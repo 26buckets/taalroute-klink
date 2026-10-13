@@ -1,0 +1,2012 @@
+[
+  {
+    "id": "CP001",
+    "title": "U01 + ABC lijst 1",
+    "subtitle": "Startles en twintig kernwoorden",
+    "description": "Van pen en boek naar klank-tekenkoppeling, woordbouw, lezen, typen, spreken en context.",
+    "level": "Alfa A",
+    "status": "Interne proef",
+    "statusNote": "Inhoud is redactioneel opgebouwd; runtime-, beeld- en luistercontrole zijn nog niet afgerond.",
+    "counts": {
+      "lessons": 2,
+      "coreWords": 20,
+      "exercises": 542,
+      "exerciseTypes": 18,
+      "texts": 12,
+      "dialogues": 8,
+      "games": 10,
+      "images": 41,
+      "audio": 326
+    },
+    "lessons": [
+      {
+        "id": "AA-U01",
+        "title": "Les 1",
+        "scope": "pen, boek, p, korte e, n, pen; mondeling pakken",
+        "words": [
+          "pen",
+          "boek"
+        ],
+        "steps": [
+          "start",
+          "kijk",
+          "kies",
+          "klank",
+          "bouw",
+          "doe"
+        ]
+      },
+      {
+        "id": "AA-ABC-L01",
+        "title": "ABC Lijst 1: a, oo, ie",
+        "scope": "20 bronvaste woorden, klank-teken, bouwen, lezen, typen, spreken",
+        "words": [
+          "kam",
+          "kat",
+          "kan",
+          "man",
+          "map",
+          "pan",
+          "pak",
+          "boom",
+          "boon",
+          "boot",
+          "noot",
+          "kool",
+          "roos",
+          "rook",
+          "tien",
+          "kies",
+          "biet",
+          "vies",
+          "vier",
+          "riem"
+        ],
+        "steps": [
+          "start",
+          "kijk",
+          "kies",
+          "klank",
+          "bouw",
+          "doe"
+        ]
+      }
+    ],
+    "words": [
+      {
+        "id": "AA_ABC_L01_P01_KAM",
+        "word": "kam",
+        "segmentation": "k | a | m",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "bestaand; betekenis: kam als voorwerp om haar te kammen; in AA-SENT-X-01-3 komt ook het werkwoord kammen voor en wordt dat apart voorbereid.",
+        "image": "/package-media/cp001/aa-cp001-kam-object-01.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P02_KAT",
+        "word": "kat",
+        "segmentation": "k | a | t",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: kat als dier.",
+        "image": "/package-media/cp001/aa-cp001-kat-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P03_KAN",
+        "word": "kan",
+        "segmentation": "k | a | n",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: schenkkan/kruik voor vloeistof; niet kan als vorm van het werkwoord kunnen.",
+        "image": "/package-media/cp001/aa-cp001-kan-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P04_MAN",
+        "word": "man",
+        "segmentation": "m | a | n",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: volwassen man.",
+        "image": "/package-media/cp001/aa-cp001-man-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P05_MAP",
+        "word": "map",
+        "segmentation": "m | a | p",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: fysieke documentenmap voor papier; niet digitale map.",
+        "image": "/package-media/cp001/aa-cp001-map-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P06_PAN",
+        "word": "pan",
+        "segmentation": "p | a | n",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "bestaand; betekenis: kookpan/pot voor eten bereiden; niet dakpan.",
+        "image": "/package-media/cp001/aa-cp001-pan-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P07_PAK",
+        "word": "pak",
+        "segmentation": "p | a | k",
+        "focus": "a",
+        "group": "kernwoorden",
+        "meaning": "primair v02; betekenis: pak als kledingstuk, colbert met bijpassende broek; niet pak als werkwoord, verpakking of pakket.",
+        "image": "/package-media/cp001/aa-cp001-pak-action-03.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P08_BOOM",
+        "word": "boom",
+        "segmentation": "b | oo | m",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: boom als levende plant met stam en kroon.",
+        "image": "/package-media/cp001/aa-cp001-boom-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P09_BOON",
+        "word": "boon",
+        "segmentation": "b | oo | n",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: eetbare boon; in CP001 wordt een bruine boon als prototype gebruikt.",
+        "image": "/package-media/cp001/aa-cp001-boon-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P10_BOOT",
+        "word": "boot",
+        "segmentation": "b | oo | t",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: boot als vaartuig op het water.",
+        "image": "/package-media/cp001/aa-cp001-boot-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P11_NOOT",
+        "word": "noot",
+        "segmentation": "n | oo | t",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "primair v02; betekenis: walnoot als eetbare noot in harde dop; niet muzieknoot.",
+        "image": "/package-media/cp001/aa-cp001-noot-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P12_KOOL",
+        "word": "kool",
+        "segmentation": "k | oo | l",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: witte kool als groente; niet kool in de betekenis steenkool/koolstof.",
+        "image": "/package-media/cp001/aa-cp001-kool-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P13_ROOS",
+        "word": "roos",
+        "segmentation": "r | oo | s",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: rode roos als bloem van een rozenplant; in koopcontext kan dezelfde bloem als snijroos voorkomen.",
+        "image": "/package-media/cp001/aa-cp001-roos-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P14_ROOK",
+        "word": "rook",
+        "segmentation": "r | oo | k",
+        "focus": "oo",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: rook van brandend of smeulend materiaal; niet stoom, mist of de verleden tijd van roken.",
+        "image": "/package-media/cp001/aa-cp001-rook-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P15_TIEN",
+        "word": "tien",
+        "segmentation": "t | ie | n",
+        "focus": "ie",
+        "group": "kernwoorden",
+        "meaning": "programmatic; betekenis: exact getal en hoeveelheid 10; visueel alleen exacte programmatische voorstellingen, geen willekeurige sfeerfoto.",
+        "image": "/package-media/cp001/aa-cp001-tien-quantity-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P16_KIES",
+        "word": "kies",
+        "segmentation": "k | ie | s",
+        "focus": "ie",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: kies als achterste tand/molaar. Basisbeeld is een anatomisch model van één molaar; niet algemene tand, hele mond of werkwoord kiezen.",
+        "image": "/package-media/cp001/aa-cp001-kies-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P17_BIET",
+        "word": "biet",
+        "segmentation": "b | ie | t",
+        "focus": "ie",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: rode biet als eetbare wortelgroente; niet radijs, raap of andere rode/paarse groente.",
+        "image": "/package-media/cp001/aa-cp001-biet-context-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P18_VIES",
+        "word": "vies",
+        "segmentation": "v | ie | s",
+        "focus": "ie",
+        "group": "kernwoorden",
+        "meaning": "nieuw; betekenis: vies als eigenschap zichtbaar vuil/niet schoon, toepasbaar op verschillende voorwerpen; niet automatisch kapot of bedorven.",
+        "image": "/package-media/cp001/aa-cp001-vies-wash-action-03.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P19_VIER",
+        "word": "vier",
+        "segmentation": "v | ie | r",
+        "focus": "ie",
+        "group": "kernwoorden",
+        "meaning": "programmatic; betekenis: exact getal en hoeveelheid 4; programmatische weergave, geen willekeurige sfeerfoto.",
+        "image": "/package-media/cp001/aa-cp001-vier-quantity-02.webp"
+      },
+      {
+        "id": "AA_ABC_L01_P20_RIEM",
+        "word": "riem",
+        "segmentation": "r | ie | m",
+        "focus": "ie",
+        "group": "kernwoorden",
+        "meaning": "bestaand; betekenis: riem als kledingriem voor broek of kleding; niet aandrijfriem, spanband of andere technische riem.",
+        "image": "/package-media/cp001/aa-cp001-riem-action-03.webp"
+      },
+      {
+        "id": "AA_U01_WORD_PEN",
+        "word": "pen",
+        "segmentation": "p | e | n",
+        "focus": "e",
+        "group": "startles",
+        "meaning": "U01 geschreven doelwoord"
+      },
+      {
+        "id": "AA_U01_WORD_BOEK",
+        "word": "boek",
+        "segmentation": "b | oe | k",
+        "focus": "oe",
+        "group": "startles",
+        "meaning": "U01 mondeling, geen leeswoord",
+        "image": "/package-media/cp001/u01-asset-boek-context-02.webp"
+      }
+    ],
+    "texts": [
+      {
+        "id": "AA-TEXT-001",
+        "title": "De pan",
+        "level": "guided_microtext",
+        "text": "De pan is vies. Ik pak de pan. Ik maak de pan schoon."
+      },
+      {
+        "id": "AA-TEXT-002",
+        "title": "Naar de les",
+        "level": "guided_microtext",
+        "text": "Ik pak een map. De map is voor de les. Ik neem de map mee."
+      },
+      {
+        "id": "AA-TEXT-003",
+        "title": "Even zitten",
+        "level": "guided_microtext",
+        "text": "Ik zie een boom. Bij de boom staat een bank. Ik zit op de bank."
+      },
+      {
+        "id": "AA-TEXT-004",
+        "title": "In de keuken",
+        "level": "guided_microtext",
+        "text": "Ik koop kool en een biet. Ik pak een pan. De kool en de biet gaan in de pan."
+      },
+      {
+        "id": "AA-TEXT-005",
+        "title": "Een pen lenen",
+        "level": "a1_oriented_microtext",
+        "text": "Sara is in de les. Haar boek ligt op tafel. Ze heeft geen pen. Ze vraagt aan Mo: Mag ik jouw pen lenen? Mo geeft haar een pen. Na de les geeft Sara de pen terug."
+      },
+      {
+        "id": "AA-TEXT-006",
+        "title": "Bij de bank",
+        "level": "a1_oriented_microtext",
+        "text": "Mo en Sara lopen in het park. Onder een boom staat een bank. Er zit een kat op de bank. Naast de bank groeit een roos. Mo en Sara lopen naar een andere bank. Daar gaan ze zitten."
+      },
+      {
+        "id": "AA-TEXT-007",
+        "title": "Eten voor vier",
+        "level": "a1_oriented_microtext",
+        "text": "Vandaag kookt Ali voor vier mensen. Hij heeft een kool en een biet. Op tafel staat een grote pan. Ali wast de biet en snijdt de kool. Dan doet hij de groente in de pan."
+      },
+      {
+        "id": "AA-TEXT-008",
+        "title": "Een pak voor het feest",
+        "level": "a1_oriented_microtext",
+        "text": "Morgen gaat Mo naar een feest. Zijn blauwe pak hangt in de kast. Zijn bruine riem hangt ernaast. Mo trekt het pak aan. De riem is te klein. Hij zoekt een andere riem."
+      },
+      {
+        "id": "AA-TEXT-009",
+        "title": "Het boek terugbrengen",
+        "level": "a2_oriented_microtext",
+        "text": "Sara heeft een boek van Mo geleend. Ze zou het vandaag terugbrengen, maar ze heeft het thuis laten liggen. Voor de les stuurt ze Mo een bericht: Sorry, je boek ligt nog op mijn tafel. Ik neem het morgen mee. Mo antwoordt: Dat is goed. Hij heeft het boek pas volgende week nodig."
+      },
+      {
+        "id": "AA-TEXT-010",
+        "title": "Een andere boot",
+        "level": "a2_oriented_microtext",
+        "text": "Ali en Sara willen zaterdag met de boot naar een dorp aan het water. Ze hebben afgesproken om tien uur te vertrekken. Vrijdag krijgt Ali een bericht: de boot van tien uur vaart niet. Er gaat wel een boot om elf uur. Ali belt Sara. Ze besluiten de boot van elf uur te nemen en iets later te gaan eten."
+      },
+      {
+        "id": "AA-TEXT-011",
+        "title": "Een afspraak verzetten",
+        "level": "a2_oriented_microtext",
+        "text": "Mo heeft woensdag om vier uur een afspraak bij de tandarts voor zijn kies. Hij moet die middag werken en belt om de afspraak te verzetten. De assistent biedt donderdag om tien uur aan. Dan kan Mo wel komen. Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda."
+      },
+      {
+        "id": "AA-TEXT-012",
+        "title": "Samen koken",
+        "level": "a2_oriented_microtext",
+        "text": "Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groente. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken."
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "AA-DIALOG-001",
+        "title": "Een pen vragen",
+        "level": "A1",
+        "goal": "Een voorwerp vragen en een passend antwoord geven.",
+        "turns": [
+          {
+            "speaker": "Sara",
+            "text": "Mag ik jouw pen even lenen?"
+          },
+          {
+            "speaker": "Mo",
+            "text": "Ja, hier is mijn pen."
+          },
+          {
+            "speaker": "Sara",
+            "text": "Dank je. Ik geef hem straks terug."
+          },
+          {
+            "speaker": "Mo",
+            "text": "Goed, ik heb hem nu niet nodig."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-002",
+        "title": "Een plek afspreken",
+        "level": "A1",
+        "goal": "Een plek noemen en controleren of je dezelfde plek bedoelt.",
+        "turns": [
+          {
+            "speaker": "Mo",
+            "text": "Waar zullen we op elkaar wachten?"
+          },
+          {
+            "speaker": "Sara",
+            "text": "Bij de bank onder de boom."
+          },
+          {
+            "speaker": "Mo",
+            "text": "De bank naast de roos?"
+          },
+          {
+            "speaker": "Sara",
+            "text": "Ja, die bedoel ik."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-003",
+        "title": "Water vragen",
+        "level": "A1",
+        "goal": "Een verzoek beantwoorden en een vervolgvraag stellen.",
+        "turns": [
+          {
+            "speaker": "Ali",
+            "text": "Wil je mij de kan geven?"
+          },
+          {
+            "speaker": "Sara",
+            "text": "Ja. Wil je er water in?"
+          },
+          {
+            "speaker": "Ali",
+            "text": "Graag, de kan is leeg."
+          },
+          {
+            "speaker": "Sara",
+            "text": "Ik vul hem even voor je."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-004",
+        "title": "Een riem passen",
+        "level": "A1",
+        "goal": "Hulp vragen bij een passende maat.",
+        "turns": [
+          {
+            "speaker": "Klant",
+            "text": "Mag ik deze riem passen?"
+          },
+          {
+            "speaker": "Medewerker",
+            "text": "Natuurlijk. Welke maat zoekt u?"
+          },
+          {
+            "speaker": "Klant",
+            "text": "Dat weet ik niet. Deze riem is te klein."
+          },
+          {
+            "speaker": "Medewerker",
+            "text": "Dan pak ik een langere riem voor u."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-005",
+        "title": "Een boek later teruggeven",
+        "level": "A2",
+        "goal": "Een gemiste afspraak uitleggen en een nieuwe afspraak maken.",
+        "turns": [
+          {
+            "speaker": "Sara",
+            "text": "Ik zou je boek vandaag teruggeven, maar het ligt nog thuis."
+          },
+          {
+            "speaker": "Mo",
+            "text": "Kun je het morgen meenemen?"
+          },
+          {
+            "speaker": "Sara",
+            "text": "Ja, ik leg het vanavond alvast in mijn tas."
+          },
+          {
+            "speaker": "Mo",
+            "text": "Fijn, dan zie ik je morgen in de les."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-006",
+        "title": "De vertrektijd controleren",
+        "level": "A2",
+        "goal": "Een wijziging begrijpen en controleren.",
+        "turns": [
+          {
+            "speaker": "Ali",
+            "text": "Gaat de boot zaterdag nog om tien uur?"
+          },
+          {
+            "speaker": "Medewerker",
+            "text": "Nee, die boot vaart niet. U kunt om elf uur mee."
+          },
+          {
+            "speaker": "Ali",
+            "text": "Dus we vertrekken een uur later?"
+          },
+          {
+            "speaker": "Medewerker",
+            "text": "Ja, dat klopt."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-007",
+        "title": "Een afspraak verzetten",
+        "level": "A2",
+        "goal": "Een afspraak verzetten en dag en tijd bevestigen.",
+        "turns": [
+          {
+            "speaker": "Mo",
+            "text": "Ik heb woensdag een afspraak voor mijn kies, maar dan moet ik werken."
+          },
+          {
+            "speaker": "Assistent",
+            "text": "Kunt u donderdag om tien uur komen?"
+          },
+          {
+            "speaker": "Mo",
+            "text": "Ja, dat lukt. Donderdag om tien uur dus."
+          },
+          {
+            "speaker": "Assistent",
+            "text": "Dat klopt. Ik zet de nieuwe afspraak in de agenda."
+          }
+        ]
+      },
+      {
+        "id": "AA-DIALOG-008",
+        "title": "Een ander ingrediënt",
+        "level": "A2",
+        "goal": "Een alternatief voorstellen en een boodschappenafspraak controleren.",
+        "turns": [
+          {
+            "speaker": "Sara",
+            "text": "Er is geen kool meer in de winkel. Zal ik wortels meenemen?"
+          },
+          {
+            "speaker": "Ali",
+            "text": "Ja, dat is goed. Neem ook een biet mee."
+          },
+          {
+            "speaker": "Sara",
+            "text": "Een biet en wortels. Hebben we verder alles?"
+          },
+          {
+            "speaker": "Ali",
+            "text": "Ja, ik heb thuis al een grote pan."
+          }
+        ]
+      }
+    ],
+    "games": [
+      {
+        "id": "GAME-MEMORY",
+        "title": "Memory",
+        "mode": "memory"
+      },
+      {
+        "id": "GAME-BINGO",
+        "title": "Bingo",
+        "mode": "word"
+      },
+      {
+        "id": "GAME-FIND",
+        "title": "Zoeken",
+        "mode": "find_word"
+      },
+      {
+        "id": "GAME-DOMINO",
+        "title": "Domino",
+        "mode": "domino"
+      },
+      {
+        "id": "GAME-FLASH",
+        "title": "Woordkaarten",
+        "mode": "image_word"
+      },
+      {
+        "id": "GAME-SORT",
+        "title": "Sorteren",
+        "mode": "sort"
+      },
+      {
+        "id": "GAME-LISTEN",
+        "title": "Luisterspel",
+        "mode": "listen"
+      },
+      {
+        "id": "GAME-ORDER",
+        "title": "Volgorde",
+        "mode": "sequence"
+      },
+      {
+        "id": "GAME-LOTTO",
+        "title": "Lotto",
+        "mode": "lotto"
+      },
+      {
+        "id": "GAME-BINGO-IMAGE",
+        "title": "Beeldbingo",
+        "mode": "image"
+      }
+    ],
+    "exerciseTypes": [
+      {
+        "id": "ALF-CMP-001",
+        "label": "Kijk- en luisterkaart",
+        "count": 112,
+        "modes": [
+          "image_word",
+          "image_audio",
+          "mixed"
+        ],
+        "examples": [
+          "Pen",
+          "Kijk en luister",
+          "kam"
+        ]
+      },
+      {
+        "id": "ALF-CMP-002",
+        "label": "Kiezen uit beeld, woord of zin",
+        "count": 110,
+        "modes": [
+          "image",
+          "text",
+          "sentence"
+        ],
+        "examples": [
+          "Kies de pen",
+          "Kies het plaatje",
+          "Woord pen"
+        ]
+      },
+      {
+        "id": "ALF-CMP-003",
+        "label": "Klanken onderscheiden",
+        "count": 6,
+        "modes": [
+          "contrast"
+        ],
+        "examples": [
+          "Klank p",
+          "Klank e",
+          "Klank n"
+        ]
+      },
+      {
+        "id": "ALF-CMP-004",
+        "label": "Woord, beeld en audio koppelen",
+        "count": 12,
+        "modes": [
+          "word_image",
+          "audio_word"
+        ],
+        "examples": [
+          "Koppel woord en beeld",
+          "Luister en koppel"
+        ]
+      },
+      {
+        "id": "ALF-CMP-005",
+        "label": "Letters, klanken of woorden bouwen",
+        "count": 81,
+        "modes": [
+          "phoneme",
+          "letter"
+        ],
+        "examples": [
+          "Bouw pen",
+          "Bouw het woord"
+        ]
+      },
+      {
+        "id": "ALF-CMP-006",
+        "label": "Typen en invullen",
+        "count": 57,
+        "modes": [
+          "word",
+          "sentence",
+          "phoneme"
+        ],
+        "examples": [
+          "Typ pen",
+          "Typ het woord",
+          "Typ zin 1"
+        ]
+      },
+      {
+        "id": "ALF-CMP-007",
+        "label": "Zin, tekst of gesprek lezen",
+        "count": 30,
+        "modes": [
+          "short_text",
+          "sentence"
+        ],
+        "examples": [
+          "De pan",
+          "Naar de les",
+          "Even zitten"
+        ]
+      },
+      {
+        "id": "ALF-CMP-008",
+        "label": "Luistervraag beantwoorden",
+        "count": 10,
+        "modes": [
+          "audio_question"
+        ],
+        "examples": [
+          "Luister: boom",
+          "Luister: Boom en roos",
+          "Luister: Een pen lenen"
+        ]
+      },
+      {
+        "id": "ALF-CMP-009",
+        "label": "Nazeggen, reageren en rollenspel",
+        "count": 54,
+        "modes": [
+          "repeat",
+          "response"
+        ],
+        "examples": [
+          "Zeg pen",
+          "Pak de pen",
+          "Luister en doe"
+        ]
+      },
+      {
+        "id": "ALF-CMP-010",
+        "label": "Vrij schrijven",
+        "count": 9,
+        "modes": [
+          "digital"
+        ],
+        "examples": [
+          "Schrijf over jezelf",
+          "Schrijf: Een pen vragen",
+          "Schrijf: Een plek afspreken"
+        ]
+      },
+      {
+        "id": "ALF-CMP-011",
+        "label": "Formulier invullen",
+        "count": 1,
+        "modes": [
+          "form"
+        ],
+        "examples": [
+          "Mijn kaart"
+        ]
+      },
+      {
+        "id": "ALF-CMP-012",
+        "label": "Handschrift oefenen",
+        "count": 14,
+        "modes": [
+          "trace"
+        ],
+        "examples": [
+          "Schrijf p",
+          "Schrijf e",
+          "Schrijf n"
+        ]
+      },
+      {
+        "id": "ALF-CMP-013",
+        "label": "Volgorde leggen",
+        "count": 25,
+        "modes": [
+          "sequence"
+        ],
+        "examples": [
+          "p e n",
+          "Maak de zin",
+          "Volgorde"
+        ]
+      },
+      {
+        "id": "ALF-CMP-014",
+        "label": "Bingo en lotto",
+        "count": 3,
+        "modes": [
+          "word",
+          "lotto",
+          "image"
+        ],
+        "examples": [
+          "Bingo",
+          "Lotto",
+          "Beeldbingo"
+        ]
+      },
+      {
+        "id": "ALF-CMP-015",
+        "label": "Memory, domino, zoeken en sorteren",
+        "count": 5,
+        "modes": [
+          "memory",
+          "find_word",
+          "domino",
+          "sort",
+          "listen"
+        ],
+        "examples": [
+          "Memory",
+          "Zoeken",
+          "Domino"
+        ]
+      },
+      {
+        "id": "ALF-CMP-016",
+        "label": "Woord- en oefenkaarten",
+        "count": 2,
+        "modes": [
+          "image_word"
+        ],
+        "examples": [
+          "Oefenkaarten",
+          "Woordkaarten"
+        ]
+      },
+      {
+        "id": "ALF-CMP-017",
+        "label": "Oefencheck en reflectie",
+        "count": 10,
+        "modes": [
+          "diagnostic_set",
+          "reflection_set"
+        ],
+        "examples": [
+          "Oefencheck lezen",
+          "Oefencheck dictee",
+          "Oefencheck klanken"
+        ]
+      },
+      {
+        "id": "ALF-CMP-018",
+        "label": "Aanbevolen extra route",
+        "count": 1,
+        "modes": [
+          "recommended_path"
+        ],
+        "examples": [
+          "Extra oefenen: a, oo, ie"
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "U01_ASSET_BOEK_SCENE_03",
+        "title": "boek",
+        "image": "/package-media/cp001/u01-asset-boek-scene-03.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_TABLE_ON",
+        "title": "Een boek, pen, map en beker op een tafel in een leslokaal.",
+        "image": "/package-media/cp001/aa-cp001-scene-table-on.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_TABLE_UNDER",
+        "title": "Een boek ligt onder een tafel; een pen, map en beker staan of liggen op de tafel.",
+        "image": "/package-media/cp001/aa-cp001-scene-table-under.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_KITCHEN",
+        "title": "Op een aanrecht staan een pan en kan; er liggen kool, biet en een open walnoot bij een kom bonen.",
+        "image": "/package-media/cp001/aa-cp001-scene-kitchen.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_PAN_DIRTY",
+        "title": "Een pan met bruine etensresten in de gootsteen.",
+        "image": "/package-media/cp001/aa-cp001-scene-pan-dirty.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_PAN_CLEAN",
+        "title": "Een schone pan in dezelfde gootsteen.",
+        "image": "/package-media/cp001/aa-cp001-scene-pan-clean.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_PARK",
+        "title": "Een kat zit op een bank onder een boom; er groeit een roos naast en twee volwassenen lopen over het pad.",
+        "image": "/package-media/cp001/aa-cp001-scene-park.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_CLOTHES",
+        "title": "Een blauw pak hangt in een kast; er hangt een bruine riem naast.",
+        "image": "/package-media/cp001/aa-cp001-scene-clothes.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_COMB",
+        "title": "Een bruine kam ligt bij een handdoek op de rand van een wastafel.",
+        "image": "/package-media/cp001/aa-cp001-scene-comb.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_DENTAL",
+        "title": "Een tandarts en een volwassen patiënt kijken samen naar een model van een kies.",
+        "image": "/package-media/cp001/aa-cp001-scene-dental.webp"
+      },
+      {
+        "id": "AA_CP001_SCENE_BOAT",
+        "title": "Een blauwe boot ligt vast aan een steiger bij een boom.",
+        "image": "/package-media/cp001/aa-cp001-scene-boat.webp"
+      },
+      {
+        "id": "AA_CP001_BOOT_SCENE_03",
+        "title": "Dezelfde blauw-witte kajuitboot in een volledige kleurrijke watersituatie; volwassene stapt natuurlijk vanaf de steiger aan boord.",
+        "image": "/package-media/cp001/aa-cp001-boot-scene-03.webp"
+      },
+      {
+        "id": "AA_CP001_ROOK_SCENE_03",
+        "title": "Twee volwassenen gaan iets verder van rook uit smeulend hout staan in een natuurlijke kleurrijke buitensituatie.",
+        "image": "/package-media/cp001/aa-cp001-rook-scene-03.webp"
+      }
+    ],
+    "media": {
+      "imageAvailable": 41,
+      "imageExpected": 41,
+      "audioAvailable": 326,
+      "missing": [],
+      "imageReview": "Menselijke beeldcontrole open",
+      "audioReview": "Luistercontrole en rechtencontrole open",
+      "publication": "INTERNAL_ONLY"
+    }
+  },
+  {
+    "id": "CP002",
+    "title": "Thuis, in de les en onderweg",
+    "subtitle": "Vier lessen met twintig woorden",
+    "description": "Woorden en situaties uit huis, les, kleding, eten, bibliotheek, boerderij en apotheek.",
+    "level": "Alfa A met groei naar A1/A2-context",
+    "status": "Interne proef",
+    "statusNote": "De inhoud is geladen; acht scènebindingen, menselijke mediareview en runtimecontrole staan nog open.",
+    "counts": {
+      "lessons": 4,
+      "coreWords": 20,
+      "exercises": 645,
+      "exerciseTypes": 18,
+      "texts": 12,
+      "dialogues": 8,
+      "games": 10,
+      "images": 32,
+      "audio": 655
+    },
+    "lessons": [
+      {
+        "id": "CP002-L01",
+        "title": "Les 1",
+        "scope": "Woorden kaas, maan, naam, haar, haak",
+        "words": [
+          "kaas",
+          "maan",
+          "naam",
+          "haar",
+          "haak"
+        ],
+        "steps": [
+          "start",
+          "kijk",
+          "kies",
+          "klank",
+          "bouw",
+          "doe"
+        ]
+      },
+      {
+        "id": "CP002-L02",
+        "title": "Les 2",
+        "scope": "Woorden laars, boek, koek, koe, soep",
+        "words": [
+          "laars",
+          "boek",
+          "koek",
+          "koe",
+          "soep"
+        ],
+        "steps": [
+          "start",
+          "kijk",
+          "kies",
+          "klank",
+          "bouw",
+          "doe"
+        ]
+      },
+      {
+        "id": "CP002-L03",
+        "title": "Les 3",
+        "scope": "Woorden bloem, voet, bloes, lip, kip",
+        "words": [
+          "bloem",
+          "voet",
+          "bloes",
+          "lip",
+          "kip"
+        ],
+        "steps": [
+          "start",
+          "kijk",
+          "kies",
+          "klank",
+          "bouw",
+          "doe"
+        ]
+      },
+      {
+        "id": "CP002-L04",
+        "title": "Les 4",
+        "scope": "Woorden pil, kin, ik, vis, zit",
+        "words": [
+          "pil",
+          "kin",
+          "ik",
+          "vis",
+          "zit"
+        ],
+        "steps": [
+          "start",
+          "kijk",
+          "kies",
+          "klank",
+          "bouw",
+          "doe"
+        ]
+      }
+    ],
+    "words": [
+      {
+        "id": "CP002-WORD-01",
+        "word": "kaas",
+        "meaning": "de kaas; eten",
+        "segmentation": "k|aa|s",
+        "focus": "aa",
+        "group": "les-1",
+        "image": "/package-media/cp002/cp002-img-word-01-v1.webp",
+        "examples": [
+          "Dit is kaas.",
+          "De kaas ligt op een bord.",
+          "Ik leg kaas op mijn brood.",
+          "Wil je ook kaas?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-02",
+        "word": "maan",
+        "meaning": "de maan aan de hemel",
+        "segmentation": "m|aa|n",
+        "focus": "aa",
+        "group": "les-1",
+        "image": "/package-media/cp002/cp002-img-word-02-v1.webp",
+        "examples": [
+          "Ik zie de maan.",
+          "De maan staat boven het huis.",
+          "We kijken naar de maan.",
+          "Zie jij de maan ook?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-03",
+        "word": "naam",
+        "meaning": "de naam van een persoon",
+        "segmentation": "n|aa|m",
+        "focus": "aa",
+        "group": "les-1",
+        "image": "/package-media/cp002/cp002-img-word-03-v1.svg",
+        "examples": [
+          "Mijn naam is Nora.",
+          "Mijn naam staat op de kaart.",
+          "Ik schrijf mijn naam.",
+          "Wat is jouw naam?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-04",
+        "word": "haar",
+        "meaning": "het haar op het hoofd; geen bezittelijk voornaamwoord",
+        "segmentation": "h|aa|r",
+        "focus": "aa",
+        "group": "les-1",
+        "image": "/package-media/cp002/cp002-img-word-04-v1.webp",
+        "examples": [
+          "Dit is mijn haar.",
+          "Mijn haar is lang.",
+          "Ik kam mijn haar.",
+          "Wil je mijn haar knippen?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-05",
+        "word": "haak",
+        "meaning": "de haak om iets aan op te hangen",
+        "segmentation": "h|aa|k",
+        "focus": "aa",
+        "group": "les-1",
+        "image": "/package-media/cp002/cp002-img-word-05-v1.webp",
+        "examples": [
+          "Dit is een haak.",
+          "De haak zit aan de muur.",
+          "Ik hang mijn jas aan de haak.",
+          "Is deze haak vrij?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-06",
+        "word": "laars",
+        "meaning": "de laars; schoeisel",
+        "segmentation": "l|aa|r|s",
+        "focus": "aa",
+        "group": "les-2",
+        "image": "/package-media/cp002/cp002-img-word-06-v1.webp",
+        "examples": [
+          "Dit is een laars.",
+          "Er zit zand op de laars.",
+          "Ik trek een laars aan.",
+          "Waar is mijn andere laars?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-07",
+        "word": "boek",
+        "meaning": "het boek om te lezen",
+        "segmentation": "b|oe|k",
+        "focus": "oe",
+        "group": "les-2",
+        "image": "/package-media/cp002/cp002-img-word-07-v1.webp",
+        "examples": [
+          "Dit is mijn boek.",
+          "Het boek ligt op tafel.",
+          "Ik lees in het boek.",
+          "Mag ik dit boek lenen?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-08",
+        "word": "koek",
+        "meaning": "de koek; een gebakken lekkernij",
+        "segmentation": "k|oe|k",
+        "focus": "oe",
+        "group": "les-2",
+        "image": "/package-media/cp002/cp002-img-word-08-v1.webp",
+        "examples": [
+          "Dit is een koek.",
+          "De koek ligt op een bord.",
+          "Ik breek de koek in twee stukken.",
+          "Wil je een halve koek?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-09",
+        "word": "koe",
+        "meaning": "de koe; dier",
+        "segmentation": "k|oe",
+        "focus": "oe",
+        "group": "les-2",
+        "image": "/package-media/cp002/cp002-img-word-09-v1.webp",
+        "examples": [
+          "Dat is een koe.",
+          "De koe staat in het gras.",
+          "De koe eet gras.",
+          "Zie je de koe bij het hek?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-10",
+        "word": "soep",
+        "meaning": "de soep; eten",
+        "segmentation": "s|oe|p",
+        "focus": "oe",
+        "group": "les-2",
+        "image": "/package-media/cp002/cp002-img-word-10-v1.webp",
+        "examples": [
+          "Dit is soep.",
+          "De soep zit in een kom.",
+          "Ik roer in de soep.",
+          "Wil je een kom soep?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-11",
+        "word": "bloem",
+        "meaning": "de bloem; plant, niet het meelproduct",
+        "segmentation": "b|l|oe|m",
+        "focus": "oe",
+        "group": "les-3",
+        "image": "/package-media/cp002/cp002-img-word-11-v1.webp",
+        "examples": [
+          "Dit is een bloem.",
+          "De bloem staat in een vaas.",
+          "Ik geef de bloem water.",
+          "Voor wie is die bloem?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-12",
+        "word": "voet",
+        "meaning": "de voet; lichaamsdeel",
+        "segmentation": "v|oe|t",
+        "focus": "oe",
+        "group": "les-3",
+        "image": "/package-media/cp002/cp002-img-word-12-v1.webp",
+        "examples": [
+          "Dit is mijn voet.",
+          "Mijn voet zit in een sok.",
+          "Ik zet mijn voet op de grond.",
+          "Past deze schoen aan je voet?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-13",
+        "word": "bloes",
+        "meaning": "de bloes; kledingstuk",
+        "segmentation": "b|l|oe|s",
+        "focus": "oe",
+        "group": "les-3",
+        "image": "/package-media/cp002/cp002-img-word-13-v1.webp",
+        "examples": [
+          "Dit is een bloes.",
+          "De bloes hangt aan een haak.",
+          "Ik doe de bloes aan.",
+          "Heb je deze bloes ook in een andere maat?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-14",
+        "word": "lip",
+        "meaning": "de lip; lichaamsdeel",
+        "segmentation": "l|i|p",
+        "focus": "i",
+        "group": "les-3",
+        "image": "/package-media/cp002/cp002-img-word-14-v1.webp",
+        "examples": [
+          "Dit is mijn lip.",
+          "Er zit een kruimel op mijn lip.",
+          "Ik veeg de kruimel van mijn lip.",
+          "Zit er nog iets op mijn lip?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-15",
+        "word": "kip",
+        "meaning": "de kip; levend dier",
+        "segmentation": "k|i|p",
+        "focus": "i",
+        "group": "les-3",
+        "image": "/package-media/cp002/cp002-img-word-15-v1.webp",
+        "examples": [
+          "Dat is een kip.",
+          "De kip staat bij het hok.",
+          "De kip pikt in het zand.",
+          "Waar is de witte kip?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-16",
+        "word": "pil",
+        "meaning": "de pil; geneesmiddel, zonder doseringsinstructie",
+        "segmentation": "p|i|l",
+        "focus": "i",
+        "group": "les-4",
+        "image": "/package-media/cp002/cp002-img-word-16-v1.webp",
+        "examples": [
+          "Dit is een pil.",
+          "De pil zit in een strip.",
+          "Ik wijs de pil op de foto aan.",
+          "Hoe heet deze pil?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-17",
+        "word": "kin",
+        "meaning": "de kin; lichaamsdeel",
+        "segmentation": "k|i|n",
+        "focus": "i",
+        "group": "les-4",
+        "image": "/package-media/cp002/cp002-img-word-17-v1.webp",
+        "examples": [
+          "Dit is mijn kin.",
+          "Er zit een druppel op mijn kin.",
+          "Ik droog mijn kin af.",
+          "Is mijn kin nu droog?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-18",
+        "word": "ik",
+        "meaning": "ik; de spreker bedoelt zichzelf",
+        "segmentation": "i|k",
+        "focus": "k",
+        "group": "les-4",
+        "image": "/package-media/cp002/cp002-img-word-18-v1.svg",
+        "examples": [
+          "Ik ben Nora.",
+          "Ik zit bij het raam.",
+          "Ik lees een boek.",
+          "Mag ik hier zitten?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-19",
+        "word": "vis",
+        "meaning": "de vis; levend dier",
+        "segmentation": "v|i|s",
+        "focus": "i",
+        "group": "les-4",
+        "image": "/package-media/cp002/cp002-img-word-19-v1.webp",
+        "examples": [
+          "Dit is een vis.",
+          "De vis zwemt in het water.",
+          "Ik kijk naar de vis.",
+          "Zie je de kleine vis?"
+        ]
+      },
+      {
+        "id": "CP002-WORD-20",
+        "word": "zit",
+        "meaning": "zit; vorm van zitten",
+        "segmentation": "z|i|t",
+        "focus": "i",
+        "group": "les-4",
+        "image": "/package-media/cp002/cp002-img-word-20-v1.webp",
+        "examples": [
+          "Ik zit op een stoel.",
+          "Elena zit bij de deur.",
+          "Ik zit en lees een boek.",
+          "Wie zit naast jou?"
+        ]
+      }
+    ],
+    "texts": [
+      {
+        "id": "CP002-TEXT-01",
+        "title": "Een kom soep",
+        "level": "guided-oriented",
+        "text": "De soep staat op tafel. Nora zit op een stoel. Zij pakt een lepel.",
+        "question": "Wat pakt Nora?",
+        "answer": "Een lepel."
+      },
+      {
+        "id": "CP002-TEXT-02",
+        "title": "De jas",
+        "level": "guided-oriented",
+        "text": "Youssef komt thuis. Zijn jas is nat. Hij hangt de jas aan een haak.",
+        "question": "Waar hangt Youssef zijn jas?",
+        "answer": "Aan een haak."
+      },
+      {
+        "id": "CP002-TEXT-03",
+        "title": "Het boek",
+        "level": "guided-oriented",
+        "text": "Het boek ligt op tafel. Elena pakt het boek. Zij leest bij het raam.",
+        "question": "Waar leest Elena?",
+        "answer": "Bij het raam."
+      },
+      {
+        "id": "CP002-TEXT-04",
+        "title": "De kip",
+        "level": "guided-oriented",
+        "text": "De kip staat bij het hok. De koe staat in het gras. Nora kijkt naar de kip.",
+        "question": "Waar staat de kip?",
+        "answer": "Bij het hok."
+      },
+      {
+        "id": "CP002-TEXT-05",
+        "title": "Een halve koek",
+        "level": "A1-oriented",
+        "text": "Er ligt één koek op het bord. Nora wil de koek delen. Zij geeft de helft aan Youssef. De andere helft eet zij zelf.",
+        "question": "Wat krijgt Youssef?",
+        "answer": "Een halve koek."
+      },
+      {
+        "id": "CP002-TEXT-06",
+        "title": "De eerste les",
+        "level": "A1-oriented",
+        "text": "Elena is voor het eerst in de les. Nora vraagt haar naam. Elena schrijft haar naam op een kaart. Daarna gaat zij naast Nora zitten.",
+        "question": "Wat schrijft Elena op de kaart?",
+        "answer": "Haar naam."
+      },
+      {
+        "id": "CP002-TEXT-07",
+        "title": "Een andere maat",
+        "level": "A1-oriented",
+        "text": "Youssef past een laars. De laars zit strak om zijn voet. Hij vraagt om een grotere maat. De medewerker haalt een ander paar.",
+        "question": "Waarom vraagt Youssef een grotere maat?",
+        "answer": "De laars zit strak."
+      },
+      {
+        "id": "CP002-TEXT-08",
+        "title": "Een bloem voor thuis",
+        "level": "A1-oriented",
+        "text": "Nora neemt een bloem mee naar huis. Zij zet de bloem in een vaas met water. De vaas staat op tafel, naast haar boek.",
+        "question": "Wat staat naast het boek?",
+        "answer": "Een vaas met een bloem."
+      },
+      {
+        "id": "CP002-TEXT-09",
+        "title": "Het boek is nog uitgeleend",
+        "level": "A2-oriented",
+        "text": "Elena zoekt een boek in de bibliotheek. Het boek is vandaag niet aanwezig: iemand anders heeft het geleend. De medewerker verwacht het vrijdag terug. Elena laat het boek voor zich bewaren en komt dan opnieuw.",
+        "question": "Waarom neemt Elena het boek vandaag niet mee?",
+        "answer": "Iemand anders heeft het geleend."
+      },
+      {
+        "id": "CP002-TEXT-10",
+        "title": "De bloes voor het gesprek",
+        "level": "A2-oriented",
+        "text": "Nora legt een bloes klaar voor een gesprek. Ze ziet een vlek op de mouw. Daarom kiest ze een andere bloes. De bloes met de vlek gaat in de was; het gesprek hoeft niet te worden verzet.",
+        "question": "Waarom kiest Nora een andere bloes?",
+        "answer": "Er zit een vlek op de mouw."
+      },
+      {
+        "id": "CP002-TEXT-11",
+        "title": "Een vraag over de verpakking",
+        "level": "A2-oriented",
+        "text": "Youssef is in de apotheek. De verpakking van zijn pil ziet er anders uit dan de vorige keer. Hij weet niet waarom en vraagt het aan de medewerker. Hij wil eerst uitleg; hij raadt niet zelf wat de verandering betekent.",
+        "question": "Wat wil Youssef van de medewerker?",
+        "answer": "Uitleg over de andere verpakking."
+      },
+      {
+        "id": "CP002-TEXT-12",
+        "title": "Kijken als het donker is",
+        "level": "A2-oriented",
+        "text": "Na het eten wil Elena naar de maan kijken. Eerst zijn er veel wolken. Ze wacht binnen en leest een boek. Later gaat ze weer naar buiten. De wolken zijn weg en de maan is goed te zien.",
+        "question": "Wat doet Elena terwijl zij wacht?",
+        "answer": "Zij leest een boek."
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "CP002-DIALOG-01",
+        "title": "Een boek lenen",
+        "level": "A1-oriented",
+        "goal": "Wanneer wil Elena het boek terug?",
+        "turns": [
+          {
+            "speaker": "Nora",
+            "text": "Mag ik jouw boek lenen?"
+          },
+          {
+            "speaker": "Elena",
+            "text": "Ja, dat mag."
+          },
+          {
+            "speaker": "Nora",
+            "text": "Wanneer wil je het terug?"
+          },
+          {
+            "speaker": "Elena",
+            "text": "Morgen na de les."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-02",
+        "title": "Samen aan tafel",
+        "level": "A1-oriented",
+        "goal": "Wat wil Nora eten?",
+        "turns": [
+          {
+            "speaker": "Youssef",
+            "text": "Wil je een kom soep?"
+          },
+          {
+            "speaker": "Nora",
+            "text": "Ja, graag."
+          },
+          {
+            "speaker": "Youssef",
+            "text": "Wil je er brood met kaas bij?"
+          },
+          {
+            "speaker": "Nora",
+            "text": "Nee, alleen soep, dank je."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-03",
+        "title": "Kennismaken",
+        "level": "A1-oriented",
+        "goal": "Waar kan Elena zitten?",
+        "turns": [
+          {
+            "speaker": "Elena",
+            "text": "Hallo, wat is jouw naam?"
+          },
+          {
+            "speaker": "Youssef",
+            "text": "Mijn naam is Youssef. En jij?"
+          },
+          {
+            "speaker": "Elena",
+            "text": "Ik ben Elena. Is deze stoel vrij?"
+          },
+          {
+            "speaker": "Youssef",
+            "text": "Ja, kom maar naast mij zitten."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-04",
+        "title": "Een laars zoeken",
+        "level": "A1-oriented",
+        "goal": "Waar staat de andere laars?",
+        "turns": [
+          {
+            "speaker": "Nora",
+            "text": "Ik zie maar één laars. Waar is de andere?"
+          },
+          {
+            "speaker": "Youssef",
+            "text": "Kijk eens onder de stoel."
+          },
+          {
+            "speaker": "Nora",
+            "text": "Ja, daar staat hij. Dank je."
+          },
+          {
+            "speaker": "Youssef",
+            "text": "Graag gedaan."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-05",
+        "title": "Een maat vragen",
+        "level": "A2-oriented",
+        "goal": "Wat wil Elena veranderen?",
+        "turns": [
+          {
+            "speaker": "Elena",
+            "text": "Deze laars zit te strak. Hebt u een grotere maat?"
+          },
+          {
+            "speaker": "Medewerker",
+            "text": "Ja. Wilt u hetzelfde model?"
+          },
+          {
+            "speaker": "Elena",
+            "text": "Graag, als dat er nog is."
+          },
+          {
+            "speaker": "Medewerker",
+            "text": "Ik kijk even in het magazijn."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-06",
+        "title": "Bij de kapper",
+        "level": "A2-oriented",
+        "goal": "Wat spreken zij af?",
+        "turns": [
+          {
+            "speaker": "Youssef",
+            "text": "Ik wil mijn haar iets korter, maar niet heel kort."
+          },
+          {
+            "speaker": "Kapper",
+            "text": "Ongeveer twee centimeter eraf?"
+          },
+          {
+            "speaker": "Youssef",
+            "text": "Ja, dat lijkt me goed."
+          },
+          {
+            "speaker": "Kapper",
+            "text": "Dan beginnen we daarmee."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-07",
+        "title": "Iets niet begrijpen",
+        "level": "A2-oriented",
+        "goal": "Wat vraagt Nora over de uitleg?",
+        "turns": [
+          {
+            "speaker": "Nora",
+            "text": "De verpakking van deze pil is anders. Kunt u dat uitleggen?"
+          },
+          {
+            "speaker": "Apotheekmedewerker",
+            "text": "Ja, ik kijk eerst welke verpakking u eerder had."
+          },
+          {
+            "speaker": "Nora",
+            "text": "Wilt u het daarna rustig uitleggen?"
+          },
+          {
+            "speaker": "Apotheekmedewerker",
+            "text": "Natuurlijk. En u kunt vragen stellen."
+          }
+        ]
+      },
+      {
+        "id": "CP002-DIALOG-08",
+        "title": "Een plek bij het raam",
+        "level": "A2-oriented",
+        "goal": "Waarom kiest Elena de stoel bij het raam?",
+        "turns": [
+          {
+            "speaker": "Elena",
+            "text": "Mag ik hier zitten? Ik wil even in mijn boek lezen."
+          },
+          {
+            "speaker": "Nora",
+            "text": "Ja. De stoel bij het raam is ook vrij."
+          },
+          {
+            "speaker": "Elena",
+            "text": "Daar zit ik liever, want daar is meer licht."
+          },
+          {
+            "speaker": "Nora",
+            "text": "Goed, ik zet mijn tas even opzij."
+          }
+        ]
+      }
+    ],
+    "games": [
+      {
+        "id": "CP002-GAME-MEMORY",
+        "title": "Memory",
+        "mode": "memory"
+      },
+      {
+        "id": "CP002-GAME-WORD",
+        "title": "Woordbingo",
+        "mode": "word"
+      },
+      {
+        "id": "CP002-GAME-IMAGE",
+        "title": "Beeldbingo",
+        "mode": "image"
+      },
+      {
+        "id": "CP002-GAME-LOTTO",
+        "title": "Lotto",
+        "mode": "lotto"
+      },
+      {
+        "id": "CP002-GAME-FIND",
+        "title": "Zoeken",
+        "mode": "find_word"
+      },
+      {
+        "id": "CP002-GAME-DOMINO",
+        "title": "Domino",
+        "mode": "domino"
+      },
+      {
+        "id": "CP002-GAME-CARDS",
+        "title": "Woordkaarten",
+        "mode": "image_word"
+      },
+      {
+        "id": "CP002-GAME-SORT",
+        "title": "Sorteren",
+        "mode": "sort"
+      },
+      {
+        "id": "CP002-GAME-LISTEN",
+        "title": "Luisterspel",
+        "mode": "listen"
+      },
+      {
+        "id": "CP002-GAME-SEQUENCE",
+        "title": "Volgorde",
+        "mode": "sequence"
+      }
+    ],
+    "exerciseTypes": [
+      {
+        "id": "ALF-CMP-001",
+        "label": "Kijk- en luisterkaart",
+        "count": 138,
+        "modes": [
+          "image_word",
+          "word_audio"
+        ],
+        "examples": [
+          "Kijk. Luister."
+        ]
+      },
+      {
+        "id": "ALF-CMP-002",
+        "label": "Kiezen uit beeld, woord of zin",
+        "count": 80,
+        "modes": [
+          "mixed"
+        ],
+        "examples": [
+          "kaas",
+          "Luister. Kies het plaatje.",
+          "Luister. Kies het woord."
+        ]
+      },
+      {
+        "id": "ALF-CMP-003",
+        "label": "Klanken onderscheiden",
+        "count": 3,
+        "modes": [
+          "contrast"
+        ],
+        "examples": [
+          "Luister naar kaas. Welke klinker hoor je in het woord?",
+          "Luister naar boek. Welke klinker hoor je in het woord?",
+          "Luister naar vis. Welke klinker hoor je in het woord?"
+        ]
+      },
+      {
+        "id": "ALF-CMP-004",
+        "label": "Woord, beeld en audio koppelen",
+        "count": 10,
+        "modes": [
+          "word_image",
+          "audio_word"
+        ],
+        "examples": [
+          "Kies twee kaarten die bij elkaar horen."
+        ]
+      },
+      {
+        "id": "ALF-CMP-005",
+        "label": "Letters, klanken of woorden bouwen",
+        "count": 160,
+        "modes": [
+          "phoneme",
+          "letter",
+          "word"
+        ],
+        "examples": [
+          "Bouw het woord.",
+          "kaas",
+          "Zet de woorden op volgorde."
+        ]
+      },
+      {
+        "id": "ALF-CMP-006",
+        "label": "Typen en invullen",
+        "count": 64,
+        "modes": [
+          "word",
+          "phoneme",
+          "sentence"
+        ],
+        "examples": [
+          "Kijk. Typ het woord.",
+          "Luister. Typ het woord.",
+          "kaas"
+        ]
+      },
+      {
+        "id": "ALF-CMP-007",
+        "label": "Zin, tekst of gesprek lezen",
+        "count": 20,
+        "modes": [
+          "short_text"
+        ],
+        "examples": [
+          "Lees de tekst of luister."
+        ]
+      },
+      {
+        "id": "ALF-CMP-008",
+        "label": "Luistervraag beantwoorden",
+        "count": 12,
+        "modes": [
+          "audio_question"
+        ],
+        "examples": [
+          "Luister naar de vraag. Kies een antwoord."
+        ]
+      },
+      {
+        "id": "ALF-CMP-009",
+        "label": "Nazeggen, reageren en rollenspel",
+        "count": 108,
+        "modes": [
+          "repeat",
+          "roleplay"
+        ],
+        "examples": [
+          "Luister. Zeg het na.",
+          "Dit is kaas.",
+          "De kaas ligt op een bord."
+        ]
+      },
+      {
+        "id": "ALF-CMP-010",
+        "label": "Vrij schrijven",
+        "count": 8,
+        "modes": [
+          "digital"
+        ],
+        "examples": [
+          "Schrijf Elena een kort bericht. Vraag of je haar boek mag lenen.",
+          "Schrijf een briefje voor Youssef. Laat weten wat je wilt eten.",
+          "Vul een naamkaart voor de les in. Gebruik een verzonnen voornaam of je eigen voornaam."
+        ]
+      },
+      {
+        "id": "ALF-CMP-011",
+        "label": "Formulier invullen",
+        "count": 1,
+        "modes": [
+          "form"
+        ],
+        "examples": [
+          "Oefengegevens: naam Nora, bijeenkomst in lokaal 2, aantal personen 2."
+        ]
+      },
+      {
+        "id": "ALF-CMP-012",
+        "label": "Handschrift oefenen",
+        "count": 20,
+        "modes": [
+          "trace"
+        ],
+        "examples": [
+          "Schrijf het woord op papier. Je kunt ook typen."
+        ]
+      },
+      {
+        "id": "ALF-CMP-013",
+        "label": "Volgorde leggen",
+        "count": 1,
+        "modes": [
+          "sequence"
+        ],
+        "examples": [
+          "Leg de kaarten in de juiste volgorde."
+        ]
+      },
+      {
+        "id": "ALF-CMP-014",
+        "label": "Bingo en lotto",
+        "count": 3,
+        "modes": [
+          "word",
+          "image",
+          "lotto"
+        ],
+        "examples": [
+          "Luister en zoek het vak."
+        ]
+      },
+      {
+        "id": "ALF-CMP-015",
+        "label": "Memory, domino, zoeken en sorteren",
+        "count": 5,
+        "modes": [
+          "memory",
+          "find_word",
+          "domino",
+          "sort",
+          "listen"
+        ],
+        "examples": [
+          "Kies twee kaarten die bij elkaar horen.",
+          "Zoek hetzelfde woord.",
+          "Leg het woord bij het passende plaatje."
+        ]
+      },
+      {
+        "id": "ALF-CMP-016",
+        "label": "Woord- en oefenkaarten",
+        "count": 1,
+        "modes": [
+          "image_word"
+        ],
+        "examples": [
+          "Kijk naar de kaart. Draai hem daarna om."
+        ]
+      },
+      {
+        "id": "ALF-CMP-017",
+        "label": "Oefencheck en reflectie",
+        "count": 10,
+        "modes": [
+          "diagnostic_set",
+          "reflection_set"
+        ],
+        "examples": [
+          "Maak de oefencheck."
+        ]
+      },
+      {
+        "id": "ALF-CMP-018",
+        "label": "Aanbevolen extra route",
+        "count": 1,
+        "modes": [
+          "recommended_path"
+        ],
+        "examples": [
+          "Kies wat je extra wilt oefenen."
+        ]
+      }
+    ],
+    "scenes": [
+      {
+        "id": "CP002-SCENE-01",
+        "title": "Samen eten",
+        "description": "Nora en Youssef zitten schuin tegenover elkaar aan een keukentafel. Een bord met brood en kaas, een kom soep en een koek zijn afzonderlijk herkenbaar. Ze praten met elkaar; geen kijkersblik.",
+        "words": [
+          "kaas",
+          "soep",
+          "koek",
+          "zit"
+        ],
+        "image": "/package-media/cp002/cp002-scene-01.webp"
+      },
+      {
+        "id": "CP002-SCENE-02",
+        "title": "Avond in de tuin",
+        "description": "Elena staat in een eenvoudige tuin met een bloeiende plant. Ze kijkt omhoog naar een zichtbare maan boven het huis. Geen onnatuurlijke dag-en-nachtcombinatie.",
+        "words": [
+          "maan",
+          "bloem"
+        ],
+        "image": "/package-media/cp002/cp002-scene-02.webp"
+      },
+      {
+        "id": "CP002-SCENE-03",
+        "title": "Kennismaken in de les",
+        "description": "Nora en Elena stellen zich aan elkaar voor bij een lestafel. Nora wijst kort naar zichzelf terwijl zij met Elena spreekt. Er ligt een formulier naar de gebruiker gericht.",
+        "words": [
+          "naam",
+          "ik"
+        ],
+        "image": "/package-media/cp002/cp002-scene-03.webp"
+      },
+      {
+        "id": "CP002-SCENE-04",
+        "title": "Bij de kapper",
+        "description": "Youssef zit bij een kapper en kijkt naar zijn eigen spiegelbeeld. Haar, kin en lip zijn duidelijk te onderscheiden; de kapper richt aandacht op het haar.",
+        "words": [
+          "haar",
+          "kin",
+          "lip"
+        ],
+        "image": "/package-media/cp002/cp002-scene-04.webp"
+      },
+      {
+        "id": "CP002-SCENE-05",
+        "title": "Kleding klaarleggen",
+        "description": "Elena kiest thuis een bloes. Aan de muur zit een haak, op de vloer staan laarzen. De bloes wordt natuurlijk vastgehouden en is niet naar de kijker gepresenteerd.",
+        "words": [
+          "haak",
+          "laars",
+          "bloes"
+        ],
+        "image": "/package-media/cp002/cp002-scene-05.webp"
+      },
+      {
+        "id": "CP002-SCENE-06",
+        "title": "Een boek lenen",
+        "description": "Nora en een bibliotheekmedewerker praten bij een tafel. Een boek ligt naar Nora gericht; zij wijst naar het boek en de medewerker luistert.",
+        "words": [
+          "boek",
+          "zit"
+        ],
+        "image": "/package-media/cp002/cp002-scene-06.webp"
+      },
+      {
+        "id": "CP002-SCENE-07",
+        "title": "Op de boerderij",
+        "description": "Een koe graast achter een stevig hek. Verderop staat een kip bij haar hok. Beide dieren zijn herkenbaar en op geloofwaardige schaal.",
+        "words": [
+          "koe",
+          "kip"
+        ],
+        "image": "/package-media/cp002/cp002-scene-07.webp"
+      },
+      {
+        "id": "CP002-SCENE-08",
+        "title": "Een schoen passen",
+        "description": "Youssef zit en past een schoen. De andere voet draagt een sok. Zijn handen ondersteunen de schoen natuurlijk; geen anatomische onduidelijkheid.",
+        "words": [
+          "voet",
+          "laars"
+        ]
+      },
+      {
+        "id": "CP002-SCENE-09",
+        "title": "Een vraag in de apotheek",
+        "description": "Elena praat met een apotheekmedewerker. Op de balie ligt een neutrale medicijnverpakking met een blister naar de medewerker gericht. Geen leesbare dosering of merknaam.",
+        "words": [
+          "pil"
+        ]
+      },
+      {
+        "id": "CP002-SCENE-10",
+        "title": "Bij het aquarium",
+        "description": "Nora kijkt vanaf de zijkant naar een vis in een verzorgd aquarium. Vis, water en glas zijn duidelijk te onderscheiden. De vis wordt niet vastgehouden.",
+        "words": [
+          "vis"
+        ]
+      }
+    ],
+    "media": {
+      "imageAvailable": 32,
+      "imageExpected": 40,
+      "audioAvailable": 655,
+      "missing": [
+        "CP002-SCENE-06-V2",
+        "CP002-SCENE-07-V2",
+        "CP002-SCENE-08",
+        "CP002-SCENE-08-V2",
+        "CP002-SCENE-09",
+        "CP002-SCENE-09-V2",
+        "CP002-SCENE-10",
+        "CP002-SCENE-10-V2"
+      ],
+      "imageReview": "Menselijke beeldcontrole open",
+      "audioReview": "Luistercontrole open",
+      "publication": "INTERNAL_ONLY"
+    }
+  }
+]

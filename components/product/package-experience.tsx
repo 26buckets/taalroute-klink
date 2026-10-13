@@ -3,122 +3,62 @@
 import { Brand } from '@/components/product/shared';
 import {
   contentPackages,
-  levelLabels,
-  levelOrder,
-  type PackageEntry,
-  type PackageLevel,
+  getPackage,
+  type PackageDefinition,
+  type PackageId,
 } from '@/lib/package-content';
 import {
   ArrowLeft,
   ArrowRight,
-  AudioLines,
   BookOpen,
+  Bookmark,
+  BookmarkCheck,
   Check,
-  CheckCircle2,
-  Circle,
-  CircleHelp,
+  CircleAlert,
+  FileText,
+  Gamepad2,
+  Headphones,
+  Images,
+  Layers3,
+  LibraryBig,
   ListChecks,
-  LoaderCircle,
-  Mic2,
+  MessageCircle,
   PackageOpen,
-  RotateCcw,
+  Route,
+  Shapes,
   Volume2,
+  WholeWord,
 } from 'lucide-react';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
 
-type ContentItem = {
-  id: string;
-  kind: string;
-  title?: string;
-  targetText?: string;
-  displayText?: string;
-  sentenceSegments?: { id: string; text: string }[];
-};
+type PackageTab =
+  | 'overview'
+  | 'words'
+  | 'lessons'
+  | 'practice'
+  | 'texts'
+  | 'dialogues'
+  | 'media';
 
-type ContentOption = {
-  id: string;
-  text: string;
-  correct?: boolean;
-  feedbackId?: string;
-  feedback?: { text?: string };
-};
+const tabLabels: { id: PackageTab; label: string; icon: typeof BookOpen }[] = [
+  { id: 'overview', label: 'Overzicht', icon: Layers3 },
+  { id: 'words', label: 'Woorden', icon: WholeWord },
+  { id: 'lessons', label: 'Lessen', icon: Route },
+  { id: 'practice', label: 'Oefeningen', icon: Shapes },
+  { id: 'texts', label: 'Teksten', icon: FileText },
+  { id: 'dialogues', label: 'Gesprekken', icon: MessageCircle },
+  { id: 'media', label: 'Beeld en audio', icon: Images },
+];
 
-type CriteriaFeedback = {
-  index: number;
-  criterion: string;
-  metFeedbackId?: string;
-  needsWorkFeedbackId?: string;
-};
-
-type ContentExercise = {
-  id: string;
-  exerciseTypeId:
-    | 'TE-01'
-    | 'TE-02'
-    | 'TE-03'
-    | 'WO-02'
-    | 'SP-01'
-    | 'SC-01'
-    | 'SC-02';
-  instruction: { targetText: string; targetAudioId?: string };
-  help?: { text?: string; audioId?: string };
-  options?: ContentOption[];
-  tiles?: string[];
-  answer?: string | string[];
-  criteria?: string[];
-  example?: string;
-  feedback?: {
-    after_marked_done?: { text?: string };
-    when_correct?: { text?: string };
-    when_incorrect?: { text?: string };
-    when_criteria_met?: { text?: string };
-    when_criteria_missing?: { text?: string };
-    continueFeedbackId?: string;
-    afterHelpSuccessFeedbackId?: string;
-    permutationFeedback?: { source_indices: number[]; feedbackId: string }[];
-    criteriaFeedback?: CriteriaFeedback[];
-    allCriteriaMetFeedbackId?: string;
-  };
-};
-
-type ContentPack = {
-  pack: {
-    id: string;
-    title: string;
-    level: PackageLevel;
-    objective?: string;
-    support?: string;
-  };
-  items: ContentItem[];
-  exerciseInstances: ContentExercise[];
-};
-
-type FeedbackRecord = {
-  id: string;
-  displayText: string;
-  correct?: boolean | null;
-};
-
-type FeedbackState = {
-  tone: 'idle' | 'right' | 'wrong';
-  title: string;
-  text: string;
-};
-
-const activityLabels: Record<ContentExercise['exerciseTypeId'], string> = {
-  'TE-01': 'Lezen',
-  'TE-02': 'Koppelen',
-  'TE-03': 'Volgorde',
-  'WO-02': 'Woord herkennen',
-  'SP-01': 'Nazeggen',
-  'SC-01': 'Schrijven',
-  'SC-02': 'Schrijven',
-};
-
-const idleFeedback: FeedbackState = {
-  tone: 'idle',
-  title: 'Neem de tijd',
-  text: 'Lees rustig. Gebruik de hulp als je die nodig hebt.',
+const stepLabels: Record<string, string> = {
+  start: 'Start',
+  kijk: 'Kijken',
+  kies: 'Kiezen',
+  klank: 'Klank',
+  bouw: 'Bouwen',
+  doe: 'Doen',
+  meer: 'Meer oefenen',
 };
 
 export function PackageLibrary({
@@ -126,35 +66,21 @@ export function PackageLibrary({
   onOpen,
 }: {
   onBack: () => void;
-  onOpen: (entry: PackageEntry) => void;
+  onOpen: (packageId: PackageId) => void;
 }) {
-  const [packageId, setPackageId] = useState<'1' | '2'>('1');
-  const currentPackage =
-    contentPackages.find((item) => item.id === packageId) ?? contentPackages[0];
-  const availableLevels = levelOrder.filter((level) =>
-    currentPackage.entries.some((entry) => entry.level === level),
-  );
-  const [level, setLevel] = useState<PackageLevel>(availableLevels[0]);
-  const currentLevel = availableLevels.includes(level)
-    ? level
-    : availableLevels[0];
-  const entries = currentPackage.entries.filter(
-    (entry) => entry.level === currentLevel,
-  );
-
   return (
-    <div className="learner-page package-library-page">
+    <div className="learner-page package-library-page cp-library-page">
       <button className="text-back" onClick={onBack}>
         <ArrowLeft />
         Terug naar home
       </button>
       <header className="package-library-heading">
         <div>
-          <span className="eyebrow">Klink leespakketten</span>
-          <h1>Lees, oefen en gebruik de tekst</h1>
+          <span className="eyebrow">Klink · Alfabeta+</span>
+          <h1>Kies een contentpakket</h1>
           <p>
-            De inhoud staat los van de speler. Zo blijft elk pakket herkenbaar
-            en kan de vorm rustig meegroeien.
+            CP betekent contentpakket. Elk pakket bevat woorden, lessen,
+            oefeningen, teksten, gesprekken, beelden en audio.
           </p>
         </div>
         <div className="klink-cycle" aria-label="De vijf stappen van Klink">
@@ -169,685 +95,332 @@ export function PackageLibrary({
         </div>
       </header>
 
-      <section className="package-switcher" aria-label="Kies een pakket">
-        {contentPackages.map((item) => (
-          <button
-            key={item.id}
-            className={item.id === packageId ? 'active' : ''}
-            onClick={() => {
-              setPackageId(item.id);
-              setLevel('ALFA_A');
-            }}
-          >
-            <span className="package-number">
+      <section className="cp-package-grid" aria-label="Beschikbare contentpakketten">
+        {contentPackages.map((pack, index) => (
+          <button key={pack.id} onClick={() => onOpen(pack.id)}>
+            <span className="cp-package-cover">
               <PackageOpen />
-              {item.id}
+              <strong>{pack.id}</strong>
+              <small>{index === 0 ? 'Eerst bekijken' : 'Tweede pakket'}</small>
             </span>
-            <span>
-              <strong>{item.title}</strong>
-              <small>{item.subtitle}</small>
-              <em>{item.summary}</em>
+            <span className="cp-package-copy">
+              <span className="prototype-label">{pack.status}</span>
+              <strong>{pack.title}</strong>
+              <em>{pack.subtitle}</em>
+              <span className="cp-package-stats">
+                <small>{pack.counts.lessons} lessen</small>
+                <small>{pack.counts.coreWords} kernwoorden</small>
+                <small>{pack.counts.exercises} oefeningen</small>
+                <small>{pack.counts.images} beelden</small>
+              </span>
             </span>
-            {item.id === packageId ? <CheckCircle2 /> : <ArrowRight />}
+            <ArrowRight />
           </button>
         ))}
       </section>
 
-      <section className="package-browser">
-        <header>
-          <div>
-            <span className="eyebrow">Niveau</span>
-            <h2>{currentPackage.title}</h2>
-          </div>
-          <span className="prototype-label">Proefomgeving</span>
-        </header>
-        <div className="package-levels" role="tablist" aria-label="Niveaus">
-          {availableLevels.map((item) => (
-            <button
-              key={item}
-              role="tab"
-              aria-selected={currentLevel === item}
-              className={currentLevel === item ? 'active' : ''}
-              onClick={() => setLevel(item)}
-            >
-              {levelLabels[item]}
-              <small>
-                {
-                  currentPackage.entries.filter((entry) => entry.level === item)
-                    .length
-                }
-              </small>
-            </button>
+      <section className="cp-roadmap" aria-label="Geplande contentpakketten">
+        <div>
+          <span className="eyebrow">Reeks</span>
+          <h2>De structuur loopt door tot CP016</h2>
+          <p>CP001 en CP002 zijn nu zichtbaar. Dezelfde indeling kan daarna per pakket worden gevuld.</p>
+        </div>
+        <div>
+          {Array.from({ length: 14 }, (_, index) => (
+            <span key={index}>CP{String(index + 3).padStart(3, '0')}</span>
           ))}
         </div>
-        <div className="package-text-grid">
-          {entries.map((entry, index) => (
-            <button
-              key={`${entry.packageId}-${entry.id}`}
-              onClick={() => onOpen(entry)}
-            >
-              <span className="text-card-index">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span className="text-card-copy">
-                <small>{levelLabels[entry.level]} · 8 activiteiten</small>
-                <strong>{entry.title}</strong>
-                <em>
-                  {entry.pilot
-                    ? 'Aparte B1-pilotbank'
-                    : 'Lezen, vragen, volgorde, spreken en schrijven'}
-                </em>
-              </span>
-              <ArrowRight />
-            </button>
-          ))}
-        </div>
-        {packageId === '2' && currentLevel === 'B1' && (
-          <p className="pilot-note">
-            <CircleHelp />
-            Deze B1-tekst is een aparte pilotbank en hoort niet formeel bij
-            Pakket 2.
-          </p>
-        )}
       </section>
     </div>
   );
 }
 
 export function PackagePlayer({
-  entry,
+  packageId,
   onClose,
+  savedWordIds,
+  onToggleWord,
   onToast,
 }: {
-  entry: PackageEntry;
+  packageId: PackageId;
   onClose: () => void;
+  savedWordIds: string[];
+  onToggleWord: (wordId: string) => void;
   onToast: (message: string) => void;
 }) {
-  const [pack, setPack] = useState<ContentPack | null>(null);
-  const [feedbackBank, setFeedbackBank] = useState<FeedbackRecord[]>([]);
-  const [loadError, setLoadError] = useState('');
-  const [activityIndex, setActivityIndex] = useState(0);
-  const [complete, setComplete] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('');
-  const [sequence, setSequence] = useState<string[]>([]);
-  const [draft, setDraft] = useState('');
-  const [criteriaChecks, setCriteriaChecks] = useState<boolean[]>([]);
-  const [feedback, setFeedback] = useState<FeedbackState>(idleFeedback);
-  const [helpShown, setHelpShown] = useState(false);
-  const [helpCount, setHelpCount] = useState(0);
-  const startedAt = useRef(0);
+  const pack = getPackage(packageId);
+  const [tab, setTab] = useState<PackageTab>('overview');
 
-  useEffect(() => {
-    let active = true;
-    Promise.all([
-      fetch(entry.path).then(async (response) => {
-        if (!response.ok) throw new Error('Pakket kon niet worden geladen.');
-        return (await response.json()) as ContentPack;
-      }),
-      entry.feedbackPath
-        ? fetch(entry.feedbackPath).then(async (response) =>
-            response.ok ? ((await response.json()) as FeedbackRecord[]) : [],
-          )
-        : Promise.resolve([] as FeedbackRecord[]),
-    ])
-      .then(([loadedPack, loadedFeedback]) => {
-        if (!active) return;
-        setPack(loadedPack);
-        setFeedbackBank(loadedFeedback);
-        startedAt.current = Date.now();
-      })
-      .catch((error: unknown) => {
-        if (active)
-          setLoadError(
-            error instanceof Error
-              ? error.message
-              : 'Pakket kon niet worden geladen.',
-          );
-      });
-    return () => {
-      active = false;
-    };
-  }, [entry]);
-
-  const activity = pack?.exerciseInstances[activityIndex];
-  const story = pack?.items.find((item) => item.kind === 'text');
-  const feedbackById = useMemo(
-    () => new Map(feedbackBank.map((item) => [item.id, item])),
-    [feedbackBank],
-  );
-
-  function resetActivity(nextActivity?: ContentExercise) {
-    setSelectedOption('');
-    setSequence([]);
-    setDraft('');
-    setCriteriaChecks(
-      (
-        nextActivity?.criteria ??
-        nextActivity?.feedback?.criteriaFeedback?.map(
-          (item) => item.criterion,
-        ) ??
-        []
-      ).map(() => false),
-    );
-    setFeedback(idleFeedback);
-    setHelpShown(false);
-    setHelpCount(0);
-    startedAt.current = Date.now();
-  }
-
-  function unavailableAudio() {
+  function audioStatus() {
     onToast(
-      'De audioteksten zijn voorbereid, maar de audio is nog niet vrijgegeven.',
+      `${pack.id}: ${pack.counts.audio} audiobestanden zijn aanwezig, maar de luistercontrole is nog open.`,
     );
   }
-
-  function resolveFeedback(id?: string) {
-    return id ? feedbackById.get(id)?.displayText : undefined;
-  }
-
-  function saveAttempt(answer: string, isCorrect: boolean) {
-    if (!pack || !activity) return;
-    void fetch('/api/attempts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        exerciseId: activity.id,
-        skillKey: `${pack.pack.id}.${activity.exerciseTypeId.toLowerCase()}`,
-        answer,
-        isCorrect,
-        helpCount,
-        responseMs: Date.now() - startedAt.current,
-      }),
-    }).catch(() => undefined);
-  }
-
-  function checkChoice() {
-    if (!activity || !selectedOption) return;
-    const option = activity.options?.find((item) => item.id === selectedOption);
-    const correct = option?.correct ?? selectedOption === activity.answer;
-    const text =
-      option?.feedback?.text ??
-      resolveFeedback(option?.feedbackId) ??
-      (correct
-        ? 'Goed gelezen. Dit antwoord past bij de tekst.'
-        : 'Dit antwoord past niet bij de tekst. Lees nog eens en probeer opnieuw.');
-    saveAttempt(option?.text ?? selectedOption, correct);
-    setFeedback({
-      tone: correct ? 'right' : 'wrong',
-      title: correct ? 'Goed gelezen' : 'Kijk nog een keer',
-      text,
-    });
-  }
-
-  function checkSequence() {
-    if (!activity || !Array.isArray(activity.answer)) return;
-    const correct = activity.answer.every(
-      (item, index) => sequence[index] === item,
-    );
-    let text = correct
-      ? activity.feedback?.when_correct?.text
-      : activity.feedback?.when_incorrect?.text;
-    if (!text && activity.feedback?.permutationFeedback) {
-      const indices = sequence.map(
-        (item) => activity.answer?.indexOf(item) ?? -1,
-      );
-      const feedbackId = activity.feedback.permutationFeedback.find((item) =>
-        item.source_indices.every(
-          (index, position) => indices[position] === index,
-        ),
-      )?.feedbackId;
-      text = resolveFeedback(feedbackId);
-    }
-    if (correct && helpShown)
-      text =
-        resolveFeedback(activity.feedback?.afterHelpSuccessFeedbackId) ?? text;
-    text ??= correct
-      ? 'De zinnen staan in dezelfde volgorde als in de tekst.'
-      : 'De volgorde klopt nog niet. Zoek de zinnen terug in de tekst.';
-    saveAttempt(sequence.join(' | '), correct);
-    setFeedback({
-      tone: correct ? 'right' : 'wrong',
-      title: correct ? 'Goede volgorde' : 'Probeer opnieuw',
-      text,
-    });
-  }
-
-  function checkCriteria() {
-    if (!activity) return;
-    const criteria =
-      activity.criteria ??
-      activity.feedback?.criteriaFeedback?.map((item) => item.criterion) ??
-      [];
-    const correct = criteria.length > 0 && criteriaChecks.every(Boolean);
-    let text = correct
-      ? activity.feedback?.when_criteria_met?.text
-      : activity.feedback?.when_criteria_missing?.text;
-    if (!text && correct)
-      text = resolveFeedback(activity.feedback?.allCriteriaMetFeedbackId);
-    if (!text && !correct) {
-      const firstMissing = activity.feedback?.criteriaFeedback?.find(
-        (_, index) => !criteriaChecks[index],
-      );
-      text = resolveFeedback(firstMissing?.needsWorkFeedbackId);
-    }
-    text ??= correct
-      ? 'Je hebt alle punten gecontroleerd. Je kunt verder.'
-      : 'Controleer de punten nog eens. Pas je antwoord aan als dat nodig is.';
-    setFeedback({
-      tone: correct ? 'right' : 'wrong',
-      title: correct ? 'Zelf gecontroleerd' : 'Kijk nog een keer',
-      text,
-    });
-  }
-
-  function markReadingDone() {
-    if (!activity) return;
-    const text =
-      activity.feedback?.after_marked_done?.text ??
-      resolveFeedback(activity.feedback?.continueFeedbackId) ??
-      'Je bent klaar met de tekst. Nu kun je de vragen maken.';
-    setFeedback({ tone: 'right', title: 'Tekst gelezen', text });
-  }
-
-  function checkActivity() {
-    if (!activity) return;
-    if (activity.exerciseTypeId === 'TE-01') return markReadingDone();
-    if (
-      activity.exerciseTypeId === 'TE-02' ||
-      activity.exerciseTypeId === 'WO-02'
-    )
-      return checkChoice();
-    if (activity.exerciseTypeId === 'TE-03') return checkSequence();
-    checkCriteria();
-  }
-
-  function nextActivity() {
-    if (!pack) return;
-    if (activityIndex === pack.exerciseInstances.length - 1) {
-      setComplete(true);
-      return;
-    }
-    const nextIndex = activityIndex + 1;
-    resetActivity(pack.exerciseInstances[nextIndex]);
-    setActivityIndex(nextIndex);
-  }
-
-  function addSequenceItem(item: string) {
-    if (feedback.tone === 'right' || sequence.includes(item)) return;
-    setSequence((current) => [...current, item]);
-    if (feedback.tone === 'wrong') setFeedback(idleFeedback);
-  }
-
-  function removeSequenceItem(item: string) {
-    if (feedback.tone === 'right') return;
-    setSequence((current) => current.filter((entry) => entry !== item));
-    if (feedback.tone === 'wrong') setFeedback(idleFeedback);
-  }
-
-  if (loadError) {
-    return (
-      <div className="package-loading">
-        <CircleHelp />
-        <h1>Dit pakket kon niet open</h1>
-        <p>{loadError}</p>
-        <button className="primary-button" onClick={onClose}>
-          Terug naar pakketten
-        </button>
-      </div>
-    );
-  }
-
-  if (!pack || !activity || !story) {
-    return (
-      <div className="package-loading">
-        <LoaderCircle className="spin" />
-        <strong>Pakket laden…</strong>
-      </div>
-    );
-  }
-
-  if (complete) {
-    return (
-      <div className="package-complete">
-        <div>
-          <CheckCircle2 />
-        </div>
-        <span className="eyebrow">8 van 8 activiteiten</span>
-        <h1>{pack.pack.title} is doorlopen</h1>
-        <p>
-          Je hebt gelezen, gekoppeld, geordend, gesproken en geschreven. Dit is
-          een oefenresultaat, geen formele niveaubeoordeling.
-        </p>
-        <div className="package-complete-actions">
-          <button
-            className="secondary-button"
-            onClick={() => {
-              resetActivity(pack.exerciseInstances[0]);
-              setComplete(false);
-              setActivityIndex(0);
-            }}
-          >
-            <RotateCcw />
-            Nog een keer
-          </button>
-          <button className="primary-button" onClick={onClose}>
-            Kies een andere tekst
-            <ArrowRight />
-          </button>
-        </div>
-      </div>
-    );
-  }
-
-  const progress = ((activityIndex + 1) / pack.exerciseInstances.length) * 100;
-  const criteria =
-    activity.criteria ??
-    activity.feedback?.criteriaFeedback?.map((item) => item.criterion) ??
-    [];
-  const isChoice =
-    activity.exerciseTypeId === 'TE-02' || activity.exerciseTypeId === 'WO-02';
-  const isSequence = activity.exerciseTypeId === 'TE-03';
-  const isSpeaking = activity.exerciseTypeId === 'SP-01';
-  const isWriting =
-    activity.exerciseTypeId === 'SC-01' || activity.exerciseTypeId === 'SC-02';
-  const canCheck =
-    activity.exerciseTypeId === 'TE-01' ||
-    (isChoice && Boolean(selectedOption)) ||
-    (isSequence && sequence.length === (activity.tiles?.length ?? 0)) ||
-    isSpeaking ||
-    (isWriting && draft.trim().length > 0);
 
   return (
-    <div className="package-player">
-      <header className="package-player-header">
-        <button onClick={onClose} aria-label="Sluit deze tekst">
-          <ArrowLeft />
-        </button>
+    <div className="cp-player">
+      <header className="cp-player-bar">
+        <button onClick={onClose} aria-label="Terug naar pakketten"><ArrowLeft /></button>
         <Brand dark />
-        <div className="package-player-title">
-          <span>
-            {entry.packageId === '1'
-              ? 'Pakket 1'
-              : entry.pilot
-                ? 'Pakket 2 · B1-pilot'
-                : 'Pakket 2'}{' '}
-            · {levelLabels[pack.pack.level]}
-          </span>
-          <strong>{pack.pack.title}</strong>
+        <div>
+          <span>{pack.id} · {pack.level}</span>
+          <strong>{pack.title}</strong>
         </div>
-        <button onClick={unavailableAudio}>
-          <Volume2 />
-          <span>Luister</span>
-        </button>
+        <span className="prototype-label">{pack.status}</span>
       </header>
-      <div className="package-player-progress">
-        <span style={{ width: `${progress}%` }} />
-      </div>
 
-      <main className="package-player-workspace">
-        <aside className="package-story-panel">
-          <header>
-            <BookOpen />
-            <span>
-              <small>TEKST</small>
-              <strong>{story.title ?? pack.pack.title}</strong>
-            </span>
-          </header>
-          <div className="package-story-copy">
-            {(story.sentenceSegments?.length
-              ? story.sentenceSegments.map((item) => item.text)
-              : splitSentences(story.displayText ?? story.targetText ?? '')
-            ).map((sentence, index) => (
-              <p key={`${index}-${sentence}`}>{sentence}</p>
-            ))}
-          </div>
-          <footer>
-            <span>{levelLabels[pack.pack.level]}</span>
-            <small>De tekst blijft tijdens de oefeningen zichtbaar.</small>
-          </footer>
-        </aside>
-
-        <section className="package-activity-panel">
-          <header className="package-instruction">
-            <button
-              onClick={unavailableAudio}
-              aria-label="Luister naar de opdracht"
-            >
-              <AudioLines />
+      <nav className="cp-tabs" aria-label={`${pack.id} onderdelen`}>
+        {tabLabels.map((item) => {
+          const Icon = item.icon;
+          return (
+            <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => setTab(item.id)}>
+              <Icon />
+              <span>{item.label}</span>
             </button>
-            <div>
-              <span>
-                {activityLabels[activity.exerciseTypeId]} · activiteit{' '}
-                {activityIndex + 1} van {pack.exerciseInstances.length}
-              </span>
-              <h1>{activity.instruction.targetText}</h1>
-            </div>
-          </header>
+          );
+        })}
+      </nav>
 
-          <div className="package-activity-canvas">
-            {activity.exerciseTypeId === 'TE-01' && (
-              <div className="reading-activity">
-                <BookOpen />
-                <strong>{story.title ?? pack.pack.title}</strong>
-                <p>
-                  Lees de tekst links rustig door. Je mag iedere zin opnieuw
-                  lezen.
-                </p>
-                <button className="secondary-button" onClick={unavailableAudio}>
-                  <Volume2 />
-                  Audio volgt na vrijgave
-                </button>
-              </div>
-            )}
-
-            {isChoice && (
-              <div
-                className={`package-options ${activity.exerciseTypeId === 'WO-02' ? 'words' : ''}`}
-              >
-                {activity.options?.map((option) => (
-                  <button
-                    key={option.id}
-                    className={selectedOption === option.id ? 'selected' : ''}
-                    disabled={feedback.tone === 'right'}
-                    onClick={() => {
-                      setSelectedOption(option.id);
-                      if (feedback.tone === 'wrong') setFeedback(idleFeedback);
-                    }}
-                  >
-                    <span>
-                      {selectedOption === option.id ? (
-                        <Check />
-                      ) : (
-                        option.id.replace(/\D/g, '') || '•'
-                      )}
-                    </span>
-                    <strong>{option.text}</strong>
-                  </button>
-                ))}
-              </div>
-            )}
-
-            {isSequence && (
-              <div className="sequence-activity">
-                <div className="sequence-chosen">
-                  <small>Jouw volgorde</small>
-                  {sequence.length === 0 && (
-                    <p>Tik hieronder op de zin die eerst komt.</p>
-                  )}
-                  {sequence.map((item, index) => (
-                    <button key={item} onClick={() => removeSequenceItem(item)}>
-                      <span>{index + 1}</span>
-                      {item}
-                    </button>
-                  ))}
-                </div>
-                <div className="sequence-source">
-                  <small>Nog kiezen</small>
-                  {activity.tiles
-                    ?.filter((item) => !sequence.includes(item))
-                    .map((item) => (
-                      <button key={item} onClick={() => addSequenceItem(item)}>
-                        {item}
-                        <ArrowRight />
-                      </button>
-                    ))}
-                </div>
-              </div>
-            )}
-
-            {isSpeaking && (
-              <div className="criteria-activity speaking">
-                <span className="criteria-icon">
-                  <Mic2 />
-                </span>
-                <h2>Zeg je antwoord hardop</h2>
-                <p>
-                  Opnemen wordt pas aangezet wanneer de audio en opnamefunctie
-                  zijn vrijgegeven. Controleer je antwoord nu zelf.
-                </p>
-                <CriteriaList
-                  criteria={criteria}
-                  checks={criteriaChecks}
-                  setChecks={setCriteriaChecks}
-                  disabled={feedback.tone === 'right'}
-                />
-              </div>
-            )}
-
-            {isWriting && (
-              <div className="criteria-activity writing">
-                <label>
-                  Jouw antwoord
-                  <textarea
-                    value={draft}
-                    disabled={feedback.tone === 'right'}
-                    onChange={(event) => {
-                      setDraft(event.target.value);
-                      if (feedback.tone === 'wrong') setFeedback(idleFeedback);
-                    }}
-                    placeholder="Schrijf hier…"
-                  />
-                </label>
-                <CriteriaList
-                  criteria={criteria}
-                  checks={criteriaChecks}
-                  setChecks={setCriteriaChecks}
-                  disabled={feedback.tone === 'right'}
-                />
-              </div>
-            )}
-
-            {helpShown && (
-              <aside className="package-help-card">
-                <CircleHelp />
-                <div>
-                  <strong>Hulp</strong>
-                  <p>
-                    {activity.help?.text ??
-                      'Lees de tekst nog eens en kijk wat de opdracht precies vraagt.'}
-                  </p>
-                  {activity.example && (
-                    <p>
-                      <b>Voorbeeld:</b> {activity.example}
-                    </p>
-                  )}
-                </div>
-              </aside>
-            )}
-          </div>
-        </section>
+      <main className="cp-content">
+        {tab === 'overview' && <PackageOverview pack={pack} onTab={setTab} />}
+        {tab === 'words' && (
+          <PackageWords
+            pack={pack}
+            savedWordIds={savedWordIds}
+            onToggleWord={onToggleWord}
+            onAudio={audioStatus}
+          />
+        )}
+        {tab === 'lessons' && <PackageLessons pack={pack} />}
+        {tab === 'practice' && <PackagePractice pack={pack} />}
+        {tab === 'texts' && <PackageTexts pack={pack} />}
+        {tab === 'dialogues' && <PackageDialogues pack={pack} />}
+        {tab === 'media' && <PackageMedia pack={pack} onAudio={audioStatus} />}
       </main>
-
-      <footer className={`package-player-footer ${feedback.tone}`}>
-        <div className="package-feedback-icon">
-          {feedback.tone === 'right' ? (
-            <Check />
-          ) : feedback.tone === 'wrong' ? (
-            <RotateCcw />
-          ) : (
-            <Circle />
-          )}
-        </div>
-        <div className="package-feedback-copy">
-          <strong>{feedback.title}</strong>
-          <small>{feedback.text}</small>
-        </div>
-        {feedback.tone !== 'right' && (
-          <button
-            className="secondary-button"
-            onClick={() => {
-              setHelpShown(true);
-              setHelpCount((value) => value + 1);
-            }}
-          >
-            <CircleHelp />
-            Hulp
-          </button>
-        )}
-        {feedback.tone === 'right' ? (
-          <button className="success-button" onClick={nextActivity}>
-            {activityIndex === pack.exerciseInstances.length - 1
-              ? 'Afronden'
-              : 'Verder'}
-            <ArrowRight />
-          </button>
-        ) : (
-          <button
-            className="primary-button"
-            disabled={!canCheck}
-            onClick={checkActivity}
-          >
-            <ListChecks />
-            {activity.exerciseTypeId === 'TE-01'
-              ? 'Tekst gelezen'
-              : 'Controleer'}
-          </button>
-        )}
-      </footer>
     </div>
   );
 }
 
-function CriteriaList({
-  criteria,
-  checks,
-  setChecks,
-  disabled,
-}: {
-  criteria: string[];
-  checks: boolean[];
-  setChecks: (checks: boolean[]) => void;
-  disabled: boolean;
-}) {
+function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab: PackageTab) => void }) {
   return (
-    <div className="criteria-list">
-      <small>Controleer jezelf</small>
-      {criteria.map((criterion, index) => (
-        <button
-          key={criterion}
-          className={checks[index] ? 'checked' : ''}
-          disabled={disabled}
-          onClick={() =>
-            setChecks(
-              checks.map((value, itemIndex) =>
-                itemIndex === index ? !value : value,
-              ),
-            )
-          }
-        >
-          <span>{checks[index] ? <Check /> : <Circle />}</span>
-          {criterion}
-        </button>
-      ))}
+    <div className="cp-overview">
+      <section className="cp-hero">
+        <div>
+          <span className="eyebrow light">{pack.id}</span>
+          <h1>{pack.title}</h1>
+          <p>{pack.description}</p>
+          <div className="cp-hero-actions">
+            <button className="accent-button" onClick={() => onTab('lessons')}>Bekijk de lessen<ArrowRight /></button>
+            <button className="dark-secondary-button" onClick={() => onTab('words')}>Bekijk alle woorden</button>
+          </div>
+        </div>
+        <div className="cp-count-grid">
+          <Count value={pack.counts.lessons} label="lessen" />
+          <Count value={pack.counts.coreWords} label="kernwoorden" />
+          <Count value={pack.counts.exercises} label="oefeningen" />
+          <Count value={pack.counts.texts} label="teksten" />
+          <Count value={pack.counts.dialogues} label="gesprekken" />
+          <Count value={pack.counts.games} label="spellen" />
+        </div>
+      </section>
+
+      <section className="cp-status-note">
+        <CircleAlert />
+        <div>
+          <strong>Wat je hier ziet</strong>
+          <p>{pack.statusNote} Daarom is dit een inhoudelijke voorvertoning en nog geen vrijgegeven cursistenpakket.</p>
+        </div>
+        <button onClick={() => onTab('media')}>Bekijk mediastatus</button>
+      </section>
+
+      <section className="cp-section-heading">
+        <div><span className="eyebrow">Opbouw</span><h2>Wat zit er in {pack.id}?</h2></div>
+      </section>
+      <section className="cp-overview-cards">
+        <OverviewCard icon={Route} value={pack.counts.lessons} title="Lessen" text="Een vaste route van kijken en kiezen naar bouwen, doen en meer oefenen." onClick={() => onTab('lessons')} />
+        <OverviewCard icon={WholeWord} value={pack.words.length} title="Woorden zichtbaar" text={`${pack.counts.coreWords} kernwoorden${pack.id === 'CP001' ? ' plus de startwoorden pen en boek' : ''}.`} onClick={() => onTab('words')} />
+        <OverviewCard icon={Shapes} value={pack.counts.exercises} title="Oefenrecords" text={`${pack.counts.exerciseTypes} verschillende componentfamilies in de bron.`} onClick={() => onTab('practice')} />
+        <OverviewCard icon={FileText} value={pack.counts.texts} title="Teksten" text="Korte begeleide teksten en contextteksten met groei in taalgebruik." onClick={() => onTab('texts')} />
+        <OverviewCard icon={MessageCircle} value={pack.counts.dialogues} title="Gesprekken" text="Dialogen met rollen, doel en beurtwisseling." onClick={() => onTab('dialogues')} />
+        <OverviewCard icon={Images} value={pack.counts.images} title="Beelden" text={`${pack.scenes.filter((scene) => scene.image).length} scènebeelden zijn direct zichtbaar in deze proef.`} onClick={() => onTab('media')} />
+      </section>
     </div>
   );
 }
 
-function splitSentences(text: string) {
+function Count({ value, label }: { value: number; label: string }) {
+  return <span><strong>{value}</strong><small>{label}</small></span>;
+}
+
+function OverviewCard({ icon: Icon, value, title, text, onClick }: { icon: typeof Route; value: number; title: string; text: string; onClick: () => void }) {
+  return <button onClick={onClick}><span><Icon /></span><div><small>{value}</small><strong>{title}</strong><p>{text}</p></div><ArrowRight /></button>;
+}
+
+function PackageWords({ pack, savedWordIds, onToggleWord, onAudio }: { pack: PackageDefinition; savedWordIds: string[]; onToggleWord: (wordId: string) => void; onAudio: () => void }) {
   return (
-    text
-      .match(/[^.!?]+[.!?]+|[^.!?]+$/g)
-      ?.map((sentence) => sentence.trim())
-      .filter(Boolean) ?? [text]
+    <section className="cp-panel">
+      <header className="cp-panel-heading">
+        <div><span className="eyebrow">{pack.id} · woorden</span><h1>Alle woorden uit dit pakket</h1><p>Beeld, woordvorm en klankopbouw staan bij elkaar. Audio staat zichtbaar op slot tot de luistercontrole klaar is.</p></div>
+        <span className="cp-panel-count"><strong>{pack.words.length}</strong><small>zichtbare woorden</small></span>
+      </header>
+      <div className="cp-word-grid">
+        {pack.words.map((word) => {
+          const saved = savedWordIds.includes(`${pack.id}:${word.id}`);
+          return (
+            <article key={word.id}>
+              <div className="cp-word-image">
+                {word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span>{word.word.slice(0, 1)}</span>}
+              </div>
+              <div className="cp-word-copy">
+                <small>{word.group.replace('-', ' ')}</small>
+                <strong>{word.word}</strong>
+                <span>{word.segmentation.replaceAll('|', ' · ')}</span>
+              </div>
+              <button className="cp-audio-button" onClick={onAudio} aria-label={`Audiostatus van ${word.word}`}><Volume2 /></button>
+              <button className={`cp-save-button ${saved ? 'saved' : ''}`} onClick={() => onToggleWord(`${pack.id}:${word.id}`)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+function PackageLessons({ pack }: { pack: PackageDefinition }) {
+  return (
+    <section className="cp-panel">
+      <header className="cp-panel-heading">
+        <div><span className="eyebrow">{pack.id} · lessen</span><h1>Zo is het pakket verdeeld</h1><p>Elke les laat vooraf zien welke woorden en stappen erbij horen.</p></div>
+        <span className="cp-panel-count"><strong>{pack.lessons.length}</strong><small>lessen</small></span>
+      </header>
+      <div className="cp-lesson-list">
+        {pack.lessons.map((lesson, index) => (
+          <article key={lesson.id}>
+            <span className="cp-lesson-number">{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <small>{lesson.id}</small>
+              <h2>{lesson.title}</h2>
+              <p>{lesson.scope}</p>
+              <div className="cp-word-chips">{lesson.words.map((word) => <span key={word}>{word}</span>)}</div>
+            </div>
+            <ol aria-label={`Stappen van ${lesson.title}`}>
+              {lesson.steps.map((step, stepIndex) => <li key={step}><span>{stepIndex + 1}</span>{stepLabels[step] ?? step}</li>)}
+            </ol>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function PackagePractice({ pack }: { pack: PackageDefinition }) {
+  const cycle = [
+    ['K', 'Kijken', 'beeld en woord herkennen'],
+    ['L', 'Luisteren', 'klanken en woorden onderscheiden'],
+    ['I', 'Inoefenen', 'bouwen, typen, schrijven en herhalen'],
+    ['N', 'Nazeggen', 'model beluisteren, spreken en terugluisteren'],
+    ['K', 'Koppelen', 'woord, zin, tekst en gesprek verbinden'],
+  ];
+  return (
+    <section className="cp-panel">
+      <header className="cp-panel-heading">
+        <div><span className="eyebrow">{pack.id} · oefenbank</span><h1>{pack.counts.exercises} oefeningen in {pack.counts.exerciseTypes} vormen</h1><p>De broninhoud is aanwezig. Deze proef toont de indeling; nog niet alle oefenrecords hebben hier al een werkende speler.</p></div>
+        <span className="cp-panel-count"><strong>{pack.counts.exerciseTypes}</strong><small>componentfamilies</small></span>
+      </header>
+      <div className="cp-cycle-list">
+        {cycle.map(([letter, title, text]) => <article key={`${letter}-${title}`}><span>{letter}</span><div><strong>{title}</strong><p>{text}</p></div><Check /></article>)}
+      </div>
+      <section className="cp-activity-atlas">
+        <header>
+          <div><span className="eyebrow">Activiteitenkaart</span><h2>Alle {pack.exerciseTypes.length} kleine activiteitsoorten</h2></div>
+          <p>Het getal rechts is het aantal concrete oefeningen van dat type in {pack.id}.</p>
+        </header>
+        <div>
+          {pack.exerciseTypes.map((exercise, index) => (
+            <article key={exercise.id}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <small>{exercise.id}</small>
+                <strong>{exercise.label}</strong>
+                <em>{exercise.examples.join(' · ')}</em>
+              </div>
+              <b>{exercise.count}</b>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="cp-games">
+        <header><Gamepad2 /><div><span className="eyebrow">Spellen</span><h2>{pack.games.length} spelvormen</h2></div></header>
+        <div>{pack.games.map((game) => <span key={game.id}>{game.title}</span>)}</div>
+      </section>
+      <p className="cp-honesty-line"><CircleAlert />De telling komt uit de canonieke pakketbron; “geladen” betekent hier dat de inhoud inspecteerbaar is, niet dat alle {pack.counts.exercises} oefeningen al interactief werken.</p>
+    </section>
+  );
+}
+
+function PackageTexts({ pack }: { pack: PackageDefinition }) {
+  return (
+    <section className="cp-panel">
+      <header className="cp-panel-heading">
+        <div><span className="eyebrow">{pack.id} · teksten</span><h1>{pack.texts.length} teksten om te bekijken</h1><p>Open een tekst om de volledige inhoud en, waar aanwezig, de begripsvraag te zien.</p></div>
+        <span className="cp-panel-count"><strong>{pack.texts.length}</strong><small>teksten</small></span>
+      </header>
+      <div className="cp-reading-list">
+        {pack.texts.map((text, index) => (
+          <details key={text.id} open={index === 0}>
+            <summary><span>{String(index + 1).padStart(2, '0')}</span><div><small>{text.level.replaceAll('_', ' ')}</small><strong>{text.title}</strong></div><ArrowRight /></summary>
+            <div className="cp-reading-copy"><p>{text.text}</p>{text.question && <aside><strong>{text.question}</strong><span>Antwoord: {text.answer}</span></aside>}</div>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function PackageDialogues({ pack }: { pack: PackageDefinition }) {
+  return (
+    <section className="cp-panel">
+      <header className="cp-panel-heading">
+        <div><span className="eyebrow">{pack.id} · gesprekken</span><h1>{pack.dialogues.length} dialogen met rollen</h1><p>De rollen en beurten blijven samen zichtbaar, zodat duidelijk is wie tegen wie praat.</p></div>
+        <span className="cp-panel-count"><strong>{pack.dialogues.length}</strong><small>gesprekken</small></span>
+      </header>
+      <div className="cp-dialogue-grid">
+        {pack.dialogues.map((dialogue) => (
+          <article key={dialogue.id}>
+            <header><MessageCircle /><div><small>{dialogue.level}</small><h2>{dialogue.title}</h2></div></header>
+            <div>{dialogue.turns.map((turn, index) => <p key={`${turn.speaker}-${index}`}><strong>{turn.speaker}</strong><span>{turn.text}</span></p>)}</div>
+            <footer><ListChecks /><span>{dialogue.goal}</span></footer>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function PackageMedia({ pack, onAudio }: { pack: PackageDefinition; onAudio: () => void }) {
+  return (
+    <section className="cp-panel">
+      <header className="cp-panel-heading">
+        <div><span className="eyebrow">{pack.id} · beeld en audio</span><h1>Wat is aanwezig en wat staat nog open?</h1><p>De app maakt hier geen “klaar”-claim van zolang menselijke controles niet zijn afgerond.</p></div>
+        <span className="cp-panel-count"><strong>{pack.media.imageAvailable}</strong><small>beelden aanwezig</small></span>
+      </header>
+      <div className="cp-media-status">
+        <article><Images /><div><small>Beeld</small><strong>{pack.media.imageAvailable} van {pack.media.imageExpected} bindingen aanwezig</strong><p>{pack.media.imageReview}</p></div></article>
+        <button onClick={onAudio}><Headphones /><div><small>Audio</small><strong>{pack.media.audioAvailable} bestanden aanwezig</strong><p>{pack.media.audioReview}</p></div><ArrowRight /></button>
+        <article><LibraryBig /><div><small>Vrijgave</small><strong>{pack.status}</strong><p>{pack.media.publication === 'INTERNAL_ONLY' ? 'Alleen als interne voorvertoning behandelen.' : pack.media.publication}</p></div></article>
+      </div>
+      {pack.media.missing.length > 0 && <p className="cp-honesty-line"><CircleAlert />Ontbrekende scènebindingen: {pack.media.missing.join(', ')}.</p>}
+      <section className="cp-scene-gallery">
+        <header><div><span className="eyebrow">Scènes</span><h2>{pack.scenes.filter((scene) => scene.image).length} beelden zichtbaar</h2></div></header>
+        <div>
+          {pack.scenes.map((scene) => (
+            <article key={scene.id} className={!scene.image ? 'missing' : ''}>
+              {scene.image ? <Image src={scene.image} alt={scene.description ?? scene.title} width={760} height={760} /> : <span><Images /><small>Beeld nog niet aanwezig</small></span>}
+              <div><small>{scene.id}</small><strong>{scene.title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </section>
   );
 }

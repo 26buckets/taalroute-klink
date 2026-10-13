@@ -12,11 +12,17 @@ De naam staat voor de vijf leerhandelingen:
 
 ## Inhoud
 
-- Pakket 1: zeven teksten, van Alfa A tot en met B1
-- Pakket 2: vier teksten per route tot en met A2
-- B1 bij Pakket 2: zichtbaar als aparte pilotbank
+- CP001: 2 lessen, 20 kernwoorden, 542 oefeningen, 12 teksten en 8 dialogen
+- CP002: 4 lessen, 20 kernwoorden, 645 oefeningen, 12 teksten en 8 dialogen
+- De pakketbrowser is voorbereid op uitbreiding van CP003 tot en met CP016
 
-Iedere tekst bevat acht activiteiten voor lezen, tekstbegrip, woordherkenning, volgorde, spreken en schrijven. De audioteksten zijn voorbereid, maar audio wordt pas aangezet na vrijgave.
+Beide pakketten gebruiken 18 componentfamilies, waaronder kijken en luisteren, kiezen, klankcontrast, koppelen, bouwen, typen, lezen, luistervragen, nazeggen, schrijven, formulieren, handschrift, volgorde en spellen. De pakketmedia blijven als interne proef gemarkeerd zolang menselijke beeld-, luister- en runtimecontroles openstaan.
+
+De afgeleide pakketgegevens en compacte webbeelden worden opnieuw opgebouwd met:
+
+```bash
+node scripts/build-package-catalog.mjs
+```
 
 ## Lokale preview
 
