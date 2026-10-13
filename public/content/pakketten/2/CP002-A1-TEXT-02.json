@@ -1,0 +1,751 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-A1-TEXT-02",
+    "title": "Een halve koek",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A1",
+    "objectiveIds": [
+      "CP002-A1-TEXT-02-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A1-TEXT-02",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-05",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A1"
+    }
+  },
+  "learning": {
+    "oral_goal": "Eén geheel, twee helften en de ontvangers onderscheiden.",
+    "support": "Bereid helft en halve samen voor; één krijgt nadruk op het aantal. Geen mes of snijden veronderstellen.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-A1-TEXT-02-TEXT",
+      "kind": "text",
+      "title": "Een halve koek",
+      "targetText": "Er ligt één koek op het bord. Nora wil de koek delen. Zij geeft de helft aan Youssef. De andere helft eet zij zelf.",
+      "displayText": "Er ligt één koek op het bord. Nora wil de koek delen. Zij geeft de helft aan Youssef. De andere helft eet zij zelf.",
+      "script_sha256": "a2e3b9bd293b805066f9a954a168195e324e6cf11539d1f5b161ea169ee83941",
+      "audio": {
+        "normal": "PREP-target_narration-a2e3b9bd293b805066f9"
+      },
+      "titleAudioId": "PREP-target_narration-019de0b876ac43f9557c",
+      "imageId": "CP002-A1-TEXT-02-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-A1-TEXT-02-TEXT-SEG-01",
+          "text": "Er ligt één koek op het bord.",
+          "start": 0,
+          "end": 29,
+          "audioId": "PREP-target_narration-9d7366a2bc28086d696e",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1-TEXT-02-TEXT-SEG-02",
+          "text": "Nora wil de koek delen.",
+          "start": 30,
+          "end": 53,
+          "audioId": "PREP-target_narration-42cdd7c0222ff23eea0b",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1-TEXT-02-TEXT-SEG-03",
+          "text": "Zij geeft de helft aan Youssef.",
+          "start": 54,
+          "end": 85,
+          "audioId": "PREP-target_narration-a01919283fa08b41229c",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1-TEXT-02-TEXT-SEG-04",
+          "text": "De andere helft eet zij zelf.",
+          "start": 86,
+          "end": 115,
+          "audioId": "PREP-target_narration-44fe8f74dadea002e3df",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-A1-TEXT-02-SENT-01",
+      "kind": "sentence",
+      "targetText": "Er ligt één koek op het bord.",
+      "displayText": "Er ligt één koek op het bord.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-05"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-9d7366a2bc28086d696e"
+      },
+      "imageId": "CP002-A1-TEXT-02-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-A1-TEXT-02-SENT-02",
+      "kind": "sentence",
+      "targetText": "Nora wil de koek delen.",
+      "displayText": "Nora wil de koek delen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-05"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-42cdd7c0222ff23eea0b"
+      },
+      "imageId": "CP002-A1-TEXT-02-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-A1-TEXT-02-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora geeft een halve koek aan Youssef.",
+      "displayText": "Nora geeft een halve koek aan Youssef.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-f5fe28001165f526ab9f"
+      },
+      "imageId": "CP002-A1-TEXT-02-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-A1-TEXT-02-SENT-04",
+      "kind": "sentence",
+      "targetText": "Youssef krijgt de helft van de koek.",
+      "displayText": "Youssef krijgt de helft van de koek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-78505d0f8c47e075e022"
+      },
+      "imageId": "CP002-A1-TEXT-02-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-A1-TEXT-02-SENT-05",
+      "kind": "sentence",
+      "targetText": "Nora eet de andere helft van de koek.",
+      "displayText": "Nora eet de andere helft van de koek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-a23311059abbbb9aaf90"
+      },
+      "imageId": "CP002-A1-TEXT-02-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-A1-TEXT-02-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT",
+        "CP002-A1-TEXT-02-SENT-01",
+        "CP002-A1-TEXT-02-SENT-02",
+        "CP002-A1-TEXT-02-SENT-03",
+        "CP002-A1-TEXT-02-SENT-04",
+        "CP002-A1-TEXT-02-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-A1-TEXT-02-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-A1-TEXT-02-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat krijgt Youssef?",
+        "targetAudioId": "PREP-instruction_support-23a8686b7c86e75053d8"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Youssef krijgt een hele koek.",
+          "audioId": "OPT-REV-153fd08e54d477e15b789e6b",
+          "correct": false,
+          "feedbackId": "CP002-A1-TEXT-02-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Youssef krijgt een stuk kaas.",
+          "audioId": "OPT-REV-c2f7ba7ba36e939d05206b15",
+          "correct": false,
+          "feedbackId": "CP002-A1-TEXT-02-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Youssef krijgt een halve koek.",
+          "audioId": "OPT-REV-48378bbcaf299ea881918de0",
+          "correct": true,
+          "feedbackId": "CP002-A1-TEXT-02-EX-02-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Zij geeft de helft aan Youssef.",
+        "start": 54,
+        "end": 85,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Helft is halve koek; hele koek verandert hoeveelheid, kaas verandert product.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-A1-TEXT-02-EX-02-FB-O2",
+          "O3": "CP002-A1-TEXT-02-EX-02-FB-O3",
+          "O1": "CP002-A1-TEXT-02-EX-02-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1-TEXT-02-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Hoeveel koeken liggen er aan het begin op het bord?",
+        "targetAudioId": "PREP-instruction_support-962daae8da18b4ea1bd6"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Er liggen drie koeken.",
+          "audioId": "PREP-target_narration-1e42aecdbf9992843075",
+          "correct": false,
+          "feedbackId": "CP002-A1-TEXT-02-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Er ligt één koek.",
+          "audioId": "PREP-target_narration-114e9aaa4333acce1d6a",
+          "correct": true,
+          "feedbackId": "CP002-A1-TEXT-02-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Er liggen twee koeken.",
+          "audioId": "PREP-target_narration-afbfdd4aeba85e1b9569",
+          "correct": false,
+          "feedbackId": "CP002-A1-TEXT-02-EX-03-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Er ligt één koek op het bord.",
+        "start": 0,
+        "end": 29,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Één is expliciet; twee en drie veranderen het aantal.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-A1-TEXT-02-EX-03-FB-O3",
+          "O1": "CP002-A1-TEXT-02-EX-03-FB-O1",
+          "O2": "CP002-A1-TEXT-02-EX-03-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1-TEXT-02-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie eet de andere helft?",
+        "targetAudioId": "PREP-instruction_support-cb50729febb5653a30fd"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Nora eet de andere helft.",
+          "audioId": "PREP-target_narration-c8915a820bccca368aca",
+          "correct": true,
+          "feedbackId": "CP002-A1-TEXT-02-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Youssef eet de andere helft.",
+          "audioId": "PREP-target_narration-637ba4e1bf42474f3df7",
+          "correct": false,
+          "feedbackId": "CP002-A1-TEXT-02-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena eet de andere helft.",
+          "audioId": "PREP-target_narration-93631ca67332fcb7c83f",
+          "correct": false,
+          "feedbackId": "CP002-A1-TEXT-02-EX-04-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De andere helft eet zij zelf.",
+        "start": 86,
+        "end": 115,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Zij is Nora; Youssef is ontvanger, Elena komt niet voor.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-A1-TEXT-02-EX-04-FB-O1",
+          "O2": "CP002-A1-TEXT-02-EX-04-FB-O2",
+          "O3": "CP002-A1-TEXT-02-EX-04-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1-TEXT-02-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent delen in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-ca8520ce4dc6a7c55cfb"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W2",
+          "text": "Nora eet de hele koek alleen op.",
+          "correct": false,
+          "audioId": "PREP-target_narration-2aac7cf370296b69fb0a",
+          "feedbackId": "CP002-A1-TEXT-02-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "Nora bewaart de hele koek voor later.",
+          "correct": false,
+          "audioId": "PREP-target_narration-06df6df651577c383be9",
+          "feedbackId": "CP002-A1-TEXT-02-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "Nora geeft een deel van de koek aan Youssef.",
+          "correct": true,
+          "audioId": "PREP-target_narration-82935bbbaed8ce37c7b0",
+          "feedbackId": "CP002-A1-TEXT-02-EX-05-FB-W1"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W2": "CP002-A1-TEXT-02-EX-05-FB-W2",
+          "W3": "CP002-A1-TEXT-02-EX-05-FB-W3",
+          "W1": "CP002-A1-TEXT-02-EX-05-FB-W1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1-TEXT-02-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Zij geeft de helft aan Youssef.",
+        "De andere helft eet zij zelf.",
+        "Nora wil de koek delen."
+      ],
+      "answer": [
+        "Nora wil de koek delen.",
+        "Zij geeft de helft aan Youssef.",
+        "De andere helft eet zij zelf."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-a01919283fa08b41229c",
+        "PREP-target_narration-44fe8f74dadea002e3df",
+        "PREP-target_narration-42cdd7c0222ff23eea0b"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1-TEXT-02-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je hebt één koek en wilt die delen. Vraag een ander of die een halve koek wil.",
+        "targetAudioId": "PREP-instruction_support-e4c90a9e803891c2202e"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Wil je een halve koek?",
+      "criteria": [
+        "Je biedt een halve koek aan.",
+        "Je stelt een begrijpelijke vraag."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-d727dce3f4304b540a35",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-29b190c67837ba92dca6",
+        "PREP-instruction_support-df7fb48abe4d151dfc16"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je biedt een halve koek aan.",
+            "metFeedbackId": "CP002-A1-TEXT-02-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A1-TEXT-02-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je stelt een begrijpelijke vraag.",
+            "metFeedbackId": "CP002-A1-TEXT-02-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A1-TEXT-02-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A1-TEXT-02-EX-07-FB-ALL-MET",
+        "example": "Wil je een halve koek?",
+        "exampleAudioId": "PREP-target_narration-d727dce3f4304b540a35",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A1-TEXT-02-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1-TEXT-02-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-A1-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf aan Nora dat je graag een halve koek wilt.",
+        "targetAudioId": "PREP-instruction_support-c7e40cf12435a7503aef"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik wil graag een halve koek.",
+      "criteria": [
+        "Je zegt dat je een halve koek wilt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-46e16dc6ec6de2215604",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-29f0d2bc5c45ed5b05f9"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je zegt dat je een halve koek wilt.",
+            "metFeedbackId": "CP002-A1-TEXT-02-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A1-TEXT-02-EX-08-FB-CR-01-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A1-TEXT-02-EX-08-FB-ALL-MET",
+        "example": "Ik wil graag een halve koek.",
+        "exampleAudioId": "PREP-target_narration-46e16dc6ec6de2215604",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A1-TEXT-02-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

@@ -1,0 +1,760 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_A-TEXT-03",
+    "title": "De kip",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_A",
+    "objectiveIds": [
+      "CP002-ALFA_A-TEXT-03-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_A-TEXT-03",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-04",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "guided"
+    }
+  },
+  "learning": {
+    "oral_goal": "Kip en koe met hun plaats verbinden.",
+    "support": "Bereid hok, gras en kijkt naar met betekenissteun voor. Kip en koe hebben verschillende klinkers. Ordening betreft tekstvolgorde, niet de tijdvolgorde van gelijktijdige waarnemingen.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_A-TEXT-03-TEXT",
+      "kind": "text",
+      "title": "De kip",
+      "targetText": "De kip staat bij het hok. De koe staat in het gras. Nora kijkt naar de kip.",
+      "displayText": "De kip staat bij het hok. De koe staat in het gras. Nora kijkt naar de kip.",
+      "script_sha256": "87949d31e014838183e07a31fcea2f4b021ecb8a87428e559e2a28fe9edeea0c",
+      "audio": {
+        "normal": "PREP-target_narration-87949d31e014838183e0"
+      },
+      "titleAudioId": "PREP-target_narration-21eb45a4da070f7a346a",
+      "imageId": "CP002-ALFA_A-TEXT-03-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_A-TEXT-03-TEXT-SEG-01",
+          "text": "De kip staat bij het hok.",
+          "start": 0,
+          "end": 25,
+          "audioId": "PREP-target_narration-16cf270450f1905f765c",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_A-TEXT-03-TEXT-SEG-02",
+          "text": "De koe staat in het gras.",
+          "start": 26,
+          "end": 51,
+          "audioId": "PREP-target_narration-8d0a402470d6dd4bb875",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_A-TEXT-03-TEXT-SEG-03",
+          "text": "Nora kijkt naar de kip.",
+          "start": 52,
+          "end": 75,
+          "audioId": "PREP-target_narration-d2eeb4cf270947e3b876",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-SENT-01",
+      "kind": "sentence",
+      "targetText": "De kip staat bij het hok.",
+      "displayText": "De kip staat bij het hok.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/14/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-16cf270450f1905f765c"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-03-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-SENT-02",
+      "kind": "sentence",
+      "targetText": "De koe staat in het gras.",
+      "displayText": "De koe staat in het gras.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/8/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-8d0a402470d6dd4bb875"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-03-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora kijkt naar de kip.",
+      "displayText": "Nora kijkt naar de kip.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-04"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-d2eeb4cf270947e3b876"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-03-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-SENT-04",
+      "kind": "sentence",
+      "targetText": "De kip pikt in het zand.",
+      "displayText": "De kip pikt in het zand.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/14/5"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-f1e1acc0eab9d5767456"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-03-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-SENT-05",
+      "kind": "sentence",
+      "targetText": "De koe eet gras.",
+      "displayText": "De koe eet gras.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/8/5"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-eed05c935221f76a5190"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-03-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT",
+        "CP002-ALFA_A-TEXT-03-SENT-01",
+        "CP002-ALFA_A-TEXT-03-SENT-02",
+        "CP002-ALFA_A-TEXT-03-SENT-03",
+        "CP002-ALFA_A-TEXT-03-SENT-04",
+        "CP002-ALFA_A-TEXT-03-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_A-TEXT-03-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_A-TEXT-03-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar staat de kip?",
+        "targetAudioId": "PREP-instruction_support-8fd77e078235388aec98"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De kip staat in het water.",
+          "audioId": "OPT-REV-d3bbdef8c67bdf7c68063db9",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De kip staat bij het hok.",
+          "audioId": "PREP-target_narration-16cf270450f1905f765c",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De kip staat in het gras.",
+          "audioId": "OPT-REV-14a5cf2a509adb3f4b42049b",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-02-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De kip staat bij het hok.",
+        "start": 0,
+        "end": 25,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Hok hoort bij kip; gras bij koe; water is niet genoemd.",
+      "help": {
+        "text": "Zoek de zin over de kip.",
+        "audioId": "HELP-REV-a31edfdedc7830b354b63d11"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_A-TEXT-03-EX-02-FB-O3",
+          "O1": "CP002-ALFA_A-TEXT-03-EX-02-FB-O1",
+          "O2": "CP002-ALFA_A-TEXT-03-EX-02-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-03-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar staat de koe?",
+        "targetAudioId": "PREP-instruction_support-2143aaeadc75248c2b64"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "De koe staat in het gras.",
+          "audioId": "PREP-target_narration-8d0a402470d6dd4bb875",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De koe staat in het water.",
+          "audioId": "PREP-target_narration-611e1586bcd88bffb933",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De koe staat op de weg.",
+          "audioId": "PREP-target_narration-e9ef47a077dddb2da31e",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-03-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De koe staat in het gras.",
+        "start": 26,
+        "end": 51,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Gras hoort bij koe; water en weg zijn andere plaatsen.",
+      "help": {
+        "text": "Zoek de zin over de koe.",
+        "audioId": "HELP-REV-aafe49a41376f27f81cbefa1"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_A-TEXT-03-EX-03-FB-O1",
+          "O2": "CP002-ALFA_A-TEXT-03-EX-03-FB-O2",
+          "O3": "CP002-ALFA_A-TEXT-03-EX-03-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-03-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Naar welk dier kijkt Nora?",
+        "targetAudioId": "PREP-instruction_support-36f66f441f01dbfc0a98"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Nora kijkt naar de koe.",
+          "audioId": "PREP-target_narration-d3290571e4306608e579",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Nora kijkt naar de vis.",
+          "audioId": "PREP-target_narration-28448e72db90925453d8",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora kijkt naar de kip.",
+          "audioId": "PREP-target_narration-d2eeb4cf270947e3b876",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-04-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora kijkt naar de kip.",
+        "start": 52,
+        "end": 75,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Kijkt naar de kip is letterlijk; koe en vis verwisselen het dier.",
+      "help": {
+        "text": "Zoek de zin met Nora.",
+        "audioId": "HELP-REV-64a4020555bd3d3bc354d94d"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_A-TEXT-03-EX-04-FB-O2",
+          "O3": "CP002-ALFA_A-TEXT-03-EX-04-FB-O3",
+          "O1": "CP002-ALFA_A-TEXT-03-EX-04-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-03-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord kip.",
+        "targetAudioId": "PREP-instruction_support-2c14829c0c8522592036"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W3",
+          "text": "kin",
+          "correct": false,
+          "audioId": "PREP-target_narration-c1d6b0ba57d78fec8689",
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "kip",
+          "correct": true,
+          "audioId": "PREP-target_narration-7797a2701fdb8aaa9fdc",
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "lip",
+          "correct": false,
+          "audioId": "PREP-target_narration-8ac1ef5381caf75418d7",
+          "feedbackId": "CP002-ALFA_A-TEXT-03-EX-05-FB-W2"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Woordvorm herkennen aan het verschil in letters; geen betekenis- of luistertoets.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W3": "CP002-ALFA_A-TEXT-03-EX-05-FB-W3",
+          "W1": "CP002-ALFA_A-TEXT-03-EX-05-FB-W1",
+          "W2": "CP002-ALFA_A-TEXT-03-EX-05-FB-W2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-03-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "De koe staat in het gras.",
+        "Nora kijkt naar de kip.",
+        "De kip staat bij het hok."
+      ],
+      "answer": [
+        "De kip staat bij het hok.",
+        "De koe staat in het gras.",
+        "Nora kijkt naar de kip."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-8d0a402470d6dd4bb875",
+        "PREP-target_narration-d2eeb4cf270947e3b876",
+        "PREP-target_narration-16cf270450f1905f765c"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-03-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zeg naar welk dier Nora kijkt.",
+        "targetAudioId": "PREP-instruction_support-29bef398957503eb8602"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Nora kijkt naar de kip.",
+      "criteria": [
+        "Je noemt Nora.",
+        "Je zegt dat Nora naar de kip kijkt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-d2eeb4cf270947e3b876",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-a6c07f2f906d4f45a396",
+        "PREP-instruction_support-b38e0677779644dd2756"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt Nora.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-03-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-03-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat Nora naar de kip kijkt.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-03-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-03-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-03-EX-07-FB-ALL-MET",
+        "example": "Nora kijkt naar de kip.",
+        "exampleAudioId": "PREP-target_narration-d2eeb4cf270947e3b876",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-03-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-03-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: De kip staat bij het hok.",
+        "targetAudioId": "PREP-instruction_support-6ea1811d662b01647f72"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "De kip staat bij het hok.",
+      "criteria": [
+        "Je schrijft de hele voorbeeldzin over.",
+        "Hok staat aan het einde."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-16cf270450f1905f765c",
+      "criteriaAudioIds": [
+        "HELP-REV-a960c390278c4c17f8fe1778",
+        "PREP-instruction_support-e540a9384fd08693bb90"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je schrijft de hele voorbeeldzin over.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-03-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-03-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Hok staat aan het einde.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-03-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-03-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-03-EX-08-FB-ALL-MET",
+        "example": "De kip staat bij het hok.",
+        "exampleAudioId": "PREP-target_narration-16cf270450f1905f765c",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": true,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-03-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

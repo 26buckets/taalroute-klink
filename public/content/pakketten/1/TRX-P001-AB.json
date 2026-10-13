@@ -1,0 +1,809 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-AB",
+    "title": "Nora leest",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_B",
+    "objectiveIds": [
+      "TRX-P001-AB-GOAL"
+    ],
+    "objective": "Een persoon, een voorwerp en een eenvoudige reeks handelingen volgen.",
+    "status": "concept",
+    "owner": "taalroute",
+    "version": 1,
+    "source_package": "CP002",
+    "theme": "boeken-lenen-en-gebruiken",
+    "support": "Nora en Elena zijn de bestaande CP002-personen. Bereid namen, raam en terug voor; bied korte regels en herhaald luisteren aan.",
+    "voice_policy": "Instructie/steun en doeltaal hebben verschillende exacte voice-IDs; geen generatie in deze fase."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-AB-TEXT",
+      "kind": "text",
+      "targetText": "Nora heeft een boek van Elena. Ze zit bij het raam. Ze leest in het boek. Daarna geeft Nora het boek terug.",
+      "displayText": "Nora heeft een boek van Elena. Ze zit bij het raam. Ze leest in het boek. Daarna geeft Nora het boek terug.",
+      "title": "Nora leest",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-7e4418b8b8bed5b3d773"
+      },
+      "titleAudioId": "AUD-PREP-target_narration-6b07aca6bacff740652c",
+      "imageId": "TRX-P001-AB-IMG-STORY",
+      "script_sha256": "7e4418b8b8bed5b3d773d481a60f38b733169827d85cc43bfae949bd667ee29c",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN",
+      "sentenceSegments": [
+        {
+          "id": "TRX-P001-AB-TEXT-S01",
+          "text": "Nora heeft een boek van Elena.",
+          "audioId": "AUD-PREP-target_narration-ad674b701830c82cc432",
+          "story_context_required": true,
+          "parent_text_sha256": "7e4418b8b8bed5b3d773d481a60f38b733169827d85cc43bfae949bd667ee29c",
+          "imageBriefId": "TRX-P001-AB-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-AB-TEXT-S02",
+          "text": "Ze zit bij het raam.",
+          "audioId": "AUD-PREP-target_narration-3735338f821e030f73c5",
+          "story_context_required": true,
+          "parent_text_sha256": "7e4418b8b8bed5b3d773d481a60f38b733169827d85cc43bfae949bd667ee29c",
+          "imageBriefId": "TRX-P001-AB-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-AB-TEXT-S03",
+          "text": "Ze leest in het boek.",
+          "audioId": "AUD-PREP-target_narration-ce82fbc8a451ab928d39",
+          "story_context_required": true,
+          "parent_text_sha256": "7e4418b8b8bed5b3d773d481a60f38b733169827d85cc43bfae949bd667ee29c",
+          "imageBriefId": "TRX-P001-AB-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-AB-TEXT-S04",
+          "text": "Daarna geeft Nora het boek terug.",
+          "audioId": "AUD-PREP-target_narration-866e9f6270a5c2e25b0d",
+          "story_context_required": true,
+          "parent_text_sha256": "7e4418b8b8bed5b3d773d481a60f38b733169827d85cc43bfae949bd667ee29c",
+          "imageBriefId": "TRX-P001-AB-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-AB-SENT-01",
+      "kind": "sentence",
+      "targetText": "Nora heeft een boek van Elena.",
+      "displayText": "Nora heeft een boek van Elena.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-ad674b701830c82cc432"
+      },
+      "imageId": "TRX-P001-AB-IMG-SENT-01",
+      "script_sha256": "ad674b701830c82cc432d7945566eabe076f7c189f3db41e06c8ca9adefbe52f",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AB-SENT-02",
+      "kind": "sentence",
+      "targetText": "Het boek is van Elena.",
+      "displayText": "Het boek is van Elena.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-fb5f579fcf70fdfd2b7b"
+      },
+      "imageId": "TRX-P001-AB-IMG-SENT-02",
+      "script_sha256": "fb5f579fcf70fdfd2b7b7a0c6453e6c9275a2905582182a6edab3609618bb967",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AB-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora zit bij het raam.",
+      "displayText": "Nora zit bij het raam.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-5c44148fe7bb9b81ab8e"
+      },
+      "imageId": "TRX-P001-AB-IMG-SENT-03",
+      "script_sha256": "5c44148fe7bb9b81ab8e9943b9db27f01130c73ebcc8aff11f89db512129afcc",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AB-SENT-04",
+      "kind": "sentence",
+      "targetText": "Nora leest in het boek.",
+      "displayText": "Nora leest in het boek.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-71f5d29aeb9dbe3520c1"
+      },
+      "imageId": "TRX-P001-AB-IMG-SENT-04",
+      "script_sha256": "71f5d29aeb9dbe3520c1ad7e3e951b9a744e788f34a6c8c442ec0d06869662e4",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AB-SENT-05",
+      "kind": "sentence",
+      "targetText": "Nora geeft het boek terug.",
+      "displayText": "Nora geeft het boek terug.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-c8762c057f47e472e174"
+      },
+      "imageId": "TRX-P001-AB-IMG-SENT-05",
+      "script_sha256": "c8762c057f47e472e17468b7e00f0cce2682caa484cd28a0dbfc5359de05f011",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AB-WORD-01",
+      "kind": "word",
+      "targetText": "boek",
+      "displayText": "boek",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-2afcca9e14eade2e0af6"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AB-WORD-02",
+      "kind": "word",
+      "targetText": "raam",
+      "displayText": "raam",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-149a5a5e93ae05e6aa75"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AB-WORD-03",
+      "kind": "word",
+      "targetText": "leest",
+      "displayText": "leest",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-532472d37d14805ea1ab"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AB-WORD-04",
+      "kind": "word",
+      "targetText": "terug",
+      "displayText": "terug",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-a4109b92c3639bcca4ec"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AB-WORD-05",
+      "kind": "word",
+      "targetText": "van",
+      "displayText": "van",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-970b1897af0abab6127d"
+      },
+      "preteach": true,
+      "meaning_note": null
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-AB-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Lees of luister naar het verhaal. Je mag het nog eens lezen of beluisteren.",
+        "targetAudioId": "AUD-PREP-instruction_support-14599e937022f2f833cf"
+      },
+      "help": {
+        "text": "Lees de tekst. Je mag hem nog eens lezen of beluisteren.",
+        "audioId": "AUD-PREP-instruction_support-a35418e6f59fde36af66"
+      },
+      "feedback": {
+        "mode": "participation_only",
+        "automatic_correctness": false,
+        "after_marked_done": {
+          "text": "Je bent klaar met de tekst. Nu kun je de vragen maken.",
+          "audioId": "AUD-PREP-instruction_support-1dd256fb2d459290cad3"
+        },
+        "condition": "Alleen nadat de cursist lezen of luisteren zelf heeft afgerond; geen begrip of beheersing afleiden."
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AB-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "mode": "supported_reading",
+      "assessment": false,
+      "adaptation": "Patroon aangepast aan dit leerprofiel; geen getoetste rendererclaim."
+    },
+    {
+      "id": "TRX-P001-AB-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Van wie is het boek?",
+        "targetAudioId": "AUD-PREP-instruction_support-802918970fbb7bc7208e"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AB-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Nora heeft een boek van Elena.",
+      "evidenceAudioId": "AUD-PREP-target_narration-ad674b701830c82cc432",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Het boek is van Youssef.",
+          "audioId": "AUD-PREP-target_narration-a93daedc472edace9165",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niets over Youssef. Het boek is van Elena.",
+            "audioId": "AUD-PREP-instruction_support-893457a2d07ae49a87d6",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Het boek is van Elena.",
+          "audioId": "AUD-PREP-target_narration-fb5f579fcf70fdfd2b7b",
+          "correct": true,
+          "feedback": {
+            "text": "Goed gezien. Het boek is van Elena. Nora leest erin.",
+            "audioId": "AUD-PREP-instruction_support-3d0347da9d9b28f09507",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Het boek is van Elena. Nora leest erin.",
+              "audioId": "AUD-PREP-instruction_support-2707c68cdd0e55fe19cb"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Het boek is van Nora.",
+          "audioId": "AUD-PREP-target_narration-d68b93e7b478be4386f8",
+          "correct": false,
+          "feedback": {
+            "text": "Nora leest in het boek. Het boek is van Elena.",
+            "audioId": "AUD-PREP-instruction_support-72764fc59fb486bb6c6f",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-AB-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar zit Nora?",
+        "targetAudioId": "AUD-PREP-instruction_support-7e1dd359069306e25b67"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AB-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Ze zit bij het raam.",
+      "evidenceAudioId": "AUD-PREP-target_narration-3735338f821e030f73c5",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Nora zit bij het raam.",
+          "audioId": "AUD-PREP-target_narration-5c44148fe7bb9b81ab8e",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Nora zit bij het raam.",
+            "audioId": "AUD-PREP-instruction_support-dbfa674f59cd97260351",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Nora zit bij het raam.",
+              "audioId": "AUD-PREP-instruction_support-e6b942a177b8191d0c6f"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Nora zit bij de deur.",
+          "audioId": "AUD-PREP-target_narration-fed01e717a3201c6ec2a",
+          "correct": false,
+          "feedback": {
+            "text": "Nora zit bij het raam. Ze zit niet bij de deur.",
+            "audioId": "AUD-PREP-instruction_support-f74b7e78b26dceae4daa",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Nora zit bij de kast.",
+          "audioId": "AUD-PREP-target_narration-ef4cefe327c87a07ffde",
+          "correct": false,
+          "feedback": {
+            "text": "Nora zit bij het raam. Ze zit niet bij de kast.",
+            "audioId": "AUD-PREP-instruction_support-d175a57fcf5995ef07c6",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-AB-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doet Nora na het lezen?",
+        "targetAudioId": "AUD-PREP-instruction_support-2ee987650555387383a3"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AB-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Daarna geeft Nora het boek terug.",
+      "evidenceAudioId": "AUD-PREP-target_narration-866e9f6270a5c2e25b0d",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Nora neemt het boek mee.",
+          "audioId": "AUD-PREP-target_narration-b8bd12479ee9b3d94a59",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat Nora het boek meeneemt. Ze geeft het terug.",
+            "audioId": "AUD-PREP-instruction_support-8cd55ba99758430be8dc",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Nora legt het boek weg.",
+          "audioId": "AUD-PREP-target_narration-7107c4fd122e2bed6351",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat Nora het boek weglegt. Ze geeft het terug.",
+            "audioId": "AUD-PREP-instruction_support-79a67cda788fcfdd3cf6",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Nora geeft het boek terug.",
+          "audioId": "AUD-PREP-target_narration-c8762c057f47e472e174",
+          "correct": true,
+          "feedback": {
+            "text": "Goed gezien. Nora leest in het boek. Daarna geeft ze het terug.",
+            "audioId": "AUD-PREP-instruction_support-74b7ac98c1a39472c4ea",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Nora leest in het boek. Daarna geeft ze het terug.",
+              "audioId": "AUD-PREP-instruction_support-b39218a92f334f7352b2"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-AB-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Nora geeft het boek terug. Wat betekent dat hier?",
+        "targetAudioId": "AUD-PREP-instruction_support-494c83dd865305ffefd3"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AB-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Het boek blijft bij Nora.",
+          "audioId": "AUD-PREP-target_narration-659f1d941664650d7c3b",
+          "correct": false,
+          "feedback": {
+            "text": "Nora houdt het boek niet. Ze geeft het terug aan Elena.",
+            "audioId": "AUD-PREP-instruction_support-8881c7a4c72ceee38e8a",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Elena krijgt haar boek weer.",
+          "audioId": "AUD-PREP-target_narration-a33e60b8ec717fb0cf1a",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Nora geeft het boek terug. Elena heeft haar boek weer.",
+            "audioId": "AUD-PREP-instruction_support-8b7d2fcb132d579e5ee8",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Nora geeft het boek terug. Elena heeft haar boek weer.",
+              "audioId": "AUD-PREP-instruction_support-7c5cfa635c46b86b39a2"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Nora krijgt een ander boek.",
+          "audioId": "AUD-PREP-target_narration-692d6935fb60748be62b",
+          "correct": false,
+          "feedback": {
+            "text": "Een ander boek krijgen is iets anders. Hier krijgt Elena haar eigen boek terug.",
+            "audioId": "AUD-PREP-instruction_support-7784958d1fcb4bff736e",
+            "outcome": "try_again",
+            "reason_type": "wrong_meaning",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie.",
+      "objective": "word_meaning_in_context",
+      "distractorRationale": "Onderscheid teruggeven, ruilen en houden in dezelfde leensituatie."
+    },
+    {
+      "id": "TRX-P001-AB-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kijk naar het verhaal. Zet de zinnen in de goede volgorde.",
+        "targetAudioId": "AUD-PREP-instruction_support-24372ec42d61e404209a"
+      },
+      "help": {
+        "text": "Kijk naar de tekst. Wat gebeurt eerst? Wat gebeurt daarna?",
+        "audioId": "AUD-PREP-instruction_support-93527756dcc3c6689be6"
+      },
+      "feedback": {
+        "mode": "sequence_comparison",
+        "when_correct": {
+          "text": "Dat klopt. Nora heeft eerst het boek. Dan leest ze. Daarna geeft ze het terug.",
+          "audioId": "AUD-PREP-instruction_support-b2f7293cf74d25bf43f5"
+        },
+        "when_incorrect": {
+          "text": "Kijk naar de tekst. Nora leest eerst. Daarna geeft ze het boek terug.",
+          "audioId": "AUD-PREP-instruction_support-32704b15caf797eed956"
+        },
+        "correct_sequence": [
+          "Nora heeft een boek van Elena.",
+          "Ze leest in het boek.",
+          "Daarna geeft Nora het boek terug."
+        ],
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plek.",
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "answer": [
+        "Nora heeft een boek van Elena.",
+        "Ze leest in het boek.",
+        "Daarna geeft Nora het boek terug."
+      ],
+      "tiles": [
+        "Ze leest in het boek.",
+        "Daarna geeft Nora het boek terug.",
+        "Nora heeft een boek van Elena."
+      ],
+      "assessment": "Volgorde in de bron; geen algemene claim dat elke andere volgorde onmogelijk is.",
+      "tileAudioIds": [
+        "AUD-PREP-target_narration-ce82fbc8a451ab928d39",
+        "AUD-PREP-target_narration-866e9f6270a5c2e25b0d",
+        "AUD-PREP-target_narration-ad674b701830c82cc432"
+      ]
+    },
+    {
+      "id": "TRX-P001-AB-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je hebt een boek van een ander. Geef het terug en zeg wat je doet.",
+        "targetAudioId": "AUD-PREP-instruction_support-690ac8f77dbe677bda9b"
+      },
+      "help": {
+        "text": "Kijk naar het voorbeeld. Probeer het dan zelf. Je mag ook een ander goed antwoord geven.",
+        "audioId": "AUD-PREP-instruction_support-b725a6d1669451c3443b"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed gedaan. Je zegt in een hele zin dat je het boek teruggeeft.",
+          "audioId": "AUD-PREP-instruction_support-15befd68e7680028cefb"
+        },
+        "when_criteria_missing": {
+          "text": "Zeg dat je het boek teruggeeft. Maak een hele zin. Je mag andere woorden gebruiken dan in het voorbeeld.",
+          "audioId": "AUD-PREP-instruction_support-11a020ddf65f05f64f52"
+        },
+        "criteria": [
+          "Je zegt dat je het boek teruggeeft.",
+          "Je maakt een hele zin."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "record_audio",
+          "teacher_or_pair_oral"
+        ],
+        "speechRecognitionRequired": false,
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "Ik geef je het boek terug.",
+      "exampleAudioId": "AUD-PREP-target_narration-448638f15d06c6dc8013",
+      "criteria": [
+        "Je zegt dat je het boek teruggeeft.",
+        "Je maakt een hele zin."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-018d4734378ca5ff6b2c",
+        "AUD-PREP-instruction_support-189b5db33f1ff32a3551"
+      ]
+    },
+    {
+      "id": "TRX-P001-AB-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "TRX-P001-AB-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AB-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf de zin over: Nora leest in het boek.",
+        "targetAudioId": "AUD-PREP-instruction_support-59ced0b879d784034f16"
+      },
+      "help": {
+        "text": "Kijk naar de voorbeeldzin. Schrijf de zin over.",
+        "audioId": "AUD-PREP-instruction_support-40c5fccd6e337af072f4"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed gedaan. De woorden staan goed. Nora begint met een hoofdletter.",
+          "audioId": "AUD-PREP-instruction_support-9a86039e331ecad068aa"
+        },
+        "when_criteria_missing": {
+          "text": "Kijk naar het voorbeeld. Staan de woorden goed? Begint Nora met een hoofdletter?",
+          "audioId": "AUD-PREP-instruction_support-eceeb2989130029a9b72"
+        },
+        "criteria": [
+          "Nora begint met een hoofdletter.",
+          "De woorden staan net als in het voorbeeld."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "type",
+          "paper"
+        ],
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "Nora leest in het boek.",
+      "exampleAudioId": "AUD-PREP-target_narration-71f5d29aeb9dbe3520c1",
+      "criteria": [
+        "Nora begint met een hoofdletter.",
+        "De woorden staan net als in het voorbeeld."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-4a9a6d1991c8e41dd5e5",
+        "AUD-PREP-instruction_support-8e393cc3a5111ce705b8"
+      ]
+    }
+  ],
+  "media": {
+    "state": "BRIEFS_AND_AUDIO_SCRIPTS_ONLY",
+    "audio_generation": "DEFERRED_BY_USER",
+    "image_generation": "NOT_STARTED"
+  },
+  "review": {
+    "ai_cycle": "initial_six_checks -> devils_advocate -> revision -> repeated_six_checks",
+    "record": "redactie/06-eindherlezing.json",
+    "human_didactic_review": "OPEN",
+    "learner_pilot": "NOT_RUN",
+    "runtime_and_accessibility_execution": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_review": "redactie/09-extra-niveaureview.json",
+    "feedback_review_sha256": "0046f648433ae5c2cd4774ec88473e3d0e3da368d327226b1ecaab47968c6e7d"
+  },
+  "measurement_plan": {
+    "capture": [
+      "response",
+      "correctness_when_objective",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Geen beheersing afleiden uit één goed antwoord of naspreken. Gebruik een latere parallelle check zonder model; stel afkapwaarden na proefgebruik vast."
+  },
+  "successFeedback": {
+    "message": {
+      "text": "De vier antwoorden kloppen. Je hebt gevonden van wie het boek is en waar Nora zit. Goed gedaan.",
+      "audioId": "AUD-PREP-instruction_support-63107d50d747b9fb7505"
+    },
+    "condition": "Alle vier keuzevragen bij deze tekst zijn daadwerkelijk goed beantwoord. Open productie wordt apart beoordeeld.",
+    "after_help_message": {
+      "text": "De vier antwoorden kloppen nu. Je hebt de uitleg gebruikt. Goed dat je het opnieuw hebt geprobeerd.",
+      "audioId": "AUD-PREP-instruction_support-6047cbdb132ac9d72a7e"
+    },
+    "not_a_level_or_mastery_certificate": true,
+    "not_triggered_by_opening_document": true
+  }
+}

@@ -1,0 +1,773 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_B-TEXT-04",
+    "title": "Samen soep eten",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_B",
+    "objectiveIds": [
+      "CP002-ALFA_B-TEXT-04-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_B-TEXT-04",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "NEW_STORY",
+      "source_id": null,
+      "source_path": "redactie/01-concepten.json",
+      "old_route": null
+    }
+  },
+  "learning": {
+    "oral_goal": "Een eenvoudige maaltijd en het aantal kommen volgen.",
+    "support": "Bereid twee, kommen, schept en samen voor; kom/kommen als vormpaar. Meervoud ze in de slotzin slaat op Elena en Youssef.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_B-TEXT-04-TEXT",
+      "kind": "text",
+      "title": "Samen soep eten",
+      "targetText": "Elena maakt soep. Ze zet twee kommen op tafel. Youssef komt eten. Elena schept soep in de kommen. Ze eten samen.",
+      "displayText": "Elena maakt soep. Ze zet twee kommen op tafel. Youssef komt eten. Elena schept soep in de kommen. Ze eten samen.",
+      "script_sha256": "fc448a98110baec14a7f2776fd1398cd1e9852d97e718be9211b0e88f22dee43",
+      "audio": {
+        "normal": "PREP-target_narration-fc448a98110baec14a7f"
+      },
+      "titleAudioId": "PREP-target_narration-3de1d6fb1614857033de",
+      "imageId": "CP002-ALFA_B-TEXT-04-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_B-TEXT-04-TEXT-SEG-01",
+          "text": "Elena maakt soep.",
+          "start": 0,
+          "end": 17,
+          "audioId": "PREP-target_narration-d4086d915af97757db3a",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-04-TEXT-SEG-02",
+          "text": "Ze zet twee kommen op tafel.",
+          "start": 18,
+          "end": 46,
+          "audioId": "PREP-target_narration-30a4120de656bb35f5be",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-04-TEXT-SEG-03",
+          "text": "Youssef komt eten.",
+          "start": 47,
+          "end": 65,
+          "audioId": "PREP-target_narration-298c1dc3609e9bef2854",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-04-TEXT-SEG-04",
+          "text": "Elena schept soep in de kommen.",
+          "start": 66,
+          "end": 97,
+          "audioId": "PREP-target_narration-dea33b455d0d869a802f",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-04-TEXT-SEG-05",
+          "text": "Ze eten samen.",
+          "start": 98,
+          "end": 112,
+          "audioId": "PREP-target_narration-a716df7da585791ce07b",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena maakt soep.",
+      "displayText": "Elena maakt soep.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-d4086d915af97757db3a"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-04-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-SENT-02",
+      "kind": "sentence",
+      "targetText": "Elena zet twee kommen op tafel.",
+      "displayText": "Elena zet twee kommen op tafel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-435bd6344cdc58b94a2e"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-04-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-SENT-03",
+      "kind": "sentence",
+      "targetText": "Youssef komt eten.",
+      "displayText": "Youssef komt eten.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-298c1dc3609e9bef2854"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-04-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-SENT-04",
+      "kind": "sentence",
+      "targetText": "Elena schept soep in de kommen.",
+      "displayText": "Elena schept soep in de kommen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-dea33b455d0d869a802f"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-04-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-SENT-05",
+      "kind": "sentence",
+      "targetText": "Elena en Youssef eten samen.",
+      "displayText": "Elena en Youssef eten samen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-b1416e3089c534056a7d"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-04-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT",
+        "CP002-ALFA_B-TEXT-04-SENT-01",
+        "CP002-ALFA_B-TEXT-04-SENT-02",
+        "CP002-ALFA_B-TEXT-04-SENT-03",
+        "CP002-ALFA_B-TEXT-04-SENT-04",
+        "CP002-ALFA_B-TEXT-04-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_B-TEXT-04-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_B-TEXT-04-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat maakt Elena?",
+        "targetAudioId": "PREP-instruction_support-f8563fe908b6524a16b3"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Elena maakt brood.",
+          "audioId": "PREP-target_narration-d2443753254b911df529",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena maakt een koek.",
+          "audioId": "PREP-target_narration-0b0f2439f757ea7d947b",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena maakt soep.",
+          "audioId": "PREP-target_narration-d4086d915af97757db3a",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-02-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Elena maakt soep.",
+        "start": 0,
+        "end": 17,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Soep is het bereide eten; brood en koek veranderen het product.",
+      "help": {
+        "text": "Lees de eerste zin.",
+        "audioId": "HELP-REV-7d175ae5bcd93b66fbcab8b1"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_B-TEXT-04-EX-02-FB-O2",
+          "O3": "CP002-ALFA_B-TEXT-04-EX-02-FB-O3",
+          "O1": "CP002-ALFA_B-TEXT-04-EX-02-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-04-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Hoeveel kommen zet Elena op tafel?",
+        "targetAudioId": "PREP-instruction_support-5413491b317434ac7a0e"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Elena zet drie kommen op tafel.",
+          "audioId": "PREP-target_narration-e6e4f8b727477bfb7ede",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena zet twee kommen op tafel.",
+          "audioId": "PREP-target_narration-435bd6344cdc58b94a2e",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Elena zet één kom op tafel.",
+          "audioId": "PREP-target_narration-2925fe3d05e974127cd2",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-03-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze zet twee kommen op tafel.",
+        "start": 18,
+        "end": 46,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Twee kommen staat letterlijk; één en drie veranderen het aantal.",
+      "help": {
+        "text": "Kijk hoeveel kommen er zijn.",
+        "audioId": "HELP-REV-d68f1bd97f6729d7d7178c6e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_B-TEXT-04-EX-03-FB-O3",
+          "O1": "CP002-ALFA_B-TEXT-04-EX-03-FB-O1",
+          "O2": "CP002-ALFA_B-TEXT-04-EX-03-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-04-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie komt bij Elena eten?",
+        "targetAudioId": "PREP-instruction_support-c62a4fd36ba48e4d31f4"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Youssef komt eten.",
+          "audioId": "PREP-target_narration-298c1dc3609e9bef2854",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora komt eten.",
+          "audioId": "PREP-target_narration-05fb8df1b986554fbbe3",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De buurman komt eten.",
+          "audioId": "PREP-target_narration-2d46ecf84a97bddf7279",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-04-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Youssef komt eten.",
+        "start": 47,
+        "end": 65,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Youssef komt eten; Nora en buurman vervangen de gast.",
+      "help": {
+        "text": "Zoek wie komt eten.",
+        "audioId": "HELP-REV-625e68678ec3a1c99a10e035"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_B-TEXT-04-EX-04-FB-O1",
+          "O2": "CP002-ALFA_B-TEXT-04-EX-04-FB-O2",
+          "O3": "CP002-ALFA_B-TEXT-04-EX-04-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-04-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord soep.",
+        "targetAudioId": "PREP-instruction_support-b2023a05d55e4a3d80c8"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W2",
+          "text": "sop",
+          "correct": false,
+          "audioId": "PREP-target_narration-34640245da31603675fb",
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "stoep",
+          "correct": false,
+          "audioId": "PREP-target_narration-92a51f1bf71b4e99bfe6",
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "soep",
+          "correct": true,
+          "audioId": "PREP-target_narration-0ab524e4bd774de2424b",
+          "feedbackId": "CP002-ALFA_B-TEXT-04-EX-05-FB-W1"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Woordvorm herkennen aan het verschil in letters; geen betekenis- of luistertoets.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W2": "CP002-ALFA_B-TEXT-04-EX-05-FB-W2",
+          "W3": "CP002-ALFA_B-TEXT-04-EX-05-FB-W3",
+          "W1": "CP002-ALFA_B-TEXT-04-EX-05-FB-W1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-04-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Youssef komt eten.",
+        "Ze eten samen.",
+        "Elena maakt soep."
+      ],
+      "answer": [
+        "Elena maakt soep.",
+        "Youssef komt eten.",
+        "Ze eten samen."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-298c1dc3609e9bef2854",
+        "PREP-target_narration-a716df7da585791ce07b",
+        "PREP-target_narration-d4086d915af97757db3a"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-04-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zeg met wie Elena eet.",
+        "targetAudioId": "PREP-instruction_support-744ef36e5bf6ad4c54e8"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Elena eet met Youssef.",
+      "criteria": [
+        "Je noemt Elena.",
+        "Je zegt dat zij met Youssef eet."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-78e193759b1d0b8075fb",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-d5cf08569c4909a44660",
+        "PREP-instruction_support-722fd00201cfe341f608"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt Elena.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-04-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-04-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat zij met Youssef eet.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-04-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-04-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-04-EX-07-FB-ALL-MET",
+        "example": "Elena eet met Youssef.",
+        "exampleAudioId": "PREP-target_narration-78e193759b1d0b8075fb",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-04-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-04-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: Elena maakt soep.",
+        "targetAudioId": "PREP-instruction_support-565270a55c2ebb461b59"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Elena maakt soep.",
+      "criteria": [
+        "Je schrijft de hele voorbeeldzin over.",
+        "De woorden staan in de juiste volgorde."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-d4086d915af97757db3a",
+      "criteriaAudioIds": [
+        "HELP-REV-a960c390278c4c17f8fe1778",
+        "PREP-instruction_support-92d9308fafa6b05577f2"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je schrijft de hele voorbeeldzin over.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-04-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-04-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "De woorden staan in de juiste volgorde.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-04-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-04-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-04-EX-08-FB-ALL-MET",
+        "example": "Elena maakt soep.",
+        "exampleAudioId": "PREP-target_narration-d4086d915af97757db3a",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": true,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-04-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

@@ -1,0 +1,766 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-A1_PLUS-TEXT-03",
+    "title": "Kijken als het donker is",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A1_PLUS",
+    "objectiveIds": [
+      "CP002-A1_PLUS-TEXT-03-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A1_PLUS-TEXT-03",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-12",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A2"
+    }
+  },
+  "learning": {
+    "oral_goal": "Tijdsvolgorde en twee gelijktijdige handelingen onderscheiden.",
+    "support": "A1+ brugtekst met eerst, later en terwijl; oude A2-label is geen verplicht minimum. Bereid wolken en goed te zien voor. De reden van wachten volgt uit de context, niet uit een omdat-zin.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-TEXT",
+      "kind": "text",
+      "title": "Kijken als het donker is",
+      "targetText": "Na het eten wil Elena naar de maan kijken. Eerst zijn er veel wolken. Ze wacht binnen en leest een boek. Later gaat ze weer naar buiten. De wolken zijn weg en de maan is goed te zien.",
+      "displayText": "Na het eten wil Elena naar de maan kijken. Eerst zijn er veel wolken. Ze wacht binnen en leest een boek. Later gaat ze weer naar buiten. De wolken zijn weg en de maan is goed te zien.",
+      "script_sha256": "c5f1fd5cbf01580d91190583516a96eddffe7cbc68b15df75fb08c7ff581340a",
+      "audio": {
+        "normal": "PREP-target_narration-c5f1fd5cbf01580d9119"
+      },
+      "titleAudioId": "PREP-target_narration-95c37ee3ec3a20743d18",
+      "imageId": "CP002-A1_PLUS-TEXT-03-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-A1_PLUS-TEXT-03-TEXT-SEG-01",
+          "text": "Na het eten wil Elena naar de maan kijken.",
+          "start": 0,
+          "end": 42,
+          "audioId": "PREP-target_narration-d2d06f3bbab17cb8db4c",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-03-TEXT-SEG-02",
+          "text": "Eerst zijn er veel wolken.",
+          "start": 43,
+          "end": 69,
+          "audioId": "PREP-target_narration-49d884e687d19a63eafe",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-03-TEXT-SEG-03",
+          "text": "Ze wacht binnen en leest een boek.",
+          "start": 70,
+          "end": 104,
+          "audioId": "PREP-target_narration-a6735d73600b1264b78b",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-03-TEXT-SEG-04",
+          "text": "Later gaat ze weer naar buiten.",
+          "start": 105,
+          "end": 136,
+          "audioId": "PREP-target_narration-5f8c6d4a01962fb1bbc1",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-03-TEXT-SEG-05",
+          "text": "De wolken zijn weg en de maan is goed te zien.",
+          "start": 137,
+          "end": 183,
+          "audioId": "PREP-target_narration-5040bf2622f8875333a7",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena wil na het eten naar de maan kijken.",
+      "displayText": "Elena wil na het eten naar de maan kijken.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-c08da4b184ed7448695d"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-03-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-SENT-02",
+      "kind": "sentence",
+      "targetText": "Er zijn eerst veel wolken.",
+      "displayText": "Er zijn eerst veel wolken.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-05c5438e8967f3a79616"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-03-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-SENT-03",
+      "kind": "sentence",
+      "targetText": "Elena leest binnen een boek terwijl zij wacht.",
+      "displayText": "Elena leest binnen een boek terwijl zij wacht.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-65a5fd542a49595e4182"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-03-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-SENT-04",
+      "kind": "sentence",
+      "targetText": "Elena gaat later weer naar buiten.",
+      "displayText": "Elena gaat later weer naar buiten.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-5e88bf4f024e961a2d76"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-03-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-SENT-05",
+      "kind": "sentence",
+      "targetText": "Zonder de wolken is de maan goed te zien.",
+      "displayText": "Zonder de wolken is de maan goed te zien.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-e1d5504735a414b5861e"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-03-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT",
+        "CP002-A1_PLUS-TEXT-03-SENT-01",
+        "CP002-A1_PLUS-TEXT-03-SENT-02",
+        "CP002-A1_PLUS-TEXT-03-SENT-03",
+        "CP002-A1_PLUS-TEXT-03-SENT-04",
+        "CP002-A1_PLUS-TEXT-03-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doet Elena terwijl zij wacht?",
+        "targetAudioId": "PREP-instruction_support-743e41844fe6966281fb"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Zij leest een boek.",
+          "audioId": "PREP-target_narration-97656f70c0f1920f5742",
+          "correct": true,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Zij maakt soep.",
+          "audioId": "PREP-target_narration-f0e42196aca1dce80a3a",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Zij zit buiten op een stoel.",
+          "audioId": "PREP-target_narration-ec5009e2e7d5bb06ded2",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze wacht binnen en leest een boek.",
+        "start": 70,
+        "end": 104,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Lezen gebeurt tijdens wachten; soep en buiten zitten zijn niet de genoemde wachtactiviteit.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O1",
+          "O2": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O2",
+          "O3": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom wacht Elena eerst binnen?",
+        "targetAudioId": "PREP-instruction_support-a1b18c326c37ed5f8b8c"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Het regent hard.",
+          "audioId": "PREP-target_narration-fa1384ab18c77bd76e21",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Het eten is nog niet klaar.",
+          "audioId": "PREP-target_narration-a94d0dc4df34200f6dcb",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Er zijn veel wolken.",
+          "audioId": "PREP-target_narration-98ca6b0930c2423e27ae",
+          "correct": true,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Eerst zijn er veel wolken.",
+        "start": 43,
+        "end": 69,
+        "kind": "simple_context_inference"
+      },
+      "distractorRationale": "Wolken verklaren wachten contextueel; regen en nog niet gegeten zijn niet genoemd.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O2",
+          "O3": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O3",
+          "O1": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat is er aan het einde veranderd?",
+        "targetAudioId": "PREP-instruction_support-7c4b982f5e2758feb475"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Het begint te regenen.",
+          "audioId": "PREP-target_narration-918ed434ba01ec13c848",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De wolken zijn weg.",
+          "audioId": "PREP-target_narration-b981547cbef522fb35e8",
+          "correct": true,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De maan is weg.",
+          "audioId": "PREP-target_narration-3c28297aaa0c936c7be9",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De wolken zijn weg en de maan is goed te zien.",
+        "start": 137,
+        "end": 183,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Wolken zijn weg staat letterlijk; verdwenen maan en regen wijzigen de uitkomst.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O3",
+          "O1": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O1",
+          "O2": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Elena leest terwijl zij wacht. Wat betekent terwijl in deze zin?",
+        "targetAudioId": "PREP-instruction_support-cdc34cb85a62362d6f4c"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "Elena leest tijdens het wachten.",
+          "correct": true,
+          "audioId": "PREP-target_narration-9e6990b623a91d43c3b0",
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "Elena leest pas na het wachten.",
+          "correct": false,
+          "audioId": "PREP-target_narration-0be1f6fb784581e7e641",
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "Elena leest voordat zij gaat wachten.",
+          "correct": false,
+          "audioId": "PREP-target_narration-127f6fb1b73580ef5ad2",
+          "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W1",
+          "W2": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W2",
+          "W3": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Ze wacht binnen en leest een boek.",
+        "Later gaat ze weer naar buiten.",
+        "Eerst zijn er veel wolken."
+      ],
+      "answer": [
+        "Eerst zijn er veel wolken.",
+        "Ze wacht binnen en leest een boek.",
+        "Later gaat ze weer naar buiten."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-a6735d73600b1264b78b",
+        "PREP-target_narration-5f8c6d4a01962fb1bbc1",
+        "PREP-target_narration-49d884e687d19a63eafe"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je moet even wachten. Vertel wat je in die tijd doet.",
+        "targetAudioId": "PREP-instruction_support-429e346a8b73650d145f"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik lees een boek terwijl ik wacht.",
+      "criteria": [
+        "Je noemt een bezigheid.",
+        "Je zegt dat je die tijdens het wachten doet."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-73a51830edcd2773ca54",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-4c6cbeb9357fd4087e07",
+        "PREP-instruction_support-f48fdefdb5245141e10d"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt een bezigheid.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat je die tijdens het wachten doet.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-07-FB-ALL-MET",
+        "example": "Ik lees een boek terwijl ik wacht.",
+        "exampleAudioId": "PREP-target_narration-73a51830edcd2773ca54",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-03-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf wat Elena doet tijdens het wachten en wat zij daarna doet.",
+        "targetAudioId": "PREP-instruction_support-0c92dbc331567840707a"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Elena leest binnen een boek. Daarna gaat zij weer naar buiten.",
+      "criteria": [
+        "Je noemt binnen lezen tijdens het wachten.",
+        "Je noemt daarna naar buiten gaan."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-3e2ce99f1da3af745535",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-f39876b2c63503222c3a",
+        "PREP-instruction_support-5ab05c81f1a5d524f727"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt binnen lezen tijdens het wachten.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt daarna naar buiten gaan.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-08-FB-ALL-MET",
+        "example": "Elena leest binnen een boek. Daarna gaat zij weer naar buiten.",
+        "exampleAudioId": "PREP-target_narration-3e2ce99f1da3af745535",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-03-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

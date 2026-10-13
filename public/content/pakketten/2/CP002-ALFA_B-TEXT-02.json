@@ -1,0 +1,758 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_B-TEXT-02",
+    "title": "De jas",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_B",
+    "objectiveIds": [
+      "CP002-ALFA_B-TEXT-02-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_B-TEXT-02",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-02",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "guided"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een korte handelingsreeks en de plaats van de jas begrijpen.",
+    "support": "Bereid Youssef, thuis, nat en hangt aan voor. Haak bevat aa; geen regenoorzaak veronderstellen.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_B-TEXT-02-TEXT",
+      "kind": "text",
+      "title": "De jas",
+      "targetText": "Youssef komt thuis. Zijn jas is nat. Hij hangt de jas aan een haak.",
+      "displayText": "Youssef komt thuis. Zijn jas is nat. Hij hangt de jas aan een haak.",
+      "script_sha256": "2c6c4729ca4d35dbbefce18f1528eb356010dbea5f048b03362a91a7cbcd8709",
+      "audio": {
+        "normal": "PREP-target_narration-2c6c4729ca4d35dbbefc"
+      },
+      "titleAudioId": "PREP-target_narration-abb3fdc9d7444ba2a42d",
+      "imageId": "CP002-ALFA_B-TEXT-02-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_B-TEXT-02-TEXT-SEG-01",
+          "text": "Youssef komt thuis.",
+          "start": 0,
+          "end": 19,
+          "audioId": "PREP-target_narration-792cfbf4c25fcf07846f",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-02-TEXT-SEG-02",
+          "text": "Zijn jas is nat.",
+          "start": 20,
+          "end": 36,
+          "audioId": "PREP-target_narration-1092b23f5855c61b1fde",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-02-TEXT-SEG-03",
+          "text": "Hij hangt de jas aan een haak.",
+          "start": 37,
+          "end": 67,
+          "audioId": "PREP-target_narration-aa69fabd5955be9b2368",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-SENT-01",
+      "kind": "sentence",
+      "targetText": "Youssef komt thuis.",
+      "displayText": "Youssef komt thuis.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-02"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-792cfbf4c25fcf07846f"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-02-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-SENT-02",
+      "kind": "sentence",
+      "targetText": "De jas van Youssef is nat.",
+      "displayText": "De jas van Youssef is nat.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ec09b76e0be3a6f8cc47"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-02-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-SENT-03",
+      "kind": "sentence",
+      "targetText": "Youssef hangt de jas aan een haak.",
+      "displayText": "Youssef hangt de jas aan een haak.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-d9606c065f6a2df0fdf5"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-02-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-SENT-04",
+      "kind": "sentence",
+      "targetText": "De haak zit aan de muur.",
+      "displayText": "De haak zit aan de muur.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/4/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-8627b6e525981af7bf34"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-02-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-SENT-05",
+      "kind": "sentence",
+      "targetText": "Ik hang mijn jas aan de haak.",
+      "displayText": "Ik hang mijn jas aan de haak.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/4/5"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-7e3fb89dfed86017b9d0"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-02-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT",
+        "CP002-ALFA_B-TEXT-02-SENT-01",
+        "CP002-ALFA_B-TEXT-02-SENT-02",
+        "CP002-ALFA_B-TEXT-02-SENT-03",
+        "CP002-ALFA_B-TEXT-02-SENT-04",
+        "CP002-ALFA_B-TEXT-02-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_B-TEXT-02-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_B-TEXT-02-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar hangt Youssef zijn jas?",
+        "targetAudioId": "PREP-instruction_support-ca55bd4eba80a4503e3a"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Youssef hangt zijn jas aan het hek.",
+          "audioId": "OPT-REV-50b8a4ee583d9d7e0db1fe51",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Youssef hangt zijn jas aan een haak.",
+          "audioId": "OPT-REV-0afbf15befff7b96edf3913f",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Youssef hangt zijn jas aan een stoel.",
+          "audioId": "OPT-REV-431fab7ffae0500beb9b3f1f",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-02-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Hij hangt de jas aan een haak.",
+        "start": 37,
+        "end": 67,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Haak is de bronplaats; stoel en hek zijn andere ophangplekken.",
+      "help": {
+        "text": "Lees de laatste zin.",
+        "audioId": "HELP-REV-4990ea1c6e80ef15ef28aef9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_B-TEXT-02-EX-02-FB-O3",
+          "O1": "CP002-ALFA_B-TEXT-02-EX-02-FB-O1",
+          "O2": "CP002-ALFA_B-TEXT-02-EX-02-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-02-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Hoe is de jas van Youssef?",
+        "targetAudioId": "PREP-instruction_support-a7504d0e0e38b588f4f6"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "De jas is nat.",
+          "audioId": "PREP-target_narration-0a1964518e7fc05bae32",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De jas is droog.",
+          "audioId": "PREP-target_narration-4246ffa3393e25d0d928",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De jas is vuil.",
+          "audioId": "PREP-target_narration-73fa8fee1ceb8968347e",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-03-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Zijn jas is nat.",
+        "start": 20,
+        "end": 36,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Nat staat letterlijk; droog contrasteert, vuil is niet genoemd.",
+      "help": {
+        "text": "Zoek de zin over de jas.",
+        "audioId": "HELP-REV-1bad50c07c834d7191ada730"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_B-TEXT-02-EX-03-FB-O1",
+          "O2": "CP002-ALFA_B-TEXT-02-EX-03-FB-O2",
+          "O3": "CP002-ALFA_B-TEXT-02-EX-03-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-02-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar is Youssef nu?",
+        "targetAudioId": "HELP-REV-fd436e9f6f4dfa0a324e6464"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Youssef is nu in de les.",
+          "audioId": "OPT-REV-8267052caf0f5bd638571be7",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Youssef is nu in de winkel.",
+          "audioId": "OPT-REV-03162cf35c596a5076159893",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Youssef is nu thuis.",
+          "audioId": "OPT-REV-b9c38e69a96c4453c7e16d00",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-04-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Youssef komt thuis.",
+        "start": 0,
+        "end": 19,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Thuis staat letterlijk; les en winkel veranderen de bestemming.",
+      "help": {
+        "text": "Lees de eerste zin.",
+        "audioId": "HELP-REV-7d175ae5bcd93b66fbcab8b1"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_B-TEXT-02-EX-04-FB-O2",
+          "O3": "CP002-ALFA_B-TEXT-02-EX-04-FB-O3",
+          "O1": "CP002-ALFA_B-TEXT-02-EX-04-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-02-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord haak.",
+        "targetAudioId": "PREP-instruction_support-bb43c0dccb6a55dd19a1"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W3",
+          "text": "kaas",
+          "correct": false,
+          "audioId": "PREP-target_narration-ef39abd3c5f6b0ae7e77",
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "haak",
+          "correct": true,
+          "audioId": "PREP-target_narration-9046aa6a940641eb1f74",
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "haar",
+          "correct": false,
+          "audioId": "PREP-target_narration-c33635072f01e4f83600",
+          "feedbackId": "CP002-ALFA_B-TEXT-02-EX-05-FB-W2"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Woordvorm herkennen aan het verschil in letters; geen betekenis- of luistertoets.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W3": "CP002-ALFA_B-TEXT-02-EX-05-FB-W3",
+          "W1": "CP002-ALFA_B-TEXT-02-EX-05-FB-W1",
+          "W2": "CP002-ALFA_B-TEXT-02-EX-05-FB-W2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-02-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Zijn jas is nat.",
+        "Hij hangt de jas aan een haak.",
+        "Youssef komt thuis."
+      ],
+      "answer": [
+        "Youssef komt thuis.",
+        "Zijn jas is nat.",
+        "Hij hangt de jas aan een haak."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-1092b23f5855c61b1fde",
+        "PREP-target_narration-aa69fabd5955be9b2368",
+        "PREP-target_narration-792cfbf4c25fcf07846f"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-02-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je hangt je jas op. Zeg waar je de jas hangt.",
+        "targetAudioId": "PREP-instruction_support-6a6cc02a6d71e9342b3b"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik hang mijn jas aan een haak.",
+      "criteria": [
+        "Je noemt de jas.",
+        "Je noemt een plek waar je de jas hangt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-769284d61510c87bfa18",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-1d0c51f35506728e9e03",
+        "PREP-instruction_support-37fcdb467b8792709a03"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt de jas.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-02-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-02-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt een plek waar je de jas hangt.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-02-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-02-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-02-EX-07-FB-ALL-MET",
+        "example": "Ik hang mijn jas aan een haak.",
+        "exampleAudioId": "PREP-target_narration-769284d61510c87bfa18",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-02-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-02-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: De jas is nat.",
+        "targetAudioId": "PREP-instruction_support-9bd9c17183161ff62af4"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "De jas is nat.",
+      "criteria": [
+        "Je schrijft de hele voorbeeldzin over.",
+        "De woorden staan in de juiste volgorde."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-0a1964518e7fc05bae32",
+      "criteriaAudioIds": [
+        "HELP-REV-a960c390278c4c17f8fe1778",
+        "PREP-instruction_support-92d9308fafa6b05577f2"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je schrijft de hele voorbeeldzin over.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-02-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-02-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "De woorden staan in de juiste volgorde.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-02-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-02-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-02-EX-08-FB-ALL-MET",
+        "example": "De jas is nat.",
+        "exampleAudioId": "PREP-target_narration-0a1964518e7fc05bae32",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": true,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-02-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

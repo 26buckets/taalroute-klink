@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_C-TEXT-04",
+    "title": "De vis achter de plant",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_C",
+    "objectiveIds": [
+      "CP002-ALFA_C-TEXT-04-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_C-TEXT-04",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "NEW_STORY",
+      "source_id": null,
+      "source_path": "redactie/01-concepten.json",
+      "old_route": null
+    }
+  },
+  "learning": {
+    "oral_goal": "Achter, naar voren en een veranderend zicht onderscheiden.",
+    "support": "Bereid aquarium, plant, staart, alleen, hele en naar voren voor. Aquarium is steunwoord, geen Alfa-decodeerdoel.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_C-TEXT-04-TEXT",
+      "kind": "text",
+      "title": "De vis achter de plant",
+      "targetText": "Nora kijkt naar een vis in het aquarium. De vis zwemt achter een plant. Nora ziet alleen de staart. Ze wacht even. Dan zwemt de vis naar voren. Nu ziet Nora de hele vis.",
+      "displayText": "Nora kijkt naar een vis in het aquarium. De vis zwemt achter een plant. Nora ziet alleen de staart. Ze wacht even. Dan zwemt de vis naar voren. Nu ziet Nora de hele vis.",
+      "script_sha256": "4ca968e4ea94a09040160910250d301c8c75eac9b2bd268f633aaa534b029b05",
+      "audio": {
+        "normal": "PREP-target_narration-4ca968e4ea94a0904016"
+      },
+      "titleAudioId": "PREP-target_narration-9746289735ee8182a38b",
+      "imageId": "CP002-ALFA_C-TEXT-04-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_C-TEXT-04-TEXT-SEG-01",
+          "text": "Nora kijkt naar een vis in het aquarium.",
+          "start": 0,
+          "end": 40,
+          "audioId": "PREP-target_narration-90a99a8a717ac76edfc2",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-04-TEXT-SEG-02",
+          "text": "De vis zwemt achter een plant.",
+          "start": 41,
+          "end": 71,
+          "audioId": "PREP-target_narration-d9eaa0866c95fe45b81b",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-04-TEXT-SEG-03",
+          "text": "Nora ziet alleen de staart.",
+          "start": 72,
+          "end": 99,
+          "audioId": "PREP-target_narration-830e94133ece976ec673",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-04-TEXT-SEG-04",
+          "text": "Ze wacht even.",
+          "start": 100,
+          "end": 114,
+          "audioId": "PREP-target_narration-dcebbb0229d6ec2d74c8",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-04-TEXT-SEG-05",
+          "text": "Dan zwemt de vis naar voren.",
+          "start": 115,
+          "end": 143,
+          "audioId": "PREP-target_narration-d4b348170abb3ef6c850",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-04-TEXT-SEG-06",
+          "text": "Nu ziet Nora de hele vis.",
+          "start": 144,
+          "end": 169,
+          "audioId": "PREP-target_narration-b76a78b20b49a27ebb2e",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-SENT-01",
+      "kind": "sentence",
+      "targetText": "Nora kijkt naar een vis.",
+      "displayText": "Nora kijkt naar een vis.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-7ba5d89cf278c484fd0b"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-04-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-SENT-02",
+      "kind": "sentence",
+      "targetText": "De vis zwemt achter een plant.",
+      "displayText": "De vis zwemt achter een plant.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-d9eaa0866c95fe45b81b"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-04-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora ziet alleen de staart van de vis.",
+      "displayText": "Nora ziet alleen de staart van de vis.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-282a577c872a23c2e37b"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-04-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-SENT-04",
+      "kind": "sentence",
+      "targetText": "Nora wacht even.",
+      "displayText": "Nora wacht even.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-96c8eba2c1497bc87d6a"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-04-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-SENT-05",
+      "kind": "sentence",
+      "targetText": "De vis zwemt naar voren.",
+      "displayText": "De vis zwemt naar voren.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ecc297d58c42a0faff23"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-04-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT",
+        "CP002-ALFA_C-TEXT-04-SENT-01",
+        "CP002-ALFA_C-TEXT-04-SENT-02",
+        "CP002-ALFA_C-TEXT-04-SENT-03",
+        "CP002-ALFA_C-TEXT-04-SENT-04",
+        "CP002-ALFA_C-TEXT-04-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_C-TEXT-04-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_C-TEXT-04-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar zwemt de vis eerst naartoe?",
+        "targetAudioId": "PREP-instruction_support-4713a025ba93b7f106aa"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De vis zwemt boven het water.",
+          "audioId": "PREP-target_narration-f1699549c41c10202ac4",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De vis zwemt achter een plant.",
+          "audioId": "PREP-target_narration-d9eaa0866c95fe45b81b",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De vis zwemt onder een steen.",
+          "audioId": "PREP-target_narration-0888474a62c69b2fa162",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-02-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De vis zwemt achter een plant.",
+        "start": 41,
+        "end": 71,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Achter plant is de eerst beschreven beweging; steen en boven water veranderen de plaats.",
+      "help": {
+        "text": "Zoek waar de vis naartoe zwemt.",
+        "audioId": "HELP-REV-7d21a672c46508abb80a1b5a"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_C-TEXT-04-EX-02-FB-O3",
+          "O1": "CP002-ALFA_C-TEXT-04-EX-02-FB-O1",
+          "O2": "CP002-ALFA_C-TEXT-04-EX-02-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-04-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat ziet Nora achter de plant?",
+        "targetAudioId": "PREP-instruction_support-62e93d3ca018338b0cb4"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Nora ziet alleen de staart.",
+          "audioId": "PREP-target_narration-830e94133ece976ec673",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora ziet de hele vis.",
+          "audioId": "PREP-target_narration-3f8f817330a4b505c916",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Nora ziet alleen de kop.",
+          "audioId": "PREP-target_narration-c7ade292b78a46e7fcf3",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-03-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora ziet alleen de staart.",
+        "start": 72,
+        "end": 99,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Alleen staart staat letterlijk; hele vis en kop veranderen wat zichtbaar is.",
+      "help": {
+        "text": "Zoek het woord alleen.",
+        "audioId": "HELP-REV-fdce695ff32a6ce00154903f"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_C-TEXT-04-EX-03-FB-O1",
+          "O2": "CP002-ALFA_C-TEXT-04-EX-03-FB-O2",
+          "O3": "CP002-ALFA_C-TEXT-04-EX-03-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-04-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat ziet Nora aan het einde?",
+        "targetAudioId": "PREP-instruction_support-20c6a248723fa61be91a"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Nora ziet alleen de staart.",
+          "audioId": "PREP-target_narration-830e94133ece976ec673",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Nora ziet geen vis.",
+          "audioId": "PREP-target_narration-4f5a24fee7a2fae6bfba",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora ziet de hele vis.",
+          "audioId": "PREP-target_narration-3f8f817330a4b505c916",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-04-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nu ziet Nora de hele vis.",
+        "start": 144,
+        "end": 169,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Hele vis staat in het slot; alleen staart is de eerdere toestand en geen vis is onjuist.",
+      "help": {
+        "text": "Lees de laatste zin.",
+        "audioId": "HELP-REV-4990ea1c6e80ef15ef28aef9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_C-TEXT-04-EX-04-FB-O2",
+          "O3": "CP002-ALFA_C-TEXT-04-EX-04-FB-O3",
+          "O1": "CP002-ALFA_C-TEXT-04-EX-04-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-04-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent hele in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-0b8ce84927f7fedd9017"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W3",
+          "text": "Nora ziet geen vis.",
+          "correct": false,
+          "audioId": "PREP-target_narration-4f5a24fee7a2fae6bfba",
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "Nora ziet de vis helemaal.",
+          "correct": true,
+          "audioId": "PREP-target_narration-c410f86d5da6d1c0f160",
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "Nora ziet alleen de staart.",
+          "correct": false,
+          "audioId": "PREP-target_narration-830e94133ece976ec673",
+          "feedbackId": "CP002-ALFA_C-TEXT-04-EX-05-FB-W2"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W3": "CP002-ALFA_C-TEXT-04-EX-05-FB-W3",
+          "W1": "CP002-ALFA_C-TEXT-04-EX-05-FB-W1",
+          "W2": "CP002-ALFA_C-TEXT-04-EX-05-FB-W2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-04-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Ze wacht even.",
+        "Dan zwemt de vis naar voren.",
+        "De vis zwemt achter een plant."
+      ],
+      "answer": [
+        "De vis zwemt achter een plant.",
+        "Ze wacht even.",
+        "Dan zwemt de vis naar voren."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-dcebbb0229d6ec2d74c8",
+        "PREP-target_narration-d4b348170abb3ef6c850",
+        "PREP-target_narration-d9eaa0866c95fe45b81b"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-04-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Vertel wat Nora eerst ziet en wat zij aan het einde ziet.",
+        "targetAudioId": "PREP-instruction_support-84c1bb3259b48108bece"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Eerst ziet Nora alleen de staart. Daarna ziet zij de hele vis.",
+      "criteria": [
+        "Je noemt eerst alleen de staart.",
+        "Je noemt aan het einde de hele vis."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-74fa3cb4f59e508ea428",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-5c857ab238703739170e",
+        "PREP-instruction_support-cd71dea2edf0faac1004"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt eerst alleen de staart.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-04-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-04-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt aan het einde de hele vis.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-04-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-04-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-04-EX-07-FB-ALL-MET",
+        "example": "Eerst ziet Nora alleen de staart. Daarna ziet zij de hele vis.",
+        "exampleAudioId": "PREP-target_narration-74fa3cb4f59e508ea428",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-04-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-04-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf wat de vis doet na het wachten.",
+        "targetAudioId": "PREP-instruction_support-645f5249588c21461fdb"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "De vis zwemt naar voren.",
+      "criteria": [
+        "Je noemt de vis.",
+        "Je zegt dat de vis naar voren zwemt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-ecc297d58c42a0faff23",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-05b4ddbca583f3fdb2f8",
+        "PREP-instruction_support-2e4df6f3ddef67dbf5cd"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt de vis.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-04-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-04-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat de vis naar voren zwemt.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-04-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-04-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-04-EX-08-FB-ALL-MET",
+        "example": "De vis zwemt naar voren.",
+        "exampleAudioId": "PREP-target_narration-ecc297d58c42a0faff23",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-04-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

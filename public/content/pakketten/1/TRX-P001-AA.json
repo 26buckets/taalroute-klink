@@ -1,0 +1,800 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-AA",
+    "title": "Ik lees",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_A",
+    "objectiveIds": [
+      "TRX-P001-AA-GOAL"
+    ],
+    "objective": "Een concrete leeshandeling begrijpen; boek herkennen.",
+    "status": "concept",
+    "owner": "taalroute",
+    "version": 1,
+    "source_package": "CP002",
+    "theme": "boeken-lenen-en-gebruiken",
+    "support": "Samen luisteren en kijken. Bereid pak, stoel en lees mondeling voor; bied de hele tekst niet aan als bewezen zelfstandig decodeerbaar.",
+    "voice_policy": "Instructie/steun en doeltaal hebben verschillende exacte voice-IDs; geen generatie in deze fase."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-AA-TEXT",
+      "kind": "text",
+      "targetText": "Ik pak een boek. Ik zit op een stoel. Ik lees in het boek.",
+      "displayText": "Ik pak een boek. Ik zit op een stoel. Ik lees in het boek.",
+      "title": "Ik lees",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-a690a75334aa6e9b02b2"
+      },
+      "titleAudioId": "AUD-PREP-target_narration-ac25b10d8d014f02072a",
+      "imageId": "TRX-P001-AA-IMG-STORY",
+      "script_sha256": "a690a75334aa6e9b02b2b8063b242457b13fb5cf9261594c8e64b751c0712485",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN",
+      "sentenceSegments": [
+        {
+          "id": "TRX-P001-AA-TEXT-S01",
+          "text": "Ik pak een boek.",
+          "audioId": "AUD-PREP-target_narration-0bd9cd48860a03769b1d",
+          "story_context_required": true,
+          "parent_text_sha256": "a690a75334aa6e9b02b2b8063b242457b13fb5cf9261594c8e64b751c0712485",
+          "imageBriefId": "TRX-P001-AA-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-AA-TEXT-S02",
+          "text": "Ik zit op een stoel.",
+          "audioId": "AUD-PREP-target_narration-25a1287cdea3823b2673",
+          "story_context_required": true,
+          "parent_text_sha256": "a690a75334aa6e9b02b2b8063b242457b13fb5cf9261594c8e64b751c0712485",
+          "imageBriefId": "TRX-P001-AA-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-AA-TEXT-S03",
+          "text": "Ik lees in het boek.",
+          "audioId": "AUD-PREP-target_narration-0ae099d6732c4ab411b7",
+          "story_context_required": true,
+          "parent_text_sha256": "a690a75334aa6e9b02b2b8063b242457b13fb5cf9261594c8e64b751c0712485",
+          "imageBriefId": "TRX-P001-AA-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-AA-SENT-01",
+      "kind": "sentence",
+      "targetText": "Ik pak een boek.",
+      "displayText": "Ik pak een boek.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-0bd9cd48860a03769b1d"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-01",
+      "script_sha256": "0bd9cd48860a03769b1d664754d06ff221031c72aedff717d9e49b98880ca123",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-02",
+      "kind": "sentence",
+      "targetText": "Ik zit op een stoel.",
+      "displayText": "Ik zit op een stoel.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-25a1287cdea3823b2673"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-02",
+      "script_sha256": "25a1287cdea3823b26730a136400202b58df947a40435b74cdd3fb6c696bde99",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-03",
+      "kind": "sentence",
+      "targetText": "Het boek ligt op tafel.",
+      "displayText": "Het boek ligt op tafel.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-e98583ab45026d76c728"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-03",
+      "script_sha256": "e98583ab45026d76c728ec801fa943ac7577844abb517a6e5d4cf03ec684b808",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-04",
+      "kind": "sentence",
+      "targetText": "Ik lees het boek.",
+      "displayText": "Ik lees het boek.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-b428fb50bcbc1ceff769"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-04",
+      "script_sha256": "b428fb50bcbc1ceff7691562c21e1204010dc47864b15d78be13bea737b6b6fa",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-05",
+      "kind": "sentence",
+      "targetText": "Ik doe het boek dicht.",
+      "displayText": "Ik doe het boek dicht.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-be5a05324e597c3f7de1"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-05",
+      "script_sha256": "be5a05324e597c3f7de1696913df132a1a13710721adba4f4d7c2a8cdaa1c6f2",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-AA-WORD-01",
+      "kind": "word",
+      "targetText": "boek",
+      "displayText": "boek",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-2afcca9e14eade2e0af6"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AA-WORD-02",
+      "kind": "word",
+      "targetText": "pak",
+      "displayText": "pak",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-43729710aeaf3be18742"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AA-WORD-03",
+      "kind": "word",
+      "targetText": "stoel",
+      "displayText": "stoel",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-ab184a6f1d4b6671a4aa"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AA-WORD-04",
+      "kind": "word",
+      "targetText": "lees",
+      "displayText": "lees",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-7776dc7742bebebd1155"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-AA-WORD-05",
+      "kind": "word",
+      "targetText": "dicht",
+      "displayText": "dicht",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-042bdfc055756320b2a8"
+      },
+      "preteach": true,
+      "meaning_note": null
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-AA-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Lees of luister naar het verhaal. Je mag het nog eens lezen of beluisteren.",
+        "targetAudioId": "AUD-PREP-instruction_support-14599e937022f2f833cf"
+      },
+      "help": {
+        "text": "Lees de tekst. Je mag hem nog eens lezen of beluisteren.",
+        "audioId": "AUD-PREP-instruction_support-a35418e6f59fde36af66"
+      },
+      "feedback": {
+        "mode": "participation_only",
+        "automatic_correctness": false,
+        "after_marked_done": {
+          "text": "Je bent klaar met de tekst. Nu kun je de vragen maken.",
+          "audioId": "AUD-PREP-instruction_support-1dd256fb2d459290cad3"
+        },
+        "condition": "Alleen nadat de cursist lezen of luisteren zelf heeft afgerond; geen begrip of beheersing afleiden."
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AA-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "mode": "supported_reading",
+      "assessment": false,
+      "adaptation": "Patroon aangepast aan dit leerprofiel; geen getoetste rendererclaim."
+    },
+    {
+      "id": "TRX-P001-AA-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat pak ik?",
+        "targetAudioId": "AUD-PREP-instruction_support-fe543b81f5b60f00a642"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AA-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Ik pak een boek.",
+      "evidenceAudioId": "AUD-PREP-target_narration-0bd9cd48860a03769b1d",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Ik pak een tas.",
+          "audioId": "AUD-PREP-target_narration-0a00d95f8c5c7a7e4a0d",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niets over een tas. Ik pak een boek.",
+            "audioId": "AUD-PREP-instruction_support-df2e07258cd185778dea",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Ik pak een pen.",
+          "audioId": "AUD-PREP-target_narration-ab8a19f2d6abb8aa8017",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niets over een pen. Ik pak een boek.",
+            "audioId": "AUD-PREP-instruction_support-38dfeda72a545b0e006f",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Ik pak een boek.",
+          "audioId": "AUD-PREP-target_narration-0bd9cd48860a03769b1d",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Ik pak een boek.",
+            "audioId": "AUD-PREP-instruction_support-f62b22bd07932ae9a83a",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Ik pak een boek.",
+              "audioId": "AUD-PREP-instruction_support-3b72d9f69b44b3cc9661"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-AA-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar zit ik?",
+        "targetAudioId": "AUD-PREP-instruction_support-c56a5e9002f9c67531b2"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AA-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Ik zit op een stoel.",
+      "evidenceAudioId": "AUD-PREP-target_narration-25a1287cdea3823b2673",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Ik zit op een bank.",
+          "audioId": "AUD-PREP-target_narration-dfcbc8f516c575b3c987",
+          "correct": false,
+          "feedback": {
+            "text": "Ik zit op een stoel. Ik zit niet op een bank.",
+            "audioId": "AUD-PREP-instruction_support-1793db88675d0d445a8e",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Ik zit op een stoel.",
+          "audioId": "AUD-PREP-target_narration-25a1287cdea3823b2673",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Ik zit op een stoel.",
+            "audioId": "AUD-PREP-instruction_support-5b33fe74cc8f308d1611",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Ik zit op een stoel.",
+              "audioId": "AUD-PREP-instruction_support-405b60e727ec615590c2"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Ik zit op de grond.",
+          "audioId": "AUD-PREP-target_narration-c0d0e072f0e280d17721",
+          "correct": false,
+          "feedback": {
+            "text": "Ik zit op een stoel. Ik zit niet op de grond.",
+            "audioId": "AUD-PREP-instruction_support-2d9172e2e31dd99fb70d",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-AA-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doe ik met het boek?",
+        "targetAudioId": "AUD-PREP-instruction_support-b1a1cf42a6da7bdb9a8a"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AA-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Ik lees in het boek.",
+      "evidenceAudioId": "AUD-PREP-target_narration-0ae099d6732c4ab411b7",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Ik lees in het boek.",
+          "audioId": "AUD-PREP-target_narration-0ae099d6732c4ab411b7",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Ik lees in het boek.",
+            "audioId": "AUD-PREP-instruction_support-8b83993dc38cf451f036",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Ik lees in het boek.",
+              "audioId": "AUD-PREP-instruction_support-f9e980d990c3c1e54488"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Ik teken in het boek.",
+          "audioId": "AUD-PREP-target_narration-abdcbce3a871730b7fd9",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niets over tekenen. Ik lees in het boek.",
+            "audioId": "AUD-PREP-instruction_support-254c99e865239c53e17c",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Ik schrijf in het boek.",
+          "audioId": "AUD-PREP-target_narration-f357651e91a715bf1cdb",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niets over schrijven. Ik lees in het boek.",
+            "audioId": "AUD-PREP-instruction_support-e8114de7d21951aa8bc2",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-AA-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord boek.",
+        "targetAudioId": "AUD-PREP-instruction_support-b47f30f4ed8bab7d758f"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-AA-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "koek",
+          "audioId": "AUD-PREP-target_narration-2b3edaacc86290a9df3d",
+          "correct": false,
+          "feedback": {
+            "text": "Hier staat koek. Koek begint met een k. Boek begint met een b.",
+            "audioId": "AUD-PREP-instruction_support-f8e55599e03c69b9c2fb",
+            "outcome": "try_again",
+            "reason_type": "wrong_word",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "doek",
+          "audioId": "AUD-PREP-target_narration-4d814f8da0687188d801",
+          "correct": false,
+          "feedback": {
+            "text": "Hier staat doek. Doek begint met een d. Boek begint met een b.",
+            "audioId": "AUD-PREP-instruction_support-e24a8076caead17aed89",
+            "outcome": "try_again",
+            "reason_type": "wrong_word",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "boek",
+          "audioId": "AUD-PREP-target_narration-2afcca9e14eade2e0af6",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Hier staat boek.",
+            "audioId": "AUD-PREP-instruction_support-29037af0231db71d17f0",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, nu klopt het. De uitleg heeft je geholpen. Hier staat boek.",
+              "audioId": "AUD-PREP-instruction_support-79819506634e9ca1c640"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie.",
+      "objective": "word_form_recognition",
+      "distractorRationale": "Zelfde eindklank en vergelijkbaar woordbeeld; de beginletter bepaalt de keuze. Geen betekenistoets claimen."
+    },
+    {
+      "id": "TRX-P001-AA-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kijk naar het verhaal. Zet de zinnen in de goede volgorde.",
+        "targetAudioId": "AUD-PREP-instruction_support-24372ec42d61e404209a"
+      },
+      "help": {
+        "text": "Kijk naar de tekst. Wat gebeurt eerst? Wat gebeurt daarna?",
+        "audioId": "AUD-PREP-instruction_support-93527756dcc3c6689be6"
+      },
+      "feedback": {
+        "mode": "sequence_comparison",
+        "when_correct": {
+          "text": "Goed gedaan. Eerst pak ik het boek. Dan zit ik op de stoel. Dan lees ik.",
+          "audioId": "AUD-PREP-instruction_support-77900bc5ef0314862be6"
+        },
+        "when_incorrect": {
+          "text": "Kijk naar de tekst. Eerst pak ik het boek. Dan zit ik. Dan lees ik.",
+          "audioId": "AUD-PREP-instruction_support-235d733ee9e961cb18a8"
+        },
+        "correct_sequence": [
+          "Ik pak een boek.",
+          "Ik zit op een stoel.",
+          "Ik lees in het boek."
+        ],
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plek.",
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "answer": [
+        "Ik pak een boek.",
+        "Ik zit op een stoel.",
+        "Ik lees in het boek."
+      ],
+      "tiles": [
+        "Ik zit op een stoel.",
+        "Ik lees in het boek.",
+        "Ik pak een boek."
+      ],
+      "assessment": "Volgorde in de bron; geen algemene claim dat elke andere volgorde onmogelijk is.",
+      "tileAudioIds": [
+        "AUD-PREP-target_narration-25a1287cdea3823b2673",
+        "AUD-PREP-target_narration-0ae099d6732c4ab411b7",
+        "AUD-PREP-target_narration-0bd9cd48860a03769b1d"
+      ]
+    },
+    {
+      "id": "TRX-P001-AA-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Pak een boek. Vertel wat je doet.",
+        "targetAudioId": "AUD-PREP-instruction_support-d3508415f72df004f128"
+      },
+      "help": {
+        "text": "Kijk naar het voorbeeld. Probeer het dan zelf. Je mag ook een ander goed antwoord geven.",
+        "audioId": "AUD-PREP-instruction_support-b725a6d1669451c3443b"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed gedaan. Je zegt in een hele zin wat je doet.",
+          "audioId": "AUD-PREP-instruction_support-099c0b03d65b5ad53f5e"
+        },
+        "when_criteria_missing": {
+          "text": "Zeg wat je doet met het boek. Begin met: Ik. Maak de zin af.",
+          "audioId": "AUD-PREP-instruction_support-a7c3bf3434e8e16f69e3"
+        },
+        "criteria": [
+          "Je zegt wat je met het boek doet.",
+          "Je maakt een hele zin."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "record_audio",
+          "teacher_or_pair_oral"
+        ],
+        "speechRecognitionRequired": false,
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "Ik pak het boek.",
+      "exampleAudioId": "AUD-PREP-target_narration-d4ff2b3b56f452125a67",
+      "criteria": [
+        "Je zegt wat je met het boek doet.",
+        "Je maakt een hele zin."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-2089f9efe9a054938cb7",
+        "AUD-PREP-instruction_support-189b5db33f1ff32a3551"
+      ]
+    },
+    {
+      "id": "TRX-P001-AA-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: Ik pak een boek.",
+        "targetAudioId": "AUD-PREP-instruction_support-fad63056c0d255a3412b"
+      },
+      "help": {
+        "text": "Kijk naar de voorbeeldzin. Schrijf de zin over.",
+        "audioId": "AUD-PREP-instruction_support-40c5fccd6e337af072f4"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed gedaan. Je hebt de zin goed overgeschreven. De hoofdletter en de punt staan er ook.",
+          "audioId": "AUD-PREP-instruction_support-44c58b7307abca27c016"
+        },
+        "when_criteria_missing": {
+          "text": "Kijk naar het voorbeeld. Kijk naar elk woord. Kijk ook naar de hoofdletter en de punt.",
+          "audioId": "AUD-PREP-instruction_support-eea208d82b85107a82b3"
+        },
+        "criteria": [
+          "De woorden staan net als in het voorbeeld.",
+          "De zin begint met een hoofdletter en eindigt met een punt."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "type",
+          "paper"
+        ],
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "Ik pak een boek.",
+      "exampleAudioId": "AUD-PREP-target_narration-0bd9cd48860a03769b1d",
+      "criteria": [
+        "De woorden staan net als in het voorbeeld.",
+        "De zin begint met een hoofdletter en eindigt met een punt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-8e393cc3a5111ce705b8",
+        "AUD-PREP-instruction_support-1be4222a98d7d08cd59f"
+      ]
+    }
+  ],
+  "media": {
+    "state": "BRIEFS_AND_AUDIO_SCRIPTS_ONLY",
+    "audio_generation": "DEFERRED_BY_USER",
+    "image_generation": "NOT_STARTED"
+  },
+  "review": {
+    "ai_cycle": "initial_six_checks -> devils_advocate -> revision -> repeated_six_checks",
+    "record": "redactie/06-eindherlezing.json",
+    "human_didactic_review": "OPEN",
+    "learner_pilot": "NOT_RUN",
+    "runtime_and_accessibility_execution": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_review": "redactie/09-extra-niveaureview.json",
+    "feedback_review_sha256": "0046f648433ae5c2cd4774ec88473e3d0e3da368d327226b1ecaab47968c6e7d"
+  },
+  "measurement_plan": {
+    "capture": [
+      "response",
+      "correctness_when_objective",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Geen beheersing afleiden uit één goed antwoord of naspreken. Gebruik een latere parallelle check zonder model; stel afkapwaarden na proefgebruik vast."
+  },
+  "successFeedback": {
+    "message": {
+      "text": "De vier antwoorden kloppen. Je hebt ook het woord boek gevonden. Goed gedaan.",
+      "audioId": "AUD-PREP-instruction_support-c2b67bccf7e89102d4ba"
+    },
+    "condition": "Alle vier keuzevragen bij deze tekst zijn daadwerkelijk goed beantwoord. Open productie wordt apart beoordeeld.",
+    "after_help_message": {
+      "text": "De vier antwoorden kloppen nu. Je hebt de uitleg gebruikt. Goed dat je het opnieuw hebt geprobeerd.",
+      "audioId": "AUD-PREP-instruction_support-6047cbdb132ac9d72a7e"
+    },
+    "not_a_level_or_mastery_certificate": true,
+    "not_triggered_by_opening_document": true
+  }
+}

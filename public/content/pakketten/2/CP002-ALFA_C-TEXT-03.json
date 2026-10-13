@@ -1,0 +1,756 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_C-TEXT-03",
+    "title": "Een bloem voor thuis",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_C",
+    "objectiveIds": [
+      "CP002-ALFA_C-TEXT-03-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_C-TEXT-03",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-08",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A1"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een voorwerp, inhoud en plaats in drie samenhangende zinnen vinden.",
+    "support": "A1-bron als ondersteund Alfa C-aanbod met vooraf besproken vaas, water, naast en meenemen. De interpretatie van naast vraagt concrete ruimtelijke steun.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_C-TEXT-03-TEXT",
+      "kind": "text",
+      "title": "Een bloem voor thuis",
+      "targetText": "Nora neemt een bloem mee naar huis. Zij zet de bloem in een vaas met water. De vaas staat op tafel, naast haar boek.",
+      "displayText": "Nora neemt een bloem mee naar huis. Zij zet de bloem in een vaas met water. De vaas staat op tafel, naast haar boek.",
+      "script_sha256": "025c1687b8d6587680dfddcaac7daa420a10bd2b9a430a0ca8dfe65115b883f6",
+      "audio": {
+        "normal": "PREP-target_narration-025c1687b8d6587680df"
+      },
+      "titleAudioId": "PREP-target_narration-c52b913babca86f84080",
+      "imageId": "CP002-ALFA_C-TEXT-03-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_C-TEXT-03-TEXT-SEG-01",
+          "text": "Nora neemt een bloem mee naar huis.",
+          "start": 0,
+          "end": 35,
+          "audioId": "PREP-target_narration-ffbc9b466818f472e588",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-03-TEXT-SEG-02",
+          "text": "Zij zet de bloem in een vaas met water.",
+          "start": 36,
+          "end": 75,
+          "audioId": "PREP-target_narration-405265d79bb79dbaa0da",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-03-TEXT-SEG-03",
+          "text": "De vaas staat op tafel, naast haar boek.",
+          "start": 76,
+          "end": 116,
+          "audioId": "PREP-target_narration-b1033af6102b45a80253",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-SENT-01",
+      "kind": "sentence",
+      "targetText": "Nora neemt een bloem mee naar huis.",
+      "displayText": "Nora neemt een bloem mee naar huis.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-08"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ffbc9b466818f472e588"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-03-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-SENT-02",
+      "kind": "sentence",
+      "targetText": "Nora zet de bloem in een vaas.",
+      "displayText": "Nora zet de bloem in een vaas.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-30f7987dde7cd0ec4d2d"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-03-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-SENT-03",
+      "kind": "sentence",
+      "targetText": "Er zit water in de vaas.",
+      "displayText": "Er zit water in de vaas.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ac26e44721152ccbe3fd"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-03-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-SENT-04",
+      "kind": "sentence",
+      "targetText": "De vaas staat op tafel.",
+      "displayText": "De vaas staat op tafel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-5db3846abb1c82f13f8e"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-03-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-SENT-05",
+      "kind": "sentence",
+      "targetText": "De vaas staat naast het boek van Nora.",
+      "displayText": "De vaas staat naast het boek van Nora.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-327a02303f010baa341e"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-03-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT",
+        "CP002-ALFA_C-TEXT-03-SENT-01",
+        "CP002-ALFA_C-TEXT-03-SENT-02",
+        "CP002-ALFA_C-TEXT-03-SENT-03",
+        "CP002-ALFA_C-TEXT-03-SENT-04",
+        "CP002-ALFA_C-TEXT-03-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_C-TEXT-03-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_C-TEXT-03-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat staat naast het boek?",
+        "targetAudioId": "PREP-instruction_support-201edb2c9f5fb41d3fdd"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Er staat een kom soep naast het boek.",
+          "audioId": "OPT-REV-ebcd323260f498ce6003ac30",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Er staat een bord met kaas naast het boek.",
+          "audioId": "OPT-REV-eda7e937755904a986ed64e9",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Er staat een vaas met een bloem naast het boek.",
+          "audioId": "OPT-REV-2eb71484590f1efcd8f70e94",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-02-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De vaas staat op tafel, naast haar boek.",
+        "start": 76,
+        "end": 116,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Vaas met bloem is naast boek; soep en kaas zijn andere voorwerpen.",
+      "help": {
+        "text": "Lees de laatste zin.",
+        "audioId": "HELP-REV-4990ea1c6e80ef15ef28aef9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_C-TEXT-03-EX-02-FB-O2",
+          "O3": "CP002-ALFA_C-TEXT-03-EX-02-FB-O3",
+          "O1": "CP002-ALFA_C-TEXT-03-EX-02-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-03-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar neemt Nora de bloem mee naartoe?",
+        "targetAudioId": "PREP-instruction_support-5ce04c4e4118b90b94ec"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Nora neemt de bloem mee naar het werk.",
+          "audioId": "PREP-target_narration-5afc48a6ee90218b7cab",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora neemt de bloem mee naar huis.",
+          "audioId": "PREP-target_narration-d42ab0d5d88fa317c2fe",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora neemt de bloem mee naar de les.",
+          "audioId": "PREP-target_narration-6b55f331095defaa0dd9",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-03-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora neemt een bloem mee naar huis.",
+        "start": 0,
+        "end": 35,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Naar huis staat letterlijk; les en werk zijn andere bestemmingen.",
+      "help": {
+        "text": "Lees de eerste zin.",
+        "audioId": "HELP-REV-7d175ae5bcd93b66fbcab8b1"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_C-TEXT-03-EX-03-FB-O3",
+          "O1": "CP002-ALFA_C-TEXT-03-EX-03-FB-O1",
+          "O2": "CP002-ALFA_C-TEXT-03-EX-03-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-03-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat zit er in de vaas bij de bloem?",
+        "targetAudioId": "PREP-instruction_support-9659357da64dc548ca93"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Er zit water in de vaas.",
+          "audioId": "PREP-target_narration-ac26e44721152ccbe3fd",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Er zit zand in de vaas.",
+          "audioId": "PREP-target_narration-594a177280555b85e7ac",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Er zitten stenen in de vaas.",
+          "audioId": "PREP-target_narration-438c24a1638256b25098",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-04-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Zij zet de bloem in een vaas met water.",
+        "start": 36,
+        "end": 75,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Water staat letterlijk; zand en stenen veranderen de inhoud.",
+      "help": {
+        "text": "Zoek de zin over de vaas.",
+        "audioId": "HELP-REV-a1e0d613bfa4c5435e69b8bb"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_C-TEXT-03-EX-04-FB-O1",
+          "O2": "CP002-ALFA_C-TEXT-03-EX-04-FB-O2",
+          "O3": "CP002-ALFA_C-TEXT-03-EX-04-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-03-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Welke zin zegt waar de vaas staat?",
+        "targetAudioId": "PREP-instruction_support-f76553baa690f1f58f60"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W2",
+          "text": "De vaas staat op het boek.",
+          "correct": false,
+          "audioId": "PREP-target_narration-2828a05ac9d89e7e979a",
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "De vaas staat onder het boek.",
+          "correct": false,
+          "audioId": "PREP-target_narration-452e7b765cd0a4b4e802",
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "De vaas staat naast het boek.",
+          "correct": true,
+          "audioId": "PREP-target_narration-d7f07aefdcdf9f95450b",
+          "feedbackId": "CP002-ALFA_C-TEXT-03-EX-05-FB-W1"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Brongebonden plaatsherkenning: naast, op en onder onderscheiden. Geen zelfstandige woorddefinitie toetsen.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W2": "CP002-ALFA_C-TEXT-03-EX-05-FB-W2",
+          "W3": "CP002-ALFA_C-TEXT-03-EX-05-FB-W3",
+          "W1": "CP002-ALFA_C-TEXT-03-EX-05-FB-W1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-03-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Zij zet de bloem in een vaas met water.",
+        "De vaas staat op tafel, naast haar boek.",
+        "Nora neemt een bloem mee naar huis."
+      ],
+      "answer": [
+        "Nora neemt een bloem mee naar huis.",
+        "Zij zet de bloem in een vaas met water.",
+        "De vaas staat op tafel, naast haar boek."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-405265d79bb79dbaa0da",
+        "PREP-target_narration-b1033af6102b45a80253",
+        "PREP-target_narration-ffbc9b466818f472e588"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-03-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zeg waar de vaas in het verhaal staat. Noem ook het boek.",
+        "targetAudioId": "PREP-instruction_support-cebe9f729708682d1c55"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "De vaas staat op tafel naast het boek.",
+      "criteria": [
+        "Je zegt dat de vaas op tafel staat.",
+        "Je noemt de plek naast het boek."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-881d1353a126437ddff8",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-76960e43f929d6a6327a",
+        "PREP-instruction_support-51b2701c7a9285d14a20"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je zegt dat de vaas op tafel staat.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-03-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-03-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt de plek naast het boek.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-03-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-03-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-03-EX-07-FB-ALL-MET",
+        "example": "De vaas staat op tafel naast het boek.",
+        "exampleAudioId": "PREP-target_narration-881d1353a126437ddff8",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-03-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-03-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf waar Nora de bloem in zet.",
+        "targetAudioId": "PREP-instruction_support-45df5de1877f8cf55d4b"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Nora zet de bloem in een vaas met water.",
+      "criteria": [
+        "Je noemt Nora en de bloem.",
+        "Je zegt dat de bloem in een vaas staat of wordt gezet."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-c7379fef6320f0a13b3d",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-4ee97c582dae0751ba82",
+        "PREP-instruction_support-4d33a3ad9e10b53fb956"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt Nora en de bloem.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-03-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-03-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat de bloem in een vaas staat of wordt gezet.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-03-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-03-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-03-EX-08-FB-ALL-MET",
+        "example": "Nora zet de bloem in een vaas met water.",
+        "exampleAudioId": "PREP-target_narration-c7379fef6320f0a13b3d",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-03-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

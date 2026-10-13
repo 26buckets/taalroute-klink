@@ -1,0 +1,838 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-A2-TEXT-04",
+    "title": "De laarzen blijven in de winkel",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A2",
+    "objectiveIds": [
+      "CP002-A2-TEXT-04-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A2-TEXT-04",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "NEW_STORY",
+      "source_id": null,
+      "source_path": "redactie/01-concepten.json",
+      "old_route": null
+    }
+  },
+  "learning": {
+    "oral_goal": "Twee pasproblemen en een afspraak over een alternatief begrijpen.",
+    "support": "Bereid hetzelfde model, te strak/te los, bestellen, zodra en achterlaten voor. Telefoonnummer wordt alleen in fictieve context genoemd; vraag geen werkelijk nummer van een leerder.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-A2-TEXT-04-TEXT",
+      "kind": "text",
+      "title": "De laarzen blijven in de winkel",
+      "targetText": "Youssef zoekt laarzen voor zijn werk in de tuin. In de winkel past hij een paar, maar de laarzen zitten te strak. De medewerker brengt hetzelfde model in een grotere maat. Youssef loopt er een stukje mee door de winkel. Bij elke stap schuift zijn voet in de laars heen en weer. De grotere maat zit dus te los. De medewerker kan een ander model bestellen. Dat kan Youssef volgende week komen passen. Youssef kan zijn oude laarzen nog gebruiken. Daarom kan hij op het andere model wachten. Hij laat zijn telefoonnummer achter. De medewerker belt hem zodra het andere model binnen is. Youssef koopt vandaag nog niets.",
+      "displayText": "Youssef zoekt laarzen voor zijn werk in de tuin. In de winkel past hij een paar, maar de laarzen zitten te strak. De medewerker brengt hetzelfde model in een grotere maat. Youssef loopt er een stukje mee door de winkel. Bij elke stap schuift zijn voet in de laars heen en weer. De grotere maat zit dus te los. De medewerker kan een ander model bestellen. Dat kan Youssef volgende week komen passen. Youssef kan zijn oude laarzen nog gebruiken. Daarom kan hij op het andere model wachten. Hij laat zijn telefoonnummer achter. De medewerker belt hem zodra het andere model binnen is. Youssef koopt vandaag nog niets.",
+      "script_sha256": "cbd079e7d7e7cf8b698c23f754b5867b48175d75a31c874a98bce2370a4c0d2a",
+      "audio": {
+        "normal": "PREP-target_narration-cbd079e7d7e7cf8b698c"
+      },
+      "titleAudioId": "PREP-target_narration-613465affba050f6ba67",
+      "imageId": "CP002-A2-TEXT-04-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-01",
+          "text": "Youssef zoekt laarzen voor zijn werk in de tuin.",
+          "start": 0,
+          "end": 48,
+          "audioId": "PREP-target_narration-de2b97b9ed2da10de988",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-02",
+          "text": "In de winkel past hij een paar, maar de laarzen zitten te strak.",
+          "start": 49,
+          "end": 113,
+          "audioId": "PREP-target_narration-bd38c17ab2d6a882dc9f",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-03",
+          "text": "De medewerker brengt hetzelfde model in een grotere maat.",
+          "start": 114,
+          "end": 171,
+          "audioId": "PREP-target_narration-fce279b1a4f6b4401944",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-04",
+          "text": "Youssef loopt er een stukje mee door de winkel.",
+          "start": 172,
+          "end": 219,
+          "audioId": "PREP-target_narration-e4627944b53bba5d6d38",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-05",
+          "text": "Bij elke stap schuift zijn voet in de laars heen en weer.",
+          "start": 220,
+          "end": 277,
+          "audioId": "PREP-target_narration-54d8d024f17e6ef0d0bb",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-06",
+          "text": "De grotere maat zit dus te los.",
+          "start": 278,
+          "end": 309,
+          "audioId": "PREP-target_narration-3038b82c409a1fb9b317",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-07",
+          "text": "De medewerker kan een ander model bestellen.",
+          "start": 310,
+          "end": 354,
+          "audioId": "PREP-target_narration-6bf812fc055daef4101b",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-08",
+          "text": "Dat kan Youssef volgende week komen passen.",
+          "start": 355,
+          "end": 398,
+          "audioId": "PREP-target_narration-b815be34e4a17e29c1bf",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-09",
+          "text": "Youssef kan zijn oude laarzen nog gebruiken.",
+          "start": 399,
+          "end": 443,
+          "audioId": "PREP-target_narration-a77c04a87a4289536e7e",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-10",
+          "text": "Daarom kan hij op het andere model wachten.",
+          "start": 444,
+          "end": 487,
+          "audioId": "PREP-target_narration-7cc81f51103e67f82b00",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-11",
+          "text": "Hij laat zijn telefoonnummer achter.",
+          "start": 488,
+          "end": 524,
+          "audioId": "PREP-target_narration-995c53330b15ead4b2f5",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-12",
+          "text": "De medewerker belt hem zodra het andere model binnen is.",
+          "start": 525,
+          "end": 581,
+          "audioId": "PREP-target_narration-bdc9132f6941a52a1853",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-04-TEXT-SEG-13",
+          "text": "Youssef koopt vandaag nog niets.",
+          "start": 582,
+          "end": 614,
+          "audioId": "PREP-target_narration-fa7c292cc0d5a7a99bef",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-A2-TEXT-04-SENT-01",
+      "kind": "sentence",
+      "targetText": "Youssef zoekt laarzen om in de tuin te werken.",
+      "displayText": "Youssef zoekt laarzen om in de tuin te werken.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-7840005a3f98f6a3dc5d"
+      },
+      "imageId": "CP002-A2-TEXT-04-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-A2-TEXT-04-SENT-02",
+      "kind": "sentence",
+      "targetText": "De eerste laarzen zitten te strak.",
+      "displayText": "De eerste laarzen zitten te strak.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-571d3b2c8546ebfa6e68"
+      },
+      "imageId": "CP002-A2-TEXT-04-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-A2-TEXT-04-SENT-03",
+      "kind": "sentence",
+      "targetText": "De grotere maat zit te los.",
+      "displayText": "De grotere maat zit te los.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-90cd469a48ef951d445f"
+      },
+      "imageId": "CP002-A2-TEXT-04-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-A2-TEXT-04-SENT-04",
+      "kind": "sentence",
+      "targetText": "Youssef kan volgende week een ander model passen.",
+      "displayText": "Youssef kan volgende week een ander model passen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-cff334c7c7cc1f3d7e6a"
+      },
+      "imageId": "CP002-A2-TEXT-04-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-A2-TEXT-04-SENT-05",
+      "kind": "sentence",
+      "targetText": "De medewerker belt als het andere model binnen is.",
+      "displayText": "De medewerker belt als het andere model binnen is.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-0a74bb91d5f285398a49"
+      },
+      "imageId": "CP002-A2-TEXT-04-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-A2-TEXT-04-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT",
+        "CP002-A2-TEXT-04-SENT-01",
+        "CP002-A2-TEXT-04-SENT-02",
+        "CP002-A2-TEXT-04-SENT-03",
+        "CP002-A2-TEXT-04-SENT-04",
+        "CP002-A2-TEXT-04-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-A2-TEXT-04-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-A2-TEXT-04-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom koopt Youssef de grotere maat niet?",
+        "targetAudioId": "PREP-instruction_support-6d4976b73893c373bc72"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Die laarzen zijn er niet meer.",
+          "audioId": "PREP-target_narration-41023fcafd5d6399b752",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-04-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Die laarzen zitten te los.",
+          "audioId": "PREP-target_narration-d62a6bbef56b284dde14",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-04-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Die laarzen zijn te duur.",
+          "audioId": "PREP-target_narration-8dafa19c91e39c503a2a",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-04-EX-02-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De grotere maat zit dus te los.",
+        "start": 278,
+        "end": 309,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Te los verklaart afwijzing; duur en niet beschikbaar zijn andere problemen.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-A2-TEXT-04-EX-02-FB-O3",
+          "O1": "CP002-A2-TEXT-04-EX-02-FB-O1",
+          "O2": "CP002-A2-TEXT-04-EX-02-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-04-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom kan Youssef wachten?",
+        "targetAudioId": "PREP-instruction_support-e1162f7cab855a488d65"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Hij kan zijn oude laarzen nog gebruiken.",
+          "audioId": "PREP-target_narration-ef5f670db8380a99cec0",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-04-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Hij werkt voorlopig niet in de tuin.",
+          "audioId": "PREP-target_narration-1eef581e8bb7b0c4cc35",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-04-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Hij kan laarzen van de medewerker lenen.",
+          "audioId": "PREP-target_narration-7c478a598acecf668542",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-04-EX-03-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Youssef kan zijn oude laarzen nog gebruiken. Daarom kan hij op het andere model wachten.",
+        "start": 399,
+        "end": 487,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Oude laarzen bruikbaar verklaart wachten; niet werken en lenen zijn niet genoemd.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-A2-TEXT-04-EX-03-FB-O1",
+          "O2": "CP002-A2-TEXT-04-EX-03-FB-O2",
+          "O3": "CP002-A2-TEXT-04-EX-03-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-04-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wanneer belt de medewerker Youssef?",
+        "targetAudioId": "PREP-instruction_support-670e196c2937aba8c114"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "De medewerker belt voordat het model is besteld.",
+          "audioId": "PREP-target_narration-5336ebc9c38037676f5a",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-04-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De medewerker belt alleen als de prijs verandert.",
+          "audioId": "PREP-target_narration-78179fb7505d7b1f5c05",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-04-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De medewerker belt zodra het andere model binnen is.",
+          "audioId": "PREP-target_narration-fbc362a711df13284748",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-04-EX-04-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De medewerker belt hem zodra het andere model binnen is.",
+        "start": 525,
+        "end": 581,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Zodra model binnen is is afspraak; voor bestelling en prijswijziging zijn andere voorwaarden.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-A2-TEXT-04-EX-04-FB-O2",
+          "O3": "CP002-A2-TEXT-04-EX-04-FB-O3",
+          "O1": "CP002-A2-TEXT-04-EX-04-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-04-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent te los in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-2490c18705ac8b212a8c"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W3",
+          "text": "De laars kan niet worden uitgetrokken.",
+          "correct": false,
+          "audioId": "PREP-target_narration-2eb91a991ef22d832695",
+          "feedbackId": "CP002-A2-TEXT-04-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "De voet schuift in de laars heen en weer.",
+          "correct": true,
+          "audioId": "PREP-target_narration-53388a232fc67e7a87a0",
+          "feedbackId": "CP002-A2-TEXT-04-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "De laars knelt om de voet.",
+          "correct": false,
+          "audioId": "PREP-target_narration-f96b063303f6348eb635",
+          "feedbackId": "CP002-A2-TEXT-04-EX-05-FB-W2"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W3": "CP002-A2-TEXT-04-EX-05-FB-W3",
+          "W1": "CP002-A2-TEXT-04-EX-05-FB-W1",
+          "W2": "CP002-A2-TEXT-04-EX-05-FB-W2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-04-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Youssef loopt er een stukje mee door de winkel.",
+        "Hij laat zijn telefoonnummer achter.",
+        "De medewerker brengt hetzelfde model in een grotere maat."
+      ],
+      "answer": [
+        "De medewerker brengt hetzelfde model in een grotere maat.",
+        "Youssef loopt er een stukje mee door de winkel.",
+        "Hij laat zijn telefoonnummer achter."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-e4627944b53bba5d6d38",
+        "PREP-target_narration-995c53330b15ead4b2f5",
+        "PREP-target_narration-fce279b1a4f6b4401944"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-04-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je past schoenen die niet goed zitten. Leg het probleem uit en vraag naar een ander model.",
+        "targetAudioId": "PREP-instruction_support-fe87e2995bfa417558e3"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Deze schoenen zitten te los. Kan ik een ander model passen?",
+      "criteria": [
+        "Je legt uit wat er niet goed zit.",
+        "Je vraagt naar een ander model."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-c5beca3b6abcb1cafe78",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-67f72a44d72388596080",
+        "PREP-instruction_support-abe083582afd33d71749"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je legt uit wat er niet goed zit.",
+            "metFeedbackId": "CP002-A2-TEXT-04-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-04-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je vraagt naar een ander model.",
+            "metFeedbackId": "CP002-A2-TEXT-04-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-04-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A2-TEXT-04-EX-07-FB-ALL-MET",
+        "example": "Deze schoenen zitten te los. Kan ik een ander model passen?",
+        "exampleAudioId": "PREP-target_narration-c5beca3b6abcb1cafe78",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A2-TEXT-04-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-04-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf aan de winkel waarom je de laarzen niet koopt en wat je wel wilt proberen.",
+        "targetAudioId": "PREP-instruction_support-cd6143c7007cac728f1b"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "De grotere maat zit te los. Ik wil graag een ander model passen.",
+      "criteria": [
+        "Je zegt dat de grotere maat te los zit.",
+        "Je wilt een ander model proberen."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-c54e0f5f3f6cac04b1d2",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-9b00b255efc3aec01403",
+        "PREP-instruction_support-3e0e75f45728818cc869"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je zegt dat de grotere maat te los zit.",
+            "metFeedbackId": "CP002-A2-TEXT-04-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-04-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je wilt een ander model proberen.",
+            "metFeedbackId": "CP002-A2-TEXT-04-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-04-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A2-TEXT-04-EX-08-FB-ALL-MET",
+        "example": "De grotere maat zit te los. Ik wil graag een ander model passen.",
+        "exampleAudioId": "PREP-target_narration-c54e0f5f3f6cac04b1d2",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A2-TEXT-04-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

@@ -1,0 +1,881 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-A2",
+    "title": "Een droge plek voor de boeken",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A2",
+    "objectiveIds": [
+      "TRX-P001-A2-GOAL"
+    ],
+    "objective": "Oorzaak, voorstel, praktische beperking en oplossing onderscheiden.",
+    "status": "concept",
+    "owner": "taalroute",
+    "version": 1,
+    "source_package": "CP002",
+    "theme": "boeken-lenen-en-gebruiken",
+    "support": "Buurthuis, beheerder en doorgang voorbereiden. Deze scène is fictief en beschrijft geen echte instelling.",
+    "voice_policy": "Instructie/steun en doeltaal hebben verschillende exacte voice-IDs; geen generatie in deze fase."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-A2-TEXT",
+      "kind": "text",
+      "targetText": "In de gang van het buurthuis staat een kast met boeken. Bezoekers mogen boeken brengen en meenemen. Nora zet er drie boeken in die zij niet meer leest. Een week later ziet ze dat een boek nat is. De kast staat dicht bij de buitendeur. Als het hard regent, komt er water onder de deur door. Nora vraagt aan de beheerder of de kast verder van de deur kan staan. De beheerder wil dat eerst met de andere vrijwilligers bespreken. De gang moet vrij blijven. Ze meten de lege plek naast het raam. Daar past de kast en blijft de gang vrij. De volgende ochtend verplaatsen ze hem.",
+      "displayText": "In de gang van het buurthuis staat een kast met boeken. Bezoekers mogen boeken brengen en meenemen. Nora zet er drie boeken in die zij niet meer leest. Een week later ziet ze dat een boek nat is. De kast staat dicht bij de buitendeur. Als het hard regent, komt er water onder de deur door. Nora vraagt aan de beheerder of de kast verder van de deur kan staan. De beheerder wil dat eerst met de andere vrijwilligers bespreken. De gang moet vrij blijven. Ze meten de lege plek naast het raam. Daar past de kast en blijft de gang vrij. De volgende ochtend verplaatsen ze hem.",
+      "title": "Een droge plek voor de boeken",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-ab8b3b4a4682e53af0b5"
+      },
+      "titleAudioId": "AUD-PREP-target_narration-d19144d08460f1ff0bb2",
+      "imageId": "TRX-P001-A2-IMG-STORY",
+      "script_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN",
+      "sentenceSegments": [
+        {
+          "id": "TRX-P001-A2-TEXT-S01",
+          "text": "In de gang van het buurthuis staat een kast met boeken.",
+          "audioId": "AUD-PREP-target_narration-bc6a6a509acbdf90356a",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S02",
+          "text": "Bezoekers mogen boeken brengen en meenemen.",
+          "audioId": "AUD-PREP-target_narration-5b9e8cf979d29e3a9065",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S03",
+          "text": "Nora zet er drie boeken in die zij niet meer leest.",
+          "audioId": "AUD-PREP-target_narration-71c0894d40ab98f1c344",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S04",
+          "text": "Een week later ziet ze dat een boek nat is.",
+          "audioId": "AUD-PREP-target_narration-b199b10a1f14e5a9dc50",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S05",
+          "text": "De kast staat dicht bij de buitendeur.",
+          "audioId": "AUD-PREP-target_narration-a3ca65e5c6f9fb95474d",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S06",
+          "text": "Als het hard regent, komt er water onder de deur door.",
+          "audioId": "AUD-PREP-target_narration-7a15c7d9e32ed9ec84cd",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S07",
+          "text": "Nora vraagt aan de beheerder of de kast verder van de deur kan staan.",
+          "audioId": "AUD-PREP-target_narration-47882635c801b94ade80",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S08",
+          "text": "De beheerder wil dat eerst met de andere vrijwilligers bespreken.",
+          "audioId": "AUD-PREP-target_narration-f6cd99db9ea65544b14d",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S09",
+          "text": "De gang moet vrij blijven.",
+          "audioId": "AUD-PREP-target_narration-74e624da4be5a7a37a20",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S10",
+          "text": "Ze meten de lege plek naast het raam.",
+          "audioId": "AUD-PREP-target_narration-a6e835c02c2f6c7b8039",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S11",
+          "text": "Daar past de kast en blijft de gang vrij.",
+          "audioId": "AUD-PREP-target_narration-43e30644f6eb23d20a43",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A2-TEXT-S12",
+          "text": "De volgende ochtend verplaatsen ze hem.",
+          "audioId": "AUD-PREP-target_narration-33e8de9dfe661b548579",
+          "story_context_required": true,
+          "parent_text_sha256": "ab8b3b4a4682e53af0b5fe52d3244be21ea9ff98d4e7ccbbb4c57ce95e8558c5",
+          "imageBriefId": "TRX-P001-A2-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-A2-SENT-01",
+      "kind": "sentence",
+      "targetText": "De boekenkast staat bij de buitendeur.",
+      "displayText": "De boekenkast staat bij de buitendeur.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-c33c83401a7e16337c50"
+      },
+      "imageId": "TRX-P001-A2-IMG-SENT-01",
+      "script_sha256": "c33c83401a7e16337c50b0ce893ebae42ae6a668c9bfe9fad6d4a08d5e9d28ed",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A2-SENT-02",
+      "kind": "sentence",
+      "targetText": "Bij harde regen komt er water onder de deur door.",
+      "displayText": "Bij harde regen komt er water onder de deur door.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-5751c94cb5cd56537d53"
+      },
+      "imageId": "TRX-P001-A2-IMG-SENT-02",
+      "script_sha256": "5751c94cb5cd56537d539d5b8325d79434b3d2bca9cefaf8a35065dc09be0a47",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A2-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora stelt voor om de kast te verplaatsen.",
+      "displayText": "Nora stelt voor om de kast te verplaatsen.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-e419f1a881287843c2d3"
+      },
+      "imageId": "TRX-P001-A2-IMG-SENT-03",
+      "script_sha256": "e419f1a881287843c2d3f3ef7e9f1217d598763a336f87c16d999d22d954b3a9",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A2-SENT-04",
+      "kind": "sentence",
+      "targetText": "De beheerder overlegt met de vrijwilligers.",
+      "displayText": "De beheerder overlegt met de vrijwilligers.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-a131f2743cc1d4274af3"
+      },
+      "imageId": "TRX-P001-A2-IMG-SENT-04",
+      "script_sha256": "a131f2743cc1d4274af3a93e0d0c305573111ae6bd64fbec5448f1bfb1564c00",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A2-SENT-05",
+      "kind": "sentence",
+      "targetText": "Naast het raam is genoeg ruimte voor de kast.",
+      "displayText": "Naast het raam is genoeg ruimte voor de kast.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-bfefa993304e02eca074"
+      },
+      "imageId": "TRX-P001-A2-IMG-SENT-05",
+      "script_sha256": "bfefa993304e02eca07421d92215473deddc1f8de81f0b0dc640e5f7d91babe9",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A2-WORD-01",
+      "kind": "word",
+      "targetText": "buurthuis",
+      "displayText": "buurthuis",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-3a4ac85c837086fdff82"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A2-WORD-02",
+      "kind": "word",
+      "targetText": "beheerder",
+      "displayText": "beheerder",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-38936a6ea03f1ecce993"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A2-WORD-03",
+      "kind": "word",
+      "targetText": "buitendeur",
+      "displayText": "buitendeur",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-47d47fee132ca7ae7c79"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A2-WORD-04",
+      "kind": "word",
+      "targetText": "verplaatsen",
+      "displayText": "verplaatsen",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-8861698cdd9801571e4a"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A2-WORD-05",
+      "kind": "word",
+      "targetText": "vrij",
+      "displayText": "vrij",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-88c0a2817d5440d97fd4"
+      },
+      "preteach": true,
+      "meaning_note": null
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-A2-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Lees of luister naar het verhaal. Je mag het nog eens lezen of beluisteren.",
+        "targetAudioId": "AUD-PREP-instruction_support-14599e937022f2f833cf"
+      },
+      "help": {
+        "text": "Lees de tekst. Je mag hem nog eens lezen of beluisteren.",
+        "audioId": "AUD-PREP-instruction_support-a35418e6f59fde36af66"
+      },
+      "feedback": {
+        "mode": "participation_only",
+        "automatic_correctness": false,
+        "after_marked_done": {
+          "text": "Je bent klaar met de tekst. Nu kun je de vragen maken.",
+          "audioId": "AUD-PREP-instruction_support-1dd256fb2d459290cad3"
+        },
+        "condition": "Alleen nadat de cursist lezen of luisteren zelf heeft afgerond; geen begrip of beheersing afleiden."
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A2-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "mode": "supported_reading",
+      "assessment": false,
+      "adaptation": "Patroon aangepast aan dit leerprofiel; geen getoetste rendererclaim."
+    },
+    {
+      "id": "TRX-P001-A2-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waardoor wordt een boek nat?",
+        "targetAudioId": "AUD-PREP-instruction_support-21935ee3ab3223042692"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A2-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Als het hard regent, komt er water onder de deur door.",
+      "evidenceAudioId": "AUD-PREP-target_narration-7a15c7d9e32ed9ec84cd",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Regenwater komt onder de buitendeur door.",
+          "audioId": "AUD-PREP-target_narration-9ca9311df7fbf364abc3",
+          "correct": true,
+          "feedback": {
+            "text": "Goed gevonden. Bij harde regen komt er water onder de deur door. Daardoor wordt het boek nat.",
+            "audioId": "AUD-PREP-instruction_support-441ebd65bf9ef573ad7c",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Bij harde regen komt er water onder de deur door. Daardoor wordt het boek nat.",
+              "audioId": "AUD-PREP-instruction_support-b70297e48f4702d4c7b5"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Een bezoeker morst water op het boek.",
+          "audioId": "AUD-PREP-target_narration-06531b0940b4711bdf6d",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat een bezoeker water morst. Het water komt onder de buitendeur door.",
+            "audioId": "AUD-PREP-instruction_support-17a6fdbe1dd8ebf922e2",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Er komt water door het raam naar binnen.",
+          "audioId": "AUD-PREP-target_narration-2b9030c5194301b44af2",
+          "correct": false,
+          "feedback": {
+            "text": "Het water komt onder de buitendeur door. Naast het raam is de nieuwe plek voor de kast.",
+            "audioId": "AUD-PREP-instruction_support-0b9890ba40df695caa05",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-A2-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom kan de kast niet zomaar ergens anders staan?",
+        "targetAudioId": "AUD-PREP-instruction_support-7dc999f1e3bc20c017e8"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A2-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "De gang moet vrij blijven.",
+      "evidenceAudioId": "AUD-PREP-target_narration-74e624da4be5a7a37a20",
+      "options": [
+        {
+          "id": "O2",
+          "text": "De kast moet naast de deur blijven.",
+          "audioId": "AUD-PREP-target_narration-4585953c641265185fa5",
+          "correct": false,
+          "feedback": {
+            "text": "De kast hoeft niet bij de deur te blijven. Hij kan ergens anders staan als de gang vrij blijft.",
+            "audioId": "AUD-PREP-instruction_support-d4d74f2fb7cdf4250249",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "De bezoekers mogen geen boeken meenemen.",
+          "audioId": "AUD-PREP-target_narration-7bfd70bcf0dda6544768",
+          "correct": false,
+          "feedback": {
+            "text": "Bezoekers mogen boeken meenemen. Dat staat in de tekst. Het probleem is dat de gang vrij moet blijven.",
+            "audioId": "AUD-PREP-instruction_support-fd652946804528614e49",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "De gang moet vrij blijven.",
+          "audioId": "AUD-PREP-target_narration-74e624da4be5a7a37a20",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Mensen moeten door de gang kunnen lopen. De kast mag de gang dus niet blokkeren.",
+            "audioId": "AUD-PREP-instruction_support-e0dcbfdb78304aa8d9b0",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Mensen moeten door de gang kunnen lopen. De kast mag de gang dus niet blokkeren.",
+              "audioId": "AUD-PREP-instruction_support-d3adb6c3cd7ea2179ea6"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-A2-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Welke oplossing kiest de groep?",
+        "targetAudioId": "AUD-PREP-instruction_support-5b965df0c97280aab368"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A2-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Daar past de kast en blijft de gang vrij.",
+      "evidenceAudioId": "AUD-PREP-target_narration-43e30644f6eb23d20a43",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De kast wordt alleen bij harde regen verplaatst.",
+          "audioId": "AUD-PREP-target_narration-a9905681e802f6ced45a",
+          "correct": false,
+          "feedback": {
+            "text": "De groep kiest een nieuwe plek en verplaatst de kast. Er staat niet dat ze dat bij elke regenbui doen.",
+            "audioId": "AUD-PREP-instruction_support-3db25b2744ed8beb37d9",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "De kast komt naast het raam, waar hij goed past.",
+          "audioId": "AUD-PREP-target_narration-284a986a64c806bda1cb",
+          "correct": true,
+          "feedback": {
+            "text": "Goed gezien. Naast het raam past de kast. Mensen kunnen daar ook door de gang blijven lopen.",
+            "audioId": "AUD-PREP-instruction_support-ab0058f344897b296c0f",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Naast het raam past de kast. Mensen kunnen daar ook door de gang blijven lopen.",
+              "audioId": "AUD-PREP-instruction_support-0aa72ee6b840b8bd4a9f"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "De kast blijft op dezelfde plek bij de buitendeur.",
+          "audioId": "AUD-PREP-target_narration-1c2a48d5dbabc0173dce",
+          "correct": false,
+          "feedback": {
+            "text": "De groep verplaatst de kast de volgende ochtend. Hij blijft dus niet bij de buitendeur staan.",
+            "audioId": "AUD-PREP-instruction_support-81343fc8b97885bab8b0",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-A2-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doet de beheerder in dit verhaal?",
+        "targetAudioId": "AUD-PREP-instruction_support-0b8b984e585b6da5c96b"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A2-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "De beheerder bespreekt met anderen waar de kast kan staan.",
+          "audioId": "AUD-PREP-target_narration-ef4bae8aea8ed5775d3f",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. De beheerder bespreekt met de vrijwilligers waar de kast kan staan.",
+            "audioId": "AUD-PREP-instruction_support-071e0788f7261095f0db",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. De beheerder bespreekt met de vrijwilligers waar de kast kan staan.",
+              "audioId": "AUD-PREP-instruction_support-e7424a194c2a34382fa1"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "De beheerder kiest welke boeken in de kast mogen blijven.",
+          "audioId": "AUD-PREP-target_narration-976e18a3844449eafb22",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat de beheerder boeken uitzoekt. Hij wil bespreken waar de kast kan staan.",
+            "audioId": "AUD-PREP-instruction_support-8b2a305f891b2b4b9dd8",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "De beheerder vraagt bezoekers om de boeken mee naar huis te nemen.",
+          "audioId": "AUD-PREP-target_narration-22323d11690d3f43f13c",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat hij bezoekers vraagt om boeken mee te nemen. Hij wil de nieuwe plek met de vrijwilligers bespreken.",
+            "audioId": "AUD-PREP-instruction_support-146f4e51eccb68315f88",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie.",
+      "objective": "word_meaning_in_context",
+      "distractorRationale": "Rol bepalen uit een concrete handeling, niet uit algemene wereldkennis."
+    },
+    {
+      "id": "TRX-P001-A2-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kijk naar het verhaal. Zet de zinnen in de goede volgorde.",
+        "targetAudioId": "AUD-PREP-instruction_support-24372ec42d61e404209a"
+      },
+      "help": {
+        "text": "Kijk naar de tekst. Wat gebeurt eerst? Wat gebeurt daarna?",
+        "audioId": "AUD-PREP-instruction_support-93527756dcc3c6689be6"
+      },
+      "feedback": {
+        "mode": "sequence_comparison",
+        "when_correct": {
+          "text": "Dat klopt. Nora ziet eerst het natte boek. De groep meet daarna de nieuwe plek. De volgende ochtend verplaatsen ze de kast.",
+          "audioId": "AUD-PREP-instruction_support-e867c92f58bc7d9cde9a"
+        },
+        "when_incorrect": {
+          "text": "De groep meet eerst of de kast op de nieuwe plek past. Pas daarna verplaatsen ze de kast. Zoek ook op wanneer Nora het natte boek ziet.",
+          "audioId": "AUD-PREP-instruction_support-29bf3aa76a9e7580b6c3"
+        },
+        "correct_sequence": [
+          "Een week later ziet ze dat een boek nat is.",
+          "Ze meten de lege plek naast het raam.",
+          "De volgende ochtend verplaatsen ze hem."
+        ],
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plek.",
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "answer": [
+        "Een week later ziet ze dat een boek nat is.",
+        "Ze meten de lege plek naast het raam.",
+        "De volgende ochtend verplaatsen ze hem."
+      ],
+      "tiles": [
+        "Ze meten de lege plek naast het raam.",
+        "De volgende ochtend verplaatsen ze hem.",
+        "Een week later ziet ze dat een boek nat is."
+      ],
+      "assessment": "Volgorde in de bron; geen algemene claim dat elke andere volgorde onmogelijk is.",
+      "tileAudioIds": [
+        "AUD-PREP-target_narration-a6e835c02c2f6c7b8039",
+        "AUD-PREP-target_narration-33e8de9dfe661b548579",
+        "AUD-PREP-target_narration-b199b10a1f14e5a9dc50"
+      ]
+    },
+    {
+      "id": "TRX-P001-A2-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Op een plek die je met anderen gebruikt, staat iets in de weg. Zeg wat het probleem is. Stel een andere plek voor. Leg uit waarom die plek goed is voor de mensen die er komen.",
+        "targetAudioId": "AUD-PREP-instruction_support-efbd91a36d583b952535"
+      },
+      "help": {
+        "text": "Kijk naar het voorbeeld. Probeer het dan zelf. Je mag ook een ander goed antwoord geven.",
+        "audioId": "AUD-PREP-instruction_support-b725a6d1669451c3443b"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed uitgelegd. Je noemt het probleem en een oplossing. Je denkt ook aan de andere mensen die de plek gebruiken.",
+          "audioId": "AUD-PREP-instruction_support-ca3fd11606c6975619ab"
+        },
+        "when_criteria_missing": {
+          "text": "Zeg wat het probleem is en wat je wilt veranderen. Kunnen andere mensen de plek dan nog goed gebruiken? Leg dat ook uit.",
+          "audioId": "AUD-PREP-instruction_support-81370edc5587150f4ace"
+        },
+        "criteria": [
+          "Je zegt wat het probleem is.",
+          "Je noemt een andere plek en legt uit waarom die goed is voor de mensen die er komen."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "record_audio",
+          "teacher_or_pair_oral"
+        ],
+        "speechRecognitionRequired": false,
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "De stoelen staan voor de deur. Kunnen we ze langs de muur zetten? Dan kunnen mensen makkelijker naar binnen.",
+      "exampleAudioId": "AUD-PREP-target_narration-2b59aa16334474e2e326",
+      "criteria": [
+        "Je zegt wat het probleem is.",
+        "Je noemt een andere plek en legt uit waarom die goed is voor de mensen die er komen."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-b1995f271c33b19917b7",
+        "AUD-PREP-instruction_support-2990699279b9b64b4160"
+      ]
+    },
+    {
+      "id": "TRX-P001-A2-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "TRX-P001-A2-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A2-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf een bericht aan een beheerder over een onhandige plek voor een kast. Leg uit wat er misgaat en stel een andere plek voor.",
+        "targetAudioId": "AUD-PREP-instruction_support-8eab3bcad1705623a64a"
+      },
+      "help": {
+        "text": "Kijk naar het voorbeeld. Probeer het dan zelf. Je mag ook een ander goed antwoord geven.",
+        "audioId": "AUD-PREP-instruction_support-b725a6d1669451c3443b"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed geschreven. Je noemt het probleem en een andere plek. Je legt ook uit waarom die plek beter is.",
+          "audioId": "AUD-PREP-instruction_support-5b44ca207e3125c1e052"
+        },
+        "when_criteria_missing": {
+          "text": "Lees je bericht. Noem je het probleem? Noem je een andere plek en leg je uit waarom die beter is? Vul aan wat nog mist.",
+          "audioId": "AUD-PREP-instruction_support-73aad077d27a878c738f"
+        },
+        "criteria": [
+          "Je legt het probleem uit.",
+          "Je noemt een andere plek en legt uit waarom die geschikt is."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "type",
+          "paper"
+        ],
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "De kast staat vlak bij de buitendeur. Bij regen worden de boeken nat. Kunnen we de kast naast het raam zetten? Daar blijft de gang vrij.",
+      "exampleAudioId": "AUD-PREP-target_narration-991f57ae3183cc6de9e1",
+      "criteria": [
+        "Je legt het probleem uit.",
+        "Je noemt een andere plek en legt uit waarom die geschikt is."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-9003e564a26ea5632b8f",
+        "AUD-PREP-instruction_support-91c5fd1cc3e4d9fbb0a1"
+      ]
+    }
+  ],
+  "media": {
+    "state": "BRIEFS_AND_AUDIO_SCRIPTS_ONLY",
+    "audio_generation": "DEFERRED_BY_USER",
+    "image_generation": "NOT_STARTED"
+  },
+  "review": {
+    "ai_cycle": "initial_six_checks -> devils_advocate -> revision -> repeated_six_checks",
+    "record": "redactie/06-eindherlezing.json",
+    "human_didactic_review": "OPEN",
+    "learner_pilot": "NOT_RUN",
+    "runtime_and_accessibility_execution": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_review": "redactie/09-extra-niveaureview.json",
+    "feedback_review_sha256": "0046f648433ae5c2cd4774ec88473e3d0e3da368d327226b1ecaab47968c6e7d"
+  },
+  "measurement_plan": {
+    "capture": [
+      "response",
+      "correctness_when_objective",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Geen beheersing afleiden uit één goed antwoord of naspreken. Gebruik een latere parallelle check zonder model; stel afkapwaarden na proefgebruik vast."
+  },
+  "successFeedback": {
+    "message": {
+      "text": "De vier antwoorden kloppen. Je hebt gevonden waarom het boek nat wordt en waarom de nieuwe plek geschikt is.",
+      "audioId": "AUD-PREP-instruction_support-845a089250e4f452d833"
+    },
+    "condition": "Alle vier keuzevragen bij deze tekst zijn daadwerkelijk goed beantwoord. Open productie wordt apart beoordeeld.",
+    "after_help_message": {
+      "text": "De vier antwoorden kloppen nu. Je hebt de uitleg gebruikt. Goed dat je het opnieuw hebt geprobeerd.",
+      "audioId": "AUD-PREP-instruction_support-6047cbdb132ac9d72a7e"
+    },
+    "not_a_level_or_mastery_certificate": true,
+    "not_triggered_by_opening_document": true
+  }
+}

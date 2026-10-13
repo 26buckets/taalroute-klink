@@ -1,0 +1,815 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-A1P",
+    "title": "Eerst even vragen",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A1_PLUS",
+    "objectiveIds": [
+      "TRX-P001-A1P-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A1_PLUS-TEXT-01",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "PILOT_REVISED",
+      "source_id": "TRX-P001-A1P",
+      "source_path": "bronnen/pilot-teksten-v1.json"
+    }
+  },
+  "learning": {
+    "oral_goal": "Bezit, toestemming en een afspraak met elkaar verbinden.",
+    "support": "A1+ is een interne tussenroute. Ondersteun uitlenen en tijdsaanduidingen; geen formele niveauverklaring.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-A1P-TEXT",
+      "kind": "text",
+      "title": "Eerst even vragen",
+      "targetText": "Nora leent haar boek aan Elena. Elena neemt het mee naar de les. Youssef ziet het boek en wil het ook lezen. Elena weet niet of zij het mag uitlenen. Het is namelijk niet haar boek. Ze vraagt het aan Nora. Nora wil het boek vrijdag terug. Ze wil het in het weekend lezen. Youssef stelt voor om het donderdag terug te brengen. Nora vindt dat goed.",
+      "displayText": "Nora leent haar boek aan Elena. Elena neemt het mee naar de les. Youssef ziet het boek en wil het ook lezen. Elena weet niet of zij het mag uitlenen. Het is namelijk niet haar boek. Ze vraagt het aan Nora. Nora wil het boek vrijdag terug. Ze wil het in het weekend lezen. Youssef stelt voor om het donderdag terug te brengen. Nora vindt dat goed.",
+      "script_sha256": "8236fe342ceb8bd91ca2daffaab263755f71cfc5ba468d23e3d494e90a38536c",
+      "audio": {
+        "normal": "PREP-target_narration-8236fe342ceb8bd91ca2"
+      },
+      "titleAudioId": "PREP-target_narration-430a1ce72f9f16a69169",
+      "imageId": "TRX-P001-A1P-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-01",
+          "text": "Nora leent haar boek aan Elena.",
+          "start": 0,
+          "end": 31,
+          "audioId": "PREP-target_narration-8d2aa0453b84ecb293ce",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-02",
+          "text": "Elena neemt het mee naar de les.",
+          "start": 32,
+          "end": 64,
+          "audioId": "PREP-target_narration-df6919c95358af5c9896",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-03",
+          "text": "Youssef ziet het boek en wil het ook lezen.",
+          "start": 65,
+          "end": 108,
+          "audioId": "PREP-target_narration-1c3ebd8d68eee1c0d16b",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-04",
+          "text": "Elena weet niet of zij het mag uitlenen.",
+          "start": 109,
+          "end": 149,
+          "audioId": "PREP-target_narration-b030c5af8424e3d79825",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-05",
+          "text": "Het is namelijk niet haar boek.",
+          "start": 150,
+          "end": 181,
+          "audioId": "PREP-target_narration-62353a9f156e1c91619e",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-06",
+          "text": "Ze vraagt het aan Nora.",
+          "start": 182,
+          "end": 205,
+          "audioId": "PREP-target_narration-0bf7170fc6b6d71ef83e",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-07",
+          "text": "Nora wil het boek vrijdag terug.",
+          "start": 206,
+          "end": 238,
+          "audioId": "PREP-target_narration-cf3a46f1c06752d91a88",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-08",
+          "text": "Ze wil het in het weekend lezen.",
+          "start": 239,
+          "end": 271,
+          "audioId": "PREP-target_narration-ec93ee3765379baabdce",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-09",
+          "text": "Youssef stelt voor om het donderdag terug te brengen.",
+          "start": 272,
+          "end": 325,
+          "audioId": "PREP-target_narration-5f3719ca6bbceecd79b1",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1P-TEXT-SEG-10",
+          "text": "Nora vindt dat goed.",
+          "start": 326,
+          "end": 346,
+          "audioId": "PREP-target_narration-ab99385370dd4c95caee",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-A1P-SENT-01",
+      "kind": "sentence",
+      "targetText": "Youssef wil het boek ook lezen.",
+      "displayText": "Youssef wil het boek ook lezen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Youssef wil het boek ook lezen."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-c788f1f1c52be97307f6"
+      },
+      "imageId": "TRX-P001-A1P-IMG-SENT-01"
+    },
+    {
+      "id": "TRX-P001-A1P-SENT-02",
+      "kind": "sentence",
+      "targetText": "Elena vraagt of zij het boek mag uitlenen.",
+      "displayText": "Elena vraagt of zij het boek mag uitlenen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Elena vraagt of zij het boek mag uitlenen."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-037e80e9ee70351e2f4e"
+      },
+      "imageId": "TRX-P001-A1P-IMG-SENT-02"
+    },
+    {
+      "id": "TRX-P001-A1P-SENT-03",
+      "kind": "sentence",
+      "targetText": "Het boek is niet van Elena.",
+      "displayText": "Het boek is niet van Elena.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Het boek is niet van Elena."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-886c5ba68a29ae0d3ec2"
+      },
+      "imageId": "TRX-P001-A1P-IMG-SENT-03"
+    },
+    {
+      "id": "TRX-P001-A1P-SENT-04",
+      "kind": "sentence",
+      "targetText": "Nora wil het boek vrijdag terug.",
+      "displayText": "Nora wil het boek vrijdag terug.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Nora wil het boek vrijdag terug."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-cf3a46f1c06752d91a88"
+      },
+      "imageId": "TRX-P001-A1P-IMG-SENT-04"
+    },
+    {
+      "id": "TRX-P001-A1P-SENT-05",
+      "kind": "sentence",
+      "targetText": "Youssef brengt het donderdag terug.",
+      "displayText": "Youssef brengt het donderdag terug.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Youssef brengt het donderdag terug."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-12a7195a4476933a4e06"
+      },
+      "imageId": "TRX-P001-A1P-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-A1P-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT",
+        "TRX-P001-A1P-SENT-01",
+        "TRX-P001-A1P-SENT-02",
+        "TRX-P001-A1P-SENT-03",
+        "TRX-P001-A1P-SENT-04",
+        "TRX-P001-A1P-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "TRX-P001-A1P-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "TRX-P001-A1P-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom vraagt Elena eerst iets aan Nora?",
+        "targetAudioId": "PREP-instruction_support-ca8841be146736e8b6d4"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Het boek is van Youssef.",
+          "audioId": "PREP-target_narration-a93daedc472edace9165",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1P-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Het boek is van Elena zelf.",
+          "audioId": "PREP-target_narration-b477a3ee3acb03107b62",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1P-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Het boek is van Nora.",
+          "audioId": "PREP-target_narration-d68b93e7b478be4386f8",
+          "correct": true,
+          "feedbackId": "TRX-P001-A1P-EX-02-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora leent haar boek aan Elena.",
+        "start": 0,
+        "end": 31,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "TRX-P001-A1P-EX-02-FB-O2",
+          "O3": "TRX-P001-A1P-EX-02-FB-O3",
+          "O1": "TRX-P001-A1P-EX-02-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1P-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wanneer wil Nora het boek terug?",
+        "targetAudioId": "PREP-instruction_support-194d390f0c5ccc9f3308"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Nora wil het boek maandag terug.",
+          "audioId": "PREP-target_narration-eeee3cebee7589469505",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1P-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora wil het boek vrijdag terug.",
+          "audioId": "PREP-target_narration-cf3a46f1c06752d91a88",
+          "correct": true,
+          "feedbackId": "TRX-P001-A1P-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora wil het boek donderdag terug.",
+          "audioId": "PREP-target_narration-7956edf2e9588edcc715",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1P-EX-03-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora wil het boek vrijdag terug.",
+        "start": 206,
+        "end": 238,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "TRX-P001-A1P-EX-03-FB-O3",
+          "O1": "TRX-P001-A1P-EX-03-FB-O1",
+          "O2": "TRX-P001-A1P-EX-03-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1P-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat stelt Youssef voor?",
+        "targetAudioId": "PREP-instruction_support-80a4c39e5e87da4940d9"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Hij brengt het boek donderdag terug.",
+          "audioId": "PREP-target_narration-184bbfe907ae53045a3b",
+          "correct": true,
+          "feedbackId": "TRX-P001-A1P-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Hij brengt het boek vrijdag terug.",
+          "audioId": "PREP-target_narration-ead9b29b27b3fa08f7e0",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1P-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Hij brengt het boek na het weekend terug.",
+          "audioId": "PREP-target_narration-56666c950519d8932d32",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1P-EX-04-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Youssef stelt voor om het donderdag terug te brengen.",
+        "start": 272,
+        "end": 325,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "TRX-P001-A1P-EX-04-FB-O1",
+          "O2": "TRX-P001-A1P-EX-04-FB-O2",
+          "O3": "TRX-P001-A1P-EX-04-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1P-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Nora leent haar boek uit. Welke zin past daarbij?",
+        "targetAudioId": "PREP-instruction_support-a1fa27d9c6b9906f61f5"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W2",
+          "text": "Zij koopt een nieuw boek voor iemand anders.",
+          "correct": false,
+          "audioId": "PREP-target_narration-19a813436dd847ac613a",
+          "feedbackId": "TRX-P001-A1P-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "Zij krijgt haar eigen boek weer terug.",
+          "correct": false,
+          "audioId": "PREP-target_narration-9fdb835ff55e85e5fa7e",
+          "feedbackId": "TRX-P001-A1P-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "Een ander gebruikt haar boek en geeft het later terug.",
+          "correct": true,
+          "audioId": "OPT-REV-546c32bbf198bddc3ef30a7e",
+          "feedbackId": "TRX-P001-A1P-EX-05-FB-W1"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Uitlenen, kopen en terugkrijgen onderscheiden vanuit het perspectief van de eigenaar.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W2": "TRX-P001-A1P-EX-05-FB-W2",
+          "W3": "TRX-P001-A1P-EX-05-FB-W3",
+          "W1": "TRX-P001-A1P-EX-05-FB-W1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1P-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Ze vraagt het aan Nora.",
+        "Youssef stelt voor om het donderdag terug te brengen.",
+        "Youssef ziet het boek en wil het ook lezen."
+      ],
+      "answer": [
+        "Youssef ziet het boek en wil het ook lezen.",
+        "Ze vraagt het aan Nora.",
+        "Youssef stelt voor om het donderdag terug te brengen."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-0bf7170fc6b6d71ef83e",
+        "PREP-target_narration-5f3719ca6bbceecd79b1",
+        "PREP-target_narration-1c3ebd8d68eee1c0d16b"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1P-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je wilt iets lenen. Bedenk wanneer de ander het weer nodig heeft. Vraag of je het mag lenen. Zeg wanneer je het terugbrengt. Zorg dat het op tijd terug is.",
+        "targetAudioId": "HELP-REV-6aecb9ecf2b5b609d4031dc5"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Mag ik je tas vandaag lenen? Ik breng hem vanavond terug. Dan heb jij hem morgen weer.",
+      "criteria": [
+        "Je vraagt of je het mag lenen.",
+        "Je zegt dat je het terugbrengt voordat de ander het weer nodig heeft."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-2c41843ffc5f3cb757f8",
+      "criteriaAudioIds": [
+        "HELP-REV-dd6ee678eec20922a8c3a9e2",
+        "HELP-REV-79d37fc9b0291030dc1808fb"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je vraagt of je het mag lenen.",
+            "metFeedbackId": "TRX-P001-A1P-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1P-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat je het terugbrengt voordat de ander het weer nodig heeft.",
+            "metFeedbackId": "TRX-P001-A1P-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1P-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-A1P-EX-07-FB-ALL-MET",
+        "example": "Mag ik je tas vandaag lenen? Ik breng hem vanavond terug. Dan heb jij hem morgen weer.",
+        "exampleAudioId": "PREP-target_narration-2c41843ffc5f3cb757f8",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-A1P-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1P-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "TRX-P001-A1P-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1P-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je hebt een boek geleend. Een ander wil het boek ook lenen. Schrijf aan de persoon van wie het boek is. Vraag of dat mag. Zeg ook wanneer het boek terugkomt.",
+        "targetAudioId": "HELP-REV-07ca1c1b8563af3cda0e5cfb"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Mag Youssef je boek ook lenen? Hij kan het donderdag terugbrengen. Is dat goed?",
+      "criteria": [
+        "Je vraagt of iemand anders het boek mag lenen.",
+        "Je noemt wanneer het terugkomt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-cd2112c19b9c8f9c8570",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-6fbe16c24ffb79083a19",
+        "PREP-instruction_support-39add30ac47dc951e495"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je vraagt of iemand anders het boek mag lenen.",
+            "metFeedbackId": "TRX-P001-A1P-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1P-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt wanneer het terugkomt.",
+            "metFeedbackId": "TRX-P001-A1P-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1P-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-A1P-EX-08-FB-ALL-MET",
+        "example": "Mag Youssef je boek ook lenen? Hij kan het donderdag terugbrengen. Is dat goed?",
+        "exampleAudioId": "PREP-target_narration-cd2112c19b9c8f9c8570",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-A1P-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

@@ -1,0 +1,797 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-A1",
+    "title": "Het boek ligt thuis",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A1",
+    "objectiveIds": [
+      "TRX-P001-A1-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A1-TEXT-01",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "PILOT_UNCHANGED",
+      "source_id": "TRX-P001-A1",
+      "source_path": "bronnen/pilot-teksten-v1.json"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een praktisch probleem en de voorgestelde oplossing begrijpen.",
+    "support": "Tas, thuis, vandaag en morgen zijn voorbereid; een optioneel beeld ondersteunt de situatie.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-A1-TEXT",
+      "kind": "text",
+      "title": "Het boek ligt thuis",
+      "targetText": "Elena heeft een boek van Nora. Vandaag wil ze het teruggeven. Ze kijkt in haar tas. Het boek zit er niet in. Het ligt nog thuis op tafel. Elena stuurt Nora een bericht. Ze schrijft: ‘Ik breng je boek morgen mee.’ Nora vindt dat prima.",
+      "displayText": "Elena heeft een boek van Nora. Vandaag wil ze het teruggeven. Ze kijkt in haar tas. Het boek zit er niet in. Het ligt nog thuis op tafel. Elena stuurt Nora een bericht. Ze schrijft: ‘Ik breng je boek morgen mee.’ Nora vindt dat prima.",
+      "script_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+      "audio": {
+        "normal": "PREP-target_narration-4de8538b85a94f859e6f"
+      },
+      "titleAudioId": "PREP-target_narration-2ffa4ce2028fc5f07b86",
+      "imageId": "TRX-P001-A1-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-01",
+          "text": "Elena heeft een boek van Nora.",
+          "start": 0,
+          "end": 30,
+          "audioId": "PREP-target_narration-9c8b1da7bf1ab7e7dbb8",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-02",
+          "text": "Vandaag wil ze het teruggeven.",
+          "start": 31,
+          "end": 61,
+          "audioId": "PREP-target_narration-a44675f197b586644169",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-03",
+          "text": "Ze kijkt in haar tas.",
+          "start": 62,
+          "end": 83,
+          "audioId": "PREP-target_narration-e5d019499eab5b72fdf7",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-04",
+          "text": "Het boek zit er niet in.",
+          "start": 84,
+          "end": 108,
+          "audioId": "PREP-target_narration-eb67309a848608fdb86c",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-05",
+          "text": "Het ligt nog thuis op tafel.",
+          "start": 109,
+          "end": 137,
+          "audioId": "PREP-target_narration-c2b525c867b49ab1e030",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-06",
+          "text": "Elena stuurt Nora een bericht.",
+          "start": 138,
+          "end": 168,
+          "audioId": "PREP-target_narration-5323d01f498019476d69",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-07",
+          "text": "Ze schrijft: ‘Ik breng je boek morgen mee.’",
+          "start": 169,
+          "end": 212,
+          "audioId": "PREP-target_narration-4af08b00b379b6f478fa",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-SEG-08",
+          "text": "Nora vindt dat prima.",
+          "start": 213,
+          "end": 234,
+          "audioId": "PREP-target_narration-26ca770c99d569415eb6",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-A1-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena kijkt in haar tas.",
+      "displayText": "Elena kijkt in haar tas.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Elena kijkt in haar tas."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-f2ebe497d7b293545119"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-01"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-02",
+      "kind": "sentence",
+      "targetText": "Het boek ligt thuis op tafel.",
+      "displayText": "Het boek ligt thuis op tafel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Het boek ligt thuis op tafel."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-adff14839c04472446f1"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-02"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-03",
+      "kind": "sentence",
+      "targetText": "Elena stuurt Nora een bericht.",
+      "displayText": "Elena stuurt Nora een bericht.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Elena stuurt Nora een bericht."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-5323d01f498019476d69"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-03"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-04",
+      "kind": "sentence",
+      "targetText": "Morgen brengt Elena het boek mee.",
+      "displayText": "Morgen brengt Elena het boek mee.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Morgen brengt Elena het boek mee."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-8b08ce2f4a39ef5ecb4f"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-04"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-05",
+      "kind": "sentence",
+      "targetText": "Nora vindt de nieuwe afspraak prima.",
+      "displayText": "Nora vindt de nieuwe afspraak prima.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Nora vindt de nieuwe afspraak prima."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-4fa751c37dfc3cfc43b1"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-A1-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT",
+        "TRX-P001-A1-SENT-01",
+        "TRX-P001-A1-SENT-02",
+        "TRX-P001-A1-SENT-03",
+        "TRX-P001-A1-SENT-04",
+        "TRX-P001-A1-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "TRX-P001-A1-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "TRX-P001-A1-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom kan Elena het boek vandaag niet teruggeven?",
+        "targetAudioId": "PREP-instruction_support-1ea9dede1ecbacfe154c"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Het boek ligt nog thuis.",
+          "audioId": "PREP-target_narration-f87a3feb5cf30e16800f",
+          "correct": true,
+          "feedbackId": "TRX-P001-A1-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora is vandaag niet in de les.",
+          "audioId": "PREP-target_narration-29c31aceb23a433e9b87",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena heeft het boek nog niet uit.",
+          "audioId": "PREP-target_narration-038d3edd610ef69034d6",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Het ligt nog thuis op tafel.",
+        "start": 109,
+        "end": 137,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "TRX-P001-A1-EX-02-FB-O1",
+          "O2": "TRX-P001-A1-EX-02-FB-O2",
+          "O3": "TRX-P001-A1-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat schrijft Elena aan Nora?",
+        "targetAudioId": "PREP-instruction_support-b2e2cd451e134372639f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Elena brengt het boek vandaag mee.",
+          "audioId": "PREP-target_narration-2bdf728c9bbcc8b77420",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena brengt het boek volgende week mee.",
+          "audioId": "PREP-target_narration-f8b43ef9f50ec9e34d04",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena brengt het boek morgen mee.",
+          "audioId": "PREP-target_narration-b71ff6c8db8e586a2bcf",
+          "correct": true,
+          "feedbackId": "TRX-P001-A1-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ik breng je boek morgen mee.",
+        "start": 183,
+        "end": 211,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "TRX-P001-A1-EX-03-FB-O2",
+          "O3": "TRX-P001-A1-EX-03-FB-O3",
+          "O1": "TRX-P001-A1-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Hoe reageert Nora?",
+        "targetAudioId": "PREP-instruction_support-14e68bac873f4eb28c20"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Nora wil het boek niet meer terug.",
+          "audioId": "PREP-target_narration-f761c6f228d71f9c166a",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora vindt de afspraak prima.",
+          "audioId": "PREP-target_narration-697de576cc15f2c5792b",
+          "correct": true,
+          "feedbackId": "TRX-P001-A1-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora wil het boek vandaag ophalen.",
+          "audioId": "PREP-target_narration-839e31284e7f55cb1894",
+          "correct": false,
+          "feedbackId": "TRX-P001-A1-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora vindt dat prima.",
+        "start": 213,
+        "end": 234,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "TRX-P001-A1-EX-04-FB-O3",
+          "O1": "TRX-P001-A1-EX-04-FB-O1",
+          "O2": "TRX-P001-A1-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Elena brengt het boek morgen mee. Wat doet ze dan?",
+        "targetAudioId": "PREP-instruction_support-2debcca13ad3c76f949e"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "Het boek gaat met Elena mee.",
+          "correct": true,
+          "audioId": "PREP-target_narration-b3ce476b74ce06045f4f",
+          "feedbackId": "TRX-P001-A1-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "Ze laat het boek thuis liggen.",
+          "correct": false,
+          "audioId": "PREP-target_narration-2866f22c9183a6ddbf7b",
+          "feedbackId": "TRX-P001-A1-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "Ze stuurt een foto van het boek.",
+          "correct": false,
+          "audioId": "PREP-target_narration-eb290c82ea65967a4fcf",
+          "feedbackId": "TRX-P001-A1-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Meebrengen onderscheiden van achterlaten en digitaal laten zien; geen bestemming veronderstellen die niet in de tekst staat.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "TRX-P001-A1-EX-05-FB-W1",
+          "W2": "TRX-P001-A1-EX-05-FB-W2",
+          "W3": "TRX-P001-A1-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Elena stuurt Nora een bericht.",
+        "Nora vindt dat prima.",
+        "Ze kijkt in haar tas."
+      ],
+      "answer": [
+        "Ze kijkt in haar tas.",
+        "Elena stuurt Nora een bericht.",
+        "Nora vindt dat prima."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-5323d01f498019476d69",
+        "PREP-target_narration-26ca770c99d569415eb6",
+        "PREP-target_narration-e5d019499eab5b72fdf7"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "TRX-P001-A1-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "TRX-P001-A1-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "TRX-P001-A1-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "TRX-P001-A1-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "TRX-P001-A1-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "TRX-P001-A1-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-A1-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je wilt iets teruggeven, maar je hebt het thuis laten liggen. Zeg wat je bent vergeten. Zeg ook wanneer je het teruggeeft.",
+        "targetAudioId": "HELP-REV-3728cffa5fbe59c36b8c6cd1"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Je pen ligt nog bij mij thuis. Ik breng hem morgen mee.",
+      "criteria": [
+        "Je zegt wat je bent vergeten.",
+        "Je zegt wanneer je het teruggeeft."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-9a523fc37ffe55d3fe57",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-51015e5990468d2ba8ba",
+        "HELP-REV-486985413c1e88456224ec4e"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je zegt wat je bent vergeten.",
+            "metFeedbackId": "TRX-P001-A1-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt wanneer je het teruggeeft.",
+            "metFeedbackId": "TRX-P001-A1-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-A1-EX-07-FB-ALL-MET",
+        "example": "Je pen ligt nog bij mij thuis. Ik breng hem morgen mee.",
+        "exampleAudioId": "PREP-target_narration-9a523fc37ffe55d3fe57",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-A1-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-A1-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je hebt een boek geleend. Het ligt nog thuis. Schrijf een bericht aan de persoon van wie het boek is. Zeg wanneer je het meebrengt.",
+        "targetAudioId": "HELP-REV-05327ac1f5068fdf665105c7"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Je boek ligt nog bij mij thuis. Ik breng het morgen mee.",
+      "criteria": [
+        "Je zegt dat het boek nog thuis ligt.",
+        "Je zegt wanneer je het meebrengt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-50a763d61924bf6a8582",
+      "criteriaAudioIds": [
+        "HELP-REV-e8a9813ced71fcd7f3e904e1",
+        "HELP-REV-04f516e672ed4f3b7b1d0a03"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je zegt dat het boek nog thuis ligt.",
+            "metFeedbackId": "TRX-P001-A1-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt wanneer je het meebrengt.",
+            "metFeedbackId": "TRX-P001-A1-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-A1-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-A1-EX-08-FB-ALL-MET",
+        "example": "Je boek ligt nog bij mij thuis. Ik breng het morgen mee.",
+        "exampleAudioId": "PREP-target_narration-50a763d61924bf6a8582",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-A1-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

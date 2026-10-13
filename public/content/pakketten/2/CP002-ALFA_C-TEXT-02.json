@@ -1,0 +1,767 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_C-TEXT-02",
+    "title": "De eerste les",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_C",
+    "objectiveIds": [
+      "CP002-ALFA_C-TEXT-02-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_C-TEXT-02",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-06",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A1"
+    }
+  },
+  "learning": {
+    "oral_goal": "Kennismaken en twee opeenvolgende handelingen begrijpen.",
+    "support": "Voormalige A1-bron hier alleen als ondersteund Alfa C-aanbod; bereid voor het eerst, kaart, naast en daarna voor. Haar naam betekent in deze context de naam van Elena.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_C-TEXT-02-TEXT",
+      "kind": "text",
+      "title": "De eerste les",
+      "targetText": "Elena is voor het eerst in de les. Nora vraagt haar naam. Elena schrijft haar naam op een kaart. Daarna gaat zij naast Nora zitten.",
+      "displayText": "Elena is voor het eerst in de les. Nora vraagt haar naam. Elena schrijft haar naam op een kaart. Daarna gaat zij naast Nora zitten.",
+      "script_sha256": "6831ff755b9e5eaba05b2f4d771dfa1b37f694d6257f7f0d9d656335087bf050",
+      "audio": {
+        "normal": "PREP-target_narration-6831ff755b9e5eaba05b"
+      },
+      "titleAudioId": "PREP-target_narration-b51f973b2d5e60c90050",
+      "imageId": "CP002-ALFA_C-TEXT-02-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_C-TEXT-02-TEXT-SEG-01",
+          "text": "Elena is voor het eerst in de les.",
+          "start": 0,
+          "end": 34,
+          "audioId": "PREP-target_narration-18dd2a05ac471f45e754",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-02-TEXT-SEG-02",
+          "text": "Nora vraagt haar naam.",
+          "start": 35,
+          "end": 57,
+          "audioId": "PREP-target_narration-f91449bb2861b54256ee",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-02-TEXT-SEG-03",
+          "text": "Elena schrijft haar naam op een kaart.",
+          "start": 58,
+          "end": 96,
+          "audioId": "PREP-target_narration-81ce6a9ee347797d0b64",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_C-TEXT-02-TEXT-SEG-04",
+          "text": "Daarna gaat zij naast Nora zitten.",
+          "start": 97,
+          "end": 131,
+          "audioId": "PREP-target_narration-37ec8dfa90341db8b522",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena is voor het eerst in de les.",
+      "displayText": "Elena is voor het eerst in de les.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-06"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-18dd2a05ac471f45e754"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-02-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-SENT-02",
+      "kind": "sentence",
+      "targetText": "Nora vraagt naar de naam van Elena.",
+      "displayText": "Nora vraagt naar de naam van Elena.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-b8d708c17ad0c3ff6d7a"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-02-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-SENT-03",
+      "kind": "sentence",
+      "targetText": "Elena schrijft haar naam op een kaart.",
+      "displayText": "Elena schrijft haar naam op een kaart.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-06"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-81ce6a9ee347797d0b64"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-02-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-SENT-04",
+      "kind": "sentence",
+      "targetText": "Elena gaat naast Nora zitten.",
+      "displayText": "Elena gaat naast Nora zitten.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-2d9eb572f7b791a63c33"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-02-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-SENT-05",
+      "kind": "sentence",
+      "targetText": "Mijn naam staat op de kaart.",
+      "displayText": "Mijn naam staat op de kaart.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/2/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-41112bd76b0325f5ef45"
+      },
+      "imageId": "CP002-ALFA_C-TEXT-02-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT",
+        "CP002-ALFA_C-TEXT-02-SENT-01",
+        "CP002-ALFA_C-TEXT-02-SENT-02",
+        "CP002-ALFA_C-TEXT-02-SENT-03",
+        "CP002-ALFA_C-TEXT-02-SENT-04",
+        "CP002-ALFA_C-TEXT-02-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_C-TEXT-02-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_C-TEXT-02-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat schrijft Elena op de kaart?",
+        "targetAudioId": "PREP-instruction_support-9c4d7ef34b819b61b5f4"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Elena schrijft haar naam.",
+          "audioId": "OPT-REV-19b9c0d40c8994742526531e",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Elena schrijft haar adres.",
+          "audioId": "OPT-REV-6844bbf6fa53c2500a2b0284",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena schrijft haar telefoonnummer.",
+          "audioId": "OPT-REV-a68f954cd3268c5ceee577c6",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Elena schrijft haar naam op een kaart.",
+        "start": 58,
+        "end": 96,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Naam staat letterlijk; adres en telefoonnummer zijn andere kaartgegevens.",
+      "help": {
+        "text": "Zoek wat Elena schrijft.",
+        "audioId": "HELP-REV-73bd2fac720a3753d50205d9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_C-TEXT-02-EX-02-FB-O1",
+          "O2": "CP002-ALFA_C-TEXT-02-EX-02-FB-O2",
+          "O3": "CP002-ALFA_C-TEXT-02-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-02-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Naast wie gaat Elena zitten?",
+        "targetAudioId": "PREP-instruction_support-046ead2f71e4f583a63b"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Elena gaat naast Youssef zitten.",
+          "audioId": "PREP-target_narration-8749afe88bc948082c40",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena gaat naast de docent zitten.",
+          "audioId": "PREP-target_narration-331ef8aafb0e44b547d8",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena gaat naast Nora zitten.",
+          "audioId": "PREP-target_narration-2d9eb572f7b791a63c33",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Daarna gaat zij naast Nora zitten.",
+        "start": 97,
+        "end": 131,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Naast Nora staat letterlijk; Youssef en docent vervangen de buur.",
+      "help": {
+        "text": "Lees de laatste zin.",
+        "audioId": "HELP-REV-4990ea1c6e80ef15ef28aef9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_C-TEXT-02-EX-03-FB-O2",
+          "O3": "CP002-ALFA_C-TEXT-02-EX-03-FB-O3",
+          "O1": "CP002-ALFA_C-TEXT-02-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-02-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie vraagt naar de naam van Elena?",
+        "targetAudioId": "PREP-instruction_support-0c0383a637a9f37ce874"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De docent vraagt naar haar naam.",
+          "audioId": "PREP-target_narration-773625557b45aeebb85a",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora vraagt naar haar naam.",
+          "audioId": "PREP-target_narration-bec33e482005c86efe47",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Youssef vraagt naar haar naam.",
+          "audioId": "PREP-target_narration-310fa8baf73719d48347",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora vraagt haar naam.",
+        "start": 35,
+        "end": 57,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Nora vraagt; Youssef en docent vervangen de vragensteller.",
+      "help": {
+        "text": "Zoek wie de naam vraagt.",
+        "audioId": "HELP-REV-b3b0ab9ee5a610aa3c02288a"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_C-TEXT-02-EX-04-FB-O3",
+          "O1": "CP002-ALFA_C-TEXT-02-EX-04-FB-O1",
+          "O2": "CP002-ALFA_C-TEXT-02-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-02-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent daarna in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-6b1525fb30230a69b466"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "Eerst schrijft Elena haar naam. Dan gaat zij zitten.",
+          "correct": true,
+          "audioId": "PREP-target_narration-fdd6dc2f4cdbb8434979",
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "Eerst gaat Elena zitten. Dan schrijft zij haar naam.",
+          "correct": false,
+          "audioId": "PREP-target_narration-e890b31f5b848f2594c4",
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "Elena schrijft haar naam terwijl zij gaat zitten.",
+          "correct": false,
+          "audioId": "PREP-target_narration-ae780e9f37bd326838ae",
+          "feedbackId": "CP002-ALFA_C-TEXT-02-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "CP002-ALFA_C-TEXT-02-EX-05-FB-W1",
+          "W2": "CP002-ALFA_C-TEXT-02-EX-05-FB-W2",
+          "W3": "CP002-ALFA_C-TEXT-02-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-02-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Elena schrijft haar naam op een kaart.",
+        "Daarna gaat zij naast Nora zitten.",
+        "Elena is voor het eerst in de les."
+      ],
+      "answer": [
+        "Elena is voor het eerst in de les.",
+        "Elena schrijft haar naam op een kaart.",
+        "Daarna gaat zij naast Nora zitten."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-81ce6a9ee347797d0b64",
+        "PREP-target_narration-37ec8dfa90341db8b522",
+        "PREP-target_narration-18dd2a05ac471f45e754"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_C-TEXT-02-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je stelt je voor in de les. Zeg je naam en vraag of een stoel vrij is.",
+        "targetAudioId": "PREP-instruction_support-ca63dce89340a53ef04b"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik ben Nora. Is deze stoel vrij?",
+      "criteria": [
+        "Je noemt een eigen of gekozen naam.",
+        "Je vraagt of de stoel vrij is."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-1f019a6ca48c214f5012",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-7043a97406cc1be6e80c",
+        "PREP-instruction_support-47fd045620a25e2ba6d3"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt een eigen of gekozen naam.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-02-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-02-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je vraagt of de stoel vrij is.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-02-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-02-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-02-EX-07-FB-ALL-MET",
+        "example": "Ik ben Nora. Is deze stoel vrij?",
+        "exampleAudioId": "PREP-target_narration-1f019a6ca48c214f5012",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-02-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_C-TEXT-02-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-ALFA_C-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_C-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf één zin met je naam. Je mag een naam kiezen.",
+        "targetAudioId": "PREP-instruction_support-6215f10532196c9fff52"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Mijn naam is Elena.",
+      "criteria": [
+        "Je noemt een eigen of gekozen naam.",
+        "Je gebruikt een zin, bijvoorbeeld Mijn naam is … ."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-a3a01873e605634d40a2",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-7043a97406cc1be6e80c",
+        "PREP-instruction_support-c21e5f28f6125f5b73ea"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt een eigen of gekozen naam.",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-02-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-02-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je gebruikt een zin, bijvoorbeeld Mijn naam is … .",
+            "metFeedbackId": "CP002-ALFA_C-TEXT-02-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_C-TEXT-02-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-02-EX-08-FB-ALL-MET",
+        "example": "Mijn naam is Elena.",
+        "exampleAudioId": "PREP-target_narration-a3a01873e605634d40a2",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_C-TEXT-02-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

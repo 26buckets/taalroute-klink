@@ -1,0 +1,845 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-A1",
+    "title": "Het boek ligt thuis",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A1",
+    "objectiveIds": [
+      "TRX-P001-A1-GOAL"
+    ],
+    "objective": "Een praktisch probleem en de voorgestelde oplossing begrijpen.",
+    "status": "concept",
+    "owner": "taalroute",
+    "version": 1,
+    "source_package": "CP002",
+    "theme": "boeken-lenen-en-gebruiken",
+    "support": "Tas, thuis, vandaag en morgen zijn voorbereid; een optioneel beeld ondersteunt de situatie.",
+    "voice_policy": "Instructie/steun en doeltaal hebben verschillende exacte voice-IDs; geen generatie in deze fase."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-A1-TEXT",
+      "kind": "text",
+      "targetText": "Elena heeft een boek van Nora. Vandaag wil ze het teruggeven. Ze kijkt in haar tas. Het boek zit er niet in. Het ligt nog thuis op tafel. Elena stuurt Nora een bericht. Ze schrijft: ‘Ik breng je boek morgen mee.’ Nora vindt dat prima.",
+      "displayText": "Elena heeft een boek van Nora. Vandaag wil ze het teruggeven. Ze kijkt in haar tas. Het boek zit er niet in. Het ligt nog thuis op tafel. Elena stuurt Nora een bericht. Ze schrijft: ‘Ik breng je boek morgen mee.’ Nora vindt dat prima.",
+      "title": "Het boek ligt thuis",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-4de8538b85a94f859e6f"
+      },
+      "titleAudioId": "AUD-PREP-target_narration-2ffa4ce2028fc5f07b86",
+      "imageId": "TRX-P001-A1-IMG-STORY",
+      "script_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN",
+      "sentenceSegments": [
+        {
+          "id": "TRX-P001-A1-TEXT-S01",
+          "text": "Elena heeft een boek van Nora.",
+          "audioId": "AUD-PREP-target_narration-9c8b1da7bf1ab7e7dbb8",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S02",
+          "text": "Vandaag wil ze het teruggeven.",
+          "audioId": "AUD-PREP-target_narration-a44675f197b586644169",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S03",
+          "text": "Ze kijkt in haar tas.",
+          "audioId": "AUD-PREP-target_narration-e5d019499eab5b72fdf7",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S04",
+          "text": "Het boek zit er niet in.",
+          "audioId": "AUD-PREP-target_narration-eb67309a848608fdb86c",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S05",
+          "text": "Het ligt nog thuis op tafel.",
+          "audioId": "AUD-PREP-target_narration-c2b525c867b49ab1e030",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S06",
+          "text": "Elena stuurt Nora een bericht.",
+          "audioId": "AUD-PREP-target_narration-5323d01f498019476d69",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S07",
+          "text": "Ze schrijft: ‘Ik breng je boek morgen mee.’",
+          "audioId": "AUD-PREP-target_narration-4af08b00b379b6f478fa",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        },
+        {
+          "id": "TRX-P001-A1-TEXT-S08",
+          "text": "Nora vindt dat prima.",
+          "audioId": "AUD-PREP-target_narration-26ca770c99d569415eb6",
+          "story_context_required": true,
+          "parent_text_sha256": "4de8538b85a94f859e6f0a2d17c580410601f48eb92f59383a616c50d52914cd",
+          "imageBriefId": "TRX-P001-A1-IMG-STORY",
+          "visual_coverage": "CONTEXT_CANDIDATE_NOT_YET_REVIEWED"
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-A1-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena kijkt in haar tas.",
+      "displayText": "Elena kijkt in haar tas.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-f2ebe497d7b293545119"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-01",
+      "script_sha256": "f2ebe497d7b293545119d5ccc00c1a665ac1b43f6d58af64faffb54f201f28e0",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-02",
+      "kind": "sentence",
+      "targetText": "Het boek ligt thuis op tafel.",
+      "displayText": "Het boek ligt thuis op tafel.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-adff14839c04472446f1"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-02",
+      "script_sha256": "adff14839c04472446f1f0d554ebf8f8fef8b4ae6931e5b875ec2b8479e0d13b",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-03",
+      "kind": "sentence",
+      "targetText": "Elena stuurt Nora een bericht.",
+      "displayText": "Elena stuurt Nora een bericht.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-5323d01f498019476d69"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-03",
+      "script_sha256": "5323d01f498019476d69804358f7047c596b0bc9d4b9b584c2cefc34f19c3d40",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-04",
+      "kind": "sentence",
+      "targetText": "Morgen brengt Elena het boek mee.",
+      "displayText": "Morgen brengt Elena het boek mee.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-8b08ce2f4a39ef5ecb4f"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-04",
+      "script_sha256": "8b08ce2f4a39ef5ecb4f2afa183b92c6e1defeaee26de384ebb38e02e0f72f03",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A1-SENT-05",
+      "kind": "sentence",
+      "targetText": "Nora vindt de nieuwe afspraak prima.",
+      "displayText": "Nora vindt de nieuwe afspraak prima.",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-4fa751c37dfc3cfc43b1"
+      },
+      "imageId": "TRX-P001-A1-IMG-SENT-05",
+      "script_sha256": "4fa751c37dfc3cfc43b1f32fe1fdcc174ab95b889d83c68d1ec44efc3f5795e0",
+      "status": "AI_REVIEWED_PILOT_HUMAN_REVIEW_OPEN"
+    },
+    {
+      "id": "TRX-P001-A1-WORD-01",
+      "kind": "word",
+      "targetText": "tas",
+      "displayText": "tas",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-ae22fc6ea93f9534edf6"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A1-WORD-02",
+      "kind": "word",
+      "targetText": "thuis",
+      "displayText": "thuis",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-0f10e9964d4c18ed8af6"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A1-WORD-03",
+      "kind": "word",
+      "targetText": "bericht",
+      "displayText": "bericht",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-83f7819f1b13cbf9b2ea"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A1-WORD-04",
+      "kind": "word",
+      "targetText": "morgen",
+      "displayText": "morgen",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-eb26d4fa531af429ed3f"
+      },
+      "preteach": true,
+      "meaning_note": null
+    },
+    {
+      "id": "TRX-P001-A1-WORD-05",
+      "kind": "word",
+      "targetText": "afspraak",
+      "displayText": "afspraak",
+      "audio": {
+        "normal": "AUD-PREP-target_narration-13c4af431a05e7859d4b"
+      },
+      "preteach": true,
+      "meaning_note": null
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-A1-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Lees of luister naar het verhaal. Je mag het nog eens lezen of beluisteren.",
+        "targetAudioId": "AUD-PREP-instruction_support-14599e937022f2f833cf"
+      },
+      "help": {
+        "text": "Lees de tekst. Je mag hem nog eens lezen of beluisteren.",
+        "audioId": "AUD-PREP-instruction_support-a35418e6f59fde36af66"
+      },
+      "feedback": {
+        "mode": "participation_only",
+        "automatic_correctness": false,
+        "after_marked_done": {
+          "text": "Je bent klaar met de tekst. Nu kun je de vragen maken.",
+          "audioId": "AUD-PREP-instruction_support-1dd256fb2d459290cad3"
+        },
+        "condition": "Alleen nadat de cursist lezen of luisteren zelf heeft afgerond; geen begrip of beheersing afleiden."
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A1-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "mode": "supported_reading",
+      "assessment": false,
+      "adaptation": "Patroon aangepast aan dit leerprofiel; geen getoetste rendererclaim."
+    },
+    {
+      "id": "TRX-P001-A1-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom kan Elena het boek vandaag niet teruggeven?",
+        "targetAudioId": "AUD-PREP-instruction_support-1ea9dede1ecbacfe154c"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A1-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Het ligt nog thuis op tafel.",
+      "evidenceAudioId": "AUD-PREP-target_narration-c2b525c867b49ab1e030",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Nora is vandaag niet in de les.",
+          "audioId": "AUD-PREP-target_narration-29c31aceb23a433e9b87",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat Nora weg is. Elena kan het boek niet teruggeven omdat het thuis ligt.",
+            "audioId": "AUD-PREP-instruction_support-ee09f8e17b74d0723344",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Elena heeft het boek nog niet uit.",
+          "audioId": "AUD-PREP-target_narration-038d3edd610ef69034d6",
+          "correct": false,
+          "feedback": {
+            "text": "We weten niet of Elena het boek uit heeft. Het boek ligt nog thuis. Daarom kan ze het nu niet teruggeven.",
+            "audioId": "AUD-PREP-instruction_support-42d7b65c97b4b3ecb78b",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Het boek ligt nog thuis.",
+          "audioId": "AUD-PREP-target_narration-f87a3feb5cf30e16800f",
+          "correct": true,
+          "feedback": {
+            "text": "Goed gevonden. Het boek ligt nog thuis. Daarom kan Elena het nu niet teruggeven.",
+            "audioId": "AUD-PREP-instruction_support-b6db713a490d1c1a09a2",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Het boek ligt nog thuis. Daarom kan Elena het nu niet teruggeven.",
+              "audioId": "AUD-PREP-instruction_support-e747212fdd316c465c10"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-A1-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat schrijft Elena aan Nora?",
+        "targetAudioId": "AUD-PREP-instruction_support-b2e2cd451e134372639f"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A1-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Ik breng je boek morgen mee.",
+      "evidenceAudioId": "AUD-PREP-target_narration-84ce874042d30276b01d",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Elena brengt het boek volgende week mee.",
+          "audioId": "AUD-PREP-target_narration-f8b43ef9f50ec9e34d04",
+          "correct": false,
+          "feedback": {
+            "text": "In het bericht staat morgen. Er staat niet volgende week.",
+            "audioId": "AUD-PREP-instruction_support-ff128b901c3a59b3b319",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Elena brengt het boek morgen mee.",
+          "audioId": "AUD-PREP-target_narration-b71ff6c8db8e586a2bcf",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Elena schrijft dat ze het boek morgen meebrengt.",
+            "audioId": "AUD-PREP-instruction_support-727cd16e022af1edd141",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Elena schrijft dat ze het boek morgen meebrengt.",
+              "audioId": "AUD-PREP-instruction_support-82e66b17d523bcf8489c"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Elena brengt het boek vandaag mee.",
+          "audioId": "AUD-PREP-target_narration-2bdf728c9bbcc8b77420",
+          "correct": false,
+          "feedback": {
+            "text": "Elena wilde het boek vandaag teruggeven. Nu schrijft ze dat ze het morgen meebrengt.",
+            "audioId": "AUD-PREP-instruction_support-c901463e73e570cab5bb",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-A1-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Hoe reageert Nora?",
+        "targetAudioId": "AUD-PREP-instruction_support-14e68bac873f4eb28c20"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A1-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "evidence": "Nora vindt dat prima.",
+      "evidenceAudioId": "AUD-PREP-target_narration-26ca770c99d569415eb6",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Nora vindt de afspraak prima.",
+          "audioId": "AUD-PREP-target_narration-697de576cc15f2c5792b",
+          "correct": true,
+          "feedback": {
+            "text": "Goed gezien. Nora vindt het prima dat Elena het boek morgen meebrengt.",
+            "audioId": "AUD-PREP-instruction_support-ea00ea42f79b7d0693a5",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Nora vindt het prima dat Elena het boek morgen meebrengt.",
+              "audioId": "AUD-PREP-instruction_support-8dc9c386b60fa922ebcc"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        },
+        {
+          "id": "O2",
+          "text": "Nora wil het boek vandaag ophalen.",
+          "audioId": "AUD-PREP-target_narration-839e31284e7f55cb1894",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat Nora het boek ophaalt. Ze vindt het prima dat Elena het morgen meebrengt.",
+            "audioId": "AUD-PREP-instruction_support-bd73a852530e2eff147d",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Nora wil het boek niet meer terug.",
+          "audioId": "AUD-PREP-target_narration-f761c6f228d71f9c166a",
+          "correct": false,
+          "feedback": {
+            "text": "Er staat niet dat Nora het boek niet meer terug wil. Ze vindt het prima dat Elena het morgen meebrengt.",
+            "audioId": "AUD-PREP-instruction_support-af070621b2d9fc897fc8",
+            "outcome": "try_again",
+            "reason_type": "not_stated",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie."
+    },
+    {
+      "id": "TRX-P001-A1-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Elena brengt het boek morgen mee. Wat doet ze dan?",
+        "targetAudioId": "AUD-PREP-instruction_support-2debcca13ad3c76f949e"
+      },
+      "help": {
+        "text": "Lees of luister nog eens. Zoek het antwoord in de tekst.",
+        "audioId": "AUD-PREP-instruction_support-b6d165f5d617bc3e0dc6"
+      },
+      "feedback": {
+        "mode": "per_option",
+        "text": "Bij elk antwoord staat uitleg.",
+        "audioId": "AUD-PREP-instruction_support-b8ffa57953654aba2d6e",
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "showOptionalImageHelp": true,
+        "imageId": "TRX-P001-A1-IMG-STORY",
+        "speechRecognitionRequired": false
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Ze laat het boek thuis liggen.",
+          "audioId": "AUD-PREP-target_narration-2866f22c9183a6ddbf7b",
+          "correct": false,
+          "feedback": {
+            "text": "Elena wil het boek morgen meebrengen. Als het thuis blijft liggen, heeft ze het niet bij zich.",
+            "audioId": "AUD-PREP-instruction_support-129ca8d3a28268b7e262",
+            "outcome": "try_again",
+            "reason_type": "contradicted",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O3",
+          "text": "Ze stuurt een foto van het boek.",
+          "audioId": "AUD-PREP-target_narration-eb290c82ea65967a4fcf",
+          "correct": false,
+          "feedback": {
+            "text": "Een foto van het boek is niet het boek zelf. Meebrengen betekent dat Elena het boek zelf meeneemt.",
+            "audioId": "AUD-PREP-instruction_support-4ea6273cce8ce5911b01",
+            "outcome": "try_again",
+            "reason_type": "wrong_meaning",
+            "next_step": {
+              "text": "Lees of luister nog eens. Probeer het dan opnieuw.",
+              "audioId": "AUD-PREP-instruction_support-729327f7ef117e6c9bed"
+            }
+          }
+        },
+        {
+          "id": "O1",
+          "text": "Het boek gaat met Elena mee.",
+          "audioId": "AUD-PREP-target_narration-b3ce476b74ce06045f4f",
+          "correct": true,
+          "feedback": {
+            "text": "Dat klopt. Elena neemt het boek mee. Het blijft dus niet thuis.",
+            "audioId": "AUD-PREP-instruction_support-4fef8d82610559dbb59c",
+            "outcome": "correct",
+            "reason_type": "supported",
+            "after_retry": {
+              "text": "Goed, je hebt je antwoord met hulp van de uitleg verbeterd. Elena neemt het boek mee. Het blijft dus niet thuis.",
+              "audioId": "AUD-PREP-instruction_support-9ca52155ab8da01ebf38"
+            },
+            "after_retry_condition": "Eerder antwoord was onjuist en er is uitleg gebruikt; geen zelfstandige beheersing claimen."
+          }
+        }
+      ],
+      "answer": "O1",
+      "distractorPolicy": "Afleiders verschillen op de gevraagde betekenis; controleer bronbewijs. Geen score voor woordlengte of antwoordpositie.",
+      "objective": "word_meaning_in_context",
+      "distractorRationale": "Meebrengen onderscheiden van achterlaten en digitaal laten zien; geen bestemming veronderstellen die niet in de tekst staat."
+    },
+    {
+      "id": "TRX-P001-A1-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kijk naar het verhaal. Zet de zinnen in de goede volgorde.",
+        "targetAudioId": "AUD-PREP-instruction_support-24372ec42d61e404209a"
+      },
+      "help": {
+        "text": "Kijk naar de tekst. Wat gebeurt eerst? Wat gebeurt daarna?",
+        "audioId": "AUD-PREP-instruction_support-93527756dcc3c6689be6"
+      },
+      "feedback": {
+        "mode": "sequence_comparison",
+        "when_correct": {
+          "text": "Dat klopt. Elena kijkt eerst in haar tas. Dan stuurt ze een bericht. Daarna geeft Nora antwoord.",
+          "audioId": "AUD-PREP-instruction_support-373ecf8a1ffcecc4a74b"
+        },
+        "when_incorrect": {
+          "text": "Nora geeft antwoord op het bericht. Die zin komt dus na het bericht. Kijk wat Elena eerst doet.",
+          "audioId": "AUD-PREP-instruction_support-aeca0618cf991ca8925d"
+        },
+        "correct_sequence": [
+          "Ze kijkt in haar tas.",
+          "Elena stuurt Nora een bericht.",
+          "Nora vindt dat prima."
+        ],
+        "keep_retry_available": true,
+        "independent_mastery_claim": false
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plek.",
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "answer": [
+        "Ze kijkt in haar tas.",
+        "Elena stuurt Nora een bericht.",
+        "Nora vindt dat prima."
+      ],
+      "tiles": [
+        "Elena stuurt Nora een bericht.",
+        "Nora vindt dat prima.",
+        "Ze kijkt in haar tas."
+      ],
+      "assessment": "Volgorde in de bron; geen algemene claim dat elke andere volgorde onmogelijk is.",
+      "tileAudioIds": [
+        "AUD-PREP-target_narration-5323d01f498019476d69",
+        "AUD-PREP-target_narration-26ca770c99d569415eb6",
+        "AUD-PREP-target_narration-e5d019499eab5b72fdf7"
+      ]
+    },
+    {
+      "id": "TRX-P001-A1-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je wilt iets teruggeven, maar je hebt het thuis laten liggen. Zeg wat je bent vergeten. Zeg ook wanneer je het teruggeeft.",
+        "targetAudioId": "AUD-PREP-instruction_support-3728cffa5fbe59c36b8c"
+      },
+      "help": {
+        "text": "Kijk naar het voorbeeld. Probeer het dan zelf. Je mag ook een ander goed antwoord geven.",
+        "audioId": "AUD-PREP-instruction_support-b725a6d1669451c3443b"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed uitgelegd. Je zegt wat je bent vergeten. Je zegt ook wanneer je het teruggeeft.",
+          "audioId": "AUD-PREP-instruction_support-9ef571540d8ef971eed4"
+        },
+        "when_criteria_missing": {
+          "text": "Zeg wat je bent vergeten. Zeg ook wanneer je het teruggeeft. Dan kun je een nieuwe afspraak maken.",
+          "audioId": "AUD-PREP-instruction_support-5a7394a56c5c7d9edc24"
+        },
+        "criteria": [
+          "Je zegt wat je bent vergeten.",
+          "Je zegt wanneer je het teruggeeft."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "record_audio",
+          "teacher_or_pair_oral"
+        ],
+        "speechRecognitionRequired": false,
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "Je pen ligt nog bij mij thuis. Ik breng hem morgen mee.",
+      "exampleAudioId": "AUD-PREP-target_narration-9a523fc37ffe55d3fe57",
+      "criteria": [
+        "Je zegt wat je bent vergeten.",
+        "Je zegt wanneer je het teruggeeft."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-51015e5990468d2ba8ba",
+        "AUD-PREP-instruction_support-486985413c1e88456224"
+      ]
+    },
+    {
+      "id": "TRX-P001-A1-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "TRX-P001-A1-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-A1-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je hebt een boek geleend. Het ligt nog thuis. Schrijf een bericht aan de persoon van wie het boek is. Zeg wanneer je het meebrengt.",
+        "targetAudioId": "AUD-PREP-instruction_support-05327ac1f5068fdf6651"
+      },
+      "help": {
+        "text": "Kijk naar het voorbeeld. Probeer het dan zelf. Je mag ook een ander goed antwoord geven.",
+        "audioId": "AUD-PREP-instruction_support-b725a6d1669451c3443b"
+      },
+      "feedback": {
+        "mode": "criteria_review",
+        "automatic_correctness": false,
+        "when_criteria_met": {
+          "text": "Goed geschreven. Je zegt dat het boek nog thuis ligt. Je zegt ook wanneer je het meebrengt.",
+          "audioId": "AUD-PREP-instruction_support-99961c7c407d94f661fa"
+        },
+        "when_criteria_missing": {
+          "text": "Lees je bericht. Staat erin dat het boek thuis ligt? Staat er ook wanneer je het meebrengt? Schrijf erbij wat nog mist.",
+          "audioId": "AUD-PREP-instruction_support-6c5a5f3c1229ad2a3f4d"
+        },
+        "criteria": [
+          "Je zegt dat het boek nog thuis ligt.",
+          "Je zegt wanneer je het meebrengt."
+        ],
+        "example_is_only_one_possible_answer": true,
+        "self_or_teacher_review_required": true
+      },
+      "settings": {
+        "inputModes": [
+          "type",
+          "paper"
+        ],
+        "allowReplay": true
+      },
+      "status": "AI_REVIEWED_CONTENT_ONLY_RUNTIME_NOT_TESTED",
+      "example": "Je boek ligt nog bij mij thuis. Ik breng het morgen mee.",
+      "exampleAudioId": "AUD-PREP-target_narration-50a763d61924bf6a8582",
+      "criteria": [
+        "Je zegt dat het boek nog thuis ligt.",
+        "Je zegt wanneer je het meebrengt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "criteriaAudioIds": [
+        "AUD-PREP-instruction_support-e8a9813ced71fcd7f3e9",
+        "AUD-PREP-instruction_support-04f516e672ed4f3b7b1d"
+      ]
+    }
+  ],
+  "media": {
+    "state": "BRIEFS_AND_AUDIO_SCRIPTS_ONLY",
+    "audio_generation": "DEFERRED_BY_USER",
+    "image_generation": "NOT_STARTED"
+  },
+  "review": {
+    "ai_cycle": "initial_six_checks -> devils_advocate -> revision -> repeated_six_checks",
+    "record": "redactie/06-eindherlezing.json",
+    "human_didactic_review": "OPEN",
+    "learner_pilot": "NOT_RUN",
+    "runtime_and_accessibility_execution": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_review": "redactie/09-extra-niveaureview.json",
+    "feedback_review_sha256": "0046f648433ae5c2cd4774ec88473e3d0e3da368d327226b1ecaab47968c6e7d"
+  },
+  "measurement_plan": {
+    "capture": [
+      "response",
+      "correctness_when_objective",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Geen beheersing afleiden uit één goed antwoord of naspreken. Gebruik een latere parallelle check zonder model; stel afkapwaarden na proefgebruik vast."
+  },
+  "successFeedback": {
+    "message": {
+      "text": "De vier antwoorden kloppen. Je hebt gevonden waarom Elena het boek nu niet kan teruggeven. Goed gedaan.",
+      "audioId": "AUD-PREP-instruction_support-14f645aa720e1bfb6af8"
+    },
+    "condition": "Alle vier keuzevragen bij deze tekst zijn daadwerkelijk goed beantwoord. Open productie wordt apart beoordeeld.",
+    "after_help_message": {
+      "text": "De vier antwoorden kloppen nu. Je hebt de uitleg gebruikt. Goed dat je het opnieuw hebt geprobeerd.",
+      "audioId": "AUD-PREP-instruction_support-6047cbdb132ac9d72a7e"
+    },
+    "not_a_level_or_mastery_certificate": true,
+    "not_triggered_by_opening_document": true
+  }
+}

@@ -1,0 +1,759 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_A-TEXT-02",
+    "title": "Een kom soep",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_A",
+    "objectiveIds": [
+      "CP002-ALFA_A-TEXT-02-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_A-TEXT-02",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-01",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "guided"
+    }
+  },
+  "learning": {
+    "oral_goal": "Soep, persoon en voorwerp herkennen in een begeleide eetsituatie.",
+    "support": "Bereid tafel, stoel, lepel en kom mondeling voor. Lees namen voor. De hele tekst is geen zelfstandig decodeeraanbod.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_A-TEXT-02-TEXT",
+      "kind": "text",
+      "title": "Een kom soep",
+      "targetText": "De soep staat op tafel. Nora zit op een stoel. Zij pakt een lepel.",
+      "displayText": "De soep staat op tafel. Nora zit op een stoel. Zij pakt een lepel.",
+      "script_sha256": "fc81f14bf93efd9ef8809bc55d93d1935e6a984f7bf878329a2c8cf5a61dca62",
+      "audio": {
+        "normal": "PREP-target_narration-fc81f14bf93efd9ef880"
+      },
+      "titleAudioId": "PREP-target_narration-13bcf5f4c66165dfa11b",
+      "imageId": "CP002-ALFA_A-TEXT-02-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_A-TEXT-02-TEXT-SEG-01",
+          "text": "De soep staat op tafel.",
+          "start": 0,
+          "end": 23,
+          "audioId": "PREP-target_narration-47d4d6c32c26d2df1cde",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_A-TEXT-02-TEXT-SEG-02",
+          "text": "Nora zit op een stoel.",
+          "start": 24,
+          "end": 46,
+          "audioId": "PREP-target_narration-e35fde95fcfef5fd6620",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_A-TEXT-02-TEXT-SEG-03",
+          "text": "Zij pakt een lepel.",
+          "start": 47,
+          "end": 66,
+          "audioId": "PREP-target_narration-53cfa96ec372c780afa6",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-SENT-01",
+      "kind": "sentence",
+      "targetText": "De soep staat op tafel.",
+      "displayText": "De soep staat op tafel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-01"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-47d4d6c32c26d2df1cde"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-02-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-SENT-02",
+      "kind": "sentence",
+      "targetText": "Nora zit op een stoel.",
+      "displayText": "Nora zit op een stoel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-01"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-e35fde95fcfef5fd6620"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-02-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora pakt een lepel.",
+      "displayText": "Nora pakt een lepel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-2ef07041a3d6a1a195e0"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-02-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-SENT-04",
+      "kind": "sentence",
+      "targetText": "De soep zit in een kom.",
+      "displayText": "De soep zit in een kom.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/9/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-17be0e0b5a5b513cd829"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-02-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-SENT-05",
+      "kind": "sentence",
+      "targetText": "Ik roer in de soep.",
+      "displayText": "Ik roer in de soep.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/9/5"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-c2b089ad4bf4603e527e"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-02-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT",
+        "CP002-ALFA_A-TEXT-02-SENT-01",
+        "CP002-ALFA_A-TEXT-02-SENT-02",
+        "CP002-ALFA_A-TEXT-02-SENT-03",
+        "CP002-ALFA_A-TEXT-02-SENT-04",
+        "CP002-ALFA_A-TEXT-02-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_A-TEXT-02-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_A-TEXT-02-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat pakt Nora?",
+        "targetAudioId": "PREP-instruction_support-993baa97a216cd275b05"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Nora pakt een boek.",
+          "audioId": "OPT-REV-f11828157932675cdbf73014",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Nora pakt een bloem.",
+          "audioId": "OPT-REV-b7bf81133291783d21180e26",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora pakt een lepel.",
+          "audioId": "PREP-target_narration-2ef07041a3d6a1a195e0",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-02-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Zij pakt een lepel.",
+        "start": 47,
+        "end": 66,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Een lepel is het gepakte voorwerp; boek en bloem zijn andere concrete voorwerpen.",
+      "help": {
+        "text": "Zoek het woord pakt.",
+        "audioId": "HELP-REV-e57a87c835e0eabe8fa5f923"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_A-TEXT-02-EX-02-FB-O2",
+          "O3": "CP002-ALFA_A-TEXT-02-EX-02-FB-O3",
+          "O1": "CP002-ALFA_A-TEXT-02-EX-02-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-02-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar staat de soep?",
+        "targetAudioId": "PREP-instruction_support-b2a56e70920e4e1347b1"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De soep staat op een stoel.",
+          "audioId": "PREP-target_narration-8ebbb2d59f38803da75b",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De soep staat op tafel.",
+          "audioId": "PREP-target_narration-47d4d6c32c26d2df1cde",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De soep staat op de grond.",
+          "audioId": "PREP-target_narration-8f5d21bb29bcfd9773ec",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-03-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De soep staat op tafel.",
+        "start": 0,
+        "end": 23,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Tafel staat letterlijk in de bron; grond en stoel verwisselen de plaats.",
+      "help": {
+        "text": "Zoek de zin over de soep.",
+        "audioId": "HELP-REV-f678814a0fd1a3c33e5d5086"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_A-TEXT-02-EX-03-FB-O3",
+          "O1": "CP002-ALFA_A-TEXT-02-EX-03-FB-O1",
+          "O2": "CP002-ALFA_A-TEXT-02-EX-03-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-02-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie zit op een stoel?",
+        "targetAudioId": "PREP-instruction_support-f81e905497d2646dfc67"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Nora zit op een stoel.",
+          "audioId": "PREP-target_narration-e35fde95fcfef5fd6620",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Elena zit op een stoel.",
+          "audioId": "PREP-target_narration-fc59840b083ee27fc67b",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Youssef zit op een stoel.",
+          "audioId": "PREP-target_narration-367e729c667c032e289a",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-04-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Nora zit op een stoel.",
+        "start": 24,
+        "end": 46,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Nora staat letterlijk bij zit; Elena en Youssef verwisselen de persoon.",
+      "help": {
+        "text": "Zoek de naam bij zit.",
+        "audioId": "HELP-REV-f4f90fe9a1cc3379fda2342f"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_A-TEXT-02-EX-04-FB-O1",
+          "O2": "CP002-ALFA_A-TEXT-02-EX-04-FB-O2",
+          "O3": "CP002-ALFA_A-TEXT-02-EX-04-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-02-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord soep.",
+        "targetAudioId": "PREP-instruction_support-b2023a05d55e4a3d80c8"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W2",
+          "text": "sop",
+          "correct": false,
+          "audioId": "PREP-target_narration-34640245da31603675fb",
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "stoep",
+          "correct": false,
+          "audioId": "PREP-target_narration-92a51f1bf71b4e99bfe6",
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "soep",
+          "correct": true,
+          "audioId": "PREP-target_narration-0ab524e4bd774de2424b",
+          "feedbackId": "CP002-ALFA_A-TEXT-02-EX-05-FB-W1"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Woordvorm herkennen aan het verschil in letters; geen betekenis- of luistertoets.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W2": "CP002-ALFA_A-TEXT-02-EX-05-FB-W2",
+          "W3": "CP002-ALFA_A-TEXT-02-EX-05-FB-W3",
+          "W1": "CP002-ALFA_A-TEXT-02-EX-05-FB-W1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-02-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Nora zit op een stoel.",
+        "Zij pakt een lepel.",
+        "De soep staat op tafel."
+      ],
+      "answer": [
+        "De soep staat op tafel.",
+        "Nora zit op een stoel.",
+        "Zij pakt een lepel."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-e35fde95fcfef5fd6620",
+        "PREP-target_narration-53cfa96ec372c780afa6",
+        "PREP-target_narration-47d4d6c32c26d2df1cde"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-02-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wijs een lepel aan. Zeg wat je pakt.",
+        "targetAudioId": "PREP-instruction_support-423c9faa7298a127bead"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik pak een lepel.",
+      "criteria": [
+        "Je noemt een lepel.",
+        "Je zegt dat je de lepel pakt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-bb721d368b8b516f3296",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-b54a62f37ec96d0d6157",
+        "PREP-instruction_support-c1b326198c47bf9198c6"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt een lepel.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-02-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-02-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat je de lepel pakt.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-02-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-02-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-02-EX-07-FB-ALL-MET",
+        "example": "Ik pak een lepel.",
+        "exampleAudioId": "PREP-target_narration-bb721d368b8b516f3296",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-02-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-02-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: Nora pakt een lepel.",
+        "targetAudioId": "PREP-instruction_support-87aff248120ceecc25c5"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Nora pakt een lepel.",
+      "criteria": [
+        "Je schrijft de hele voorbeeldzin over.",
+        "De woorden staan in de juiste volgorde."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-2ef07041a3d6a1a195e0",
+      "criteriaAudioIds": [
+        "HELP-REV-a960c390278c4c17f8fe1778",
+        "PREP-instruction_support-92d9308fafa6b05577f2"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je schrijft de hele voorbeeldzin over.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-02-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-02-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "De woorden staan in de juiste volgorde.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-02-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-02-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-02-EX-08-FB-ALL-MET",
+        "example": "Nora pakt een lepel.",
+        "exampleAudioId": "PREP-target_narration-2ef07041a3d6a1a195e0",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": true,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-02-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

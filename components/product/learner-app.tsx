@@ -3,21 +3,24 @@
 import { Brand, playAudio } from '@/components/product/shared';
 import { ExerciseAtlas } from '@/components/product/exercise-atlas';
 import { ExerciseSampler, type ExerciseDemoId } from '@/components/product/exercise-sampler';
+import { PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
+import type { PackageEntry } from '@/lib/package-content';
 import { lessonSteps, MasteryRow, totalActivities, type LessonItem, type LessonStep } from '@/lib/product-data';
 import {
   ArrowLeft, ArrowRight, AudioLines, BookOpen, Check, Clock3, Gauge,
-  Grid2X2, Headphones, Home, ListOrdered, LogOut, MessageCircle, Mic, Pause, Play, RefreshCw, RotateCcw, Route, ScanText, ShieldCheck,
+  Grid2X2, Headphones, Home, LibraryBig, ListOrdered, LogOut, MessageCircle, Mic, Pause, Play, RefreshCw, RotateCcw, Route, ScanText, ShieldCheck,
   Volume2, WholeWord, X,
 } from 'lucide-react';
 import { type CSSProperties, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-type LearnerView = 'home' | 'lesson' | 'practice' | 'result' | 'atlas' | 'sampler';
+type LearnerView = 'home' | 'lesson' | 'practice' | 'result' | 'atlas' | 'sampler' | 'packages' | 'package';
 type Feedback = 'idle' | 'right' | 'wrong';
 
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
   const [view, setView] = useState<LearnerView>('home');
   const [demoId, setDemoId] = useState<ExerciseDemoId>('picture');
+  const [selectedPackage, setSelectedPackage] = useState<PackageEntry | null>(null);
   const [stepIndex, setStepIndex] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<string[]>(['model']);
   const [mastery, setMastery] = useState<MasteryRow[]>([]);
@@ -38,6 +41,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <nav aria-label="Cursistnavigatie">
           <button className={view === 'home' ? 'active' : ''} onClick={() => setView('home')}><Home /><span>Verder</span></button>
           <button className={view === 'lesson' ? 'active' : ''} onClick={() => setView('lesson')}><Route /><span>Mijn les</span></button>
+          <button className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><LibraryBig /><span>Pakketten</span></button>
           <button className={view === 'atlas' || view === 'sampler' ? 'active' : ''} onClick={() => setView('atlas')}><Grid2X2 /><span>Oefeningen</span></button>
           <button onClick={() => onToast('Je herhaalset is morgen om 09.00 uur klaar.')}><RefreshCw /><span>Herhalen</span></button>
           <button onClick={() => onToast('Je hebt 18 woorden bewaard.')}><BookOpen /><span>Woorden</span></button>
@@ -45,8 +49,10 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <button className="learner-profile" onClick={onExit}><span>FA</span><small>Fatima</small><LogOut /></button>
       </aside>
       <main className="learner-main">
-        {view === 'home' && <LearnerHome onContinue={() => setView('lesson')} onExplore={() => setView('atlas')} mastery={mastery} />}
+        {view === 'home' && <LearnerHome onContinue={() => setView('lesson')} onExplore={() => setView('atlas')} onPackages={() => setView('packages')} mastery={mastery} />}
         {view === 'lesson' && <LessonOverview completedSteps={completedSteps} onStart={startPractice} onBack={() => setView('home')} />}
+        {view === 'packages' && <PackageLibrary onBack={() => setView('home')} onOpen={(entry) => { setSelectedPackage(entry); setView('package'); }} />}
+        {view === 'package' && selectedPackage && <PackagePlayer entry={selectedPackage} onClose={() => setView('packages')} onToast={onToast} />}
         {view === 'atlas' && <ExerciseAtlas onBack={() => setView('home')} onAction={(title, selectedDemoId) => { if (selectedDemoId) { setDemoId(selectedDemoId); setView('sampler'); } else onToast(`${title} staat op de uitbouwkaart.`); }} />}
         {view === 'sampler' && <ExerciseSampler initialId={demoId} onBack={() => setView('atlas')} />}
         {view === 'practice' && <PracticePlayer initialStep={stepIndex} onClose={() => setView('lesson')} onComplete={(steps) => { setCompletedSteps(Array.from(new Set([...completedSteps, ...steps]))); setView('result'); }} />}
@@ -56,7 +62,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   );
 }
 
-function LearnerHome({ onContinue, onExplore, mastery }: { onContinue: () => void; onExplore: () => void; mastery: MasteryRow[] }) {
+function LearnerHome({ onContinue, onExplore, onPackages, mastery }: { onContinue: () => void; onExplore: () => void; onPackages: () => void; mastery: MasteryRow[] }) {
   const score = mastery.length ? Math.round(mastery.reduce((sum, item) => sum + item.score, 0) / mastery.length) : 64;
   return (
     <div className="learner-page">
@@ -67,6 +73,11 @@ function LearnerHome({ onContinue, onExplore, mastery }: { onContinue: () => voi
       <section className="next-lesson-card">
         <div className="next-lesson-copy"><span className="eyebrow light">Jouw volgende stap</span><div className="sound-title"><b>p</b><i>en</i><b>b</b></div><h2>Horen, bouwen en gebruiken</h2><p>{totalActivities} korte activiteiten · ongeveer 12 minuten</p><button className="accent-button" onClick={onContinue}><Play />Bekijk de les<ArrowRight /></button></div>
         <div className="next-lesson-path" aria-label="Opbouw van de les">{lessonSteps.slice(0, 6).map((step, index) => <div key={step.id} className={index < 2 ? 'done' : index === 2 ? 'current' : ''}><span>{index < 2 ? <Check /> : index + 1}</span><small>{step.short}</small></div>)}</div>
+      </section>
+      <section className="package-home-callout">
+        <span><LibraryBig /></span>
+        <div><small>NIEUW IN KLINK</small><strong>Pakket 1 en Pakket 2 staan klaar</strong><p>Kies een niveau van Alfa A tot B1 en probeer een complete tekst met acht activiteiten.</p></div>
+        <button className="secondary-button" onClick={onPackages}>Bekijk de pakketten<ArrowRight /></button>
       </section>
       <div className="learner-dashboard-grid">
         <section className="plain-panel today-panel"><div className="panel-heading"><div><span className="eyebrow">Vandaag</span><h2>Je oefent rustig door</h2></div><div className="mastery-ring" style={{ '--progress': `${score * 3.6}deg` } as CSSProperties}><strong>{score}%</strong></div></div><div className="today-stats"><span><Clock3 /><b>7 min</b><small>geoefend</small></span><span><WholeWord /><b>18</b><small>woorden</small></span><span><Gauge /><b>2</b><small>stappen klaar</small></span></div></section>

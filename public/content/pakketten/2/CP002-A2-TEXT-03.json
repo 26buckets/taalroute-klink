@@ -1,0 +1,759 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-A2-TEXT-03",
+    "title": "Een vraag over de verpakking",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A2",
+    "objectiveIds": [
+      "CP002-A2-TEXT-03-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A2-TEXT-03",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-11",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A2"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een verandering opmerken, een vraag stellen en de reactie herkennen.",
+    "support": "Bereid pil/pillen, verpakking, vorige keer, uitleg en veranderd voor. Geen oorzaak van de verandering of gebruiksadvies invullen; de tekst geeft die informatie niet.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-A2-TEXT-03-TEXT",
+      "kind": "text",
+      "title": "Een vraag over de verpakking",
+      "targetText": "Youssef is in de apotheek. De verpakking van zijn pillen ziet er anders uit dan de vorige keer. Hij weet niet waarom en vraagt het aan de medewerker. De medewerker legt uit waarom de verpakking is veranderd.",
+      "displayText": "Youssef is in de apotheek. De verpakking van zijn pillen ziet er anders uit dan de vorige keer. Hij weet niet waarom en vraagt het aan de medewerker. De medewerker legt uit waarom de verpakking is veranderd.",
+      "script_sha256": "479cd456ec54925e523f00fabb8586a6a8bcd9734a4b16908a06b6b4ff8162fc",
+      "audio": {
+        "normal": "PREP-target_narration-479cd456ec54925e523f"
+      },
+      "titleAudioId": "PREP-target_narration-8e1f0014bb9240e760ab",
+      "imageId": "CP002-A2-TEXT-03-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-A2-TEXT-03-TEXT-SEG-01",
+          "text": "Youssef is in de apotheek.",
+          "start": 0,
+          "end": 26,
+          "audioId": "PREP-target_narration-f2ed47340ea26958bb08",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-03-TEXT-SEG-02",
+          "text": "De verpakking van zijn pillen ziet er anders uit dan de vorige keer.",
+          "start": 27,
+          "end": 95,
+          "audioId": "PREP-target_narration-622ed8808687ced4a54d",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-03-TEXT-SEG-03",
+          "text": "Hij weet niet waarom en vraagt het aan de medewerker.",
+          "start": 96,
+          "end": 149,
+          "audioId": "PREP-target_narration-5c923178ce4b8007e1a8",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-03-TEXT-SEG-04",
+          "text": "De medewerker legt uit waarom de verpakking is veranderd.",
+          "start": 150,
+          "end": 207,
+          "audioId": "PREP-target_narration-b01d9424840f2c020493",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-A2-TEXT-03-SENT-01",
+      "kind": "sentence",
+      "targetText": "Youssef is in de apotheek.",
+      "displayText": "Youssef is in de apotheek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-11"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-f2ed47340ea26958bb08"
+      },
+      "imageId": "CP002-A2-TEXT-03-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-A2-TEXT-03-SENT-02",
+      "kind": "sentence",
+      "targetText": "De verpakking van de pillen ziet er anders uit.",
+      "displayText": "De verpakking van de pillen ziet er anders uit.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-a9756f03e194acb6a026"
+      },
+      "imageId": "CP002-A2-TEXT-03-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-A2-TEXT-03-SENT-03",
+      "kind": "sentence",
+      "targetText": "Youssef vraagt de medewerker om uitleg.",
+      "displayText": "Youssef vraagt de medewerker om uitleg.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ed5f5223fba85bdbdee8"
+      },
+      "imageId": "CP002-A2-TEXT-03-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-A2-TEXT-03-SENT-04",
+      "kind": "sentence",
+      "targetText": "De medewerker legt uit waarom de verpakking is veranderd.",
+      "displayText": "De medewerker legt uit waarom de verpakking is veranderd.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-11"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-b01d9424840f2c020493"
+      },
+      "imageId": "CP002-A2-TEXT-03-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-A2-TEXT-03-SENT-05",
+      "kind": "sentence",
+      "targetText": "Youssef weet eerst niet waarom de verpakking anders is.",
+      "displayText": "Youssef weet eerst niet waarom de verpakking anders is.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-a56f1a98313af0a05dd5"
+      },
+      "imageId": "CP002-A2-TEXT-03-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-A2-TEXT-03-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT",
+        "CP002-A2-TEXT-03-SENT-01",
+        "CP002-A2-TEXT-03-SENT-02",
+        "CP002-A2-TEXT-03-SENT-03",
+        "CP002-A2-TEXT-03-SENT-04",
+        "CP002-A2-TEXT-03-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-A2-TEXT-03-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-A2-TEXT-03-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat wil Youssef van de medewerker?",
+        "targetAudioId": "PREP-instruction_support-9d85cb35f78b1dc82a22"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Youssef wil uitleg over de openingstijden.",
+          "audioId": "OPT-REV-085f2ab17f6b5488a2cefe8a",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-03-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Youssef wil uitleg over de wachttijd.",
+          "audioId": "OPT-REV-15515533f58826cff1654b97",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-03-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Youssef wil uitleg over de andere verpakking.",
+          "audioId": "OPT-REV-cdd6996aa2e803258dd6d2a8",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-03-EX-02-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De verpakking van zijn pillen ziet er anders uit dan de vorige keer. Hij weet niet waarom en vraagt het aan de medewerker.",
+        "start": 27,
+        "end": 149,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Uitleg over verpakking is de concrete vraag; openingstijden en wachttijd zijn andere informatievragen.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-A2-TEXT-03-EX-02-FB-O2",
+          "O3": "CP002-A2-TEXT-03-EX-02-FB-O3",
+          "O1": "CP002-A2-TEXT-03-EX-02-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-03-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat is er anders dan de vorige keer?",
+        "targetAudioId": "PREP-instruction_support-98fd24711bf8a7c4a530"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De medewerker heeft een andere naam.",
+          "audioId": "PREP-target_narration-97d235dcb78063b89a44",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-03-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De verpakking ziet er anders uit.",
+          "audioId": "PREP-target_narration-d5b390cbbf764dce6c11",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-03-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De apotheek is op een andere plek.",
+          "audioId": "PREP-target_narration-960c082fb0dbc074f156",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-03-EX-03-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De verpakking van zijn pillen ziet er anders uit dan de vorige keer.",
+        "start": 27,
+        "end": 95,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Verpakking is veranderd; locatie en naam van medewerker zijn niet genoemd.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-A2-TEXT-03-EX-03-FB-O3",
+          "O1": "CP002-A2-TEXT-03-EX-03-FB-O1",
+          "O2": "CP002-A2-TEXT-03-EX-03-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-03-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doet de medewerker?",
+        "targetAudioId": "PREP-instruction_support-ad3ac67916cd1e76b014"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "De medewerker legt de verandering uit.",
+          "audioId": "PREP-target_narration-22d19ce17174e3d9bc40",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-03-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De medewerker geeft zonder uitleg een tas mee.",
+          "audioId": "PREP-target_narration-39776ac2c26a1c005b75",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-03-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De medewerker maakt een afspraak voor morgen.",
+          "audioId": "PREP-target_narration-efbaeea7679a0bffe8db",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-03-EX-04-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De medewerker legt uit waarom de verpakking is veranderd.",
+        "start": 150,
+        "end": 207,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Uitleg wordt gegeven; tas zonder uitleg en afspraak voor morgen zijn andere uitkomsten.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-A2-TEXT-03-EX-04-FB-O1",
+          "O2": "CP002-A2-TEXT-03-EX-04-FB-O2",
+          "O3": "CP002-A2-TEXT-03-EX-04-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-03-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent uitleg in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-80d6ca8ebd81ad33938d"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W2",
+          "text": "De medewerker laat alleen zien waar de uitgang is.",
+          "correct": false,
+          "audioId": "PREP-target_narration-5e3eff2da59069206154",
+          "feedbackId": "CP002-A2-TEXT-03-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "De medewerker vraagt Youssef om later terug te komen.",
+          "correct": false,
+          "audioId": "PREP-target_narration-c0e98585eb95c73a8ae6",
+          "feedbackId": "CP002-A2-TEXT-03-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "De medewerker vertelt waarom de verpakking anders is.",
+          "correct": true,
+          "audioId": "PREP-target_narration-662cab1c1b90d45cd8ca",
+          "feedbackId": "CP002-A2-TEXT-03-EX-05-FB-W1"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W2": "CP002-A2-TEXT-03-EX-05-FB-W2",
+          "W3": "CP002-A2-TEXT-03-EX-05-FB-W3",
+          "W1": "CP002-A2-TEXT-03-EX-05-FB-W1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-03-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Hij weet niet waarom en vraagt het aan de medewerker.",
+        "De medewerker legt uit waarom de verpakking is veranderd.",
+        "Youssef is in de apotheek."
+      ],
+      "answer": [
+        "Youssef is in de apotheek.",
+        "Hij weet niet waarom en vraagt het aan de medewerker.",
+        "De medewerker legt uit waarom de verpakking is veranderd."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-5c923178ce4b8007e1a8",
+        "PREP-target_narration-b01d9424840f2c020493",
+        "PREP-target_narration-f2ed47340ea26958bb08"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-03-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je herkent een verpakking niet. Vraag een medewerker om uitleg.",
+        "targetAudioId": "PREP-instruction_support-9a29f9d8ab8244faba58"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Deze verpakking ziet er anders uit. Kunt u uitleggen waarom?",
+      "criteria": [
+        "Je noemt de andere verpakking.",
+        "Je vraagt om uitleg zonder een oorzaak te verzinnen."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-671590280a6401064172",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-81d493fde5d566467bb1",
+        "PREP-instruction_support-d8b6836f2b984725179a"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt de andere verpakking.",
+            "metFeedbackId": "CP002-A2-TEXT-03-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-03-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je vraagt om uitleg zonder een oorzaak te verzinnen.",
+            "metFeedbackId": "CP002-A2-TEXT-03-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-03-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A2-TEXT-03-EX-07-FB-ALL-MET",
+        "example": "Deze verpakking ziet er anders uit. Kunt u uitleggen waarom?",
+        "exampleAudioId": "PREP-target_narration-671590280a6401064172",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A2-TEXT-03-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-03-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf één vraag aan de medewerker over de veranderde verpakking.",
+        "targetAudioId": "PREP-instruction_support-5e5694316f2d00208bbf"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Waarom ziet de verpakking er anders uit?",
+      "criteria": [
+        "Je vraagt naar de andere verpakking.",
+        "Je geeft zelf geen medische verklaring."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-361d897d2f82c51f3bfd",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-0a59dcc3cae9d9f7727a",
+        "PREP-instruction_support-6f7085165a4f18a2ff2d"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je vraagt naar de andere verpakking.",
+            "metFeedbackId": "CP002-A2-TEXT-03-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-03-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je geeft zelf geen medische verklaring.",
+            "metFeedbackId": "CP002-A2-TEXT-03-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-03-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A2-TEXT-03-EX-08-FB-ALL-MET",
+        "example": "Waarom ziet de verpakking er anders uit?",
+        "exampleAudioId": "PREP-target_narration-361d897d2f82c51f3bfd",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A2-TEXT-03-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

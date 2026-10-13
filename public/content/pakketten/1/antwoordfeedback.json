@@ -1,0 +1,408 @@
+{
+  "AA": {
+    "02": [
+      [
+        "supported",
+        "Dat klopt. Ik pak een boek."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over een tas. Ik pak een boek."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over een pen. Ik pak een boek."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Ik zit op een stoel."
+      ],
+      [
+        "contradicted",
+        "Ik zit op een stoel. Ik zit niet op de grond."
+      ],
+      [
+        "contradicted",
+        "Ik zit op een stoel. Ik zit niet op een bank."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Dat klopt. Ik lees in het boek."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over tekenen. Ik lees in het boek."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over schrijven. Ik lees in het boek."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. Hier staat boek."
+      ],
+      [
+        "wrong_word",
+        "Hier staat koek. Koek begint met een k. Boek begint met een b."
+      ],
+      [
+        "wrong_word",
+        "Hier staat doek. Doek begint met een d. Boek begint met een b."
+      ]
+    ]
+  },
+  "AB": {
+    "02": [
+      [
+        "supported",
+        "Goed gezien. Het boek is van Elena. Nora leest erin."
+      ],
+      [
+        "contradicted",
+        "Nora leest in het boek. Het boek is van Elena."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over Youssef. Het boek is van Elena."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Nora zit bij het raam."
+      ],
+      [
+        "contradicted",
+        "Nora zit bij het raam. Ze zit niet bij de deur."
+      ],
+      [
+        "contradicted",
+        "Nora zit bij het raam. Ze zit niet bij de kast."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Goed gezien. Nora leest in het boek. Daarna geeft ze het terug."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat Nora het boek meeneemt. Ze geeft het terug."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat Nora het boek weglegt. Ze geeft het terug."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. Nora geeft het boek terug. Elena heeft haar boek weer."
+      ],
+      [
+        "wrong_meaning",
+        "Een ander boek krijgen is iets anders. Hier krijgt Elena haar eigen boek terug."
+      ],
+      [
+        "contradicted",
+        "Nora houdt het boek niet. Ze geeft het terug aan Elena."
+      ]
+    ]
+  },
+  "AC": {
+    "02": [
+      [
+        "supported",
+        "Goed gezien. Elena mag het boek lenen."
+      ],
+      [
+        "contradicted",
+        "Het boek is van Nora. Elena mag het lenen."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over Youssef. Elena mag het boek lenen."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Elena neemt het boek mee naar huis."
+      ],
+      [
+        "not_stated",
+        "Elena neemt het boek mee naar huis. Er staat niets over de winkel."
+      ],
+      [
+        "not_stated",
+        "Elena neemt het boek mee naar huis. Er staat niets over haar werk."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Goed gezien. Elena brengt het boek morgen terug."
+      ],
+      [
+        "contradicted",
+        "In de tekst staat morgen. Ze brengt het boek dus niet vandaag terug."
+      ],
+      [
+        "contradicted",
+        "In de tekst staat morgen. Ze brengt het boek dus niet volgende week terug."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. Elena mag het boek lezen. Daarna geeft ze het terug aan Nora."
+      ],
+      [
+        "wrong_meaning",
+        "Bij kopen is het boek daarna van Elena. Hier leent ze het. Ze geeft het terug aan Nora."
+      ],
+      [
+        "wrong_meaning",
+        "Elena mag het boek lezen. Ze moet het ook teruggeven. Ze mag het niet houden."
+      ]
+    ]
+  },
+  "A1": {
+    "02": [
+      [
+        "supported",
+        "Goed gevonden. Het boek ligt nog thuis. Daarom kan Elena het nu niet teruggeven."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat Nora weg is. Elena kan het boek niet teruggeven omdat het thuis ligt."
+      ],
+      [
+        "not_stated",
+        "We weten niet of Elena het boek uit heeft. Het boek ligt nog thuis. Daarom kan ze het nu niet teruggeven."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Elena schrijft dat ze het boek morgen meebrengt."
+      ],
+      [
+        "contradicted",
+        "Elena wilde het boek vandaag teruggeven. Nu schrijft ze dat ze het morgen meebrengt."
+      ],
+      [
+        "contradicted",
+        "In het bericht staat morgen. Er staat niet volgende week."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Goed gezien. Nora vindt het prima dat Elena het boek morgen meebrengt."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat Nora het boek ophaalt. Ze vindt het prima dat Elena het morgen meebrengt."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat Nora het boek niet meer terug wil. Ze vindt het prima dat Elena het morgen meebrengt."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. Elena neemt het boek mee. Het blijft dus niet thuis."
+      ],
+      [
+        "contradicted",
+        "Elena wil het boek morgen meebrengen. Als het thuis blijft liggen, heeft ze het niet bij zich."
+      ],
+      [
+        "wrong_meaning",
+        "Een foto van het boek is niet het boek zelf. Meebrengen betekent dat Elena het boek zelf meeneemt."
+      ]
+    ]
+  },
+  "A1P": {
+    "02": [
+      [
+        "supported",
+        "Goed gezien. Het boek is van Nora. Daarom vraagt Elena eerst of het mag."
+      ],
+      [
+        "contradicted",
+        "Youssef wil het boek lezen. Maar het boek is van Nora. Daarom vraagt Elena het aan haar."
+      ],
+      [
+        "contradicted",
+        "Elena heeft het boek geleend. Het boek is van Nora. Daarom vraagt Elena het aan haar."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Nora wil het boek vrijdag terug."
+      ],
+      [
+        "wrong_reference",
+        "Youssef noemt donderdag. De vraag gaat over Nora. Zij wil het boek vrijdag terug."
+      ],
+      [
+        "not_stated",
+        "Nora noemt vrijdag. Er staat niets over maandag."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Goed gezien. Youssef zegt dat hij het boek donderdag kan terugbrengen. Dat is vóór vrijdag."
+      ],
+      [
+        "wrong_reference",
+        "Nora noemt vrijdag. Youssef zegt dat hij het boek donderdag kan terugbrengen."
+      ],
+      [
+        "contradicted",
+        "Youssef wil het boek donderdag terugbrengen. Dat is vóór het weekend. Nora wil het in het weekend zelf lezen."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. Iemand anders mag het boek een tijdje gebruiken. Daarna krijgt Nora het terug."
+      ],
+      [
+        "wrong_meaning",
+        "Bij uitlenen koopt Nora geen nieuw boek. Ze geeft haar boek een tijdje aan iemand anders."
+      ],
+      [
+        "wrong_meaning",
+        "Bij uitlenen geeft Nora haar boek een tijdje aan iemand anders. Het terugkrijgen komt daarna."
+      ]
+    ]
+  },
+  "A2": {
+    "02": [
+      [
+        "supported",
+        "Goed gevonden. Bij harde regen komt er water onder de deur door. Daardoor wordt het boek nat."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat een bezoeker water morst. Het water komt onder de buitendeur door."
+      ],
+      [
+        "contradicted",
+        "Het water komt onder de buitendeur door. Naast het raam is de nieuwe plek voor de kast."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Mensen moeten door de gang kunnen lopen. De kast mag de gang dus niet blokkeren."
+      ],
+      [
+        "contradicted",
+        "De kast hoeft niet bij de deur te blijven. Hij kan ergens anders staan als de gang vrij blijft."
+      ],
+      [
+        "contradicted",
+        "Bezoekers mogen boeken meenemen. Dat staat in de tekst. Het probleem is dat de gang vrij moet blijven."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Goed gezien. Naast het raam past de kast. Mensen kunnen daar ook door de gang blijven lopen."
+      ],
+      [
+        "contradicted",
+        "De groep verplaatst de kast de volgende ochtend. Hij blijft dus niet bij de buitendeur staan."
+      ],
+      [
+        "not_stated",
+        "De groep kiest een nieuwe plek en verplaatst de kast. Er staat niet dat ze dat bij elke regenbui doen."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. De beheerder bespreekt met de vrijwilligers waar de kast kan staan."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat de beheerder boeken uitzoekt. Hij wil bespreken waar de kast kan staan."
+      ],
+      [
+        "not_stated",
+        "Er staat niet dat hij bezoekers vraagt om boeken mee te nemen. Hij wil de nieuwe plek met de vrijwilligers bespreken."
+      ]
+    ]
+  },
+  "B1": {
+    "02": [
+      [
+        "supported",
+        "Goed gevonden. Elena werkt op woensdag. Als de kast alleen dan open is, kan zij er niet terecht."
+      ],
+      [
+        "wrong_reference",
+        "De vrijwilligers hebben last van het opruimwerk. Elena noemt iets anders: zij werkt op woensdag en kan dan niet komen."
+      ],
+      [
+        "not_stated",
+        "Elena zegt niet dat het buurthuis op woensdag dicht is. Zij kan zelf niet komen, omdat ze dan werkt."
+      ]
+    ],
+    "03": [
+      [
+        "supported",
+        "Dat klopt. Als de kast vol is, moeten bezoekers hun boeken weer meenemen."
+      ],
+      [
+        "contradicted",
+        "De afspraak is dat bezoekers hun boeken weer meenemen als de kast vol is. Ze mogen ze dus niet naast de kast zetten."
+      ],
+      [
+        "not_stated",
+        "Er staat niets over boeken bij de balie inleveren. Als de kast vol is, moeten bezoekers hun boeken weer meenemen."
+      ]
+    ],
+    "04": [
+      [
+        "supported",
+        "Goed samengevat. De kast blijft op alle openingsdagen open. Bezoekers mogen per keer maximaal vijf hele, schone boeken brengen."
+      ],
+      [
+        "contradicted",
+        "De kast blijft op alle openingsdagen open. Minder vaak open past daar niet bij. Bezoekers mogen per keer maximaal vijf boeken brengen."
+      ],
+      [
+        "contradicted",
+        "Twee vrijwilligers blijven elke week controleren. De kast is open als het buurthuis open is. Hij is dus niet altijd open."
+      ]
+    ],
+    "05": [
+      [
+        "supported",
+        "Dat klopt. De groep probeert de afspraken vier weken uit. Daarna bespreekt de groep of ze werken."
+      ],
+      [
+        "wrong_meaning",
+        "Een proef is hier iets uitproberen. De bezoekers hoeven geen vragen over boeken te beantwoorden."
+      ],
+      [
+        "contradicted",
+        "Er is nog geen besluit om de kast te sluiten. Na vier weken bespreekt de groep hoe het verdergaat."
+      ]
+    ]
+  }
+}

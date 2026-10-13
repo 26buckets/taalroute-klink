@@ -1,0 +1,751 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_A-TEXT-04",
+    "title": "Mijn naam",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_A",
+    "objectiveIds": [
+      "CP002-ALFA_A-TEXT-04-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_A-TEXT-04",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "NEW_STORY",
+      "source_id": null,
+      "source_path": "redactie/01-concepten.json",
+      "old_route": null
+    }
+  },
+  "learning": {
+    "oral_goal": "Een naam mondeling noemen en als geschreven naam herkennen.",
+    "support": "Nora is de bestaande persoon. Bereid schrijf, staat en kaart mondeling voor. Eigen naam mag als woordbeeld worden gekopieerd. Geen andere persoonsgegevens vragen.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_A-TEXT-04-TEXT",
+      "kind": "text",
+      "title": "Mijn naam",
+      "targetText": "Ik ben Nora. Ik schrijf mijn naam. Mijn naam staat op de kaart.",
+      "displayText": "Ik ben Nora. Ik schrijf mijn naam. Mijn naam staat op de kaart.",
+      "script_sha256": "f0901903dd5360b88f6626d1837e37bf9b972fc7f77bc80001aa5a7881b72143",
+      "audio": {
+        "normal": "PREP-target_narration-f0901903dd5360b88f66"
+      },
+      "titleAudioId": "PREP-target_narration-1d4cb2da4cd09750eedf",
+      "imageId": "CP002-ALFA_A-TEXT-04-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_A-TEXT-04-TEXT-SEG-01",
+          "text": "Ik ben Nora.",
+          "start": 0,
+          "end": 12,
+          "audioId": "PREP-target_narration-6eeb6d366fe0a75a9297",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_A-TEXT-04-TEXT-SEG-02",
+          "text": "Ik schrijf mijn naam.",
+          "start": 13,
+          "end": 34,
+          "audioId": "PREP-target_narration-068effd01abc51298ff6",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_A-TEXT-04-TEXT-SEG-03",
+          "text": "Mijn naam staat op de kaart.",
+          "start": 35,
+          "end": 63,
+          "audioId": "PREP-target_narration-41112bd76b0325f5ef45",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-SENT-01",
+      "kind": "sentence",
+      "targetText": "Ik ben Nora.",
+      "displayText": "Ik ben Nora.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/17/3"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-6eeb6d366fe0a75a9297"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-04-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-SENT-02",
+      "kind": "sentence",
+      "targetText": "Mijn naam is Nora.",
+      "displayText": "Mijn naam is Nora.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/2/3"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-2f6a63530b537d1ec1b8"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-04-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-SENT-03",
+      "kind": "sentence",
+      "targetText": "Ik schrijf mijn naam.",
+      "displayText": "Ik schrijf mijn naam.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/2/5"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-068effd01abc51298ff6"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-04-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-SENT-04",
+      "kind": "sentence",
+      "targetText": "Mijn naam staat op de kaart.",
+      "displayText": "Mijn naam staat op de kaart.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/2/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-41112bd76b0325f5ef45"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-04-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-SENT-05",
+      "kind": "sentence",
+      "targetText": "Ik pak een pen.",
+      "displayText": "Ik pak een pen.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ab8a19f2d6abb8aa8017"
+      },
+      "imageId": "CP002-ALFA_A-TEXT-04-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT",
+        "CP002-ALFA_A-TEXT-04-SENT-01",
+        "CP002-ALFA_A-TEXT-04-SENT-02",
+        "CP002-ALFA_A-TEXT-04-SENT-03",
+        "CP002-ALFA_A-TEXT-04-SENT-04",
+        "CP002-ALFA_A-TEXT-04-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_A-TEXT-04-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_A-TEXT-04-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie ben ik?",
+        "targetAudioId": "PREP-instruction_support-6103ddd6fd96f129f1f7"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Ik ben Nora.",
+          "audioId": "PREP-target_narration-6eeb6d366fe0a75a9297",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Ik ben Elena.",
+          "audioId": "PREP-target_narration-63a2e5cadada1c7ccaa8",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Ik ben Youssef.",
+          "audioId": "PREP-target_narration-2f977f40aed75220aba3",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ik ben Nora.",
+        "start": 0,
+        "end": 12,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Ik ben Nora bepaalt de naam; Elena en Youssef zijn andere bestaande personen.",
+      "help": {
+        "text": "Lees de eerste zin nog eens.",
+        "audioId": "HELP-REV-b0638a92ee1ca502895df9d0"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_A-TEXT-04-EX-02-FB-O1",
+          "O2": "CP002-ALFA_A-TEXT-04-EX-02-FB-O2",
+          "O3": "CP002-ALFA_A-TEXT-04-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-04-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat schrijf ik?",
+        "targetAudioId": "PREP-instruction_support-eab92b4e490d8d2a94e4"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Ik schrijf een adres.",
+          "audioId": "PREP-target_narration-8f32c75dad19bbfcdc0b",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Ik schrijf een zin.",
+          "audioId": "PREP-target_narration-10f8f7aae7e9d16f28ce",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Ik schrijf mijn naam.",
+          "audioId": "PREP-target_narration-068effd01abc51298ff6",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ik schrijf mijn naam.",
+        "start": 13,
+        "end": 34,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Naam is het geschreven gegeven; adres en zin zijn andere gegevens/teksteenheden.",
+      "help": {
+        "text": "Zoek het woord schrijf.",
+        "audioId": "HELP-REV-d76d5205f5917d14653780cd"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_A-TEXT-04-EX-03-FB-O2",
+          "O3": "CP002-ALFA_A-TEXT-04-EX-03-FB-O3",
+          "O1": "CP002-ALFA_A-TEXT-04-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-04-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar staat mijn naam?",
+        "targetAudioId": "PREP-instruction_support-d4d71cbbf5e444198d89"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Mijn naam staat op het boek.",
+          "audioId": "PREP-target_narration-e6c2f86242183e05a42c",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Mijn naam staat op de kaart.",
+          "audioId": "PREP-target_narration-41112bd76b0325f5ef45",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Mijn naam staat op de tas.",
+          "audioId": "PREP-target_narration-6f5c476b7c4be804ee2b",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Mijn naam staat op de kaart.",
+        "start": 35,
+        "end": 63,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Kaart staat letterlijk; tas en boek verwisselen de drager.",
+      "help": {
+        "text": "Zoek het woord kaart.",
+        "audioId": "HELP-REV-16ca5e5521a3e6d8d0c14c5a"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_A-TEXT-04-EX-04-FB-O3",
+          "O1": "CP002-ALFA_A-TEXT-04-EX-04-FB-O1",
+          "O2": "CP002-ALFA_A-TEXT-04-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-04-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord naam.",
+        "targetAudioId": "PREP-instruction_support-06d8b608870537feffe2"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "naam",
+          "correct": true,
+          "audioId": "PREP-target_narration-805363c9d5a023c8eb2d",
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "maan",
+          "correct": false,
+          "audioId": "PREP-target_narration-c35e4a8b5a513b134452",
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "raam",
+          "correct": false,
+          "audioId": "PREP-target_narration-149a5a5e93ae05e6aa75",
+          "feedbackId": "CP002-ALFA_A-TEXT-04-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Woordvorm herkennen aan het verschil in letters; geen betekenis- of luistertoets.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "CP002-ALFA_A-TEXT-04-EX-05-FB-W1",
+          "W2": "CP002-ALFA_A-TEXT-04-EX-05-FB-W2",
+          "W3": "CP002-ALFA_A-TEXT-04-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-04-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Ik schrijf mijn naam.",
+        "Mijn naam staat op de kaart.",
+        "Ik ben Nora."
+      ],
+      "answer": [
+        "Ik ben Nora.",
+        "Ik schrijf mijn naam.",
+        "Mijn naam staat op de kaart."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-068effd01abc51298ff6",
+        "PREP-target_narration-41112bd76b0325f5ef45",
+        "PREP-target_narration-6eeb6d366fe0a75a9297"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_A-TEXT-04-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zeg je naam. Je mag ook een naam kiezen.",
+        "targetAudioId": "PREP-instruction_support-fe696ee53f0c25fbe291"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik ben Nora.",
+      "criteria": [
+        "Je noemt een eigen of gekozen naam."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-6eeb6d366fe0a75a9297",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-7043a97406cc1be6e80c"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt een eigen of gekozen naam.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-04-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-04-EX-07-FB-CR-01-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-04-EX-07-FB-ALL-MET",
+        "example": "Ik ben Nora.",
+        "exampleAudioId": "PREP-target_narration-6eeb6d366fe0a75a9297",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-04-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_A-TEXT-04-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "CP002-ALFA_A-TEXT-04-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_A-TEXT-04-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf je voornaam. Je mag ook een voornaam kiezen.",
+        "targetAudioId": "PREP-instruction_support-1064c6548c3e0ef47506"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Nora",
+      "criteria": [
+        "Er staat een eigen of gekozen voornaam.",
+        "Je naam is leesbaar."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-c8ccf6c9714f85c0da64",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-b42440064dfe1ffaf2ed",
+        "HELP-REV-a8b6722956c053b0ab79f279"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Er staat een eigen of gekozen voornaam.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-04-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-04-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je naam is leesbaar.",
+            "metFeedbackId": "CP002-ALFA_A-TEXT-04-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_A-TEXT-04-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-04-EX-08-FB-ALL-MET",
+        "example": "Nora",
+        "exampleAudioId": "PREP-target_narration-c8ccf6c9714f85c0da64",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_A-TEXT-04-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

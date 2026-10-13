@@ -14,8 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'Taalroute | Klink',
-  description: 'Klink: kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
+  description:
+    'Klink: kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
   manifest: '/manifest.webmanifest',
+  icons: { icon: '/favicon.svg' },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',

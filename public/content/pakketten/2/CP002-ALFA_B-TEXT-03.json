@@ -1,0 +1,759 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-ALFA_B-TEXT-03",
+    "title": "Het boek",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_B",
+    "objectiveIds": [
+      "CP002-ALFA_B-TEXT-03-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_B-TEXT-03",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-03",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "guided"
+    }
+  },
+  "learning": {
+    "oral_goal": "De beginplaats van het boek en Elena’s leesplaats onderscheiden.",
+    "support": "Tafel, pakt en raam voorbereiden; zij verwijst naar Elena. Er is geen bibliotheekmedewerker in deze tekst.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-ALFA_B-TEXT-03-TEXT",
+      "kind": "text",
+      "title": "Het boek",
+      "targetText": "Het boek ligt op tafel. Elena pakt het boek. Zij leest bij het raam.",
+      "displayText": "Het boek ligt op tafel. Elena pakt het boek. Zij leest bij het raam.",
+      "script_sha256": "3aa43f4785753eba613a6f977946c83852886a2d92eb7ba0e162f2403cc57cda",
+      "audio": {
+        "normal": "PREP-target_narration-3aa43f4785753eba613a"
+      },
+      "titleAudioId": "PREP-target_narration-becc36c33d71e019c2c6",
+      "imageId": "CP002-ALFA_B-TEXT-03-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-ALFA_B-TEXT-03-TEXT-SEG-01",
+          "text": "Het boek ligt op tafel.",
+          "start": 0,
+          "end": 23,
+          "audioId": "PREP-target_narration-e98583ab45026d76c728",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-03-TEXT-SEG-02",
+          "text": "Elena pakt het boek.",
+          "start": 24,
+          "end": 44,
+          "audioId": "PREP-target_narration-90c905983110c409c3ca",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-ALFA_B-TEXT-03-TEXT-SEG-03",
+          "text": "Zij leest bij het raam.",
+          "start": 45,
+          "end": 68,
+          "audioId": "PREP-target_narration-349726ab1adc312aa9ce",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-SENT-01",
+      "kind": "sentence",
+      "targetText": "Het boek ligt op tafel.",
+      "displayText": "Het boek ligt op tafel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/6/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-e98583ab45026d76c728"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-03-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-SENT-02",
+      "kind": "sentence",
+      "targetText": "Elena pakt het boek.",
+      "displayText": "Elena pakt het boek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-03"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-90c905983110c409c3ca"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-03-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-SENT-03",
+      "kind": "sentence",
+      "targetText": "Elena leest bij het raam.",
+      "displayText": "Elena leest bij het raam.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-75643e8d435eee0c8b71"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-03-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-SENT-04",
+      "kind": "sentence",
+      "targetText": "Ik lees in het boek.",
+      "displayText": "Ik lees in het boek.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/6/5"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-0ae099d6732c4ab411b7"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-03-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-SENT-05",
+      "kind": "sentence",
+      "targetText": "Ik zit bij het raam.",
+      "displayText": "Ik zit bij het raam.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/17/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-5d51931246416d0f2311"
+      },
+      "imageId": "CP002-ALFA_B-TEXT-03-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT",
+        "CP002-ALFA_B-TEXT-03-SENT-01",
+        "CP002-ALFA_B-TEXT-03-SENT-02",
+        "CP002-ALFA_B-TEXT-03-SENT-03",
+        "CP002-ALFA_B-TEXT-03-SENT-04",
+        "CP002-ALFA_B-TEXT-03-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-ALFA_B-TEXT-03-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-ALFA_B-TEXT-03-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar leest Elena?",
+        "targetAudioId": "PREP-instruction_support-47db10da7dfef76878a9"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Elena leest bij het raam.",
+          "audioId": "PREP-target_narration-75643e8d435eee0c8b71",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Elena leest bij het hek.",
+          "audioId": "OPT-REV-363f16fb8b7c21bec5678aab",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena leest bij de deur.",
+          "audioId": "OPT-REV-4ef854d3b5db1e014a43574f",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Zij leest bij het raam.",
+        "start": 45,
+        "end": 68,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Raam is leesplek; hek en deur zijn andere plaatsen.",
+      "help": {
+        "text": "Zoek de zin met leest.",
+        "audioId": "HELP-REV-35f0430c5991931a33629c34"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-ALFA_B-TEXT-03-EX-02-FB-O1",
+          "O2": "CP002-ALFA_B-TEXT-03-EX-02-FB-O2",
+          "O3": "CP002-ALFA_B-TEXT-03-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-03-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar ligt het boek aan het begin?",
+        "targetAudioId": "PREP-instruction_support-ee2127b8db6c06f86c42"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Het boek ligt op de stoel.",
+          "audioId": "PREP-target_narration-fe0076ff848cd8cdbfbe",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Het boek ligt op de grond.",
+          "audioId": "PREP-target_narration-217044e58d44b4795e4c",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Het boek ligt op tafel.",
+          "audioId": "PREP-target_narration-e98583ab45026d76c728",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Het boek ligt op tafel.",
+        "start": 0,
+        "end": 23,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Tafel is de beginplaats; stoel en grond verwisselen die plaats.",
+      "help": {
+        "text": "Lees de eerste zin.",
+        "audioId": "HELP-REV-7d175ae5bcd93b66fbcab8b1"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-ALFA_B-TEXT-03-EX-03-FB-O2",
+          "O3": "CP002-ALFA_B-TEXT-03-EX-03-FB-O3",
+          "O1": "CP002-ALFA_B-TEXT-03-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-03-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie pakt het boek?",
+        "targetAudioId": "PREP-instruction_support-2ef4b711929c69bfc70b"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Youssef pakt het boek.",
+          "audioId": "PREP-target_narration-0fef8762791f847a3444",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena pakt het boek.",
+          "audioId": "PREP-target_narration-90c905983110c409c3ca",
+          "correct": true,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora pakt het boek.",
+          "audioId": "PREP-target_narration-7b0bddb52fd941ab6327",
+          "correct": false,
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Elena pakt het boek.",
+        "start": 24,
+        "end": 44,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Elena pakt; Nora en Youssef verwisselen de persoon.",
+      "help": {
+        "text": "Zoek de naam bij pakt.",
+        "audioId": "HELP-REV-b145c96403d8389d3a57fbf9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-ALFA_B-TEXT-03-EX-04-FB-O3",
+          "O1": "CP002-ALFA_B-TEXT-03-EX-04-FB-O1",
+          "O2": "CP002-ALFA_B-TEXT-03-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-03-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord boek.",
+        "targetAudioId": "PREP-instruction_support-b47f30f4ed8bab7d758f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "boek",
+          "correct": true,
+          "audioId": "PREP-target_narration-2afcca9e14eade2e0af6",
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "koek",
+          "correct": false,
+          "audioId": "PREP-target_narration-2b3edaacc86290a9df3d",
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "doek",
+          "correct": false,
+          "audioId": "PREP-target_narration-4d814f8da0687188d801",
+          "feedbackId": "CP002-ALFA_B-TEXT-03-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Woordvorm herkennen aan het verschil in letters; geen betekenis- of luistertoets.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "CP002-ALFA_B-TEXT-03-EX-05-FB-W1",
+          "W2": "CP002-ALFA_B-TEXT-03-EX-05-FB-W2",
+          "W3": "CP002-ALFA_B-TEXT-03-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-03-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Elena pakt het boek.",
+        "Zij leest bij het raam.",
+        "Het boek ligt op tafel."
+      ],
+      "answer": [
+        "Het boek ligt op tafel.",
+        "Elena pakt het boek.",
+        "Zij leest bij het raam."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-90c905983110c409c3ca",
+        "PREP-target_narration-349726ab1adc312aa9ce",
+        "PREP-target_narration-e98583ab45026d76c728"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-ALFA_B-TEXT-03-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Pak een boek. Zeg wat je doet.",
+        "targetAudioId": "PREP-instruction_support-1bd09b72fc815a79cfd3"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik pak een boek.",
+      "criteria": [
+        "Je noemt het boek.",
+        "Je zegt dat je het boek pakt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-0bd9cd48860a03769b1d",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-30f7b85a50df96a9ad7a",
+        "PREP-instruction_support-ec99a38365e0ed00fa3a"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt het boek.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-03-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-03-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat je het boek pakt.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-03-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-03-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-03-EX-07-FB-ALL-MET",
+        "example": "Ik pak een boek.",
+        "exampleAudioId": "PREP-target_narration-0bd9cd48860a03769b1d",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-03-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-ALFA_B-TEXT-03-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "CP002-ALFA_B-TEXT-03-GOAL"
+      ],
+      "itemIds": [
+        "CP002-ALFA_B-TEXT-03-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: Elena pakt het boek.",
+        "targetAudioId": "PREP-instruction_support-9c1fd603ad5b25c9e1d7"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Elena pakt het boek.",
+      "criteria": [
+        "Je schrijft de hele voorbeeldzin over.",
+        "Elena begint met een hoofdletter."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-90c905983110c409c3ca",
+      "criteriaAudioIds": [
+        "HELP-REV-a960c390278c4c17f8fe1778",
+        "HELP-REV-b16e4731e2ef70a317906a4f"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je schrijft de hele voorbeeldzin over.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-03-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-03-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Elena begint met een hoofdletter.",
+            "metFeedbackId": "CP002-ALFA_B-TEXT-03-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-ALFA_B-TEXT-03-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-03-EX-08-FB-ALL-MET",
+        "example": "Elena pakt het boek.",
+        "exampleAudioId": "PREP-target_narration-90c905983110c409c3ca",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": true,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-ALFA_B-TEXT-03-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

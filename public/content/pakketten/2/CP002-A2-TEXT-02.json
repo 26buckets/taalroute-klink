@@ -1,0 +1,768 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-A2-TEXT-02",
+    "title": "Het boek is nog uitgeleend",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A2",
+    "objectiveIds": [
+      "CP002-A2-TEXT-02-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A2-TEXT-02",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-09",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A2"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een verwachting en een voorwaardelijk plan uit elkaar houden.",
+    "support": "Bereid bibliotheek, geleend, verwacht en bewaren voor. Er is geen toezegging of berichtendienst in de bron. Oude verhaalopname kan afwijken van de gereviewde tekst.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-A2-TEXT-02-TEXT",
+      "kind": "text",
+      "title": "Het boek is nog uitgeleend",
+      "targetText": "Elena zoekt een boek in de bibliotheek. Het boek is vandaag niet aanwezig: iemand anders heeft het geleend. De medewerker verwacht het vrijdag terug. Elena vraagt of de medewerker het boek voor haar wil bewaren. Ze komt terug als het boek er weer is.",
+      "displayText": "Elena zoekt een boek in de bibliotheek. Het boek is vandaag niet aanwezig: iemand anders heeft het geleend. De medewerker verwacht het vrijdag terug. Elena vraagt of de medewerker het boek voor haar wil bewaren. Ze komt terug als het boek er weer is.",
+      "script_sha256": "a952191be9c5f1f965dfab8b72505483c6554a11e4f06351fdc8392a93d80d40",
+      "audio": {
+        "normal": "PREP-target_narration-a952191be9c5f1f965df"
+      },
+      "titleAudioId": "PREP-target_narration-7108700a726583b6c806",
+      "imageId": "CP002-A2-TEXT-02-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-A2-TEXT-02-TEXT-SEG-01",
+          "text": "Elena zoekt een boek in de bibliotheek.",
+          "start": 0,
+          "end": 39,
+          "audioId": "PREP-target_narration-7bc166f593ca14cc2359",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-02-TEXT-SEG-02",
+          "text": "Het boek is vandaag niet aanwezig: iemand anders heeft het geleend.",
+          "start": 40,
+          "end": 107,
+          "audioId": "PREP-target_narration-a8a3ebe92571872009b7",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-02-TEXT-SEG-03",
+          "text": "De medewerker verwacht het vrijdag terug.",
+          "start": 108,
+          "end": 149,
+          "audioId": "PREP-target_narration-fac0d995bef174cad1bd",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-02-TEXT-SEG-04",
+          "text": "Elena vraagt of de medewerker het boek voor haar wil bewaren.",
+          "start": 150,
+          "end": 211,
+          "audioId": "PREP-target_narration-228e5e1cabfa5455bd97",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A2-TEXT-02-TEXT-SEG-05",
+          "text": "Ze komt terug als het boek er weer is.",
+          "start": 212,
+          "end": 250,
+          "audioId": "PREP-target_narration-8ca0262e3b3cb3af0cae",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-A2-TEXT-02-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena zoekt een boek in de bibliotheek.",
+      "displayText": "Elena zoekt een boek in de bibliotheek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-09"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-7bc166f593ca14cc2359"
+      },
+      "imageId": "CP002-A2-TEXT-02-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-A2-TEXT-02-SENT-02",
+      "kind": "sentence",
+      "targetText": "Iemand anders heeft het boek geleend.",
+      "displayText": "Iemand anders heeft het boek geleend.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-ceca3c7abe1bf9829bce"
+      },
+      "imageId": "CP002-A2-TEXT-02-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-A2-TEXT-02-SENT-03",
+      "kind": "sentence",
+      "targetText": "De medewerker verwacht het boek vrijdag terug.",
+      "displayText": "De medewerker verwacht het boek vrijdag terug.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-0affdb74c14af2838ddc"
+      },
+      "imageId": "CP002-A2-TEXT-02-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-A2-TEXT-02-SENT-04",
+      "kind": "sentence",
+      "targetText": "Elena vraagt of de medewerker het boek voor haar wil bewaren.",
+      "displayText": "Elena vraagt of de medewerker het boek voor haar wil bewaren.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-09"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-228e5e1cabfa5455bd97"
+      },
+      "imageId": "CP002-A2-TEXT-02-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-A2-TEXT-02-SENT-05",
+      "kind": "sentence",
+      "targetText": "Elena komt terug als het boek er weer is.",
+      "displayText": "Elena komt terug als het boek er weer is.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-9a6679fedb3550418392"
+      },
+      "imageId": "CP002-A2-TEXT-02-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-A2-TEXT-02-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT",
+        "CP002-A2-TEXT-02-SENT-01",
+        "CP002-A2-TEXT-02-SENT-02",
+        "CP002-A2-TEXT-02-SENT-03",
+        "CP002-A2-TEXT-02-SENT-04",
+        "CP002-A2-TEXT-02-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-A2-TEXT-02-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-A2-TEXT-02-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom neemt Elena het boek vandaag niet mee?",
+        "targetAudioId": "PREP-instruction_support-e996acb68b422e91c173"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Iemand anders heeft het geleend.",
+          "audioId": "PREP-target_narration-f3ad2168183caf04c959",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-02-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Zij heeft het boek al thuis.",
+          "audioId": "PREP-target_narration-9db3c4c800c3d7a7239f",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-02-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De bibliotheek is dicht.",
+          "audioId": "PREP-target_narration-12c59c15a39b96e3da57",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-02-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Het boek is vandaag niet aanwezig: iemand anders heeft het geleend.",
+        "start": 40,
+        "end": 107,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Iemand anders heeft geleend verklaart afwezigheid; zelf thuis en gesloten bibliotheek niet.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-A2-TEXT-02-EX-02-FB-O1",
+          "O2": "CP002-A2-TEXT-02-EX-02-FB-O2",
+          "O3": "CP002-A2-TEXT-02-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-02-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wanneer verwacht de medewerker het boek terug?",
+        "targetAudioId": "PREP-instruction_support-fcf986216355312cab1f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "De medewerker verwacht het maandag terug.",
+          "audioId": "PREP-target_narration-33c6ef19fdd7b1adf76a",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-02-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De medewerker verwacht het morgen terug.",
+          "audioId": "PREP-target_narration-b1ac7a7510520ca8154a",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-02-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "De medewerker verwacht het vrijdag terug.",
+          "audioId": "PREP-target_narration-fac0d995bef174cad1bd",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-02-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "De medewerker verwacht het vrijdag terug.",
+        "start": 108,
+        "end": 149,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Vrijdag is de verwachte dag; maandag en morgen vervangen die dag.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-A2-TEXT-02-EX-03-FB-O2",
+          "O3": "CP002-A2-TEXT-02-EX-03-FB-O3",
+          "O1": "CP002-A2-TEXT-02-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-02-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wanneer komt Elena terug?",
+        "targetAudioId": "PREP-instruction_support-b787aeb79f4d53bfd552"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Elena komt niet meer terug.",
+          "audioId": "PREP-target_narration-b00f8b147a26dc2e6b98",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-02-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena komt terug als het boek er weer is.",
+          "audioId": "PREP-target_narration-9a6679fedb3550418392",
+          "correct": true,
+          "feedbackId": "CP002-A2-TEXT-02-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Elena komt zeker vrijdag terug, ook als het boek er niet is.",
+          "audioId": "PREP-target_narration-d00c73f8ead3d2f4a957",
+          "correct": false,
+          "feedbackId": "CP002-A2-TEXT-02-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze komt terug als het boek er weer is.",
+        "start": 212,
+        "end": 250,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Als boek er weer is is voorwaardelijk; zeker vrijdag maakt verwachting een garantie, nooit terug ontkent plan.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-A2-TEXT-02-EX-04-FB-O3",
+          "O1": "CP002-A2-TEXT-02-EX-04-FB-O1",
+          "O2": "CP002-A2-TEXT-02-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-02-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent verwacht in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-8d3de33eeed58a9a2443"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "De medewerker denkt dat het boek vrijdag terugkomt.",
+          "correct": true,
+          "audioId": "PREP-target_narration-d33c00bb40835386389c",
+          "feedbackId": "CP002-A2-TEXT-02-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "De medewerker weet zeker dat het boek vrijdag terugkomt.",
+          "correct": false,
+          "audioId": "PREP-target_narration-9bc2f7b334803554ae55",
+          "feedbackId": "CP002-A2-TEXT-02-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "De medewerker zegt dat het boek vandaag al terug is.",
+          "correct": false,
+          "audioId": "PREP-target_narration-a3f00320f5eb7aa3b147",
+          "feedbackId": "CP002-A2-TEXT-02-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "CP002-A2-TEXT-02-EX-05-FB-W1",
+          "W2": "CP002-A2-TEXT-02-EX-05-FB-W2",
+          "W3": "CP002-A2-TEXT-02-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-02-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Elena vraagt of de medewerker het boek voor haar wil bewaren.",
+        "Ze komt terug als het boek er weer is.",
+        "Elena zoekt een boek in de bibliotheek."
+      ],
+      "answer": [
+        "Elena zoekt een boek in de bibliotheek.",
+        "Elena vraagt of de medewerker het boek voor haar wil bewaren.",
+        "Ze komt terug als het boek er weer is."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-228e5e1cabfa5455bd97",
+        "PREP-target_narration-8ca0262e3b3cb3af0cae",
+        "PREP-target_narration-7bc166f593ca14cc2359"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-A2-TEXT-02-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Een boek dat je wilt lenen is er nog niet. Vraag of de medewerker het voor je wil bewaren.",
+        "targetAudioId": "PREP-instruction_support-b39f76d73bda30ab1a00"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Wilt u het boek voor mij bewaren als het terug is?",
+      "criteria": [
+        "Je noemt het boek.",
+        "Je vraagt of het voor je bewaard kan worden wanneer het terug is."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-257bfc3840b5893e9f8b",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-30f7b85a50df96a9ad7a",
+        "PREP-instruction_support-8449166060d9777fb4de"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt het boek.",
+            "metFeedbackId": "CP002-A2-TEXT-02-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-02-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je vraagt of het voor je bewaard kan worden wanneer het terug is.",
+            "metFeedbackId": "CP002-A2-TEXT-02-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-02-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A2-TEXT-02-EX-07-FB-ALL-MET",
+        "example": "Wilt u het boek voor mij bewaren als het terug is?",
+        "exampleAudioId": "PREP-target_narration-257bfc3840b5893e9f8b",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A2-TEXT-02-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A2-TEXT-02-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-A2-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A2-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf een bericht aan de bibliotheek. Vraag of het boek er alweer is en of je het kunt lenen.",
+        "targetAudioId": "PREP-instruction_support-d0958d1ef8b5353ed896"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Is het boek er alweer? Ik wil het graag lenen.",
+      "criteria": [
+        "Je vraagt of het boek er weer is.",
+        "Je zegt dat je het wilt lenen."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-ba3b138df0d6f2774957",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-b35316507daacfcf39df",
+        "PREP-instruction_support-335dec67a2bf0a22c7a6"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je vraagt of het boek er weer is.",
+            "metFeedbackId": "CP002-A2-TEXT-02-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-02-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat je het wilt lenen.",
+            "metFeedbackId": "CP002-A2-TEXT-02-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A2-TEXT-02-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A2-TEXT-02-EX-08-FB-ALL-MET",
+        "example": "Is het boek er alweer? Ik wil het graag lenen.",
+        "exampleAudioId": "PREP-target_narration-ba3b138df0d6f2774957",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A2-TEXT-02-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

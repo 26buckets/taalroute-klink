@@ -1,0 +1,777 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-AC",
+    "title": "Een boek voor thuis",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_C",
+    "objectiveIds": [
+      "TRX-P001-AC-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_C-TEXT-01",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "PILOT_UNCHANGED",
+      "source_id": "TRX-P001-AC",
+      "source_path": "bronnen/pilot-teksten-v1.json"
+    }
+  },
+  "learning": {
+    "oral_goal": "Bij een kort verhaal vaststellen wie iets leent en wanneer het terugkomt.",
+    "support": "Lenen en teruggeven vooraf in een concrete situatie aanbieden; terugverwijzingen naar Elena markeerbaar maken.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-AC-TEXT",
+      "kind": "text",
+      "title": "Een boek voor thuis",
+      "targetText": "Na de les pakt Elena een boek. Het boek is van Nora. Elena mag het lenen. Ze neemt het mee naar huis. Morgen brengt Elena het boek terug.",
+      "displayText": "Na de les pakt Elena een boek. Het boek is van Nora. Elena mag het lenen. Ze neemt het mee naar huis. Morgen brengt Elena het boek terug.",
+      "script_sha256": "c3ada49cf3af58c4b4ca37e0b56cb89145d40cc38cc4dd8ff0507b09d424f109",
+      "audio": {
+        "normal": "PREP-target_narration-c3ada49cf3af58c4b4ca"
+      },
+      "titleAudioId": "PREP-target_narration-82b6945bd5e82a037ece",
+      "imageId": "TRX-P001-AC-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "TRX-P001-AC-TEXT-SEG-01",
+          "text": "Na de les pakt Elena een boek.",
+          "start": 0,
+          "end": 30,
+          "audioId": "PREP-target_narration-e1c696444e5697e84855",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-AC-TEXT-SEG-02",
+          "text": "Het boek is van Nora.",
+          "start": 31,
+          "end": 52,
+          "audioId": "PREP-target_narration-d68b93e7b478be4386f8",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-AC-TEXT-SEG-03",
+          "text": "Elena mag het lenen.",
+          "start": 53,
+          "end": 73,
+          "audioId": "PREP-target_narration-c7beaede6099352fbf02",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-AC-TEXT-SEG-04",
+          "text": "Ze neemt het mee naar huis.",
+          "start": 74,
+          "end": 101,
+          "audioId": "PREP-target_narration-b06b03a43a69f522f7c0",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-AC-TEXT-SEG-05",
+          "text": "Morgen brengt Elena het boek terug.",
+          "start": 102,
+          "end": 137,
+          "audioId": "PREP-target_narration-185252234ce2764baf4a",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-AC-SENT-01",
+      "kind": "sentence",
+      "targetText": "Elena pakt een boek.",
+      "displayText": "Elena pakt een boek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Elena pakt een boek."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-c8c8190428939ca82400"
+      },
+      "imageId": "TRX-P001-AC-IMG-SENT-01"
+    },
+    {
+      "id": "TRX-P001-AC-SENT-02",
+      "kind": "sentence",
+      "targetText": "Het boek is van Nora.",
+      "displayText": "Het boek is van Nora.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Het boek is van Nora."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-d68b93e7b478be4386f8"
+      },
+      "imageId": "TRX-P001-AC-IMG-SENT-02"
+    },
+    {
+      "id": "TRX-P001-AC-SENT-03",
+      "kind": "sentence",
+      "targetText": "Elena mag het boek lenen.",
+      "displayText": "Elena mag het boek lenen.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Elena mag het boek lenen."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-72385ecfee4342a8eb91"
+      },
+      "imageId": "TRX-P001-AC-IMG-SENT-03"
+    },
+    {
+      "id": "TRX-P001-AC-SENT-04",
+      "kind": "sentence",
+      "targetText": "Elena neemt het boek mee naar huis.",
+      "displayText": "Elena neemt het boek mee naar huis.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Elena neemt het boek mee naar huis."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-f844baed9f52d2a195cc"
+      },
+      "imageId": "TRX-P001-AC-IMG-SENT-04"
+    },
+    {
+      "id": "TRX-P001-AC-SENT-05",
+      "kind": "sentence",
+      "targetText": "Morgen brengt Elena het boek terug.",
+      "displayText": "Morgen brengt Elena het boek terug.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Morgen brengt Elena het boek terug."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-185252234ce2764baf4a"
+      },
+      "imageId": "TRX-P001-AC-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-AC-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT",
+        "TRX-P001-AC-SENT-01",
+        "TRX-P001-AC-SENT-02",
+        "TRX-P001-AC-SENT-03",
+        "TRX-P001-AC-SENT-04",
+        "TRX-P001-AC-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "TRX-P001-AC-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "TRX-P001-AC-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wie mag het boek lenen?",
+        "targetAudioId": "PREP-instruction_support-995d654c1604b3478f61"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Youssef mag het boek lenen.",
+          "audioId": "PREP-target_narration-59c97e39d4875d660724",
+          "correct": false,
+          "feedbackId": "TRX-P001-AC-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena mag het boek lenen.",
+          "audioId": "PREP-target_narration-72385ecfee4342a8eb91",
+          "correct": true,
+          "feedbackId": "TRX-P001-AC-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Nora mag het boek lenen.",
+          "audioId": "PREP-target_narration-26eb41f39d4576791a5f",
+          "correct": false,
+          "feedbackId": "TRX-P001-AC-EX-02-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Elena mag het lenen.",
+        "start": 53,
+        "end": 73,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Zoek wie het boek leent.",
+        "audioId": "HELP-REV-601140f6768ecc998f4b4aab"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "TRX-P001-AC-EX-02-FB-O3",
+          "O1": "TRX-P001-AC-EX-02-FB-O1",
+          "O2": "TRX-P001-AC-EX-02-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AC-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar neemt Elena het boek mee naartoe?",
+        "targetAudioId": "PREP-instruction_support-3a28cf7dbbb9e9854983"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Elena neemt het mee naar huis.",
+          "audioId": "PREP-target_narration-12ea05b575b83946272f",
+          "correct": true,
+          "feedbackId": "TRX-P001-AC-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Elena neemt het mee naar de winkel.",
+          "audioId": "PREP-target_narration-0f31b29c9144e98d8726",
+          "correct": false,
+          "feedbackId": "TRX-P001-AC-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena neemt het mee naar het werk.",
+          "audioId": "PREP-target_narration-e954479e8f400598893e",
+          "correct": false,
+          "feedbackId": "TRX-P001-AC-EX-03-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze neemt het mee naar huis.",
+        "start": 74,
+        "end": 101,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Zoek waar Elena naartoe gaat.",
+        "audioId": "HELP-REV-ef17aec240b8179b1eb9a791"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "TRX-P001-AC-EX-03-FB-O1",
+          "O2": "TRX-P001-AC-EX-03-FB-O2",
+          "O3": "TRX-P001-AC-EX-03-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AC-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wanneer brengt Elena het boek terug?",
+        "targetAudioId": "PREP-instruction_support-521a9281e77b9a58420b"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Elena brengt het vandaag terug.",
+          "audioId": "PREP-target_narration-ce0667e43630ae14d828",
+          "correct": false,
+          "feedbackId": "TRX-P001-AC-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Elena brengt het volgende week terug.",
+          "audioId": "PREP-target_narration-21116d513fda20721dff",
+          "correct": false,
+          "feedbackId": "TRX-P001-AC-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Elena brengt het morgen terug.",
+          "audioId": "PREP-target_narration-29f50f935016fdd9b6c7",
+          "correct": true,
+          "feedbackId": "TRX-P001-AC-EX-04-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Morgen brengt Elena het boek terug.",
+        "start": 102,
+        "end": 137,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Lees de laatste zin.",
+        "audioId": "HELP-REV-4990ea1c6e80ef15ef28aef9"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "TRX-P001-AC-EX-04-FB-O2",
+          "O3": "TRX-P001-AC-EX-04-FB-O3",
+          "O1": "TRX-P001-AC-EX-04-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AC-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Elena mag het boek lenen. Wat betekent lenen hier?",
+        "targetAudioId": "PREP-instruction_support-d432f43d8716fe891234"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W3",
+          "text": "Elena mag het boek altijd houden.",
+          "correct": false,
+          "audioId": "PREP-target_narration-0d16a6c5635d642e5b24",
+          "feedbackId": "TRX-P001-AC-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "Elena gebruikt het boek en geeft het terug.",
+          "correct": true,
+          "audioId": "PREP-target_narration-3c7683454b7c42f1e71a",
+          "feedbackId": "TRX-P001-AC-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "Elena koopt het boek van Nora.",
+          "correct": false,
+          "audioId": "PREP-target_narration-082497b6c14850948ba0",
+          "feedbackId": "TRX-P001-AC-EX-05-FB-W2"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Tijdelijk gebruik onderscheiden van kopen en krijgen.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W3": "TRX-P001-AC-EX-05-FB-W3",
+          "W1": "TRX-P001-AC-EX-05-FB-W1",
+          "W2": "TRX-P001-AC-EX-05-FB-W2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AC-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Ze neemt het mee naar huis.",
+        "Morgen brengt Elena het boek terug.",
+        "Na de les pakt Elena een boek."
+      ],
+      "answer": [
+        "Na de les pakt Elena een boek.",
+        "Ze neemt het mee naar huis.",
+        "Morgen brengt Elena het boek terug."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-b06b03a43a69f522f7c0",
+        "PREP-target_narration-185252234ce2764baf4a",
+        "PREP-target_narration-e1c696444e5697e84855"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "TRX-P001-AC-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "TRX-P001-AC-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "TRX-P001-AC-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "TRX-P001-AC-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "TRX-P001-AC-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "TRX-P001-AC-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AC-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je wilt een boek lenen. Vraag of dat mag. Zeg ook wanneer je het terugbrengt.",
+        "targetAudioId": "PREP-instruction_support-8ec449254418e5fff0b2"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Mag ik je boek lenen? Ik breng het morgen terug.",
+      "criteria": [
+        "Je vraagt of je het boek mag lenen.",
+        "Je zegt wanneer je het terugbrengt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-d8b0f79862990aaac25d",
+      "criteriaAudioIds": [
+        "HELP-REV-555c028a7d321909c8cb2ee1",
+        "HELP-REV-7d0fe6eb33ff6335c92ee5af"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je vraagt of je het boek mag lenen.",
+            "metFeedbackId": "TRX-P001-AC-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-AC-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt wanneer je het terugbrengt.",
+            "metFeedbackId": "TRX-P001-AC-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-AC-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-AC-EX-07-FB-ALL-MET",
+        "example": "Mag ik je boek lenen? Ik breng het morgen terug.",
+        "exampleAudioId": "PREP-target_narration-d8b0f79862990aaac25d",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-AC-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AC-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "TRX-P001-AC-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AC-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf een kort bericht. Zeg dat je het boek morgen terugbrengt.",
+        "targetAudioId": "PREP-instruction_support-0a3d3a25d06b690b90e9"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik breng je boek morgen terug.",
+      "criteria": [
+        "Je noemt het boek.",
+        "Je zegt dat je het morgen terugbrengt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-4c592a4d120576ec0f02",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-30f7b85a50df96a9ad7a",
+        "PREP-instruction_support-c01b875a0326780b87a1"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt het boek.",
+            "metFeedbackId": "TRX-P001-AC-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-AC-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je zegt dat je het morgen terugbrengt.",
+            "metFeedbackId": "TRX-P001-AC-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-AC-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-AC-EX-08-FB-ALL-MET",
+        "example": "Ik breng je boek morgen terug.",
+        "exampleAudioId": "PREP-target_narration-4c592a4d120576ec0f02",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-AC-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

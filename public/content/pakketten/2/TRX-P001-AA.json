@@ -1,0 +1,759 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "TRX-P001-AA",
+    "title": "Ik lees",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "ALFA_A",
+    "objectiveIds": [
+      "TRX-P001-AA-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-ALFA_A-TEXT-01",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "PILOT_UNCHANGED",
+      "source_id": "TRX-P001-AA",
+      "source_path": "bronnen/pilot-teksten-v1.json"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een concrete leeshandeling begrijpen; boek herkennen.",
+    "support": "Samen luisteren en kijken. Bereid pak, stoel en lees mondeling voor; bied de hele tekst niet aan als bewezen zelfstandig decodeerbaar.",
+    "decode_conditions": {
+      "status": "NOT_VALIDATED_FOR_INDEPENDENT_DECODING",
+      "known_cp002_grapheme_focus": [
+        "aa",
+        "oe",
+        "i"
+      ],
+      "required_precheck": "Controleer met de docent bekende letters, clusters, woordbeelden en leesrichting vóór zelfstandig lezen. Namen en steunwoorden mogen worden voorgelezen.",
+      "new_words_not_automatically_decode_targets": true
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "TRX-P001-AA-TEXT",
+      "kind": "text",
+      "title": "Ik lees",
+      "targetText": "Ik pak een boek. Ik zit op een stoel. Ik lees in het boek.",
+      "displayText": "Ik pak een boek. Ik zit op een stoel. Ik lees in het boek.",
+      "script_sha256": "a690a75334aa6e9b02b2b8063b242457b13fb5cf9261594c8e64b751c0712485",
+      "audio": {
+        "normal": "PREP-target_narration-a690a75334aa6e9b02b2"
+      },
+      "titleAudioId": "PREP-target_narration-ac25b10d8d014f02072a",
+      "imageId": "TRX-P001-AA-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "TRX-P001-AA-TEXT-SEG-01",
+          "text": "Ik pak een boek.",
+          "start": 0,
+          "end": 16,
+          "audioId": "PREP-target_narration-0bd9cd48860a03769b1d",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-AA-TEXT-SEG-02",
+          "text": "Ik zit op een stoel.",
+          "start": 17,
+          "end": 37,
+          "audioId": "PREP-target_narration-25a1287cdea3823b2673",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "TRX-P001-AA-TEXT-SEG-03",
+          "text": "Ik lees in het boek.",
+          "start": 38,
+          "end": 58,
+          "audioId": "PREP-target_narration-0ae099d6732c4ab411b7",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "TRX-P001-AA-SENT-01",
+      "kind": "sentence",
+      "targetText": "Ik pak een boek.",
+      "displayText": "Ik pak een boek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Ik pak een boek."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-0bd9cd48860a03769b1d"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-01"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-02",
+      "kind": "sentence",
+      "targetText": "Ik zit op een stoel.",
+      "displayText": "Ik zit op een stoel.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Ik zit op een stoel."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-25a1287cdea3823b2673"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-02"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-03",
+      "kind": "sentence",
+      "targetText": "Het boek ligt op tafel.",
+      "displayText": "Het boek ligt op tafel.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Het boek ligt op tafel."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-e98583ab45026d76c728"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-03"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-04",
+      "kind": "sentence",
+      "targetText": "Ik lees het boek.",
+      "displayText": "Ik lees het boek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Ik lees het boek."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-b428fb50bcbc1ceff769"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-04"
+    },
+    {
+      "id": "TRX-P001-AA-SENT-05",
+      "kind": "sentence",
+      "targetText": "Ik doe het boek dicht.",
+      "displayText": "Ik doe het boek dicht.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "PILOT_UNCHANGED",
+        "prior_text": "Ik doe het boek dicht."
+      },
+      "audio": {
+        "normal": "PREP-target_narration-be5a05324e597c3f7de1"
+      },
+      "imageId": "TRX-P001-AA-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "TRX-P001-AA-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT",
+        "TRX-P001-AA-SENT-01",
+        "TRX-P001-AA-SENT-02",
+        "TRX-P001-AA-SENT-03",
+        "TRX-P001-AA-SENT-04",
+        "TRX-P001-AA-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "TRX-P001-AA-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "TRX-P001-AA-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat pak ik?",
+        "targetAudioId": "PREP-instruction_support-fe543b81f5b60f00a642"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "Ik pak een boek.",
+          "audioId": "PREP-target_narration-0bd9cd48860a03769b1d",
+          "correct": true,
+          "feedbackId": "TRX-P001-AA-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Ik pak een tas.",
+          "audioId": "PREP-target_narration-0a00d95f8c5c7a7e4a0d",
+          "correct": false,
+          "feedbackId": "TRX-P001-AA-EX-02-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Ik pak een pen.",
+          "audioId": "PREP-target_narration-ab8a19f2d6abb8aa8017",
+          "correct": false,
+          "feedbackId": "TRX-P001-AA-EX-02-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ik pak een boek.",
+        "start": 0,
+        "end": 16,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Kijk wat er wordt gepakt.",
+        "audioId": "HELP-REV-196619bd7a183902f425b157"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "TRX-P001-AA-EX-02-FB-O1",
+          "O2": "TRX-P001-AA-EX-02-FB-O2",
+          "O3": "TRX-P001-AA-EX-02-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AA-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar zit ik?",
+        "targetAudioId": "PREP-instruction_support-c56a5e9002f9c67531b2"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Ik zit op de grond.",
+          "audioId": "PREP-target_narration-c0d0e072f0e280d17721",
+          "correct": false,
+          "feedbackId": "TRX-P001-AA-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Ik zit op een bank.",
+          "audioId": "PREP-target_narration-dfcbc8f516c575b3c987",
+          "correct": false,
+          "feedbackId": "TRX-P001-AA-EX-03-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Ik zit op een stoel.",
+          "audioId": "PREP-target_narration-25a1287cdea3823b2673",
+          "correct": true,
+          "feedbackId": "TRX-P001-AA-EX-03-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ik zit op een stoel.",
+        "start": 17,
+        "end": 37,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Zoek het woord zit.",
+        "audioId": "HELP-REV-968b522473f00501faa6d8b0"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "TRX-P001-AA-EX-03-FB-O2",
+          "O3": "TRX-P001-AA-EX-03-FB-O3",
+          "O1": "TRX-P001-AA-EX-03-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AA-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doe ik met het boek?",
+        "targetAudioId": "PREP-instruction_support-b1a1cf42a6da7bdb9a8a"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "Ik schrijf in het boek.",
+          "audioId": "PREP-target_narration-f357651e91a715bf1cdb",
+          "correct": false,
+          "feedbackId": "TRX-P001-AA-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Ik lees in het boek.",
+          "audioId": "PREP-target_narration-0ae099d6732c4ab411b7",
+          "correct": true,
+          "feedbackId": "TRX-P001-AA-EX-04-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Ik teken in het boek.",
+          "audioId": "PREP-target_narration-abdcbce3a871730b7fd9",
+          "correct": false,
+          "feedbackId": "TRX-P001-AA-EX-04-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ik lees in het boek.",
+        "start": 38,
+        "end": 58,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Brongebonden keuze; zie pilotreview.",
+      "help": {
+        "text": "Kijk wat er met het boek gebeurt.",
+        "audioId": "HELP-REV-c4b1f74af2769452668af873"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "TRX-P001-AA-EX-04-FB-O3",
+          "O1": "TRX-P001-AA-EX-04-FB-O1",
+          "O2": "TRX-P001-AA-EX-04-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AA-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-05",
+      "exerciseTypeId": "WO-02",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Kies het woord boek.",
+        "targetAudioId": "PREP-instruction_support-b47f30f4ed8bab7d758f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W1",
+          "text": "boek",
+          "correct": true,
+          "audioId": "PREP-target_narration-2afcca9e14eade2e0af6",
+          "feedbackId": "TRX-P001-AA-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "koek",
+          "correct": false,
+          "audioId": "PREP-target_narration-2b3edaacc86290a9df3d",
+          "feedbackId": "TRX-P001-AA-EX-05-FB-W2"
+        },
+        {
+          "id": "W3",
+          "text": "doek",
+          "correct": false,
+          "audioId": "PREP-target_narration-4d814f8da0687188d801",
+          "feedbackId": "TRX-P001-AA-EX-05-FB-W3"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Zelfde eindklank en vergelijkbaar woordbeeld; de beginletter bepaalt de keuze. Geen betekenistoets claimen.",
+      "assessment_label": "Woordvormherkenning met zichtbaar model",
+      "help": {
+        "text": "Kijk nog eens naar het woord in de opdracht.",
+        "audioId": "HELP-REV-2840bf419ba43191fd1692cf"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W1": "TRX-P001-AA-EX-05-FB-W1",
+          "W2": "TRX-P001-AA-EX-05-FB-W2",
+          "W3": "TRX-P001-AA-EX-05-FB-W3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AA-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Ik zit op een stoel.",
+        "Ik lees in het boek.",
+        "Ik pak een boek."
+      ],
+      "answer": [
+        "Ik pak een boek.",
+        "Ik zit op een stoel.",
+        "Ik lees in het boek."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-25a1287cdea3823b2673",
+        "PREP-target_narration-0ae099d6732c4ab411b7",
+        "PREP-target_narration-0bd9cd48860a03769b1d"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "TRX-P001-AA-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "TRX-P001-AA-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "TRX-P001-AA-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "TRX-P001-AA-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "TRX-P001-AA-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "TRX-P001-AA-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "TRX-P001-AA-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Pak een boek. Vertel wat je doet.",
+        "targetAudioId": "PREP-instruction_support-d3508415f72df004f128"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik pak het boek.",
+      "criteria": [
+        "Je zegt wat je met het boek doet.",
+        "Je maakt een hele zin."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-d4ff2b3b56f452125a67",
+      "criteriaAudioIds": [
+        "HELP-REV-2089f9efe9a054938cb7a001",
+        "HELP-REV-189b5db33f1ff32a3551bee4"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je zegt wat je met het boek doet.",
+            "metFeedbackId": "TRX-P001-AA-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-AA-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je maakt een hele zin.",
+            "metFeedbackId": "TRX-P001-AA-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-AA-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-AA-EX-07-FB-ALL-MET",
+        "example": "Ik pak het boek.",
+        "exampleAudioId": "PREP-target_narration-d4ff2b3b56f452125a67",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-AA-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "TRX-P001-AA-EX-08",
+      "exerciseTypeId": "SC-01",
+      "objectiveIds": [
+        "TRX-P001-AA-GOAL"
+      ],
+      "itemIds": [
+        "TRX-P001-AA-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf deze zin over: Ik pak een boek.",
+        "targetAudioId": "PREP-instruction_support-fad63056c0d255a3412b"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik pak een boek.",
+      "criteria": [
+        "De woorden staan net als in het voorbeeld.",
+        "De zin begint met een hoofdletter en eindigt met een punt."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-0bd9cd48860a03769b1d",
+      "criteriaAudioIds": [
+        "HELP-REV-8e393cc3a5111ce705b8bc15",
+        "PREP-instruction_support-1be4222a98d7d08cd59f"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "De woorden staan net als in het voorbeeld.",
+            "metFeedbackId": "TRX-P001-AA-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "TRX-P001-AA-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "De zin begint met een hoofdletter en eindigt met een punt.",
+            "metFeedbackId": "TRX-P001-AA-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "TRX-P001-AA-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "TRX-P001-AA-EX-08-FB-ALL-MET",
+        "example": "Ik pak een boek.",
+        "exampleAudioId": "PREP-target_narration-0bd9cd48860a03769b1d",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": true,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "TRX-P001-AA-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}

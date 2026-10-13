@@ -1,0 +1,759 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "CP002-A1_PLUS-TEXT-02",
+    "title": "De bloes voor het gesprek",
+    "targetLocale": "nl-NL",
+    "supportLocales": [],
+    "localContext": "NL",
+    "level": "A1_PLUS",
+    "objectiveIds": [
+      "CP002-A1_PLUS-TEXT-02-GOAL"
+    ],
+    "status": "concept",
+    "editorialStatus": "FEEDBACK_EXTRA_LEVEL_REVIEWED_HUMAN_OPEN",
+    "owner": "taalroute",
+    "version": 4,
+    "slot": "CP002-A1_PLUS-TEXT-02",
+    "source_package": "CP002",
+    "theme": "CP002",
+    "origin": {
+      "type": "EXACT_REVIEWED_STORY_REUSE",
+      "source_id": "CP002-TEXT-10",
+      "source_path": "bronnen/cp002-three-rounds/CP002-final-reviewed-source.json",
+      "old_route": "A2"
+    }
+  },
+  "learning": {
+    "oral_goal": "Een expliciete oorzaak en een praktische oplossing verbinden.",
+    "support": "A1+ is een interne route. De eerdere A2-bron is hier als korte brugtekst gekozen: één expliciete reden, geen abstracte afweging. Bereid mouw, vlek en in de was voor.",
+    "decode_conditions": {
+      "status": "LEVEL_HYPOTHESIS_HUMAN_CALIBRATION_OPEN"
+    },
+    "lesson_order": [
+      "voordoen en voorbereiden",
+      "bron lezen/meeluisteren",
+      "informatie herkennen",
+      "woordvorm of betekenis",
+      "bronvolgorde",
+      "mondeling toepassen",
+      "schrijven",
+      "later herhalen"
+    ],
+    "route_exceptions": "Geen losse auditieve klankonderscheiding of tempotaak in deze leesles: het leerdoel is betekenis in tekst. Audio staat uitgesteld. De vijf oefenzinnen geven herhaalaanbod; uitgestelde beheersingsmeting wordt pas na proefgebruik ingericht."
+  },
+  "items": [
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-TEXT",
+      "kind": "text",
+      "title": "De bloes voor het gesprek",
+      "targetText": "Nora legt een bloes klaar voor een gesprek. Ze ziet een vlek op de mouw. Daarom kiest ze een andere bloes. Ze doet de bloes met de vlek in de was.",
+      "displayText": "Nora legt een bloes klaar voor een gesprek. Ze ziet een vlek op de mouw. Daarom kiest ze een andere bloes. Ze doet de bloes met de vlek in de was.",
+      "script_sha256": "8130132113b9d910c6b7e4382bb099104334805d6f3cbcc82a6fbaf39681b447",
+      "audio": {
+        "normal": "PREP-target_narration-8130132113b9d910c6b7"
+      },
+      "titleAudioId": "PREP-target_narration-3f1bf78f69cb433c2d2e",
+      "imageId": "CP002-A1_PLUS-TEXT-02-IMG-TEXT",
+      "rights": {
+        "source": "Taalroute: bestaande CP002-bron of in deze opdracht geschreven uitbreiding",
+        "license": "owner_review_pending"
+      },
+      "segments": [
+        {
+          "id": "CP002-A1_PLUS-TEXT-02-TEXT-SEG-01",
+          "text": "Nora legt een bloes klaar voor een gesprek.",
+          "start": 0,
+          "end": 43,
+          "audioId": "PREP-target_narration-2b7cfb6bdec448cb3dd5",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-02-TEXT-SEG-02",
+          "text": "Ze ziet een vlek op de mouw.",
+          "start": 44,
+          "end": 72,
+          "audioId": "PREP-target_narration-5a3074e2720910f99f1e",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-02-TEXT-SEG-03",
+          "text": "Daarom kiest ze een andere bloes.",
+          "start": 73,
+          "end": 106,
+          "audioId": "PREP-target_narration-a85ca14c9ef7eb291981",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        },
+        {
+          "id": "CP002-A1_PLUS-TEXT-02-TEXT-SEG-04",
+          "text": "Ze doet de bloes met de vlek in de was.",
+          "start": 107,
+          "end": 146,
+          "audioId": "PREP-target_narration-b10b4dd73d0ad8f86000",
+          "context_required": true,
+          "standalone_practice_sentence": false
+        }
+      ]
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-SENT-01",
+      "kind": "sentence",
+      "targetText": "Nora legt een bloes klaar voor een gesprek.",
+      "displayText": "Nora legt een bloes klaar voor een gesprek.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_STORY_SENTENCE",
+        "source_id": "CP002-TEXT-10"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-2b7cfb6bdec448cb3dd5"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-02-IMG-SENT-01"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-SENT-02",
+      "kind": "sentence",
+      "targetText": "Er zit een vlek op de mouw van de bloes.",
+      "displayText": "Er zit een vlek op de mouw van de bloes.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-9b97b8c1f7cd3b943732"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-02-IMG-SENT-02"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-SENT-03",
+      "kind": "sentence",
+      "targetText": "Nora kiest een andere bloes.",
+      "displayText": "Nora kiest een andere bloes.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-9c437080ad284ba8dd4f"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-02-IMG-SENT-03"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-SENT-04",
+      "kind": "sentence",
+      "targetText": "Nora doet de bloes met de vlek in de was.",
+      "displayText": "Nora doet de bloes met de vlek in de was.",
+      "source_relation": "SOURCE_PARAPHRASE_OR_EXACT",
+      "provenance": {
+        "type": "NEW_SENTENCE"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-cd00be1d68a5146e8df9"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-02-IMG-SENT-04"
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-SENT-05",
+      "kind": "sentence",
+      "targetText": "De bloes hangt aan een haak.",
+      "displayText": "De bloes hangt aan een haak.",
+      "source_relation": "INDEPENDENT_PRACTICE_NOT_STORY_FACT",
+      "provenance": {
+        "type": "EXACT_EXISTING_WORD_EXAMPLE",
+        "source_pointer": "words/12/4"
+      },
+      "audio": {
+        "normal": "PREP-target_narration-8b299224fee2a48789f5"
+      },
+      "imageId": "CP002-A1_PLUS-TEXT-02-IMG-SENT-05"
+    }
+  ],
+  "exerciseInstances": [
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-01",
+      "exerciseTypeId": "TE-01",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT",
+        "CP002-A1_PLUS-TEXT-02-SENT-01",
+        "CP002-A1_PLUS-TEXT-02-SENT-02",
+        "CP002-A1_PLUS-TEXT-02-SENT-03",
+        "CP002-A1_PLUS-TEXT-02-SENT-04",
+        "CP002-A1_PLUS-TEXT-02-SENT-05"
+      ],
+      "instruction": {
+        "targetText": "Lees of beluister de tekst. Je mag de tekst herhalen.",
+        "targetAudioId": "PREP-instruction_support-7a3da5c8b489d1725c47"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "assessment": false,
+      "practiceSentenceMode": "Lees of zeg daarna de vijf losse oefenzinnen. Een aparte oefensituatie hoeft niet in het verhaal te gebeuren.",
+      "adaptation": "Voor Alfa A/B begeleid meelezen; voor A1+/A2/B1 inhoudelijke uitbreiding van patroon. Geen gevalideerde niveautoewijzing of rendererclaim.",
+      "help": {
+        "text": "Lees of luister nog eens. Vraag je docent om hulp.",
+        "audioId": "HELP-REV-bac7755a95fc77c2ba9d0394"
+      },
+      "feedback": {
+        "mode": "unscored_support",
+        "continueFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-01-FB-CONTINUE",
+        "replayFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-01-FB-REPLAY",
+        "completion_is_not_mastery": true,
+        "display_and_audio_same_text": true
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-02",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waarom kiest Nora een andere bloes?",
+        "targetAudioId": "PREP-instruction_support-5ee9bfebae96e8b548fa"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O3",
+          "text": "De bloes is van iemand anders.",
+          "audioId": "PREP-target_narration-a8c1c4cd0eb666b4b8c5",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Er zit een vlek op de mouw.",
+          "audioId": "PREP-target_narration-3c0cde3a6eb63d2903de",
+          "correct": true,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "Het gesprek gaat niet door.",
+          "audioId": "PREP-target_narration-ddfb975df38a5c76d2b2",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O2"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze ziet een vlek op de mouw.",
+        "start": 44,
+        "end": 72,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Vlek verklaart de keuze; afgelast gesprek en ander eigendom staan niet in de bron.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O3": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O3",
+          "O1": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O1",
+          "O2": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-02-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-03",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Waar zit de vlek?",
+        "targetAudioId": "PREP-instruction_support-e7381cd699bad9cf8f63"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O1",
+          "text": "De vlek zit op de mouw.",
+          "audioId": "PREP-target_narration-9fbf6c0c03d5abe586f5",
+          "correct": true,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O1"
+        },
+        {
+          "id": "O2",
+          "text": "De vlek zit op de kraag.",
+          "audioId": "PREP-target_narration-0485a6bfda6f8ff84e77",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "De vlek zit aan de onderkant.",
+          "audioId": "PREP-target_narration-e14890fba8d3ce5753a7",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O3"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze ziet een vlek op de mouw.",
+        "start": 44,
+        "end": 72,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Mouw staat letterlijk; kraag en onderkant zijn andere delen.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O1": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O1",
+          "O2": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O2",
+          "O3": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O3"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-03-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-04",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat doet Nora met de bloes met de vlek?",
+        "targetAudioId": "PREP-instruction_support-8286449a532a484fd2ff"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "O2",
+          "text": "Nora trekt de bloes aan.",
+          "audioId": "PREP-target_narration-75940d95be5302bc21b5",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O2"
+        },
+        {
+          "id": "O3",
+          "text": "Nora hangt de bloes terug in de kast.",
+          "audioId": "PREP-target_narration-57952380cd2996e679c0",
+          "correct": false,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O3"
+        },
+        {
+          "id": "O1",
+          "text": "Nora doet de bloes in de was.",
+          "audioId": "PREP-target_narration-5f09d77e71c02d4c92ce",
+          "correct": true,
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O1"
+        }
+      ],
+      "answer": "O1",
+      "evidence": {
+        "quote": "Ze doet de bloes met de vlek in de was.",
+        "start": 107,
+        "end": 146,
+        "kind": "literal_or_direct_paraphrase"
+      },
+      "distractorRationale": "Was staat letterlijk; aantrekken en terughangen zijn andere handelingen.",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "O2": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O2",
+          "O3": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O3",
+          "O1": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O1"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-04-FB-O1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-05",
+      "exerciseTypeId": "TE-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Wat betekent daarom in deze tekst?",
+        "targetAudioId": "PREP-instruction_support-0825108411653e30c1a4"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "allowReplay": true,
+        "speechRecognitionRequired": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "options": [
+        {
+          "id": "W3",
+          "text": "Nora kiest een andere bloes zonder reden.",
+          "correct": false,
+          "audioId": "PREP-target_narration-5574af95a7113e162593",
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W3"
+        },
+        {
+          "id": "W1",
+          "text": "Nora kiest een andere bloes omdat zij een vlek ziet.",
+          "correct": true,
+          "audioId": "PREP-target_narration-5d05155e770742ae8103",
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W1"
+        },
+        {
+          "id": "W2",
+          "text": "Nora kiest een andere bloes voordat zij de vlek ziet.",
+          "correct": false,
+          "audioId": "PREP-target_narration-9227e238e03c29c4b872",
+          "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W2"
+        }
+      ],
+      "answer": "W1",
+      "distractorRationale": "Kies de betekenis die past bij de beschreven handeling. De andere opties beschrijven een andere handeling of plaats.",
+      "assessment_label": "Betekenis of handeling in broncontext",
+      "help": {
+        "text": "Lees de zin bij de vraag nog eens. Je mag ook luisteren.",
+        "audioId": "HELP-REV-bd238f72e675d369f63b5d3e"
+      },
+      "feedback": {
+        "mode": "by_option",
+        "optionFeedbackIds": {
+          "W3": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W3",
+          "W1": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W1",
+          "W2": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W2"
+        },
+        "display_and_audio_same_text": true,
+        "show_explanation_for_correct_and_incorrect": true,
+        "retry_on_incorrect": true,
+        "no_global_mastery_claim": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-05-FB-W1-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-06",
+      "exerciseTypeId": "TE-03",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Zet deze zinnen in de volgorde waarin ze in de tekst staan.",
+        "targetAudioId": "PREP-instruction_support-dcbc3c171d0ebf3c420f"
+      },
+      "settings": {
+        "inputModes": [
+          "tap",
+          "keyboard"
+        ],
+        "dragAlternative": "Selecteer een zin en kies daarna de plaats.",
+        "allowReplay": true
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "tiles": [
+        "Daarom kiest ze een andere bloes.",
+        "Ze doet de bloes met de vlek in de was.",
+        "Nora legt een bloes klaar voor een gesprek."
+      ],
+      "answer": [
+        "Nora legt een bloes klaar voor een gesprek.",
+        "Daarom kiest ze een andere bloes.",
+        "Ze doet de bloes met de vlek in de was."
+      ],
+      "assessment_label": "Bronvolgorde, geen algemene tijdsvolgorde of logische noodzaak",
+      "tileAudioIds": [
+        "PREP-target_narration-a85ca14c9ef7eb291981",
+        "PREP-target_narration-b10b4dd73d0ad8f86000",
+        "PREP-target_narration-2b7cfb6bdec448cb3dd5"
+      ],
+      "help": {
+        "text": "Zoek de zinnen in de tekst. Welke zin staat eerst?",
+        "audioId": "HELP-REV-d651f0c60ef6f590c2deb469"
+      },
+      "feedback": {
+        "mode": "by_permutation",
+        "permutationFeedback": [
+          {
+            "source_indices": [
+              0,
+              1,
+              2
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-123"
+          },
+          {
+            "source_indices": [
+              0,
+              2,
+              1
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-132"
+          },
+          {
+            "source_indices": [
+              1,
+              0,
+              2
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-213"
+          },
+          {
+            "source_indices": [
+              1,
+              2,
+              0
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-231"
+          },
+          {
+            "source_indices": [
+              2,
+              0,
+              1
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-312"
+          },
+          {
+            "source_indices": [
+              2,
+              1,
+              0
+            ],
+            "feedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-321"
+          }
+        ],
+        "scoring_scope": "Alleen de volgorde in deze bron; geen algemene claim over wat in werkelijkheid eerst moet gebeuren.",
+        "tile_identity": "canonical source index; option shuffle does not change source index",
+        "display_and_audio_same_text": true,
+        "afterHelpSuccessFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-06-FB-ORDER-123-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-07",
+      "exerciseTypeId": "SP-01",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Je ziet een vlek op je kleding voor je weggaat. Vertel wat je doet en waarom.",
+        "targetAudioId": "PREP-instruction_support-0244f5b8aa0bcf41a490"
+      },
+      "settings": {
+        "inputModes": [
+          "teacher_or_pair_oral",
+          "record_audio_later"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Ik kies een andere bloes, want er zit een vlek op deze mouw.",
+      "criteria": [
+        "Je noemt een kledingkeuze.",
+        "Je noemt de vlek als reden."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-a80e10d90dc41cafb1af",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-3bfd424eb1501bb6a977",
+        "PREP-instruction_support-e47c4cdfa8a73fc3e25b"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt een kledingkeuze.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-07-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-07-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt de vlek als reden.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-07-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-07-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-07-FB-ALL-MET",
+        "example": "Ik kies een andere bloes, want er zit een vlek op deze mouw.",
+        "exampleAudioId": "PREP-target_narration-a80e10d90dc41cafb1af",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-07-FB-ALL-MET-AFTER-HELP"
+      }
+    },
+    {
+      "id": "CP002-A1_PLUS-TEXT-02-EX-08",
+      "exerciseTypeId": "SC-02",
+      "objectiveIds": [
+        "CP002-A1_PLUS-TEXT-02-GOAL"
+      ],
+      "itemIds": [
+        "CP002-A1_PLUS-TEXT-02-TEXT"
+      ],
+      "instruction": {
+        "targetText": "Schrijf waarom Nora een andere bloes kiest.",
+        "targetAudioId": "PREP-instruction_support-3d5e1d0f522b1641af78"
+      },
+      "settings": {
+        "inputModes": [
+          "paper",
+          "type"
+        ],
+        "speechRecognitionRequired": false,
+        "recording_enabled_now": false
+      },
+      "status": "CONTENT_REVIEWED_RUNTIME_NOT_TESTED",
+      "example": "Nora kiest een andere bloes omdat er een vlek op de mouw zit.",
+      "criteria": [
+        "Je noemt de andere bloes.",
+        "Je noemt de vlek als reden."
+      ],
+      "assessment": "teacher_or_self_review",
+      "exampleAudioId": "PREP-target_narration-1a3039155830a83f5634",
+      "criteriaAudioIds": [
+        "PREP-instruction_support-420955f17360af906b14",
+        "PREP-instruction_support-e47c4cdfa8a73fc3e25b"
+      ],
+      "help": {
+        "text": "Kijk naar het voorbeeld. Kijk wat de opdracht vraagt.",
+        "audioId": "HELP-REV-3ef3924d027d5ba2e01189a6"
+      },
+      "feedback": {
+        "mode": "criterion_based",
+        "criteriaFeedback": [
+          {
+            "index": 1,
+            "criterion": "Je noemt de andere bloes.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-08-FB-CR-01-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-08-FB-CR-01-NEEDS-WORK"
+          },
+          {
+            "index": 2,
+            "criterion": "Je noemt de vlek als reden.",
+            "metFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-08-FB-CR-02-MET",
+            "needsWorkFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-08-FB-CR-02-NEEDS-WORK"
+          }
+        ],
+        "allCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-08-FB-ALL-MET",
+        "example": "Nora kiest een andere bloes omdat er een vlek op de mouw zit.",
+        "exampleAudioId": "PREP-target_narration-1a3039155830a83f5634",
+        "assessment": "teacher_or_learner_review",
+        "automatic_exact_match": false,
+        "automatic_model_similarity_rejection": false,
+        "unreviewed_is_not_incorrect": true,
+        "meaningful_alternatives_allowed": true,
+        "copying_task_exact_words_required": false,
+        "note": "Bij overschrijven is dezelfde doelzin de opdracht. Bij vrije productie tellen de betekeniscriteria. Spelling of vorm wordt alleen volgens de expliciete criteria besproken.",
+        "display_and_audio_same_text": true,
+        "afterRevisionAllCriteriaMetFeedbackId": "CP002-A1_PLUS-TEXT-02-EX-08-FB-ALL-MET-AFTER-HELP"
+      }
+    }
+  ],
+  "media": {
+    "state": "SCRIPTS_AND_BRIEFS_ONLY",
+    "tts_allowed": false,
+    "image_generation": false
+  },
+  "review": {
+    "record": "redactie/07-eindherlezing.json",
+    "human_review": "OPEN",
+    "learner_trial": "NOT_RUN",
+    "runtime_accessibility": "NOT_RUN",
+    "publication": "NOT_PUBLISHED",
+    "feedback_rule": "CP002-FEEDBACK-2026-10-13",
+    "feedback_integration": "CONTENT_ONLY_NOT_LIVE_RUNTIME",
+    "feedback_review_record": "redactie/05-feedback-eindherlezing.json",
+    "ai_review_type": "SEQUENTIAL_SELF_REVIEW_NOT_INDEPENDENT",
+    "extra_level_review": "redactie/12-niveau-eindherlezing.json"
+  },
+  "measurement_plan": {
+    "fields": [
+      "response",
+      "correctness",
+      "attempts",
+      "help_used",
+      "response_time",
+      "objective_id"
+    ],
+    "mastery_rule": "Ondersteund goed kiezen, kopiëren of nazeggen is geen zelfstandige beheersing. Plan later een parallelle check zonder model; grenzen pas na proefgebruik bepalen."
+  }
+}
