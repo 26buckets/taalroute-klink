@@ -1,12 +1,14 @@
 'use client';
 
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
-import { Brand } from '@/components/product/shared';
+import { playMedia } from '@/components/product/shared';
 import {
   contentPackages,
   getPackage,
   type PackageDefinition,
+  type PackageExercise,
   type PackageId,
+  type PackageLesson,
 } from '@/lib/package-content';
 import {
   ArrowLeft,
@@ -78,10 +80,10 @@ export function PackageLibrary({
       <header className="package-library-heading">
         <div>
           <span className="eyebrow">Klink · Alfabeta+</span>
-          <h1>Kies een contentpakket</h1>
+          <h1>Kies een lessenpakket</h1>
           <p>
-            CP betekent contentpakket. Elk pakket bevat woorden, lessen,
-            oefeningen, teksten, gesprekken, beelden en audio.
+            Elk pakket is een verzameling lessen. Open een pakket en kies
+            daarna de les waarmee je wilt oefenen.
           </p>
         </div>
         <div className="klink-cycle" aria-label="De vijf stappen van Klink">
@@ -150,19 +152,24 @@ export function PackagePlayer({
   onToast: (message: string) => void;
 }) {
   const pack = getPackage(packageId);
-  const [tab, setTab] = useState<PackageTab>('overview');
+  const [tab, setTab] = useState<PackageTab>('lessons');
 
-  function audioStatus() {
-    onToast(
-      `${pack.id}: ${pack.counts.audio} audiobestanden zijn aanwezig, maar de luistercontrole is nog open.`,
-    );
+  async function playAudio(source?: string) {
+    if (!source) {
+      onToast(`${pack.id}: dit luisterfragment is nog niet gekoppeld.`);
+      return;
+    }
+    try {
+      await playMedia(source);
+    } catch {
+      onToast('Het geluid kon niet worden afgespeeld. Probeer de knop nog een keer.');
+    }
   }
 
   return (
     <div className="cp-player">
       <header className="cp-player-bar">
         <button onClick={onClose} aria-label="Terug naar pakketten"><ArrowLeft /></button>
-        <Brand dark />
         <div>
           <span>{pack.id} · {pack.level}</span>
           <strong>{pack.title}</strong>
@@ -189,14 +196,14 @@ export function PackagePlayer({
             pack={pack}
             savedWordIds={savedWordIds}
             onToggleWord={onToggleWord}
-            onAudio={audioStatus}
+            onAudio={playAudio}
           />
         )}
-        {tab === 'lessons' && <PackageLessons pack={pack} />}
-        {tab === 'practice' && <PackagePractice pack={pack} onAudio={audioStatus} />}
+        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} />}
+        {tab === 'practice' && <PackagePractice pack={pack} onAudio={playAudio} />}
         {tab === 'texts' && <PackageTexts pack={pack} />}
         {tab === 'dialogues' && <PackageDialogues pack={pack} />}
-        {tab === 'media' && <PackageMedia pack={pack} onAudio={audioStatus} />}
+        {tab === 'media' && <PackageMedia pack={pack} onAudio={playAudio} />}
       </main>
     </div>
   );
@@ -229,7 +236,7 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
         <CircleAlert />
         <div>
           <strong>Wat je hier ziet</strong>
-          <p>{pack.statusNote} Daarom is dit een inhoudelijke voorvertoning en nog geen vrijgegeven cursistenpakket.</p>
+          <p>{pack.statusNote}</p>
         </div>
         <button onClick={() => onTab('media')}>Bekijk mediastatus</button>
       </section>
@@ -257,11 +264,11 @@ function OverviewCard({ icon: Icon, value, title, text, onClick }: { icon: typeo
   return <button onClick={onClick}><span><Icon /></span><div><small>{value}</small><strong>{title}</strong><p>{text}</p></div><ArrowRight /></button>;
 }
 
-function PackageWords({ pack, savedWordIds, onToggleWord, onAudio }: { pack: PackageDefinition; savedWordIds: string[]; onToggleWord: (wordId: string) => void; onAudio: () => void }) {
+function PackageWords({ pack, savedWordIds, onToggleWord, onAudio }: { pack: PackageDefinition; savedWordIds: string[]; onToggleWord: (wordId: string) => void; onAudio: (source?: string) => void }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · woorden</span><h1>Alle woorden uit dit pakket</h1><p>Beeld, woordvorm en klankopbouw staan bij elkaar. Audio staat zichtbaar op slot tot de luistercontrole klaar is.</p></div>
+        <div><span className="eyebrow">{pack.id} · woorden</span><h1>Alle woorden uit dit pakket</h1><p>Tik op de luidspreker om het woord te horen. Je kunt woorden bewaren om ze later opnieuw te oefenen.</p></div>
         <span className="cp-panel-count"><strong>{pack.words.length}</strong><small>zichtbare woorden</small></span>
       </header>
       <div className="cp-word-grid">
@@ -277,7 +284,7 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio }: { pack: Pac
                 <strong>{word.word}</strong>
                 <span>{word.segmentation.replaceAll('|', ' · ')}</span>
               </div>
-              <button className="cp-audio-button" onClick={onAudio} aria-label={`Audiostatus van ${word.word}`}><Volume2 /></button>
+              <button className="cp-audio-button" onClick={() => onAudio(word.audio)} disabled={!word.audio} aria-label={word.audio ? `Luister naar ${word.word}` : `Audio van ${word.word} is nog niet gekoppeld`}><Volume2 /></button>
               <button className={`cp-save-button ${saved ? 'saved' : ''}`} onClick={() => onToggleWord(`${pack.id}:${word.id}`)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button>
             </article>
           );
@@ -287,11 +294,118 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio }: { pack: Pac
   );
 }
 
-function PackageLessons({ pack }: { pack: PackageDefinition }) {
+function textValues(value: unknown, result: string[] = []) {
+  if (Array.isArray(value)) value.forEach((item) => textValues(item, result));
+  else if (value && typeof value === 'object') Object.values(value).forEach((item) => textValues(item, result));
+  else if (typeof value === 'string') result.push(value);
+  return result;
+}
+
+function belongsToLesson(exercise: PackageExercise, lesson: PackageLesson) {
+  if (exercise.lessonId === lesson.id) return true;
+  const words = new Set(lesson.words.map((word) => word.toLocaleLowerCase('nl-NL')));
+  return textValues(exercise).some((value) => value
+    .toLocaleLowerCase('nl-NL')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()
+    .split(/\s+/)
+    .some((token) => words.has(token)));
+}
+
+const lessonComponentOrder = [
+  'ALF-CMP-001',
+  'ALF-CMP-002',
+  'ALF-CMP-003',
+  'ALF-CMP-004',
+  'ALF-CMP-005',
+  'ALF-CMP-006',
+  'ALF-CMP-012',
+  'ALF-CMP-009',
+  'ALF-CMP-007',
+  'ALF-CMP-008',
+  'ALF-CMP-011',
+  'ALF-CMP-013',
+  'ALF-CMP-014',
+  'ALF-CMP-015',
+  'ALF-CMP-016',
+];
+
+function lessonMatchScore(exercise: PackageExercise, lesson: PackageLesson) {
+  const words = lesson.words.map((word) => word.toLocaleLowerCase('nl-NL'));
+  const containsWord = (value: string) => words.some((word) => value
+    .toLocaleLowerCase('nl-NL')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .split(/\s+/)
+    .includes(word));
+  const values = textValues(exercise);
+  return (exercise.lessonId === lesson.id ? 100 : 0)
+    + (containsWord(exercise.title ?? '') ? 20 : 0)
+    + (containsWord(exercise.prompt?.text ?? '') ? 10 : 0)
+    + (values.some((value) => value.startsWith('/package-audio/')) ? 30 : 0)
+    + (values.some((value) => value.startsWith('/package-media/')) ? 1 : 0);
+}
+
+function addLessonWordAudio(exercise: PackageExercise, pack: PackageDefinition, lesson: PackageLesson) {
+  const values = textValues(exercise);
+  if (values.some((value) => value.startsWith('/package-audio/'))) return exercise;
+  const tokens = new Set(values.flatMap((value) => value
+    .toLocaleLowerCase('nl-NL')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim()
+    .split(/\s+/)));
+  const word = lesson.words.find((item) => tokens.has(item.toLocaleLowerCase('nl-NL')));
+  const audio = pack.words.find((item) => item.word === word)?.audio;
+  if (!word || !audio) return exercise;
+  return {
+    ...exercise,
+    prompt: {
+      ...exercise.prompt,
+      audio: { audioId: `${pack.id}-${word}`, src: audio },
+    },
+  };
+}
+
+function lessonExercises(pack: PackageDefinition, lesson: PackageLesson) {
+  const candidates = pack.exercises.filter((exercise) => belongsToLesson(exercise, lesson));
+  return lessonComponentOrder.flatMap((componentId) => candidates
+    .filter((exercise) => exercise.componentId === componentId)
+    .sort((left, right) => lessonMatchScore(right, lesson) - lessonMatchScore(left, lesson))
+    .slice(0, 1))
+    .map((exercise) => addLessonWordAudio(exercise, pack, lesson));
+}
+
+function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
+  const [selectedLessonId, setSelectedLessonId] = useState('');
+  const selectedLesson = pack.lessons.find((lesson) => lesson.id === selectedLessonId);
+
+  if (selectedLesson) {
+    const exercises = lessonExercises(pack, selectedLesson);
+    const lessonNumber = pack.lessons.findIndex((lesson) => lesson.id === selectedLesson.id) + 1;
+    return (
+      <section className="cp-panel cp-lesson-player">
+        <button className="text-back" onClick={() => setSelectedLessonId('')}><ArrowLeft />Terug naar alle lessen</button>
+        <div className="cp-lesson-launch">
+          <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
+          <div><small>{pack.id} · les {lessonNumber}</small><h1>{selectedLesson.title}</h1><p>{selectedLesson.words.join(' · ')}</p></div>
+        </div>
+        <PackageExerciseBrowser
+          key={selectedLesson.id}
+          pack={pack}
+          exercises={exercises}
+          guided
+          onAudio={onAudio}
+          eyebrow={`Les ${lessonNumber}`}
+          title={`Oefen met ${selectedLesson.title}`}
+          description="Volg de stappen van kijken en luisteren naar bouwen, nazeggen en toepassen."
+        />
+      </section>
+    );
+  }
+
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · lessen</span><h1>Zo is het pakket verdeeld</h1><p>Elke les laat vooraf zien welke woorden en stappen erbij horen.</p></div>
+        <div><span className="eyebrow">{pack.id} · lessen</span><h1>Kies een les en begin</h1><p>Tik op Start les. Daarna kun je de opdrachten echt uitvoeren, beluisteren en controleren.</p></div>
         <span className="cp-panel-count"><strong>{pack.lessons.length}</strong><small>lessen</small></span>
       </header>
       <div className="cp-lesson-list">
@@ -303,6 +417,7 @@ function PackageLessons({ pack }: { pack: PackageDefinition }) {
               <h2>{lesson.title}</h2>
               <p>{lesson.scope}</p>
               <div className="cp-word-chips">{lesson.words.map((word) => <span key={word}>{word}</span>)}</div>
+              <button className="primary-button cp-start-lesson" onClick={() => setSelectedLessonId(lesson.id)}>Start les<ArrowRight /></button>
             </div>
             <ol aria-label={`Stappen van ${lesson.title}`}>
               {lesson.steps.map((step, stepIndex) => <li key={step}><span>{stepIndex + 1}</span>{stepLabels[step] ?? step}</li>)}
@@ -314,7 +429,7 @@ function PackageLessons({ pack }: { pack: PackageDefinition }) {
   );
 }
 
-function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: () => void }) {
+function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
   const cycle = [
     ['K', 'Kijken', 'beeld en woord herkennen'],
     ['L', 'Luisteren', 'klanken en woorden onderscheiden'],
@@ -325,7 +440,7 @@ function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: 
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · oefenbank</span><h1>{pack.counts.exercises} oefeningen in {pack.counts.exerciseTypes} vormen</h1><p>Blader door de echte bronrecords en probeer iedere componentfamilie uit. Beeld wordt direct getoond; audio blijft op slot tot de luister- en rechtencontrole klaar is.</p></div>
+        <div><span className="eyebrow">{pack.id} · oefenbank</span><h1>{pack.counts.exercises} oefeningen in {pack.counts.exerciseTypes} vormen</h1><p>Hier kun je vrij door alle opdrachtsoorten bladeren. De lessen hierboven geven een eenvoudigere, afgebakende start.</p></div>
         <span className="cp-panel-count"><strong>{pack.counts.exerciseTypes}</strong><small>componentfamilies</small></span>
       </header>
       <div className="cp-cycle-list">
@@ -355,7 +470,7 @@ function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: 
         <header><Gamepad2 /><div><span className="eyebrow">Spellen</span><h2>{pack.games.length} spelvormen</h2></div></header>
         <div>{pack.games.map((game) => <span key={game.id}>{game.title}</span>)}</div>
       </section>
-      <p className="cp-honesty-line"><CircleAlert />Alle {pack.counts.exercises} bronrecords zijn inspecteerbaar via de achttien spelers. De mediastatus blijft eerlijk zichtbaar: ontbrekende beeldbindingen krijgen een melding en audio wordt pas afgespeeld na menselijke controle.</p>
+      <p className="cp-honesty-line"><CircleAlert />Alle {pack.counts.exercises} opdrachten zijn te proberen. Beschikbare audio speelt direct af; ontbrekende media blijven herkenbaar gemarkeerd.</p>
     </section>
   );
 }
@@ -399,7 +514,7 @@ function PackageDialogues({ pack }: { pack: PackageDefinition }) {
   );
 }
 
-function PackageMedia({ pack, onAudio }: { pack: PackageDefinition; onAudio: () => void }) {
+function PackageMedia({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
@@ -408,7 +523,7 @@ function PackageMedia({ pack, onAudio }: { pack: PackageDefinition; onAudio: () 
       </header>
       <div className="cp-media-status">
         <article><Images /><div><small>Beeld</small><strong>{pack.media.imageAvailable} van {pack.media.imageExpected} bindingen aanwezig</strong><p>{pack.media.imageReview}</p></div></article>
-        <button onClick={onAudio}><Headphones /><div><small>Audio</small><strong>{pack.media.audioAvailable} bestanden aanwezig</strong><p>{pack.media.audioReview}</p></div><ArrowRight /></button>
+        <button onClick={() => onAudio(pack.words.find((word) => word.audio)?.audio)}><Headphones /><div><small>Audio</small><strong>{pack.media.audioAvailable} van {pack.media.audioExpected} gekoppeld</strong><p>{pack.media.audioReview}</p></div><ArrowRight /></button>
         <article><LibraryBig /><div><small>Vrijgave</small><strong>{pack.status}</strong><p>{pack.media.publication === 'INTERNAL_ONLY' ? 'Alleen als interne voorvertoning behandelen.' : pack.media.publication}</p></div></article>
       </div>
       {pack.media.missing.length > 0 && <p className="cp-honesty-line"><CircleAlert />Ontbrekende scènebindingen: {pack.media.missing.join(', ')}.</p>}

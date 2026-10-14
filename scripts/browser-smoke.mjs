@@ -50,11 +50,12 @@ function send(method, params = {}) {
   return new Promise((resolve, reject) => pending.set(id, { resolve, reject }));
 }
 
-async function evaluate(expression) {
+async function evaluate(expression, { userGesture = false } = {}) {
   const result = await send('Runtime.evaluate', {
     expression,
     awaitPromise: true,
     returnByValue: true,
+    userGesture,
   });
   if (result.exceptionDetails) throw new Error(result.exceptionDetails.text);
   return result.result.value;
@@ -110,6 +111,20 @@ if (await evaluate("document.querySelectorAll('.cp-package-grid > button').lengt
 
 await evaluate("document.querySelector('.cp-package-grid > button').click()");
 await waitFor("Boolean(document.querySelector('.cp-player'))");
+if (await evaluate("document.querySelectorAll('.cp-player-bar .brand').length") !== 0)
+  throw new Error('De pakketkop toont het Klink-logo dubbel.');
+await waitFor("document.querySelectorAll('.cp-start-lesson').length >= 2");
+await evaluate("document.querySelectorAll('.cp-start-lesson')[1].click()");
+await waitFor("Boolean(document.querySelector('.cp-lesson-player .cp-task-card'))");
+if (!(await evaluate("Boolean(document.querySelector('.cp-task-prompt button'))")))
+  throw new Error('De geopende les heeft geen afspeelbare audio.');
+const audioRequestsBefore = await evaluate("performance.getEntriesByType('resource').filter((entry) => entry.name.includes('/package-audio/')).length");
+await evaluate("document.querySelector('.cp-task-prompt button').click()", { userGesture: true });
+await waitFor(`performance.getEntriesByType('resource').filter((entry) => entry.name.includes('/package-audio/')).length > ${audioRequestsBefore}`);
+await new Promise((resolve) => setTimeout(resolve, 250));
+if (await evaluate("document.querySelector('.toast-message')?.textContent.includes('kon niet worden afgespeeld')"))
+  throw new Error('De audio kon in de browser niet worden afgespeeld.');
+await screenshot('02-werkende-les-desktop');
 await evaluate(
   "[...document.querySelectorAll('.cp-tabs button')].find((button) => button.textContent.includes('Oefeningen')).click()",
 );
@@ -125,7 +140,7 @@ for (let index = 0; index < 18; index += 1) {
 }
 await evaluate("document.querySelector('.cp-exercise-browser').scrollIntoView({block:'start'})");
 await new Promise((resolve) => setTimeout(resolve, 120));
-await screenshot('02-bronspeler-18-families-desktop');
+await screenshot('03-bronspeler-18-families-desktop');
 
 await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button')[14].click()");
 await waitFor("document.querySelector('.cp-exercise-record-head small')?.textContent.includes('memory')");
@@ -141,6 +156,25 @@ for (const mode of ['memory', 'domino', 'find_word', 'sort', 'listen']) {
   if (!gameModes.some((label) => label.includes(mode))) throw new Error(`Spelvorm ${mode} ontbreekt in de speler.`);
 }
 
+await evaluate("document.querySelector('.cp-player-bar > button').click()");
+await waitFor("Boolean(document.querySelector('.package-library-page'))");
+await evaluate("document.querySelectorAll('.cp-package-grid > button')[1].click()");
+await waitFor("document.querySelectorAll('.cp-start-lesson').length === 4");
+await evaluate("document.querySelectorAll('.cp-start-lesson')[1].click()");
+await waitFor("Boolean(document.querySelector('.cp-lesson-player .cp-task-card'))");
+const cp002LessonSteps = await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button').length");
+if (cp002LessonSteps < 8 || cp002LessonSteps > 16)
+  throw new Error(`CP002-les heeft ${cp002LessonSteps} stappen; verwacht 8 tot en met 16.`);
+const firstProgress = await evaluate("document.querySelector('.cp-exercise-record-head nav b').textContent");
+await evaluate("document.querySelector('.cp-exercise-feedback .secondary-button').click()");
+await waitFor(`document.querySelector('.cp-exercise-record-head nav b').textContent !== ${JSON.stringify(firstProgress)}`);
+if (!(await evaluate("Boolean(document.querySelector('.cp-task-prompt button'))")))
+  throw new Error('De CP002-les heeft geen afspeelbare audio.');
+await evaluate("document.querySelector('.cp-task-prompt button').click()", { userGesture: true });
+await new Promise((resolve) => setTimeout(resolve, 250));
+if (await evaluate("document.querySelector('.toast-message')?.textContent.includes('kon niet worden afgespeeld')"))
+  throw new Error('De CP002-audio kon in de browser niet worden afgespeeld.');
+
 await send('Emulation.setDeviceMetricsOverride', {
   width: 390,
   height: 844,
@@ -148,11 +182,13 @@ await send('Emulation.setDeviceMetricsOverride', {
   mobile: true,
 });
 await new Promise((resolve) => setTimeout(resolve, 250));
-if (!(await evaluate("document.querySelector('.cp-exercise-workspace')?.clientWidth <= window.innerWidth")))
-  throw new Error('De oefenwerkplek past niet op mobiel.');
-await evaluate("document.querySelector('.cp-exercise-browser').scrollIntoView({block:'start'})");
+if (!(await evaluate("document.querySelector('.cp-lesson-player')?.clientWidth <= window.innerWidth")))
+  throw new Error('De lesweergave past niet op mobiel.');
+if (await evaluate('document.documentElement.scrollWidth > window.innerWidth + 1'))
+  throw new Error('De lesweergave veroorzaakt horizontale pagina-overloop op mobiel.');
+await evaluate("document.querySelector('.cp-lesson-player').scrollIntoView({block:'start'})");
 await new Promise((resolve) => setTimeout(resolve, 120));
-await screenshot('03-bronspeler-mobiel');
+await screenshot('04-cp002-les-mobiel');
 
 await send('Emulation.setDeviceMetricsOverride', {
   width: 1440,
@@ -173,10 +209,10 @@ if (await evaluate("document.querySelectorAll('.cp-opportunity-atlas article').l
   throw new Error('De makerskaart bevat niet alle 52 opdrachtvarianten.');
 if (await evaluate("document.querySelectorAll('.cp-opportunity-summary article').length") !== 6)
   throw new Error('De samenvatting van de oefenkaart is onvolledig.');
-await screenshot('04-makerskaart-overzicht-desktop');
+await screenshot('05-makerskaart-overzicht-desktop');
 await evaluate("document.querySelector('.cp-opportunity-atlas').scrollIntoView({block:'start'})");
 await new Promise((resolve) => setTimeout(resolve, 120));
-await screenshot('05-makerskaart-52-opdrachten-desktop');
+await screenshot('06-makerskaart-52-opdrachten-desktop');
 
 await send('Emulation.setDeviceMetricsOverride', {
   width: 390,
@@ -189,7 +225,7 @@ if (await evaluate('document.documentElement.scrollWidth > window.innerWidth + 1
   throw new Error('De makerskaart veroorzaakt horizontale pagina-overloop op mobiel.');
 await evaluate("document.querySelector('.cp-opportunity-atlas').scrollIntoView({block:'start'})");
 await new Promise((resolve) => setTimeout(resolve, 120));
-await screenshot('06-makerskaart-mobiel');
+await screenshot('07-makerskaart-mobiel');
 
 const visibleText = await evaluate('document.body.innerText');
 if (visibleText.includes('Pakket kon niet open'))

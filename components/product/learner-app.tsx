@@ -1,6 +1,6 @@
 'use client';
 
-import { Brand } from '@/components/product/shared';
+import { Brand, playMedia } from '@/components/product/shared';
 import { PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import {
   allPackageWords,
@@ -14,7 +14,6 @@ import {
   Bookmark,
   BookmarkCheck,
   Home,
-  Images,
   Layers3,
   LogOut,
   PackageOpen,
@@ -116,8 +115,8 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount }: {
       </section>
 
       <section className="cp-home-honesty">
-        <Images />
-        <div><strong>Beeld is zichtbaar; audio nog niet</strong><p>De pakketten bevatten honderden audiobestanden. Omdat de luistercontrole nog openstaat, meldt de app dit duidelijk in plaats van een knop te laten doen alsof alles al vrijgegeven is.</p></div>
+        <Volume2 />
+        <div><strong>Luisteren en oefenen werkt nu</strong><p>Open een pakket, kies Lessen en tik op Start les. Een luidsprekerknop speelt het gekoppelde woord of fragment af.</p></div>
       </section>
     </div>
   );
@@ -135,7 +134,7 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
         {contentPackages.map((pack) => <button key={pack.id} className={filter === pack.id ? 'active' : ''} onClick={() => setFilter(pack.id)}>{pack.id}</button>)}
         <button className={filter === 'saved' ? 'active' : ''} onClick={() => setFilter('saved')}><Bookmark />Bewaard ({savedWordIds.length})</button>
       </div>
-      {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op het vlaggetje. Dan verschijnt het hier en bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const key = `${word.packageId}:${word.id}`; const saved = savedWordIds.includes(key); return <article key={key}>{word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<div><small>{word.packageId}</small><strong>{word.word}</strong><span>{word.segmentation.replaceAll('|', ' · ')}</span></div><button onClick={() => onToast(`${word.packageId}: audio is aanwezig, maar de luistercontrole is nog open.`)} aria-label={`Audiostatus van ${word.word}`}><Volume2 /></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(key)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button></article>; })}</section>}
+      {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op het vlaggetje. Dan verschijnt het hier en bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const key = `${word.packageId}:${word.id}`; const saved = savedWordIds.includes(key); return <article key={key}>{word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<div><small>{word.packageId}</small><strong>{word.word}</strong><span>{word.segmentation.replaceAll('|', ' · ')}</span></div><button disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))} aria-label={word.audio ? `Luister naar ${word.word}` : `Audio van ${word.word} is nog niet gekoppeld`}><Volume2 /></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(key)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button></article>; })}</section>}
     </div>
   );
 }
@@ -146,7 +145,7 @@ function ReviewQueue({ savedWordIds, onWords, onBack, onToast }: { savedWordIds:
     <div className="learner-page review-page">
       <button className="text-back" onClick={onBack}><ArrowLeft />Terug naar home</button>
       <header className="content-page-heading"><div><span className="eyebrow">Herhalen</span><h1>Jouw bewaarde woorden</h1><p>Geen verzonnen planning of deadline: alleen jouw eigen selectie.</p></div><div className="content-count"><strong>{items.length}</strong><span>bewaard</span><small>door jou gekozen</small></div></header>
-      {items.length === 0 ? <section className="honest-empty"><RefreshCw /><h2>Nog niets om te herhalen</h2><p>Bewaar eerst één of meer woorden. Ze verschijnen daarna direct op deze plek.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section> : <section className="review-word-list"><header><div><span className="eyebrow">Jouw selectie</span><h2>Bekijk elk woord opnieuw</h2></div><small>Audio volgt na luistercontrole</small></header><div>{items.map((word) => <button key={`${word.packageId}:${word.id}`} onClick={() => onToast(`${word.packageId}: audio is aanwezig, maar nog niet vrijgegeven.`)}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{word.packageId}</small><strong>{word.word}</strong></span><Volume2 /></button>)}</div></section>}
+      {items.length === 0 ? <section className="honest-empty"><RefreshCw /><h2>Nog niets om te herhalen</h2><p>Bewaar eerst één of meer woorden. Ze verschijnen daarna direct op deze plek.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section> : <section className="review-word-list"><header><div><span className="eyebrow">Jouw selectie</span><h2>Bekijk en beluister elk woord opnieuw</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={`${word.packageId}:${word.id}`} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{word.packageId}</small><strong>{word.word}</strong></span><Volume2 /></button>)}</div></section>}
     </div>
   );
 }

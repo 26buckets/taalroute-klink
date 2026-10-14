@@ -10,6 +10,7 @@ export type PackageWord = {
   group: string;
   meaning?: string;
   image?: string;
+  audio?: string;
   examples?: string[];
 };
 
@@ -45,6 +46,12 @@ export type ExerciseImage = {
   rendition?: string;
 };
 
+export type ExerciseAudio = {
+  audioId?: string;
+  src?: string;
+  autoplay?: boolean;
+};
+
 export type PackageExercise = {
   exerciseId: string;
   componentId: string;
@@ -57,7 +64,7 @@ export type PackageExercise = {
   prompt?: {
     text?: string;
     image?: ExerciseImage;
-    audio?: { audioId?: string; autoplay?: boolean };
+    audio?: ExerciseAudio;
   };
   [key: string]: unknown;
 };
@@ -105,6 +112,7 @@ export type PackageDefinition = {
     imageAvailable: number;
     imageExpected: number;
     audioAvailable: number;
+    audioExpected: number;
     missing: string[];
     imageReview: string;
     audioReview: string;

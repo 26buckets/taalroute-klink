@@ -10,6 +10,14 @@ export function playAudio(file: string, rate = 1) {
   void audio.play();
 }
 
+let activeAudio: HTMLAudioElement | undefined;
+
+export async function playMedia(source: string) {
+  activeAudio?.pause();
+  activeAudio = new Audio(source);
+  await activeAudio.play();
+}
+
 export function Brand({ dark = false }: { dark?: boolean; label?: string }) {
   return (
     <span className={`brand ${dark ? 'brand-dark' : ''}`}>

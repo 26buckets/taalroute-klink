@@ -6,7 +6,9 @@ const root = resolve(import.meta.dirname, '..');
 const cp001Source = process.env.KLINK_CP001_SOURCE ?? '/Users/nicoknoester/Documents/Codex/2026-09-27/files-pasted-by-the-user-volgende/work/taalroute-alfalabs/content-source/cp001.json';
 const cp001MediaRegister = process.env.KLINK_CP001_MEDIA_REGISTER ?? '/Users/nicoknoester/Documents/Codex/2026-09-27/files-pasted-by-the-user-volgende/work/taalroute-alfalabs/content-source/cp001-package-media.json';
 const cp001MediaRoot = process.env.KLINK_CP001_MEDIA_ROOT ?? '/Users/nicoknoester/Documents/Codex/2026-09-27/files-pasted-by-the-user-volgende/work/taalroute-alfalabs/fixture-public/package-media';
+const cp001PenImage = process.env.KLINK_CP001_PEN_IMAGE ?? '/Users/nicoknoester/Documents/Codex/2026-09-23/ku/outputs/losse-woordbeelden/volledige-collectie/WB_LOS_pen__TR-REBUS-KORT-33_p01.png';
 const cp002Root = process.env.KLINK_CP002_ROOT ?? '/Users/nicoknoester/Documents/Codex/2026-10-12/alfalabs-pakketten-002-016/pakketten/CP002';
+const cp002MediaCatalogSource = process.env.KLINK_CP002_MEDIA_CATALOG ?? '/Users/nicoknoester/Documents/Codex/2026-10-13/alfalabs-media-afronding-vervolg/outputs/herstelgegevens/pakketten/CP002/mediacatalogus.json';
 
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf8'));
 const rows = (table) => {
@@ -36,11 +38,11 @@ const componentLabels = {
   'ALF-CMP-018': 'Aanbevolen extra route',
 };
 
-function attachImageSources(value, publishedImages, aliases = {}) {
-  if (Array.isArray(value)) return value.map((item) => attachImageSources(item, publishedImages, aliases));
+function attachMediaSources(value, publishedImages, publishedAudio, aliases = {}) {
+  if (Array.isArray(value)) return value.map((item) => attachMediaSources(item, publishedImages, publishedAudio, aliases));
   if (!value || typeof value !== 'object') return value;
   const next = Object.fromEntries(
-    Object.entries(value).map(([key, item]) => [key, attachImageSources(item, publishedImages, aliases)]),
+    Object.entries(value).map(([key, item]) => [key, attachMediaSources(item, publishedImages, publishedAudio, aliases)]),
   );
   if (typeof next.assetId === 'string') {
     const canonicalId = aliases[next.assetId] ?? next.assetId;
@@ -49,17 +51,21 @@ function attachImageSources(value, publishedImages, aliases = {}) {
     const src = direct ?? fallback;
     if (src) next.src = src;
   }
+  if (typeof next.audioId === 'string') {
+    const src = publishedAudio.get(next.audioId);
+    if (src) next.src = src;
+  }
   return next;
 }
 
-function normalizeExercise(exercise, metadata, publishedImages, aliases) {
-  return attachImageSources({
+function normalizeExercise(exercise, metadata, publishedImages, publishedAudio, aliases) {
+  return attachMediaSources({
     ...exercise,
     title: metadata?.title || exercise.title,
     lessonId: metadata?.lesson_id || undefined,
     stepKey: metadata?.step_key || undefined,
     sourceStatus: metadata?.status || undefined,
-  }, publishedImages, aliases);
+  }, publishedImages, publishedAudio, aliases);
 }
 
 function summarizeComponents(exercises) {
@@ -94,8 +100,19 @@ function unresolvedImageAssets(value, result = new Set()) {
   return result;
 }
 
+function referencedAudioAssets(value, result = new Set()) {
+  if (Array.isArray(value)) value.forEach((item) => referencedAudioAssets(item, result));
+  else if (value && typeof value === 'object') {
+    if (typeof value.audioId === 'string') result.add(value.audioId);
+    Object.values(value).forEach((item) => referencedAudioAssets(item, result));
+  }
+  return result;
+}
+
 const mediaOutput = join(root, 'public', 'package-media');
+const audioOutput = join(root, 'public', 'package-audio');
 mkdirSync(mediaOutput, { recursive: true });
+mkdirSync(audioOutput, { recursive: true });
 
 function publishImage(source, packageId, name) {
   if (!source || !existsSync(source)) return undefined;
@@ -109,14 +126,26 @@ function publishImage(source, packageId, name) {
     return `/package-media/${packageId.toLowerCase()}/${basename(target)}`;
   }
   const target = join(folder, `${safeName}.webp`);
-  execFileSync('cwebp', ['-quiet', '-resize', '760', '760', '-q', '78', source, '-o', target]);
+  execFileSync('cwebp', ['-quiet', '-resize', '760', '0', '-q', '82', source, '-o', target]);
   return `/package-media/${packageId.toLowerCase()}/${basename(target)}`;
+}
+
+function publishAudio(source, packageId, id) {
+  if (!source || !existsSync(source)) return undefined;
+  const folder = join(audioOutput, packageId.toLowerCase());
+  mkdirSync(folder, { recursive: true });
+  const extension = extname(source).toLowerCase();
+  const safeName = id.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const target = join(folder, `${safeName}${extension}`);
+  copyFileSync(source, target);
+  return `/package-audio/${packageId.toLowerCase()}/${basename(target)}`;
 }
 
 const cp001 = readJson(cp001Source);
 const cp001Register = readJson(cp001MediaRegister);
 const cp001Manifest = manifest(cp001.tabs.Manifest);
 const cp001WordImages = {
+  pen: 'U01_ASSET_PEN_01',
   kam: 'AA_CP001_KAM_OBJECT_01',
   kat: 'AA_CP001_KAT_CONTEXT_02',
   kan: 'AA_CP001_KAN_CONTEXT_02',
@@ -144,6 +173,12 @@ const cp001PublishedImages = new Map();
 for (const image of cp001Register.images) {
   cp001PublishedImages.set(image.id, publishImage(join(cp001MediaRoot, image.file), 'CP001', image.id));
 }
+cp001PublishedImages.set('U01_ASSET_PEN_01', publishImage(cp001PenImage, 'CP001', 'U01_ASSET_PEN_01'));
+const cp001PublishedAudio = new Map();
+for (const audio of cp001Register.audio) {
+  cp001PublishedAudio.set(audio.id, publishAudio(join(cp001MediaRoot, audio.file), 'CP001', audio.id));
+}
+cp001PublishedAudio.set('U01-AUD-WORD-BOEK', publishAudio(join(root, 'public', 'audio', 'pb', 'boek.m4a'), 'CP001', 'U01-AUD-WORD-BOEK'));
 
 const cp001WordRows = rows(cp001.tabs.Words);
 const cp001ImageAliases = Object.fromEntries(
@@ -155,15 +190,23 @@ cp001ImageAliases.U01_ASSET_BOEK_01 = 'U01_ASSET_BOEK_CONTEXT_02';
 
 const cp001Words = cp001WordRows
   .filter((word) => word.position || word.word_id === 'AA_U01_WORD_PEN' || word.word_id === 'AA_U01_WORD_BOEK')
-  .map((word) => ({
-    id: word.word_id,
-    word: word.word,
-    segmentation: word.segmentation,
-    focus: word.sound_focus,
-    group: word.position ? 'kernwoorden' : 'startles',
-    meaning: word.source_note,
-    image: cp001PublishedImages.get(cp001WordImages[word.word]),
-  }));
+  .map((word) => {
+    const audioId = word.word_id === 'AA_U01_WORD_PEN'
+      ? 'U01-AUD-WORD-PEN'
+      : word.word_id === 'AA_U01_WORD_BOEK'
+        ? 'U01-AUD-WORD-BOEK'
+        : `AA-L01-AUD-WORD-${String(word.position).padStart(2, '0')}`;
+    return {
+      id: word.word_id,
+      word: word.word,
+      segmentation: word.segmentation,
+      focus: word.sound_focus,
+      group: word.position ? 'kernwoorden' : 'startles',
+      meaning: word.source_note,
+      image: cp001PublishedImages.get(cp001WordImages[word.word]),
+      audio: cp001PublishedAudio.get(audioId),
+    };
+  });
 
 const cp001Scenes = cp001Register.images
   .filter((image) => image.id.includes('_SCENE_') || image.id === 'AA_CP001_SCENE_COMB')
@@ -190,19 +233,24 @@ const cp001ExerciseRecords = rows(cp001.tabs.Exercises).map((exercise) =>
     JSON.parse(exercise.input_json),
     exercise,
     cp001PublishedImages,
+    cp001PublishedAudio,
     cp001ImageAliases,
   ),
 );
 const cp001MissingExerciseImages = [...unresolvedImageAssets(cp001ExerciseRecords)];
+const cp001ExpectedAudio = new Set([
+  ...cp001Register.audio.map((audio) => audio.id),
+  ...referencedAudioAssets(cp001ExerciseRecords),
+]).size;
 
 const cp001Package = {
   id: 'CP001',
-  title: 'U01 + ABC lijst 1',
-  subtitle: 'Startles en twintig kernwoorden',
+  title: 'Start met pen en boek',
+  subtitle: 'Twee lessen met woorden en klanken',
   description: 'Van pen en boek naar klank-tekenkoppeling, woordbouw, lezen, typen, spreken en context.',
   level: 'Alfa A',
-  status: 'Interne proef',
-  statusNote: 'Inhoud is redactioneel opgebouwd; runtime-, beeld- en luistercontrole zijn nog niet afgerond.',
+  status: 'Testversie',
+  statusNote: 'De lessen en audio zijn te proberen. De menselijke beeld-, luister- en rechtencontrole staat nog open.',
   counts: {
     lessons: Number(cp001Manifest.lesson_count),
     coreWords: Number(cp001Manifest.word_count),
@@ -211,12 +259,12 @@ const cp001Package = {
     texts: Number(cp001Manifest.text_count),
     dialogues: Number(cp001Manifest.dialog_count),
     games: Number(cp001Manifest.game_count),
-    images: cp001Register.images.length,
-    audio: cp001Register.audio.length,
+    images: cp001PublishedImages.size,
+    audio: cp001PublishedAudio.size,
   },
   lessons: rows(cp001.tabs.Lessons).map((lesson) => ({
     id: lesson.lesson_id,
-    title: lesson.title,
+    title: lesson.lesson_id === 'AA-U01' ? 'Pen en boek' : 'Klanken a, oo en ie',
     scope: lesson.scope,
     words: lesson.lesson_id === 'AA-U01' ? ['pen', 'boek'] : cp001Words.filter((word) => word.group === 'kernwoorden').map((word) => word.word),
     steps: String(lesson.required_steps).split('|'),
@@ -229,19 +277,20 @@ const cp001Package = {
   exerciseTypes: summarizeComponents(cp001Exercises),
   scenes: cp001Scenes,
   media: {
-    imageAvailable: cp001Register.images.length,
-    imageExpected: cp001Register.images.length,
-    audioAvailable: cp001Register.audio.length,
+    imageAvailable: cp001PublishedImages.size,
+    imageExpected: cp001PublishedImages.size,
+    audioAvailable: cp001PublishedAudio.size,
+    audioExpected: cp001ExpectedAudio,
     missing: cp001MissingExerciseImages,
     imageReview: 'Menselijke beeldcontrole open',
-    audioReview: 'Luistercontrole en rechtencontrole open',
+    audioReview: 'Afspelen is beschikbaar; luister- en rechtencontrole open',
     publication: cp001Register.publicationStatus,
   },
 };
 
 const cp002Source = readJson(join(cp002Root, 'bron.json'));
 const cp002Authoring = readJson(join(cp002Root, 'authoring.json'));
-const cp002Catalog = readJson(join(cp002Root, 'mediacatalogus.json'));
+const cp002Catalog = readJson(cp002MediaCatalogSource);
 const cp002Control = readJson(join(cp002Root, 'mediacontrole.json'));
 const cp002Exercises = readJson(join(cp002Root, 'oefeningen.json'));
 const cp002ExerciseMetadata = new Map(
@@ -252,12 +301,21 @@ const cp002PublishedImages = new Map();
 for (const [id, image] of cp002ImageEntries) {
   cp002PublishedImages.set(id, publishImage(join(cp002Root, image.url), 'CP002', id));
 }
+const cp002PublishedAudio = new Map();
+for (let index = 1; index <= cp002Source.words.length; index += 1) {
+  const audioId = `CP002-AUD-WORD-${String(index).padStart(2, '0')}`;
+  const source = ['mp3', 'm4a', 'wav']
+    .map((extension) => join(audioOutput, 'cp002', `${audioId.toLowerCase()}.${extension}`))
+    .find(existsSync);
+  if (source) cp002PublishedAudio.set(audioId, `/package-audio/cp002/${basename(source)}`);
+}
 
 const cp002ExerciseRecords = Object.values(cp002Exercises).map((exercise) =>
   normalizeExercise(
     exercise,
     cp002ExerciseMetadata.get(exercise.exerciseId),
     cp002PublishedImages,
+    cp002PublishedAudio,
     {},
   ),
 );
@@ -271,6 +329,7 @@ const cp002Words = cp002Source.words.map((word, index) => ({
   focus: word[2].split('|').find((part) => part.length > 1) ?? word[2].split('|')[1] ?? word[2].split('|')[0],
   group: `les-${Math.floor(index / 5) + 1}`,
   image: cp002PublishedImages.get(`CP002-IMG-WORD-${String(index + 1).padStart(2, '0')}-V1`),
+  audio: cp002PublishedAudio.get(`CP002-AUD-WORD-${String(index + 1).padStart(2, '0')}`),
   examples: word.slice(3),
 }));
 
@@ -288,8 +347,8 @@ const cp002Package = {
   subtitle: 'Vier lessen met twintig woorden',
   description: 'Woorden en situaties uit huis, les, kleding, eten, bibliotheek, boerderij en apotheek.',
   level: 'Alfa A met groei naar A1/A2-context',
-  status: 'Interne proef',
-  statusNote: 'De inhoud is geladen; acht scènebindingen, menselijke mediareview en runtimecontrole staan nog open.',
+  status: 'Testversie',
+  statusNote: 'De lessen en kernwoorden zijn te proberen. Een deel van de audio en acht scènebindingen staan nog open.',
   counts: {
     lessons: rows(cp002Authoring.tabs.Lessons).length,
     coreWords: cp002Source.words.length,
@@ -299,11 +358,11 @@ const cp002Package = {
     dialogues: cp002Source.dialogues.length,
     games: rows(cp002Authoring.tabs.Games).length,
     images: cp002Control.images_available,
-    audio: cp002Control.audio_available,
+    audio: cp002PublishedAudio.size,
   },
   lessons: rows(cp002Authoring.tabs.Lessons).map((lesson, index) => ({
     id: lesson.lesson_id,
-    title: `Les ${index + 1}`,
+    title: cp002Words.slice(index * 5, index * 5 + 5).map((word) => word.word).join(', '),
     scope: lesson.scope,
     words: cp002Words.slice(index * 5, index * 5 + 5).map((word) => word.word),
     steps: String(lesson.required_steps).split('|'),
@@ -324,10 +383,11 @@ const cp002Package = {
   media: {
     imageAvailable: cp002Control.images_available,
     imageExpected: cp002Control.expected_image_bindings,
-    audioAvailable: cp002Control.audio_available,
+    audioAvailable: cp002PublishedAudio.size,
+    audioExpected: cp002Control.audio_available,
     missing: [...new Set([...cp002Control.missing_images, ...cp002MissingExerciseImages])],
     imageReview: cp002Control.human_review === 'OPEN' ? 'Menselijke beeldcontrole open' : cp002Control.human_review,
-    audioReview: 'Luistercontrole open',
+    audioReview: 'Kernwoorden afspeelbaar; overige audio en luistercontrole open',
     publication: cp002Control.publication,
   },
 };
