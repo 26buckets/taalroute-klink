@@ -9,7 +9,7 @@
     "targetLocale": "nl-NL",
     "supportLocales": [],
     "localContext": "NL",
-    "objectiveIds": ["meaning.spoken.tas", "meaning.spoken.mat", "phonology.t.exposure"],
+    "objectiveIds": ["meaning.spoken.tas", "meaning.spoken.mat"],
     "status": "concept",
     "publicRelease": false
   },
@@ -17,7 +17,8 @@
     "approvedDesign": "Klink klankroute, 15 oktober 2026, a01 en a02",
     "route": "/start/tas",
     "newWords": 2,
-    "newSound": "t",
+    "newSound": null,
+    "pendingSound": "t — opname afgekeurd; losse klank tijdelijk niet aangeboden",
     "notice": "Twee woorden zijn hier bewust de instap van een nieuwe route, niet een volledige woordenlijst of CP001.",
     "excluded": ["extra CP-import", "letterkeuze", "woordbouw", "zinswerk", "score als leesbeheersing", "productiepublicatie"]
   },
@@ -26,7 +27,7 @@
     { "id": "w-mat", "kind": "word", "targetText": "mat", "meaningKey": "object.doormat", "meaning": "een vloermat bij een deur", "phonemes": ["m", "ɑ", "t"], "imageId": "img-mat", "audio": { "normal": "word-mat" } }
   ],
   "exerciseInstances": [
-    { "id": "a01", "exerciseTypeId": "KL-01", "itemIds": ["w-tas"], "instruction": "Kijk. Luister.", "sequence": ["tas", "/t/", "tas"], "response": "Het hele woord-beeldvlak herhaalt de audio.", "assessment": "Geen score; kennismaking met betekenis, klank en luisterbediening." },
+    { "id": "a01", "exerciseTypeId": "KL-01", "itemIds": ["w-tas"], "instruction": "Kijk. Luister.", "sequence": ["tas"], "plannedSequenceAfterApproval": ["tas", "/t/", "tas"], "response": "Het hele woord-beeldvlak herhaalt de woordaudio.", "assessment": "Geen score; kennismaking met betekenis en luisterbediening. Losse klank nog niet beschikbaar." },
     { "id": "a01-mat", "exerciseTypeId": "KL-01", "itemIds": ["w-mat"], "instruction": "Kijk. Luister.", "reason": "Ook het afleiderbeeld eerst benoemen; mat mag geen onbekend begrip zijn." },
     { "id": "a02-model", "exerciseTypeId": "BB-01", "itemIds": ["w-tas", "w-mat"], "instruction": "Luister. Dit is de tas. Tik op de tas.", "model": "Tas heeft een rand én aanwijzing; geen zelfstandige meting." },
     { "id": "a02", "exerciseTypeId": "BB-01", "itemIds": ["w-tas", "w-mat"], "instruction": "Luister. Kies het plaatje.", "trials": [{"target":"w-tas","options":["w-tas","w-mat"]},{"target":"w-mat","options":["w-tas","w-mat"]},{"target":"w-tas","options":["w-mat","w-tas"]}], "distractorReason": "Twee concrete, vooraf benoemde voorwerpen; eerste herkenningshandeling, geen zuivere minimale-paar-klanktoets.", "error": "Posities blijven staan; instructie en doelwoord herhalen; opnieuw kiezen.", "correct": "Directe bevestiging, doelwoord en vervolgens automatisch verder.", "assessment": "Auditieve woordherkenning met beeld; geen bewijs van lezen of beheersing van t." }
@@ -35,12 +36,13 @@
     "instructionVoice": "h6uBOiAjLKklte8hdYio",
     "targetVoice": "0qLmDzgqulxcvv0yf3kg",
     "sourceWords": "Twee bestaande Taalroute-opnamen, via bronhash gecontroleerd; geen nieuwe opname van tas en mat.",
-    "newAudio": ["kijk", "kies", "opnieuw", "goed", "klaar", "voorbeeld", "t"],
+    "newAudio": ["kijk", "kies", "opnieuw", "goed", "klaar", "voorbeeld"],
+    "rejectedAudio": {"id":"t","reviewer":"Nico","date":"2026-10-15","reason":"Zegt letterlijk slash T slash.","status":"REJECTED","includedInPractice":false},
     "images": [
       {"id":"img-tas","file":"/start-tas/tas.webp","kind":"image","width":800,"height":800,"alt":"Een blauwgrijze draagtas","provenance":"nieuw gegenereerde objectfoto voor Taalroute","humanReview":"OPEN"},
       {"id":"img-mat","file":"/start-tas/mat.webp","kind":"image","width":800,"height":800,"alt":"Een bruine deurmat met donkere rand","provenance":"nieuw gegenereerde objectfoto voor Taalroute","humanReview":"OPEN"}
     ],
-    "soundWarning": "De nieuwe t-kandidaat duurt 2 seconden. Luistercontrole is verplicht: korte plofklank, geen tee/tuh, geen uitgesproken slash, geen extra stem of ruis. Niet vrijgegeven.",
+    "soundWarning": "De eerdere t-opname is afgekeurd en uit de oefenroute en openbare assets verwijderd. Een uit tas geknipte nieuwe kandidaat staat uitsluitend in de besloten beoordelingsbestanden; niet ingeschakeld in de oefenroute.",
     "deliveryMetadata": "WAV bevat artiest Taalroute en album Klink - Tas en mat. Albumartiest en uitgever worden door deze WAV-muxer niet bewaard; geen claim dat die velden aanwezig zijn. Geluidsdata voor en na metadataherstel op hash vergeleken.",
     "originals": "In het afzonderlijke herstelarchief, niet als gewone cursistdownloads.",
     "publicSourceLinks": false

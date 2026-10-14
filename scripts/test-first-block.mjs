@@ -1,6 +1,11 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { advance, firstBlock, freshCheckpoint, parseCheckpoint } from '../lib/first-block.ts';
 import { BlockAudio } from '../lib/first-block-audio.ts';
+
+const renderer = fs.readFileSync(new URL('../components/product/first-block.tsx', import.meta.url), 'utf8');
+assert(!renderer.includes("'tas', 't'"), 'Teacher-rejected t must not re-enter the listening sequence');
+assert(!fs.existsSync(new URL('../public/start-tas/t.wav', import.meta.url)), 'Rejected t is quarantined, not delivered');
 
 assert.equal(parseCheckpoint('bad-json'), null);
 assert.equal(parseCheckpoint('{"version":1,"step":"choose","trial":99,"events":[]}'), null);

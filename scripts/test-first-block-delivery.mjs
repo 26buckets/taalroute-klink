@@ -8,6 +8,7 @@ const out = path.resolve('outputs/klink-eerste-blok-2026-10-15/tests');
 fs.mkdirSync(path.join(out, 'served'), { recursive: true });
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const results = [];
+assert(!fs.existsSync('public/start-tas/t.wav'), 'Rejected t must not be a public asset');
 for (const file of fs.readdirSync('public/start-tas')) {
   const response = await fetch(`${base}/start-tas/${file}`);
   assert.equal(response.status, 200, file);
@@ -28,4 +29,4 @@ for (const file of fs.readdirSync('public/start-tas')) {
   results.push({ file, sha256: sha(bytes), tags, status: 'PASS' });
 }
 fs.writeFileSync(path.join(out, 'delivery-report.json'), JSON.stringify({ base, status: 'PASS', results, productionPublished: false }, null, 2));
-console.log(`PASS: ${results.length} served assets match source bytes; all 9 audio files carry Taalroute metadata without generator labels.`);
+console.log(`PASS: ${results.length} served assets match source bytes; all ${results.filter(r => r.tags).length} audio files carry Taalroute metadata without generator labels.`);

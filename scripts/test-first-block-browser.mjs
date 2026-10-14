@@ -11,6 +11,8 @@ const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const results = [];
 const errors = [];
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+const requestedAudio = [];
+context.on('request', request => { if (request.url().includes('/start-tas/')) requestedAudio.push(request.url()); });
 context.setDefaultTimeout(20000);
 await context.addInitScript(() => {
   window.__played = [];
@@ -164,6 +166,8 @@ try {
   await brokenImage.close();
 
   assert.deepEqual(errors, []);
+  assert(!requestedAudio.some(url => new URL(url).pathname === '/start-tas/t.wav'), 'Rejected slash-T recording must never be requested');
+  results.push('Teacher-rejected isolated t is not requested anywhere in the full word-practice flow.');
   await fs.writeFile(path.join(out, 'browser-report.json'), JSON.stringify({ status: 'PASS', results, errors, humanListeningReview: 'OPEN', learnerPilot: 'NOT_RUN' }, null, 2));
   console.log(results.join('\n'));
 } catch (error) {

@@ -84,7 +84,8 @@ export default function FirstBlock() {
   }
 
   function sequence(p: Checkpoint): string[] {
-    if (p.step === 'tas') return ['kijk', 'tas', 't', 'tas'];
+    // The isolated t recording was rejected by the teacher; word practice stays available.
+    if (p.step === 'tas') return ['kijk', 'tas'];
     if (p.step === 'mat') return ['kijk', 'mat'];
     if (p.step === 'model') return ['voorbeeld', 'tas'];
     if (p.step === 'done') return ['klaar'];
