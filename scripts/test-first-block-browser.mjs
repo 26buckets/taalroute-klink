@@ -164,4 +164,7 @@ try {
   assert.deepEqual(errors, []);
   await fs.writeFile(path.join(out, 'browser-report.json'), JSON.stringify({ status: 'PASS', results, errors, humanListeningReview: 'OPEN', learnerPilot: 'NOT_RUN' }, null, 2));
   console.log(results.join('\n'));
+} catch (error) {
+  await fs.writeFile(path.join(out, 'browser-failure.txt'), String(error.stack || error));
+  throw error;
 } finally { await browser.close(); }
