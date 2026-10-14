@@ -38,6 +38,30 @@ export type PackageDialogue = {
   turns: { speaker: string; text: string }[];
 };
 
+export type ExerciseImage = {
+  assetId?: string;
+  src?: string;
+  altText?: string;
+  rendition?: string;
+};
+
+export type PackageExercise = {
+  exerciseId: string;
+  componentId: string;
+  contractVersion: string;
+  mode: string;
+  title?: string;
+  lessonId?: string;
+  stepKey?: string;
+  sourceStatus?: string;
+  prompt?: {
+    text?: string;
+    image?: ExerciseImage;
+    audio?: { audioId?: string; autoplay?: boolean };
+  };
+  [key: string]: unknown;
+};
+
 export type PackageDefinition = {
   id: PackageId;
   title: string;
@@ -62,6 +86,7 @@ export type PackageDefinition = {
   texts: PackageText[];
   dialogues: PackageDialogue[];
   games: { id: string; title: string; mode: string }[];
+  exercises: PackageExercise[];
   exerciseTypes: {
     id: string;
     label: string;

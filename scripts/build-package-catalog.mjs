@@ -36,6 +36,32 @@ const componentLabels = {
   'ALF-CMP-018': 'Aanbevolen extra route',
 };
 
+function attachImageSources(value, publishedImages, aliases = {}) {
+  if (Array.isArray(value)) return value.map((item) => attachImageSources(item, publishedImages, aliases));
+  if (!value || typeof value !== 'object') return value;
+  const next = Object.fromEntries(
+    Object.entries(value).map(([key, item]) => [key, attachImageSources(item, publishedImages, aliases)]),
+  );
+  if (typeof next.assetId === 'string') {
+    const canonicalId = aliases[next.assetId] ?? next.assetId;
+    const direct = publishedImages.get(canonicalId);
+    const fallback = publishedImages.get(canonicalId.replace(/-V2$/, ''));
+    const src = direct ?? fallback;
+    if (src) next.src = src;
+  }
+  return next;
+}
+
+function normalizeExercise(exercise, metadata, publishedImages, aliases) {
+  return attachImageSources({
+    ...exercise,
+    title: metadata?.title || exercise.title,
+    lessonId: metadata?.lesson_id || undefined,
+    stepKey: metadata?.step_key || undefined,
+    sourceStatus: metadata?.status || undefined,
+  }, publishedImages, aliases);
+}
+
 function summarizeComponents(exercises) {
   const groups = new Map();
   for (const exercise of exercises) {
@@ -55,6 +81,17 @@ function summarizeComponents(exercises) {
     modes: [...group.modes],
     examples: [...group.examples].slice(0, 3),
   }));
+}
+
+function unresolvedImageAssets(value, result = new Set()) {
+  if (Array.isArray(value)) {
+    value.forEach((item) => unresolvedImageAssets(item, result));
+    return result;
+  }
+  if (!value || typeof value !== 'object') return result;
+  if (typeof value.assetId === 'string' && !value.src) result.add(value.assetId);
+  Object.values(value).forEach((item) => unresolvedImageAssets(item, result));
+  return result;
 }
 
 const mediaOutput = join(root, 'public', 'package-media');
@@ -108,7 +145,15 @@ for (const image of cp001Register.images) {
   cp001PublishedImages.set(image.id, publishImage(join(cp001MediaRoot, image.file), 'CP001', image.id));
 }
 
-const cp001Words = rows(cp001.tabs.Words)
+const cp001WordRows = rows(cp001.tabs.Words);
+const cp001ImageAliases = Object.fromEntries(
+  cp001WordRows
+    .filter((word) => cp001WordImages[word.word])
+    .map((word) => [word.word_id, cp001WordImages[word.word]]),
+);
+cp001ImageAliases.U01_ASSET_BOEK_01 = 'U01_ASSET_BOEK_CONTEXT_02';
+
+const cp001Words = cp001WordRows
   .filter((word) => word.position || word.word_id === 'AA_U01_WORD_PEN' || word.word_id === 'AA_U01_WORD_BOEK')
   .map((word) => ({
     id: word.word_id,
@@ -140,6 +185,15 @@ const cp001Exercises = rows(cp001.tabs.Exercises).map((exercise) => ({
   mode: exercise.mode,
   title: exercise.title,
 }));
+const cp001ExerciseRecords = rows(cp001.tabs.Exercises).map((exercise) =>
+  normalizeExercise(
+    JSON.parse(exercise.input_json),
+    exercise,
+    cp001PublishedImages,
+    cp001ImageAliases,
+  ),
+);
+const cp001MissingExerciseImages = [...unresolvedImageAssets(cp001ExerciseRecords)];
 
 const cp001Package = {
   id: 'CP001',
@@ -171,13 +225,14 @@ const cp001Package = {
   texts: rows(cp001.tabs.Texts).map((text) => ({ id: text.text_id, title: text.title, level: text.type, text: text.text })),
   dialogues: cp001Dialogs,
   games: rows(cp001.tabs.Games).map((game) => ({ id: game.game_id, title: game.display_name, mode: game.mode })),
+  exercises: cp001ExerciseRecords,
   exerciseTypes: summarizeComponents(cp001Exercises),
   scenes: cp001Scenes,
   media: {
     imageAvailable: cp001Register.images.length,
     imageExpected: cp001Register.images.length,
     audioAvailable: cp001Register.audio.length,
-    missing: [],
+    missing: cp001MissingExerciseImages,
     imageReview: 'Menselijke beeldcontrole open',
     audioReview: 'Luistercontrole en rechtencontrole open',
     publication: cp001Register.publicationStatus,
@@ -189,11 +244,24 @@ const cp002Authoring = readJson(join(cp002Root, 'authoring.json'));
 const cp002Catalog = readJson(join(cp002Root, 'mediacatalogus.json'));
 const cp002Control = readJson(join(cp002Root, 'mediacontrole.json'));
 const cp002Exercises = readJson(join(cp002Root, 'oefeningen.json'));
+const cp002ExerciseMetadata = new Map(
+  rows(cp002Authoring.tabs.Exercises).map((exercise) => [exercise.exercise_id, exercise]),
+);
 const cp002ImageEntries = Object.entries(cp002Catalog.images);
 const cp002PublishedImages = new Map();
 for (const [id, image] of cp002ImageEntries) {
   cp002PublishedImages.set(id, publishImage(join(cp002Root, image.url), 'CP002', id));
 }
+
+const cp002ExerciseRecords = Object.values(cp002Exercises).map((exercise) =>
+  normalizeExercise(
+    exercise,
+    cp002ExerciseMetadata.get(exercise.exerciseId),
+    cp002PublishedImages,
+    {},
+  ),
+);
+const cp002MissingExerciseImages = [...unresolvedImageAssets(cp002ExerciseRecords)];
 
 const cp002Words = cp002Source.words.map((word, index) => ({
   id: `CP002-WORD-${String(index + 1).padStart(2, '0')}`,
@@ -250,13 +318,14 @@ const cp002Package = {
     turns: dialog.turns.map((text, index) => ({ speaker: index % 2 === 0 ? dialog.speaker_1 : dialog.speaker_2, text })),
   })),
   games: rows(cp002Authoring.tabs.Games).map((game) => ({ id: game.game_id, title: game.title, mode: game.mode })),
+  exercises: cp002ExerciseRecords,
   exerciseTypes: summarizeComponents(Object.values(cp002Exercises)),
   scenes: cp002Scenes,
   media: {
     imageAvailable: cp002Control.images_available,
     imageExpected: cp002Control.expected_image_bindings,
     audioAvailable: cp002Control.audio_available,
-    missing: cp002Control.missing_images,
+    missing: [...new Set([...cp002Control.missing_images, ...cp002MissingExerciseImages])],
     imageReview: cp002Control.human_review === 'OPEN' ? 'Menselijke beeldcontrole open' : cp002Control.human_review,
     audioReview: 'Luistercontrole open',
     publication: cp002Control.publication,

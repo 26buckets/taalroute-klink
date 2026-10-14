@@ -1,5 +1,6 @@
 'use client';
 
+import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
 import { Brand } from '@/components/product/shared';
 import {
   contentPackages,
@@ -192,7 +193,7 @@ export function PackagePlayer({
           />
         )}
         {tab === 'lessons' && <PackageLessons pack={pack} />}
-        {tab === 'practice' && <PackagePractice pack={pack} />}
+        {tab === 'practice' && <PackagePractice pack={pack} onAudio={audioStatus} />}
         {tab === 'texts' && <PackageTexts pack={pack} />}
         {tab === 'dialogues' && <PackageDialogues pack={pack} />}
         {tab === 'media' && <PackageMedia pack={pack} onAudio={audioStatus} />}
@@ -313,7 +314,7 @@ function PackageLessons({ pack }: { pack: PackageDefinition }) {
   );
 }
 
-function PackagePractice({ pack }: { pack: PackageDefinition }) {
+function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: () => void }) {
   const cycle = [
     ['K', 'Kijken', 'beeld en woord herkennen'],
     ['L', 'Luisteren', 'klanken en woorden onderscheiden'],
@@ -324,7 +325,7 @@ function PackagePractice({ pack }: { pack: PackageDefinition }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · oefenbank</span><h1>{pack.counts.exercises} oefeningen in {pack.counts.exerciseTypes} vormen</h1><p>De broninhoud is aanwezig. Deze proef toont de indeling; nog niet alle oefenrecords hebben hier al een werkende speler.</p></div>
+        <div><span className="eyebrow">{pack.id} · oefenbank</span><h1>{pack.counts.exercises} oefeningen in {pack.counts.exerciseTypes} vormen</h1><p>Blader door de echte bronrecords en probeer iedere componentfamilie uit. Beeld wordt direct getoond; audio blijft op slot tot de luister- en rechtencontrole klaar is.</p></div>
         <span className="cp-panel-count"><strong>{pack.counts.exerciseTypes}</strong><small>componentfamilies</small></span>
       </header>
       <div className="cp-cycle-list">
@@ -349,11 +350,12 @@ function PackagePractice({ pack }: { pack: PackageDefinition }) {
           ))}
         </div>
       </section>
+      <PackageExerciseBrowser pack={pack} onAudio={onAudio} />
       <section className="cp-games">
         <header><Gamepad2 /><div><span className="eyebrow">Spellen</span><h2>{pack.games.length} spelvormen</h2></div></header>
         <div>{pack.games.map((game) => <span key={game.id}>{game.title}</span>)}</div>
       </section>
-      <p className="cp-honesty-line"><CircleAlert />De telling komt uit de canonieke pakketbron; “geladen” betekent hier dat de inhoud inspecteerbaar is, niet dat alle {pack.counts.exercises} oefeningen al interactief werken.</p>
+      <p className="cp-honesty-line"><CircleAlert />Alle {pack.counts.exercises} bronrecords zijn inspecteerbaar via de achttien spelers. De mediastatus blijft eerlijk zichtbaar: ontbrekende beeldbindingen krijgen een melding en audio wordt pas afgespeeld na menselijke controle.</p>
     </section>
   );
 }

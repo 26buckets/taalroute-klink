@@ -90,8 +90,9 @@ await send('Emulation.setDeviceMetricsOverride', {
   deviceScaleFactor: 1,
   mobile: false,
 });
-await send('Page.navigate', { url: appUrl });
+await send('Page.navigate', { url: `${appUrl}?smoke=learner` });
 await waitFor("Boolean(document.querySelector('.role-choice-primary'))");
+await new Promise((resolve) => setTimeout(resolve, 300));
 await evaluate("document.querySelector('.role-choice-primary').click()");
 await waitFor("Boolean(document.querySelector('.learner-login'))");
 await evaluate(
@@ -104,31 +105,41 @@ await evaluate(
 await waitFor("Boolean(document.querySelector('.package-library-page'))");
 await screenshot('01-pakketbibliotheek-desktop');
 
-await evaluate(
-  "document.querySelector('.package-switcher button:nth-child(2)').click()",
-);
-await evaluate(
-  "[...document.querySelectorAll('.package-levels button')].find((button) => button.textContent.includes('A2')).click()",
-);
-await waitFor(
-  "document.querySelectorAll('.package-text-grid button').length === 4",
-);
-await new Promise((resolve) => setTimeout(resolve, 250));
-await screenshot('02-pakket-2-a2-desktop');
+if (await evaluate("document.querySelectorAll('.cp-package-grid > button').length") !== 2)
+  throw new Error('CP001 en CP002 zijn niet allebei zichtbaar.');
 
-await evaluate("document.querySelector('.package-text-grid button').click()");
-await waitFor("Boolean(document.querySelector('.package-player'))");
-await waitFor(
-  "document.querySelector('.package-story-copy')?.textContent.includes('boek')",
-);
-await screenshot('03-tekstspeler-desktop');
+await evaluate("document.querySelector('.cp-package-grid > button').click()");
+await waitFor("Boolean(document.querySelector('.cp-player'))");
 await evaluate(
-  "document.querySelector('.package-player-footer .primary-button').click()",
+  "[...document.querySelectorAll('.cp-tabs button')].find((button) => button.textContent.includes('Oefeningen')).click()",
 );
-await waitFor(
-  "document.querySelector('.package-player-footer')?.classList.contains('right')",
-);
-await screenshot('04-feedback-desktop');
+await waitFor("Boolean(document.querySelector('.cp-exercise-browser'))");
+if (await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button').length") !== 18)
+  throw new Error('De bronspeler toont niet alle 18 componentfamilies.');
+
+for (let index = 0; index < 18; index += 1) {
+  await evaluate(`document.querySelectorAll('.cp-exercise-workspace > aside button')[${index}].click()`);
+  await waitFor("Boolean(document.querySelector('.cp-task-card'))");
+  const title = await evaluate("document.querySelector('.cp-exercise-record-head strong')?.textContent");
+  if (!title) throw new Error(`Componentfamilie ${index + 1} heeft geen oefening.`);
+}
+await evaluate("document.querySelector('.cp-exercise-browser').scrollIntoView({block:'start'})");
+await new Promise((resolve) => setTimeout(resolve, 120));
+await screenshot('02-bronspeler-18-families-desktop');
+
+await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button')[14].click()");
+await waitFor("document.querySelector('.cp-exercise-record-head small')?.textContent.includes('memory')");
+const gameModes = [];
+for (let index = 0; index < 5; index += 1) {
+  gameModes.push(await evaluate("document.querySelector('.cp-exercise-record-head small')?.textContent"));
+  if (index < 4) {
+    await evaluate("document.querySelector('.cp-exercise-record-head nav button:last-child').click()");
+    await new Promise((resolve) => setTimeout(resolve, 80));
+  }
+}
+for (const mode of ['memory', 'domino', 'find_word', 'sort', 'listen']) {
+  if (!gameModes.some((label) => label.includes(mode))) throw new Error(`Spelvorm ${mode} ontbreekt in de speler.`);
+}
 
 await send('Emulation.setDeviceMetricsOverride', {
   width: 390,
@@ -137,7 +148,48 @@ await send('Emulation.setDeviceMetricsOverride', {
   mobile: true,
 });
 await new Promise((resolve) => setTimeout(resolve, 250));
-await screenshot('05-tekstspeler-mobiel');
+if (!(await evaluate("document.querySelector('.cp-exercise-workspace')?.clientWidth <= window.innerWidth")))
+  throw new Error('De oefenwerkplek past niet op mobiel.');
+await evaluate("document.querySelector('.cp-exercise-browser').scrollIntoView({block:'start'})");
+await new Promise((resolve) => setTimeout(resolve, 120));
+await screenshot('03-bronspeler-mobiel');
+
+await send('Emulation.setDeviceMetricsOverride', {
+  width: 1440,
+  height: 1000,
+  deviceScaleFactor: 1,
+  mobile: false,
+});
+await send('Page.navigate', { url: `${appUrl}?smoke=teacher` });
+await waitFor("document.querySelectorAll('.role-choice').length === 2");
+await new Promise((resolve) => setTimeout(resolve, 300));
+await evaluate("document.querySelectorAll('.role-choice')[1].click()");
+await waitFor("Boolean(document.querySelector('.staff-app'))");
+await evaluate(
+  "[...document.querySelectorAll('.staff-nav button')].find((button) => button.textContent.includes('Oefenkaart')).click()",
+);
+await waitFor("Boolean(document.querySelector('.cp-opportunity-atlas'))");
+if (await evaluate("document.querySelectorAll('.cp-opportunity-atlas article').length") !== 52)
+  throw new Error('De makerskaart bevat niet alle 52 opdrachtvarianten.');
+if (await evaluate("document.querySelectorAll('.cp-opportunity-summary article').length") !== 6)
+  throw new Error('De samenvatting van de oefenkaart is onvolledig.');
+await screenshot('04-makerskaart-overzicht-desktop');
+await evaluate("document.querySelector('.cp-opportunity-atlas').scrollIntoView({block:'start'})");
+await new Promise((resolve) => setTimeout(resolve, 120));
+await screenshot('05-makerskaart-52-opdrachten-desktop');
+
+await send('Emulation.setDeviceMetricsOverride', {
+  width: 390,
+  height: 844,
+  deviceScaleFactor: 2,
+  mobile: true,
+});
+await new Promise((resolve) => setTimeout(resolve, 250));
+if (await evaluate('document.documentElement.scrollWidth > window.innerWidth + 1'))
+  throw new Error('De makerskaart veroorzaakt horizontale pagina-overloop op mobiel.');
+await evaluate("document.querySelector('.cp-opportunity-atlas').scrollIntoView({block:'start'})");
+await new Promise((resolve) => setTimeout(resolve, 120));
+await screenshot('06-makerskaart-mobiel');
 
 const visibleText = await evaluate('document.body.innerText');
 if (visibleText.includes('Pakket kon niet open'))
@@ -149,6 +201,8 @@ console.log(
   JSON.stringify({
     ok: true,
     screenshots: outputDir,
+    checkedFamilies: 18,
+    checkedOpportunities: 52,
     title: await evaluate('document.title'),
   }),
 );
