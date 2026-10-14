@@ -60,7 +60,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <button className="brand-button" onClick={() => setView('home')} aria-label="Naar de leerhome"><Brand /></button>
         <nav aria-label="Cursistnavigatie">
           <button className={view === 'home' ? 'active' : ''} onClick={() => setView('home')}><Home /><span>Verder</span></button>
-          <button className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><PackageOpen /><span>Pakketten</span></button>
+          <button className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><PackageOpen /><span>Lessen</span></button>
           <button className={view === 'words' ? 'active' : ''} onClick={() => setView('words')}><WholeWord /><span>Woorden</span></button>
           <button className={view === 'review' ? 'active' : ''} onClick={() => setView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
@@ -84,7 +84,6 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount }: {
     <div className="learner-page cp-home">
       <header className="learner-page-head">
         <div><span className="cp-home-mark"><Layers3 /></span><span>Goedemorgen, Fatima</span><h1>Kies waar je verdergaat</h1></div>
-        <span className="prototype-label">Voorvertoning</span>
       </header>
 
       <section className="cp-home-hero">
@@ -109,7 +108,7 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount }: {
       </section>
 
       <section className="cp-home-actions">
-        <button onClick={onPackages}><span><Route /></span><div><small>Alles bij elkaar</small><strong>Bekijk de pakketten</strong><p>CP001 en CP002, met lessen, teksten, gesprekken en mediastatus.</p></div><ArrowRight /></button>
+        <button onClick={onPackages}><span><Route /></span><div><small>Alles bij elkaar</small><strong>Bekijk de lessen</strong><p>Open een lessenreeks en kies waar je wilt beginnen.</p></div><ArrowRight /></button>
         <button onClick={onWords}><span><WholeWord /></span><div><small>{allPackageWords.length} woordkaarten</small><strong>Bekijk alle woorden</strong><p>Filter per pakket en bewaar woorden voor later.</p></div><ArrowRight /></button>
         <button onClick={onReview}><span><BookmarkCheck /></span><div><small>{savedCount} bewaard</small><strong>Herhalen</strong><p>Alleen de woorden die je zelf hebt gekozen.</p></div><ArrowRight /></button>
       </section>
@@ -134,7 +133,7 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
         {contentPackages.map((pack) => <button key={pack.id} className={filter === pack.id ? 'active' : ''} onClick={() => setFilter(pack.id)}>{pack.id}</button>)}
         <button className={filter === 'saved' ? 'active' : ''} onClick={() => setFilter('saved')}><Bookmark />Bewaard ({savedWordIds.length})</button>
       </div>
-      {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op het vlaggetje. Dan verschijnt het hier en bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const key = `${word.packageId}:${word.id}`; const saved = savedWordIds.includes(key); return <article key={key}>{word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<div><small>{word.packageId}</small><strong>{word.word}</strong><span>{word.segmentation.replaceAll('|', ' · ')}</span></div><button disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))} aria-label={word.audio ? `Luister naar ${word.word}` : `Audio van ${word.word} is nog niet gekoppeld`}><Volume2 /></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(key)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button></article>; })}</section>}
+      {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op het vlaggetje. Dan verschijnt het hier en bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const key = `${word.packageId}:${word.id}`; const saved = savedWordIds.includes(key); const audioLabel = word.audioStatus === 'rejected' ? `De opname van ${word.word} wordt vervangen` : word.audio ? `Luister naar ${word.word}` : `Audio van ${word.word} is nog niet gekoppeld`; return <article key={key}>{word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<div><small>{word.packageId}</small><strong>{word.word}</strong><span>{word.audioStatus === 'rejected' ? 'opname wordt vervangen' : word.segmentation.replaceAll('|', ' · ')}</span></div><button disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))} aria-label={audioLabel} title={audioLabel}><Volume2 /></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(key)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button></article>; })}</section>}
     </div>
   );
 }

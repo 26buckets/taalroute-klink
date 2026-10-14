@@ -47,7 +47,16 @@ socket.addEventListener('message', (event) => {
 function send(method, params = {}) {
   const id = ++commandId;
   socket.send(JSON.stringify({ id, method, params }));
-  return new Promise((resolve, reject) => pending.set(id, { resolve, reject }));
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      pending.delete(id);
+      reject(new Error(`Browsercommand timed out: ${method}`));
+    }, 15000);
+    pending.set(id, {
+      resolve: (value) => { clearTimeout(timer); resolve(value); },
+      reject: (error) => { clearTimeout(timer); reject(error); },
+    });
+  });
 }
 
 async function evaluate(expression, { userGesture = false } = {}) {
@@ -93,7 +102,19 @@ await send('Emulation.setDeviceMetricsOverride', {
 });
 await send('Page.navigate', { url: `${appUrl}?smoke=learner` });
 await waitFor("Boolean(document.querySelector('.role-choice-primary'))");
-await new Promise((resolve) => setTimeout(resolve, 300));
+await new Promise((resolve) => setTimeout(resolve, 1500));
+for (const [width, height, name] of [[1440, 1000, 'desktop'], [1366, 768, 'laptop'], [390, 844, 'mobile']]) {
+  await send('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: width < 600 });
+  await new Promise((resolve) => setTimeout(resolve, 200));
+  if (await evaluate('document.documentElement.scrollWidth > innerWidth + 1'))
+    throw new Error(`Entree loopt horizontaal over: ${name}`);
+  if (!(await evaluate("[...document.querySelectorAll('.role-choice')].every(button => {const r=button.getBoundingClientRect(); return Math.abs(r.width-r.height)<2 && r.left>=0 && r.right<=innerWidth+1})")))
+    throw new Error(`Boekknoppen zijn niet vierkant of vallen buiten beeld: ${name}`);
+  await screenshot(`00-entree-${name}`);
+}
+await send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 1000, deviceScaleFactor: 1, mobile: false });
+if (!(await evaluate("document.querySelector('link[rel=icon]')?.getAttribute('href') === '/favicon.svg?v=2'")))
+  throw new Error('Klink-tabicoon mist de nieuwe versie.');
 await evaluate("document.querySelector('.role-choice-primary').click()");
 await waitFor("Boolean(document.querySelector('.learner-login'))");
 await evaluate(
@@ -101,7 +122,7 @@ await evaluate(
 );
 await waitFor("Boolean(document.querySelector('.learner-nav'))");
 await evaluate(
-  "[...document.querySelectorAll('.learner-nav button')].find((button) => button.textContent.includes('Pakketten')).click()",
+  "[...document.querySelectorAll('.learner-nav button')].find((button) => button.textContent.includes('Lessen')).click()",
 );
 await waitFor("Boolean(document.querySelector('.package-library-page'))");
 await screenshot('01-pakketbibliotheek-desktop');
@@ -125,6 +146,9 @@ await new Promise((resolve) => setTimeout(resolve, 250));
 if (await evaluate("document.querySelector('.toast-message')?.textContent.includes('kon niet worden afgespeeld')"))
   throw new Error('De audio kon in de browser niet worden afgespeeld.');
 await screenshot('02-werkende-les-desktop');
+if (await evaluate('document.documentElement.scrollHeight > innerHeight + 1 || document.documentElement.scrollWidth > innerWidth + 1'))
+  throw new Error('De geopende desktoples veroorzaakt pagina-overloop.');
+await evaluate("document.querySelector('.cp-lesson-player > .text-back').click()");
 await evaluate(
   "[...document.querySelectorAll('.cp-tabs button')].find((button) => button.textContent.includes('Oefeningen')).click()",
 );
@@ -143,18 +167,16 @@ await new Promise((resolve) => setTimeout(resolve, 120));
 await screenshot('03-bronspeler-18-families-desktop');
 
 await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button')[14].click()");
-await waitFor("document.querySelector('.cp-exercise-record-head small')?.textContent.includes('memory')");
+await waitFor("Boolean(document.querySelector('.cp-memory-grid'))");
 const gameModes = [];
 for (let index = 0; index < 5; index += 1) {
-  gameModes.push(await evaluate("document.querySelector('.cp-exercise-record-head small')?.textContent"));
+  gameModes.push(await evaluate("document.querySelector('.cp-task-card')?.innerText"));
   if (index < 4) {
     await evaluate("document.querySelector('.cp-exercise-record-head nav button:last-child').click()");
     await new Promise((resolve) => setTimeout(resolve, 80));
   }
 }
-for (const mode of ['memory', 'domino', 'find_word', 'sort', 'listen']) {
-  if (!gameModes.some((label) => label.includes(mode))) throw new Error(`Spelvorm ${mode} ontbreekt in de speler.`);
-}
+if (new Set(gameModes).size !== 5) throw new Error('Niet alle vijf spelvormen hebben een eigen oefening.');
 
 await evaluate("document.querySelector('.cp-player-bar > button').click()");
 await waitFor("Boolean(document.querySelector('.package-library-page'))");
@@ -186,7 +208,10 @@ if (!(await evaluate("document.querySelector('.cp-lesson-player')?.clientWidth <
   throw new Error('De lesweergave past niet op mobiel.');
 if (await evaluate('document.documentElement.scrollWidth > window.innerWidth + 1'))
   throw new Error('De lesweergave veroorzaakt horizontale pagina-overloop op mobiel.');
-await evaluate("document.querySelector('.cp-lesson-player').scrollIntoView({block:'start'})");
+if (await evaluate('document.documentElement.scrollHeight > window.innerHeight + 1'))
+  throw new Error('De lesweergave veroorzaakt verticale pagina-overloop op mobiel.');
+if (!(await evaluate("[document.querySelector('.cp-exercise-feedback > button'), ...document.querySelectorAll('.cp-exercise-record-head nav button')].every(el => {const r=el.getBoundingClientRect(); return r.top>=0 && r.bottom<=innerHeight+1 && r.right<=innerWidth+1})")))
+  throw new Error('Een vaste lesbedieningsknop valt buiten beeld op mobiel.');
 await new Promise((resolve) => setTimeout(resolve, 120));
 await screenshot('04-cp002-les-mobiel');
 
@@ -198,7 +223,7 @@ await send('Emulation.setDeviceMetricsOverride', {
 });
 await send('Page.navigate', { url: `${appUrl}?smoke=teacher` });
 await waitFor("document.querySelectorAll('.role-choice').length === 2");
-await new Promise((resolve) => setTimeout(resolve, 300));
+await new Promise((resolve) => setTimeout(resolve, 1500));
 await evaluate("document.querySelectorAll('.role-choice')[1].click()");
 await waitFor("Boolean(document.querySelector('.staff-app'))");
 await evaluate(

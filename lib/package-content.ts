@@ -11,6 +11,7 @@ export type PackageWord = {
   meaning?: string;
   image?: string;
   audio?: string;
+  audioStatus?: 'review-open' | 'rejected' | 'missing' | 'approved';
   examples?: string[];
 };
 

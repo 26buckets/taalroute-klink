@@ -17,7 +17,11 @@ export const metadata: Metadata = {
   description:
     'Klink: kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
   manifest: '/manifest.webmanifest',
-  icons: { icon: '/favicon.svg' },
+  icons: {
+    icon: '/favicon.svg?v=2',
+    shortcut: '/favicon.ico?v=2',
+    apple: '/favicon.ico?v=2',
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',

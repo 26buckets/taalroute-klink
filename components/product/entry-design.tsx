@@ -5,14 +5,16 @@ import { Brand } from '@/components/product/shared';
 import {
   ArrowLeft,
   ArrowRight,
+  BookOpen,
   Building2,
   ChevronRight,
   CircleAlert,
-  GraduationCap,
+  Headphones,
   KeyRound,
+  Library,
   LockKeyhole,
-  ScanLine,
 } from 'lucide-react';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }) {
@@ -40,25 +42,42 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
       <section className="entry-window">
         <header className="entry-appbar">
           <Brand />
-          <span className="window-controls" aria-hidden="true"><i /><i /><i /></span>
+          <span>Alfabeta+</span>
         </header>
-        {mode === 'choose' ? (
-          <div className="entry-roles">
-            <h1 className="sr-only">Klink</h1>
-            <button className="role-choice role-choice-primary" onClick={chooseLearner}><span className="role-icon"><ScanLine /></span><strong>Cursist</strong><small>Leren en oefenen</small><ChevronRight /></button>
-            <button className="role-choice" onClick={() => onPortal('teacher')}><span className="role-icon"><GraduationCap /></span><strong>Docent</strong><small>Beheer en voortgang</small><ChevronRight /></button>
+        <div className="entry-layout">
+          <div className="entry-copy">
+            {mode === 'choose' ? (
+              <>
+                <span className="entry-kicker">Luisteren · oefenen · groeien</span>
+                <h1>Welkom bij Klink</h1>
+                <p>Oefen Nederlandse klanken, woorden en zinnen stap voor stap.</p>
+                <div className="entry-roles">
+                  <button className="role-choice role-choice-primary" onClick={chooseLearner}><span className="role-icon"><BookOpen /></span><span><strong>Cursist</strong><small>Open je lessen</small></span><ChevronRight /></button>
+                  <button className="role-choice" onClick={() => onPortal('teacher')}><span className="role-icon"><Library /></span><span><strong>Docent</strong><small>Bekijk lessen en voortgang</small></span><ChevronRight /></button>
+                </div>
+                <div className="entry-method" aria-label="De vijf stappen van Klink">
+                  {['Kijken', 'Luisteren', 'Inoefenen', 'Nazeggen', 'Koppelen'].map((step, index) => <span key={step}><b>{'KLINK'[index]}</b>{step}</span>)}
+                </div>
+              </>
+            ) : (
+              <form className="learner-login" onSubmit={submitLearner}>
+                <button type="button" className="text-back" onClick={() => setMode('choose')}><ArrowLeft />Terug</button>
+                <span className="entry-kicker">Cursist</span>
+                <h1>Open je lessen</h1>
+                <p>Vul de klascode en je persoonlijke pincode in.</p>
+                <label><span><Building2 />Klascode</span><input value={code} onChange={(event) => setCode(event.target.value.toUpperCase())} autoComplete="organization" /></label>
+                <label><span><KeyRound />Persoonlijke pincode</span><input value={pin} onChange={(event) => setPin(event.target.value.replace(/\D/g, '').slice(0, 4))} inputMode="numeric" autoComplete="one-time-code" maxLength={4} /></label>
+                {error && <p className="form-error"><CircleAlert />{error}</p>}
+                <button className="primary-button wide" type="submit"><LockKeyhole />Begin<ArrowRight /></button>
+                <div className="demo-code"><span>Proberen</span><b>ALFA1</b><b>2580</b></div>
+              </form>
+            )}
           </div>
-        ) : (
-          <form className="learner-login" onSubmit={submitLearner}>
-            <button type="button" className="text-back" onClick={() => setMode('choose')}><ArrowLeft />Terug</button>
-            <h1>Cursist</h1>
-            <label><span><Building2 />Klascode</span><input value={code} onChange={(event) => setCode(event.target.value.toUpperCase())} autoComplete="organization" /></label>
-            <label><span><KeyRound />Persoonlijke PIN</span><input value={pin} onChange={(event) => setPin(event.target.value.replace(/\D/g, '').slice(0, 4))} inputMode="numeric" autoComplete="one-time-code" maxLength={4} /></label>
-            {error && <p className="form-error"><CircleAlert />{error}</p>}
-            <button className="primary-button wide" type="submit"><LockKeyhole />Open<ArrowRight /></button>
-            <div className="demo-code"><span>Demo</span><b>ALFA1</b><b>2580</b></div>
-          </form>
-        )}
+          <figure className="entry-visual">
+            <Image src="/klink-entry-hero.webp" alt="Een volwassen cursist oefent woorden samen met een docent" fill priority sizes="(max-width: 760px) 100vw, 52vw" />
+            <figcaption><Headphones /><span><strong>Luister zo vaak als je wilt</strong><small>In je eigen tempo, op elk apparaat</small></span></figcaption>
+          </figure>
+        </div>
       </section>
     </main>
   );

@@ -178,7 +178,7 @@ const cp001PublishedAudio = new Map();
 for (const audio of cp001Register.audio) {
   cp001PublishedAudio.set(audio.id, publishAudio(join(cp001MediaRoot, audio.file), 'CP001', audio.id));
 }
-cp001PublishedAudio.set('U01-AUD-WORD-BOEK', publishAudio(join(root, 'public', 'audio', 'pb', 'boek.m4a'), 'CP001', 'U01-AUD-WORD-BOEK'));
+// The legacy prototype recording for "boek" was rejected in listening review.
 
 const cp001WordRows = rows(cp001.tabs.Words);
 const cp001ImageAliases = Object.fromEntries(
@@ -205,6 +205,7 @@ const cp001Words = cp001WordRows
       meaning: word.source_note,
       image: cp001PublishedImages.get(cp001WordImages[word.word]),
       audio: cp001PublishedAudio.get(audioId),
+      audioStatus: word.word === 'boek' ? 'rejected' : cp001PublishedAudio.has(audioId) ? 'review-open' : 'missing',
     };
   });
 
@@ -283,7 +284,7 @@ const cp001Package = {
     audioExpected: cp001ExpectedAudio,
     missing: cp001MissingExerciseImages,
     imageReview: 'Menselijke beeldcontrole open',
-    audioReview: 'Afspelen is beschikbaar; luister- en rechtencontrole open',
+    audioReview: 'Luister- en rechtencontrole open; de oude opname van boek is geblokkeerd',
     publication: cp001Register.publicationStatus,
   },
 };
@@ -304,6 +305,7 @@ for (const [id, image] of cp002ImageEntries) {
 const cp002PublishedAudio = new Map();
 for (let index = 1; index <= cp002Source.words.length; index += 1) {
   const audioId = `CP002-AUD-WORD-${String(index).padStart(2, '0')}`;
+  if (index === 7) continue;
   const source = ['mp3', 'm4a', 'wav']
     .map((extension) => join(audioOutput, 'cp002', `${audioId.toLowerCase()}.${extension}`))
     .find(existsSync);
@@ -330,6 +332,7 @@ const cp002Words = cp002Source.words.map((word, index) => ({
   group: `les-${Math.floor(index / 5) + 1}`,
   image: cp002PublishedImages.get(`CP002-IMG-WORD-${String(index + 1).padStart(2, '0')}-V1`),
   audio: cp002PublishedAudio.get(`CP002-AUD-WORD-${String(index + 1).padStart(2, '0')}`),
+  audioStatus: index === 6 ? 'rejected' : cp002PublishedAudio.has(`CP002-AUD-WORD-${String(index + 1).padStart(2, '0')}`) ? 'review-open' : 'missing',
   examples: word.slice(3),
 }));
 
@@ -387,7 +390,7 @@ const cp002Package = {
     audioExpected: cp002Control.audio_available,
     missing: [...new Set([...cp002Control.missing_images, ...cp002MissingExerciseImages])],
     imageReview: cp002Control.human_review === 'OPEN' ? 'Menselijke beeldcontrole open' : cp002Control.human_review,
-    audioReview: 'Kernwoorden afspeelbaar; overige audio en luistercontrole open',
+    audioReview: 'Negentien kernwoorden afspeelbaar met luistercontrole open; de oude opname van boek is geblokkeerd',
     publication: cp002Control.publication,
   },
 };

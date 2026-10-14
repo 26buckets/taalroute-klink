@@ -167,7 +167,7 @@ export function PackageExerciseBrowser({
 
   const family = pack.exerciseTypes.find((item) => item.id === familyId);
   return (
-    <section className="cp-exercise-browser">
+    <section className={`cp-exercise-browser ${guided ? 'is-guided' : ''}`}>
       <header>
         <div>
           <span className="eyebrow">{eyebrow}</span>
@@ -190,7 +190,7 @@ export function PackageExerciseBrowser({
         <main>
           <header className="cp-exercise-record-head">
             <div>
-              <small>{exercise.exerciseId} · {exercise.mode}</small>
+              <small>{guided ? `Stap ${guidedIndex + 1} van ${exercises.length}` : 'Vrij oefenen'}</small>
               <strong>{exercise.title || family?.label || exercise.componentId}</strong>
               <span>{exercise.prompt?.text || 'Maak de opdracht.'}</span>
             </div>
@@ -266,7 +266,7 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   return (
     <div className="cp-task-prompt">
       {source && onAudio ? <button onClick={() => onAudio(source)} aria-label="Luister naar de opdracht"><Volume2 /></button> : <span><FileText /></span>}
-      <div><small>{exercise.mode.replaceAll('_', ' ')}</small><h3>{exercise.prompt?.text || exercise.title || 'Maak de opdracht.'}</h3>{children}</div>
+      <div><small>Opdracht</small><h3>{exercise.prompt?.text || exercise.title || 'Maak de opdracht.'}</h3>{children}</div>
     </div>
   );
 }
@@ -281,12 +281,13 @@ function ModelSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-model-content"><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}</strong></div><button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button></section>;
 }
 
-function ChoiceSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function ChoiceSurface({ exercise, onAudio, onFinish, nested = false }: SurfaceProps & { nested?: boolean }) {
   const [selected, setSelected] = useState('');
   const options = asArray<ChoiceOption>(exercise.options);
   const answer = asRecord(exercise.answer);
   const correct = asArray<string>(answer.correctOptionIds);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid">{options.map((option) => <button key={option.id} className={selected === option.id ? 'selected' : ''} onClick={() => setSelected(option.id)}>{option.image ? <ExerciseImageView image={option.image} /> : <strong>{option.label ?? option.grapheme ?? option.id}</strong>}</button>)}</div><button className="primary-button" disabled={!selected} onClick={() => onFinish(selected, correct.includes(selected))}>Controleer<Check /></button></section>;
+  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid">{options.map((option) => <button key={option.id} className={selected === option.id ? 'selected' : ''} onClick={() => setSelected(option.id)}>{option.image ? <ExerciseImageView image={option.image} /> : <strong>{option.label ?? option.grapheme ?? option.id}</strong>}</button>)}</div><button className="primary-button" disabled={!selected} onClick={() => onFinish(selected, correct.includes(selected))}>Controleer<Check /></button></>;
+  return nested ? <div className="cp-linked-choice">{content}</div> : <section className="cp-task-card">{content}</section>;
 }
 
 function ContrastSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
@@ -332,7 +333,7 @@ function ReadingSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
 function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {
   const linkedId = asString(asRecord(exercise.responseComponent).exerciseId);
   const linked = pack.exercises.find((item) => item.exerciseId === linkedId);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{!findAudioSource(exercise) && <p className="cp-audio-lock"><CircleAlert />Dit luisterfragment is nog niet gekoppeld. De antwoordvraag is wel te proberen.</p>}{linked ? <ChoiceSurface exercise={linked} onAudio={onAudio} onFinish={onFinish} /> : <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Verder<ArrowRight /></button>}</section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{!findAudioSource(exercise) && <p className="cp-audio-lock"><CircleAlert />Dit luisterfragment is nog niet gekoppeld. De antwoordvraag is wel te proberen.</p>}{linked ? <ChoiceSurface exercise={linked} onAudio={onAudio} onFinish={onFinish} nested /> : <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Verder<ArrowRight /></button>}</section>;
 }
 
 function SpeakSurface({ exercise, onAudio, onFinish }: SurfaceProps) {

@@ -12,6 +12,11 @@ assert.deepEqual(packages.map((pack) => pack.id), ['CP001', 'CP002']);
 assert.equal(packages.reduce((total, pack) => total + pack.exercises.length, 0), 1187);
 
 for (const pack of packages) {
+  const rejectedWord = pack.words.find((word) => word.word === 'boek');
+  assert.equal(rejectedWord?.audioStatus, 'rejected', `${pack.id}: boek moet op luistercontrole wachten`);
+  assert.equal(rejectedWord.audio, undefined, `${pack.id}: afgekeurde boekopname mag niet afspeelbaar zijn`);
+  const rejectedPath = pack.id === 'CP001' ? '/package-audio/cp001/u01-aud-word-boek.m4a' : '/package-audio/cp002/cp002-aud-word-07.m4a';
+  assert.ok(!JSON.stringify(pack).includes(rejectedPath), `${pack.id}: afgekeurde audio is nog gekoppeld`);
   assert.equal(pack.exercises.length, expectedCounts[pack.id], `${pack.id} heeft een onverwacht aantal oefenrecords`);
   assert.deepEqual([...new Set(pack.exercises.map((exercise) => exercise.componentId))].sort((a, b) => a.localeCompare(b)), expectedFamilies);
   assert.equal(pack.exerciseTypes.length, 18);
