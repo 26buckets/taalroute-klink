@@ -56,6 +56,10 @@ export default function FirstBlock() {
     return () => { epoch.current++; audio.stop(); document.removeEventListener('visibilitychange', hide); };
   }, []);
 
+  useEffect(() => {
+    if (active) heading.current?.focus();
+  }, [active, checkpoint.step, checkpoint.trial, paused]);
+
   function save(next: Checkpoint) {
     state.current = next;
     setCheckpoint(next);
@@ -93,7 +97,6 @@ export default function FirstBlock() {
     setFeedback('none'); setHeard(false); setImageError(false);
     began.current = Date.now(); save(next);
     void play(sequence(next));
-    requestAnimationFrame(() => heading.current?.focus());
   }
 
   function next() {

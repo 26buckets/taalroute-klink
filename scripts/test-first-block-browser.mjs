@@ -119,8 +119,10 @@ try {
   const keyboard = await browser.newPage();
   keyboard.setDefaultTimeout(20000);
   await keyboard.goto(base + '/start/tas');
+  await keyboard.waitForSelector('button.fb-primary:enabled');
   await keyboard.getByRole('button', { name: 'Start', exact: true }).focus();
   await keyboard.keyboard.press('Enter');
+  await keyboard.getByRole('heading', { name: 'Kijk en luister' }).waitFor();
   await keyboard.waitForSelector('main[data-playing="false"]');
   await keyboard.keyboard.press('Tab');
   assert.equal(await keyboard.evaluate(() => document.activeElement.getAttribute('aria-label')), 'Luister naar tas');
