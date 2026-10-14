@@ -1,0 +1,167 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
+const modulePath = process.env.PLAYWRIGHT_MODULE || '/Users/nicoknoester/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
+const { chromium } = await import(pathToFileURL(modulePath).href);
+const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:4315';
+const out = path.resolve('outputs/klink-eerste-blok-2026-10-15/tests');
+await fs.mkdir(out, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const results = [];
+const errors = [];
+const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+context.setDefaultTimeout(20000);
+await context.addInitScript(() => {
+  window.__played = [];
+  document.addEventListener('play', e => window.__played.push(e.target.currentSrc), true);
+});
+const page = await context.newPage();
+page.on('pageerror', error => errors.push(error.message));
+const step = name => page.waitForSelector(`main[data-step="${name}"]`);
+const settled = async () => { await page.waitForSelector('main[data-playing="false"]'); await page.waitForTimeout(100); };
+const overflow = async () => page.evaluate(() => ({ x: document.documentElement.scrollWidth > innerWidth + 1, y: document.documentElement.scrollHeight > innerHeight + 1 }));
+try {
+  await page.goto(base + '/start/tas');
+  await page.getByRole('button', { name: 'Start', exact: true }).click();
+  await step('tas'); await settled();
+  assert.equal(await page.getByRole('button', { name: 'Verder', exact: true }).isEnabled(), true);
+  assert.deepEqual(await overflow(), { x: false, y: false });
+  await page.screenshot({ path: path.join(out, 'desktop-tas.png') });
+  await page.getByRole('button', { name: 'Luister naar tas' }).click();
+  await page.getByRole('button', { name: 'Luister naar tas' }).click();
+  await settled();
+  await page.getByRole('button', { name: 'Verder', exact: true }).dblclick();
+  await step('mat'); await settled();
+  await page.getByRole('button', { name: 'Verder', exact: true }).click();
+  await step('model'); await settled();
+  await page.screenshot({ path: path.join(out, 'desktop-voorbeeld.png') });
+  await page.getByRole('button', { name: 'Kies tas', exact: true }).click();
+  await step('choose'); await settled();
+  const before = await page.locator('.fb-choice').evaluateAll(xs => xs.map(x => x.getAttribute('aria-label')));
+  await page.getByRole('button', { name: 'Kies mat', exact: true }).click(); await settled();
+  assert.deepEqual(await page.locator('.fb-choice').evaluateAll(xs => xs.map(x => x.getAttribute('aria-label'))), before);
+  assert.equal(await page.locator('main').getAttribute('data-trial'), '0');
+  await page.screenshot({ path: path.join(out, 'desktop-foutherstel.png') });
+  await page.reload();
+  await page.getByRole('button', { name: 'Verder oefenen', exact: true }).click(); await settled();
+  assert.equal(await page.locator('main').getAttribute('data-trial'), '0');
+  await page.getByRole('button', { name: 'Pauze', exact: true }).click();
+  assert.equal(await page.getByRole('heading', { name: 'Even pauze' }).count(), 1);
+  await page.getByRole('button', { name: 'Verder oefenen', exact: true }).click(); await settled();
+  for (const [i, target] of ['tas', 'mat', 'tas'].entries()) {
+    await page.getByRole('button', { name: `Kies ${target}`, exact: true }).click();
+    if (i < 2) await page.waitForSelector(`main[data-step="choose"][data-trial="${i + 1}"]`);
+    else await step('done');
+    await settled();
+  }
+  await page.screenshot({ path: path.join(out, 'desktop-klaar.png') });
+  const state = await page.evaluate(() => JSON.parse(localStorage.getItem('klink-tas-instap-v1')));
+  assert.equal(state.step, 'done');
+  assert.equal(state.events.filter(e => e.kind === 'answer' && e.correct).length, 4);
+  assert.equal(state.events.filter(e => e.correct === false).length, 1);
+  results.push('Real audio: tas/mat introduction, repeated playback, double-next guard, model, error recovery, fixed choices, resume, pause, completion and local event records.');
+  console.log('Desktop flow passed.');
+
+  for (const [name, width, height] of [['tablet', 820, 1180], ['mobile', 390, 844], ['small', 320, 568]]) {
+    const vp = await browser.newPage({ viewport: { width, height } });
+    vp.setDefaultTimeout(20000);
+    console.log('Testing viewport:', name);
+    const wait = () => vp.waitForSelector('main[data-playing="false"]');
+    await vp.goto(base + '/start/tas');
+    await vp.getByRole('button', { name: 'Start', exact: true }).click(); await wait();
+    const size = await vp.evaluate(() => ({ x: document.documentElement.scrollWidth > innerWidth + 1, y: document.documentElement.scrollHeight > innerHeight + 1 }));
+    assert.equal(size.x, false);
+    if (name !== 'small') assert.equal(size.y, false);
+    await vp.screenshot({ path: path.join(out, `${name}-tas.png`), fullPage: true });
+    await vp.getByRole('button', { name: 'Verder', exact: true }).click(); await wait();
+    await vp.getByRole('button', { name: 'Verder', exact: true }).click(); await wait();
+    const boxes = await vp.locator('.fb-choice').evaluateAll(xs => xs.map(x => ({ width: x.getBoundingClientRect().width, height: x.getBoundingClientRect().height })));
+    assert(boxes.every(b => b.width >= 48 && b.height >= 48));
+    await vp.screenshot({ path: path.join(out, `${name}-kiezen.png`), fullPage: true });
+    await vp.close();
+    results.push(`${name}: images, minimum targets and no horizontal overflow.`);
+  }
+
+  const failed = await browser.newPage();
+  failed.setDefaultTimeout(20000);
+  await failed.route('**/start-tas/tas.wav', route => route.abort());
+  await failed.goto(base + '/start/tas');
+  await failed.getByRole('button', { name: /Start|Verder oefenen/, exact: true }).click();
+  await failed.getByRole('alert').waitFor();
+  assert.equal(await failed.getByRole('button', { name: 'Verder', exact: true }).isDisabled(), true);
+  await failed.unroute('**/start-tas/tas.wav');
+  await failed.getByRole('button', { name: 'Probeer geluid opnieuw' }).click();
+  await failed.waitForSelector('main[data-playing="false"]');
+  assert.equal(await failed.getByRole('button', { name: 'Verder', exact: true }).isEnabled(), true);
+  results.push('Missing audio blocks progression; retry recovers with real audio.');
+  await failed.close();
+
+  const edgeContext = await browser.newContext();
+  edgeContext.setDefaultTimeout(20000);
+  await edgeContext.addInitScript(() => localStorage.setItem('klink-tas-instap-v1', JSON.stringify({ version: 1, step: 'choose', trial: 0, events: [] })));
+  const edge = await edgeContext.newPage();
+  await edge.route('**/start-tas/goed.wav', route => route.abort());
+  await edge.goto(base + '/start/tas');
+  await edge.getByRole('button', { name: 'Verder oefenen', exact: true }).click();
+  await edge.waitForSelector('main[data-playing="false"]');
+  await edge.getByRole('button', { name: 'Kies tas', exact: true }).click();
+  await edge.getByRole('alert').waitFor();
+  assert.equal(await edge.locator('main').getAttribute('data-trial'), '0');
+  await edge.unroute('**/start-tas/goed.wav');
+  await edge.getByRole('button', { name: 'Probeer geluid opnieuw' }).click();
+  await edge.waitForSelector('main[data-trial="1"]');
+  await edge.waitForSelector('main[data-playing="false"]');
+  assert.equal(await edge.evaluate(() => JSON.parse(localStorage.getItem('klink-tas-instap-v1')).events.filter(e => e.kind === 'answer').length), 1);
+  results.push('Feedback-audio failure: no silent advance, retry proceeds once without a duplicate answer.');
+  await edgeContext.close();
+
+  const keyboard = await browser.newPage();
+  keyboard.setDefaultTimeout(20000);
+  await keyboard.goto(base + '/start/tas');
+  await keyboard.getByRole('button', { name: 'Start', exact: true }).focus();
+  await keyboard.keyboard.press('Enter');
+  await keyboard.waitForSelector('main[data-playing="false"]');
+  await keyboard.keyboard.press('Tab');
+  assert.equal(await keyboard.evaluate(() => document.activeElement.getAttribute('aria-label')), 'Luister naar tas');
+  await keyboard.keyboard.press('Enter');
+  await keyboard.waitForSelector('main[data-playing="false"]');
+  await keyboard.keyboard.press('Tab');
+  assert.equal(await keyboard.evaluate(() => document.activeElement.textContent), 'Verder');
+  await keyboard.keyboard.press('Enter');
+  await keyboard.waitForSelector('main[data-step="mat"]');
+  await keyboard.waitForSelector('main[data-playing="false"]');
+  await keyboard.addStyleTag({ content: '.first-block { zoom: 2; }' });
+  assert.equal(await keyboard.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+  results.push('Keyboard: Start, listening surface and next; enlarged interface remains horizontally usable. Screenreader speech not manually audited.');
+  await keyboard.close();
+
+  const blockedContext = await browser.newContext();
+  blockedContext.setDefaultTimeout(20000);
+  await blockedContext.addInitScript(() => {
+    Object.defineProperty(window, 'localStorage', { get() { throw new DOMException('Storage denied', 'SecurityError'); } });
+  });
+  const blocked = await blockedContext.newPage();
+  await blocked.goto(base + '/start/tas');
+  await blocked.getByText('Je plek kan hier niet worden bewaard. Je kunt wel oefenen.').waitFor();
+  await blocked.getByRole('button', { name: 'Start', exact: true }).click();
+  await blocked.waitForSelector('main[data-playing="false"]');
+  assert.equal(await blocked.getByRole('button', { name: 'Verder', exact: true }).isEnabled(), true);
+  results.push('Blocked browser storage: honest warning, no crash, practice still available.');
+  await blockedContext.close();
+
+  const brokenImage = await browser.newPage();
+  brokenImage.setDefaultTimeout(20000);
+  await brokenImage.route('**/start-tas/tas.webp', route => route.abort());
+  await brokenImage.goto(base + '/start/tas');
+  await brokenImage.getByRole('button', { name: 'Start', exact: true }).click();
+  await brokenImage.waitForSelector('main[data-playing="false"]');
+  assert.equal(await brokenImage.getByRole('button', { name: 'Verder', exact: true }).isDisabled(), true);
+  await brokenImage.getByText('Het plaatje is niet geladen. Vernieuw de pagina om verder te gaan.').waitFor();
+  results.push('Missing image: visible error, no meaningless picture exercise.');
+  await brokenImage.close();
+
+  assert.deepEqual(errors, []);
+  await fs.writeFile(path.join(out, 'browser-report.json'), JSON.stringify({ status: 'PASS', results, errors, humanListeningReview: 'OPEN', learnerPilot: 'NOT_RUN' }, null, 2));
+  console.log(results.join('\n'));
+} finally { await browser.close(); }
