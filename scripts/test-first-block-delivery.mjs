@@ -21,7 +21,7 @@ for (const file of fs.readdirSync('public/start-tas')) {
     const info = JSON.parse(execFileSync('ffprobe', ['-v', 'quiet', '-show_format', '-show_streams', '-of', 'json', saved]));
     tags = info.format.tags;
     assert.equal(tags.artist, 'Taalroute');
-    assert.equal(tags.album, 'Klink - Tas en mat');
+    assert.equal(tags.album, ['zelfde-woord.wav', 'vergelijk-woord.wav'].includes(file) ? 'Klink - Zoek hetzelfde woord' : 'Klink - Tas en mat');
     assert(!/eleven|suno|lavf|generator|model/i.test(JSON.stringify(tags)));
     assert.equal(info.streams[0].sample_rate, '44100');
     assert(Number(info.format.duration) > 0);

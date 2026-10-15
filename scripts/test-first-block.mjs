@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { advance, firstBlock, freshCheckpoint, parseCheckpoint } from '../lib/first-block.ts';
+import { advance, firstBlock, freshCheckpoint, parseCheckpoint, wordMatch, freshWordMatch, parseWordMatch } from '../lib/first-block.ts';
 import { BlockAudio } from '../lib/first-block-audio.ts';
 
 const renderer = fs.readFileSync(new URL('../components/product/first-block.tsx', import.meta.url), 'utf8');
@@ -22,6 +22,21 @@ for (const trial of firstBlock.trials) {
 }
 
 const made = [];
+assert.notEqual(wordMatch.id, firstBlock.id, 'The new block must not overwrite the listening checkpoint');
+assert.equal(wordMatch.trials.length, firstBlock.trials.length, 'Both rounds share the progression contract');
+assert.equal(parseWordMatch(JSON.stringify(freshCheckpoint())), null);
+assert.deepEqual(parseWordMatch(JSON.stringify(freshWordMatch())), freshWordMatch());
+let match = freshWordMatch();
+const matchingTargets = ['tas'];
+for (let i = 0; i < wordMatch.trials.length; i++) {
+  match = advance(match);
+  matchingTargets.push(wordMatch.trials[match.trial].target);
+}
+assert.deepEqual(matchingTargets, ['tas', 'mat', 'tas', 'mat']);
+assert.equal(advance(match).step, 'done');
+for (const trial of wordMatch.trials) assert.deepEqual([...trial.options].sort(), ['mat', 'tas']);
+assert.deepEqual(wordMatch.trials.map(t => t.options.indexOf(t.target)), [1, 1, 0]);
+
 class FakeAudio {
   constructor(src) { this.src = src; made.push(this); }
   async play() {}

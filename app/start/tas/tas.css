@@ -66,3 +66,28 @@
   .fb-word-text { font-size: 48px; }
 }
 @media (prefers-reduced-motion: reduce) { .first-block button { transition: none; } }
+.fb-word-match .fb-content { gap: 12px; }
+.fb-word-match .fb-header, .fb-word-match .fb-header .brand, .fb-word-match .fb-location { flex-wrap: wrap; }
+.fb-word-match .fb-header { gap: 8px; }
+.fb-word-match .fb-header > a { max-width: 100%; }
+.fb-word-match .fb-content h1 { overflow-wrap: anywhere; }
+.fb-word-match .fb-primary { min-width: min(200px, 100%); max-width: 100%; }
+.fb-word-match .fb-word-example { padding: 0 12px 4px; }
+.fb-word-match .fb-word-example { max-width: 100%; }
+.fb-word-match .fb-word-example img { width: min(180px, 23svh); max-width: 100%; height: auto; aspect-ratio: 1; }
+.fb-word-match .fb-listen-label { max-width: 100%; }
+.fb-word-match .fb-word-text { font-size: clamp(48px, 6vw, 64px); }
+.fb-word-choices { width: min(100%, 360px, 44svh); grid-template-columns: repeat(auto-fit, minmax(min(108px, 100%), 1fr)); gap: 20px; border: 0; margin: 0; padding: 0; min-inline-size: 0; }
+.first-block .fb-written-word { display: grid; place-items: center; font-size: clamp(44px, 6vw, 60px); font-weight: 400; padding-bottom: 30px; }
+.fb-word-match .fb-example-help { outline: 2px solid #6b4518; outline-offset: 3px; }
+.fb-word-match .fb-feedback { min-height: 56px; max-width: 480px; font-size: 20px; }
+@media (max-height: 700px) {
+  .fb-word-match { gap: 8px; padding-top: 8px; padding-bottom: 8px; }
+  .fb-word-match .fb-content { gap: 8px; }
+  .fb-word-match .fb-content h1 { font-size: 28px; }
+  .fb-word-match .fb-word-example img { width: 18svh; height: 18svh; }
+  .fb-word-match .fb-word-text { font-size: 44px; }
+  .fb-word-match .fb-listen-label { font-size: 16px; min-height: 28px; }
+  .fb-word-match .fb-feedback { font-size: 18px; min-height: 44px; }
+  .fb-word-match .fb-model-label { font-size: 16px; padding: 4px 0; }
+}

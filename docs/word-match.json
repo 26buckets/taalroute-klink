@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0",
+  "pack": {
+    "id": "klink-tas-mat-woordbeeld-v1",
+    "title": "Zoek hetzelfde woord",
+    "owner": "taalroute",
+    "version": 1,
+    "level": "alpha-a",
+    "targetLocale": "nl-NL",
+    "status": "concept",
+    "publicRelease": false,
+    "objectiveIds": ["visual.match.word.tas", "visual.match.word.mat"]
+  },
+  "route": "/start/woorden",
+  "predecessor": "/start/tas",
+  "items": [
+    {"id": "w-tas", "kind": "word", "targetText": "tas", "meaningKey": "object.carry-bag", "image": "/start-tas/tas.webp", "audio": "/start-tas/tas.wav"},
+    {"id": "w-mat", "kind": "word", "targetText": "mat", "meaningKey": "object.doormat", "image": "/start-tas/mat.webp", "audio": "/start-tas/mat.wav"}
+  ],
+  "exerciseInstances": [
+    {"id": "woordbeeld-model", "exerciseTypeId": "WO-02", "target": "w-tas", "options": ["w-tas", "w-mat"], "modelShown": true},
+    {"id": "woordbeeld-01", "exerciseTypeId": "WO-02", "target": "w-mat", "options": ["w-tas", "w-mat"], "modelShown": false},
+    {"id": "woordbeeld-02", "exerciseTypeId": "WO-02", "target": "w-tas", "options": ["w-mat", "w-tas"], "modelShown": false},
+    {"id": "woordbeeld-03", "exerciseTypeId": "WO-02", "target": "w-mat", "options": ["w-mat", "w-tas"], "modelShown": false}
+  ],
+  "instruction": "Kijk naar het woord. Tik op hetzelfde woord.",
+  "instructionAudio": "/start-tas/zelfde-woord.wav",
+  "help": "Kijk nog eens naar het woord. Tik op hetzelfde woord.",
+  "helpAudio": "/start-tas/vergelijk-woord.wav",
+  "feedback": {
+    "correct": "Goed plus doelwoord; automatisch verder na gesproken feedback en korte pauze.",
+    "wrong": "Voorbeeldwoord en foto blijven staan; leg de aandacht terug bij het voorbeeld. Antwoordposities veranderen niet. Opnieuw proberen zonder controleknop.",
+    "audioFailure": "Niet stilzwijgend doorgaan; audioherstel aanbieden zonder dubbel antwoord.",
+    "imageFailure": "Niet doorgaan met een ontbrekend betekenisbeeld."
+  },
+  "entryBurden": {
+    "known": ["betekenis van tas en mat", "tik op een groot vlak", "tik om opnieuw te luisteren"],
+    "new": ["een zichtbaar woordmodel vergelijken met twee geschreven keuzes"],
+    "simultaneousWords": 2,
+    "modelAlwaysVisible": true,
+    "timer": false,
+    "response": "Eén tik op een geschreven woord; toetsenbord ook mogelijk.",
+    "scopeOverride": "Op verzoek een kleine proef met alleen twee bekende woorden en vier keuzemomenten; geen extra woorden om een productiequota te halen."
+  },
+  "assessment": {
+    "measures": "Hetzelfde woordbeeld vinden bij blijvend zichtbaar voorbeeld en beschikbare woordaudio.",
+    "doesNotMeasure": ["zelfstandig lezen", "klank-letterkoppeling", "beheersing van de losse t", "transfer naar nieuwe woorden"],
+    "distractorReason": "Het andere vooraf geïntroduceerde woord. Beide woorden zijn drie letters lang, maar hebben een andere geschreven vorm; geen minimale-paar-klanktoets.",
+    "events": ["antwoord", "goed/fout", "herhaalde audio", "stap/modelstatus", "reactietijd", "tijdstip"],
+    "storage": "Afzonderlijke apparaatgebonden sleutel; voortgang van de eerdere ronde blijft behouden. Geen persoonsgegevens of microfoon."
+  },
+  "media": {
+    "instructionVoice": "h6uBOiAjLKklte8hdYio",
+    "targetVoice": "0qLmDzgqulxcvv0yf3kg",
+    "new": ["twee korte instructies, geen nieuwe doelwoordopnamen"],
+    "unchanged": ["tas.wav", "mat.wav", "tas.webp", "mat.webp"],
+    "isolatedT": "Geparkeerd; beide kandidaten afgekeurd, geen gebruik in deze route.",
+    "metadata": "Taalroute in artiest en passend album; PCM vóór en na metadataherstel gelijk. Extra merkvelden alleen waar WAV die bewaart.",
+    "sourceLinksInLearnerUI": false
+  },
+  "review": {
+    "teacher": "OPEN",
+    "instructionListening": "OPEN",
+    "wordPronunciation": "OPEN",
+    "imageMeaning": "OPEN",
+    "learnerPilot": "NOT_RUN",
+    "mediaRightsRelease": "OPEN",
+    "production": "NOT_RELEASED",
+    "nextStep": "Nico doorloopt de proef: blijft de vergelijking duidelijk bij tas én mat, na een fout en bij hervatten? Daarna pas gerichte cursistproef."
+  }
+}

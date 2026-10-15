@@ -38,3 +38,19 @@ export function advance(p: Checkpoint): Checkpoint {
   if (p.step === 'choose') return p.trial + 1 < firstBlock.trials.length ? { ...p, trial: p.trial + 1 } : { ...p, step: 'done' };
   return p;
 }
+
+export const wordMatch = {
+  id: 'klink-tas-mat-woordbeeld-v1',
+  objective: 'Hetzelfde geschreven woord zoeken met zichtbaar voorbeeld en woordaudio; geen bewijs van zelfstandig lezen.',
+  trials: [
+    { target: 'mat', options: ['tas', 'mat'] },
+    { target: 'tas', options: ['mat', 'tas'] },
+    { target: 'mat', options: ['mat', 'tas'] },
+  ] as { target: WordId; options: WordId[] }[],
+} as const;
+
+export const freshWordMatch = (): Checkpoint => ({ ...freshCheckpoint(), step: 'model' });
+export function parseWordMatch(raw: string | null): Checkpoint | null {
+  const saved = parseCheckpoint(raw);
+  return saved && ['model', 'choose', 'done'].includes(saved.step) ? saved : null;
+}
