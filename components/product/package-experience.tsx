@@ -1,11 +1,12 @@
 'use client';
 
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
-import { playMedia } from '@/components/product/shared';
+import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson } from '@/lib/taalroute-packages';
 import {
   contentPackages,
   getPackage,
+  wordLabel,
   type PackageDefinition,
   type PackageExercise,
   type PackageId,
@@ -17,14 +18,9 @@ import {
   BookOpen,
   Bookmark,
   BookmarkCheck,
-  Check,
-  CircleAlert,
   FileText,
-  Gamepad2,
-  Headphones,
   Images,
   Layers3,
-  LibraryBig,
   ListChecks,
   MessageCircle,
   PackageOpen,
@@ -34,7 +30,7 @@ import {
   WholeWord,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type PackageTab =
   | 'overview'
@@ -151,10 +147,11 @@ export function PackagePlayer({
 }) {
   const pack = getPackage(packageId);
   const [tab, setTab] = useState<PackageTab>('lessons');
+  useEffect(() => { stopMedia(); return stopMedia; }, [tab, packageId]);
 
   async function playAudio(source?: string) {
     if (!source) {
-      onToast(`${pack.id}: dit luisterfragment is nog niet gekoppeld.`);
+      onToast('Bij dit woord is nog geen geluid beschikbaar. Vraag je docent om hulp.');
       return;
     }
     try {
@@ -169,16 +166,16 @@ export function PackagePlayer({
       <header className="cp-player-bar">
         <button onClick={onClose} aria-label="Terug naar lessen"><ArrowLeft /></button>
         <div>
-          <span>{pack.id} · {pack.level}</span>
+          <span>{pack.level}</span>
           <strong>{pack.title}</strong>
         </div>
       </header>
 
-      <nav className="cp-tabs" aria-label={`${pack.id} onderdelen`}>
-        {tabLabels.map((item) => {
+      <nav className="cp-tabs" aria-label="Onderdelen">
+        {tabLabels.filter(item => item.id !== 'texts' || pack.texts.length > 0).filter(item => item.id !== 'dialogues' || pack.dialogues.length > 0).filter(item => item.id !== 'media' || pack.words.some(word => word.image || word.audio) || pack.scenes.some(scene => scene.image)).map((item) => {
           const Icon = item.icon;
           return (
-            <button key={item.id} className={tab === item.id ? 'active' : ''} onClick={() => setTab(item.id)}>
+            <button key={item.id} aria-current={tab === item.id ? 'page' : undefined} className={tab === item.id ? 'active' : ''} onClick={() => setTab(item.id)}>
               <Icon />
               <span>{item.label}</span>
             </button>
@@ -186,7 +183,7 @@ export function PackagePlayer({
         })}
       </nav>
 
-      <main className="cp-content">
+      <div className="cp-content">
         {tab === 'overview' && <PackageOverview pack={pack} onTab={setTab} />}
         {tab === 'words' && (
           <PackageWords
@@ -201,7 +198,7 @@ export function PackagePlayer({
         {tab === 'texts' && <PackageTexts pack={pack} />}
         {tab === 'dialogues' && <PackageDialogues pack={pack} />}
         {tab === 'media' && <PackageMedia pack={pack} onAudio={playAudio} />}
-      </main>
+      </div>
     </div>
   );
 }
@@ -211,7 +208,7 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
     <div className="cp-overview">
       <section className="cp-hero">
         <div>
-          <span className="eyebrow light">{pack.id}</span>
+          <span className="eyebrow light">Klink</span>
           <h1>{pack.title}</h1>
           <p>{pack.description}</p>
           <div className="cp-hero-actions">
@@ -223,31 +220,22 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
           <Count value={pack.counts.lessons} label="lessen" />
           <Count value={pack.counts.coreWords} label="kernwoorden" />
           <Count value={pack.counts.exercises} label="oefeningen" />
-          <Count value={pack.counts.texts} label="teksten" />
-          <Count value={pack.counts.dialogues} label="gesprekken" />
-          <Count value={pack.counts.games} label="spellen" />
+          {pack.counts.texts > 0 && <Count value={pack.counts.texts} label="teksten" />}
+          {pack.counts.dialogues > 0 && <Count value={pack.counts.dialogues} label="gesprekken" />}
+          {pack.counts.games > 0 && <Count value={pack.counts.games} label={pack.counts.games === 1 ? 'spel' : 'spellen'} />}
         </div>
-      </section>
-
-      <section className="cp-status-note">
-        <CircleAlert />
-        <div>
-          <strong>Wat je hier ziet</strong>
-          <p>{pack.statusNote}</p>
-        </div>
-        <button onClick={() => onTab('media')}>Bekijk mediastatus</button>
       </section>
 
       <section className="cp-section-heading">
-        <div><span className="eyebrow">Opbouw</span><h2>Wat zit er in {pack.id}?</h2></div>
+        <div><span className="eyebrow">Oefenen</span><h2>Wat wil je doen?</h2></div>
       </section>
       <section className="cp-overview-cards">
-        <OverviewCard icon={Route} value={pack.counts.lessons} title="Lessen" text="Een vaste route van kijken en kiezen naar bouwen, doen en meer oefenen." onClick={() => onTab('lessons')} />
-        <OverviewCard icon={WholeWord} value={pack.words.length} title="Woorden zichtbaar" text={`${pack.counts.coreWords} woorden binnen deze Taalroute-indeling.`} onClick={() => onTab('words')} />
-        <OverviewCard icon={Shapes} value={pack.counts.exercises} title="Oefenrecords" text={`${pack.counts.exerciseTypes} verschillende componentfamilies in de bron.`} onClick={() => onTab('practice')} />
-        <OverviewCard icon={FileText} value={pack.counts.texts} title="Teksten" text="Korte begeleide teksten en contextteksten met groei in taalgebruik." onClick={() => onTab('texts')} />
-        <OverviewCard icon={MessageCircle} value={pack.counts.dialogues} title="Gesprekken" text="Dialogen met rollen, doel en beurtwisseling." onClick={() => onTab('dialogues')} />
-        <OverviewCard icon={Images} value={pack.counts.images} title="Beelden" text={`${pack.scenes.filter((scene) => scene.image).length} scènebeelden zijn direct zichtbaar in deze proef.`} onClick={() => onTab('media')} />
+        <OverviewCard icon={Route} value={pack.counts.lessons} title="Lessen" text="Kijk, luister, kies en bouw het woord." onClick={() => onTab('lessons')} />
+        <OverviewCard icon={WholeWord} value={pack.words.length} title="Woorden" text="Bekijk en beluister de woorden." onClick={() => onTab('words')} />
+        <OverviewCard icon={Shapes} value={pack.counts.exercises} title="Oefeningen" text="Kies wat je wilt oefenen." onClick={() => onTab('practice')} />
+        {pack.texts.length > 0 && <OverviewCard icon={FileText} value={pack.counts.texts} title="Teksten" text="Lees een korte tekst." onClick={() => onTab('texts')} />}
+        {pack.dialogues.length > 0 && <OverviewCard icon={MessageCircle} value={pack.counts.dialogues} title="Gesprekken" text="Lees een gesprek." onClick={() => onTab('dialogues')} />}
+        {pack.counts.images > 0 && <OverviewCard icon={Images} value={pack.counts.images} title="Beelden" text="Bekijk de beelden bij de woorden." onClick={() => onTab('media')} />}
       </section>
     </div>
   );
@@ -265,25 +253,26 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio }: { pack: Pac
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · woorden</span><h1>De woorden bij deze leesstappen</h1><p>Tik op de luidspreker om het woord te horen. Je kunt woorden bewaren om ze later opnieuw te oefenen.</p></div>
-        <span className="cp-panel-count"><strong>{pack.words.length}</strong><small>zichtbare woorden</small></span>
+        <div><span className="eyebrow">Woorden</span><h1>De woorden bij deze lessen</h1><p>Tik op het woord of de foto om te luisteren. Bewaar woorden om ze later te oefenen.</p></div>
+        <span className="cp-panel-count"><strong>{pack.words.length}</strong><small>woorden</small></span>
       </header>
       <div className="cp-word-grid">
         {pack.words.map((word) => {
           const saved = savedWordIds.includes(word.id);
           return (
             <article key={word.id}>
+              <button className="cp-package-word-listen" disabled={!word.audio} onClick={() => onAudio(word.audio)} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen.`}>
               <div className="cp-word-image">
-                {word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span>{word.word.slice(0, 1)}</span>}
+                {word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span>{word.word.slice(0, 1)}</span>}
               </div>
               <div className="cp-word-copy">
-                <small>{word.group.replace('-', ' ')}</small>
-                <strong>{word.word}</strong>
+                <strong>{wordLabel(word)}</strong>
                 <span>{word.segmentation.replaceAll('|', ' · ')}</span>
-                {word.audioStatus === 'rejected' && <em>Opname wordt vervangen</em>}
+                {!word.audio && <span>Lees samen</span>}
               </div>
-              <button className="cp-audio-button" onClick={() => onAudio(word.audio)} disabled={!word.audio} aria-label={word.audio ? `Luister naar ${word.word}` : `Audio van ${word.word} is nog niet gekoppeld`}><Volume2 /></button>
-              <button className={`cp-save-button ${saved ? 'saved' : ''}`} onClick={() => onToggleWord(word.id)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button>
+              <span className="cp-listen-label">{word.audio && <><Volume2 /> Luister</>}</span>
+              </button>
+              <button className={`cp-save-button ${saved ? 'saved' : ''}`} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button>
             </article>
           );
         })}
@@ -385,7 +374,7 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
         <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => setSelectedLessonId('')}><ArrowLeft />Alle lessen</button>
         <div className="cp-lesson-launch">
           <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
-          <div><small>{pack.id} · les {lessonNumber}</small><h1>{selectedLesson.title}</h1><p>{selectedLesson.words.join(' · ')}</p></div>
+          <div><small>Les {lessonNumber}</small><h1>{selectedLesson.title}</h1><p>{selectedLesson.words.join(' · ')}</p></div>
         </div>
         <PackageExerciseBrowser
           key={selectedLesson.id}
@@ -396,7 +385,7 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
           onAudio={onAudio}
           eyebrow={`Les ${lessonNumber}`}
           title={`Oefen met ${selectedLesson.title}`}
-          description="Volg de stappen van kijken en luisteren naar bouwen, nazeggen en toepassen."
+          description="Kijk, luister, kies en bouw het woord."
         />
       </section>
     );
@@ -405,7 +394,7 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · lessen</span><h1>Kies een les en begin</h1><p>Tik op Start les. Daarna kun je de opdrachten echt uitvoeren, beluisteren en controleren.</p></div>
+        <div><span className="eyebrow">Lessen</span><h1>Kies een les en begin</h1><p>Tik op Start les.</p></div>
         <span className="cp-panel-count"><strong>{pack.lessons.length}</strong><small>lessen</small></span>
       </header>
       <div className="cp-lesson-list">
@@ -415,7 +404,6 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
             <div>
               <small>{lesson.kind === 'uitbreiding' ? 'Uitbreiding' : lesson.kind === 'woord' ? 'Verder oefenen' : lesson.kind === 'herhaalronde' ? 'Herhalen' : 'Leesstap'}</small>
               <h2>{lesson.title}</h2>
-              <p>{lesson.scope}</p>
               {lesson.newWords ? <div className="cp-word-chips">{[['Bekend', lesson.known ?? []], ['Nieuw', lesson.newWords], ['Komt terug', lesson.returning ?? []]].map(([label, ids]) => <span key={label as string}><b>{label as string}: </b>{(ids as string[]).map(id => pack.words.find(word => word.id === id)?.word).join(' · ') || '—'}</span>)}</div> : <div className="cp-word-chips">{lesson.words.map(word => <span key={word}>{word}</span>)}</div>}
               <button className="primary-button cp-start-lesson" onClick={() => setSelectedLessonId(lesson.id)}>Start les<ArrowRight /></button>
             </div>
@@ -430,47 +418,9 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
 }
 
 function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
-  const cycle = [
-    ['K', 'Kijken', 'beeld en woord herkennen'],
-    ['L', 'Luisteren', 'klanken en woorden onderscheiden'],
-    ['I', 'Inoefenen', 'bouwen, typen, schrijven en herhalen'],
-    ['N', 'Nazeggen', 'model beluisteren, spreken en terugluisteren'],
-    ['K', 'Koppelen', 'woord, zin, tekst en gesprek verbinden'],
-  ];
   return (
     <section className="cp-panel">
-      <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · oefenbank</span><h1>{pack.counts.exercises} oefeningen in {pack.counts.exerciseTypes} vormen</h1><p>Hier kun je vrij door alle opdrachtsoorten bladeren. De lessen hierboven geven een eenvoudigere, afgebakende start.</p></div>
-        <span className="cp-panel-count"><strong>{pack.counts.exerciseTypes}</strong><small>componentfamilies</small></span>
-      </header>
-      <div className="cp-cycle-list">
-        {cycle.map(([letter, title, text]) => <article key={`${letter}-${title}`}><span>{letter}</span><div><strong>{title}</strong><p>{text}</p></div><Check /></article>)}
-      </div>
-      <section className="cp-activity-atlas">
-        <header>
-          <div><span className="eyebrow">Activiteitenkaart</span><h2>Alle {pack.exerciseTypes.length} kleine activiteitsoorten</h2></div>
-          <p>Het getal rechts is het aantal concrete oefeningen van dat type in {pack.id}.</p>
-        </header>
-        <div>
-          {pack.exerciseTypes.map((exercise, index) => (
-            <article key={exercise.id}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <div>
-                <small>{exercise.id}</small>
-                <strong>{exercise.label}</strong>
-                <em>{exercise.examples.join(' · ')}</em>
-              </div>
-              <b>{exercise.count}</b>
-            </article>
-          ))}
-        </div>
-      </section>
-      <PackageExerciseBrowser pack={pack} onAudio={onAudio} />
-      <section className="cp-games">
-        <header><Gamepad2 /><div><span className="eyebrow">Spellen</span><h2>{pack.games.length} spelvormen</h2></div></header>
-        <div>{pack.games.map((game) => <span key={game.id}>{game.title}</span>)}</div>
-      </section>
-      <p className="cp-honesty-line"><CircleAlert />Alle {pack.counts.exercises} opdrachten zijn te proberen. Beschikbare audio speelt direct af; ontbrekende media blijven herkenbaar gemarkeerd.</p>
+      <PackageExerciseBrowser pack={pack} onAudio={onAudio} title="Vrij oefenen" description="Kies wat je wilt oefenen." />
     </section>
   );
 }
@@ -479,7 +429,7 @@ function PackageTexts({ pack }: { pack: PackageDefinition }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · teksten</span><h1>{pack.texts.length} teksten om te bekijken</h1><p>Open een tekst om de volledige inhoud en, waar aanwezig, de begripsvraag te zien.</p></div>
+        <div><span className="eyebrow">Teksten</span><h1>Lees een tekst</h1><p>Kies een tekst.</p></div>
         <span className="cp-panel-count"><strong>{pack.texts.length}</strong><small>teksten</small></span>
       </header>
       <div className="cp-reading-list">
@@ -498,7 +448,7 @@ function PackageDialogues({ pack }: { pack: PackageDefinition }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · gesprekken</span><h1>{pack.dialogues.length} dialogen met rollen</h1><p>De rollen en beurten blijven samen zichtbaar, zodat duidelijk is wie tegen wie praat.</p></div>
+        <div><span className="eyebrow">Gesprekken</span><h1>Lees een gesprek</h1><p>Kies een gesprek.</p></div>
         <span className="cp-panel-count"><strong>{pack.dialogues.length}</strong><small>gesprekken</small></span>
       </header>
       <div className="cp-dialogue-grid">
@@ -515,50 +465,31 @@ function PackageDialogues({ pack }: { pack: PackageDefinition }) {
 }
 
 function PackageMedia({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
-  const [selectedWordId, setSelectedWordId] = useState(pack.words[0]?.id ?? '');
-  const selectedWord = pack.words.find((word) => word.id === selectedWordId) ?? pack.words[0];
-  const relatedScenes = selectedWord
-    ? pack.scenes.filter((scene) => scene.words?.some((word) => word.toLocaleLowerCase('nl-NL') === selectedWord.word.toLocaleLowerCase('nl-NL')))
-    : [];
-  const imageGrowth = [
-    { label: 'Los woordbeeld', note: 'Eén betekenis, rustig in beeld', image: selectedWord?.image },
-    { label: 'Eenvoudige context', note: 'Het woord in een herkenbare plek', image: relatedScenes[0]?.image },
-    { label: 'Handeling', note: 'Het woord doet mee in een situatie', image: undefined },
-    { label: 'Het geheel', note: 'Begrijpen en toepassen in een groter verhaal', image: undefined },
-  ];
-
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">{pack.id} · beeld en audio</span><h1>Wat is aanwezig en wat staat nog open?</h1><p>De app maakt hier geen “klaar”-claim van zolang menselijke controles niet zijn afgerond.</p></div>
-        <span className="cp-panel-count"><strong>{pack.media.imageAvailable}</strong><small>beelden aanwezig</small></span>
+        <div><span className="eyebrow">Beeld en audio</span><h1>Kijk en luister</h1><p>Tik op het woord of de foto om te luisteren.</p></div>
       </header>
-      <div className="cp-media-status">
-        <article><Images /><div><small>Beeld</small><strong>{pack.media.imageAvailable} van {pack.media.imageExpected} bindingen aanwezig</strong><p>{pack.media.imageReview}</p></div></article>
-        <button onClick={() => onAudio(pack.words.find((word) => word.audio)?.audio)}><Headphones /><div><small>Audio</small><strong>{pack.media.audioAvailable} van {pack.media.audioExpected} gekoppeld</strong><p>{pack.media.audioReview}</p></div><ArrowRight /></button>
-        <article><LibraryBig /><div><small>Vrijgave</small><strong>{pack.status}</strong><p>{pack.media.publication === 'INTERNAL_ONLY' ? 'Alleen als interne voorvertoning behandelen.' : pack.media.publication}</p></div></article>
+      <div className="cp-word-grid">
+        {pack.words.filter(word => word.image || word.audio).map(word => <article key={word.id}>
+          <button className="cp-package-word-listen" disabled={!word.audio} onClick={() => onAudio(word.audio)} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen.`}>
+            {word.image && <div className="cp-word-image"><Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /></div>}
+            <div className="cp-word-copy"><strong>{wordLabel(word)}</strong></div>
+            <span className="cp-listen-label">{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span>
+          </button>
+        </article>)}
       </div>
-      <section className="cp-image-growth">
-        <header>
-          <div><span className="eyebrow">Beeldgroei</span><h2>Van los woord naar een echte situatie</h2><p>Elk woord groeit in vier vaste stappen. Alleen aantoonbaar aanwezige beelden worden hier als gereed getoond.</p></div>
-          <label><span>Kies een woord</span><select value={selectedWord?.id ?? ''} onChange={(event) => setSelectedWordId(event.target.value)}>{pack.words.map((word) => <option key={word.id} value={word.id}>{word.word}</option>)}</select></label>
-        </header>
+      {pack.scenes.some(scene => scene.image) && <section className="cp-scene-gallery">
+        <header><h2>Bekijk de situaties</h2></header>
         <div>
-          {imageGrowth.map((stage, index) => <article key={stage.label} className={stage.image ? 'available' : 'open'}><span className="cp-growth-number">{index + 1}</span>{stage.image ? <Image src={stage.image} alt={`${selectedWord?.word ?? 'Woord'}: ${stage.label.toLocaleLowerCase('nl-NL')}`} width={760} height={760} /> : <span className="cp-growth-placeholder"><Images /><small>Nog te maken</small></span>}<div><strong>{stage.label}</strong><p>{stage.note}</p></div></article>)}
-        </div>
-      </section>
-      {pack.media.missing.length > 0 && <p className="cp-honesty-line"><CircleAlert />Nog zonder woordbeeld: {pack.media.missing.join(', ')}.</p>}
-      <section className="cp-scene-gallery">
-        <header><div><span className="eyebrow">Scènes</span><h2>{pack.scenes.filter((scene) => scene.image).length} beelden zichtbaar</h2></div></header>
-        <div>
-          {pack.scenes.map((scene) => (
-            <article key={scene.id} className={!scene.image ? 'missing' : ''}>
-              {scene.image ? <Image src={scene.image} alt={scene.description ?? scene.title} width={760} height={760} /> : <span><Images /><small>Beeld nog niet aanwezig</small></span>}
-              <div><small>{scene.id}</small><strong>{scene.title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div>
+          {pack.scenes.filter(scene => scene.image).map((scene) => (
+            <article key={scene.id}>
+              <Image src={scene.image!} alt={scene.description ?? scene.title} width={760} height={760} />
+              <div><strong>{scene.title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div>
             </article>
           ))}
         </div>
-      </section>
+      </section>}
     </section>
   );
 }

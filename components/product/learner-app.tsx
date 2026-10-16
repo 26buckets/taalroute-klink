@@ -1,11 +1,12 @@
 'use client';
 
-import { Brand, playMedia } from '@/components/product/shared';
+import { Brand, playMedia, stopMedia } from '@/components/product/shared';
 import { PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import {
   allPackageWords,
   contentPackages,
   getPackage,
+  wordLabel,
   type PackageId,
 } from '@/lib/package-content';
 import {
@@ -23,7 +24,7 @@ import {
   WholeWord,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review';
 type WordFilter = string;
@@ -40,6 +41,8 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
       return [];
     }
   });
+
+  useEffect(() => { stopMedia(); return stopMedia; }, [view]);
 
   function openPackage(packageId: PackageId) {
     setSelectedPackage(packageId);
@@ -59,10 +62,10 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
       <aside className="learner-nav">
         <button className="brand-button" onClick={() => setView('home')} aria-label="Naar de leerhome"><Brand /></button>
         <nav aria-label="Cursistnavigatie">
-          <button className={view === 'home' ? 'active' : ''} onClick={() => setView('home')}><Home /><span>Verder</span></button>
-          <button className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button className={view === 'words' ? 'active' : ''} onClick={() => setView('words')}><WholeWord /><span>Woorden</span></button>
-          <button className={view === 'review' ? 'active' : ''} onClick={() => setView('review')}><RefreshCw /><span>Herhalen</span></button>
+          <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => setView('home')}><Home /><span>Verder</span></button>
+          <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><PackageOpen /><span>Lessen</span></button>
+          <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => setView('words')}><WholeWord /><span>Woorden</span></button>
+          <button aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => setView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
         <button className="learner-profile" onClick={onExit}><small>Afsluiten</small><LogOut /></button>
       </aside>
@@ -90,32 +93,30 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount }: {
         <div>
           <span className="eyebrow light">Begin met de eerste leesstappen</span>
           <h2>{first.title}</h2>
-          <p>{first.description}</p>
+          <p>Kijk, luister en oefen. Begin samen met je docent.</p>
           <button className="accent-button" onClick={() => onPackage(first.id)}>Begin hier<ArrowRight /></button>
         </div>
         <div className="cp-home-facts">
           <span><strong>{first.counts.lessons}</strong><small>lessen</small></span>
           <span><strong>{first.counts.coreWords}</strong><small>kernwoorden</small></span>
-          <span><strong>{first.counts.exercises}</strong><small>oefeningen</small></span>
-          <span><strong>{first.counts.exerciseTypes}</strong><small>activiteitsoorten</small></span>
         </div>
       </section>
 
       <section className="cp-home-second">
         <span><PackageOpen /></span>
-        <div><small>Volgende bouwgroep</small><strong>{second.title}</strong><p>{second.counts.lessons} lessen · {second.counts.coreWords} woorden · {second.counts.exercises} oefeningen</p></div>
-        <button className="secondary-button" onClick={() => onPackage(second.id)}>Bekijk deze groep<ArrowRight /></button>
+        <div><small>Daarna</small><strong>{second.title}</strong><p>{second.counts.lessons} lessen · {second.counts.coreWords} woorden</p></div>
+        <button className="secondary-button" onClick={() => onPackage(second.id)}>Bekijk de lessen<ArrowRight /></button>
       </section>
 
       <section className="cp-home-actions">
         <button onClick={onPackages}><span><Route /></span><div><small>Alles bij elkaar</small><strong>Bekijk de lessen</strong><p>Open een lessenreeks en kies waar je wilt beginnen.</p></div><ArrowRight /></button>
-        <button onClick={onWords}><span><WholeWord /></span><div><small>{allPackageWords.length} woordkaarten</small><strong>Bekijk alle woorden</strong><p>Bekijk de woorden per bouwgroep en bewaar woorden voor later.</p></div><ArrowRight /></button>
+        <button onClick={onWords}><span><WholeWord /></span><div><small>Luisteren en bewaren</small><strong>Bekijk alle woorden</strong><p>Tik op een woord om te luisteren.</p></div><ArrowRight /></button>
         <button onClick={onReview}><span><BookmarkCheck /></span><div><small>{savedCount} bewaard</small><strong>Herhalen</strong><p>Alleen de woorden die je zelf hebt gekozen.</p></div><ArrowRight /></button>
       </section>
 
       <section className="cp-home-honesty">
         <Volume2 />
-        <div><strong>Stap voor stap oefenen</strong><p>Open een bouwgroep, kies een leesstap en tik op Start les. Met Luister hoor je de gekoppelde opname.</p></div>
+        <div><strong>Luister nog een keer</strong><p>Tik op het woord, de foto of op Luister.</p></div>
       </section>
     </div>
   );
@@ -126,14 +127,14 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
   const visibleWords = allPackageWords.filter((word) => filter === 'all' || filter === word.packageId || (filter === 'saved' && savedWordIds.includes(word.id)));
   return (
     <div className="learner-page word-library-page">
-      <button className="text-back" onClick={onBack}><ArrowLeft />Terug naar home</button>
-      <header className="content-page-heading"><div><span className="eyebrow">Woorden</span><h1>De woorden van Klink</h1><p>Elk woord staat bij zijn eerste leesmoment. Verschillende betekenissen hebben een eigen woordkaart.</p></div><div className="content-count"><strong>{allPackageWords.length}</strong><span>woordkaarten</span><small>volgens de Taalroute-indeling</small></div></header>
+      <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
+      <header className="content-page-heading"><div><span className="eyebrow">Woorden</span><h1>De woorden van Klink</h1><p>Tik op een woord om te luisteren. Bewaar een woord om het nog eens te oefenen.</p></div><div className="content-count"><strong>{allPackageWords.length}</strong><span>woorden</span></div></header>
       <div className="word-filters" aria-label="Filter woorden">
         <button className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>Alles</button>
         {contentPackages.map((pack) => <button key={pack.id} className={filter === pack.id ? 'active' : ''} onClick={() => setFilter(pack.id)}>{pack.title}</button>)}
         <button className={filter === 'saved' ? 'active' : ''} onClick={() => setFilter('saved')}><Bookmark />Bewaard ({savedWordIds.length})</button>
       </div>
-      {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op het vlaggetje. Dan verschijnt het hier en bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const key = word.id; const saved = savedWordIds.includes(key); const audioLabel = word.audioStatus === 'rejected' ? `De opname van ${word.word} wordt vervangen` : word.audio ? `Luister naar ${word.word}` : `Audio van ${word.word} is nog niet gekoppeld`; return <article key={key}>{word.image ? <Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<div><small>{getPackage(word.packageId).title}</small><strong>{word.word}</strong><span>{word.audioStatus === 'rejected' ? 'opname wordt vervangen' : word.meaning ?? word.segmentation.replaceAll('|', ' · ')}</span></div><button disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))} aria-label={audioLabel} title={audioLabel}><Volume2 /></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(key)} aria-label={`${word.word} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}</button></article>; })}</section>}
+      {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong><span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
     </div>
   );
 }
@@ -142,9 +143,9 @@ function ReviewQueue({ savedWordIds, onWords, onBack, onToast }: { savedWordIds:
   const items = allPackageWords.filter((word) => savedWordIds.includes(word.id));
   return (
     <div className="learner-page review-page">
-      <button className="text-back" onClick={onBack}><ArrowLeft />Terug naar home</button>
-      <header className="content-page-heading"><div><span className="eyebrow">Herhalen</span><h1>Jouw bewaarde woorden</h1><p>Geen verzonnen planning of deadline: alleen jouw eigen selectie.</p></div><div className="content-count"><strong>{items.length}</strong><span>bewaard</span><small>door jou gekozen</small></div></header>
-      {items.length === 0 ? <section className="honest-empty"><RefreshCw /><h2>Nog niets om te herhalen</h2><p>Bewaar eerst één of meer woorden. Ze verschijnen daarna direct op deze plek.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section> : <section className="review-word-list"><header><div><span className="eyebrow">Jouw selectie</span><h2>Bekijk en beluister elk woord opnieuw</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{getPackage(word.packageId).title}</small><strong>{word.word}</strong></span><Volume2 /></button>)}</div></section>}
+      <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
+      <header className="content-page-heading"><div><span className="eyebrow">Herhalen</span><h1>Jouw bewaarde woorden</h1><p>Deze woorden zijn bewaard op dit apparaat. Tik op een woord en luister.</p></div><div className="content-count"><strong>{items.length}</strong><span>bewaard</span></div></header>
+      {items.length === 0 ? <section className="honest-empty"><RefreshCw /><h2>Nog niets om te herhalen</h2><p>Bewaar eerst één of meer woorden. Ze verschijnen daarna direct op deze plek.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section> : <section className="review-word-list"><header><div><span className="eyebrow">Jouw selectie</span><h2>Bekijk en beluister elk woord opnieuw</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{getPackage(word.packageId).title}</small><strong>{wordLabel(word)}</strong><small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
     </div>
   );
 }

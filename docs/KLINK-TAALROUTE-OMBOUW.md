@@ -2,7 +2,7 @@
 
 ## Correctie van de eerdere ombouw
 
-De bestaande LearnerApp, TeacherApp, PackagePlayer en PackageExerciseBrowser zijn opnieuw de actieve app. De aparte CurriculumApp en de bijbehorende stylesheet zijn verwijderd; de eerdere werkversie is herstelbaar via commit 2721eff. De oorspronkelijke startpagina, navigatie, lespagina, oefenwerkruimte, woordkaarten en docentomgeving blijven het uitgangspunt. De enige wijzigingen aan de bestaande globale stylesheet zijn twee mobiele kolomlabels: Bouwgroepen en Leesroutes in plaats van de oude pakketnamen.
+De bestaande LearnerApp, TeacherApp, PackagePlayer en PackageExerciseBrowser zijn opnieuw de actieve app. De aparte CurriculumApp en de bijbehorende stylesheet zijn verwijderd; de eerdere werkversie is herstelbaar via commit 2721eff. De oorspronkelijke startpagina, navigatie, lespagina, oefenwerkruimte, woordkaarten en docentomgeving blijven het uitgangspunt. De UI-review van 16 oktober verbetert binnen die compositie de leesbaarheid, tikvlakken, feedback en labels; zij introduceert geen nieuw hoofdmenu.
 
 ## Eén inhoudelijke basis
 
@@ -22,7 +22,7 @@ De koppeling levert na het fotoherstel 4.322 oefeninstanties in negen bestaande 
 
 Iedere begeleide route gebruikt expliciete oefen-ID's. De oude zoekmatch op losse woorden en de beperking tot één opdracht per familie bepalen de nieuwe route niet meer. Eerst worden de woorden getoond; daarna volgen woordvergelijking, luisteren waar audio bestaat en woordbouw. Afleiders zijn reeds getoonde woorden uit dezelfde leesstap; gelijke schrijfwijzen met verschillende betekenissen worden niet tegenover elkaar gezet. De eerste zeer kleine routes blijven bewust korter dan acht opdrachten, zodat er geen extra woorden of opdrachten worden toegevoegd alleen om een aantal te halen.
 
-Andere oefenvormen zijn in de bestaande oefenbank te openen. Alle achttien renderers blijven in de code beschikbaar; niet alle achttien zijn al aan nieuwe inhoud gekoppeld. Oude teksten, gesprekken, zinsopdrachten en contextscènes zijn bewaard in de bestaande broncatalogus, maar worden niet zonder inhoudelijke herindeling als nieuwe Taalroute-leerstof aangeboden. De tabs daarvoor blijven bestaan en tonen de actuele nulstand.
+Andere oefenvormen zijn in de bestaande oefenbank te openen. Alle achttien renderers blijven in de code beschikbaar; niet alle achttien zijn al aan nieuwe inhoud gekoppeld. Oude teksten, gesprekken, zinsopdrachten en contextscènes zijn bewaard in de bestaande broncatalogus, maar worden niet zonder inhoudelijke herindeling als nieuwe Taalroute-leerstof aangeboden. Lege tabs voor teksten en gesprekken worden niet aan de cursist getoond.
 
 De bestaande bediening blijft behouden. Wel hersteld: een begeleide route kan echt worden afgerond; Verder blijft na een fout geblokkeerd. Bij woordbouw tellen gelijk gespelde herhaalde tegels als hetzelfde antwoord, ongeacht hun interne ID. Bewaarde woorden gebruiken nu de betekenis-ID en verschijnen ook bij Herhalen. Oude voortgang wordt niet gemigreerd of verwijderd. Een handmatig gekozen herhaalroute veronderstelt dat de docent/cursist de woorden al heeft aangeboden; de app bewijst die voorwaarde niet.
 
@@ -37,6 +37,8 @@ Het hoofdmenu blijft Verder, Lessen, Woorden en Herhalen. Nieuwe leesstappen ver
 De enige productiebranch blijft 26buckets/taalroute-klink:main. De werkbranch is codex/klink-taalroute-20261016, afgeleid van c221eb104fe64a17de9e51a59ddc5667ea805518. De live-Worker-versie efddd274-4f66-4d5b-9bfb-c21e87acc89d is opnieuw rechtstreeks in Cloudflare gecontroleerd. De browser-appcode is gelijk na scopebewuste normalisatie van minifiernamen; 41 gedownloade servermodules komen bytegelijk overeen met de opgebouwde basis, inclusief de server-gerenderde app en beide API-routebundels. Zeventien runtime-/manifestmodules verschillen nog. Een ontbrekende broncommit-tag is dus niet vervangen door een aanname: de volledige live-bronkoppeling blijft een open publicatievoorwaarde. Geen publicatie of wijziging aan de openbare app uitgevoerd.
 
 ## Lokale controles
+
+De vervolgcontrole staat in UI-REVIEW-20261016.md. De app verstuurt geen antwoorden meer naar de gedeelde demo-opslag. De twee oude demo-eindpunten antwoorden met 410, zonder bestaande opgeslagen gegevens te verwijderen. Bewaarde woorden blijven lokaal op het apparaat beschikbaar; de oefencode is geen persoonlijke beveiligde accounttoegang.
 
 - npm run test:curriculum: 14 controles van de bevroren gegevens, routes, bestaande spelercontracten, afleiders, plaatsing, betekenisonderscheid en mediapaden.
 - npm run test:curriculum:browser: alle onderdelen in de bestaande lessenpagina, een volledige begeleide route met luisteren en foutherstel, alle negen gekoppelde families, woorden bewaren/herhalen, docenttotalen en desktop/tablet/telefoon.

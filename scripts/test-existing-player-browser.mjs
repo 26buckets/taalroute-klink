@@ -36,7 +36,9 @@ try {
   const exercises = exercisesForLesson(packs[0], lesson);
   for (const exercise of exercises) {
     assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
-    assert(await page.locator('.cp-exercise-feedback button').isDisabled());
+    assert.equal(await page.locator('.cp-exercise-feedback button').isDisabled(), exercise.mode !== 'model');
+    assert.equal(await page.getByRole('button', { name: 'Volgende oefening', exact: true }).count(), 0);
+    assert.equal(await page.locator('.cp-exercise-feedback output').getAttribute('aria-live'), 'polite');
     if (exercise.mode === 'model') {
       if (exercise.prompt.audio) {
         await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
@@ -45,19 +47,17 @@ try {
       if (exercise.prompt.image) {
         await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
       }
-      await page.getByRole('button', { name: 'Ik heb gekeken', exact: true }).click();
+      assert.equal(await page.getByRole('button', { name: 'Ik heb gekeken', exact: true }).count(), 0);
     } else if (exercise.componentId === 'ALF-CMP-002') {
       if (exercise.mode === 'heard-word') await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
       const answer = exercise.answer.correctOptionIds[0];
       const wrong = exercise.options.find(option => option.id !== answer);
       const options = await page.locator('.cp-choice-grid button').allTextContents();
       await page.locator('.cp-choice-grid button').filter({ hasText: new RegExp(`^${wrong.label}$`) }).click();
-      await page.getByRole('button', { name: 'Controleer', exact: true }).click();
       assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Probeer opnieuw'));
       assert(await page.locator('.cp-exercise-feedback button').isDisabled());
       assert.deepEqual(await page.locator('.cp-choice-grid button').allTextContents(), options);
       await page.locator('.cp-choice-grid button').filter({ hasText: new RegExp(`^${exercise.options.find(option => option.id === answer).label}$`) }).click();
-      await page.getByRole('button', { name: 'Controleer', exact: true }).click();
     } else if (exercise.componentId === 'ALF-CMP-005') {
       await page.locator('.cp-tile-bank button').first().click();
       await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
@@ -65,9 +65,13 @@ try {
         const tile = exercise.tiles.find(item => item.id === id);
         await page.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${tile.token}$`) }).first().click();
       }
-      await page.getByRole('button', { name: 'Controleer', exact: true }).click();
+      assert(!(await page.locator('.cp-exercise-feedback button').isDisabled()));
+      await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
+      assert(await page.locator('.cp-exercise-feedback button').isDisabled());
+      const last = exercise.tiles.find(item => item.id === exercise.answer.targetTileIds.at(-1));
+      await page.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${last.token}$`) }).first().click();
     } else throw Error(`Untested guided mode: ${exercise.mode}`);
-    assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Goed'));
+    if (exercise.mode !== 'model') assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Goed'));
     await page.locator('.cp-exercise-feedback button').click();
   }
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
@@ -82,10 +86,38 @@ try {
   pass('All nine linked families render in the original free-practice browser');
   await page.getByRole('button', { name: 'Woorden', exact: true }).first().click();
   assert.equal(await page.locator('.cp-global-word-grid article').count(), 338);
+  for (const meaning of ['pak (kleding)', 'pak (verpakking)']) {
+    assert.equal(await page.locator('.cp-global-word-grid strong').filter({ hasText: new RegExp(`^${meaning.replace(/[()]/g, '\\$&')}$`) }).count(), 1);
+    await page.getByRole('button', { name: `${meaning} bewaren`, exact: true }).click();
+  }
+  await page.getByRole('button', { name: 'sap bewaren', exact: true }).click();
   await page.getByRole('button', { name: 'mat bewaren', exact: true }).click();
   await page.getByRole('button', { name: 'Herhalen', exact: true }).click();
   assert((await page.locator('.review-word-list').innerText()).includes('mat'));
+  const noAudio = page.locator('.review-word-list button').filter({ has: page.locator('strong', { hasText: /^sap$/ }) });
+  assert(await noAudio.isDisabled());
+  assert((await noAudio.innerText()).includes('Lees samen met je docent'));
+  assert.equal(await noAudio.locator('svg').count(), 0);
+  assert((await page.locator('.review-word-list').innerText()).includes('pak (verpakking)'));
+  assert((await page.locator('.review-word-list').innerText()).includes('pak (kleding)'));
   pass('The existing word bank and saved-word review share the new stable meaning IDs');
+  await library();
+  await page.locator('.cp-package-grid > button').first().click();
+  for (const name of ['Overzicht', 'Woorden', 'Lessen', 'Oefeningen', 'Beeld en audio']) {
+    await page.locator('.cp-tabs').getByRole('button', { name, exact: true }).click();
+    assert(!/CP00[12]|ALF-CMP|Beeldbinding|assetId|contractVersion|renderer|scope|publicatiestatus|1 oefeningen|1 spellen|zichtbare woorden/i.test(await page.locator('.cp-content').innerText()));
+  }
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Woorden', exact: true }).click();
+  for (const width of [1366, 390, 320]) {
+    await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
+    await screenshot(`woorden-na-eindreview-${width}`);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    const save = page.locator('.cp-save-button').first();
+    assert((await save.innerText()).includes('Bewaar'));
+    const box = await save.boundingBox();
+    assert(box.width >= 48 && box.height >= 48);
+  }
+  pass('Learner tabs have no known system labels; meaning and missing-audio help are explicit');
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
     await home();

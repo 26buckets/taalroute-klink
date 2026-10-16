@@ -14,7 +14,6 @@ import {
   CircleAlert,
   FileText,
   Headphones,
-  Images,
   Mic,
   Pause,
   PencilLine,
@@ -25,6 +24,7 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
+import { stopMedia } from '@/components/product/shared';
 
 type ResultState = 'idle' | 'right' | 'wrong';
 type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };
@@ -37,7 +37,6 @@ const normalize = (value: string) => value.trim().toLocaleLowerCase('nl-NL').rep
 const asArray = <T,>(value: unknown) => (Array.isArray(value) ? value as T[] : []);
 const asRecord = (value: unknown) => value && typeof value === 'object' ? value as Record<string, unknown> : {};
 const asString = (value: unknown) => typeof value === 'string' || typeof value === 'number' ? `${value}` : '';
-const readClock = () => Date.now();
 
 function exerciseImage(exercise: PackageExercise) {
   if (exercise.prompt?.image) return exercise.prompt.image;
@@ -85,8 +84,8 @@ export function PackageExerciseBrowser({
   exercises = pack.exercises,
   guided = false,
   eyebrow = 'Oefenen',
-  title = `Probeer de oefeningen uit ${pack.id}`,
-  description = 'Kies links een soort opdracht. Je kunt luisteren, antwoorden controleren en daarna doorgaan.',
+  title = 'Kies een oefening',
+  description = 'Kijk, luister en oefen.',
   onComplete,
 }: {
   pack: PackageDefinition;
@@ -106,17 +105,20 @@ export function PackageExerciseBrowser({
   const [recordIndex, setRecordIndex] = useState(() => guided ? 0 : representativeIndex(exercises, initialFamilyId));
   const [completed, setCompleted] = useState(false);
   const [result, setResult] = useState<ResultState>('idle');
-  const [message, setMessage] = useState('Maak de opdracht. Je mag zo vaak proberen als nodig is.');
-  const startedAt = useRef(0);
+  const [message, setMessage] = useState('Neem rustig de tijd.');
+  const taskHeading = useRef<HTMLHeadingElement>(null);
   const records = exercises.filter((exercise) => exercise.componentId === familyId);
   const exercise = records[Math.min(recordIndex, Math.max(0, records.length - 1))] ?? exercises[0];
   const guidedIndex = guided ? exercises.findIndex((item) => item.exerciseId === exercise?.exerciseId) : -1;
 
   useEffect(() => {
-    startedAt.current = readClock();
-  }, []);
+    stopMedia();
+    taskHeading.current?.focus({ preventScroll: true });
+    return stopMedia;
+  }, [exercise?.exerciseId]);
 
   function chooseFamily(nextFamilyId: string) {
+    if (guided) return;
     setFamilyId(nextFamilyId);
     setRecordIndex(representativeIndex(exercises, nextFamilyId));
     resetResult();
@@ -143,27 +145,22 @@ export function PackageExerciseBrowser({
 
   function resetResult() {
     setResult('idle');
-    setMessage('Maak de opdracht. Je mag zo vaak proberen als nodig is.');
-    startedAt.current = readClock();
+    setMessage('Neem rustig de tijd.');
   }
 
-  function finish(answer: string, correct: boolean, feedback?: string) {
+  function finish(_answer: string, correct: boolean, feedback?: string) {
     setResult(correct ? 'right' : 'wrong');
     setMessage(feedback ?? (correct
-      ? 'Goed. Deze opdracht is afgerond.'
-      : 'Nog niet. Kijk naar het verschil en probeer opnieuw.'));
-    void fetch('/api/attempts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        exerciseId: exercise.exerciseId,
-        skillKey: exercise.componentId,
-        answer,
-        isCorrect: correct,
-        helpCount: correct ? 0 : 1,
-        responseMs: Math.max(0, readClock() - startedAt.current),
-      }),
-    }).catch(() => undefined);
+      ? 'Ga verder als je klaar bent.'
+      : exercise.mode.startsWith('heard') ? 'Luister nog een keer. Kies dan opnieuw.' : 'Kijk nog een keer. Probeer opnieuw.'));
+  }
+
+  function next() {
+    if (guided && exercise.mode !== 'model' && result !== 'right') return;
+    if (guided) {
+      if (guidedIndex >= exercises.length - 1) { stopMedia(); setCompleted(true); }
+      else openGuidedAt(guidedIndex + 1);
+    } else openAt((recordIndex + 1) % records.length);
   }
 
   if (!exercise) return null;
@@ -182,26 +179,25 @@ export function PackageExerciseBrowser({
       </header>
 
       <div className="cp-exercise-workspace">
-        <aside aria-label={guided ? 'Stappen van de les' : 'Componentfamilies'}>
+        <aside aria-label={guided ? 'Stappen van de les' : 'Soort oefening'}>
           {exerciseTypes.map((type, index) => (
-            <button key={type.id} className={familyId === type.id ? 'active' : ''} onClick={() => chooseFamily(type.id)}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <span><strong>{type.label}</strong><small>{guided ? `Stap ${index + 1}` : `${type.count} oefeningen`}</small></span>
+            <button key={type.id} className={familyId === type.id ? 'active' : ''} disabled={guided} aria-current={familyId === type.id ? 'step' : undefined} onClick={() => chooseFamily(type.id)}>
+              <span aria-hidden="true">{guided ? familyId === type.id ? '•' : '–' : String(index + 1).padStart(2, '0')}</span>
+                <span><strong>{type.label}</strong>{!guided && <small>{type.count} {type.count === 1 ? 'oefening' : 'oefeningen'}</small>}</span>
             </button>
           ))}
         </aside>
 
-        <main>
+        <div className="cp-exercise-main">
           <header className="cp-exercise-record-head">
             <div>
               <small>{guided ? `Stap ${guidedIndex + 1} van ${exercises.length}` : 'Vrij oefenen'}</small>
-              <strong>{exercise.title || family?.label || exercise.componentId}</strong>
-              <span>{exercise.prompt?.text || 'Maak de opdracht.'}</span>
+              <h3 ref={taskHeading} tabIndex={-1}>{exercise.title || family?.label || 'Oefenen'}</h3>
             </div>
             <nav aria-label="Bladeren door oefeningen">
               <button onClick={() => guided ? openGuidedAt(guidedIndex - 1) : openAt(recordIndex - 1)} disabled={guided ? guidedIndex <= 0 : recordIndex === 0} aria-label="Vorige oefening"><ArrowLeft /></button>
               <b>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
-              <button onClick={() => guided ? openGuidedAt(guidedIndex + 1) : openAt(recordIndex + 1)} disabled={guided ? guidedIndex >= exercises.length - 1 : recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>
+              {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
             </nav>
           </header>
 
@@ -213,6 +209,8 @@ export function PackageExerciseBrowser({
               onAudio={onAudio}
               onFinish={finish}
               onOpenExercise={openExercise}
+              guided={guided}
+              onReset={resetResult}
             />
           </div>
 
@@ -220,10 +218,10 @@ export function PackageExerciseBrowser({
             {result === 'idle' && <Shapes />}
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
-            <span><strong>{result === 'idle' ? 'Aan de slag' : result === 'right' ? 'Goed' : 'Probeer opnieuw'}</strong><small>{message}</small></span>
-            <button className="secondary-button" disabled={guided && result !== 'right'} onClick={() => guided ? guidedIndex >= exercises.length - 1 ? setCompleted(true) : openGuidedAt(guidedIndex + 1) : openAt((recordIndex + 1) % records.length)}>{guided && guidedIndex >= exercises.length - 1 ? 'Les afronden' : 'Volgende'}<ArrowRight /></button>
+            <output aria-live="polite" aria-atomic="true"><strong>{result === 'idle' ? 'Aan de slag' : result === 'right' ? ['ALF-CMP-001', 'ALF-CMP-009', 'ALF-CMP-012', 'ALF-CMP-016'].includes(exercise.componentId) ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{message}</small></output>
+            <button className="secondary-button" disabled={guided && exercise.mode !== 'model' && result !== 'right'} onClick={next}>{guided && guidedIndex >= exercises.length - 1 ? 'Les afronden' : 'Volgende'}<ArrowRight /></button>
           </footer>
-        </main>
+        </div>
       </div>
     </section>
   );
@@ -235,27 +233,31 @@ function ExerciseSurface({
   onAudio,
   onFinish,
   onOpenExercise,
+  guided,
+  onReset,
 }: {
   exercise: PackageExercise;
   pack: PackageDefinition;
-  onAudio: () => void;
+  onAudio: (source?: string) => void;
   onFinish: (answer: string, correct: boolean, feedback?: string) => void;
   onOpenExercise: (exerciseId: string) => void;
+  guided: boolean;
+  onReset: () => void;
 }) {
   switch (exercise.componentId) {
-    case 'ALF-CMP-001': return <ModelSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
+    case 'ALF-CMP-001': return <ModelSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} />;
     case 'ALF-CMP-002': return <ChoiceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-003': return <ContrastSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-004': return <MatchingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
+    case 'ALF-CMP-003': return <ContrastSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-004': return <MatchingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
-    case 'ALF-CMP-011': return <FormSurface exercise={exercise} onFinish={onFinish} />;
-    case 'ALF-CMP-012': return <TraceSurface exercise={exercise} onFinish={onFinish} />;
-    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onFinish={onFinish} />;
+    case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-011': return <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-012': return <TraceSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-014': return <BoardSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-015': return <GameSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-016': return <CardsSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
@@ -269,20 +271,22 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   const source = findAudioSource(exercise);
   return (
     <div className="cp-task-prompt">
-      {source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /></button> : <span><FileText /></span>}
-      <div><small>Opdracht</small><h3>{exercise.prompt?.text || exercise.title || 'Maak de opdracht.'}</h3>{typeof exercise.exampleWord === 'string' && <strong>{exercise.exampleWord}</strong>}{children}</div>
+      {source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /><span>Luister</span></button> : <span><FileText /></span>}
+      <div>{typeof exercise.exampleWord === 'string' && <strong>{exercise.exampleWord}</strong>}{children}</div>
     </div>
   );
 }
 
 function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht' }: { image?: ExerciseImage; alt?: string }) {
-  if (!image?.src) return <span className="cp-missing-exercise-image"><Images /><small>Beeldbinding nog open</small></span>;
+  if (!image?.src) return null;
   return <Image src={image.src} alt={image.altText || alt} width={760} height={760} />;
 }
 
-function ModelSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
   const text = asRecord(exercise.text);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-model-content"><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}</strong></div><button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button></section>;
+  const source = findAudioSource(exercise);
+  const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}</strong></>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
 function ChoiceSurface({ exercise, onAudio, onFinish, nested = false }: SurfaceProps & { nested?: boolean }) {
@@ -290,42 +294,47 @@ function ChoiceSurface({ exercise, onAudio, onFinish, nested = false }: SurfaceP
   const options = asArray<ChoiceOption>(exercise.options);
   const answer = asRecord(exercise.answer);
   const correct = asArray<string>(answer.correctOptionIds);
-  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid">{options.map((option) => <button key={option.id} className={selected === option.id ? 'selected' : ''} onClick={() => setSelected(option.id)}>{option.image ? <ExerciseImageView image={option.image} /> : <strong>{option.label ?? option.grapheme ?? option.id}</strong>}</button>)}</div><button className="primary-button" disabled={!selected} onClick={() => onFinish(selected, correct.includes(selected))}>Controleer<Check /></button></>;
+  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid">{options.map((option) => <button key={option.id} className={selected === option.id ? 'selected' : ''} aria-pressed={selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}</button>)}</div></>;
   return nested ? <div className="cp-linked-choice">{content}</div> : <section className="cp-task-card">{content}</section>;
 }
 
-function ContrastSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function ContrastSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps & { onReset: () => void }) {
   const [selected, setSelected] = useState('');
   const choices = asArray<ChoiceOption>(exercise.choices);
   const answer = asRecord(exercise.answer);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-large-options">{choices.map((choice) => <button key={choice.id} className={selected === choice.id ? 'selected' : ''} onClick={() => setSelected(choice.id)}>{choice.grapheme ?? choice.label ?? choice.id}</button>)}</div><button className="primary-button" disabled={!selected} onClick={() => onFinish(selected, selected === answer.correctSoundId)}>Controleer<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-large-options">{choices.map((choice) => <button key={choice.id} className={selected === choice.id ? 'selected' : ''} aria-pressed={selected === choice.id} onClick={() => { setSelected(choice.id); onReset(); }}>{choice.grapheme ?? choice.label ?? choice.id}</button>)}</div><button className="primary-button" disabled={!selected} onClick={() => onFinish(selected, selected === answer.correctSoundId)}>Controleer<Check /></button></section>;
 }
 
-function MatchingSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function MatchingSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps & { onReset: () => void }) {
   const sources = asArray<ChoiceOption>(exercise.sources);
   const targets = asArray<ChoiceOption>(exercise.targets);
   const mapping = asRecord(asRecord(exercise.answer).mapping);
   const [activeSource, setActiveSource] = useState('');
   const [pairs, setPairs] = useState<Record<string, string>>({});
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-match-board"><div>{sources.map((source) => <button key={source.id} className={activeSource === source.id ? 'selected' : ''} onClick={() => { setActiveSource(source.id); const audio = findAudioSource(source.audio); if (audio) onAudio(audio); }}>{source.audio ? <Headphones /> : source.label ?? source.id}<small>{pairs[source.id] ? 'gekoppeld' : 'kies eerst'}</small></button>)}</div><div>{targets.map((target) => <button key={target.id} onClick={() => { if (!activeSource) return; setPairs({ ...pairs, [activeSource]: target.id }); setActiveSource(''); }}>{target.image ? <ExerciseImageView image={target.image} /> : <strong>{target.label ?? target.id}</strong>}</button>)}</div></div><button className="primary-button" disabled={Object.keys(pairs).length !== sources.length} onClick={() => onFinish(JSON.stringify(pairs), sources.every((source) => mapping[source.id] === pairs[source.id]))}>Controleer<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-match-board"><div>{sources.map((source) => <button key={source.id} className={activeSource === source.id ? 'selected' : ''} aria-pressed={activeSource === source.id} onClick={() => { setActiveSource(source.id); const audio = findAudioSource(source.audio); if (audio) onAudio(audio); }}>{source.audio ? <Headphones /> : source.label ?? source.id}<small>{pairs[source.id] ? 'gekoppeld' : 'kies eerst'}</small></button>)}</div><div>{targets.map((target) => <button key={target.id} onClick={() => { if (!activeSource) return; setPairs({ ...pairs, [activeSource]: target.id }); setActiveSource(''); onReset(); }}>{target.image ? <ExerciseImageView image={target.image} /> : <strong>{target.label ?? target.id}</strong>}</button>)}</div></div><button className="primary-button" disabled={Object.keys(pairs).length !== sources.length} onClick={() => onFinish(JSON.stringify(pairs), sources.every((source) => mapping[source.id] === pairs[source.id]))}>Controleer<Check /></button></section>;
 }
 
-function BuildSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function BuildSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps & { onReset: () => void }) {
   const tiles = asArray<Tile>(exercise.tiles);
   const target = asArray<string>(asRecord(exercise.answer).targetTileIds);
   const slots = asArray<unknown>(exercise.slots);
   const [chosen, setChosen] = useState<string[]>([]);
   const token = (id: string) => tiles.find((tile) => tile.id === id)?.token ?? '';
   const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<div className="cp-build-slots">{Array.from({ length: slots.length }).map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : ''}</span>)}</div><div className="cp-tile-bank">{tiles.map((tile) => <button key={tile.id} disabled={chosen.includes(tile.id)} onClick={() => setChosen([...chosen, tile.id])}>{tile.token}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" onClick={() => setChosen(chosen.slice(0, -1))} disabled={!chosen.length}><RotateCcw />Eén terug</button><button className="primary-button" disabled={chosen.length !== target.length} onClick={() => onFinish(chosen.map(token).join(' '), chosen.map(token).join('') === target.map(token).join(''))}>Controleer<Check /></button></div></section>;
+  function choose(next: string[]) {
+    setChosen(next);
+    onReset();
+    if (next.length === target.length) onFinish(next.map(token).join(' '), next.map(token).join('') === target.map(token).join(''));
+  }
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<div className="cp-build-slots">{Array.from({ length: slots.length }).map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : ''}</span>)}</div><div className="cp-tile-bank">{tiles.map((tile) => <button key={tile.id} disabled={chosen.includes(tile.id)} onClick={() => choose([...chosen, tile.id])}>{tile.token}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" onClick={() => choose(chosen.slice(0, -1))} disabled={!chosen.length}><RotateCcw />Eén terug</button></div></section>;
 }
 
-function InputSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function InputSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps & { onReset: () => void }) {
   const fields = asArray<TextField>(exercise.fields);
   const [value, setValue] = useState('');
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
   const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<label className="cp-text-entry"><span>Jouw antwoord</span><input value={value} onChange={(event) => setValue(event.target.value)} autoComplete="off" /></label><button className="primary-button" disabled={!value.trim()} onClick={() => onFinish(value, accepted.some((answer) => normalize(answer) === normalize(value)))}>Controleer<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<label className="cp-text-entry"><span>Jouw antwoord</span><input value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" /></label><button className="primary-button" disabled={!value.trim()} onClick={() => onFinish(value, accepted.some((answer) => normalize(answer) === normalize(value)))}>Controleer<Check /></button></section>;
 }
 
 function ReadingSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
@@ -337,7 +346,8 @@ function ReadingSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
 function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {
   const linkedId = asString(asRecord(exercise.responseComponent).exerciseId);
   const linked = pack.exercises.find((item) => item.exerciseId === linkedId);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{!findAudioSource(exercise) && <p className="cp-audio-lock"><CircleAlert />Dit luisterfragment is nog niet gekoppeld. De antwoordvraag is wel te proberen.</p>}{linked ? <ChoiceSurface exercise={linked} onAudio={onAudio} onFinish={onFinish} nested /> : <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Verder<ArrowRight /></button>}</section>;
+  if (!linked || !findAudioSource(exercise)) return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><p className="cp-audio-lock"><CircleAlert />Vraag je docent om hulp.</p></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><ChoiceSurface exercise={linked} onAudio={onAudio} onFinish={onFinish} nested /></section>;
 }
 
 function SpeakSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
@@ -352,24 +362,35 @@ function Recorder({ onFinish }: { onFinish: SurfaceProps['onFinish'] }) {
   const recorder = useRef<MediaRecorder | null>(null);
   const stream = useRef<MediaStream | null>(null);
   const chunks = useRef<Blob[]>([]);
+  const mounted = useRef(true);
+  const [requesting, setRequesting] = useState(false);
 
-  useEffect(() => () => {
-    if (recorder.current?.state === 'recording') recorder.current.stop();
-    stream.current?.getTracks().forEach((track) => track.stop());
-    if (audioUrl) URL.revokeObjectURL(audioUrl);
-  }, [audioUrl]);
+  useEffect(() => {
+    mounted.current = true;
+    return () => {
+      mounted.current = false;
+      if (recorder.current?.state === 'recording') recorder.current.stop();
+      stream.current?.getTracks().forEach((track) => track.stop());
+    };
+  }, []);
+  useEffect(() => () => { if (audioUrl) URL.revokeObjectURL(audioUrl); }, [audioUrl]);
 
   async function toggle() {
     if (recording) { recorder.current?.stop(); setRecording(false); return; }
+    if (requesting) return;
+    setRequesting(true);
     try {
       const nextStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      const nextRecorder = new MediaRecorder(nextStream);
+      if (!mounted.current) { nextStream.getTracks().forEach(track => track.stop()); return; }
       stream.current = nextStream;
+      const nextRecorder = new MediaRecorder(nextStream);
       chunks.current = [];
       nextRecorder.ondataavailable = (event) => chunks.current.push(event.data);
       nextRecorder.onstop = () => {
-        setAudioUrl(URL.createObjectURL(new Blob(chunks.current, { type: nextRecorder.mimeType })));
-        setMessage('Luister terug. Neem opnieuw op als je dat wilt.');
+        if (mounted.current) {
+          setAudioUrl(URL.createObjectURL(new Blob(chunks.current, { type: nextRecorder.mimeType })));
+          setMessage('Luister terug. Neem opnieuw op als je dat wilt.');
+        }
         nextStream.getTracks().forEach((track) => track.stop());
         stream.current = null;
       };
@@ -378,20 +399,24 @@ function Recorder({ onFinish }: { onFinish: SurfaceProps['onFinish'] }) {
       setRecording(true);
       setMessage('Spreek nu.');
     } catch {
-      setMessage('De microfoon is niet beschikbaar. Zeg de opdracht hardop en rond handmatig af.');
+      stream.current?.getTracks().forEach(track => track.stop());
+      stream.current = null;
+      if (mounted.current) setMessage('De microfoon werkt niet. Zeg het woord hardop. Tik daarna op Klaar.');
+    } finally {
+      if (mounted.current) setRequesting(false);
     }
   }
 
-  return <div className="cp-recorder"><p>{message}</p><button className={recording ? 'recording' : ''} onClick={toggle}>{recording ? <Pause /> : <Mic />}<span>{recording ? 'Stop' : 'Neem op'}</span></button>{audioUrl && <audio controls src={audioUrl} aria-label="Jouw opname" />}<button className="primary-button" onClick={() => onFinish(audioUrl ? 'opgenomen' : 'hardop geoefend', true)}>Klaar<Check /></button></div>;
+  return <div className="cp-recorder"><output aria-live="polite">{message}</output><button disabled={requesting} className={recording ? 'recording' : ''} onClick={toggle}>{recording ? <Pause /> : <Mic />}<span>{requesting ? 'Even wachten' : recording ? 'Stop' : 'Neem op'}</span></button>{audioUrl && <audio controls src={audioUrl} aria-label="Jouw opname" />}<button className="primary-button" disabled={recording || requesting} onClick={() => onFinish(audioUrl ? 'opgenomen' : 'hardop geoefend', true, 'Je hebt geoefend. Luister zelf of samen met je docent.')}>Klaar<Check /></button></div>;
 }
 
-function WritingSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function WritingSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps & { onReset: () => void }) {
   const [value, setValue] = useState('');
   const maxLength = Number(asRecord(exercise.textPolicy).maxLength ?? 1000);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><label className="cp-text-entry"><span>Schrijf hier</span><textarea value={value} onChange={(event) => setValue(event.target.value)} maxLength={maxLength} rows={6} /></label><button className="primary-button" disabled={!value.trim()} onClick={() => onFinish(value, true, 'Opgeslagen voor zelf- of docentcontrole.')}>Bewaar<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><label className="cp-text-entry"><span>Schrijf hier</span><textarea value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} maxLength={maxLength} rows={6} /></label><button className="primary-button" disabled={!value.trim()} onClick={() => onFinish(value, true, 'Opgeslagen voor zelf- of docentcontrole.')}>Bewaar<Check /></button></section>;
 }
 
-function FormSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'onFinish'>) {
+function FormSurface({ exercise, onFinish, onReset }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void }) {
   const fields = asArray<{ fieldId: string; label: string; type: string; required?: boolean; validation?: { pattern?: string; min?: number; max?: number }; options?: { value: string; label: string }[] }>(exercise.fields);
   const [values, setValues] = useState<Record<string, string>>({});
   function valid() {
@@ -404,20 +429,20 @@ function FormSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'on
       return true;
     });
   }
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-form-fields">{fields.map((field) => <label key={field.fieldId}><span>{field.label}</span>{field.type === 'select' ? <select value={values[field.fieldId] ?? ''} onChange={(event) => setValues({ ...values, [field.fieldId]: event.target.value })}><option value="">Kies</option>{field.options?.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select> : <input type={field.type === 'number' ? 'number' : 'text'} value={values[field.fieldId] ?? ''} onChange={(event) => setValues({ ...values, [field.fieldId]: event.target.value })} />}</label>)}</div><button className="primary-button" onClick={() => onFinish(JSON.stringify(values), valid())}>Controleer<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-form-fields">{fields.map((field) => <label key={field.fieldId}><span>{field.label}</span>{field.type === 'select' ? <select value={values[field.fieldId] ?? ''} onChange={(event) => { setValues({ ...values, [field.fieldId]: event.target.value }); onReset(); }}><option value="">Kies</option>{field.options?.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}</select> : <input type={field.type === 'number' ? 'number' : 'text'} value={values[field.fieldId] ?? ''} onChange={(event) => { setValues({ ...values, [field.fieldId]: event.target.value }); onReset(); }} />}</label>)}</div><button className="primary-button" onClick={() => onFinish(JSON.stringify(values), valid())}>Controleer<Check /></button></section>;
 }
 
-function TraceSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'onFinish'>) {
+function TraceSurface({ exercise, onFinish, onReset }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void }) {
   const [value, setValue] = useState('');
   const target = asString(exercise.target);
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>Schrijf dit woord op papier of typ het hieronder.</span></div><label className="cp-text-entry"><span>Typen is ook mogelijk</span><input value={value} onChange={(event) => setValue(event.target.value)} /></label><button className="primary-button" onClick={() => onFinish(value || 'op papier', !value || normalize(value) === normalize(target), 'Vergelijk jouw woord rustig met het model.')}>Ik heb geschreven<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>Schrijf dit woord op papier of typ het hieronder.</span></div><label className="cp-text-entry"><span>Typen is ook mogelijk</span><input value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} /></label><button className="primary-button" onClick={() => onFinish(value || 'op papier', !value || normalize(value) === normalize(target), 'Vergelijk jouw woord rustig met het model.')}>Ik heb geschreven<Check /></button></section>;
 }
 
-function SequenceSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'onFinish'>) {
+function SequenceSurface({ exercise, onFinish, onReset }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void }) {
   const items = asArray<ExerciseItem>(exercise.items);
   const target = asArray<string>(exercise.targetOrderIds);
   const [chosen, setChosen] = useState<string[]>([]);
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-sequence-result">{chosen.map((id, index) => <span key={id}><b>{index + 1}</b>{items.find((item) => item.itemId === id)?.text}</span>)}</div><div className="cp-sequence-options">{items.map((item) => <button key={item.itemId} disabled={chosen.includes(item.itemId)} onClick={() => setChosen([...chosen, item.itemId])}>{item.text}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" disabled={!chosen.length} onClick={() => setChosen(chosen.slice(0, -1))}><RotateCcw />Eén terug</button><button className="primary-button" disabled={chosen.length !== items.length} onClick={() => onFinish(chosen.join('|'), chosen.join('|') === target.join('|'))}>Controleer<Check /></button></div></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-sequence-result">{chosen.map((id, index) => <span key={id}><b>{index + 1}</b>{items.find((item) => item.itemId === id)?.text}</span>)}</div><div className="cp-sequence-options">{items.map((item) => <button key={item.itemId} disabled={chosen.includes(item.itemId)} onClick={() => { setChosen([...chosen, item.itemId]); onReset(); }}>{item.text}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" disabled={!chosen.length} onClick={() => { setChosen(chosen.slice(0, -1)); onReset(); }}><RotateCcw />Eén terug</button><button className="primary-button" disabled={chosen.length !== items.length} onClick={() => onFinish(chosen.join('|'), chosen.join('|') === target.join('|'))}>Controleer<Check /></button></div></section>;
 }
 
 function BoardSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {
@@ -500,6 +525,8 @@ function MemorySurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | '
   const items = asArray<ExerciseItem>(exercise.items);
   const [open, setOpen] = useState<string[]>([]);
   const [matched, setMatched] = useState<string[]>([]);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => { if (timer.current !== null) clearTimeout(timer.current); }, []);
   function choose(item: ExerciseItem) {
     if (open.length >= 2 || open.includes(item.itemId) || matched.includes(item.itemId)) return;
     const next = [...open, item.itemId];
@@ -507,7 +534,7 @@ function MemorySurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | '
     if (next.length === 2) {
       const first = items.find((candidate) => candidate.itemId === next[0]);
       const correct = first?.pairKey === item.pairKey;
-      window.setTimeout(() => {
+      timer.current = setTimeout(() => {
         if (correct) {
           const nextMatched = [...matched, ...next];
           setMatched(nextMatched);
@@ -526,7 +553,7 @@ function SortSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'on
   const assignments = asRecord(asRecord(exercise.rules).assignments);
   const [selected, setSelected] = useState('');
   const [placed, setPlaced] = useState<Record<string, string>>({});
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-sort-items">{items.map((item) => <button key={item.itemId} className={selected === item.itemId ? 'selected' : ''} disabled={Boolean(placed[item.itemId])} onClick={() => setSelected(item.itemId)}>{item.content?.text}</button>)}</div><div className="cp-sort-categories">{categories.map((category) => <button key={category.categoryId} onClick={() => { if (!selected) return; setPlaced({ ...placed, [selected]: category.categoryId }); setSelected(''); }}>{category.label}<small>{Object.values(placed).filter((value) => value === category.categoryId).length} woorden</small></button>)}</div><button className="primary-button" disabled={Object.keys(placed).length !== items.length} onClick={() => onFinish(JSON.stringify(placed), items.every((item) => assignments[item.itemId] === placed[item.itemId]))}>Controleer<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-sort-items">{items.map((item) => <button key={item.itemId} className={selected === item.itemId ? 'selected' : ''} aria-pressed={selected === item.itemId} disabled={Boolean(placed[item.itemId])} onClick={() => setSelected(item.itemId)}>{item.content?.text}</button>)}</div><div className="cp-sort-categories">{categories.map((category) => <button key={category.categoryId} onClick={() => { if (!selected) return; setPlaced({ ...placed, [selected]: category.categoryId }); setSelected(''); }}>{category.label}<small>{Object.values(placed).filter((value) => value === category.categoryId).length} woorden</small></button>)}</div><button className="primary-button" disabled={Object.keys(placed).length !== items.length} onClick={() => onFinish(JSON.stringify(placed), items.every((item) => assignments[item.itemId] === placed[item.itemId]))}>Controleer<Check /></button></section>;
 }
 
 function FindWordSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'onFinish'>) {
@@ -573,11 +600,11 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
 
 function RouteSurface({ exercise, onOpenExercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onOpenExercise: (exerciseId: string) => void }) {
   const tasks = asArray<{ exerciseId: string; componentId: string }>(exercise.tasks);
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-route-tasks">{tasks.map((task, index) => <button key={`${task.exerciseId}-${index}`} onClick={() => onOpenExercise(task.exerciseId)}><span>{index + 1}</span><strong>{task.exerciseId}</strong><small>{task.componentId}</small><ArrowRight /></button>)}</div><button className="secondary-button" onClick={() => onFinish('route bekeken', true)}>Route bekeken<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-route-tasks">{tasks.map((task, index) => <button key={`${task.exerciseId}-${index}`} onClick={() => onOpenExercise(task.exerciseId)}><strong>Oefening {index + 1}</strong><ArrowRight /></button>)}</div><button className="secondary-button" onClick={() => onFinish('route bekeken', true)}>Route bekeken<Check /></button></section>;
 }
 
-function FallbackSurface({ exercise, onFinish }: Pick<SurfaceProps, 'exercise' | 'onFinish'>) {
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><pre>{JSON.stringify(exercise, null, 2)}</pre><button className="primary-button" onClick={() => onFinish('bekeken', true)}>Klaar<Check /></button></section>;
+function FallbackSurface({ exercise }: Pick<SurfaceProps, 'exercise' | 'onFinish'>) {
+  return <section className="cp-task-card"><Prompt exercise={exercise} /><p>Deze oefening werkt nu niet. Kies een andere oefening.</p></section>;
 }
 
 function ContentView({ content }: { content?: CardContent }) {

@@ -983,11 +983,11 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-exercise-workspace > aside strong, .cp-exercise-workspace > aside small { display: block; }
 .cp-exercise-workspace > aside strong { font-size: 11px; font-weight: 500; line-height: 1.25; }
 .cp-exercise-workspace > aside small { margin-top: 2px; font-size: 8px; }
-.cp-exercise-workspace > main { min-width: 0; display: grid; grid-template-rows: auto minmax(0,1fr) auto; }
+.cp-exercise-workspace > .cp-exercise-main { min-width: 0; display: grid; grid-template-rows: auto minmax(0,1fr) auto; }
 .cp-exercise-record-head { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 17px; border-bottom: 1px solid var(--line); }
-.cp-exercise-record-head small, .cp-exercise-record-head strong, .cp-exercise-record-head span { display: block; }
+.cp-exercise-record-head small, .cp-exercise-record-head h3, .cp-exercise-record-head span { display: block; }
 .cp-exercise-record-head small { color: var(--muted); font-size: 8px; text-transform: uppercase; }
-.cp-exercise-record-head strong { margin-top: 3px; font-size: 16px; font-weight: 500; }
+.cp-exercise-record-head h3 { margin: 3px 0 0; font-size: 16px; font-weight: 500; }
 .cp-exercise-record-head span { margin-top: 3px; color: var(--muted); font-size: 11px; }
 .cp-exercise-record-head nav { display: flex; align-items: center; gap: 8px; }
 .cp-exercise-record-head nav button { width: 48px; height: 48px; display: grid; place-items: center; color: var(--primary); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
@@ -1080,9 +1080,9 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-exercise-feedback > svg { width: 36px; height: 36px; padding: 8px; color: var(--primary); background: var(--primary-soft); border-radius: 50%; }
 .cp-exercise-feedback.right > svg { color: var(--green); background: var(--green-soft); }
 .cp-exercise-feedback.wrong > svg { color: var(--red); background: var(--red-soft); }
-.cp-exercise-feedback span strong, .cp-exercise-feedback span small { display: block; }
-.cp-exercise-feedback span strong { font-size: 12px; font-weight: 500; }
-.cp-exercise-feedback span small { margin-top: 2px; color: var(--muted); font-size: 9px; }
+.cp-exercise-feedback output strong, .cp-exercise-feedback output small { display: block; }
+.cp-exercise-feedback output strong { font-size: 12px; font-weight: 500; }
+.cp-exercise-feedback output small { margin-top: 2px; color: var(--muted); font-size: 9px; }
 .cp-exercise-feedback > button { min-height: 48px; }
 
 /* Complete maker map: 18 renderers and 52 didactic variants */
@@ -1797,7 +1797,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   font-weight: 400;
 }
 
-.is-guided .cp-exercise-workspace > main {
+.is-guided .cp-exercise-workspace > .cp-exercise-main {
   min-height: 0;
   grid-template-rows: 62px minmax(0, 1fr) 68px;
 }
@@ -2078,7 +2078,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
     white-space: nowrap;
   }
 
-  .is-guided .cp-exercise-workspace > main {
+  .is-guided .cp-exercise-workspace > .cp-exercise-main {
     grid-template-rows: 52px minmax(0, 1fr) 64px;
   }
 
@@ -2089,7 +2089,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
     padding: 4px 8px;
   }
 
-  .is-guided .cp-exercise-record-head strong {
+  .is-guided .cp-exercise-record-head h3 {
     max-width: 145px;
     overflow: hidden;
     font-size: 13px;
@@ -2165,7 +2165,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
     padding: 6px;
   }
 
-  .is-guided .cp-exercise-feedback span small {
+  .is-guided .cp-exercise-feedback output small {
     display: none;
   }
 
@@ -2175,4 +2175,179 @@ h1, h2, h3, h4 { font-family: var(--heading); }
     min-height: 46px;
     padding: 0 10px;
   }
+}
+
+/* Learner controls keep the existing layout, with readable labels and touch targets. */
+.learner-app button { min-height: 48px; font-weight: 500; }
+.learner-app :is(h1, h2, h3, strong, b) { font-weight: 500; }
+.learner-app :is(.cp-home-actions p, .cp-home-honesty p, .cp-home-second p,
+  .cp-lesson-list p, .cp-word-chips span, .cp-lesson-list li,
+  .cp-exercise-workspace aside small, .cp-exercise-record-head small,
+  .cp-exercise-record-head nav b, .cp-preview-support, .cp-trace-model span) {
+  font-size: 14px;
+  line-height: 1.45;
+}
+.learner-app :is(.cp-home-facts small, .cp-home-second small, .cp-home-actions small,
+  .cp-lesson-list article > div > small, .cp-panel-count small,
+  .cp-package-stats small, .cp-package-copy em, .cp-global-word-grid small) {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.learner-app :is(.primary-button, .secondary-button, .accent-button, .text-back,
+  .cp-tabs button, .word-filters button, .cp-exercise-feedback strong) {
+  font-size: 16px;
+}
+.learner-app .cp-player-bar { grid-template-columns: 48px minmax(0, 1fr) auto; }
+.learner-app .cp-player-bar > button,
+.learner-app .cp-exercise-record-head nav button,
+.learner-app .cp-save-button,
+.learner-app .cp-audio-button {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.learner-app .cp-audio-button {
+  bottom: 8px;
+  width: 88px;
+  height: 56px;
+  border-radius: var(--radius);
+  padding: 5px;
+  font-size: 14px;
+}
+.learner-app .cp-word-copy { padding-right: 84px; }
+.learner-app .cp-save-button {
+  width: 72px;
+  height: 64px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  padding: 4px;
+}
+.learner-app .cp-panel-count { display: block; flex-shrink: 0; }
+.learner-app .cp-word-grid article:has(.cp-audio-button) .cp-word-copy { padding-right: 104px; min-height: 74px; }
+.learner-app .cp-package-word-listen {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  text-align: left;
+}
+.learner-app .cp-package-word-listen .cp-word-copy { padding-bottom: 4px; }
+.learner-app .cp-package-word-listen .cp-word-copy > span { font-size: 16px; }
+.learner-app .cp-listen-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 84px 10px 13px;
+  color: var(--primary);
+  font-size: 16px;
+}
+.learner-app .cp-listen-label svg { width: 20px; height: 20px; }
+.learner-app .cp-lesson-player > .text-back { min-width: 48px; }
+.learner-app .cp-task-prompt { grid-template-columns: auto minmax(0, 1fr); }
+.learner-app .cp-task-prompt > button {
+  width: auto;
+  min-width: 88px;
+  min-height: 56px;
+  height: auto;
+  padding: 6px 10px;
+  gap: 2px;
+  font-size: 16px;
+}
+.learner-app .cp-task-prompt > button span { line-height: 1.2; }
+.learner-app .cp-task-prompt > div > strong { display: block; font-size: 32px; line-height: 1.2; }
+.learner-app .cp-choice-grid > button,
+.learner-app .cp-memory-grid > button,
+.learner-app .cp-board-grid > button { min-height: 120px; }
+.learner-app button.cp-model-content {
+  width: 100%;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  text-align: center;
+}
+.learner-app .cp-global-word-grid article { grid-template-columns: minmax(0, 1fr) 64px; }
+.learner-app .cp-global-word-grid article > button {
+  width: 64px;
+  height: 56px;
+  padding: 5px;
+  border-radius: var(--radius);
+  font-size: 14px;
+}
+.learner-app .cp-global-word-grid article > .cp-word-listen {
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius);
+  text-align: left;
+}
+.learner-app .cp-word-listen > div { min-width: 0; overflow-wrap: anywhere; }
+.learner-app .cp-word-listen strong { font-size: 24px; }
+.learner-app .cp-word-listen div > span { display: flex; align-items: center; gap: 4px; font-size: 14px; line-height: 1.4; }
+.learner-app .cp-word-listen div > span svg { width: 18px; height: 18px; }
+.learner-app .cp-word-listen .word-initial { display: grid; place-items: center; font-size: 36px; }
+.learner-app .cp-global-word-grid article > .cp-word-listen:disabled {
+  color: var(--ink);
+  opacity: 1;
+  cursor: default;
+}
+.learner-app .is-guided .cp-exercise-workspace > .cp-exercise-main {
+  grid-template-rows: 64px minmax(0, 1fr) auto;
+}
+.learner-app .is-guided .cp-exercise-feedback {
+  min-height: 68px;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+}
+.learner-app .is-guided .cp-exercise-feedback output small {
+  display: block;
+  font-size: 14px;
+  line-height: 1.35;
+}
+.learner-app .is-guided .cp-exercise-feedback > button { min-height: 48px; }
+.learner-app .is-guided .cp-exercise-feedback > button:disabled {
+  color: var(--muted);
+  background: var(--canvas);
+  border-color: var(--line);
+  opacity: .65;
+}
+
+@media (max-width: 760px) {
+  .learner-app .cp-home-facts { min-height: 100px; }
+  .learner-app .cp-lesson-player > .text-back { width: 48px; height: 48px; font-size: 0; }
+  .learner-app .is-guided .cp-exercise-workspace > aside strong {
+    font-size: 14px;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  .learner-app .is-guided .cp-exercise-workspace > aside small { display: none; }
+  .learner-app .is-guided .cp-exercise-record-head { min-height: 60px; }
+  .learner-app .is-guided .cp-exercise-record-head h3 {
+    max-width: none;
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: normal;
+  }
+  .learner-app .cp-choice-grid > button,
+  .learner-app .cp-memory-grid > button,
+  .learner-app .cp-board-grid > button { min-height: 96px; }
+  .learner-app .is-guided .cp-exercise-workspace > .cp-exercise-main {
+    grid-template-rows: 60px minmax(0, 1fr) auto;
+  }
+  .learner-app .is-guided .cp-exercise-feedback { gap: 6px; }
+  .learner-app .is-guided .cp-exercise-feedback > button { padding: 0 8px; font-size: 14px; }
 }

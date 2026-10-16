@@ -134,3 +134,9 @@ export function getPackage(packageId: PackageId) {
 }
 
 export const allPackageWords = primaryWordCards;
+
+export function wordLabel(word: { id: string; word: string }) {
+  if (word.id === 'klink-woord-pak') return 'pak (kleding)';
+  if (word.id === 'klink-woord-pak-verpakking') return 'pak (verpakking)';
+  return word.word;
+}

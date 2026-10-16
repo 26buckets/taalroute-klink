@@ -26,7 +26,7 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
   function submitLearner(event: { preventDefault(): void }) {
     event.preventDefault();
     if (code.trim().toUpperCase() !== 'ALFA1' || pin !== '2580') {
-      setError('Deze combinatie klopt niet. Gebruik voor de demo ALFA1 en 2580.');
+      setError('Vul ALFA1 en 2580 in. Tik daarna op Begin.');
       return;
     }
     onPortal('learner');
@@ -64,9 +64,9 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
                 <button type="button" className="text-back" onClick={() => setMode('choose')}><ArrowLeft />Terug</button>
                 <span className="entry-kicker">Cursist</span>
                 <h1>Open je lessen</h1>
-                <p>Vul de klascode en je persoonlijke pincode in.</p>
+                <p>Vul de klascode en de oefencode in.</p>
                 <label><span><Building2 />Klascode</span><input value={code} onChange={(event) => setCode(event.target.value.toUpperCase())} autoComplete="organization" /></label>
-                <label><span><KeyRound />Persoonlijke pincode</span><input value={pin} onChange={(event) => setPin(event.target.value.replace(/\D/g, '').slice(0, 4))} inputMode="numeric" autoComplete="one-time-code" maxLength={4} /></label>
+                <label><span><KeyRound />Oefencode</span><input value={pin} onChange={(event) => setPin(event.target.value.replace(/\D/g, '').slice(0, 4))} inputMode="numeric" autoComplete="off" maxLength={4} /></label>
                 {error && <p className="form-error"><CircleAlert />{error}</p>}
                 <button className="primary-button wide" type="submit"><LockKeyhole />Begin<ArrowRight /></button>
                 <div className="demo-code"><span>Proberen</span><b>ALFA1</b><b>2580</b></div>
