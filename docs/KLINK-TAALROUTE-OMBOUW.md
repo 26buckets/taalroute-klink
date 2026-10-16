@@ -18,7 +18,7 @@ Er zijn 302 te openen routes: 40 basisonderdelen, 23 uitbreidingssets en 239 ind
 
 ## Bestaande oefenspelers
 
-De koppeling levert na het fotoherstel 4.322 oefeninstanties in negen bestaande families: modelkaart, woord/beeld kiezen, koppelen, woordbouw, typen, nazeggen, schrijven, memory en woordkaarten. Dezelfde woordbetekenis kan in verschillende leesstappen terugkomen. Dit aantal is geen aantal unieke oefenvormen of bewezen beheerste doelen.
+De koppeling levert na het foto- en symboolherstel 4.354 oefeninstanties in negen bestaande families: modelkaart, woord/beeld kiezen, koppelen, woordbouw, typen, nazeggen, schrijven, memory en woordkaarten. Dezelfde woordbetekenis kan in verschillende leesstappen terugkomen. Dit aantal is geen aantal unieke oefenvormen of bewezen beheerste doelen.
 
 Iedere begeleide route gebruikt expliciete oefen-ID's. De oude zoekmatch op losse woorden en de beperking tot één opdracht per familie bepalen de nieuwe route niet meer. Eerst worden de woorden getoond; daarna volgen woordvergelijking, luisteren waar audio bestaat en woordbouw. Afleiders zijn reeds getoonde woorden uit dezelfde leesstap; gelijke schrijfwijzen met verschillende betekenissen worden niet tegenover elkaar gezet. De eerste zeer kleine routes blijven bewust korter dan acht opdrachten, zodat er geen extra woorden of opdrachten worden toegevoegd alleen om een aantal te halen.
 
@@ -34,7 +34,15 @@ Zeven betekenissen missen audio: fit, koekje, pak (verpakking), sap, spuit, toma
 
 Het hoofdmenu blijft Verder, Lessen, Woorden en Herhalen. Nieuwe leesstappen vervangen alleen de CP-indeling binnen de bestaande schermen; geen nieuw hoofdmenu of nieuw uiterlijk. De tijdelijke lokale controleversie op poort 18816 is op 16 oktober volledig door de bestaande browsertest gekomen. Deze lokale versie is geen publicatie op het openbare domein. Ook de openbare startpagina, toegang met de bestaande democode en CP-home zijn in de browser gecontroleerd; er waren geen JavaScript-fouten.
 
-De enige productiebranch blijft 26buckets/taalroute-klink:main. De werkbranch is codex/klink-taalroute-20261016, afgeleid van c221eb104fe64a17de9e51a59ddc5667ea805518. De live-Worker-versie efddd274-4f66-4d5b-9bfb-c21e87acc89d is opnieuw rechtstreeks in Cloudflare gecontroleerd. De browser-appcode is gelijk na scopebewuste normalisatie van minifiernamen; 41 gedownloade servermodules komen bytegelijk overeen met de opgebouwde basis, inclusief de server-gerenderde app en beide API-routebundels. Zeventien runtime-/manifestmodules verschillen nog. Een ontbrekende broncommit-tag is dus niet vervangen door een aanname: de volledige live-bronkoppeling blijft een open publicatievoorwaarde. Geen publicatie of wijziging aan de openbare app uitgevoerd.
+De enige productiebranch blijft 26buckets/taalroute-klink:main. De werkbranch is codex/klink-taalroute-20261016, afgeleid van c221eb104fe64a17de9e51a59ddc5667ea805518. De live-Worker-versie efddd274-4f66-4d5b-9bfb-c21e87acc89d is rechtstreeks in Cloudflare gecontroleerd. De oorspronkelijke publicatieadministratie van 14 oktober is teruggevonden: het audiomerkherstelrapport noemt deze broncommit en het bijbehorende publicatielog en uitvoeringsregister noemen deze Worker-versie. Een verse download van alle 61 modules en de openbare clientbundel bevestigt de app- en API-vergelijking. Het bewijs staat in klink-publication-provenance.json. Daarmee is de historische bronkoppeling vastgesteld; een bit-identieke herbouw van alle gegenereerde runtime- en manifestbestanden wordt niet geclaimd. Vóór een werkelijke publicatie moet opnieuw worden gecontroleerd of deze versie nog live is. Geen publicatie of wijziging aan de openbare app uitgevoerd.
+
+### Aanvulling media-afronding, 16 oktober
+
+Tien bestaande SVG-beelden voor geel, rood, bruin, blauw, vijf, zes, zeven, acht, negen en cirkel zijn exact uit de oorspronkelijke bestanden overgenomen. Bron en aflevering zijn bytegelijk gecontroleerd. Nu zijn 161 beelden gekoppeld en ontbreken 177 beeldkoppelingen. De 21 overige gevonden symbolen zijn niet blind gekoppeld: zij vragen context, notatiekennis of verdere didactische beoordeling. Er zijn geen nieuwe beelden gegenereerd en geen menselijke beeldgoedkeuringen ingevuld.
+
+De zeven ontbrekende woordopnamen zijn als nieuwe kandidaten geproduceerd met de bestaande Remko-stem (0qLmDzgqulxcvv0yf3kg), dezelfde modelinstelling en hetzelfde tempo. Ze staan uitsluitend in het interne beoordelingspakket, niet in de publieke bestanden of de appkoppelingen. De technische niveaus, bestandsduur en ingebedde Taalroute-merkgegevens zijn gecontroleerd; de geluidsdata bleven gelijk bij het toevoegen van metadata. Menselijke uitspraakcontrole staat open. Instructie-audio is daarmee niet aangevuld. De losse t blijft ongebruikt.
+
+De publicatiecontrole controleert nu ook het onderliggende herkomstbewijs en blokkeert ontbrekende betekenisbeelden. De cursistproef is niet opnieuw verplicht gemaakt. Publicatie blijft wachten op complete, goedgekeurde media; niet op een nieuw appontwerp.
 
 ## Lokale controles
 
