@@ -8,7 +8,10 @@ import {
   getPackage,
   wordLabel,
   type PackageId,
+  type LessonPosition,
+  type PracticeAttempt,
 } from '@/lib/package-content';
+import { nextLessonPosition, parseProgress, progressKey, type RouteProgress } from '@/lib/learner-progress';
 import {
   ArrowLeft,
   ArrowRight,
@@ -32,6 +35,12 @@ type WordFilter = string;
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
   const [view, setView] = useState<LearnerView>('home');
   const [selectedPackage, setSelectedPackage] = useState<PackageId>(contentPackages[0].id);
+  const [progress, setProgress] = useState<RouteProgress>(() => {
+    if (typeof window === 'undefined') return { completed: [] };
+    try { return parseProgress(window.localStorage.getItem(progressKey), contentPackages); } catch { return { completed: [] }; }
+  });
+  const [resumePosition, setResumePosition] = useState<LessonPosition>();
+  const [playerVisit, setPlayerVisit] = useState(0);
   const [savedWordIds, setSavedWordIds] = useState<string[]>(() => {
     if (typeof window === 'undefined') return [];
     try {
@@ -44,8 +53,32 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
 
   useEffect(() => { stopMedia(); return stopMedia; }, [view]);
 
+  function saveProgress(next: RouteProgress) {
+    setProgress(next);
+    try { window.localStorage.setItem(progressKey, JSON.stringify(next)); }
+    catch { onToast('Verdergaan wordt niet bewaard op dit apparaat. Oefenen kan doorgaan.'); }
+  }
+
+  function continueLearning() {
+    if (!progress.position) { setView('home'); return; }
+    setSelectedPackage(progress.position.packageId);
+    setResumePosition(progress.position);
+    setPlayerVisit(value => value + 1);
+    setView('package');
+  }
+
+  function recordAttempt(attempt: PracticeAttempt) {
+    try {
+      const raw: unknown = JSON.parse(window.localStorage.getItem('klink.taalroute.attempts.v1') ?? '[]');
+      const previous = Array.isArray(raw) ? raw.slice(-199) : [];
+      window.localStorage.setItem('klink.taalroute.attempts.v1', JSON.stringify([...previous, attempt]));
+    } catch { /* Results never prevent practice; no recording or identity is stored. */ }
+  }
+
   function openPackage(packageId: PackageId) {
     setSelectedPackage(packageId);
+    setResumePosition(undefined);
+    setPlayerVisit(value => value + 1);
     setView('package');
   }
 
@@ -62,7 +95,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
       <aside className="learner-nav">
         <button className="brand-button" onClick={() => setView('home')} aria-label="Naar de leerhome"><Brand /></button>
         <nav aria-label="Cursistnavigatie">
-          <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => setView('home')}><Home /><span>Verder</span></button>
+          <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={continueLearning}><Home /><span>Verder</span></button>
           <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><PackageOpen /><span>Lessen</span></button>
           <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => setView('words')}><WholeWord /><span>Woorden</span></button>
           <button aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => setView('review')}><RefreshCw /><span>Herhalen</span></button>
@@ -70,9 +103,9 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <button className="learner-profile" onClick={onExit}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
-        {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => setView('packages')} onWords={() => setView('words')} onReview={() => setView('review')} savedCount={savedWordIds.length} />}
+        {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => setView('packages')} onWords={() => setView('words')} onReview={() => setView('review')} savedCount={savedWordIds.length} progress={progress} onContinue={continueLearning} />}
         {view === 'packages' && <PackageLibrary onBack={() => setView('home')} onOpen={openPackage} />}
-        {view === 'package' && <PackagePlayer packageId={selectedPackage} onClose={() => setView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} />}
+        {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => setView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onAttempt={recordAttempt} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => setView('home')} onToast={onToast} />}
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} onWords={() => setView('words')} onBack={() => setView('home')} onToast={onToast} />}
       </main>
@@ -80,21 +113,22 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   );
 }
 
-function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; savedCount: number }) {
-  const first = contentPackages[0];
-  const second = contentPackages[1];
+function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
+  const first = contentPackages.find(pack => pack.id === progress.position?.packageId) ?? contentPackages.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? contentPackages[0];
+  const second = contentPackages[(contentPackages.indexOf(first) + 1) % contentPackages.length];
+  const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId);
   return (
     <div className="learner-page cp-home">
       <header className="learner-page-head">
-        <div><span className="cp-home-mark"><Layers3 /></span><span>Welkom bij Klink</span><h1>Kies waar je verdergaat</h1></div>
+        <div><span className="cp-home-mark"><Layers3 /></span><span>Welkom bij Klink</span><h1>{progress.position ? 'Ga verder' : 'Begin met oefenen'}</h1></div>
       </header>
 
       <section className="cp-home-hero">
         <div>
-          <span className="eyebrow light">Begin met de eerste leesstappen</span>
+          <span className="eyebrow light">{activeLesson ? `Les ${first.lessons.indexOf(activeLesson) + 1}` : 'Kijk en luister'}</span>
           <h2>{first.title}</h2>
-          <p>Kijk, luister en oefen. Begin samen met je docent.</p>
-          <button className="accent-button" onClick={() => onPackage(first.id)}>Begin hier<ArrowRight /></button>
+          <p>{progress.position ? 'Ga door waar je was.' : 'Begin samen met je docent.'}</p>
+          <button className="accent-button" onClick={() => progress.position ? onContinue() : onPackage(first.id)}>{progress.position ? 'Ga verder' : 'Begin hier'}<ArrowRight /></button>
         </div>
         <div className="cp-home-facts">
           <span><strong>{first.counts.lessons}</strong><small>lessen</small></span>

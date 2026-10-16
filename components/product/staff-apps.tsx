@@ -1,6 +1,7 @@
 'use client';
 
 import { PackagePlayer } from '@/components/product/package-experience';
+import { LessonCoverage } from '@/components/product/lesson-coverage';
 import { NavButton, StaffShell, StaffTopbar } from '@/components/product/shared';
 import {
   exerciseOpportunities,
@@ -54,12 +55,12 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
     <StaffShell area="Docent" name="Docent" initials="TR" onExit={onExit} nav={<>
       <NavButton active={view === 'overview'} icon={<LayoutDashboard />} label="Overzicht" onClick={() => setView('overview')} />
       <NavButton active={view === 'packages'} icon={<PackageOpen />} label="Leesstappen" onClick={() => setView('packages')} badge="10" />
-      <NavButton active={view === 'activities'} icon={<Shapes />} label="Oefenkaart" onClick={() => setView('activities')} badge="52" />
+      <NavButton active={view === 'activities'} icon={<Shapes />} label="Oefenkaart" onClick={() => setView('activities')} badge={String(contentPackages.reduce((count, pack) => count + pack.lessons.length, 0))} />
       <NavButton active={view === 'media'} icon={<Images />} label="Media" onClick={() => setView('media')} />
     </>}>
       {view === 'overview' && <TeacherOverview onOpen={openPackage} onActivities={() => setView('activities')} />}
       {view === 'packages' && <TeacherPackages onOpen={openPackage} />}
-      {view === 'activities' && <TeacherActivities />}
+      {view === 'activities' && <><div className="staff-content cp-teacher-content"><LessonCoverage onOpen={openPackage} /></div><details className="cp-teacher-extra"><summary>Meer oefenvormen en mogelijkheden</summary><TeacherActivities /></details></>}
       {view === 'media' && <TeacherMedia />}
     </StaffShell>
   );

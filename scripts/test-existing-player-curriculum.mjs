@@ -44,7 +44,10 @@ test('Guided lessons use explicit IDs, introduce choices first and never borrow 
     for (const exercise of exercises) {
       assert.equal(exercise.lessonId, lesson.id);
       if (exercise.mode === 'model') seen.add(exercise.wordId);
-      for (const option of exercise.options ?? []) assert(seen.has(option.id), `${lesson.id} unknown option ${option.id}`);
+      if (exercise.mode === 'missing-grapheme') {
+        const prepared = release.words.filter(word => seen.has(word.id)).flatMap(word => word.reading.units.map(unit => unit.text));
+        for (const option of exercise.options) assert(prepared.includes(option.label), `${lesson.id} unknown grapheme ${option.label}`);
+      } else for (const option of exercise.options ?? []) assert(seen.has(option.id), `${lesson.id} unknown option ${option.id}`);
     }
     for (const id of [...lesson.newWords, ...lesson.returning]) assert(seen.has(id), `${lesson.id} drops ${id}`);
   }
@@ -62,7 +65,9 @@ test('Existing renderer contracts have valid answers, tiles, models, and nonambi
     }
     if (exercise.componentId === 'ALF-CMP-005') {
       const target = exercise.answer.targetTileIds.map(id => exercise.tiles.find(tile => tile.id === id).token).join('');
-      assert.equal(target, exercise.exampleWord);
+      assert.equal(target, pack.words.find(word => word.id === exercise.wordId).word);
+      if (exercise.mode === 'word-build') assert.equal(target, exercise.exampleWord);
+      if (exercise.mode === 'recall-word') assert.equal(exercise.exampleWord, undefined);
     }
     if (exercise.mode.startsWith('heard') || exercise.mode === 'repeat-word') assert(exercise.prompt.audio?.src);
   }

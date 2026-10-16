@@ -19,6 +19,8 @@ De naam staat voor de vijf leerhandelingen:
 
 Negen van de achttien bestaande oefenvormen zijn aan de nieuwe woordindeling gekoppeld. De makerskaart beschrijft ook mogelijke vervolgopdrachten; die mogelijkheden zijn niet allemaal uitgewerkte lessen. De cursist krijgt deze bibliotheek niet als losse keuzelijst te zien.
 
+De begeleide lessen volgen passende fasen van kennismaken tot herhalen. Beeldkeuzes en koppelen zijn aangesloten; dictee zonder zichtbaar model en het aanvullen van lettercombinaties zijn toegevoegd binnen de bestaande spelers. Maximaal zestien opdrachten per begeleide route, met extra varianten bij vrij oefenen. Verder hervat de laatste opdracht. Docent → Oefenkaart toont per leesstap wat werkt, beschikbaar maar niet aangesloten is, ontbreekt of bewust niet nodig is. Zie docs/LESROUTE-UITBREIDING-20261016.md; `node scripts/export-lesson-coverage.mjs` maakt de volledige inventaris.
+
 Media- en publicatievoorwaarden staan in data/klink-release-readiness.json en docs/KLINK-TAALROUTE-OMBOUW.md. Deze werkversie is nog niet live vrijgegeven. Interne statusinformatie staat niet op cursistschermen.
 
 De oude broncatalogus kan voor herstel opnieuw worden opgebouwd met onderstaande opdracht. Dit is niet de actuele Taalroute-leerlijnadapter:

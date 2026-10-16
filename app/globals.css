@@ -2340,6 +2340,67 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   opacity: .65;
 }
 
+/* The approved photo strip changes the section button, not the app navigation. */
+.cp-package-grid > .cp-photo-section { grid-template-columns: 34% minmax(0, 1fr); min-height: 180px; gap: 0; padding: 0; overflow: hidden; }
+.cp-section-photo { display: grid; place-items: center; align-self: stretch; min-height: 180px; background: #fff; }
+.cp-section-photo img { width: 100%; height: 180px; object-fit: contain; }
+.cp-section-photo > svg { width: 48px; height: 48px; color: var(--primary); }
+.cp-photo-section .cp-package-copy { padding: 20px; }
+.cp-photo-section .cp-package-copy > strong { margin: 4px 0 16px; font-size: 26px; line-height: 1.3; overflow-wrap: anywhere; }
+.cp-photo-section .cp-package-copy > small { color: var(--muted); font-size: 16px; }
+.cp-section-open { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: var(--radius); color: #fff; background: var(--primary); font-size: 18px; font-weight: 400; }
+.cp-section-open svg { width: 20px; height: 20px; }
+.cp-example-listen { border: 0; background: transparent; color: var(--ink); padding: 0 8px; font-size: 32px; min-height: 48px; }
+.cp-mode-picker { display: grid; gap: 8px; align-self: start; font-size: 16px; margin-bottom: 16px; }
+.cp-mode-picker select { width: 100%; min-height: 48px; padding: 8px; color: var(--ink); background: #fff; border: 1px solid var(--line-strong); border-radius: var(--radius); font: inherit; }
+.cp-missing-word { margin: 0; text-align: center; font-size: clamp(38px, 6vw, 68px); line-height: 1.4; overflow-wrap: anywhere; }
+.cp-dictation-form { display: grid; gap: 16px; }
+.cp-dictation-form .primary-button { justify-self: start; }
+.cp-word-hint { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.cp-word-hint strong { font-size: 32px; }
+.cp-match-board .wrong-pair { outline: 2px solid var(--red); outline-offset: 2px; }
+.cp-match-board button:disabled:has(svg) { opacity: .75; }
+.cp-choice-grid:has(> button:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cp-lesson-player:has([data-answer-hidden="true"]) .cp-lesson-launch h1 { display: none; }
+.cp-lesson-coverage { display: grid; gap: 18px; padding: 24px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+.cp-lesson-coverage p { line-height: 1.55; margin: 8px 0; }
+.cp-lesson-coverage h2 { margin: 0; }
+.cp-coverage-filters { display: grid; grid-template-columns: 1fr 2fr; gap: 16px; }
+.cp-coverage-filters label { display: grid; gap: 8px; min-width: 0; }
+.cp-coverage-filters select { width: 100%; min-width: 0; min-height: 48px; padding: 8px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: #fff; font: inherit; }
+.cp-coverage-words { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0; gap: 16px; }
+.cp-coverage-words dt { color: var(--muted); font-size: 14px; }
+.cp-coverage-words dd { margin: 8px 0 0; font-size: 18px; }
+.cp-coverage-phases { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 0; margin: 0; list-style: none; gap: 8px; }
+.cp-coverage-phases li { display: grid; gap: 6px; padding: 14px; background: var(--primary-soft); border-radius: var(--radius); }
+.cp-coverage-phases span { font-size: 14px; }
+.cp-coverage-table-wrap { overflow-x: auto; }
+.cp-coverage-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 15px; }
+.cp-coverage-table caption { text-align: left; font-size: 20px; padding: 8px 0 16px; }
+.cp-coverage-table :is(th, td) { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.5; }
+.cp-coverage-table th { font-weight: 500; }
+.cp-coverage-table small { display: block; margin-top: 6px; color: var(--muted); }
+.cp-plan-status { display: inline-block; border-radius: 6px; padding: 4px 8px; min-width: 130px; }
+.cp-plan-status.connected { background: var(--primary-soft); }
+.cp-plan-status.available { background: var(--canvas); }
+.cp-plan-status.missing { background: var(--yellow-soft); }
+.cp-plan-status.unnecessary { border: 1px solid var(--line); }
+.cp-coverage-overview summary { padding: 16px 0; cursor: pointer; }
+.cp-teacher-extra > summary { margin: 0 24px 24px; padding: 16px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; }
+.cp-coverage-overview button { min-height: 48px; background: transparent; color: var(--primary); text-align: left; border: 0; font: inherit; text-decoration: underline; }
+@media (max-width: 760px) {
+  .cp-package-grid > .cp-photo-section { grid-template-columns: 32% minmax(0, 1fr); min-height: 160px; }
+  .cp-section-photo, .cp-section-photo img { min-height: 160px; height: 160px; }
+  .cp-photo-section .cp-package-copy { padding: 12px; }
+  .cp-photo-section .cp-package-copy > strong { font-size: 23px; }
+  .is-guided .cp-match-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .is-guided .cp-match-board button { min-height: 100px; font-size: 24px; }
+  .is-guided .cp-match-board img { height: 74px; }
+  .cp-coverage-filters, .cp-coverage-words { grid-template-columns: 1fr; }
+  .cp-coverage-phases { grid-template-columns: 1fr; }
+  .cp-lesson-coverage { padding: 14px; }
+}
+
 @media (max-width: 760px) {
   .learner-app .cp-home-facts { min-height: 100px; }
   .learner-app .cp-lesson-player > .text-back { width: 48px; height: 48px; font-size: 0; }
@@ -2364,4 +2425,8 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   }
   .learner-app .is-guided .cp-exercise-feedback { gap: 6px; }
   .learner-app .is-guided .cp-exercise-feedback > button { padding: 0 8px; font-size: 14px; }
+  .learner-app .is-guided .cp-exercise-workspace > aside { overflow: hidden; }
+  .learner-app .is-guided .cp-exercise-workspace > aside button:not(.active) { display: none; }
+  .learner-app .is-guided .cp-exercise-workspace > aside button.active { width: 100%; min-width: 0; }
+  .learner-app .is-guided .cp-exercise-workspace > aside strong { font-size: 16px; }
 }

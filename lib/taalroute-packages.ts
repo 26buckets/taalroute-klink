@@ -1,9 +1,9 @@
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import bindings from '../data/klink-media.json' with { type: 'json' };
-import type { PackageDefinition, PackageExercise, PackageLesson, PackageWord } from './package-content';
+import type { LessonPhase, PackageDefinition, PackageExercise, PackageLesson, PackageWord } from './package-content';
 
 type Word = typeof curriculum.words[number];
-type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string };
+type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds?: string[] };
 const media = bindings as Record<string, { image?: string; audio?: string }>;
 const byId = new Map(curriculum.words.map(word => [word.id, word]));
 const unique = (ids: string[]) => [...new Set(ids)];
@@ -24,18 +24,19 @@ export function exercisesForStep(step: Step) {
   const selected = wordsFor(unique([...step.known, ...step.newWords, ...step.returning]));
   const targets = wordsFor(step.newWords.length ? step.newWords : step.returning);
   const exercises: PackageExercise[] = [];
-  const guided: string[] = [];
-  const make = (word: Word, family: string, mode: string, prompt: string, extra: Record<string, unknown> = {}) => {
+  const phases: Record<LessonPhase, string[]> = { meet: [], recognize: [], make: [], use: [], recall: [] };
+  const make = (word: Word, family: string, mode: string, prompt: string, activityTypeId: string, phase: LessonPhase, extra: Record<string, unknown> = {}) => {
     const record: PackageExercise = {
       exerciseId: `${step.id}:${word.id}:${mode}`, componentId: `ALF-CMP-${family}`, contractVersion: '1.0',
       lessonId: step.id, mode, title: prompt, sourceStatus: 'concept', wordId: word.id,
       objective: word.firstReading.firstGoal ?? word.reading.firstMoment,
+      activityTypeId, phase, assessment: family === '001' || family === '009' || family === '012' || family === '016' ? 'participation' : 'answer',
       prompt: { text: prompt, audio: audioFor(word) }, ...extra,
     };
     exercises.push(record);
     return record.exerciseId;
   };
-  for (const word of selected) guided.push(make(word, '001', 'model', audioFor(word) ? 'Kijk en luister.' : 'Lees samen.', {
+  for (const word of selected) phases.meet.push(make(word, '001', 'model', audioFor(word) ? 'Kijk en luister.' : 'Lees samen.', 'KL-01', 'meet', {
     text: { primary: word.word }, prompt: { text: audioFor(word) ? 'Kijk en luister.' : 'Lees samen.', image: imageFor(word), audio: audioFor(word) },
   }));
   for (const [index, word] of selected.entries()) {
@@ -49,39 +50,92 @@ export function exercisesForStep(step: Step) {
       const pair = index % 2 ? [other, word] : [word, other];
       const options = pair.map(item => ({ id: item.id, label: item.word }));
       const choice = { options, answer: { correctOptionIds: [word.id] }, distractorReason: 'Vergelijk twee al getoonde woordvormen uit dezelfde leesstap.' };
-      const match = make(word, '002', 'same-word', 'Kies hetzelfde woord.', { ...choice, exampleWord: word.word });
-      if (isTarget) guided.push(match);
+      const match = make(word, '002', 'same-word', 'Kies hetzelfde woord.', 'WO-02', 'recognize', { ...choice, exampleWord: word.word });
+      if (isTarget && Number(step.id.match(/leesstap-(\d+)$/)?.[1]) <= 5 && audioFor(word)) phases.recognize.push(match);
       if (audioFor(word)) {
-        const listen = make(word, '002', 'heard-word', 'Welk woord hoor je?', choice);
-        if (isTarget) guided.push(listen);
+        const listen = make(word, '002', 'heard-word', 'Welk woord hoor je?', 'KL-03', 'recognize', { ...choice, requiresAudio: true });
+        if (isTarget) phases.recognize.push(listen);
+      } else if (isTarget) phases.recognize.push(match);
+    }
+    // Image tasks need a distinct prepared meaning AND a distinct actual image.
+    const pictureOther = selected.find(item => item.word !== word.word && imageFor(item) && imageFor(item)?.src !== imageFor(word)?.src);
+    if (imageFor(word) && pictureOther) {
+      const pair = index % 2 ? [pictureOther, word] : [word, pictureOther];
+      const pictureChoice = { options: pair.map(item => ({ id: item.id, image: imageFor(item) })), answer: { correctOptionIds: [word.id] }, distractorReason: `Onderscheid de al aangeboden betekenissen van ${word.word} en ${pictureOther.word}; beide beelden blijven op dezelfde plaats.` };
+      const readImage = make(word, '002', 'word-image', 'Kies de foto.', 'BB-02', 'use', { ...pictureChoice, exampleWord: word.word });
+      if (audioFor(word)) {
+        const listenImage = make(word, '002', 'heard-image', 'Luister. Kies de foto.', 'BB-01', 'recognize', { ...pictureChoice, requiresAudio: true });
+        if (word.id === targets[0]?.id) phases.recognize.push(listenImage);
       }
-      if (pair.every(item => imageFor(item))) {
-        const pictureChoice = { options: pair.map(item => ({ id: item.id, image: imageFor(item) })), answer: { correctOptionIds: [word.id] }, distractorReason: 'Koppel de voorbereide woordbetekenis aan één van twee al getoonde beelden.' };
-        make(word, '002', 'word-image', 'Welk beeld hoort bij het woord?', { ...pictureChoice, exampleWord: word.word });
-        if (audioFor(word)) make(word, '002', 'heard-image', 'Welk beeld hoort bij het woord dat je hoort?', pictureChoice);
-      }
+      if (isTarget) phases.use.push(readImage);
     }
     const tokens = tokensFor(word);
     const tiles = tokens.map((token, i) => ({ id: `${word.id}-tile-${i}`, token }));
-    const build = make(word, '005', 'word-build', 'Leg het woord.', { exampleWord: word.word, tiles: [...tiles].reverse(), slots: tiles.map(tile => ({ id: `slot-${tile.id}` })), answer: { targetTileIds: tiles.map(tile => tile.id) } });
-    if (isTarget) guided.push(build);
-    make(word, '006', 'copy-word', 'Typ het woord na.', { exampleWord: word.word, fields: [{ id: 'word', acceptedAnswers: [word.word] }] });
-    if (audioFor(word)) make(word, '009', 'repeat-word', 'Luister en zeg na.', { exampleWord: word.word });
-    make(word, '012', 'write-word', 'Schrijf het woord.', { target: word.word });
-    if (imageFor(word)) make(word, '016', 'word-card', 'Bekijk het woordkaartje.', { cards: [{ cardId: word.id, front: { image: imageFor(word) }, back: { text: word.word }, audio: audioFor(word) }] });
+    const building = { tiles: [...tiles].reverse(), slots: tiles.map(tile => ({ id: `slot-${tile.id}` })), answer: { targetTileIds: tiles.map(tile => tile.id) } };
+    const build = make(word, '005', 'word-build', 'Leg het woord.', 'WO-03', 'make', { ...building, exampleWord: word.word, feedback: 'Kijk naar het voorbeeld. Met Eén terug kun je een letter veranderen.' });
+    if (isTarget) phases.make.push(build);
+    make(word, '006', 'copy-word', 'Typ het woord na.', 'SC-01', 'make', { exampleWord: word.word, fields: [{ id: 'word', acceptedAnswers: [word.word] }] });
+    if (audioFor(word)) {
+      const dictation = make(word, '006', 'word-dictation', 'Typ wat je hoort.', 'WO-06', 'make', { requiresAudio: true, fields: [{ id: 'word', acceptedAnswers: [word.word] }], feedback: 'Luister opnieuw. Verander de letters in je antwoord.', helpWord: word.word });
+      // Keyboard use is optional in early literacy; longer-word routes introduce independent typing.
+      if (isTarget && word.reading.level === 'B') phases.make.push(dictation);
+      make(word, '009', 'repeat-word', 'Luister en zeg na.', 'SP-01', 'make', { exampleWord: word.word });
+      const recall = make(word, '005', 'recall-word', 'Luister. Leg het woord.', 'WO-03', 'recall', { ...building, requiresAudio: true, helpWord: word.word, feedback: 'Luister nog een keer. Met Eén terug kun je een letter veranderen.' });
+      if (step.returning.length ? step.returning.includes(word.id) : isTarget) phases.recall.push(recall);
+      const gap = gapForWord(word, step, selected);
+      if (gap) {
+        const missing = make(word, '002', 'missing-grapheme', 'Wat ontbreekt?', 'WO-05', 'make', { ...gap, requiresAudio: true, feedback: 'Luister naar het hele woord. Kijk naar de lege plek.' });
+        // One gap per core step, after the basic tap/build actions have been introduced.
+        if (isTarget && word.reading.level === 'A' && Number(step.id.match(/leesstap-(\d+)$/)?.[1]) >= 6 && !phases.make.some(id => id.endsWith(':missing-grapheme'))) phases.make.push(missing);
+      }
+    } else if (step.returning.includes(word.id)) {
+      phases.recall.push(make(word, '001', 'recall-together', 'Lees samen.', 'KL-01', 'recall', { text: { primary: word.word }, prompt: { text: 'Lees samen.', image: imageFor(word) } }));
+    }
+    make(word, '012', 'write-word', 'Schrijf het woord.', 'SC-01', 'make', { target: word.word });
+    if (imageFor(word)) make(word, '016', 'word-card', 'Bekijk het woordkaartje.', 'BB-05', 'meet', { cards: [{ cardId: word.id, front: { image: imageFor(word) }, back: { text: word.word }, audio: audioFor(word) }] });
   }
-  const pictured = selected.filter(word => imageFor(word)).filter((word, i, all) => all.findIndex(item => item.word === word.word) === i).slice(0, 4);
+  const pictured = [...targets, ...selected].filter(word => imageFor(word)).filter((word, i, all) => all.findIndex(item => item.word === word.word || imageFor(item)?.src === imageFor(word)?.src) === i).slice(0, 2);
   if (pictured.length >= 2) {
-    make(pictured[0], '004', 'word-image-match', 'Koppel het woord aan het beeld.', {
-      sources: pictured.map(word => ({ id: word.id, label: word.word })), targets: [...pictured].reverse().map(word => ({ id: `image-${word.id}`, image: imageFor(word) })),
+    const matching = make(pictured[0], '004', 'word-image-match', 'Kies een woord. Kies de foto.', 'BB-03', 'use', {
+      prompt: { text: 'Kies een woord. Kies de foto.' },
+      sources: pictured.map(word => ({ id: word.id, label: word.word, audio: audioFor(word) })), targets: [...pictured].reverse().map(word => ({ id: `image-${word.id}`, image: imageFor(word) })),
       answer: { mapping: Object.fromEntries(pictured.map(word => [word.id, `image-${word.id}`])) },
+      distractorReason: 'Twee voorbereide, verschillende woordbetekenissen koppelen; elke foto hoort bij één woord.',
     });
-    make(pictured[0], '015', 'memory', 'Zoek het woord en het beeld bij elkaar.', { items: [
+    // One meaningful pairing activity replaces repeating the same image choice for every target.
+    phases.use = [matching];
+    make(pictured[0], '015', 'memory', 'Zoek het woord en het beeld bij elkaar.', 'BB-04', 'recall', { items: [
       ...pictured.map(word => ({ itemId: `word-${word.id}`, pairKey: word.id, content: { text: word.word } })),
       ...[...pictured].reverse().map(word => ({ itemId: `image-${word.id}`, pairKey: word.id, content: { image: imageFor(word) } })),
     ] });
   }
+  const guided = Object.values(phases).flat();
+  // Keep every introduction and recall; optional variation stays in free practice if the route is long.
+  for (const mode of ['missing-grapheme', 'heard-image', 'word-image-match', 'word-image']) {
+    while (guided.length > 16) {
+      const index = guided.findIndex(id => id.endsWith(`:${mode}`));
+      if (index < 0) break;
+      guided.splice(index, 1);
+    }
+  }
   return { exercises, guided };
+}
+
+function gapForWord(word: Word, step: Step, prepared: Word[]) {
+  const units = word.reading.units;
+  if (units.map(unit => unit.text).join('') !== word.word) return;
+  const positions = units.map((unit, index) => ({ unit, index })).filter(({ unit }) => !step.unitIds?.length || step.unitIds.includes(unit.coreUnit));
+  const vowel = (text: string) => /^(a|e|i|o|u|aa|ee|oo|uu|ie|oe|eu|ui|ei|ij|au|ou)$/.test(text);
+  const homophones = [['ei', 'ij'], ['au', 'ou'], ['g', 'ch']];
+  for (const { unit, index } of positions) {
+    const alternative = prepared.flatMap(tokensFor).find(token => token !== unit.text && vowel(token) === vowel(unit.text) && !homophones.some(pair => pair.includes(token) && pair.includes(unit.text)));
+    if (!alternative) continue;
+    const options = [unit.text, alternative].map(token => ({ id: `grapheme-${token}`, label: token }));
+    return { maskedWord: units.map((item, i) => i === index ? '…' : item.text).join(''), gapIndex: index, targetGrapheme: unit.text,
+      options: word.id.length % 2 ? options.reverse() : options, answer: { correctOptionIds: [`grapheme-${unit.text}`] },
+      distractorReason: `Vul ${unit.text} aan tegenover ${alternative}, beide al getoond in deze les. Het hele woord is hoorbaar; de lettercombinatie blijft één geheel.`,
+      preparedWordIds: prepared.map(item => item.id) };
+  }
 }
 
 function toWord(word: Word): PackageWord {
@@ -98,10 +152,11 @@ function buildPack(id: string, title: string, kind: PackageDefinition['kind'], w
   const allWords = wordsFor(unique([...words.map(word => word.id), ...steps.flatMap(step => [...step.known, ...step.newWords, ...step.returning])]));
   const material = steps.map(step => ({ step, ...exercisesForStep(step) }));
   const exercises = material.flatMap(item => item.exercises);
-  const lessons: PackageLesson[] = material.map(({ step, guided }) => ({
+  const lessons: PackageLesson[] = material.map(({ step, exercises: records, guided }) => ({
     id: step.id, title: step.kind === 'herhaalronde' ? `Herhaal: ${wordsFor(step.returning).map(word => word.word).join(' · ')}` : step.title,
-    scope: step.guidance, kind: step.kind, words: wordsFor(unique([...step.newWords, ...step.returning])).map(word => word.word), steps: ['kijk', 'kies', 'bouw'],
-    known: step.known, newWords: step.newWords, returning: step.returning, guidedExerciseIds: guided,
+    scope: step.guidance, kind: step.kind, words: wordsFor(unique([...step.newWords, ...step.returning])).map(word => word.word),
+    steps: unique(guided.flatMap(id => { const phase = records.find(item => item.exerciseId === id)?.phase; return phase ? [phase] : []; })),
+    known: step.known, newWords: step.newWords, returning: step.returning, unitIds: step.unitIds, guidedExerciseIds: guided,
   }));
   const exerciseTypes = Object.entries(labels).map(([number, label]) => {
     const records = exercises.filter(item => item.componentId === `ALF-CMP-${number}`);
@@ -134,8 +189,8 @@ export const taalroutePackages: PackageDefinition[] = [
 ];
 
 export function exercisesForLesson(pack: PackageDefinition, lesson: PackageLesson) {
-  const ids = new Set(lesson.guidedExerciseIds);
-  return pack.exercises.filter(exercise => exercise.lessonId === lesson.id && ids.has(exercise.exerciseId));
+  const byExerciseId = new Map(pack.exercises.filter(exercise => exercise.lessonId === lesson.id).map(exercise => [exercise.exerciseId, exercise]));
+  return (lesson.guidedExerciseIds ?? []).map(id => byExerciseId.get(id)).filter((item): item is PackageExercise => Boolean(item));
 }
 
 // A preview is not a shortened lesson: the full lesson and recall stay unchanged.

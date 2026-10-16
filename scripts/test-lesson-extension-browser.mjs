@@ -1,0 +1,165 @@
+import assert from 'node:assert/strict';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
+import { answerActivity } from './browser-route-helpers.mjs';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
+const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
+const out = new URL('../outputs/lesson-extension-20261016/', import.meta.url);
+mkdirSync(out, { recursive: true });
+const errors = [], checks = [];
+const pass = label => { checks.push(label); console.log('PASS', label); };
+page.on('pageerror', error => errors.push(error.message));
+await page.addInitScript(() => {
+  window.__audioMode = 'play';
+  window.__played = [];
+  window.Audio = class {
+    constructor(src) { this.src = src; this.paused = true; }
+    play() { if (window.__audioMode === 'fail') return Promise.reject(new Error('test audio unavailable')); this.paused = false; window.__played.push(this.src); return Promise.resolve(); }
+    pause() { this.paused = true; }
+  };
+});
+async function openLesson(pack, lesson) {
+  await page.goto(`${base}/#learner/home`);
+  await page.reload();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
+  await page.locator('.cp-start-lesson').nth(pack.lessons.indexOf(lesson)).click();
+}
+async function seedAt(pack, lesson, exercise) {
+  await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: pack.id, lessonId: lesson.id, exerciseId: exercise.exerciseId });
+  await page.reload();
+  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
+}
+try {
+  const core = packs[2], coreLesson = core.lessons.find(item => item.id === 'klink-leesstap-06');
+  await openLesson(core, coreLesson);
+  for (const exercise of exercisesForLesson(core, coreLesson)) await answerActivity(page, exercise);
+  await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
+  await page.getByRole('button', { name: 'Volgende les', exact: true }).click();
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), core.lessons[1].guidedExerciseIds[0]);
+  pass('Complete core route includes new gap tasks, image choice, matching, recall and next lesson');
+
+  const longPack = packs.find(item => item.kind === 'route');
+  const longLesson = longPack.lessons[0];
+  const longRoute = exercisesForLesson(longPack, longLesson);
+  await openLesson(longPack, longLesson);
+  for (const exercise of longRoute) await answerActivity(page, exercise);
+  await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
+  pass('Complete longer-word route includes actual dictation without a visible model');
+
+  const audioChoice = exercisesForLesson(core, coreLesson).find(item => item.mode === 'heard-word');
+  await seedAt(core, coreLesson, audioChoice);
+  await page.evaluate(() => { window.__audioMode = 'fail'; });
+  await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
+  await page.getByText('Probeer Luister opnieuw', { exact: true }).waitFor();
+  assert(await page.locator('.cp-choice-grid button').first().isDisabled());
+  assert(await page.locator('.cp-exercise-feedback button').isDisabled());
+  await page.evaluate(() => { window.__audioMode = 'play'; });
+  await answerActivity(page, audioChoice, { advance: false, checkFocus: false });
+  const current = audioChoice.exerciseId;
+  await page.waitForFunction(id => document.querySelector('.cp-exercise-browser')?.dataset.exerciseId !== id, current);
+  assert.equal(await page.locator('.cp-exercise-feedback').getAttribute('class'), 'cp-exercise-feedback idle');
+  pass('Failed sound cannot be answered; retry works and a correct choice advances automatically');
+
+  const gap = exercisesForLesson(core, coreLesson).find(item => item.mode === 'missing-grapheme');
+  await seedAt(core, coreLesson, gap);
+  await answerActivity(page, gap, { advance: false });
+  await page.getByRole('button', { name: 'Blijf hier', exact: true }).click();
+  await page.waitForTimeout(1600);
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
+  await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
+  assert(await page.locator('.cp-exercise-feedback button').isDisabled());
+  await page.reload();
+  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
+  pass('Pause, navigating away, Verder and reloading resume the exact exercise without restoring a correct answer');
+
+  const dictation = longRoute.find(item => item.mode === 'word-dictation');
+  await seedAt(longPack, longLesson, dictation);
+  assert(!(await page.locator('.cp-lesson-player').innerText()).includes(dictation.fields[0].acceptedAnswers[0]));
+  await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
+  await page.getByRole('button', { name: 'Help', exact: true }).click();
+  assert.equal(await page.locator('.cp-word-hint strong').innerText(), dictation.helpWord);
+  await page.getByRole('button', { name: 'Verberg voorbeeld', exact: true }).click();
+  await page.locator('.cp-text-entry input').fill(dictation.fields[0].acceptedAnswers[0]);
+  await page.locator('.cp-text-entry input').press('Enter');
+  await page.getByRole('button', { name: 'Blijf hier', exact: true }).click();
+  const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
+  assert.equal(attempt.helpUsed, true); assert.equal(attempt.assessment, 'answer'); assert(attempt.elapsedMs >= 0); assert.equal(attempt.attempts, 1);
+  pass('Explicit word help is hidden by default and recorded as assistance, not independent success');
+
+  for (const width of [1366, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
+    await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
+    await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+    assert.equal(await page.locator('.cp-photo-section').count(), packs.length);
+    assert(!/Bouwgroep|kernwoorden|oefeningen|Bekende woorden/.test(await page.locator('.cp-library-page').innerText()));
+    await page.waitForFunction(() => [...document.querySelectorAll('.cp-section-photo img')].filter(image => image.getBoundingClientRect().top < innerHeight).every(image => image.complete && image.naturalWidth > 0));
+    await page.screenshot({ path: new URL(`fotostrook-${width}.png`, out).pathname });
+    const matching = exercisesForLesson(packs[0], packs[0].lessons[1]).find(item => item.mode === 'word-image-match');
+    await seedAt(packs[0], packs[0].lessons[1], matching);
+    await page.waitForFunction(() => [...document.querySelectorAll('.cp-match-board img')].every(image => image.naturalWidth > 0));
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    const footer = await page.locator('.cp-exercise-feedback').boundingBox();
+    assert(footer.y + footer.height <= (width > 700 ? 900 : 844) + 2);
+    assert.equal(await page.locator('.cp-match-board > div').first().locator('button').first().innerText(), matching.sources[0].label);
+    if (width < 760) assert.equal(await page.locator('.cp-exercise-workspace aside button:visible').innerText(), '•\nGebruiken');
+    await page.screenshot({ path: new URL(`koppelen-${width}.png`, out).pathname });
+    for (const selector of ['.cp-match-board button', '.cp-exercise-record-head nav button', '.cp-exercise-feedback button']) for (const button of await page.locator(selector).all()) {
+      const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48, `${width}: ${selector}`);
+    }
+  }
+  pass('Photo strips and matching preserve all sections and 48px controls at desktop, tablet, 390px and 320px');
+  await page.setViewportSize({ width: 1366, height: 900 });
+  await page.goto(`${base}/#teacher`);
+  await page.getByRole('button', { name: /Oefenkaart/ }).click();
+  assert.equal(await page.locator('.cp-coverage-filters select').first().locator('option').count(), packs.length);
+  for (const pack of packs) {
+    await page.locator('.cp-coverage-filters select').first().selectOption(pack.id);
+    assert.equal(await page.locator('.cp-coverage-filters select').nth(1).locator('option').count(), pack.lessons.length);
+  }
+  await page.locator('.cp-coverage-filters select').first().selectOption(packs[0].id);
+  assert((await page.locator('.cp-lesson-coverage').innerText()).includes('Bewust niet nodig'));
+  await page.screenshot({ path: new URL('docent-routeoverzicht.png', out).pathname });
+  pass('Teacher overview exposes every route and its missing content without changing learner navigation');
+
+  await openLesson(packs[0], packs[0].lessons[0]);
+  await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
+  await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Het woord typen' }).click();
+  await page.getByLabel('Wat wil je oefenen?').selectOption('word-dictation');
+  assert.equal(await page.locator('.cp-example-listen').count(), 0);
+  assert(await page.locator('.cp-text-entry input').isDisabled());
+  const listen = page.getByRole('button', { name: 'Luister naar het woord', exact: true });
+  await listen.focus(); await page.keyboard.press('Enter');
+  const freeId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
+  const freeDictation = packs[0].exercises.find(item => item.exerciseId === freeId);
+  await page.locator('.cp-text-entry input').fill(freeDictation.fields[0].acceptedAnswers[0]);
+  await page.locator('.cp-text-entry input').press('Enter');
+  assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('right')));
+  pass('Free practice visibly separates copying from dictation and works with keyboard submission');
+
+  const noStorage = await browser.newPage();
+  await noStorage.addInitScript(() => {
+    Storage.prototype.getItem = () => { throw new Error('storage blocked'); };
+    Storage.prototype.setItem = () => { throw new Error('storage blocked'); };
+  });
+  noStorage.on('pageerror', error => errors.push(error.message));
+  await noStorage.goto(`${base}/#learner/home`);
+  await noStorage.getByRole('button', { name: 'Begin hier', exact: true }).click();
+  await noStorage.locator('.cp-start-lesson').first().click();
+  await noStorage.locator('.cp-model-content').waitFor();
+  assert((await noStorage.locator('.toast-message').innerText()).includes('Oefenen kan doorgaan'));
+  await noStorage.close();
+  pass('Blocked browser storage does not prevent starting a lesson');
+  assert.deepEqual(errors, []);
+} finally {
+  writeFileSync(new URL(base.endsWith(':18817') ? 'production-browser-check.json' : 'browser-check.json', out), JSON.stringify({ base, checks, errors }, null, 2));
+  await browser.close();
+}

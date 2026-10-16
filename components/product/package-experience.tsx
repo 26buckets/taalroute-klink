@@ -11,6 +11,9 @@ import {
   type PackageExercise,
   type PackageId,
   type PackageLesson,
+  type AudioPlayer,
+  type LessonPosition,
+  type PracticeAttempt,
 } from '@/lib/package-content';
 import {
   ArrowLeft,
@@ -23,7 +26,6 @@ import {
   Layers3,
   ListChecks,
   MessageCircle,
-  PackageOpen,
   Route,
   Shapes,
   Volume2,
@@ -67,56 +69,25 @@ export function PackageLibrary({
       <header className="package-library-heading">
         <div>
           <span className="eyebrow">Klink · Alfabeta+</span>
-          <h1>Kies een bouwgroep</h1>
-          <p>
-            Open een bouwgroep en kies een leesstap. De routes voor langere woorden
-            en de voorbereiding staan daaronder.
-          </p>
-        </div>
-        <div className="klink-cycle" aria-label="De vijf stappen van Klink">
-          {['Kijken', 'Luisteren', 'Inoefenen', 'Nazeggen', 'Koppelen'].map(
-            (step, index) => (
-              <span key={step}>
-                <b>{'KLINK'[index]}</b>
-                <small>{step}</small>
-              </span>
-            ),
-          )}
+          <h1>Kies je lessen</h1>
         </div>
       </header>
 
       <section className="cp-package-grid" aria-label="Beschikbare lessenreeksen">
-        {contentPackages.map((pack, index) => (
-          <button key={pack.id} onClick={() => onOpen(pack.id)}>
-            <span className="cp-package-cover">
-              <PackageOpen />
-              <strong>{pack.kind === 'group' ? `Groep ${index + 1}` : 'Verder lezen'}</strong>
-              <small>{pack.kind === 'group' ? 'Bouwgroep' : pack.kind === 'route' ? 'Leesroute' : 'Voorbereiden'}</small>
+        {contentPackages.map((pack, index) => {
+          const preview = pack.lessons.flatMap(lesson => lessonPreviewWords(pack, lesson)).filter((word, i, all) => all.findIndex(item => item.id === word.id) === i).slice(0, 3);
+          const image = preview.find(word => word.image)?.image;
+          return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Open ${pack.title}: ${preview.map(wordLabel).join(', ')}`}>
+            <span className="cp-section-photo">
+              {image ? <Image src={image} alt="" width={240} height={200} /> : <BookOpen aria-hidden="true" />}
             </span>
             <span className="cp-package-copy">
-              <strong>{pack.title}</strong>
-              <em>{pack.subtitle}</em>
-              <span className="cp-package-stats">
-                <small>{pack.counts.lessons} lessen</small>
-                <small>{pack.counts.coreWords} kernwoorden</small>
-                <small>{pack.counts.exercises} oefeningen</small>
-                <small>{pack.counts.images} beelden</small>
-              </span>
+              <small>{index + 1}</small>
+              <strong>{preview.map(wordLabel).join(' · ') || pack.title}</strong>
+              <span className="cp-section-open">Open <ArrowRight aria-hidden="true" /></span>
             </span>
-            <ArrowRight />
-          </button>
-        ))}
-      </section>
-
-      <section className="cp-roadmap" aria-label="De Taalroute-opbouw">
-        <div>
-          <span className="eyebrow">Reeks</span>
-          <h2>Van bekende woorden naar een nieuwe leesstap</h2>
-          <p>37 leesstappen en 3 herhaalmomenten vormen de basis. Uitbreidingswoorden en langere woorden blijven afzonderlijk te kiezen.</p>
-        </div>
-        <div>
-          {['Bekende woorden', 'Nieuwe woorden', 'Woorden die terugkomen'].map(label => <span key={label}>{label}</span>)}
-        </div>
+          </button>;
+        })}
       </section>
     </div>
   );
@@ -128,12 +99,20 @@ export function PackagePlayer({
   savedWordIds,
   onToggleWord,
   onToast,
+  initialPosition,
+  onPosition,
+  onLessonDone,
+  onAttempt,
 }: {
   packageId: PackageId;
   onClose: () => void;
   savedWordIds: string[];
   onToggleWord: (wordId: string) => void;
   onToast: (message: string) => void;
+  initialPosition?: LessonPosition;
+  onPosition?: (position: LessonPosition) => void;
+  onLessonDone?: (lessonId: string) => void;
+  onAttempt?: (attempt: PracticeAttempt) => void;
 }) {
   const pack = getPackage(packageId);
   const [tab, setTab] = useState<PackageTab>('lessons');
@@ -142,12 +121,14 @@ export function PackagePlayer({
   async function playAudio(source?: string) {
     if (!source) {
       onToast('Bij dit woord is nog geen geluid beschikbaar. Vraag je docent om hulp.');
-      return;
+      return false;
     }
     try {
       await playMedia(source);
+      return true;
     } catch {
       onToast('Het geluid kon niet worden afgespeeld. Probeer de knop nog een keer.');
+      return false;
     }
   }
 
@@ -183,7 +164,7 @@ export function PackagePlayer({
             onAudio={playAudio}
           />
         )}
-        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} />}
+        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} />}
         {tab === 'practice' && <PackagePractice pack={pack} onAudio={playAudio} />}
         {tab === 'texts' && <PackageTexts pack={pack} />}
         {tab === 'dialogues' && <PackageDialogues pack={pack} />}
@@ -352,14 +333,16 @@ function lessonExercises(pack: PackageDefinition, lesson: PackageLesson) {
     .map((exercise) => addLessonWordAudio(exercise, pack, lesson));
 }
 
-function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
-  const [selectedLessonId, setSelectedLessonId] = useState('');
+function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onAttempt }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onAttempt?: (attempt: PracticeAttempt) => void }) {
+  const [selectedLessonId, setSelectedLessonId] = useState(initialPosition?.packageId === pack.id ? initialPosition.lessonId : '');
+  const [resumeId, setResumeId] = useState(initialPosition?.exerciseId);
   const selectedLesson = pack.lessons.find((lesson) => lesson.id === selectedLessonId);
 
   if (selectedLesson) {
     const exercises = lessonExercises(pack, selectedLesson);
     const lessonNumber = pack.lessons.findIndex((lesson) => lesson.id === selectedLesson.id) + 1;
     const label = lessonPreviewWords(pack, selectedLesson).map(wordLabel).join(' · ') || `Les ${lessonNumber}`;
+    const following = pack.lessons[lessonNumber];
     return (
       <section className="cp-panel cp-lesson-player">
         <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => setSelectedLessonId('')}><ArrowLeft />Alle lessen</button>
@@ -372,7 +355,12 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
           pack={pack}
           exercises={exercises}
           guided
-          onComplete={() => setSelectedLessonId('')}
+          initialExerciseId={resumeId}
+          onPosition={exerciseId => onPosition?.({ packageId: pack.id, lessonId: selectedLesson.id, exerciseId })}
+          onLessonDone={() => onLessonDone?.(selectedLesson.id)}
+          onAttempt={onAttempt}
+          completeLabel={following ? 'Volgende les' : 'Alle lessen'}
+          onComplete={() => { setResumeId(undefined); setSelectedLessonId(following?.id ?? ''); }}
           onAudio={onAudio}
           eyebrow={`Les ${lessonNumber}`}
           title={`Oefen met ${label}`}
@@ -397,7 +385,7 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
               {words[0]?.image && <Image src={words[0].image} alt="" width={80} height={80} />}
               <h2>{label}</h2>
             </div>
-            <button className="primary-button cp-start-lesson" aria-label={`Start les ${index + 1}: ${label}`} onClick={() => setSelectedLessonId(lesson.id)}>Start<ArrowRight aria-hidden="true" /></button>
+            <button className="primary-button cp-start-lesson" aria-label={`Start les ${index + 1}: ${label}`} onClick={() => { setResumeId(undefined); setSelectedLessonId(lesson.id); }}>Start<ArrowRight aria-hidden="true" /></button>
           </article>
         })}
       </div>

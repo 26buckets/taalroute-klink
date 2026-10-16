@@ -1,6 +1,10 @@
 import { taalroutePackages, primaryWordCards } from './taalroute-packages';
 
 export type PackageId = string;
+export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
+export type AudioPlayer = (source?: string) => Promise<boolean> | boolean | void;
+export type LessonPosition = { packageId: string; lessonId: string; exerciseId: string };
+export type PracticeAttempt = { exerciseId: string; mode: string; answer: string; correct: boolean; attempts: number; helpUsed: boolean; support: 'model' | 'requested-help' | 'none'; elapsedMs: number; objective: string; assessment: 'answer' | 'participation' };
 
 export type PackageWord = {
   id: string;
@@ -26,6 +30,7 @@ export type PackageLesson = {
   newWords?: string[];
   returning?: string[];
   guidedExerciseIds?: string[];
+  unitIds?: string[];
 };
 
 export type PackageText = {
@@ -67,6 +72,11 @@ export type PackageExercise = {
   lessonId?: string;
   stepKey?: string;
   sourceStatus?: string;
+  activityTypeId?: string;
+  phase?: LessonPhase;
+  feedback?: string;
+  requiresAudio?: boolean;
+  assessment?: 'answer' | 'participation';
   prompt?: {
     text?: string;
     image?: ExerciseImage;

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
+import { answerActivity } from './browser-route-helpers.mjs';
 const rendererSource = readFileSync(new URL('../components/product/package-exercise-browser.tsx', import.meta.url), 'utf8');
 const linkedSource = rendererSource.split('function LinkedQuestionSurface(')[1].split('\nfunction ')[0];
 assert(linkedSource.includes('if (!linked || !findAudioSource(exercise))'));
@@ -37,7 +38,6 @@ await page.addInitScript(() => {
 });
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
 const stopped = () => page.evaluate(() => window.__mediaAudit.audios.every(audio => audio.paused));
-const next = () => page.locator('.cp-exercise-feedback button').click();
 const exerciseId = () => page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
 async function openFirst() {
   await page.goto(`${base}/#learner/home`);
@@ -53,39 +53,12 @@ try {
   assert.equal(await page.getByRole('button', { name: 'Volgende oefening', exact: true }).count(), 0);
   assert(await page.locator('.cp-exercise-workspace aside button').evaluateAll(buttons => buttons.every(button => button.disabled)));
   for (const exercise of guided) {
-    assert.equal(await exerciseId(), exercise.exerciseId);
-    assert.equal(await page.locator('.cp-exercise-feedback output').getAttribute('aria-live'), 'polite');
-    assert(await page.locator('.cp-exercise-record-head h3').evaluate(element => element === document.activeElement));
-    if (exercise.mode === 'model') {
-      await page.locator('.cp-model-content').click();
-      assert.equal(await stopped(), false);
-    } else if (exercise.componentId === 'ALF-CMP-002') {
-      assert(await page.locator('.cp-exercise-feedback button').isDisabled());
-      const correct = exercise.answer.correctOptionIds[0];
-      const wrongIndex = exercise.options.findIndex(option => option.id !== correct);
-      const correctIndex = exercise.options.findIndex(option => option.id === correct);
-      await page.locator('.cp-choice-grid button').nth(wrongIndex).click();
-      assert(await page.locator('.cp-exercise-feedback button').isDisabled());
-      await page.locator('.cp-choice-grid button').nth(correctIndex).click();
-      assert.equal(await page.locator('.cp-choice-grid button').nth(correctIndex).getAttribute('aria-pressed'), 'true');
-      assert.equal(await page.getByRole('button', { name: 'Controleer', exact: true }).count(), 0);
-    } else if (exercise.componentId === 'ALF-CMP-005') {
-      for (const id of exercise.answer.targetTileIds) {
-        const token = exercise.tiles.find(tile => tile.id === id).token;
-        await page.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${token}$`) }).first().click();
-      }
-      assert.equal(await page.locator('.cp-exercise-feedback button').isDisabled(), false);
-      await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
-      assert(await page.locator('.cp-exercise-feedback button').isDisabled());
-      const token = exercise.tiles.find(tile => tile.id === exercise.answer.targetTileIds.at(-1)).token;
-      await page.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${token}$`) }).first().click();
-    }
-    await next();
+    await answerActivity(page, exercise);
     assert(await stopped());
   }
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
   console.log('PASS guided sequence, one-click choices, wrong/correct, undo relocks, focus/status, audio stops');
-  await page.getByRole('button', { name: 'Terug naar de leesstappen', exact: true }).click();
+  await page.getByRole('button', { name: 'Alle lessen', exact: true }).click();
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
   await family('Het woord typen');
   const typeId = await exerciseId();
@@ -106,20 +79,18 @@ try {
   await family('Woord en beeld koppelen');
   const matchId = await exerciseId();
   const matching = packs[0].exercises.find(exercise => exercise.exerciseId === matchId);
+  await page.locator('.cp-match-board > div').nth(0).locator('button').first().click();
+  const wrongTarget = matching.targets.findIndex(target => target.id !== matching.answer.mapping[matching.sources[0].id]);
+  await page.locator('.cp-match-board > div').nth(1).locator('button').nth(wrongTarget).click();
+  assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('wrong')));
   for (let i = 0; i < matching.sources.length; i++) {
     await page.locator('.cp-match-board > div').nth(0).locator('button').nth(i).click();
     const targetIndex = matching.targets.findIndex(target => target.id === matching.answer.mapping[matching.sources[i].id]);
     await page.locator('.cp-match-board > div').nth(1).locator('button').nth(targetIndex).click();
   }
-  await page.getByRole('button', { name: 'Controleer', exact: true }).click();
   assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('right')));
-  await page.locator('.cp-match-board > div').nth(0).locator('button').first().click();
-  const wrongTarget = matching.targets.findIndex(target => target.id !== matching.answer.mapping[matching.sources[0].id]);
-  await page.locator('.cp-match-board > div').nth(1).locator('button').nth(wrongTarget).click();
-  assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('idle')));
-  await page.getByRole('button', { name: 'Controleer', exact: true }).click();
-  assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('wrong')));
-  console.log('PASS typing, writing and matching reset earlier correct feedback after answer edits');
+  assert(await page.locator('.cp-match-board > div').nth(0).locator('button').first().isDisabled());
+  console.log('PASS typing/writing reset feedback; matching preserves correct pairs and permits recovery');
   await family('Memory');
   const memoryId = await exerciseId();
   const memory = packs[0].exercises.find(exercise => exercise.exerciseId === memoryId);

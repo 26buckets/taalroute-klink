@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
+import { answerActivity } from './browser-route-helpers.mjs';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -10,7 +11,7 @@ page.on('pageerror', error => errors.push(error.message));
 const out = new URL('../outputs/existing-player-integration/', import.meta.url);
 mkdirSync(out, { recursive: true });
 const pass = name => { checks.push(name); console.log('PASS', name); };
-async function home() { await page.goto(`${base}/#learner/home`); await page.reload(); await page.locator('.cp-home').waitFor(); }
+async function home() { await page.goto(`${base}/#learner/home`); await page.evaluate(() => localStorage.removeItem('klink.taalroute.route.v1')); await page.reload(); await page.locator('.cp-home').waitFor(); }
 async function library() { await page.getByRole('button', { name: 'Lessen', exact: true }).click(); await page.locator('.cp-package-grid').waitFor(); }
 async function screenshot(name) { await page.screenshot({ path: new URL(`${name}.png`, out).pathname }); }
 try {
@@ -37,47 +38,12 @@ try {
   const lesson = packs[0].lessons[1];
   const exercises = exercisesForLesson(packs[0], lesson);
   for (const exercise of exercises) {
-    assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
-    assert.equal(await page.locator('.cp-exercise-feedback button').isDisabled(), exercise.mode !== 'model');
     assert.equal(await page.getByRole('button', { name: 'Volgende oefening', exact: true }).count(), 0);
-    assert.equal(await page.locator('.cp-exercise-feedback output').getAttribute('aria-live'), 'polite');
-    if (exercise.mode === 'model') {
-      if (exercise.prompt.audio) {
-        await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
-        assert.equal((await page.request.get(base + exercise.prompt.audio.src)).status(), 200);
-      }
-      if (exercise.prompt.image) {
-        await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
-      }
-      assert.equal(await page.getByRole('button', { name: 'Ik heb gekeken', exact: true }).count(), 0);
-    } else if (exercise.componentId === 'ALF-CMP-002') {
-      if (exercise.mode === 'heard-word') await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
-      const answer = exercise.answer.correctOptionIds[0];
-      const wrong = exercise.options.find(option => option.id !== answer);
-      const options = await page.locator('.cp-choice-grid button').allTextContents();
-      await page.locator('.cp-choice-grid button').filter({ hasText: new RegExp(`^${wrong.label}$`) }).click();
-      assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Probeer opnieuw'));
-      assert(await page.locator('.cp-exercise-feedback button').isDisabled());
-      assert.deepEqual(await page.locator('.cp-choice-grid button').allTextContents(), options);
-      await page.locator('.cp-choice-grid button').filter({ hasText: new RegExp(`^${exercise.options.find(option => option.id === answer).label}$`) }).click();
-    } else if (exercise.componentId === 'ALF-CMP-005') {
-      await page.locator('.cp-tile-bank button').first().click();
-      await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
-      for (const id of exercise.answer.targetTileIds) {
-        const tile = exercise.tiles.find(item => item.id === id);
-        await page.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${tile.token}$`) }).first().click();
-      }
-      assert(!(await page.locator('.cp-exercise-feedback button').isDisabled()));
-      await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
-      assert(await page.locator('.cp-exercise-feedback button').isDisabled());
-      const last = exercise.tiles.find(item => item.id === exercise.answer.targetTileIds.at(-1));
-      await page.locator('.cp-tile-bank button:not(:disabled)').filter({ hasText: new RegExp(`^${last.token}$`) }).first().click();
-    } else throw Error(`Untested guided mode: ${exercise.mode}`);
-    if (exercise.mode !== 'model') assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Goed'));
-    await page.locator('.cp-exercise-feedback button').click();
+    if (exercise.prompt.audio) assert.equal((await page.request.get(base + exercise.prompt.audio.src)).status(), 200);
+    await answerActivity(page, exercise);
   }
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
-  await page.getByRole('button', { name: 'Terug naar de leesstappen', exact: true }).click();
+  await page.getByRole('button', { name: 'Alle lessen', exact: true }).click();
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
