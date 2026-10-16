@@ -2,7 +2,7 @@
 
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
 import { playMedia, stopMedia } from '@/components/product/shared';
-import { exercisesForLesson } from '@/lib/taalroute-packages';
+import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
 import {
   contentPackages,
   getPackage,
@@ -50,16 +50,6 @@ const tabLabels: { id: PackageTab; label: string; icon: typeof BookOpen }[] = [
   { id: 'dialogues', label: 'Gesprekken', icon: MessageCircle },
   { id: 'media', label: 'Beeld en audio', icon: Images },
 ];
-
-const stepLabels: Record<string, string> = {
-  start: 'Start',
-  kijk: 'Kijken',
-  kies: 'Kiezen',
-  klank: 'Klank',
-  bouw: 'Bouwen',
-  doe: 'Doen',
-  meer: 'Meer oefenen',
-};
 
 export function PackageLibrary({
   onBack,
@@ -369,12 +359,13 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
   if (selectedLesson) {
     const exercises = lessonExercises(pack, selectedLesson);
     const lessonNumber = pack.lessons.findIndex((lesson) => lesson.id === selectedLesson.id) + 1;
+    const label = lessonPreviewWords(pack, selectedLesson).map(wordLabel).join(' · ') || `Les ${lessonNumber}`;
     return (
       <section className="cp-panel cp-lesson-player">
         <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => setSelectedLessonId('')}><ArrowLeft />Alle lessen</button>
         <div className="cp-lesson-launch">
           <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
-          <div><small>Les {lessonNumber}</small><h1>{selectedLesson.title}</h1><p>{selectedLesson.words.join(' · ')}</p></div>
+          <div><small>Les {lessonNumber}</small><h1>{label}</h1></div>
         </div>
         <PackageExerciseBrowser
           key={selectedLesson.id}
@@ -384,7 +375,7 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
           onComplete={() => setSelectedLessonId('')}
           onAudio={onAudio}
           eyebrow={`Les ${lessonNumber}`}
-          title={`Oefen met ${selectedLesson.title}`}
+          title={`Oefen met ${label}`}
           description="Kijk, luister, kies en bouw het woord."
         />
       </section>
@@ -392,26 +383,23 @@ function PackageLessons({ pack, onAudio }: { pack: PackageDefinition; onAudio: (
   }
 
   return (
-    <section className="cp-panel">
+    <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">Lessen</span><h1>Kies een les en begin</h1><p>Tik op Start les.</p></div>
-        <span className="cp-panel-count"><strong>{pack.lessons.length}</strong><small>lessen</small></span>
+        <h1>Lessen</h1>
       </header>
       <div className="cp-lesson-list">
-        {pack.lessons.map((lesson, index) => (
-          <article key={lesson.id}>
-            <span className="cp-lesson-number">{String(index + 1).padStart(2, '0')}</span>
-            <div>
-              <small>{lesson.kind === 'uitbreiding' ? 'Uitbreiding' : lesson.kind === 'woord' ? 'Verder oefenen' : lesson.kind === 'herhaalronde' ? 'Herhalen' : 'Leesstap'}</small>
-              <h2>{lesson.title}</h2>
-              {lesson.newWords ? <div className="cp-word-chips">{[['Bekend', lesson.known ?? []], ['Nieuw', lesson.newWords], ['Komt terug', lesson.returning ?? []]].map(([label, ids]) => <span key={label as string}><b>{label as string}: </b>{(ids as string[]).map(id => pack.words.find(word => word.id === id)?.word).join(' · ') || '—'}</span>)}</div> : <div className="cp-word-chips">{lesson.words.map(word => <span key={word}>{word}</span>)}</div>}
-              <button className="primary-button cp-start-lesson" onClick={() => setSelectedLessonId(lesson.id)}>Start les<ArrowRight /></button>
+        {pack.lessons.map((lesson, index) => {
+          const words = lessonPreviewWords(pack, lesson);
+          const label = words.map(wordLabel).join(' · ') || `Les ${index + 1}`;
+          return <article key={lesson.id}>
+            <span className="cp-lesson-number" aria-label={`Les ${index + 1}`}>{index + 1}</span>
+            <div className="cp-lesson-preview">
+              {words[0]?.image && <Image src={words[0].image} alt="" width={80} height={80} />}
+              <h2>{label}</h2>
             </div>
-            <ol aria-label={`Stappen van ${lesson.title}`}>
-              {lesson.steps.map((step, stepIndex) => <li key={step}><span>{stepIndex + 1}</span>{stepLabels[step] ?? step}</li>)}
-            </ol>
+            <button className="primary-button cp-start-lesson" aria-label={`Start les ${index + 1}: ${label}`} onClick={() => setSelectedLessonId(lesson.id)}>Start<ArrowRight aria-hidden="true" /></button>
           </article>
-        ))}
+        })}
       </div>
     </section>
   );

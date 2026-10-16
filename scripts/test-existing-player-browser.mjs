@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
+import { taalroutePackages as packs, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -24,7 +24,9 @@ try {
     const pack = packs[i];
     await page.locator('.cp-package-grid > button').nth(i).click();
     assert.equal(await page.locator('.cp-player-bar strong').innerText(), pack.title);
-    assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(), pack.lessons.map(lesson => lesson.title));
+    assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(), pack.lessons.map((lesson, index) => lessonPreviewWords(pack, lesson).map(word => word.word === 'pak' ? `pak (${word.id.endsWith('verpakking') ? 'verpakking' : 'kleding'})` : word.word).join(' · ') || `Les ${index + 1}`));
+    assert.equal(await page.locator('.cp-lesson-list article button').count(), pack.lessons.length);
+    assert(!/Leesstap|Bekend:|Nieuw:|Komt terug|Kijken|Kiezen|Bouwen|Tik op Start/.test(await page.locator('.cp-lesson-picker').innerText()));
     assert(!/CP00[12]/.test(await page.locator('.cp-player').innerText()));
     await page.getByRole('button', { name: 'Terug naar lessen', exact: true }).click();
   }

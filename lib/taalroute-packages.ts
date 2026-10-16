@@ -138,6 +138,15 @@ export function exercisesForLesson(pack: PackageDefinition, lesson: PackageLesso
   return pack.exercises.filter(exercise => exercise.lessonId === lesson.id && ids.has(exercise.exerciseId));
 }
 
+// A preview is not a shortened lesson: the full lesson and recall stay unchanged.
+export function lessonPreviewWords(pack: PackageDefinition, lesson: PackageLesson): PackageWord[] {
+  const ids = lesson.newWords?.length ? lesson.newWords : lesson.returning;
+  return (ids?.length
+    ? ids.map(id => pack.words.find(word => word.id === id))
+    : lesson.words.map(text => pack.words.find(word => word.word === text)))
+    .filter((word): word is PackageWord => Boolean(word)).slice(0, 2);
+}
+
 export const primaryWordCards = curriculum.words.map(word => ({ ...toWord(word), packageId:
   word.firstReading.mode === 'reading-route' ? `route-${word.firstReading.routeId}` :
   word.firstReading.mode === 'preparation' ? 'voorbereiding' : `groep-${homeGroup(word)}`,

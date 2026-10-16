@@ -1,9 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { taalroutePackages as packs, primaryWordCards, exercisesForLesson } from '../lib/taalroute-packages.ts';
+import { taalroutePackages as packs, primaryWordCards, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
 import release from '../data/klink-curriculum.json' with { type: 'json' };
 const lessons = packs.flatMap(pack => pack.lessons);
+test('Compact lesson previews preserve the full lesson and choose target meanings, including recall', () => {
+  const before = JSON.stringify(packs);
+  for (const pack of packs) for (const lesson of pack.lessons) {
+    const expected = (lesson.newWords.length ? lesson.newWords : lesson.returning).slice(0, 2);
+    assert.deepEqual(lessonPreviewWords(pack, lesson).map(word => word.id), expected, lesson.id);
+  }
+  assert.equal(JSON.stringify(packs), before);
+  const pack = packs[0];
+  const legacy = { ...pack.lessons[0], newWords: undefined, returning: undefined };
+  assert.deepEqual(lessonPreviewWords(pack, legacy).map(word => word.word), legacy.words.slice(0, 2));
+});
 test('Every Lexicon meaning has exactly one first home; all core and extension steps remain exact', () => {
   assert.equal(primaryWordCards.length, 338);
   assert.equal(new Set(primaryWordCards.map(word => word.id)).size, 338);
