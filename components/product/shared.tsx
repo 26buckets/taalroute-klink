@@ -12,10 +12,17 @@ export function playAudio(file: string, rate = 1) {
 
 let activeAudio: HTMLAudioElement | undefined;
 
+export function stopMedia() {
+  activeAudio?.pause();
+  activeAudio = undefined;
+}
+
 export async function playMedia(source: string) {
   activeAudio?.pause();
-  activeAudio = new Audio(source);
-  await activeAudio.play();
+  const audio = new Audio(source);
+  activeAudio = audio;
+  try { await audio.play(); }
+  catch (error) { if (activeAudio === audio) throw error; }
 }
 
 export function Brand({ dark = false }: { dark?: boolean; label?: string }) {

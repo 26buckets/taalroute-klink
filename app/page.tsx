@@ -1,8 +1,7 @@
 'use client';
 
 import { EntryScreen } from '@/components/product/entry-design';
-import { LearnerApp } from '@/components/product/learner-app';
-import { TeacherApp } from '@/components/product/staff-apps';
+import { CurriculumApp } from '@/components/product/curriculum-app';
 import { CheckCircle2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -11,6 +10,17 @@ export type Portal = 'entry' | 'learner' | 'teacher';
 export default function KlinkProductSlice() {
   const [portal, setPortal] = useState<Portal>('entry');
   const [toast, setToast] = useState('');
+
+  useEffect(() => {
+    const restore = () => setPortal(window.location.hash.startsWith('#learner') ? 'learner' : window.location.hash.startsWith('#teacher') ? 'teacher' : 'entry');
+    restore();
+    window.addEventListener('hashchange', restore);
+    return () => window.removeEventListener('hashchange', restore);
+  }, []);
+  function openPortal(next: Portal) {
+    setPortal(next);
+    window.location.hash = next === 'entry' ? '' : next;
+  }
 
   useEffect(() => {
     if (!toast) return;
@@ -38,7 +48,7 @@ export default function KlinkProductSlice() {
       execute(input: unknown) {
         const workspace = (input as { workspace?: Portal }).workspace;
         if (!workspace || !['entry', 'learner', 'teacher'].includes(workspace)) throw new Error('Onbekende werkplek.');
-        setPortal(workspace);
+        openPortal(workspace);
         return { visibleWorkspace: workspace };
       },
     }, { signal: lifecycle.signal })).catch(() => undefined);
@@ -47,9 +57,9 @@ export default function KlinkProductSlice() {
 
   return (
     <div className="product-root" data-theme="taalroute">
-      {portal === 'entry' && <EntryScreen onPortal={setPortal} />}
-      {portal === 'learner' && <LearnerApp onExit={() => setPortal('entry')} onToast={setToast} />}
-      {portal === 'teacher' && <TeacherApp onExit={() => setPortal('entry')} onToast={setToast} />}
+      {portal === 'entry' && <EntryScreen onPortal={openPortal} />}
+      {portal === 'learner' && <CurriculumApp key="learner" onExit={() => openPortal('entry')} onToast={setToast} />}
+      {portal === 'teacher' && <CurriculumApp key="teacher" teacher onExit={() => openPortal('entry')} onToast={setToast} />}
       {toast && <output className="toast-message"><CheckCircle2 />{toast}</output>}
     </div>
   );
