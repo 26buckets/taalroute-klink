@@ -75,7 +75,10 @@ test('Existing renderer contracts have valid answers, tiles, models, and nonambi
 test('Both pak meanings remain distinct, missing media is not invented and public files contain no Drive links', () => {
   const pak = primaryWordCards.filter(word => word.word === 'pak');
   assert.equal(pak.length, 2);
-  assert.equal(pak.find(word => word.id.endsWith('verpakking')).image, undefined);
+  const packaging = pak.find(word => word.id.endsWith('verpakking'));
+  const garment = pak.find(word => !word.id.endsWith('verpakking'));
+  assert.equal(packaging.image, '/package-media/candidates/klink-woord-pak-verpakking.webp');
+  assert.notEqual(packaging.image, garment.image);
   for (const word of primaryWordCards) for (const path of [word.audio, word.image].filter(Boolean)) assert(existsSync(new URL(`../public${path}`, import.meta.url)), path);
   assert(!/drive\.google|docs\.google|diglin/i.test(JSON.stringify(packs)));
 });

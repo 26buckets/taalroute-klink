@@ -51,7 +51,7 @@ test('The two pak meanings stay distinct and cannot be ambiguous distractors', (
   const meanings = curriculum.words.filter(word => word.word === 'pak');
   assert.equal(meanings.length, 2);
   assert.notEqual(meanings[0].meaning, meanings[1].meaning);
-  assert(!wordMedia['klink-woord-pak-verpakking']?.image);
+  assert.notEqual(wordMedia['klink-woord-pak-verpakking']?.image, wordMedia['klink-woord-pak']?.image);
 });
 test('Storage is optional, validated and independent from old CP progress', () => {
   for (const raw of ['garbage', 'null', '[]', '{}']) assert.deepEqual(parseState(raw).introduced, []);

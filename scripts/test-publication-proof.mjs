@@ -25,7 +25,7 @@ function check(candidate) {
 test('Valid historical proof resolves provenance, not outstanding media approval', () => {
   const errors = check(proof);
   assert(!/herkomstbewijs|broncommit/.test(errors));
-  assert(errors.includes('uitspraakcontrole')); assert(errors.includes('177 betekenissen'));
+  assert(errors.includes('uitspraakcontrole')); assert(errors.includes('161 betekenissen'));
   assert(errors.includes('instructie-audio is nog niet inhoudelijk vrijgegeven')); assert(errors.includes('zinnen en situaties'));
 });
 test('Proof for a different live version cannot satisfy the publication gate', () => {
