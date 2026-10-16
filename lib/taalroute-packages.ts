@@ -1,6 +1,8 @@
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import bindings from '../data/klink-media.json' with { type: 'json' };
+import instructions from '../data/klink-instructions.json' with { type: 'json' };
 import type { LessonPhase, PackageDefinition, PackageExercise, PackageLesson, PackageWord } from './package-content';
+import { klinkContexts } from './klink-context.ts';
 
 type Word = typeof curriculum.words[number];
 type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds?: string[] };
@@ -16,7 +18,7 @@ const tokensFor = (word: Word) => {
 };
 const labels: Record<string, string> = {
   '001': 'Kijk- en luisterkaart', '002': 'Kies het woord of beeld', '004': 'Woord en beeld koppelen',
-  '005': 'Het woord bouwen', '006': 'Het woord typen', '009': 'Nazeggen', '012': 'Het woord schrijven',
+  '005': 'Het woord bouwen', '006': 'Het woord typen', '007': 'Zinnen en situaties', '009': 'Nazeggen', '012': 'Het woord schrijven',
   '015': 'Memory', '016': 'Woordkaarten',
 };
 
@@ -26,11 +28,13 @@ export function exercisesForStep(step: Step) {
   const exercises: PackageExercise[] = [];
   const phases: Record<LessonPhase, string[]> = { meet: [], recognize: [], make: [], use: [], recall: [] };
   const make = (word: Word, family: string, mode: string, prompt: string, activityTypeId: string, phase: LessonPhase, extra: Record<string, unknown> = {}) => {
+    const instruction = instructions.items.find(item => item.modes.includes(mode));
     const record: PackageExercise = {
       exerciseId: `${step.id}:${word.id}:${mode}`, componentId: `ALF-CMP-${family}`, contractVersion: '1.0',
       lessonId: step.id, mode, title: prompt, sourceStatus: 'concept', wordId: word.id,
       objective: word.firstReading.firstGoal ?? word.reading.firstMoment,
       activityTypeId, phase, assessment: family === '001' || family === '009' || family === '012' || family === '016' ? 'participation' : 'answer',
+      instructionAudio: instruction?.src ? { src: instruction.src, audioId: instruction.id } : undefined,
       prompt: { text: prompt, audio: audioFor(word) }, ...extra,
     };
     exercises.push(record);
@@ -109,11 +113,26 @@ export function exercisesForStep(step: Step) {
       ...[...pictured].reverse().map(word => ({ itemId: `image-${word.id}`, pairKey: word.id, content: { image: imageFor(word) } })),
     ] });
   }
+  const contexts = klinkContexts.filter(item => item.wordIds.some(id => targets.some(word => word.id === id)));
+  for (const item of contexts) {
+    const word = targets.find(word => item.wordIds.includes(word.id))!;
+    const contextId = make(word, '007', `listen-${item.kind}`, 'Luister en kijk.', 'ZI-01', 'use', {
+      exerciseId: `${step.id}:${item.id}`, contextId: item.id,
+      prompt: { text: 'Luister en kijk.', audio: { src: item.audio, audioId: item.id } },
+      textBlocks: [{ id: item.id, text: item.text, audio: { src: item.audio, audioId: item.id } }],
+      image: item.image ? { src: item.image, altText: item.imageAlt } : imageFor(word),
+      requiresAudio: true, assessment: 'participation', access: item.access,
+      preparation: item.preparation, independentReading: false, humanReview: item.humanReview,
+      objective: 'Een bekend woord horen in een betekenisvolle zin of situatie; luisteren met tekststeun, niet zelfstandig lezen.',
+    });
+    // At most one sentence and one situation; all further models remain in free practice.
+    if (!phases.use.some(id => exercises.find(record => record.exerciseId === id)?.mode === `listen-${item.kind}`)) phases.use.push(contextId);
+  }
   const guided = Object.values(phases).flat();
   // Keep every introduction and recall; optional variation stays in free practice if the route is long.
-  for (const mode of ['missing-grapheme', 'heard-image', 'word-image-match', 'word-image']) {
+  for (const mode of ['missing-grapheme', 'heard-image', 'word-image-match', 'word-image', 'listen-situation', 'listen-sentence']) {
     while (guided.length > 16) {
-      const index = guided.findIndex(id => id.endsWith(`:${mode}`));
+      const index = guided.findIndex(id => exercises.find(record => record.exerciseId === id)?.mode === mode);
       if (index < 0) break;
       guided.splice(index, 1);
     }
@@ -165,10 +184,11 @@ function buildPack(id: string, title: string, kind: PackageDefinition['kind'], w
   const wordCards = allWords.map(toWord);
   const imageCount = wordCards.filter(word => word.image).length;
   const audioCount = wordCards.filter(word => word.audio).length;
+  const contexts = klinkContexts.filter(item => exercises.some(exercise => exercise.contextId === item.id));
   return { id, title, kind, subtitle: kind === 'group' ? 'Taalroute · klanken en woorden' : 'Taalroute · verder lezen', description, level: 'Alfabeta+',
     status: 'Mediacontrole open', statusNote: 'De nieuwe Taalroute-indeling gebruikt de bestaande oefeningen. Ontbrekende opnamen en beelden zijn nog niet aangevuld.',
-    counts: { lessons: lessons.length, coreWords: words.length, exercises: exercises.length, exerciseTypes: exerciseTypes.length, texts: 0, dialogues: 0, games: exercises.filter(item => item.componentId === 'ALF-CMP-015').length, images: imageCount, audio: audioCount },
-    lessons, words: wordCards, exercises, exerciseTypes, texts: [], dialogues: [], games: exercises.filter(item => item.componentId === 'ALF-CMP-015').map(item => ({ id: item.exerciseId, title: item.title!, mode: item.mode })), scenes: [],
+    counts: { lessons: lessons.length, coreWords: words.length, exercises: exercises.length, exerciseTypes: exerciseTypes.length, texts: contexts.length, dialogues: 0, games: exercises.filter(item => item.componentId === 'ALF-CMP-015').length, images: imageCount, audio: audioCount },
+    lessons, words: wordCards, exercises, exerciseTypes, texts: contexts.map(item => ({ id: item.id, title: item.title, level: 'Samen luisteren', text: item.text, audio: item.audio })), dialogues: [], games: exercises.filter(item => item.componentId === 'ALF-CMP-015').map(item => ({ id: item.exerciseId, title: item.title!, mode: item.mode })), scenes: contexts.filter(item => item.image).map(item => ({ id: item.id, title: item.title, image: item.image, words: wordsFor(item.wordIds).map(word => word.word) })),
     media: { imageAvailable: imageCount, imageExpected: wordCards.length, audioAvailable: audioCount, audioExpected: wordCards.length, missing: wordCards.filter(word => !word.image).map(word => word.word), imageReview: 'Herkenbaarheid nog beoordelen.', audioReview: 'Uitspraak nog beoordelen.', publication: 'INTERNAL_ONLY' },
   };
 }

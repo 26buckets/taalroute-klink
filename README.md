@@ -17,9 +17,11 @@ De naam staat voor de vijf leerhandelingen:
 - Vijf leesroutes voor 78 langere woorden, plus voorbereiding.
 - Bestaande Klink-schermen en oefenspelers; geen afzonderlijke nieuwe app.
 
-Negen van de achttien bestaande oefenvormen zijn aan de nieuwe woordindeling gekoppeld. De makerskaart beschrijft ook mogelijke vervolgopdrachten; die mogelijkheden zijn niet allemaal uitgewerkte lessen. De cursist krijgt deze bibliotheek niet als losse keuzelijst te zien.
+Tien van de achttien bestaande oefenvormen zijn aan de nieuwe woordindeling gekoppeld. De makerskaart beschrijft ook mogelijke vervolgopdrachten; die mogelijkheden zijn niet allemaal uitgewerkte lessen. De cursist krijgt deze bibliotheek niet als losse keuzelijst te zien.
 
 De begeleide lessen volgen passende fasen van kennismaken tot herhalen. Beeldkeuzes en koppelen zijn aangesloten; dictee zonder zichtbaar model en het aanvullen van lettercombinaties zijn toegevoegd binnen de bestaande spelers. Maximaal zestien opdrachten per begeleide route, met extra varianten bij vrij oefenen. Verder hervat de laatste opdracht. Docent → Oefenkaart toont per leesstap wat werkt, beschikbaar maar niet aangesloten is, ontbreekt of bewust niet nodig is. Zie docs/LESROUTE-UITBREIDING-20261016.md; `node scripts/export-lesson-coverage.mjs` maakt de volledige inventaris.
+
+De doorgaande klikroute start benodigde audio vanzelf. Instructies met een aparte steunstem worden eenmaal per handeling aangeboden; woord en foto zijn herhaalbaar. Verder heeft één betekenis; correcte antwoorden gaan na 650 ms vanzelf door, met een eigen pauzeknop. Acht bestaande Taalroute-zinnen en vier situaties met audio zijn bij passende woorden aangesloten als luisteren met tekststeun, niet als zelfstandig lezen. Zeventien instructieopnamen en zeven ontbrekende woordopnamen zijn als beoordelingskandidaten gekoppeld. Zie docs/DOORGAAN-EN-LUISTEREN-20261016.md.
 
 Media- en publicatievoorwaarden staan in data/klink-release-readiness.json en docs/KLINK-TAALROUTE-OMBOUW.md. Deze werkversie is nog niet live vrijgegeven. Interne statusinformatie staat niet op cursistschermen.
 

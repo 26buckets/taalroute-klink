@@ -3,26 +3,12 @@
 import { LogOut, MoreHorizontal, Search } from 'lucide-react';
 import Image from 'next/image';
 import { ReactNode } from 'react';
+export { playMedia, stopMedia } from '@/lib/media-player';
 
 export function playAudio(file: string, rate = 1) {
   const audio = new Audio(`/audio/pb/${file}.m4a`);
   audio.playbackRate = rate;
   void audio.play();
-}
-
-let activeAudio: HTMLAudioElement | undefined;
-
-export function stopMedia() {
-  activeAudio?.pause();
-  activeAudio = undefined;
-}
-
-export async function playMedia(source: string) {
-  activeAudio?.pause();
-  const audio = new Audio(source);
-  activeAudio = audio;
-  try { await audio.play(); }
-  catch (error) { if (activeAudio === audio) throw error; }
 }
 
 export function Brand({ dark = false }: { dark?: boolean; label?: string }) {

@@ -5,10 +5,13 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
   const feedback = page.locator('.cp-exercise-feedback');
   assert.equal(await feedback.locator('output').getAttribute('aria-live'), 'polite');
   if (checkFocus) assert(await page.locator('.cp-exercise-record-head h3').evaluate(element => element === document.activeElement));
-  if (exercise.requiresAudio || (exercise.mode === 'model' && exercise.prompt.audio)) {
-    assert(await feedback.locator('button').isDisabled());
-    await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
-    await page.waitForFunction(() => !document.querySelector('.cp-exercise-feedback output').textContent.includes('Tik op Luister'));
+  if (advance) {
+    const pause = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true });
+    if (await pause.count()) await pause.click();
+  }
+  if (exercise.requiresAudio) {
+    // The learner's Start action now starts the stimulus; no mandatory replay click.
+    await page.waitForFunction(() => !/Tik op Luister|Je hoort het geluid vanzelf|Probeer Luister opnieuw/.test(document.querySelector('.cp-exercise-feedback output').textContent));
   }
   if (exercise.componentId === 'ALF-CMP-001') {
     if (exercise.prompt.image) await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
@@ -30,7 +33,6 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
       const index = exercise.tiles.findIndex(tile => tile.id === id);
       await bank.nth(index).click();
     }
-    await page.getByRole('button', { name: 'Blijf hier', exact: true }).click();
     await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
     assert(await feedback.locator('button').isDisabled());
     await bank.nth(exercise.tiles.findIndex(tile => tile.id === exercise.answer.targetTileIds.at(-1))).click();
@@ -58,11 +60,14 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
     assert.equal(await input.inputValue(), 'fout');
     await input.fill(exercise.fields[0].acceptedAnswers[0]);
     await input.press('Enter');
+  } else if (exercise.componentId === 'ALF-CMP-007') {
+    assert.equal(exercise.assessment, 'participation');
+    assert.equal(exercise.independentReading, false);
+    assert.equal(await page.getByRole('button', { name: 'Ik heb gelezen', exact: true }).count(), 0);
+    assert(await page.locator('.cp-reading-blocks').isVisible());
   } else throw Error(`Untested guided component: ${exercise.componentId}/${exercise.mode}`);
   if (exercise.assessment === 'answer') assert((await feedback.innerText()).includes('Goed'));
   if (advance) {
-    const pause = page.getByRole('button', { name: 'Blijf hier', exact: true });
-    if (await pause.count()) await pause.click();
     await feedback.locator('button').click();
   }
 }

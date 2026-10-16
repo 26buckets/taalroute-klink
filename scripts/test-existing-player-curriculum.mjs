@@ -56,7 +56,7 @@ test('Existing renderer contracts have valid answers, tiles, models, and nonambi
   const ids = new Set();
   for (const pack of packs) for (const exercise of pack.exercises) {
     assert(!ids.has(exercise.exerciseId), exercise.exerciseId); ids.add(exercise.exerciseId);
-    assert(/^ALF-CMP-(001|002|004|005|006|009|012|015|016)$/.test(exercise.componentId));
+    assert(/^ALF-CMP-(001|002|004|005|006|007|009|012|015|016)$/.test(exercise.componentId));
     if (exercise.componentId === 'ALF-CMP-002') {
       assert.equal(exercise.options.length, 2);
       assert.equal(new Set(exercise.options.map(option => option.label ?? option.image.src)).size, 2);

@@ -1,9 +1,11 @@
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { klinkContexts } from '../lib/klink-context.ts';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
 const media = read('../data/klink-media.json');
 const release = read('../data/klink-curriculum.json');
+const instructions = read('../data/klink-instructions.json');
 const issues = [];
 if (!readiness.publicationApproved) issues.push('De nieuwe inhoud is nog niet vrijgegeven.');
 if (!readiness.baseline.commitToLiveVersionProven) issues.push('De broncommit van de liveversie moet nog aantoonbaar worden bevestigd.');
@@ -18,6 +20,11 @@ execFileSync('git', ['merge-base', '--is-ancestor', readiness.baseline.sourceCom
 if (readiness.wordPronunciationReview !== 'approved') issues.push('De uitspraakcontrole staat open.');
 if (readiness.imageMeaningReview !== 'approved') issues.push('De woord-beeldcontrole staat open.');
 if (readiness.instructionAudioCoverage !== 'complete') issues.push('Niet elke oefenvorm heeft gecontroleerde instructie-audio.');
+const missingInstructions = instructions.items.filter(item => !item.src);
+if (missingInstructions.length) issues.push(`${missingInstructions.length} instructieopnamen moeten nog worden geproduceerd.`);
+if (instructions.voiceId === instructions.targetVoiceId) issues.push('De instructiestem moet verschillen van de doeltaalstem.');
+if (instructions.humanReview !== 'approved') issues.push('De instructie-audio is nog niet inhoudelijk vrijgegeven.');
+if (klinkContexts.some(item => item.humanReview !== 'approved')) issues.push('De zinnen en situaties wachten op inhoudelijke en luistervrijgave.');
 const missing = release.words.filter(word => !media[word.id]?.audio);
 if (missing.length) issues.push(`${missing.length} betekenissen hebben nog geen gekoppelde woordopname.`);
 const missingImages = release.words.filter(word => !media[word.id]?.image);

@@ -62,10 +62,10 @@ try {
   await page.getByRole('button', { name: 'mat bewaren', exact: true }).click();
   await page.getByRole('button', { name: 'Herhalen', exact: true }).click();
   assert((await page.locator('.review-word-list').innerText()).includes('mat'));
-  const noAudio = page.locator('.review-word-list button').filter({ has: page.locator('strong', { hasText: /^sap$/ }) });
-  assert(await noAudio.isDisabled());
-  assert((await noAudio.innerText()).includes('Lees samen met je docent'));
-  assert.equal(await noAudio.locator('svg').count(), 0);
+  const sap = page.locator('.review-word-list button').filter({ has: page.locator('strong', { hasText: /^sap$/ }) });
+  assert(await sap.isEnabled());
+  assert((await sap.innerText()).includes('Luister'));
+  assert.equal(await sap.locator('svg').count(), 1);
   assert((await page.locator('.review-word-list').innerText()).includes('pak (verpakking)'));
   assert((await page.locator('.review-word-list').innerText()).includes('pak (kleding)'));
   pass('The existing word bank and saved-word review share the new stable meaning IDs');

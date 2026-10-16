@@ -118,16 +118,15 @@ export function PackagePlayer({
   const [tab, setTab] = useState<PackageTab>('lessons');
   useEffect(() => { stopMedia(); return stopMedia; }, [tab, packageId]);
 
-  async function playAudio(source?: string) {
+  async function playAudio(source?: string, options?: Parameters<AudioPlayer>[1]) {
     if (!source) {
       onToast('Bij dit woord is nog geen geluid beschikbaar. Vraag je docent om hulp.');
       return false;
     }
     try {
-      await playMedia(source);
-      return true;
+      return await playMedia(source, options);
     } catch {
-      onToast('Het geluid kon niet worden afgespeeld. Probeer de knop nog een keer.');
+      if (!options) onToast('Het geluid kon niet worden afgespeeld. Probeer de knop nog een keer.');
       return false;
     }
   }
@@ -166,7 +165,7 @@ export function PackagePlayer({
         )}
         {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} />}
         {tab === 'practice' && <PackagePractice pack={pack} onAudio={playAudio} />}
-        {tab === 'texts' && <PackageTexts pack={pack} />}
+        {tab === 'texts' && <PackageTexts pack={pack} onAudio={playAudio} />}
         {tab === 'dialogues' && <PackageDialogues pack={pack} />}
         {tab === 'media' && <PackageMedia pack={pack} onAudio={playAudio} />}
       </div>
@@ -401,18 +400,18 @@ function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: 
   );
 }
 
-function PackageTexts({ pack }: { pack: PackageDefinition }) {
+function PackageTexts({ pack, onAudio }: { pack: PackageDefinition; onAudio: AudioPlayer }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><span className="eyebrow">Teksten</span><h1>Lees een tekst</h1><p>Kies een tekst.</p></div>
+        <div><h1>Luister en lees mee</h1></div>
         <span className="cp-panel-count"><strong>{pack.texts.length}</strong><small>teksten</small></span>
       </header>
       <div className="cp-reading-list">
         {pack.texts.map((text, index) => (
           <details key={text.id} open={index === 0}>
             <summary><span>{String(index + 1).padStart(2, '0')}</span><div><small>{text.level.replaceAll('_', ' ')}</small><strong>{text.title}</strong></div><ArrowRight /></summary>
-            <div className="cp-reading-copy"><p>{text.text}</p>{text.question && <aside><strong>{text.question}</strong><span>Antwoord: {text.answer}</span></aside>}</div>
+            <div className="cp-reading-copy">{text.audio && <button className="secondary-button" onClick={() => onAudio(text.audio)}><Volume2 />Luister</button>}<p>{text.text}</p>{text.question && <aside><strong>{text.question}</strong><span>Antwoord: {text.answer}</span></aside>}</div>
           </details>
         ))}
       </div>

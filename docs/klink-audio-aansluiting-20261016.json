@@ -1,0 +1,552 @@
+{
+  "date": "2026-10-16T21:08:07.850Z",
+  "published": false,
+  "humanReview": "open",
+  "instructionPlan": {
+    "date": "2026-10-16T20:55:33.508Z",
+    "authorization": "Nico: instructies en audio afronden voor Klink, 16 oktober 2026",
+    "voiceId": "h6uBOiAjLKklte8hdYio",
+    "voiceName": "Roland - Clear Educational Narrator",
+    "targetVoiceId": "0qLmDzgqulxcvv0yf3kg",
+    "role": "instruction",
+    "model": "eleven_multilingual_v2",
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "speed": 0.95
+    },
+    "characters": 852,
+    "published": false,
+    "humanReview": "open",
+    "items": [
+      {
+        "id": "kijken",
+        "text": "Kijk naar de foto. Luister naar het woord."
+      },
+      {
+        "id": "zelfde-woord",
+        "text": "Kijk naar het voorbeeld. Tik op hetzelfde woord."
+      },
+      {
+        "id": "hoor-woord",
+        "text": "Luister. Tik op het woord dat je hoort."
+      },
+      {
+        "id": "hoor-foto",
+        "text": "Luister. Tik op de foto die erbij hoort."
+      },
+      {
+        "id": "woord-foto",
+        "text": "Kijk naar het woord. Tik op de foto die erbij hoort."
+      },
+      {
+        "id": "bouwen",
+        "text": "Kijk naar het woord. Tik de letters in de goede volgorde."
+      },
+      {
+        "id": "natypen",
+        "text": "Typ het woord na. Tik daarna op Controleer."
+      },
+      {
+        "id": "dictee",
+        "text": "Luister. Typ het woord. Tik daarna op Controleer."
+      },
+      {
+        "id": "nazeggen",
+        "text": "Luister en zeg het woord na. Met Neem op kun je jezelf terughoren."
+      },
+      {
+        "id": "terughalen",
+        "text": "Luister. Tik de letters in de goede volgorde."
+      },
+      {
+        "id": "aanvullen",
+        "text": "Luister naar het woord. Tik op de letters die ontbreken."
+      },
+      {
+        "id": "samen-lezen",
+        "text": "Lees het woord samen met je docent."
+      },
+      {
+        "id": "schrijven",
+        "text": "Schrijf het woord op papier. Tik daarna op Ik heb geschreven."
+      },
+      {
+        "id": "woordkaart",
+        "text": "Kijk naar de foto. Draai de kaart om om het woord te zien."
+      },
+      {
+        "id": "koppelen",
+        "text": "Tik op een woord. Tik daarna op de foto die erbij hoort."
+      },
+      {
+        "id": "paren",
+        "text": "Zoek het woord en de foto die bij elkaar horen."
+      },
+      {
+        "id": "meeluisteren",
+        "text": "Luister en kijk. Je hoeft de tekst nog niet zelf te lezen."
+      }
+    ]
+  },
+  "instructions": [
+    {
+      "id": "kijken",
+      "text": "Kijk naar de foto. Luister naar het woord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "5db2b870a68a1ec98a0d87eefacee43ce59f970bf2612c604d81f5e0bd3318db",
+      "pcmSha256": "e67afc0fcb30b1fc1753c98606497affbf59c8a007b2a982a47b4f03cff2ddcf",
+      "originalSha256": "9c9f34e1542bf21403778c707b37a1be15f4842e48a827c5362cb1fbcfbad4ca",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Kijk naar de foto. Luister naar het woord.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.5541950113378684,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "zelfde-woord",
+      "text": "Kijk naar het voorbeeld. Tik op hetzelfde woord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "7c3ed42169e30ea07bf3f4c07deb9abe9a6be0aad0b4f5d1639d7aaa7ad4c276",
+      "pcmSha256": "43de18f45285a238d88b5532f82f5e243f100e147626480ed0b814bebe50cfc7",
+      "originalSha256": "9d053a168b697f1a0cef597f2ee122d92e3ba6fb5dc8edbe05e2bc5714543972",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Kijk naar het voorbeeld. Tik op hetzelfde woord.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.7399546485260773,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "hoor-woord",
+      "text": "Luister. Tik op het woord dat je hoort.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "0c62aa30dfe73d8ee1475ec82fbbff3d29b64d73e97563f24c5b7d86b2df9ff1",
+      "pcmSha256": "5338ad758f113134cb2e0f75aeeea2e2a40e6e1cc0319ba2840bcfd364ed1588",
+      "originalSha256": "7f4af70d067638770e3b038aa9e41de7dfeae7825b9ccf7d811de058e5aded63",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister. Tik op het woord dat je hoort.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.2291156462585033,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "hoor-foto",
+      "text": "Luister. Tik op de foto die erbij hoort.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "0d1ebd5233486ff62ab25e2e27fa139428e571e96f1de70d923ac5edbc201a2c",
+      "pcmSha256": "fa9ce30a203a5a3330b1bb2003dcc2ba4a61a18612620cef51932398591625eb",
+      "originalSha256": "95a01895c12e3521cc9f7b8754cda83ba8518cee18a6e24b29d05db30de02d3a",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister. Tik op de foto die erbij hoort.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.2755555555555556,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "woord-foto",
+      "text": "Kijk naar het woord. Tik op de foto die erbij hoort.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "a940e9a7f5ede905ba236976f7ef0d004ebe00b788ed6c9336711f85ec33efdf",
+      "pcmSha256": "f9711fc99a7fda958ca20dc389d59e6fdaa1615bbf148451c4c20a2065adf87a",
+      "originalSha256": "ffcfd41993b7699182f709e7c7eb7acd52d59a110934486a68587c66fb9522a7",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Kijk naar het woord. Tik op de foto die erbij hoort.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.111473922902494,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "bouwen",
+      "text": "Kijk naar het woord. Tik de letters in de goede volgorde.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "44660d5bea28112400f7c580935d661fa6deff4486d97c92ef59f5fce6c37c4b",
+      "pcmSha256": "99335755c40692eff3405fa3272735f7710ef120460ee07db57fd64db33d5b7e",
+      "originalSha256": "42079d759509ef728d464bee0d7248f53224bae2123545719de68a8882517bfe",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Kijk naar het woord. Tik de letters in de goede volgorde.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.622312925170068,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "natypen",
+      "text": "Typ het woord na. Tik daarna op Controleer.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "cfe18ff16ad131a3b11d1c39ed74110ca973d4bf382caa1bd84189d3db867e6b",
+      "pcmSha256": "b66475e8ab0b198df8e4227bb199a9e35208fae34e51be32d128159efef06919",
+      "originalSha256": "69fdea41a07b8c149e13bf84c9451f792fee7a42cf8e2d6c0e1d5f21677bb6d1",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Typ het woord na. Tik daarna op Controleer.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.3219954648526078,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "dictee",
+      "text": "Luister. Typ het woord. Tik daarna op Controleer.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "6271592d9dc9fdf13fb61ae1a9a3e8956538c6177118325ff066c2e6d9cf39cd",
+      "pcmSha256": "3566d1a3cb8ae95e4b8ea2892002983e04184f79e39cbd4971c4bd9b7d275164",
+      "originalSha256": "a79f8cc08619089e65b910e8a7b371d68db395802093a9f342bfe76c61af69c2",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister. Typ het woord. Tik daarna op Controleer.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.5294331065759637,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "nazeggen",
+      "text": "Luister en zeg het woord na. Met Neem op kun je jezelf terughoren.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "dd56be785ec38091d65e1b2f144a1731d84f9b00060cd5ce656a67541b5f95f9",
+      "pcmSha256": "5f20482f621b83fd5865e4cb6b2a3ce0c29f4a8eb8730211d494bc46e95fb161",
+      "originalSha256": "ef581c5095b5a2b14dc19915279c5ca4f949ab9f7b67bdea2691f6406e405a2e",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister en zeg het woord na. Met Neem op kun je jezelf terughoren.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.900952380952381,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "terughalen",
+      "text": "Luister. Tik de letters in de goede volgorde.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "df440487a745444a39e64985d47d61713f7e9fb61c2221be372a85b4322113be",
+      "pcmSha256": "637f47ff7640704df0bdf9261b522bcd8e1ce0db2ac45c965441adf3f272a779",
+      "originalSha256": "8e1dc42c22b737ced30508290697a7845498f2bb1a1f9feaab6d40fcff1067ff",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister. Tik de letters in de goede volgorde.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.507755102040816,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "aanvullen",
+      "text": "Luister naar het woord. Tik op de letters die ontbreken.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "69d30f7cdf890c9a84145d5dd7c630830cbc6f3701e7037c93db40c9eff4012a",
+      "pcmSha256": "c828549b319f1c60aaeb442786b2abd1616f9d7ed63104f445f7ce40133ae0c1",
+      "originalSha256": "28714a18253ad2a7341483e85af239e30eeceb0e3639ac486fc079c8e3b90bfd",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister naar het woord. Tik op de letters die ontbreken.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.1579138321995464,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "samen-lezen",
+      "text": "Lees het woord samen met je docent.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "a5adaef37ff91b5581a877f0cef7a527f6e456742a80671efc039dd5b87544e6",
+      "pcmSha256": "3fc083e0f6eeb9ac734f1a3420c2d069f95d8cfc6d35e5f96b144b9965daeddf",
+      "originalSha256": "f83c651a5ac5a183613e0d94fef8a201b2e844521b78c2d2d0d72b7dadb92aca",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Lees het woord samen met je docent.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.182675736961451,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "schrijven",
+      "text": "Schrijf het woord op papier. Tik daarna op Ik heb geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "2f370dcc989665392a9702ccacc1545b1d3cddcd0b179e5a01dd0390c5106fde",
+      "pcmSha256": "79ddf667961401124af42d1e634fbae6ca169058d35d79f39d7964815fadbab7",
+      "originalSha256": "25150a0102e272f28d83c221ec05dd13726d78de1d1343ea9e1b9c9ff8a3dd70",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Schrijf het woord op papier. Tik daarna op Ik heb geschreven.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.3901133786848074,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "woordkaart",
+      "text": "Kijk naar de foto. Draai de kaart om om het woord te zien.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "a75f7bb621a16619709eabf22683157d4e54a0199c424a232e9340a16ed14706",
+      "pcmSha256": "a503abb6da379eaf260fc1e1f83cb587e93fc2ddc365a7048798babf6a14392d",
+      "originalSha256": "53c59d39bcfc80d4b3cbeec644e61431dbd6a018e6849c8632af2ff8f7d4443b",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Kijk naar de foto. Draai de kaart om om het woord te zien.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.250793650793651,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "koppelen",
+      "text": "Tik op een woord. Tik daarna op de foto die erbij hoort.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "6a2b0962de6aa7136b4a6a86c62a9a51b5dd2e5bc4d9edc75bc5c2c3a949f6f4",
+      "pcmSha256": "2ece75fbbbdbbc97be546982bd6d34d6979c50031e8fdf697749a0386d4455f5",
+      "originalSha256": "f8707b1f9a1d830105ad772d94e4f7e48f21a6273c86bd0c3e28133fdd2176cf",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Tik op een woord. Tik daarna op de foto die erbij hoort.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 3.2043537414965986,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "paren",
+      "text": "Zoek het woord en de foto die bij elkaar horen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "bfe4ff89b4e175afff84097f590a862a3f1aa088b1897d3dfc96902393a2be9a",
+      "pcmSha256": "607b181144b3d0b610fbb49a1bffa8c28995dbfb284b54eb0d6f2abd328a927b",
+      "originalSha256": "9c6232017ee1b6ceaef6564b6f6ae630fde3a50364dfe7f9da4abcee671f2f5b",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Zoek het woord en de foto die bij elkaar horen.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.8328344671201813,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "meeluisteren",
+      "text": "Luister en kijk. Je hoeft de tekst nog niet zelf te lezen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "role": "instruction",
+      "sha256": "86e5fdc258ca3ff986ed24be28e2e27da786bee33cc75a7889b069e1dc507470",
+      "pcmSha256": "9d688116b63cccefa3b020b62db63d962edbe957dde235f57f983cf0fe090c80",
+      "originalSha256": "41e106206a79a6e7dc7fe6330f9c602744ac396952c81a2e8215aac885bde3d6",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "Luister en kijk. Je hoeft de tekst nog niet zelf te lezen.",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 2.9257142857142857,
+      "humanReview": "open",
+      "status": "candidate"
+    }
+  ],
+  "words": [
+    {
+      "id": "klink-woord-fit",
+      "text": "fit",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "69d57516235199f8f3197e75790ec040ec1b976394df7143e7e076d2b59a1892",
+      "pcmSha256": "19933066c3e64def9aba671af7525c90a1736e5a74acc1f33e68e005b6854060",
+      "originalSha256": "a41a56bccbed197af4e67930cd19235160a3a8be0dacbd4625675788d61e6a06",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "fit",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.8,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "klink-woord-koekje",
+      "text": "koekje",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "0c08e23c7634d6e1eb53f0e7043854ba0266521c9f6a28ff390e102f48264894",
+      "pcmSha256": "cf7d14c25f7e599ee1548eb77840e47e59c3be840579009b52b5a792673f472b",
+      "originalSha256": "eda422307e3e12e2fcbc1c5dc4468003c934dcc29ead751f163491ed40906ecf",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "koekje",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.88,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "klink-woord-pak-verpakking",
+      "text": "pak",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "2d00acc964dcefad32b38a135d189e39b450b14fc6217c3d1dc068b47e2e3427",
+      "pcmSha256": "38859fe116bf2423bf36adb21757224b796be0edd4103a5cb56c7496e8799740",
+      "originalSha256": "e9d299d029760f2c2284505a5ff0143c52545f89408a418d0e76382d0b82bb21",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "pak",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.8,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "klink-woord-sap",
+      "text": "sap",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "9b2e6b2055a74c5ab533e43c9414899b6410b260e2df6c4b8ee84e2a9ea4a601",
+      "pcmSha256": "b4767f0a96d61023e57129cccb2b58cf2622701c8cc87996fa3bcc1257b85041",
+      "originalSha256": "656585b565565399ee86860d293387a9a8590d1b1c2d4575c04b1e0061070592",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "sap",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.8,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "klink-woord-spuit",
+      "text": "spuit",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "66614b3c08a852cc0769c5608908caddb7be88d74ce742722b9b35648db088b1",
+      "pcmSha256": "336dda8978d8157fb4a67600b161374abef5e90c8669e5fbcd6946dc93b3c004",
+      "originalSha256": "915adb57b87e8272f6b88be342ca6dafb286958a7077732ab6128e70092c2887",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "spuit",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.96,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "klink-woord-tomaat",
+      "text": "tomaat",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "9b4b746b8a0889469ff69322c365669a70f8aad6a1efa2355e2be8b46f7e1c14",
+      "pcmSha256": "d6eee53684c11177c02ad0cf9203b36b4c0409af8747559b022464caec729fde",
+      "originalSha256": "a43b41c5e4905d240959d42c095128a93605b60c84303f8eeaeccec28e065d19",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "tomaat",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.8,
+      "humanReview": "open",
+      "status": "candidate"
+    },
+    {
+      "id": "klink-woord-zeef",
+      "text": "zeef",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "word_model",
+      "sha256": "2f1ed01ba9482e453f351625fc4dfc9975f0ae348967da42a587661785101698",
+      "pcmSha256": "b58985f7c788f7d04db834c9a29f79b637cc4b4e5f2ba66705ada1654fbcf7b4",
+      "originalSha256": "d573babfafbed4fd40b0da236c302dc407dc7593f2f02f8d492121d2fa907007",
+      "metadata": {
+        "artist": "Taalroute",
+        "copyright": "Taalroute",
+        "title": "zeef",
+        "album": "Klink - Taalroute",
+        "encoder": "Lavf62.12.102"
+      },
+      "duration": 0.8,
+      "humanReview": "open",
+      "status": "candidate"
+    }
+  ]
+}

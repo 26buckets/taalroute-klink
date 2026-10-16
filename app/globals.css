@@ -1051,6 +1051,18 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-text-entry textarea:focus-visible, .cp-form-fields select:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .cp-reading-blocks { display: grid; gap: 12px; padding: 19px; background: #fbfcfb; border-left: 4px solid var(--primary); }
 .cp-reading-blocks p { margin: 0; font-size: 22px; line-height: 1.65; }
+.cp-reading-blocks > button { min-height: 48px; padding: 0; background: transparent; border: 0; text-align: left; color: inherit; font: inherit; font-size: clamp(24px, 2.4vw, 32px); line-height: 1.55; }
+.cp-context-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 24px; }
+.cp-context-image { display: block; padding: 0; border: 0; background: transparent; min-width: 0; }
+.cp-context-layout img { display: block; width: 100%; height: min(34vh, 320px); object-fit: contain; }
+.cp-instruction-listen { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; }
+.cp-instruction-listen svg { width: 24px; height: 24px; flex-shrink: 0; }
+.cp-model-content strong svg, .cp-example-listen svg { display: inline-block; width: 26px; height: 26px; margin-left: 12px; vertical-align: middle; }
+@media (max-width: 760px) {
+  .cp-context-layout { grid-template-columns: 1fr; gap: 12px; }
+  .cp-context-layout img { height: 150px; }
+  .cp-context-layout .cp-reading-blocks { padding: 10px; }
+}
 .cp-audio-lock { display: flex; align-items: flex-start; gap: 8px; margin: 0; padding: 12px; color: #66502d; background: var(--yellow-soft); border: 1px solid #e5ca91; font-size: 11px; }
 .cp-audio-lock svg { flex: 0 0 18px; }
 .cp-recorder { display: grid; justify-items: center; gap: 14px; }

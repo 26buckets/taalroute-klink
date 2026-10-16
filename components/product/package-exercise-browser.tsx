@@ -18,6 +18,7 @@ import {
   FileText,
   Mic,
   Pause,
+ Play,
   PencilLine,
   RefreshCw,
   RotateCcw,
@@ -39,6 +40,14 @@ const normalize = (value: string) => value.trim().toLocaleLowerCase('nl-NL').rep
 const asArray = <T,>(value: unknown) => (Array.isArray(value) ? value as T[] : []);
 const asRecord = (value: unknown) => value && typeof value === 'object' ? value as Record<string, unknown> : {};
 const asString = (value: unknown) => typeof value === 'string' || typeof value === 'number' ? `${value}` : '';
+const instructionMemoryKey = 'klink.instructies.v1';
+function previousInstructions(): Set<string> {
+  if (typeof window === 'undefined') return new Set();
+  try {
+    const stored: unknown = JSON.parse(sessionStorage.getItem(instructionMemoryKey) ?? '[]');
+    return new Set(Array.isArray(stored) ? stored.filter((item): item is string => typeof item === 'string' && item.startsWith('/package-audio/instructions/')) : []);
+  } catch { return new Set(); }
+}
 
 function exerciseImage(exercise: PackageExercise) {
   if (exercise.prompt?.image) return exercise.prompt.image;
@@ -60,7 +69,8 @@ function findAudioSource(value: unknown): string | undefined {
   if (!value || typeof value !== 'object') return undefined;
   const record = value as Record<string, unknown>;
   if (typeof record.audioId === 'string' && typeof record.src === 'string') return record.src;
-  for (const item of Object.values(record)) {
+  for (const [key, item] of Object.entries(record)) {
+    if (key === 'instructionAudio') continue;
     const source = findAudioSource(item);
     if (source) return source;
   }
@@ -122,6 +132,11 @@ export function PackageExerciseBrowser({
   const [heard, setHeard] = useState(false);
   const [audioError, setAudioError] = useState(false);
   const [autoPaused, setAutoPaused] = useState(false);
+  const [holdFeedback, setHoldFeedback] = useState(false);
+  const [audioPending, setAudioPending] = useState(false);
+  const [instructionFailed, setInstructionFailed] = useState(false);
+  const playback = useRef<AbortController | null>(null);
+  const explainedModes = useRef(previousInstructions());
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });
   const reportPosition = useEffectEvent((id: string) => onPosition?.(id));
   const currentId = useRef('');
@@ -132,36 +147,60 @@ export function PackageExerciseBrowser({
   const guidedIndex = guided ? exercises.findIndex((item) => item.exerciseId === exercise?.exerciseId) : -1;
   const exerciseId = exercise?.exerciseId ?? '';
   const selfPaced = exercise?.assessment === 'participation' || exercise?.componentId === 'ALF-CMP-001';
-  const needsListen = Boolean(exercise?.requiresAudio || (selfPaced && exercise?.mode === 'model' && findAudioSource(exercise)));
+  const needsListen = Boolean(exercise?.requiresAudio);
   const canAnswer = !needsListen || heard;
-  const automatic = guided && result === 'right' && !selfPaced && !autoPaused;
+  const automatic = guided && result === 'right' && !selfPaced && !autoPaused && !holdFeedback && !audioPending;
+  const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
+  async function listen(source?: string, automaticStart = false) {
+    if (!automaticStart && result === 'right') setHoldFeedback(true);
+    const id = exercise?.exerciseId;
+    playback.current?.abort();
+    const controller = new AbortController();
+    playback.current = controller;
+    const isCurrent = () => currentId.current === id && !controller.signal.aborted;
+    setAudioPending(true);
+    setAudioError(false);
+    try {
+      if (exercise.instructionAudio?.src && !explainedModes.current.has(exercise.instructionAudio.src)) {
+        setInstructionFailed(true);
+        const explained = await onAudio(exercise.instructionAudio.src, { waitUntilEnd: true, signal: controller.signal });
+        if (!isCurrent()) return false;
+        if (explained === false) throw new Error('instruction unavailable');
+        explainedModes.current.add(exercise.instructionAudio.src);
+        try { sessionStorage.setItem(instructionMemoryKey, JSON.stringify([...explainedModes.current].slice(-100))); } catch { /* Listening does not depend on storage. */ }
+        setInstructionFailed(false);
+      }
+      if (!source) return true;
+      const played = await onAudio(source, { waitUntilEnd: true, signal: controller.signal });
+      if (!isCurrent()) return false;
+      if (played === false) throw new Error('audio unavailable');
+      if (source === stimulus) setHeard(true);
+      setAudioError(false);
+      metrics.current.plays++;
+      if (metrics.current.plays > 1) metrics.current.helpUsed = true;
+      return true;
+    } catch {
+      if (isCurrent()) { setAudioError(true); if (source === stimulus) setHeard(false); }
+      return false;
+    } finally {
+      if (isCurrent()) setAudioPending(false);
+    }
+  }
 
+  const beginAudio = useEffectEvent(() => {
+    if (guided && (needsListen || exercise?.mode === 'model' || exercise?.instructionAudio)) {
+      void listen(needsListen || exercise?.mode === 'model' ? stimulus : undefined, true);
+    }
+  });
   useEffect(() => {
     stopMedia();
     currentId.current = exerciseId;
     metrics.current = { started: Date.now(), attempts: 0, helpUsed: false, plays: 0 };
     taskHeading.current?.focus({ preventScroll: true });
     if (guided && exerciseId) reportPosition(exerciseId);
-    return () => { currentId.current = ''; stopMedia(); };
+    const timer = window.setTimeout(() => beginAudio(), 0);
+    return () => { window.clearTimeout(timer); currentId.current = ''; playback.current?.abort(); stopMedia(); };
   }, [exerciseId, guided]);
-
-  async function listen(source?: string) {
-    if (result === 'right') setAutoPaused(true);
-    const id = exercise?.exerciseId;
-    try {
-      const played = await onAudio(source);
-      if (currentId.current !== id) return false;
-      if (played === false) throw new Error('audio unavailable');
-      setHeard(true);
-      setAudioError(false);
-      metrics.current.plays++;
-      if (metrics.current.plays > 1) metrics.current.helpUsed = true;
-      return true;
-    } catch {
-      if (currentId.current === id) { setAudioError(true); setHeard(false); }
-      return false;
-    }
-  }
 
   function chooseFamily(nextFamilyId: string) {
     if (guided) return;
@@ -198,11 +237,14 @@ export function PackageExerciseBrowser({
     resetResult();
     setHeard(false);
     setAudioError(false);
-    setAutoPaused(false);
+    setAudioPending(false);
+    setInstructionFailed(false);
+    setHoldFeedback(false);
   }
 
   function finish(answer: string, correct: boolean, feedback?: string) {
     if (needsListen && !heard) return;
+    if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts,
       support: typeof exercise.exampleWord === 'string' ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
@@ -225,7 +267,7 @@ export function PackageExerciseBrowser({
   const advanceAfterFeedback = useEffectEvent(() => next());
   useEffect(() => {
     if (!automatic || completed) return;
-    const timer = window.setTimeout(() => advanceAfterFeedback(), 1400);
+    const timer = window.setTimeout(() => advanceAfterFeedback(), 650);
     return () => window.clearTimeout(timer);
   }, [automatic, exercise?.exerciseId, completed]);
   useEffect(() => { if (completed) completionHeading.current?.focus({ preventScroll: true }); }, [completed]);
@@ -260,10 +302,11 @@ export function PackageExerciseBrowser({
           <header className="cp-exercise-record-head">
             <div>
               <small>{guided ? `Stap ${guidedIndex + 1} van ${exercises.length}` : 'Vrij oefenen'}</small>
-              <h3 ref={taskHeading} tabIndex={-1}>{exercise.title || family?.label || 'Oefenen'}</h3>
+              <h3 ref={taskHeading} tabIndex={-1}>{exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(needsListen && !heard ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
             </div>
             <nav aria-label="Bladeren door oefeningen">
               <button onClick={() => guided ? openGuidedAt(guidedIndex - 1) : openAt(recordIndex - 1)} disabled={guided ? guidedIndex <= 0 : recordIndex === 0} aria-label="Vorige oefening"><ArrowLeft /></button>
+              {guided && <button aria-label={autoPaused ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused} onClick={() => setAutoPaused(value => !value)}>{autoPaused ? <Play /> : <Pause />}</button>}
               <b>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
               {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
             </nav>
@@ -275,13 +318,13 @@ export function PackageExerciseBrowser({
               key={exercise.exerciseId}
               exercise={exercise}
               pack={pack}
-              onAudio={listen}
+              onAudio={source => listen(source)}
               onFinish={finish}
               onOpenExercise={openExercise}
               guided={guided}
               onReset={resetResult}
-              canAnswer={canAnswer}
-              onHelp={() => { metrics.current.helpUsed = true; }}
+              canAnswer={canAnswer && (exercise.componentId !== 'ALF-CMP-002' || result !== 'right')}
+              onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }}
             />
           </div>
 
@@ -289,8 +332,8 @@ export function PackageExerciseBrowser({
             {result === 'idle' && <Shapes />}
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
-            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? !canAnswer ? 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? !canAnswer ? 'Luister eerst naar het woord.' : exerciseHelp(exercise) : message}</small></output>
-            <button className="secondary-button" disabled={guided && (!canAnswer || (!selfPaced && result !== 'right'))} onClick={() => automatic ? setAutoPaused(true) : next()}>{automatic ? <><Pause />Blijf hier</> : <>{guided && guidedIndex >= exercises.length - 1 ? 'Les afronden' : 'Volgende'}<ArrowRight /></>}</button>
+            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? !canAnswer ? 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise) : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
+            <button className="secondary-button" disabled={guided && (!canAnswer || (!selfPaced && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 ? 'Les afronden' : 'Verder'}<ArrowRight /></button>
           </footer>
         </div>
       </div>
@@ -326,7 +369,7 @@ function ExerciseSurface({
     case 'ALF-CMP-004': return <MatchingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} />;
     case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} />;
-    case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
+    case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} />;
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
@@ -347,8 +390,8 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   if (!source && typeof exercise.exampleWord !== 'string' && !children) return null;
   return (
     <div className="cp-task-prompt">
-      {source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /><span>Luister</span></button> : <span><FileText /></span>}
-      <div>{typeof exercise.exampleWord === 'string' && (source && onAudio ? <button className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${exercise.exampleWord}`}>{exercise.exampleWord}</button> : <strong>{exercise.exampleWord}</strong>)}{children}</div>
+      {typeof exercise.exampleWord !== 'string' && (source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /><span>Luister</span></button> : <span><FileText /></span>)}
+      <div>{typeof exercise.exampleWord === 'string' && (source && onAudio ? <button className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${exercise.exampleWord}`}>{exercise.exampleWord}<Volume2 aria-hidden="true" /></button> : <strong>{exercise.exampleWord}</strong>)}{children}</div>
     </div>
   );
 }
@@ -361,8 +404,8 @@ function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht' }: { imag
 function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
   const text = asRecord(exercise.text);
   const source = findAudioSource(exercise);
-  const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}</strong></>;
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
+  const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}{source && <Volume2 aria-hidden="true" />}</strong></>;
+  return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
 function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer = true }: SurfaceProps & { nested?: boolean; canAnswer?: boolean }) {
@@ -444,10 +487,14 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp 
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => normalize(answer) === normalize(value))); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
-function ReadingSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
+function ReadingSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
   const blocks = asArray<{ id: string; text: string; audio?: unknown }>(exercise.textBlocks);
   const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<div className="cp-reading-blocks">{blocks.map((block) => <p key={block.id}>{block.text}</p>)}</div><button className="primary-button" onClick={() => onFinish('gelezen', true)}>Ik heb gelezen<Check /></button></section>;
+  const audio = exercise.prompt?.audio?.src;
+  return <section className="cp-task-card cp-context-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-context-layout">{image && (audio ? <button className="cp-context-image" aria-label="Luister bij de foto" onClick={() => onAudio(audio)}><ExerciseImageView image={image} /></button> : <ExerciseImageView image={image} />)}<div className="cp-reading-blocks">{blocks.map(block => {
+    const source = findAudioSource(block.audio);
+    return source ? <button key={block.id} aria-label={`Luister: ${block.text}`} onClick={() => onAudio(source)}>{block.text}</button> : <p key={block.id}>{block.text}</p>;
+  })}</div></div>{!guided && <button className="primary-button" onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}</section>;
 }
 
 function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {

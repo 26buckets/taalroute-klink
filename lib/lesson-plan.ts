@@ -43,7 +43,8 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
     row('MX-02', 'Herhalen in een latere sessie', 'recall', [], 'De terugkeerwoorden staan vast en de plek wordt bewaard. Een planning op basis van beheersing ontbreekt nog; Bewaarde woorden is een eigen selectie, geen adaptieve herhaalplanning.'),
     row('BB-04', 'Memory', 'recall', ['memory'], 'Twee voorbereide beeld–woordparen nodig.', pairExcluded),
     row('BB-05', 'Woordkaarten', 'meet', ['word-card'], 'Een passend betekenisbeeld ontbreekt.'),
-    row('ZI-03', 'Korte combinaties en zinnen', 'use', ['sentence-gap'], 'Eigen korte combinaties, zinnen, betekeniscontext en zinsaudio ontbreken. Luisterbegrip en zelfstandig lezen vragen aparte voorwaarden.'),
+    row('ZI-03', 'Zinnen beluisteren met tekststeun', 'use', ['listen-sentence'], 'Een passende zin met opname ontbreekt bij deze woorden. Aanwezige zinnen zijn luistermodellen, geen toets zelfstandig lezen.'),
+    row('ZI-situation', 'Een situatie beluisteren', 'use', ['listen-situation'], 'Een passende korte situatie met opname en beeld ontbreekt bij deze woorden. Mondeling voorbereiden; niet behandelen als zelfstandig lezen.'),
     row('BB-07', 'Een voorwerp in een situatie aanwijzen', 'use', ['scene-choice'], 'Een gecontroleerd situatiebeeld met gemarkeerde voorwerpen en bijbehorende vraag ontbreekt.'),
     row('BB-06', 'Een handeling in volgorde', 'use', ['image-sequence'], 'Een samenhangende eigen beeldreeks ontbreekt; losse woordfoto’s zijn geen handeling.'),
     row('PR-05', 'Een praktische keuze', 'use', ['situation-branch'], 'Eigen gesprek/situatie, reacties en uitkomsten ontbreken; geen verplicht onderdeel van elke woordstap.'),
@@ -51,7 +52,9 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
   ];
   if (missingAudio.length) result.push({ id: 'word-audio', title: 'Ontbrekende woordopnamen', phase: 'meet', status: 'missing', count: 0, guidedCount: 0, exerciseIds: [], reason: missingAudio.join(' · ') });
   if (missingImages.length) result.push({ id: 'word-images', title: 'Ontbrekende woordbeelden', phase: 'meet', status: 'missing', count: 0, guidedCount: 0, exerciseIds: [], reason: `${missingImages.join(' · ')}. Voor niet-afbeeldbare betekenissen eerst een passende context kiezen.` });
-  result.push({ id: 'instruction-audio', title: 'Gesproken instructie en gerichte luisterhulp', phase: 'meet', status: 'missing', count: 0, guidedCount: 0, exerciseIds: [], reason: 'Woordaudio is geen instructie-audio. Afzonderlijke steunstem en gecontroleerde instructies zijn nog nodig; losse /t/ blijft geparkeerd.' });
+  const explained = records.filter(item => item.instructionAudio?.src);
+  const explainedGuided = explained.filter(item => guided.has(item.exerciseId)).length;
+  result.push({ id: 'instruction-audio', title: 'Gesproken instructie', phase: 'meet', status: explained.length ? explainedGuided ? 'connected' : 'available' : 'missing', count: explained.length, guidedCount: explainedGuided, exerciseIds: explained.map(item => item.exerciseId), reason: explained.length ? 'Aparte steunstem. Uitleg klinkt eenmaal per handeling in deze browsersessie en is via de opdracht opnieuw te beluisteren. Luisterbeoordeling staat nog open.' : 'Afzonderlijke steunstem en passende instructie ontbreken; losse /t/ blijft geparkeerd.' });
   return result;
 }
 

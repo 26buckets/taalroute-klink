@@ -100,7 +100,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
           <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => setView('words')}><WholeWord /><span>Woorden</span></button>
           <button aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => setView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
-        <button className="learner-profile" onClick={onExit}><small>Afsluiten</small><LogOut /></button>
+        <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
         {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => setView('packages')} onWords={() => setView('words')} onReview={() => setView('review')} savedCount={savedWordIds.length} progress={progress} onContinue={continueLearning} />}

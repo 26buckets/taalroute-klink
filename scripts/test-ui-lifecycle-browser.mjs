@@ -19,10 +19,10 @@ page.on('pageerror', error => errors.push(error.message));
 page.on('request', request => { if (request.method() === 'POST' && request.url().includes('/api/')) writes.push(request.url()); });
 await page.addInitScript(() => {
   window.__mediaAudit = { audios: [], stoppedTracks: 0, recorderCreations: 0, pendingTimers: [], clearedTimers: [] };
-  window.Audio = class {
-    constructor(src) { this.src = src; this.paused = true; window.__mediaAudit.audios.push(this); }
-    play() { this.paused = false; return Promise.resolve(); }
-    pause() { this.paused = true; }
+  window.Audio = class extends EventTarget {
+    constructor(src) { super(); this.src = src; this.paused = true; window.__mediaAudit.audios.push(this); }
+    play() { this.paused = false; this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 80); return Promise.resolve(); }
+    pause() { clearTimeout(this.timer); this.paused = true; }
   };
   Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { configurable: true, value: () => new Promise(resolve => {
     window.__resolveMicrophone = () => resolve({ getTracks: () => [{ stop: () => { window.__mediaAudit.stoppedTracks++; } }] });
@@ -54,7 +54,7 @@ try {
   assert(await page.locator('.cp-exercise-workspace aside button').evaluateAll(buttons => buttons.every(button => button.disabled)));
   for (const exercise of guided) {
     await answerActivity(page, exercise);
-    assert(await stopped());
+    await page.waitForFunction(() => window.__mediaAudit.audios.every(audio => audio.paused));
   }
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
   console.log('PASS guided sequence, one-click choices, wrong/correct, undo relocks, focus/status, audio stops');
@@ -118,6 +118,7 @@ try {
   assert.equal(await stopped(), false);
   await page.getByRole('button', { name: 'Afsluiten', exact: true }).click();
   assert(await stopped());
+  assert.equal(await page.evaluate(() => sessionStorage.getItem('klink.instructies.v1')), null);
   assert.deepEqual(writes, []);
   assert.deepEqual(errors, []);
   console.log('PASS main navigation and exit stop audio; no API writes or browser errors');

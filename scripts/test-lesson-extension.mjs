@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
+import { taalroutePackages as packs, exercisesForLesson, exercisesForStep } from '../lib/taalroute-packages.ts';
+import media from '../data/klink-media.json' with { type: 'json' };
 import { lessonPlan, phaseLabels } from '../lib/lesson-plan.ts';
 import { parseProgress, nextLessonPosition } from '../lib/learner-progress.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
@@ -28,8 +29,8 @@ test('All 302 routes have a complete status inventory and monotonically ordered 
       for (const id of row.exerciseIds) assert(pack.exercises.some(item => item.exerciseId === id && item.lessonId === lesson.id));
       assert(row.reason.length > 0);
     }
-    assert.equal(rows.find(row => row.id === 'ZI-03').status, 'missing');
-    assert.equal(rows.find(row => row.id === 'instruction-audio').status, 'missing');
+    assert.equal(rows.find(row => row.id === 'ZI-03').count, pack.exercises.filter(item => item.lessonId === lesson.id && item.mode === 'listen-sentence').length);
+    assert.equal(rows.find(row => row.id === 'instruction-audio').status, 'connected');
   }
   assert.equal(statuses.size, 4);
 });
@@ -43,7 +44,13 @@ test('Dictation and independent rebuilding never contain a visible model; missin
     assert.equal(exercise.prompt.image, undefined);
     assert.equal(exercise.assessment, 'answer');
   }
-  assert.equal(all.filter(item => item.wordId === 'klink-woord-fit' && item.mode === 'word-dictation').length, 0);
+  assert(all.some(item => item.wordId === 'klink-woord-fit' && item.mode === 'word-dictation'));
+  const original = media['klink-woord-fit'].audio;
+  try {
+    delete media['klink-woord-fit'].audio;
+    const material = exercisesForStep(curriculum.steps.find(step => step.newWords.includes('klink-woord-fit')));
+    assert(!material.exercises.some(item => item.wordId === 'klink-woord-fit' && item.mode === 'word-dictation'));
+  } finally { media['klink-woord-fit'].audio = original; }
 });
 test('Gap items mask a complete source unit with two prepared distinct alternatives', () => {
   const gaps = all.filter(item => item.mode === 'missing-grapheme');

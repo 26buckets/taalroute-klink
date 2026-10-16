@@ -2,7 +2,8 @@ import { taalroutePackages, primaryWordCards } from './taalroute-packages';
 
 export type PackageId = string;
 export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
-export type AudioPlayer = (source?: string) => Promise<boolean> | boolean | void;
+export type AudioOptions = { signal?: AbortSignal; waitUntilEnd?: boolean; onStarted?: () => void };
+export type AudioPlayer = (source?: string, options?: AudioOptions) => Promise<boolean> | boolean | void;
 export type LessonPosition = { packageId: string; lessonId: string; exerciseId: string };
 export type PracticeAttempt = { exerciseId: string; mode: string; answer: string; correct: boolean; attempts: number; helpUsed: boolean; support: 'model' | 'requested-help' | 'none'; elapsedMs: number; objective: string; assessment: 'answer' | 'participation' };
 
@@ -40,6 +41,7 @@ export type PackageText = {
   text: string;
   question?: string;
   answer?: string;
+  audio?: string;
 };
 
 export type PackageDialogue = {
@@ -76,6 +78,7 @@ export type PackageExercise = {
   phase?: LessonPhase;
   feedback?: string;
   requiresAudio?: boolean;
+  instructionAudio?: ExerciseAudio;
   assessment?: 'answer' | 'participation';
   prompt?: {
     text?: string;

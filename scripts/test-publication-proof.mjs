@@ -9,9 +9,10 @@ const proof = JSON.parse(readFileSync('docs/klink-publication-provenance.json'))
 function check(candidate) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
-    mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data'));
+    mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
-    for (const name of ['klink-media.json', 'klink-curriculum.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));
+    copyFileSync('lib/klink-context.ts', join(dir, 'lib/klink-context.ts'));
+    for (const name of ['klink-media.json', 'klink-curriculum.json', 'klink-instructions.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));
     const readiness = JSON.parse(readFileSync('data/klink-release-readiness.json'));
     readiness.baseline.proofFile = join(dir, 'proof.json');
     writeFileSync(join(dir, 'data/klink-release-readiness.json'), JSON.stringify(readiness));
@@ -25,6 +26,7 @@ test('Valid historical proof resolves provenance, not outstanding media approval
   const errors = check(proof);
   assert(!/herkomstbewijs|broncommit/.test(errors));
   assert(errors.includes('uitspraakcontrole')); assert(errors.includes('177 betekenissen'));
+  assert(errors.includes('instructie-audio is nog niet inhoudelijk vrijgegeven')); assert(errors.includes('zinnen en situaties'));
 });
 test('Proof for a different live version cannot satisfy the publication gate', () => {
   assert(check({ ...proof, liveWorkerVersion: 'another-version' }).includes('herkomstbewijs past niet'));

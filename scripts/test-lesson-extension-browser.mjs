@@ -14,10 +14,10 @@ page.on('pageerror', error => errors.push(error.message));
 await page.addInitScript(() => {
   window.__audioMode = 'play';
   window.__played = [];
-  window.Audio = class {
-    constructor(src) { this.src = src; this.paused = true; }
-    play() { if (window.__audioMode === 'fail') return Promise.reject(new Error('test audio unavailable')); this.paused = false; window.__played.push(this.src); return Promise.resolve(); }
-    pause() { this.paused = true; }
+  window.Audio = class extends EventTarget {
+    constructor(src) { super(); this.src = src; this.paused = true; }
+    play() { if (window.__audioMode === 'fail') return Promise.reject(new Error('test audio unavailable')); this.paused = false; window.__played.push(this.src); this.timer = setTimeout(() => { this.paused = true; this.dispatchEvent(new Event('ended')); }, 80); return Promise.resolve(); }
+    pause() { clearTimeout(this.timer); this.paused = true; }
   };
 });
 async function openLesson(pack, lesson) {
@@ -58,6 +58,9 @@ try {
   assert(await page.locator('.cp-choice-grid button').first().isDisabled());
   assert(await page.locator('.cp-exercise-feedback button').isDisabled());
   await page.evaluate(() => { window.__audioMode = 'play'; });
+  await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
+  const resume = page.getByRole('button', { name: 'Automatisch verder aanzetten', exact: true });
+  if (await resume.count()) await resume.click();
   await answerActivity(page, audioChoice, { advance: false, checkFocus: false });
   const current = audioChoice.exerciseId;
   await page.waitForFunction(id => document.querySelector('.cp-exercise-browser')?.dataset.exerciseId !== id, current);
@@ -67,7 +70,7 @@ try {
   const gap = exercisesForLesson(core, coreLesson).find(item => item.mode === 'missing-grapheme');
   await seedAt(core, coreLesson, gap);
   await answerActivity(page, gap, { advance: false });
-  await page.getByRole('button', { name: 'Blijf hier', exact: true }).click();
+  await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
   await page.waitForTimeout(1600);
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
@@ -89,7 +92,7 @@ try {
   await page.getByRole('button', { name: 'Verberg voorbeeld', exact: true }).click();
   await page.locator('.cp-text-entry input').fill(dictation.fields[0].acceptedAnswers[0]);
   await page.locator('.cp-text-entry input').press('Enter');
-  await page.getByRole('button', { name: 'Blijf hier', exact: true }).click();
+  await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
   const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
   assert.equal(attempt.helpUsed, true); assert.equal(attempt.assessment, 'answer'); assert(attempt.elapsedMs >= 0); assert.equal(attempt.attempts, 1);
   pass('Explicit word help is hidden by default and recorded as assistance, not independent success');
