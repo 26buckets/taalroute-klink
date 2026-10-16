@@ -2299,20 +2299,34 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   border-radius: var(--radius);
   text-align: center;
 }
-.learner-app .cp-global-word-grid article { grid-template-columns: minmax(0, 1fr) 64px; }
+.learner-app .cp-global-word-grid article {
+  grid-template-columns: minmax(0, 1fr) 64px;
+  border-color: #e2e7e4;
+}
 .learner-app .cp-global-word-grid article > button {
   width: 64px;
   height: 56px;
   padding: 5px;
   border-radius: var(--radius);
   font-size: 14px;
+  font-weight: 400;
+  background: transparent;
+  border-color: transparent;
+}
+.learner-app .cp-global-word-grid article > button.saved {
+  color: var(--green);
+  background: var(--green-soft);
+  border-color: transparent;
+}
+.learner-app .cp-global-word-grid article > button:not(.cp-word-listen):hover {
+  background: var(--primary-soft);
 }
 .learner-app .cp-global-word-grid article > .cp-word-listen {
   width: 100%;
   height: auto;
   min-width: 0;
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-columns: clamp(72px, 40%, 104px) minmax(0, 1fr);
   align-items: center;
   gap: 10px;
   padding: 0;
@@ -2326,11 +2340,30 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .learner-app .cp-word-listen strong { font-size: 24px; }
 .learner-app .cp-word-listen div > span { display: flex; align-items: center; gap: 4px; font-size: 14px; line-height: 1.4; }
 .learner-app .cp-word-listen div > span svg { width: 18px; height: 18px; }
-.learner-app .cp-word-listen .word-initial { display: grid; place-items: center; font-size: 36px; }
+.learner-app .cp-word-listen > img,
+.learner-app .cp-word-listen > .word-initial {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
+.learner-app .cp-word-listen .word-initial {
+  display: grid;
+  place-items: center;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--muted);
+  background: var(--canvas);
+}
 .learner-app .cp-global-word-grid article > .cp-word-listen:disabled {
   color: var(--ink);
   opacity: 1;
   cursor: default;
+}
+@media (min-width: 701px) and (max-width: 1200px) {
+  .learner-app .cp-global-word-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .learner-app .cp-global-word-grid { grid-template-columns: 1fr; }
 }
 .learner-app .is-guided .cp-exercise-workspace > .cp-exercise-main {
   grid-template-rows: 64px minmax(0, 1fr) auto;
