@@ -87,6 +87,7 @@ export function PackageExerciseBrowser({
   eyebrow = 'Oefenen',
   title = `Probeer de oefeningen uit ${pack.id}`,
   description = 'Kies links een soort opdracht. Je kunt luisteren, antwoorden controleren en daarna doorgaan.',
+  onComplete,
 }: {
   pack: PackageDefinition;
   onAudio: (source?: string) => void;
@@ -95,13 +96,15 @@ export function PackageExerciseBrowser({
   eyebrow?: string;
   title?: string;
   description?: string;
+  onComplete?: () => void;
 }) {
   const exerciseTypes = pack.exerciseTypes
     .map((type) => ({ ...type, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
     .filter((type) => type.count > 0);
-  const initialFamilyId = exerciseTypes[0]?.id ?? 'ALF-CMP-001';
+  const initialFamilyId = (guided ? exercises[0]?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';
   const [familyId, setFamilyId] = useState(initialFamilyId);
-  const [recordIndex, setRecordIndex] = useState(() => representativeIndex(exercises, initialFamilyId));
+  const [recordIndex, setRecordIndex] = useState(() => guided ? 0 : representativeIndex(exercises, initialFamilyId));
+  const [completed, setCompleted] = useState(false);
   const [result, setResult] = useState<ResultState>('idle');
   const [message, setMessage] = useState('Maak de opdracht. Je mag zo vaak proberen als nodig is.');
   const startedAt = useRef(0);
@@ -164,10 +167,11 @@ export function PackageExerciseBrowser({
   }
 
   if (!exercise) return null;
+  if (completed) return <section className="honest-empty"><Check /><h2>Goed geoefend</h2><p>Deze leesstap is afgerond.</p><button className="primary-button" onClick={onComplete}>Terug naar de leesstappen<ArrowRight /></button></section>;
 
   const family = pack.exerciseTypes.find((item) => item.id === familyId);
   return (
-    <section className={`cp-exercise-browser ${guided ? 'is-guided' : ''}`}>
+    <section className={`cp-exercise-browser ${guided ? 'is-guided' : ''}`} data-exercise-id={exercise.exerciseId}>
       <header>
         <div>
           <span className="eyebrow">{eyebrow}</span>
@@ -217,7 +221,7 @@ export function PackageExerciseBrowser({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <span><strong>{result === 'idle' ? 'Aan de slag' : result === 'right' ? 'Goed' : 'Probeer opnieuw'}</strong><small>{message}</small></span>
-            <button className="secondary-button" disabled={guided && guidedIndex >= exercises.length - 1} onClick={() => guided ? openGuidedAt(guidedIndex + 1) : openAt((recordIndex + 1) % records.length)}>{guided && guidedIndex >= exercises.length - 1 ? 'Les klaar' : 'Volgende'}<ArrowRight /></button>
+            <button className="secondary-button" disabled={guided && result !== 'right'} onClick={() => guided ? guidedIndex >= exercises.length - 1 ? setCompleted(true) : openGuidedAt(guidedIndex + 1) : openAt((recordIndex + 1) % records.length)}>{guided && guidedIndex >= exercises.length - 1 ? 'Les afronden' : 'Volgende'}<ArrowRight /></button>
           </footer>
         </main>
       </div>
@@ -265,8 +269,8 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   const source = findAudioSource(exercise);
   return (
     <div className="cp-task-prompt">
-      {source && onAudio ? <button onClick={() => onAudio(source)} aria-label="Luister naar de opdracht"><Volume2 /></button> : <span><FileText /></span>}
-      <div><small>Opdracht</small><h3>{exercise.prompt?.text || exercise.title || 'Maak de opdracht.'}</h3>{children}</div>
+      {source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /></button> : <span><FileText /></span>}
+      <div><small>Opdracht</small><h3>{exercise.prompt?.text || exercise.title || 'Maak de opdracht.'}</h3>{typeof exercise.exampleWord === 'string' && <strong>{exercise.exampleWord}</strong>}{children}</div>
     </div>
   );
 }
@@ -313,7 +317,7 @@ function BuildSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
   const [chosen, setChosen] = useState<string[]>([]);
   const token = (id: string) => tiles.find((tile) => tile.id === id)?.token ?? '';
   const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<div className="cp-build-slots">{Array.from({ length: slots.length }).map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : ''}</span>)}</div><div className="cp-tile-bank">{tiles.map((tile) => <button key={tile.id} disabled={chosen.includes(tile.id)} onClick={() => setChosen([...chosen, tile.id])}>{tile.token}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" onClick={() => setChosen(chosen.slice(0, -1))} disabled={!chosen.length}><RotateCcw />Eén terug</button><button className="primary-button" disabled={chosen.length !== target.length} onClick={() => onFinish(chosen.map(token).join(' '), chosen.join('|') === target.join('|'))}>Controleer<Check /></button></div></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<div className="cp-build-slots">{Array.from({ length: slots.length }).map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : ''}</span>)}</div><div className="cp-tile-bank">{tiles.map((tile) => <button key={tile.id} disabled={chosen.includes(tile.id)} onClick={() => setChosen([...chosen, tile.id])}>{tile.token}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" onClick={() => setChosen(chosen.slice(0, -1))} disabled={!chosen.length}><RotateCcw />Eén terug</button><button className="primary-button" disabled={chosen.length !== target.length} onClick={() => onFinish(chosen.map(token).join(' '), chosen.map(token).join('') === target.map(token).join(''))}>Controleer<Check /></button></div></section>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish }: SurfaceProps) {

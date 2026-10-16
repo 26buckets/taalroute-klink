@@ -1,7 +1,8 @@
 'use client';
 
 import { EntryScreen } from '@/components/product/entry-design';
-import { CurriculumApp } from '@/components/product/curriculum-app';
+import { LearnerApp } from '@/components/product/learner-app';
+import { TeacherApp } from '@/components/product/staff-apps';
 import { CheckCircle2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -58,8 +59,8 @@ export default function KlinkProductSlice() {
   return (
     <div className="product-root" data-theme="taalroute">
       {portal === 'entry' && <EntryScreen onPortal={openPortal} />}
-      {portal === 'learner' && <CurriculumApp key="learner" onExit={() => openPortal('entry')} onToast={setToast} />}
-      {portal === 'teacher' && <CurriculumApp key="teacher" teacher onExit={() => openPortal('entry')} onToast={setToast} />}
+      {portal === 'learner' && <LearnerApp onExit={() => openPortal('entry')} onToast={setToast} />}
+      {portal === 'teacher' && <TeacherApp onExit={() => openPortal('entry')} onToast={setToast} />}
       {toast && <output className="toast-message"><CheckCircle2 />{toast}</output>}
     </div>
   );

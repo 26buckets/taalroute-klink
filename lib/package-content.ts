@@ -1,6 +1,6 @@
-import generatedPackages from './package-content.generated.json';
+import { taalroutePackages, primaryWordCards } from './taalroute-packages';
 
-export type PackageId = 'CP001' | 'CP002';
+export type PackageId = string;
 
 export type PackageWord = {
   id: string;
@@ -21,6 +21,11 @@ export type PackageLesson = {
   scope: string;
   words: string[];
   steps: string[];
+  kind?: string;
+  known?: string[];
+  newWords?: string[];
+  returning?: string[];
+  guidedExerciseIds?: string[];
 };
 
 export type PackageText = {
@@ -72,6 +77,7 @@ export type PackageExercise = {
 
 export type PackageDefinition = {
   id: PackageId;
+  kind?: 'group' | 'route' | 'preparation';
   title: string;
   subtitle: string;
   description: string;
@@ -121,12 +127,10 @@ export type PackageDefinition = {
   };
 };
 
-export const contentPackages = generatedPackages as PackageDefinition[];
+export const contentPackages: PackageDefinition[] = taalroutePackages;
 
 export function getPackage(packageId: PackageId) {
   return contentPackages.find((item) => item.id === packageId) ?? contentPackages[0];
 }
 
-export const allPackageWords = contentPackages.flatMap((pack) =>
-  pack.words.map((word) => ({ ...word, packageId: pack.id })),
-);
+export const allPackageWords = primaryWordCards;

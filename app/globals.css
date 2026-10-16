@@ -1172,8 +1172,8 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   .cp-activity-matrix > article > div { grid-column: 2/5; }
   .cp-activity-matrix > article > b, .cp-activity-matrix > footer > b { padding: 7px 4px; background: var(--canvas); border-radius: var(--radius); font-size: 13px; }
   .cp-activity-matrix > article > b::before, .cp-activity-matrix > footer > b::before { display: block; margin-bottom: 2px; color: var(--muted); font-size: 7px; font-weight: 700; text-transform: uppercase; }
-  .cp-activity-matrix > article > b:nth-of-type(1)::before, .cp-activity-matrix > footer > b:nth-of-type(1)::before { content: 'CP001'; }
-  .cp-activity-matrix > article > b:nth-of-type(2)::before, .cp-activity-matrix > footer > b:nth-of-type(2)::before { content: 'CP002'; }
+  .cp-activity-matrix > article > b:nth-of-type(1)::before, .cp-activity-matrix > footer > b:nth-of-type(1)::before { content: 'Bouwgroepen'; }
+  .cp-activity-matrix > article > b:nth-of-type(2)::before, .cp-activity-matrix > footer > b:nth-of-type(2)::before { content: 'Leesroutes'; }
   .cp-activity-matrix > article > b:nth-of-type(3)::before, .cp-activity-matrix > footer > b:nth-of-type(3)::before { content: 'Samen'; }
   .cp-activity-matrix em { overflow: visible; white-space: normal; }
   .cp-activity-matrix > footer { grid-template-columns: repeat(3,minmax(0,1fr)); }

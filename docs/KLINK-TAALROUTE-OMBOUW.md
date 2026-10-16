@@ -1,45 +1,42 @@
-# Klink — Taalroute-indeling
+# Klink — nieuwe leesstappen in de bestaande app
 
-De app gebruikt de vastgezette Lexicon-editie `klink-leerlijn-20261016-v1` uit `data/klink-curriculum.json`. Geen live afhankelijkheid van Drive of het wachtwoordbeveiligde Lexicon. Alle 337 woordvormen / 338 betekenissen zijn opgenomen.
+## Correctie van de eerdere ombouw
 
-## Ingebouwd
+De bestaande LearnerApp, TeacherApp, PackagePlayer en PackageExerciseBrowser zijn opnieuw de actieve app. De aparte CurriculumApp en de bijbehorende stylesheet zijn verwijderd; de eerdere werkversie is herstelbaar via commit 2721eff. De oorspronkelijke startpagina, navigatie, lespagina, oefenwerkruimte, woordkaarten en docentomgeving blijven het uitgangspunt. De enige wijzigingen aan de bestaande globale stylesheet zijn twee mobiele kolomlabels: Bouwgroepen en Leesroutes in plaats van de oude pakketnamen.
 
-- 10 bouwgroepen, 37 basisleesstappen en 3 herhaalmomenten.
-- 23 gekozen uitbreidingssets; de andere woorden blijven bereikbaar in de woordenbank.
-- Alle 78 langere woorden behouden hun vijf leesroutes. De vijfde route houdt drie onderdelen. Klankvoorwaarden worden niet verward met het eerste leesmoment.
-- Bekende, nieuwe en terugkerende woorden blijven gescheiden. Herhaalactiviteiten nemen alleen al geïntroduceerde woorden mee.
-- Vier gekoppelde oefenvormen: woordmodel (KL-01), hetzelfde woord zoeken (WO-02), gehoord woord kiezen (KL-03) en woordbouw met voorbeeld (WO-03). Een zichtbare schrijfvorm vergelijken/bouwen bewijst geen zelfstandig lezen.
-- Geen overname van de oude pakketgrenzen, teksten, gesprekken of alle 18 technische oefenfamilies in de nieuwe leerlijn. De bestaande code en inhoud blijven behouden; de nieuwe route is inhoudelijk opnieuw gekoppeld.
-- Directe antwoordfeedback, stabiele antwoordposities na een fout, tik- en toetsenbordbediening, automatisch verder met handmatige optie, terugstap en herstel bij woordbouw.
-- Een afzonderlijke lokale sleutel voor nieuwe voortgang; oude sleutels worden niet gewist of gemigreerd. Geen nieuwe persoonsgegevens of serveropslag.
+## Eén inhoudelijke basis
 
-## Media en open werk
+De vastgezette Lexicon-editie klink-leerlijn-20261016-v1 blijft ongewijzigd. lib/taalroute-packages.ts zet die gegevens om naar het bestaande les- en oefencontract. Er is geen live afhankelijkheid van Drive of Lexicon.
 
-331 betekenissen hebben gekoppelde woordaudio. De afgeleverde bestanden zijn verliesloos voorzien van Taalroute-merkvelden; gedecodeerde geluidsdata zijn vóór en na gelijk. De technische controles en oorspronkelijke bestanden zitten in het aparte herstelarchief, niet in de cursistinterface.
+- 337 woordvormen / 338 betekenissen; iedere betekenis heeft één eerste vindplaats in de woordenbank.
+- 10 bouwgroepen met 37 basisleesstappen en 3 herhaalmomenten.
+- 23 uitbreidingssets en 154 overige oefenwoorden.
+- 78 langere woorden in vijf afzonderlijke leesroutes; 7 steunbetekenissen onder voorbereiding.
+- Bekende, nieuwe en terugkerende woorden blijven ongewijzigd uit Lexicon overgenomen.
 
-Zeven betekenissen missen audio: fit, koekje, pak (verpakking), sap, spuit, tomaat en zeef. De verpakkingsbetekenis van pak krijgt nooit automatisch de kledingafbeelding. Bij ontbreken van audio is geen luisterkeuze actief; de begeleide woordvormactiviteiten blijven beschikbaar als 'Lees samen'.
+Er zijn 302 te openen routes: 40 basisonderdelen, 23 uitbreidingssets en 239 individuele woordroutes. Dit zijn niet 302 nieuwe didactische lijsten. De technische containers zijn de tien bouwgroepen, vijf leesroutes en één ondersteunend onderdeel; zij zijn niet afgeleid van de oude zestien pakketgrenzen.
 
-43 beelden zijn gekoppeld; 295 betekeniskaarten hebben nog geen beeldbinding. Geen onjuiste vervangingsplaatjes. Voor sommige abstracte woorden is een andere beeldfunctie nodig dan een losse objectfoto. De geïmporteerde opnamen hebben geen nieuw geclaimde menselijke uitspraakgoedkeuring. Instructie-audio voor de volledige nieuwe route is nog niet compleet. De afgekeurde losse t wordt nergens gebruikt. Geen nieuwe audio of beelden gegenereerd.
+## Bestaande oefenspelers
 
-De bronpakketten melden zelf nog open menselijke mediareview. Een nieuwe cursistpilot is op verzoek geen verplichte vrijgavepoort; hij is niet uitgevoerd. De oefenproductieskill verhindert dat onvolledige media als vrijgegeven oefenreeks worden gepubliceerd.
+De koppeling levert 3.895 oefeninstanties in negen bestaande families: modelkaart, woord/beeld kiezen, koppelen, woordbouw, typen, nazeggen, schrijven, memory en woordkaarten. Dezelfde woordbetekenis kan in verschillende leesstappen terugkomen. Dit aantal is geen aantal unieke oefenvormen of bewezen beheerste doelen.
 
-## Publicatiebasis
+Iedere begeleide route gebruikt expliciete oefen-ID's. De oude zoekmatch op losse woorden en de beperking tot één opdracht per familie bepalen de nieuwe route niet meer. Eerst worden de woorden getoond; daarna volgen woordvergelijking, luisteren waar audio bestaat en woordbouw. Afleiders zijn reeds getoonde woorden uit dezelfde leesstap; gelijke schrijfwijzen met verschillende betekenissen worden niet tegenover elkaar gezet. De eerste zeer kleine routes blijven bewust korter dan acht opdrachten, zodat er geen extra woorden of opdrachten worden toegevoegd alleen om een aantal te halen.
 
-De enige productiebranch blijft `26buckets/taalroute-klink:main`. De werkbasis is commit `c221eb104fe64a17de9e51a59ddc5667ea805518`, rechtstreeks opgehaald van GitHub. De huidige Cloudflare Worker-versie is `efddd274-4f66-4d5b-9bfb-c21e87acc89d` (14 oktober 2026, 19:44 UTC). De versie bevat geen broncommit-tag; overeenkomst van datum is geen sluitend bronbewijs. Daarom staat `commitToLiveVersionProven` nog op false. Geen publicatie uitgevoerd.
+Andere oefenvormen zijn in de bestaande oefenbank te openen. Alle achttien renderers blijven in de code beschikbaar; niet alle achttien zijn al aan nieuwe inhoud gekoppeld. Oude teksten, gesprekken, zinsopdrachten en contextscènes zijn bewaard in de bestaande broncatalogus, maar worden niet zonder inhoudelijke herindeling als nieuwe Taalroute-leerstof aangeboden. De tabs daarvoor blijven bestaan en tonen de actuele nulstand.
 
-Publiceren gaat pas na afgeronde controles via `npm run deploy`. De controle blokkeert op ontbrekende inhoudelijke vrijgave, ontbrekende audio, onvolledige instructies, onbewezen live-bronkoppeling of een andere branch dan main. Niet rechtstreeks met een alternatieve configuratie publiceren.
+De bestaande bediening blijft behouden. Wel hersteld: een begeleide route kan echt worden afgerond; Verder blijft na een fout geblokkeerd. Bij woordbouw tellen gelijk gespelde herhaalde tegels als hetzelfde antwoord, ongeacht hun interne ID. Bewaarde woorden gebruiken nu de betekenis-ID en verschijnen ook bij Herhalen. Oude voortgang wordt niet gemigreerd of verwijderd. Een handmatig gekozen herhaalroute veronderstelt dat de docent/cursist de woorden al heeft aangeboden; de app bewijst die voorwaarde niet.
 
-De oude werkmap bevat iCloud-verwijzingen die niet betrouwbaar leesbaar zijn. Die bestanden zijn niet vervangen of gewist. Deze ombouw is uitgevoerd in een verse GitHub-kopie; ongerelateerde lokale wijzigingen zijn niet meegenomen.
+## Media en vrijgave
 
-## Lokale controle
+De 331 woordopnamen en 43 beeldkoppelingen uit de vorige werkversie zijn behouden. Geen nieuwe media geproduceerd of veranderd. De bestaande audiometadatacontrole en gelijke gedecodeerde geluidsdata staan in het eerdere herstelarchief.
 
-- `npm run test:curriculum`: volledige dekking, alle stappen en woordactiviteiten, betekenisonderscheid, leesroutes, herhaalfilter, opslagvalidatie en mediapaden.
-- `npm run test:curriculum:browser`: alle 40 basisonderdelen, 23 uitbreidingssets, zoekfuncties, vijfde leesroute, fouten en herstel, luisteren, afronden, herhaling en uitlevering van alle media.
-- De browserreeks omvat 13 controles, inclusief automatisch doorgaan, een bewust onderbroken audiolading met herstel, en foutief gelegde letters met terugnemen en opnieuw beginnen. De 8 gegevens-/logictests slagen eveneens.
-- Desktop 1366×768, tablet 768×1024, telefoon 390×844 en 320×740.
-- TypeScript, gerichte React/lintcontrole, bestaande cataloguscontrole en productiebuild.
-- Geen GitHub Actions-workflow toegevoegd of uitgevoerd. Reële uitspraak en herkenbaarheid van alle beelden zijn hiermee niet bewezen.
+Zeven betekenissen missen audio: fit, koekje, pak (verpakking), sap, spuit, tomaat en zeef. Er ontbreken 295 beeldkoppelingen. Bij ontbrekende audio wordt geen luisterkeuze aangemaakt. De verpakkingsbetekenis van pak krijgt geen kledingbeeld of -opname. De afgekeurde losse t blijft ongebruikt. Uitspraakcontrole, beeldcontrole en complete instructie-audio staan open; technische tests vervangen die beoordeling niet. De oefenproductieskill laat deze onvolledige reeks niet als publiceerbaar bestempelen.
 
-## Bewaarplaats van deze ombouw
+De enige productiebranch blijft 26buckets/taalroute-klink:main. De werkbranch is codex/klink-taalroute-20261016, afgeleid van c221eb104fe64a17de9e51a59ddc5667ea805518. De bekende live-Worker-versie is efddd274-4f66-4d5b-9bfb-c21e87acc89d. Een ontbrekende broncommit-tag is niet vervangen door een aanname: de live-bronkoppeling blijft een open publicatievoorwaarde. Geen publicatie of wijziging aan de openbare app uitgevoerd.
 
-Werkbranch: `codex/klink-taalroute-20261016`. Deze branch is geen productiebranch; main blijft ongewijzigd totdat de vrijgavevoorwaarden zijn vervuld. De bron en herstelgegevens worden ook in de bestaande Alfabeta+ Klink-projectmap opgeslagen. Een back-up is geen publicatie.
+## Lokale controles
+
+- npm run test:curriculum: 14 controles van de bevroren gegevens, routes, bestaande spelercontracten, afleiders, plaatsing, betekenisonderscheid en mediapaden.
+- npm run test:curriculum:browser: alle onderdelen in de bestaande lessenpagina, een volledige begeleide route met luisteren en foutherstel, alle negen gekoppelde families, woorden bewaren/herhalen, docenttotalen en desktop/tablet/telefoon.
+- TypeScript, gerichte React/lintcontrole en productiebuild. Geen zware cloudcontroles; geen GitHub Actions-workflows toegevoegd.
+- Bron en nieuw testbewijs worden in de bestaande Alfabeta+ Klink-projectmap geback-upt. De eerdere oorspronkelijke audio en herstelgegevens blijven behouden.
