@@ -27,11 +27,17 @@ try {
         const photo = el.querySelector('.cp-section-photo').getBoundingClientRect();
         const copy = el.querySelector('.cp-package-copy').getBoundingClientRect();
         const box = el.getBoundingClientRect();
-        return {photo: {width: photo.width, height: photo.height, bottom: photo.bottom}, copyTop: copy.top, cardWidth: box.width};
+        const img = el.querySelector('.cp-section-photo img');
+        const image = img.getBoundingClientRect();
+        return {photo: {width: photo.width, height: photo.height, bottom: photo.bottom}, copyTop: copy.top, cardWidth: box.width,
+          imageFillsPhoto: Math.abs(image.left-photo.left)<1 && Math.abs(image.top-photo.top)<1 && Math.abs(image.width-photo.width)<1 && Math.abs(image.height-photo.height)<1,
+          objectFit: getComputedStyle(img).objectFit};
       });
       assert(geometry.photo.bottom <= geometry.copyTop + 1, 'Photo stays above the title');
-      assert(Math.abs(geometry.photo.width / geometry.photo.height - 1.5) < .02, 'Keep complete 3:2 navigation scenes');
+      assert(Math.abs(geometry.photo.width / geometry.photo.height - 1.5) < .02, 'Keep aligned 3:2 navigation frames');
       assert(geometry.photo.width >= geometry.cardWidth - 3, 'Photo fills the card width');
+      assert(geometry.imageFillsPhoto, 'Image box reaches every edge of the photo frame');
+      assert.equal(geometry.objectFit, 'cover', 'Square photos fill the frame without white sidebars');
       assert(!/\d+ lessen|\d+ woorden/.test(await card.innerText()));
     }
     if(width!==768)await page.screenshot({path:`outputs/sections-20261017/klink-${width}.png`});
