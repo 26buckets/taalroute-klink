@@ -89,7 +89,7 @@ export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
           const image = (sectionPhotos as Record<string, string>)[pack.id] ?? pack.cover?.image;
           return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Onderdeel ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>
             <span className="cp-section-photo">
-              {image ? <Image src={image} alt="" width={720} height={480} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" /> : <BookOpen aria-hidden="true" />}
+              {image ? <Image src={image} alt="" width={720} height={480} sizes="(max-width: 480px) 50vw, 200px" /> : <BookOpen aria-hidden="true" />}
             </span>
             <span className="cp-package-copy">
               <small aria-hidden="true">{index + 1}</small>

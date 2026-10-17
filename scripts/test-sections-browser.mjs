@@ -18,18 +18,19 @@ try {
     await cards.nth(i).locator('img').evaluate(img=>img.decode());
     assert(await cards.nth(i).locator('img').evaluate(img=>img.naturalWidth>0));
   }
-  for(const width of [1920,1366,1101,1100,768,701,700,390,320]) {
+  for(const width of [1920,1366,1101,1100,768,701,700,481,480,390,320]) {
     await page.setViewportSize({width,height:950});await cards.first().scrollIntoViewIfNeeded();
-    const columns = width > 1100 ? 3 : width > 700 ? 2 : 1;
+    const gridWidth = await page.locator('.cp-package-grid').evaluate(el => el.getBoundingClientRect().width);
+    const columns = width <= 480 ? 2 : Math.max(1, Math.floor((gridWidth + 12) / 212));
     const boxes = await cards.evaluateAll(items => items.map(item => {
       const {x,y,width,height} = item.getBoundingClientRect(); return {x,y,width,height};
     }));
-    assert.equal(boxes.filter(box => Math.abs(box.y - boxes[0].y) < 1).length, columns, 'Three compact desktop cards, two tablet cards, one mobile card');
+    assert.equal(boxes.filter(box => Math.abs(box.y - boxes[0].y) < 1).length, columns, 'Compact fixed-width cards; two smaller cards on phones');
     for (let i=0;i<boxes.length;i++) {
       assert(Math.abs(boxes[i].width-boxes[0].width)<1, 'Cards have equal widths');
       assert(Math.abs(boxes[i].y-boxes[Math.floor(i/columns)*columns].y)<1, 'Each row is aligned');
     }
-    if (width===1366) assert(boxes[0].width<400 && boxes[0].height<420, 'Desktop cards stay compact');
+    assert(boxes.every(box => box.width <= 201 && box.height < 370), 'Cards never expand beyond 200px or become oversized');
     assert(await page.locator('.cp-home-preview img').isVisible());
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
     for (const card of await cards.all()) {
@@ -41,16 +42,18 @@ try {
         const image = img.getBoundingClientRect();
         return {photo: {width: photo.width, height: photo.height, bottom: photo.bottom}, copyTop: copy.top, cardWidth: box.width,
           imageFillsPhoto: Math.abs(image.left-photo.left)<1 && Math.abs(image.top-photo.top)<1 && Math.abs(image.width-photo.width)<1 && Math.abs(image.height-photo.height)<1,
-          objectFit: getComputedStyle(img).objectFit,
+          objectFit: getComputedStyle(img).objectFit, naturalRatio: img.naturalWidth / img.naturalHeight,
+          naturalWidth: img.naturalWidth, naturalHeight: img.naturalHeight, imageWidth: image.width, imageHeight: image.height,
           openHeight: el.querySelector('.cp-section-open').getBoundingClientRect().height,
           titleSize: parseFloat(getComputedStyle(el.querySelector('strong')).fontSize)};
       });
       assert(geometry.photo.bottom <= geometry.copyTop + 1, 'Photo stays above the title');
-      assert(Math.abs(geometry.photo.width / geometry.photo.height - 1.5) < .02, 'Keep aligned 3:2 navigation frames');
+      assert(Math.abs(geometry.photo.width / geometry.photo.height - geometry.naturalRatio) < .02, 'Show the full natural aspect ratio, not a forced crop');
       assert(geometry.photo.width >= geometry.cardWidth - 3, 'Photo fills the card width');
       assert(geometry.imageFillsPhoto, 'Image box reaches every edge of the photo frame');
-      assert.equal(geometry.objectFit, 'cover', 'Square photos fill the frame without white sidebars');
-      assert(geometry.openHeight>=48 && geometry.titleSize>=23, 'Compact cards keep large controls and readable titles');
+      assert.equal(geometry.objectFit, 'contain', 'No photo crop or zoom');
+      assert(geometry.imageWidth <= geometry.naturalWidth && geometry.imageHeight <= geometry.naturalHeight, 'Never enlarge beyond the actual image dimensions');
+      assert(geometry.openHeight>=48 && geometry.titleSize>=20, 'Compact cards keep large controls and readable titles');
       assert(!/\d+ lessen|\d+ woorden/.test(await card.innerText()));
     }
     if(width!==768)await page.screenshot({path:`outputs/sections-20261017/klink-${width}.png`});

@@ -79,12 +79,15 @@ exacte bestandshashes staan in `docs/klink-photo-cards-approval-20261017.json`.
 De publicatiecontrole toetst dit akkoord, de nieuwe beelden en alle oorspronkelijke
 woordcovers. De live release vermeldt ook `sectionPhotosSha256`.
 
-De navigatiefoto’s vullen hun 3:2-kader randloos. Vierkante beelden worden
-bijgesneden; kip en bank hebben een hogere uitsnede. Oorspronkelijke beeldbestanden
-en oefenbeelden blijven intact. De compacte kaarten staan met drie naast elkaar
-boven 1100 pixels, twee tussen 701 en 1100 pixels en één tot en met 700 pixels.
-De browsertest bewaakt randvulling, rijuitlijning, leesbare titels en grote knoppen
-op negen schermbreedtes, inclusief de omslagpunten.
+Nico heeft de vaste 3:2-uitsnede ingetrokken: toon voortaan de volledige foto,
+zonder bijsnijden, uitrekken of vergroten. De kaart is maximaal 200 pixels breed;
+de foto behoudt zijn eigen verhoudingen en vult de kaartbreedte zonder zijstroken.
+Op grotere schermen passen zoveel kaarten naast elkaar als de beschikbare ruimte
+toelaat; op telefoons tot en met 480 pixels staan twee kleinere kaarten naast
+elkaar. De bestaande foto-bovenaan-opzet, bronbeelden en oefenbeelden blijven
+intact. Titels blijven 20 pixels en de Open-knop behoudt 48 pixels tikhoogte.
+De browsertest bewaakt volledige beelden, natuurlijke verhoudingen, geen
+vergroting, rijuitlijning en bediening op elf schermbreedtes.
 
 De oorspronkelijke publicatie van 14 oktober is gedocumenteerd in
 docs/klink-publication-provenance.json. Het nieuwste register heeft voorrang
