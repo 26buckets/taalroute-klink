@@ -29,6 +29,11 @@
 .learner-app .cp-home-honesty { background: transparent; border-color: transparent; padding-left: 0; }
 .learner-app .cp-home-second { border-left-width: 1px; }
 .learner-app .cp-home-actions > button { box-shadow: none; border-color: var(--line); }
+.learner-app .cp-home-shortcuts { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 28px; }
+.learner-app .cp-all-lists-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+.learner-app .cp-all-lists-heading h2 { margin: 0; font-size: 26px; font-weight: 500; }
+.learner-app .cp-all-lists-heading .text-back { margin: 0; }
+.learner-app .cp-package-copy > span:not(.cp-section-open) { font-size: 14px; color: var(--muted); }
 .learner-app .content-page-heading { align-items: center; gap: 16px; }
 .learner-app .content-count { display: flex; align-items: baseline; gap: 6px; min-width: 0; padding: 0; background: transparent; border: 0; box-shadow: none; }
 .learner-app .content-count :is(strong, span) { font-size: 16px; font-weight: 400; }

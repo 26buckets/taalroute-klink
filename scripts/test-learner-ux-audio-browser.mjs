@@ -24,7 +24,7 @@ try {
   const model = packs[2].exercises.find(item => item.exerciseId === id);
   await page.waitForFunction(src => window.__started.some(path => path.endsWith(src)), model.prompt.audio.src, { timeout: 20000 });
   checks.push('Free-practice model starts the actual instruction and word recording automatically');
-  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Het woord schrijven' }).click();
+  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Schrijf' }).click();
   const writingId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
   const writing = packs[2].exercises.find(item => item.exerciseId === writingId);
   await page.waitForFunction(src => window.__started.some(path => path.endsWith(src)), writing.instructionAudio.src);
@@ -32,7 +32,7 @@ try {
   await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
   await page.waitForFunction(src => window.__started.some(path => path.endsWith(src)), writing.prompt.audio.src, { timeout: 20000 });
   checks.push('The writing button plays the actual matching word file');
-  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Kies het woord of beeld' }).click();
+  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Kies' }).click();
   const heard = packs[2].exercises.find(item => item.mode === 'heard-word');
   await page.route(`**${heard.prompt.audio.src}`, route => route.abort());
   await page.locator('.cp-mode-picker select').selectOption('heard-word');

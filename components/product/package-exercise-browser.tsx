@@ -9,7 +9,8 @@ import type {
   AudioPlayer,
   PracticeAttempt,
 } from '@/lib/package-content';
-import { exerciseHelp, phaseLabels } from '@/lib/lesson-plan';
+import { exerciseHelp } from '@/lib/lesson-plan';
+import { learnerExerciseNames, learnerPhaseNames } from '@/lib/learner-copy';
 import {
   ArrowLeft,
   ArrowRight,
@@ -120,7 +121,7 @@ export function PackageExerciseBrowser({
   onAttempt?: (attempt: PracticeAttempt) => void;
 }) {
   const exerciseTypes = pack.exerciseTypes
-    .map((type) => ({ ...type, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
+    .map((type) => ({ ...type, label: learnerExerciseNames[type.id] ?? type.label, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
     .filter((type) => type.count > 0);
   const initialExercise = exercises.find(item => item.exerciseId === initialExerciseId) ?? exercises[0];
   const initialFamilyId = (guided ? initialExercise?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';
@@ -128,7 +129,7 @@ export function PackageExerciseBrowser({
   const [recordIndex, setRecordIndex] = useState(() => guided ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));
   const [completed, setCompleted] = useState(false);
   const [result, setResult] = useState<ResultState>('idle');
-  const [message, setMessage] = useState('Neem rustig de tijd.');
+  const [message, setMessage] = useState('Neem je tijd.');
   const [heard, setHeard] = useState(false);
   const [audioError, setAudioError] = useState(false);
   const [autoPaused, setAutoPaused] = useState(false);
@@ -230,7 +231,7 @@ export function PackageExerciseBrowser({
 
   function resetResult() {
     setResult('idle');
-    setMessage('Neem rustig de tijd.');
+    setMessage('Neem je tijd.');
   }
 
   function resetExercise() {
@@ -290,7 +291,7 @@ export function PackageExerciseBrowser({
       <div className="cp-exercise-workspace">
         {!guided && <label className="cp-family-picker">Oefening<select value={familyId} onChange={event => chooseFamily(event.target.value)}>{exerciseTypes.map(type => <option key={type.id} value={type.id}>{type.label}</option>)}</select></label>}
         <aside aria-label={guided ? 'Stappen van de les' : 'Soort oefening'}>
-          {guided ? Object.entries(phaseLabels).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([phase, label]) => <button key={phase} disabled className={exercise.phase === phase ? 'active' : ''} aria-current={exercise.phase === phase ? 'step' : undefined}><span aria-hidden="true">{exercise.phase === phase ? '•' : '–'}</span><span><strong>{label}</strong></span></button>) : exerciseTypes.map((type, index) => (
+          {guided ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([phase, label]) => <button key={phase} disabled className={exercise.phase === phase ? 'active' : ''} aria-current={exercise.phase === phase ? 'step' : undefined}><span aria-hidden="true">{exercise.phase === phase ? '•' : '–'}</span><span><strong>{label}</strong></span></button>) : exerciseTypes.map((type, index) => (
             <button key={type.id} className={familyId === type.id ? 'active' : ''} disabled={guided} aria-current={familyId === type.id ? 'step' : undefined} onClick={() => chooseFamily(type.id)}>
               <span aria-hidden="true">{guided ? familyId === type.id ? '•' : '–' : String(index + 1).padStart(2, '0')}</span>
                 <span><strong>{type.label}</strong>{!guided && <small>{type.count} {type.count === 1 ? 'oefening' : 'oefeningen'}</small>}</span>
@@ -753,10 +754,10 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
   const source = findAudioSource(card?.audio);
   return <section className="cp-task-card">
     {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-label={flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}>{flipped ? <strong>{backText}</strong> : <ExerciseImageView image={card.front?.image} />}</button>}
-    <span className="cp-card-hint">Tik op de kaart om hem om te draaien.</span>
+    <span className="cp-card-hint">Tik op de kaart.</span>
     <div className="cp-task-actions">
       {source && <button className="secondary-button" aria-label="Luister naar het woord" onClick={() => onAudio(source)}><Volume2 />Luister</button>}
-      {cards.length > 1 && <><button className="secondary-button" disabled={index === 0} onClick={() => { setIndex(index - 1); setFlipped(false); }}><ArrowLeft />Vorige</button><button className="primary-button" onClick={() => { if (index >= cards.length - 1) onFinish('kaartenset afgerond', true); else { setIndex(index + 1); setFlipped(false); } }}>{index >= cards.length - 1 ? 'Afronden' : 'Volgende'}<ArrowRight /></button></>}
+      {cards.length > 1 && <><button className="secondary-button" disabled={index === 0} onClick={() => { setIndex(index - 1); setFlipped(false); }}><ArrowLeft />Vorige</button><button className="primary-button" onClick={() => { if (index >= cards.length - 1) onFinish('kaartenset afgerond', true); else { setIndex(index + 1); setFlipped(false); } }}>{index >= cards.length - 1 ? 'Klaar' : 'Verder'}<ArrowRight /></button></>}
     </div>
   </section>;
 }

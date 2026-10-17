@@ -74,9 +74,9 @@ try {
       const r = button.getBoundingClientRect();
       return r.left >= 0 && r.right <= innerWidth && r.width >= 48 && r.height >= 48;
     })), 'Every package tab is visible and has a usable touch target');
-    for (const label of ['Kijk- en luisterkaart', 'Kies het woord of beeld', 'Woord en beeld koppelen', 'Het woord bouwen', 'Het woord typen', 'Nazeggen', 'Het woord schrijven', 'Memory', 'Woordkaarten']) {
+    for (const label of ['Kijk en luister', 'Kies', 'Wat hoort bij elkaar?', 'Leg het woord', 'Typ', 'Zeg na', 'Schrijf', 'Zoek twee dezelfde', 'Draai de kaart']) {
       await family(label); await geometry(`${width} ${label}`);
-      if (label === 'Woordkaarten') {
+      if (label === 'Draai de kaart') {
         const card = page.locator('.cp-flash-card'); await card.scrollIntoViewIfNeeded(); const front = await card.boundingBox();
         await card.click(); const back = await card.boundingBox();
         assert(Math.abs(front.height - back.height) < 1, 'Turning a card must not move the surrounding controls');
@@ -110,7 +110,7 @@ try {
     }
   }
   checks.push('Seven guided modes across desktop, tablet, narrow, short and landscape viewports; long words and focused inputs stay reachable');
-  await page.setViewportSize({ width: 1366, height: 900 }); await free(); await family('Het woord schrijven');
+  await page.setViewportSize({ width: 1366, height: 900 }); await free(); await family('Schrijf');
   await page.waitForTimeout(90); await page.evaluate(() => { window.__played = []; });
   await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
   const writingId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
@@ -118,7 +118,7 @@ try {
   assert((await page.evaluate(() => window.__played)).includes(writing.prompt.audio.src), 'Writing must expose its existing word recording');
   checks.push('Writing exercise exposes the linked word audio');
   await home(); await nav().getByRole('button', { name: 'Woorden', exact: true }).click();
-  const filter = page.getByLabel('Lessenreeks');
+  const filter = page.getByLabel('Kies een lijst');
   for (const pack of packs) { await filter.selectOption(pack.id); assert.equal(await page.locator('.cp-global-word-grid article').count(), primaryWordCards.filter(word => word.packageId === pack.id).length); }
   await filter.selectOption('all');
   const save = page.getByRole('button', { name: 'aardappel bewaren', exact: true }); await save.click();
