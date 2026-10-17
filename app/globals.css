@@ -2387,15 +2387,18 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   opacity: .65;
 }
 
-/* One approved photo above each title; preserve the existing grid and navigation. */
+/* Compact responsive cards retain the approved photo-above layout and navigation. */
+.cp-package-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 1100px) { .cp-package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .cp-package-grid { grid-template-columns: minmax(0, 1fr); } }
 .cp-package-grid > .cp-photo-section { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-items: stretch; min-height: 0; gap: 0; padding: 0; overflow: hidden; }
 .cp-section-photo { display: grid; place-items: center; align-self: stretch; min-height: 0; aspect-ratio: 3 / 2; overflow: hidden; background: #fff; }
 .cp-section-photo img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; }
 /* Keep the hen's head and the reader's face in the navigation crop. */
 .cp-section-photo img:is([src*="cp002-img-word-15-v1"], [src*="klink-woord-bank"]) { object-position: center top; }
 .cp-section-photo > svg { width: 48px; height: 48px; color: var(--primary); }
-.cp-photo-section .cp-package-copy { padding: 20px; }
-.cp-photo-section .cp-package-copy > strong { margin: 4px 0 16px; font-size: 26px; font-weight: 500; line-height: 1.3; overflow-wrap: anywhere; }
+.cp-photo-section .cp-package-copy { padding: 16px; }
+.cp-photo-section .cp-package-copy > strong { margin: 4px 0 16px; font-size: 24px; font-weight: 500; line-height: 1.3; overflow-wrap: anywhere; }
 .cp-photo-section .cp-package-copy > small { color: var(--muted); font-size: 16px; }
 .cp-section-open { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 16px; border-radius: var(--radius); color: #fff; background: var(--primary); font-size: 18px; font-weight: 400; }
 .cp-section-open svg { width: 20px; height: 20px; }
@@ -2438,7 +2441,6 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-teacher-extra > summary { margin: 0 24px 24px; padding: 16px; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); cursor: pointer; }
 .cp-coverage-overview button { min-height: 48px; background: transparent; color: var(--primary); text-align: left; border: 0; font: inherit; text-decoration: underline; }
 @media (max-width: 760px) {
-  .cp-photo-section .cp-package-copy { padding: 18px; }
   .cp-photo-section .cp-package-copy > strong { font-size: 23px; }
   .is-guided .cp-match-board { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .is-guided .cp-match-board button { min-height: 100px; font-size: 24px; }
