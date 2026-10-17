@@ -13,7 +13,7 @@ function check(candidate) {
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     copyFileSync('lib/klink-context.ts', join(dir, 'lib/klink-context.ts'));
-    for (const name of ['klink-media.json', 'klink-curriculum.json', 'klink-instructions.json', 'klink-comprehension-audio.json', 'klink-connected-content.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));
+    for (const name of ['klink-media.json', 'klink-curriculum.json', 'klink-instructions.json', 'klink-comprehension-audio.json', 'klink-connected-content.json', 'klink-sections.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));
     const media = JSON.parse(readFileSync(join(dir, 'data/klink-media.json')));
     for (const item of Object.values(media)) item.image ||= '/test-present.webp';
     delete Object.values(media)[0].image;
