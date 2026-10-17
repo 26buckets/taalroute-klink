@@ -128,11 +128,31 @@ try {
     assert.equal(await page.locator('.cp-coverage-filters select').nth(1).locator('option').count(), pack.lessons.length);
   }
   await page.locator('.cp-coverage-filters select').first().selectOption(packs[0].id);
+  const checklist = page.locator('[data-build-checklist]');
+  assert.equal(await checklist.locator('tbody tr').count(), 15);
+  assert.equal(await checklist.getAttribute('data-lesson-id'), packs[0].lessons[0].id);
+  assert((await checklist.innerText()).includes('Bewust anders'));
+  assert((await checklist.locator('[data-check-id="sentence-reading"]').innerText()).includes('Ontbreekt'));
+  await page.locator('[data-exercise-inventory] summary').click();
   assert((await page.locator('.cp-lesson-coverage').innerText()).includes('Bewust niet nodig'));
+  await page.locator('[data-exercise-inventory] summary').click();
+  await page.locator('.cp-coverage-filters select').first().selectOption('groep-2');
+  await page.locator('.cp-coverage-filters select').nth(1).selectOption('klink-leesstap-04');
+  await page.locator('[data-sentence-bridge] summary').click();
+  assert((await page.locator('[data-sentence-bridge]').innerText()).includes('Dit is een pan.'));
+  assert((await page.locator('[data-sentence-bridge]').innerText()).includes('nog geen zelfstandig lezen'));
+  assert.equal(await page.locator('[data-sentence-bridge] ol li').count(), 6);
+  for (const width of [390, 320, 1366]) {
+    await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+  }
+  await page.locator('[data-sentence-bridge]').scrollIntoViewIfNeeded();
+  await page.waitForTimeout(200);
   await page.screenshot({ path: new URL('docent-routeoverzicht.png', out).pathname });
-  pass('Teacher overview exposes every route and its missing content without changing learner navigation');
+  pass('Teacher checklist covers every step, distinguishes listening from reading, and opens the sentence bridge at desktop/390/320px');
 
   await openLesson(packs[0], packs[0].lessons[0]);
+  assert.equal(await page.locator('[data-build-checklist], [data-sentence-bridge]').count(), 0);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
   await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Het woord typen' }).click();
