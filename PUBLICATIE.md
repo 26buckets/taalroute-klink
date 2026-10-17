@@ -9,9 +9,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-logo-20261017.json`.
-Livebron: `4c04763dbd552a885ea15c2d70a343e75b887911`.
-Worker-versie: `47a07f92-6294-45f4-b0a4-4c8c2094aa00`.
+Actief register: `docs/klink-publication-photos-20261017.json`.
+Livebron: `632eb9ae333a29a1539c0d4415a644d7cf94c612`.
+Worker-versie: `4291f858-fd94-4996-b5c9-61487516d7dc`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 ## Voor iedere volgende publicatie
