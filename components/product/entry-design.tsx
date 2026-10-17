@@ -49,7 +49,7 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
             {mode === 'choose' ? (
               <>
                 <span className="entry-kicker">Luisteren · oefenen · groeien</span>
-                <h1>Welkom bij Klink</h1>
+                <h1 className="entry-logo-heading" aria-label="Welkom bij Klink"><Image className="entry-klink-logo" src="/klink-logo.svg" alt="Klink — Van klank naar taal" width={770} height={340} priority /></h1>
                 <p>Oefen Nederlandse klanken, woorden en zinnen stap voor stap.</p>
                 <div className="entry-roles">
                   <button className="role-choice role-choice-primary" onClick={chooseLearner}><span className="role-icon"><BookOpen /></span><span><strong>Cursist</strong><small>Open je lessen</small></span><ChevronRight /></button>

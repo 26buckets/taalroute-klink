@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Taalroute | Klink',
   description:
-    'Klink: kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
+    'Klink — Van klank naar taal. Kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
   manifest: '/manifest.webmanifest',
   icons: {
     icon: '/favicon.svg?v=2',

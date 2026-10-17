@@ -16,7 +16,7 @@ export function Brand({ dark = false }: { dark?: boolean; label?: string }) {
     <span className={`brand ${dark ? 'brand-dark' : ''}`}>
       <Image className="taalroute-logo" src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} priority />
       <span className="brand-divider" aria-hidden="true" />
-      <strong className="product-name">Klink</strong>
+      <Image className="product-name klink-wordmark" src="/klink-wordmark.svg" alt="Klink" width={770} height={252} priority />
     </span>
   );
 }

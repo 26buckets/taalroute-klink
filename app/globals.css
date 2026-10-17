@@ -322,7 +322,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   .prototype-bar > span { display: none; }.prototype-bar { justify-content: center; padding: 0; }.prototype-bar nav button { min-width: 58px; padding: 0 8px; }
   .entry-screen { grid-template-columns: 1fr; }.entry-story { min-height: 340px; padding: 34px; }.entry-statement h1 { font-size: 43px; }.entry-panel { padding: 30px 20px; }
   .learner-app, .staff-app { grid-template-columns: 1fr; }.learner-nav { position: fixed; z-index: 80; inset: auto 0 0; height: 68px; display: block; padding: 0; border-right: 0; border-top: 1px solid var(--line-strong); }.learner-nav .brand-button, .learner-profile { display: none; }.learner-nav nav { grid-template-columns: repeat(6,1fr); height: 100%; margin: 0; }.learner-nav nav button { min-height: 67px; border-radius: 0; }.learner-nav nav button.active { box-shadow: inset 0 3px var(--primary); }.learner-main { padding-bottom: 68px; }
-  .staff-sidebar { position: sticky; top: 0; z-index: 70; display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding: 8px 12px; border-right: 0; border-bottom: 1px solid var(--line-strong); }.staff-sidebar > .brand { padding: 0; border: 0; }.staff-sidebar .product-name, .staff-sidebar .brand-divider { display: none; }.staff-nav { display: flex; gap: 2px; margin: 0; overflow-x: auto; }.staff-nav > button { grid-template-columns: 17px auto; min-width: max-content; padding: 0 9px; }.staff-nav > button b { display: none; }.staff-account { min-height: 40px; grid-template-columns: 30px 14px; margin: 0; border: 0; }.staff-account > span:nth-child(2) { display: none; }
+  .staff-sidebar { position: sticky; top: 0; z-index: 70; display: grid; grid-template-columns: auto 1fr auto; align-items: center; padding: 8px 12px; border-right: 0; border-bottom: 1px solid var(--line-strong); }.staff-sidebar > .brand { padding: 0; border: 0; }.staff-sidebar .taalroute-logo, .staff-sidebar .brand-divider { display: none; }.staff-nav { display: flex; gap: 2px; margin: 0; overflow-x: auto; }.staff-nav > button { grid-template-columns: 17px auto; min-width: max-content; padding: 0 9px; }.staff-nav > button b { display: none; }.staff-account { min-height: 40px; grid-template-columns: 30px 14px; margin: 0; border: 0; }.staff-account > span:nth-child(2) { display: none; }
   .sampler-workspace { grid-template-columns: 260px minmax(0, 1fr); }.sampler-heading { align-items: start; }.picture-options { grid-template-columns: repeat(3, 1fr); }
   .next-lesson-card { grid-template-columns: 1fr; }.next-lesson-path { grid-template-columns: repeat(6, minmax(70px,1fr)); overflow-x: auto; border-left: 0; border-top: 1px solid rgb(255 255 255 / 13%); }.learner-dashboard-grid, .lesson-layout, .class-bottom-grid, .admin-bottom-grid, .review-columns { grid-template-columns: 1fr; }.lesson-side { position: static; }.route-copy { grid-template-columns: 74px 1fr; }.route-copy em { display: none; }.library-grid, .package-grid { grid-template-columns: 1fr; }.admin-metrics { grid-template-columns: 1fr 1fr; }.curriculum-map { grid-template-columns: 1fr; }.curriculum-map > svg { transform: rotate(90deg); justify-self: center; }.studio-workspace { grid-template-columns: 170px 1fr; }
 }
@@ -848,7 +848,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   .compact-player { grid-template-rows: 58px minmax(0,1fr) 72px; }
   .compact-titlebar { padding: 0 12px; }
   .compact-titlebar .taalroute-logo { width: 92px; }
-  .compact-titlebar .product-name, .compact-titlebar .brand-divider, .compact-user strong { display: none; }
+  .compact-titlebar .taalroute-logo, .compact-titlebar .brand-divider, .compact-user strong { display: none; }
   .compact-title-center > span { display: none; }
   .compact-workspace { grid-template-columns: 66px minmax(0,1fr); }
   .compact-route { display: none; }
@@ -2476,4 +2476,32 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   .learner-app .is-guided .cp-exercise-workspace > aside button:not(.active) { display: none; }
   .learner-app .is-guided .cp-exercise-workspace > aside button.active { width: 100%; min-width: 0; }
   .learner-app .is-guided .cp-exercise-workspace > aside strong { font-size: 16px; }
+}
+
+/* Vastgesteld Klink-woordmerk: dezelfde vectorvormen op elk scherm. */
+.brand .klink-wordmark {
+  display: block;
+  width: 96px;
+  height: auto;
+  flex: 0 0 auto;
+}
+.learner-nav .brand, .staff-sidebar > .brand { gap: 8px; }
+.learner-nav .klink-wordmark, .staff-sidebar .klink-wordmark { width: 68px; }
+.entry-copy > .entry-logo-heading {
+  margin: 16px 0;
+  font-size: 0;
+  line-height: 0;
+}
+.entry-klink-logo {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+}
+@media (max-width: 760px) {
+  .entry-appbar .klink-wordmark { width: 80px; }
+  .compact-titlebar .klink-wordmark { width: 92px; }
+}
+@media (max-width: 360px) {
+  .entry-appbar .taalroute-logo { width: 96px; }
+  .entry-appbar .brand { gap: 8px; }
 }
