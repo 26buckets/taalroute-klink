@@ -66,6 +66,8 @@ try {
   pass('Sentence, text and dialogue open in the existing player, play in order, record listening participation and allow Verder');
   const dialogue = connectedContent.find(item => item.kind === 'dialogue');
   await openItem(dialogue);
+  // Finish the initial autoplay before measuring the explicit failed replay.
+  await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
   await page.evaluate(src => { window.__fail = src; window.__plays = []; }, dialogue.blocks[1].audio.src);
   await page.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
   await page.getByText('Probeer Luister opnieuw', { exact: true }).waitFor();
