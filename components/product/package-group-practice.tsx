@@ -37,9 +37,9 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt }: { pack: Packa
   </section>;
 }
 
-function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain }: { pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void }) {
-  const exercises = useMemo(() => groupExercises(pack, activity), [pack, activity]);
-  const storageKey = groupSessionKey(pack.id, activity);
+export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen' }: { pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string }) {
+  const exercises = useMemo(() => exerciseSet ?? groupExercises(pack, activity), [pack, activity, exerciseSet]);
+  const storageKey = groupSessionKey(sessionId ?? pack.id, activity);
   const [session, setSession] = useState(() => {
     try { return restoreGroupSession(localStorage.getItem(storageKey), exercises); } catch { return { done: false }; }
   });
@@ -47,7 +47,7 @@ function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain }: { p
   useEffect(() => { try { localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...session })); } catch { /* Optional storage. */ } }, [session, storageKey]);
   const title = groupActivities.find(item => item.id === activity)!.label;
   function restart() { try { localStorage.removeItem(storageKey); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
-  if (session.done) return <section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>Alle oefeningen<ArrowRight /></button></section>;
+  if (session.done) return <section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <BuildWorksheet exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} />;
   return <PackageExerciseBrowser pack={pack} exercises={exercises} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={initialId}
     onPosition={exerciseId => setSession(current => current.exerciseId === exerciseId ? current : { ...current, exerciseId })}

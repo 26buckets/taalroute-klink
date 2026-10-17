@@ -3,6 +3,8 @@
 import { Brand, playMedia, stopMedia } from '@/components/product/shared';
 import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
+import { PracticeChapters, PracticeChapterCards } from '@/components/product/practice-chapters';
+import { chapterHash } from '@/lib/practice-chapters';
 import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
   allPackageWords,
@@ -22,6 +24,7 @@ import {
   Bookmark,
   BookmarkCheck,
   Home,
+  Grid2X2,
   Layers3,
   LogOut,
   PackageOpen,
@@ -32,7 +35,7 @@ import {
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 
-type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review';
+type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters';
 type WordFilter = string;
 
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
@@ -55,6 +58,22 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   });
 
   useEffect(() => { stopMedia(); return stopMedia; }, [view]);
+  useEffect(() => {
+    const restore = () => {
+      const route = window.location.hash.split('/')[1]?.split('?')[0];
+      if (route === 'chapters') setView('chapters');
+      else if (route === 'packages' || route === 'words' || route === 'review' || route === 'home') setView(route);
+    };
+    restore(); window.addEventListener('hashchange', restore);
+    return () => window.removeEventListener('hashchange', restore);
+  }, []);
+
+  function openView(next: LearnerView) {
+    setView(next);
+    // Existing screens still reload at the resumable home; only chapters add deep links.
+    if (window.location.hash !== '#learner/home') window.history.pushState(null, '', '#learner/home');
+  }
+  function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: 'all' }); }
 
   function saveProgress(next: RouteProgress) {
     setProgress(next);
@@ -63,11 +82,11 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   }
 
   function continueLearning() {
-    if (!progress.position) { setView('home'); return; }
+    if (!progress.position) { openView('home'); return; }
     setSelectedPackage(progress.position.packageId);
     setResumePosition(progress.position);
     setPlayerVisit(value => value + 1);
-    setView('package');
+    openView('package');
   }
 
   function recordAttempt(attempt: PracticeAttempt) {
@@ -82,7 +101,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     setSelectedPackage(packageId);
     setResumePosition(undefined);
     setPlayerVisit(value => value + 1);
-    setView('package');
+    openView('package');
   }
 
   function toggleSavedWord(wordId: string) {
@@ -96,27 +115,29 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   return (
     <div className="learner-app">
       <aside className="learner-nav">
-        <button className="brand-button" onClick={() => setView('home')} aria-label="Naar het begin"><Brand /></button>
+        <button className="brand-button" onClick={() => openView('home')} aria-label="Naar het begin"><Brand /></button>
         <nav aria-label="Cursistnavigatie">
           <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={continueLearning}><Home /><span>Verder</span></button>
-          <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => setView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => setView('words')}><WholeWord /><span>Woorden</span></button>
-          <button aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => setView('review')}><RefreshCw /><span>Herhalen</span></button>
+          <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
+          <button aria-current={view === 'chapters' ? 'page' : undefined} className={view === 'chapters' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
+          <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
+          <button aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
         <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
-        {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => setView('packages')} onWords={() => setView('words')} onReview={() => setView('review')} savedCount={savedWordIds.length} progress={progress} onContinue={continueLearning} />}
-        {view === 'packages' && <PackageLibrary onBack={() => setView('home')} onOpen={openPackage} />}
-        {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => setView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onAttempt={recordAttempt} />}
-        {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => setView('home')} onToast={onToast} />}
-        {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => setView('words')} onBack={() => setView('home')} onToast={onToast} />}
+        {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => openView('packages')} onWords={() => openView('words')} onReview={() => openView('review')} onChapter={openChapter} savedCount={savedWordIds.length} progress={progress} onContinue={continueLearning} />}
+        {view === 'packages' && <PackageLibrary onBack={() => openView('home')} onOpen={openPackage} />}
+        {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onAttempt={recordAttempt} />}
+        {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
+        {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
+        {view === 'chapters' && <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />}
       </main>
     </div>
   );
 }
 
-function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
+function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; onChapter: (chapter: string) => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
   const first = contentPackages.find(pack => pack.id === progress.position?.packageId) ?? contentPackages.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? contentPackages[0];
   const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId);
   const preview = activeLesson ? lessonPreviewWords(first, activeLesson).find(word => word.image) : undefined;
@@ -145,6 +166,7 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, pro
       </div>
       <header className="cp-all-lists-heading"><h2>Alle onderdelen</h2><button className="text-back" onClick={onPackages}>Alle lessen<ArrowRight /></button></header>
       <PackageGrid onOpen={onPackage} />
+      <section className="cp-home-chapters"><h2>Oefenen</h2><PracticeChapterCards onOpen={onChapter} /></section>
     </div>
   );
 }

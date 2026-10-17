@@ -19,7 +19,7 @@ async function screenshot(name) { await page.screenshot({ path: new URL(`${name}
 try {
   await home();
   assert.equal(await page.locator('.tr-app').count(), 0);
-  assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Verder', 'Lessen', 'Woorden', 'Herhalen']);
+  assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Verder', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
   await screenshot('bestaande-home');
   await library();
   assert.equal(await page.locator('.cp-package-grid > button').count(), packs.length);
