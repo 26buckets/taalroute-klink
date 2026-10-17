@@ -9,10 +9,20 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-landing-20261017.json`.
-Livebron: `10affc05a167a7ebba4620ce0c368346f8fc0244`.
-Worker-versie: `6a49650c-e332-4699-ae11-72fb2ecbc993`.
+Actief register: `docs/klink-publication-task-audio-20261017.json`.
+Livebron: `1ffddba983f8bbfe78b564bdcea4a7fc2958ddc2`.
+Worker-versie: `2f7132d2-92c8-44cc-906d-ff17c2c16a7b`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+De groeps- en vervolgoefeningen zijn gepubliceerd op Nico's expliciete opdracht,
+vastgelegd in `docs/klink-owner-release-20261017.json` met inhoudshashes. Dit
+akkoord bewijst geen onafhankelijke combinatiebeoordeling of cursistproef.
+Gesproken instructies en hulp zijn op zijn verzoek ingetrokken: 48 bestanden
+blijven in bron en herstelkopie, maar zijn via `public/.assetsignore` uitgesloten
+van publieke assets. Korte opdrachttekst en werkelijke woord-, zin-, vraag-,
+antwoord-, tekst- en gespreksaudio blijven beschikbaar. Het standaardtempo is
+0,85 met behoud van toonhoogte. Alle 2.679 aangeboden mediabestanden zijn live
+teruggelezen en vergeleken met de gecontroleerde bronbytes.
 
 De goedgekeurde startpagina gebruikt de kop “Klink jij ook?”, één compact Klink-logo,
 “Een leermiddel van” met het officiële Taalroute-logo bovenaan en Alfabeta+
