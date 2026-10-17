@@ -245,7 +245,12 @@
 .learner-app .cp-exercise-browser.is-mixed-round { display: block; height: auto; overflow: visible; }
 .learner-app .is-mixed-round > header { display: none; }
 .learner-app .is-mixed-round .cp-exercise-workspace { min-height: 0; }
-.learner-app .is-mixed-round .cp-exercise-stage { min-height: 0; }
+.learner-app .is-mixed-round .cp-exercise-stage { height: clamp(540px, 62dvh, 720px); min-height: 0; overflow: auto; }
+.learner-app .is-mixed-round .cp-exercise-feedback { height: 112px; overflow: auto; }
+/* Reserve the same picture frame before loading and for every word shape. */
+.learner-app .cp-model-content > img { width: min(330px, 100%); height: auto; aspect-ratio: 1; object-fit: contain; }
+.learner-app .cp-model-content > strong { width: 100%; overflow-wrap: anywhere; }
+.learner-app .is-mixed-round .cp-task-card:has(.cp-model-content) { margin-block: 0; }
 .learner-app .is-mixed-round .cp-exercise-stage:has(.cp-flash-card) { container-type: normal; }
 .learner-app .is-mixed-round .cp-exercise-stage .cp-flash-card { width: min(240px, 100%); }
 /* Keep keyboard focus and automatic scrolling clear of the fixed bottom navigation. */

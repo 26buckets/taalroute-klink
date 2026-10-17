@@ -19,7 +19,7 @@
     "inventory:audio": "node scripts/build-audio-register.mjs",
     "pretest:curriculum": "node --test scripts/test-audio-register.mjs",
     "posttest:review": "node scripts/test-audio-register-browser.mjs && npm run test:group-practice && npm run test:chapters",
-    "test:chapters": "node --test scripts/test-practice-chapters.mjs && node scripts/test-practice-chapters-browser.mjs",
+    "test:chapters": "node --test scripts/test-practice-chapters.mjs && node scripts/test-practice-chapters-browser.mjs && node scripts/test-player-stability-browser.mjs",
     "test:audio-register": "node --test scripts/test-audio-register.mjs && node scripts/test-audio-register-browser.mjs",
     "test:group-practice": "node --test scripts/test-group-practice.mjs scripts/test-extended-practice.mjs && node scripts/test-group-practice-browser.mjs && node scripts/test-extended-practice-browser.mjs",
     "check:publication": "node scripts/check-curriculum-release.mjs",
