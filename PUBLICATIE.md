@@ -78,13 +78,18 @@ De live release vermeldt ook `sectionsSha256`.
 De goedgekeurde vorm 'Foto bovenaan' verandert alleen de onderdeelkaart.
 `data/klink-section-photos.json` bevat vier aparte navigatiebeelden; de
 Lexicon-export en oefenwoordbeelden blijven ongewijzigd. Het beeldakkoord en de
-exacte bestandshashes staan in `docs/klink-photo-cards-approval-20261017.json`.
+exacte bestandshashes staan in `docs/klink-square-photo-cards-approval-20261017.json`.
+De vorige brede versies en hun oorspronkelijke akkoord blijven bewaard.
 De publicatiecontrole toetst dit akkoord, de nieuwe beelden en alle oorspronkelijke
 woordcovers. De live release vermeldt ook `sectionPhotosSha256`.
 
 Nico heeft de vaste 3:2-uitsnede ingetrokken: toon voortaan de volledige foto,
 zonder bijsnijden, uitrekken of vergroten. De kaart is maximaal 200 pixels breed;
 de foto behoudt zijn eigen verhoudingen en vult de kaartbreedte zonder zijstroken.
+Op Nico's vervolgopdracht zijn ook de foto's van 7, 9, 14 en 15 vierkante
+bronbeelden geworden (1:1). Alle vijftien foto's hebben daardoor dezelfde hoogte;
+er wordt geen extra uitsnede toegepast. De vier aangepaste scènes behouden hun
+onderwerp en zijn afzonderlijk visueel gecontroleerd; zie het beeldreviewrecord.
 Op grotere schermen passen zoveel kaarten naast elkaar als de beschikbare ruimte
 toelaat; op telefoons tot en met 480 pixels staan twee kleinere kaarten naast
 elkaar. De bestaande foto-bovenaan-opzet, bronbeelden en oefenbeelden blijven

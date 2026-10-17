@@ -6,13 +6,14 @@ import { join } from 'node:path';
 const connections = process.argv.includes('--connected-audio');
 const phaseNavigation = process.argv.includes('--phase-navigation');
 const completePhotos = process.argv.includes('--complete-photos');
-const publication = completePhotos || phaseNavigation || process.argv.includes('--publication');
+const squarePhotos = process.argv.includes('--square-photos');
+const publication = squarePhotos || completePhotos || phaseNavigation || process.argv.includes('--publication');
 const cardsAndRate = process.argv.includes('--cards-and-rate');
 const extraAudio = publication || cardsAndRate || connections || process.argv.includes('--extra-audio');
 const extended = extraAudio || process.argv.includes('--extended');
-const out = completePhotos ? 'outputs/complete-photos-20261017' : phaseNavigation ? 'outputs/phase-navigation-20261017' : publication ? 'outputs/publication-task-audio-20261017' : cardsAndRate ? 'outputs/card-layout-audio-rate-20261017' : connections ? 'outputs/instruction-connections-20261017' : extraAudio ? 'outputs/extended-instruction-audio-20261017/backup' : extended ? 'outputs/extended-practice-review-20261017' : 'outputs/group-practice-review-20261017';
+const out = squarePhotos ? 'outputs/square-section-photos-20261017' : completePhotos ? 'outputs/complete-photos-20261017' : phaseNavigation ? 'outputs/phase-navigation-20261017' : publication ? 'outputs/publication-task-audio-20261017' : cardsAndRate ? 'outputs/card-layout-audio-rate-20261017' : connections ? 'outputs/instruction-connections-20261017' : extraAudio ? 'outputs/extended-instruction-audio-20261017/backup' : extended ? 'outputs/extended-practice-review-20261017' : 'outputs/group-practice-review-20261017';
 mkdirSync(out, { recursive: true });
-const archive = `${out}/${completePhotos ? 'Klink-compacte-kaarten-volledige-fotos-20261017' : phaseNavigation ? 'Klink-leerstappen-herstel-20261017' : publication ? 'Klink-publicatie-opdrachtaudio-20261017' : cardsAndRate ? 'Klink-online-kaartstijl-audio-085-20261017' : connections ? 'Klink-zestien-instructies-gekoppeld-20261017' : extraAudio ? 'Klink-zestien-instructies-bron-media-controles-20261017' : extended ? 'Klink-taalgebruik-bron-media-controles-20261017' : 'Klink-groepsoefeningen-bron-en-controles-20261017'}.zip`;
+const archive = `${out}/${squarePhotos ? 'Klink-vierkante-fotos-7-9-14-15-20261017' : completePhotos ? 'Klink-compacte-kaarten-volledige-fotos-20261017' : phaseNavigation ? 'Klink-leerstappen-herstel-20261017' : publication ? 'Klink-publicatie-opdrachtaudio-20261017' : cardsAndRate ? 'Klink-online-kaartstijl-audio-085-20261017' : connections ? 'Klink-zestien-instructies-gekoppeld-20261017' : extraAudio ? 'Klink-zestien-instructies-bron-media-controles-20261017' : extended ? 'Klink-taalgebruik-bron-media-controles-20261017' : 'Klink-groepsoefeningen-bron-en-controles-20261017'}.zip`;
 if (existsSync(archive)) throw Error('Existing archive must be retained; choose a new filename for a new backup.');
 const tracked = execFileSync('git', ['ls-files', '-co', '--exclude-standard'], { encoding: 'utf8' }).split('\n').filter(Boolean);
 const sources = [...new Set(tracked.filter(path => (/\.(ts|tsx|js|mjs|cjs|json|jsonc|css|md|html|toml|yml|yaml|lock)$/.test(path) || path === 'public/.assetsignore') && !path.startsWith('outputs/')))];
@@ -22,7 +23,8 @@ const newAudio = extended ? JSON.parse(readFileSync('data/klink-audio-candidates
   const recordPath = item.recordPath || `outputs/group-instruction-audio-20261017/${item.id}.json`;
   return [`public${item.src}`, JSON.parse(readFileSync(recordPath)).original, recordPath];
 }) : [];
-const files = [...new Set([...sources, ...checks.flatMap(walk), ...(extended ? walk('outputs/group-instruction-audio-20261017') : []), ...(extraAudio ? walk('outputs/extended-instruction-audio-20261017') : []), ...newAudio])];
+const photoFiles = squarePhotos ? JSON.parse(readFileSync('docs/klink-square-photo-cards-approval-20261017.json')).assets.flatMap(asset => [asset.image, asset.previousImage].map(path => `public${path}`)) : [];
+const files = [...new Set([...sources, ...photoFiles, ...checks.flatMap(walk), ...(extended ? walk('outputs/group-instruction-audio-20261017') : []), ...(extraAudio ? walk('outputs/extended-instruction-audio-20261017') : []), ...newAudio])];
 const manifest = {
   createdAt: new Date().toISOString(), baseCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
   branch: execFileSync('git', ['branch', '--show-current'], { encoding: 'utf8' }).trim(),

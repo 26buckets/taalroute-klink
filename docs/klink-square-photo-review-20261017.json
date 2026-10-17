@@ -1,0 +1,101 @@
+{
+  "date": "2026-10-17",
+  "scope": "Four navigation photographs only: sections 7, 9, 14, 15. Existing exercise images and the other section images are unchanged.",
+  "reviewer": "Codex visual inspection; not a learner trial",
+  "generationMode": "built-in image_gen edit; one call per image",
+  "originalDirectory": "outputs/square-section-photos-20261017/originals/",
+  "detailDirectory": "outputs/square-section-photos-20261017/review/",
+  "requestedFormat": "1:1",
+  "originalDimensions": [
+    1254,
+    1254
+  ],
+  "publishedDimensions": [
+    800,
+    800
+  ],
+  "sourceAssets": [
+    {
+      "sectionId": "groep-8",
+      "number": 7,
+      "title": "zeep · hek",
+      "image": "/package-media/section-covers-20261017/hek-square.webp",
+      "sha256": "9baf1ce5297419ae7892946efdbbc7ae95e2865cf6d8ccfc40338e6b88d928d7",
+      "bytes": 218818,
+      "previousImage": "/package-media/section-covers-20261017/hek.webp",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "sectionId": "groep-10",
+      "number": 9,
+      "title": "sjaal · taxi",
+      "image": "/package-media/section-covers-20261017/sjaal-square.webp",
+      "sha256": "e37f0977d4d2db8787e8096db6db9691db3ad10dfd0faff18b79b01d3543249b",
+      "bytes": 80946,
+      "previousImage": "/package-media/section-covers-20261017/sjaal.webp",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "sectionId": "route-verbinden",
+      "number": 14,
+      "title": "pakje · tomaten",
+      "image": "/package-media/section-covers-20261017/tomaten-square.webp",
+      "sha256": "35c0dce009db4adda921a992c771cee5feb982d9c01dec8a7297592329f1fd0a",
+      "bytes": 110842,
+      "previousImage": "/package-media/section-covers-20261017/tomaten.webp",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "sectionId": "voorbereiding",
+      "number": 15,
+      "title": "appel · sap",
+      "image": "/package-media/section-covers-20261017/sap-square.webp",
+      "sha256": "37dfe9e132b9df604ecd96a9ccbd5a65b642a82e9fce17be1a02a0de6cb92b95",
+      "bytes": 104234,
+      "previousImage": "/package-media/section-covers-20261017/sap.webp",
+      "width": 800,
+      "height": 800
+    }
+  ],
+  "prompts": {
+    "hek": "Use case: precise-object-edit. Image 1 is the edit target: the existing Klink navigation photograph of a wooden garden gate. Create a SQUARE 1:1 version by naturally extending the photographic scene vertically above and below the existing landscape composition. Preserve the entire existing gate, both posts, latch, hinges, garden, colors, daylight, camera position and realistic textures. Do not zoom, crop the sides, stretch, redesign or add objects. Keep the gate fully visible and recognizable in a small navigation card. Seamlessly extend only the existing house/garden above and paving below; no borders, padding bands, text, logos, people or hands. A realistic observer viewpoint. Output one square photograph.",
+    "sjaal": "Use case: precise-object-edit. Image 1 is the edit target: the existing Klink photograph of a mustard-yellow knitted scarf draped over a dark coat on a hall coat hook. Create a SQUARE 1:1 version by naturally extending the photographic scene vertically. Keep the same scarf, knitted texture, both fringed ends fully visible, dark coat, coat hook, hall, daylight, colors and realistic camera viewpoint. No zoom, cropped scarf, stretching, redesign or extra objects. Preserve the whole subject and seamlessly extend wall above and existing coat/hall below. This is a small navigation photograph, so scarf remains clearly recognizable. Edge-to-edge photographic scene, no white bands or borders, no text or logos, no people or hands. Output one square photograph.",
+    "tomaten": "Use case: precise-object-edit. Image 1 is the edit target: the existing Klink photograph of three whole red tomatoes and two tomato halves on a wooden cutting board beside a kitchen sink. Create a SQUARE 1:1 version by naturally extending the scene above and below the landscape photograph. Preserve the complete existing tomato arrangement, all tomatoes and halves, cutting board, kitchen, lighting, red colors, natural textures and camera viewpoint. No zoom, side cropping, stretching, changed counts or extra objects. Extend only the existing kitchen background above and board/counter below, with realistic contact and support. Tomatoes remain clearly recognizable at small navigation-card size. Edge-to-edge photographic scene, no padding bands, borders, text, logos, people or hands. Output one square photograph.",
+    "sap": "Use case: precise-object-edit. Image 1 is the edit target: existing Klink navigation photo of a clear glass of orange juice and a red apple on a woven placemat on a wooden dining table. Create a SQUARE 1:1 version by naturally extending the existing photographic scene vertically. Preserve the entire glass, rim and glass base, orange juice, complete apple, placemat, table, chair, window, daylight, colors and realistic textures and perspective. No zoom, cropping of subjects, stretching, redesign, additional fruit or extra objects. Extend existing room above and table below seamlessly. The glass and apple must remain clearly recognizable on a small navigation card; realistic support and contact shadows. Edge-to-edge photographic scene, no white bands, borders, text, logos, people or hands. Output one square photograph."
+  },
+  "checks": [
+    {
+      "image": "hek",
+      "meaning": "Garden gate fully visible with both posts, latch, hinges and ground contact.",
+      "hands": "No people or hands in full image or detailed inspection; finger, wrist and grip checks not applicable.",
+      "observer": "External observer; no demonstrative action or object."
+    },
+    {
+      "image": "sjaal",
+      "meaning": "Mustard knitted scarf with both fringed ends visible; supported by coat/hook in a hall.",
+      "hands": "No person inside the coat and no hands in full image or detailed inspection; finger, wrist and grip checks not applicable.",
+      "observer": "External observer; garment remains naturally hanging, not presented by a person."
+    },
+    {
+      "image": "tomaten",
+      "meaning": "Three whole tomatoes and two halves remain recognizable, supported by the board and worktop.",
+      "hands": "No people or hands in full image or detailed inspection; finger, wrist and grip checks not applicable.",
+      "observer": "External observer; ordinary kitchen surface, no person displaying a prop."
+    },
+    {
+      "image": "sap",
+      "meaning": "Complete glass, rim, liquid and base visible beside whole apple; contact with woven placemat is plausible.",
+      "hands": "No people or hands in full image or detailed inspection; finger, wrist and grip checks not applicable.",
+      "observer": "External observer; objects rest on table, not held toward viewer."
+    }
+  ],
+  "fullImagesInspected": true,
+  "detailCropsInspected": true,
+  "placedFormatReview": "Local browser: all 15 source images square, no crop or upscale, eleven viewport widths 320–1920px, no horizontal overflow. Desktop screenshot and dedicated 390px screenshots showing sections 7, 9, 14 and 15 inspected: full square photos, matching heights, compact cards and clear subjects. Live verification is recorded separately in the publication proof.",
+  "openPoints": [
+    "No new learner field trial; the owner requested the square transformation, but has not separately reviewed these generated variants."
+  ]
+}

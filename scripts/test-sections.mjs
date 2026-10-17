@@ -7,7 +7,7 @@ import curriculum from '../data/klink-curriculum.json' with {type:'json'};
 import media from '../data/klink-media.json' with {type:'json'};
 import before from './fixtures/klink-sections-preserved.json' with {type:'json'};
 import sectionPhotos from '../data/klink-section-photos.json' with {type:'json'};
-import photoApproval from '../docs/klink-photo-cards-approval-20261017.json' with {type:'json'};
+import photoApproval from '../docs/klink-square-photo-cards-approval-20261017.json' with {type:'json'};
 import {taalroutePackages as packs, primaryWordCards} from '../lib/taalroute-packages.ts';
 import {getPackage} from '../lib/package-content.ts';
 import {parseProgress,nextLessonPosition} from '../lib/learner-progress.ts';

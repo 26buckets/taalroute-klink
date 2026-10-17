@@ -48,6 +48,7 @@ try {
           titleSize: parseFloat(getComputedStyle(el.querySelector('strong')).fontSize)};
       });
       assert(geometry.photo.bottom <= geometry.copyTop + 1, 'Photo stays above the title');
+      assert(Math.abs(geometry.naturalRatio - 1) < .01, 'Every section cover, including 7, 9, 14 and 15, is a square source image');
       assert(Math.abs(geometry.photo.width / geometry.photo.height - geometry.naturalRatio) < .02, 'Show the full natural aspect ratio, not a forced crop');
       assert(geometry.photo.width >= geometry.cardWidth - 3, 'Photo fills the card width');
       assert(geometry.imageFillsPhoto, 'Image box reaches every edge of the photo frame');
@@ -57,6 +58,10 @@ try {
       assert(!/\d+ lessen|\d+ woorden/.test(await card.innerText()));
     }
     if(width!==768)await page.screenshot({path:`outputs/sections-20261017/klink-${width}.png`});
+    if(width===390)for(const index of [6,13]) {
+      await cards.nth(index).scrollIntoViewIfNeeded();
+      await page.screenshot({path:`outputs/sections-20261017/square-photos-${index+1}-390.png`});
+    }
   }
   await page.setViewportSize({width:1366,height:950});await cards.first().click();
   await page.locator('.cp-tabs').getByRole('button',{name:'Lessen',exact:true}).click();
