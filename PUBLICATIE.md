@@ -9,9 +9,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-photo-fill-20261017.json`.
-Livebron: `324306dd4bb8e31e2cf375672aab283eb6f0d3ad`.
-Worker-versie: `e38b8214-e128-48cf-9c05-03679f9c296d`.
+Actief register: `docs/klink-publication-compact-cards-20261017.json`.
+Livebron: `c447745328ba7b6d8dd6f7f8e9631862ca33efb6`.
+Worker-versie: `70e0aa45-987f-4ca0-ade8-2e4e407d3d8e`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 ## Voor iedere volgende publicatie
@@ -58,7 +58,10 @@ woordcovers. De live release vermeldt ook `sectionPhotosSha256`.
 
 De navigatiefoto’s vullen hun 3:2-kader randloos. Vierkante beelden worden
 bijgesneden; kip en bank hebben een hogere uitsnede. Oorspronkelijke beeldbestanden
-en oefenbeelden blijven intact. De browsertest bewaakt de randvulling op vier schermbreedtes.
+en oefenbeelden blijven intact. De compacte kaarten staan met drie naast elkaar
+boven 1100 pixels, twee tussen 701 en 1100 pixels en één tot en met 700 pixels.
+De browsertest bewaakt randvulling, rijuitlijning, leesbare titels en grote knoppen
+op negen schermbreedtes, inclusief de omslagpunten.
 
 De oorspronkelijke publicatie van 14 oktober is gedocumenteerd in
 docs/klink-publication-provenance.json. Het nieuwste register heeft voorrang
