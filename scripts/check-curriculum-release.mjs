@@ -19,7 +19,16 @@ if (execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], { enc
 if (!readiness.baseline.commitToLiveVersionProven) issues.push('De broncommit van de liveversie moet nog aantoonbaar worden bevestigd.');
 try {
   const proof = JSON.parse(readFileSync(readiness.baseline.proofFile));
-  if (proof.sourceCommit !== readiness.baseline.sourceCommit || proof.liveWorkerVersion !== readiness.baseline.liveWorkerVersion || proof.sourceCommitDocumented !== true || !/^[a-f0-9]{64}$/.test(proof.originalArchiveSha256) || !/^[a-f0-9]{64}$/.test(proof.freshClientSha256)) {
+  const hash = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+  const validArchive = readiness.baseline.proofType === 'published-release-marker-and-byte-comparison'
+    ? proof.proofType === readiness.baseline.proofType && hash(proof.sourceArchiveSha256)
+      && proof.liveRelease?.sourceCommit === proof.sourceCommit && proof.liveRelease?.sourceClean === true
+      && proof.liveRelease?.branch === readiness.canonicalBranch
+      && proof.mediaChecked > 0 && proof.mediaChecked === proof.expectedMedia
+      && Array.isArray(proof.errors) && proof.errors.length === 0
+    : readiness.baseline.proofType === 'original-publication-record-and-fresh-application-module-check'
+      && hash(proof.originalArchiveSha256);
+  if (proof.sourceCommit !== readiness.baseline.sourceCommit || proof.liveWorkerVersion !== readiness.baseline.liveWorkerVersion || proof.sourceCommitDocumented !== true || !validArchive || !hash(proof.freshClientSha256)) {
     issues.push('Het herkomstbewijs past niet bij de vastgezette publicatiebasis.');
   }
 } catch { issues.push('Het onderliggende herkomstbewijs ontbreekt of is onleesbaar.'); }

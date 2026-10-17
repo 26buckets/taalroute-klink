@@ -5,7 +5,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 
-const proof = JSON.parse(readFileSync('docs/klink-publication-provenance.json'));
+const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
+const proof = JSON.parse(readFileSync(baseline.proofFile));
 function check(candidate) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
@@ -37,7 +38,7 @@ function check(candidate) {
     return result.stderr;
   } finally { rmSync(dir, { recursive: true, force: true }); }
 }
-test('Valid historical proof resolves provenance, not outstanding media approval', () => {
+test('Valid publication proof resolves provenance, not outstanding media approval', () => {
   const errors = check(proof);
   assert(!/herkomstbewijs|broncommit/.test(errors));
   assert(errors.includes('uitspraakcontrole')); assert(errors.includes('1 betekenissen hebben nog geen gekoppeld betekenisbeeld'));
@@ -51,4 +52,14 @@ test('A boolean without its underlying publication record is rejected', () => {
 });
 test('Missing fresh public client evidence is rejected', () => {
   assert(check({ ...proof, freshClientSha256: null }).includes('herkomstbewijs past niet'));
+});
+test('A mismatching or dirty live release marker is rejected', () => {
+  for (const liveRelease of [null, { ...proof.liveRelease, sourceCommit: 'another-commit' }, { ...proof.liveRelease, sourceClean: false }]) {
+    assert(check({ ...proof, liveRelease }).includes('herkomstbewijs past niet'));
+  }
+});
+test('Incomplete media evidence or a missing source archive is rejected', () => {
+  for (const changes of [{ mediaChecked: 0 }, { mediaChecked: proof.expectedMedia - 1 }, { errors: ['missing media'] }, { sourceArchiveSha256: null }]) {
+    assert(check({ ...proof, ...changes }).includes('herkomstbewijs past niet'));
+  }
 });

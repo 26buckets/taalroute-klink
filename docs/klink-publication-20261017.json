@@ -1,0 +1,51 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "038ca121554cb5a828ab9323ba14086a80483910",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "6532cdbb-0062-4596-b61d-574c3d794e24",
+  "deploymentId": "d2b38011-c49d-4214-b7eb-ba7dafdf8c4d",
+  "deployedAt": "2026-10-17T09:55:04.730155Z",
+  "verifiedAt": "2026-10-17T09:56:53.814Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T09:54:03.986Z",
+    "sourceCommit": "038ca121554cb5a828ab9323ba14086a80483910",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-BozSFERx.js",
+  "freshClientSha256": "003f7be73633362990bca6d6c2b2babd9c9aff0c3fe9a554d93d8de8362c5358",
+  "sourceArchiveSha256": "0974db16f72bb75bb21f86a6b84f16a8357304f4ec8172e1cc50e07e48abe5cf",
+  "sourceArchiveDriveId": "1c2QOkUMoLHWr2L-JE4ttJS0dfGMcyz83",
+  "sourceArchiveBaseCommit": "3ba2f3b6d0bceab6154bbf001d893b9411867c78",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2696,
+  "expectedMedia": 2696,
+  "errors": [],
+  "audioMetadataPreserved": "All fetched media bytes equal the locally verified files; audio Taalroute metadata was checked with ffprobe.",
+  "evidenceFile": "outputs/publication-20261017/live-verification.json",
+  "checks": [
+    "40 curriculum and content tests passed locally",
+    "4 publication-proof tests passed before deployment",
+    "TypeScript and targeted changed-file lint passed",
+    "Complete local test:review passed against the production build",
+    "Live existing-player and connected-content browser checks passed",
+    "16 entrances and 302 selectable routes preserved",
+    "2696 unique public media files fetched and compared: no differences"
+  ],
+  "approvalRecord": "docs/klink-content-approval-20261017.json",
+  "githubActionsUsed": false,
+  "previousPublicationRecord": "docs/klink-publication-provenance.json",
+  "limitations": [
+    "Owner publication approval is not an independent item-by-item listening record.",
+    "No learner pilot or learning-gain claim; the pilot is not an owner-required publication gate.",
+    "Standalone t remains parked and excluded.",
+    "The broader repository linter has existing findings; no repository-wide clean-lint claim."
+  ]
+}
