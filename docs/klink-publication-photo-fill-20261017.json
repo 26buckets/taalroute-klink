@@ -1,0 +1,68 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "324306dd4bb8e31e2cf375672aab283eb6f0d3ad",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "e38b8214-e128-48cf-9c05-03679f9c296d",
+  "verifiedAt": "2026-10-17T12:28:40.520Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T12:27:41.962Z",
+    "sourceCommit": "324306dd4bb8e31e2cf375672aab283eb6f0d3ad",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "38d1b0efa8d3a9c350289cb34d825a621d1dafc6a7c61c00dd6c8fdcc7976143",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-D4nNMiZD.js",
+  "freshClientSha256": "4e94650dbcc9719e35327d43f6e7dcf3e527822791bdf4b18235712b50e7d456",
+  "sourceArchiveSha256": "1503dc66fff72379449edc4d89b1fe1f4e6e412c78be482e4719388d0e921088",
+  "sourceArchiveBaseCommit": "79d4d0c4a92621d46febd674989b411c45ed2cec",
+  "sourceArchiveMember": "klink-photo-fill-source.bundle",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2700,
+  "expectedMedia": 2700,
+  "errors": [],
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "photoApprovalRecord": "docs/klink-photo-cards-approval-20261017.json",
+  "previousPublicationRecord": "docs/klink-publication-photos-20261017.json",
+  "previousLiveSourceCommit": "632eb9ae333a29a1539c0d4415a644d7cf94c612",
+  "previousLiveWorkerVersion": "4291f858-fd94-4996-b5c9-61487516d7dc",
+  "githubActionsUsed": false,
+  "checks": [
+    "Complete local test:review passed, including real audio, resume and responsive exercise controls.",
+    "TypeScript, changed-file lint and six publication-proof negative checks passed.",
+    "Fifteen photo-above cards checked locally and live at desktop, tablet, 390px and 320px; all fifteen sections retain their lesson routes.",
+    "All 2700 offered media files are byte-identical to the checked source files, including four new navigation images.",
+    "Original word-cover hashes, exact exercise payloads and the approved logo are preserved.",
+    "All fifteen navigation photos fill their frames without white sidebars at 1366, 768, 390 and 320px locally and live. Hen and reader have top-aligned crops.",
+    "All fifteen crops visually inspected; source images and original lesson images unchanged."
+  ],
+  "logoAssets": {
+    "klink-logo.svg": "747235695791c84f0ff24b98e848da7223fc752acdec8e32bec482fc018d2337",
+    "klink-wordmark.svg": "f1adb55d826705e36a9f2b455930fc260d5d5b4a0dd1bb0c7fe93d284cc52614"
+  },
+  "designBasis": {
+    "read": true,
+    "scope": "Navigation presentation only; Lexicon content, teaching prerequisites, recall and lesson contents unchanged. No new curriculum or timetable.",
+    "practiceValidation": "Not performed; no new mastery claim."
+  },
+  "sourceBackup": {
+    "id": "1pNOFky5Fd6783a92--Q_YUArEUyI6YPl",
+    "url": "https://drive.google.com/file/d/1pNOFky5Fd6783a92--Q_YUArEUyI6YPl/view?usp=drivesdk",
+    "bytes": 2210023,
+    "sha256": "1239cb6622a23d40e0ea56e376e966a0038ed222acaed4958d5a89b336cf80bc",
+    "readbackByteIdentical": true
+  },
+  "limitations": [
+    "Navigation photos are cropped to fill their frames; source files and exercise images remain unchanged.",
+    "No new learner field test performed."
+  ]
+}

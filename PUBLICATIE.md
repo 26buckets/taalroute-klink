@@ -9,9 +9,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-photos-20261017.json`.
-Livebron: `632eb9ae333a29a1539c0d4415a644d7cf94c612`.
-Worker-versie: `4291f858-fd94-4996-b5c9-61487516d7dc`.
+Actief register: `docs/klink-publication-photo-fill-20261017.json`.
+Livebron: `324306dd4bb8e31e2cf375672aab283eb6f0d3ad`.
+Worker-versie: `e38b8214-e128-48cf-9c05-03679f9c296d`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 ## Voor iedere volgende publicatie
@@ -55,6 +55,10 @@ Lexicon-export en oefenwoordbeelden blijven ongewijzigd. Het beeldakkoord en de
 exacte bestandshashes staan in `docs/klink-photo-cards-approval-20261017.json`.
 De publicatiecontrole toetst dit akkoord, de nieuwe beelden en alle oorspronkelijke
 woordcovers. De live release vermeldt ook `sectionPhotosSha256`.
+
+De navigatiefoto’s vullen hun 3:2-kader randloos. Vierkante beelden worden
+bijgesneden; kip en bank hebben een hogere uitsnede. Oorspronkelijke beeldbestanden
+en oefenbeelden blijven intact. De browsertest bewaakt de randvulling op vier schermbreedtes.
 
 De oorspronkelijke publicatie van 14 oktober is gedocumenteerd in
 docs/klink-publication-provenance.json. Het nieuwste register heeft voorrang
