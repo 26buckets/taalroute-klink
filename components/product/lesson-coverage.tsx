@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { contentPackages, type PackageId } from '@/lib/package-content';
 import { lessonPlan, phaseLabels, planStatusLabels, type PlanStatus } from '@/lib/lesson-plan';
 import { buildChecklist, buildStatusLabels, sentenceBridge, type BuildStatus } from '@/lib/build-checklist';
+import { wordById } from '@/lib/klink-curriculum';
 
 const statuses = Object.keys(planStatusLabels) as PlanStatus[];
 const statusClasses: Record<BuildStatus, PlanStatus> = { works: 'connected', partial: 'available', missing: 'missing', different: 'unnecessary' };
@@ -17,7 +18,7 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
   const plan = lessonPlan(pack, lesson);
   const checklist = buildChecklist(pack, lesson);
   const bridge = sentenceBridge(pack, lesson);
-  const words = (ids: string[] = []) => ids.map(id => pack.words.find(word => word.id === id)?.word).join(' · ') || '—';
+  const words = (ids: string[] = []) => ids.map(id => wordById.get(id)?.word).join(' · ') || '—';
   return <section className="cp-lesson-coverage" aria-labelledby="lesson-coverage-title">
     <header><h2 id="lesson-coverage-title">De route per leesstap</h2><p>De bouwchecklist volgt dezelfde Taalroute-leesstappen. Werkt betekent aangesloten voor de doelwoorden van deze stap, niet dat de cursist het beheerst of dat de media zijn goedgekeurd. Gedeeltelijk betekent dat inhoud, dekking of aansluiting in de lesroute nog ontbreekt.</p></header>
     <div className="cp-coverage-filters">
@@ -33,10 +34,11 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
       <p>{bridge.readingNote}</p><ol>{bridge.stages.map(stage => <li key={stage.title}><strong>{stage.title}.</strong> {stage.action}</li>)}</ol>
     </details>
     <details className="cp-coverage-overview" data-existing-content><summary>Bestaande zinnen, teksten en gesprekken bij deze woorden ({bridge.existing.length})</summary>
-      <p>Beschikbaar bij Zinnen en teksten, Gesprekken en Vrij oefenen. De korte woordles blijft ongewijzigd. Deze koppeling is een woordverband, geen vrijgave voor zelfstandig lezen. Ook een gesprek met een bekend woord kan veel mondelinge voorbereiding vragen.</p>
+      <p>De eerste plek en het terughalen komen uit Lexicon. Beschikbaar bij Zinnen en teksten, Gesprekken en Vrij oefenen; de korte woordles blijft ongewijzigd. Dit zijn plaatsingsvoorstellen met luistersteun, geen vrijgave voor zelfstandig lezen. Gebruik terughaalvoorstellen alleen na eerder aanbod; schuif ze mee bij een latere start. Dit is geen automatische herhaalplanner.</p>
       {bridge.existing.map(item => <details key={item.id} data-content-id={item.id}><summary>{item.kind === 'sentence' ? 'Zin' : item.kind === 'text' ? 'Tekst' : 'Gesprek'}: {item.title}</summary>
         <p>{item.text}</p>
-        <dl><dt>Doelwoorden in deze stap</dt><dd>{words(item.wordIds.filter(id => bridge.wordIds.includes(id)))}</dd>
+        <dl><dt>Eerst aanbieden bij</dt><dd>{words(item.placement.firstWordIds)}</dd>
+          <dt>Terughalen na eerder aanbod</dt><dd>{words(item.placement.returningWordIds)}</dd>
           <dt>Andere woorden uit de woordenbank</dt><dd>{item.conditions.otherWords.map(word => word.word).join(' · ') || 'Geen'}</dd>
           <dt>Overige woordvormen en namen voorbereiden</dt><dd>{item.conditions.outsideWordBank.join(' · ') || 'Geen'}</dd>
           <dt>Klanktekens buiten de woorden van deze stap</dt><dd>{item.conditions.unitsOutsideStep.join(' · ') || 'Geen extra tekens in de gekoppelde woorden; controleer ook de overige vormen.'}</dd>

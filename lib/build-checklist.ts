@@ -1,6 +1,6 @@
 import type { PackageDefinition, PackageExercise, PackageLesson } from './package-content';
 import { klinkContexts } from './klink-context.ts';
-import { contentForStep, contentReadingConditions } from './connected-content.ts';
+import { contentForStep, contentReadingConditions, contentPlacementForStep } from './connected-content.ts';
 
 export const buildStatusLabels = {
   works: 'Werkt', partial: 'Gedeeltelijk', missing: 'Ontbreekt', different: 'Bewust anders',
@@ -93,7 +93,7 @@ export function sentenceBridge(pack: PackageDefinition, lesson: PackageLesson) {
       wordsOutsideStep: tokens.filter(word => !spellings.has(word)),
       independentReading: context.independentReading, humanReview: context.humanReview };
   });
-  const existing = contentForStep(lesson).map(item => ({ ...item, conditions: contentReadingConditions(item, lesson) }));
+  const existing = contentForStep(lesson).map(item => ({ ...item, conditions: contentReadingConditions(item, lesson), placement: contentPlacementForStep(lesson.id, item.id)! }));
   return { packageId: pack.id, lessonId: lesson.id, wordIds: ids, models, existing, stages: bridgeStages,
     nextAction: models.some(model => model.questions.length)
       ? 'De gekoppelde begripsvragen oefenen luisteren. Beoordeel de vragen en opnamen, en bereid waar vermeld extra betekenissen mondeling voor. Zelfstandig lezen volgt pas na afzonderlijke leesvoorbereiding.'

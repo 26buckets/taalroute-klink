@@ -194,6 +194,12 @@
   .learner-app .cp-exercise-feedback > svg { display: none; }
 }
 
+/* Size the square card to the remaining exercise space, including all content tabs. */
+@media (min-height: 601px) {
+  .learner-app .cp-exercise-stage:has(.cp-flash-card) { container-type: size; }
+  .learner-app .cp-exercise-stage .cp-flash-card { width: min(240px, 100%, max(120px, calc(100cqh - 104px))); }
+}
+
 /* In a short landscape window, free practice must scroll instead of squeezing
    its selectors, task and feedback into an impossible fixed-height stack. */
 @media (max-height: 600px) {
