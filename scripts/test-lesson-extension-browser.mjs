@@ -114,7 +114,7 @@ try {
     const footer = await page.locator('.cp-exercise-feedback').boundingBox();
     assert(footer.y + footer.height <= (width > 700 ? 900 : 844) + 2);
     assert.equal(await page.locator('.cp-match-board > div').first().locator('button').first().innerText(), matching.sources[0].label);
-    if (width < 760) assert.equal(await page.locator('.cp-exercise-workspace aside button:visible').innerText(), '•\nOefen');
+    if (width < 760) assert.equal(await page.locator('.cp-exercise-workspace aside button[aria-current="step"]').innerText(), '•\nOefen');
     await page.screenshot({ path: new URL(`koppelen-${width}.png`, out).pathname });
     for (const selector of ['.cp-match-board button', '.cp-exercise-record-head nav button', '.cp-exercise-feedback button']) for (const button of await page.locator(selector).all()) {
       const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48, `${width}: ${selector}`);

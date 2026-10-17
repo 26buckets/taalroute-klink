@@ -143,8 +143,8 @@
 .learner-app .cp-lesson-launch small { display: block; font-size: 13px; text-transform: none; }
 .learner-app .cp-lesson-launch h1 { margin: 2px 0 0; font-size: 20px; line-height: 1.2; }
 .learner-app .is-guided .cp-exercise-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
-.learner-app .is-guided .cp-exercise-workspace > aside { display: flex; overflow: hidden; padding: 4px 12px; gap: 4px; border: 0; border-bottom: 1px solid var(--line); }
-.learner-app .is-guided .cp-exercise-workspace > aside button { width: auto; min-width: 0; min-height: 32px; display: flex; gap: 6px; padding: 4px 8px; border: 0; box-shadow: none; }
+.learner-app .is-guided .cp-exercise-workspace > aside { display: flex; overflow-x: auto; overflow-y: hidden; padding: 4px 12px; gap: 4px; border: 0; border-bottom: 1px solid var(--line); }
+.learner-app .is-guided .cp-exercise-workspace > aside button { width: auto; min-width: 48px; min-height: 48px; flex-shrink: 0; display: flex; gap: 6px; padding: 4px 8px; border: 0; box-shadow: none; }
 .learner-app .is-guided .cp-exercise-workspace > aside button > span:first-child { width: 16px; height: 16px; border: 0; background: transparent; }
 .learner-app .is-guided .cp-exercise-workspace > aside strong { font-size: 14px; white-space: nowrap; }
 .learner-app .is-guided .cp-model-content { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); align-items: center; }
@@ -183,8 +183,6 @@
   .learner-app .is-guided .cp-model-content { grid-template-columns: minmax(0, 1fr); }
   .learner-app .is-guided .cp-model-content > img { max-height: 230px; }
   .learner-app .is-guided .cp-model-content > strong { font-size: 44px; }
-  .learner-app .is-guided .cp-exercise-workspace > aside button:not(.active) { display: none; }
-  .learner-app .is-guided .cp-exercise-workspace > aside button.active { width: auto; }
   .learner-app .review-word-list > header { display: block; }
 }
 @media (max-width: 420px) {

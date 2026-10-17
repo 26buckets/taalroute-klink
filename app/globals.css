@@ -2494,9 +2494,6 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   }
   .learner-app .is-guided .cp-exercise-feedback { gap: 6px; }
   .learner-app .is-guided .cp-exercise-feedback > button { padding: 0 8px; font-size: 14px; }
-  .learner-app .is-guided .cp-exercise-workspace > aside { overflow: hidden; }
-  .learner-app .is-guided .cp-exercise-workspace > aside button:not(.active) { display: none; }
-  .learner-app .is-guided .cp-exercise-workspace > aside button.active { width: 100%; min-width: 0; }
   .learner-app .is-guided .cp-exercise-workspace > aside strong { font-size: 16px; }
 }
 

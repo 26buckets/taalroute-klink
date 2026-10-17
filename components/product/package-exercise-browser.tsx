@@ -29,7 +29,7 @@ import {
   Volume2,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useEffect, useEffectEvent, useRef, useState, type ReactNode } from 'react';
+import { useEffect, useEffectEvent, useRef, useState, type ReactNode, type MouseEvent } from 'react';
 import { stopMedia } from '@/components/product/shared';
 import { ExtendedPracticeSurface } from './extended-practice-surface';
 
@@ -129,6 +129,8 @@ export function PackageExerciseBrowser({
     .map((type) => ({ ...type, label: learnerExerciseNames[type.id] ?? type.label, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
     .filter((type) => type.count > 0);
   const initialExercise = exercises.find(item => item.exerciseId === initialExerciseId) ?? exercises[0];
+  // Browsing ahead must not move the saved route past unfinished exercises.
+  const [nextRequiredIndex, setNextRequiredIndex] = useState(() => Math.max(0, exercises.findIndex(item => item.exerciseId === initialExercise?.exerciseId)));
   const initialFamilyId = (guided || initialExerciseId ? initialExercise?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';
   const [familyId, setFamilyId] = useState(initialFamilyId);
   const [recordIndex, setRecordIndex] = useState(() => guided || initialExerciseId ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));
@@ -147,7 +149,9 @@ export function PackageExerciseBrowser({
   const playback = useRef<AbortController | null>(null);
   const explainedModes = useRef(previousInstructions());
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });
-  const reportPosition = useEffectEvent((id: string) => onPosition?.(id));
+  const reportPosition = useEffectEvent((id: string) => {
+    if (practiceRound || exercises.findIndex(item => item.exerciseId === id) <= nextRequiredIndex) onPosition?.(id);
+  });
   const currentId = useRef('');
   const taskHeading = useRef<HTMLHeadingElement>(null);
   const completionHeading = useRef<HTMLHeadingElement>(null);
@@ -260,6 +264,17 @@ export function PackageExerciseBrowser({
     if (target) openExercise(target.exerciseId);
   }
 
+  function openPhase(event: MouseEvent<HTMLButtonElement>) {
+    const phase = event.currentTarget.dataset.phase;
+    const index = exercises.findIndex(item => item.phase === phase);
+    if (index < 0) return;
+    if (index === guidedIndex) {
+      if (stimulus) void listen(stimulus);
+      return;
+    }
+    openGuidedAt(index);
+  }
+
   function resetResult() {
     setResult('idle');
     setMessage('Neem je tijd.');
@@ -300,7 +315,10 @@ export function PackageExerciseBrowser({
     if (guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion) && result !== 'right'))) return;
     if (guided) {
       if (selfPaced && result !== 'right') finish('geoefend', true);
-      if (guidedIndex >= exercises.length - 1) { stopMedia(); setCompleted(true); onLessonDone?.(); }
+      const nextRequired = nextRequiredIndex + (guidedIndex === nextRequiredIndex ? 1 : 0);
+      setNextRequiredIndex(nextRequired);
+      if (!practiceRound && guidedIndex >= exercises.length - 1 && nextRequired < exercises.length) openGuidedAt(nextRequired);
+      else if (guidedIndex >= exercises.length - 1) { stopMedia(); setCompleted(true); onLessonDone?.(); }
       else openGuidedAt(guidedIndex + 1);
     } else openAt((recordIndex + 1) % records.length);
   }
@@ -344,7 +362,7 @@ export function PackageExerciseBrowser({
       <div className="cp-exercise-workspace">
         {!guided && <label className="cp-family-picker">Oefening<select value={familyId} onChange={event => chooseFamily(event.target.value)}>{exerciseTypes.map(type => <option key={type.id} value={type.id}>{type.label}</option>)}</select></label>}
         {!practiceRound && <aside aria-label={guided ? 'Stappen van de les' : 'Soort oefening'}>
-          {guided ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([phase, label]) => <button key={phase} disabled className={exercise.phase === phase ? 'active' : ''} aria-current={exercise.phase === phase ? 'step' : undefined}><span aria-hidden="true">{exercise.phase === phase ? '•' : '–'}</span><span><strong>{label}</strong></span></button>) : exerciseTypes.map((type, index) => (
+          {guided ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([phase, label]) => <button key={phase} type="button" data-phase={phase} onClick={openPhase} className={exercise.phase === phase ? 'active' : ''} aria-current={exercise.phase === phase ? 'step' : undefined}><span aria-hidden="true">{exercise.phase === phase ? '•' : '–'}</span><span><strong>{label}</strong></span></button>) : exerciseTypes.map((type, index) => (
             <button key={type.id} className={familyId === type.id ? 'active' : ''} disabled={guided} aria-current={familyId === type.id ? 'step' : undefined} onClick={() => chooseFamily(type.id)}>
               <span aria-hidden="true">{guided ? familyId === type.id ? '•' : '–' : String(index + 1).padStart(2, '0')}</span>
                 <span><strong>{type.label}</strong>{!guided && <small>{type.count} {type.count === 1 ? 'oefening' : 'oefeningen'}</small>}</span>
@@ -394,7 +412,7 @@ export function PackageExerciseBrowser({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? !canAnswer ? 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise) : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button className="secondary-button" disabled={guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 ? practiceRound ? 'Ronde afronden' : 'Les afronden' : 'Verder'}<ArrowRight /></button>
+            <button className="secondary-button" disabled={guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? 'Ronde afronden' : 'Les afronden' : 'Verder'}<ArrowRight /></button>
           </footer>
         </div>
       </div>

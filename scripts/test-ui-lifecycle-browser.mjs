@@ -59,7 +59,7 @@ try {
   await page.locator('.cp-start-lesson').nth(1).click();
   const guided = exercisesForLesson(packs[0], packs[0].lessons[1]);
   assert.equal(await page.getByRole('button', { name: 'Volgende oefening', exact: true }).count(), 0);
-  assert(await page.locator('.cp-exercise-workspace aside button').evaluateAll(buttons => buttons.every(button => button.disabled)));
+  assert(await page.locator('.cp-exercise-workspace aside button').evaluateAll(buttons => buttons.every(button => !button.disabled)));
   for (const exercise of guided) {
     await answerActivity(page, exercise);
     await page.waitForFunction(() => window.__mediaAudit.audios.every(audio => audio.paused));
