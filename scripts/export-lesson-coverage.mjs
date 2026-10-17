@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 import { lessonPlan, phaseLabels } from '../lib/lesson-plan.ts';
+import { buildChecklist, buildStatusLabels, sentenceBridge } from '../lib/build-checklist.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 
 const output = new URL('../outputs/lesson-extension-20261016/', import.meta.url);
@@ -10,6 +11,8 @@ const routes = packs.flatMap(pack => pack.lessons.map(lesson => ({
   known: lesson.known, newWords: lesson.newWords, returning: lesson.returning,
   route: exercisesForLesson(pack, lesson).map(item => ({ id: item.exerciseId, type: item.activityTypeId, phase: item.phase, wordId: item.wordId, mode: item.mode, objective: item.objective, assessment: item.assessment })),
   coverage: lessonPlan(pack, lesson),
+  buildChecklist: buildChecklist(pack, lesson),
+  sentenceBridge: sentenceBridge(pack, lesson),
 })));
 const report = {
   curriculum: curriculum.release.id, owner: 'Taalroute', status: 'concept', published: false,
@@ -20,7 +23,8 @@ const report = {
     selectableRoutes: routes.length, exerciseInstances: packs.reduce((sum, pack) => sum + pack.exercises.length, 0),
     guidedInstances: routes.reduce((sum, route) => sum + route.route.length, 0), longestRoute: Math.max(...routes.map(route => route.route.length)) },
   phases: phaseLabels,
-  review: { technical: 'See browser-check.json and existing-player-integration/browser-check.json', didactic: 'human-review-open', pronunciation: 'human-review-open', images: 'human-review-open', instructionAudio: 'incomplete', learnerPilot: 'waived-by-owner', standaloneT: 'parked' },
+  buildStatuses: buildStatusLabels,
+  review: { technical: 'See browser-check.json and existing-player-integration/browser-check.json', didactic: 'human-review-open', pronunciation: 'human-review-open', images: 'human-review-open', instructionAudio: 'recorded-review-open', learnerPilot: 'waived-by-owner', standaloneT: 'parked' },
   routes,
 };
 writeFileSync(new URL('leesstappen-overzicht.json', output), JSON.stringify(report, null, 2));
