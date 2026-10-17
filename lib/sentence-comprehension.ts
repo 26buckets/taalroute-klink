@@ -60,6 +60,6 @@ export function questionFields(question: typeof sentenceQuestions[number]): Part
     distractorReason: question.distractorReason, oralPreparation: question.oralPreparation,
     preparedWordIds: question.requiredWordIds, feedback: question.feedback,
     instructionAudio: audio('zinnen-begrijpen'), requiresAudio: true, assessment: 'answer',
-    access: 'supported-listening', independentReading: false, humanReview: 'open',
+    access: 'supported-listening', independentReading: false, humanReview: audioPlan.humanReview,
   };
 }

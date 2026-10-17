@@ -49,7 +49,7 @@ export function buildChecklist(pack: PackageDefinition, lesson: PackageLesson): 
   }
   const pairReason = oneWord ? 'Bij één voorbereid woord geen kunstmatige tweede keuze. Eerst kennismaken; vergelijken volgt met een tweede woord.' : '';
   return [
-    check('word-model', 'Woord horen, zien en betekenis voorbereiden', ['model'], 'Aanwezige opnamen en beelden moeten nog inhoudelijk worden beoordeeld.', { media: ['audio', 'image'] }),
+    check('word-model', 'Woord horen, zien en betekenis voorbereiden', ['model'], 'Opnamen en beelden zijn voor deze versie vrijgegeven. Dat is geen bewijs dat de cursist het woord zelfstandig beheerst.', { media: ['audio', 'image'] }),
     check('sound-letter', 'Klank en letter verbinden', ['missing-grapheme'], 'Een letter aanvullen binnen een hoorbaar woord is nog geen volledige klank-tekenroute. Geïsoleerde klankmodellen ontbreken; de losse t blijft geparkeerd.', { media: ['audio'], partial: true }),
     check('sound-synthesis', 'Losse klanken tot een woord samenvoegen', [], 'Nog nodig: gecontroleerde klankreeksen en een taak waarin de cursist de klanken samenvoegt. Een heel woord beluisteren of zichtbare letters nabouwen telt hiervoor niet.'),
     check('word-recognition', 'Een gehoord woord herkennen', ['heard-word'], pairReason || 'Keuze uit voorbereide woorden. Een modelwoord vergelijken telt hier niet als zelfstandig herkennen.', { media: ['audio'], different: oneWord }),
@@ -58,7 +58,7 @@ export function buildChecklist(pack: PackageDefinition, lesson: PackageLesson): 
     check('word-meaning', 'Geschreven woord en betekenis verbinden', ['word-image', 'word-image-match'], pairReason || 'Verschillende voorbereide betekenissen en beelden. Ontbrekende woordbeelden niet door willekeurige foto’s vervangen.', { media: ['image'], different: oneWord }),
     check('speaking', 'Nazeggen en terugluisteren', ['repeat-word'], 'Beschikbaar bij vrij oefenen. Een opname of tik op Klaar is geen uitspraakbeoordeling.', { media: ['audio'] }),
     check('sentence-listening', 'Een korte zin beluisteren en begrijpen', questions.length ? ['sentence-question'] : ['listen-sentence', 'connected-sentence'], questions.length
-      ? 'Begripsvragen met vaste keuzes en gesproken hulp. De foto-opdrachten oefenen de genoemde betekenis, nog geen complexere zinsbouw. Extra mondelinge voorbereiding en plaatsing bij Vrij oefenen staan hieronder per vraag; menselijke beoordeling blijft open.'
+      ? 'Begripsvragen met vaste keuzes en gesproken hulp. De foto-opdrachten oefenen de genoemde betekenis, nog geen complexere zinsbouw. Extra mondelinge voorbereiding en plaatsing bij Vrij oefenen staan hieronder per vraag.'
       : 'Luistermodellen zijn aanwezig waar gekoppeld; een passende begripsvraag met voorbereide keuzes ontbreekt nog.', { partial: !questions.length }),
     check('sentence-reading', 'Een zin zelfstandig lezen en begrijpen', [], 'Nog bouwen: leesvoorwaarden voor álle woorden, een betekenisvraag en afzonderlijke registratie van luister- of modelsteun.'),
     check('sentence-building', 'Woorden tot een betekenisvolle zin verbinden', [], 'Nog bouwen: voorbereide woordkaarten, een natuurlijk zinsdoel en verdedigbare alternatieve woordvolgordes. Geen verplicht toetsenbord.'),

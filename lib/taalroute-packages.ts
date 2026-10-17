@@ -35,7 +35,7 @@ export function exercisesForStep(step: Step) {
     const instruction = instructions.items.find(item => item.modes.includes(mode));
     const record: PackageExercise = {
       exerciseId: `${step.id}:${word.id}:${mode}`, componentId: `ALF-CMP-${family}`, contractVersion: '1.0',
-      lessonId: step.id, mode, title: prompt, sourceStatus: 'concept', wordId: word.id,
+      lessonId: step.id, mode, title: prompt, sourceStatus: 'approved', wordId: word.id,
       objective: word.firstReading.firstGoal ?? word.reading.firstMoment,
       activityTypeId, phase, assessment: family === '001' || family === '009' || family === '012' || family === '016' ? 'participation' : 'answer',
       instructionAudio: instruction?.src ? { src: instruction.src, audioId: instruction.id } : undefined,

@@ -70,7 +70,7 @@ test('Sentence bridge uses only contexts actually attached to the selected meani
     for (const model of bridge.models) {
       linked++;
       assert.equal(model.independentReading, false);
-      assert.equal(model.humanReview, 'open');
+      assert.equal(model.humanReview, 'approved');
       assert(model.wordIds.length > 0);
       for (const id of model.wordIds) assert(bridge.wordIds.includes(id));
       for (const id of model.exerciseIds) assert(pack.exercises.some(item => item.exerciseId === id && item.lessonId === lesson.id && item.contextId === model.id));

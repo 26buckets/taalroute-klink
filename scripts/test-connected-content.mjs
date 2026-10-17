@@ -38,7 +38,7 @@ test('New listening content never inflates a word lesson or asserts independent 
       assert.equal(conditions.access, 'supported-listening');
       assert.deepEqual(conditions.outsideWordBank, item.reading.outsideWordBank);
       assert.equal(item.reading.syntaxCheck, 'teacher-guided');
-      assert.equal(item.humanReview, 'open');
+      assert.equal(item.humanReview, 'approved');
     }
   }
   for (const exercise of connected) {

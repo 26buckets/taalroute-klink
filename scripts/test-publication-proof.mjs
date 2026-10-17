@@ -18,6 +18,17 @@ function check(candidate) {
     delete Object.values(media)[0].image;
     writeFileSync(join(dir, 'data/klink-media.json'), JSON.stringify(media));
     const readiness = JSON.parse(readFileSync('data/klink-release-readiness.json'));
+    // Deliberately unapproved fixture: a valid live-source proof must not waive review.
+    readiness.publicationApproved = false;
+    readiness.wordPronunciationReview = 'open';
+    readiness.sentenceComprehensionReview = 'open';
+    readiness.connectedContentReview = 'open';
+    const instructionsPath = join(dir, 'data/klink-instructions.json');
+    const instructions = JSON.parse(readFileSync(instructionsPath));
+    instructions.humanReview = 'open';
+    writeFileSync(instructionsPath, JSON.stringify(instructions));
+    const contextPath = join(dir, 'lib/klink-context.ts');
+    writeFileSync(contextPath, readFileSync(contextPath, 'utf8').replace("humanReview: 'approved'", "humanReview: 'open'"));
     readiness.baseline.proofFile = join(dir, 'proof.json');
     writeFileSync(join(dir, 'data/klink-release-readiness.json'), JSON.stringify(readiness));
     if (candidate) writeFileSync(readiness.baseline.proofFile, JSON.stringify(candidate));

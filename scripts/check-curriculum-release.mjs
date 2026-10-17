@@ -10,6 +10,12 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 if (!readiness.publicationApproved) issues.push('De nieuwe inhoud is nog niet vrijgegeven.');
+try {
+  const approval = JSON.parse(readFileSync(readiness.approvalRecord));
+  if (approval.approvedBy !== 'Nico' || !approval.userAnswer || !approval.contentSourceCommit) issues.push('Het vastgelegde publicatieakkoord is onvolledig.');
+  else execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
+} catch { issues.push('Het vastgelegde publicatieakkoord ontbreekt of past niet bij deze bron.'); }
+if (execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], { encoding: 'utf8' }).trim()) issues.push('Leg de gecontroleerde bronwijzigingen eerst vast in een commit.');
 if (!readiness.baseline.commitToLiveVersionProven) issues.push('De broncommit van de liveversie moet nog aantoonbaar worden bevestigd.');
 try {
   const proof = JSON.parse(readFileSync(readiness.baseline.proofFile));

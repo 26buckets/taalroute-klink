@@ -88,8 +88,9 @@ test('Route cursor is validated, meaning-safe and separate from mastery; complet
   assert.equal(nextLessonPosition(packs, pack.id, lesson.id), undefined);
   assert.equal(nextLessonPosition(packs, 'bad', 'bad'), undefined);
 });
-test('No new media are implicitly approved; recording/self-check remains participation only', () => {
-  assert.equal(release.publicationApproved, false);
+test('Explicit release approval does not turn recording/self-check into mastery', () => {
+  assert.equal(release.publicationApproved, true);
+  assert.equal(release.approvalRecord, 'docs/klink-content-approval-20261017.json');
   assert.equal(release.standaloneT, 'parked-do-not-use');
   for (const exercise of all.filter(item => ['ALF-CMP-009', 'ALF-CMP-012'].includes(item.componentId))) assert.equal(exercise.assessment, 'participation');
 });

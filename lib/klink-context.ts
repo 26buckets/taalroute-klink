@@ -27,5 +27,5 @@ export const klinkContexts = [
   access: 'supported-listening' as const,
   preparation: 'Bespreek de betekenis van de hele zin mondeling. Het doelwoord is eerder in deze les getoond. De overige woorden hoeven nog niet zelfstandig leesbaar te zijn.',
   independentReading: false,
-  humanReview: 'open' as const,
+  humanReview: 'approved' as const,
 }));

@@ -44,7 +44,7 @@ test('Eight sentences and four situations reuse exact authored Taalroute text an
     assert.equal(tags.album_artist, 'Taalroute');
     assert(!/suno|openai|elevenlabs|generator/i.test(JSON.stringify(tags)));
     if (item.image) assert(existsSync(`public${item.image}`));
-    assert.equal(item.independentReading, false); assert.equal(item.humanReview, 'open');
+    assert.equal(item.independentReading, false); assert.equal(item.humanReview, 'approved');
     assert(packs.some(pack => pack.exercises.some(exercise => exercise.contextId === item.id)), item.id);
   }
   for (const pack of packs) for (const lesson of pack.lessons) {

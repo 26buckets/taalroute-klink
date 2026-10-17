@@ -57,7 +57,7 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
   if (missingImages.length) result.push({ id: 'word-images', title: 'Ontbrekende woordbeelden', phase: 'meet', status: 'missing', count: 0, guidedCount: 0, exerciseIds: [], reason: `${missingImages.join(' · ')}. Voor niet-afbeeldbare betekenissen eerst een passende context kiezen.` });
   const explained = records.filter(item => item.instructionAudio?.src);
   const explainedGuided = explained.filter(item => guided.has(item.exerciseId)).length;
-  result.push({ id: 'instruction-audio', title: 'Gesproken instructie', phase: 'meet', status: explained.length ? explainedGuided ? 'connected' : 'available' : 'missing', count: explained.length, guidedCount: explainedGuided, exerciseIds: explained.map(item => item.exerciseId), reason: explained.length ? 'Aparte steunstem. Uitleg klinkt eenmaal per handeling in deze browsersessie en is via de opdracht opnieuw te beluisteren. Luisterbeoordeling staat nog open.' : 'Afzonderlijke steunstem en passende instructie ontbreken; losse /t/ blijft geparkeerd.' });
+  result.push({ id: 'instruction-audio', title: 'Gesproken instructie', phase: 'meet', status: explained.length ? explainedGuided ? 'connected' : 'available' : 'missing', count: explained.length, guidedCount: explainedGuided, exerciseIds: explained.map(item => item.exerciseId), reason: explained.length ? 'Aparte steunstem. Uitleg klinkt eenmaal per handeling in deze browsersessie en is via de opdracht opnieuw te beluisteren. Voor deze versie vrijgegeven.' : 'Afzonderlijke steunstem en passende instructie ontbreken; losse /t/ blijft geparkeerd.' });
   return result;
 }
 

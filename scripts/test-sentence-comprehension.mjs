@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
-import { execFileSync, spawnSync } from 'node:child_process';
+import { execFileSync } from 'node:child_process';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 import { sentenceQuestions, sentenceQuestionFor } from '../lib/sentence-comprehension.ts';
 import { klinkContexts } from '../lib/klink-context.ts';
@@ -23,7 +23,7 @@ test('Eight authored questions cover the existing sentences with real evidence, 
     assert.equal(item.assessment, 'answer');
     assert.equal(item.access, 'supported-listening');
     assert.equal(item.independentReading, false);
-    assert.equal(item.humanReview, 'open');
+    assert.equal(item.humanReview, 'approved');
     assert.equal(item.options.length, 2);
     assert.equal(new Set(item.options.map(option => option.id)).size, 2);
     assert.equal(item.answer.correctOptionIds.length, 1);
@@ -83,7 +83,7 @@ test('Teacher checklist reports connected, optional and absent comprehension wit
   assert(sentenceBridge(bietPack, bietLesson).models.flatMap(model => model.questions).some(item => item.preparation.length && !item.guided));
   assert.equal(buildChecklist(packs[0], packs[0].lessons[0]).find(item => item.id === 'sentence-listening').status, 'missing');
 });
-test('New audio has separate roles, embedded Taalroute branding and no automatic approval', () => {
+test('Released audio retains separate roles, embedded Taalroute branding and explicit user approval', () => {
   assert.notEqual(audioPlan.instructionVoiceId, audioPlan.targetVoiceId);
   assert.equal(audioPlan.items.length, 8);
   for (const item of audioPlan.items) {
@@ -93,12 +93,13 @@ test('New audio has separate roles, embedded Taalroute branding and no automatic
     assert.equal(tags.album, 'Klink - Taalroute'); assert.equal(tags.title, item.text);
     assert(!/elevenlabs|suno|openai|generator/i.test(JSON.stringify(tags)));
   }
-  assert.equal(release.publicationApproved, false);
-  assert.equal(audioPlan.humanReview, 'open');
-  assert.equal(release.sentenceComprehensionReview, 'open');
-  const gate = spawnSync(process.execPath, ['scripts/check-curriculum-release.mjs'], { encoding: 'utf8' });
-  assert.equal(gate.status, 1);
-  assert(gate.stderr.includes('begripsvragen en bijbehorende vraag-, hulp- en antwoordaudio'));
+  assert.equal(release.publicationApproved, true);
+  assert.equal(audioPlan.humanReview, 'approved');
+  assert.equal(release.sentenceComprehensionReview, 'approved');
+  const approval = JSON.parse(readFileSync(release.approvalRecord));
+  assert.equal(approval.approvedBy, 'Nico');
+  assert(approval.scope.includes('sentence-comprehension'));
+  assert.equal(approval.independentReadingOrMasteryApproved, false);
   assert(!/drive\.google|diglin/i.test(JSON.stringify(questions)));
   assert(readFileSync('components/product/package-exercise-browser.tsx', 'utf8').includes("independentReading: false"));
 });

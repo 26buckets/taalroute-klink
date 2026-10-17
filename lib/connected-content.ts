@@ -48,10 +48,10 @@ export function connectedExercisesForStep(step: Step): PackageExercise[] {
     contentTitle: item.title, lessonId: step.id, contextId: item.id, wordId: targets[0],
     wordIds: targets, phase: 'use', activityTypeId: 'TE-01',
     objective: 'Een voorbereid woord volgen in bestaande samenhangende taal, met luistersteun. Geen zelfstandig lees- of begripsresultaat.',
-    sourceStatus: 'concept', assessment: 'participation', requiresAudio: true,
+    sourceStatus: 'approved', assessment: 'participation', requiresAudio: true,
     instructionAudio: { src: instruction.src, audioId: instruction.id },
     prompt: { text: 'Luister en lees mee.', audio: item.blocks[0].audio },
-    textBlocks: item.blocks, playAllBlocks: true, access: 'supported-listening', independentReading: false, humanReview: 'open',
+    textBlocks: item.blocks, playAllBlocks: true, access: 'supported-listening', independentReading: false, humanReview: item.humanReview,
     contentPlacement: placement, recurrenceOnlyAfterIntroduction: placement.returningWordIds.length > 0,
   }); });
 }
