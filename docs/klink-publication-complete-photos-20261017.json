@@ -1,0 +1,56 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "3886b0cddc62d5b7812139ff25ba2b43c080d07e",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "dc0dd87f-1c37-4c1b-b719-06d6a13e1be5",
+  "verifiedAt": "2026-10-17T20:10:11.438Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T20:09:00.875Z",
+    "sourceCommit": "3886b0cddc62d5b7812139ff25ba2b43c080d07e",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "38d1b0efa8d3a9c350289cb34d825a621d1dafc6a7c61c00dd6c8fdcc7976143",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-CQtDJVkt.js",
+  "freshClientSha256": "149459780e8f68b9de48e72e92ce9dcd1a5bf92da446f59cc8ac3db3ecf5d116",
+  "sourceArchiveSha256": "39648b20b1a93134ecd738d84185b8b00a438b930d2abb4dbe0ea19f7150f4f3",
+  "sourceArchiveFormat": "git archive HEAD (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-phase-navigation-20261017.json",
+  "scope": "Smaller section overview cards with whole photographs at their natural proportions, without crop or enlargement. Existing images, content, navigation and audio policy unchanged.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "githubActionsUsed": false,
+  "checks": [
+    "Full local review suite, including phase navigation, grouped and extended practice, passed.",
+    "TypeScript, targeted lint, publication-proof rejection tests, media-rate tests and diff checks passed.",
+    "Local and live section overview tested at eleven viewport widths, 320–1920px: all 15 sections, natural photograph ratios, cards no wider than 200px, no upscaling or horizontal overflow; 20px titles and 48px Open targets.",
+    "Desktop and phone screenshots inspected. Existing photo-above composition retained.",
+    "Live phase navigation: all phases remain accessible by pointer and keyboard; unfinished work resumes correctly and the current model phase replays task audio only.",
+    "All 2679 live media match the locally metadata-checked source bytes. All 48 withdrawn instruction/help files remain excluded."
+  ],
+  "limitations": [
+    "No new learner field trial. This is a layout correction, not a new curriculum or exercise release.",
+    "No new or edited images, audio or words; the rejected isolated t stays parked. No new content-level image or hand audit is claimed."
+  ],
+  "sourceBackup": {
+    "id": "1HB6QROy2O_hmCx5V_IixhziaLJh0cQCK",
+    "url": "https://drive.google.com/file/d/1HB6QROy2O_hmCx5V_IixhziaLJh0cQCK/view?usp=drivesdk",
+    "bytes": 24826724,
+    "sha256": "2e890aaa4613554205d887628f9ce9093926f0b1c174e54bdc7fca938f52ba00",
+    "metadataAndBytesVerified": true
+  }
+}

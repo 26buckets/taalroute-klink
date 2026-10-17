@@ -9,10 +9,13 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-phase-navigation-20261017.json`.
-Livebron: `0c1087eecb79aefd298ffcaeffd91266646b9a6b`.
-Worker-versie: `e0f8fe5b-ebe3-411f-a368-462d8785e666`.
+Actief register: `docs/klink-publication-complete-photos-20261017.json`.
+Livebron: `3886b0cddc62d5b7812139ff25ba2b43c080d07e`.
+Worker-versie: `dc0dd87f-1c37-4c1b-b719-06d6a13e1be5`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Het onderdelenoverzicht heeft kleinere kaarten met volledige foto's, zonder
+uitsnede of vergroting. Deze publicatie wijzigt geen beelden of lesinhoud.
 
 Herstel van de niet-werkende stappenbalk: de bestaande fasen openen hun eerste
 opdracht, ook op mobiel en met toetsenbord. De huidige modelstap kan het woord
