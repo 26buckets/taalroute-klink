@@ -44,7 +44,7 @@ try {
     await answerActivity(page, exercise);
   }
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
-  await page.getByRole('button', { name: 'Alle lessen', exact: true }).click();
+  await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();

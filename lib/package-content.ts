@@ -1,4 +1,4 @@
-import { taalroutePackages, primaryWordCards } from './taalroute-packages';
+import { taalroutePackages, primaryWordCards } from './taalroute-packages.ts';
 
 export type PackageId = string;
 export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
@@ -94,6 +94,8 @@ export type PackageExercise = {
 };
 
 export type PackageDefinition = {
+  cover?: { wordId: string; label: string; image: string };
+  aliases?: string[];
   id: PackageId;
   kind?: 'group' | 'route' | 'preparation';
   title: string;
@@ -149,7 +151,7 @@ export type PackageDefinition = {
 export const contentPackages: PackageDefinition[] = taalroutePackages;
 
 export function getPackage(packageId: PackageId) {
-  return contentPackages.find((item) => item.id === packageId) ?? contentPackages[0];
+  return contentPackages.find((item) => item.id === packageId || item.aliases?.includes(packageId)) ?? contentPackages[0];
 }
 
 export const allPackageWords = primaryWordCards;

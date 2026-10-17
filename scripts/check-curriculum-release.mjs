@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { klinkContexts } from '../lib/klink-context.ts';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
@@ -9,6 +10,9 @@ const instructions = read('../data/klink-instructions.json');
 const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
+const sections = read('../data/klink-sections.json');
+if (sections.release.id !== readiness.sectionEdition || createHash('sha256').update(readFileSync('data/klink-sections.json')).digest('hex') !== readiness.sectionExportSha256) issues.push('De onderdelenindeling wijkt af van de vastgezette Lexicon-export.');
+execFileSync(process.execPath, ['--test', 'scripts/test-sections.mjs'], { stdio: 'inherit' });
 if (!readiness.publicationApproved) issues.push('De nieuwe inhoud is nog niet vrijgegeven.');
 try {
   const approval = JSON.parse(readFileSync(readiness.approvalRecord));

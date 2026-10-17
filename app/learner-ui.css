@@ -187,8 +187,11 @@
   .learner-app .review-word-list > header { display: block; }
 }
 @media (max-width: 420px) {
-  .learner-app .cp-home-hero { grid-template-columns: minmax(0, 1fr); }
-  .learner-app .cp-home-preview { display: none; }
+  .learner-app .cp-home-hero { grid-template-columns: minmax(0, 1fr) 96px; }
+  .learner-app .cp-home-hero > div:first-child { padding: 20px 12px; }
+  .learner-app .cp-home-preview { display: grid; padding: 12px 8px; }
+  .learner-app .cp-home-preview img { width: 80px; height: 100px; }
+  .learner-app .cp-home-facts { display: none; }
   .learner-app .cp-choice-grid, .learner-app .cp-memory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .learner-app .cp-exercise-feedback, .learner-app .is-guided .cp-exercise-feedback { grid-template-columns: minmax(0, 1fr) auto; }
   .learner-app .cp-exercise-feedback > svg { display: none; }

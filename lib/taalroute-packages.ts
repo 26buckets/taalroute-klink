@@ -1,6 +1,7 @@
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import bindings from '../data/klink-media.json' with { type: 'json' };
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
+import sections from '../data/klink-sections.json' with { type: 'json' };
 import type { LessonPhase, PackageDefinition, PackageExercise, PackageLesson, PackageWord } from './package-content';
 import { klinkContexts } from './klink-context.ts';
 import { sentenceQuestionFor, questionFields } from './sentence-comprehension.ts';
@@ -216,7 +217,7 @@ function buildPack(id: string, title: string, kind: PackageDefinition['kind'], w
   };
 }
 const wordStep = (word: Word): Step => ({ id: `woord-${word.id}`, title: word.word, kind: 'woord', known: word.preparation.wordIds, newWords: [word.id], returning: [], guidance: word.reading.firstMoment });
-export const taalroutePackages: PackageDefinition[] = [
+const originalPackages: PackageDefinition[] = [
   ...curriculum.groups.map(group => {
     const words = curriculum.words.filter(word => homeGroup(word) === group.group);
     const basic = curriculum.steps.filter(step => stepGroup(step) === group.group);
@@ -230,6 +231,38 @@ export const taalroutePackages: PackageDefinition[] = [
   }),
   buildPack('voorbereiding', 'Woorden voorbereiden', 'preparation', curriculum.words.filter(word => word.firstReading.mode === 'preparation'), curriculum.words.filter(word => word.firstReading.mode === 'preparation').map(wordStep), 'Bereid deze woorden voor wanneer ze nodig zijn voor een volgende leesstap.'),
 ];
+
+// Merge entrances, not learning activities, prerequisites or recall.
+export const taalroutePackages: PackageDefinition[] = sections.sections.map(section => {
+  const originals = originalPackages.filter(pack => pack.id === section.id || section.aliases.includes(pack.id));
+  const first = originals[0];
+  if (!first) throw new Error(`Unknown Lexicon section: ${section.id}`);
+  const words = [...new Map(originals.flatMap(pack => pack.words).map(word => [word.id, word])).values()];
+  const counts = { ...first.counts };
+  for (const key of ['lessons', 'coreWords', 'exercises', 'texts', 'sentences', 'dialogues', 'games'] as const) counts[key] = originals.reduce((sum, pack) => sum + (pack.counts[key] ?? 0), 0);
+  counts.images = words.filter(word => word.image).length;
+  counts.audio = words.filter(word => word.audio).length;
+  const exerciseTypes = [...new Set(originals.flatMap(pack => pack.exerciseTypes.map(type => type.id)))].map(id => {
+    const types = originals.flatMap(pack => pack.exerciseTypes.filter(type => type.id === id));
+    return { ...types[0], count: types.reduce((sum, type) => sum + type.count, 0), modes: unique(types.flatMap(type => type.modes)), examples: unique(types.flatMap(type => type.examples)).slice(0, 3) };
+  });
+  counts.exerciseTypes = exerciseTypes.length;
+  // A shared context keeps the lesson links from both former entrances.
+  const contexts = <T extends {id: string; lessonIds?: string[]}>(items: T[]) => [...new Set(items.map(item => item.id))].map(id => {
+    const matches = items.filter(item => item.id === id);
+    return { ...matches[0], lessonIds: unique(matches.flatMap(item => item.lessonIds ?? [])) };
+  });
+  const texts = contexts(originals.flatMap(pack => pack.texts));
+  const dialogues = contexts(originals.flatMap(pack => pack.dialogues));
+  counts.texts = texts.filter(item => item.kind === 'text').length;
+  counts.sentences = texts.filter(item => item.kind === 'sentence').length;
+  counts.dialogues = dialogues.length;
+  return { ...first, title: section.title, cover: section.cover, aliases: section.aliases, counts, words, exerciseTypes, texts, dialogues,
+    lessons: originals.flatMap(pack => pack.lessons), exercises: originals.flatMap(pack => pack.exercises), games: originals.flatMap(pack => pack.games),
+    scenes: [...new Map(originals.flatMap(pack => pack.scenes).map(scene => [scene.id, scene])).values()],
+    media: { ...first.media, imageAvailable: counts.images, imageExpected: words.length, audioAvailable: counts.audio, audioExpected: words.length, missing: words.filter(word => !word.image).map(word => word.word) },
+  };
+});
 
 export function exercisesForLesson(pack: PackageDefinition, lesson: PackageLesson) {
   const byExerciseId = new Map(pack.exercises.filter(exercise => exercise.lessonId === lesson.id).map(exercise => [exercise.exerciseId, exercise]));
@@ -245,7 +278,4 @@ export function lessonPreviewWords(pack: PackageDefinition, lesson: PackageLesso
     .filter((word): word is PackageWord => Boolean(word)).slice(0, 2);
 }
 
-export const primaryWordCards = curriculum.words.map(word => ({ ...toWord(word), packageId:
-  word.firstReading.mode === 'reading-route' ? `route-${word.firstReading.routeId}` :
-  word.firstReading.mode === 'preparation' ? 'voorbereiding' : `groep-${homeGroup(word)}`,
-}));
+export const primaryWordCards = curriculum.words.map(word => ({ ...toWord(word), packageId: sections.sections.find(section => section.wordIds.includes(word.id))!.id }));

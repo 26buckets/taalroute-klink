@@ -58,7 +58,7 @@ try {
   }
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
   console.log('PASS guided sequence, one-click choices, wrong/correct, undo relocks, focus/status, audio stops');
-  await page.getByRole('button', { name: 'Alle lessen', exact: true }).click();
+  await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
   await family('Typ');
   const typeId = await exerciseId();

@@ -46,7 +46,7 @@ try {
       assert.equal(await page.locator('.cp-reading-list > button').count(), library.filter(item => item.lessonIds.includes(lesson.id)).length);
     }
   }
-  pass('All 16 existing collections expose the exact connected library; word-step filters return the correct entries');
+  pass('All 15 sections expose the exact connected library; word-step filters return the correct entries');
   for (const kind of ['sentence', 'text', 'dialogue']) {
     const item = connectedContent.find(item => item.kind === kind);
     await openItem(item);

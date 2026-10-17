@@ -118,7 +118,7 @@ try {
   assert((await page.evaluate(() => window.__played)).includes(writing.prompt.audio.src), 'Writing must expose its existing word recording');
   checks.push('Writing exercise exposes the linked word audio');
   await home(); await nav().getByRole('button', { name: 'Woorden', exact: true }).click();
-  const filter = page.getByLabel('Kies een lijst');
+  const filter = page.getByLabel('Kies een onderdeel');
   for (const pack of packs) { await filter.selectOption(pack.id); assert.equal(await page.locator('.cp-global-word-grid article').count(), primaryWordCards.filter(word => word.packageId === pack.id).length); }
   await filter.selectOption('all');
   const save = page.getByRole('button', { name: 'aardappel bewaren', exact: true }); await save.click();

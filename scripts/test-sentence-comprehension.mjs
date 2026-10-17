@@ -71,7 +71,7 @@ test('Condition and conjunction items cannot be solved by spotting only the subj
   assert.equal(kool.answer.correctOptionIds[0], 'beide');
 });
 test('Teacher checklist reports connected, optional and absent comprehension without claiming independent reading', () => {
-  const pack = packs.find(item => item.id === 'groep-2');
+  const pack = packs.find(item => item.id === 'groep-1');
   const lesson = pack.lessons.find(item => item.id === 'klink-leesstap-04');
   const list = buildChecklist(pack, lesson);
   assert.equal(list.find(item => item.id === 'sentence-listening').status, 'works');

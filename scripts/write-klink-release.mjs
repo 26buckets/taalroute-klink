@@ -13,6 +13,7 @@ const record = {
   sourceClean: git('status', '--porcelain', '--untracked-files=no') === '',
   curriculumEdition: readiness.curriculumEdition,
   lexiconExportSha256: routing.exportSha256,
+  sectionsSha256: createHash('sha256').update(readFileSync('data/klink-sections.json')).digest('hex'),
   contentSha256: createHash('sha256').update(readFileSync('data/klink-connected-content.json')).digest('hex'),
 };
 writeFileSync('public/release.json', JSON.stringify(record, null, 2) + '\n');

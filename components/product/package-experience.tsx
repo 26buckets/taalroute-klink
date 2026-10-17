@@ -68,8 +68,8 @@ export function PackageLibrary({
       </button>
       <header className="package-library-heading">
         <div>
-          <h1>Alle lijsten</h1>
-          <p>{contentPackages.length} lijsten · {contentPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
+          <h1>Alle onderdelen</h1>
+          <p>{contentPackages.length} onderdelen · {contentPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
         </div>
       </header>
 
@@ -79,16 +79,15 @@ export function PackageLibrary({
 }
 
 export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
-  return <section className="cp-package-grid" aria-label="Alle lijsten">
+  return <section className="cp-package-grid" aria-label="Alle onderdelen">
         {contentPackages.map((pack, index) => {
-          const preview = pack.lessons.flatMap(lesson => lessonPreviewWords(pack, lesson)).filter((word, i, all) => all.findIndex(item => item.id === word.id) === i).slice(0, 3);
-          const image = preview.find(word => word.image)?.image ?? pack.words.find(word => word.image)?.image;
-          return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Lijst ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>
+          const image = pack.cover?.image;
+          return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Onderdeel ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>
             <span className="cp-section-photo">
               {image ? <Image src={image} alt="" width={240} height={200} /> : <BookOpen aria-hidden="true" />}
             </span>
             <span className="cp-package-copy">
-              <small>Lijst {index + 1}</small>
+              <small>Onderdeel {index + 1}</small>
               <strong>{learnerListName(pack)}</strong>
               <span>{pack.lessons.length} lessen · {pack.counts.coreWords} woorden</span>
               <span className="cp-section-open">Open <ArrowRight aria-hidden="true" /></span>

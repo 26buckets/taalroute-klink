@@ -34,7 +34,7 @@ async function seedAt(pack, lesson, exercise) {
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
 }
 try {
-  const core = packs[2], coreLesson = core.lessons.find(item => item.id === 'klink-leesstap-06');
+  const core = packs.find(pack => pack.lessons.some(item => item.id === 'klink-leesstap-06')), coreLesson = core.lessons.find(item => item.id === 'klink-leesstap-06');
   await openLesson(core, coreLesson);
   for (const exercise of exercisesForLesson(core, coreLesson)) await answerActivity(page, exercise);
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
@@ -136,7 +136,7 @@ try {
   await page.locator('[data-exercise-inventory] summary').click();
   assert((await page.locator('.cp-lesson-coverage').innerText()).includes('Bewust niet nodig'));
   await page.locator('[data-exercise-inventory] summary').click();
-  await page.locator('.cp-coverage-filters select').first().selectOption('groep-2');
+  await page.locator('.cp-coverage-filters select').first().selectOption('groep-1');
   await page.locator('.cp-coverage-filters select').nth(1).selectOption('klink-leesstap-04');
   await page.locator('[data-sentence-bridge] summary').click();
   assert((await page.locator('[data-sentence-bridge]').innerText()).includes('Dit is een pan.'));

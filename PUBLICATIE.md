@@ -36,6 +36,17 @@ Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 cursistentekst. Vergelijkingen met andere methoden en Drive-herstelverwijzingen
 blijven uitsluitend in interne documenten, nooit in de cursisteninterface.
 
+## Onderdelenindeling
+
+`data/klink-sections.json` is een exacte import van de Lexicon-export
+`public/data/klink-onderdelen.json`, editie `klink-onderdelen-20261017-v1`.
+Vijftien ingangen houden alle 338 betekenissen en 302 lesroutes intact.
+`groep-2` blijft als hervatalias van `groep-1` ondersteund. De openingsfoto
+is bewust gekozen en hoort bij een titelwoord; oefenbeelden en audio blijven
+ongewijzigd. Nieuwe Lexicon-edities importeren via `scripts/import-lexicon-sections.mjs`,
+exporthash in het vrijgaverecord vastleggen en de gerichte behoudtests draaien.
+De live release vermeldt ook `sectionsSha256`.
+
 De oorspronkelijke publicatie van 14 oktober is gedocumenteerd in
 docs/klink-publication-provenance.json. Het nieuwste register heeft voorrang
 bij het vaststellen van de actieve publicatiebasis.

@@ -11,7 +11,7 @@ export function parseProgress(raw: string | null, packs: PackageDefinition[]): R
     const lessons = new Set(packs.flatMap(pack => pack.lessons.map(lesson => lesson.id)));
     const completed = Array.isArray(value.completed) ? [...new Set(value.completed.filter((id): id is string => typeof id === 'string' && lessons.has(id)))] : [];
     const position = value.position as Partial<LessonPosition> | null;
-    const pack = packs.find(item => item.id === position?.packageId);
+    const pack = packs.find(item => item.id === position?.packageId || (position?.packageId && item.aliases?.includes(position.packageId)));
     const lesson = pack?.lessons.find(item => item.id === position?.lessonId);
     if (!lesson || !position?.exerciseId) return { completed };
     const exerciseId = lesson.guidedExerciseIds?.includes(position.exerciseId) ? position.exerciseId
@@ -23,7 +23,7 @@ export function parseProgress(raw: string | null, packs: PackageDefinition[]): R
 
 // Resume a place, not a claim of mastery. Completion never means pronunciation was approved.
 export function nextLessonPosition(packs: PackageDefinition[], packId: string, lessonId: string): LessonPosition | undefined {
-  const pack = packs.find(item => item.id === packId);
+  const pack = packs.find(item => item.id === packId || item.aliases?.includes(packId));
   const index = pack?.lessons.findIndex(item => item.id === lessonId) ?? -1;
   if (!pack || index < 0) return;
   const lesson = pack.lessons[index + 1];

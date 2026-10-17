@@ -117,7 +117,8 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
 function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
   const first = contentPackages.find(pack => pack.id === progress.position?.packageId) ?? contentPackages.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? contentPackages[0];
   const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId);
-  const preview = (activeLesson ? lessonPreviewWords(first, activeLesson) : first.words).find(word => word.image);
+  const preview = activeLesson ? lessonPreviewWords(first, activeLesson).find(word => word.image) : undefined;
+  const previewImage = preview?.image ?? first.cover?.image;
   return (
     <div className="learner-page cp-home">
       <header className="learner-page-head">
@@ -131,7 +132,7 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, pro
           <button className="accent-button" onClick={() => progress.position ? onContinue() : onPackage(first.id)}>{progress.position ? 'Ga verder' : 'Begin hier'}<ArrowRight /></button>
         </div>
         <div className="cp-home-preview">
-          {preview?.image && <Image src={preview.image} alt={wordLabel(preview)} width={240} height={240} />}
+          {previewImage && <Image src={previewImage} alt={preview ? wordLabel(preview) : first.cover?.label ?? ''} width={240} height={240} />}
           <div className="cp-home-facts"><span><strong>{first.counts.lessons}</strong><small>lessen</small></span><span><strong>{first.counts.coreWords}</strong><small>woorden</small></span></div>
         </div>
       </section>
@@ -140,7 +141,7 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, pro
         <button className="secondary-button" onClick={onWords}><WholeWord />Alle woorden</button>
         <button className="secondary-button" onClick={onReview}><BookmarkCheck />Nog een keer{savedCount > 0 && ` (${savedCount})`}</button>
       </div>
-      <header className="cp-all-lists-heading"><h2>Alle lijsten</h2><button className="text-back" onClick={onPackages}>Alle lessen<ArrowRight /></button></header>
+      <header className="cp-all-lists-heading"><h2>Alle onderdelen</h2><button className="text-back" onClick={onPackages}>Alle lessen<ArrowRight /></button></header>
       <PackageGrid onOpen={onPackage} />
     </div>
   );
@@ -154,7 +155,7 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
       <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
       <header className="content-page-heading"><div><h1>Alle woorden</h1><p>Tik en luister.</p></div><div className="content-count"><strong>{allPackageWords.length}</strong><span>woorden</span></div></header>
       <div className="word-filters" aria-label="Filter woorden">
-        <label>Kies een lijst<select value={filter} onChange={event => setFilter(event.target.value)}><option value="all">Alle woorden</option>{contentPackages.map((pack, index) => <option key={pack.id} value={pack.id}>{index + 1}. {learnerListName(pack)}</option>)}<option value="saved">Bewaard ({savedWordIds.length})</option></select></label>
+        <label>Kies een onderdeel<select value={filter} onChange={event => setFilter(event.target.value)}><option value="all">Alle woorden</option>{contentPackages.map((pack, index) => <option key={pack.id} value={pack.id}>{index + 1}. {learnerListName(pack)}</option>)}<option value="saved">Bewaard ({savedWordIds.length})</option></select></label>
       </div>
       {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong><span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
     </div>

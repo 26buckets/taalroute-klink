@@ -34,7 +34,7 @@ test('Every Lexicon meaning has exactly one first home; all core and extension s
   assert.equal(new Set(primaryWordCards.map(word => word.id)).size, 338);
   assert.equal(new Set(primaryWordCards.map(word => word.word)).size, 337);
   for (const word of primaryWordCards) assert(packs.some(pack => pack.id === word.packageId && pack.words.some(item => item.id === word.id)), word.id);
-  assert.equal(packs.filter(pack => pack.kind === 'group').length, 10);
+  assert.equal(packs.filter(pack => pack.kind === 'group').length, 9);
   assert.equal(lessons.filter(lesson => lesson.kind === 'klanklijst').length, 37);
   assert.equal(lessons.filter(lesson => lesson.kind === 'herhaalronde').length, 3);
   assert.equal(lessons.filter(lesson => lesson.kind === 'uitbreiding').length, 23);
