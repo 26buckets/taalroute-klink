@@ -1,0 +1,58 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "91908054615f6b3086bec23e53c5ac95e8862235",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "f946a63f-766a-4d53-86da-cd72e634781b",
+  "verifiedAt": "2026-10-17T22:07:21.627Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T22:06:07.498Z",
+    "sourceCommit": "91908054615f6b3086bec23e53c5ac95e8862235",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-DcISAMHU.js",
+  "freshClientSha256": "f0b90eaa75f3d38787783eaf71aeb476a88ee2a0c7cbf2d87b98d667bea5a6ca",
+  "sourceArchiveSha256": "361386dda88d637eb77853298af7bb65f1f6f8fbb6116af41382de21440cabd7",
+  "sourceArchiveFormat": "git archive HEAD (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-chapters-20261017.json",
+  "scope": "Stable shared exercise canvas and feedback row; consistent uncropped model image frame and word positioning. No curriculum, media, chapter structure, overview cards or storage changes.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "practiceChapters": 12,
+  "activityForms": 40,
+  "githubActionsUsed": false,
+  "checks": [
+    "Full npm run test:review passed locally including real audio, original lesson routes, group exercises, chapter tests and player stability regression.",
+    "TypeScript, targeted lint, publication-proof and audio-policy tests passed.",
+    "Live lam/kat, playback, previous/next, missing-image layout, audio-error recovery and multiple activity frames verified at 1366x950, 820x950, 390x844, 320x640, 844x390.",
+    "Live chapter navigation and all 15 section cards verified; 2679 served media files byte-match the verified source.",
+    "No new media. All 48 withdrawn instructions remain unavailable; audio remains 0.85."
+  ],
+  "limitations": [
+    "No new learner trial. Long content scrolls inside the fixed exercise area; short screens may also require page scrolling.",
+    "No new instructional content or completion of broader DigLin-equivalence work.",
+    "DigiBord reference folder unavailable; existing Klink styling preserved."
+  ],
+  "sourceBackup": {
+    "id": "1Ap9e6LYuOU5uZgDitxPRtN1CZfIg0TK7",
+    "url": "https://drive.google.com/file/d/1Ap9e6LYuOU5uZgDitxPRtN1CZfIg0TK7/view?usp=drivesdk",
+    "bytes": 16115170,
+    "sha256": "9176cc2d8923a58d5dd17aad985e3e45ecbcad342597cbd8438231418d46c13b",
+    "metadataAndBytesVerified": true
+  }
+}

@@ -9,10 +9,17 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-chapters-20261017.json`.
-Livebron: `b8bb935903ace901dafd4b8b89220e74cab56377`.
-Worker-versie: `e41e5b31-7960-4ac5-b9a5-d6a187c7b868`.
+Actief register: `docs/klink-publication-stable-player-20261018.json`.
+Livebron: `91908054615f6b3086bec23e53c5ac95e8862235`.
+Worker-versie: `f946a63f-766a-4d53-86da-cd72e634781b`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Op 18 oktober is uitsluitend het gedeelde oefenvlak gestabiliseerd: een vaste,
+ruime hoogte per schermformaat, een vaste onderrand en een gereserveerd volledig
+beeldvlak. Lange opdrachten blijven scrollbaar. Lam/kat, woordwissels en audio
+zijn lokaal en live gecontroleerd op vijf schermformaten. De volledige lokale
+regressiereeks is geslaagd; alle 2.679 media zijn live bytegelijk teruggelezen.
+De hoofdstukken, lessen, compacte overzichtskaarten en inhoud blijven behouden.
 
 Oefenen heeft twaalf rechtstreekse hoofdstukken, los van Lessen. Alle veertig
 bestaande oefenvormen gebruiken dezelfde spelers, woorden, bronnen en media.
