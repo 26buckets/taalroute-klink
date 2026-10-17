@@ -1,3 +1,21 @@
+# Actuele complete Klink-review — 17 oktober 2026
+
+Deze stand vervangt de oudere aantallen hieronder. Alle 338 woordbeelden en 338 woordopnamen zijn gekoppeld. De laatste vijf beelden zijn woord, zie, ziet, zomer en zoon. Deze vijf blijven contextbeelden en worden niet als zelfstandige goed/fout-fotokeuze ingezet.
+
+De beoordeling staat in `outputs/media-review-20261016/index.html`. Het bijgewerkte overzicht bevat 721 afzonderlijke mediabeslissingen: 171 nieuwe beelden, 161 bestaande beelden, 6 eerder expliciet goedgekeurde beelden, 338 woordopnamen, 18 instructieopnamen, 12 zinnen/situaties, 7 aanvullende begripsopnamen en 8 begripsvragen. Het aantal unieke leveringsbestanden inclusief vier contextbeelden is 717; een vraag kan een bestaande contextopname hergebruiken.
+
+Eerdere expliciete beeldgoedkeuringen voor leesboek, bussen, vliegtuig, rugzak, pennen en mixer blijven in de bron behouden. Het beoordelingsscherm toont deze als aparte groep; het verzint geen beslissingen namens Nico. Contextbeelden zijn herkenbaar aan hun redactionele toelichting. Woorden, beelden, uitspraak en tekst-/vraagbegrip krijgen afzonderlijke controles. Een automatisch afgespeelde test is geen menselijke luistervrijgave.
+
+Beoordeel het bestand met betekenis of transcript, gebruik Goed of Aanpassen en download de beoordeling. Goedkeuren van een audiobestand kan pas na volledig afspelen; een niet geladen beeld kan niet worden goedgekeurd. Beslissingen bevatten de volledige SHA256 en vervallen bij een gewijzigde bestandsinhoud. Het exportbestand geeft geen automatische publicatiegoedkeuring.
+
+De normale publicatiecontrole blijft actief. Voor publicatie zijn echte vrijgave van uitspraak, woord-beeldbetekenis, instructies, zinnen/situaties en begripsvragen nodig, plus expliciete publicatievrijgave. Pas daarna mag de gecontroleerde werkbranch via canonieke `main` en `npm run deploy` worden gepubliceerd. Geen pilot vereist. Livebasis is op 17 oktober opnieuw gecontroleerd: commit c221eb104fe64a17de9e51a59ddc5667ea805518, Worker-versie efddd274-4f66-4d5b-9bfb-c21e87acc89d en dezelfde openbare client-SHA256 als het bestaande herkomstbewijs. Geen GitHub Actions uitgevoerd; deze branch en canonieke main bevatten geen workflows.
+
+Alle controles blijven lokaal. Bewijs, originelen, prompts en herstelgegevens staan in `outputs/alfa-publicatie-20261017/`; eerdere Drive-back-ups blijven nodig voor eerdere originele beeldreeksen. De definitieve back-upcontrole van deze ronde wordt vastgelegd in `backup-verification-final.json`.
+
+---
+
+## Historische reviewstand van 16 oktober 2026
+
 # Klink — beeldbatch en menselijke mediabeoordeling
 
 ## Status
