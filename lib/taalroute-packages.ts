@@ -7,11 +7,13 @@ import { sentenceQuestionFor, questionFields } from './sentence-comprehension.ts
 
 type Word = typeof curriculum.words[number];
 type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds?: string[] };
-const media = bindings as Record<string, { image?: string; audio?: string }>;
+const media = bindings as Record<string, { image?: string; audio?: string; imageUse?: 'meaning' | 'context' }>;
 const byId = new Map(curriculum.words.map(word => [word.id, word]));
 const unique = (ids: string[]) => [...new Set(ids)];
 const wordsFor = (ids: string[]) => ids.map(id => byId.get(id)!).filter(Boolean);
 const imageFor = (word: Word) => media[word.id]?.image ? { src: media[word.id].image, altText: word.meaning } : undefined;
+// A supporting scene cannot test recognition of an article, pronoun or abstract relation.
+const testableImageFor = (word: Word) => media[word.id]?.imageUse === 'context' ? undefined : imageFor(word);
 const audioFor = (word: Word) => media[word.id]?.audio ? { src: media[word.id].audio, audioId: word.id } : undefined;
 const tokensFor = (word: Word) => {
   const parts = word.reading.units.map(unit => unit.text);
@@ -63,8 +65,8 @@ export function exercisesForStep(step: Step) {
       } else if (isTarget) phases.recognize.push(match);
     }
     // Image tasks need a distinct prepared meaning AND a distinct actual image.
-    const pictureOther = selected.find(item => item.word !== word.word && imageFor(item) && imageFor(item)?.src !== imageFor(word)?.src);
-    if (imageFor(word) && pictureOther) {
+    const pictureOther = selected.find(item => item.word !== word.word && testableImageFor(item) && testableImageFor(item)?.src !== testableImageFor(word)?.src);
+    if (testableImageFor(word) && pictureOther) {
       const pair = index % 2 ? [pictureOther, word] : [word, pictureOther];
       const pictureChoice = { options: pair.map(item => ({ id: item.id, image: imageFor(item) })), answer: { correctOptionIds: [word.id] }, distractorReason: `Onderscheid de al aangeboden betekenissen van ${word.word} en ${pictureOther.word}; beide beelden blijven op dezelfde plaats.` };
       const readImage = make(word, '002', 'word-image', 'Kies de foto.', 'BB-02', 'use', { ...pictureChoice, exampleWord: word.word });
@@ -99,7 +101,7 @@ export function exercisesForStep(step: Step) {
     make(word, '012', 'write-word', 'Schrijf het woord.', 'SC-01', 'make', { target: word.word });
     if (imageFor(word)) make(word, '016', 'word-card', 'Bekijk het woordkaartje.', 'BB-05', 'meet', { cards: [{ cardId: word.id, front: { image: imageFor(word) }, back: { text: word.word }, audio: audioFor(word) }] });
   }
-  const pictured = [...targets, ...selected].filter(word => imageFor(word)).filter((word, i, all) => all.findIndex(item => item.word === word.word || imageFor(item)?.src === imageFor(word)?.src) === i).slice(0, 2);
+  const pictured = [...targets, ...selected].filter(word => testableImageFor(word)).filter((word, i, all) => all.findIndex(item => item.word === word.word || imageFor(item)?.src === imageFor(word)?.src) === i).slice(0, 2);
   if (pictured.length >= 2) {
     const matching = make(pictured[0], '004', 'word-image-match', 'Kies een woord. Kies de foto.', 'BB-03', 'use', {
       prompt: { text: 'Kies een woord. Kies de foto.' },

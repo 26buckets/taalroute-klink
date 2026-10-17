@@ -1,9 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
-import { taalroutePackages as packs, primaryWordCards, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
+import { taalroutePackages as packs, primaryWordCards, exercisesForLesson, exercisesForStep, lessonPreviewWords } from '../lib/taalroute-packages.ts';
 import release from '../data/klink-curriculum.json' with { type: 'json' };
+import media from '../data/klink-media.json' with { type: 'json' };
 const lessons = packs.flatMap(pack => pack.lessons);
+test('Context pictures remain learning support and never become scored image answers', () => {
+  const original = media['klink-woord-de'];
+  media['klink-woord-de'] = { ...original, image: '/package-media/test-context.webp', imageUse: 'context' };
+  try {
+    const { exercises } = exercisesForStep({ id: 'context-image-check', title: 'de', kind: 'woord', known: ['klink-woord-pan'], newWords: ['klink-woord-de'], returning: [], guidance: '' });
+    assert(exercises.find(item => item.wordId === 'klink-woord-de' && item.mode === 'model').prompt.image);
+    assert(exercises.some(item => item.wordId === 'klink-woord-de' && item.mode === 'heard-word'));
+    assert(exercises.some(item => item.wordId === 'klink-woord-de' && item.mode === 'word-card'));
+    for (const exercise of exercises.filter(item => ['word-image', 'heard-image', 'word-image-match', 'memory'].includes(item.mode))) {
+      assert(!JSON.stringify(exercise).includes('/package-media/test-context.webp'), exercise.exerciseId);
+    }
+  } finally { media['klink-woord-de'] = original; }
+});
 test('Compact lesson previews preserve the full lesson and choose target meanings, including recall', () => {
   const before = JSON.stringify(packs);
   for (const pack of packs) for (const lesson of pack.lessons) {

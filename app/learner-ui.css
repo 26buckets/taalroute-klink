@@ -34,6 +34,9 @@
 .learner-app .cp-all-lists-heading h2 { margin: 0; font-size: 26px; font-weight: 500; }
 .learner-app .cp-all-lists-heading .text-back { margin: 0; }
 .learner-app .cp-package-copy > span:not(.cp-section-open) { font-size: 14px; color: var(--muted); }
+.learner-app .cp-photo-section .cp-package-copy { display: grid; justify-items: start; gap: 8px; }
+.learner-app .cp-photo-section .cp-package-copy > strong { margin: 0; }
+.learner-app .cp-section-open { margin-top: 4px; }
 .learner-app .content-page-heading { align-items: center; gap: 16px; }
 .learner-app .content-count { display: flex; align-items: baseline; gap: 6px; min-width: 0; padding: 0; background: transparent; border: 0; box-shadow: none; }
 .learner-app .content-count :is(strong, span) { font-size: 16px; font-weight: 400; }

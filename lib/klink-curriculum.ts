@@ -3,7 +3,7 @@ import media from '../data/klink-media.json' with { type: 'json' };
 
 export const curriculum = release;
 export type CurriculumWord = typeof release.words[number];
-export type WordMedia = { audio?: string; image?: string; review: 'open' | 'approved' };
+export type WordMedia = { audio?: string; image?: string; imageUse?: 'meaning' | 'context'; review: 'open' | 'approved' };
 export const wordMedia = media as Record<string, WordMedia>;
 export const wordById = new Map(curriculum.words.map(word => [word.id, word]));
 export type ReadingStep = { id: string; title: string; group: number | null; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds: string[] };

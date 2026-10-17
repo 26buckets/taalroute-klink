@@ -83,7 +83,7 @@ export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
   return <section className="cp-package-grid" aria-label="Alle lijsten">
         {contentPackages.map((pack, index) => {
           const preview = pack.lessons.flatMap(lesson => lessonPreviewWords(pack, lesson)).filter((word, i, all) => all.findIndex(item => item.id === word.id) === i).slice(0, 3);
-          const image = preview.find(word => word.image)?.image;
+          const image = preview.find(word => word.image)?.image ?? pack.words.find(word => word.image)?.image;
           return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Lijst ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>
             <span className="cp-section-photo">
               {image ? <Image src={image} alt="" width={240} height={200} /> : <BookOpen aria-hidden="true" />}
