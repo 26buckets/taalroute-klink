@@ -347,7 +347,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
         <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => setSelectedLessonId('')}><ArrowLeft />Alle lessen</button>
         <div className="cp-lesson-launch">
           <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
-          <div><small>Les {lessonNumber}</small><h1>{label}</h1></div>
+          <div><small>{pack.title} · Les {lessonNumber}</small><h1>{label}</h1></div>
         </div>
         <PackageExerciseBrowser
           key={selectedLesson.id}

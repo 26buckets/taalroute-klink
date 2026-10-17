@@ -1,0 +1,199 @@
+/* Learner layout trial. Restore ui-before-broad-review-20261017 for the prior UI. */
+.learner-app { --radius: 4px; }
+.learner-app :is(button, select, input) { border-radius: var(--radius); }
+.learner-app :is(button, select, input):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.learner-app button > svg { flex-shrink: 0; }
+.learner-app :is(.primary-button, .secondary-button, .accent-button, .dark-secondary-button) {
+  min-height: 48px; padding: 10px 16px; gap: 8px; font-size: 16px; line-height: 1.35;
+}
+.learner-app :is(.learner-page-head h1, .content-page-heading h1, .package-library-heading h1, .cp-panel-heading h1) {
+  font-size: clamp(26px, 3vw, 34px); line-height: 1.2; letter-spacing: -.025em;
+}
+.learner-app .learner-page { padding-top: 28px; }
+.learner-app .learner-profile { display: flex; gap: 10px; padding: 10px 12px; background: transparent; border-color: transparent; }
+.learner-app .learner-profile small { font-size: 14px; }
+.learner-app .learner-profile svg { width: 18px; height: 18px; }
+.learner-app .cp-home-mark { background: transparent; color: var(--primary); }
+.learner-app .cp-home-hero {
+  min-height: 230px; grid-template-columns: minmax(0, 1fr) 240px; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line); box-shadow: none;
+}
+.learner-app .cp-home-hero > div:first-child { padding: 28px; }
+.learner-app .cp-home-hero h2 { font-size: clamp(26px, 3vw, 36px); line-height: 1.2; letter-spacing: -.025em; }
+.learner-app .cp-home-hero :is(p, .eyebrow) { color: var(--muted); }
+.learner-app .cp-home-preview { display: grid; justify-items: center; align-content: center; gap: 12px; padding: 20px; }
+.learner-app .cp-home-preview img { width: 160px; height: 160px; object-fit: contain; border-radius: var(--radius); }
+.learner-app .cp-home-facts { display: flex; gap: 16px; min-height: 0; background: transparent; }
+.learner-app .cp-home-facts span { display: flex; gap: 5px; background: transparent; }
+.learner-app .cp-home-facts :is(strong, small) { margin: 0; color: var(--muted); font-size: 14px; }
+.learner-app .cp-home-honesty { background: transparent; border-color: transparent; padding-left: 0; }
+.learner-app .cp-home-second { border-left-width: 1px; }
+.learner-app .cp-home-actions > button { box-shadow: none; border-color: var(--line); }
+.learner-app .content-page-heading { align-items: center; gap: 16px; }
+.learner-app .content-count { display: flex; align-items: baseline; gap: 6px; min-width: 0; padding: 0; background: transparent; border: 0; box-shadow: none; }
+.learner-app .content-count :is(strong, span) { font-size: 16px; font-weight: 400; }
+.learner-app .cp-panel-count { display: flex; align-items: baseline; gap: 6px; min-width: 0; padding: 0; background: transparent; border: 0; }
+.learner-app .cp-panel-count :is(strong, small) { font-size: 16px; font-weight: 400; }
+.learner-app .word-filters { display: block; overflow: visible; padding: 0; }
+.learner-app .word-filters label { display: grid; gap: 6px; width: min(100%, 390px); font-size: 14px; color: var(--muted); }
+.learner-app :is(.word-filters, .cp-family-picker, .cp-mode-picker) select {
+  appearance: none;
+  width: 100%; min-width: 0; min-height: 48px; padding: 10px 36px 10px 12px; color: var(--ink);
+  background: var(--paper); border: 1px solid var(--line-strong); font: inherit; font-size: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%2343575b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 12px center;
+}
+.learner-app .cp-tabs { gap: 4px; padding: 8px 16px; min-height: 64px; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); overflow: visible; }
+.learner-app .cp-tabs button { min-height: 48px; padding: 8px 12px; border: 1px solid transparent; font-size: 15px; }
+.learner-app .cp-tabs button.active { background: var(--primary-soft); border-color: #c5d8dc; box-shadow: none; }
+.learner-app .cp-player-bar { min-height: 64px; padding: 8px 16px; gap: 12px; }
+.learner-app .cp-player-bar > button { width: 48px; height: 48px; }
+.learner-app .cp-word-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); }
+.learner-app .cp-word-grid article { min-width: 0; }
+.learner-app .cp-word-image { aspect-ratio: 1; padding: 12px; background: var(--paper); }
+.learner-app .cp-word-image > span { font-size: 40px; font-weight: 400; color: var(--muted); }
+.learner-app .cp-word-copy { min-width: 0; padding: 12px 88px 4px 16px; overflow-wrap: anywhere; }
+.learner-app .cp-word-copy strong { font-size: 24px; line-height: 1.3; }
+.learner-app .cp-word-copy > span { color: var(--muted); }
+.learner-app .cp-save-button { width: 64px; height: 56px; padding: 4px; background: transparent; border-color: transparent; font-size: 14px; font-weight: 400; }
+.learner-app .cp-save-button.saved { color: var(--green); background: var(--green-soft); border-color: transparent; }
+.learner-app .cp-word-grid article:not(:has(.cp-save-button)) :is(.cp-word-copy, .cp-listen-label) { padding-right: 16px; }
+.learner-app .cp-package-word-listen { height: 100%; }
+.learner-app .cp-listen-label { padding-left: 16px; font-size: 14px; }
+.learner-app .review-word-list > div { grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.learner-app .review-word-list > div > button { grid-template-columns: 80px minmax(0, 1fr) 20px; min-width: 0; gap: 12px; }
+.learner-app .review-word-list img, .learner-app .review-word-list .word-initial { width: 80px; height: 80px; object-fit: contain; }
+.learner-app .review-word-list strong { font-size: 24px; overflow-wrap: anywhere; }
+.learner-app .review-word-list button > span:nth-child(2) small { font-size: 14px; }
+
+/* The exercise canvas owns its scroll area; controls stay in separate rows. */
+.learner-app .learner-main:has(.cp-exercise-browser) { height: 100dvh; min-height: 0; overflow: hidden; }
+.learner-app .cp-player:has(.cp-exercise-browser) { height: 100%; min-height: 0; display: grid; grid-template-rows: auto auto minmax(0, 1fr); overflow: hidden; }
+.learner-app .cp-player:has(.is-guided) { grid-template-rows: minmax(0, 1fr); }
+.learner-app .cp-player:has(.is-guided) > .cp-player-bar { display: none; }
+.learner-app .cp-player:has(.cp-exercise-browser) > .cp-content { width: 100%; min-height: 0; margin: 0; padding: 0; overflow: hidden; }
+.learner-app .cp-panel:has(> .cp-exercise-browser) { height: 100%; min-height: 0; }
+.learner-app .cp-exercise-browser { height: 100%; min-height: 0; margin: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); border: 0; border-radius: 0; }
+.learner-app .cp-exercise-browser > header { min-height: 0; padding: 12px 20px; }
+.learner-app .cp-exercise-browser > header :is(.eyebrow, p) { display: none; }
+.learner-app .cp-exercise-browser > header h2 { margin: 0; font-size: 21px; }
+.learner-app .cp-exercise-browser.is-guided { display: block; }
+.learner-app .cp-exercise-workspace { height: 100%; min-height: 0; grid-template-columns: 210px minmax(0, 1fr); }
+.learner-app .cp-exercise-workspace > aside { max-height: none; min-height: 0; }
+.learner-app .cp-exercise-workspace > aside strong { font-size: 15px; }
+.learner-app .cp-exercise-workspace > aside small { font-size: 13px; }
+.learner-app .cp-exercise-workspace > aside button > span:first-child { border-radius: var(--radius); }
+.learner-app .cp-family-picker { display: none; }
+.learner-app .cp-exercise-workspace > .cp-exercise-main { min-width: 0; min-height: 0; grid-template-rows: auto minmax(0, 1fr) auto; }
+.learner-app .is-guided .cp-exercise-workspace > .cp-exercise-main { grid-template-rows: auto minmax(0, 1fr) auto; }
+.learner-app .cp-exercise-record-head { display: flex; align-items: center; justify-content: space-between; min-width: 0; min-height: 64px; gap: 12px; padding: 8px 16px; }
+.learner-app .cp-exercise-record-head > div { min-width: 0; }
+.learner-app .cp-exercise-record-head small { display: none; }
+.learner-app .cp-exercise-record-head h3 { max-width: none; margin: 0; font-size: 18px; line-height: 1.3; white-space: normal; overflow: visible; }
+.learner-app .cp-instruction-listen { min-height: 48px; padding: 6px 0; font-weight: 500; }
+.learner-app .cp-instruction-listen svg { width: 20px; height: 20px; }
+.learner-app .cp-exercise-record-head nav { width: auto; flex: 0 0 auto; justify-content: flex-end; gap: 6px; }
+.learner-app .cp-exercise-record-head nav button { width: 48px; height: 48px; padding: 0; }
+.learner-app .cp-exercise-record-head nav b { min-width: 48px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.learner-app .cp-exercise-stage { display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 20px; background: var(--paper); scroll-padding: 16px; }
+.learner-app .cp-mode-picker { width: min(100%, 760px); flex: 0 0 auto; margin: 0 auto 16px; font-size: 14px; }
+.learner-app .cp-task-card { flex: 0 0 auto; width: min(760px, 100%); min-height: 0; margin: auto; padding: 8px; gap: 20px; background: transparent; border: 0; box-shadow: none; }
+.learner-app .cp-task-card > :is(.primary-button, .secondary-button) { width: fit-content; max-width: 100%; justify-self: center; }
+.learner-app .cp-task-card > img { max-height: 230px; border: 0; }
+.learner-app .cp-task-prompt { padding: 0; border: 0; }
+.learner-app .cp-task-prompt > button { width: 88px; height: 56px; min-width: 0; padding: 4px 8px; }
+.learner-app .cp-task-actions { display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; }
+.learner-app .cp-task-actions > button { flex: 0 1 auto; width: auto; }
+.learner-app :is(.cp-build-slots span, .cp-tile-bank button) { min-width: 52px; min-height: 52px; padding: 6px; font-size: 28px; }
+.learner-app .cp-build-slots, .learner-app .cp-tile-bank { gap: 8px; }
+.learner-app :is(.cp-choice-grid, .cp-memory-grid) { gap: 12px; }
+.learner-app .cp-choice-grid > button { min-width: 0; min-height: 96px; padding: 12px; }
+.learner-app .cp-choice-grid strong { font-size: clamp(22px, 2.5vw, 30px); overflow-wrap: anywhere; }
+.learner-app .cp-choice-grid img { height: 160px; }
+.learner-app .cp-match-board { gap: 12px; }
+.learner-app .cp-match-board button { min-height: 104px; font-size: 24px; }
+.learner-app .cp-match-board img { height: 84px; object-fit: contain; }
+.learner-app .cp-memory-grid > button { aspect-ratio: 1; min-height: 0; }
+.learner-app .cp-memory-grid img { height: 100%; max-height: 160px; }
+.learner-app .cp-flash-card { width: min(280px, 100%); height: auto; min-height: 0; aspect-ratio: 1; padding: 16px; }
+.learner-app .cp-flash-card img { width: 100%; height: 100%; min-height: 0; object-fit: contain; }
+.learner-app .cp-flash-card strong { font-size: clamp(28px, 4vw, 42px); overflow-wrap: anywhere; }
+.learner-app .cp-card-hint { text-align: center; color: var(--muted); font-size: 14px; }
+.learner-app .cp-exercise-feedback { min-height: 72px; padding: 10px 16px; gap: 10px; grid-template-columns: 28px minmax(0, 1fr) auto; }
+.learner-app .cp-exercise-feedback > svg { width: 28px; height: 28px; padding: 5px; border-radius: var(--radius); }
+.learner-app .cp-exercise-feedback output strong { font-size: 16px; }
+.learner-app .cp-exercise-feedback output small { display: block; font-size: 14px; line-height: 1.4; }
+.learner-app .cp-exercise-feedback > button { grid-column: auto; width: auto; min-height: 48px; padding: 10px 16px; }
+.learner-app .cp-audio-retry { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; padding: 12px; margin-bottom: 16px; background: var(--yellow-soft); }
+
+/* One lesson toolbar and one progress indicator, without a second back button. */
+.learner-app .cp-lesson-player { grid-template-rows: 64px minmax(0, 1fr); }
+.learner-app .cp-lesson-player > .text-back { width: 48px; height: 48px; padding: 0; margin-left: 12px; justify-content: center; font-size: 0; }
+.learner-app .cp-lesson-launch { min-height: 64px; padding: 8px 16px 8px 72px; grid-template-columns: minmax(0, 1fr); }
+.learner-app .cp-lesson-launch > .cp-lesson-number { display: none; }
+.learner-app .cp-lesson-launch small { display: block; font-size: 13px; text-transform: none; }
+.learner-app .cp-lesson-launch h1 { margin: 2px 0 0; font-size: 20px; line-height: 1.2; }
+.learner-app .is-guided .cp-exercise-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+.learner-app .is-guided .cp-exercise-workspace > aside { display: flex; overflow: hidden; padding: 4px 12px; gap: 4px; border: 0; border-bottom: 1px solid var(--line); }
+.learner-app .is-guided .cp-exercise-workspace > aside button { width: auto; min-width: 0; min-height: 32px; display: flex; gap: 6px; padding: 4px 8px; border: 0; box-shadow: none; }
+.learner-app .is-guided .cp-exercise-workspace > aside button > span:first-child { width: 16px; height: 16px; border: 0; background: transparent; }
+.learner-app .is-guided .cp-exercise-workspace > aside strong { font-size: 14px; white-space: nowrap; }
+.learner-app .is-guided .cp-model-content { grid-template-columns: minmax(0, 300px) minmax(0, 1fr); align-items: center; }
+.learner-app .is-guided .cp-model-content > strong { overflow-wrap: anywhere; font-size: clamp(36px, 5.5vw, 72px); }
+
+@media (max-width: 1000px) {
+  .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-workspace > aside { display: none; }
+  .learner-app .cp-family-picker { display: grid; gap: 6px; padding: 10px 16px; font-size: 14px; border-bottom: 1px solid var(--line); }
+}
+@media (max-width: 760px) {
+  .learner-app .learner-nav nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .learner-app .learner-main:has(.cp-exercise-browser) { padding-bottom: 68px; }
+  .learner-app .learner-main:has(.is-guided) { padding-bottom: 0; }
+  .learner-app .cp-home-hero { grid-template-columns: minmax(0, 1fr) 130px; min-height: 210px; }
+  .learner-app .cp-home-hero > div:first-child { padding: 20px; }
+  .learner-app .cp-home-hero h2 { font-size: 27px; }
+  .learner-app .cp-home-preview { padding: 12px; }
+  .learner-app .cp-home-preview img { width: 104px; height: 104px; }
+  .learner-app .cp-home-facts { flex-direction: column; gap: 4px; }
+  .learner-app .content-count { margin-top: 12px; }
+  .learner-app .cp-tabs { padding: 6px 10px; min-height: 60px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .learner-app .cp-tabs button { min-width: 0; gap: 4px; padding: 6px; flex-direction: column; white-space: normal; font-size: 13px; line-height: 1.2; }
+  .learner-app .cp-exercise-browser > header { display: none; }
+  .learner-app .cp-exercise-browser:not(.is-guided) { grid-template-rows: minmax(0, 1fr); }
+  .learner-app .cp-exercise-record-head { flex-wrap: wrap; padding: 8px 12px; gap: 6px; }
+  .learner-app .cp-exercise-record-head > div { flex: 1 1 155px; }
+  .learner-app .cp-exercise-record-head h3 { font-size: 17px; }
+  .learner-app .cp-exercise-record-head nav { margin-left: auto; }
+  .learner-app .cp-exercise-stage { padding: 12px; }
+  .learner-app .cp-task-card { padding: 4px; gap: 16px; }
+  .learner-app .cp-task-card:has(.cp-flash-card) { gap: 12px; }
+  .learner-app .cp-flash-card { width: min(240px, 100%); }
+  .learner-app .cp-exercise-feedback { padding: 8px 12px; gap: 8px; }
+  .learner-app .cp-exercise-feedback > button { padding: 8px 12px; font-size: 15px; }
+  .learner-app .is-guided .cp-model-content { grid-template-columns: minmax(0, 1fr); }
+  .learner-app .is-guided .cp-model-content > img { max-height: 230px; }
+  .learner-app .is-guided .cp-model-content > strong { font-size: 44px; }
+  .learner-app .is-guided .cp-exercise-workspace > aside button:not(.active) { display: none; }
+  .learner-app .is-guided .cp-exercise-workspace > aside button.active { width: auto; }
+  .learner-app .review-word-list > header { display: block; }
+}
+@media (max-width: 420px) {
+  .learner-app .cp-home-hero { grid-template-columns: minmax(0, 1fr); }
+  .learner-app .cp-home-preview { display: none; }
+  .learner-app .cp-choice-grid, .learner-app .cp-memory-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .learner-app .cp-exercise-feedback, .learner-app .is-guided .cp-exercise-feedback { grid-template-columns: minmax(0, 1fr) auto; }
+  .learner-app .cp-exercise-feedback > svg { display: none; }
+}
+
+/* In a short landscape window, free practice must scroll instead of squeezing
+   its selectors, task and feedback into an impossible fixed-height stack. */
+@media (max-height: 600px) {
+  .learner-app .learner-main:has(.cp-exercise-browser:not(.is-guided)) { overflow: auto; }
+  .learner-app .cp-player:has(.cp-exercise-browser:not(.is-guided)) { display: block; height: auto; overflow: visible; }
+  .learner-app .cp-player:has(.cp-exercise-browser:not(.is-guided)) > .cp-content { overflow: visible; }
+  .learner-app .cp-panel:has(> .cp-exercise-browser:not(.is-guided)),
+  .learner-app .cp-exercise-browser:not(.is-guided) { height: auto; overflow: visible; }
+  .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-workspace { height: auto; }
+  .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-stage { min-height: 320px; overflow: visible; }
+}

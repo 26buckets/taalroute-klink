@@ -12,6 +12,7 @@ import {
   type PracticeAttempt,
 } from '@/lib/package-content';
 import { nextLessonPosition, parseProgress, progressKey, type RouteProgress } from '@/lib/learner-progress';
+import { lessonPreviewWords } from '@/lib/taalroute-packages';
 import {
   ArrowLeft,
   ArrowRight,
@@ -117,6 +118,7 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, pro
   const first = contentPackages.find(pack => pack.id === progress.position?.packageId) ?? contentPackages.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? contentPackages[0];
   const second = contentPackages[(contentPackages.indexOf(first) + 1) % contentPackages.length];
   const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId);
+  const preview = (activeLesson ? lessonPreviewWords(first, activeLesson) : first.words).find(word => word.image);
   return (
     <div className="learner-page cp-home">
       <header className="learner-page-head">
@@ -130,9 +132,9 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, savedCount, pro
           <p>{progress.position ? 'Ga door waar je was.' : 'Begin samen met je docent.'}</p>
           <button className="accent-button" onClick={() => progress.position ? onContinue() : onPackage(first.id)}>{progress.position ? 'Ga verder' : 'Begin hier'}<ArrowRight /></button>
         </div>
-        <div className="cp-home-facts">
-          <span><strong>{first.counts.lessons}</strong><small>lessen</small></span>
-          <span><strong>{first.counts.coreWords}</strong><small>kernwoorden</small></span>
+        <div className="cp-home-preview">
+          {preview?.image && <Image src={preview.image} alt={wordLabel(preview)} width={240} height={240} />}
+          <div className="cp-home-facts"><span><strong>{first.counts.lessons}</strong><small>lessen</small></span><span><strong>{first.counts.coreWords}</strong><small>woorden</small></span></div>
         </div>
       </section>
 
@@ -164,9 +166,7 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
       <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
       <header className="content-page-heading"><div><span className="eyebrow">Woorden</span><h1>De woorden van Klink</h1><p>Tik op een woord om te luisteren. Bewaar een woord om het nog eens te oefenen.</p></div><div className="content-count"><strong>{allPackageWords.length}</strong><span>woorden</span></div></header>
       <div className="word-filters" aria-label="Filter woorden">
-        <button className={filter === 'all' ? 'active' : ''} onClick={() => setFilter('all')}>Alles</button>
-        {contentPackages.map((pack) => <button key={pack.id} className={filter === pack.id ? 'active' : ''} onClick={() => setFilter(pack.id)}>{pack.title}</button>)}
-        <button className={filter === 'saved' ? 'active' : ''} onClick={() => setFilter('saved')}><Bookmark />Bewaard ({savedWordIds.length})</button>
+        <label>Lessenreeks<select value={filter} onChange={event => setFilter(event.target.value)}><option value="all">Alle woorden</option>{contentPackages.map(pack => <option key={pack.id} value={pack.id}>{pack.title}</option>)}<option value="saved">Bewaarde woorden ({savedWordIds.length})</option></select></label>
       </div>
       {filter === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Herhalen.</p><button className="primary-button" onClick={() => setFilter('all')}>Bekijk alle woorden</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong><span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
     </div>
