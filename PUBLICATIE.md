@@ -9,10 +9,17 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-compact-cards-20261017.json`.
-Livebron: `c447745328ba7b6d8dd6f7f8e9631862ca33efb6`.
-Worker-versie: `70e0aa45-987f-4ca0-ade8-2e4e407d3d8e`.
+Actief register: `docs/klink-publication-landing-20261017.json`.
+Livebron: `10affc05a167a7ebba4620ce0c368346f8fc0244`.
+Worker-versie: `6a49650c-e332-4699-ae11-72fb2ecbc993`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+De goedgekeurde startpagina gebruikt de kop “Klink jij ook?”, één compact Klink-logo,
+“Een leermiddel van” met het officiële Taalroute-logo bovenaan en Alfabeta+
+onderaan. Akkoord: `docs/klink-landing-approval-20261017.json`. Het bestaande
+domein, de nieuwste compacte leskaarten, 15 onderdelen, 302 lesroutes, media
+en lokale opslag blijven behouden. Haal voor vervolgwerk de actuele GitHub-main
+op; een oudere lokale checkout is geen publicatiebasis.
 
 ## Voor iedere volgende publicatie
 

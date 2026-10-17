@@ -1,0 +1,63 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "10affc05a167a7ebba4620ce0c368346f8fc0244",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "6a49650c-e332-4699-ae11-72fb2ecbc993",
+  "verifiedAt": "2026-10-17T12:48:25.541Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T12:47:09.666Z",
+    "sourceCommit": "10affc05a167a7ebba4620ce0c368346f8fc0244",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "38d1b0efa8d3a9c350289cb34d825a621d1dafc6a7c61c00dd6c8fdcc7976143",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-B5-y4nYf.js",
+  "freshClientSha256": "79bc6776386da4d0badcb755afb409b9f6e0587b17858097f494d4f010d46e29",
+  "sourceArchiveSha256": "847dc0dbb692c912a84f5c76c53c05a897c1c49cdc047c2679421476a1bdc417",
+  "sourceArchiveBaseCommit": "feb21794276a81a42c55fe9f11520df37f0590b2",
+  "sourceArchiveMember": "Klink-startpagina-publicatiebron.bundle",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2700,
+  "expectedMedia": 2700,
+  "errors": [],
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "landingApprovalRecord": "docs/klink-landing-approval-20261017.json",
+  "previousPublicationRecord": "docs/klink-publication-compact-cards-20261017.json",
+  "previousLiveSourceCommit": "c447745328ba7b6d8dd6f7f8e9631862ca33efb6",
+  "previousLiveWorkerVersion": "70e0aa45-987f-4ca0-ade8-2e4e407d3d8e",
+  "githubActionsUsed": false,
+  "logoAssets": {
+    "klink-logo.svg": "747235695791c84f0ff24b98e848da7223fc752acdec8e32bec482fc018d2337",
+    "klink-wordmark.svg": "f1adb55d826705e36a9f2b455930fc260d5d5b4a0dd1bb0c7fe93d284cc52614",
+    "taalroute-logo.svg": "caf9668e4c2237b5c4b66a32ecde8f9bf4264a3b62a6d579b77b25c3467d31ac",
+    "alfabetaplus-logo.png": "7c8e1019d5c4c7c1f405c8e44f6ec007812ae1c89fdbf9c2e12e10837de33639"
+  },
+  "checks": [
+    "Complete local test:review passed on the final source, including actual audio, resume, all 15 sections and 302 lesson routes.",
+    "Landing page checked locally and live at 1440, 1024, 768, 390 and 320px, including header geometry, one Klink logo, Taalroute attribution, Alfabeta footer, invalid and valid learner codes, teacher entry and therapist information.",
+    "Latest compact three-column photo cards and original group-2 resume verified live.",
+    "TypeScript, targeted lint, diff checks and six publication-proof negative checks passed.",
+    "All 2700 offered lesson-media files match the source bytes; all four offered logo files match their source bytes."
+  ],
+  "sourceBackup": {
+    "id": "1tdWDLTZKHO4M0hRx--Pt4Hi8gF7mJV-u",
+    "url": "https://drive.google.com/file/d/1tdWDLTZKHO4M0hRx--Pt4Hi8gF7mJV-u/view",
+    "bytes": 1718393,
+    "sha256": "764c5555236538ec90d428d50f0ffd005d6739b364dd9cb6e852dd3fb4ced88b",
+    "metadataAndSizeVerified": true
+  },
+  "limitations": [
+    "No domain migration; klink.taalroute.nl remains the live address.",
+    "No new learner field test; curriculum, audio, media, database and storage agreements unchanged."
+  ]
+}
