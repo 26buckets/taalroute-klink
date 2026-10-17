@@ -1,0 +1,63 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "31c093549965cb316dc90505e67a1c42cb5679fe",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "e988ca6d-e77a-4537-9423-9e9c1465e558",
+  "verifiedAt": "2026-10-17T22:33:38.492Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T22:32:34.389Z",
+    "sourceCommit": "31c093549965cb316dc90505e67a1c42cb5679fe",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-COAHaekg.js",
+  "freshClientSha256": "c6c9d2f534e676a34daf4b49cca210ce5c9e9cfef72daf191796e67673fb62bd",
+  "sourceArchiveSha256": "0627a4f22ba7e1fb71189a7fd9c00a68283c6df397ffa622ac90fc95a318ff7a",
+  "sourceArchiveFormat": "git archive HEAD (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-stable-player-20261018.json",
+  "scope": "Optional Op één blad view for ten existing word activities, alongside the unchanged one-at-a-time sequence. All selected words appear on one scrollable page; existing renderers, targets, distractors, reading conditions and media are reused.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "practiceChapters": 12,
+  "activityForms": 40,
+  "sheetActivityForms": 10,
+  "githubActionsUsed": false,
+  "checks": [
+    "Full local npm run test:review passed, including preserved lessons, groups, chapters, media policy, cards and stable-player regression.",
+    "TypeScript, targeted lint, publication-proof tests, media-rate tests and diff whitespace checks passed.",
+    "New sheet tests passed locally and live at five viewport sizes. Model participation, per-row audio gating, interruption, failure/retry, typing, wrong/correct answers, dragging/tapping, keyboard selection and view switching verified.",
+    "Largest selected collection shows all 68 words on one scrollable page; first group shows all six. Ordinary lesson-group practice and chapter entrances both verified.",
+    "Existing word-route storage is unchanged by sheet practice. Existing saved sequence position is reused on returning to one-at-a-time.",
+    "Real live sheet audio completed at 0.85 with preserved pitch policy; all 2679 offered media byte-match the metadata-verified source. All 48 withdrawn instruction files remain unavailable.",
+    "Live original player geometry and all twelve chapter/navigation flows passed."
+  ],
+  "reviewRecord": "docs/klink-practice-sheet-review-20261018.json",
+  "limitations": [
+    "No new learner trial; no DigLin-equivalence or independent-reading mastery claim.",
+    "Only the ten recorded single-word activity types have the extra sheet view. Existing bingo and matching boards are retained, and text/conversation players are not all converted.",
+    "Sheet drafts remain while switching views in the same visit, not after a fresh visit. Narrow screens scroll vertically.",
+    "DigLin menus could be inspected, but opening its exercises redirected to NT2 School. Current exercise screens were not re-verified. No DigLin content or code copied."
+  ],
+  "sourceBackup": {
+    "id": "1t-tgdn5qJQ1tnZnLVya1CMB8XOiAj_jC",
+    "url": "https://drive.google.com/file/d/1t-tgdn5qJQ1tnZnLVya1CMB8XOiAj_jC/view?usp=drivesdk",
+    "bytes": 17023758,
+    "sha256": "7f19c54d8c771ea68726e17f4d59a302cf91c8e462cc2e33beb76c7ec95d46cf",
+    "metadataAndBytesVerified": true
+  }
+}

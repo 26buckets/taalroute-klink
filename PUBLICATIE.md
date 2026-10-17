@@ -9,12 +9,21 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-stable-player-20261018.json`.
-Livebron: `91908054615f6b3086bec23e53c5ac95e8862235`.
-Worker-versie: `f946a63f-766a-4d53-86da-cd72e634781b`.
+Actief register: `docs/klink-publication-practice-sheet-20261018.json`.
+Livebron: `31c093549965cb316dc90505e67a1c42cb5679fe`.
+Worker-versie: `e988ca6d-e77a-4537-9423-9e9c1465e558`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
-Op 18 oktober is uitsluitend het gedeelde oefenvlak gestabiliseerd: een vaste,
+Op 18 oktober is naast de bestaande reeks de keuze 'Op één blad' toegevoegd
+aan tien woordactiviteiten. Alle geselecteerde woorden blijven op dezelfde
+scrollbare pagina. Dit gebruikt de bestaande spelers, afleiders, media en
+leesvoorwaarden, zowel via Lessen als Oefenen. De woordroute, hoofdstukken,
+bingo's, koppelbladen en vaste één-voor-éénkaart blijven behouden. Zie
+`docs/klink-practice-sheet-review-20261018.json` voor scope en beperkingen.
+De volledige lokale regressiereeks en live blad-, hoofdstuk- en kaartcontroles
+zijn geslaagd; alle 2.679 aangeboden mediabestanden zijn opnieuw bytegelijk.
+
+Eerder op 18 oktober is het gedeelde oefenvlak gestabiliseerd: een vaste,
 ruime hoogte per schermformaat, een vaste onderrand en een gereserveerd volledig
 beeldvlak. Lange opdrachten blijven scrollbaar. Lam/kat, woordwissels en audio
 zijn lokaal en live gecontroleerd op vijf schermformaten. De volledige lokale
