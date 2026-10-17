@@ -9,10 +9,20 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-square-photos-20261017.json`.
-Livebron: `ed42ef08be1fc8339678c6e25571e18cefe6300e`.
-Worker-versie: `f3afe532-4c42-4ce7-87e8-43562fb206aa`.
+Actief register: `docs/klink-publication-chapters-20261017.json`.
+Livebron: `b8bb935903ace901dafd4b8b89220e74cab56377`.
+Worker-versie: `e41e5b31-7960-4ac5-b9a5-d6a187c7b868`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Oefenen heeft twaalf rechtstreekse hoofdstukken, los van Lessen. Alle veertig
+bestaande oefenvormen gebruiken dezelfde spelers, woorden, bronnen en media.
+De woordroute blijft vijftien onderdelen met 302 lessen. Hoofdstuklinks zijn
+herlaadbaar onder `#learner/chapters/…`; vrije oefenvoortgang blijft apart van
+de lesroute. Alfa A/B volgt bestaande leesvoorwaarden; A1/A2 zijn bronlabels
+met hulp, geen behaalde niveaus. Losse klanken, expliciete spellingregels,
+volledige grammatica en B1 zijn hierdoor niet ineens voltooid. Zie
+`docs/KLINK-APARTE-HOOFDSTUKKEN-20261017.md`. De volledige lokale regressiereeks
+plus hoofdstuktests en de live hoofdstuk-/fotokaartcontroles zijn geslaagd.
 
 Het onderdelenoverzicht heeft kleinere kaarten met volledige foto's, zonder
 uitsnede of vergroting. De foto's van onderdelen 7, 9, 14 en 15 zijn op

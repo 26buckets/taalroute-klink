@@ -1,0 +1,61 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "b8bb935903ace901dafd4b8b89220e74cab56377",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "e41e5b31-7960-4ac5-b9a5-d6a187c7b868",
+  "verifiedAt": "2026-10-17T21:25:04.705Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T21:24:03.594Z",
+    "sourceCommit": "b8bb935903ace901dafd4b8b89220e74cab56377",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-WCwazOnl.js",
+  "freshClientSha256": "6e3cdb2421dc007314b7ca7a373f8fa938c11aa8c5b28ac5ef4b29a7c484aeab",
+  "sourceArchiveSha256": "61968a16b1b6c503450bc845969fc9736c705b9b3234421634dc76e916b795d3",
+  "sourceArchiveFormat": "git archive HEAD (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-square-photos-20261017.json",
+  "scope": "Separate 12 skill chapters from the existing word lesson route; reuse all 40 activity forms, existing media, source levels and players. Add direct chapter links and teacher explanation without altering curriculum placement.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "practiceChapters": 12,
+  "activityForms": 40,
+  "githubActionsUsed": false,
+  "checks": [
+    "Full npm run test:review passed locally, including all original regression suites and the new chapter unit/browser tests.",
+    "TypeScript, targeted lint, publication-proof tests, audio policy tests and git diff check passed.",
+    "All 12 chapters reach existing exercises without a word-lesson gate. All 40 activity forms are covered with preserved source payloads; context duplicates are removed only in the new free-practice library.",
+    "Deep links, reload, browser Back, level filtering, pagination, keyboard answers, retries, independent practice storage and audio errors verified locally and live.",
+    "Chapter desktop/tablet/phone views and a long-text short-phone view checked for overflow, 48px targets and reachable continuation.",
+    "All 15 compact square photo cards and former group-2 resume verified live at 11 viewport widths. Existing 302 lesson routes preserved.",
+    "All 2679 offered media byte-match locally metadata-verified source. All 48 withdrawn instruction/help files remain excluded."
+  ],
+  "limitations": [
+    "No new content, audio, images or learner trial. Source-level A1/A2 uses support, not independent-reading certification.",
+    "Klanken currently exposes whole-word contrasts; approved isolated phoneme/synthesis content is not complete, and isolated t remains parked.",
+    "Spelling rules, full grammar coverage and a complete B1 curriculum remain open. Separate chapters do not prove DigLin-equivalent breadth.",
+    "The canonical DigiBord style-reference folder was not present; existing Klink typography, icons, buttons and compact photo layout were retained."
+  ],
+  "sourceBackup": {
+    "id": "1OMt8ij4viKgAzg2QMIuIVRKlhxhYyOcH",
+    "url": "https://drive.google.com/file/d/1OMt8ij4viKgAzg2QMIuIVRKlhxhYyOcH/view?usp=drivesdk",
+    "bytes": 16676548,
+    "sha256": "226ba9e9670eecb95f558cf7281931a5cd01162bbb160245eb4975d3a6e7b51d",
+    "metadataAndBytesVerified": true
+  }
+}
