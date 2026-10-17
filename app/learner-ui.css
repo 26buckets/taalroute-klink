@@ -214,3 +214,16 @@
   .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-workspace { height: auto; }
   .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-stage { min-height: 320px; overflow: visible; }
 }
+
+/* A mixed word page keeps the existing navigation, unlike the immersive single-word lesson. */
+.learner-app .learner-main:has(.is-mixed-round) { height: auto; min-height: 100dvh; overflow: visible; }
+.learner-app .cp-player:has(.is-mixed-round) { display: block; height: auto; overflow: visible; }
+.learner-app .cp-player:has(.is-mixed-round) > .cp-content { width: min(1210px, calc(100% - 42px)); margin: 0 auto; padding: 28px 0 60px; overflow: visible; }
+.learner-app .cp-panel:has(> .is-mixed-round) { height: auto; }
+.learner-app .cp-exercise-browser.is-mixed-round { display: block; height: auto; overflow: visible; }
+.learner-app .is-mixed-round > header { display: none; }
+.learner-app .is-mixed-round .cp-exercise-workspace { min-height: 0; }
+.learner-app .is-mixed-round .cp-exercise-stage { min-height: 0; }
+/* Keep keyboard focus and automatic scrolling clear of the fixed bottom navigation. */
+html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
+.learner-app .is-mixed-round button { scroll-margin-block: 12px 84px; }

@@ -105,6 +105,7 @@ export function PackageExerciseBrowser({
   onPosition,
   onLessonDone,
   onAttempt,
+  practiceRound = false,
 }: {
   pack: PackageDefinition;
   onAudio: AudioPlayer;
@@ -119,6 +120,7 @@ export function PackageExerciseBrowser({
   onPosition?: (exerciseId: string) => void;
   onLessonDone?: () => void;
   onAttempt?: (attempt: PracticeAttempt) => void;
+  practiceRound?: boolean;
 }) {
   const exerciseTypes = pack.exerciseTypes
     .map((type) => ({ ...type, label: learnerExerciseNames[type.id] ?? type.label, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
@@ -155,6 +157,7 @@ export function PackageExerciseBrowser({
   const automatic = guided && result === 'right' && !selfPaced && !autoPaused && !holdFeedback && !audioPending;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   async function listen(source?: string, automaticStart = false) {
+    if (exercise?.readingTask && source === stimulus && source) metrics.current.helpUsed = true;
     if (!automaticStart && result === 'right') setHoldFeedback(true);
     const id = exercise?.exerciseId;
     playback.current?.abort();
@@ -275,6 +278,7 @@ export function PackageExerciseBrowser({
       support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
       helpUsed: metrics.current.helpUsed, elapsedMs: Date.now() - metrics.current.started,
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
+      ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
     setMessage(feedback ?? (correct
@@ -303,14 +307,14 @@ export function PackageExerciseBrowser({
   useEffect(() => { if (completed) completionHeading.current?.focus({ preventScroll: true }); }, [completed]);
 
   if (!exercise) return null;
-  if (completed) return <section className="honest-empty"><Check /><h2 ref={completionHeading} tabIndex={-1}>Goed geoefend</h2><p>Deze les is klaar.</p><button className="primary-button" onClick={onComplete}>{completeLabel}<ArrowRight /></button></section>;
+  if (completed) return <section className="honest-empty"><Check /><h2 ref={completionHeading} tabIndex={-1}>Goed geoefend</h2><p>{practiceRound ? 'Deze ronde is klaar.' : 'Deze les is klaar.'}</p><button className="primary-button" onClick={onComplete}>{completeLabel}<ArrowRight /></button></section>;
 
   const family = pack.exerciseTypes.find((item) => item.id === familyId);
   const isIndividual = (item: PackageExercise) => item.mode === 'sentence-question' || item.mode.startsWith('connected-');
   const modes = records.filter((item, index, all) => isIndividual(item) || all.findIndex(other => other.mode === item.mode) === index);
   const questionModes = modes.filter(item => item.mode === 'sentence-question');
   return (
-    <section className={`cp-exercise-browser ${guided ? 'is-guided' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
+    <section className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
       <header>
         <div>
           <span className="eyebrow">{eyebrow}</span>
@@ -321,14 +325,14 @@ export function PackageExerciseBrowser({
 
       <div className="cp-exercise-workspace">
         {!guided && <label className="cp-family-picker">Oefening<select value={familyId} onChange={event => chooseFamily(event.target.value)}>{exerciseTypes.map(type => <option key={type.id} value={type.id}>{type.label}</option>)}</select></label>}
-        <aside aria-label={guided ? 'Stappen van de les' : 'Soort oefening'}>
+        {!practiceRound && <aside aria-label={guided ? 'Stappen van de les' : 'Soort oefening'}>
           {guided ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([phase, label]) => <button key={phase} disabled className={exercise.phase === phase ? 'active' : ''} aria-current={exercise.phase === phase ? 'step' : undefined}><span aria-hidden="true">{exercise.phase === phase ? '•' : '–'}</span><span><strong>{label}</strong></span></button>) : exerciseTypes.map((type, index) => (
             <button key={type.id} className={familyId === type.id ? 'active' : ''} disabled={guided} aria-current={familyId === type.id ? 'step' : undefined} onClick={() => chooseFamily(type.id)}>
               <span aria-hidden="true">{guided ? familyId === type.id ? '•' : '–' : String(index + 1).padStart(2, '0')}</span>
                 <span><strong>{type.label}</strong>{!guided && <small>{type.count} {type.count === 1 ? 'oefening' : 'oefeningen'}</small>}</span>
             </button>
           ))}
-        </aside>
+        </aside>}
 
         <div className="cp-exercise-main">
           <header className="cp-exercise-record-head">
@@ -371,7 +375,7 @@ export function PackageExerciseBrowser({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? !canAnswer ? 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise) : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button className="secondary-button" disabled={guided && (!canAnswer || (!selfPaced && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 ? 'Les afronden' : 'Verder'}<ArrowRight /></button>
+            <button className="secondary-button" disabled={guided && (!canAnswer || (!selfPaced && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 ? practiceRound ? 'Ronde afronden' : 'Les afronden' : 'Verder'}<ArrowRight /></button>
           </footer>
         </div>
       </div>
@@ -427,11 +431,12 @@ function ExerciseSurface({
 
 function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; onAudio?: AudioPlayer; children?: ReactNode }) {
   const source = exercise.prompt?.audio?.src ?? (exercise.wordId ? undefined : findAudioSource(exercise));
-  if (!source && typeof exercise.exampleWord !== 'string' && !children) return null;
+  const visibleWord = typeof exercise.displayWord === 'string' ? exercise.displayWord : exercise.exampleWord;
+  if (!source && typeof visibleWord !== 'string' && !children) return null;
   return (
     <div className="cp-task-prompt">
-      {typeof exercise.exampleWord !== 'string' && (source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /><span>Luister</span></button> : <span><FileText /></span>)}
-      <div>{typeof exercise.exampleWord === 'string' && (source && onAudio ? <button className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${exercise.exampleWord}`}>{exercise.exampleWord}<Volume2 aria-hidden="true" /></button> : <strong>{exercise.exampleWord}</strong>)}{children}</div>
+      {typeof visibleWord !== 'string' && (source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /><span>Luister</span></button> : <span><FileText /></span>)}
+      <div>{typeof visibleWord === 'string' && (source && onAudio ? <button className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}<Volume2 aria-hidden="true" /></button> : <strong>{visibleWord}</strong>)}{children}</div>
     </div>
   );
 }
@@ -475,7 +480,7 @@ function MatchingSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps 
     if (!activeSource) return;
     if (mapping[activeSource] !== targetId) {
       setWrongTarget(targetId);
-      onFinish(`${activeSource}:${targetId}`, false, 'Kijk naar het gekozen woord. Kies de andere foto.');
+      onFinish(`${activeSource}:${targetId}`, false, exercise.feedback ?? 'Kijk naar het gekozen woord. Kies de andere foto.');
       return;
     }
     const nextPairs = { ...pairs, [activeSource]: targetId };

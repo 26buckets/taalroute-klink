@@ -2480,6 +2480,33 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   .learner-app .is-guided .cp-exercise-workspace > aside strong { font-size: 16px; }
 }
 
+/* Mixed practice reuses the current lesson shell and exercise controls. */
+.cp-lesson-picker > .cp-panel-heading { flex-wrap: wrap; gap: 16px; }
+.cp-mixed-practice > .text-back { margin: 0 0 16px; }
+.cp-mixed-modes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-bottom: 16px; }
+.cp-mixed-modes > button { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 12px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; font-size: 18px; font-weight: 400; }
+.cp-mixed-modes > button.active { border-color: var(--primary); background: var(--primary-soft); }
+.cp-mixed-modes svg { width: 24px; height: 24px; flex-shrink: 0; }
+.learner-app .is-mixed-round { height: auto; min-height: 0; overflow: visible; }
+.learner-app .is-mixed-round .cp-exercise-workspace { height: auto; grid-template-columns: minmax(0, 1fr); }
+.learner-app .is-mixed-round .cp-exercise-main { min-height: 0; grid-template-rows: auto minmax(0, 1fr) auto; }
+.learner-app .is-mixed-round .cp-exercise-record-head { flex-wrap: wrap; gap: 12px; }
+.learner-app .is-mixed-round .cp-exercise-record-head nav button { min-width: 48px; min-height: 48px; }
+.learner-app .is-mixed-round .cp-exercise-stage { overflow: visible; }
+.learner-app .is-mixed-round .cp-task-card { min-height: 0; }
+.learner-app .is-mixed-round .cp-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.learner-app .is-mixed-round .cp-match-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.learner-app .is-mixed-round .cp-match-board button { min-height: 120px; }
+.learner-app .is-mixed-round .cp-match-board img { width: 100%; height: 100px; object-fit: contain; }
+.cp-review-mixed { margin-bottom: 20px; }
+@media (max-width: 760px) {
+  .cp-mixed-modes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-mixed-modes > button { justify-content: flex-start; font-size: 16px; }
+  .learner-app .is-mixed-round .cp-exercise-feedback { grid-template-columns: minmax(0, 1fr) auto; }
+  .learner-app .is-mixed-round .cp-exercise-feedback > svg { display: none; }
+  .learner-app .is-mixed-round .cp-exercise-feedback > button { grid-column: 2; justify-self: end; }
+}
+
 /* Vastgesteld Klink-woordmerk: dezelfde vectorvormen op elk scherm. */
 .brand .klink-wordmark {
   display: block;

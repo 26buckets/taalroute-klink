@@ -2,6 +2,8 @@
 
 import { Brand, playMedia, stopMedia } from '@/components/product/shared';
 import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
+import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
+import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
   allPackageWords,
   contentPackages,
@@ -28,7 +30,7 @@ import {
   WholeWord,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review';
 type WordFilter = string;
@@ -108,7 +110,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         {view === 'packages' && <PackageLibrary onBack={() => setView('home')} onOpen={openPackage} />}
         {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => setView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onAttempt={recordAttempt} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => setView('home')} onToast={onToast} />}
-        {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} onWords={() => setView('words')} onBack={() => setView('home')} onToast={onToast} />}
+        {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => setView('words')} onBack={() => setView('home')} onToast={onToast} />}
       </main>
     </div>
   );
@@ -162,13 +164,17 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
   );
 }
 
-function ReviewQueue({ savedWordIds, onWords, onBack, onToast }: { savedWordIds: string[]; onWords: () => void; onBack: () => void; onToast: (message: string) => void }) {
+function ReviewQueue({ savedWordIds, completed, onAttempt, onWords, onBack, onToast }: { savedWordIds: string[]; completed: string[]; onAttempt: (attempt: PracticeAttempt) => void; onWords: () => void; onBack: () => void; onToast: (message: string) => void }) {
+  const [mixed, setMixed] = useState(false);
+  const pack = useMemo(() => mixedReviewPack(contentPackages, completed, savedWordIds), [completed, savedWordIds]);
   const items = allPackageWords.filter((word) => savedWordIds.includes(word.id));
+  if (mixed) return <div className="learner-page"><PackageMixedPractice pack={pack} onAudio={(source, options) => source ? playMedia(source, options) : false} onBack={() => setMixed(false)} onAttempt={onAttempt} /></div>;
   return (
     <div className="learner-page review-page">
       <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
       <header className="content-page-heading"><div><span className="eyebrow">Herhalen</span><h1>Nog een keer</h1><p>Tik en luister.</p></div><div className="content-count"><strong>{items.length}</strong><span>bewaard</span></div></header>
-      {items.length === 0 ? <section className="honest-empty"><RefreshCw /><h2>Kies eerst een woord</h2><p>Tik bij een woord op Bewaar.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section> : <section className="review-word-list"><header><div><span className="eyebrow"></span><h2>Jouw woorden</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{learnerListName(getPackage(word.packageId))}</small><strong>{wordLabel(word)}</strong><small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
+      {pack.words.length >= 2 && <div className="cp-review-mixed"><button className="primary-button" onClick={() => { stopMedia(); setMixed(true); }}><RefreshCw aria-hidden="true" />Alles oefenen<ArrowRight aria-hidden="true" /></button></div>}
+      {items.length === 0 ? (pack.words.length >= 2 ? null : <section className="honest-empty"><RefreshCw /><h2>Kies eerst een woord</h2><p>Tik bij een woord op Bewaar.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section>) : <section className="review-word-list"><header><div><span className="eyebrow"></span><h2>Jouw woorden</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{learnerListName(getPackage(word.packageId))}</small><strong>{wordLabel(word)}</strong><small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
     </div>
   );
 }

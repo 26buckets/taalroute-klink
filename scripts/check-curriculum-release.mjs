@@ -10,6 +10,10 @@ const instructions = read('../data/klink-instructions.json');
 const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
+try {
+  const mixed = read('../data/klink-mixed-practice-release.json');
+  if (!mixed.publicationApproved || mixed.combinationReview !== 'approved') issues.push('De nieuwe gemengde oefenrondes wachten op inhoudelijke beoordeling.');
+} catch { issues.push('Het vrijgaverecord voor de gemengde oefenrondes ontbreekt.'); }
 const sections = read('../data/klink-sections.json');
 if (sections.release.id !== readiness.sectionEdition || createHash('sha256').update(readFileSync('data/klink-sections.json')).digest('hex') !== readiness.sectionExportSha256) issues.push('De onderdelenindeling wijkt af van de vastgezette Lexicon-export.');
 execFileSync(process.execPath, ['--test', 'scripts/test-sections.mjs'], { stdio: 'inherit' });

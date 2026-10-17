@@ -1,6 +1,7 @@
 'use client';
 
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
+import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
@@ -40,6 +41,7 @@ type PackageTab =
   | 'words'
   | 'lessons'
   | 'practice'
+  | 'mixed'
   | 'texts'
   | 'dialogues'
   | 'media';
@@ -168,7 +170,8 @@ export function PackagePlayer({
             onAudio={playAudio}
           />
         )}
-        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} />}
+        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} onMixed={() => setTab('mixed')} />}
+        {tab === 'mixed' && <PackageMixedPractice pack={pack} onAudio={playAudio} onBack={() => setTab('lessons')} onAttempt={onAttempt} />}
         {tab === 'practice' && <PackagePractice pack={pack} onAudio={playAudio} />}
         {tab === 'texts' && <PackageReading pack={pack} onAudio={playAudio} onAttempt={onAttempt} kind="texts" />}
         {tab === 'dialogues' && <PackageReading pack={pack} onAudio={playAudio} onAttempt={onAttempt} kind="dialogues" />}
@@ -338,7 +341,7 @@ function lessonExercises(pack: PackageDefinition, lesson: PackageLesson) {
     .map((exercise) => addLessonWordAudio(exercise, pack, lesson));
 }
 
-function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onAttempt }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onAttempt?: (attempt: PracticeAttempt) => void }) {
+function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onAttempt, onMixed }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onAttempt?: (attempt: PracticeAttempt) => void; onMixed: () => void }) {
   const [selectedLessonId, setSelectedLessonId] = useState(initialPosition?.packageId === pack.id ? initialPosition.lessonId : '');
   const [resumeId, setResumeId] = useState(initialPosition?.exerciseId);
   const selectedLesson = pack.lessons.find((lesson) => lesson.id === selectedLessonId);
@@ -379,6 +382,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
     <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
         <h1>Lessen</h1>
+        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Alles oefenen<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
         {pack.lessons.map((lesson, index) => {
