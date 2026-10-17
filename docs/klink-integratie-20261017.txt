@@ -1,0 +1,59 @@
+Samenhangende Klink-versie — 17 oktober 2026
+
+De bestaande app en spelers blijven behouden. De actuele UI- en mediabron fa3d3a9
+is samengevoegd met de bestaande inhoudsaansluiting en de expliciete Lexicon-plaatsing.
+Lexicon is leidend voor eerste aanbod en herhaling. De export blijft een vastgezette
+versie: een latere Lexicon-wijziging vraagt een gecontroleerde import en Klink-release.
+
+Inhoud: 338 betekenissen, 302 bestaande route-ID's, 1612 unieke inhoudsitems
+(1292 zinnen, 192 teksten, 128 gesprekken). 323 betekenissen hebben gekoppelde
+context, 15 niet. Aantallen inhoudsitems zijn geen aantallen nieuwe lessen.
+Alle 338 betekenissen hebben nu woordaudio en beeld. De 1979 bestaande gekoppelde
+opnamen zijn ongewijzigd hergebruikt. Taalroute-metadata zijn gecontroleerd.
+Teksten en opnamehashes blijven behouden; meerduidige woordverbanden zijn conservatief
+gefilterd. Korte woordlessen worden niet automatisch langer. Meeluisteren is geen
+zelfstandig leesresultaat of bewezen begrip; terughaalplekken zijn geen kalender.
+
+Bron/ketenreview: Lexicon docs/KLINK-INHOUDSKOPPELING-REVIEW-20261017.txt.
+Live Lexicon-bron en exportbewijs: docs/klink-lexicon-handoff.json.
+Klink-livebasis c221eb104fe64a17de9e51a59ddc5667ea805518, Worker
+efddd274-4f66-4d5b-9bfb-c21e87acc89d, opnieuw gecontroleerd en niet gepubliceerd.
+
+Lokale controles
+- 40 unit/datacontroles; exacte Lexicon-exportimport en ongewijzigde transcripties.
+- Volledige lokale route-, herstel-, opslag-, voortgang-, luister-, tekst- en
+  gespreksbrowserreeks. 16 ingangen en 302 routes bereikbaar; geen nieuw menuontwerp.
+- Smalle/landschapschermen, toetsenbord, 48px-bediening, beeldverhoudingen, geen
+  overlap van de vierkante kaart met Verder; echte audiobestanden afgespeeld.
+- Hapering in test hersteld: eerst het automatisch gestarte gesprek laten eindigen,
+  daarna een afzonderlijke mislukte herhaling meten. Geen productiegedrag verzwakt.
+- Laatste vijf beelden daarna meegeïntegreerd; 40 tests, typecontrole, bouw, alle
+  mediahashes en complete beoordelingspagina opnieuw gecontroleerd.
+- Vier publicatiebewijstests; fixture omvat ook de aangesloten contextbibliotheek.
+- Volledige linter meldt 31 bestaande/bredere repositorymeldingen. De in deze ronde
+  gewijzigde inhoudskoppelbestanden zijn afzonderlijk zonder lintmeldingen getest.
+  Geen claim van een volledig lintschone repository; geen grote codeopruiming gedaan.
+
+Vrijgave
+De gebruiker heeft publicatie gevraagd. Dat vervangt geen ontbrekende menselijke
+uitspraak-, beeld-, instructie-, context- en begripsbeoordeling. Geen mediareview als
+goedgekeurd ingevuld en geen publicatiebeveiliging omzeild. Losse /t/ blijft geparkeerd.
+Cursistpilot is volgens Nico geen verplichte publicatiepoort en is niet uitgevoerd.
+De normale route blijft npm run deploy vanaf main, na vastgelegde beoordelingen.
+Voor een volgende release eerst huidige livebron, eventuele nieuwere UI/mediawijzigingen,
+canonieke main, lokale tests en actuele export opnieuw vergelijken. Niet direct uit de
+aparte UI-werkbranch publiceren: die mist de inhoudskoppeling van deze integratie.
+
+Beoordelen
+outputs/media-review-20261016/index.html bevat 721 beoordelingsregels, waaronder
+338 woordbeelden, woordaudio, instructies, zinnen/situaties en begripsvragen.
+Zinnen/teksten/gesprekken met de oorspronkelijke opnamen zijn in de bestaande Klink-
+speler en het docentoverzicht bereikbaar; menselijke vrijgave daarvan staat apart open.
+Geëxporteerde beoordeling is bewijs om te verwerken, niet automatisch toestemming.
+
+Herstel
+De bestaande geverifieerde acht-delige 57bc59b-backup bevat de oorspronkelijke
+inhoud en opnamen. Deze ronde voegt een bronbundle met alle volgende wijzigingen,
+Lexicon-bron, review en lokale/livebewijzen toe in dezelfde Klink-projectmap.
+De beeldproductiechat bewaart oorspronkelijke beelden/prompts afzonderlijk in die map.
+Er zijn geen GitHub Actions uitgevoerd of nieuwe workflows toegevoegd.
