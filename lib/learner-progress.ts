@@ -13,8 +13,11 @@ export function parseProgress(raw: string | null, packs: PackageDefinition[]): R
     const position = value.position as Partial<LessonPosition> | null;
     const pack = packs.find(item => item.id === position?.packageId);
     const lesson = pack?.lessons.find(item => item.id === position?.lessonId);
-    if (!lesson || !position?.exerciseId || !lesson.guidedExerciseIds?.includes(position.exerciseId)) return { completed };
-    return { completed, position: { packageId: pack!.id, lessonId: lesson.id, exerciseId: position.exerciseId } };
+    if (!lesson || !position?.exerciseId) return { completed };
+    const exerciseId = lesson.guidedExerciseIds?.includes(position.exerciseId) ? position.exerciseId
+      : pack!.exercises.find(item => item.lessonId === lesson.id && item.replacesExerciseId === position.exerciseId && lesson.guidedExerciseIds?.includes(item.exerciseId))?.exerciseId;
+    if (!exerciseId) return { completed };
+    return { completed, position: { packageId: pack!.id, lessonId: lesson.id, exerciseId } };
   } catch { return { completed: [] }; }
 }
 

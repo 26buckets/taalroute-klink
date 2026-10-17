@@ -44,6 +44,7 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
     row('BB-04', 'Memory', 'recall', ['memory'], 'Twee voorbereide beeld–woordparen nodig.', pairExcluded),
     row('BB-05', 'Woordkaarten', 'meet', ['word-card'], 'Een passend betekenisbeeld ontbreekt.'),
     row('ZI-03', 'Zinnen beluisteren met tekststeun', 'use', ['listen-sentence'], 'Een passende zin met opname ontbreekt bij deze woorden. Aanwezige zinnen zijn luistermodellen, geen toets zelfstandig lezen.'),
+    row('ZI-01-begrip', 'Een luisterzin begrijpen', 'use', ['sentence-question'], 'Een vraag met passende voorbereide keuzes ontbreekt. Horen en begrijpen is geen zelfstandig lezen.'),
     row('ZI-situation', 'Een situatie beluisteren', 'use', ['listen-situation'], 'Een passende korte situatie met opname en beeld ontbreekt bij deze woorden. Mondeling voorbereiden; niet behandelen als zelfstandig lezen.'),
     row('BB-07', 'Een voorwerp in een situatie aanwijzen', 'use', ['scene-choice'], 'Een gecontroleerd situatiebeeld met gemarkeerde voorwerpen en bijbehorende vraag ontbreekt.'),
     row('BB-06', 'Een handeling in volgorde', 'use', ['image-sequence'], 'Een samenhangende eigen beeldreeks ontbreekt; losse woordfoto’s zijn geen handeling.'),
@@ -59,6 +60,7 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
 }
 
 export function exerciseHelp(exercise: PackageExercise): string {
+  if (exercise.mode === 'sentence-question') return 'Luister opnieuw als je twijfelt. Kies één antwoord.';
   if (exercise.mode === 'missing-grapheme') return 'Luister. Kies wat ontbreekt.';
   if (exercise.componentId === 'ALF-CMP-004') return 'Kies een woord. Kies daarna de foto.';
   if (exercise.componentId === 'ALF-CMP-005') return 'Tik op de letters. Met Eén terug verander je een letter.';

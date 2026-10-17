@@ -2,6 +2,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 import { lessonPlan, phaseLabels } from '../lib/lesson-plan.ts';
 import { buildChecklist, buildStatusLabels, sentenceBridge } from '../lib/build-checklist.ts';
+import { sentenceQuestions } from '../lib/sentence-comprehension.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 
 const output = new URL('../outputs/lesson-extension-20261016/', import.meta.url);
@@ -24,6 +25,7 @@ const report = {
     guidedInstances: routes.reduce((sum, route) => sum + route.route.length, 0), longestRoute: Math.max(...routes.map(route => route.route.length)) },
   phases: phaseLabels,
   buildStatuses: buildStatusLabels,
+  comprehension: { status: 'concept', humanReview: 'open', independentReading: false, questions: sentenceQuestions },
   review: { technical: 'See browser-check.json and existing-player-integration/browser-check.json', didactic: 'human-review-open', pronunciation: 'human-review-open', images: 'human-review-open', instructionAudio: 'recorded-review-open', learnerPilot: 'waived-by-owner', standaloneT: 'parked' },
   routes,
 };

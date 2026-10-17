@@ -1,0 +1,16 @@
+{
+  "status": "candidate",
+  "humanReview": "open",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "0qLmDzgqulxcvv0yf3kg",
+  "items": [
+    { "id": "zinnen-begrijpen", "role": "instruction", "text": "Luister naar de zin. Luister naar de vraag. Kies het antwoord.", "src": "/package-audio/instructions/zinnen-begrijpen.wav" },
+    { "id": "vraag-zin", "role": "instruction", "text": "Wat hoort bij de zin?", "src": "/package-audio/comprehension/vraag-zin.wav" },
+    { "id": "vraag-biet", "role": "instruction", "text": "Hoe is de biet?", "src": "/package-audio/comprehension/vraag-biet.wav" },
+    { "id": "hulp-foto", "role": "instruction", "text": "Luister nog eens naar de zin. Welke foto hoort erbij?", "src": "/package-audio/comprehension/hulp-foto.wav" },
+    { "id": "hulp-biet", "role": "instruction", "text": "Luister nog eens. Hoe is de biet?", "src": "/package-audio/comprehension/hulp-biet.wav" },
+    { "id": "hulp-kool", "role": "instruction", "text": "Luister nog eens. Hoor je één groente, of twee?", "src": "/package-audio/comprehension/hulp-kool.wav" },
+    { "id": "antwoord-kool-biet", "role": "target", "text": "Kool en biet.", "src": "/package-audio/comprehension/antwoord-kool-biet.wav" },
+    { "id": "antwoord-alleen-kool", "role": "target", "text": "Alleen kool.", "src": "/package-audio/comprehension/antwoord-alleen-kool.wav" }
+  ]
+}
