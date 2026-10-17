@@ -62,7 +62,7 @@ function exerciseImage(exercise: PackageExercise) {
   return image.assetId || image.src ? image as ExerciseImage : undefined;
 }
 
-function findAudioSource(value: unknown): string | undefined {
+export function findAudioSource(value: unknown): string | undefined {
   if (Array.isArray(value)) {
     for (const item of value) {
       const source = findAudioSource(item);
@@ -420,7 +420,7 @@ export function PackageExerciseBrowser({
   );
 }
 
-function ExerciseSurface({
+export function ExerciseSurface({
   exercise,
   pack,
   onAudio,

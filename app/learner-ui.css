@@ -238,6 +238,26 @@
 }
 
 /* A mixed word page keeps the existing navigation, unlike the immersive single-word lesson. */
+.learner-app .cp-practice-display { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; padding: 0; border: 0; }
+.learner-app .cp-practice-display button { min-height: 48px; }
+.learner-app .cp-practice-display button[aria-pressed="true"] { background: var(--primary); color: white; }
+.learner-app .learner-main:has(.cp-practice-sheet) { scroll-padding-bottom: 96px; }
+.learner-app .cp-practice-sheet button, .learner-app .cp-practice-sheet input { scroll-margin-block: 12px 96px; }
+html:has(.cp-practice-sheet) { scroll-padding-bottom: 96px; }
+.learner-app .cp-practice-sheet > header, .learner-app .cp-practice-sheet > footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 16px 0; }
+.learner-app .cp-practice-sheet h2 { margin: 0; font-size: 24px; font-weight: 500; }
+.learner-app .cp-practice-sheet-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; align-items: start; }
+.learner-app .cp-sheet-item { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+.learner-app .cp-sheet-item .cp-task-card { width: 100%; padding: 0; margin: 0; gap: 12px; }
+.learner-app .cp-sheet-item .cp-model-content { gap: 10px; }
+.learner-app .cp-sheet-item .cp-model-content > img, .learner-app .cp-sheet-item .cp-task-card > img { width: min(180px, 100%); height: 180px; object-fit: contain; margin-inline: auto; }
+.learner-app .cp-sheet-item .cp-model-content > strong { font-size: 32px; line-height: 1.3; min-height: 42px; }
+.learner-app .cp-sheet-item > output { display: flex; gap: 6px; align-items: center; min-height: 48px; margin-top: 8px; font-size: 16px; }
+.learner-app .cp-sheet-item > output svg { width: 22px; height: 22px; }
+.learner-app .cp-sheet-item .cp-choice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.learner-app .cp-sheet-item .cp-choice-grid img { height: 100px; }
+.learner-app .cp-sheet-item .cp-build-slots, .learner-app .cp-sheet-item .cp-tile-bank { flex-wrap: wrap; }
+.learner-app .cp-sheet-item .cp-text-entry input { min-width: 0; width: 100%; }
 .learner-app .learner-main:has(.is-mixed-round) { height: auto; min-height: 100dvh; overflow: visible; }
 .learner-app .cp-player:has(.is-mixed-round) { display: block; height: auto; overflow: visible; }
 .learner-app .cp-player:has(.is-mixed-round) > .cp-content { width: min(1210px, calc(100% - 42px)); margin: 0 auto; padding: 28px 0 60px; overflow: visible; }

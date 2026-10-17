@@ -1,0 +1,34 @@
+{
+  "request": "Keep the one-at-a-time route and add one task with many words on the same page.",
+  "scope": "Additional presentation of existing word activities. No new words, distractors, audio, images, curriculum placement or exercise answers.",
+  "views": ["Eén voor één", "Op één blad"],
+  "activities": ["meet", "same-word", "listen", "hear-word", "read", "build-model", "build", "missing", "copy", "dictation"],
+  "placement": "Shared GroupRound, reachable both through skill chapters and existing word-group practice. Existing level/reading-condition selections are passed through unchanged.",
+  "didacticChecks": [
+    "One common task, with the same action available for every eligible word; not a menu mixing different exercises.",
+    "Existing sourceExerciseId, wordId, sourceLessonIds, targets, distractors and approved media remain attached to every item.",
+    "Copying retains the model; heard spelling does not show the answer before help. A completed model audio is participation, not evidence of independent reading.",
+    "Each listening row unlocks only after its own stimulus ends. Interrupted or failed audio does not unlock another row.",
+    "Words and options stay in place after wrong answers. The learner can choose any row, repeat audio or return to the sequence.",
+    "Existing letter building supplies both dragging and tapping. No withdrawn instruction audio or rejected isolated t is introduced.",
+    "The sheet is optional independent practice attached to existing lesson goals. It does not silently replace scheduled lesson time or create a new course programme. No fictional classroom observations are recorded."
+  ],
+  "technicalChecks": [
+    "Reuse existing ExerciseSurface rendering and answer validation; no parallel exercise engine.",
+    "At most one audio stream. Requests are aborted on row/view changes and unmount.",
+    "A previously opened sheet keeps drafts and completion while switching views in the same visit. A fresh visit starts a new sheet; existing lesson-route storage is not changed.",
+    "No fixed four-word limit: all selected words remain on the scrollable page. A single-word collection keeps the existing single view."
+  ],
+  "diglinObservation": {
+    "method": "Read the user's open logged-in Chrome menu and attempted to open two exercise entries without submitting answers.",
+    "observedMenuEntries": ["de woorden", "letters slepen per woord 1", "letters slepen 1"],
+    "limitation": "Opening exercises redirected to NT2 School. Their current exercise screens could not be re-verified. No DigLin content, media or code copied."
+  },
+  "reviewBasis": "Woordstap oefenproductie, its content schema and exercise matrix; the existing Taalroute design basis was read locally and on Drive.",
+  "limitations": [
+    "No new learner trial. This is a design/code review and browser verification, not a classroom observation.",
+    "Existing bingo, matching and other multiword boards are retained. Text, conversation and other activity families are not all converted to sheets by this change.",
+    "Narrow screens scroll vertically instead of shrinking all words into one viewport.",
+    "The canonical DigiBord style-reference folder is unavailable. Existing Klink typography, icons and buttons are preserved."
+  ]
+}
