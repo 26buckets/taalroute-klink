@@ -42,7 +42,9 @@ async function openQuestion(exercise, targetPage = page) {
     await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
     await targetPage.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
     await targetPage.getByRole('button', { name: 'Oefeningen', exact: true }).click();
-    await targetPage.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Kies het woord of beeld' }).click();
+    const picker = targetPage.locator('.cp-family-picker select');
+    if (await picker.isVisible()) await picker.selectOption({ label: 'Kies' });
+    else await targetPage.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Kies' }).click();
     await targetPage.getByLabel('Wat wil je oefenen?').selectOption(exercise.exerciseId);
     const menu = targetPage.getByLabel('Wat wil je oefenen?');
     assert.match(await menu.locator('option:checked').innerText(), /^Luistervraag \d+: /);

@@ -3,6 +3,7 @@
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
+import { learnerListName } from '@/lib/learner-copy';
 import {
   contentPackages,
   getPackage,
@@ -49,7 +50,7 @@ const tabLabels: { id: PackageTab; label: string; icon: typeof BookOpen }[] = [
   { id: 'practice', label: 'Oefeningen', icon: Shapes },
   { id: 'texts', label: 'Zinnen en teksten', icon: FileText },
   { id: 'dialogues', label: 'Gesprekken', icon: MessageCircle },
-  { id: 'media', label: 'Beeld en audio', icon: Images },
+  { id: 'media', label: 'Foto en geluid', icon: Images },
 ];
 
 export function PackageLibrary({
@@ -63,33 +64,38 @@ export function PackageLibrary({
     <div className="learner-page package-library-page cp-library-page">
       <button className="text-back" onClick={onBack}>
         <ArrowLeft />
-        Terug naar home
+        Terug
       </button>
       <header className="package-library-heading">
         <div>
-          <span className="eyebrow">Klink · Alfabeta+</span>
-          <h1>Kies je lessen</h1>
+          <h1>Alle lijsten</h1>
+          <p>{contentPackages.length} lijsten · {contentPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
         </div>
       </header>
 
-      <section className="cp-package-grid" aria-label="Beschikbare lessenreeksen">
+      <PackageGrid onOpen={onOpen} />
+    </div>
+  );
+}
+
+export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
+  return <section className="cp-package-grid" aria-label="Alle lijsten">
         {contentPackages.map((pack, index) => {
           const preview = pack.lessons.flatMap(lesson => lessonPreviewWords(pack, lesson)).filter((word, i, all) => all.findIndex(item => item.id === word.id) === i).slice(0, 3);
-          const image = preview.find(word => word.image)?.image;
-          return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Open ${pack.title}: ${preview.map(wordLabel).join(', ')}`}>
+          const image = preview.find(word => word.image)?.image ?? pack.words.find(word => word.image)?.image;
+          return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Lijst ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>
             <span className="cp-section-photo">
               {image ? <Image src={image} alt="" width={240} height={200} /> : <BookOpen aria-hidden="true" />}
             </span>
             <span className="cp-package-copy">
-              <small>{index + 1}</small>
-              <strong>{preview.map(wordLabel).join(' · ') || pack.title}</strong>
+              <small>Lijst {index + 1}</small>
+              <strong>{learnerListName(pack)}</strong>
+              <span>{pack.lessons.length} lessen · {pack.counts.coreWords} woorden</span>
               <span className="cp-section-open">Open <ArrowRight aria-hidden="true" /></span>
             </span>
           </button>;
         })}
-      </section>
-    </div>
-  );
+      </section>;
 }
 
 export function PackagePlayer({
@@ -136,7 +142,7 @@ export function PackagePlayer({
         <button onClick={onClose} aria-label="Terug naar lessen"><ArrowLeft /></button>
         <div>
           <span>{pack.level}</span>
-          <strong>{pack.title}</strong>
+          <strong>{learnerListName(pack)}</strong>
         </div>
       </header>
 
@@ -178,8 +184,8 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
       <section className="cp-hero">
         <div>
           <span className="eyebrow light">Klink</span>
-          <h1>{pack.title}</h1>
-          <p>{pack.description}</p>
+          <h1>{learnerListName(pack)}</h1>
+          <p>Kijk. Luister. Doe mee.</p>
           <div className="cp-hero-actions">
             <button className="accent-button" onClick={() => onTab('lessons')}>Bekijk de lessen<ArrowRight /></button>
             <button className="dark-secondary-button" onClick={() => onTab('words')}>Bekijk alle woorden</button>
@@ -187,7 +193,7 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
         </div>
         <div className="cp-count-grid">
           <Count value={pack.counts.lessons} label="lessen" />
-          <Count value={pack.counts.coreWords} label="kernwoorden" />
+          <Count value={pack.counts.coreWords} label="woorden" />
           <Count value={pack.counts.exercises} label="oefeningen" />
           {pack.counts.texts > 0 && <Count value={pack.counts.texts} label="teksten" />}
           {!!pack.counts.sentences && <Count value={pack.counts.sentences} label="zinnen" />}
@@ -347,7 +353,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
         <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => setSelectedLessonId('')}><ArrowLeft />Alle lessen</button>
         <div className="cp-lesson-launch">
           <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
-          <div><small>Les {lessonNumber}</small><h1>{label}</h1></div>
+          <div><small>Les {lessonNumber} van {pack.lessons.length}</small><h1>{label}</h1></div>
         </div>
         <PackageExerciseBrowser
           key={selectedLesson.id}

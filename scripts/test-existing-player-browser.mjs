@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { learnerListName } from '../lib/learner-copy.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
 import { answerActivity } from './browser-route-helpers.mjs';
@@ -24,7 +25,7 @@ try {
   for (let i = 0; i < packs.length; i++) {
     const pack = packs[i];
     await page.locator('.cp-package-grid > button').nth(i).click();
-    assert.equal(await page.locator('.cp-player-bar strong').innerText(), pack.title);
+    assert.equal(await page.locator('.cp-player-bar strong').innerText(), learnerListName(pack));
     assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(), pack.lessons.map((lesson, index) => lessonPreviewWords(pack, lesson).map(word => word.word === 'pak' ? `pak (${word.id.endsWith('verpakking') ? 'verpakking' : 'kleding'})` : word.word).join(' · ') || `Les ${index + 1}`));
     assert.equal(await page.locator('.cp-lesson-list article button').count(), pack.lessons.length);
     assert(!/Leesstap|Bekend:|Nieuw:|Komt terug|Kijken|Kiezen|Bouwen|Tik op Start/.test(await page.locator('.cp-lesson-picker').innerText()));
@@ -71,7 +72,7 @@ try {
   pass('The existing word bank and saved-word review share the new stable meaning IDs');
   await library();
   await page.locator('.cp-package-grid > button').first().click();
-  for (const name of ['Overzicht', 'Woorden', 'Lessen', 'Oefeningen', 'Beeld en audio']) {
+  for (const name of ['Overzicht', 'Woorden', 'Lessen', 'Oefeningen', 'Foto en geluid']) {
     await page.locator('.cp-tabs').getByRole('button', { name, exact: true }).click();
     assert(!/CP00[12]|ALF-CMP|Beeldbinding|assetId|contractVersion|renderer|scope|publicatiestatus|1 oefeningen|1 spellen|zichtbare woorden/i.test(await page.locator('.cp-content').innerText()));
   }
