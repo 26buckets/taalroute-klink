@@ -9,10 +9,16 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-task-audio-20261017.json`.
-Livebron: `1ffddba983f8bbfe78b564bdcea4a7fc2958ddc2`.
-Worker-versie: `2f7132d2-92c8-44cc-906d-ff17c2c16a7b`.
+Actief register: `docs/klink-publication-phase-navigation-20261017.json`.
+Livebron: `0c1087eecb79aefd298ffcaeffd91266646b9a6b`.
+Worker-versie: `e0f8fe5b-ebe3-411f-a368-462d8785e666`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Herstel van de niet-werkende stappenbalk: de bestaande fasen openen hun eerste
+opdracht, ook op mobiel en met toetsenbord. De huidige modelstap kan het woord
+herhalen. Vooruit bladeren telt niet als afronden en verplaatst de opgeslagen
+route niet voorbij onafgerond werk. Bij het einde keert Verder zo nodig terug
+naar de eerste ontbrekende opdracht. Broninhoud en audiobeleid blijven gelijk.
 
 De groeps- en vervolgoefeningen zijn gepubliceerd op Nico's expliciete opdracht,
 vastgelegd in `docs/klink-owner-release-20261017.json` met inhoudshashes. Dit

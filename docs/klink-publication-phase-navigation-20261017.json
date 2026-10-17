@@ -1,0 +1,55 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "0c1087eecb79aefd298ffcaeffd91266646b9a6b",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "e0f8fe5b-ebe3-411f-a368-462d8785e666",
+  "verifiedAt": "2026-10-17T19:50:53.072Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T19:49:49.807Z",
+    "sourceCommit": "0c1087eecb79aefd298ffcaeffd91266646b9a6b",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "38d1b0efa8d3a9c350289cb34d825a621d1dafc6a7c61c00dd6c8fdcc7976143",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page--pnP4zgj.js",
+  "freshClientSha256": "86c5e1f7eb2b231de2d79ed69dee7e071039c05cbd661e012e78fec5eba51f5b",
+  "sourceArchiveSha256": "4f0c094e39ba2e1682dd84da9f64ec13923f9f40adbbd66d4ca19864d6075b8f",
+  "sourceArchiveFormat": "git archive HEAD (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-task-audio-20261017.json",
+  "scope": "Repair non-interactive phase navigation reported by Nico. Preserve curriculum, exercise content, card style and audio policy.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "githubActionsUsed": false,
+  "checks": [
+    "Full local review suite including group and extended practice passed; phase navigation tested separately and added to future review runs.",
+    "TypeScript, targeted lint, publication-proof rejection tests and media-rate tests passed.",
+    "Local and live map lesson: all phases accessible by keyboard and pointer across 1366/768/390/320px; no skipped saved progress or false lesson completion.",
+    "All 2679 live media match the verified branded source bytes; 48 instruction/help assets remain withdrawn.",
+    "Actual live browser word replay decoded after clicking the current model phase; photo loaded, rate 0.85 and pitch retained."
+  ],
+  "limitations": [
+    "No new learner field trial; this is a targeted interface/navigation repair.",
+    "No new images, audio, words or curriculum; the rejected isolated t stays parked."
+  ],
+  "sourceBackup": {
+    "id": "1X2AIpEAmD4yChLetxnks3zx9j5xIFf-Z",
+    "url": "https://drive.google.com/file/d/1X2AIpEAmD4yChLetxnks3zx9j5xIFf-Z/view?usp=drivesdk",
+    "bytes": 24162274,
+    "sha256": "d20c26e56d172989650045c6f1158d0c49f97989b430429072c43253b25168f4",
+    "metadataAndBytesVerified": true
+  }
+}
