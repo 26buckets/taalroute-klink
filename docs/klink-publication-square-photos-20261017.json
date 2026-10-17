@@ -1,0 +1,58 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "ed42ef08be1fc8339678c6e25571e18cefe6300e",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "f3afe532-4c42-4ce7-87e8-43562fb206aa",
+  "verifiedAt": "2026-10-17T20:28:00.140Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T20:26:57.280Z",
+    "sourceCommit": "ed42ef08be1fc8339678c6e25571e18cefe6300e",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-CQdKiboB.js",
+  "freshClientSha256": "2ecb77361fef554f49a7409c16d2db0ebde937765889c18cb02e96206e1b7420",
+  "sourceArchiveSha256": "f79f88a64db80559bb9800c8a72436caf533de2c5b7c05d729639732bbd8d2c6",
+  "sourceArchiveFormat": "git archive HEAD (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-complete-photos-20261017.json",
+  "scope": "Convert only navigation photographs 7, 9, 14, 15 to square 1:1 source images. Preserve small cards, layout, original photographs for recovery, content, exercise images, routes and audio policy.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "githubActionsUsed": false,
+  "imageApproval": "docs/klink-square-photo-cards-approval-20261017.json",
+  "imageReview": "docs/klink-square-photo-review-20261017.json",
+  "checks": [
+    "Full local review suite including phase navigation, grouped and extended practice passed.",
+    "TypeScript, targeted lint, section/content preservation tests, publication-proof and media-rate tests passed.",
+    "Local and live section cards verified at eleven viewport widths, 320–1920px: all 15 sources square, natural ratio, no crop or enlargement, cards at most 200px, no horizontal overflow, 48px Open targets.",
+    "Full generated photographs and detail crops inspected: subjects recognizable, support and perspective plausible, no visible people or hands in the four changed photographs.",
+    "Desktop and dedicated mobile screenshots for 7, 9, 14, 15 visually inspected at actual placement size.",
+    "All 2679 live active media byte-match local verified source. All 48 withdrawn instruction/help recordings remain excluded."
+  ],
+  "limitations": [
+    "The user authorized the square transformation, not a separate item-by-item review of these new variants.",
+    "No new learner trial; no new exercises, words or audio. The rejected isolated t remains parked."
+  ],
+  "sourceBackup": {
+    "id": "1j6z5Yw_lF2gvDFfXqPqbO9mR1NQL-JoK",
+    "url": "https://drive.google.com/file/d/1j6z5Yw_lF2gvDFfXqPqbO9mR1NQL-JoK/view?usp=drivesdk",
+    "bytes": 38346755,
+    "sha256": "54683fc7e22f5258b4ce731dd6eeb072c6f6b57918a7bc8922eecbda5c635303",
+    "metadataAndBytesVerified": true
+  }
+}
