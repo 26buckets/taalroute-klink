@@ -25,6 +25,7 @@ export function buildChecklist(pack: PackageDefinition, lesson: PackageLesson): 
   const words = targetIds(lesson);
   const prepared = preparedIds(lesson).map(id => pack.words.find(word => word.id === id)).filter(Boolean);
   const oneWord = new Set(prepared.map(word => word!.word)).size < 2;
+  const questions = records.filter(item => item.mode === 'sentence-question');
   function check(id: string, title: string, modes: string[], reason: string, options: {
     media?: ('audio' | 'image')[]; partial?: boolean; different?: boolean;
   } = {}): BuildCheck {
@@ -54,7 +55,9 @@ export function buildChecklist(pack: PackageDefinition, lesson: PackageLesson): 
     check('word-production', 'Een woord maken zonder zichtbaar antwoord', ['recall-word', 'word-dictation'], 'Lettertegels of dictee zonder zichtbaar model. Opgevraagde hulp blijft apart geregistreerd; typen is niet verplicht bij de instap.', { media: ['audio'] }),
     check('word-meaning', 'Geschreven woord en betekenis verbinden', ['word-image', 'word-image-match'], pairReason || 'Verschillende voorbereide betekenissen en beelden. Ontbrekende woordbeelden niet door willekeurige foto’s vervangen.', { media: ['image'], different: oneWord }),
     check('speaking', 'Nazeggen en terugluisteren', ['repeat-word'], 'Beschikbaar bij vrij oefenen. Een opname of tik op Klaar is geen uitspraakbeoordeling.', { media: ['audio'] }),
-    check('sentence-listening', 'Een korte zin beluisteren en begrijpen', ['listen-sentence'], 'Luistermodellen zijn aanwezig waar gekoppeld; een afzonderlijke begripsvraag en gecontroleerde antwoordkeuzes ontbreken nog.', { partial: true }),
+    check('sentence-listening', 'Een korte zin beluisteren en begrijpen', questions.length ? ['sentence-question'] : ['listen-sentence'], questions.length
+      ? 'Begripsvragen met vaste keuzes en gesproken hulp. De foto-opdrachten oefenen de genoemde betekenis, nog geen complexere zinsbouw. Extra mondelinge voorbereiding en plaatsing bij Vrij oefenen staan hieronder per vraag; menselijke beoordeling blijft open.'
+      : 'Luistermodellen zijn aanwezig waar gekoppeld; een passende begripsvraag met voorbereide keuzes ontbreekt nog.', { partial: !questions.length }),
     check('sentence-reading', 'Een zin zelfstandig lezen en begrijpen', [], 'Nog bouwen: leesvoorwaarden voor álle woorden, een betekenisvraag en afzonderlijke registratie van luister- of modelsteun.'),
     check('sentence-building', 'Woorden tot een betekenisvolle zin verbinden', [], 'Nog bouwen: voorbereide woordkaarten, een natuurlijk zinsdoel en verdedigbare alternatieve woordvolgordes. Geen verplicht toetsenbord.'),
     check('text-understanding', 'Een korte samenhangende tekst begrijpen', ['listen-situation'], 'Een beluisterde situatie is hoogstens een begin. Zelfstandig lezen, vragen met bewijs in de tekst en foutherstel ontbreken nog.', { partial: true }),
@@ -80,14 +83,18 @@ export function sentenceBridge(pack: PackageDefinition, lesson: PackageLesson) {
   const records = pack.exercises.filter(item => item.lessonId === lesson.id && ['listen-sentence', 'listen-situation'].includes(item.mode));
   const models = klinkContexts.filter(context => records.some(exercise => exercise.contextId === context.id)).map(context => {
     const tokens = unique(context.text.toLocaleLowerCase('nl').match(/\p{L}+(?:['’-]\p{L}+)*/gu) ?? []);
+    const questions = pack.exercises.filter(item => item.lessonId === lesson.id && item.contextId === context.id && item.mode === 'sentence-question');
     return { id: context.id, kind: context.kind, text: context.text, wordIds: context.wordIds.filter(id => ids.includes(id)),
       exerciseIds: records.filter(item => item.contextId === context.id).map(item => item.exerciseId),
+      questions: questions.map(item => ({ id: item.exerciseId, title: item.title, guided: Boolean(lesson.guidedExerciseIds?.includes(item.exerciseId)),
+        preparation: Array.isArray(item.oralPreparation) ? item.oralPreparation as string[] : [], objective: typeof item.objective === 'string' ? item.objective : '' })),
       wordsOutsideStep: tokens.filter(word => !spellings.has(word)),
       independentReading: context.independentReading, humanReview: context.humanReview };
   });
   return { packageId: pack.id, lessonId: lesson.id, wordIds: ids, models, stages: bridgeStages,
-    nextAction: models.length
-      ? 'Werk bij het gekoppelde luistermodel eerst één begrijpelijke betekenisvraag uit. Bereid de overige woorden voor voordat dit zelfstandig lezen wordt.'
+    nextAction: models.some(model => model.questions.length)
+      ? 'De gekoppelde begripsvragen oefenen luisteren. Beoordeel de vragen en opnamen, en bereid waar vermeld extra betekenissen mondeling voor. Zelfstandig lezen volgt pas na afzonderlijke leesvoorbereiding.'
+      : models.length ? 'Werk bij het gekoppelde luistermodel eerst één begrijpelijke betekenisvraag uit. Bereid de overige woorden voor voordat dit zelfstandig lezen wordt.'
       : 'Kies bij deze woordbetekenissen eerst één natuurlijke korte zin. Leg alle extra woorden, de volledige zinsopname en een concrete betekenisvraag vast.',
     readingNote: 'De opgesomde extra woorden ontbreken als geschreven vorm in deze leesstap. Dit is geen oordeel over beheersing: ook de betekenis, woordvorm, klanken en zinsbouw van de overige woorden moeten passen. Een luistermodel is nog geen zelfstandig leesmateriaal.' };
 }

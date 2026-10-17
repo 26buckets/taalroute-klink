@@ -49,7 +49,7 @@ test('Eight sentences and four situations reuse exact authored Taalroute text an
   }
   for (const pack of packs) for (const lesson of pack.lessons) {
     const route = exercisesForLesson(pack, lesson);
-    for (const exercise of route.filter(item => item.contextId)) {
+    for (const exercise of route.filter(item => ['listen-sentence', 'listen-situation'].includes(item.mode))) {
       assert.equal(exercise.phase, 'use'); assert.equal(exercise.assessment, 'participation');
       assert.equal(exercise.requiresAudio, true); assert.equal(exercise.independentReading, false);
       const index = route.indexOf(exercise);

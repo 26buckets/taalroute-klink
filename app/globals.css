@@ -1027,6 +1027,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-choice-grid > button, .cp-board-grid > button, .cp-memory-grid > button { position: relative; min-height: 126px; overflow: hidden; padding: 9px; background: var(--paper); border: 1px solid var(--line-strong); border-radius: var(--radius); }
 .cp-choice-grid > button:hover, .cp-board-grid > button:hover, .cp-memory-grid > button:hover { border-color: var(--primary); }
 .cp-choice-grid > button.selected, .cp-board-grid > button.marked, .cp-memory-grid > button.open { background: var(--primary-soft); border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary); }
+.cp-choice-grid > button[data-speaking="true"] { border-color: var(--primary); box-shadow: inset 0 0 0 2px var(--primary); opacity: 1; }
 .cp-choice-grid img, .cp-board-grid img, .cp-memory-grid img { width: 100%; height: 110px; object-fit: contain; border-radius: calc(var(--radius) - 1px); }
 .cp-choice-grid strong, .cp-board-grid strong, .cp-memory-grid strong { font-size: 21px; font-weight: 500; }
 .cp-board-grid > button > svg { position: absolute; top: 8px; right: 8px; padding: 4px; color: #fff; background: var(--green); border-radius: 50%; }

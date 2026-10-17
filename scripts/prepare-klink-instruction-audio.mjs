@@ -8,6 +8,8 @@ assert(keyFile, 'Pass the existing speech credential file, never the secret itse
 const key = readFileSync(keyFile, 'utf8').match(/^ELEVENLABS_API_KEY=(.+)$/m)?.[1].trim().replace(/^["']|["']$/g, '');
 assert(key, 'Speech authentication unavailable.');
 const plan = JSON.parse(readFileSync('data/klink-instructions.json'));
+// Keep this historical batch reproducible; comprehension has its own bounded producer.
+plan.items = plan.items.filter(item => !item.modes.includes('sentence-question'));
 assert.notEqual(plan.voiceId, plan.targetVoiceId);
 assert.equal(plan.items.length, 17);
 const characters = plan.items.reduce((count, item) => count + item.text.length, 0);

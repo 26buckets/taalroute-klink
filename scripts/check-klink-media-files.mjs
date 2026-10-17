@@ -5,7 +5,8 @@ import { klinkContexts } from '../lib/klink-context.ts';
 const media = JSON.parse(readFileSync('data/klink-media.json'));
 const words = JSON.parse(readFileSync('data/klink-curriculum.json')).words;
 const instructions = JSON.parse(readFileSync('data/klink-instructions.json'));
-const result = { date: new Date().toISOString(), audio: 0, images: 0, contextAudio: 0, instructionAudio: 0, missingAudio: [], missingImages: [] };
+const comprehension = JSON.parse(readFileSync('data/klink-comprehension-audio.json'));
+const result = { date: new Date().toISOString(), audio: 0, images: 0, contextAudio: 0, instructionAudio: 0, comprehensionAudio: 0, missingAudio: [], missingImages: [] };
 for (const word of words) {
   const item = media[word.id];
   assert(item, `Missing media record ${word.id}`);
@@ -35,14 +36,15 @@ for (const item of klinkContexts) {
   assert(!/suno|openai|elevenlabs|generator|text.to.speech/i.test(JSON.stringify(tags)));
   result.contextAudio++;
 }
-for (const item of instructions.items) if (item.src) {
+const extraComprehensionAudio = comprehension.items.filter(item => !instructions.items.some(instruction => instruction.src === item.src));
+for (const item of [...instructions.items, ...extraComprehensionAudio]) if (item.src) {
   assert(existsSync(`public${item.src}`));
   const tags = JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format_tags', '-of', 'json', `public${item.src}`])).format.tags;
   assert.equal(tags.artist, 'Taalroute'); assert.equal(tags.album, 'Klink - Taalroute');
   assert.equal(tags.album_artist, 'Taalroute'); assert.equal(tags.publisher, 'Taalroute');
   assert(!/suno|openai|elevenlabs|generator|text.to.speech/i.test(JSON.stringify(tags)));
-  result.instructionAudio++;
+  if (instructions.items.includes(item)) result.instructionAudio++; else result.comprehensionAudio++;
 }
 mkdirSync('outputs/media-connection', { recursive: true });
 writeFileSync('outputs/media-connection/media-check.json', JSON.stringify(result, null, 2));
-console.log(JSON.stringify({ audio: result.audio, images: result.images, contextAudio: result.contextAudio, instructionAudio: result.instructionAudio, missingAudio: result.missingAudio.length, missingImages: result.missingImages.length }));
+console.log(JSON.stringify({ audio: result.audio, images: result.images, contextAudio: result.contextAudio, instructionAudio: result.instructionAudio, comprehensionAudio: result.comprehensionAudio, missingAudio: result.missingAudio.length, missingImages: result.missingImages.length }));

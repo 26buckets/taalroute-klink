@@ -3,6 +3,7 @@ import bindings from '../data/klink-media.json' with { type: 'json' };
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
 import type { LessonPhase, PackageDefinition, PackageExercise, PackageLesson, PackageWord } from './package-content';
 import { klinkContexts } from './klink-context.ts';
+import { sentenceQuestionFor, questionFields } from './sentence-comprehension.ts';
 
 type Word = typeof curriculum.words[number];
 type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds?: string[] };
@@ -125,14 +126,23 @@ export function exercisesForStep(step: Step) {
       preparation: item.preparation, independentReading: false, humanReview: item.humanReview,
       objective: 'Een bekend woord horen in een betekenisvolle zin of situatie; luisteren met tekststeun, niet zelfstandig lezen.',
     });
-    // At most one sentence and one situation; all further models remain in free practice.
-    if (!phases.use.some(id => exercises.find(record => record.exerciseId === id)?.mode === `listen-${item.kind}`)) phases.use.push(contextId);
+    const question = item.kind === 'sentence' ? sentenceQuestionFor(item.id, selected.map(word => word.id)) : undefined;
+    let questionId: string | undefined;
+    if (question) questionId = make(word, '002', 'sentence-question', question.question, 'ZI-01', 'use', {
+      ...questionFields(question), exerciseId: `${step.id}:${question.id}`, contextId: item.id,
+      prompt: { text: question.question, audio: { src: item.audio, audioId: item.id } },
+      replacesExerciseId: contextId,
+    });
+    // Oral contrasts need teacher preparation; they stay optional, never silently become known words.
+    if (questionId && !question!.oralPreparation.length) phases.use.push(questionId);
+    else if (!phases.use.some(id => exercises.find(record => record.exerciseId === id)?.mode === `listen-${item.kind}`)) phases.use.push(contextId);
   }
   const guided = Object.values(phases).flat();
   // Keep every introduction and recall; optional variation stays in free practice if the route is long.
-  for (const mode of ['missing-grapheme', 'heard-image', 'word-image-match', 'word-image', 'listen-situation', 'listen-sentence']) {
+  for (const mode of ['missing-grapheme', 'heard-image', 'word-image-match', 'word-image', 'listen-situation', 'listen-sentence', 'sentence-question']) {
     while (guided.length > 16) {
-      const index = guided.findIndex(id => exercises.find(record => record.exerciseId === id)?.mode === mode);
+      const matches = (id: string) => exercises.find(record => record.exerciseId === id)?.mode === mode;
+      const index = mode === 'sentence-question' ? guided.findLastIndex(matches) : guided.findIndex(matches);
       if (index < 0) break;
       guided.splice(index, 1);
     }
