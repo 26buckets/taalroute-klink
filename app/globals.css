@@ -1042,10 +1042,30 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-match-board button small { color: var(--muted); font-size: 8px; }
 .cp-match-board img { width: 100%; height: 94px; object-fit: cover; border-radius: calc(var(--radius) - 1px); }
 .cp-build-slots, .cp-tile-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; }
-.cp-build-slots span, .cp-tile-bank button { min-width: 58px; min-height: 62px; display: grid; place-items: center; padding: 9px; border-radius: var(--radius); font-size: 28px; font-weight: 500; }
-.cp-build-slots span { background: var(--canvas); border: 2px dashed var(--line-strong); }
+.cp-build-slots span, .cp-build-slots button, .cp-tile-bank button { min-width: 58px; min-height: 62px; display: grid; place-items: center; padding: 9px; border-radius: var(--radius); font-size: 28px; font-weight: 500; }
+.cp-build-slots span, .cp-build-slots button { background: var(--canvas); border: 2px dashed var(--line-strong); }
+.cp-build-slots button[aria-pressed="true"] { border-color: var(--primary); background: var(--primary-soft); }
 .cp-tile-bank button { background: var(--paper); border: 1px solid var(--primary); }
 .cp-tile-bank button:disabled { opacity: .25; }
+.cp-activity-section { margin-block: 24px; }
+.cp-activity-section h2 { font-size: 21px; font-weight: 500; margin-bottom: 12px; }
+.cp-activity-grid, .cp-worksheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cp-activity-button { display: flex; align-items: center; gap: 12px; min-height: 70px; padding: 14px; text-align: left; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); font: inherit; font-size: 20px; font-weight: 400; }
+.cp-activity-button svg { width: 26px; height: 26px; flex-shrink: 0; }
+.cp-activity-button svg:last-child { margin-left: auto; width: 20px; }
+.cp-activity-button:hover { border-color: var(--primary); background: var(--primary-soft); }
+.cp-worksheet-row { min-width: 0; border: 1px solid var(--line-strong); border-radius: var(--radius); padding: 12px; }
+.cp-worksheet-row .cp-task-card { border: 0; padding: 0; }
+.cp-worksheet-row > output { display: flex; min-height: 32px; gap: 8px; align-items: center; }
+.cp-word-worksheet > .primary-button { margin-top: 18px; }
+.cp-pace-controls { display: flex; gap: 8px; flex-wrap: wrap; padding: 0; margin: 0; border: 0; }
+.cp-pace-controls button[aria-pressed="true"] { background: var(--primary-soft); border-color: var(--primary); }
+.cp-paper-model { font-size: 32px; font-weight: 500; }
+@media (max-width: 700px) {
+  .cp-activity-grid, .cp-worksheet-grid { grid-template-columns: minmax(0, 1fr); }
+  .cp-activity-button { font-size: 18px; }
+  .cp-worksheet-row .cp-build-slots button, .cp-worksheet-row .cp-tile-bank button { min-width: 48px; min-height: 52px; }
+}
 .cp-task-actions { display: flex; justify-content: space-between; gap: 10px; }
 .cp-text-entry, .cp-form-fields label { display: grid; gap: 7px; color: var(--muted); font-size: 11px; font-weight: 500; }
 .cp-text-entry input, .cp-text-entry textarea, .cp-form-fields input, .cp-form-fields select { width: 100%; min-height: 54px; padding: 11px 13px; color: var(--ink); background: var(--paper); border: 1px solid var(--line-strong); border-radius: var(--radius); font-size: 18px; }
@@ -2244,8 +2264,8 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   padding: 5px;
   font-size: 14px;
 }
-.learner-app .cp-word-copy { padding-right: 84px; }
-.learner-app .cp-save-button {
+.cp-player .cp-word-copy { padding-right: 84px; }
+.cp-player .cp-save-button {
   width: 72px;
   height: 64px;
   border-radius: var(--radius);
@@ -2254,7 +2274,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 }
 .learner-app .cp-panel-count { display: block; flex-shrink: 0; }
 .learner-app .cp-word-grid article:has(.cp-audio-button) .cp-word-copy { padding-right: 104px; min-height: 74px; }
-.learner-app .cp-package-word-listen {
+.cp-player .cp-package-word-listen {
   display: block;
   width: 100%;
   padding: 0;
@@ -2264,9 +2284,9 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   border-radius: var(--radius);
   text-align: left;
 }
-.learner-app .cp-package-word-listen .cp-word-copy { padding-bottom: 4px; }
-.learner-app .cp-package-word-listen .cp-word-copy > span { font-size: 16px; }
-.learner-app .cp-listen-label {
+.cp-player .cp-package-word-listen .cp-word-copy { padding-bottom: 4px; }
+.cp-player .cp-package-word-listen .cp-word-copy > span { font-size: 16px; }
+.cp-player .cp-listen-label {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -2275,7 +2295,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
   color: var(--primary);
   font-size: 16px;
 }
-.learner-app .cp-listen-label svg { width: 20px; height: 20px; }
+.cp-player .cp-listen-label svg { width: 20px; height: 20px; }
 .learner-app .cp-lesson-player > .text-back { min-width: 48px; }
 .learner-app .cp-task-prompt { grid-template-columns: auto minmax(0, 1fr); }
 .learner-app .cp-task-prompt > button {

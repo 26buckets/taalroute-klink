@@ -1,8 +1,9 @@
 import { dirname } from 'node:path';
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { klinkContexts } from '../lib/klink-context.ts';
+import { isWithdrawnAudio } from '../lib/audio-policy.ts';
 const base = 'https://klink.taalroute.nl';
 const output = process.argv[2] ?? 'outputs/sections-20261017/live-verification.json';
 const read = path => JSON.parse(readFileSync(path));
@@ -24,8 +25,14 @@ const paths = [...new Set([
   ...content.items.flatMap(item => item.blocks.map(block => block.audio.src)),
   ...klinkContexts.flatMap(item => [item.audio, item.image]),
   ...instructions.items.map(item => item.src), ...comprehension.items.map(item => item.src),
-].filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+].filter(path => path && !isWithdrawnAudio(path)))].sort((a,b)=>a.localeCompare(b));
 const results = [], errors = []; let next = 0;
+const withdrawn = readdirSync('public', { recursive: true }).map(path => `/${path}`).filter(path => isWithdrawnAudio(path) && statSync(`public${path}`).isFile());
+assert(withdrawn.length > 16);
+for (const path of new Set(withdrawn)) {
+  const response = await fetch(base + path, { cache: 'no-store' });
+  assert(!/audio|octet-stream/.test(response.headers.get('content-type') || ''), `Withdrawn recording remains public: ${path}`);
+}
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 await Promise.all(Array.from({ length: 8 }, async () => {
   while (next < paths.length) {
@@ -49,6 +56,7 @@ assert.equal(appPaths.length, 1);
 const client = Buffer.from(await (await fetch(base + appPaths[0])).arrayBuffer());
 assert.equal(sha(client), sha(readFileSync('dist/client' + appPaths[0])));
 const record = { checkedAt: new Date().toISOString(), release, wordMeanings: words.length,
+  withdrawnInstructionFiles: withdrawn.length,
   connectedItems: content.items.length, mediaChecked: results.length, expectedMedia: paths.length,
   audioMetadataPreserved: 'Fetched bytes equal the locally ffprobe-verified branded files.',
   freshClientPath: appPaths[0], freshClientSha256: sha(client), errors,

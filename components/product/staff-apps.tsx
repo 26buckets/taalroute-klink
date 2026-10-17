@@ -2,6 +2,7 @@
 
 import { PackagePlayer } from '@/components/product/package-experience';
 import { LessonCoverage } from '@/components/product/lesson-coverage';
+import { ContentCoverage, ContentAudioRegister } from '@/components/product/content-audio-register';
 import { NavButton, StaffShell, StaffTopbar } from '@/components/product/shared';
 import {
   exerciseOpportunities,
@@ -60,8 +61,8 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
     </>}>
       {view === 'overview' && <TeacherOverview onOpen={openPackage} onActivities={() => setView('activities')} />}
       {view === 'packages' && <TeacherPackages onOpen={openPackage} />}
-      {view === 'activities' && <><div className="staff-content cp-teacher-content"><LessonCoverage onOpen={openPackage} /></div><details className="cp-teacher-extra"><summary>Meer oefenvormen en mogelijkheden</summary><TeacherActivities /></details></>}
-      {view === 'media' && <TeacherMedia />}
+      {view === 'activities' && <><div className="staff-content cp-teacher-content"><details className="cp-coverage-overview"><summary>Volledige inhoudslijn: van ontwerp naar app</summary><ContentCoverage /></details><LessonCoverage onOpen={openPackage} /></div><details className="cp-teacher-extra"><summary>Meer oefenvormen en mogelijkheden</summary><TeacherActivities /></details></>}
+      {view === 'media' && <><div className="staff-content cp-teacher-content"><ContentAudioRegister /></div><TeacherMedia /></>}
     </StaffShell>
   );
 }

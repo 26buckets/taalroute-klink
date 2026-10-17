@@ -62,6 +62,8 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
 }
 
 export function exerciseHelp(exercise: PackageExercise): string {
+  if (exercise.buildKind === 'sentence') return 'Tik op de woorden. Met Eén terug verander je de volgorde.';
+  if (exercise.componentId === 'KLINK-EXTENDED') return exercise.mode === 'sound-compare' ? 'Luister naar beide woorden. Kies daarna.' : 'Neem je tijd. Je mag terugkijken of hulp vragen.';
   if (exercise.mode === 'sentence-question') return 'Luister opnieuw als je twijfelt. Kies één antwoord.';
   if (exercise.mode === 'missing-grapheme') return 'Luister. Kies wat ontbreekt.';
   if (exercise.componentId === 'ALF-CMP-004') return 'Kies een woord. Kies daarna de foto.';

@@ -56,6 +56,7 @@ try {
     if(width!==768)await page.screenshot({path:`outputs/sections-20261017/klink-${width}.png`});
   }
   await page.setViewportSize({width:1366,height:950});await cards.first().click();
+  await page.locator('.cp-tabs').getByRole('button',{name:'Lessen',exact:true}).click();
   assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(),['mat','tas','map','man · pan','jas']);
   const lesson=packs[0].lessons[2],exerciseId=lesson.guidedExerciseIds[1];
   await page.evaluate(position=>localStorage.setItem('klink.taalroute.route.v1',JSON.stringify({position,completed:[]})),{packageId:'groep-2',lessonId:lesson.id,exerciseId});

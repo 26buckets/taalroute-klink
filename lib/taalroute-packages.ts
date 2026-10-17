@@ -6,6 +6,7 @@ import type { LessonPhase, PackageDefinition, PackageExercise, PackageLesson, Pa
 import { klinkContexts } from './klink-context.ts';
 import { sentenceQuestionFor, questionFields } from './sentence-comprehension.ts';
 import { connectedExercisesForStep, contentById } from './connected-content.ts';
+import { resolveRegisteredAudio } from './audio-register.ts';
 
 type Word = typeof curriculum.words[number];
 type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds?: string[] };
@@ -16,7 +17,10 @@ const wordsFor = (ids: string[]) => ids.map(id => byId.get(id)!).filter(Boolean)
 const imageFor = (word: Word) => media[word.id]?.image ? { src: media[word.id].image, altText: word.meaning } : undefined;
 // A supporting scene cannot test recognition of an article, pronoun or abstract relation.
 const testableImageFor = (word: Word) => media[word.id]?.imageUse === 'context' ? undefined : imageFor(word);
-const audioFor = (word: Word) => media[word.id]?.audio ? { src: media[word.id].audio, audioId: word.id } : undefined;
+const audioFor = (word: Word) => {
+  const src = resolveRegisteredAudio(word.id, word.word, 'target', media[word.id]?.audio);
+  return src ? { src, audioId: word.id } : undefined;
+};
 const tokensFor = (word: Word) => {
   const parts = word.reading.units.map(unit => unit.text);
   return parts.join('') === word.word ? parts : Array.from(new Intl.Segmenter('nl', { granularity: 'grapheme' }).segment(word.word), item => item.segment);
@@ -174,7 +178,7 @@ function gapForWord(word: Word, step: Step, prepared: Word[]) {
 }
 
 function toWord(word: Word): PackageWord {
-  return { id: word.id, word: word.word, meaning: word.meaning, segmentation: tokensFor(word).join('|'), focus: word.reading.requirements.join(' · '), group: word.role, ...media[word.id], audioStatus: media[word.id]?.audio ? 'review-open' : 'missing' };
+  return { id: word.id, word: word.word, meaning: word.meaning, segmentation: tokensFor(word).join('|'), focus: word.reading.requirements.join(' · '), group: word.role, ...media[word.id], audio: audioFor(word)?.src, audioStatus: audioFor(word) ? 'review-open' : 'missing' };
 }
 const stepGroup = (step: typeof curriculum.steps[number]) => step.group ?? Math.max(...wordsFor(step.returning).map(word => word.reading.coreStep));
 function homeGroup(word: Word) {

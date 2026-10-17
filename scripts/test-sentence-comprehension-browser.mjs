@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import audioPlan from '../data/klink-comprehension-audio.json' with { type: 'json' };
 import { klinkContexts } from '../lib/klink-context.ts';
+import { groupExercises, groupSessionKey } from '../lib/group-practice.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
@@ -32,6 +33,7 @@ const man = questions.find(item => item.questionId === 'begrip-man');
 async function openQuestion(exercise, targetPage = page) {
   const pack = packs.find(pack => pack.exercises.includes(exercise));
   const lesson = pack.lessons.find(item => item.id === exercise.lessonId);
+  let expectedId = exercise.exerciseId;
   await targetPage.goto(`${base}/#learner/home`);
   await targetPage.reload();
   if (lesson.guidedExerciseIds.includes(exercise.exerciseId)) {
@@ -42,16 +44,13 @@ async function openQuestion(exercise, targetPage = page) {
     await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
     await targetPage.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
     await targetPage.getByRole('button', { name: 'Oefeningen', exact: true }).click();
-    const picker = targetPage.locator('.cp-family-picker select');
-    if (await picker.isVisible()) await picker.selectOption({ label: 'Kies' });
-    else await targetPage.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Kies' }).click();
-    await targetPage.getByLabel('Wat wil je oefenen?').selectOption(exercise.exerciseId);
-    const menu = targetPage.getByLabel('Wat wil je oefenen?');
-    assert.match(await menu.locator('option:checked').innerText(), /^Luistervraag \d+: /);
-    assert(!(await menu.locator('option').allTextContents()).join(' ').includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The exercise menu must not reveal the sentence answer');
-    await targetPage.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
+    assert(!(await targetPage.locator('[data-group-practice]').innerText()).includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The activity hub must not reveal the sentence answer');
+    const grouped = groupExercises(pack, 'understand').find(item => item.questionId === exercise.questionId);
+    expectedId = grouped.exerciseId;
+    await targetPage.evaluate(({ key, id }) => localStorage.setItem(key, JSON.stringify({ version: 1, exerciseId: id, done: false })), { key: groupSessionKey(pack.id, 'understand'), id: expectedId });
+    await targetPage.locator('[data-activity="understand"]').click();
   }
-  assert.equal(await targetPage.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
+  assert.equal(await targetPage.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), expectedId);
 }
 const ready = (p = page) => p.waitForFunction(() => [...document.querySelectorAll('.cp-choice-grid button')].every(button => !button.disabled));
 try {
@@ -69,7 +68,7 @@ try {
     await choices.nth(1 - correct).click(); await ready();
     assert((await page.locator('.cp-exercise-feedback').innerText()).includes(question.feedback));
     assert.deepEqual(await choices.allTextContents(), before);
-    assert.equal(await page.evaluate(() => window.__plays.at(-1)), question.feedbackAudio.src);
+    assert(!(await page.evaluate(() => window.__plays)).includes(question.feedbackAudio.src));
     await choices.nth(correct).click();
     assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Goed'));
     const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));

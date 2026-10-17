@@ -19,6 +19,7 @@ try {
     assert(!/\d+ lessen|\d+ woorden/.test(await card.innerText()), 'Cards show the title and one action, not inventory counts');
     await card.click();
     assert.equal(await page.locator('.cp-player-bar strong').innerText(), learnerListName(packs[index]));
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
     assert.equal(await page.locator('.cp-start-lesson').count(), packs[index].lessons.length);
     lessons += packs[index].lessons.length;
     assert(!internal.test(await page.locator('.learner-main').innerText()));

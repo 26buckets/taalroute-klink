@@ -28,24 +28,22 @@ async function heard(src) {
 try {
   await page.goto(`${base}/#learner/home`);
   await page.locator('.cp-package-grid button').first().click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.getByRole('button', { name: 'Alles oefenen', exact: true }).click();
   const listen = await current('listen');
-  await heard(listen.instructionAudio.src);
   await heard(listen.prompt.audio.src);
   await page.waitForFunction(() => !document.querySelector('.cp-choice-grid button')?.disabled);
-  checks.push('Existing instruction and word files actually play in mixed listening');
+  checks.push('The word file plays directly in mixed listening, without a spoken instruction');
   await page.evaluate(() => { window.__started = []; });
   await page.getByRole('button', { name: 'Lees en kies', exact: true }).click();
   const read = await current('read');
-  await heard(read.instructionAudio.src);
   await page.waitForFunction(() => !document.querySelector('.cp-choice-grid button')?.disabled);
   assert.equal(await page.evaluate(src => window.__started.some(path => path.endsWith(src)), read.prompt.audio.src), false);
   await page.locator('.cp-example-listen').click();
   await heard(read.prompt.audio.src);
-  checks.push('Reading plays the instruction only; target recording plays on explicit help');
+  checks.push('Reading stays silent until explicit word-audio help');
   await page.getByRole('button', { name: 'Koppel', exact: true }).click();
   const match = await current('match');
-  await heard(match.instructionAudio.src);
   await page.waitForFunction(() => !document.querySelector('.cp-match-board button')?.disabled);
   await page.locator('.cp-match-board > div').first().locator('button').first().click();
   await heard(match.sources[0].audio.src);
@@ -59,10 +57,9 @@ try {
   }
   await page.getByRole('button', { name: 'Maak het woord', exact: true }).click();
   const build = await current('build');
-  await heard(build.instructionAudio.src);
   await heard(build.prompt.audio.src);
   await page.waitForFunction(() => !document.querySelector('.cp-tile-bank button')?.disabled);
-  checks.push('Existing instruction and word recordings unlock mixed word building');
+  checks.push('Existing word recordings unlock mixed word building without spoken instructions');
   assert.deepEqual(errors, []);
 } finally {
   mkdirSync('outputs/mixed-practice-20261017', { recursive: true });

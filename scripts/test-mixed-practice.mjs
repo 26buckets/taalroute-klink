@@ -93,8 +93,9 @@ test('Cross-section review never pulls in an unprepared future section automatic
   assert(mixedReviewPack(packs, [], [saved, 'unknown']).words.every(word => word.id === saved));
 });
 
-test('New combinations are not silently marked as approved for publication', () => {
-  assert.equal(release.publicationApproved, false);
+test('Owner publication authorization does not pretend independent review happened', () => {
+  assert.equal(release.publicationApproved, true);
+  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-20261017.json');
   assert.equal(release.combinationReview, 'open');
   assert.equal(release.existingMediaChanged, false);
 });

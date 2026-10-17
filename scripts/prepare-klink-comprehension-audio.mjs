@@ -4,16 +4,25 @@ import { dirname } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
-import plan from '../data/klink-comprehension-audio.json' with { type: 'json' };
+import comprehensionPlan from '../data/klink-comprehension-audio.json' with { type: 'json' };
+import { groupInstructionNeeds } from '../lib/group-practice.ts';
+import { extendedInstructionNeeds } from '../lib/extended-practice.ts';
 import { addWaveBrandTags } from './complete-klink-wav-metadata.mjs';
+
+const groupBatch = process.argv.includes('--group');
+const extendedBatch = process.argv.includes('--extended');
+assert(!(groupBatch && extendedBatch), 'Choose one batch.');
+const plan = groupBatch || extendedBatch ? { instructionVoiceId: comprehensionPlan.instructionVoiceId, targetVoiceId: comprehensionPlan.targetVoiceId,
+  authorization: extendedBatch ? 'Nico, 17 oktober 2026: Ja, maak die zeven ook. Instructies met Roland in ElevenLabs.' : 'Nico, 17 oktober 2026: de negen nieuwe instructieopnamen maken in ElevenLabs.',
+  humanReview: 'open', items: (extendedBatch ? extendedInstructionNeeds : groupInstructionNeeds).map(({ id, text }) => ({ id, text, role: 'instruction', src: `/package-audio/instructions/${id}.wav` })) } : comprehensionPlan;
 
 assert(process.argv[2], 'Pass the existing speech credential file, not a secret value.');
 const key = readFileSync(process.argv[2], 'utf8').match(/^ELEVENLABS_API_KEY=(.+)$/m)?.[1].trim().replace(/^["']|["']$/g, '');
 assert(key, 'Speech credential unavailable.');
 assert.notEqual(plan.instructionVoiceId, plan.targetVoiceId);
-assert.equal(plan.items.length, 8);
+assert.equal(plan.items.length, extendedBatch ? 7 : groupBatch ? 9 : 8);
 const characters = plan.items.reduce((n, item) => n + item.text.length, 0);
-assert(characters < 500);
+assert(characters < (groupBatch || extendedBatch ? 700 : 500));
 const headers = { 'xi-api-key': key, 'Content-Type': 'application/json' };
 const get = async path => {
   const response = await fetch(`https://api.elevenlabs.io/v1/${path}`, { headers, signal: AbortSignal.timeout(20000) });
@@ -22,7 +31,7 @@ const get = async path => {
 for (const voice of [plan.instructionVoiceId, plan.targetVoiceId]) assert.equal((await get(`voices/${voice}`)).voice_id, voice);
 const subscription = await get('user/subscription');
 assert(subscription.character_limit - subscription.character_count >= characters * 4, 'Not enough included speech credits.');
-const out = 'outputs/sentence-comprehension-20261017';
+const out = extendedBatch ? 'outputs/extended-instruction-audio-20261017' : groupBatch ? 'outputs/group-instruction-audio-20261017' : 'outputs/sentence-comprehension-20261017';
 mkdirSync(`${out}/audio-originals`, { recursive: true });
 const manifest = { ...plan, characters, model: 'eleven_multilingual_v2', settings: { stability: 0.6, similarity_boost: 0.75, speed: 0.95 }, published: false };
 if (existsSync(`${out}/audio-plan.json`)) assert.deepEqual(JSON.parse(readFileSync(`${out}/audio-plan.json`)), manifest);

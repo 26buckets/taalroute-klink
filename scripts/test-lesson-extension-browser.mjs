@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { groupExercises } from '../lib/group-practice.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 import { answerActivity } from './browser-route-helpers.mjs';
@@ -25,6 +26,7 @@ async function openLesson(pack, lesson) {
   await page.reload();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.locator('.cp-start-lesson').nth(pack.lessons.indexOf(lesson)).click();
 }
 async function seedAt(pack, lesson, exercise) {
@@ -134,7 +136,7 @@ try {
   assert((await checklist.innerText()).includes('Bewust anders'));
   assert((await checklist.locator('[data-check-id="sentence-reading"]').innerText()).includes('Ontbreekt'));
   await page.locator('[data-exercise-inventory] summary').click();
-  assert((await page.locator('.cp-lesson-coverage').innerText()).includes('Bewust niet nodig'));
+  assert((await page.getByRole('region', { name: 'De route per leesstap' }).innerText()).includes('Bewust niet nodig'));
   await page.locator('[data-exercise-inventory] summary').click();
   await page.locator('.cp-coverage-filters select').first().selectOption('groep-1');
   await page.locator('.cp-coverage-filters select').nth(1).selectOption('klink-leesstap-04');
@@ -155,14 +157,13 @@ try {
   assert.equal(await page.locator('[data-build-checklist], [data-sentence-bridge]').count(), 0);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
-  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: 'Typ' }).click();
-  await page.getByLabel('Wat wil je oefenen?').selectOption('word-dictation');
+  await page.locator('[data-activity="dictation"]').click();
   assert.equal(await page.locator('.cp-example-listen').count(), 0);
   assert(await page.locator('.cp-text-entry input').isDisabled());
   const listen = page.getByRole('button', { name: 'Luister naar het woord', exact: true });
   await listen.focus(); await page.keyboard.press('Enter');
   const freeId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
-  const freeDictation = packs[0].exercises.find(item => item.exerciseId === freeId);
+  const freeDictation = groupExercises(packs[0], 'dictation').find(item => item.exerciseId === freeId);
   await page.locator('.cp-text-entry input').fill(freeDictation.fields[0].acceptedAnswers[0]);
   await page.locator('.cp-text-entry input').press('Enter');
   assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('right')));
@@ -176,6 +177,7 @@ try {
   noStorage.on('pageerror', error => errors.push(error.message));
   await noStorage.goto(`${base}/#learner/home`);
   await noStorage.getByRole('button', { name: 'Begin hier', exact: true }).click();
+  await noStorage.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
   await noStorage.locator('.cp-start-lesson').first().click();
   await noStorage.locator('.cp-model-content').waitFor();
   assert((await noStorage.locator('.toast-message').innerText()).includes('Oefenen kan doorgaan'));

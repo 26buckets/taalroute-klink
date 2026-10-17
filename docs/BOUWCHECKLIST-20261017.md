@@ -1,5 +1,42 @@
 # Klink — vaste bouwchecklist en vervolglijn
 
+## Nieuwste implementatiestand: groepsbibliotheek
+
+Zie `KLINK-GROEPSOEFENINGEN-20261017.md`. De uitbreiding is nu gebouwd: maximaal 31 eigen oefenkeuzes per bestaande woordgroep, met slepen/tikken, twee meerwoordenwerkbladen, bingo, zinnen zoeken/dictee/nazeggen en optionele temposteun. Veertien bredere hoofdonderwerpen staan in de docentkaart met werkelijke dekking en hiaten. Negen nieuwe instructieopnamen hebben een vaste ID; ze zijn nog niet geproduceerd. Geen publicatie of volledige methodepariteit. Onderstaande inventaris-/tussenstanden blijven historische onderbouwing; de actuele gegenereerde vergelijking en dit nieuwe verslag hebben voorrang voor de lokale bouwstatus.
+
+## Concrete uitbreidingsvolgorde: hele woordgroepen
+
+De actuele uitwerking staat in `KLINK-OEFENPAKKET-EN-VERGELIJKING-20261017.md` en `outputs/diglin-comparison-20261017/comparison.json`: 38 functies, 15 eigen onderdelen en expliciete lokale/live-afbakening. Prioriteit: gezamenlijk woordenoverzicht; woordbouw met slepen én aantikken als reeks én werkblad; woord-/beeldbingo; zoek de zin uit bestaande inhoud; overige vormen. Losse t blijft geparkeerd. Na opnieuw aanmelden zijn alle 16 ABC-menu's en 12 hoofddomeinen geïnventariseerd: lijst 1–13 elk 24 menukeuzen, lijst 14/15/16 respectievelijk 21/19/18. Alle 370 ABC-keuzen hebben een eigen functievergelijking. Dit is volledige menudekking, geen volledige interactie-, media- of inhoudscontrole en geen gelijkwaardigheidsclaim.
+
+## Aanvulling 17 oktober: bredere inhoud en audio als aparte werkvoorraad
+
+Nico heeft inhoud en aansluiting voorrang gegeven; nieuwe audio mag later. Dit is geen opdracht om scripts meteen te genereren of audioafhankelijke oefeningen zonder stimulus als voltooid te registreren.
+
+Teruggevonden en gelezen op Drive:
+
+- Analyse Diglin+ en advies voor Taalroute Woordstap (3 september): `1c72oaNC3C5DuCfZGeC8303FI0BPFt0Yqpeddt8kNT8A`. De twaalf categorieën en historische aantallen beschrijven de referentieomgeving van die inspectie, geen huidige Klink-dekking.
+- Vaste productiespecificatie CP001–CP016: `1LVle7WSl3FwXJpk1kREnruTKAM6fayyykzUoT_-avic`. Elf woordvarianten, aanvullende klanktaken, contextzinnen, microteksten, dialogen, schrijven, formulieren en spelconfiguraties waren al voorzien. Een voorschrift is niet hetzelfde als een geproduceerd en aangesloten item.
+- Productarchitectuur AlfaBetaPlus: `1Si4Uda_Y1vbgHsTgqsmvN3qGXvbb9kiD`.
+- Verticale leerlijnmatrix per domein: `1JQjppc8ERh160Rg1bGw7mVRZg8bZEjVP`. Technisch en functioneel lezen/schrijven, auditieve vaardigheden, interactie, mondelinge productie, strategieën en attitudes zijn breder dan de huidige woordspeler.
+- De eerdere P0-bouwopdracht van 18 september (`12-Hm4UgDUJ9b52vLGZngjedWaObBMUIz`) beperkte toen de implementatie tot zes componenten; spellen, formulieren en bredere lees-/schrijftaken vielen er expliciet buiten. Dit is historische context, geen nieuwe uitvoeringsinstructie. De latere Taalroute-indeling blijft leidend.
+- Ontwerpbasis `1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz`: materiaal koppelen aan boekdoel en docentlesplan; geen volledige cursus of praktijkvalidatie uit de technische aansluiting afleiden.
+
+**Verklaring van de kloof:** de huidige generator sluit tien componentfamilies aan, niet alle achttien eerder beschreven families. De aangesloten 1.292 zinnen, 192 teksten en 128 gesprekken zijn overwegend luister-/meeleesinhoud. De aanwezigheid van tekst, een script of een ongebruikte renderer bewijst niet dat een zinsbouw-, schrijf-, bingo- of begripsopdracht werkt. De brede bronuitwerking is dus echt teruggevonden, maar niet integraal gerealiseerd. Een volledige afzonderlijke grammaticaroute of Junior-productlijn is in deze controle niet vastgesteld; niet stilzwijgend uit een referentiemenu overnemen.
+
+### Wat deze wijziging toevoegt
+
+In de bestaande **Docent → Oefenkaart → Volledige inhoudslijn** staan twaalf eigen inhoudsdomeinen met ontwerp, feitelijke aansluiting en open bouwstap. Bij **Docent → Media** staat een doorzoekbare audiomatrix met paginering, onderdeel- en statusfilter, afspelen van gekoppelde audio en JSON-export. De grote voorraad wordt uitsluitend op verzoek geladen. Er zijn geen cursistmenu's, woorden, leerstappen of oefeningen toegevoegd of verplaatst.
+
+`npm run inventory:audio` bouwt de matrix uit huidige inhoud en de eerdere lokale broninventaris. Het script produceert geen opname en wijzigt geen broninhoud. De private bronverwijzingen blijven in `outputs/content-audio-register-20261017/source-map.json`, niet in de publiceerbare matrix. De generator verwacht de bestaande inventaris `outputs/content-inventory-20261017/inventory.json` uit het gecontroleerde bron-/herstelpakket.
+
+- Huidige inhoud: 2.393 audio-ID's, waarvan 2.354 met aanwezig bestand; 38 ontbrekende klank-/uitspraakvoorbereidingen en één geparkeerde korte t. Een schrijfwijze-/klankvoorwaarde is niet altijd één afzonderlijke foneemopname. De uitspraakfunctie moet eerst vastliggen.
+- De 22.898 voorbereide scriptverwijzingen zijn samengebracht tot 22.473 unieke combinaties van exacte NFC-tekst en stemrol. Daarvan hebben 391 een exacte tekst-/rolmatch met een bestaande gekoppelde opname; 216 alleen een archiefkandidaat; 21.866 geen gevonden opname. Deze voorraad is nog niet geplaatst in de huidige route en is geen bestellijst voor audiogeneratie.
+- Actieve inhoud en voorraad overlappen; aantallen niet optellen als unieke opnamen of lessen. `Bestand gekoppeld` is technische beschikbaarheid, geen nieuwe uitspraakgoedkeuring. Exacte tekst alleen bewijst geen juiste stemrol of geschikte opname.
+- Bestaande audio-ID's blijven behouden. Voorraad-ID's worden deterministisch uit stemrol en exacte tekst afgeleid, niet uit positie of lijstnummer. Een tekstcorrectie krijgt een andere ID. Herkomst en oorspronkelijke script-ID's blijven in het private register.
+- `data/klink-audio-bindings.json` is leeg. De resolver kan een ontbrekende woordopname later op ID koppelen na exacte tekst-/rolcontrole, review, voice-ID en metadatavrijgave; hij vervangt nooit stilzwijgend bestaande audio. Voorraadscripts moeten eerst inhoudelijk geplaatst worden; de matrix alleen activeert geen oefening. Nieuwe audiobestanden vragen nog de werkelijke bestands-, metadata- en luistercontrole.
+
+Geen nieuwe audio gemaakt. Geen publicatie. De eerdere vrijgavepoort voor de gemengde oefencombinaties blijft onveranderd open. Deze inventaris sluit geen boek-/lesplankoppeling, cursistbeoordeling of volledige methodepariteit af.
+
 ## Plaats en betekenis
 
 De bestaande lokale app, **Docent → Oefenkaart → De route per leesstap**, bevat nu een vaste checklist met vijftien leerfuncties. Elke bestaande leesstap houdt zijn ID, woordbetekenissen, oefeningen en begeleide volgorde. Geen nieuwe app, learner-UI, woordselectie, media of publicatie.

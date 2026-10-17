@@ -3,6 +3,7 @@ import { learnerListName } from '../lib/learner-copy.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
 import { answerActivity } from './browser-route-helpers.mjs';
+import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -26,6 +27,7 @@ try {
     const pack = packs[i];
     await page.locator('.cp-package-grid > button').nth(i).click();
     assert.equal(await page.locator('.cp-player-bar strong').innerText(), learnerListName(pack));
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
     assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(), pack.lessons.map((lesson, index) => lessonPreviewWords(pack, lesson).map(word => word.word === 'pak' ? `pak (${word.id.endsWith('verpakking') ? 'verpakking' : 'kleding'})` : word.word).join(' · ') || `Les ${index + 1}`));
     assert.equal(await page.locator('.cp-lesson-list article button').count(), pack.lessons.length);
     assert(!/Leesstap|Bekend:|Nieuw:|Komt terug|Kijken|Kiezen|Bouwen|Tik op Start/.test(await page.locator('.cp-lesson-picker').innerText()));
@@ -34,6 +36,7 @@ try {
   }
   pass('Existing package screens contain every core, recall, extension and additional word route');
   await page.locator('.cp-package-grid > button').first().click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
   await screenshot('bestaande-lessen');
   await page.locator('.cp-start-lesson').nth(1).click();
   const lesson = packs[0].lessons[1];
@@ -48,11 +51,12 @@ try {
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
-  for (let i = 0; i < packs[0].exerciseTypes.length; i++) {
-    await page.locator('.cp-exercise-workspace aside button').nth(i).click();
+  for (const activity of groupActivities.filter(item => !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length)) {
+    await page.locator(`[data-activity="${activity.id}"]`).click();
     assert(await page.locator('.cp-exercise-stage > section').isVisible());
+    await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click();
   }
-  pass('All nine linked families render in the original free-practice browser');
+  pass('All eligible group activities render in the existing exercise players');
   await page.getByRole('button', { name: 'Woorden', exact: true }).first().click();
   assert.equal(await page.locator('.cp-global-word-grid article').count(), 338);
   for (const meaning of ['pak (kleding)', 'pak (verpakking)']) {
@@ -91,6 +95,7 @@ try {
     await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
     await home();
     await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
     await page.locator('.cp-start-lesson').first().click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));

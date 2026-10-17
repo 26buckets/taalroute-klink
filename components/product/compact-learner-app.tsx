@@ -2,6 +2,8 @@
 
 import { exercises, type Exercise } from '@/lib/course-data';
 import { Brand, playAudio } from '@/components/product/shared';
+import { applyDefaultAudioRate } from '@/lib/media-player';
+import { instructionAudioEnabled } from '@/lib/audio-policy';
 import {
   ArrowLeft,
   ArrowRight,
@@ -199,7 +201,7 @@ export function CompactLearnerApp({ onExit }: { onExit: () => void }) {
         <main className="compact-exercise-area">
           <div className="compact-progress" aria-label={`${progress} procent afgerond`}><span style={{ width: `${progress}%` }} /></div>
           <header className="compact-instruction">
-            <button onClick={() => playAudio(instructionAudioByExercise[exercise.id] ?? 'instructie-lees')} aria-label="Luister naar de opdracht"><Volume2 /></button>
+            {instructionAudioEnabled && <button onClick={() => playAudio(instructionAudioByExercise[exercise.id] ?? 'instructie-lees')} aria-label="Luister naar de opdracht"><Volume2 /></button>}
             <div><small>{exercise.short}</small><h1>{exercise.instruction}</h1></div>
           </header>
           <section className="compact-canvas" aria-label={exercise.title}>
@@ -354,5 +356,5 @@ function CompactSpeak({ sentence, listen, onReady }: { sentence: string; listen:
     }
   }
 
-  return <div className="compact-speak"><button className="compact-sentence-model" onClick={listen}><Volume2 /><strong>{sentence}</strong></button><p>{message}</p><button className={`compact-record ${recording ? 'recording' : ''}`} onClick={toggleRecording}>{recording ? <Pause /> : <Mic />}<span>{recording ? 'Stop' : 'Neem op'}</span></button>{audioUrl && <audio controls src={audioUrl} aria-label="Jouw opname"><track kind="captions" src="/audio/recording.vtt" srcLang="nl" label="Eigen opname zonder transcript" /></audio>}</div>;
+  return <div className="compact-speak"><button className="compact-sentence-model" onClick={listen}><Volume2 /><strong>{sentence}</strong></button><p>{message}</p><button className={`compact-record ${recording ? 'recording' : ''}`} onClick={toggleRecording}>{recording ? <Pause /> : <Mic />}<span>{recording ? 'Stop' : 'Neem op'}</span></button>{audioUrl && <audio ref={applyDefaultAudioRate} controls src={audioUrl} aria-label="Jouw opname"><track kind="captions" src="/audio/recording.vtt" srcLang="nl" label="Eigen opname zonder transcript" /></audio>}</div>;
 }

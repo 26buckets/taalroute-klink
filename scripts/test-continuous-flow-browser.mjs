@@ -33,7 +33,7 @@ try {
   await openExercise(heard);
   await ready();
   assert.equal(await page.evaluate(src => window.__plays.filter(path => path.endsWith(src)).length, heard.prompt.audio.src), 1);
-  assert.equal(await page.evaluate(src => window.__plays.filter(path => path.endsWith(src)).length, heard.instructionAudio.src), 1);
+  assert.equal(await page.evaluate(src => window.__plays.filter(path => path.endsWith(src)).length, heard.instructionAudio.src), 0);
   const correct = heard.options.findIndex(option => heard.answer.correctOptionIds.includes(option.id));
   const id = heard.exerciseId;
   const start = Date.now();
@@ -45,8 +45,7 @@ try {
 
   await openExercise(heard); await ready();
   assert.equal(await page.evaluate(src => window.__plays.filter(path => path.endsWith(src)).length, heard.instructionAudio.src), 0);
-  await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).click();
-  await page.waitForFunction(src => window.__plays.some(path => path.endsWith(src)), heard.instructionAudio.src);
+  assert.equal(await page.getByRole('button', { name: 'Luister naar de opdracht', exact: true }).count(), 0);
   await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
   await page.locator('.cp-choice-grid button').nth(correct).click();
   await page.waitForTimeout(900);

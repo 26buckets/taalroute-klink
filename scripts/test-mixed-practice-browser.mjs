@@ -25,6 +25,7 @@ await page.addInitScript(() => {
 async function open(pack = packs[0]) {
   await page.goto(base + '/#learner/home'); await page.reload();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.getByRole('button', { name: 'Alles oefenen', exact: true }).click();
   await page.locator('.is-mixed-round, .cp-mixed-complete').waitFor();
 }

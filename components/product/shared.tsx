@@ -3,10 +3,15 @@
 import { LogOut, MoreHorizontal, Search } from 'lucide-react';
 import Image from 'next/image';
 import { ReactNode } from 'react';
+import { applyDefaultAudioRate, DEFAULT_AUDIO_RATE } from '@/lib/media-player';
+import { isWithdrawnAudio } from '@/lib/audio-policy';
 export { playMedia, stopMedia } from '@/lib/media-player';
 
-export function playAudio(file: string, rate = 1) {
+export function playAudio(file: string, rate = DEFAULT_AUDIO_RATE) {
+  if (isWithdrawnAudio(`/audio/pb/${file}.m4a`)) return;
   const audio = new Audio(`/audio/pb/${file}.m4a`);
+  applyDefaultAudioRate(audio);
+  audio.defaultPlaybackRate = rate;
   audio.playbackRate = rate;
   void audio.play();
 }

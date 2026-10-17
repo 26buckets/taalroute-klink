@@ -1,7 +1,17 @@
 import type { AudioOptions } from './package-content';
+import { isWithdrawnAudio } from './audio-policy.ts';
 
 let activeAudio: HTMLAudioElement | undefined;
 let cancelPlayback: (() => void) | undefined;
+
+export const DEFAULT_AUDIO_RATE = 0.85;
+
+export function applyDefaultAudioRate(audio: HTMLMediaElement | null) {
+  if (!audio) return;
+  audio.defaultPlaybackRate = DEFAULT_AUDIO_RATE;
+  audio.playbackRate = DEFAULT_AUDIO_RATE;
+  audio.preservesPitch = true;
+}
 
 export function stopMedia() {
   cancelPlayback?.();
@@ -10,10 +20,12 @@ export function stopMedia() {
 
 export function playMedia(source: string, options: AudioOptions = {}): Promise<boolean> {
   stopMedia();
+  if (isWithdrawnAudio(source)) return Promise.resolve(false);
   if (options.signal?.aborted) return Promise.resolve(false);
   // Reuse the element unlocked by the learner's gesture, including on mobile.
   const audio = activeAudio ??= new Audio();
   audio.src = source;
+  applyDefaultAudioRate(audio);
   return new Promise((resolve, reject) => {
     let settled = false;
     const cleanup = () => {
@@ -33,7 +45,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
     const ended = () => finish(true);
     const failed = () => { audio.pause(); finish(false, new Error('audio unavailable')); };
     // A stalled recording must leave a usable retry instead of an endless lock.
-    const timeout = setTimeout(failed, 60000);
+    const timeout = setTimeout(failed, 60000 / DEFAULT_AUDIO_RATE);
     cancelPlayback = cancel;
     audio.addEventListener('ended', ended);
     audio.addEventListener('error', failed);

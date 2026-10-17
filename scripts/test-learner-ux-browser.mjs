@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson, primaryWordCards } from '../lib/taalroute-packages.ts';
 const browsers = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -26,12 +27,14 @@ async function free(pack = packs[2]) {
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
 }
 async function family(label) {
-  const picker = page.locator('.cp-family-picker select');
-  if (await picker.isVisible()) await picker.selectOption({ label });
-  else await page.locator('.cp-exercise-workspace aside button').filter({ hasText: label }).click();
+  const back = page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first();
+  if (await back.count()) await back.click();
+  const id = { 'Kijk en luister': 'meet', Kies: 'listen', 'Wat hoort bij elkaar?': 'match', 'Leg het woord': 'build-model', Typ: 'copy', 'Zeg na': 'speak', Schrijf: 'write', 'Zoek twee dezelfde': 'memory', 'Draai de kaart': 'cards' }[label];
+  await page.locator(`[data-activity="${id}"]`).click();
 }
 async function geometry(label) {
   await page.waitForTimeout(90);
+  if (await page.locator('.is-mixed-round').count()) await page.locator('.cp-exercise-feedback > button').scrollIntoViewIfNeeded();
   // Scroll the app panel to its end: WebKit's visibility check ignores the fixed bottom navigation.
   if (page.viewportSize().height <= 600 && !(await page.locator('.is-guided').count())) await page.evaluate(async () => {
     const panel = document.querySelector('.learner-main');
@@ -114,7 +117,7 @@ try {
   await page.waitForTimeout(90); await page.evaluate(() => { window.__played = []; });
   await page.getByRole('button', { name: 'Luister naar het woord', exact: true }).click();
   const writingId = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
-  const writing = packs[2].exercises.find(item => item.exerciseId === writingId);
+  const writing = groupActivities.flatMap(activity => groupExercises(packs[2], activity.id)).find(item => item.exerciseId === writingId);
   assert((await page.evaluate(() => window.__played)).includes(writing.prompt.audio.src), 'Writing must expose its existing word recording');
   checks.push('Writing exercise exposes the linked word audio');
   await home(); await nav().getByRole('button', { name: 'Woorden', exact: true }).click();

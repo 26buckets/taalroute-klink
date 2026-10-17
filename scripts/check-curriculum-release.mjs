@@ -1,7 +1,11 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { klinkContexts } from '../lib/klink-context.ts';
+import { groupInstructionNeeds } from '../lib/group-practice.ts';
+import { extendedInstructionNeeds } from '../lib/extended-practice.ts';
+import { resolveRegisteredAudio } from '../lib/audio-register.ts';
+import { instructionAudioEnabled } from '../lib/audio-policy.ts';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
 const media = read('../data/klink-media.json');
@@ -10,10 +14,39 @@ const instructions = read('../data/klink-instructions.json');
 const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
+let ownerAuthorized = false;
+const authorizationPath = 'docs/klink-owner-release-20261017.json';
+try {
+  const approval = JSON.parse(readFileSync(authorizationPath));
+  if (approval.approvedBy !== 'Nico' || !approval.userRequest || Object.keys(approval.files).length < 5) throw Error('Incomplete scoped approval');
+  execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
+  for (const [file, hash] of Object.entries(approval.files)) {
+    if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
+  }
+  ownerAuthorized = true;
+} catch { issues.push('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'); }
+const ownerRelease = record => ownerAuthorized && record.ownerAuthorization === authorizationPath;
+if (!instructionAudioEnabled) {
+  const policy = read('../data/klink-audio-policy.json');
+  const exclusions = readFileSync('public/.assetsignore', 'utf8');
+  if (policy.approvedBy !== 'Nico' || !policy.userRequest || !exclusions.includes('/package-audio/instructions/**') || !exclusions.includes('/audio/pb/instructie*') || policy.withdrawnFiles.some(path => !exclusions.includes(path))) issues.push('De ingetrokken instructieaudio is niet volledig uitgesloten van publicatie.');
+}
 try {
   const mixed = read('../data/klink-mixed-practice-release.json');
-  if (!mixed.publicationApproved || mixed.combinationReview !== 'approved') issues.push('De nieuwe gemengde oefenrondes wachten op inhoudelijke beoordeling.');
+  if (!mixed.publicationApproved || (mixed.combinationReview !== 'approved' && !ownerRelease(mixed))) issues.push('De nieuwe gemengde oefenrondes wachten op inhoudelijke beoordeling.');
 } catch { issues.push('Het vrijgaverecord voor de gemengde oefenrondes ontbreekt.'); }
+try {
+  const group = read('../data/klink-group-practice-release.json');
+  if (!group.publicationApproved || (group.combinationReview !== 'approved' && !ownerRelease(group)) || (instructionAudioEnabled && group.instructionAudioReview !== 'approved')) issues.push('De nieuwe groepsoefeningen wachten op combinatiebeoordeling en passende instructie-audio.');
+} catch { issues.push('Het vrijgaverecord voor de groepsoefeningen ontbreekt.'); }
+try {
+  const extended = read('../data/klink-extended-practice-release.json');
+  if (!extended.publicationApproved || (extended.contentReview !== 'approved' && !ownerRelease(extended)) || (instructionAudioEnabled && extended.instructionAudioReview !== 'approved')) issues.push('De uitbreiding met begrip, klanken en taalgebruik wacht op inhoudelijke en instructie-audiovrijgave.');
+} catch { issues.push('Het vrijgaverecord van de inhoudelijke uitbreiding ontbreekt.'); }
+for (const need of instructionAudioEnabled ? [...groupInstructionNeeds, ...extendedInstructionNeeds] : []) {
+  const src = resolveRegisteredAudio(need.id, need.text, 'instruction');
+  if (!src || !existsSync(`public${src}`)) issues.push(`De gecontroleerde groepsinstructie ontbreekt: ${need.id}.`);
+}
 const sections = read('../data/klink-sections.json');
 if (sections.release.id !== readiness.sectionEdition || createHash('sha256').update(readFileSync('data/klink-sections.json')).digest('hex') !== readiness.sectionExportSha256) issues.push('De onderdelenindeling wijkt af van de vastgezette Lexicon-export.');
 execFileSync(process.execPath, ['--test', 'scripts/test-sections.mjs'], { stdio: 'inherit' });
@@ -44,11 +77,11 @@ if (execFileSync('git', ['branch', '--show-current'], { encoding: 'utf8' }).trim
 execFileSync('git', ['merge-base', '--is-ancestor', readiness.baseline.sourceCommit, 'HEAD']);
 if (readiness.wordPronunciationReview !== 'approved') issues.push('De uitspraakcontrole staat open.');
 if (readiness.imageMeaningReview !== 'approved') issues.push('De woord-beeldcontrole staat open.');
-if (readiness.instructionAudioCoverage !== 'complete') issues.push('Niet elke oefenvorm heeft gecontroleerde instructie-audio.');
+if (instructionAudioEnabled && readiness.instructionAudioCoverage !== 'complete') issues.push('Niet elke oefenvorm heeft gecontroleerde instructie-audio.');
 const missingInstructions = instructions.items.filter(item => !item.src);
-if (missingInstructions.length) issues.push(`${missingInstructions.length} instructieopnamen moeten nog worden geproduceerd.`);
+if (instructionAudioEnabled && missingInstructions.length) issues.push(`${missingInstructions.length} instructieopnamen moeten nog worden geproduceerd.`);
 if (instructions.voiceId === instructions.targetVoiceId) issues.push('De instructiestem moet verschillen van de doeltaalstem.');
-if (instructions.humanReview !== 'approved') issues.push('De instructie-audio is nog niet inhoudelijk vrijgegeven.');
+if (instructionAudioEnabled && instructions.humanReview !== 'approved') issues.push('De instructie-audio is nog niet inhoudelijk vrijgegeven.');
 if (readiness.sentenceComprehensionReview !== 'approved' || comprehensionAudio.humanReview !== 'approved') issues.push('De begripsvragen en bijbehorende vraag-, hulp- en antwoordaudio wachten op menselijke vrijgave.');
 if (comprehensionAudio.instructionVoiceId === comprehensionAudio.targetVoiceId) issues.push('Vraag- en steunstem moeten verschillen van de doeltaalstem.');
 if (klinkContexts.some(item => item.humanReview !== 'approved')) issues.push('De zinnen en situaties wachten op inhoudelijke en luistervrijgave.');

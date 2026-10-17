@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { readFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 import { answerActivity } from './browser-route-helpers.mjs';
@@ -42,10 +43,17 @@ const exerciseId = () => page.locator('.cp-exercise-browser').getAttribute('data
 async function openFirst() {
   await page.goto(`${base}/#learner/home`);
   await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
 }
 async function family(name) {
-  await page.locator('.cp-exercise-workspace aside button').filter({ hasText: name }).click();
+  const back = page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first();
+  if (await back.count()) await back.click();
+  const id = { Typ: 'copy', Schrijf: 'write', 'Wat hoort bij elkaar?': 'match', 'Zoek twee dezelfde': 'memory', 'Zeg na': 'speak', 'Kijk en luister': 'meet' }[name];
+  await page.locator(`[data-activity="${id}"]`).click();
+  const pause = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true });
+  if (await pause.count()) await pause.click();
 }
+const groupExercise = id => groupActivities.flatMap(activity => groupExercises(packs[0], activity.id)).find(item => item.exerciseId === id);
 try {
   await openFirst();
   await page.locator('.cp-start-lesson').nth(1).click();
@@ -62,7 +70,7 @@ try {
   await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
   await family('Typ');
   const typeId = await exerciseId();
-  const typeExercise = packs[0].exercises.find(exercise => exercise.exerciseId === typeId);
+  const typeExercise = groupExercise(typeId);
   await page.locator('.cp-text-entry input').fill(typeExercise.fields[0].acceptedAnswers[0]);
   await page.getByRole('button', { name: 'Controleer', exact: true }).click();
   assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('right')));
@@ -78,7 +86,7 @@ try {
   assert(await page.locator('.cp-exercise-feedback').evaluate(element => element.classList.contains('idle')));
   await family('Wat hoort bij elkaar?');
   const matchId = await exerciseId();
-  const matching = packs[0].exercises.find(exercise => exercise.exerciseId === matchId);
+  const matching = groupExercise(matchId);
   await page.locator('.cp-match-board > div').nth(0).locator('button').first().click();
   const wrongTarget = matching.targets.findIndex(target => target.id !== matching.answer.mapping[matching.sources[0].id]);
   await page.locator('.cp-match-board > div').nth(1).locator('button').nth(wrongTarget).click();
@@ -93,7 +101,7 @@ try {
   console.log('PASS typing/writing reset feedback; matching preserves correct pairs and permits recovery');
   await family('Zoek twee dezelfde');
   const memoryId = await exerciseId();
-  const memory = packs[0].exercises.find(exercise => exercise.exerciseId === memoryId);
+  const memory = groupExercise(memoryId);
   const first = memory.items[0];
   const pair = memory.items.findIndex(item => item.itemId !== first.itemId && item.pairKey === first.pairKey);
   await page.locator('.cp-memory-grid button').nth(0).click();
