@@ -1,0 +1,61 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "e2542240495dc765722946e2f06b70f433857043",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "65250964-3cfa-4c6a-ab82-b5bb77c74a0e",
+  "verifiedAt": "2026-10-17T11:09:52.212Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-17T11:08:29.598Z",
+    "sourceCommit": "e2542240495dc765722946e2f06b70f433857043",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-DhPnpBa8.js",
+  "freshClientSha256": "c855cbaeca065b933809255112eb3215510720b40632ce75532599ebc28d35a4",
+  "sourceArchiveSha256": "863ed1f68aa3f37aef911b1912842e0a0c1958176e81622cff5237438050a9fb",
+  "sourceArchiveBaseCommit": "038ca121554cb5a828ab9323ba14086a80483910",
+  "sourceArchiveMember": "Klink-bronaanvulling-15-onderdelen.zip",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2696,
+  "expectedMedia": 2696,
+  "errors": [],
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "evidenceFile": "outputs/sections-20261017/live-verification.json",
+  "checks": [
+    "42 curriculum tests locally, exact lesson/exercise payload preservation",
+    "6 publication-proof negative tests, TypeScript and targeted lint",
+    "Complete local test:review passed, desktop/tablet/mobile and real audio",
+    "Production build checked with existing-player, sections and connected-content browsers",
+    "Live 15 covers, five first lessons, old group-2 resume and connected-content players checked",
+    "2696 live media files byte-equal to locally metadata-checked media",
+    "Exact Lexicon section export SHA-256 in release marker"
+  ],
+  "approvalRecord": "docs/klink-content-approval-20261017.json",
+  "presentationApproval": "Nico: Prima, is goed. Ik ben helemaal met je eens. We gaan het helemaal zo doorvoeren. Let op dat er wel één afbeelding komt aan het begin.",
+  "githubActionsUsed": false,
+  "previousPublicationRecord": "docs/klink-publication-20261017.json",
+  "limitations": [
+    "Existing word exercise images remain intact; only entrance images were selected.",
+    "No new audio, generated images, learner pilot or independent learning-gain claim.",
+    "Standalone t stays parked.",
+    "Historical media approval does not prove independent item-by-item human listening."
+  ],
+  "sourceArchiveDriveId": "1eq70UGYw7f3DFO1a9lIaHdmB4Pg7KIqX",
+  "recoveryArchive": {
+    "driveId": "1eq70UGYw7f3DFO1a9lIaHdmB4Pg7KIqX",
+    "url": "https://drive.google.com/file/d/1eq70UGYw7f3DFO1a9lIaHdmB4Pg7KIqX/view",
+    "bytes": 1384092,
+    "sha256": "592153cf7779cee10bfaae9c6badfc115b2438ae6a991e8481415d186acf2bc8",
+    "readbackVerified": true
+  }
+}
