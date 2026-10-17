@@ -6,6 +6,8 @@ import sections from '../data/klink-sections.json' with {type:'json'};
 import curriculum from '../data/klink-curriculum.json' with {type:'json'};
 import media from '../data/klink-media.json' with {type:'json'};
 import before from './fixtures/klink-sections-preserved.json' with {type:'json'};
+import sectionPhotos from '../data/klink-section-photos.json' with {type:'json'};
+import photoApproval from '../docs/klink-photo-cards-approval-20261017.json' with {type:'json'};
 import {taalroutePackages as packs, primaryWordCards} from '../lib/taalroute-packages.ts';
 import {getPackage} from '../lib/package-content.ts';
 import {parseProgress,nextLessonPosition} from '../lib/learner-progress.ts';
@@ -38,6 +40,24 @@ test('Former group 2 resumes at its actual exercise; first a steps remain small 
   for(const kind of ['texts','dialogues'])for(const item of pack[kind]) {
     assert.equal(pack[kind].filter(other=>other.id===item.id).length,1);
     const linked=[...new Set(pack.exercises.filter(e=>e.contextId===item.id).map(e=>e.lessonId))];
-    assert.deepEqual([...item.lessonIds].sort(),linked.sort());
+    assert.deepEqual([...item.lessonIds].sort((a,b)=>a.localeCompare(b)),linked.sort((a,b)=>a.localeCompare(b)));
+  }
+});
+test('Approved navigation photos remain separate from every preserved word cover',()=>{
+  assert.equal(photoApproval.approvedBy,'Nico');
+  assert.equal(photoApproval.approvedVariant,'Foto bovenaan');
+  assert(photoApproval.userAnswer);
+  assert.deepEqual(Object.keys(sectionPhotos).sort((a,b)=>a.localeCompare(b)),photoApproval.assets.map(a=>a.sectionId).sort((a,b)=>a.localeCompare(b)));
+  assert.equal(photoApproval.assets.length,4);
+  for(const section of sections.sections) {
+    assert.equal(section.cover.image,media[section.cover.wordId].image);
+    assert.equal(createHash('sha256').update(readFileSync('public'+section.cover.image)).digest('hex'),section.cover.sha256);
+    if(!sectionPhotos[section.id])continue;
+    const asset=photoApproval.assets.find(a=>a.sectionId===section.id);
+    assert.equal(asset.number,section.number);assert.equal(asset.title,section.title);
+    assert.equal(asset.image,sectionPhotos[section.id]);
+    assert(asset.image.startsWith('/package-media/section-covers-20261017/'));
+    assert(!Object.values(media).some(word=>word.image===asset.image),'Navigation scenes are not exercise answer images');
+    assert.equal(createHash('sha256').update(readFileSync('public'+asset.image)).digest('hex'),asset.sha256);
   }
 });

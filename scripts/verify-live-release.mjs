@@ -11,6 +11,7 @@ const media = read('data/klink-media.json');
 const content = read('data/klink-connected-content.json');
 const instructions = read('data/klink-instructions.json');
 const comprehension = read('data/klink-comprehension-audio.json');
+const sectionPhotos = read('data/klink-section-photos.json');
 const expected = read('public/release.json');
 const releaseResponse = await fetch(base + '/release.json', { cache: 'no-store' });
 assert(releaseResponse.ok);
@@ -18,11 +19,12 @@ const release = await releaseResponse.json();
 assert.deepEqual(release, expected);
 assert.equal(release.sourceClean, true);
 const paths = [...new Set([
+  ...Object.values(sectionPhotos),
   ...words.flatMap(word => [media[word.id].image, media[word.id].audio]),
   ...content.items.flatMap(item => item.blocks.map(block => block.audio.src)),
   ...klinkContexts.flatMap(item => [item.audio, item.image]),
   ...instructions.items.map(item => item.src), ...comprehension.items.map(item => item.src),
-].filter(Boolean))].sort();
+].filter(Boolean))].sort((a,b)=>a.localeCompare(b));
 const results = [], errors = []; let next = 0;
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 await Promise.all(Array.from({ length: 8 }, async () => {

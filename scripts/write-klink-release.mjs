@@ -14,6 +14,7 @@ const record = {
   curriculumEdition: readiness.curriculumEdition,
   lexiconExportSha256: routing.exportSha256,
   sectionsSha256: createHash('sha256').update(readFileSync('data/klink-sections.json')).digest('hex'),
+  sectionPhotosSha256: createHash('sha256').update(readFileSync('data/klink-section-photos.json')).digest('hex'),
   contentSha256: createHash('sha256').update(readFileSync('data/klink-connected-content.json')).digest('hex'),
 };
 writeFileSync('public/release.json', JSON.stringify(record, null, 2) + '\n');

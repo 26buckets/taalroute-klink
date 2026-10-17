@@ -9,9 +9,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-sections-20261017.json`.
-Livebron: `e2542240495dc765722946e2f06b70f433857043`.
-Worker-versie: `65250964-3cfa-4c6a-ab82-b5bb77c74a0e`.
+Actief register: `docs/klink-publication-logo-20261017.json`.
+Livebron: `4c04763dbd552a885ea15c2d70a343e75b887911`.
+Worker-versie: `47a07f92-6294-45f4-b0a4-4c8c2094aa00`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 ## Voor iedere volgende publicatie
@@ -46,6 +46,15 @@ is bewust gekozen en hoort bij een titelwoord; oefenbeelden en audio blijven
 ongewijzigd. Nieuwe Lexicon-edities importeren via `scripts/import-lexicon-sections.mjs`,
 exporthash in het vrijgaverecord vastleggen en de gerichte behoudtests draaien.
 De live release vermeldt ook `sectionsSha256`.
+
+## Fotokaarten
+
+De goedgekeurde vorm 'Foto bovenaan' verandert alleen de onderdeelkaart.
+`data/klink-section-photos.json` bevat vier aparte navigatiebeelden; de
+Lexicon-export en oefenwoordbeelden blijven ongewijzigd. Het beeldakkoord en de
+exacte bestandshashes staan in `docs/klink-photo-cards-approval-20261017.json`.
+De publicatiecontrole toetst dit akkoord, de nieuwe beelden en alle oorspronkelijke
+woordcovers. De live release vermeldt ook `sectionPhotosSha256`.
 
 De oorspronkelijke publicatie van 14 oktober is gedocumenteerd in
 docs/klink-publication-provenance.json. Het nieuwste register heeft voorrang

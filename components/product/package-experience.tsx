@@ -4,6 +4,7 @@ import { PackageExerciseBrowser } from '@/components/product/package-exercise-br
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
+import sectionPhotos from '@/data/klink-section-photos.json';
 import {
   contentPackages,
   getPackage,
@@ -81,15 +82,15 @@ export function PackageLibrary({
 export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
   return <section className="cp-package-grid" aria-label="Alle onderdelen">
         {contentPackages.map((pack, index) => {
-          const image = pack.cover?.image;
+          // Navigation scenes are separate from the meaning images used in exercises.
+          const image = (sectionPhotos as Record<string, string>)[pack.id] ?? pack.cover?.image;
           return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Onderdeel ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>
             <span className="cp-section-photo">
-              {image ? <Image src={image} alt="" width={240} height={200} /> : <BookOpen aria-hidden="true" />}
+              {image ? <Image src={image} alt="" width={720} height={480} sizes="(max-width: 800px) 100vw, 50vw" /> : <BookOpen aria-hidden="true" />}
             </span>
             <span className="cp-package-copy">
-              <small>Onderdeel {index + 1}</small>
+              <small aria-hidden="true">{index + 1}</small>
               <strong>{learnerListName(pack)}</strong>
-              <span>{pack.lessons.length} lessen · {pack.counts.coreWords} woorden</span>
               <span className="cp-section-open">Open <ArrowRight aria-hidden="true" /></span>
             </span>
           </button>;
