@@ -4,6 +4,7 @@ import instructions from '../data/klink-instructions.json' with { type: 'json' }
 import type { LessonPhase, PackageDefinition, PackageExercise, PackageLesson, PackageWord } from './package-content';
 import { klinkContexts } from './klink-context.ts';
 import { sentenceQuestionFor, questionFields } from './sentence-comprehension.ts';
+import { connectedExercisesForStep, contentById } from './connected-content.ts';
 
 type Word = typeof curriculum.words[number];
 type Step = { id: string; title: string; kind: string; known: string[]; newWords: string[]; returning: string[]; guidance: string; unitIds?: string[] };
@@ -19,7 +20,7 @@ const tokensFor = (word: Word) => {
 };
 const labels: Record<string, string> = {
   '001': 'Kijk- en luisterkaart', '002': 'Kies het woord of beeld', '004': 'Woord en beeld koppelen',
-  '005': 'Het woord bouwen', '006': 'Het woord typen', '007': 'Zinnen en situaties', '009': 'Nazeggen', '012': 'Het woord schrijven',
+  '005': 'Het woord bouwen', '006': 'Het woord typen', '007': 'Zinnen, teksten en gesprekken', '009': 'Nazeggen', '012': 'Het woord schrijven',
   '015': 'Memory', '016': 'Woordkaarten',
 };
 
@@ -147,6 +148,8 @@ export function exercisesForStep(step: Step) {
       guided.splice(index, 1);
     }
   }
+  // Extra reading/listening material is reachable at this step without inflating the short word lesson.
+  exercises.push(...connectedExercisesForStep(step));
   return { exercises, guided };
 }
 
@@ -195,10 +198,18 @@ function buildPack(id: string, title: string, kind: PackageDefinition['kind'], w
   const imageCount = wordCards.filter(word => word.image).length;
   const audioCount = wordCards.filter(word => word.audio).length;
   const contexts = klinkContexts.filter(item => exercises.some(exercise => exercise.contextId === item.id));
+  const connected = unique(exercises.filter(exercise => exercise.mode.startsWith('connected-')).map(exercise => String(exercise.contextId))).map(id => contentById.get(id)!);
+  const placement = (id: string) => ({
+    exerciseId: exercises.find(exercise => exercise.contextId === id)!.exerciseId,
+    lessonIds: unique(exercises.filter(exercise => exercise.contextId === id).map(exercise => exercise.lessonId!)),
+  });
+  const texts = [...contexts.filter(item => !connected.some(record => record.kind !== 'dialogue' && record.text === item.text)).map(item => ({ id: item.id, title: item.title, level: 'Samen luisteren', text: item.text, audio: item.audio, kind: item.kind === 'sentence' ? 'sentence' as const : 'text' as const, ...placement(item.id) })),
+    ...connected.filter(item => item.kind !== 'dialogue').map(item => ({ id: item.id, title: item.title, level: 'Samen luisteren', text: item.text, audio: item.blocks[0].audio.src, kind: item.kind as 'sentence' | 'text', ...placement(item.id) }))];
+  const dialogues = connected.filter(item => item.kind === 'dialogue').map(item => ({ id: item.id, title: item.title, level: 'Samen luisteren', goal: 'Luister en lees mee.', turns: item.blocks.map(block => ({ speaker: 'speaker' in block ? String(block.speaker) : '', text: block.text, audio: block.audio.src })), ...placement(item.id) }));
   return { id, title, kind, subtitle: kind === 'group' ? 'Taalroute · klanken en woorden' : 'Taalroute · verder lezen', description, level: 'Alfabeta+',
     status: 'Mediacontrole open', statusNote: 'De nieuwe Taalroute-indeling gebruikt de bestaande oefeningen. Ontbrekende opnamen en beelden zijn nog niet aangevuld.',
-    counts: { lessons: lessons.length, coreWords: words.length, exercises: exercises.length, exerciseTypes: exerciseTypes.length, texts: contexts.length, dialogues: 0, games: exercises.filter(item => item.componentId === 'ALF-CMP-015').length, images: imageCount, audio: audioCount },
-    lessons, words: wordCards, exercises, exerciseTypes, texts: contexts.map(item => ({ id: item.id, title: item.title, level: 'Samen luisteren', text: item.text, audio: item.audio })), dialogues: [], games: exercises.filter(item => item.componentId === 'ALF-CMP-015').map(item => ({ id: item.exerciseId, title: item.title!, mode: item.mode })), scenes: contexts.filter(item => item.image).map(item => ({ id: item.id, title: item.title, image: item.image, words: wordsFor(item.wordIds).map(word => word.word) })),
+    counts: { lessons: lessons.length, coreWords: words.length, exercises: exercises.length, exerciseTypes: exerciseTypes.length, texts: texts.filter(item => item.kind === 'text').length, sentences: texts.filter(item => item.kind === 'sentence').length, dialogues: dialogues.length, games: exercises.filter(item => item.componentId === 'ALF-CMP-015').length, images: imageCount, audio: audioCount },
+    lessons, words: wordCards, exercises, exerciseTypes, texts, dialogues, games: exercises.filter(item => item.componentId === 'ALF-CMP-015').map(item => ({ id: item.exerciseId, title: item.title!, mode: item.mode })), scenes: contexts.filter(item => item.image).map(item => ({ id: item.id, title: item.title, image: item.image, words: wordsFor(item.wordIds).map(word => word.word) })),
     media: { imageAvailable: imageCount, imageExpected: wordCards.length, audioAvailable: audioCount, audioExpected: wordCards.length, missing: wordCards.filter(word => !word.image).map(word => word.word), imageReview: 'Herkenbaarheid nog beoordelen.', audioReview: 'Uitspraak nog beoordelen.', publication: 'INTERNAL_ONLY' },
   };
 }

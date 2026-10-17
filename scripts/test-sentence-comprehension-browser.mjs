@@ -3,6 +3,7 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import audioPlan from '../data/klink-comprehension-audio.json' with { type: 'json' };
+import { klinkContexts } from '../lib/klink-context.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
@@ -45,7 +46,7 @@ async function openQuestion(exercise, targetPage = page) {
     await targetPage.getByLabel('Wat wil je oefenen?').selectOption(exercise.exerciseId);
     const menu = targetPage.getByLabel('Wat wil je oefenen?');
     assert.match(await menu.locator('option:checked').innerText(), /^Luistervraag \d+: /);
-    assert(!(await menu.locator('option').allTextContents()).join(' ').includes(pack.texts.find(text => text.id === exercise.contextId).text), 'The exercise menu must not reveal the sentence answer');
+    assert(!(await menu.locator('option').allTextContents()).join(' ').includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The exercise menu must not reveal the sentence answer');
     await targetPage.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
   }
   assert.equal(await targetPage.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);

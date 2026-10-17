@@ -1,0 +1,50 @@
+import bank from '../data/klink-connected-content.json' with { type: 'json' };
+import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
+import instructions from '../data/klink-instructions.json' with { type: 'json' };
+import type { PackageExercise, PackageLesson } from './package-content';
+
+export type ConnectedContent = typeof bank.items[number];
+export const connectedContent = bank.items;
+export const contentById = new Map(connectedContent.map(item => [item.id, item]));
+const wordsById = new Map(curriculum.words.map(word => [word.id, word]));
+const unique = (ids: string[]) => [...new Set(ids)];
+const byWord = new Map<string, ConnectedContent[]>();
+for (const item of connectedContent) for (const id of item.wordIds) byWord.set(id, [...(byWord.get(id) ?? []), item]);
+type Step = Pick<PackageLesson, 'id' | 'known' | 'newWords' | 'returning'>;
+export function contentForStep(step: Step) {
+  const targets = step.newWords?.length ? step.newWords : step.returning ?? [];
+  return unique(targets.flatMap(id => (byWord.get(id) ?? []).map(item => item.id))).map(id => contentById.get(id)!);
+}
+
+export function contentReadingConditions(item: ConnectedContent, step: Step) {
+  const prepared = new Set([...(step.known ?? []), ...(step.newWords ?? []), ...(step.returning ?? [])]);
+  const words = item.readingWordIds.map(id => wordsById.get(id)!);
+  const preparedUnits = new Set([...prepared].flatMap(id => wordsById.get(id)?.reading.requirements ?? []));
+  return {
+    wordIds: words.map(word => word.id),
+    otherWords: words.filter(word => !prepared.has(word.id)).map(word => ({ id: word.id, word: word.word, meaning: word.meaning, firstReading: word.firstReading })),
+    outsideWordBank: item.reading.outsideWordBank,
+    requiredUnits: unique(words.flatMap(word => word.reading.requirements)),
+    unitsOutsideStep: unique(words.flatMap(word => word.reading.requirements)).filter(unit => !preparedUnits.has(unit)),
+    wordConditions: unique(words.flatMap(word => [...word.reading.conditions, ...('additionalConditions' in word.firstReading && word.firstReading.additionalConditions ? [word.firstReading.additionalConditions] : [])])),
+    access: 'supported-listening' as const,
+    independentReading: false,
+    note: 'Bereid betekenis, verwijswoorden en zinsverband mondeling voor. Controleer ook namen en overige woordvormen buiten de woordenbank. Een woordverband of klankoverlap is geen bewijs dat de hele tekst zelfstandig leesbaar is.',
+  };
+}
+
+export function connectedExercisesForStep(step: Step): PackageExercise[] {
+  const targets = step.newWords?.length ? step.newWords : step.returning ?? [];
+  const instruction = instructions.items.find(item => item.id === 'meeluisteren')!;
+  return contentForStep(step).map(item => ({
+    exerciseId: `${step.id}:${item.id}`, componentId: 'ALF-CMP-007', contractVersion: '1.0',
+    mode: `connected-${item.kind}`, title: item.kind === 'sentence' ? 'Luister naar de zin.' : item.kind === 'text' ? 'Luister naar de tekst.' : 'Luister naar het gesprek.',
+    contentTitle: item.title, lessonId: step.id, contextId: item.id, wordId: targets.find(id => item.wordIds.includes(id)),
+    wordIds: item.wordIds.filter(id => targets.includes(id)), phase: 'use', activityTypeId: 'TE-01',
+    objective: 'Een voorbereid woord volgen in bestaande samenhangende taal, met luistersteun. Geen zelfstandig lees- of begripsresultaat.',
+    sourceStatus: 'concept', assessment: 'participation', requiresAudio: true,
+    instructionAudio: { src: instruction.src, audioId: instruction.id },
+    prompt: { text: 'Luister en lees mee.', audio: item.blocks[0].audio },
+    textBlocks: item.blocks, playAllBlocks: true, access: 'supported-listening', independentReading: false, humanReview: 'open',
+  }));
+}

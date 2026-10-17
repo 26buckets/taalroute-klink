@@ -6,6 +6,7 @@ import { createHash } from 'node:crypto';
 import { resolve, basename, join } from 'node:path';
 import { taalroutePackages } from '../lib/taalroute-packages.ts';
 import { klinkContexts } from '../lib/klink-context.ts';
+import { connectedContent } from '../lib/connected-content.ts';
 
 const root = resolve(import.meta.dirname, '..');
 const output = resolve(process.argv[2] ?? join(root, 'outputs/content-inventory-20261017'));
@@ -120,7 +121,7 @@ const cp001 = {
   textsRegister: legacy.texts,
   note: 'CP001 is inventoried separately; the two old starter lessons are not the new curriculum. No new level-by-level CP001 release has been claimed.',
 };
-const currentTexts = new Set(klinkContexts.map(item => normalize(item.text)));
+const currentTexts = new Set([...klinkContexts, ...connectedContent].map(item => normalize(item.text)));
 const baseLessons = taalroutePackages.flatMap(pack => pack.lessons);
 const compact = items => ({ count: items.length, uniqueTexts: new Set(items.map(item => normalize(item.text))).size, withAudioFile: items.filter(item => item.audio.present).length, alreadyInNewContextRoute: items.filter(item => currentTexts.has(normalize(item.text))).length });
 const summarize = items => Object.fromEntries([...new Set(items.map(item => item.kind))].map(kind => [kind, compact(items.filter(item => item.kind === kind))]));
@@ -148,6 +149,7 @@ const inventory = {
     wordsWithAudio: Object.values(currentMedia).filter(item => item.audio).length, wordsWithImages: Object.values(currentMedia).filter(item => item.image).length,
     listeningSentences: klinkContexts.filter(item => item.kind === 'sentence').length, listeningSituations: klinkContexts.filter(item => item.kind === 'situation').length,
     comprehensionQuestions: taalroutePackages.flatMap(pack => pack.exercises).filter(item => item.mode === 'sentence-question').length,
+    connectedRecordedContent: countBy(connectedContent, 'kind'),
     groups: taalroutePackages.map(pack => ({ id: pack.id, title: pack.title, kind: pack.kind, routes: pack.lessons.length, routeKinds: countBy(pack.lessons, 'kind') })),
   },
   cp001, originalCP002to016: summarize(originals), revisedCP002to016: summarize(reviewed),
@@ -174,7 +176,7 @@ const overview = [
   `Oorspronkelijke CP002–CP016: ${summary.original['word-sentence'].count} voorbeeldzinnen, ${summary.original.text.count} teksten en ${summary.original.dialogue.count} gesprekken.`,
   'Voor al deze oorspronkelijke voorbeeldzinnen en teksten zijn transcriptgebonden WAV-bestanden aanwezig; gesprekken hebben afzonderlijke beurtopnamen.',
   `CP001 afzonderlijk: ${cp001.words} woorditems, ${cp001.texts} teksten en ${cp001.dialogues} gesprekken in de bestaande import.`,
-  'In de nieuwe route zijn nu slechts 8 luisterzinnen, 4 situaties en 8 begripsvragen aangesloten.', '',
+  `Aangesloten bestaande inhoud: ${connectedContent.filter(item => item.kind === 'sentence').length} zinnen, ${connectedContent.filter(item => item.kind === 'text').length} teksten en ${connectedContent.filter(item => item.kind === 'dialogue').length} gesprekken. De eerdere 8 begripsvragen blijven behouden.`, '',
   '3. Niet dubbel tellen',
   `De latere eindreview bevat ${summary.revised.text.count} teksten en ${summary.revised.sentence.count} oefenzinnen. Dit overlapt de oorspronkelijke inhoud.`,
   `Daarvan hebben ${summary.revised.text.withAudioFile} volledige teksten en ${summary.revised.sentence.withAudioFile} oefenzinnen een exact passende opname in de gecontroleerde WAV-archieven.`,

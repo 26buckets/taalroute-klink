@@ -32,6 +32,20 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
       {bridge.models.length > 0 && <div className="cp-coverage-table-wrap"><table className="cp-coverage-table"><caption>Al gekoppelde luistermodellen — nog geen zelfstandig lezen</caption><thead><tr><th>Model</th><th>Overige woorden voorbereiden</th></tr></thead><tbody>{bridge.models.map(model => <tr key={model.id}><th scope="row">{model.text}<small>{model.kind === 'sentence' ? 'Zin' : 'Situatie'} · menselijke beoordeling open</small>{model.questions.map(question => <small key={question.id}>Vraag: {question.title} · {question.guided ? 'In de lesroute' : 'Bij Vrij oefenen'}<br />{question.objective}{question.preparation.map(note => <span key={note}><br />Vooraf: {note}</span>)}</small>)}</th><td>{model.wordsOutsideStep.join(' · ') || 'Geen extra geschreven vormen; betekenis en leesvoorwaarden blijven te controleren.'}</td></tr>)}</tbody></table></div>}
       <p>{bridge.readingNote}</p><ol>{bridge.stages.map(stage => <li key={stage.title}><strong>{stage.title}.</strong> {stage.action}</li>)}</ol>
     </details>
+    <details className="cp-coverage-overview" data-existing-content><summary>Bestaande zinnen, teksten en gesprekken bij deze woorden ({bridge.existing.length})</summary>
+      <p>Beschikbaar bij Zinnen en teksten, Gesprekken en Vrij oefenen. De korte woordles blijft ongewijzigd. Deze koppeling is een woordverband, geen vrijgave voor zelfstandig lezen. Ook een gesprek met een bekend woord kan veel mondelinge voorbereiding vragen.</p>
+      {bridge.existing.map(item => <details key={item.id} data-content-id={item.id}><summary>{item.kind === 'sentence' ? 'Zin' : item.kind === 'text' ? 'Tekst' : 'Gesprek'}: {item.title}</summary>
+        <p>{item.text}</p>
+        <dl><dt>Doelwoorden in deze stap</dt><dd>{words(item.wordIds.filter(id => bridge.wordIds.includes(id)))}</dd>
+          <dt>Andere woorden uit de woordenbank</dt><dd>{item.conditions.otherWords.map(word => word.word).join(' · ') || 'Geen'}</dd>
+          <dt>Overige woordvormen en namen voorbereiden</dt><dd>{item.conditions.outsideWordBank.join(' · ') || 'Geen'}</dd>
+          <dt>Klanktekens buiten de woorden van deze stap</dt><dd>{item.conditions.unitsOutsideStep.join(' · ') || 'Geen extra tekens in de gekoppelde woorden; controleer ook de overige vormen.'}</dd>
+          <dt>Aanvullende leesvoorwaarden</dt><dd>{item.conditions.wordConditions.join(' ') || 'De losse woorden verbinden met behoud van de betekenis.'}</dd>
+          <dt>Taalbelasting van de bestaande tekst</dt><dd>{/a2/i.test(item.sourceLevel) ? 'A2: ruimere woordenschat en zinsverbanden; geen zelfstandige Alfa-opdracht.' : /a1/i.test(item.sourceLevel) ? 'A1: mondelinge voorbereiding nodig; geen zelfstandige Alfa-opdracht.' : 'Met begeleiding; geen zelfstandig leesniveau vastgesteld.'}</dd>
+        </dl><p>{item.conditions.note}</p>
+        {item.discussion && <p>Bespreekvraag: {item.discussion.question}<br />Antwoord: {item.discussion.answer}<br />Bewijs: {item.discussion.evidence || 'Samen in de tekst terugzoeken.'}</p>}
+      </details>)}
+    </details>
     <details className="cp-coverage-overview" data-exercise-inventory><summary>Alle oefenvormen en ontbrekende inhoud</summary>
     <div className="cp-coverage-table-wrap"><table className="cp-coverage-table"><caption>Oefendoelen en ontbrekende inhoud voor {lesson.title}</caption><thead><tr><th>Oefendoel</th><th>Status</th><th>Wat is er nodig?</th></tr></thead><tbody>{plan.map(row => <tr key={row.id}><th scope="row">{row.title}<small>{phaseLabels[row.phase]}</small></th><td><span className={`cp-plan-status ${row.status}`}>{planStatusLabels[row.status]}</span></td><td>{row.reason}</td></tr>)}</tbody></table></div>
     </details>

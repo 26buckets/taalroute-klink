@@ -7,6 +7,7 @@ const media = read('../data/klink-media.json');
 const release = read('../data/klink-curriculum.json');
 const instructions = read('../data/klink-instructions.json');
 const comprehensionAudio = read('../data/klink-comprehension-audio.json');
+const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 if (!readiness.publicationApproved) issues.push('De nieuwe inhoud is nog niet vrijgegeven.');
 if (!readiness.baseline.commitToLiveVersionProven) issues.push('De broncommit van de liveversie moet nog aantoonbaar worden bevestigd.');
@@ -28,6 +29,7 @@ if (instructions.humanReview !== 'approved') issues.push('De instructie-audio is
 if (readiness.sentenceComprehensionReview !== 'approved' || comprehensionAudio.humanReview !== 'approved') issues.push('De begripsvragen en bijbehorende vraag-, hulp- en antwoordaudio wachten op menselijke vrijgave.');
 if (comprehensionAudio.instructionVoiceId === comprehensionAudio.targetVoiceId) issues.push('Vraag- en steunstem moeten verschillen van de doeltaalstem.');
 if (klinkContexts.some(item => item.humanReview !== 'approved')) issues.push('De zinnen en situaties wachten op inhoudelijke en luistervrijgave.');
+if (readiness.connectedContentReview !== 'approved' || connectedContent.humanReview !== 'approved') issues.push('De aangesloten bestaande zinnen, teksten en gesprekken wachten op inhoudelijke en luistervrijgave.');
 const missing = release.words.filter(word => !media[word.id]?.audio);
 if (missing.length) issues.push(`${missing.length} betekenissen hebben nog geen gekoppelde woordopname.`);
 const missingImages = release.words.filter(word => !media[word.id]?.image);
@@ -35,5 +37,6 @@ if (missingImages.length) issues.push(`${missingImages.length} betekenissen hebb
 if (issues.length) { console.error(issues.join('\n')); process.exitCode = 1; }
 else {
   execFileSync(process.execPath, ['scripts/check-klink-media-files.mjs'], { stdio: 'inherit' });
+  execFileSync(process.execPath, ['scripts/check-connected-audio.mjs'], { stdio: 'inherit' });
   console.log('Publicatiebasis en inhoudelijke vrijgave gecontroleerd.');
 }

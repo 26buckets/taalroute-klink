@@ -123,9 +123,9 @@ export function PackageExerciseBrowser({
     .map((type) => ({ ...type, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
     .filter((type) => type.count > 0);
   const initialExercise = exercises.find(item => item.exerciseId === initialExerciseId) ?? exercises[0];
-  const initialFamilyId = (guided ? initialExercise?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';
+  const initialFamilyId = (guided || initialExerciseId ? initialExercise?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';
   const [familyId, setFamilyId] = useState(initialFamilyId);
-  const [recordIndex, setRecordIndex] = useState(() => guided ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));
+  const [recordIndex, setRecordIndex] = useState(() => guided || initialExerciseId ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));
   const [completed, setCompleted] = useState(false);
   const [result, setResult] = useState<ResultState>('idle');
   const [message, setMessage] = useState('Neem rustig de tijd.');
@@ -150,7 +150,7 @@ export function PackageExerciseBrowser({
   const selfPaced = exercise?.assessment === 'participation' || exercise?.componentId === 'ALF-CMP-001';
   const needsListen = Boolean(exercise?.requiresAudio);
   const sentenceQuestion = exercise?.mode === 'sentence-question';
-  const canAnswer = (!needsListen || heard) && (!sentenceQuestion || !audioPending);
+  const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);
   const automatic = guided && result === 'right' && !selfPaced && !autoPaused && !holdFeedback && !audioPending;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   async function listen(source?: string, automaticStart = false) {
@@ -175,7 +175,12 @@ export function PackageExerciseBrowser({
         setInstructionFailed(false);
       }
       if (!source) return true;
-      const sequence: { src: string; optionId?: string }[] = [{ src: source }];
+      const sequence: { src: string; optionId?: string }[] = exercise.playAllBlocks && source === stimulus
+        ? asArray<{ audio?: unknown }>(exercise.textBlocks).map(block => {
+          const src = findAudioSource(block.audio);
+          if (!src) throw new Error('recorded block unavailable');
+          return { src };
+        }) : [{ src: source }];
       if (sentenceQuestion && source === stimulus) {
         const questionAudio = findAudioSource(exercise.questionAudio);
         if (!questionAudio) throw new Error('question unavailable');
@@ -206,7 +211,7 @@ export function PackageExerciseBrowser({
   }
 
   const beginAudio = useEffectEvent(() => {
-    if (guided && (needsListen || exercise?.mode === 'model' || exercise?.instructionAudio)) {
+    if ((guided || exercise?.playAllBlocks) && (needsListen || exercise?.mode === 'model' || exercise?.instructionAudio)) {
       void listen(needsListen || exercise?.mode === 'model' ? stimulus : undefined, true);
     }
   });
@@ -266,10 +271,10 @@ export function PackageExerciseBrowser({
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts,
-      support: sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
+      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
       helpUsed: metrics.current.helpUsed, elapsedMs: Date.now() - metrics.current.started,
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
-      ...(sentenceQuestion ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
+      ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
     setMessage(feedback ?? (correct
       ? selfPaced ? 'Je hebt geoefend.' : 'Goed gedaan.'
@@ -300,7 +305,8 @@ export function PackageExerciseBrowser({
   if (completed) return <section className="honest-empty"><Check /><h2 ref={completionHeading} tabIndex={-1}>Goed geoefend</h2><p>Deze les is klaar.</p><button className="primary-button" onClick={onComplete}>{completeLabel}<ArrowRight /></button></section>;
 
   const family = pack.exerciseTypes.find((item) => item.id === familyId);
-  const modes = records.filter((item, index, all) => item.mode === 'sentence-question' || all.findIndex(other => other.mode === item.mode) === index);
+  const isIndividual = (item: PackageExercise) => item.mode === 'sentence-question' || item.mode.startsWith('connected-');
+  const modes = records.filter((item, index, all) => isIndividual(item) || all.findIndex(other => other.mode === item.mode) === index);
   const questionModes = modes.filter(item => item.mode === 'sentence-question');
   return (
     <section className={`cp-exercise-browser ${guided ? 'is-guided' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
@@ -338,10 +344,10 @@ export function PackageExerciseBrowser({
           </header>
 
           <div className="cp-exercise-stage">
-            {!guided && modes.length > 1 && <label className="cp-mode-picker">Wat wil je oefenen?<select value={sentenceQuestion ? exercise.exerciseId : exercise.mode} onChange={event => openAt(records.findIndex(item => item.exerciseId === event.target.value || item.mode === event.target.value))}>{modes.map(item => {
+            {!guided && modes.length > 1 && <label className="cp-mode-picker">Wat wil je oefenen?<select value={isIndividual(exercise) ? exercise.exerciseId : exercise.mode} onChange={event => openAt(records.findIndex(item => item.exerciseId === event.target.value || item.mode === event.target.value))}>{modes.map(item => {
               const isQuestion = item.mode === 'sentence-question';
-              const value = isQuestion ? item.exerciseId : item.mode;
-              return <option key={value} value={value}>{isQuestion ? `Luistervraag ${questionModes.indexOf(item) + 1}: ${item.title}` : item.title}</option>;
+              const value = isIndividual(item) ? item.exerciseId : item.mode;
+              return <option key={value} value={value}>{isQuestion ? `Luistervraag ${questionModes.indexOf(item) + 1}: ${item.title}` : asString(item.contentTitle) || item.title}</option>;
             })}</select></label>}
             <ExerciseSurface
               key={exercise.exerciseId}
@@ -401,7 +407,7 @@ function ExerciseSurface({
     case 'ALF-CMP-004': return <MatchingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} />;
     case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} />;
-    case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} />;
+    case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} canAnswer={canAnswer} />;
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
@@ -519,14 +525,14 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp 
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => normalize(answer) === normalize(value))); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
-function ReadingSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
-  const blocks = asArray<{ id: string; text: string; audio?: unknown }>(exercise.textBlocks);
+function ReadingSurface({ exercise, onAudio, onFinish, guided, canAnswer }: SurfaceProps & { guided: boolean; canAnswer: boolean }) {
+  const blocks = asArray<{ id: string; text: string; speaker?: string; audio?: unknown }>(exercise.textBlocks);
   const image = exerciseImage(exercise);
   const audio = exercise.prompt?.audio?.src;
   return <section className="cp-task-card cp-context-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-context-layout">{image && (audio ? <button className="cp-context-image" aria-label="Luister bij de foto" onClick={() => onAudio(audio)}><ExerciseImageView image={image} /></button> : <ExerciseImageView image={image} />)}<div className="cp-reading-blocks">{blocks.map(block => {
     const source = findAudioSource(block.audio);
-    return source ? <button key={block.id} aria-label={`Luister: ${block.text}`} onClick={() => onAudio(source)}>{block.text}</button> : <p key={block.id}>{block.text}</p>;
-  })}</div></div>{!guided && <button className="primary-button" onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}</section>;
+    return source ? <button key={block.id} aria-label={`Luister: ${block.speaker ? `${block.speaker}: ` : ''}${block.text}`} onClick={() => onAudio(source)}>{block.speaker && <small>{block.speaker}<br /></small>}{block.text}</button> : <p key={block.id}>{block.text}</p>;
+  })}</div></div>{!guided && <button className="primary-button" disabled={!canAnswer} onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}</section>;
 }
 
 function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {

@@ -24,7 +24,6 @@ import {
   FileText,
   Images,
   Layers3,
-  ListChecks,
   MessageCircle,
   Route,
   Shapes,
@@ -48,7 +47,7 @@ const tabLabels: { id: PackageTab; label: string; icon: typeof BookOpen }[] = [
   { id: 'words', label: 'Woorden', icon: WholeWord },
   { id: 'lessons', label: 'Lessen', icon: Route },
   { id: 'practice', label: 'Oefeningen', icon: Shapes },
-  { id: 'texts', label: 'Teksten', icon: FileText },
+  { id: 'texts', label: 'Zinnen en teksten', icon: FileText },
   { id: 'dialogues', label: 'Gesprekken', icon: MessageCircle },
   { id: 'media', label: 'Beeld en audio', icon: Images },
 ];
@@ -165,8 +164,8 @@ export function PackagePlayer({
         )}
         {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} />}
         {tab === 'practice' && <PackagePractice pack={pack} onAudio={playAudio} />}
-        {tab === 'texts' && <PackageTexts pack={pack} onAudio={playAudio} />}
-        {tab === 'dialogues' && <PackageDialogues pack={pack} />}
+        {tab === 'texts' && <PackageReading pack={pack} onAudio={playAudio} onAttempt={onAttempt} kind="texts" />}
+        {tab === 'dialogues' && <PackageReading pack={pack} onAudio={playAudio} onAttempt={onAttempt} kind="dialogues" />}
         {tab === 'media' && <PackageMedia pack={pack} onAudio={playAudio} />}
       </div>
     </div>
@@ -191,6 +190,7 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
           <Count value={pack.counts.coreWords} label="kernwoorden" />
           <Count value={pack.counts.exercises} label="oefeningen" />
           {pack.counts.texts > 0 && <Count value={pack.counts.texts} label="teksten" />}
+          {!!pack.counts.sentences && <Count value={pack.counts.sentences} label="zinnen" />}
           {pack.counts.dialogues > 0 && <Count value={pack.counts.dialogues} label="gesprekken" />}
           {pack.counts.games > 0 && <Count value={pack.counts.games} label={pack.counts.games === 1 ? 'spel' : 'spellen'} />}
         </div>
@@ -203,8 +203,8 @@ function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab
         <OverviewCard icon={Route} value={pack.counts.lessons} title="Lessen" text="Kijk, luister, kies en bouw het woord." onClick={() => onTab('lessons')} />
         <OverviewCard icon={WholeWord} value={pack.words.length} title="Woorden" text="Bekijk en beluister de woorden." onClick={() => onTab('words')} />
         <OverviewCard icon={Shapes} value={pack.counts.exercises} title="Oefeningen" text="Kies wat je wilt oefenen." onClick={() => onTab('practice')} />
-        {pack.texts.length > 0 && <OverviewCard icon={FileText} value={pack.counts.texts} title="Teksten" text="Lees een korte tekst." onClick={() => onTab('texts')} />}
-        {pack.dialogues.length > 0 && <OverviewCard icon={MessageCircle} value={pack.counts.dialogues} title="Gesprekken" text="Lees een gesprek." onClick={() => onTab('dialogues')} />}
+        {pack.texts.length > 0 && <OverviewCard icon={FileText} value={pack.texts.length} title="Zinnen en teksten" text="Luister en lees mee." onClick={() => onTab('texts')} />}
+        {pack.dialogues.length > 0 && <OverviewCard icon={MessageCircle} value={pack.counts.dialogues} title="Gesprekken" text="Luister naar een gesprek." onClick={() => onTab('dialogues')} />}
         {pack.counts.images > 0 && <OverviewCard icon={Images} value={pack.counts.images} title="Beelden" text="Bekijk de beelden bij de woorden." onClick={() => onTab('media')} />}
       </section>
     </div>
@@ -400,40 +400,33 @@ function PackagePractice({ pack, onAudio }: { pack: PackageDefinition; onAudio: 
   );
 }
 
-function PackageTexts({ pack, onAudio }: { pack: PackageDefinition; onAudio: AudioPlayer }) {
+function PackageReading({ pack, onAudio, onAttempt, kind }: { pack: PackageDefinition; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; kind: 'texts' | 'dialogues' }) {
+  const [lessonId, setLessonId] = useState('');
+  const [selectedId, setSelectedId] = useState('');
+  const [textKind, setTextKind] = useState('');
+  const items = (kind === 'texts' ? pack.texts : pack.dialogues).filter(item => (!lessonId || item.lessonIds?.includes(lessonId)) && (!textKind || ('kind' in item && item.kind === textKind)));
+  const availableLessons = pack.lessons.filter(lesson => (kind === 'texts' ? pack.texts : pack.dialogues).some(item => item.lessonIds?.includes(lesson.id)));
+  const records = items.flatMap(item => {
+    const record = pack.exercises.find(exercise => exercise.contextId === item.id && (!lessonId || exercise.lessonId === lessonId));
+    return record ? [record] : [];
+  });
+  if (selectedId) return <section className="cp-panel">
+    <button className="text-back" onClick={() => { stopMedia(); setSelectedId(''); }}><ArrowLeft />{kind === 'texts' ? 'Zinnen en teksten' : 'Gesprekken'}</button>
+    <PackageExerciseBrowser key={selectedId} pack={pack} exercises={records} initialExerciseId={selectedId} onAudio={onAudio} onAttempt={onAttempt} title="Luister en lees mee" description="" />
+  </section>;
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><h1>Luister en lees mee</h1></div>
-        <span className="cp-panel-count"><strong>{pack.texts.length}</strong><small>teksten</small></span>
+        <div><h1>{kind === 'texts' ? 'Luister en lees mee' : 'Luister naar een gesprek'}</h1></div>
+        <span className="cp-panel-count"><strong>{items.length}</strong><small>{kind === 'texts' ? 'zinnen en teksten' : 'gesprekken'}</small></span>
       </header>
-      <div className="cp-reading-list">
-        {pack.texts.map((text, index) => (
-          <details key={text.id} open={index === 0}>
-            <summary><span>{String(index + 1).padStart(2, '0')}</span><div><small>{text.level.replaceAll('_', ' ')}</small><strong>{text.title}</strong></div><ArrowRight /></summary>
-            <div className="cp-reading-copy">{text.audio && <button className="secondary-button" onClick={() => onAudio(text.audio)}><Volume2 />Luister</button>}<p>{text.text}</p>{text.question && <aside><strong>{text.question}</strong><span>Antwoord: {text.answer}</span></aside>}</div>
-          </details>
-        ))}
+      <div className="cp-coverage-filters">
+        <label>Woorden<select aria-label="Woorden" value={lessonId} onChange={event => setLessonId(event.target.value)}><option value="">Alle woorden</option>{availableLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lessonPreviewWords(pack, lesson).map(wordLabel).join(' · ')}</option>)}</select></label>
+        {kind === 'texts' && <label>Kies<select aria-label="Soort tekst" value={textKind} onChange={event => setTextKind(event.target.value)}><option value="">Zinnen en teksten</option><option value="sentence">Zinnen</option><option value="text">Teksten</option></select></label>}
       </div>
-    </section>
-  );
-}
-
-function PackageDialogues({ pack }: { pack: PackageDefinition }) {
-  return (
-    <section className="cp-panel">
-      <header className="cp-panel-heading">
-        <div><span className="eyebrow">Gesprekken</span><h1>Lees een gesprek</h1><p>Kies een gesprek.</p></div>
-        <span className="cp-panel-count"><strong>{pack.dialogues.length}</strong><small>gesprekken</small></span>
-      </header>
-      <div className="cp-dialogue-grid">
-        {pack.dialogues.map((dialogue) => (
-          <article key={dialogue.id}>
-            <header><MessageCircle /><div><small>{dialogue.level}</small><h2>{dialogue.title}</h2></div></header>
-            <div>{dialogue.turns.map((turn, index) => <p key={`${turn.speaker}-${index}`}><strong>{turn.speaker}</strong><span>{turn.text}</span></p>)}</div>
-            <footer><ListChecks /><span>{dialogue.goal}</span></footer>
-          </article>
-        ))}
+      <div className="cp-reading-list">
+        {items.map((item, index) => <button className="secondary-button" key={item.id} onClick={() => setSelectedId(records.find(record => record.contextId === item.id)!.exerciseId)}><span>{index + 1}. {item.title}</span><Volume2 aria-hidden="true" /></button>)}
+        {!items.length && <p>Bij deze woorden is nog geen tekst om samen te beluisteren.</p>}
       </div>
     </section>
   );

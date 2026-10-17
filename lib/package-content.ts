@@ -42,6 +42,9 @@ export type PackageText = {
   question?: string;
   answer?: string;
   audio?: string;
+  kind?: 'sentence' | 'text';
+  exerciseId?: string;
+  lessonIds?: string[];
 };
 
 export type PackageDialogue = {
@@ -49,7 +52,9 @@ export type PackageDialogue = {
   title: string;
   level: string;
   goal: string;
-  turns: { speaker: string; text: string }[];
+  turns: { speaker: string; text: string; audio?: string }[];
+  exerciseId?: string;
+  lessonIds?: string[];
 };
 
 export type ExerciseImage = {
@@ -103,6 +108,7 @@ export type PackageDefinition = {
     exercises: number;
     exerciseTypes: number;
     texts: number;
+    sentences?: number;
     dialogues: number;
     games: number;
     images: number;

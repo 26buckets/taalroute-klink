@@ -1,5 +1,6 @@
 import type { PackageDefinition, PackageExercise, PackageLesson } from './package-content';
 import { klinkContexts } from './klink-context.ts';
+import { contentForStep, contentReadingConditions } from './connected-content.ts';
 
 export const buildStatusLabels = {
   works: 'Werkt', partial: 'Gedeeltelijk', missing: 'Ontbreekt', different: 'Bewust anders',
@@ -15,6 +16,7 @@ const targetIds = (lesson: PackageLesson) => unique(lesson.newWords?.length ? le
 const preparedIds = (lesson: PackageLesson) => unique([...(lesson.known ?? []), ...(lesson.newWords ?? []), ...(lesson.returning ?? [])]);
 const exerciseWordIds = (exercise: PackageExercise): string[] => unique([
   ...(typeof exercise.wordId === 'string' ? [exercise.wordId] : []),
+  ...(Array.isArray(exercise.wordIds) ? exercise.wordIds.filter((id): id is string => typeof id === 'string') : []),
   ...(Array.isArray(exercise.sources) ? exercise.sources.flatMap(item => typeof item?.id === 'string' ? [item.id] : []) : []),
 ]);
 
@@ -55,13 +57,13 @@ export function buildChecklist(pack: PackageDefinition, lesson: PackageLesson): 
     check('word-production', 'Een woord maken zonder zichtbaar antwoord', ['recall-word', 'word-dictation'], 'Lettertegels of dictee zonder zichtbaar model. Opgevraagde hulp blijft apart geregistreerd; typen is niet verplicht bij de instap.', { media: ['audio'] }),
     check('word-meaning', 'Geschreven woord en betekenis verbinden', ['word-image', 'word-image-match'], pairReason || 'Verschillende voorbereide betekenissen en beelden. Ontbrekende woordbeelden niet door willekeurige foto’s vervangen.', { media: ['image'], different: oneWord }),
     check('speaking', 'Nazeggen en terugluisteren', ['repeat-word'], 'Beschikbaar bij vrij oefenen. Een opname of tik op Klaar is geen uitspraakbeoordeling.', { media: ['audio'] }),
-    check('sentence-listening', 'Een korte zin beluisteren en begrijpen', questions.length ? ['sentence-question'] : ['listen-sentence'], questions.length
+    check('sentence-listening', 'Een korte zin beluisteren en begrijpen', questions.length ? ['sentence-question'] : ['listen-sentence', 'connected-sentence'], questions.length
       ? 'Begripsvragen met vaste keuzes en gesproken hulp. De foto-opdrachten oefenen de genoemde betekenis, nog geen complexere zinsbouw. Extra mondelinge voorbereiding en plaatsing bij Vrij oefenen staan hieronder per vraag; menselijke beoordeling blijft open.'
       : 'Luistermodellen zijn aanwezig waar gekoppeld; een passende begripsvraag met voorbereide keuzes ontbreekt nog.', { partial: !questions.length }),
     check('sentence-reading', 'Een zin zelfstandig lezen en begrijpen', [], 'Nog bouwen: leesvoorwaarden voor álle woorden, een betekenisvraag en afzonderlijke registratie van luister- of modelsteun.'),
     check('sentence-building', 'Woorden tot een betekenisvolle zin verbinden', [], 'Nog bouwen: voorbereide woordkaarten, een natuurlijk zinsdoel en verdedigbare alternatieve woordvolgordes. Geen verplicht toetsenbord.'),
-    check('text-understanding', 'Een korte samenhangende tekst begrijpen', ['listen-situation'], 'Een beluisterde situatie is hoogstens een begin. Zelfstandig lezen, vragen met bewijs in de tekst en foutherstel ontbreken nog.', { partial: true }),
-    check('application', 'Taal gebruiken in dagelijks leven en werk', ['listen-situation'], 'Een situatie beluisteren is nog geen praktische keuze maken. Een handeling of reactie met passende feedback moet nog worden uitgewerkt.', { partial: true }),
+    check('text-understanding', 'Een korte samenhangende tekst begrijpen', ['listen-situation', 'connected-text'], 'Bestaande teksten en opnamen zijn gekoppeld waar beschikbaar. Oorspronkelijke vragen en bewijsplaatsen staan bij de docent. Meeluisteren is geen zelfstandig lees- of begripsresultaat; een zelfstandige begripsopdracht is nog niet aangesloten.', { partial: true }),
+    check('application', 'Taal gebruiken in dagelijks leven en werk', ['listen-situation', 'connected-dialogue'], 'Bestaande gesprekken zijn met beurtopnamen aangesloten waar beschikbaar. Luisteren is geen praktische keuze maken of zelf een gesprek voeren.', { partial: true }),
     check('repetition', 'Terughalen en later opnieuw gebruiken', ['recall-word'], 'Terughalen binnen de les en vaste terugkeerwoorden bestaan. Persoonlijke herhaalplanning over sessies ontbreekt; hervatten is geen beheersingsmeting.', { media: ['audio'], partial: true }),
     check('interaction', 'Rustige bediening en passende variatie', [], 'Eén hoofdhandeling, tikken als alternatief voor slepen, geen verplichte timer of puntenwedstrijd. Niet iedere oefenvorm hoort bij ieder woord.', { different: true }),
   ];
@@ -91,9 +93,11 @@ export function sentenceBridge(pack: PackageDefinition, lesson: PackageLesson) {
       wordsOutsideStep: tokens.filter(word => !spellings.has(word)),
       independentReading: context.independentReading, humanReview: context.humanReview };
   });
-  return { packageId: pack.id, lessonId: lesson.id, wordIds: ids, models, stages: bridgeStages,
+  const existing = contentForStep(lesson).map(item => ({ ...item, conditions: contentReadingConditions(item, lesson) }));
+  return { packageId: pack.id, lessonId: lesson.id, wordIds: ids, models, existing, stages: bridgeStages,
     nextAction: models.some(model => model.questions.length)
       ? 'De gekoppelde begripsvragen oefenen luisteren. Beoordeel de vragen en opnamen, en bereid waar vermeld extra betekenissen mondeling voor. Zelfstandig lezen volgt pas na afzonderlijke leesvoorbereiding.'
+      : existing.length ? 'Gebruik de gekoppelde bestaande inhoud en bijbehorende opnamen. Bereid de extra woordbetekenissen en zinsverbanden voor; benut aanwezige bespreekvragen. Zelfstandig lezen en beoordelen zijn nog niet vrijgegeven.'
       : models.length ? 'Werk bij het gekoppelde luistermodel eerst één begrijpelijke betekenisvraag uit. Bereid de overige woorden voor voordat dit zelfstandig lezen wordt.'
       : 'Kies bij deze woordbetekenissen eerst één natuurlijke korte zin. Leg alle extra woorden, de volledige zinsopname en een concrete betekenisvraag vast.',
     readingNote: 'De opgesomde extra woorden ontbreken als geschreven vorm in deze leesstap. Dit is geen oordeel over beheersing: ook de betekenis, woordvorm, klanken en zinsbouw van de overige woorden moeten passen. Een luistermodel is nog geen zelfstandig leesmateriaal.' };
