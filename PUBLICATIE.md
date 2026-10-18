@@ -31,10 +31,19 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-picture-guide-20261018.json`.
-Livebron: `3e098a090a523416d27a00c60b30b8b0d3d36e50`.
-Worker-versie: `90a520da-c59c-4186-b52c-c4a1def51c55`.
+Actief register: `docs/klink-publication-origin-story-20261018.json`.
+Livebron: `691c43980ae9ee03c041e433fcefd88b37331bde`.
+Worker-versie: `1d7e996e-27fa-413f-ae8f-b48851e453c2`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Hoofdstuk 12 heet op verzoek van Nico nu Het idee achter Klink. De klantpagina
+vertelt over de oorsprong, kleine stappen, Lexicon Basis 1000, beeldsteun en
+praktische toepassing; LASLLIAM blijft kort genoemd. Bronnenlijst, datums en
+interne controle-/reviewtaal zijn daar verwijderd. De interne onderbouwing en
+historische beperkingen blijven bewaard. Hoofdstukken 1–11 zijn exact behouden.
+De volledige lokale regressie en online wiki-, route- en docentbeeldcontroles
+slagen. Alle 2.679 aangeboden media zijn opnieuw bytegelijk teruggelezen.
+Akkoord en scope: `docs/klink-owner-release-origin-story-20261018.json`.
 
 Nieuwste aanscherping op 18 oktober: vijf beeldblokken met concrete voorbeelden
 staan in Docentomgeving → Overzicht → Van woordbeeld naar situatie. Dit is
