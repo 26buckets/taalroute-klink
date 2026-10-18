@@ -28,7 +28,26 @@ try {
     assert(await page.locator('.cp-home-hero').evaluate(el => Boolean(el.compareDocumentPosition(document.querySelector('.cp-practice-line')) & Node.DOCUMENT_POSITION_FOLLOWING)));
     for (const number of await page.locator('.cp-line-number').all()) {
       const css = await number.evaluate(el => ({ radius: getComputedStyle(el).borderRadius, color: getComputedStyle(el).color }));
-      assert.equal(css.radius, '50%'); assert.notEqual(css.color, 'rgb(255, 255, 255)');
+      assert.equal(css.radius, '50%'); assert.equal(css.color, 'rgb(255, 255, 255)');
+    }
+    const steps = await page.locator('.cp-practice-line-overview li').evaluateAll(items => items.map(li => {
+      const number = li.querySelector('.cp-line-number').getBoundingClientRect();
+      const card = li.querySelector('div').getBoundingClientRect();
+      const connector = getComputedStyle(li, '::before');
+      return { n: { x: number.x, y: number.y, w: number.width, h: number.height }, c: { x: card.x, y: card.y, w: card.width, h: card.height }, connector: connector.content };
+    }));
+    assert.deepEqual(await page.locator('.cp-practice-line-overview .cp-line-number').allTextContents(), ['1', '2', '3', '4', '5', '6']);
+    for (const [index, { n, c, connector }] of steps.entries()) {
+      assert.equal(n.w, 30); assert.equal(n.h, 30);
+      if (width <= 600) {
+        assert(Math.abs(n.y + n.h / 2 - c.y - c.h / 2) <= 1);
+        assert(n.x + n.w < c.x);
+        if (index) assert(c.y >= steps[index - 1].c.y + steps[index - 1].c.h + 9);
+      } else {
+        assert(Math.abs(n.x + n.w / 2 - c.x - c.w / 2) <= 1);
+        assert(n.y + n.h < c.y); assert.equal(c.h, 82);
+      }
+      assert.equal(connector === 'none', index === 5);
     }
     assert.equal(Math.round((await page.locator('.header-klink-logo').boundingBox()).width), width <= 440 ? 65 : 78);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
@@ -61,7 +80,7 @@ try {
       await page.screenshot({ path: `${out}/example-${width}.png` });
     }
   }
-  pass('Learner home retains six framed steps, circular numbers, no false active state and the smaller approved logo at four widths');
+  pass('Learner home has six framed steps with 30px white numerals, connected above on desktop and vertically on mobile; no false active state, overflow or logo changes at four widths');
   pass('Teacher has five matching blocks and five real visual examples, keyboard jumps, unchanged app route and visible preparation/observation guidance');
   await page.goto(`${base}/#learner/package/groep-1`);
   await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();

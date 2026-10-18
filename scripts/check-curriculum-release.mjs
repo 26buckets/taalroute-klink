@@ -15,8 +15,8 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-step-frames-20261018.json';
-const previousAuthorizationPath = 'docs/klink-owner-release-origin-story-20261018.json';
+const authorizationPath = 'docs/klink-owner-release-clear-step-line-20261018.json';
+const previousAuthorizationPath = 'docs/klink-owner-release-step-frames-20261018.json';
 try {
   const approval = JSON.parse(readFileSync(authorizationPath));
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));

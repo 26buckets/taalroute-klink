@@ -36,6 +36,15 @@ Livebron: `fd769e32aa8698ae341991566ae5b267ea22a47c`.
 Worker-versie: `47958c99-94fc-48b3-8417-48cdd4461a0f`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
+Vervolgopdracht 18 oktober: Nico koos Stappenlijn erboven met cijferrondjes
+van 30 px en gaf expliciet opdracht deze online in te bouwen. Alleen de uitleg
+Zo oefen je op Start wijzigt: witte cijfers boven zes bestaande kaders, verbonden
+door een horizontale lijn; op mobiel een verticale lijn links van de kaders.
+Deze uniforme cijfers zijn geen actieve of voltooide stappen. De interactieve
+oefenlijn, fotokaarten, inhoud, audio en het bodemmenu blijven ongewijzigd.
+Vrijgave: `docs/klink-owner-release-clear-step-line-20261018.json`.
+Publicatie en eindcontrole worden in het actieve register vastgelegd.
+
 Op verzoek van Nico hebben de zes stappen van Zo oefen je weer hun eigen
 kadertje: de bestaande rand en papierachtergrond zijn hersteld. De huidige
 ronde nummers, compacte maat, plaatsing en responsieve indeling zijn behouden.
