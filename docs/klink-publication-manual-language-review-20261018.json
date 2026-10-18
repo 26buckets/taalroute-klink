@@ -1,0 +1,91 @@
+{
+  "wordMeanings": 338,
+  "withdrawnInstructionFiles": 48,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "freshClientPath": "/_next/static/chunks/page-C7aV0jGJ.js",
+  "freshClientSha256": "a0fdc0cc04fadc49ab61868cb59723d6ad833d33ca67373295f4ce0705f9b048",
+  "errors": [],
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "6d69e2a418bab7c66fda350c9bd66a5162f7b6d5",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "9fd80949-e1af-4ac5-933f-c9a7abd9b83a",
+  "verifiedAt": "2026-10-18T10:41:08.767Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-18T10:39:51.687Z",
+    "sourceCommit": "6d69e2a418bab7c66fda350c9bd66a5162f7b6d5",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "sourceArchiveSha256": "735579bf121083e9cf034997acf34477a3591ebdee827831312ec371489df9c9",
+  "sourceArchiveFormat": "git archive 6d69e2a418bab7c66fda350c9bd66a5162f7b6d5 (tar)",
+  "previousPublicationRecord": "docs/klink-publication-teacher-wiki-20261018.json",
+  "scope": "Full teacher/didactic/editorial review and revision of twelve wiki topics for practical, active, clear Dutch around A2+/B1−.",
+  "manualSource": "docs/KLINK-DOCENTHANDLEIDING.md",
+  "webManual": "data/klink-teacher-manual.json",
+  "ownerAuthorization": "docs/klink-manual-language-review-20261018.json",
+  "githubActionsUsed": false,
+  "workflows": "No GitHub workflows; checks local.",
+  "checks": {
+    "typescript": "passed",
+    "fullLocalRegression": "Complete npm run test:review including all posttest suites exited 0.",
+    "publicationGate": "Normal npm run deploy passed.",
+    "wikiLocalAndLive": "Twelve articles exactly match reviewed text; four overview widths, mobile keyboard menu, navigation, legacy links, 404 and short guided lesson passed.",
+    "allTopicLayout": "All twelve chapters at 1440 and 320px; no overflow or page errors, valid internal links.",
+    "teachingFlow": "Documented pause, m demonstration, undo, learner m/a/t attempt and exit passed locally and live.",
+    "language": "All twelve articles reviewed for vocabulary, grammar, spelling, flow and actionable teaching guidance. Indicative local sentence scan supports but does not certify level.",
+    "liveMedia": "All 2679 offered media files byte-equal; zero errors.",
+    "worker": "100% active version verified."
+  },
+  "audioPause": {
+    "newRecordings": 0,
+    "newAudioConnections": 0,
+    "existingMediaUnchanged": true,
+    "rate": 0.85,
+    "isolatedT": "parked",
+    "instructionAudio": "withdrawn"
+  },
+  "limitations": [
+    "No independent human editorial review or teacher usability trial.",
+    "A2+/B1− is an editorial target, not a certified CEFR score.",
+    "The teacher supplies the actual book pages, group and schedule.",
+    "DigiBord integration is not included."
+  ],
+  "sourceBackup": {
+    "id": "1W-LTx3OGmkQhX5SPSWHg55DiU6BA2xjv",
+    "url": "https://drive.google.com/file/d/1W-LTx3OGmkQhX5SPSWHg55DiU6BA2xjv/view?usp=drivesdk",
+    "bytes": 6361619,
+    "sha256": "844b304ac53f2cc887bab549ef8b583db906e81fe7db973e8d6dd082a9c51da6",
+    "metadataAndBytesVerified": true,
+    "zipIntegrity": "passed",
+    "contains": "426 files: editable current source, manual and full review, local/live checks, screenshots, source readbacks and existing unchanged media recovery references. Final verified receipt is separate."
+  },
+  "readerDeliverables": [
+    {
+      "name": "Klink-grote-review-docentenhandleiding-20261018.md",
+      "id": "19gsKmiXeq08UokFxy9w552BGZHXlrLzV",
+      "url": "https://drive.google.com/file/d/19gsKmiXeq08UokFxy9w552BGZHXlrLzV/view",
+      "bytes": 16786,
+      "sha256": "d15e4ee77a5431012b06b574daf377bc1a62ecdc92bfd99eebec686f7ca9dc0b",
+      "metadataAndBytesVerified": true
+    },
+    {
+      "name": "Klink-docenthandleiding-herzien-20261018.md",
+      "id": "1NFG46CMNdNv0lEFIVOtVIW1iLr4YiLVC",
+      "url": "https://drive.google.com/file/d/1NFG46CMNdNv0lEFIVOtVIW1iLr4YiLVC/view",
+      "bytes": 32128,
+      "sha256": "2d027d4b9992cc0d82a763fcf185b6a9e22e7a0d3814516a906661029af4de9c",
+      "metadataAndBytesVerified": true
+    }
+  ]
+}
