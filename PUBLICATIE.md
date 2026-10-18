@@ -31,10 +31,18 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-origin-story-20261018.json`.
-Livebron: `691c43980ae9ee03c041e433fcefd88b37331bde`.
-Worker-versie: `1d7e996e-27fa-413f-ae8f-b48851e453c2`.
+Actief register: `docs/klink-publication-step-frames-20261018.json`.
+Livebron: `fd769e32aa8698ae341991566ae5b267ea22a47c`.
+Worker-versie: `47958c99-94fc-48b3-8417-48cdd4461a0f`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Op verzoek van Nico hebben de zes stappen van Zo oefen je weer hun eigen
+kadertje: de bestaande rand en papierachtergrond zijn hersteld. De huidige
+ronde nummers, compacte maat, plaatsing en responsieve indeling zijn behouden.
+De borderloze variant uit de eerdere beeldgidsronde is daarmee ingetrokken.
+De volledige lokale regressie, live kader-/route-/docentbeeld-/wikicontroles
+en vergelijking van alle 2.679 mediabestanden slagen. Geen gewijzigde inhoud
+of audio. Scope: `docs/klink-owner-release-step-frames-20261018.json`.
 
 Hoofdstuk 12 heet op verzoek van Nico nu Het idee achter Klink. De klantpagina
 vertelt over de oorsprong, kleine stappen, Lexicon Basis 1000, beeldsteun en
