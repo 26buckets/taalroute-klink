@@ -3,12 +3,12 @@
 Publiceer alleen `main` uit 26buckets/taalroute-klink op klink.taalroute.nl.
 Geen publicatie uit de aparte UI-werkmap of een oudere checkout.
 
-Voor publicatie goedgekeurd op 18 oktober 2026: zichtbaar
+Gepubliceerd en live gecontroleerd op 18 oktober 2026: zichtbaar
 keuzepaneel op Start, aparte fotohulp, zes zichtbare oefenstappen en grijze
 plaatsen voor ontbrekend aanbod. Zie `docs/klink-route-panel-review-20261018.json`.
 Geen nieuwe inhoud, beelden of audio. De eerdere lokale niveauroute blijft behouden.
 
-Lokale vervolguitwerking 18 oktober 2026 (nog niet gepubliceerd): vier ingangen
+Meegepubliceerde vervolguitwerking 18 oktober 2026: vier ingangen
 per onderdeel, aparte lees-/taalkeuzes, leeropbouw, plaatsing Nu zelf / Met de
 docent / Voor later, en instelbare beeldsteun. Zie
 `docs/klink-level-routes-review-20261018.json`. De bronbank en mediabestanden
@@ -31,10 +31,20 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-manual-language-review-20261018.json`.
-Livebron: `6d69e2a418bab7c66fda350c9bd66a5162f7b6d5`.
-Worker-versie: `9fd80949-e1af-4ac5-933f-c9a7abd9b83a`.
+Actief register: `docs/klink-publication-route-panel-20261018.json`.
+Livebron: `0ca61ce5833ad201d6b2652fa886765c07e399a5`.
+Worker-versie: `d93c7960-0576-4bfc-acc6-33c76534953b`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+De routekeuze en oefenlijn zijn lokaal én live gecontroleerd. De volledige
+lokale regressiereeks is geslaagd, evenals de aanvullende route- en
+publicatiebewijstests. Live zijn ook de vijf vaste menuknoppen, compacte
+fotokaarten, stabiele spelers, oefenbladen en bijgewerkte docentenwiki
+gecontroleerd. Alle 2.679 aangeboden mediabestanden zijn bytegelijk teruggelezen.
+Alfa C/B1 en de nog te maken beeldvormen blijven eerlijk als ontbrekend aanbod
+zichtbaar. Geen nieuwe audio of nieuwe inhoud. Historische lokale reviewverslagen
+bewaren hun toenmalige status; het actieve register is leidend. De gerichte
+codecontrole slaagt; algemene bestaande lintmeldingen elders zijn niet opgelost.
 
 De derde didactische review is gepubliceerd na Nico's expliciete akkoord en de
 lokale eindcontrole. Zie `docs/KLINK-DIDACTISCHE-REVIEW-RONDE3-20261018.md` en
