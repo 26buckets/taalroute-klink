@@ -19,7 +19,7 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
       <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
     {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
-    <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
+    <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
       setSelected(option.id);
       onFinish(option.id, answer.correctOptionIds?.includes(option.id) === true,
         answer.correctOptionIds?.includes(option.id) ? typeof exercise.evidence === 'string' ? `In de tekst: ${exercise.evidence}` : 'Goed. Kijk ook naar het voorbeeld.' : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.');

@@ -27,7 +27,11 @@ function ruleAudio(rule: typeof learningRules[number], part: 'instruction' | 'ex
 }
 
 function wrap(pack: PackageDefinition, activity: LearningActivity, id: string, title: string, source: PackageExercise, stage: Stage, index: number): PackageExercise {
-  return { ...source, exerciseId: `${pack.id}:${activity}:${id}:${stage}:${index}`, sourceExerciseId: source.sourceExerciseId ?? source.exerciseId,
+  const exerciseId = `${pack.id}:${activity}:${id}:${stage}:${index}`;
+  // Change positions between practice and recall, never during a retry.
+  const seed = Array.from(exerciseId).reduce((value, letter) => (Math.imul(value, 31) + letter.charCodeAt(0)) | 0, 7);
+  return { ...source, exerciseId, sourceExerciseId: source.sourceExerciseId ?? source.exerciseId,
+    ...(stage === 'recall' && Array.isArray(source.options) ? { options: orderedChoices(source.options, seed) } : {}),
     learningPathId: id, learningPathTitle: title, learningStage: stage, learningActivity: activity,
     // A listening route or an answer after a model never establishes independent reading.
     sourceStatus: 'concept', combinationReview: 'open', independentReading: false, access: 'teacher-supported',
@@ -40,7 +44,8 @@ function wrap(pack: PackageDefinition, activity: LearningActivity, id: string, t
 function example(rule: typeof learningRules[number], source: PackageExercise, display: string): PackageExercise {
   return { ...source, componentId: 'KLINK-LEARNING', mode: 'learning-example', title: 'Kijk en luister.',
     explanation: rule.explanation, displayWord: display, requiresAudio: false, assessment: 'participation',
-    requiresExplicitCompletion: true, ruleId: rule.id, instructionNeedId: `learning:${rule.id}:example`, instructionAudio: ruleAudio(rule, 'example'), readingTask: false };
+    requiresExplicitCompletion: true, ruleId: rule.id, instructionNeedId: `learning:${rule.id}:example`, instructionAudio: ruleAudio(rule, 'example'), readingTask: false,
+    ...('position' in rule ? { modelUnits: display.split(' · '), modelFocus: rule.position } : {}) };
 }
 
 function selection(rule: typeof learningRules[number], source: PackageExercise, options: string[], answer: string, seed: number, maskedWord?: string): PackageExercise {
@@ -49,7 +54,11 @@ function selection(rule: typeof learningRules[number], source: PackageExercise, 
     prompt: { audio: source.prompt?.audio }, requiresAudio: true, assessment: 'answer', readingTask: false,
     maskedWord, ruleId: rule.id, instructionNeedId: `learning:${rule.id}:instruction`, instructionAudio: ruleAudio(rule, 'instruction'), explanation: rule.explanation, helpWord: text((source.text as { primary?: string })?.primary) || text(source.helpWord),
     options: orderedChoices(options.map(label => ({ id: label, label })), seed), answer: { correctOptionIds: [answer] },
-    feedback: 'Luister opnieuw. Kijk zo nodig naar het voorbeeld. Je keuzes blijven staan.',
+    feedback: rule.id === 'grammar-we' ? 'Kijk naar wij of we. Vergelijk de zin met het voorbeeld.'
+      : rule.id === 'sound-first' ? 'Luister nog eens naar het begin van het woord.'
+      : rule.id === 'sound-middle' ? 'Luister nog eens naar het midden van het woord.'
+      : rule.id === 'sound-last' ? 'Luister nog eens naar het einde van het woord.'
+      : 'Luister nog eens. Vergelijk de lege plek met het voorbeeld.',
     distractorReason: 'De bedoelde klankpositie of spellingregel verschilt; geen willekeurige betekenisafleiders.',
   };
 }

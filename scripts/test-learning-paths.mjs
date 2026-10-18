@@ -214,10 +214,10 @@ test('New content cannot inherit the old publication approval', () => {
     readFileSync('data/klink-learning-paths-release.json'),
   );
   assert.equal(release.publicationApproved, true);
-  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-20261018.json');
+  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-round3-20261018.json');
   const approval = JSON.parse(readFileSync(release.ownerAuthorization));
   assert.equal(approval.approvedBy, 'Nico');
-  assert(approval.userRequest.includes('alles online'));
+  assert.equal(approval.userRequest, 'Ja, na de geslaagde eindcontrole publiceren');
   for (const [file, hash] of Object.entries(approval.files))
     assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'), hash, file);
   assert.equal(release.humanReview, 'open');

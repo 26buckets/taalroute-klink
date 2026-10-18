@@ -6,6 +6,7 @@ import { contentPackages, type PackageId } from '@/lib/package-content';
 import { lessonPlan, phaseLabels, planStatusLabels, type PlanStatus } from '@/lib/lesson-plan';
 import { buildChecklist, buildStatusLabels, sentenceBridge, type BuildStatus } from '@/lib/build-checklist';
 import { wordById } from '@/lib/klink-curriculum';
+import { teacherPracticePlan } from '@/lib/teacher-practice-plan';
 
 const statuses = Object.keys(planStatusLabels) as PlanStatus[];
 const statusClasses: Record<BuildStatus, PlanStatus> = { works: 'connected', partial: 'available', missing: 'missing', different: 'unnecessary' };
@@ -18,6 +19,7 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
   const plan = lessonPlan(pack, lesson);
   const checklist = buildChecklist(pack, lesson);
   const bridge = sentenceBridge(pack, lesson);
+  const teaching = teacherPracticePlan(pack, lesson);
   const words = (ids: string[] = []) => ids.map(id => wordById.get(id)?.word).join(' · ') || '—';
   return <section className="cp-lesson-coverage" aria-labelledby="lesson-coverage-title">
     <header><h2 id="lesson-coverage-title">De route per leesstap</h2><p>De bouwchecklist volgt dezelfde Taalroute-leesstappen. Werkt betekent aangesloten voor de doelwoorden van deze stap, niet dat de cursist het beheerst of dat de media zijn goedgekeurd. Gedeeltelijk betekent dat inhoud, dekking of aansluiting in de lesroute nog ontbreekt.</p></header>
@@ -27,6 +29,16 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
     </div>
     <dl className="cp-coverage-words"><div><dt>Bekende woorden</dt><dd>{words(lesson.known)}</dd></div><div><dt>Nieuwe woorden</dt><dd>{words(lesson.newWords)}</dd></div><div><dt>Woorden die terugkomen</dt><dd>{words(lesson.returning)}</dd></div></dl>
     {lesson.scope && <p>{lesson.scope}</p>}
+    <details className="cp-coverage-overview" data-teacher-practice-plan data-lesson-id={lesson.id}>
+      <summary>Deze leesstap begeleiden: {teaching.focus || lesson.title}</summary>
+      <p>Doel: de voorbereide woorden herkennen, lezen en betekenis geven met steeds minder hulp. Kies één kleine stap; het onderdeel is geen les die in één keer af moet.</p>
+      <p><strong>Klikroute:</strong> Lessen → {pack.title} → tabblad Lessen → leesstap {teaching.lessonNumber}: {lesson.title}. De fotokaart opent eerst het woordenoverzicht, niet meteen deze stap.</p>
+      <p>Voorbeeldblok van 15 minuten actieve oefentijd. Pas dit in je werkelijk ingeroosterde les en bijbehorende boekdoel; dit is geen volledig lesplan. Pauzes en zelfstandig oefenen vallen hier niet onder.</p>
+      <ol>{teaching.blocks.map(block => <li key={block.title}><strong>{block.title} · {block.minutes} minuten.</strong> {block.action}<p>Let op: {block.observe}</p></li>)}</ol>
+      <p>{teaching.wordIds.length === 1 ? 'Deze stap heeft één woord. Werk met dat woord; maak geen kunstmatige keuzevraag met nog onbekende woorden.' : 'Meng de woorden van dit onderdeel pas wanneer ze zijn voorbereid. Kies bij Oefeningen één oefenvorm: als reeks of, waar beschikbaar, Op één blad.'}</p>
+      <p>Stem hulp apart af op mondeling Nederlands, lezen/schrijven en digitale bediening. Een cursist kan goed spreken en toch net beginnen met lezen. Laat een vlottere lezer zonder voorbeeld proberen; geef een beginnende lezer eerst een model.</p>
+      <p>De docent begeleidt de instructie. Nieuwe audio is gepauzeerd. Herhalen bewaart gegevens op dit apparaat, niet per cursist; gebruik dit op gedeelde apparaten niet als individueel beheersingsrapport.</p>
+    </details>
     <ol className="cp-coverage-phases">{Object.entries(phaseLabels).map(([id, label]) => <li key={id}><strong>{label}</strong><span>{pack.exercises.filter(item => item.lessonId === lesson.id && item.phase === id && lesson.guidedExerciseIds?.includes(item.exerciseId)).length} in de route</span></li>)}</ol>
     <div className="cp-coverage-table-wrap"><table className="cp-coverage-table" data-build-checklist data-lesson-id={lesson.id}><caption>Vaste bouwchecklist voor {lesson.title}</caption><thead><tr><th>Vaardigheid</th><th>Status</th><th>Aansluiting en volgende bouwstap</th></tr></thead><tbody>{checklist.map(row => <tr key={row.id} data-check-id={row.id}><th scope="row">{row.title}</th><td><span className={`cp-plan-status ${statusClasses[row.status]}`}>{buildStatusLabels[row.status]}</span></td><td>{row.reason}</td></tr>)}</tbody></table></div>
     <details className="cp-coverage-overview" data-sentence-bridge><summary>Van deze woorden naar zinnen en tekstbegrip</summary><p>Doelwoorden: {words(bridge.wordIds)}.</p><p>{bridge.nextAction}</p>
