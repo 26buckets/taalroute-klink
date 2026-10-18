@@ -19,10 +19,14 @@ const home = async () => { await page.goto(`${base}/#learner/home`); await page.
 const choose = label => page.locator('.cp-route-panel').getByRole('button', { name: label, exact: true });
 try {
   await home();
-  assert.equal(await page.locator('.cp-route-panel summary').count(), 0);
+  assert.equal(await page.locator('.cp-route-panel summary').count(), 1);
   assert.equal(await page.locator('.cp-route-level').count(), 6);
   assert.equal(await page.locator('.cp-route-axis').count(), 2);
-  assert.equal(await page.locator('.cp-route-panel [data-picture-settings]').count(), 0);
+  assert.equal(await page.locator('.cp-route-panel [data-picture-settings]').count(), 1);
+  assert.equal(await page.locator('[data-level-picker]').count(), 0);
+  assert.equal(await page.locator('.learner-nav .brand-button, .learner-nav .brand').count(), 0);
+  assert.equal(await page.locator('.taalroute-header img').count(), 2);
+  assert(await page.locator('.header-brand-divider').isVisible());
   for (const label of ['Alfa C', 'B1']) {
     assert(await choose(label).isDisabled());
     assert((await choose(label).innerText()).includes('Nog niet beschikbaar'));
@@ -48,10 +52,31 @@ try {
   await page.locator('[data-chapter-page="words"]').waitFor();
   assert(page.url().includes('level=alfa-b'));
   assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.route.v1')), progress);
-  await home(); await page.locator('.cp-route-axis').first().getByRole('button', { name: 'Samen kiezen', exact: true }).click();
+  await home(); await choose('Alfa B').click();
+  assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'false');
+  assert.equal(await choose('A2').getAttribute('aria-pressed'), 'true');
+  await page.reload();
+  assert.equal(await page.getByRole('button', { name: 'Alle leesniveaus', exact: true }).getAttribute('aria-pressed'), 'true');
   await page.getByRole('button', { name: 'Bekijk mijn oefeningen', exact: true }).click();
   await page.locator('[data-chapter-page="texts"]').waitFor(); assert(page.url().includes('level=a2'));
   pass('Keyboard choice stays on Start; explicit Continue follows literacy or language choice without changing saved lesson progress');
+
+  await home(); await choose('Alfa B').click();
+  await page.goto(`${base}/#learner/chapters`);
+  await page.locator('[data-chapter="words"]').click();
+  assert(page.url().includes('level=alfa-b'));
+  assert.equal(await page.locator('.cp-route-axis').count(), 1);
+  assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'true');
+  await page.goto(`${base}/#learner/chapters`);
+  await page.locator('[data-chapter="texts"]').click();
+  assert(page.url().includes('level=a2'));
+  assert.equal(await page.locator('.cp-route-axis').count(), 1);
+  await choose('A2').click();
+  assert.equal(await choose('A2').getAttribute('aria-pressed'), 'false');
+  assert.equal(await page.locator('[data-level-picker]').count(), 0);
+  await home();
+  assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'true');
+  pass('One contextual toolbar follows the correct literacy/language axis; deselecting language preserves literacy');
 
   await home(); await choose('Alfa A').click();
   await page.goto(`${base}/#learner/package/groep-1`);
@@ -63,8 +88,9 @@ try {
   assert.equal(await page.locator('.cp-practice-line').count(), 0);
   await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click();
   assert.equal(await page.locator('[data-stage-link="make"]').getAttribute('aria-current'), 'step');
-  await page.locator('[data-level-picker] summary').click();
-  await page.locator('[data-level-picker]').getByRole('button', { name: 'Alfa C', exact: true }).click();
+  await page.evaluate(() => localStorage.setItem('klink.taalroute.preferences.v1', JSON.stringify({ literacy: 'alfa-c', language: 'a2', pictures: 'always' })));
+  await page.reload();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
   assert.equal(await page.locator('[data-stage-link]:disabled').count(), 5);
   assert.equal(await page.locator('[data-activity]').count(), 0);
   pass('Exercise line jumps to the correct section with focus, remembers the chosen stage and greys unavailable stages without empty exercise links');
@@ -72,9 +98,19 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 950 }); await home();
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
-    for (const button of await page.locator('.cp-route-panel button').all()) {
+    for (const button of await page.locator('.cp-route-panel button:visible').all()) {
       const rect = await button.boundingBox(); assert(rect.width >= 48 && rect.height >= 48, `${width}: touch target`);
     }
+    const header = page.locator('.taalroute-header');
+    for (const img of await header.locator('img').all()) assert(await img.evaluate(el => el.complete && el.naturalWidth > 0));
+    assert((await page.locator('.cp-route-panel').boundingBox()).height < (width >= 768 ? 190 : width >= 390 ? 260 : 320));
+    await page.locator('[data-picture-settings] summary').click();
+    const drawer = await page.locator('.cp-route-options').boundingBox();
+    assert(drawer.x >= 0 && drawer.x + drawer.width <= width + 1);
+    await page.locator('[data-picture-settings] summary').focus(); await page.keyboard.press('Escape');
+    assert.equal(await page.locator('[data-picture-settings]').getAttribute('open'), null);
+    assert(await page.locator('[data-picture-settings] summary').evaluate(el => el === document.activeElement));
+    await page.screenshot({ path: `${out}/header-${width}.png` });
     await page.locator('.cp-route-panel').screenshot({ path: `${out}/choices-${width}.png` });
     await page.locator('.cp-practice-line').evaluate(el => el.scrollIntoView({ block: 'center' }));
     await page.locator('.cp-practice-line').screenshot({ path: `${out}/line-${width}.png` });

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-18",
+  "scope": "Compacte routekeuze, tweede klik deselecteert, gezamenlijke hulpknop en één Taalroute/Klink-header.",
+  "baselineSource": "0ca61ce5833ad201d6b2652fa886765c07e399a5",
+  "baselineWorker": "d93c7960-0576-4bfc-acc6-33c76534953b",
+  "baselineVerified": "Live release.json, actieve Worker op 100%, actuele origin/main en Git-afstamming gecontroleerd.",
+  "changes": [
+    "Canonieke Taalroute- en Klink-logo’s met zichtbare scheidingslijn in de header; dubbele branding uit beide zijmenu’s verwijderd.",
+    "Lezen en Taal zijn aparte compacte keuzes. Contextpagina’s tonen alleen de toepasselijke rij; een bestaande deellink behoudt zijn eigen bronfilter.",
+    "Een tweede klik zet de actieve keuze uit. De andere route-as en bestaande lesvoortgang blijven behouden.",
+    "Fotohulp en eventuele opdrachtfilters staan onder één Hulp-knop; Escape sluit deze en herstelt focus.",
+    "Docentenhandleiding en verwijzingen gebruiken dezelfde zichtbare namen. De oude ongebruikte niveaucomponent blijft alleen in de bron voor historische scopecontrole."
+  ],
+  "checks": {
+    "typeScript": "passed",
+    "changedProductLint": "passed",
+    "publicationProofTests": "7 passed, inclusief onjuiste hashes en verloren historische scope",
+    "routeTests": "8 unittests; routekeuzes, opslagweigering, niveauverschillen, foto-hulp en deellinks gecontroleerd",
+    "compactBrowser": "Vier schermbreedtes: 1366, 768, 390 en 320; header, compacte hoogte, 48px doelen, hulpvenster, toetsenbord, deselectie, context-as en behoud van bodemmenu gecontroleerd",
+    "teacherManual": "12 hoofdstukken met exacte broninhoud, desktop/mobiel, navigatie, terugkeer en korte lesvensters gecontroleerd",
+    "visualReview": "Desktop, 390px, 320px en mobiel docentmenu bekeken. Geen nieuwe beelden gemaakt.",
+    "styleReference": "Opgegeven DigiBord-stijlmap niet beschikbaar; bestaande Klink-typografie, iconen en knoppen behouden.",
+    "fullRegressionAndLive": "Zie het publicatieregister voor de afzonderlijke volledige eindcontrole en online nacontrole."
+  },
+  "preserved": ["15 onderdelen", "302 lesroutes", "338 woordbetekenissen", "1612 gekoppelde bronnen", "2679 gepubliceerde media", "vijfknops bodemmenu", "compacte volledige foto's", "bestaande oefenspelers", "lokale opslag en voortgang"],
+  "audio": "Ongewijzigd. Geen productie of nieuwe koppelingen; tempo 0,85 behouden, instructieaudio ingetrokken, losse t geparkeerd.",
+  "limitations": ["Geen menselijke cursistproef", "Geen volledige DigLin-gelijkwaardigheid", "Alfa C en B1 blijven zichtbaar maar niet beschikbaar", "Bestaande algemene lintmeldingen buiten deze wijziging niet verholpen"],
+  "authorization": "docs/klink-owner-release-compact-route-20261018.json",
+  "githubActions": "Geen workflows lokaal of op origin/main; zware controles lokaal."
+}

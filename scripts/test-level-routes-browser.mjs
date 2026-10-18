@@ -22,7 +22,7 @@ await page.addInitScript(() => {
 const pass = text => { checks.push(text); console.log('PASS', text); };
 const tab = label => page.locator('.cp-tabs').getByRole('button', { name: label, exact: true }).click();
 async function openPack() { await page.goto(`${base}/#learner/package/groep-1`); await page.locator('.cp-word-grid').waitFor(); }
-async function settings() { const block = page.locator('[data-my-route]'); if (await block.locator('summary').count() && await block.getAttribute('open') === null) await block.locator('summary').click(); return block; }
+async function settings() { const block = page.locator('[data-my-route]'); await block.waitFor(); return block; }
 try {
   await page.goto(`${base}/#learner/home`); await page.locator('.cp-home').waitFor();
   assert.deepEqual(await page.locator('.learner-nav nav button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
@@ -93,8 +93,7 @@ try {
   await page.goto(`${base}/#learner/chapters/texts/texts?level=b1`);
   await page.locator('.cp-chapters').waitFor(); assert.equal(await page.locator('[data-collection]').count(), 0);
   assert((await page.getByRole('status').innerText()).includes('B1'));
-  await page.locator('[data-level-picker] summary').click();
-  await page.locator('[data-level-picker]').getByRole('button', { name: 'A2', exact: true }).click();
+  await page.locator('[data-my-route]').getByRole('button', { name: 'A2', exact: true }).click();
   await page.locator('[data-collection]').first().click(); await page.locator('[data-exercise-id]').waitFor();
   const selectedUrl = page.url(); await page.reload(); await page.locator('[data-exercise-id]').waitFor();
   assert.equal(page.url(), selectedUrl);

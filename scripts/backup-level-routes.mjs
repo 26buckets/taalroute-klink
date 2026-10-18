@@ -2,12 +2,13 @@ import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSy
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
-if (process.argv[2] && !['route-panel', 'route-release'].includes(process.argv[2])) throw Error('Unknown backup target.');
-const published = process.argv[2] === 'route-release';
+if (process.argv[2] && !['route-panel', 'route-release', 'compact-route'].includes(process.argv[2])) throw Error('Unknown backup target.');
+const compact = process.argv[2] === 'compact-route';
+const published = compact || process.argv[2] === 'route-release';
 const panel = published || process.argv[2] === 'route-panel';
-const out = published ? 'outputs/route-release-20261018' : panel ? 'outputs/route-panel-20261018' : 'outputs/level-routes-20261018';
+const out = compact ? 'outputs/compact-route-20261018' : published ? 'outputs/route-release-20261018' : panel ? 'outputs/route-panel-20261018' : 'outputs/level-routes-20261018';
 mkdirSync(out, { recursive: true });
-const archive = `${out}/${published ? 'Klink-routekeuze-gepubliceerd-20261018' : panel ? 'Klink-routekeuze-en-oefenlijn-20261018' : 'Klink-niveauroutes-lokale-bouw-20261018'}.zip`;
+const archive = `${out}/${compact ? 'Klink-compacte-route-header-gepubliceerd-20261018' : published ? 'Klink-routekeuze-gepubliceerd-20261018' : panel ? 'Klink-routekeuze-en-oefenlijn-20261018' : 'Klink-niveauroutes-lokale-bouw-20261018'}.zip`;
 if (existsSync(archive)) throw Error('Existing recovery archive must not be overwritten.');
 const candidates = execFileSync('git', ['ls-files', '-co', '--exclude-standard'], { encoding: 'utf8' }).trim().split('\n');
 const source = candidates.filter(path => !path.startsWith('outputs/') && (/\.(ts|tsx|js|mjs|cjs|json|jsonc|css|md|html|toml|yml|yaml|lock)$/.test(path) || path === 'public/.assetsignore'));
@@ -44,7 +45,7 @@ const manifest = {
   createdAt: new Date().toISOString(),
   baseCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
   state: published ? 'Published implementation; source and verification records included. Consult the active publication register for the runtime commit.' : 'Uncommitted local implementation; not published. Restore files over the stated base.',
-  scope: panel ? 'Visible route choice on Start, separate photo help, six-stage exercise navigation and honest unavailable placeholders. Includes the prior level-route implementation; media unchanged.' : 'Approved menu, separate literacy/language routes, within-route progression and optional picture support. Existing media unchanged.',
+  scope: compact ? 'One compact contextual route toolbar, second-click deselection, unified help and header branding. Existing bottom navigation, content, players, progress and media unchanged.' : panel ? 'Visible route choice on Start, separate photo help, six-stage exercise navigation and honest unavailable placeholders. Includes the prior level-route implementation; media unchanged.' : 'Approved menu, separate literacy/language routes, within-route progression and optional picture support. Existing media unchanged.',
   unchangedMediaRecovery: {
     previousSourceAndEvidence: panel ? '1-08CFDcFvx_lDzRzktziVSNUKdxJduox' : '1T8HJFDd9xFUuLntKzQP1QYdzyOhNbvOT',
     fullMediaPackages: ['12_bQiJUlJEPdrl8s8rjYEJzycWmsIkXy', '1uHj2hVUO30HO9r17iW4TJ3_QBCBWptE-', '1zdlnhScWKaiwJpd5-Sqbk9acY746Bx-4', '1j6z5Yw_lF2gvDFfXqPqbO9mR1NQL-JoK', '1t-tgdn5qJQ1tnZnLVya1CMB8XOiAj_jC'],

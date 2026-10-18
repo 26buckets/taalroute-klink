@@ -3,7 +3,6 @@
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PackageGroupPractice } from '@/components/product/package-group-practice';
-import { ContentLevelPicker } from './content-level-picker';
 import { levelLabel, type ContentSelection } from '@/lib/content-levels';
 import { MyRoute, useRouteSettings } from './route-settings';
 import { contextReadiness, lessonContentLevel, lessonWordIds, readinessLabels, type ContentReadiness } from '@/lib/learner-route';
@@ -164,9 +163,8 @@ export function PackagePlayer({
       </nav>
 
       <div className="cp-content">
-        <MyRoute onChange={() => setSelection(undefined)} />
+        <MyRoute axis={tab === 'use' ? 'language' : 'literacy'} selection={tab === 'practice' ? selection : undefined} onChange={() => setSelection(undefined)} onSelectionChange={tab === 'practice' ? setSelection : undefined} />
         {['practice', 'use'].includes(tab) && <label className="cp-step-scope">Oefenen met<select value={lessonId} onChange={event => { stopMedia(); setLessonId(event.target.value); }}><option value="">Alle woorden van dit onderdeel</option>{pack.lessons.map((item, index) => <option key={item.id} value={item.id}>{index + 1}. {lessonPreviewWords(pack, item).map(wordLabel).join(' · ')}</option>)}</select></label>}
-        {tab === 'practice' && <ContentLevelPicker selection={selection} onChange={setSelection} />}
         {tab === 'words' && (
           <PackageWords
             pack={pack}
@@ -345,7 +343,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
         <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Samen oefenen<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
-        {!lessons.length && <output>Bij deze route zijn hier nog geen leesstappen ingedeeld. Kies samen met je docent bij Mijn route.</output>}
+        {!lessons.length && <output>Bij deze route zijn hier nog geen leesstappen ingedeeld. Kies samen met je docent bij Lezen bovenaan.</output>}
         {lessons.map((lesson) => {
           const index = pack.lessons.indexOf(lesson);
           const words = lessonPreviewWords(pack, lesson);

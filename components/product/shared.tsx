@@ -32,7 +32,6 @@ export function StaffShell({ area, name, initials, nav, children, onExit }: {
   return (
     <div className="staff-app">
       <aside className="staff-sidebar">
-        <Brand label={area} />
         <nav className="staff-nav" aria-label="Docentnavigatie">{nav}</nav>
         <button className="staff-account" aria-label="Afsluiten" onClick={onExit}><span>{initials}</span><span><strong>{name}</strong><small>{area}</small></span><LogOut /></button>
       </aside>

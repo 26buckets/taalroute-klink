@@ -15,7 +15,7 @@ function check(candidate, changeApproval) {
     cpSync('data', join(dir, 'data'), { recursive: true });
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-route-panel-20261018.json';
+      const approvalPath = 'docs/klink-owner-release-compact-route-20261018.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');

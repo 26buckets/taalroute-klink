@@ -7,9 +7,9 @@ import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
 import { chapterCollections, chapterHash, chapterLevels, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
-import { ContentLevelPicker } from './content-level-picker';
 import { exerciseSetHelp, levelLabel } from '@/lib/content-levels';
-import { MyRoute } from './route-settings';
+import { MyRoute, useRouteSettings } from './route-settings';
+import { chapterRouteAxis } from '@/lib/learner-route';
 import type { PracticeAttempt } from '@/lib/package-content';
 import { learningReviewKey, parseLearningReview } from '@/lib/learning-review';
 
@@ -32,6 +32,7 @@ export function PracticeChapterCards({ onOpen }: { onOpen: (chapter: string) => 
 }
 
 export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; onAttempt: (attempt: PracticeAttempt) => void }) {
+  const { settings } = useRouteSettings();
   const [location, setLocation] = useState<ChapterLocation>(() => typeof window === 'undefined' ? { level: 'all' } : parseChapterHash(window.location.hash));
   const [limits, setLimits] = useState<Record<string, number>>(() => revealCollection({}, location));
   const [round, setRound] = useState(0);
@@ -78,8 +79,8 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
   return <div className={`learner-page cp-chapters ${collection ? 'cp-chapter-playing' : ''}`} data-chapter-page={chapter?.id ?? 'all'}>
     <button className="text-back" onClick={back}><ArrowLeft />{collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'}</button>
     <header className="content-page-heading"><div>{chapter && <p className="cp-menu-location" aria-label="Je bent hier">Oefenen{activity ? ` · ${chapter.title}` : ''}</p>}<h1 ref={heading} tabIndex={-1}>{title}</h1>{collection && exerciseSetHelp(collection.exercises) === 'guided' && <p>Samen met je docent.</p>}</div></header>
-    {!collection && <><MyRoute onChange={next => open({ ...location, level: location.chapter && ['sentences', 'texts', 'listening', 'speaking', 'grammar', 'practical'].includes(location.chapter) ? next.language : next.literacy, collection: undefined })} /><ContentLevelPicker selection={location} onChange={next => open({ ...location, ...next, collection: undefined })} /></>}
-    {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, ...selection })} />}
+    {!collection && <MyRoute axis={chapter ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
+    {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, level: settings[chapterRouteAxis(id)] })} />}
     {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{activities.map(item => {
       const Icon = icons[item.icon];
       return <button className="cp-activity-button" key={item.id} data-chapter-activity={item.id} onClick={() => open({ chapter: chapter.id, activity: item.id, ...selection })}><Icon aria-hidden="true" /><span>{item.label}</span><ArrowRight aria-hidden="true" /></button>;

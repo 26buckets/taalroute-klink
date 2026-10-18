@@ -6,6 +6,9 @@ import type { PackageDefinition, PackageExercise, PackageLesson } from './packag
 export const routeSettingsKey = 'klink.taalroute.preferences.v1';
 export type RouteSettings = { literacy: 'all' | 'alfa-a' | 'alfa-b' | 'alfa-c'; language: 'all' | 'a1' | 'a2' | 'b1'; pictures: 'always' | 'request' | 'after' };
 export const defaultRouteSettings: RouteSettings = { literacy: 'all', language: 'all', pictures: 'always' };
+export function chapterRouteAxis(chapter?: string): 'literacy' | 'language' {
+  return chapter && ['sentences', 'texts', 'listening', 'speaking', 'grammar', 'practical'].includes(chapter) ? 'language' : 'literacy';
+}
 export function parseRouteSettings(raw: string | null): RouteSettings {
   try {
     const value = JSON.parse(raw ?? '{}');
@@ -74,7 +77,7 @@ export function contextReadiness(id: string, pack: PackageDefinition, lesson: Pa
   if (!source) return { status: 'later', reason: 'Bron en leesvoorwaarden moeten nog worden vastgesteld.', level: 'support' };
   const level = sourceContentLevel(source.sourceLevel);
   if (level !== 'support') {
-    if (settings.language === 'all') return { status: 'later', level, reason: 'Kies met de docent eerst het passende taalniveau bij Mijn route. Het bronlabel is geen leesvrijgave.' };
+    if (settings.language === 'all') return { status: 'later', level, reason: 'Kies met de docent eerst het passende taalniveau bij Taal bovenaan. Het bronlabel is geen leesvrijgave.' };
     if (level !== settings.language) return { status: 'later', level, reason: 'Ander taalniveau dan de gekozen route. De docent kan dit bewust voor herhaling of later kiezen.' };
     return { status: 'guided', level, reason: 'Het taalbronlabel past bij de gekozen route. Betekenis en lezen blijven begeleid; dit is geen zelfstandige leesvrijgave.' };
   }

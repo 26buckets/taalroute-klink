@@ -39,9 +39,9 @@ Kies eerst wat je wilt oefenen. Gebruik daarna de route die daarbij past. De kno
 
 ### Je oefenroute kiezen
 
-Kies op Start bij Kies je oefenroute samen een leeskeuze (Alfa A of Alfa B) en zo nodig een taalkeuze (A1 of A2). Deze keuzes staan los van elkaar. Ze bepalen het aanbod, niet het behaalde niveau. Alfa C en B1 zijn zichtbaar maar nog niet beschikbaar. Met Bekijk mijn oefeningen open je het passende aanbod. De keuze blijft op dit apparaat staan.
+Kies bovenaan bij Lezen samen Alfa A of Alfa B en zo nodig bij Taal A1 of A2. Deze keuzes staan los van elkaar. Ze bepalen het aanbod, niet het behaalde niveau. Nogmaals op de gekozen knop tikken zet die keuze uit; Alles toont alle niveaus van die rij. Alfa C en B1 zijn grijs: daarvoor is nog geen aanbod. Met Bekijk mijn oefeningen open je het passende aanbod. Bij een woordhoofdstuk zie je alleen de leeskeuze; bij een taalhoofdstuk alleen de taalkeuze. De keuze blijft op dit apparaat staan. Een geopende deellink kan een eigen niveaukeuze tonen.
 
-De oefenlijn toont Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Binnen Samen oefenen kies je zo een soort opdracht. Dit zijn geen behaalde stappen. Grijs betekent dat er bij deze keuze nog geen passend aanbod is. Bij Hulp bij oefenen kies je wanneer de woordfoto helpt; voorbeelden en situatiebeelden blijven zichtbaar.
+De oefenlijn toont Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Binnen Samen oefenen kies je zo een soort opdracht. Dit zijn geen behaalde stappen. Grijs betekent dat er bij deze keuze nog geen passend aanbod is. Bij Hulp kies je wanneer de woordfoto helpt; voorbeelden en situatiebeelden blijven zichtbaar.
 
 ### Eén kleine leesstap
 

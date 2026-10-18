@@ -43,15 +43,13 @@ try {
   }
   pass('All 12 chapters open real exercises directly, without a word lesson gate');
   await page.goto(`${base}/#learner/chapters/texts/texts`);
-  await page.locator('[data-level-picker] summary').click();
-  await page.locator('[data-level-picker]').getByRole('button', { name: 'A2', exact: true }).click();
+  await page.locator('[data-my-route]').getByRole('button', { name: 'A2', exact: true }).click();
   await page.locator('[data-collection]').first().click();
   const url = page.url(), id = await page.locator('[data-exercise-id]').getAttribute('data-exercise-id');
   await page.reload(); await page.locator('[data-exercise-id]').waitFor();
   assert.equal(await page.locator('[data-exercise-id]').getAttribute('data-exercise-id'), id);
   await page.getByRole('button', { name: 'Andere opdracht', exact: true }).first().click();
-  await page.locator('[data-level-picker] summary').click();
-  assert.equal(await page.locator('[data-level-picker]').getByRole('button', { name: 'A2', exact: true }).getAttribute('aria-pressed'), 'true');
+  assert.equal(await page.locator('[data-my-route]').getByRole('button', { name: 'A2', exact: true }).getAttribute('aria-pressed'), 'true');
   await page.goBack(); await page.locator('[data-exercise-id]').waitFor(); assert.equal(page.url(), url);
   await page.goBack(); await page.locator('[data-collection]').first().waitFor();
   pass('Source-level selection, shareable deep links, reload and browser Back retain the correct content');

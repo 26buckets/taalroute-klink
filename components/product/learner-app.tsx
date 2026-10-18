@@ -1,6 +1,6 @@
 'use client';
 
-import { Brand, playMedia, stopMedia } from '@/components/product/shared';
+import { playMedia, stopMedia } from '@/components/product/shared';
 import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PracticeChapters, PracticeChapterCards } from '@/components/product/practice-chapters';
@@ -19,9 +19,9 @@ import {
 import { nextLessonPosition, parseProgress, progressKey, type RouteProgress } from '@/lib/learner-progress';
 import { lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
-import { MyRoute, PictureHelp, useRouteSettings } from './route-settings';
+import { MyRoute, useRouteSettings } from './route-settings';
 import { PracticeLine, PictureGrowthLine } from './practice-line';
-import { lessonContentLevel } from '@/lib/learner-route';
+import { chapterRouteAxis, lessonContentLevel } from '@/lib/learner-route';
 import { levelLabel } from '@/lib/content-levels';
 import {
   ArrowLeft,
@@ -90,7 +90,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     const hash = next === 'package' ? `#learner/package/${packageId}` : `#learner/${next}`;
     if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
-  function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: chapter && ['sentences', 'texts', 'listening', 'speaking', 'grammar', 'practical'].includes(chapter) ? settings.language : settings.literacy }); }
+  function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: settings[chapterRouteAxis(chapter)] }); }
 
   function saveProgress(next: RouteProgress) {
     setProgress(next);
@@ -135,7 +135,6 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   return (
     <div className="learner-app">
       <aside className="learner-nav">
-        <button className="brand-button" onClick={() => openView('home')} aria-label="Naar het begin"><Brand /></button>
         <nav aria-label="Cursistnavigatie">
           <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
           <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
@@ -175,7 +174,6 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
       <MyRoute onBrowse={() => onChapter(settings.literacy !== 'all' ? 'words' : settings.language !== 'all' ? 'texts' : 'words')} />
       <PracticeLine />
       <PictureGrowthLine />
-      <PictureHelp />
 
       {languageRoute || !candidates.length ? <section className="cp-home-hero"><div><h2>{languageRoute ? `Nederlands gebruiken · ${levelLabel(settings.language)}` : levelLabel(settings.literacy)}</h2><p>{languageRoute ? 'Bekijk het aanbod bij jouw route. Een niveaukeuze is geen behaald niveau.' : 'Voor deze keuze is nog geen leesroute ingedeeld.'}</p><button className="accent-button" onClick={() => onChapter(languageRoute ? 'texts' : 'words')}>Bekijk aanbod<ArrowRight /></button></div></section> : <section className="cp-home-hero">
         <div>
