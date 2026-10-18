@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "recordedAtUtc": "2026-10-18T20:22:34.905Z",
+  "status": "published-with-open-small-screen-layout-defect",
+  "sourceCommit": "7008a35917f73f5ea52df1089c5c2e7c53a741f4",
+  "branch": "main",
+  "workerVersion": "22187f39-a827-442e-929b-280e4c79d653",
+  "deploymentShare": 100,
+  "previousSourceCommit": "bd21413c5673cab5758e454e656a6e89fd35a430",
+  "previousWorkerVersion": "73ca978c-e65e-4e5f-8a5b-3e69e89de3a9",
+  "authorization": "docs/klink-owner-release-cumulative-20261018.json",
+  "publicationCommand": "npm run deploy",
+  "gateBypassed": false,
+  "fullLocalRegression": "docs/klink-cumulative-release-20261018/verification-final.json",
+  "counts": {
+    "candidateRecords": 1871,
+    "integratedCandidateRecords": 1393,
+    "liveCandidateRecords": 1393,
+    "excludedCandidateRecords": 478,
+    "preservedUnclassifiedRecords": 4,
+    "newAudioConnections": 0,
+    "newMediaBindings": 0,
+    "verifiedLiveMediaFiles": 2679,
+    "protectedFiles": 3187
+  },
+  "countCaveat": "Candidate records are not a count of unique atomic exercises; no complete-method, level or DigLin parity claim.",
+  "verification": {
+    "releaseSourceClean": true,
+    "releaseBranch": "main",
+    "releaseSourceCommitMatches": true,
+    "clientPath": "/_next/static/chunks/page-BHKkODqb.js",
+    "clientSha256": "7ffb2dd878d1f627d454beecd16c571d7801a231e487080ff62675d7c16556a7",
+    "clientMatchesBuiltSource": true,
+    "liveMediaByteMatches": 2679,
+    "liveMediaErrors": [],
+    "withdrawnInstructionsNotOffered": 48,
+    "localBrandedAudioFilesChecked": 1979,
+    "centralContractTestsPassed": 27,
+    "liveRealRouteChecks": 10,
+    "sixPlayerIntegrationChecks": 13,
+    "sixPlayerCheckCaveat": "First seven checks exercise actual deployed routes and scene tasks; later renderer fixture checks inject the local committed component into the live page and are not independent live-bundle tests."
+  },
+  "openIssues": [
+    {
+      "id": "short-screen-workflow-footer-overlap-001",
+      "viewport": {
+        "width": 320,
+        "height": 480
+      },
+      "evidence": "outputs/cumulative-integration-20261018/real-list-320.png",
+      "finding": "Workflow action Samen bekijken overlaps the existing Aan de slag / Verder footer at short viewport after scrolling; automated center hit test did not catch whole-region overlap.",
+      "status": "repair-required",
+      "notSeenAt": "390x844"
+    }
+  ],
+  "backup": {
+    "sourceArchiveId": "1plsRIK5K3irBLqeU4bdD-zxZsd80a0Pb",
+    "sourceSha256": "73110b6b96821c58399caa680e520a8208c1d67cdd227ba1637c5dc80907cb35",
+    "deltaArchiveId": "1Yqt0t41FydHhpBAO-fstBOO8vGgC27dj",
+    "deltaSha256": "36c5c0bf2445db4947b9e3115a531f471e77828ca0fe33e2e4e32ea10440d06a",
+    "sourceAndDeltaReadbackVerified": true
+  },
+  "nextPublicationRule": "This is the current live baseline. Next publication must descend from this source, recheck actual live release/Worker, preserve all content/media/routes/storage and obtain a newly hash-bound reviewed scope; historic baseline records remain unchanged.",
+  "evidenceDirectory": "outputs/publication-contract-handoff-20261018",
+  "humanReviewClaimed": false,
+  "learnerPilotClaimed": false,
+  "allWorkComplete": false
+}
