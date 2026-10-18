@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-18",
+  "requestedBy": "Nico",
+  "userRequest": "Er moet een docentenhandleiding komen op de website zelf. Een standaard header van Taalroute, met rechts een knopje voor docenten. Eerst de handleiding. Zet die er maar alvast in.",
+  "scope": [
+    "Shared Taalroute header with Voor docenten",
+    "Native /docenten page with twelve chapters and contents links",
+    "Existing learner and teacher routes preserved"
+  ],
+  "notIncluded": [
+    "DigiBord integration",
+    "New audio or audio connections",
+    "Changes to lesson content or stored progress"
+  ],
+  "baseline": {
+    "sourceCommit": "46d64d8efd9b593fd5584d058410c003bf4c1dc0",
+    "workerVersion": "e60bd45e-1bed-4352-a096-1edf1fec7914",
+    "canonicalMain": "f712f40576b8cf2d04e3d3ba7433723e1167b2c6"
+  },
+  "manualSource": "docs/KLINK-DOCENTHANDLEIDING.md",
+  "webContent": "data/klink-teacher-manual.json",
+  "webAdaptation": "The educational text is retained. Internal Drive references, technical release references and comparison with another method are not shown publicly. Update the verified click paths whenever the corresponding app labels or routes change.",
+  "style": "Recovered canonical DigiBord settings README and reference.png from the 2026-10-06 Drive-backed Mac archive; original home path absent. Existing official Taalroute logo retained.",
+  "verificationStatus": "All required local checks passed, including focused retests; live verification follows deployment.",
+  "limitations": [
+    "The real book pages, timetable and learner needs must be completed for each group.",
+    "No actual learner trial or independent human expert review has been performed."
+  ],
+  "checks": {
+    "typeScript": "passed",
+    "fullExistingReview": "Completed across full-review.log and remaining-review.log; failed checks rerun successfully in phase-retry.log, ux-retry.log and group-retry.log.",
+    "manual": "All 12 chapters, anchors and reload, learner/teacher entrances, four regular widths and short guided window passed.",
+    "media": "338 word audio/images, 12 context audio, retained instruction/comprehension metadata and 1979 connected recordings verified.",
+    "retests": [
+      "A phase-navigation timeout during development passed on isolated rerun without a test change.",
+      "A guided lesson in a 390px-high window lost too much space to the header. Hide the header during guided lessons below 600px height; full seven-mode UX checks then passed.",
+      "Ignored historical audio evidence was absent in the clean checkout; copied original records without changing them and reran the complete group suite."
+    ]
+  },
+  "shortWindows": "In guided lessons only, windows at most 600px high temporarily hide the header. Existing lesson back control restores it."
+}

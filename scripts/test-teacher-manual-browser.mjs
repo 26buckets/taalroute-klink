@@ -1,0 +1,60 @@
+import assert from 'node:assert/strict';
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:5208';
+const out = 'outputs/header-manual-20261018';
+mkdirSync(out, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const page = await browser.newPage();
+const errors = [], checks = [];
+page.on('pageerror', error => errors.push(error.message));
+const chapters = JSON.parse(readFileSync('data/klink-teacher-manual.json', 'utf8'));
+assert.equal(chapters.length, 12);
+assert(!/drive\.google|PUBLICATIE\.md|DigLin|<script|onerror=/i.test(JSON.stringify(chapters)));
+try {
+  for (const width of [1440, 820, 390, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(base);
+    await page.getByRole('heading', { name: 'Klink jij ook?', exact: true }).waitFor();
+    const entry = page.getByRole('link', { name: 'Voor docenten', exact: true });
+    assert(await entry.evaluate(el => {
+      const r = el.getBoundingClientRect();
+      return r.height >= 44 && r.right <= innerWidth && r.left > innerWidth / 2 && r.top >= 0;
+    }));
+    await entry.click();
+    await page.getByRole('heading', { name: 'Docentenhandleiding', exact: true }).waitFor();
+    assert.equal(await page.locator('h1').count(), 1);
+    assert.equal(await page.locator('.manual-chapters > section').count(), 12);
+    assert.equal(await page.locator('.manual-contents a').count(), 12);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    assert(await page.locator('.manual-contents ol').evaluate(el => getComputedStyle(el).listStyleType === 'decimal'));
+    await page.screenshot({ path: `${out}/manual-${width}.png` });
+    await page.getByRole('link', { name: 'Een oefenblok met mat', exact: true }).click();
+    assert(await page.locator('#hoofdstuk-5').evaluate(el => Math.abs(el.getBoundingClientRect().top - 24) < 3));
+    await page.reload();
+    await page.getByRole('heading', { name: '5 Een oefenblok met mat', exact: true }).waitFor();
+    assert(await page.locator('#hoofdstuk-5').innerText().then(text => text.includes('15')));
+    await page.locator('#hoofdstuk-5 .manual-top').click();
+    await page.getByRole('link', { name: 'Open de docentomgeving', exact: true }).click();
+    await page.locator('.staff-app').waitFor();
+    await page.getByRole('link', { name: 'Voor docenten', exact: true }).click();
+    await page.getByRole('link', { name: 'Naar Klink', exact: true }).click();
+    await page.locator('.cp-home').waitFor();
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    await page.screenshot({ path: `${out}/header-${width}.png` });
+    checks.push(`${width}px: header, 12 chapters, anchors/reload, teacher and learner return, no horizontal overflow`);
+  }
+  await page.setViewportSize({ width: 844, height: 390 });
+  await page.goto(`${base}/#learner/packages`);
+  await page.locator('.cp-package-grid > button').first().click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-start-lesson').first().click();
+  await page.locator('.cp-exercise-browser.is-guided').waitFor();
+  assert(await page.locator('.taalroute-header').isHidden());
+  await page.locator('.cp-lesson-player > .text-back').click();
+  assert(await page.getByRole('link', { name: 'Voor docenten', exact: true }).isVisible());
+  checks.push('Short guided lesson retains its reading space; leaving restores the teacher entry.');
+  assert.deepEqual(errors, []);
+  writeFileSync(`${out}/manual-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), checks, errors }, null, 2));
+  console.log('PASS teacher manual:', checks.length, 'viewports, all twelve chapters and navigation.');
+} finally { await browser.close(); }

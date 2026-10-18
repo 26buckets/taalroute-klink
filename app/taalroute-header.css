@@ -1,0 +1,66 @@
+:root { --taalroute-header-height: 60px; --klink-app-height: calc(100dvh - var(--taalroute-header-height)); }
+.taalroute-header { height: var(--taalroute-header-height); display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 24px; border-bottom: 1px solid #d7e4ee; background: white; color: #173752; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.taalroute-header-brand { display: inline-flex; align-items: center; gap: 14px; min-height: 44px; color: inherit; text-decoration: none; }
+.taalroute-header-brand img { display: block; width: 128px; height: auto; }
+.taalroute-header-brand span { border-left: 1px solid #d7e4ee; padding-left: 14px; font-size: 15px; font-weight: 500; }
+.taalroute-teacher-link, .manual-teacher-entry { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid #d7e4ee; border-radius: 6px; background: white; color: #173752; font-size: 14px; font-weight: 500; line-height: 1.4; text-decoration: none; }
+.taalroute-teacher-link:hover, .manual-teacher-entry:hover { background: #edf6fd; border-color: #126ab3; }
+.taalroute-header a:focus-visible, .teacher-manual :is(a, [tabindex]):focus-visible { outline: 3px solid #126ab3; outline-offset: 3px; }
+.taalroute-header svg, .teacher-manual svg { width: 18px; height: 18px; flex-shrink: 0; stroke-width: 2; }
+/* The new header reserves space above the existing exercise and navigation layout. */
+body > .product-root, .product-root .entry-screen, .product-root .entry-window, .product-root .learner-app, .product-root .staff-app, .product-root .cp-player { min-height: var(--klink-app-height); }
+.product-root .learner-app .learner-main:has(.cp-exercise-browser), .product-root .learner-app .learner-main:has(.cp-chapter-playing), .product-root .learner-app .cp-player:has(.cp-exercise-browser.is-guided) { height: var(--klink-app-height); min-height: 0; }
+.product-root .learner-app .learner-main:has(.is-mixed-round) { height: auto; min-height: var(--klink-app-height); }
+@media (min-width: 821px) {
+  .product-root .learner-app, .product-root .learner-nav, .product-root .learner-main, .product-root .staff-main { height: var(--klink-app-height); }
+}
+@media (max-width: 820px) {
+  .product-root .learner-main, .product-root .staff-main { min-height: var(--klink-app-height); }
+}
+/* Short windows keep the original immersive lesson space; leaving the lesson restores the header. */
+@media (max-height: 600px) {
+  body:has(.cp-exercise-browser.is-guided) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }
+  body:has(.cp-exercise-browser.is-guided) > .taalroute-header { display: none; }
+}
+@media (max-width: 440px) {
+  .taalroute-header { padding: 0 12px; gap: 8px; }
+  .taalroute-header-brand { gap: 8px; }
+  .taalroute-header-brand img { width: 102px; }
+  .taalroute-header-brand span { padding-left: 8px; font-size: 14px; }
+  .taalroute-teacher-link { padding: 8px; font-size: 13px; gap: 6px; }
+}
+.teacher-manual { max-width: 1040px; margin: 0 auto; padding: 28px 32px 64px; background: #fff; color: #173752; font: 400 17px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; overflow-wrap: anywhere; }
+body:has(.teacher-manual) { background: #fff; }
+.teacher-manual h1, .teacher-manual h2, .teacher-manual h3 { font-family: inherit; font-weight: 500; line-height: 1.3; }
+.teacher-manual h1 { margin: 8px 0 12px; font-size: clamp(30px, 4vw, 42px); letter-spacing: -.025em; }
+.teacher-manual h2 { margin: 0 0 22px; font-size: 27px; }
+.teacher-manual h3 { margin: 28px 0 10px; font-size: 21px; }
+.teacher-manual strong { font-weight: 600; }
+.teacher-manual p, .teacher-manual ul, .teacher-manual ol { margin: 0 0 18px; }
+.teacher-manual li { margin-bottom: 10px; }
+.teacher-manual ol { list-style: decimal; padding-left: 26px; }
+.teacher-manual ul { list-style: disc; padding-left: 26px; }
+.teacher-manual a { color: #126ab3; text-underline-offset: 3px; }
+.manual-back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 22px; font-size: 15px; text-decoration: none; }
+.manual-eyebrow { color: #526c80; font-size: 14px; }
+.manual-subtitle { font-size: 23px; line-height: 1.45; }
+.manual-intro > p { max-width: 76ch; }
+.manual-contents { margin: 36px 0; padding: 26px; background: #f3f8fc; border: 1px solid #d7e4ee; border-radius: 7px; }
+.manual-contents h2 { font-size: 22px; margin-bottom: 12px; }
+.manual-contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; padding-left: 24px; margin: 0; }
+.manual-contents li { margin: 0; }
+.manual-contents a { display: inline-block; padding: 8px 0; line-height: 1.5; }
+.manual-chapters > section { padding: 28px 0 32px; border-top: 1px solid #d7e4ee; scroll-margin-top: 24px; }
+.manual-chapters p, .manual-chapters li { max-width: 78ch; }
+.manual-table { max-width: 100%; overflow-x: auto; margin: 24px 0; border: 1px solid #d7e4ee; border-radius: 6px; }
+.manual-table table { width: 100%; min-width: 650px; border-collapse: collapse; font-size: 15px; line-height: 1.6; }
+.manual-table th, .manual-table td { padding: 14px; text-align: left; vertical-align: top; border-bottom: 1px solid #d7e4ee; }
+.manual-table th { font-weight: 500; background: #f3f8fc; }
+.manual-table tr:last-child td { border-bottom: 0; }
+.manual-top { display: inline-block; padding: 10px 0; font-size: 14px; }
+@media (max-width: 650px) {
+  .teacher-manual { padding: 20px 18px 48px; font-size: 16px; }
+  .manual-contents { padding: 20px; }
+  .manual-contents ol { grid-template-columns: 1fr; }
+  .teacher-manual h2 { font-size: 24px; }
+}

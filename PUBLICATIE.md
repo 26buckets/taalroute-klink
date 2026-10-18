@@ -159,3 +159,14 @@ vergroting, rijuitlijning en bediening op elf schermbreedtes.
 De oorspronkelijke publicatie van 14 oktober is gedocumenteerd in
 docs/klink-publication-provenance.json. Het nieuwste register heeft voorrang
 bij het vaststellen van de actieve publicatiebasis.
+
+## Header en docentenhandleiding — 18 oktober 2026
+
+Nico heeft opdracht gegeven de docentenhandleiding op de website te plaatsen,
+met een standaard Taalroute-header en rechts de ingang Voor docenten.
+De webhandleiding staat op /docenten en bevat twaalf hoofdstukken. DigiBord is
+niet toegevoegd. Zie docs/klink-header-manual-scope-20261018.json voor de exacte
+scope en lokale controles. De handleiding gebruikt de gecontroleerde knopnamen
+van de ronde-3-liveversie. Bij volgende wijzigingen van tabs, routes of knoppen
+moeten de bijbehorende klikroutes in data/klink-teacher-manual.json en de
+bewerkbare handleidingbron samen worden bijgewerkt vóór publicatie.
