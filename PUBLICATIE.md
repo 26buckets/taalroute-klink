@@ -186,3 +186,12 @@ op mobiel inklapbaar. Oude hoofdstukankers blijven werken. De inhoudelijke
 hoofdstuktekst is exact behouden; alleen verwijzingen en kopniveaus zijn aan
 de losse pagina's aangepast. Scope en controles:
 `docs/klink-manual-wiki-review-20261018.json`.
+
+Op 18 oktober is de volledige docentenwiki redactioneel en didactisch herzien.
+De twaalf onderwerpen gebruiken gewone woorden, actieve instructies en concrete
+docenthandelingen. Het oefenblok legt nu ook automatisch doorgaan pauzeren,
+voordoen met Eén terug en de overstap naar een losse woordkaart uit. Taaldoel:
+A2+/B1−, redactioneel beoordeeld; geen formele niveaucertificering of docentproef.
+Boekdoel, echte bijeenkomst, materiaal, tijd en lesbezoekkader blijven verbonden.
+Zie `docs/KLINK-HANDLEIDING-REVIEW-20261018.md` en het bijbehorende reviewrecord.
+Leerinhoud, audio, beelden, routes en opgeslagen voortgang blijven ongewijzigd.

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:5208';
-const out = 'outputs/manual-wiki-20261018';
+const out = process.env.KLINK_MANUAL_OUTPUT || 'outputs/manual-wiki-20261018';
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const page = await browser.newPage();
@@ -20,10 +20,10 @@ try {
     assert.equal(await page.locator('.wiki-desktop-navigation [aria-current="page"]').getAttribute('href'), `/docenten/${chapter.id}`);
     const actual = await page.locator('.wiki-article > div').textContent();
     const expected = await page.evaluate(html => { const element = document.createElement('div'); element.innerHTML = html; return element.textContent; }, chapter.html);
-    assert.equal(actual, expected, `${chapter.id}: original text retained`);
+    assert.equal(actual, expected, `${chapter.id}: reviewed source text rendered`);
     assert.equal(await page.title(), `${chapter.title.replace(/^\d+ /, '')} | Klink docentenhandleiding`);
   }
-  checks.push('All twelve direct chapter URLs return exactly the original article text, one article, a matching title and active navigation.');
+  checks.push('All twelve direct chapter URLs return exactly the reviewed article text, one article, a matching title and active navigation.');
   for (const width of [1440, 820, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto(base);
@@ -65,7 +65,7 @@ try {
   await page.getByRole('heading', { name: 'Een oefenblok met mat', exact: true }).waitFor();
   await page.goto(`${base}/docenten/hoofdstuk-1`);
   await page.locator('.wiki-article').getByRole('link', { name: 'hoofdstuk 10', exact: true }).first().click();
-  await page.getByRole('heading', { name: 'Aansluiten bij boek en echte bijeenkomst', exact: true }).waitFor();
+  await page.getByRole('heading', { name: 'Je les voorbereiden', exact: true }).waitFor();
   const missing = await page.goto(`${base}/docenten/hoofdstuk-99`);
   assert.equal(missing.status(), 404);
   await page.getByRole('heading', { name: 'Onderwerp niet gevonden', exact: true }).waitFor();

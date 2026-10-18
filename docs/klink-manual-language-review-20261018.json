@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-18",
+  "requestedBy": "Nico",
+  "request": "Grote reviewronde vanuit docent, didacticus en handleidingenschrijver; direct bruikbaar, A2+/B1−, actief, vloeiend en correct Nederlands.",
+  "baselineRuntimeCommit": "0c69fff6abcc6c03ac5bed4bf6b86af6500e48ff",
+  "baselineRegisterCommit": "8299737603eaa20fe768b854c66e38c592e96f0a",
+  "scope": [
+    "All twelve teacher wiki articles",
+    "Concrete teacher actions, example language, learner responses and next steps",
+    "Editorial language review and practical app walkthrough"
+  ],
+  "reviewer": "One AI assistant, sequential review passes; no human expert panel",
+  "languageAssessment": "Editorial target A2+/B1−; no formal CEFR certification or teacher user trial",
+  "report": "docs/KLINK-HANDLEIDING-REVIEW-20261018.md",
+  "manualSourceSha256": "2d027d4b9992cc0d82a763fcf185b6a9e22e7a0d3814516a906661029af4de9c",
+  "webManualSha256": "bf730daef935b04f479d1b081114528868d876c53b9006e4712198afc82146cb",
+  "checks": {
+    "sourceAndWebParity": "Generated from the same reviewed Markdown; all twelve chapters verified in browser",
+    "wiki": "Four overview widths and twelve direct URLs passed",
+    "allTopicWidths": "All twelve chapters passed at 1440px and 320px",
+    "teachingFlow": "Documented pause, demonstrate m, undo, learner m/a/t and exit to paper-card flow passed",
+    "typescript": "passed",
+    "fullLocalRegression": "Complete npm run test:review including all posttest suites passed."
+  },
+  "unchanged": [
+    "learner content",
+    "media",
+    "audio policy",
+    "learner routes",
+    "local storage",
+    "DigiBord"
+  ],
+  "limitations": [
+    "No real teacher usability trial",
+    "Actual book page, group and schedule remain teacher-specific",
+    "No formal language-level certification"
+  ]
+}

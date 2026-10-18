@@ -1,328 +1,565 @@
 # Klink docenthandleiding
 
-Begeleiden van betekenis naar lezen en gebruiken
+Praktische hulp bij lezen, oefenen en herhalen
 
 Taalroute • Voor docenten en begeleiders
 
-Klink ondersteunt kleine leesstappen met bestaande woorden, beelden en oefeningen. Kies één haalbaar doel, geef precies de hulp die nodig is en kijk wat de cursist zelf doet. Verbind het schermwerk steeds met betekenis en taalgebruik. Deze handleiding helpt je dat voorbereiden, uitvoeren en terughalen in de volgende bijeenkomst.
+Met Klink oefent de cursist in kleine stappen. Deze handleiding helpt je om een les voor te bereiden en te geven. Je vindt uitleg, voorbeeldzinnen en keuzes voor extra hulp. Kies het onderwerp dat je nodig hebt.
 
 ## 1 Snelstart voor de docent
 
-**De werkwijze:** betekenis → voordoen → zelf proberen → gebruiken → later terughalen. Dit zijn didactische handelingen; ze hoeven niet allemaal als aparte knop in de app te staan.
+Begin met één woord en één duidelijk doel. In dit voorbeeld oefen je met *mat*. Gebruik hoofdstuk 5 als je meteen een oefenblok van 15 minuten wilt geven.
 
-1. **Kies het doel.** Neem het doel uit je boek en lesplan. Voor het startvoorbeeld: de cursist verbindt de voorbereide tekens m, a en t tot het woord *mat* en toont wat het woord betekent. Koppel dit aan de echte boekpagina en bijeenkomst; vul die zelf in bij hoofdstuk 10.
-2. **Controleer de start.** Kent de cursist de betekenis? Zijn m, a en t afzonderlijk voorbereid? Kan de cursist de gevraagde tikhandeling uitvoeren? Geef zo nodig eerst extra voorbereiding. Drie nieuwe tekens leren, samenvoegen én zelfstandig toepassen hoeft niet in één oefenblok te passen.
-3. **Open de kleine les.** In de cursistomgeving: **Lessen → tas · map → tabblad Lessen → Start les 1: mat**. De fotokaart opent eerst het woordenoverzicht. Het onderdeel heet tas · map, maar begint bewust met mat.
-4. **Doe één handeling voor.** Gebruik Kijk en luister en de bestaande woordopname. Bereid de klanken zo nodig zelf mondeling voor. Laat zien waar de cursist moet tikken. Vraag daarna: “Laat zien wat je gaat doen.”
-5. **Laat zelf proberen.** In Maak tikt de cursist de letters aan. Wacht eerst. Geef bij vastlopen één aanwijzing en laat opnieuw proberen. Noteer welke hulp nodig was.
-6. **Controleer meer dan de klik.** Laat de cursist het woord zonder voorafgaand luistermodel lezen en de echte mat aanwijzen. Doe dit zo nodig met een losse woordkaart buiten het scherm. Leesresultaat en betekenis krijgen elk een eigen notitie.
-7. **Gebruik en herhaal.** Laat twee cursisten om de beurt het woord lezen of zeggen en de mat aanwijzen. Plan een korte nieuwe poging in de volgende werkelijke bijeenkomst, vóór je het model opnieuw aanbiedt.
+### Leg dit klaar
 
-**Tijd:** het voorbeeld in hoofdstuk 5 duurt 15 minuten actieve oefentijd als de leesvoorwaarden voldoende zijn voorbereid. Het is een onderdeel van een ingeroosterde les. Het vervangt geen bijeenkomstplan of cursusprogramma. Pauze en zelfstandig oefenen staan apart. [1, 2]
+- Een apparaat met Klink en werkend geluid.
+- Een echte mat of een duidelijk beeld van een mat.
+- Een kaart met het woord **mat**, zonder afbeelding.
+- Losse letters **m**, **a** en **t**.
 
-**Docenthulp vinden:** startpagina → Voor begeleiders → Naar de docentomgeving → Kies een leesstap en bekijk de docenthulp → Onderdeel tas · map → Leesstap 1. m, a, t — mat → Deze leesstap begeleiden: mat.
+### Zo begin je
 
-## 2 De juiste ingang in de app
+1. **Kies je doel.** Bijvoorbeeld: de cursist leest *mat* en wijst de mat aan. Zoek daarbij het doel uit je boek en lesplan. Vul je voorbereiding in bij hoofdstuk 10.
+2. **Kijk wat al lukt.** Kent de cursist het woord *mat*? Herkent de cursist de letters m, a en t en de klanken die erbij horen? Oefen wat nog niet bekend is. Je hoeft niet alles in één keer te doen.
+3. **Open de les.** Kies in de cursistomgeving **Lessen → tas · map → tabblad Lessen → Start les 1: mat**. De kaart **tas · map** opent eerst een overzicht. De eerste les gaat over *mat*.
+4. **Doe het voor.** Open **Kijk en luister**. Laat het woord horen en wijs de mat aan. Open daarna **Maak**. Laat zien hoe je één letter kiest. Haal die met **Eén terug** weg voor de cursist begint.
+5. **Laat de cursist proberen.** Zeg: “Nu jij.” Wacht rustig. Loopt de cursist vast? Geef één aanwijzing. Laat daarna opnieuw proberen.
+6. **Kijk wat zelfstandig lukt.** Toon de woordkaart zonder het woord eerst te zeggen. Vraag: “Lees.” Vraag daarna: “Waar is de mat?” Noteer het lezen en het aanwijzen apart.
+7. **Plan een nieuwe poging.** Begin de volgende les kort met hetzelfde woord. Laat de cursist eerst zelf proberen. Geef daarna pas een voorbeeld als dat nodig is.
 
-### Kleine leesstappen via Lessen
+### Als de start nog te moeilijk is
 
-Gebruik **Lessen** voor de bestaande kleine opbouw. Binnen tas · map volgen de lessen: **mat → tas → map → man · pan → jas**. Bereid bij iedere volgende stap de nieuw benodigde tekens en de betekenis voor. De eerste les bestaat op het scherm uit **Kijk en luister → Maak → Nog een keer**. In Maak staat de opdracht **Leg het woord**. Met **Eén terug** kan een letter worden hersteld. [1]
+Kent de cursist de letters nog niet? Oefen eerst één letter en de klank. Kent de cursist de betekenis nog niet? Begin met de echte mat of het beeld. Lukt tikken niet? Laat de cursist aanwijzen en tik zelf.
 
-Je kunt met de stappenbalk naar een fase gaan. Vooruit bladeren bewijst niet dat een opdracht is uitgevoerd. De app kan bij doorgaan terugkeren naar onafgerond werk. Laat de route daarom niet bepalen wat je over de cursist concludeert.
+De 15 minuten zijn oefentijd binnen je les. Plan pauze en oefenen buiten de les apart. Pas de tijd aan als de voorbereiding langer duurt.
 
-### Eén oefenvorm met de woorden van een onderdeel
+## 2 De juiste oefening vinden
 
-De route is **Lessen → tas · map → Oefeningen → Leg het woord na**. Kies vervolgens **Eén voor één** of **Op één blad**. De knop Oefeningen in het woordenoverzicht opent dezelfde pagina als het tabblad Oefeningen.
+Kies eerst wat je wilt oefenen. Gebruik daarna de route die daarbij past. De knopnamen hieronder horen bij de cursistomgeving, tenzij er **docentomgeving** staat.
 
-In dit voorbeeld bevat de oefenvorm de zes woorden *mat, tas, jas, man, map, pan*. De volgorde op het scherm kan anders zijn dan de lesvolgorde. Op één blad zet de opdrachten onder elkaar op een scrollbare pagina; het is geen afzonderlijke printknop. Een teller zoals “0 / 6” gaat over de oefeningen op dat blad.
+### Eén kleine leesstap
 
-**Bij alleen mat:** blijf bij de kleine les of gebruik één eigen woordkaart. Open niet het hele onderdeel als zelfstandige opdracht zolang de overige woorden onbekend zijn. De route hierboven biedt een verzameling, geen vrije selectie van één willekeurig woord.
+Kies **Lessen → tas · map → tabblad Lessen → Start les 1: mat**.
 
-### Oefenen via een vaardigheid
+Deze les heeft drie delen: **Kijk en luister → Maak → Nog een keer**. Bij **Maak** staat **Leg het woord**. Met **Eén terug** haal je de laatst gekozen letter weg.
 
-De cursistknop **Oefenen** opent twaalf hoofdstukken. Een gecontroleerd voorbeeld is **Oefenen → Rustig beginnen → Leg het woord na → tas · map Alfa A → Op één blad**. Dezelfde voorbereiding van alle aangeboden woorden blijft nodig. Via **Andere opdracht** keer je terug naar de keuze.
+Binnen **tas · map** is de lesvolgorde: **mat → tas → map → man · pan → jas**. Bereid bij een volgend woord de nieuwe letters en de betekenis voor.
 
-Kies een hoofdstuk op grond van het lesdoel. Oefenen begint niet verplicht bij Klanken. Labels als Alfa A, Alfa B en A1/A2 met hulp beschrijven de aangeboden inhoud of ondersteuning; zij verklaren niet dat een cursist dat niveau heeft behaald. [1]
+Na een goed antwoord kan de les vanzelf doorgaan. Wil je zelf het tempo bepalen? Klik op het pauzeteken boven de opdracht. Daarmee pauzeer je het automatisch doorgaan.
 
-### Docent en cursist uit elkaar houden
+Via de stappenbalk kun je naar een ander deel gaan. Een stap openen betekent nog niet dat de cursist de opdracht heeft gedaan. Klink kan teruggaan naar werk dat nog niet af is.
 
-**Oefenen in de docentomgeving** bevat onder meer De route per leesstap en de docenthulp. **Oefenen in de cursistomgeving** opent de vaardigheidshoofdstukken. **Oefeningen binnen een onderdeel** biedt oefenvormen met de woorden van dat onderdeel. Noem bij je instructie steeds de omgeving én de knop.
+### Een oefenvorm met meerdere woorden
 
-De docentknop **Open deze lessen** opent het onderdeel; kies daar nog het tabblad Lessen en de gewenste kleine les. Gebruik **Verder** alleen voor de opgeslagen lesroute op het gebruikte apparaat. Bij een nieuwe start staat op het cursistbeginscherm **Begin hier**. [1]
+Kies **Lessen → tas · map → Oefeningen → Leg het woord na**. Kies daarna **Eén voor één** of **Op één blad**.
 
-## 3 Wat een antwoord wel en niet laat zien
+- **Eén voor één:** één opdracht tegelijk in beeld.
+- **Op één blad:** meerdere opdrachten onder elkaar. Je scrolt naar beneden. Dit is geen printknop.
 
-Observeer de handeling vóór de feedback verschijnt. Een goed antwoord kan voortkomen uit lezen, een voorbeeld volgen, luisteren, plaatsgeheugen of hulp van een buur. Gebruik onderstaande verschillen om een passende volgende opdracht te kiezen. [1]
+Deze oefening bevat zes woorden: *mat, tas, jas, man, map, pan*. De volgorde kan anders zijn dan in de lessen. Een teller zoals **0 / 6** laat zien hoeveel opdrachten op het blad klaar zijn.
 
-| Wat je ziet | Wat je kunt noteren | Wat je nog controleert |
-| --- | --- | --- |
-| De cursist zegt mat na de opname na | Nazeggen na luistermodel | Het woord later lezen zonder dat model |
-| De cursist legt m a t met een zichtbaar voorbeeld | Nabouwen met voorbeeld | Opbouw zonder zichtbaar antwoord |
-| De cursist klikt de juiste keuze aan | Deze keuze was juist | Lezen en betekenis afzonderlijk |
-| De cursist leest mat zonder voorafgaand model | Dit bekende woord nu zonder model gelezen | Betekenis en opnieuw lezen op een later moment |
-| De cursist wijst de mat aan na een gesproken vraag | Betekenis na mondelinge vraag getoond | Herkenning van het geschreven woord |
-| De cursist bouwt mat na de woordopname | Gehoord woord met letters gemaakt | Zelfstandig lezen en eventueel schrijven op papier |
+**Oefen je alleen mat?** Blijf bij de kleine les of gebruik je eigen woordkaart. De route hierboven opent meerdere woorden. Je kiest daar niet zelf één los woord. Laat een cursist pas zelfstandig met het hele blad werken als alle woorden zijn voorbereid.
 
-**Zelfstandig lezen controleren:** toon een gewone woordkaart met mat, zonder foto of hoorbaar voorbeeld. Vraag kort: “Lees.” Geef eerst denktijd. Laat daarna betekenis tonen. Een bekende kaart lezen is nog geen bewijs dat de cursist ook nieuwe woorden kan ontsleutelen. Noteer precies wat je hebt gezien.
+### Oefenen via een onderwerp
 
-**Betekenis controleren:** vraag bijvoorbeeld “Waar is de mat?” en laat aanwijzen, tonen of uitleggen. Een antwoord in een andere taal of een passend gebaar kan begrip zichtbaar maken. Observeer het Nederlandse woordgebruik afzonderlijk. Alleen een vertaling laten nazeggen is onvoldoende.
+De knop **Oefenen** opent twaalf hoofdstukken. Een voorbeeld van een route is:
 
-**Schrijven controleren:** onderscheid overschrijven, een gehoord woord schrijven en zelf een woord oproepen. Een juist getypt of gebouwd woord bewijst geen handschriftvaardigheid. Moeite met pen of toetsenbord bewijst op zichzelf geen leesprobleem.
+**Oefenen → Rustig beginnen → Leg het woord na → tas · map Alfa A → Op één blad**.
 
-Gebruik in je eigen notitie **zelf**, **met hulp** of **opnieuw voorbereiden**, steeds mét de taak en de geboden hulp. Dit zijn docentnotities, geen nieuwe appknoppen of gestandaardiseerde toetsscores. Een ingevuld scherm of een tik op Klaar is geen beheersingsbewijs.
+Kies het onderwerp dat bij je lesdoel past. Je hoeft niet bij Klanken te beginnen. Met **Andere opdracht** ga je terug naar de keuze.
 
-## 4 Hulp afstemmen op afzonderlijke vaardigheden
+Je ziet labels zoals **Alfa A**, **Alfa B** en **A1/A2 met hulp**. Die gaan over de inhoud of de hulp bij een oefening. Ze zeggen niet welk niveau een cursist heeft behaald.
 
-Vraag kort naar eerdere leeservaring en talen die de cursist gebruikt. Bekijk daarna de concrete taak. Mondeling Nederlands, lezen en schrijven, en digitale bediening kunnen zich verschillend ontwikkelen. LASLLIAM beschrijft zulke uiteenlopende profielen; de onderstaande werkwijze vertaalt dit naar begeleiding in Klink. [4]
+### Hulp voor de docent
 
-| Onderdeel | Kleine controle | Passende hulp |
-| --- | --- | --- |
-| Mondeling Nederlands | Begrijpt de cursist mat en een korte opdracht? | Echt voorwerp, gebaar, korte formulering; zo nodig andere taal als steun |
-| Lezen en schrijven | Herkent de cursist de voorbereide tekens en verbindt die tot mat? Wat lukt op papier? | Eén teken of verbinding voordoen; losse letters of woordkaart; lezen en schrijven apart observeren |
-| Digitale bediening | Kan de cursist aanwijzen en één letter aantikken? | Tikhandeling voordoen, samen aanwijzen; docent bedient op aanwijzing van de cursist |
+Open vanaf de startpagina:
 
-### Veel mondeling Nederlands en weinig leeservaring
+1. **Voor begeleiders → Naar de docentomgeving**.
+2. **Kies een leesstap en bekijk de docenthulp**.
+3. **Onderdeel tas · map → Leesstap 1. m, a, t — mat**.
+4. **Deze leesstap begeleiden: mat**.
 
-Laat de cursist de betekenis zelf toelichten. Besteed de leertijd aan de tekens en hun verbinding. Gebruik geen moeilijkere leestekst alleen omdat het gesprek vlot verloopt. Geef bij de terughaalpoging dezelfde rustige denktijd als aan andere beginnende lezers.
+Met **Open deze lessen** ga je naar het onderdeel voor de cursist. Kies daar nog het tabblad **Lessen** en de gewenste les.
 
-### Meer leeservaring en nog weinig Nederlands
+Let op het verschil: **Oefenen** in de docentomgeving toont andere keuzes dan **Oefenen** in de cursistomgeving. Noem daarom bij je uitleg steeds de omgeving én de knop.
 
-Controleer eerst de betekenis en uitspraak van het doelwoord. Laat vervolgens zonder model lezen als dat haalbaar lijkt. Geef een bekende woordvorm in een andere, begrijpelijke situatie terug. Houd extra mondelinge taalsteun beschikbaar; snel kunnen lezen betekent niet automatisch begrijpen.
+### Verdergaan met eerder werk
 
-### Lezen lukt maar het scherm bedienen kost moeite
+**Verder** opent de bewaarde lesroute op het gebruikte apparaat. Bij een nieuwe start staat er **Begin hier**. Op een gedeeld apparaat kan de bewaarde route van iemand anders zijn. Controleer daarom zelf waar jouw cursist moet beginnen.
 
-Laat de cursist de letter aanwijzen terwijl jij tikt, of gebruik losse letters. Noteer “zelf gelezen, bediening met hulp”. Oefen daarna één digitale handeling apart. Zo blijft zichtbaar of de moeilijkheid in het lezen of in het bedienen zit.
+## 3 Kijken wat de cursist zelf kan
 
-### Meer ondersteuning of meer uitdaging
+Kijk eerst hoe de cursist tot een antwoord komt. Een goed antwoord kan ontstaan door lezen, luisteren, nadoen of hulp van een ander. Kies daarna een korte opdracht om te zien wat de cursist zelf kan.
 
-Bij veel nieuwe leerhandelingen verklein je het doel: eerst betekenis en één teken, later verbinden. Gebruik een volwassen, herkenbare situatie en voorkom haast. Een vlottere cursist kan een bekend woord zonder model lezen, een voorwerp bij het woord zoeken of een korte mondelinge boodschap maken. Maak extra uitdaging niet afhankelijk van snelheid of steeds meer nieuwe woorden.
+### Lezen of nazeggen?
 
-Verander hulp op grond van wat je ziet. Een groep hoeft niet overal dezelfde steun te krijgen. Laat cursisten met weinig spreekdurf eerst aanwijzen of zacht met een partner oefenen en geef daarna een veilige beurt.
+Zegt de cursist *mat* direct na de opname? Noteer: “Zegt mat na.” Je weet dan nog niet of de cursist het woord leest.
+
+Controleer het lezen zo:
+
+1. Toon een kaart met **mat**, zonder afbeelding.
+2. Zeg het woord niet voor en speel geen audio af.
+3. Zeg: “Lees.” Geef tijd om te denken.
+4. Noteer wat lukt en welke hulp je geeft.
+
+Heb je het woord net zelf gezegd? Probeer het later nog eens zonder voorbeeld. Eén bekend woord lezen zegt nog niet of nieuwe woorden ook lukken.
+
+### Begrijpt de cursist het woord?
+
+Vraag: “Waar is de mat?” Laat de cursist aanwijzen, iets tonen of uitleg geven. Een gebaar of uitleg in een andere taal kan ook begrip laten zien.
+
+Noteer het begrip apart van het Nederlandse spreken. Een cursist kan het woord begrijpen en nog moeite hebben om het uit te spreken.
+
+### Letters leggen of schrijven?
+
+Kijk welke taak de cursist uitvoert:
+
+- Letters leggen met een voorbeeld: de cursist bouwt het woord na.
+- Letters leggen na de opname: de cursist maakt een gehoord woord.
+- Een woord overschrijven: de cursist schrijft met een voorbeeld.
+- Een woord schrijven zonder voorbeeld: de cursist moet de letters zelf kiezen en schrijven.
+
+Deze taken vragen iets anders. Een goed gelegd woord zegt niet of schrijven met een pen ook lukt. Moeite met een pen of het scherm zegt niet vanzelf iets over het lezen.
+
+### Noteer kort en precies
+
+Schrijf per taak: **zelf**, **met hulp** of **opnieuw oefenen**. Zet erbij wat de cursist deed en welke hulp je gaf.
+
+Bijvoorbeeld: “Leest mat met hulp bij de eerste letter. Wijst de echte mat zelf aan.”
+
+Dit zijn notities voor jou, geen knoppen in Klink. Een groen antwoord of een tik op **Klaar** vervangt jouw eigen waarneming niet. In hoofdstuk 10 staat een invulblad.
+
+## 4 Hulp geven die past
+
+Vraag welke talen de cursist gebruikt en of de cursist eerder heeft leren lezen. Kijk daarna wat bij deze opdracht lukt. Spreken, lezen, schrijven en het scherm bedienen kunnen op een verschillend niveau zijn.
+
+### De cursist spreekt al veel Nederlands
+
+Vraag wat het woord betekent. Is de betekenis bekend? Gebruik de tijd dan vooral voor de letters en het lezen. Laat een vlot gesprek niet bepalen hoe moeilijk de leestekst mag zijn.
+
+### De cursist leest al, maar kent weinig Nederlands
+
+Begin met de betekenis en uitspraak van het woord. Laat het woord daarna lezen. Vraag ook om het juiste voorwerp aan te wijzen. Zo zie je of de cursist begrijpt wat er staat.
+
+### Het scherm bedienen is lastig
+
+Laat de cursist de juiste letter aanwijzen. Tik zelf op die letter. Je kunt ook losse letters gebruiken.
+
+Noteer bijvoorbeeld: “Kiest de letters zelf. Docent helpt met tikken.” Oefen later één handeling op het scherm apart.
+
+### Er is meer hulp nodig
+
+Maak de opdracht kleiner. Kies bijvoorbeeld eerst de betekenis en één letter. Doe één stap voor. Laat de cursist die stap nadoen. Probeer daarna dezelfde stap met minder hulp.
+
+Wordt de cursist moe of gespannen? Stop even of kies een kleinere taak. Bespreek aanhoudende moeite volgens de afspraken van je school. Eén fout vertelt niet wat de oorzaak is.
+
+### De opdracht is al makkelijk
+
+Laat een bekend woord zonder voorbeeld lezen. Laat de cursist het passende voorwerp zoeken of het woord tegen een partner gebruiken. Kies pas daarna een nieuwe leesstap.
+
+Extra uitdaging hoeft niet sneller werken of meer woorden tegelijk te betekenen.
+
+### Niet iedereen durft meteen te spreken
+
+Laat eerst aanwijzen of zacht met een partner oefenen. Geef daarna een rustige beurt. Vraag naar eigen ervaringen. Gebruik situaties die passen bij volwassenen en vermijd aannames over iemands gezin, werk of dagelijks leven.
 
 ## 5 Een oefenblok met mat
 
-**Doel van dit voorbeeld:** de cursist leest het voorbereide woord mat met afnemende steun en verbindt het aan de betekenis. Voor het bouwen zijn m, a en t vooraf afzonderlijk voorbereid. Controleer of de cursist die tekens ook werkelijk herkent. Als die basis ontbreekt, gebruik je het blok voor voorbereiding en plan je het lezen later. [1, 2]
+**Doel:** de cursist leest *mat* en koppelt het woord aan de echte mat of een duidelijk beeld. Je kijkt welke hulp nog nodig is.
 
-**Leg klaar:** de kleine les mat, het bestaande woordbeeld en geluid, een herkenbare echte mat of passend bestaand beeld, één woordkaart mat en losse letters m, a en t. Papier en pen gebruik je alleen als schrijven ook een afgesproken doel is. Zet het materiaal zo neer dat de cursist het kan zien en bereiken.
+**Tijd:** 15 minuten oefenen binnen je les. Dit voorbeeld past bij één cursist of een kleine groep. Plan bij meer cursisten extra tijd voor individuele beurten.
 
-### Minuut 0 tot 2 Betekenis en start
+### Voor je begint
 
-Zeg: “Vandaag lezen we mat. Daarna zoeken we de mat.” Toon het voorwerp of beeld. Vraag: “Wat is dit?” Laat ook wijzen of gebaren toe. Vraag waar de cursist een mat tegenkomt. Controleer de noodzakelijke tekens kort. De cursist toont de betekenis en laat zien wat al bekend is.
+Controleer of de cursist de betekenis van *mat* kent. Controleer ook de letters m, a en t en de klanken die erbij horen. Oefen eerst wat ontbreekt. Je kunt het lezen dan naar een volgend moment verschuiven.
 
-### Minuut 2 tot 5 Eén handeling voordoen
+Zet Klink klaar met de les **mat** en werkend geluid. Leg een mat of beeld en een woordkaart **mat** klaar. Leg ook de losse letters m, a en t klaar. Gebruik papier en pen alleen als schrijven ook je doel is.
 
-Open **Kijk en luister**. Laat het hele woord horen en verbind het aan het voorwerp. Geef zo nodig zelf een zorgvuldig klankvoorbeeld bij m, a en t en laat horen hoe de klanken samen mat vormen. Gebruik voor deze leeshandeling de klanken, niet alleen de letternamen. De bestaande woordopname is geen verzameling losse klankopnamen; de geparkeerde losse t wordt niet gebruikt.
+Open **Lessen → tas · map → tabblad Lessen → Start les 1: mat**. Klik op het pauzeteken boven de opdracht. Zo gaat de les niet vanzelf verder.
 
-Open **Maak**. Doe één tikhandeling voor en laat de cursist aanwijzen wat er daarna gebeurt. Zeg kort: “Ik kies de eerste letter. Nu jij.” W3C ondersteunt korte, taaknabije stappen en voorbeelden; dit is een praktische toepassing daarvan. [5]
+### Minuut 0 tot 2: betekenis en doel
 
-### Minuut 5 tot 10 Zelf proberen met gerichte hulp
+Zeg: “Vandaag lezen we mat. Daarna zoeken we de mat.”
 
-Laat de cursist in Maak de letters kiezen. Geef denktijd en kijk of de cursist leest, luistert, nabouwt of jouw handeling volgt. Bij een fout vraag je bijvoorbeeld: “Kijk naar het begin.” Als dat onvoldoende helpt, doe je dat stukje opnieuw voor. Gebruik **Eén terug** voor herstel en geef daarna een nieuwe poging.
+Toon de mat of het beeld. Vraag: “Wat is dit?” Laat ook wijzen of gebaren toe. Vraag daarna: “Waar zie je een mat?” Kijk kort of de letters al bekend zijn.
 
-Neem vervolgens het model weg en toon de losse kaart mat. Vraag te lezen. Als je vlak daarvoor het woord hebt gezegd, noteer je de poging als lezen na een model en controleer je later nogmaals. Laat een partner niet het antwoord voorzeggen. Stop of verklein de taak wanneer spanning of uitputting de observatie onbruikbaar maakt.
+**Je let op:** begrijpt de cursist het woord? Welke letters herkent de cursist?
 
-### Minuut 10 tot 13 Gebruiken met een ander
+### Minuut 2 tot 5: voordoen
 
-Laat twee cursisten samenwerken. Cursist A leest of zegt mat; cursist B wijst de echte mat aan of toont waar die ligt. Daarna wisselen de rollen. Geef mondelinge steun zoals “Hier is de mat” wanneer dat past. Zo'n voorgedane zin is spreeksteun en geen zelfstandige leestekst. Bij één woord is dit een kleine toepassing, geen brede toets van woordbegrip.
+Open **Kijk en luister**. Laat het hele woord horen en wijs de mat aan. Geef zo nodig zelf een voorbeeld van de klanken. Laat horen hoe ze samen *mat* vormen. Gebruik daarbij de klanken, niet alleen de namen van de letters.
 
-### Minuut 13 tot 15 Terugkijken en vervolg kiezen
+De woordopname laat het hele woord horen. Voor dit voorbeeld gebruik je geen losse klankopnamen.
 
-Laat ieder nog één korte poging doen: de kaart mat lezen zonder voorafgaand luistermodel, of mat maken zonder zichtbaar voorbeeld. Controleer ook betekenis. Zeg concreet wat lukte: “Je las mat zelf. De volgende les kijken we weer.” Noteer de feitelijke volgende bijeenkomstdatum en de benodigde hulp. Voor een groep observeer je tijdens het hele blok; twee slotminuten zijn niet voldoende voor een individuele toets van iedereen.
+Open **Maak**. Het woord staat als voorbeeld in beeld. Zeg: “Ik kies de eerste letter.” Tik op **m**. Kies daarna **Eén terug**. De plek is weer leeg.
 
-De vijf delen tellen samen 15 actieve minuten. De korte controle aan het einde is direct terughalen. **Later terughalen** vindt daarnaast plaats in een volgende bijeenkomst; plan die tijd afzonderlijk. Als voorbereiding meer tijd vraagt, pas je de volledige lesplanning aan en verkort je niet stilzwijgend toepassing of terugkijken.
+Vraag: “Wijs aan waar je begint.” Laat de cursist alleen aanwijzen. Daarna begint de eigen poging.
+
+**Je let op:** weet de cursist wat de opdracht is? Lukt aanwijzen of tikken?
+
+### Minuut 5 tot 10: zelf proberen
+
+Laat de cursist de letters kiezen. Wacht eerst. Gaat het mis? Zeg bijvoorbeeld: “Kijk naar het begin.” Help zo nodig met **Eén terug** en laat opnieuw proberen.
+
+Kies daarna **Alle lessen** en leg het apparaat even opzij. Toon alleen de woordkaart. Laat die lezen zonder het woord eerst te zeggen. Heeft de cursist het woord net gehoord? Noteer dat en probeer het later nog eens zonder voorbeeld.
+
+Is lezen nog te moeilijk? Doe het nog eens samen en probeer later opnieuw.
+
+**Je let op:** kiest de cursist zelf de letters? Leest de cursist het woord, of volgt de cursist het voorbeeld?
+
+### Minuut 10 tot 13: samen gebruiken
+
+Werk met twee cursisten. Ben je met één cursist? Neem zelf de tweede rol.
+
+1. De eerste cursist leest de kaart of zegt *mat*.
+2. De tweede wijst de mat aan.
+3. Laat de cursisten wisselen.
+
+Geef zo nodig deze zin als hulp: “Hier is de mat.” De cursist hoeft deze hele zin nog niet te kunnen lezen.
+
+**Je let op:** doen beiden mee? Reageert de ander op het woord?
+
+### Minuut 13 tot 15: terugkijken
+
+Laat de cursist de kaart nog eens lezen, zonder dat jij het woord voorzegt. Laat daarna de mat aanwijzen. Noteer de hulp die nodig was.
+
+Zeg wat lukte. Bijvoorbeeld: “Je las mat zelf. Volgende les lezen we het weer.” Was er hulp nodig? Zeg dan: “Met hulp bij de eerste letter lukte het. Dat oefenen we nog.”
+
+Schrijf de volgende lesdatum en de volgende opdracht op. Bij een groep kijk je ook tijdens het hele blok naar iedere cursist. Twee minuten aan het eind zijn te kort om iedereen apart te beoordelen.
+
+### Als je meer tijd nodig hebt
+
+Pas je lesplan aan. Houd tijd voor gebruiken en terugkijken. Plan ook een korte herhaling in een volgende les. Nogmaals oefenen in dit blok is iets anders dan oefenen op een latere dag.
 
 ## 6 Individueel en samen oefenen
 
+Kies een werkvorm die bij je doel past. Spreek steeds af wie wat doet en wanneer de opdracht klaar is.
+
 ### Eén cursist op één apparaat
 
-Start met een afgesproken kleine les. Laat de cursist één opdracht uitvoeren en benoem pas daarna de benodigde hulp. Kies **Eén voor één** als één opdracht in beeld helpt. Spreek een concreet stoppunt af, bijvoorbeeld na Maak en een korte leescontrole. Laat de cursist de handeling terugdoen voordat je zelfstandig werken afspreekt.
+Start met een kleine les. Doe één handeling voor en laat die nadoen. Spreek een stoppunt af, bijvoorbeeld: “Maak het woord. Daarna lezen we samen de kaart.”
 
-Een niet-lezende cursist kan de geschreven instructie nog niet vanzelf gebruiken. Geef zelf het model. Nieuwe instructieaudio is niet beschikbaar als oplossing binnen deze uitwerking. Ga niet uit van zelfstandigheid omdat de cursist een luisterknop kan indrukken. [1]
+Kies bij een losse oefenvorm **Eén voor één** als één opdracht tegelijk helpt. Een cursist die nog niet leest, kan de geschreven uitleg vaak nog niet zelf gebruiken. Geef daarom zelf de uitleg. Ga niet uit van gesproken instructies in de app.
 
-### Een blad met voorbereide woorden
+### Meerdere woorden op één blad
 
-Gebruik **Op één blad** als overzicht of vergelijking bij het lesdoel helpt. Bij de gecontroleerde route Leg het woord na staan alle zes woorden van tas · map op het blad. Gebruik deze variant nadat de betekenissen en leesvoorwaarden zijn voorbereid. Wijs de eerste opdracht aan; spreek af of de cursist één, enkele of alle opdrachten doet. De teller verplicht niemand om het hele blad af te maken.
+Kies **Op één blad** als de cursist de aangeboden woorden al heeft geoefend. In **Leg het woord na** bij **tas · map** staan alle zes woorden op het blad.
 
-Als het blad te veel aandacht vraagt, kies je Eén voor één of ga je terug naar de kleine leesstap. Een nieuw schermformaat is geen nieuw leerdoel. Behandel de uitkomsten als oefengedrag, niet als een individuele niveauscore.
+Wijs de eerste opdracht aan. Spreek af hoeveel opdrachten de cursist doet. De teller betekent niet dat het hele blad af moet.
 
-### Met twee cursisten aan één apparaat
+Is het blad te druk? Kies **Eén voor één** of ga terug naar de kleine les. Je verandert dan hoe de opdracht in beeld staat. Het doel blijft hetzelfde.
 
-Verdeel rollen: de eerste cursist leest of kiest en zegt of wijst het antwoord; de tweede bedient op diens aanwijzing. Wissel na één opdracht. Controleer af en toe ieder apart met een woordkaart. Noteer wie het antwoord gaf en wie de bediening deed. Een gezamenlijke juiste klik zegt niets over de individuele prestatie van de tweede cursist.
+### Twee cursisten op één apparaat
+
+Geef ieder een duidelijke rol:
+
+1. De eerste cursist leest, kiest of wijst het antwoord aan.
+2. De tweede tikt op aanwijzing van de eerste.
+3. Na één opdracht wisselen ze.
+
+Kijk af en toe bij ieder apart met een woordkaart. Noteer wie het antwoord gaf. Eén goed antwoord van het tweetal zegt nog niet wat beiden zelf kunnen.
 
 ### Met de groep op het bord
 
-Laat iedereen eerst zelf denken of letters leggen. Geef daarna één cursist de beurt om het antwoord te tonen. Laat een ander betekenis tonen. Wissel de rollen en voorkom dat steeds de snelste cursist antwoordt. Samen nazeggen kan oefening zijn; gebruik daarna individuele beurten om te zien wat ieder doet.
+Laat iedereen eerst zelf denken of letters leggen. Geef daarna één cursist een beurt om het antwoord te tonen. Vraag een ander om het passende voorwerp aan te wijzen. Wissel de beurten.
 
-Woordbingo, Fotobingo en Zoek de paren zijn pas bruikbaar wanneer de aangeboden woorden en beelden voorbereid zijn. Maak bij de eerste stap met alleen mat geen kunstmatige keuze of bingo met onbekende afleiders. Een hele groepsles hoeft niet uit dezelfde werkvorm te bestaan. [1, 3]
+Samen nazeggen kan helpen bij het oefenen. Laat daarna ook ieder apart iets doen. Zo krijgt niet steeds de snelste cursist de beurt.
 
-## 7 Fouten gebruiken om de volgende hulp te kiezen
+Gebruik **Woordbingo**, **Fotobingo** en **Zoek de paren** pas als de woorden en beelden bekend zijn. Bij de eerste stap met alleen *mat* is een eigen woordkaart genoeg.
 
-Werk in vier handelingen: **wacht → kijk wat er misgaat → geef één aanwijzing → laat opnieuw proberen**. Benoem eerst iets concreets dat lukt. Geef geen lange uitleg en laat de cursist het herstel zo veel mogelijk zelf uitvoeren. [1, 3]
+### Terwijl jij iemand helpt
 
-| Waarneming | Mogelijke controle | Feedback en nieuwe poging |
-| --- | --- | --- |
-| De cursist wijst goed maar tikt verkeerd | Laat opnieuw aanwijzen zonder te tikken | “Je wijst de m aan. Tik hier.” Noteer bedieningshulp |
-| De letters staan in een andere volgorde | Laat het begin en de leesrichting aanwijzen | “Kijk naar het begin.” Gebruik Eén terug en laat opnieuw leggen |
-| Het woord wordt goed nagezegd maar niet gelezen | Toon de kaart op een later moment zonder audio | Bereid de benodigde tekenverbinding opnieuw voor; noem de eerste poging nazeggen |
-| Het woord wordt gelezen maar betekenis blijft onduidelijk | Laat een voorwerp zoeken of gebruik tonen | Bied de betekenis opnieuw in context aan en controleer met een handeling |
-| De cursist wacht op een buur | Laat eerst eigen letters leggen of een eigen keuze aanwijzen | Geef daarna een beurt en wissel de rollen; observeer individueel |
-| Een zin wordt gekozen zonder zichtbaar begrip | Laat vertellen, aanwijzen of in de bron terugzoeken | Geef steun bij de relevante woorden of bronzin en laat de betekenis opnieuw tonen |
+Laat de anderen een bekende taak uitvoeren. Bijvoorbeeld: om de beurt een geoefende woordkaart lezen en het voorwerp aanwijzen. Geef vooraf een duidelijk stoppunt. Zo hoeven ze niet op jou te wachten.
 
-Een fout kan meerdere oorzaken hebben. Maak van één mislukte poging geen diagnose. Noteer bijvoorbeeld “las na aanwijzing van de eerste letter” in plaats van “kan niet lezen”. Bij aanhoudende moeite overleg je via de gewone begeleidingsafspraken over passende ondersteuning.
+## 7 Helpen bij fouten
 
-Bij een klankvraag richt je de aandacht op begin, midden of eind van het woord. Gebruik uitsluitend de luisterknop die bij de opdracht werkelijk aanwezig is. Bij een grammaticaopdracht zonder luisterknop verwijs je naar **Voorbeeld** en de bestaande bronzin. Laat de gekozen vorm vervolgens mondeling of schriftelijk gebruiken als dat bij het doel past.
+Werk in vier stappen: **wacht → kijk → geef één aanwijzing → laat opnieuw proberen**. Zeg wat al lukt. Geef daarna korte hulp bij het deel dat nog moeilijk is.
 
-Na een goed antwoord kunnen keuzes vaststaan. Dat voorkomt een andere zichtbare keuze bij dezelfde goede feedback. Gebruik herbeluisteren of Verder waar die beschikbaar zijn; forceer geen tweede keuze. Kijk bij het vervolg opnieuw wat de cursist zonder model doet.
+### De cursist wijst goed, maar tikt verkeerd
 
-## 8 Van een woord naar gebruik en tekstbegrip
+Laat nog eens aanwijzen zonder te tikken. Is de keuze goed? Help alleen bij het tikken. Zeg bijvoorbeeld: “Je wijst de m aan. Tik hier.”
 
-Begin met een betekenisvolle, haalbare handeling. Bij mat kan de cursist het woord aan de mat bij de deur koppelen. Bij een latere stap met tas kan de cursist de eigen tas aanwijzen of aan een partner vragen waar die staat. Gebruik echte, aanwezige voorwerpen en laat cursisten eigen ervaringen noemen zonder één leefwijze als vanzelfsprekend aan te nemen.
+Noteer dat hulp bij de bediening nodig was. Noem dit geen leesfout.
 
-**Voorbeeld na voorbereiding van tas:** de cursist leest de woordkaart tas; de partner wijst de tas aan. Vervolgens stelt de docent mondeling “Waar is de tas?” en geeft zo nodig “Hier is de tas” als spreeksteun. De cursisten wisselen. Deze uitbreiding gebeurt buiten de app en verandert de vaste woordplaatsing niet.
+### De letters staan in de verkeerde volgorde
 
-### Bestaande zinnen en teksten kiezen
+Vraag: “Waar begint het woord?” Laat van links naar rechts aanwijzen. Gebruik zo nodig **Eén terug**. Laat de cursist daarna de letter opnieuw kiezen.
 
-Open binnen een onderdeel **Zinnen en teksten** of **Gesprekken**. Bekijk in de docentomgeving bij de gekozen leesstap ook **Van deze woorden naar zinnen en tekstbegrip** en **Bestaande zinnen, teksten en gesprekken bij deze woorden**. Controleer welke andere woorden, woordvormen en leesvoorwaarden nodig zijn. Bij de eerste stap mat toont dit laatste overzicht geen gekoppelde inhoud. Voeg daarom geen vermeende apptekst aan die stap toe. [1]
+Lukt het nog niet? Doe het begin samen. Geef daarna weer een eigen beurt.
 
-Kies vóór de opdracht wat je wilt zien: luisteren en begrijpen, meelezen, zelfstandig lezen, of zelf reageren. Vertel het doel kort. Voor luisteren laat je bijvoorbeeld na afloop een passende handeling uitvoeren. Voor zelfstandig lezen laat je eerst zonder audio lezen en stel je daarna een betekenisvraag. Bij een bestaande tekst laat je het antwoord waar mogelijk in de bron terugzoeken.
+### Nazeggen lukt, lezen nog niet
 
-Een zin beluisteren, mondeling gebruiken en zelfstandig lezen vragen verschillende voorbereiding. Alle andere geschreven woorden moeten voor een zelfstandige leestaak toegankelijk zijn. Een bronlabel A1 of A2 met hulp is geen uitnodiging om de hele tekst zelfstandig aan een beginnende lezer te geven.
+Toon later de woordkaart zonder audio. Laat eerst zelf proberen. Oefen daarna de letter of de verbinding die nog moeilijk is.
 
-### Schrijven en grammatica functioneel kiezen
+Noteer bijvoorbeeld: “Zegt mat na. Leest de kaart met hulp bij de eerste letter.”
 
-Laat een voorbereid woord bijvoorbeeld op een kaart bij het bedoelde voorwerp schrijven als dat bij het boekdoel past. Spreek af of de cursist overschrijft of zonder model schrijft. Vergroot de opdracht pas naar een bericht of formulier wanneer inhoud, taal en schrijfhandeling voorbereid zijn. Grammaticale uitleg blijft kort en sluit aan op een bestaande bronzin en een bruikbare boodschap.
+### Het woord lezen lukt, maar de betekenis is onduidelijk
+
+Pak het voorwerp of een duidelijk beeld erbij. Gebruik het woord in de situatie. Vraag daarna om het voorwerp aan te wijzen of te gebruiken.
+
+Alleen het woord opnieuw laten lezen is hier niet genoeg.
+
+### De cursist wacht op een buur
+
+Laat eerst zelf letters leggen of een antwoord aanwijzen. Geef daarna een beurt. Wissel de rollen bij het samenwerken. Kijk bij ieder apart wat lukt.
+
+### Een antwoord bij een zin is goed, maar je twijfelt aan het begrip
+
+Vraag: “Waar lees je dat?” of: “Laat zien wat dit betekent.” Laat de cursist in de tekst zoeken, aanwijzen of vertellen. Help bij de woorden die nodig zijn. Stel daarna de vraag opnieuw.
+
+### Welke hulp gebruik je in de app?
+
+Gebruik de luisterknop als die bij de opdracht staat. Bij een grammaticaopdracht zonder luisterknop gebruik je **Voorbeeld** en de zin uit de oefening. Laat de cursist de vorm daarna zelf gebruiken, mondeling of op papier.
+
+Na een goed antwoord kun je soms geen andere keuze meer aantikken. Luister opnieuw of kies **Verder** als die knop beschikbaar is. Controleer bij een volgende poging wat zonder voorbeeld lukt.
+
+### Als een fout blijft terugkomen
+
+Noteer wat je ziet en wat je hebt geprobeerd. Bijvoorbeeld: “Leest na een aanwijzing bij de eerste letter.” Bespreek extra hulp volgens de afspraken van je school. Trek geen grote conclusie uit één mislukte poging.
+
+## 8 Woorden gebruiken en teksten begrijpen
+
+Laat de cursist iets doen met het geoefende woord. Begin klein en kies een situatie die herkenbaar is.
+
+### Een woord gebruiken met een ander
+
+Na het oefenen met *tas* kun je dit doen:
+
+1. De eerste cursist leest de woordkaart **tas**.
+2. De tweede wijst een tas aan.
+3. Vraag: “Waar is de tas?” Geef zo nodig de zin: “Hier is de tas.”
+4. Laat de cursisten wisselen.
+
+Gebruik een tas die er echt is. De cursist hoeft de hele voorbeeldzin nog niet te lezen. Deze opdracht geef je zelf, buiten de app.
+
+### Een zin, tekst of gesprek kiezen
+
+Open binnen een onderdeel **Zinnen en teksten** of **Gesprekken**. Bekijk de inhoud vóór de les. Welke woorden zijn bekend? Welke woorden moet je eerst uitleggen? Past het lezen of luisteren bij je doel?
+
+In de docentomgeving vind je bij de leesstap ook:
+
+- **Van deze woorden naar zinnen en tekstbegrip**.
+- **Bestaande zinnen, teksten en gesprekken bij deze woorden**.
+
+Bij de eerste stap *mat* staat in dit laatste overzicht geen gekoppelde tekst. Gebruik daar de kleine woordopdracht. Ga niet uit van een tekst die de app niet aanbiedt.
+
+### Zo geef je een korte tekstopdracht
+
+1. **Kies één doel.** Wil je luisteren en begrijpen, samen lezen of zelf lezen?
+2. **Bereid de nodige woorden voor.** Leg alleen uit wat nodig is voor de opdracht.
+3. **Geef vooraf een vraag.** Bijvoorbeeld: “Over wie gaat dit?” of: “Wat moet deze persoon doen?” Kies een vraag die bij de tekst past.
+4. **Laat luisteren of lezen.** Geef genoeg tijd. Laat de cursist zo nodig een stukje opnieuw bekijken.
+5. **Vraag naar de betekenis.** Laat vertellen, aanwijzen of de passende zin terugzoeken.
+6. **Laat de taal gebruiken.** Oefen bijvoorbeeld een korte vraag uit het gesprek met een partner.
+
+Noteer welke hulp je gaf. Een goed antwoord na het luisteren is nog geen bewijs dat de cursist de tekst zelf kan lezen.
+
+### Schrijven of grammatica oefenen
+
+Kies een kleine taak met een duidelijk doel. Bijvoorbeeld: schrijf **mat** op een kaart voor bij de mat. Spreek af of de cursist mag overschrijven of zonder voorbeeld schrijft.
+
+Bij grammatica gebruik je een zin uit de oefening. Laat kort zien welke vorm nodig is. Laat de cursist daarna een passende zin zeggen of schrijven. Kies pas een langer bericht of formulier als de woorden en de schrijfhandeling voldoende bekend zijn.
 
 ### Een kleine opdracht buiten de les
 
-Een mogelijke afspraak is: “Zoek een mat op een plek waar je toch komt. Vertel volgende les waar.” Doe de handeling eerst samen voor. Een foto, telefoon of toegang tot een gebouw is niet nodig. Als deze opdracht niet past, laat je de cursist in de les een mat zoeken. Spreek zelfstandig oefentijd apart af en kom er in de volgende bijeenkomst op terug. Dit is een docentopdracht, geen bestaande automatische appfunctie.
+Spreek bijvoorbeeld af: “Zoek een mat op een plek waar je toch komt. Vertel volgende les waar.” Doe eerst voor wat je bedoelt.
 
-## 9 Terughalen en het vervolg bepalen
+Een foto of telefoon is niet nodig. Past de opdracht niet? Laat de cursist in de les een mat zoeken. Spreek de oefentijd apart af. Kom in de volgende les op de ervaring terug.
 
-Plan terughalen op de eerstvolgende werkelijke bijeenkomst en daarna opnieuw op een passend later moment. Laat de cursist eerst proberen zonder opnieuw het antwoord te laten horen of zien. Geef vervolgens hulp wanneer nodig en oefen opnieuw. Verbind de keuze aan je eigen observatie en aan wat in het rooster haalbaar is. Onderzoek naar gespreide herhaling ondersteunt het verdelen van oefenmomenten, maar bepaalt geen optimaal Klink-rooster voor iedere cursist. [6]
+Dit is jouw eigen opdracht. Klink zet deze niet automatisch klaar.
 
-### Start van de volgende bijeenkomst
+## 9 Herhalen en verdergaan
 
-Reserveer bijvoorbeeld **3 actieve minuten binnen die bijeenkomst**: één minuut een bekend woord zonder model lezen of maken, één minuut betekenis tonen en één minuut feedback en vervolgkeuze. Dit is een planningsvoorbeeld. Bij een grotere groep verdeel je de individuele observaties over meer tijd of over gerichte beurten terwijl anderen zelfstandig voorbereide taken uitvoeren.
+Laat een bekend woord in de volgende les terugkomen. Laat de cursist eerst zelf proberen, zonder dat jij het antwoord laat horen of zien. Geef daarna hulp als die nodig is.
 
-| Wat je ziet | Eerstvolgende docenthandeling |
-| --- | --- |
-| Lezen en betekenis lukken zonder model | Bereid de volgende kleine stap voor; laat het bekende woord later terugkomen |
-| Lezen lukt alleen na een aanwijzing | Oefen dezelfde verbinding met gerichte steun en bouw die weer af |
-| Betekenis is bekend maar de tekens nog niet | Werk eerst aan de noodzakelijke verbindingen tussen klanken en tekens |
-| Lezen lukt maar betekenis is onzeker | Geef opnieuw context en laat betekenis tonen |
-| Alleen de bediening belemmert de taak | Laat aanwijzen of werk met kaarten; oefen bediening apart |
+### Een korte start van de volgende les
 
-Deze beslissingen zijn geen automatische overgangsnorm. De taak, omstandigheden en eerdere waarnemingen blijven bepalend. De volgende stap na mat is tas, met voorbereiding van s; dat betekent niet dat iedere cursist die stap al in hetzelfde blok moet doen.
+Plan bijvoorbeeld drie minuten voor één cursist of enkele gerichte beurten:
 
-### Herhalen in de app en jouw eigen notitie
+- **Eerste minuut:** laat een bekend woord lezen of met letters maken, zonder voorbeeld.
+- **Tweede minuut:** laat het passende voorwerp aanwijzen of de betekenis uitleggen.
+- **Derde minuut:** zeg wat lukt en kies wat je nog gaat oefenen.
 
-Open de cursistknop **Herhalen** voor de daar beschikbare herhaalopdrachten. Het bestaande systeem gebruikt onder voorwaarden intervallen van 1, 3 en 7 dagen. Dat zijn appkeuzes, geen bewezen optimale intervallen of garantie van onthouden. Ook **Nog een keer** binnen een les is iets anders dan oefenen op een latere dag. [1, 6]
+Bij een grotere groep heb je meer tijd nodig om iedereen apart te zien. Geef de anderen ondertussen een bekende taak. In hoofdstuk 6 staan werkvormen.
 
-Voortgang wordt op het apparaat bewaard. Bij een gedeeld apparaat zijn die gegevens geen individueel dossier. Een leeg herhaaloverzicht bewijst evenmin dat een cursist niets meer hoeft te oefenen. Houd de persoonlijke observatie in het afgesproken docentdossier bij, met de concrete volgende datum en opdracht.
+### Wat doe je daarna?
 
-## 10 Aansluiten bij boek en echte bijeenkomst
+- **Lezen en begrijpen lukken zelf.** Bereid de volgende kleine stap voor. Laat het bekende woord later nog eens terugkomen.
+- **Lezen lukt met hulp.** Oefen dezelfde letters of verbinding nog eens. Geef daarna minder hulp.
+- **De betekenis is bekend, maar de letters nog niet.** Oefen eerst de letters en de klanken die erbij horen.
+- **Lezen lukt, maar begrijpen nog niet.** Gebruik het voorwerp of een herkenbare situatie. Laat de betekenis opnieuw tonen.
+- **Alleen het scherm is lastig.** Werk met aanwijzen of losse kaarten. Oefen de bediening apart.
 
-Gebruik het bestaande cursusprogramma. Vul onderstaande gegevens in voordat je het oefenblok voor een groep inplant. Er is voor deze handleiding geen boekpagina, groepsrooster of urenvariant vastgesteld. De aansluiting moet daarom per werkelijke bijeenkomst worden ingevuld. Een los Klink-blok vraagt niet automatisch om een nieuw cursusprogramma. [2]
+Kijk ook naar eerdere pogingen. Eén goed antwoord is niet genoeg om een heel niveau vast te stellen. Na *mat* volgt *tas*. Bereid daarvoor ook de letter **s** en de klank voor.
 
-### Voorbereiding van de bijeenkomst
+### Herhalen in Klink
 
-- Groep en docent: ........................................................
-- Datum en ingeroosterde begin en eindtijd: ........................................................
-- Boek, editie, les en pagina: ........................................................
-- Boekdoel en plaats in het bestaande cursusprogramma: ........................................................
-- Klinkonderdeel en kleine leesstap: ........................................................
-- Zichtbaar doel voor deze cursisten: ........................................................
-- Wat al is aangeboden en wat afzonderlijk wordt voorbereid: ........................................................
-- Verschillen in mondelinge taal, lezen en schrijven, en bediening: ........................................................
-- Materialen en werkende apparatuur: ........................................................
+Via **Herhalen** vind je de herhaalopdrachten die de app klaarzet. Klink gebruikt daarbij onder voorwaarden momenten na 1, 3 en 7 dagen. Kies daarnaast zelf wat jouw cursist nodig heeft en wat in het rooster past.
 
-### Tijd in het volledige lesplan
+**Nog een keer** binnen dezelfde les is oefenen op dat moment. Oefenen op een latere dag blijft nodig. De achtergrond bij herhalen staat in hoofdstuk 12.
 
-| Onderdeel | Begin en einde | Actieve minuten |
-| --- | --- | --- |
-| Terugblik en boekactiviteit vóór Klink | In te vullen | In te vullen |
-| Voorbereiding die nog nodig is | In te vullen | In te vullen |
-| Klinkblok met gekozen doel | In te vullen | Bijvoorbeeld 15 als dit past |
-| Boekactiviteit en toepassing na Klink | In te vullen | In te vullen |
-| Afronding en vervolgafspraak | In te vullen | In te vullen |
+### Houd zelf een korte notitie bij
 
-Pauze: ........ minuten, van ........ tot ........ . Zelfstandig oefenen buiten de bijeenkomst: taak ........, afgesproken tijd ........ . Datum en tijd voor later terughalen: ........ . Controleer dat actieve minuten plus pauze samen binnen de ingeroosterde duur passen. Tel dezelfde toepassing of afronding niet nogmaals mee als die al in het Klinkblok zit.
+De app bewaart de voortgang op het apparaat. Bij een gedeeld apparaat is dat geen persoonlijk overzicht per cursist. Ook een leeg herhaaloverzicht zegt niet dat alles al lukt.
 
-### Korte individuele observatie
+Noteer daarom de volgende opdracht en een echte datum in je eigen lesplan of cursistdossier. Gebruik daarvoor de afspraken van je school.
 
-Gebruik één notitie per cursist en relevant doel, volgens de bestaande dossierafspraken. Noteer een cursistcode als een naam niet nodig is.
+## 10 Je les voorbereiden
 
-- Datum, woord of opdracht: ........................................................
-- Betekenis: zelf / met hulp / opnieuw voorbereiden. Zichtbaar gedrag: ........................................................
-- Lezen: zelf / met hulp / opnieuw voorbereiden. Was er audio of een zichtbaar model? ........................................................
-- Bouwen of schrijven indien geoefend: handeling en hulp ........................................................
-- Digitale bediening: zelf / met hulp. Welke handeling? ........................................................
-- Volgende opdracht en concrete datum: ........................................................
+Gebruik je boek, cursusprogramma en rooster als basis. Een Klink-oefening is een deel van je les. Vul hieronder de gegevens voor jouw groep in. Er is geen vaste boekpagina of lesduur die voor iedere groep past.
 
-**Fictief voorbeeld van noteren:** “Cursist A: mat na de opname nagezegd; kaart daarna met hulp gelezen; echte mat zelfstandig aangewezen; m zelf aangewezen, docent tikte. Volgende bijeenkomst eerst de kaart zonder audio, daarna gericht m/a/t hernemen.” Dit beschrijft een voorbeeld, geen afgenomen observatie.
+Je kunt de invulvelden overnemen in je eigen lesplan. Deze pagina slaat je antwoorden niet op.
 
-## 11 Koppeling met het eigen lesbezoekkader
+### Voor de les
 
-De nummers hieronder verwijzen naar domein en observatiepunt van **Checklist lesbezoek Lingua Academy v2**. Ze zijn ontwerpankers voor het blok en het bijeenkomstplan. Een beschreven handeling krijgt pas een observatiescore wanneer zij werkelijk in de les is gezien. Gebruik daarvoor het bestaande kader. [3]
+- **Groep en docent:** …
+- **Datum, begintijd en eindtijd:** …
+- **Boek, editie, les en pagina:** …
+- **Doel uit het boek en cursusprogramma:** …
+- **Wat de cursist aan het einde doet:** …
+- **Klink-onderdeel en leesstap:** …
+- **Bekende woorden en letters:** …
+- **Wat je eerst nog uitlegt of voordoet:** …
+- **Wie extra hulp nodig heeft en welke hulp:** …
+- **Wat de anderen doen terwijl jij helpt:** …
+- **Materiaal en controle van beeld en geluid:** …
 
-De tijdaanduidingen verwijzen naar hoofdstuk 5 en 10. Meerdere punten kunnen in dezelfde activiteit zichtbaar worden; de minuten worden één keer geteld. Voor voorbereiding, vervolg en aanvullende taken wordt de werkelijke tijd in het bijeenkomstplan ingevuld.
+### Verdeel de tijd
 
-| Punten en focus | Opdracht en docenthandeling → zichtbaar cursistgedrag | Materiaal en tijd |
-| --- | --- | --- |
-| 1.2, 1.3, 1.7–1.9 Methode en voorbereiding | Kies vanuit het boekdoel één Klinkstap, leg materialen klaar en controleer apparatuur → cursisten kunnen de afgesproken taak starten | Boek, lesplan, apparaat, letters; vóór de les |
-| 2.1–2.5 Doel en samenhang | Zeg “We lezen mat en zoeken de mat” en verbind dit aan de boektaak → cursist wijst aan wat het doelwoord betekent en weet wat te doen | Boekdoel, mat, woordkaart; minuut 0–2 |
-| 3.1–3.6 Start en opbouw | Activeer voorkennis, kondig de eerstvolgende handeling aan en laat die terugdoen → cursist start de bedoelde taak en volgt de overgang | Kleine les en voorwerp; minuut 0–5 |
-| 4.4–4.10 Tempo en actieve tijd | Bewaak de bloktijd, geef een parallelle voorbereide taak en verklein bij vastlopen → cursisten blijven actief, krijgen denktijd en ronden een haalbaar doel af | Lesplan en voorbereide kaarten; minuut 0–15 |
-| 5.1–5.5, 5.8–5.10 Instructie | Doe één lees- of tikhandeling voor, gebruik korte taal en laat aanwijzen wat volgt → cursist toont taakbegrip en probeert | Scherm, losse letters, gebaar; minuut 2–5 |
-| 6.1–6.3, 6.6–6.9 Activering | Geef eerst eigen denktijd, verdeel beurten en bied een stille cursist een veilige reactievorm → ieder kiest, legt, leest of wijst zelf | Letters, kaart en scherm; minuut 5–13 |
-| 7.1–7.7, 7.9 Interactie | Verdeel lees- en aanwijsrollen, loop rond en laat wisselen → beide cursisten reageren op elkaar en geven niet alleen samen één antwoord | Woordkaart en mat; minuut 10–13 |
-| 8.2, 8.5–8.8 Passende variatie | Wissel model, eigen poging, voorwerphandeling en terugblik af → cursist gebruikt hetzelfde woord in verschillende handelingen | Scherm, kaart, voorwerp; minuut 0–15 |
-| 9.1–9.9 Differentiatie | Stem hulp per vaardigheid af; laat wie meer kan zonder model proberen en help individueel → cursisten werken aan een passende taak met verschillende steun | Model, kaart, letters; minuut 0–15 |
-| 10.1, 10.2, 10.5–10.8, 10.10 Feedback | Benoem wat lukt, wijs één probleem aan en geef een herstelpoging → cursist verbetert zelf of toont welke hulp nog nodig is | Eén terug, model of losse letters; minuut 5–10 |
-| 11.1, 11.2, 11.6–11.9 Spreken | Geef zo nodig een korte mondelinge formulering bij het voorwerp → cursist zegt het woord of een passende boodschap verstaanbaar tegen de partner | Echte mat, mondeling model; minuut 10–13 |
-| 12.1–12.3, 12.6, 12.8 Luisteren | Geef vooraf een luisterdoel en laat daarna naar het bedoelde voorwerp wijzen → cursist reageert op wat gehoord is | Bestaande woordaudio en mat; minuut 0–5 |
-| 13.1–13.3, 13.6–13.8 Lezen | Toon het voorbereide woord zonder model en vraag het voorwerp erbij te zoeken → cursist leest en verbindt het woord aan de situatie | Woordkaart en mat; minuut 5–15 |
-| 15.1–15.4, 15.6–15.9 Woordenschat | Kies het routewoord, verbind beeld, uitspraak en gebruik en vraag betekenis opnieuw → cursist zegt of toont betekenis en herkent het terugkerende woord | Voorwerp, woordbeeld, kaart; minuut 0–15 |
-| 17.1–17.7 Praktijk in de les | Verbind mat aan de ingang en laat de partner op het woord handelen → cursist gebruikt taal bij een herkenbare dagelijkse handeling | Mat bij een ingang of bestaand passend beeld; minuut 10–13 |
-| 20.1–20.9, 21.1, 21.4–21.6 Veilig klimaat | Wacht rustig, corrigeer zonder beschaming, wissel dominante rollen en vraag naar eigen ervaringen → cursisten durven proberen en krijgen ruimte voor verschillende ervaringen | Groepsafspraken en vertrouwde voorwerpen; door het hele blok |
-| 2.6–2.8, 3.7–3.9 Terugblik | Keer terug naar het leesdoel, laat een laatste poging doen en benoem het vervolg → cursist laat zien wat lukte en begrijpt de volgende handeling | Kaart en docentnotitie; minuut 13–15 |
-| 22.1, 22.3–22.8, 23.1, 23.3–23.5, 23.7–23.8 Vervolg | Noteer concrete hulp, geef zicht op de volgende stap en pas het volgende lesplan aan → cursist weet wat al lukte en wat opnieuw geoefend wordt | Observatienotitie en volgend lesplan; minuut 13–15 en gepland volgend blok |
+Schrijf bij elk deel de begin- en eindtijd en het aantal oefenminuten:
 
-### Punten die afhangen van het gekozen vervolg
+1. Terugkijken en de boekopdracht vóór Klink: …
+2. Voorbereiding van woorden, letters of bediening: …
+3. Het Klink-blok met je gekozen doel: …
+4. Verder werken in het boek of de taal gebruiken: …
+5. Terugkijken en de volgende afspraak maken: …
 
-| Punten en voorwaarde | Opdracht en docenthandeling → zichtbaar cursistgedrag | Materiaal en tijd |
-| --- | --- | --- |
-| 14.1, 14.3–14.6, 14.8 Als schrijven een doel is | Laat een kaart bij een voorwerp schrijven, spreek modelgebruik af en geef inhoudelijke en vormfeedback → cursist maakt een passende kaart en herstelt waar nodig | Papier, pen en eventueel model; in plaats van een deel van zelf proberen, of apart ingepland |
-| 15.5, 16.1–16.9 Als een zin of grammatica het doel is | Gebruik de bestaande bronzin, vergelijk de relevante vorm kort en laat een eigen mondelinge of schriftelijke toepassing proberen → cursist gebruikt het patroon met betekenis | Voorbereide bronzin en Voorbeeld; eigen gepland vervolgblok |
-| 18.1–18.8 Bij een buitenopdracht | Doe de zoekopdracht voor, spreek een haalbare plek af en vraag volgende les wat is geprobeerd → cursist begrijpt de opdracht en vertelt of toont de ervaring | Gewone omgeving, geen foto vereist; voorbereiding en terugblik in rooster, uitvoering apart |
-| 7.8, 8.9, 10.9, 19.1–19.11 Bij hybride deelname | Controleer beeld en geluid, geef ook online een beurt en partnerrol en herhaal de vraag hoorbaar → online cursist reageert, oefent en krijgt feedback | Gedeeld scherm, hoorbare verbinding, lokaal voorwerp; vooraf en in dezelfde activiteiten |
+**Pauze:** van … tot …, totaal … minuten.
 
-De eerste woordstap bevat geen uitgebreide schrijftekst of examenopdracht. Punt 14.2 en domein 24 zijn voor dit blok daarom niet het doel; bekijk ze bij passende vervolglessen. Spreekpunten 11.3–11.5 krijgen pas volledige ruimte in een passend gesprek, niet door een eerste woord kunstmatig uit te breiden. Schoolbeleid, portaalgebruik, roosterdiscipline, trajectinformatie en de structurele uitvoering van praktijkleren worden op bijeenkomst of trajectniveau beoordeeld. Vul overige punten alleen als toepasselijk in met concrete bewijsplaatsen; deze tabel is geen volledige lesbezoekscore.
+**Oefenen buiten de les:** opdracht …, afgesproken tijd … minuten.
 
-## 12 Onderbouwing en grenzen van de aanpak
+**Opnieuw oefenen in een volgende les:** datum …, opdracht …, tijd … minuten.
 
-**Afzonderlijke vaardigheidsprofielen.** LASLLIAM beschrijft verschillen tussen mondelinge en schriftelijke vaardigheden en behandelt digitale vaardigheden afzonderlijk. Daarom noteer je in deze aanpak het leesresultaat los van taalbegrip en bediening. Dit is een keuze voor begeleiding, geen nieuwe diagnostische toets. [4]
+Controleer of alle onderdelen en de pauze binnen je rooster passen. Tel een onderdeel maar één keer. Gebruik je het blok van 15 minuten uit hoofdstuk 5? Dan zitten gebruiken en terugkijken al in die 15 minuten.
 
-**Betekenis en geschreven code.** LASLLIAM bespreekt klanken, letters en betekenisvolle woorden. De uitwerking met mat combineert daarom een concreet voorwerp, tekenvoorbereiding en een leeshandeling. De bestaande woordaudio bewijst niet dat een volledige route met losse klankmodellen beschikbaar is. [1, 4]
+### Een korte notitie per cursist
 
-**Korte uitvoerbare instructies.** De W3C-richtlijn ondersteunt heldere stappen bij de taak en bruikbare voorbeelden. Daarom doe je één handeling voor en laat je die terugdoen. Deze toepassing is geen verklaring van volledige toegankelijkheid of WCAG-conformiteit. [5]
+Gebruik de afspraken van je school voor het bewaren van gegevens. Gebruik een cursistcode als een naam niet nodig is.
 
-**Herhalen op verschillende momenten.** Cepeda en collega's onderzochten de relatie tussen oefenafstand en later onthouden van feiten. Dat ondersteunt het algemene spreiden van oefening. Het onderzoek bewijst niet dat 1, 3 en 7 dagen optimaal zijn voor deze alfabetiseringsgroep, of dat Klink daarmee bewezen leerwinst levert. [6]
+- **Datum en opdracht:** …
+- **Begrijpen:** zelf / met hulp / opnieuw oefenen. Wat zag je? …
+- **Lezen:** zelf / met hulp / opnieuw oefenen. Welke hulp gaf je? …
+- **Voorbeeld of audio:** was het antwoord te zien of net te horen? …
+- **Letters leggen of schrijven, als dat je doel was:** wat lukte? …
+- **Scherm bedienen:** zelf / met hulp. Welke handeling? …
+- **Volgende opdracht en datum:** …
 
-**Boek en bijeenkomst blijven de basis.** De Taalroute-ontwerpbasis verlangt een traceerbare koppeling tussen boekdoel, cursusprogramma, echte bijeenkomst en observatie. De invulvelden in hoofdstuk 10 moeten met de eigen groep en het bestaande rooster worden uitgewerkt. De handleiding geeft geen volledig cursusprogramma, urenvariant of nieuwe woordindeling. [2]
+### Een ingevuld voorbeeld
 
-De derde didactische review is een agentreview vanuit verschillende perspectieven. Zij is geen menselijke expertreview of cursistproef. De uitgewerkte begeleiding moet nog in echte lessen worden beproefd. De beschikbaarheid van oefeningen zegt niet dat alle spelling, grammatica, tekstbegrip of hogere taalniveaus volledig zijn gerealiseerd. Een volledige gelijkwaardigheid met DigLin is niet vastgesteld. [1]
+Dit voorbeeld is verzonnen:
+
+“18 oktober. Cursist A zegt mat na de opname. Leest de kaart met hulp bij de m. Wijst de echte mat zelf aan. Kiest zelf de letters; ik help met tikken. Op 20 oktober eerst de kaart lezen zonder audio. Daarna oefenen wat nog moeilijk is.”
+
+Gebruik in je eigen notitie de echte lesdatum en wat jij werkelijk zag.
+
+## 11 Je les bekijken met het lesbezoekkader
+
+Een lesbezoek is een les waarbij iemand meekijkt. Het bestaande lesbezoekkader helpt om te bespreken wat goed gaat en wat beter kan. Gebruik het kader van je school. De vragen hieronder helpen je bij het blok met *mat* uit hoofdstuk 5.
+
+Je hoeft niet elk punt uit het hele kader in één kort blok te laten zien. Kies wat bij je lesdoel past. Noteer na de les wat werkelijk gebeurde.
+
+### Voorbereiding en doel
+
+**Voor de les:** leg het boek, de woordkaart, de letters en de mat klaar. Controleer het geluid. Schrijf het boekdoel en de tijd in je lesplan.
+
+**Minuut 0–2:** zeg: “We lezen mat en zoeken de mat.” Laat de cursist de mat aanwijzen. Zo zie je of het woord betekenis heeft. Vraag daarna wat de cursist gaat doen.
+
+### Duidelijke uitleg
+
+**Minuut 2–5:** doe één lees- of tikhandeling voor. Gebruik korte zinnen. Vraag: “Laat zien wat je nu doet.”
+
+**Je kijkt:** begint de cursist aan de bedoelde opdracht? Geef nog één voorbeeld als dat nodig is.
+
+### Actief oefenen en samenwerken
+
+**Minuut 5–13:** laat eerst ieder zelf letters leggen, kiezen of lezen. Geef daarna rollen: de eerste leest of zegt het woord, de tweede wijst de mat aan. Laat wisselen.
+
+**Je kijkt:** doen beiden iets zelf? Reageert de partner op het woord? Blijft de rest aan het werk terwijl jij helpt?
+
+### Hulp, tempo en een veilige sfeer
+
+**Tijdens het hele blok:** geef denktijd. Kies een kleinere taak bij vastlopen. Geef een cursist die meer aankan een poging zonder voorbeeld.
+
+Zeg rustig wat lukt en geef één aanwijzing. Laat daarna opnieuw proberen. Geef ook stille cursisten ruimte om te wijzen of te spreken. Gebruik de letters, woordkaart en mat als hulp.
+
+**Je kijkt:** durft de cursist te proberen? Helpt jouw aanwijzing? Past de tijd nog bij de groep? Pas je planning zo nodig aan.
+
+### Lezen, luisteren en gebruiken
+
+**Minuut 0–5:** laat naar het woord luisteren en daarna de mat aanwijzen.
+
+**Minuut 5–15:** laat de woordkaart lezen zonder voorafgaand voorbeeld. Kijk apart of de cursist de betekenis begrijpt.
+
+**Minuut 10–13:** laat de cursist het woord tegen een partner gebruiken. Geef zo nodig “Hier is de mat” als hulp. De partner wijst de mat aan.
+
+### Terugkijken en een vervolg kiezen
+
+**Minuut 13–15:** benoem wat lukt en wat je nog samen oefent. Schrijf de taak, de hulp en de volgende lesdatum op.
+
+**Je kijkt:** kan de cursist de afgesproken taak uitvoeren? Welk materiaal en welke hulp zijn volgende keer nodig? Gebruik de notitie uit hoofdstuk 10.
+
+### Als dit ook bij je les hoort
+
+- **Schrijven:** laat een kaart voor bij de mat maken. Spreek af of overschrijven mag. Kijk naar het woord en het schrijven. Gebruik papier, pen en zo nodig een voorbeeld. Plan dit binnen of naast het oefenblok.
+- **Een zin of grammatica:** kies een passende zin uit een oefening. Doe kort voor wat nodig is. Laat de cursist de zin gebruiken. Plan hiervoor een eigen vervolgblok.
+- **Een opdracht buiten de les:** doe vooraf de zoekopdracht uit hoofdstuk 8 voor. Laat de cursist vertellen wat de bedoeling is. Plan in de volgende les tijd om op de ervaring terug te komen.
+- **Online deelname:** controleer vooraf beeld, geluid en materiaal. Geef de online cursist een beurt en een partnerrol. Herhaal vragen hoorbaar. Vraag om de handeling te tonen en geef ook deze cursist hulp.
+
+### Wat je apart beoordeelt
+
+Een kort blok met één woord laat niet alles zien. Kijk bij andere lessen naar langere gesprekken, teksten schrijven en examenopdrachten. Beoordeel rooster, aanwezigheid en schoolafspraken over de hele bijeenkomst.
+
+Gebruik het oorspronkelijke lesbezoekkader voor de volledige beoordeling. Deze uitleg vervangt dat kader niet. Het voorbeeld is een plan; een lesbezoek laat zien hoe het in de praktijk gaat.
+
+## 12 Achtergrond en bronnen
+
+Deze handleiding helpt je om Klink in je les te gebruiken. De praktische keuzes sluiten aan bij de bronnen hieronder.
+
+### Kijk naar verschillende vaardigheden
+
+Een cursist kan goed spreken en nog weinig lezen. Een andere cursist kan al lezen, maar kent weinig Nederlands. Ook het scherm bedienen kan extra hulp vragen.
+
+Kijk daarom apart naar spreken, lezen, schrijven en bediening. De Raad van Europa beschrijft deze verschillen in **LASLLIAM**. Dat is een gids over leren lezen en een nieuwe taal leren als volwassene.
+
+### Geef korte uitleg en doe het voor
+
+Geef één opdracht tegelijk. Doe een handeling voor en laat de cursist die uitvoeren. Zo zie je of je uitleg duidelijk is. Dit past bij de aanvullende uitleg van W3C over begrijpelijke instructies op websites.
+
+Deze werkwijze helpt bij de uitleg. Ze betekent niet dat alle toegankelijkheid van Klink al volledig is onderzocht.
+
+### Herhaal op verschillende momenten
+
+Laat woorden op meerdere dagen terugkomen. Onderzoek van Cepeda en collega's ondersteunt het spreiden van oefenmomenten. Het geeft geen vast rooster dat voor iedere Klink-cursist het beste is.
+
+De momenten na 1, 3 en 7 dagen in Klink zijn keuzes van de app. Ze garanderen niet dat een cursist een woord onthoudt. Kijk zelf wat opnieuw oefenen vraagt.
+
+### Verbind Klink met je boek en lesplan
+
+De Taalroute-ontwerpbasis verbindt boek, cursusprogramma, lesplan en wat je in de les ziet. Vul daarom voor je eigen groep hoofdstuk 10 in. Kies passende punten uit je bestaande lesbezoekkader.
+
+Klink is een hulpmiddel binnen je onderwijs. Deze handleiding is geen volledig cursusprogramma. De aanwezigheid van een oefening betekent ook niet dat een heel taalniveau is gedekt.
+
+### Wat nog in echte lessen moet blijken
+
+De tekst en klikroutes zijn nagekeken. De voorbeelden moeten ook in echte lessen worden uitgeprobeerd. Er is nog geen gebruikstest met docenten gedaan voor deze herschreven handleiding.
+
+Gebruik je een voorbeeld? Kijk of de uitleg duidelijk is, de tijd past en de hulp werkt. Pas je eigen lesplan daarop aan.
 
 ### Bronnen
 
-**[1] Klink projectbronnen.** *Derde didactische review en verantwoording*, 18 oktober 2026; actuele PUBLICATIE.md en actief ronde 3 publicatieregister. Klikroutes en knopnamen gecontroleerd op de bestaande app op 18 oktober 2026. Review: https://drive.google.com/file/d/1SVvnPTJA4tDEiCvP5xtRRFUoGjwymv-0/view. App: https://klink.taalroute.nl. Technische versiegegevens staan in het aparte verificatiebestand.
-
-**[2] Taalroute.** *Vaste Taalroute ontwerpbasis*, vastgesteld 17 oktober 2026. Vooral Eén samenhangend geheel, Cursusprogramma en tijd en Docentlesplan per echte bijeenkomst. https://drive.google.com/file/d/1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz/view.
-
-**[3] Lingua Academy.** *Checklist lesbezoek v2*. De eigen observatiepunten, met name domeinen 1–23 voor de hier gekozen activiteiten. https://drive.google.com/file/d/159x2piXWCvP0e17niB7Phs3hyld9_YMC/view. Dit eigen kader wordt niet gelijkgesteld aan officiële externe criteria.
-
-**[4] Raad van Europa.** *Literacy and Second Language Learning for the Linguistic Integration of Adult Migrants* (LASLLIAM), 2022. §1.4.3, gedrukte p. 21–22; §3.2.2–3.2.3, p. 34; §4.3, p. 82–85. https://rm.coe.int/prems-008922-eng-2518-literacy-and-second-language-learning-couv-texte/1680a70e18.
-
-**[5] W3C WAI.** *Use Clear Step-by-step Instructions*, aanvullende richtlijn voor cognitieve toegankelijkheid. https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p07-step-instructions/.
-
-**[6] Cepeda, N. J., Vul, E., Rohrer, D., Wixted, J. T. en Pashler, H.** (2008). *Spacing effects in learning: a temporal ridgeline of optimal retention*. Psychological Science, 19(11), 1095–1102. DOI 10.1111/j.1467-9280.2008.02209.x. https://pubmed.ncbi.nlm.nih.gov/19076480/.
+- **Klink:** de bestaande lessen, oefeningen en docentomgeving. De klikroutes zijn gecontroleerd op 18 oktober 2026.
+- **Taalroute:** de vaste ontwerpbasis van 17 oktober 2026. Deze gaat over de samenhang tussen boek, programma, les en begeleiding.
+- **Lingua Academy:** de bestaande *Checklist lesbezoek v2*. Dit is het eigen lesbezoekkader, geen landelijke norm.
+- **Raad van Europa (2022):** [LASLLIAM: leren lezen en een nieuwe taal leren als volwassene](https://rm.coe.int/prems-008922-eng-2518-literacy-and-second-language-learning-couv-texte/1680a70e18). Gebruikte delen: 1.4.3, 3.2.2–3.2.3 en 4.3. De bron is in het Engels.
+- **W3C WAI:** [uitleg over duidelijke instructies in stappen](https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p07-step-instructions/). De bron is in het Engels.
+- **Cepeda en collega's (2008):** [onderzoek naar herhalen op verschillende momenten](https://pubmed.ncbi.nlm.nih.gov/19076480/). De bron is in het Engels.
