@@ -18,7 +18,18 @@ try {
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `Horizontal overflow at ${width}`);
     assert.equal(await page.locator('h1').count(), 1);
     assert(await page.evaluate(() => document.querySelector('.entry-appbar').getBoundingClientRect().bottom <= document.querySelector('.entry-layout').getBoundingClientRect().top), `Header overlaps hero at ${width}`);
-    assert.equal(await page.locator('.landing-brand img').count(), 1);
+    assert.equal(await page.locator('.landing-brand').count(), 0, 'The duplicate logo below the top header is removed');
+    const headerLogo = page.locator('.taalroute-header .header-klink-logo');
+    const logo = await headerLogo.evaluate(image => {
+      const box = image.getBoundingClientRect();
+      const header = image.closest('header').getBoundingClientRect();
+      return { width: box.width, ratio: box.width / box.height, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight, inside: box.top >= header.top && box.bottom <= header.bottom };
+    });
+    assert.equal(Math.round(logo.width), width <= 440 ? 65 : 78, 'Keep the existing compact header width');
+    assert(Math.abs(logo.ratio - 770 / 340) < 0.01, 'Complete logo with tagline retains its rendered proportions');
+    // Responsive srcset density correction rounds natural dimensions to whole pixels.
+    assert(Math.abs(logo.naturalWidth - logo.naturalHeight * 770 / 340) <= 770 / 340 + 1, 'Complete asset retains its intrinsic proportions within pixel rounding');
+    assert(logo.inside, 'The complete logo fits inside the top header');
     assert(await page.locator('.landing-publisher').innerText() === 'Een leermiddel van');
     assert.equal(await page.locator('.landing-publisher img').getAttribute('alt'), 'Taalroute');
     assert(await page.locator('.landing-alfa').evaluate(element => !!element.closest('footer')));

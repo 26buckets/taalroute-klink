@@ -30,7 +30,6 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
     <main className="entry-screen klink-landing">
       <section className="entry-window">
         <header className="entry-appbar">
-          <button className="landing-brand" type="button" aria-label="Klink — naar de startpagina" onClick={() => setMode('choose')}><Image src="/klink-logo.svg" alt="Klink — Van klank naar taal" width={770} height={340} priority /></button>
           {mode === 'choose' && <nav aria-label="Op deze pagina"><a href="#begeleiders">Voor begeleiders<ArrowRight aria-hidden="true" /></a></nav>}
           <div className="landing-publisher"><span>Een leermiddel van</span><Image src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} priority /></div>
         </header>

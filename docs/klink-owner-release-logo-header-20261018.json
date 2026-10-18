@@ -1,0 +1,30 @@
+{
+  "approvedBy": "Nico",
+  "date": "2026-10-18",
+  "userRequest": "Dus de klink van Klank naar Taal, die moet helemaal bovenin komen in de header. Gewoon klein, even groot zoals het nu helemaal is, maar dan met die van Klank naar Taal erbij. Ja, in de bovenste rand.",
+  "scope": "Use the full approved logo including tagline in the existing compact top-header asset slot, width78px/65px retained and height:auto follows intrinsic770:340 ratio. Remove the duplicate lower landing logo. Keep the remaining layout and header markup unchanged.",
+  "baseline": {
+    "application": "Klink",
+    "builtAt": "2026-10-18T21:51:12.799Z",
+    "sourceCommit": "277147e4589459472713240e1566de39bf6e8d43",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "baselineWorkerVersion": "599e7506-8209-4972-9099-f98349740dfb",
+  "contentAuthorization": "docs/klink-owner-release-short-screen-20261018.json",
+  "publicationGateUnchanged": true,
+  "files": {
+    "public/klink-wordmark.svg": "09769c3c1960927b9c07c213c09a5385f5192a8941f95da0363a2633b51ece23",
+    "components/product/entry-design.tsx": "387821be8a3583a9d424b80273edb0824258c42d0b9d0aa861683a43584d47a7",
+    "app/landing.css": "8d7b181108dc211644f4842f5f0a1bd9316013fcb18ee16ca30083c8ecf3602a",
+    "scripts/test-landing-browser.mjs": "1a57026db2f1e439a806ee3941e1a07380f6f4b5735602cf1b9120d01d5c7613"
+  },
+  "newAudioOrMedia": false,
+  "existingAssetUse": "klink-wordmark.svg now serves the same approved full logo as klink-logo.svg; both existing URLs retained.",
+  "verificationNote": "Header SVG is rendered at intrinsic770:340 ratio; naturalWidth/naturalHeight undergo whole-pixel rounding after responsive srcset density correction. Desktop78px and mobile65px unchanged."
+}

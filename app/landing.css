@@ -2,8 +2,6 @@
 .klink-landing { --landing-plum: #482c46; --landing-blue: #006cba; --landing-green: #39745f; --landing-muted: #706670; font-family: Inter, Arial, sans-serif; color: #342d36; background: #fff9f3; display: block; }
 .klink-landing .entry-window { width: 100%; height: auto; min-height: 100svh; max-width: none; margin: 0; overflow: visible; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
 .klink-landing .entry-appbar { display: flex; align-items: center; gap: 38px; width: min(1200px, calc(100% - 96px)); height: auto; min-height: 116px; margin: auto; padding: 23px 0; border: 0; background: transparent; }
-.landing-brand { display: block; flex-shrink: 0; border: 0; padding: 0; background: transparent; cursor: pointer; }
-.landing-brand img { display: block; width: 120px; height: auto; }
 .klink-landing .entry-appbar nav { margin-left: auto; }
 .klink-landing .entry-appbar nav a { display: flex; align-items: center; gap: 12px; min-height: 48px; color: var(--landing-plum); font-size: 15px; text-decoration: none; }
 .klink-landing .entry-appbar nav svg { width: 18px; height: 18px; }
@@ -49,7 +47,7 @@
 .landing-address { font-size: 12px; white-space: nowrap; }
 .klink-landing :is(a,button,summary,input):focus-visible { outline: 3px solid var(--landing-blue); outline-offset: 5px; }
 .klink-landing :is(a,summary,button):hover { text-decoration: underline; text-underline-offset: 5px; }
-.klink-landing :is(.landing-brand,.landing-start):hover { text-decoration: none; }
+.klink-landing :is(.landing-start):hover { text-decoration: none; }
 .klink-landing .learner-login { max-width: 440px; margin: 0; padding: 0; }
 .klink-landing .learner-login h1 { margin: 20px 0 15px; font-size: 42px; line-height: 1.15; font-weight: 400; }
 .klink-landing .learner-login > p:not(.form-error) { margin-bottom: 22px; font-size: 18px; }
@@ -64,8 +62,6 @@
 @media (max-width: 700px) {
  .klink-landing .entry-appbar, .klink-landing .entry-layout, .landing-wordrow, .landing-professionals, .landing-footer { width: calc(100% - 40px); }
  .klink-landing .entry-appbar { display: grid; grid-template-columns: 1fr auto; min-height: 0; padding: 20px 0 0; gap: 7px 20px; }
- .landing-brand { justify-self: start; }
- .landing-brand img { width: 108px; }
  .landing-publisher { grid-column: 2; grid-row: 1; margin-left: 0; gap: 8px; }
  .landing-publisher img { width: 126px; }
  .landing-publisher span { font-size: 11px; }
@@ -94,7 +90,6 @@
 }
 @media (max-width: 360px) {
  .klink-landing .entry-layout { padding: 20px; }
- .landing-brand img { width: 96px; }
  .landing-publisher img { width: 112px; }
  .landing-start { gap: 8px; font-size: 16px; padding: 12px; }
  .landing-wordrow { font-size: 22px; }
