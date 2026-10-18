@@ -14,10 +14,20 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-menu-learning-20261018.json`.
-Livebron: `a69dfea97e81f1fd53a2accf6afbdf433869baae`.
-Worker-versie: `074c3664-d842-40f1-9c09-497c54280438`.
+Actief register: `docs/klink-publication-didactic-round3-20261018.json`.
+Livebron: `46d64d8efd9b593fd5584d058410c003bf4c1dc0`.
+Worker-versie: `e60bd45e-1bed-4352-a096-1edf1fec7914`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+De derde didactische review is gepubliceerd na Nico's expliciete akkoord en de
+lokale eindcontrole. Zie `docs/KLINK-DIDACTISCHE-REVIEW-RONDE3-20261018.md` en
+`docs/klink-owner-release-round3-20261018.json`. Toegevoegd: concrete docenthulp
+per bestaande leesstap; aangescherpt: klankvoorbeelden, foutherstel, antwoordposities
+bij terughalen, selectie na succes en docentstatus. Tien gesimuleerde perspectieven,
+geen tien echte experts of cursistproef. De online nacontrole omvat 44
+browsercontrolepunten en alle 2.679 aangeboden mediabestanden. Audio, beelden,
+woordindeling, routes en opslag blijven behouden. De docenthulp is een voorbeeldblok,
+geen nieuw cursusprogramma of beheersingsbewijs.
 
 Publicatieopdracht van 18 oktober: Nico heeft de nieuwe klank-, spelling-,
 grammatica-, praktijk- en tekstbegripreeksen plus geplande herhaling en beide

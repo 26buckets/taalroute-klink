@@ -1,0 +1,71 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "46d64d8efd9b593fd5584d058410c003bf4c1dc0",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "e60bd45e-1bed-4352-a096-1edf1fec7914",
+  "verifiedAt": "2026-10-18T08:47:54.748Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-18T08:46:49.596Z",
+    "sourceCommit": "46d64d8efd9b593fd5584d058410c003bf4c1dc0",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-CecRchSU.js",
+  "freshClientSha256": "f553ba325e18b41e05e537f3a7a3ff18d0490b3321c35ab37edb3d7ee45b4263",
+  "sourceArchiveSha256": "a27cbb7f70fb4e096c3fd1e495daef4a5ee5f03a95626594edb07806ff8f1a9e",
+  "sourceArchiveFormat": "git archive 46d64d8efd9b593fd5584d058410c003bf4c1dc0 (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-menu-learning-20261018.json",
+  "scope": "Third didactic review, devil's advocate, applied fixes and re-review: lesson-specific teacher support, focused sound models, task-appropriate feedback, varied recall answer positions, consistent completed choices and accurate teacher publication status.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "practiceChapters": 12,
+  "learningSequences": 431,
+  "ownerAuthorization": "docs/klink-owner-release-round3-20261018.json",
+  "audioPause": {
+    "newRecordings": 0,
+    "newAudioConnections": 0,
+    "existingMediaUnchanged": true,
+    "rate": 0.85,
+    "isolatedT": "parked",
+    "instructionAudio": "withdrawn"
+  },
+  "githubActionsUsed": false,
+  "workflows": "No workflows in local or remote main before push.",
+  "checks": {
+    "localUnitTests": 79,
+    "localScriptBrowserCheckpoints": 137,
+    "additionalPolicyTests": 8,
+    "liveBrowserCheckpoints": 44,
+    "typeScript": "passed",
+    "scopedLint": "passed",
+    "publicationGate": "passed through normal npm run deploy",
+    "build": "passed",
+    "retestNote": "The full regression reached its last new browser test. Its focus-visible assertion needed actual keyboard modality, not programmatic focus after a pointer click. Corrected test setup; reran the complete menu/didactic suite and affected content tests successfully. Initial and retest logs retained.",
+    "liveMedia": "All 2679 offered files match source bytes; withdrawn recordings remain unavailable.",
+    "worker": "Active 100% version verified."
+  },
+  "reviewRecords": [
+    "docs/KLINK-DIDACTISCHE-REVIEW-RONDE3-20261018.md"
+  ],
+  "limitations": [
+    "Agent review from ten perspectives, not ten independent human experts or a learner trial.",
+    "Teacher plan is a suggested 15-minute practice block, not an actual scheduled class or a complete course program.",
+    "Changed answer positions do not prove transfer or mastery.",
+    "Audio pause remains; teacher support needed. Full DigLin equivalence remains open."
+  ]
+}
