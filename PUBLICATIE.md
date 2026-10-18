@@ -31,10 +31,21 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-compact-route-20261018.json`.
-Livebron: `c2f8cb559509f40fde3b4e1378adb82f09ce4eed`.
-Worker-versie: `7d465c92-a55d-4244-92c4-019e8bb466f9`.
+Actief register: `docs/klink-publication-picture-guide-20261018.json`.
+Livebron: `3e098a090a523416d27a00c60b30b8b0d3d36e50`.
+Worker-versie: `90a520da-c59c-4186-b52c-c4a1def51c55`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Nieuwste aanscherping op 18 oktober: vijf beeldblokken met concrete voorbeelden
+staan in Docentomgeving → Overzicht → Van woordbeeld naar situatie. Dit is
+docentuitleg, geen nieuwe cursistreeks. De cursist ziet een rustige oefenlijn
+onder Start met ronde nummers; alleen een echte geselecteerde oefenstap krijgt
+een witte nummering in een donkere cirkel. Het vastgestelde Klink-logo is circa
+15% kleiner. Alle inhoud en mediabestanden blijven behouden. De volledige
+lokale regressie slaagt met 87 unittests en 156 browsercontrolegroepen.
+Online zijn de voorbeelden, routekeuzes en handleiding gecontroleerd en alle
+2.679 media bytegelijk teruggelezen. Geen nieuwe audio of menselijke cursistproef.
+Akkoord: `docs/klink-owner-release-picture-guide-20261018.json`.
 
 Laatste aanscherping op 18 oktober: één compacte keuzebalk met Lezen/Taal,
 contextgebonden rij, tweede klik deselecteert en één Hulp-knop. Taalroute en

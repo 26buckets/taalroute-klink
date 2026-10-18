@@ -33,7 +33,11 @@ try {
     assert.deepEqual(await guide.locator('[data-picture-stage] strong').allTextContents(), teacherPictureExamples.map(item => item.title));
     assert((await guide.innerText()).includes('geen nieuwe cursistreeks'));
     assert.equal(await guide.locator('.cp-example-note li').allTextContents().then(items => items.join(',')), 'map,pen');
-    for (const img of await guide.locator('img').all()) assert(await img.evaluate(el => el.complete && el.naturalWidth > 0));
+    for (const img of await guide.locator('img').all()) {
+      await img.scrollIntoViewIfNeeded();
+      await img.evaluate(el => el.decode());
+      assert(await img.evaluate(el => el.complete && el.naturalWidth > 0));
+    }
     for (const item of teacherPictureExamples) {
       const button = guide.locator(`[data-picture-stage="${item.id}"] button`);
       const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48);
