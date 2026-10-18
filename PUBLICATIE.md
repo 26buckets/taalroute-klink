@@ -31,9 +31,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-step-frames-20261018.json`.
-Livebron: `fd769e32aa8698ae341991566ae5b267ea22a47c`.
-Worker-versie: `47958c99-94fc-48b3-8417-48cdd4461a0f`.
+Actief register: `docs/klink-publication-clear-step-line-20261018.json`.
+Livebron: `bd21413c5673cab5758e454e656a6e89fd35a430`.
+Worker-versie: `73ca978c-e65e-4e5f-8a5b-3e69e89de3a9`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 Vervolgopdracht 18 oktober: Nico koos Stappenlijn erboven met cijferrondjes
@@ -43,7 +43,10 @@ door een horizontale lijn; op mobiel een verticale lijn links van de kaders.
 Deze uniforme cijfers zijn geen actieve of voltooide stappen. De interactieve
 oefenlijn, fotokaarten, inhoud, audio en het bodemmenu blijven ongewijzigd.
 Vrijgave: `docs/klink-owner-release-clear-step-line-20261018.json`.
-Publicatie en eindcontrole worden in het actieve register vastgelegd.
+Gepubliceerd en online gecontroleerd: 87 unittests en 156 browsercontrolegroepen
+lokaal geslaagd, plus publicatiebewijstests, TypeScript en gerichte codecontrole.
+Live zijn stappenlijn, routekeuzes, bodemmenu, docentbeelden en handleiding
+gecontroleerd. Alle 2.679 aangeboden mediabestanden zijn bytegelijk teruggelezen.
 
 Op verzoek van Nico hebben de zes stappen van Zo oefen je weer hun eigen
 kadertje: de bestaande rand en papierachtergrond zijn hersteld. De huidige
