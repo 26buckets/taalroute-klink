@@ -21,7 +21,7 @@ Begin met één woord en één duidelijk doel. In dit voorbeeld oefen je met *ma
 
 1. **Kies je doel.** Bijvoorbeeld: de cursist leest *mat* en wijst de mat aan. Zoek daarbij het doel uit je boek en lesplan. Vul je voorbereiding in bij hoofdstuk 10.
 2. **Kijk wat al lukt.** Kent de cursist het woord *mat*? Herkent de cursist de letters m, a en t en de klanken die erbij horen? Oefen wat nog niet bekend is. Je hoeft niet alles in één keer te doen.
-3. **Open de les.** Kies in de cursistomgeving **Lessen → tas · map → tabblad Lessen → Start les 1: mat**. De kaart **tas · map** opent eerst een overzicht. De eerste les gaat over *mat*.
+3. **Open de les.** Kies in de cursistomgeving **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**. De kaart **tas · map** opent eerst een overzicht. De eerste les gaat over *mat*.
 4. **Doe het voor.** Open **Kijk en luister**. Laat het woord horen en wijs de mat aan. Open daarna **Maak**. Laat zien hoe je één letter kiest. Haal die met **Eén terug** weg voor de cursist begint.
 5. **Laat de cursist proberen.** Zeg: “Nu jij.” Wacht rustig. Loopt de cursist vast? Geef één aanwijzing. Laat daarna opnieuw proberen.
 6. **Kijk wat zelfstandig lukt.** Toon de woordkaart zonder het woord eerst te zeggen. Vraag: “Lees.” Vraag daarna: “Waar is de mat?” Noteer het lezen en het aanwijzen apart.
@@ -37,9 +37,15 @@ De 15 minuten zijn oefentijd binnen je les. Plan pauze en oefenen buiten de les 
 
 Kies eerst wat je wilt oefenen. Gebruik daarna de route die daarbij past. De knopnamen hieronder horen bij de cursistomgeving, tenzij er **docentomgeving** staat.
 
+### Je oefenroute kiezen
+
+Kies op Start bij Kies je oefenroute samen een leeskeuze (Alfa A of Alfa B) en zo nodig een taalkeuze (A1 of A2). Deze keuzes staan los van elkaar. Ze bepalen het aanbod, niet het behaalde niveau. Alfa C en B1 zijn zichtbaar maar nog niet beschikbaar. Met Bekijk mijn oefeningen open je het passende aanbod. De keuze blijft op dit apparaat staan.
+
+De oefenlijn toont Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Binnen Samen oefenen kies je zo een soort opdracht. Dit zijn geen behaalde stappen. Grijs betekent dat er bij deze keuze nog geen passend aanbod is. Bij Hulp bij oefenen kies je wanneer de woordfoto helpt; voorbeelden en situatiebeelden blijven zichtbaar.
+
 ### Eén kleine leesstap
 
-Kies **Lessen → tas · map → tabblad Lessen → Start les 1: mat**.
+Kies **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**.
 
 Deze les heeft drie delen: **Kijk en luister → Maak → Nog een keer**. Bij **Maak** staat **Leg het woord**. Met **Eén terug** haal je de laatst gekozen letter weg.
 
@@ -51,14 +57,14 @@ Via de stappenbalk kun je naar een ander deel gaan. Een stap openen betekent nog
 
 ### Een oefenvorm met meerdere woorden
 
-Kies **Lessen → tas · map → Oefeningen → Leg het woord na**. Kies daarna **Eén voor één** of **Op één blad**.
+Kies **Lessen → tas · map → Samen oefenen → Alle woorden van dit onderdeel → Namaken → Leg het woord na**. Kies daarna **Eén voor één** of **Op één blad**.
 
 - **Eén voor één:** één opdracht tegelijk in beeld.
 - **Op één blad:** meerdere opdrachten onder elkaar. Je scrolt naar beneden. Dit is geen printknop.
 
 Deze oefening bevat zes woorden: *mat, tas, jas, man, map, pan*. De volgorde kan anders zijn dan in de lessen. Een teller zoals **0 / 6** laat zien hoeveel opdrachten op het blad klaar zijn.
 
-**Oefen je alleen mat?** Blijf bij de kleine les of gebruik je eigen woordkaart. De route hierboven opent meerdere woorden. Je kiest daar niet zelf één los woord. Laat een cursist pas zelfstandig met het hele blad werken als alle woorden zijn voorbereid.
+**Oefen je alleen mat?** Kies bij **Oefenen met** de stap **1. mat**, of blijf bij de kleine les. Een gekozen kleine stap blijft bij Samen oefenen behouden. Kies bewust **Alle woorden van dit onderdeel** om alle zes woorden te oefenen. Laat een cursist pas zelfstandig met het hele blad werken als die woorden zijn voorbereid.
 
 ### Oefenen via een onderwerp
 
@@ -79,7 +85,7 @@ Open vanaf de startpagina:
 3. **Onderdeel tas · map → Leesstap 1. m, a, t — mat**.
 4. **Deze leesstap begeleiden: mat**.
 
-Met **Open deze lessen** ga je naar het onderdeel voor de cursist. Kies daar nog het tabblad **Lessen** en de gewenste les.
+Met **Open deze lessen** ga je naar het onderdeel voor de cursist. Kies daar nog het tabblad **Stap voor stap** en de gewenste les.
 
 Let op het verschil: **Oefenen** in de docentomgeving toont andere keuzes dan **Oefenen** in de cursistomgeving. Noem daarom bij je uitleg steeds de omgeving én de knop.
 
@@ -175,7 +181,7 @@ Controleer of de cursist de betekenis van *mat* kent. Controleer ook de letters 
 
 Zet Klink klaar met de les **mat** en werkend geluid. Leg een mat of beeld en een woordkaart **mat** klaar. Leg ook de losse letters m, a en t klaar. Gebruik papier en pen alleen als schrijven ook je doel is.
 
-Open **Lessen → tas · map → tabblad Lessen → Start les 1: mat**. Klik op het pauzeteken boven de opdracht. Zo gaat de les niet vanzelf verder.
+Open **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**. Klik op het pauzeteken boven de opdracht. Zo gaat de les niet vanzelf verder.
 
 ### Minuut 0 tot 2: betekenis en doel
 
@@ -334,7 +340,7 @@ Gebruik een tas die er echt is. De cursist hoeft de hele voorbeeldzin nog niet t
 
 ### Een zin, tekst of gesprek kiezen
 
-Open binnen een onderdeel **Zinnen en teksten** of **Gesprekken**. Bekijk de inhoud vóór de les. Welke woorden zijn bekend? Welke woorden moet je eerst uitleggen? Past het lezen of luisteren bij je doel?
+Open binnen een onderdeel **Gebruiken**. Kies **Nu zelf**, **Met de docent** of **Voor later**. Zinnen, teksten en gesprekken staan hier bij de gekozen woorden en leesvoorwaarden. Een hoger taalniveau of een gespreksopname is geen bewijs dat de cursist de tekst zelf kan lezen. Bekijk de inhoud vóór de les. Welke woorden zijn bekend? Welke woorden moet je eerst uitleggen? Past het lezen of luisteren bij je doel?
 
 In de docentomgeving vind je bij de leesstap ook:
 

@@ -21,6 +21,7 @@
     "posttest:review": "node scripts/test-audio-register-browser.mjs && npm run test:group-practice && npm run test:chapters && npm run test:learning-paths && npm run test:menu",
     "test:menu": "node scripts/test-menu-navigation-browser.mjs && node scripts/test-menu-refinement-browser.mjs && npm run test:didactic",
     "test:didactic": "node --test scripts/test-didactic-round3.mjs && node scripts/test-didactic-round3-browser.mjs",
+    "test:routes": "node --test scripts/test-level-routes.mjs && node scripts/test-level-routes-browser.mjs",
     "test:learning-paths": "node --test scripts/test-learning-paths.mjs && node scripts/test-learning-paths-browser.mjs",
     "test:chapters": "node --test scripts/test-practice-chapters.mjs && node scripts/test-practice-chapters-browser.mjs && node scripts/test-player-stability-browser.mjs && node scripts/test-practice-sheet-browser.mjs",
     "test:audio-register": "node --test scripts/test-audio-register.mjs && node scripts/test-audio-register-browser.mjs",

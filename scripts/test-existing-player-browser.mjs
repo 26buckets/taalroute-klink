@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { learnerListName } from '../lib/learner-copy.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
-import { answerActivity } from './browser-route-helpers.mjs';
+import { answerActivity, openGroupActivity } from './browser-route-helpers.mjs';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
@@ -19,7 +19,7 @@ async function screenshot(name) { await page.screenshot({ path: new URL(`${name}
 try {
   await home();
   assert.equal(await page.locator('.tr-app').count(), 0);
-  assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Verder', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
+  assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
   await screenshot('bestaande-home');
   await library();
   assert.equal(await page.locator('.cp-package-grid > button').count(), packs.length);
@@ -27,7 +27,7 @@ try {
     const pack = packs[i];
     await page.locator('.cp-package-grid > button').nth(i).click();
     assert.equal(await page.locator('.cp-player-bar strong').innerText(), learnerListName(pack));
-    await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
     assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(), pack.lessons.map((lesson, index) => lessonPreviewWords(pack, lesson).map(word => word.word === 'pak' ? `pak (${word.id.endsWith('verpakking') ? 'verpakking' : 'kleding'})` : word.word).join(' · ') || `Les ${index + 1}`));
     assert.equal(await page.locator('.cp-lesson-list article button').count(), pack.lessons.length);
     assert(!/Leesstap|Bekend:|Nieuw:|Komt terug|Kijken|Kiezen|Bouwen|Tik op Start/.test(await page.locator('.cp-lesson-picker').innerText()));
@@ -36,7 +36,7 @@ try {
   }
   pass('Existing package screens contain every core, recall, extension and additional word route');
   await page.locator('.cp-package-grid > button').first().click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await screenshot('bestaande-lessen');
   await page.locator('.cp-start-lesson').nth(1).click();
   const lesson = packs[0].lessons[1];
@@ -50,9 +50,9 @@ try {
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   for (const activity of groupActivities.filter(item => item.id !== 'learning-review' && !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length)) {
-    await page.locator(`[data-activity="${activity.id}"]`).click();
+    await openGroupActivity(page, activity.id);
     assert(await page.locator('.cp-exercise-stage > section').isVisible());
     await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click();
   }
@@ -76,7 +76,7 @@ try {
   pass('The existing word bank and saved-word review share the new stable meaning IDs');
   await library();
   await page.locator('.cp-package-grid > button').first().click();
-  for (const name of ['Overzicht', 'Woorden', 'Lessen', 'Oefeningen', 'Foto en geluid']) {
+  for (const name of ['Woorden', 'Stap voor stap', 'Samen oefenen', 'Gebruiken']) {
     await page.locator('.cp-tabs').getByRole('button', { name, exact: true }).click();
     assert(!/CP00[12]|ALF-CMP|Beeldbinding|assetId|contractVersion|renderer|scope|publicatiestatus|1 oefeningen|1 spellen|zichtbare woorden/i.test(await page.locator('.cp-content').innerText()));
   }
@@ -95,7 +95,7 @@ try {
     await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
     await home();
     await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
-    await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
     await page.locator('.cp-start-lesson').first().click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));

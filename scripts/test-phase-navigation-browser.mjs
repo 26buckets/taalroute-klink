@@ -30,7 +30,7 @@ async function openLesson() {
   await page.evaluate(() => { localStorage.removeItem('klink.taalroute.route.v1'); localStorage.removeItem('klink.taalroute.attempts.v1'); });
   await page.reload();
   await page.locator('.cp-package-grid > button').first().click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-start-lesson').nth(lessonIndex).click();
 }
 try {
@@ -55,7 +55,7 @@ try {
   assert(!(await position()).completed.includes(lesson.id));
   await phases().getByRole('button', { name: 'Maak', exact: true }).click();
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
   assert.equal(await step().getAttribute('data-exercise-id'), exercises[0].exerciseId);
   for (const exercise of exercises) await answerActivity(page, exercise);
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();

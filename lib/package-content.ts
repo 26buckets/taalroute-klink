@@ -5,7 +5,7 @@ export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
 export type AudioOptions = { signal?: AbortSignal; waitUntilEnd?: boolean; onStarted?: () => void };
 export type AudioPlayer = (source?: string, options?: AudioOptions) => Promise<boolean> | boolean | void;
 export type LessonPosition = { packageId: string; lessonId: string; exerciseId: string };
-export type PracticeAttempt = { exerciseId: string; mode: string; answer: string; correct: boolean; attempts: number; helpUsed: boolean; support: 'model' | 'requested-help' | 'none' | 'listening'; elapsedMs: number; objective: string; assessment: 'answer' | 'participation'; contextId?: string; access?: string; independentReading?: boolean; reviewEligible?: boolean };
+export type PracticeAttempt = { exerciseId: string; mode: string; answer: string; correct: boolean; attempts: number; helpUsed: boolean; support: 'model' | 'requested-help' | 'none' | 'listening'; elapsedMs: number; objective: string; assessment: 'answer' | 'participation'; contextId?: string; access?: string; independentReading?: boolean; reviewEligible?: boolean; pictureSupport?: 'always' | 'request' | 'after' };
 
 export type PackageWord = {
   id: string;

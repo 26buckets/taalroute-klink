@@ -73,7 +73,7 @@ try {
   await page.setViewportSize({ width: 844, height: 390 });
   await page.goto(`${base}/#learner/packages`);
   await page.locator('.cp-package-grid > button').first().click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-start-lesson').first().click();
   await page.locator('.cp-exercise-browser.is-guided').waitFor();
   assert(await page.locator('.taalroute-header').isHidden());

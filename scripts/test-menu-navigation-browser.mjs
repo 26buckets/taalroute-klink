@@ -23,7 +23,7 @@ async function teacher() { await page.goto(`${base}/#teacher/overview`); await p
 try {
   await page.goto(`${base}/#learner/home`);
   await page.getByRole('heading', { name: 'Begin hier', exact: true }).waitFor();
-  assert.deepEqual(await menu().locator('button span').allTextContents(), ['Verder', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
+  assert.deepEqual(await menu().locator('button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
   for (const [label, path, selector] of [
     ['Lessen', 'packages', '.cp-library-page'], ['Oefenen', 'chapters', '[data-chapter-page="all"]'],
     ['Woorden', 'words', '.word-library-page'], ['Herhalen', 'review', '.review-page'],
@@ -82,7 +82,8 @@ try {
   pass('Teacher labels match learners; all twelve guide links open the intended chapter and return without altering lesson progress');
 
   await page.goto(`${base}/#learner/home`);
-  await menu().getByRole('button', { name: 'Verder', exact: true }).click();
+  await menu().getByRole('button', { name: 'Start', exact: true }).click();
+  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
   await page.locator('[data-exercise-id]').waitFor();
   assert.equal(await page.locator('[data-exercise-id]').getAttribute('data-exercise-id'), position.exerciseId);
   pass('Verder still resumes the exact saved exercise after the navigation change');

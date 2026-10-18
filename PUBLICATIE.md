@@ -3,6 +3,23 @@
 Publiceer alleen `main` uit 26buckets/taalroute-klink op klink.taalroute.nl.
 Geen publicatie uit de aparte UI-werkmap of een oudere checkout.
 
+Voor publicatie goedgekeurd op 18 oktober 2026: zichtbaar
+keuzepaneel op Start, aparte fotohulp, zes zichtbare oefenstappen en grijze
+plaatsen voor ontbrekend aanbod. Zie `docs/klink-route-panel-review-20261018.json`.
+Geen nieuwe inhoud, beelden of audio. De eerdere lokale niveauroute blijft behouden.
+
+Lokale vervolguitwerking 18 oktober 2026 (nog niet gepubliceerd): vier ingangen
+per onderdeel, aparte lees-/taalkeuzes, leeropbouw, plaatsing Nu zelf / Met de
+docent / Voor later, en instelbare beeldsteun. Zie
+`docs/klink-level-routes-review-20261018.json`. De bronbank en mediabestanden
+blijven gelijk. Het hieronder genoemde actieve live-register blijft leidend.
+Nico heeft deze concrete versie nu expliciet vrijgegeven voor publicatie.
+Het nieuwe inhoudsgebonden akkoord en de behoudcontrole staan in
+`docs/klink-owner-release-route-panel-20261018.json`. Historische akkoorden
+blijven bewaard; dezelfde publicatiepoort controleert de nieuwe bestandshashes.
+Het huidige responsieve bodemmenu is vastgelegd in
+`docs/KLINK-GOEDGEKEURDE-NAVIGATIE-20261018.md` en krijgt een behoudtest.
+
 Audiopauze op verzoek van Nico, 18 oktober 2026: geen nieuwe audio genereren,
 geen ElevenLabs-productie en geen nieuwe audiokoppelingen in Klink. Bestaande
 audio ongewijzigd laten; ontbrekende audio uitsluitend administreren. Hervatten

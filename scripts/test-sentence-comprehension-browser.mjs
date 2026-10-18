@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { openGroupActivity } from './browser-route-helpers.mjs';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
@@ -43,12 +44,13 @@ async function openQuestion(exercise, targetPage = page) {
   } else {
     await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
     await targetPage.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
-    await targetPage.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
+    await targetPage.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await targetPage.locator('.cp-step-scope select').selectOption('');
     assert(!(await targetPage.locator('[data-group-practice]').innerText()).includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The activity hub must not reveal the sentence answer');
     const grouped = groupExercises(pack, 'understand').find(item => item.questionId === exercise.questionId);
     expectedId = grouped.exerciseId;
-    await targetPage.evaluate(({ key, id }) => localStorage.setItem(key, JSON.stringify({ version: 1, exerciseId: id, done: false })), { key: groupSessionKey(pack.id, 'understand'), id: expectedId });
-    await targetPage.locator('[data-activity="understand"]').click();
+    await openGroupActivity(targetPage, 'understand', { beforeOpen: async ({ readiness }) => {
+      await targetPage.evaluate(({ key, id }) => localStorage.setItem(key, JSON.stringify({ version: 1, exerciseId: id, done: false })), { key: groupSessionKey(`${pack.id}:all:all::use:all:${readiness}`, 'understand'), id: expectedId });
+    } });
   }
   assert.equal(await targetPage.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), expectedId);
 }

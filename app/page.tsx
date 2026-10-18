@@ -3,6 +3,7 @@
 import { EntryScreen } from '@/components/product/entry-design';
 import { LearnerApp } from '@/components/product/learner-app';
 import { TeacherApp } from '@/components/product/staff-apps';
+import { RouteSettingsProvider } from '@/components/product/route-settings';
 import { CheckCircle2 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -57,11 +58,11 @@ export default function KlinkProductSlice() {
   }, []);
 
   return (
-    <div className="product-root" data-theme="taalroute">
+    <RouteSettingsProvider><div className="product-root" data-theme="taalroute">
       {portal === 'entry' && <EntryScreen onPortal={openPortal} />}
       {portal === 'learner' && <LearnerApp onExit={() => openPortal('entry')} onToast={setToast} />}
       {portal === 'teacher' && <TeacherApp onExit={() => openPortal('entry')} onToast={setToast} />}
       {toast && <output className="toast-message"><CheckCircle2 />{toast}</output>}
-    </div>
+    </div></RouteSettingsProvider>
   );
 }

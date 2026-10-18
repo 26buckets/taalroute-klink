@@ -108,8 +108,8 @@ function TeacherMenuGuide() {
     <h2 id="menu-guide-title">Waar moet ik zijn?</h2>
     <p>Gebruik dezelfde namen als op het scherm van de cursist. De knoppen hieronder openen die omgeving; ze zetten geen les klaar en veranderen geen voortgang.</p>
     <dl>
-      <div><dt>Verder</dt><dd>Doorgaan met de opgeslagen les. Een nieuwe cursist kiest op het beginscherm Begin hier.</dd></div>
-      <div><dt><a href="#learner/packages">Lessen<ArrowRight aria-hidden="true" /></a></dt><dd>Kies een fotokaart. Eerst zie je alle woorden van dat onderdeel. Kies daar Lessen voor de kleine lesstappen, of Oefeningen voor een oefenvorm met die woorden. De knop Oefeningen bij de woorden opent dezelfde pagina als het tabblad Oefeningen.</dd></div>
+      <div><dt>Start</dt><dd>Het beginscherm met Mijn route. Ga verder opent de opgeslagen les; een nieuwe cursist kiest Begin hier.</dd></div>
+      <div><dt><a href="#learner/packages">Lessen<ArrowRight aria-hidden="true" /></a></dt><dd>Kies een fotokaart. Woorden toont het gezamenlijke overzicht. Stap voor stap opent de kleine leeslessen. Samen oefenen ordent de oefenvormen van kennismaken naar herhalen. Gebruiken bevat zinnen, teksten, gesprekken, situaties en hun oefeningen, met afzonderlijke leesvoorwaarden.</dd></div>
       <div><dt><a href="#learner/chapters">Oefenen<ArrowRight aria-hidden="true" /></a></dt><dd>Een vaardigheid kiezen, daarna een oefenvorm en woorden of een tekst. Geen verplichte start bij klanken.</dd></div>
       <div><dt><a href="#learner/words">Woorden<ArrowRight aria-hidden="true" /></a></dt><dd>Woorden terugvinden, bekijken en bewaren. Voor opdrachten kies je Oefenen → Woorden oefenen.</dd></div>
       <div><dt><a href="#learner/review">Herhalen<ArrowRight aria-hidden="true" /></a></dt><dd>Bewaarde woorden en eerder geoefende inhoud. Woordenmix biedt passende luister-, lees-, koppel- en bouwrondes met beschikbare woorden; niet alle oefenvormen. De opslag hoort bij dit apparaat, niet bij een persoonlijk account.</dd></div>

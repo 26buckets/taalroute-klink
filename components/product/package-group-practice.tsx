@@ -5,35 +5,52 @@ import { ArrowLeft, ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as Ima
 import { BuildSurface, ExerciseSurface, findAudioSource, PackageExerciseBrowser } from './package-exercise-browser';
 import { stopMedia } from './shared';
 import { groupActivities, groupExercises, groupSessionKey, restoreGroupSession, type GroupActivity } from '@/lib/group-practice';
-import type { AudioPlayer, PackageDefinition, PackageExercise, PracticeAttempt } from '@/lib/package-content';
+import { allPackageWords, type AudioPlayer, type PackageDefinition, type PackageExercise, type PackageLesson, type PracticeAttempt } from '@/lib/package-content';
+import { selectExerciseSet, levelLabel, type ContentSelection } from '@/lib/content-levels';
+import { practiceStages, scopeWordExercises, selectUsageExercises, type RouteSettings, type ContentReadiness } from '@/lib/learner-route';
+import { useRouteSettings } from './route-settings';
+import { PracticeLine } from './practice-line';
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const sheetActivities: GroupActivity[] = ['meet', 'same-word', 'listen', 'hear-word', 'read', 'build-model', 'build', 'missing', 'copy', 'dictation'];
 function scrollToStart() { document.querySelector('.learner-main')?.scrollTo({ top: 0, behavior: 'instant' }); window.scrollTo({ top: 0, behavior: 'instant' }); }
 
-export function PackageGroupPractice({ pack, onAudio, onAttempt }: { pack: PackageDefinition; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void }) {
+export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { level: 'all' }, wordIds, scopeId = '', onUse, onMixed, usage }: { pack: PackageDefinition; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; selection?: ContentSelection; wordIds?: string[]; scopeId?: string; onUse?: () => void; onMixed?: () => void; usage?: { lesson?: PackageLesson; settings: RouteSettings; readiness: ContentReadiness } }) {
   const [activity, setActivity] = useState<GroupActivity>();
   const [round, setRound] = useState(0);
+  const [selectedStage, setSelectedStage] = useState<string>();
   useEffect(scrollToStart, [activity]);
   const available = useMemo(() => groupActivities.filter(item => item.id !== 'learning-review').flatMap(item => {
-    const count = groupExercises(pack, item.id).length;
-    return count ? [{ ...item, count }] : [];
-  }), [pack]);
+    const useActivity = practiceStages.find(stage => stage.id === 'use')!.activities.includes(item.id);
+    if ((onUse && useActivity) || (usage && !useActivity)) return [];
+    const original = groupExercises(pack, item.id);
+    const exercises = usage ? selectUsageExercises(original, pack, usage.lesson, usage.settings, usage.readiness) : selectExerciseSet(scopeWordExercises(original, wordIds), selection);
+    return exercises.length ? [{ ...item, count: exercises.length, exercises }] : [];
+  }), [pack, selection, wordIds, onUse, usage]);
   function back() { stopMedia(); setActivity(undefined); }
   if (activity) return <section className="cp-group-practice">
     <button className="text-back" onClick={back}><ArrowLeft />Alle oefeningen</button>
-    <GroupRound key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
+    <GroupRound key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} exerciseSet={available.find(item => item.id === activity)?.exercises ?? []} sessionId={!usage && !scopeId && selection.level === 'all' && (!selection.help || selection.help === 'all') ? undefined : `${pack.id}:${selection.level}:${selection.help ?? 'all'}:${scopeId}${usage ? `:use:${usage.settings.language}:${usage.readiness}` : ''}`} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
   </section>;
   return <section className="cp-panel cp-group-practice" data-group-practice>
-    <header className="cp-panel-heading"><h1>Oefeningen</h1></header>
-    {[...new Set(available.map(item => item.category))].map(category => <section key={category} className="cp-activity-section">
-      <h2>{category}</h2>
-      <div className="cp-activity-grid">{available.filter(item => item.category === category).map(item => {
+    <header className="cp-panel-heading"><h1>{usage ? 'Oefenen met zinnen en situaties' : 'Samen oefenen'}</h1></header>
+    {!usage && <PracticeLine available={practiceStages.filter(stage => available.some(item => stage.activities.includes(item.id)) || (stage.id === 'use' && onUse)).map(stage => stage.id)} selected={selectedStage} onSelect={id => {
+      if (id === 'use' && onUse) { onUse(); return; }
+      setSelectedStage(id);
+      const heading = document.querySelector<HTMLElement>(`[data-practice-stage="${id}"] h2`);
+      heading?.focus({ preventScroll: true }); heading?.scrollIntoView({ block: 'start', behavior: 'instant' });
+    }} />}
+    {!available.length && <output>Voor deze keuze ({levelLabel(selection.level)}) zijn hier nog geen oefeningen ingedeeld. Kies samen met je docent ander aanbod.</output>}
+    {practiceStages.filter(stage => !usage || available.some(item => stage.activities.includes(item.id))).map(stage => <section key={stage.id} className="cp-activity-section" data-practice-stage={stage.id}>
+      <h2 tabIndex={-1}>{stage.label}</h2><p>{stage.description}</p>
+      {!available.some(item => stage.activities.includes(item.id)) && !(stage.id === 'use' && onUse) && <p className="cp-stage-unavailable">Nog niet bij deze keuze.</p>}
+      {stage.id === 'use' && onUse ? <button className="secondary-button" onClick={onUse}>Bekijk zinnen en situaties<ArrowRight /></button> : <div className="cp-activity-grid">{available.filter(item => stage.activities.includes(item.id)).map(item => {
         const Icon = icons[item.icon];
-        return <button className="cp-activity-button" key={item.id} data-activity={item.id} onClick={() => { stopMedia(); setActivity(item.id); }}>
+        return <button className="cp-activity-button" key={item.id} data-activity={item.id} onClick={() => { stopMedia(); setSelectedStage(stage.id); setActivity(item.id); }}>
           <Icon aria-hidden="true" /><span>{item.label}</span><ArrowRight aria-hidden="true" />
         </button>;
-      })}</div>
+      })}</div>}
+      {stage.id === 'recall' && onMixed && !scopeId && selection.level === 'all' && (!selection.help || selection.help === 'all') && <button className="secondary-button" onClick={onMixed}>Woordenmix<RefreshCw /></button>}
     </section>)}
   </section>;
 }
@@ -80,6 +97,7 @@ function PracticeSheet({ pack, exercises, title, active, onAudio, onAttempt, onB
 }
 
 function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttempt, onDone }: { pack: PackageDefinition; exercise: PackageExercise; number: number; onAudio: AudioPlayer; startPlayback: () => AbortController; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
+  const { settings } = useRouteSettings();
   const [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
@@ -91,12 +109,12 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,
-      support: model || typeof exercise.exampleWord === 'string' ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', elapsedMs: Date.now() - metrics.current.started,
+      support: model || typeof exercise.exampleWord === 'string' || (settings.pictures === 'always' && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && pack.words.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: settings.pictures, elapsedMs: Date.now() - metrics.current.started,
       objective: typeof exercise.objective === 'string' ? exercise.objective : `${exercise.mode}:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: model ? 'participation' : exercise.assessment ?? 'answer', independentReading: false });
     setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
   }
   return <article className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
-    <ExerciseSurface pack={pack} exercise={exercise} guided canAnswer={heard && result !== 'right'} speakingOptionId="" onOpenExercise={() => {}} onReset={() => setResult('idle')} onHelp={() => { metrics.current.helpUsed = true; }} onFinish={finish} onAudio={async source => {
+    <ExerciseSurface pack={pack} exercise={exercise} guided answeredCorrectly={result === 'right'} canAnswer={heard && result !== 'right'} speakingOptionId="" onOpenExercise={() => {}} onReset={() => setResult('idle')} onHelp={() => { metrics.current.helpUsed = true; }} onFinish={finish} onAudio={async source => {
       const controller = startPlayback(); playback.current = controller; setAudioError(false);
       if (exercise.readingTask) metrics.current.helpUsed = true;
       try {
@@ -125,6 +143,7 @@ function BuildWorksheet({ exercises, onAudio, onAttempt, initialId, onPosition, 
 }
 
 function WorksheetRow({ exercise, onAudio, onAttempt, onDone }: { exercise: PackageExercise; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
+  const { settings } = useRouteSettings();
   const [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
@@ -132,14 +151,14 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone }: { exercise: Pack
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
   return <article className={`cp-worksheet-row ${result}`}>
-    <BuildSurface exercise={exercise} onAudio={async source => {
+    <BuildSurface exercise={exercise} answeredCorrectly={result === 'right'} onAudio={async source => {
       playback.current?.abort(); const controller = new AbortController(); playback.current = controller;
       try { const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal }); if (controller.signal.aborted) return false; setAudioError(ok === false); if (ok !== false) setHeard(true); return ok !== false; }
       catch { if (!controller.signal.aborted) setAudioError(true); return false; }
     }} canAnswer={result !== 'right' && heard} onHelp={() => { metrics.current.helpUsed = true; }} onReset={() => setResult('idle')} onFinish={(answer, correct) => {
       metrics.current.attempts++;
       onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,
-        support: exercise.exampleWord ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', elapsedMs: Date.now() - metrics.current.started, objective: `WO-03:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: 'answer', independentReading: false });
+        support: typeof exercise.exampleWord === 'string' || (settings.pictures === 'always' && allPackageWords.some(word => word.id === exercise.wordId && word.image)) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none', pictureSupport: settings.pictures, elapsedMs: Date.now() - metrics.current.started, objective: `WO-03:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: 'answer', independentReading: false });
       setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
     }} />
     <output aria-live="polite">{audioError ? 'Het geluid lukt niet. Probeer opnieuw.' : result === 'right' ? <><Check />Goed</> : result === 'wrong' ? 'Kijk naar het voorbeeld. Verander een letter.' : ''}</output>

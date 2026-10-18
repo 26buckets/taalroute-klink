@@ -2,7 +2,7 @@ import { taalroutePackages } from './taalroute-packages.ts';
 import { groupActivities, groupExercises, type GroupActivity } from './group-practice.ts';
 import { contentById } from './connected-content.ts';
 import { learnerListName } from './learner-copy.ts';
-import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
+import { contentLevels, contentHelp, exerciseContentLevel, exerciseSetLevel, exerciseSetHelp, matchesContent, type ContentHelp } from './content-levels.ts';
 import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
@@ -21,39 +21,18 @@ export const practiceChapters: { id: string; title: string; icon: typeof groupAc
   { id: 'support', title: 'Rustig beginnen', icon: 'eye', activities: ['meet', 'build-model', 'copy'] },
 ];
 
-export const chapterLevels = [
-  { id: 'all', label: 'Alles' },
-  { id: 'alfa-a', label: 'Alfa A' },
-  { id: 'alfa-b', label: 'Alfa B' },
-  { id: 'support', label: 'Met hulp' },
-  { id: 'a1', label: 'A1 · met hulp' },
-  { id: 'a2', label: 'A2 · met hulp' },
-] as const;
+export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
 export type ChapterCollection = { id: string; title: string; level: ChapterLevel; pack: PackageDefinition; exercises: PackageExercise[]; image?: string };
-export type ChapterLocation = { chapter?: string; activity?: GroupActivity; level: ChapterLevel; collection?: string };
-const words = new Map(curriculum.words.map(word => [word.id, word]));
+export type ChapterLocation = { chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
 
 export function chapterExerciseLevel(exercise: PackageExercise): ChapterLevel {
-  if (exercise.learningPathId) return 'support';
-  const source = contentById.get(String(exercise.contextId));
-  if (source) {
-    if (/^a2(?:_|$)/i.test(source.sourceLevel)) return 'a2';
-    if (/^a1(?:_|$)/i.test(source.sourceLevel)) return 'a1';
-    return 'support';
-  }
-  // A mixed board keeps its most demanding existing word condition; never split its choices.
-  const targets = Array.isArray(exercise.targetWordIds) ? exercise.targetWordIds as string[] : typeof exercise.wordId === 'string' ? [exercise.wordId] : [];
-  const conditions = Array.isArray(exercise.readingConditions) ? exercise.readingConditions as { wordId?: string }[] : [];
-  const boardWords = Array.isArray(exercise.cells) ? (exercise.cells as { cellId?: string }[]).map(cell => cell.cellId).filter((id): id is string => Boolean(id)) : [];
-  const prepared = [...new Set([...targets, ...conditions.flatMap(condition => condition.wordId ? [condition.wordId] : []), ...boardWords])];
-  const levels = prepared.map(id => words.get(id)?.reading.level);
-  if (levels.length && levels.every(level => level === 'A')) return 'alfa-a';
-  if (levels.length && levels.every(level => level === 'A' || level === 'B')) return 'alfa-b';
-  return 'support';
+  return exerciseContentLevel(exercise);
 }
+
+export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => matchesContent(item.level, exerciseSetHelp(item.exercises), selection);
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
   const cached = cache.get(activity);
@@ -76,7 +55,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
         const sourceId = activity !== 'learning-review' && contentById.has(id) ? id : `${pack.id}:${id}`;
         if (seen.has(sourceId)) continue;
         seen.add(sourceId);
-        result.push({ id: sourceId, title: String(selected[0].learningPathTitle), level: 'support', pack, exercises: selected, image: pack.cover?.image });
+        result.push({ id: sourceId, title: String(selected[0].learningPathTitle), level: exerciseSetLevel(selected), pack, exercises: selected, image: pack.cover?.image });
       }
     } else if (singleSourceActivities.has(activity)) {
       for (const exercise of exercises) {
@@ -100,7 +79,10 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
 
 export function chapterHash(location: ChapterLocation = { level: 'all' }) {
   const path = [location.chapter, location.activity, location.collection].filter(Boolean).map(value => encodeURIComponent(value!)).join('/');
-  return `#learner/chapters${path ? `/${path}` : ''}${location.level !== 'all' ? `?level=${location.level}` : ''}`;
+  const query = new URLSearchParams();
+  if (location.level !== 'all') query.set('level', location.level);
+  if (location.help && location.help !== 'all') query.set('help', location.help);
+  return `#learner/chapters${path ? `/${path}` : ''}${query.size ? `?${query}` : ''}`;
 }
 
 export function parseChapterHash(hash: string): ChapterLocation {
@@ -110,9 +92,15 @@ export function parseChapterHash(hash: string): ChapterLocation {
     if (path !== '#learner/chapters' && !path.startsWith('#learner/chapters/')) return fallback;
     const [chapterId, activityId, collection] = path.slice('#learner/chapters'.length).split('/').filter(Boolean).map(decodeURIComponent);
     const chapter = practiceChapters.find(item => item.id === chapterId);
-    if (!chapter) return fallback;
+    const params = new URLSearchParams(query);
+    const level = chapterLevels.find(item => item.id === params.get('level'))?.id ?? 'all';
+    const help = contentHelp.find(item => item.id !== 'all' && item.id === params.get('help'))?.id;
+    const selection = { level, ...(help ? { help } : {}) };
+    if (!chapter) return chapterId ? fallback : selection;
     const activity = chapter.activities.find(id => id === activityId);
-    const level = chapterLevels.find(item => item.id === new URLSearchParams(query).get('level'))?.id ?? 'all';
-    return { chapter: chapter.id, activity, level, collection: activity && chapterCollections(activity).some(item => item.id === collection && (level === 'all' || item.level === level)) ? collection : undefined };
+    const candidate = activity && chapterCollections(activity).find(item => item.id === collection);
+    // Historical learning-path links used support as a catch-all level. Keep them playable.
+    if (candidate && level === 'support' && candidate.level !== 'support' && candidate.exercises.some(item => item.learningPathId)) selection.level = candidate.level;
+    return { chapter: chapter.id, activity, ...selection, collection: candidate && matchesChapterSelection(candidate, selection) ? collection : undefined };
   } catch { return fallback; }
 }

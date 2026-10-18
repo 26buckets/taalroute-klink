@@ -7,13 +7,22 @@ import { spawnSync } from 'node:child_process';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
-function check(candidate) {
+function check(candidate, changeApproval) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     cpSync('lib', join(dir, 'lib'), { recursive: true });
     cpSync('data', join(dir, 'data'), { recursive: true });
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
+    if (changeApproval) {
+      const approvalPath = 'docs/klink-owner-release-route-panel-20261018.json';
+      const approval = JSON.parse(readFileSync(approvalPath));
+      changeApproval(approval);
+      const fixture = join(dir, 'approval.json');
+      writeFileSync(fixture, JSON.stringify(approval));
+      const gate = join(dir, 'scripts/check-curriculum-release.mjs');
+      writeFileSync(gate, readFileSync(gate, 'utf8').replace(`'${approvalPath}'`, JSON.stringify(fixture)));
+    }
     copyFileSync('lib/klink-context.ts', join(dir, 'lib/klink-context.ts'));
     for (const name of ['klink-media.json', 'klink-curriculum.json', 'klink-instructions.json', 'klink-comprehension-audio.json', 'klink-connected-content.json', 'klink-sections.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));
     const media = JSON.parse(readFileSync(join(dir, 'data/klink-media.json')));
@@ -42,9 +51,18 @@ function check(candidate) {
 }
 test('Valid publication proof resolves provenance, not outstanding media approval', () => {
   const errors = check(proof);
+  assert(!errors.includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
   assert(!/herkomstbewijs|broncommit/.test(errors));
   assert(errors.includes('uitspraakcontrole')); assert(errors.includes('1 betekenissen hebben nog geen gekoppeld betekenisbeeld'));
   assert(!errors.includes('instructie-audio is nog niet inhoudelijk vrijgegeven')); assert(errors.includes('zinnen en situaties'));
+});
+test('New route approval rejects changed hashes and cannot drop the previous approval scope', () => {
+  for (const change of [
+    approval => { approval.files['app/learner-ui.css'] = '0'.repeat(64); },
+    approval => { delete approval.files['lib/teacher-practice-plan.ts']; },
+    approval => { delete approval.files['components/product/route-settings.tsx']; },
+    approval => { approval.previousAuthorization = 'unrelated.json'; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 test('Proof for a different live version cannot satisfy the publication gate', () => {
   assert(check({ ...proof, liveWorkerVersion: 'another-version' }).includes('herkomstbewijs past niet'));

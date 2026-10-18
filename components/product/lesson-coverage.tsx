@@ -7,11 +7,16 @@ import { lessonPlan, phaseLabels, planStatusLabels, type PlanStatus } from '@/li
 import { buildChecklist, buildStatusLabels, sentenceBridge, type BuildStatus } from '@/lib/build-checklist';
 import { wordById } from '@/lib/klink-curriculum';
 import { teacherPracticePlan } from '@/lib/teacher-practice-plan';
+import { contentLevels, sourceContentLevel, wordContentLevel } from '@/lib/content-levels';
+import { contentById } from '@/lib/connected-content';
+import { contextReadiness, pictureGrowth, readinessLabels, practiceStages } from '@/lib/learner-route';
+import { MyRoute, useRouteSettings } from './route-settings';
 
 const statuses = Object.keys(planStatusLabels) as PlanStatus[];
 const statusClasses: Record<BuildStatus, PlanStatus> = { works: 'connected', partial: 'available', missing: 'missing', different: 'unnecessary' };
 
 export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) {
+  const { settings } = useRouteSettings();
   const [packageId, setPackageId] = useState(contentPackages[0].id);
   const [lessonId, setLessonId] = useState(contentPackages[0].lessons[0].id);
   const pack = contentPackages.find(item => item.id === packageId)!;
@@ -29,10 +34,23 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
     </div>
     <dl className="cp-coverage-words"><div><dt>Bekende woorden</dt><dd>{words(lesson.known)}</dd></div><div><dt>Nieuwe woorden</dt><dd>{words(lesson.newWords)}</dd></div><div><dt>Woorden die terugkomen</dt><dd>{words(lesson.returning)}</dd></div></dl>
     {lesson.scope && <p>{lesson.scope}</p>}
+    <details className="cp-coverage-overview" data-level-coverage><summary>Niveaus, leeropbouw en beeldsteun</summary>
+      <MyRoute />
+      <p>Alfa A–C beschrijft de lees-/schrijflijn; A1–B1 betreft taalgebruik. Dit overzicht deelt broninhoud in, niet de beheersing van een cursist. Bronlabels en woordvoorwaarden zijn geen complete niveaucursus.</p>
+      <div className="cp-coverage-table-wrap"><table className="cp-coverage-table"><caption>Aanbod in {pack.title}</caption><thead><tr><th>Groep</th><th>Woorden</th><th>Zinnen, teksten en gesprekken met bronlabel</th></tr></thead><tbody>{contentLevels.filter(level => !['all', 'support'].includes(level.id)).map(level => <tr key={level.id}><th scope="row">{level.label}</th><td>{pack.words.filter(word => wordContentLevel([word.id]) === level.id).length}</td><td>{[...pack.texts, ...pack.dialogues].filter(item => sourceContentLevel(contentById.get(item.id)?.sourceLevel) === level.id).length}</td></tr>)}</tbody></table></div>
+      <p>Een nul betekent dat hier nog geen onderbouwde inhoud is ingedeeld. Niet-gelabelde bronnen blijven bij Gebruiken beschikbaar, maar worden niet tot Alfa C of B1 verklaard.</p>
+      <ol>{practiceStages.map(stage => <li key={stage.id}><strong>{stage.label}.</strong> {stage.description}</li>)}</ol>
+      <p>Klikroute: Lessen → onderdeel → Woorden / Stap voor stap / Samen oefenen / Gebruiken. De gekozen kleine stap wordt meegenomen naar Samen oefenen en Gebruiken. Alle woorden blijft een bewuste keuze; een bord of leerreeks wordt nooit half aangeboden.</p>
+      <p>Bij dezelfde woorden telt groeien als minder voorbeeld, zelf terughalen, toepassen en gemengd herhalen. Klaar of een goede keuze bewijst geen algemeen niveau. Koppel de gekozen opdracht aan het bestaande boekdoel en het voorbeeldlesblok hieronder; controleer zichtbaar cursistgedrag voordat je moeilijker materiaal kiest.</p>
+      <h3>Beeldopbouw</h3><ol>{pictureGrowth.map(stage => <li key={stage.id}><strong>{stage.label}.</strong> {stage.description} {stage.id === 'object' ? `${pack.words.filter(word => word.image).length} bestaande woordbeelden.` : stage.id === 'situation' ? `${pack.scenes.filter(scene => scene.image).length} bestaande situatiebeelden; bespreken met de docent, geen automatische beeldbegripscore.` : ''}</li>)}</ol>
+      <p>Bij woordbouw en woorddictee: foto zichtbaar, foto als hulp of foto na een goed antwoord. Hulp blijft bereikbaar. Voorbeelden, antwoordkeuzes en situatiebeelden worden niet verborgen. Nieuwe beelden of beeldreeksen zijn niet gegenereerd; de bestaande afbeeldingen blijven ongewijzigd.</p>
+      <h3>Van deze leesstap naar bestaande inhoud</h3>
+      {[...pack.texts, ...pack.dialogues].filter(item => item.lessonIds?.includes(lesson.id)).map(item => { const placement = contextReadiness(item.id, pack, lesson, settings); return <p key={item.id}><strong>{item.title} — {readinessLabels[placement.status]}.</strong> {placement.reason}</p>; })}
+    </details>
     <details className="cp-coverage-overview" data-teacher-practice-plan data-lesson-id={lesson.id}>
       <summary>Deze leesstap begeleiden: {teaching.focus || lesson.title}</summary>
       <p>Doel: de voorbereide woorden herkennen, lezen en betekenis geven met steeds minder hulp. Kies één kleine stap; het onderdeel is geen les die in één keer af moet.</p>
-      <p><strong>Klikroute:</strong> Lessen → {pack.title} → tabblad Lessen → leesstap {teaching.lessonNumber}: {lesson.title}. De fotokaart opent eerst het woordenoverzicht, niet meteen deze stap.</p>
+      <p><strong>Klikroute:</strong> Lessen → {pack.title} → Stap voor stap → leesstap {teaching.lessonNumber}: {lesson.title}. De fotokaart opent eerst het woordenoverzicht, niet meteen deze stap.</p>
       <p>Voorbeeldblok van 15 minuten actieve oefentijd. Pas dit in je werkelijk ingeroosterde les en bijbehorende boekdoel; dit is geen volledig lesplan. Pauzes en zelfstandig oefenen vallen hier niet onder.</p>
       <ol>{teaching.blocks.map(block => <li key={block.title}><strong>{block.title} · {block.minutes} minuten.</strong> {block.action}<p>Let op: {block.observe}</p></li>)}</ol>
       <p>{teaching.wordIds.length === 1 ? 'Deze stap heeft één woord. Werk met dat woord; maak geen kunstmatige keuzevraag met nog onbekende woorden.' : 'Meng de woorden van dit onderdeel pas wanneer ze zijn voorbereid. Kies bij Oefeningen één oefenvorm: als reeks of, waar beschikbaar, Op één blad.'}</p>

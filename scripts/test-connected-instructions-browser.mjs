@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { openGroupActivity } from './browser-route-helpers.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { groupInstructionNeeds, groupExercises } from '../lib/group-practice.ts';
@@ -32,8 +33,7 @@ try {
     await page.goto(`${process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830'}/#learner/home`);
     await page.reload();
     await page.locator('.cp-package-grid > button').nth(index).click();
-    await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
-    await page.locator(`[data-activity="${mode}"]`).click();
+    await openGroupActivity(page, mode);
     const src = `/package-audio/instructions/${need.id}.wav`;
     await page.locator('.cp-exercise-record-head h3').waitFor();
     const first = groupExercises(packs[index], mode)[0];

@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { exerciseSetLevel, exerciseSetHelp } from '../lib/content-levels.ts';
 import { learningActivities, learningRules } from '../lib/learning-paths.ts';
 import { chapterCollections } from '../lib/practice-chapters.ts';
 import { groupExercises } from '../lib/group-practice.ts';
@@ -26,7 +28,8 @@ test('Every new rule is reachable; intact short paths retain source references a
         steps.length <= 15,
         'Keep each route short; do not turn the entire word group into one long lesson',
       );
-      assert.equal(collection.level, 'support');
+      assert.equal(collection.level, exerciseSetLevel(steps));
+      assert.equal(exerciseSetHelp(steps), 'guided');
       assert.equal(steps[0].learningStage, 'example');
       assert.equal(steps.at(-1).learningStage, 'recall');
       assert.equal(
@@ -209,17 +212,18 @@ test('Review plans only encountered retrieval items, resets on help/error, and n
   assert.deepEqual(parseLearningReview(JSON.stringify(state)), state);
 });
 
-test('New content cannot inherit the old publication approval', () => {
+test('The historical publication approval remains bound to its published source, not this working tree', () => {
   const release = JSON.parse(
     readFileSync('data/klink-learning-paths-release.json'),
   );
   assert.equal(release.publicationApproved, true);
   assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-round3-20261018.json');
   const approval = JSON.parse(readFileSync(release.ownerAuthorization));
+  const published = JSON.parse(readFileSync('docs/klink-publication-didactic-round3-20261018.json'));
   assert.equal(approval.approvedBy, 'Nico');
   assert.equal(approval.userRequest, 'Ja, na de geslaagde eindcontrole publiceren');
   for (const [file, hash] of Object.entries(approval.files))
-    assert.equal(createHash('sha256').update(readFileSync(file)).digest('hex'), hash, file);
+    assert.equal(createHash('sha256').update(execFileSync('git', ['show', `${published.sourceCommit}:${file}`])).digest('hex'), hash, file);
   assert.equal(release.humanReview, 'open');
   assert.equal(release.studentPilot, 'not-performed');
 });

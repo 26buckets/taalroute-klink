@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { openGroupActivity } from './browser-route-helpers.mjs';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { extendedExercises } from '../lib/extended-practice.ts';
@@ -21,8 +22,7 @@ const pass = text => { checks.push(text); console.log('PASS', text); };
 async function open(mode, index = 0) {
   await page.goto(`${base}/#learner/home`); await page.reload();
   await page.locator('.cp-package-grid > button').nth(index).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
-  await page.locator(`[data-activity="${mode}"]`).click();
+  await openGroupActivity(page, mode);
   await page.locator('.is-mixed-round').waitFor();
   const id = await page.locator('.is-mixed-round').getAttribute('data-exercise-id');
   return extendedExercises(packs[index], mode).find(item => item.exerciseId === id);

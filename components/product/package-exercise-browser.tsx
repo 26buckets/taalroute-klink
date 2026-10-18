@@ -33,6 +33,8 @@ import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type Reac
 import { stopMedia } from '@/components/product/shared';
 import { ExtendedPracticeSurface } from './extended-practice-surface';
 import { LearningPathSurface } from './learning-path-surface';
+import { useRouteSettings } from './route-settings';
+import { allPackageWords } from '@/lib/package-content';
 
 type ResultState = 'idle' | 'right' | 'wrong';
 type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };
@@ -43,6 +45,7 @@ type CardContent = { text?: string; image?: ExerciseImage };
 
 const normalize = (value: string) => value.trim().replace(/\s+/g, ' ').toLocaleLowerCase('nl-NL').replace(/[.!?]+$/, '');
 const asArray = <T,>(value: unknown) => (Array.isArray(value) ? value as T[] : []);
+const wordPictures = new Map(allPackageWords.filter(word => word.image).map(word => [word.id, { src: word.image, altText: 'Afbeelding bij het woord' }]));
 const asRecord = (value: unknown) => value && typeof value === 'object' ? value as Record<string, unknown> : {};
 const asString = (value: unknown) => typeof value === 'string' || typeof value === 'number' ? `${value}` : '';
 const instructionMemoryKey = 'klink.instructies.v1';
@@ -150,6 +153,7 @@ export function PackageExerciseBrowser({
   const playback = useRef<AbortController | null>(null);
   const explainedModes = useRef(previousInstructions());
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });
+  const { settings } = useRouteSettings();
   const reportPosition = useEffectEvent((id: string) => {
     if (practiceRound || exercises.findIndex(item => item.exerciseId === id) <= nextRequiredIndex) onPosition?.(id);
   });
@@ -299,7 +303,8 @@ export function PackageExerciseBrowser({
     if (result === 'right') return;
     metrics.current.attempts++;
     onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts,
-      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
+      support: exercise.access === 'supported-listening' || sentenceQuestion ? 'listening' : typeof exercise.exampleWord === 'string' || (settings.pictures === 'always' && ['ALF-CMP-005', 'ALF-CMP-006'].includes(exercise.componentId) && wordPictures.has(String(exercise.wordId)) && !exercise.contextId) ? 'model' : metrics.current.helpUsed ? 'requested-help' : 'none',
+      pictureSupport: settings.pictures,
       helpUsed: metrics.current.helpUsed, elapsedMs: Date.now() - metrics.current.started,
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
@@ -408,6 +413,7 @@ export function PackageExerciseBrowser({
               onReset={resetResult}
               canAnswer={canAnswer && (exercise.componentId !== 'ALF-CMP-002' || result !== 'right')}
               speakingOptionId={speakingOptionId}
+              answeredCorrectly={result === 'right'}
               onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }}
             />
           </div>
@@ -436,6 +442,7 @@ export function ExerciseSurface({
   canAnswer,
   onHelp,
   speakingOptionId,
+  answeredCorrectly = false,
 }: {
   exercise: PackageExercise;
   pack: PackageDefinition;
@@ -447,6 +454,7 @@ export function ExerciseSurface({
   canAnswer: boolean;
   onHelp: () => void;
   speakingOptionId: string;
+  answeredCorrectly?: boolean;
 }) {
   switch (exercise.componentId) {
     case 'KLINK-LEARNING': return <LearningPathSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onHelp={onHelp} canAnswer={canAnswer} />;
@@ -455,8 +463,8 @@ export function ExerciseSurface({
     case 'ALF-CMP-002': return <ChoiceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} canAnswer={canAnswer} speakingOptionId={speakingOptionId} />;
     case 'ALF-CMP-003': return <ContrastSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-004': return <MatchingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
-    case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} />;
-    case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} />;
+    case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
+    case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} canAnswer={canAnswer} />;
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
@@ -554,13 +562,12 @@ function MatchingSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps 
   </section>;
 }
 
-export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void }) {
+export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
   const tiles = asArray<Tile>(exercise.tiles);
   const target = asArray<string>(asRecord(exercise.answer).targetTileIds);
   const [chosen, setChosen] = useState<string[]>(() => target.map(() => ''));
   const [destination, setDestination] = useState<number>();
   const token = (id: string) => tiles.find((tile) => tile.id === id)?.token ?? '';
-  const image = exerciseImage(exercise);
   function choose(next: string[]) {
     if (!canAnswer) return;
     setChosen(next);
@@ -572,7 +579,7 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
     const next = chosen.map(value => value === id ? '' : value);
     next[index] = id; choose(next); setDestination(undefined);
   }
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />
     <div className={`cp-build-slots ${exercise.buildKind === 'sentence' ? 'cp-sentence-slots' : ''}`} aria-label={exercise.buildKind === 'sentence' ? 'Jouw zin' : 'Jouw woord'} aria-live="polite">{target.map((_, index) => <button key={index} disabled={!canAnswer} aria-pressed={destination === index} aria-label={`Plek ${index + 1}${chosen[index] ? `: ${token(chosen[index])}, weghalen` : ', leeg'}`}
       onDragOver={event => { if (canAnswer) event.preventDefault(); }} onDrop={event => { event.preventDefault(); place(event.dataTransfer.getData('text/plain'), index); }}
       onClick={() => { setDestination(index); if (chosen[index]) choose(chosen.map((value, at) => at === index ? '' : value)); }}>{chosen[index] ? token(chosen[index]) : ''}</button>)}</div>
@@ -586,12 +593,25 @@ function WordHint({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () 
   return <div className="cp-word-hint">{shown && <strong>{exercise.helpWord}</strong>}<button className="secondary-button" onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
-function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void }) {
+function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
   const fields = asArray<TextField>(exercise.fields);
   const [value, setValue] = useState('');
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
-  const image = exerciseImage(exercise);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{image && <ExerciseImageView image={image} />}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => normalize(answer) === normalize(value))); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => normalize(answer) === normalize(value))); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
+}
+
+function WordPicture({ exercise, onHelp, answeredCorrectly }: { exercise: PackageExercise; onHelp: () => void; answeredCorrectly: boolean }) {
+  const { settings } = useRouteSettings();
+  const [revealed, setRevealed] = useState(false);
+  const image = exerciseImage(exercise) ?? (!exercise.contextId && exercise.buildKind !== 'sentence' ? wordPictures.get(String(exercise.wordId)) : undefined);
+  if (!image) return null;
+  // Situation images are the task itself, not optional word-production hints.
+  if (exercise.contextId || exercise.buildKind === 'sentence') return <ExerciseImageView image={image} />;
+  const model = typeof exercise.exampleWord === 'string';
+  const visible = model || settings.pictures === 'always' || revealed || answeredCorrectly;
+  return <div className="cp-picture-help" data-picture-support={settings.pictures}>
+    {visible ? <ExerciseImageView image={image} /> : <button className="secondary-button" onClick={() => { onHelp(); setRevealed(true); }}>{settings.pictures === 'after' ? 'Toch hulp: toon foto' : 'Toon foto'}</button>}
+  </div>;
 }
 
 function ReadingSurface({ exercise, onAudio, onFinish, guided, canAnswer }: SurfaceProps & { guided: boolean; canAnswer: boolean }) {

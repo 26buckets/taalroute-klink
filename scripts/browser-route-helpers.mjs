@@ -1,4 +1,21 @@
 import assert from 'node:assert/strict';
+import { practiceStages } from '../lib/learner-route.ts';
+
+export async function openGroupActivity(page, activity, { beforeOpen } = {}) {
+  const usage = practiceStages.find(stage => stage.id === 'use').activities.includes(activity);
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Woorden', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: usage ? 'Gebruiken' : 'Samen oefenen', exact: true }).click();
+  if (await page.locator('.cp-step-scope select').count()) await page.locator('.cp-step-scope select').selectOption('');
+  let readiness;
+  if (usage) {
+    readiness = 'later';
+    await page.getByRole('button', { name: /^Voor later/ }).click();
+    await page.getByRole('button', { name: 'Oefenen met zinnen en situaties', exact: true }).click();
+    if (!await page.locator(`[data-activity="${activity}"]`).count()) { readiness = 'guided'; await page.getByRole('button', { name: /^Met de docent/ }).click(); }
+  }
+  await beforeOpen?.({ usage, readiness });
+  await page.locator(`[data-activity="${activity}"]`).click();
+}
 
 export async function answerActivity(page, exercise, { advance = true, checkFocus = true } = {}) {
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);

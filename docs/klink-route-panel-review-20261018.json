@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-18",
+  "request": "Duidelijk keuzepaneel en oefenlijn direct bouwen; ontbrekende mogelijkheden zichtbaar grijs.",
+  "status": "local-implementation-checked-not-published",
+  "base": "Existing uncommitted level-route implementation in canonical Klink checkout; no reset or new app.",
+  "changes": [
+    "Start shows Kies je oefenroute without a disclosure. Literacy Alfa A/B/C and language A1/A2/B1 remain separate axes.",
+    "Existing source labels determine availability. Alfa C and B1 remain visible, disabled and labelled Nog niet beschikbaar. Availability is not course completeness or personal attainment.",
+    "Choosing a level stays on Start. Bekijk mijn oefeningen explicitly opens word practice for the selected literacy route, or texts for a language-only choice. Both settings remain stored separately.",
+    "Photo help is separate from the level choice. Example and situation images remain visible; no media or audio connections changed.",
+    "Six numbered learning steps are visible on Start and actionable within Samen oefenen. Stage navigation focuses the relevant heading; current stage is not marked as completed.",
+    "Unavailable exercise stages remain grey with Nog niet bij deze keuze. Existing harder sources are not falsely described as missing.",
+    "Image growth shows existing word images, comparison and situations, with grey placeholders for unproduced image stories and practical document images.",
+    "All fifteen photo cards, original word groupings, saved results and fixed exercise canvas retained."
+  ],
+  "checks": {
+    "routeUnitTests": 8,
+    "routeBrowserChecks": 10,
+    "panelBrowserCheckGroups": 4,
+    "widths": [1366, 768, 390, 320],
+    "regression": ["menu navigation", "menu refinement", "didactic round 3", "player stability including landscape", "all group practice routes"],
+    "typeCheck": "passed",
+    "scopedLint": "passed",
+    "diffWhitespace": "passed",
+    "productionBuild": "passed; existing static API-classification warning, no build error",
+    "browserErrors": [],
+    "humanPilot": false
+  },
+  "designBasis": {
+    "source": "Existing TAALROUTE-ONTWERPBASIS.md and lesson-specific guidance retained.",
+    "teacherAction": "Choose literacy and language separately with the learner; use the visible steps to locate existing tasks.",
+    "learnerAction": "Choose, explicitly open practice, navigate to a learning step, and request photo help when needed.",
+    "observation": "Navigation choice is never recorded as demonstrated language mastery. No extra course time or completed level claimed.",
+    "style": "Existing typography, Lucide icons and controls reused. Referenced DigiBord style directory still absent; no replacement style invented."
+  },
+  "boundaries": {
+    "newAudio": false,
+    "changedMedia": false,
+    "newCourseContent": false,
+    "githubActionsRuns": 0,
+    "published": false,
+    "publicationGateChanged": false
+  },
+  "evidence": "outputs/route-panel-20261018"
+}

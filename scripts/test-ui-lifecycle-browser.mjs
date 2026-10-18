@@ -43,7 +43,7 @@ const exerciseId = () => page.locator('.cp-exercise-browser').getAttribute('data
 async function openFirst() {
   await page.goto(`${base}/#learner/home`);
   await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
 }
 async function family(name) {
   const back = page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first();
@@ -67,7 +67,7 @@ try {
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
   console.log('PASS guided sequence, one-click choices, wrong/correct, undo relocks, focus/status, audio stops');
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await family('Typ');
   const typeId = await exerciseId();
   const typeExercise = groupExercise(typeId);

@@ -1,0 +1,82 @@
+{
+  "status": "local-implementation-checked-not-published",
+  "date": "2026-10-18",
+  "request": "Bouw het goedgekeurde overzicht in: menu, niveaugroepen, groei binnen een niveau en beeldgroei.",
+  "publication": {
+    "published": false,
+    "liveSourceVerified": "46d64d8efd9b593fd5584d058410c003bf4c1dc0",
+    "workingBase": "f712f40576b8cf2d04e3d3ba7433723e1167b2c6",
+    "canonicalBranch": "main",
+    "approvalGateChanged": false,
+    "note": "Nico vroeg eerst het complete ontwerp en gaf daarna bouwtoestemming. Geen nieuw hashgebonden publicatieakkoord vastgelegd."
+  },
+  "implemented": [
+    "Start, Lessen, Oefenen, Woorden en Herhalen; de twaalf vaardigheidsingangen blijven bestaan.",
+    "Per onderdeel: Woorden, Stap voor stap, Samen oefenen, Gebruiken. Geen dubbele Foto en geluid-lijst; de situaties blijven onder Gebruiken.",
+    "Mijn route bewaart leeslijn Alfa A/B/C en taalgebruik A1/A2/B1 afzonderlijk op dit apparaat. Start volgt de keuze zonder afwezig aanbod te vervangen door Alfa A.",
+    "Niveau en ondersteuning zijn afzonderlijke filters. Alfa C en B1 blijven eerlijk leeg zolang bronlabels ontbreken.",
+    "Samen oefenen ordent bestaande vormen in kennismaken, herkennen, maken met voorbeeld, zelf maken, gebruiken en gemengd herhalen.",
+    "De gekozen kleine leesstap blijft beschikbaar in de oefen- en gebruiksingang. Borden en leerreeksen worden niet gesplitst.",
+    "Gebruiken scheidt zelfstandig vrijgegeven inhoud, begeleide inhoud en nog voor te bereiden bronnen. Alle oorspronkelijke inhoud en oefenvormen blijven bewust bereikbaar.",
+    "Beeldsteun bij woordbouw en woorddictee: zichtbaar, op verzoek of na het goede antwoord; hulp blijft beschikbaar. Model-, keuze- en situatiebeelden worden niet verborgen.",
+    "Docentoverzicht met niveaudekking, leeropbouw, beeldgroei, bronredenen en aansluiting op het bestaande lesplanvoorbeeld."
+  ],
+  "sourceEvidence": {
+    "wordReadingLevels": { "A": 231, "B": 107 },
+    "connectedSourceLabels": { "with-support": 1292, "guided": 60, "A1": 124, "A2": 124, "guided_microtext": 4, "a1_oriented_microtext": 4, "a2_oriented_microtext": 4 },
+    "sections": 15,
+    "smallLessons": 302,
+    "wordMeanings": 338,
+    "connectedSources": 1612,
+    "newContentItems": 0
+  },
+  "counterReviewApplied": [
+    "Een taalbron krijgt niet het niveau van één voorkomend doelwoord.",
+    "Ondersteund luisteren is geen bewijs van zelfstandig lezen en niet automatisch behoefte aan een docent bij eenvoudige woordtaken.",
+    "Een onbekend bronlabel blijft niet-ingedeeld; hogere inhoud komt niet automatisch in de volgende Alfa A-opdracht.",
+    "Een eerste mat-stap krijgt geen kunstmatige bingo of keuzevraag met nog onbekende woorden.",
+    "Extra voorwaardewoorden en alle bordwoorden tellen mee voor de kleine stap; een onvoorbereide voorwaarde sluit de hele samenhangende reeks uit.",
+    "Alleen een niveauknop was onvoldoende: ook startadvies, gekozen leesstap, afspeelreeks, opslag en docentredenen zijn aangesloten.",
+    "Beeldgroei is niet hetzelfde als steeds drukkere foto's. Beeldhulp en inhoudscomplexiteit blijven afzonderlijk.",
+    "Foto tonen/verbergen behoudt dezelfde gereserveerde hoogte en wordt bij resultaten als beeldsteun vermeld.",
+    "Een les verlaten wist de geselecteerde kleine stap niet. De expliciete keuze Alle woorden opent opnieuw de hele groep."
+  ],
+  "designBasis": {
+    "source": "TAALROUTE-ONTWERPBASIS.md, vastgesteld 17 oktober 2026",
+    "lessonPlan": "Bestaande leesstappen, observatiepunten en docentvoorbeeldblok behouden; geen nieuw cursusprogramma of urenvariant verzonnen.",
+    "teacherAction": "Kies lees- en taalroute apart, bereid bronwoorden en betekenis voor, observeer uitvoeren met en zonder model, kies daarna pas moeilijker materiaal.",
+    "learnerEvidence": "Antwoord, pogingen, gebruikte hulp en beeldsteun; geen niveau certificeren op basis van Klaar.",
+    "timing": "Geen extra lesminuten geclaimd; inpassen in werkelijk ingeroosterde bijeenkomst.",
+    "style": "Bestaande interface, iconen en knoppen hergebruikt. De opgegeven lokale DigiBord-stijlmap ontbreekt; geen vervangende huisstijl ontworpen."
+  },
+  "boundaries": {
+    "audioPauseRespected": true,
+    "newRecordings": 0,
+    "newAudioConnections": 0,
+    "newImages": 0,
+    "originalMediaFilesChanged": false,
+    "literacyEqualsCefr": false,
+    "independentReadingReleased": false,
+    "completeAlfaCOrB1Course": false,
+    "newImageSequenceOrDocumentImages": false,
+    "humanExpertReview": false,
+    "studentPilot": false,
+    "diglinEquivalenceClaimed": false,
+    "githubActionsUsed": false
+  },
+  "checks": {
+    "state": "passed-local-segmented-regression",
+    "routeUnitTests": 8,
+    "routeBrowserChecks": 10,
+    "routeBrowserErrors": [],
+    "typeCheck": "passed",
+    "scopedLint": "passed",
+    "whitespace": "passed",
+    "productionBuild": "passed; existing framework warning about static API-route classification, no build failure",
+    "regressionSuites": ["curriculum and audio register", "existing player and lifecycle", "phase navigation and lesson extensions", "continuous flow", "sentence comprehension and connected sources", "learner language and UX/audio", "sections and landing", "mixed practice and real audio", "group practice and extended practice", "chapters and stable player", "multiword practice sheets", "learning paths", "menu navigation and refinement", "didactic round 3", "teacher manual and compact lesson picker"],
+    "mediaAndCanonicalDataDiff": "No changes in public media or data sources.",
+    "publicationGate": "Correctly refuses this uncommitted, newly changed source under the old hash-bound approval. Gate unchanged.",
+    "regressionExecution": "Local segmented runs. Old tab selectors and scope assumptions updated to the new four entrances without dropping behavior assertions. One image-loading timeout passed on a separate unchanged rerun.",
+    "evidenceDirectory": "outputs/level-routes-20261018"
+  }
+}

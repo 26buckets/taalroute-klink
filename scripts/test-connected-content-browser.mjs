@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { connectedContent } from '../lib/connected-content.ts';
+import { contextReadiness, defaultRouteSettings } from '../lib/learner-route.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
@@ -23,27 +24,34 @@ async function openLibrary(pack, kind, target = page) {
   await target.goto(`${base}/#learner/home`); await target.reload();
   await target.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
   await target.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
-  await target.locator('.cp-tabs').getByRole('button', { name: kind === 'dialogue' ? 'Gesprekken' : 'Zinnen en teksten', exact: true }).click();
+  await target.locator('.cp-tabs').getByRole('button', { name: 'Gebruiken', exact: true }).click();
+  await target.getByRole('button', { name: kind === 'dialogue' ? 'Gesprekken' : kind === 'sentence' ? 'Zinnen' : 'Teksten en verhalen', exact: true }).click();
 }
 async function openItem(item, target = page) {
   const pack = packs.find(pack => [...pack.texts, ...pack.dialogues].some(record => record.id === item.id));
   await openLibrary(pack, item.kind, target);
-  const library = item.kind === 'dialogue' ? pack.dialogues : pack.texts;
-  await target.locator('.cp-reading-list > button').nth(library.findIndex(record => record.id === item.id)).click();
+  const readiness = contextReadiness(item.id, pack, undefined, defaultRouteSettings).status;
+  await target.getByRole('button', { name: readiness === 'later' ? /^Voor later/ : /^Met de docent/ }).click();
+  await target.locator(`[data-content-id="${item.id}"]`).click();
   await target.waitForFunction(id => document.querySelector('.cp-exercise-browser')?.dataset.exerciseId.endsWith(id), item.id);
   return pack;
 }
 const ready = (target = page) => target.getByRole('button', { name: 'Klaar', exact: true }).isEnabled();
 try {
   for (const pack of packs) {
-    for (const kind of ['text', 'dialogue']) {
-      const library = kind === 'dialogue' ? pack.dialogues : pack.texts;
+    for (const kind of ['sentence', 'text', 'dialogue']) {
+      const library = kind === 'dialogue' ? pack.dialogues : pack.texts.filter(item => item.kind === kind);
       if (!library.length) continue;
       await openLibrary(pack, kind);
-      assert.equal(await page.locator('.cp-reading-list > button').count(), library.length);
+      let total = 0;
+      for (const label of [/^Nu zelf/, /^Met de docent/, /^Voor later/]) { await page.getByRole('button', { name: label }).click(); total += await page.locator('.cp-reading-list > button').count(); }
+      assert.equal(total, library.length);
       const lesson = pack.lessons.find(lesson => library.some(item => item.lessonIds.includes(lesson.id)));
-      await page.getByLabel('Woorden', { exact: true }).selectOption(lesson.id);
-      assert.equal(await page.locator('.cp-reading-list > button').count(), library.filter(item => item.lessonIds.includes(lesson.id)).length);
+      await page.locator('.cp-step-scope select').selectOption(lesson.id);
+      await page.getByRole('button', { name: kind === 'dialogue' ? 'Gesprekken' : kind === 'sentence' ? 'Zinnen' : 'Teksten en verhalen', exact: true }).click();
+      total = 0;
+      for (const label of [/^Nu zelf/, /^Met de docent/, /^Voor later/]) { await page.getByRole('button', { name: label }).click(); total += await page.locator('.cp-reading-list > button').count(); }
+      assert.equal(total, library.filter(item => item.lessonIds.includes(lesson.id)).length);
     }
   }
   pass('All 15 sections expose the exact connected library; word-step filters return the correct entries');

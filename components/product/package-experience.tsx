@@ -3,6 +3,10 @@
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PackageGroupPractice } from '@/components/product/package-group-practice';
+import { ContentLevelPicker } from './content-level-picker';
+import { levelLabel, type ContentSelection } from '@/lib/content-levels';
+import { MyRoute, useRouteSettings } from './route-settings';
+import { contextReadiness, lessonContentLevel, lessonWordIds, readinessLabels, type ContentReadiness } from '@/lib/learner-route';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
@@ -27,7 +31,6 @@ import {
   BookmarkCheck,
   FileText,
   Images,
-  Layers3,
   MessageCircle,
   Route,
   Shapes,
@@ -38,23 +41,17 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 type PackageTab =
-  | 'overview'
   | 'words'
   | 'lessons'
   | 'practice'
   | 'mixed'
-  | 'texts'
-  | 'dialogues'
-  | 'media';
+  | 'use';
 
 const tabLabels: { id: PackageTab; label: string; icon: typeof BookOpen }[] = [
-  { id: 'overview', label: 'Overzicht', icon: Layers3 },
   { id: 'words', label: 'Woorden', icon: WholeWord },
-  { id: 'lessons', label: 'Lessen', icon: Route },
-  { id: 'practice', label: 'Oefeningen', icon: Shapes },
-  { id: 'texts', label: 'Zinnen en teksten', icon: FileText },
-  { id: 'dialogues', label: 'Gesprekken', icon: MessageCircle },
-  { id: 'media', label: 'Foto en geluid', icon: Images },
+  { id: 'lessons', label: 'Stap voor stap', icon: Route },
+  { id: 'practice', label: 'Samen oefenen', icon: Shapes },
+  { id: 'use', label: 'Gebruiken', icon: MessageCircle },
 ];
 
 export function PackageLibrary({
@@ -123,8 +120,13 @@ export function PackagePlayer({
   onAttempt?: (attempt: PracticeAttempt) => void;
 }) {
   const pack = getPackage(packageId);
+  const { settings } = useRouteSettings();
   const [tab, setTab] = useState<PackageTab>(initialPosition ? 'lessons' : 'words');
-  useEffect(() => { stopMedia(); return stopMedia; }, [tab, packageId]);
+  const [localSelection, setSelection] = useState<ContentSelection>();
+  const selection = localSelection ?? { level: settings.literacy };
+  const [lessonId, setLessonId] = useState(initialPosition?.packageId === pack.id ? initialPosition.lessonId : '');
+  const lesson = pack.lessons.find(item => item.id === lessonId);
+  useEffect(() => { stopMedia(); return stopMedia; }, [tab, packageId, selection.level, selection.help]);
 
   async function playAudio(source?: string, options?: Parameters<AudioPlayer>[1]) {
     if (!source) {
@@ -144,16 +146,16 @@ export function PackagePlayer({
       <header className="cp-player-bar">
         <button onClick={onClose} aria-label="Terug naar lessen"><ArrowLeft /></button>
         <div>
-          <span>{pack.level}</span>
+          <span>Woorden · {pack.level}</span>
           <strong>{learnerListName(pack)}</strong>
         </div>
       </header>
 
       <nav className="cp-tabs" aria-label="Onderdelen">
-        {tabLabels.filter(item => item.id !== 'texts' || pack.texts.length > 0).filter(item => item.id !== 'dialogues' || pack.dialogues.length > 0).filter(item => item.id !== 'media' || pack.words.some(word => word.image || word.audio) || pack.scenes.some(scene => scene.image)).map((item) => {
+        {tabLabels.map((item) => {
           const Icon = item.icon;
           return (
-            <button key={item.id} aria-current={tab === item.id || (tab === 'mixed' && item.id === 'lessons') ? 'page' : undefined} className={tab === item.id || (tab === 'mixed' && item.id === 'lessons') ? 'active' : ''} onClick={() => setTab(item.id)}>
+            <button key={item.id} aria-current={tab === item.id || (tab === 'mixed' && item.id === 'practice') ? 'page' : undefined} className={tab === item.id || (tab === 'mixed' && item.id === 'practice') ? 'active' : ''} onClick={() => setTab(item.id)}>
               <Icon />
               <span>{item.label}</span>
             </button>
@@ -162,7 +164,9 @@ export function PackagePlayer({
       </nav>
 
       <div className="cp-content">
-        {tab === 'overview' && <PackageOverview pack={pack} onTab={setTab} />}
+        <MyRoute onChange={() => setSelection(undefined)} />
+        {['practice', 'use'].includes(tab) && <label className="cp-step-scope">Oefenen met<select value={lessonId} onChange={event => { stopMedia(); setLessonId(event.target.value); }}><option value="">Alle woorden van dit onderdeel</option>{pack.lessons.map((item, index) => <option key={item.id} value={item.id}>{index + 1}. {lessonPreviewWords(pack, item).map(wordLabel).join(' · ')}</option>)}</select></label>}
+        {tab === 'practice' && <ContentLevelPicker selection={selection} onChange={setSelection} />}
         {tab === 'words' && (
           <PackageWords
             pack={pack}
@@ -172,70 +176,22 @@ export function PackagePlayer({
             onPractice={() => setTab('practice')}
           />
         )}
-        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} onMixed={() => setTab('mixed')} />}
-        {tab === 'mixed' && <PackageMixedPractice pack={pack} onAudio={playAudio} onBack={() => setTab('lessons')} onAttempt={onAttempt} />}
-        {tab === 'practice' && <PackageGroupPractice pack={pack} onAudio={playAudio} onAttempt={onAttempt} />}
-        {tab === 'texts' && <PackageReading pack={pack} onAudio={playAudio} onAttempt={onAttempt} kind="texts" />}
-        {tab === 'dialogues' && <PackageReading pack={pack} onAudio={playAudio} onAttempt={onAttempt} kind="dialogues" />}
-        {tab === 'media' && <PackageMedia pack={pack} onAudio={playAudio} />}
+        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} onMixed={() => setTab('practice')} selectedLessonId={lessonId} onSelectLesson={setLessonId} />}
+        {tab === 'mixed' && <PackageMixedPractice pack={pack} onAudio={playAudio} onBack={() => setTab('practice')} onAttempt={onAttempt} />}
+        {tab === 'practice' && <PackageGroupPractice key={`${selection.level}:${selection.help}:${lessonId}`} pack={pack} onAudio={playAudio} onAttempt={onAttempt} selection={selection} wordIds={lesson ? lessonWordIds(pack, lesson) : undefined} scopeId={lessonId} onUse={() => setTab('use')} onMixed={() => setTab('mixed')} />}
+        {tab === 'use' && <PackageUse key={`${lessonId}:${settings.language}`} pack={pack} onAudio={playAudio} onAttempt={onAttempt} lesson={lesson} />}
       </div>
     </div>
   );
 }
 
-function PackageOverview({ pack, onTab }: { pack: PackageDefinition; onTab: (tab: PackageTab) => void }) {
-  return (
-    <div className="cp-overview">
-      <section className="cp-hero">
-        <div>
-          <span className="eyebrow light">Klink</span>
-          <h1>{learnerListName(pack)}</h1>
-          <p>Kijk. Luister. Doe mee.</p>
-          <div className="cp-hero-actions">
-            <button className="accent-button" onClick={() => onTab('lessons')}>Bekijk de lessen<ArrowRight /></button>
-            <button className="dark-secondary-button" onClick={() => onTab('words')}>Bekijk alle woorden</button>
-          </div>
-        </div>
-        <div className="cp-count-grid">
-          <Count value={pack.counts.lessons} label="lessen" />
-          <Count value={pack.counts.coreWords} label="woorden" />
-          <Count value={pack.counts.exercises} label="oefeningen" />
-          {pack.counts.texts > 0 && <Count value={pack.counts.texts} label="teksten" />}
-          {!!pack.counts.sentences && <Count value={pack.counts.sentences} label="zinnen" />}
-          {pack.counts.dialogues > 0 && <Count value={pack.counts.dialogues} label="gesprekken" />}
-          {pack.counts.games > 0 && <Count value={pack.counts.games} label={pack.counts.games === 1 ? 'spel' : 'spellen'} />}
-        </div>
-      </section>
-
-      <section className="cp-section-heading">
-        <div><span className="eyebrow">Oefenen</span><h2>Wat wil je doen?</h2></div>
-      </section>
-      <section className="cp-overview-cards">
-        <OverviewCard icon={Route} value={pack.counts.lessons} title="Lessen" text="Kijk, luister, kies en bouw het woord." onClick={() => onTab('lessons')} />
-        <OverviewCard icon={WholeWord} value={pack.words.length} title="Woorden" text="Bekijk en beluister de woorden." onClick={() => onTab('words')} />
-        <OverviewCard icon={Shapes} value={pack.counts.exercises} title="Oefeningen" text="Kies wat je wilt oefenen." onClick={() => onTab('practice')} />
-        {pack.texts.length > 0 && <OverviewCard icon={FileText} value={pack.texts.length} title="Zinnen en teksten" text="Luister en lees mee." onClick={() => onTab('texts')} />}
-        {pack.dialogues.length > 0 && <OverviewCard icon={MessageCircle} value={pack.counts.dialogues} title="Gesprekken" text="Luister naar een gesprek." onClick={() => onTab('dialogues')} />}
-        {pack.counts.images > 0 && <OverviewCard icon={Images} value={pack.counts.images} title="Beelden" text="Bekijk de beelden bij de woorden." onClick={() => onTab('media')} />}
-      </section>
-    </div>
-  );
-}
-
-function Count({ value, label }: { value: number; label: string }) {
-  return <span><strong>{value}</strong><small>{label}</small></span>;
-}
-
-function OverviewCard({ icon: Icon, value, title, text, onClick }: { icon: typeof Route; value: number; title: string; text: string; onClick: () => void }) {
-  return <button onClick={onClick}><span><Icon /></span><div><small>{value}</small><strong>{title}</strong><p>{text}</p></div><ArrowRight /></button>;
-}
 
 function PackageWords({ pack, savedWordIds, onToggleWord, onAudio, onPractice }: { pack: PackageDefinition; savedWordIds: string[]; onToggleWord: (wordId: string) => void; onAudio: (source?: string) => void; onPractice: () => void }) {
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
         <div><h1>Alle woorden</h1></div>
-        <button className="primary-button" onClick={onPractice}>Oefeningen<ArrowRight /></button>
+        <button className="primary-button" onClick={onPractice}>Samen oefenen<ArrowRight /></button>
       </header>
       <div className="cp-word-grid">
         {pack.words.map((word) => {
@@ -343,19 +299,21 @@ function lessonExercises(pack: PackageDefinition, lesson: PackageLesson) {
     .map((exercise) => addLessonWordAudio(exercise, pack, lesson));
 }
 
-function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onAttempt, onMixed }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onAttempt?: (attempt: PracticeAttempt) => void; onMixed: () => void }) {
-  const [selectedLessonId, setSelectedLessonId] = useState(initialPosition?.packageId === pack.id ? initialPosition.lessonId : '');
+function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onAttempt, onMixed, selectedLessonId, onSelectLesson: setSelectedLessonId }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onAttempt?: (attempt: PracticeAttempt) => void; onMixed: () => void; selectedLessonId: string; onSelectLesson: (id: string) => void }) {
+  const { settings } = useRouteSettings();
+  const lessons = pack.lessons.filter(item => settings.literacy === 'all' || lessonContentLevel(pack, item) === settings.literacy);
+  const [playing, setPlaying] = useState(Boolean(initialPosition && initialPosition.lessonId === selectedLessonId));
   const [resumeId, setResumeId] = useState(initialPosition?.exerciseId);
-  const selectedLesson = pack.lessons.find((lesson) => lesson.id === selectedLessonId);
+  const selectedLesson = lessons.find((lesson) => lesson.id === selectedLessonId);
 
-  if (selectedLesson) {
+  if (selectedLesson && playing) {
     const exercises = lessonExercises(pack, selectedLesson);
     const lessonNumber = pack.lessons.findIndex((lesson) => lesson.id === selectedLesson.id) + 1;
     const label = lessonPreviewWords(pack, selectedLesson).map(wordLabel).join(' · ') || `Les ${lessonNumber}`;
-    const following = pack.lessons[lessonNumber];
+    const following = lessons[lessons.indexOf(selectedLesson) + 1];
     return (
       <section className="cp-panel cp-lesson-player">
-        <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => setSelectedLessonId('')}><ArrowLeft />Alle lessen</button>
+        <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => { stopMedia(); setPlaying(false); }}><ArrowLeft />Alle lessen</button>
         <div className="cp-lesson-launch">
           <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
           <div><small>Les {lessonNumber} van {pack.lessons.length}</small><h1>{label}</h1></div>
@@ -370,7 +328,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
           onLessonDone={() => onLessonDone?.(selectedLesson.id)}
           onAttempt={onAttempt}
           completeLabel={following ? 'Volgende les' : 'Alle lessen'}
-          onComplete={() => { setResumeId(undefined); setSelectedLessonId(following?.id ?? ''); }}
+          onComplete={() => { setResumeId(undefined); if (following) setSelectedLessonId(following.id); else setPlaying(false); }}
           onAudio={onAudio}
           eyebrow={`Les ${lessonNumber}`}
           title={`Oefen met ${label}`}
@@ -383,11 +341,13 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
   return (
     <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
-        <h1>Lessen</h1>
-        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Woordenmix<ArrowRight aria-hidden="true" /></button>
+        <h1>Stap voor stap</h1>
+        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Samen oefenen<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
-        {pack.lessons.map((lesson, index) => {
+        {!lessons.length && <output>Bij deze route zijn hier nog geen leesstappen ingedeeld. Kies samen met je docent bij Mijn route.</output>}
+        {lessons.map((lesson) => {
+          const index = pack.lessons.indexOf(lesson);
           const words = lessonPreviewWords(pack, lesson);
           const label = words.map(wordLabel).join(' · ') || `Les ${index + 1}`;
           return <article key={lesson.id}>
@@ -396,7 +356,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
               {words[0]?.image && <Image src={words[0].image} alt="" width={80} height={80} />}
               <h2>{label}</h2>
             </div>
-            <button className="primary-button cp-start-lesson" aria-label={`Start les ${index + 1}: ${label}`} onClick={() => { setResumeId(undefined); setSelectedLessonId(lesson.id); }}>Start<ArrowRight aria-hidden="true" /></button>
+            <button className="primary-button cp-start-lesson" aria-label={`Start les ${index + 1}: ${label}`} onClick={() => { setResumeId(undefined); setSelectedLessonId(lesson.id); setPlaying(true); }}>Start<ArrowRight aria-hidden="true" /></button>
           </article>
         })}
       </div>
@@ -404,64 +364,40 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
   );
 }
 
-function PackageReading({ pack, onAudio, onAttempt, kind }: { pack: PackageDefinition; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; kind: 'texts' | 'dialogues' }) {
-  const [lessonId, setLessonId] = useState('');
+function PackageUse({ pack, onAudio, onAttempt, lesson }: { pack: PackageDefinition; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; lesson?: PackageLesson }) {
+  const { settings } = useRouteSettings();
+  const [kind, setKind] = useState<'sentence' | 'text' | 'dialogue' | 'scene'>('sentence');
+  const [readiness, setReadiness] = useState<ContentReadiness>('guided');
   const [selectedId, setSelectedId] = useState('');
-  const [textKind, setTextKind] = useState('');
-  const items = (kind === 'texts' ? pack.texts : pack.dialogues).filter(item => (!lessonId || item.lessonIds?.includes(lessonId)) && (!textKind || ('kind' in item && item.kind === textKind)));
-  const availableLessons = pack.lessons.filter(lesson => (kind === 'texts' ? pack.texts : pack.dialogues).some(item => item.lessonIds?.includes(lesson.id)));
-  const records = items.flatMap(item => {
-    const record = pack.exercises.find(exercise => exercise.contextId === item.id && (!lessonId || exercise.lessonId === lessonId));
-    return record ? [record] : [];
-  });
-  if (selectedId) return <section className="cp-panel">
-    <button className="text-back" onClick={() => { stopMedia(); setSelectedId(''); }}><ArrowLeft />{kind === 'texts' ? 'Zinnen en teksten' : 'Gesprekken'}</button>
+  const [practicing, setPracticing] = useState(false);
+  const sources = [...pack.texts.map(item => ({ ...item, kind: item.kind ?? 'text' })), ...pack.dialogues.map(item => ({ ...item, kind: 'dialogue' }))];
+  const items = sources.filter(item => item.kind === kind && (!lesson || item.lessonIds?.includes(lesson.id))).map(item => ({ ...item, placement: contextReadiness(item.id, pack, lesson, settings), exercise: pack.exercises.find(exercise => exercise.contextId === item.id && (!lesson || exercise.lessonId === lesson.id)) })).filter(item => item.exercise);
+  const visible = items.filter(item => item.placement.status === readiness);
+  const records = visible.map(item => item.exercise!);
+  function changeKind(next: typeof kind) { stopMedia(); setSelectedId(''); setPracticing(false); setKind(next); }
+  if (selectedId && records.some(item => item.exerciseId === selectedId)) return <section className="cp-panel">
+    <button className="text-back" onClick={() => { stopMedia(); setSelectedId(''); }}><ArrowLeft />Gebruiken</button>
+    <p>Met de docent{readiness === 'later' ? ' · eerst samen voorbereiden' : ''}.</p>
     <PackageExerciseBrowser key={selectedId} pack={pack} exercises={records} initialExerciseId={selectedId} onAudio={onAudio} onAttempt={onAttempt} title="Luister en lees mee" description="" />
   </section>;
-  return (
-    <section className="cp-panel">
-      <header className="cp-panel-heading">
-        <div><h1>{kind === 'texts' ? 'Luister en lees mee' : 'Luister naar een gesprek'}</h1></div>
-        <span className="cp-panel-count"><strong>{items.length}</strong><small>{kind === 'texts' ? 'zinnen en teksten' : 'gesprekken'}</small></span>
-      </header>
-      <div className="cp-coverage-filters">
-        <label>Woorden<select aria-label="Woorden" value={lessonId} onChange={event => setLessonId(event.target.value)}><option value="">Alle woorden</option>{availableLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lessonPreviewWords(pack, lesson).map(wordLabel).join(' · ')}</option>)}</select></label>
-        {kind === 'texts' && <label>Kies<select aria-label="Soort tekst" value={textKind} onChange={event => setTextKind(event.target.value)}><option value="">Zinnen en teksten</option><option value="sentence">Zinnen</option><option value="text">Teksten</option></select></label>}
-      </div>
-      <div className="cp-reading-list">
-        {items.map((item, index) => <button className="secondary-button" key={item.id} onClick={() => setSelectedId(records.find(record => record.contextId === item.id)!.exerciseId)}><span>{index + 1}. {item.title}</span><Volume2 aria-hidden="true" /></button>)}
-        {!items.length && <p>Bij deze woorden is nog geen tekst om samen te beluisteren.</p>}
-      </div>
-    </section>
-  );
+  return <section className="cp-panel cp-package-use" data-package-use>
+    <header className="cp-panel-heading"><h1>Gebruiken</h1></header>
+    <div className="cp-chapter-levels" aria-label="Wat wil je gebruiken?">{([['sentence', 'Zinnen', FileText], ['text', 'Teksten en verhalen', BookOpen], ['dialogue', 'Gesprekken', MessageCircle], ['scene', 'Situaties', Images]] as const).map(([id, label, Icon]) => <button className="secondary-button" key={id} aria-pressed={kind === id} onClick={() => changeKind(id)}><Icon aria-hidden="true" />{label}</button>)}</div>
+    {kind === 'scene' ? <PackageScenes pack={pack} /> : <>
+      <fieldset className="cp-chapter-levels"><legend className="sr-only">Wanneer oefenen?</legend>{(Object.keys(readinessLabels) as ContentReadiness[]).map(id => <button key={id} className="secondary-button" aria-pressed={readiness === id} onClick={() => { stopMedia(); setReadiness(id); }}>{readinessLabels[id]} <span aria-label="bronnen">({items.filter(item => item.placement.status === id).length})</span></button>)}</fieldset>
+      {readiness === 'later' && <p>Eerst met de docent kiezen en voorbereiden. Deze inhoud is nog geen volgende zelfstandige leesopdracht.</p>}
+      <button className="secondary-button" aria-pressed={practicing} onClick={() => { stopMedia(); setPracticing(value => !value); }}>{practicing ? 'Bekijk de bronnen' : 'Oefenen met zinnen en situaties'}<Shapes /></button>
+      {practicing ? <PackageGroupPractice key={`${readiness}:${settings.language}`} pack={pack} onAudio={onAudio} onAttempt={onAttempt} scopeId={lesson?.id} usage={{ lesson, settings, readiness }} /> : <>
+        <div className="cp-reading-list">{visible.map(item => <button className="secondary-button" key={item.id} data-content-id={item.id} onClick={() => setSelectedId(item.exercise!.exerciseId)}><span>{item.title}<small className="cp-content-level-label">{levelLabel(item.placement.level)} · Met de docent</small></span><ArrowRight aria-hidden="true" /></button>)}</div>
+        {!visible.length && <output>{readiness === 'independent' ? 'Er is hier nog geen tekst vrijgegeven voor zelfstandig lezen. Kijk samen met je docent bij de andere opdrachten.' : 'Voor deze keuze is hier nog geen inhoud voorbereid. Bekijk met je docent de andere mogelijkheden.'}</output>}
+      </>}
+    </>}
+  </section>;
 }
 
-function PackageMedia({ pack, onAudio }: { pack: PackageDefinition; onAudio: (source?: string) => void }) {
-  return (
-    <section className="cp-panel">
-      <header className="cp-panel-heading">
-        <div><span className="eyebrow">Beeld en audio</span><h1>Kijk en luister</h1><p>Tik op het woord of de foto om te luisteren.</p></div>
-      </header>
-      <div className="cp-word-grid">
-        {pack.words.filter(word => word.image || word.audio).map(word => <article key={word.id}>
-          <button className="cp-package-word-listen" disabled={!word.audio} onClick={() => onAudio(word.audio)} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen.`}>
-            {word.image && <div className="cp-word-image"><Image src={word.image} alt={word.meaning ?? word.word} width={760} height={760} /></div>}
-            <div className="cp-word-copy"><strong>{wordLabel(word)}</strong></div>
-            <span className="cp-listen-label">{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span>
-          </button>
-        </article>)}
-      </div>
-      {pack.scenes.some(scene => scene.image) && <section className="cp-scene-gallery">
-        <header><h2>Bekijk de situaties</h2></header>
-        <div>
-          {pack.scenes.filter(scene => scene.image).map((scene) => (
-            <article key={scene.id}>
-              <Image src={scene.image!} alt={scene.description ?? scene.title} width={760} height={760} />
-              <div><strong>{scene.title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div>
-            </article>
-          ))}
-        </div>
-      </section>}
-    </section>
-  );
+function PackageScenes({ pack }: { pack: PackageDefinition }) {
+  return <section className="cp-scene-gallery"><header><h2>Bekijk de situaties</h2><p>Bekijk en bespreek de foto met je docent.</p></header>
+    <div>{pack.scenes.filter(scene => scene.image).map(scene => <article key={scene.id}><Image src={scene.image!} alt={scene.description ?? scene.title} width={760} height={760} /><div><strong>{scene.title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div></article>)}</div>
+    {!pack.scenes.some(scene => scene.image) && <p>Bij dit onderdeel is nog geen situatiebeeld beschikbaar.</p>}
+  </section>;
 }

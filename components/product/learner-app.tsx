@@ -19,6 +19,10 @@ import {
 import { nextLessonPosition, parseProgress, progressKey, type RouteProgress } from '@/lib/learner-progress';
 import { lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
+import { MyRoute, PictureHelp, useRouteSettings } from './route-settings';
+import { PracticeLine, PictureGrowthLine } from './practice-line';
+import { lessonContentLevel } from '@/lib/learner-route';
+import { levelLabel } from '@/lib/content-levels';
 import {
   ArrowLeft,
   ArrowRight,
@@ -40,6 +44,7 @@ type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapt
 type WordFilter = string;
 
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
+  const { settings } = useRouteSettings();
   const [view, setView] = useState<LearnerView>('home');
   const [selectedPackage, setSelectedPackage] = useState<PackageId>(contentPackages[0].id);
   const [progress, setProgress] = useState<RouteProgress>(() => {
@@ -85,7 +90,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     const hash = next === 'package' ? `#learner/package/${packageId}` : `#learner/${next}`;
     if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
-  function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: 'all' }); }
+  function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: chapter && ['sentences', 'texts', 'listening', 'speaking', 'grammar', 'practical'].includes(chapter) ? settings.language : settings.literacy }); }
 
   function saveProgress(next: RouteProgress) {
     setProgress(next);
@@ -132,7 +137,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
       <aside className="learner-nav">
         <button className="brand-button" onClick={() => openView('home')} aria-label="Naar het begin"><Brand /></button>
         <nav aria-label="Cursistnavigatie">
-          <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={continueLearning}><Home /><span>Verder</span></button>
+          <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
           <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
           <button aria-current={view === 'chapters' ? 'page' : undefined} className={view === 'chapters' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
           <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
@@ -153,27 +158,36 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
 }
 
 function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; onChapter: (chapter: string) => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
-  const first = contentPackages.find(pack => pack.id === progress.position?.packageId) ?? contentPackages.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? contentPackages[0];
-  const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId);
+  const { settings } = useRouteSettings();
+  const candidates = contentPackages.filter(pack => pack.lessons.some(lesson => settings.literacy === 'all' || lessonContentLevel(pack, lesson) === settings.literacy));
+  const first = candidates.find(pack => pack.id === progress.position?.packageId) ?? candidates.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? candidates[0] ?? contentPackages[0];
+  const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId && (settings.literacy === 'all' || lessonContentLevel(first, lesson) === settings.literacy));
+  const languageRoute = settings.literacy === 'all' && settings.language !== 'all';
+  const canResume = Boolean(activeLesson && !languageRoute);
   const preview = activeLesson ? lessonPreviewWords(first, activeLesson).find(word => word.image) : undefined;
   const previewImage = preview?.image ?? first.cover?.image;
   return (
     <div className="learner-page cp-home">
       <header className="learner-page-head">
-        <div><span className="cp-home-mark"><Layers3 /></span><h1>{progress.position ? 'Ga verder' : 'Begin hier'}</h1></div>
+        <div><span className="cp-home-mark"><Layers3 /></span><h1>{languageRoute || !candidates.length ? 'Jouw route' : canResume ? 'Ga verder' : 'Begin hier'}</h1></div>
       </header>
 
-      <section className="cp-home-hero">
+      <MyRoute onBrowse={() => onChapter(settings.literacy !== 'all' ? 'words' : settings.language !== 'all' ? 'texts' : 'words')} />
+      <PracticeLine />
+      <PictureGrowthLine />
+      <PictureHelp />
+
+      {languageRoute || !candidates.length ? <section className="cp-home-hero"><div><h2>{languageRoute ? `Nederlands gebruiken · ${levelLabel(settings.language)}` : levelLabel(settings.literacy)}</h2><p>{languageRoute ? 'Bekijk het aanbod bij jouw route. Een niveaukeuze is geen behaald niveau.' : 'Voor deze keuze is nog geen leesroute ingedeeld.'}</p><button className="accent-button" onClick={() => onChapter(languageRoute ? 'texts' : 'words')}>Bekijk aanbod<ArrowRight /></button></div></section> : <section className="cp-home-hero">
         <div>
           <span className="eyebrow light">{activeLesson ? `Les ${first.lessons.indexOf(activeLesson) + 1}` : 'Kijk en luister'}</span>
           <h2>{activeLesson ? lessonPreviewWords(first, activeLesson).map(wordLabel).join(' · ') : learnerListName(first)}</h2>
-          <button className="accent-button" onClick={() => progress.position ? onContinue() : onPackage(first.id)}>{progress.position ? 'Ga verder' : 'Begin hier'}<ArrowRight /></button>
+          <button className="accent-button" onClick={() => canResume ? onContinue() : onPackage(first.id)}>{canResume ? 'Ga verder' : 'Begin hier'}<ArrowRight /></button>
         </div>
         <div className="cp-home-preview">
           {previewImage && <Image src={previewImage} alt={preview ? wordLabel(preview) : first.cover?.label ?? ''} width={240} height={240} />}
           <div className="cp-home-facts"><span><strong>{first.counts.lessons}</strong><small>lessen</small></span><span><strong>{first.counts.coreWords}</strong><small>woorden</small></span></div>
         </div>
-      </section>
+      </section>}
 
       <div className="cp-home-shortcuts">
         <button className="secondary-button" onClick={onWords}><WholeWord />Alle woorden</button>

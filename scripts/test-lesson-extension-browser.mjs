@@ -26,13 +26,13 @@ async function openLesson(pack, lesson) {
   await page.reload();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-start-lesson').nth(pack.lessons.indexOf(lesson)).click();
 }
 async function seedAt(pack, lesson, exercise) {
   await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: pack.id, lessonId: lesson.id, exerciseId: exercise.exerciseId });
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
 }
 try {
@@ -77,11 +77,11 @@ try {
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden', exact: true }).click();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   assert(await page.locator('.cp-exercise-feedback button').isDisabled());
   await page.reload();
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   pass('Pause, navigating away, Verder and reloading resume the exact exercise without restoring a correct answer');
 
@@ -156,7 +156,7 @@ try {
   await openLesson(packs[0], packs[0].lessons[0]);
   assert.equal(await page.locator('[data-build-checklist], [data-sentence-bridge]').count(), 0);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await page.locator('[data-activity="dictation"]').click();
   assert.equal(await page.locator('.cp-example-listen').count(), 0);
   assert(await page.locator('.cp-text-entry input').isDisabled());
@@ -177,7 +177,7 @@ try {
   noStorage.on('pageerror', error => errors.push(error.message));
   await noStorage.goto(`${base}/#learner/home`);
   await noStorage.getByRole('button', { name: 'Begin hier', exact: true }).click();
-  await noStorage.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await noStorage.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await noStorage.locator('.cp-start-lesson').first().click();
   await noStorage.locator('.cp-model-content').waitFor();
   assert((await noStorage.locator('.toast-message').innerText()).includes('Oefenen kan doorgaan'));

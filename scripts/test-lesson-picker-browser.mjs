@@ -18,8 +18,9 @@ try {
     await page.goto(`${base}/#learner/home`); await page.reload();
     await page.getByRole('button', { name: 'Lessen', exact: true }).click();
     await page.locator('.cp-package-grid > button').nth(packIndex).click();
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
     const picker = page.locator('.cp-lesson-picker');
-    assert.equal(await picker.locator('h1').innerText(), 'Lessen');
+    assert.equal(await picker.locator('h1').innerText(), 'Stap voor stap');
     assert.equal(await picker.locator('article').count(), pack.lessons.length);
     assert.equal(await picker.locator('.cp-word-chips, ol, .cp-panel-count, small').count(), 0);
     for (const img of await picker.locator('img').all()) await img.evaluate(el => el.decode());
@@ -34,7 +35,7 @@ try {
     await picker.screenshot({ path: `${out}/lessen-${width}.png` });
     const start = picker.locator('.cp-start-lesson').first();
     await start.focus(); await page.keyboard.press('Enter');
-    assert.equal(await page.locator('.cp-lesson-launch h1').innerText(), 'map');
+    assert.equal(await page.locator('.cp-lesson-launch h1').innerText(), pack.words.find(word => word.id === pack.lessons[0].newWords[0]).word);
     assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercisesForLesson(pack, pack.lessons[0])[0].exerciseId);
     await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
     await picker.waitFor();

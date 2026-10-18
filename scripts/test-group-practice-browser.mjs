@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import { openGroupActivity } from './browser-route-helpers.mjs';
+import { practiceStages } from '../lib/learner-route.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { groupActivities, groupExercises, groupSessionKey } from '../lib/group-practice.ts';
@@ -22,8 +24,8 @@ async function home(index = 0) {
   await page.goto(base + '/#learner/home'); await page.reload();
   await page.locator('.cp-package-grid > button').nth(index).click();
 }
-async function hub() { await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click(); await page.locator('[data-group-practice]').waitFor(); }
-async function open(mode) { await hub(); await page.locator(`[data-activity="${mode}"]`).click(); }
+async function hub() { await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption(''); await page.locator('[data-group-practice]').waitFor(); }
+async function open(mode) { await openGroupActivity(page, mode); }
 async function back() { await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click(); }
 async function pause() { const button = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }); if (await button.count()) await button.click(); }
 async function current(mode, pack = packs[0]) { const id = await page.locator('.is-mixed-round').getAttribute('data-exercise-id'); return groupExercises(pack, mode).find(item => item.exerciseId === id); }
@@ -32,9 +34,9 @@ async function next() { await page.locator('.cp-exercise-feedback > button').cli
 try {
   await home();
   assert.equal(await page.locator('.cp-word-grid > article').count(), 6);
-  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
   assert.equal(await page.locator('[data-group-practice] select').count(), 0);
-  assert.equal(await page.locator('[data-activity]').count(), groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[0], activity.id).length).length);
+  assert.equal(await page.locator('[data-activity]').count(), groupActivities.filter(activity => activity.id !== 'learning-review' && !practiceStages.find(stage => stage.id === 'use').activities.includes(activity.id) && groupExercises(packs[0], activity.id).length).length);
   await page.screenshot({ path: `${out}/exercise-hub-desktop.png`, fullPage: true });
   pass('Words first; all first-group activities available without a dropdown');
 
@@ -93,14 +95,14 @@ try {
   await page.evaluate(() => { window.__audioFail = false; }); await page.getByRole('button', { name: 'Opnieuw luisteren', exact: true }).click(); await ready('.cp-text-entry input');
   pass('Unavailable word audio blocks dictation; retry recovers');
 
-  await back(); await page.locator('[data-activity="find-sentence"]').click(); await pause(); await ready('.cp-choice-grid button');
+  await open('find-sentence'); await pause(); await ready('.cp-choice-grid button');
   item = await current('find-sentence');
   await page.locator('.cp-choice-grid button').nth(item.options.findIndex(option => option.id === item.contextId)).click();
   const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
   assert.equal(attempt.independentReading, false); assert.equal(attempt.access, 'supported-listening');
   pass('Find sentence runs on existing source sentences and never claims independent comprehension');
 
-  await back(); await page.locator('[data-activity="hear-match"]').click(); await pause();
+  await open('hear-match'); await pause();
   item = await current('hear-match');
   const sourceButtons = page.locator('.cp-match-board > div').first().locator('button');
   assert(!(await sourceButtons.first().innerText()).includes(packs[0].words[0].word));
@@ -164,8 +166,15 @@ try {
 
   for (let index = 0; index < packs.length; index++) {
     await home(index); await hub();
-    const expected = groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[index], activity.id).length).length;
-    assert.equal(await page.locator('[data-activity]').count(), expected, packs[index].id);
+    const expected = groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[index], activity.id).length).map(item => item.id).sort();
+    const found = new Set(await page.locator('[data-activity]').evaluateAll(nodes => nodes.map(node => node.dataset.activity)));
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Gebruiken', exact: true }).click();
+    await page.getByRole('button', { name: 'Oefenen met zinnen en situaties', exact: true }).click();
+    for (const label of [/^Nu zelf/, /^Met de docent/, /^Voor later/]) {
+      await page.getByRole('button', { name: label }).click();
+      for (const id of await page.locator('[data-activity]').evaluateAll(nodes => nodes.map(node => node.dataset.activity))) found.add(id);
+    }
+    assert.deepEqual([...found].sort(), expected, packs[index].id);
   }
   pass('All 15 existing word groups expose their own eligible activity sets');
   assert.deepEqual(errors, []);
