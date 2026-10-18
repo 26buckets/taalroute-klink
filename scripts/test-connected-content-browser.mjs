@@ -100,7 +100,7 @@ try {
   await real.close();
   pass('Real served conversation files decode in the browser; no synthesized substitutes');
   await page.goto(`${base}/#teacher`); await page.reload();
-  await page.getByRole('button', { name: 'Oefenkaart', exact: true }).click();
+  await page.locator('.staff-nav').getByRole('button', { name: 'Oefenen', exact: true }).click();
   await page.locator('.cp-coverage-filters select').nth(1).selectOption(packs[0].lessons[1].id);
   await page.locator('[data-existing-content] > summary').click();
   assert(await page.locator('[data-existing-content] [data-content-id]').count() > 0);

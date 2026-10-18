@@ -42,6 +42,27 @@
 .cp-chapter-collection strong { display: block; font-size: 20px; font-weight: 500; overflow-wrap: anywhere; }
 .cp-chapter-collection small { display: block; margin-top: 6px; color: var(--muted); font-size: 14px; }
 .cp-chapter-more { margin-top: 20px; }
+.learner-app .cp-chapter-collection:focus { outline: 3px solid var(--focus); outline-offset: 3px; }
+.cp-menu-location { margin: 0 0 6px; color: var(--muted); font-size: 16px; font-weight: 400; }
+.cp-menu-guide { padding: 20px; margin-bottom: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
+.cp-menu-guide h2 { margin: 0 0 12px; font-weight: 500; }
+.cp-menu-guide p, .cp-menu-guide dd { line-height: 1.6; font-weight: 400; }
+.cp-menu-guide dl > div { display: grid; grid-template-columns: 130px minmax(0, 1fr); align-items: center; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.cp-menu-guide dd { margin: 0; }
+.cp-menu-guide a { min-height: 48px; display: inline-flex; align-items: center; gap: 8px; color: var(--primary); }
+.cp-menu-guide a svg { width: 20px; height: 20px; flex-shrink: 0; }
+.cp-menu-guide summary { min-height: 48px; padding-block: 12px; cursor: pointer; }
+.cp-menu-guide-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.cp-menu-guide :is(a, summary):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+.staff-app .staff-nav > button { min-height: 48px; font-weight: 500; }
+@media (max-width: 820px) {
+  .staff-app .staff-sidebar { grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
+  .staff-app .staff-sidebar > .brand { grid-column: 1; grid-row: 1; }
+  .staff-app .staff-account { grid-column: 2; grid-row: 1; }
+  .staff-app .staff-nav { grid-column: 1 / -1; grid-row: 2; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); overflow: visible; }
+  .staff-app .staff-nav > button { min-width: 0; min-height: 48px; padding: 4px; display: flex; flex-direction: column; justify-content: center; gap: 4px; font-size: 12px; font-weight: 500; }
+}
+@media (max-width: 480px) { .cp-menu-guide { padding: 14px; } .cp-menu-guide dl > div { grid-template-columns: minmax(0, 1fr); gap: 0; } }
 .learner-app .cp-chapters h1:focus { outline: none; }
 .learner-app:has(.cp-chapter-playing) { grid-template-columns: 220px minmax(0, 1fr); }
 .learner-app:has(.cp-chapter-playing) > .learner-nav { display: flex; }
@@ -295,3 +316,9 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 .cp-sentence-slots button { width: auto; min-width: 64px; padding: .5rem .75rem; }
 .cp-extended-task summary { cursor: pointer; min-height: 48px; padding: .75rem; text-align: left; }
 .cp-extended-task button:focus-visible, .cp-extended-task summary:focus-visible { outline: 3px solid #486e9c; outline-offset: 3px; }
+.cp-learning-task { display: grid; justify-items: center; align-content: start; gap: 1rem; }
+.cp-learning-task > p:not(.cp-learning-example):not(.cp-missing-word) { max-width: 38rem; line-height: 1.6; font-weight: 400; }
+.cp-learning-example { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 500; overflow-wrap: anywhere; }
+.cp-learning-task .cp-choice-grid { width: 100%; }
+.cp-learning-task button { min-height: 48px; min-width: 48px; }
+.cp-learning-task button:focus-visible { outline: 3px solid #486e9c; outline-offset: 3px; }

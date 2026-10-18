@@ -1,0 +1,87 @@
+{
+  "schemaVersion": "1.0",
+  "owner": "Taalroute",
+  "status": "concept",
+  "humanReview": "open",
+  "rules": [
+    {
+      "id": "sound-first",
+      "title": "De eerste klank",
+      "instruction": "Luister naar het woord. Welke klank hoor je vooraan?",
+      "explanation": "Luister naar het begin van het hele woord. Kies de letter die bij de eerste klank hoort.",
+      "position": 0,
+      "activity": "sound-path"
+    },
+    {
+      "id": "sound-middle",
+      "title": "De klank in het midden",
+      "instruction": "Luister naar het woord. Welke klank hoor je in het midden?",
+      "explanation": "In deze woorden hoor je drie klanken. Luister naar de middelste klank. Soms schrijf je die met twee letters.",
+      "position": 1,
+      "activity": "sound-path"
+    },
+    {
+      "id": "sound-last",
+      "title": "De laatste klank",
+      "instruction": "Luister naar het woord. Welke klank hoor je achteraan?",
+      "explanation": "Luister naar het einde van het hele woord. Kies de letter die bij de laatste klank hoort.",
+      "position": 2,
+      "activity": "sound-path"
+    },
+    {
+      "id": "spelling-pairs",
+      "title": "Twee letters bij elkaar",
+      "instruction": "Luister. Welke letters ontbreken?",
+      "explanation": "In deze woorden horen ie, oe, eu of ui bij elkaar. De twee letters horen bij één klank. Kies ze samen.",
+      "units": ["ie", "oe", "eu", "ui"],
+      "activity": "spelling-path"
+    },
+    {
+      "id": "spelling-long",
+      "title": "aa, ee, oo en uu",
+      "instruction": "Luister. Welke letters ontbreken?",
+      "explanation": "In deze korte woorden schrijf je de lange klinker met twee dezelfde letters: aa, ee, oo of uu. Vergelijk het voorbeeld en luister naar het hele woord.",
+      "units": ["aa", "ee", "oo", "uu"],
+      "activity": "spelling-path"
+    },
+    {
+      "id": "spelling-open",
+      "title": "boom — bomen",
+      "instruction": "Luister. Welke letters ontbreken?",
+      "explanation": "boom wordt bomen: bo-men. De eerste lettergreep eindigt op de lange o. Je schrijft daar één o. Zo werkt het ook bij de andere voorbeelden in deze reeks.",
+      "pairs": [
+        ["boom", "bomen", "bo-men"],
+        ["boot", "boten", "bo-ten"],
+        ["raam", "ramen", "ra-men"],
+        ["muur", "muren", "mu-ren"],
+        ["buur", "buren", "bu-ren"]
+      ],
+      "activity": "spelling-path"
+    },
+    {
+      "id": "spelling-double",
+      "title": "bus — bussen",
+      "instruction": "Luister. Welke letters ontbreken?",
+      "explanation": "bus wordt bussen: bus-sen. De u blijft kort. Je schrijft twee s'en. Bij jas en jassen blijft de a kort en schrijf je ook twee s'en.",
+      "pairs": [
+        ["bus", "bussen", "bus-sen"],
+        ["jas", "jassen", "jas-sen"]
+      ],
+      "activity": "spelling-path"
+    },
+    {
+      "id": "grammar-we",
+      "title": "Wij en we",
+      "instruction": "Welk werkwoord past in de zin?",
+      "explanation": "Wij en we gaan over meer dan één persoon. In deze zinnen hoort daar bijvoorbeeld lopen, kijken of gaan bij: wij lopen, we kijken, wij gaan.",
+      "activity": "grammar-path"
+    },
+    {
+      "id": "grammar-question",
+      "title": "Een vraag maken",
+      "instruction": "Maak dezelfde vraag als je hoort.",
+      "explanation": "In deze vragen staat het werkwoord voor jij of je: zie jij, wil je. Luister naar de hele vraag en zet de woorden op dezelfde volgorde.",
+      "activity": "grammar-path"
+    }
+  ]
+}

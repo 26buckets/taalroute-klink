@@ -7,17 +7,17 @@ import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
 export const practiceChapters: { id: string; title: string; icon: typeof groupActivities[number]['icon']; activities: GroupActivity[] }[] = [
-  { id: 'words', title: 'Woorden', icon: 'image', activities: ['meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards'] },
-  { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-compare'] },
+  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards'] },
+  { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-path', 'sound-compare'] },
   { id: 'sentences', title: 'Zinnen', icon: 'book', activities: ['sentences', 'word-sentence', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'] },
-  { id: 'texts', title: 'Teksten', icon: 'book', activities: ['texts', 'text-question', 'text-evidence'] },
+  { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence'] },
   { id: 'listening', title: 'Luisteren', icon: 'ear', activities: ['listen', 'understand', 'text-question', 'dialogue-question'] },
   { id: 'speaking', title: 'Spreken', icon: 'mic', activities: ['speak', 'sentence-speak', 'dialogues', 'dialogue-role'] },
   { id: 'writing', title: 'Schrijven', icon: 'pen', activities: ['write-letter', 'copy', 'write', 'dictation', 'paper-dictation', 'sentence-dictation', 'functional-message', 'functional-form'] },
-  { id: 'spelling', title: 'Spelling', icon: 'keyboard', activities: ['build-model', 'build', 'worksheet', 'worksheet-heard', 'missing', 'dictation'] },
-  { id: 'grammar', title: 'Grammatica', icon: 'puzzle', activities: ['sentence-build', 'verb-choice'] },
-  { id: 'practical', title: 'In de praktijk', icon: 'chat', activities: ['dialogues', 'dialogue-role', 'dialogue-question', 'functional-message', 'functional-form'] },
-  { id: 'repeat', title: 'Samen herhalen', icon: 'grid', activities: ['word-bingo', 'image-bingo', 'memory', 'read-series', 'worksheet', 'worksheet-heard'] },
+  { id: 'spelling', title: 'Spelling', icon: 'keyboard', activities: ['spelling-path', 'build-model', 'build', 'worksheet', 'worksheet-heard', 'missing', 'dictation'] },
+  { id: 'grammar', title: 'Grammatica', icon: 'puzzle', activities: ['grammar-path', 'sentence-build', 'verb-choice'] },
+  { id: 'practical', title: 'In de praktijk', icon: 'chat', activities: ['practical-path', 'dialogues', 'dialogue-role', 'dialogue-question', 'functional-message', 'functional-form'] },
+  { id: 'repeat', title: 'Samen herhalen', icon: 'grid', activities: ['learning-review', 'word-bingo', 'image-bingo', 'memory', 'read-series', 'worksheet', 'worksheet-heard'] },
   { id: 'support', title: 'Rustig beginnen', icon: 'eye', activities: ['meet', 'build-model', 'copy'] },
 ];
 
@@ -37,6 +37,7 @@ const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
 
 export function chapterExerciseLevel(exercise: PackageExercise): ChapterLevel {
+  if (exercise.learningPathId) return 'support';
   const source = contentById.get(String(exercise.contextId));
   if (source) {
     if (/^a2(?:_|$)/i.test(source.sourceLevel)) return 'a2';
@@ -63,12 +64,21 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     const exercises = groupExercises(pack, activity).filter(exercise => {
       // One source in free practice, even when it recurs in several word lessons.
       // Word-to-sentence chains deliberately retain their model and repetition.
-      if (typeof exercise.contextId !== 'string' || !exercise.contextId || activity === 'word-sentence') return true;
+      if (exercise.learningPathId || typeof exercise.contextId !== 'string' || !exercise.contextId || activity === 'word-sentence') return true;
       const key = `${exercise.mode}:${exercise.contextId}`;
       if (seen.has(key)) return false;
       seen.add(key); return true;
     });
-    if (singleSourceActivities.has(activity)) {
+    if (exercises.some(exercise => exercise.learningPathId)) {
+      for (const id of new Set(exercises.map(exercise => String(exercise.learningPathId)))) {
+        const selected = exercises.filter(exercise => exercise.learningPathId === id);
+        // Keep a complete example → practice → use → recall route; never split it by word level.
+        const sourceId = activity !== 'learning-review' && contentById.has(id) ? id : `${pack.id}:${id}`;
+        if (seen.has(sourceId)) continue;
+        seen.add(sourceId);
+        result.push({ id: sourceId, title: String(selected[0].learningPathTitle), level: 'support', pack, exercises: selected, image: pack.cover?.image });
+      }
+    } else if (singleSourceActivities.has(activity)) {
       for (const exercise of exercises) {
         const source = contentById.get(String(exercise.contextId));
         result.push({ id: String(exercise.contextId), title: source?.title ?? exercise.title ?? learnerListName(pack), level: chapterExerciseLevel(exercise), pack, exercises: [exercise] });

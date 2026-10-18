@@ -153,7 +153,7 @@ export function PackagePlayer({
         {tabLabels.filter(item => item.id !== 'texts' || pack.texts.length > 0).filter(item => item.id !== 'dialogues' || pack.dialogues.length > 0).filter(item => item.id !== 'media' || pack.words.some(word => word.image || word.audio) || pack.scenes.some(scene => scene.image)).map((item) => {
           const Icon = item.icon;
           return (
-            <button key={item.id} aria-current={tab === item.id ? 'page' : undefined} className={tab === item.id ? 'active' : ''} onClick={() => setTab(item.id)}>
+            <button key={item.id} aria-current={tab === item.id || (tab === 'mixed' && item.id === 'lessons') ? 'page' : undefined} className={tab === item.id || (tab === 'mixed' && item.id === 'lessons') ? 'active' : ''} onClick={() => setTab(item.id)}>
               <Icon />
               <span>{item.label}</span>
             </button>
@@ -235,7 +235,7 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio, onPractice }:
     <section className="cp-panel">
       <header className="cp-panel-heading">
         <div><h1>Alle woorden</h1></div>
-        <button className="primary-button" onClick={onPractice}>Samen oefenen<ArrowRight /></button>
+        <button className="primary-button" onClick={onPractice}>Oefeningen<ArrowRight /></button>
       </header>
       <div className="cp-word-grid">
         {pack.words.map((word) => {
@@ -384,7 +384,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
     <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
         <h1>Lessen</h1>
-        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Alles oefenen<ArrowRight aria-hidden="true" /></button>
+        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Woordenmix<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
         {pack.lessons.map((lesson, index) => {

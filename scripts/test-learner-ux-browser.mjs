@@ -104,7 +104,7 @@ try {
       const item = routes.filter(item => item.exercise.mode === mode).sort((a, b) => String(b.exercise.exampleWord ?? b.exercise.helpWord ?? b.exercise.text?.primary ?? '').length - String(a.exercise.exampleWord ?? a.exercise.helpWord ?? a.exercise.text?.primary ?? '').length)[0];
       if (!item) continue;
       await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: item.pack.id, lessonId: item.lesson.id, exerciseId: item.exercise.exerciseId });
-      await page.reload(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+      await page.reload(); await nav().getByRole('button', { name: 'Verder', exact: true }).click();
       await geometry(`${width}x${height} guided ${mode}`);
       assert.equal(await page.locator('.cp-player-bar:visible').count(), 0, 'No duplicate lesson header');
       const input = page.locator('.cp-text-entry input');

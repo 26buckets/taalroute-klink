@@ -50,8 +50,8 @@ try {
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
-  await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
-  for (const activity of groupActivities.filter(item => !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length)) {
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  for (const activity of groupActivities.filter(item => item.id !== 'learning-review' && !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length)) {
     await page.locator(`[data-activity="${activity.id}"]`).click();
     assert(await page.locator('.cp-exercise-stage > section').isVisible());
     await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click();
@@ -108,7 +108,7 @@ try {
   await page.goto(`${base}/#teacher`);
   await page.locator('.staff-app').waitFor();
   assert(!/CP00[12]|1\.187/.test(await page.locator('body').innerText()));
-  await page.getByRole('button', { name: /Oefenkaart/ }).click();
+  await page.locator('.staff-nav').getByRole('button', { name: 'Oefenen', exact: true }).click();
   assert((await page.locator('.cp-activity-matrix').textContent()).includes('Bouwgroepen'));
   pass('Existing teacher screens use actual Taalroute totals instead of CP sample counts');
   assert.deepEqual(errors, []);

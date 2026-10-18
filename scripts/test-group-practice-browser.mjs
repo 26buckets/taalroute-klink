@@ -32,9 +32,9 @@ async function next() { await page.locator('.cp-exercise-feedback > button').cli
 try {
   await home();
   assert.equal(await page.locator('.cp-word-grid > article').count(), 6);
-  await page.getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Oefeningen', exact: true }).click();
   assert.equal(await page.locator('[data-group-practice] select').count(), 0);
-  assert.equal(await page.locator('[data-activity]').count(), groupActivities.filter(activity => groupExercises(packs[0], activity.id).length).length);
+  assert.equal(await page.locator('[data-activity]').count(), groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[0], activity.id).length).length);
   await page.screenshot({ path: `${out}/exercise-hub-desktop.png`, fullPage: true });
   pass('Words first; all first-group activities available without a dropdown');
 
@@ -164,7 +164,7 @@ try {
 
   for (let index = 0; index < packs.length; index++) {
     await home(index); await hub();
-    const expected = groupActivities.filter(activity => groupExercises(packs[index], activity.id).length).length;
+    const expected = groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[index], activity.id).length).length;
     assert.equal(await page.locator('[data-activity]').count(), expected, packs[index].id);
   }
   pass('All 15 existing word groups expose their own eligible activity sets');

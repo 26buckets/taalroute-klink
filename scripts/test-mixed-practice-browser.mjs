@@ -26,7 +26,7 @@ async function open(pack = packs[0]) {
   await page.goto(base + '/#learner/home'); await page.reload();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
-  await page.getByRole('button', { name: 'Alles oefenen', exact: true }).click();
+  await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   await page.locator('.is-mixed-round, .cp-mixed-complete').waitFor();
 }
 async function exercise(pack, mode) {
@@ -60,6 +60,7 @@ try {
   assert.deepEqual(await choices.locator('img').evaluateAll(images => images.map(image => image.src)), initialOrder);
   await answerChoice(first); await next();
   const second = await exercise(packs[0], 'listen'); assert.notEqual(first.wordId, second.wordId);
+  assert.equal(await page.evaluate(key => JSON.parse(localStorage.getItem(key)).exerciseId, mixedStorageKey(packs[0].id, 'listen')), second.exerciseId, 'The visible exercise is saved before leaving immediately');
   await open();
   assert.equal((await exercise(packs[0], 'listen')).exerciseId, second.exerciseId);
   await pause();
@@ -149,7 +150,7 @@ try {
   await page.evaluate(completed => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({completed})), [packs[0].lessons[0].id,packs[1].lessons[0].id]);
   await page.reload();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Herhalen', exact: true }).click();
-  await page.getByRole('button', { name: 'Alles oefenen', exact: true }).click();
+  await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   assert((await page.locator('.is-mixed-round').getAttribute('data-exercise-id')).startsWith('mixed-review:mixed:'));
   pass('Existing Herhalen screen adds a prepared cross-section mix without removing saved words');
 

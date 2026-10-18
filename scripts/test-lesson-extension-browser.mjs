@@ -32,7 +32,7 @@ async function openLesson(pack, lesson) {
 async function seedAt(pack, lesson, exercise) {
   await page.evaluate(position => localStorage.setItem('klink.taalroute.route.v1', JSON.stringify({ position, completed: [] })), { packageId: pack.id, lessonId: lesson.id, exerciseId: exercise.exerciseId });
   await page.reload();
-  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
 }
 try {
@@ -81,7 +81,7 @@ try {
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   assert(await page.locator('.cp-exercise-feedback button').isDisabled());
   await page.reload();
-  await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Verder', exact: true }).click();
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   pass('Pause, navigating away, Verder and reloading resume the exact exercise without restoring a correct answer');
 
@@ -123,7 +123,7 @@ try {
   pass('Photo strips and matching preserve all sections and 48px controls at desktop, tablet, 390px and 320px');
   await page.setViewportSize({ width: 1366, height: 900 });
   await page.goto(`${base}/#teacher`);
-  await page.getByRole('button', { name: /Oefenkaart/ }).click();
+  await page.locator('.staff-nav').getByRole('button', { name: 'Oefenen', exact: true }).click();
   assert.equal(await page.locator('.cp-coverage-filters select').first().locator('option').count(), packs.length);
   for (const pack of packs) {
     await page.locator('.cp-coverage-filters select').first().selectOption(pack.id);
@@ -156,7 +156,7 @@ try {
   await openLesson(packs[0], packs[0].lessons[0]);
   assert.equal(await page.locator('[data-build-checklist], [data-sentence-bridge]').count(), 0);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-  await page.getByRole('button', { name: 'Oefeningen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
   await page.locator('[data-activity="dictation"]').click();
   assert.equal(await page.locator('.cp-example-listen').count(), 0);
   assert(await page.locator('.cp-text-entry input').isDisabled());

@@ -8,8 +8,9 @@ import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { connectedContent } from '../lib/connected-content.ts';
 import { klinkContexts } from '../lib/klink-context.ts';
 import { resolveRegisteredAudio } from '../lib/audio-register.ts';
-import { groupInstructionNeeds } from '../lib/group-practice.ts';
+import { groupInstructionNeeds, groupExercises } from '../lib/group-practice.ts';
 import { extendedInstructionNeeds } from '../lib/extended-practice.ts';
+import { learningRules } from '../lib/learning-paths.ts';
 import { isWithdrawnAudio } from '../lib/audio-policy.ts';
 
 const root = resolve(import.meta.dirname, '..');
@@ -86,6 +87,15 @@ export function buildAudioRegister(inventory) {
       sectionIds: unique(found.map((item) => item.pack)),
     };
   };
+  for (const item of learningRules) {
+    const placements = packs.map(pack => ({ pack, exercises: groupExercises(pack, item.activity).filter(exercise => exercise.ruleId === item.id) })).filter(row => row.exercises.length);
+    for (const [part, text] of [['instruction', item.instruction], ['example', item.explanation]]) add({
+      id: `learning:${item.id}:${part}`, kind: 'instruction', role: 'instruction', text,
+      sectionIds: placements.map(row => row.pack.id),
+      lessonIds: unique(placements.flatMap(row => row.exercises.flatMap(exercise => exercise.sourceLessonIds ?? (exercise.lessonId ? [exercise.lessonId] : [])))),
+      note: 'Nieuwe leerreeks: nog niet opgenomen of vrijgegeven. Instructieaudio blijft uit volgens de bestaande afspraak.',
+    });
+  }
   for (const item of [...groupInstructionNeeds, ...extendedInstructionNeeds]) add({
     id: item.id, kind: 'instruction', role: 'instruction', text: item.text,
     sectionIds: packs.map(pack => pack.id),

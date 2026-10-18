@@ -86,7 +86,7 @@ test('Connected instructions do not change participation into proven skill or un
   assert(learningAreas.find(a => a.id === 'start').remaining.includes('t blijft'));
   assert(groupExercises(packs[0], 'write-letter').every(item => !item.prompt?.audio && item.letterModelOnly), 'Written t is not the rejected spoken sound');
   assert.equal(groupRelease.publicationApproved, true);
-  assert.equal(groupRelease.ownerAuthorization, 'docs/klink-owner-release-20261017.json');
+  assert.equal(groupRelease.ownerAuthorization, 'docs/klink-owner-release-20261018.json');
   assert.equal(groupRelease.instructionAudioUsage, 'withdrawn-by-owner');
   assert.equal(groupRelease.instructionAudioReview, 'open');
   assert.equal(groupRelease.existingMediaChanged, false);

@@ -19,7 +19,7 @@ export function ContentCoverage() {
       <h3>Rechtstreeks oefenen</h3>
       <p>De woordroute blijft bij Lessen. Deze hoofdstukken openen daarnaast rechtstreeks de bestaande oefeninhoud, zonder eerst een woordles te volgen.</p>
       <nav className="cp-chapter-levels" aria-label="Oefenhoofdstukken voor de docent">{practiceChapters.map(chapter => <a className="secondary-button" key={chapter.id} href={chapterHash({ chapter: chapter.id, level: 'all' })}>{chapter.title}</a>)}</nav>
-      <p>Alfa A/B volgt de bestaande leesvoorwaarden van alle betrokken woorden. A1/A2 is het niveau van de bron, met hulp; geen behaalde cursistniveaus. B1 is nog niet aangesloten. Klanken bevat nu woordcontrasten, Spelling woordbouw en dictee: losse klankmodellen en expliciete spellingregels blijven open.</p>
+      <p>Alfa A/B volgt de bestaande leesvoorwaarden van alle betrokken woorden. A1/A2 is het niveau van de bron, met hulp; geen behaalde cursistniveaus. B1 is nog niet aangesloten. De nieuwe leerreeksen voegen voorbeelden, oefening, toepassing en herhaling toe. Ze zijn gebouwd voor docentsteun en wachten op inhoudelijke vrijgave. Losse klankmodellen en een volledige regel- en grammaticaleerlijn blijven open.</p>
       <h3>Hoofdonderwerpen van Klink</h3>
       <p>Eigen Taalroute-onderdelen, op dezelfde woordenbank. Dit is de volledige bouwomvang; een aangekondigd onderwerp is niet automatisch een complete leerlijn.</p>
       <div className="cp-coverage-table-wrap"><table className="cp-coverage-table" data-learning-areas>

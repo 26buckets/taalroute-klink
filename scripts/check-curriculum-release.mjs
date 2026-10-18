@@ -15,10 +15,11 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-20261017.json';
+const authorizationPath = 'docs/klink-owner-release-20261018.json';
 try {
   const approval = JSON.parse(readFileSync(authorizationPath));
-  if (approval.approvedBy !== 'Nico' || !approval.userRequest || Object.keys(approval.files).length < 5) throw Error('Incomplete scoped approval');
+  const required = ['lib/group-practice.ts', 'lib/extended-practice.ts', 'lib/mixed-practice.ts', 'data/klink-functional-writing.json', 'data/klink-audio-policy.json', 'lib/learning-paths.ts', 'lib/learning-review.ts', 'data/klink-learning-rules.json', 'components/product/learning-path-surface.tsx', 'data/klink-learning-paths-release.json'];
+  if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
@@ -26,6 +27,10 @@ try {
   ownerAuthorized = true;
 } catch { issues.push('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'); }
 const ownerRelease = record => ownerAuthorized && record.ownerAuthorization === authorizationPath;
+try {
+  const learning = read('../data/klink-learning-paths-release.json');
+  if (!learning.publicationApproved || !ownerRelease(learning)) issues.push('De nieuwe leerreeksen wachten op actuele inhoudsgebonden vrijgave; het oude akkoord geldt niet voor nieuwe uitleg en samenstellingen.');
+} catch { issues.push('Het vrijgaverecord van de nieuwe leerreeksen ontbreekt.'); }
 if (!instructionAudioEnabled) {
   const policy = read('../data/klink-audio-policy.json');
   const exclusions = readFileSync('public/.assetsignore', 'utf8');

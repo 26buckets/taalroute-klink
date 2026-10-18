@@ -29,7 +29,7 @@ try {
   await page.goto(`${base}/#learner/home`);
   await page.locator('.cp-package-grid button').first().click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
-  await page.getByRole('button', { name: 'Alles oefenen', exact: true }).click();
+  await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   const listen = await current('listen');
   await heard(listen.prompt.audio.src);
   await page.waitForFunction(() => !document.querySelector('.cp-choice-grid button')?.disabled);

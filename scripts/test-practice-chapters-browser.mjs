@@ -35,7 +35,8 @@ try {
     await page.goto(`${base}/${chapterHash({ chapter: chapter.id, level: 'all' })}`);
     await page.locator(`[data-chapter-page="${chapter.id}"]`).waitFor();
     assert.equal(await page.locator('[data-chapter-activity]').count(), chapter.activities.length);
-    await page.locator('[data-chapter-activity]').first().click();
+    const activity = chapter.activities.find(id => id !== 'learning-review');
+    await page.locator(`[data-chapter-activity="${activity}"]`).click();
     await page.locator('[data-collection]').first().click();
     await page.locator('[data-exercise-id], .cp-word-worksheet').waitFor();
     assert.equal(await page.locator('.cp-lesson-list').count(), 0);

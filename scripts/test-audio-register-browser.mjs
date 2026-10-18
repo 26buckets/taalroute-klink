@@ -44,7 +44,7 @@ try {
     'Learner home and all 15 sections preserved; no audio inventory downloaded by learners',
   );
   await page.goto(`${base}/#teacher`);
-  await page.locator('.staff-nav').getByRole('button', { name: /^Oefenkaart/ }).click();
+  await page.locator('.staff-nav').getByRole('button', { name: 'Oefenen', exact: true }).click();
   await page.getByText('Volledige inhoudslijn: van ontwerp naar app', { exact: true }).click();
   assert.equal(await page.locator('[data-learning-areas] tbody tr').count(), 14);
   assert.equal(await page.locator('[data-content-coverage] tbody tr').count(), 26);

@@ -3,6 +3,11 @@
 Publiceer alleen `main` uit 26buckets/taalroute-klink op klink.taalroute.nl.
 Geen publicatie uit de aparte UI-werkmap of een oudere checkout.
 
+Audiopauze op verzoek van Nico, 18 oktober 2026: geen nieuwe audio genereren,
+geen ElevenLabs-productie en geen nieuwe audiokoppelingen in Klink. Bestaande
+audio ongewijzigd laten; ontbrekende audio uitsluitend administreren. Hervatten
+vraagt een expliciete nieuwe opdracht van Nico. De menureview heft dit niet op.
+
 De publicatie van 17 oktober 2026 combineert de Lexicon-indeling, de bestaande
 les-/oefenspelers, de aangesloten teksten/gesprekken en alle 338 woordbeelden.
 Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
@@ -13,6 +18,15 @@ Actief register: `docs/klink-publication-practice-sheet-20261018.json`.
 Livebron: `31c093549965cb316dc90505e67a1c42cb5679fe`.
 Worker-versie: `e988ca6d-e77a-4537-9423-9e9c1465e558`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Publicatieopdracht van 18 oktober: Nico heeft de nieuwe klank-, spelling-,
+grammatica-, praktijk- en tekstbegripreeksen plus geplande herhaling en beide
+menureviews expliciet vrijgegeven voor publicatie. Het nieuwe inhoudsgebonden
+akkoord staat in `docs/klink-owner-release-20261018.json`; de historische
+akkoorden blijven bewaard. Dit is geen bewijs van een onafhankelijke menselijke
+inhoudsbeoordeling. De audiopauze en beperkingen uit de reviewverslagen blijven
+gelden. Tot de nieuwe publicatie is gecontroleerd blijft de livebron hierboven
+leidend. De 431 reeksen hergebruiken bestaande inhoud; dit zijn geen 431 nieuwe lessen.
 
 Op 18 oktober is naast de bestaande reeks de keuze 'Op één blad' toegevoegd
 aan tien woordactiviteiten. Alle geselecteerde woorden blijven op dezelfde

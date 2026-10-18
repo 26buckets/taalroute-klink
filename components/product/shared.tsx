@@ -1,6 +1,6 @@
 'use client';
 
-import { LogOut, MoreHorizontal, Search } from 'lucide-react';
+import { LogOut } from 'lucide-react';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 import { applyDefaultAudioRate, DEFAULT_AUDIO_RATE } from '@/lib/media-player';
@@ -33,8 +33,8 @@ export function StaffShell({ area, name, initials, nav, children, onExit }: {
     <div className="staff-app">
       <aside className="staff-sidebar">
         <Brand label={area} />
-        <div className="staff-nav">{nav}</div>
-        <button className="staff-account" onClick={onExit}><span>{initials}</span><span><strong>{name}</strong><small>{area}</small></span><LogOut /></button>
+        <nav className="staff-nav" aria-label="Docentnavigatie">{nav}</nav>
+        <button className="staff-account" aria-label="Afsluiten" onClick={onExit}><span>{initials}</span><span><strong>{name}</strong><small>{area}</small></span><LogOut /></button>
       </aside>
       <main className="staff-main">{children}</main>
     </div>
@@ -44,14 +44,14 @@ export function StaffShell({ area, name, initials, nav, children, onExit }: {
 export function NavButton({ active, icon, label, onClick, badge }: {
   active?: boolean; icon: ReactNode; label: string; onClick: () => void; badge?: string;
 }) {
-  return <button className={active ? 'active' : ''} onClick={onClick}>{icon}<span>{label}</span>{badge && <b>{badge}</b>}</button>;
+  return <button className={active ? 'active' : ''} aria-current={active ? 'page' : undefined} onClick={onClick}>{icon}<span>{label}</span>{badge && <b>{badge}</b>}</button>;
 }
 
 export function StaffTopbar({ title, subtitle, actions }: { title: string; subtitle: string; actions?: ReactNode }) {
   return (
     <header className="staff-topbar">
       <div><h1>{title}</h1><p>{subtitle}</p></div>
-      <div className="topbar-actions">{actions}<button className="icon-button" aria-label="Zoeken"><Search /></button><button className="icon-button" aria-label="Meer"><MoreHorizontal /></button></div>
+      {actions && <div className="topbar-actions">{actions}</div>}
     </header>
   );
 }

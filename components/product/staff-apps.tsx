@@ -21,7 +21,9 @@ import {
   Route,
   Shapes,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { chapterHash, practiceChapters } from '@/lib/practice-chapters';
+import { learnerListName } from '@/lib/learner-copy';
 
 const totalExercises = contentPackages.reduce((sum, pack) => sum + pack.counts.exercises, 0);
 const connectedTypes = [...new Set(contentPackages.flatMap(pack => pack.exerciseTypes.map(type => type.id)))];
@@ -43,23 +45,43 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
   const [view, setView] = useState<TeacherView>('overview');
   const [selectedPackage, setSelectedPackage] = useState<PackageId>(contentPackages[0].id);
 
+  useEffect(() => {
+    const restore = () => {
+      const [, route, packageId] = window.location.hash.split('?')[0].split('/');
+      if (route === 'package') {
+        const pack = contentPackages.find(item => item.id === packageId);
+        if (pack) { setSelectedPackage(pack.id); setView('package'); }
+        else setView('packages');
+      } else setView(route === 'packages' || route === 'activities' || route === 'media' ? route : 'overview');
+    };
+    restore(); window.addEventListener('hashchange', restore); window.addEventListener('popstate', restore);
+    return () => { window.removeEventListener('hashchange', restore); window.removeEventListener('popstate', restore); };
+  }, []);
+  function openView(next: TeacherView, packageId = selectedPackage) {
+    window.scrollTo({ top: 0 });
+    document.querySelector('.staff-main')?.scrollTo({ top: 0 });
+    setView(next);
+    const hash = next === 'package' ? `#teacher/package/${packageId}` : `#teacher/${next}`;
+    if (window.location.hash !== hash) window.history.pushState(null, '', hash);
+  }
+
   function openPackage(packageId: PackageId) {
     setSelectedPackage(packageId);
-    setView('package');
+    openView('package', packageId);
   }
 
   if (view === 'package') {
-    return <PackagePlayer packageId={selectedPackage} onClose={() => setView('packages')} savedWordIds={[]} onToggleWord={() => onToast('Bewaren gebeurt in de cursistomgeving.')} onToast={onToast} />;
+    return <PackagePlayer key={selectedPackage} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={[]} onToggleWord={() => onToast('Bewaren gebeurt in de cursistomgeving.')} onToast={onToast} />;
   }
 
   return (
     <StaffShell area="Docent" name="Docent" initials="TR" onExit={onExit} nav={<>
-      <NavButton active={view === 'overview'} icon={<LayoutDashboard />} label="Overzicht" onClick={() => setView('overview')} />
-      <NavButton active={view === 'packages'} icon={<PackageOpen />} label="Leesstappen" onClick={() => setView('packages')} badge="10" />
-      <NavButton active={view === 'activities'} icon={<Shapes />} label="Oefenkaart" onClick={() => setView('activities')} badge={String(contentPackages.reduce((count, pack) => count + pack.lessons.length, 0))} />
-      <NavButton active={view === 'media'} icon={<Images />} label="Media" onClick={() => setView('media')} />
+      <NavButton active={view === 'overview'} icon={<LayoutDashboard />} label="Overzicht" onClick={() => openView('overview')} />
+      <NavButton active={view === 'packages'} icon={<PackageOpen />} label="Lessen" onClick={() => openView('packages')} />
+      <NavButton active={view === 'activities'} icon={<Shapes />} label="Oefenen" onClick={() => openView('activities')} />
+      <NavButton active={view === 'media'} icon={<Images />} label="Media" onClick={() => openView('media')} />
     </>}>
-      {view === 'overview' && <TeacherOverview onOpen={openPackage} onActivities={() => setView('activities')} />}
+      {view === 'overview' && <TeacherOverview onOpen={openPackage} onActivities={() => openView('activities')} />}
       {view === 'packages' && <TeacherPackages onOpen={openPackage} />}
       {view === 'activities' && <><div className="staff-content cp-teacher-content"><details className="cp-coverage-overview"><summary>Volledige inhoudslijn: van ontwerp naar app</summary><ContentCoverage /></details><LessonCoverage onOpen={openPackage} /></div><details className="cp-teacher-extra"><summary>Meer oefenvormen en mogelijkheden</summary><TeacherActivities /></details></>}
       {view === 'media' && <><div className="staff-content cp-teacher-content"><ContentAudioRegister /></div><TeacherMedia /></>}
@@ -69,14 +91,34 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
 
 function TeacherOverview({ onOpen, onActivities }: { onOpen: (packageId: PackageId) => void; onActivities: () => void }) {
   return <><StaffTopbar title="Klink inhoudsoverzicht" subtitle="Alfabeta+ · de Taalroute-leerlijn" /><div className="staff-content cp-teacher-content">
-    <section className="cp-teacher-hero"><div><span className="eyebrow light">Taalroute</span><h2>De Taalroute-leesstappen in Klink</h2><p>De tien bouwgroepen bevatten de basisleesstappen, herhaling en uitbreidingen. Daarnaast staan de vijf routes voor langere woorden en de steunwoorden.</p><button className="accent-button" onClick={onActivities}>Bekijk de complete oefenkaart<ArrowRight /></button></div><div><span><strong>10</strong><small>bouwgroepen</small></span><span><strong>{allPackageWords.length}</strong><small>woordkaarten</small></span><span><strong>{totalExercises}</strong><small>oefeningen</small></span><span><strong>{connectedTypes.length}</strong><small>oefenvormen</small></span><span><strong>52</strong><small>opdrachtvarianten</small></span></div></section>
+    <TeacherMenuGuide />
+    <section className="cp-teacher-hero"><div><span className="eyebrow light">Taalroute</span><h2>De Taalroute-leesstappen in Klink</h2><p>Dezelfde {contentPackages.length} woordonderdelen als bij de cursist: basisleesstappen, langere woorden, herhaling en steunwoorden.</p><button className="accent-button" onClick={onActivities}>Bekijk de complete oefenkaart<ArrowRight /></button></div><div><span><strong>{contentPackages.length}</strong><small>onderdelen</small></span><span><strong>{allPackageWords.length}</strong><small>woordkaarten</small></span><span><strong>{totalExercises}</strong><small>oefeningen</small></span><span><strong>{connectedTypes.length}</strong><small>oefenvormen</small></span><span><strong>52</strong><small>opdrachtvarianten</small></span></div></section>
     <p className="cp-honesty-line"><CircleAlert />Start samen; bereid m, a en t afzonderlijk voor. Dit is nog geen volledige zelfstandige startroute. Beoordeel de uitspraak en herkenbaarheid van de beelden voordat je ermee oefent.</p>
-    <section className="cp-teacher-package-cards">{contentPackages.map((pack) => <article key={pack.id}><header><span><PackageOpen /></span><div><h3>{pack.title}</h3></div></header><p>{pack.description}</p><div><span><strong>{pack.counts.lessons}</strong><small>lessen</small></span><span><strong>{pack.counts.coreWords}</strong><small>woorden</small></span><span><strong>{pack.counts.exercises}</strong><small>oefeningen</small></span><span><strong>{pack.counts.images}</strong><small>beelden</small></span></div><button className="primary-button wide" onClick={() => onOpen(pack.id)}>Open leesstappen<ArrowRight /></button></article>)}</section>
+    <section className="cp-teacher-package-cards">{contentPackages.map((pack) => <article key={pack.id}><header><span><PackageOpen /></span><div><h3>{learnerListName(pack)}</h3></div></header><p>{pack.description}</p><div><span><strong>{pack.counts.lessons}</strong><small>lessen</small></span><span><strong>{pack.counts.coreWords}</strong><small>woorden</small></span><span><strong>{pack.counts.exercises}</strong><small>oefeningen</small></span><span><strong>{pack.counts.images}</strong><small>beelden</small></span></div><button className="primary-button wide" onClick={() => onOpen(pack.id)}>Open leesstappen<ArrowRight /></button></article>)}</section>
   </div></>;
 }
 
 function TeacherPackages({ onOpen }: { onOpen: (packageId: PackageId) => void }) {
-  return <><StaffTopbar title="Leesstappen" subtitle="15 onderdelen · 302 lesroutes" /><div className="staff-content cp-teacher-content"><div className="page-heading"><div><span className="eyebrow">Taalroute</span><h2>Wat zit waar?</h2><p>Open een onderdeel om woorden, leesstappen, oefeningen en media te bekijken.</p></div></div><section className="cp-teacher-package-list">{contentPackages.map((pack) => <button key={pack.id} onClick={() => onOpen(pack.id)}><span><PackageOpen /></span><div><small>{pack.level}</small><strong>{pack.title}</strong><p>{pack.subtitle}</p></div><div><b>{pack.counts.lessons}</b><small>lessen</small></div><div><b>{pack.counts.coreWords}</b><small>woorden</small></div><div><b>{pack.counts.exercises}</b><small>oefeningen</small></div><ArrowRight /></button>)}</section></div></>;
+  return <><StaffTopbar title="Lessen" subtitle="15 onderdelen · 302 lesroutes" /><div className="staff-content cp-teacher-content"><div className="page-heading"><div><span className="eyebrow">Taalroute</span><h2>Wat zit waar?</h2><p>Dezelfde onderdelen als onder Lessen bij de cursist, met extra informatie voor de docent.</p></div></div><section className="cp-teacher-package-list">{contentPackages.map((pack) => <button key={pack.id} onClick={() => onOpen(pack.id)}><span><PackageOpen /></span><div><small>{pack.level}</small><strong>{learnerListName(pack)}</strong><p>{pack.subtitle}</p></div><div><b>{pack.counts.lessons}</b><small>lessen</small></div><div><b>{pack.counts.coreWords}</b><small>woorden</small></div><div><b>{pack.counts.exercises}</b><small>oefeningen</small></div><ArrowRight /></button>)}</section></div></>;
+}
+
+function TeacherMenuGuide() {
+  return <section className="cp-menu-guide" aria-labelledby="menu-guide-title">
+    <h2 id="menu-guide-title">Waar moet ik zijn?</h2>
+    <p>Gebruik dezelfde namen als op het scherm van de cursist. De knoppen hieronder openen die omgeving; ze zetten geen les klaar en veranderen geen voortgang.</p>
+    <dl>
+      <div><dt>Verder</dt><dd>Doorgaan met de opgeslagen les. Een nieuwe cursist kiest op het beginscherm Begin hier.</dd></div>
+      <div><dt><a href="#learner/packages">Lessen<ArrowRight aria-hidden="true" /></a></dt><dd>Kies een fotokaart. Eerst zie je alle woorden van dat onderdeel. Kies daar Lessen voor de kleine lesstappen, of Oefeningen voor een oefenvorm met die woorden. De knop Oefeningen bij de woorden opent dezelfde pagina als het tabblad Oefeningen.</dd></div>
+      <div><dt><a href="#learner/chapters">Oefenen<ArrowRight aria-hidden="true" /></a></dt><dd>Een vaardigheid kiezen, daarna een oefenvorm en woorden of een tekst. Geen verplichte start bij klanken.</dd></div>
+      <div><dt><a href="#learner/words">Woorden<ArrowRight aria-hidden="true" /></a></dt><dd>Woorden terugvinden, bekijken en bewaren. Voor opdrachten kies je Oefenen → Woorden oefenen.</dd></div>
+      <div><dt><a href="#learner/review">Herhalen<ArrowRight aria-hidden="true" /></a></dt><dd>Bewaarde woorden en eerder geoefende inhoud. Woordenmix biedt passende luister-, lees-, koppel- en bouwrondes met beschikbare woorden; niet alle oefenvormen. De opslag hoort bij dit apparaat, niet bij een persoonlijk account.</dd></div>
+    </dl>
+    <details><summary>Een oefenhoofdstuk openen voor de cursist</summary>
+      <div className="cp-menu-guide-links">{practiceChapters.map(chapter => <a className="secondary-button" key={chapter.id} href={chapterHash({ chapter: chapter.id, level: 'all' })}>{chapter.title}<ArrowRight aria-hidden="true" /></a>)}</div>
+      <p>Een hoofdstuk is een ingang, geen behaald niveau. Kies passende leesvoorwaarden. Samen herhalen biedt onder meer bingo en gemengde oefenvormen; de knop Herhalen gaat naar eerder geoefende en bewaarde inhoud.</p>
+    </details>
+    <p>Terug naar dit overzicht: gebruik de terugknop van de browser. Bij een gedeeld apparaat is Begin hier geen instaptoets; kies samen een passend onderdeel bij Lessen.</p>
+  </section>;
 }
 
 function TeacherActivities() {

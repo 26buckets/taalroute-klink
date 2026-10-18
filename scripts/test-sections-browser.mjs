@@ -68,7 +68,7 @@ try {
   assert.deepEqual(await page.locator('.cp-lesson-list h2').allTextContents(),['mat','tas','map','man · pan','jas']);
   const lesson=packs[0].lessons[2],exerciseId=lesson.guidedExerciseIds[1];
   await page.evaluate(position=>localStorage.setItem('klink.taalroute.route.v1',JSON.stringify({position,completed:[]})),{packageId:'groep-2',lessonId:lesson.id,exerciseId});
-  await page.reload();await page.getByRole('button',{name:'Ga verder',exact:true}).click();
+  await page.reload();await page.getByRole('navigation',{name:'Cursistnavigatie'}).getByRole('button',{name:'Verder',exact:true}).click();
   await page.waitForFunction(id=>document.querySelector('[data-exercise-id]')?.getAttribute('data-exercise-id')===id,exerciseId);
   assert.deepEqual(errors,[]);
   writeFileSync('outputs/sections-20261017/browser-'+(base.startsWith('https')?'live':'local')+'.json',JSON.stringify({base,sections:15,photos:15,resume:'old group 2 at exact exercise',errors},null,2));

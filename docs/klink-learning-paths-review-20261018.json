@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-18",
+  "status": "development-checked-not-released",
+  "reviewMethod": "Agent self-review with local unit, browser and production-build checks; not an independent human didactic or language review.",
+  "liveSourceCommit": "31c093549965cb316dc90505e67a1c42cb5679fe",
+  "baseCommit": "5d8fd27cda1521a957a64064b79e77f49fd264a9",
+  "canonicalRepository": "26buckets/taalroute-klink",
+  "canonicalBranch": "main",
+  "published": false,
+  "pushed": false,
+  "diglinMinimumReached": false,
+  "preserved": {
+    "wordSections": 15,
+    "lessonRoutes": 302,
+    "wordMeanings": 338,
+    "spellings": 337,
+    "lexiconPlacementChanged": false,
+    "existingMediaChanged": false,
+    "defaultPlaybackRate": 0.85,
+    "withdrawnInstructionsRemainOff": true,
+    "rejectedIsolatedTStillParked": true
+  },
+  "newPaths": [
+    { "activity": "sound-path", "collections": 98, "steps": 1311, "uniqueTargetWords": 92 },
+    { "activity": "spelling-path", "collections": 21, "steps": 244, "uniqueTargetWords": 59 },
+    { "activity": "grammar-path", "collections": 36, "steps": 357, "uniqueTargetWords": 96 },
+    { "activity": "practical-path", "collections": 120, "steps": 720, "uniqueTargetWords": 69 },
+    { "activity": "reading-path", "collections": 156, "steps": 624, "uniqueTargetWords": 69 }
+  ],
+  "countBoundary": "431 sequences reuse existing material. They are not 431 new lessons or texts. Target words overlap across activities.",
+  "audio": {
+    "newMissingStableIds": 18,
+    "newRecordingsGenerated": 0,
+    "boundary": "These eighteen new needs are additional to the existing missing-audio register, not its complete backlog. Whole-word and source-context recordings are reused. No new audio publication."
+  },
+  "localChecks": {
+    "fullReview": { "command": "npm run test:review", "passed": true, "unitTests": 75, "browserCheckpoints": 122 },
+    "afterFinalExplanationCopyEdit": { "audioRegisterUnitTests": 6, "learningPathUnitTests": 6, "learningPathBrowserPassed": true },
+    "typescript": "passed",
+    "changedImplementationAndNewTestLint": "passed",
+    "wholeRepositoryLint": "Existing unrelated diagnostics remain; not claimed clean.",
+    "diffWhitespace": "passed",
+    "productionBuild": "passed; build only, no deployment",
+    "publicationGate": "blocked as intended: fresh content-bound authorization absent; source remains uncommitted",
+    "githubActions": "No cloud runs started; no repository workflows added.",
+    "screenWidths": [1366, 820, 768, 390, 320],
+    "accessibilityScope": "Keyboard operation, focus, feedback semantics, 48px controls and reachable continuation tested. No human screen-reader or learner trial."
+  },
+  "reviewFindingsResolved": [
+    "Hide the collection's example word from the playing-page heading so it cannot reveal a listening or spelling answer.",
+    "Hide grammar's complete source sentence until help is explicitly requested.",
+    "Preserve source participation-completion behavior so text examples do not deadlock the Continue button.",
+    "Keep alternatives in place after errors and prevent changing a correct choice while its success remains recorded.",
+    "Filter scheduled repetition to due, previously encountered recall items; never introduce unseen material through review.",
+    "Retain pack-specific recall IDs, and avoid extending the repetition interval through same-sitting clicks.",
+    "Align the letter-pair explanation with choosing an answer, not with a nonexistent dragging action."
+  ],
+  "stillOpen": [
+    "Authorized language/didactic release for the new explanations and combinations.",
+    "Recorded support for the new explanations; current use requires teacher support.",
+    "Full comparison of all sixteen DigLin ABC lists and remaining domains, beyond the three observed players and menu inventory.",
+    "Broader sound instruction, spelling transfer, grammar, independent speaking/writing and reading strategies.",
+    "Concrete book/lesson-plan/observation-point mappings where the existing source does not provide them.",
+    "Device-local repetition is not a personal profile or a validated mastery model."
+  ],
+  "studentPilot": "not-performed; not presented as a release requirement after Nico's waiver"
+}

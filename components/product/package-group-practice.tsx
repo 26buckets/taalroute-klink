@@ -15,7 +15,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt }: { pack: Packa
   const [activity, setActivity] = useState<GroupActivity>();
   const [round, setRound] = useState(0);
   useEffect(scrollToStart, [activity]);
-  const available = useMemo(() => groupActivities.flatMap(item => {
+  const available = useMemo(() => groupActivities.filter(item => item.id !== 'learning-review').flatMap(item => {
     const count = groupExercises(pack, item.id).length;
     return count ? [{ ...item, count }] : [];
   }), [pack]);
@@ -25,7 +25,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt }: { pack: Packa
     <GroupRound key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
   </section>;
   return <section className="cp-panel cp-group-practice" data-group-practice>
-    <header className="cp-panel-heading"><h1>Samen oefenen</h1></header>
+    <header className="cp-panel-heading"><h1>Oefeningen</h1></header>
     {[...new Set(available.map(item => item.category))].map(category => <section key={category} className="cp-activity-section">
       <h2>{category}</h2>
       <div className="cp-activity-grid">{available.filter(item => item.category === category).map(item => {

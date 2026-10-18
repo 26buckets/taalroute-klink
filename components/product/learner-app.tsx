@@ -4,7 +4,8 @@ import { Brand, playMedia, stopMedia } from '@/components/product/shared';
 import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PracticeChapters, PracticeChapterCards } from '@/components/product/practice-chapters';
-import { chapterHash } from '@/lib/practice-chapters';
+import { chapterCollections, chapterHash } from '@/lib/practice-chapters';
+import { learningReviewKey, parseLearningReview, updateLearningReview } from '@/lib/learning-review';
 import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
   allPackageWords,
@@ -60,18 +61,29 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   useEffect(() => { stopMedia(); return stopMedia; }, [view]);
   useEffect(() => {
     const restore = () => {
-      const route = window.location.hash.split('/')[1]?.split('?')[0];
-      if (route === 'chapters') setView('chapters');
-      else if (route === 'packages' || route === 'words' || route === 'review' || route === 'home') setView(route);
+      const [, route, packageId] = window.location.hash.split('?')[0].split('/');
+      if (route === 'package') {
+        const pack = contentPackages.find(item => item.id === packageId);
+        if (pack) {
+          setSelectedPackage(pack.id);
+          setResumePosition(undefined);
+          setPlayerVisit(value => value + 1);
+          setView('package');
+        } else setView('packages');
+      } else if (route === 'chapters') setView('chapters');
+      else if (route === 'packages' || route === 'words' || route === 'review') setView(route);
+      else setView('home');
     };
-    restore(); window.addEventListener('hashchange', restore);
-    return () => window.removeEventListener('hashchange', restore);
+    restore(); window.addEventListener('hashchange', restore); window.addEventListener('popstate', restore);
+    return () => { window.removeEventListener('hashchange', restore); window.removeEventListener('popstate', restore); };
   }, []);
 
-  function openView(next: LearnerView) {
+  function openView(next: LearnerView, packageId = selectedPackage) {
+    stopMedia();
+    document.querySelector('.learner-main')?.scrollTo({ top: 0 });
     setView(next);
-    // Existing screens still reload at the resumable home; only chapters add deep links.
-    if (window.location.hash !== '#learner/home') window.history.pushState(null, '', '#learner/home');
+    const hash = next === 'package' ? `#learner/package/${packageId}` : `#learner/${next}`;
+    if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
   function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: 'all' }); }
 
@@ -86,10 +98,13 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     setSelectedPackage(progress.position.packageId);
     setResumePosition(progress.position);
     setPlayerVisit(value => value + 1);
-    openView('package');
+    openView('package', progress.position.packageId);
   }
 
   function recordAttempt(attempt: PracticeAttempt) {
+    if (attempt.reviewEligible) {
+      try { localStorage.setItem(learningReviewKey, JSON.stringify(updateLearningReview(parseLearningReview(localStorage.getItem(learningReviewKey)), attempt))); } catch { /* Optional on-device scheduling never prevents practice. */ }
+    }
     try {
       const raw: unknown = JSON.parse(window.localStorage.getItem('klink.taalroute.attempts.v1') ?? '[]');
       const previous = Array.isArray(raw) ? raw.slice(-199) : [];
@@ -101,7 +116,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     setSelectedPackage(packageId);
     setResumePosition(undefined);
     setPlayerVisit(value => value + 1);
-    openView('package');
+    openView('package', packageId);
   }
 
   function toggleSavedWord(wordId: string) {
@@ -145,7 +160,7 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
   return (
     <div className="learner-page cp-home">
       <header className="learner-page-head">
-        <div><span className="cp-home-mark"><Layers3 /></span><h1>{progress.position ? 'Ga verder' : 'Oefenen'}</h1></div>
+        <div><span className="cp-home-mark"><Layers3 /></span><h1>{progress.position ? 'Ga verder' : 'Begin hier'}</h1></div>
       </header>
 
       <section className="cp-home-hero">
@@ -189,14 +204,21 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
 function ReviewQueue({ savedWordIds, completed, onAttempt, onWords, onBack, onToast }: { savedWordIds: string[]; completed: string[]; onAttempt: (attempt: PracticeAttempt) => void; onWords: () => void; onBack: () => void; onToast: (message: string) => void }) {
   const [mixed, setMixed] = useState(false);
   const pack = useMemo(() => mixedReviewPack(contentPackages, completed, savedWordIds), [completed, savedWordIds]);
+  const [hasScheduled] = useState(() => {
+    try {
+      const review = parseLearningReview(localStorage.getItem(learningReviewKey));
+      return chapterCollections('learning-review').some(collection => collection.exercises.some(exercise => review[exercise.exerciseId]?.due <= Date.now()));
+    } catch { return false; }
+  });
   const items = allPackageWords.filter((word) => savedWordIds.includes(word.id));
   if (mixed) return <div className="learner-page"><PackageMixedPractice pack={pack} onAudio={(source, options) => source ? playMedia(source, options) : false} onBack={() => setMixed(false)} onAttempt={onAttempt} /></div>;
   return (
     <div className="learner-page review-page">
       <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
       <header className="content-page-heading"><div><span className="eyebrow">Herhalen</span><h1>Nog een keer</h1><p>Tik en luister.</p></div><div className="content-count"><strong>{items.length}</strong><span>bewaard</span></div></header>
-      {pack.words.length >= 2 && <div className="cp-review-mixed"><button className="primary-button" onClick={() => { stopMedia(); setMixed(true); }}><RefreshCw aria-hidden="true" />Alles oefenen<ArrowRight aria-hidden="true" /></button></div>}
-      {items.length === 0 ? (pack.words.length >= 2 ? null : <section className="honest-empty"><RefreshCw /><h2>Kies eerst een woord</h2><p>Tik bij een woord op Bewaar.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section>) : <section className="review-word-list"><header><div><span className="eyebrow"></span><h2>Jouw woorden</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{learnerListName(getPackage(word.packageId))}</small><strong>{wordLabel(word)}</strong><small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
+      {hasScheduled && <div className="cp-review-mixed"><a className="primary-button" href={chapterHash({ chapter: 'repeat', activity: 'learning-review', level: 'all' })} onClick={stopMedia}><RefreshCw aria-hidden="true" />Oefen opnieuw<ArrowRight aria-hidden="true" /></a></div>}
+      {pack.words.length >= 2 && <div className="cp-review-mixed"><button className="primary-button" onClick={() => { stopMedia(); setMixed(true); }}><RefreshCw aria-hidden="true" />Woordenmix<ArrowRight aria-hidden="true" /></button></div>}
+      {items.length === 0 ? (pack.words.length >= 2 || hasScheduled ? null : <section className="honest-empty"><RefreshCw /><h2>Kies eerst een woord</h2><p>Tik bij een woord op Bewaar.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section>) : <section className="review-word-list"><header><div><span className="eyebrow"></span><h2>Jouw woorden</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{learnerListName(getPackage(word.packageId))}</small><strong>{wordLabel(word)}</strong><small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
     </div>
   );
 }

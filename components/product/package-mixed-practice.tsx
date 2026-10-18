@@ -18,9 +18,9 @@ export function PackageMixedPractice({ pack, onAudio, onBack, onAttempt }: {
 }) {
   const available = useMemo(() => mixedModes.filter(mode => createMixedRound(pack, mode.id, 1).length), [pack]);
   const [mode, setMode] = useState<MixedMode>(available[0]?.id ?? 'listen');
-  return <section className="cp-panel cp-mixed-practice" aria-label="Alles oefenen">
+  return <section className="cp-panel cp-mixed-practice" aria-label="Woordenmix">
     <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
-    <header className="cp-panel-heading"><h1>Alles oefenen</h1></header>
+    <header className="cp-panel-heading"><h1>Woordenmix</h1></header>
     <nav className="cp-mixed-modes" aria-label="Kies hoe je oefent">
       {available.map(item => { const Icon = icons[item.id]; return <button key={item.id} className={mode === item.id ? 'active' : ''} aria-pressed={mode === item.id} onClick={() => { stopMedia(); setMode(item.id); }}><Icon aria-hidden="true" />{item.label}</button>; })}
     </nav>
@@ -55,5 +55,5 @@ function MixedRound({ pack, mode, onAudio, onAttempt }: { pack: PackageDefinitio
       initialExerciseId={restart ? undefined : startPosition}
       onPosition={exerciseId => setSession(current => current.exerciseId === exerciseId ? current : { ...current, exerciseId })}
       onAttempt={record} onLessonDone={() => setSession(current => ({ ...current, done: true }))}
-      onComplete={again} completeLabel="Nog een ronde" title="Alles oefenen" description="" />;
+      onComplete={again} completeLabel="Nog een ronde" title="Woordenmix" description="" />;
 }

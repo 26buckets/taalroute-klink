@@ -43,7 +43,7 @@ async function openQuestion(exercise, targetPage = page) {
   } else {
     await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
     await targetPage.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
-    await targetPage.getByRole('button', { name: 'Oefeningen', exact: true }).click();
+    await targetPage.locator('.cp-tabs').getByRole('button', { name: 'Oefeningen', exact: true }).click();
     assert(!(await targetPage.locator('[data-group-practice]').innerText()).includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The activity hub must not reveal the sentence answer');
     const grouped = groupExercises(pack, 'understand').find(item => item.questionId === exercise.questionId);
     expectedId = grouped.exerciseId;

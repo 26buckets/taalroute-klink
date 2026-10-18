@@ -1,4 +1,5 @@
 import type { PackageDefinition, PackageExercise, PackageWord } from './package-content';
+import { learningActivities, learningExercises, type LearningActivity } from './learning-paths.ts';
 import { createMixedRound } from './mixed-practice.ts';
 import { contentById, contentReadingConditions } from './connected-content.ts';
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
@@ -39,6 +40,8 @@ export const groupActivities = [
   { id: 'texts', label: 'Luister naar een verhaal', category: 'Zinnen en verhalen', icon: 'book', mode: 'connected-text' },
   { id: 'dialogues', label: 'Luister naar een gesprek', category: 'Zinnen en verhalen', icon: 'chat', mode: 'connected-dialogue' },
   ...extendedActivities,
+  ...learningActivities,
+  { id: 'learning-review', label: 'Oefen opnieuw', category: 'Samen herhalen', icon: 'book' },
 ] as const;
 export type GroupActivity = typeof groupActivities[number]['id'];
 
@@ -99,7 +102,15 @@ function spokenWordBoards(pack: PackageDefinition, seed: number): PackageExercis
   return boards;
 }
 
+const learningCache = new WeakMap<PackageDefinition, Map<string, PackageExercise[]>>();
 export function groupExercises(pack: PackageDefinition, activity: GroupActivity, seed = 1): PackageExercise[] {
+  if (activity === 'learning-review') return learningActivities.flatMap(item => groupExercises(pack, item.id, seed).filter(exercise => exercise.reviewEligible));
+  if (learningActivities.some(item => item.id === activity)) {
+    if (!learningCache.has(pack)) learningCache.set(pack, new Map());
+    const cache = learningCache.get(pack)!, key = `${activity}:${seed}`;
+    if (!cache.has(key)) cache.set(key, learningExercises(pack, activity as LearningActivity, id => groupExercises(pack, id as GroupActivity, seed)));
+    return cache.get(key)!;
+  }
   if (extendedActivities.some(item => item.id === activity)) return extendedExercises(pack, activity as ExtendedActivity, seed);
   const definition = groupActivities.find(item => item.id === activity)!;
   const groupWordIds = new Set(pack.words.map(word => word.id));
