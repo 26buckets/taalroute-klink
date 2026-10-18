@@ -28,7 +28,7 @@ async function heard(src) {
 try {
   await page.goto(`${base}/#learner/home`);
   await page.locator('.cp-package-grid button').first().click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   const listen = await current('listen');
   await heard(listen.prompt.audio.src);

@@ -4,7 +4,7 @@ import { practiceStages } from '../lib/learner-route.ts';
 export async function openGroupActivity(page, activity, { beforeOpen } = {}) {
   const usage = practiceStages.find(stage => stage.id === 'use').activities.includes(activity);
   await page.locator('.cp-tabs').getByRole('button', { name: 'Woorden', exact: true }).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: usage ? 'Gebruiken' : 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: usage ? 'Gebruiken' : 'Oefenen met deze woorden', exact: true }).click();
   if (await page.locator('.cp-step-scope select').count()) await page.locator('.cp-step-scope select').selectOption('');
   let readiness;
   if (usage) {

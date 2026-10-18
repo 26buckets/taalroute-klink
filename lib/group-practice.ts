@@ -1,3 +1,4 @@
+import { importedActivities, importedExercisesForPack, type ImportedActivity } from './imported-practice.ts';
 import type { PackageDefinition, PackageExercise, PackageWord } from './package-content';
 import { learningActivities, learningExercises, type LearningActivity } from './learning-paths.ts';
 import { createMixedRound } from './mixed-practice.ts';
@@ -5,6 +6,8 @@ import { contentById, contentReadingConditions } from './connected-content.ts';
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
 import { resolveRegisteredAudio } from './audio-register.ts';
 import { extendedActivities, extendedExercises, type ExtendedActivity } from './extended-practice.ts';
+
+import { standardActivities, standardExercises, type StandardActivity } from './standard-practice.ts';
 
 // These are activities on the existing word groups, not a second curriculum.
 export const groupActivities = [
@@ -40,6 +43,8 @@ export const groupActivities = [
   { id: 'texts', label: 'Luister naar een verhaal', category: 'Zinnen en verhalen', icon: 'book', mode: 'connected-text' },
   { id: 'dialogues', label: 'Luister naar een gesprek', category: 'Zinnen en verhalen', icon: 'chat', mode: 'connected-dialogue' },
   ...extendedActivities,
+  ...standardActivities,
+  ...importedActivities,
   ...learningActivities,
   { id: 'learning-review', label: 'Oefen opnieuw', category: 'Samen herhalen', icon: 'book' },
 ] as const;
@@ -104,6 +109,8 @@ function spokenWordBoards(pack: PackageDefinition, seed: number): PackageExercis
 
 const learningCache = new WeakMap<PackageDefinition, Map<string, PackageExercise[]>>();
 export function groupExercises(pack: PackageDefinition, activity: GroupActivity, seed = 1): PackageExercise[] {
+  if (activity.startsWith('content-')) return unique([...pack.exercises.filter(item => item.groupActivity === activity), ...importedExercisesForPack(pack, activity as ImportedActivity)], item => item.exerciseId);
+  if (standardActivities.some(item => item.id === activity)) return standardExercises(pack, activity as StandardActivity, seed);
   if (activity === 'learning-review') return learningActivities.flatMap(item => groupExercises(pack, item.id, seed).filter(exercise => exercise.reviewEligible));
   if (learningActivities.some(item => item.id === activity)) {
     if (!learningCache.has(pack)) learningCache.set(pack, new Map());

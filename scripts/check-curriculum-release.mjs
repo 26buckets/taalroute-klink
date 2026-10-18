@@ -6,6 +6,7 @@ import { groupInstructionNeeds } from '../lib/group-practice.ts';
 import { extendedInstructionNeeds } from '../lib/extended-practice.ts';
 import { resolveRegisteredAudio } from '../lib/audio-register.ts';
 import { instructionAudioEnabled } from '../lib/audio-policy.ts';
+import { importedDomains, importedItemIssues } from '../lib/imported-practice-contract.ts';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
 const media = read('../data/klink-media.json');
@@ -15,8 +16,9 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-clear-step-line-20261018.json';
-const previousAuthorizationPath = 'docs/klink-owner-release-step-frames-20261018.json';
+const authorizationPath = 'docs/klink-owner-release-cumulative-20261018.json';
+const previousAuthorizationPath = 'docs/klink-owner-release-clear-step-line-20261018.json';
+const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
   const approval = JSON.parse(readFileSync(authorizationPath));
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));
@@ -24,11 +26,50 @@ try {
   const required = ['lib/group-practice.ts', 'lib/extended-practice.ts', 'lib/mixed-practice.ts', 'data/klink-functional-writing.json', 'data/klink-audio-policy.json', 'lib/learning-paths.ts', 'lib/learning-review.ts', 'data/klink-learning-rules.json', 'components/product/learning-path-surface.tsx', 'data/klink-learning-paths-release.json'];
   required.push('lib/learner-route.ts', 'lib/content-levels.ts', 'components/product/route-settings.tsx', 'components/product/practice-line.tsx', 'components/product/package-experience.tsx', 'components/product/learner-app.tsx', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'docs/KLINK-GOEDGEKEURDE-NAVIGATIE-20261018.md');
   required.push('components/product/teacher-picture-guide.tsx', 'lib/teacher-picture-guide.ts');
+  required.push('data/klink-imported-practice.json', 'lib/imported-practice.ts', 'lib/imported-practice-contract.ts', 'lib/standard-practice.ts', 'lib/standard-player-contract.ts', 'components/product/imported-practice-surface.tsx', 'components/product/imported-teacher-workflow.tsx', 'components/product/standard-practice-surface.tsx', 'scripts/adapt-release-item.mjs', 'scripts/import-release-candidates.mjs', 'scripts/review-cumulative-candidates.mjs');
+  required.push(...['owner-instruction', 'admissions', 'candidate-index', 'review-summary', 'verification-final', 'source-drive-verification', 'media-drive-verification', 'source-backup-manifest', 'live-baseline-check', ...importedDomains.map(domain => `${domain}-item-review`)].map(name => `${cumulativeEvidence}/${name}.json`));
   if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
   }
+  const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
+  const proof = name => JSON.parse(readFileSync(`${cumulativeEvidence}/${name}.json`));
+  const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+  const scope = approval.cumulativeRelease;
+  requireProof(approval.userRequest === proof('owner-instruction').userRequest);
+  requireProof(scope?.included === 1393 && scope.excluded === 478 && scope.pendingClassification === 4 && scope.teacherSupported === true && scope.independentReading === false && scope.reviewEligible === false && scope.humanReviewClaimed === false && scope.audioPaused === true && scope.newAudioConnections === 0);
+  requireProof(JSON.stringify(scope.sixPlayers) === JSON.stringify(['word-sort', 'text-evidence', 'verb-choice', 'context-order', 'situation-point', 'practice-branch']));
+  const live = proof('live-baseline-check');
+  requireProof(live.liveRelease?.sourceCommit === readiness.baseline.sourceCommit && live.liveRelease?.sourceClean === true && live.liveRelease?.branch === readiness.canonicalBranch && live.liveWorkerVersion === readiness.baseline.liveWorkerVersion && live.liveSourceIsAncestor === true && approval.contentSourceCommit === live.localHead);
+  const backup = proof('source-drive-verification');
+  requireProof(backup.sourceArchive?.id === scope.sourceArchiveId && backup.sourceArchive?.sha256 === scope.sourceArchiveSha256 && backup.sourceArchive?.parentVerified === true && backup.sourceArchive?.downloadedByteIdentical === true && backup.sourceArchive?.zipCrcVerified === true);
+  requireProof(proof('media-drive-verification').allDownloadedByteIdentical === true && proof('verification-final').fullLocalRegression?.completed === true);
+  const manifest = proof('source-backup-manifest');
+  requireProof(manifest.length === backup.sourceArchive.manifestEntriesVerified);
+  const archived = new Map(manifest.map(row => [row.path, row]));
+  requireProof(archived.size === manifest.length && archived.get('source/data/klink-imported-practice.json')?.sha256 === approval.files['data/klink-imported-practice.json']);
+  const admissions = proof('admissions'), candidates = proof('candidate-index');
+  requireProof(candidates.length === importedDomains.length && new Set(candidates.map(row => row.domain)).size === importedDomains.length && importedDomains.every(domain => candidates.some(row => row.domain === domain)));
+  const admitted = new Map(), excluded = new Set(); let pending = 0;
+  for (const candidate of candidates) {
+    const review = proof(`${candidate.domain}-item-review`), admission = admissions[candidate.domain];
+    requireProof(admission?.candidateSha256 === candidate.candidateSha256 && review.candidateSha256 === candidate.candidateSha256 && archived.get(candidate.archiveCandidatePath)?.sha256 === candidate.candidateSha256);
+    pending += review.pendingClassificationItems.length;
+    const decisions = new Map(review.records.map(row => [row.id, row]));
+    requireProof(decisions.size === review.records.length);
+    for (const item of admission.items) {
+      const reviewed = decisions.get(item.id);
+      requireProof(!admitted.has(item.id) && item.responseReviewed === true && item.preparationReviewed === true && item.levelReviewed === true && reviewed?.decision === 'admitted' && reviewed.itemSha256 === item.itemSha256 && reviewed.renderedItemSha256 === item.renderedItemSha256 && reviewed.evidence.length > 0);
+      for (const evidence of reviewed.evidence) requireProof(archived.get(candidate.archiveEvidencePrefix + evidence.path)?.sha256 === evidence.sha256 && evidence.bytes > 0);
+      admitted.set(item.id, { ...item, domain: candidate.domain });
+    }
+    for (const item of review.records.filter(row => row.decision === 'excluded')) { requireProof(!excluded.has(item.id) && item.reasons.length > 0); excluded.add(item.id); }
+    requireProof(review.records.length === admission.items.length + review.records.filter(row => row.decision === 'excluded').length);
+  }
+  const imported = read('../data/klink-imported-practice.json').items;
+  requireProof(admitted.size === scope.included && imported.length === scope.included && excluded.size === scope.excluded && pending === scope.pendingClassification && new Set(imported.map(item => item.id)).size === imported.length);
+  for (const item of imported) requireProof(!excluded.has(item.id) && admitted.get(item.id)?.domain === item.domain && admitted.get(item.id)?.renderedItemSha256 === digest(item) && importedItemIssues(item).length === 0);
   ownerAuthorized = true;
 } catch { issues.push('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'); }
 const ownerRelease = record => ownerAuthorized && [authorizationPath, previousAuthorizationPath, 'docs/klink-owner-release-picture-guide-20261018.json', 'docs/klink-owner-release-compact-route-20261018.json', 'docs/klink-owner-release-route-panel-20261018.json', 'docs/klink-owner-release-round3-20261018.json'].includes(record.ownerAuthorization);

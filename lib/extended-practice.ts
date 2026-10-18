@@ -1,3 +1,4 @@
+import { markTask, type GapTask } from './standard-player-contract.ts';
 import type { PackageDefinition, PackageExercise } from './package-content';
 import { contentById, contentReadingConditions } from './connected-content.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
@@ -74,7 +75,7 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
     const step = pack.lessons.find(lesson => lesson.id === source.lessonId);
     if (!item || !step) return [];
     const common: PackageExercise = { ...base, exerciseId: `${pack.id}:group:${activity}:${item.id}`, contextId: item.id,
-      sourceContentIds: [item.id], sourceExerciseId: source.exerciseId, lessonId: step.id, sourceLessonIds: [step.id],
+      sourceContentIds: [item.id], sourceExerciseId: source.exerciseId, lessonId: step.id, sourceLessonIds: [...new Set(pack.exercises.filter(row => row.contextId === item.id).map(row => row.lessonId!))],
       targetWordIds: (source.wordIds as string[]).filter(id => pack.words.some(word => word.id === id)),
       readingConditions: contentReadingConditions(item, step), sourceLevel: item.sourceLevel,
       sourceText: item.text, sourceBlocks: item.blocks, contentTitle: item.title,
@@ -90,14 +91,15 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
         // Keep only a precise single-sentence proof. Whole-story evidence cannot be a meaningful selection task.
         const at = sentences.findIndex(text => normalize(text) === normalize(question.evidence));
         if (sentences.length < 2 || at < 0) return [];
-        return [{ ...common, question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
+        return [{ ...common, title: markTask(item.text, question.evidence, question.answer) ? 'Tik op de woorden met het antwoord.' : 'Tik op alle woorden van de zin met het antwoord.', question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
+          standardTask: markTask(item.text, question.evidence, question.answer) ?? { ...markTask(item.text, question.evidence, question.evidence)!, help: 'Zoek de zin met het antwoord. Tik op alle woorden van die zin.' }, manualAdvance: true,
           options: sentences.map((label, at) => ({ id: `${at}`, label })), answer: { correctOptionIds: [`${at}`] },
           distractorReason: 'Andere zinnen uit dezelfde bron; de bewijszin bevat het gevraagde antwoord.',
         }];
       }
       const labels = [question.answer, ...question.distractors];
       if (new Set(labels).size !== labels.length || labels.length < 2) return [];
-      return [{ ...common, question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
+      return [{ ...common, title: markTask(item.text, question.evidence, question.answer) ? 'Tik op de woorden met het antwoord.' : 'Tik op alle woorden van de zin met het antwoord.', question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
         options: orderedChoices(labels.map((label, at) => ({ id: `${at}`, label, audio: registered(`${item.id}:answer:${at}`, label, 'target') })), seed + index),
         answer: { correctOptionIds: ['0'] }, distractorReason: 'Antwoord en betekenisafleiders ongewijzigd uit de bestaande bronvraag.',
       }];
@@ -134,13 +136,16 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
     }
     if (activity === 'verb-choice') {
       // Narrow, unambiguous subject/verb agreement, not a claim of a complete grammar curriculum.
-      const forms: Record<string, string[]> = { ben: ['bent', 'is'], heb: ['hebt', 'heeft'], lees: ['leest', 'lezen'], loop: ['loopt', 'lopen'], zit: ['zitten'], pak: ['pakt', 'pakken'], drink: ['drinkt', 'drinken'], werk: ['werkt', 'werken'], kom: ['komt', 'komen'], ga: ['gaat', 'gaan'], maak: ['maakt', 'maken'], eet: ['eet', 'eten'] };
-      if (tokens[0] !== 'Ik' || !forms[tokens[1]] || tokens.length > 9 || tokens.includes('?')) return [];
-      const alternatives = unique([tokens[1], ...forms[tokens[1]]], value => value);
-      return [{ ...common, activityTypeId: 'ZI-03', question: tokens.map((token, at) => at === 1 ? '…' : token).join(' '),
+      const infinitives: Record<string, string> = Object.fromEntries('ben:zijn heb:hebben lees:lezen loop:lopen zit:zitten pak:pakken drink:drinken werk:werken kom:komen ga:gaan maak:maken eet:eten leg:leggen zie:zien schrijf:schrijven kam:kammen hang:hangen trek:trekken breek:breken roer:roeren geef:geven zet:zetten doe:doen veeg:vegen wijs:wijzen droog:drogen kijk:kijken beweeg:bewegen strek:strekken was:wassen kleur:kleuren plan:plannen bewaar:bewaren schenk:schenken pas:passen groet:groeten wacht:wachten vind:vinden houd:houden druk:drukken tel:tellen draai:draaien vul:vullen leun:leunen stap:stappen vouw:vouwen stop:stoppen schud:schudden meet:meten ruik:ruiken vertel:vertellen ruim:ruimen steek:steken knoop:knopen slaap:slapen zeg:zeggen hoor:horen oefen:oefenen kook:koken vergelijk:vergelijken leer:leren speel:spelen volg:volgen weeg:wegen deel:delen poets:poetsen verplaats:verplaatsen fiets:fietsen betaal:betalen verf:verven spreek:spreken kies:kiezen snijd:snijden wil:willen voel:voelen verbeter:verbeteren repareer:repareren koop:kopen smeer:smeren teken:tekenen zoek:zoeken haal:halen'.split(' ').map(pair => pair.split(':')));
+      const verb = tokens[1];
+      if (tokens[0] !== 'Ik' || !infinitives[verb] || tokens.length > 9 || item.text.includes('?')) return [];
+      const third = ({ ben: 'is', heb: 'heeft', ga: 'gaat', wil: 'wil' } as Record<string, string>)[verb] ?? (verb.endsWith('t') ? verb : verb + 't');
+      const alternatives = unique([verb, third, infinitives[verb]], value => value);
+      const gap: GapTask = { kind: 'gap', cue: `Werkwoord: ${infinitives[tokens[1]]}`, before: 'Ik ', after: ` ${tokens.slice(2).join(' ')}`, acceptedAnswers: verb === 'houd' ? ['houd', 'hou'] : verb === 'snijd' ? ['snijd', 'snij'] : [verb], options: orderedChoices(alternatives.map(label => ({ id: label, label })), seed + index), help: 'De zin begint met ik. Welk woord past op de lege plek?', model: item.text };
+      return [{ ...common, title: 'Vul het werkwoord in.', additionalReadingCondition: 'Werkwoordnaam en ik-vorm samen met de docent voorbereiden; niet automatisch een bekend woord.', instructionNeedId: 'klink-standard-gap-instruction', standardTask: gap, manualAdvance: true, activityTypeId: 'ZI-03', question: tokens.map((token, at) => at === 1 ? '…' : token).join(' '),
         sourceText: undefined, sourceBlocks: [], sourceModel: item.text, modelAudio: item.blocks[0].audio,
         options: orderedChoices(alternatives.map(label => ({ id: label, label })), seed + index),
-        answer: { correctOptionIds: [tokens[1]] }, rule: 'Bij ik gebruik je hier de ik-vorm van het werkwoord.',
+        answer: { correctOptionIds: gap.acceptedAnswers }, rule: 'Bij ik gebruik je hier de ik-vorm van het werkwoord.',
         distractorReason: 'Dezelfde werkwoordbetekenis, maar een vorm die niet bij het onderwerp ik past.',
         objective: `ZI-03:${item.id}:onderwerp-werkwoord`,
       }];

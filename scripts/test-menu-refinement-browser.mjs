@@ -20,14 +20,14 @@ await page.addInitScript(() => {
 try {
   await page.goto(`${base}/#learner/package/groep-1`);
   await page.locator('.cp-word-grid').waitFor();
-  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.locator('[data-group-practice]').waitFor();
-  assert.equal(await page.locator('[data-group-practice] h1').innerText(), 'Samen oefenen');
-  assert.equal(await page.locator('.cp-tabs [aria-current="page"]').innerText(), 'Samen oefenen');
+  assert.equal(await page.locator('[data-group-practice] h1').innerText(), 'Oefenen met deze woorden');
+  assert.equal(await page.locator('.cp-tabs [aria-current="page"]').innerText(), 'Oefenen met deze woorden');
   await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
-  await page.locator('.cp-lesson-picker').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-lesson-picker').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
-  assert.equal(await page.locator('.cp-tabs [aria-current="page"]').innerText(), 'Samen oefenen');
+  assert.equal(await page.locator('.cp-tabs [aria-current="page"]').innerText(), 'Oefenen met deze woorden');
   await page.locator('.cp-mixed-practice > .text-back').click();
   await page.locator('[data-group-practice]').waitFor();
   pass('Word overview button, section tab and practice heading agree; mixed lessons keep a visible parent and return to lessons');

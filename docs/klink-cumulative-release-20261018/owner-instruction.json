@@ -1,0 +1,76 @@
+{
+  "version": "2026-10-18-finalization-v1",
+  "userMessageDate": "2026-10-18",
+  "recordedAtUtc": "2026-10-18T18:10:06Z",
+  "userRequest": "Alles. Dus alles van Klink wat nu gebouwd wordt gaan we afronden en alles uploaden naar online.",
+  "scope": "Alle reeds vastgelegde eindige Klink-inhoudswachtrijen afronden en bestaande app-/spelerwijzigingen bundelen; centrale integratie, lokale volledige controles en publicatie. Geen nieuwe doelen of quota toevoegen.",
+  "workerInstructions": [
+    "Dit is de nieuwe eindopdracht, in plaats van telkens één losse batch. Rond je bestaande eindige wachtrij in volgorde af. Werk in kleine brongebonden deelcycli; elke cyclus behoudt eerste review, afzonderlijke kritiek, herstel, tweede review en lokale controles. Geen formele quota opblazen; betekenisvolle hergebruikte items slechts eenmaal tellen.",
+    "Lees protocol.json als kwaliteitsbasis. De centrale regie mag nu appwijzigingen integreren en publiceren. Productiechats blijven uitsluitend in de eigen werkmap, zonder commits/pushes/audio/audiokoppelingen/livepublicatie; wacht niet op nieuwe regieberichten voor iedere niet-geblokkeerde cel binnen deze eindopdracht.",
+    "Individuele leerlinggegevens zijn geen voorwaarde voor offline materiaalontwerp. Leg volledige concrete leesvoorbereiding vast; geen automatische leerlingvrijgave, beheersing of menselijke review claimen. Brongebonden voorbereiding zelf uitwerken is onderdeel van de eindopdracht.",
+    "Ontbrekende broninhoud voor een reeds vastgelegde cel mag als eigen nieuwe lokale conceptbron worden uitgewerkt en tweemaal inhoudelijk gecontroleerd. Geen bestaande vastgezette bron stilzwijgend overschrijven; geef correcties als aparte exacte bronpatch met herkomst, reden en tests aan centrale integratie. Geen nieuw doel of eindeloze varianten maken.",
+    "Audio blijft gepauzeerd, losse t afgekeurd. Auditieve doelen zonder goedgekeurde media zijn niet publiceerbaar of voltooid. Breng zulke blokkades afzonderlijk in beeld; overige onafhankelijke tekstuele doelcellen mogen binnen deze expliciete eindopdracht worden uitgewerkt. B1-label alleen na inhoudelijk niveauonderzoek, geen labelplakwerk.",
+    "Bewaar alle vorige versies, reviewbewijzen, aantallen per categorie, docentdoel/lesplankoppeling en bronkoppelingen. Geen schijndekking of DigLin+20%-claim. Maak aan het einde één cumulatief overdrachtspakket met alle eerder afgeronde én nieuw afgeronde unieke items; controleer en verifieer back-up in bestaande Klink-Drive-projectmap.",
+    "Schrijf production-state.json met finalizationId, huidige fase, voltooide/open/werkelijk geblokkeerde doelcellen en bewijsbestanden. Maak release-candidate.json volgens onderstaand compacte contract; dit is voor centrale integratie, geen publicatie door de productiechat.",
+    "Stop bij echte rechten-/inhoudelijke onoplosbare blokkade voor betreffende cel, maar werk onafhankelijke reeds vastgelegde cellen af. Rapporteer geen volledige voltooiing als iets geblokkeerd is. Geen nieuwe chats of automations."
+  ],
+  "exportContract": {
+    "schemaVersion": 1,
+    "domain": "eigen domein",
+    "finalizationId": "regie-20261018-finalize-<domain>",
+    "items": [
+      {
+        "id": "behoud stabiele unieke item-ID",
+        "queueCellId": "brongebonden cel",
+        "level": "Alfa A/B/C/A1/A2/B1",
+        "axis": "literacy of language",
+        "title": "korte cursisttitel",
+        "objective": "concreet doel",
+        "sourceIds": [
+          "bestaande bron-ID of nieuwe lokale bron-ID"
+        ],
+        "mode": "choice | text | teacher",
+        "prompt": "exacte opdrachttekst",
+        "stimulus": "volledige benodigde brontekst/context, niet alleen een bron-ID",
+        "options": [
+          {
+            "id": "a",
+            "text": "antwoordkeuze"
+          }
+        ],
+        "correctOptionIds": [
+          "alle juiste IDs bij choice"
+        ],
+        "acceptedAnswers": [
+          "uitsluitend werkelijk juiste antwoorden bij text"
+        ],
+        "feedback": {
+          "correct": "gerichte feedback",
+          "retry": "gerichte herstelhulp"
+        },
+        "teacherGuidance": "docenthandeling en concrete beoordelingspunten; teacher-modus geeft nooit automatische correctheid",
+        "prerequisites": [
+          "concrete woorden/vormen/letters/betekenissen/bediening vooraf voorbereiden"
+        ],
+        "audioRequired": false,
+        "audioStatus": "paused | existing | not-required",
+        "releaseMode": "teacher-supported | independent | blocked",
+        "blockers": [
+          "echte resterende uitvoeringsblokkades"
+        ],
+        "reviewEvidence": [
+          "relatieve paden eerste review/kritiek/herstel/tweede review/test"
+        ]
+      }
+    ],
+    "queueSummary": {
+      "completed": [],
+      "blocked": [],
+      "remaining": []
+    },
+    "sourcePatches": [],
+    "limitations": [],
+    "reviewEvidence": [],
+    "driveVerification": {}
+  }
+}

@@ -426,3 +426,48 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 .cp-learning-task .cp-choice-grid { width: 100%; }
 .cp-learning-task button { min-height: 48px; min-width: 48px; }
 .cp-learning-task button:focus-visible { outline: 3px solid #486e9c; outline-offset: 3px; }
+
+/* Standard Klink players share the existing type, buttons and page structure. */
+.cp-standard-task { min-width: 0; }
+.cp-standard-task button, .cp-standard-task input { min-width: 48px; min-height: 48px; }
+.cp-standard-task button:focus-visible, .cp-standard-task input:focus-visible { outline: 3px solid var(--primary, #23625e); outline-offset: 3px; }
+.cp-standard-task button[aria-pressed="true"] { outline: 2px solid currentColor; outline-offset: -3px; background: #eaf1ee; }
+.cp-sort-items, .cp-sort-categories, .cp-branch-options, .cp-hotspot-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.cp-sort-items > div:not([hidden]) { display: flex; flex-direction: column; gap: 6px; }
+.cp-sort-categories > button { flex: 1 1 140px; display: flex; flex-direction: column; align-items: flex-start; white-space: normal; }
+.cp-sort-categories small { font-weight: 400; }
+.cp-mark-text { display: flex; flex-wrap: wrap; gap: 6px; line-height: 1.6; }
+.cp-mark-text > button { font: inherit; padding: 8px; white-space: normal; overflow-wrap: anywhere; }
+.cp-standard-task .cp-sequence-result { margin: 0; padding: 12px 12px 12px 38px; min-height: 60px; display: block; }
+.cp-standard-task .cp-sequence-result > li { margin: 8px 0; }
+.cp-standard-task .cp-sequence-options { display: flex; flex-direction: column; gap: 12px; }
+.cp-standard-task .cp-sequence-options button { white-space: normal; text-align: left; }
+.cp-standard-task .cp-sequence-options img, .cp-standard-task .cp-sequence-result img { max-width: 100%; max-height: 180px; object-fit: contain; }
+.cp-hotspot-image { position: relative; width: 100%; max-width: 800px; margin: 24px auto; }
+.cp-hotspot-image > img { display: block; width: 100%; height: auto; }
+.cp-hotspot-image > .cp-hotspot-target { position: absolute; transform: translate(-50%, -50%); width: 48px; height: 48px; padding: 0; justify-content: center; background: transparent; border: 2px solid #315e5b; }
+.cp-hotspot-target > span { position: absolute; top: -8px; left: -8px; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: white; border: 1px solid #315e5b; color: #183633; font-size: 14px; line-height: 1; }
+.cp-hotspot-list { border: 0; margin: 0; padding: 0; }
+.cp-hotspot-list legend { margin-bottom: 12px; }
+.cp-branch-options > button { flex: 1 1 200px; white-space: normal; text-align: left; }
+.cp-branch-consequence { padding: 16px; background: #f3f5f1; }
+.cp-gap-sentence { overflow-wrap: anywhere; }
+
+.cp-content-stimulus { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 22px; line-height: 1.6; }
+.cp-content-preparation { border-left: 3px solid #8daaa4; padding-left: 14px; }
+.cp-content-preparation h4 { font-size: 18px; font-weight: 500; }
+.cp-content-preparation li { margin: 6px 0; overflow-wrap: anywhere; }
+.cp-content-task textarea { width: 100%; min-height: 100px; font: inherit; padding: 12px; border: 1px solid #8daaa4; border-radius: 8px; }
+.cp-content-task { overflow-wrap: anywhere; }
+.cp-workflow-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.cp-teacher-workflow { display: grid; gap: 18px; text-align: left; }
+.cp-workflow-teacher { display: grid; gap: 16px; min-width: 0; }
+.cp-workflow-teacher li { overflow-wrap: anywhere; }
+.cp-observation { display: grid; gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.cp-observation select, .cp-teacher-workflow input { min-width: 0; width: 100%; min-height: 48px; padding: 10px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--paper); font: inherit; }
+.cp-teacher-workflow textarea { width: 100%; min-height: 160px; padding: 12px; border: 1px solid var(--line-strong); border-radius: 4px; font: inherit; }
+
+/* During a teacher task, surrounding word selectors must not disclose a hidden model. */
+.cp-player:has([data-teacher-workflow]) .cp-step-scope { display: none; }
+.cp-player:has([data-teacher-workflow]) .cp-player-bar strong { visibility: hidden; }
+.cp-workflow-source del { text-decoration-thickness: 2px; }

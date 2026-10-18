@@ -50,7 +50,7 @@ try {
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   await page.locator('.cp-lesson-list').waitFor();
   pass('Existing guided player runs model, same word, listening, building, error recovery and completion');
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   for (const activity of groupActivities.filter(item => item.id !== 'learning-review' && !item.id.startsWith('worksheet') && groupExercises(packs[0], item.id).length)) {
     await openGroupActivity(page, activity.id);
     assert(await page.locator('.cp-exercise-stage > section').isVisible());
@@ -76,7 +76,7 @@ try {
   pass('The existing word bank and saved-word review share the new stable meaning IDs');
   await library();
   await page.locator('.cp-package-grid > button').first().click();
-  for (const name of ['Woorden', 'Stap voor stap', 'Samen oefenen', 'Gebruiken']) {
+  for (const name of ['Woorden', 'Stap voor stap', 'Oefenen met deze woorden', 'Gebruiken']) {
     await page.locator('.cp-tabs').getByRole('button', { name, exact: true }).click();
     assert(!/CP00[12]|ALF-CMP|Beeldbinding|assetId|contractVersion|renderer|scope|publicatiestatus|1 oefeningen|1 spellen|zichtbare woorden/i.test(await page.locator('.cp-content').innerText()));
   }

@@ -7,15 +7,21 @@ import { spawnSync } from 'node:child_process';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
-function check(candidate, changeApproval) {
+function check(candidate, changeApproval, changeImported) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     cpSync('lib', join(dir, 'lib'), { recursive: true });
     cpSync('data', join(dir, 'data'), { recursive: true });
+    if (changeImported) {
+      const path = join(dir, 'data/klink-imported-practice.json');
+      const catalog = JSON.parse(readFileSync(path));
+      changeImported(catalog);
+      writeFileSync(path, JSON.stringify(catalog));
+    }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-clear-step-line-20261018.json';
+      const approvalPath = 'docs/klink-owner-release-cumulative-20261018.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -64,6 +70,34 @@ test('New route approval rejects changed hashes and cannot drop the previous app
     approval => { delete approval.files['lib/teacher-picture-guide.ts']; },
     approval => { approval.previousAuthorization = 'unrelated.json'; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+test('Cumulative approval requires every new source, review and verified backup binding', () => {
+  for (const file of ['data/klink-imported-practice.json', 'components/product/imported-teacher-workflow.tsx', 'lib/standard-player-contract.ts', 'docs/klink-cumulative-release-20261018/admissions.json', 'docs/klink-cumulative-release-20261018/teksten-item-review.json', 'docs/klink-cumulative-release-20261018/source-drive-verification.json', 'docs/klink-cumulative-release-20261018/source-backup-manifest.json', 'docs/klink-cumulative-release-20261018/live-baseline-check.json']) {
+    assert(check(proof, approval => { delete approval.files[file]; }).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'), file);
+  }
+});
+test('Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity', () => {
+  for (const change of [
+    approval => { approval.userRequest = 'Unrelated instruction'; },
+    approval => { approval.cumulativeRelease.included++; },
+    approval => { approval.cumulativeRelease.excluded = 0; },
+    approval => { approval.cumulativeRelease.pendingClassification = 0; },
+    approval => { approval.cumulativeRelease.sixPlayers.pop(); },
+    approval => { approval.cumulativeRelease.humanReviewClaimed = true; },
+    approval => { approval.cumulativeRelease.audioPaused = false; },
+    approval => { approval.cumulativeRelease.newAudioConnections = 1; },
+    approval => { approval.cumulativeRelease.sourceArchiveSha256 = '0'.repeat(64); },
+    approval => { approval.contentSourceCommit = baseline.sourceCommit; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+test('Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected', () => {
+  for (const change of [
+    catalog => { catalog.items.pop(); },
+    catalog => { catalog.items[1] = catalog.items[0]; },
+    catalog => { catalog.items[0].prompt += ' changed'; },
+    catalog => { catalog.items[0].id = 'klink-sp-c-01-pennen'; },
+    catalog => { catalog.items[0].level = 'unclassified'; },
+  ]) assert(check(proof, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 test('Proof for a different live version cannot satisfy the publication gate', () => {
   assert(check({ ...proof, liveWorkerVersion: 'another-version' }).includes('herkomstbewijs past niet'));

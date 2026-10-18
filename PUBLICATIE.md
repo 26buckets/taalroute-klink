@@ -273,3 +273,36 @@ A2+/B1−, redactioneel beoordeeld; geen formele niveaucertificering of docentpr
 Boekdoel, echte bijeenkomst, materiaal, tijd en lesbezoekkader blijven verbonden.
 Zie `docs/KLINK-HANDLEIDING-REVIEW-20261018.md` en het bijbehorende reviewrecord.
 Leerinhoud, audio, beelden, routes en opgeslagen voortgang blijven ongewijzigd.
+
+## Voorbereide cumulatieve overdracht — nog niet gepubliceerd
+
+De overdracht `publication-contract-handoff-001` legt Nico's bestaande opdracht
+van 18 oktober vast voor de lokaal gecontroleerde uitbreiding. Het nieuwe
+inhoudsgebonden akkoord is
+`docs/klink-owner-release-cumulative-20261018.json`. Het bewaart de hele scope
+van het voorgaande akkoord en bindt de actuele bron, 1.393 toegelaten records,
+zes spelers, kandidaat-/weergavehashes, reviewdossiers, lokale controles en de
+teruggelezen Drive-back-up. De exacte opdracht staat in het akkoord en in
+`docs/klink-cumulative-release-20261018/owner-instruction.json`.
+
+Dit is voorbereiding van de publicatieoverdracht, geen nieuwe liveversie.
+De actieve livebron en Worker-versie bovenaan dit document blijven leidend.
+De bronbasis van de werkmap is `011b5d3be44c87ed152137f7e246bb47427c3ba0`,
+een afstammeling van de livebron; de concrete on-gecommitte wijzigingen zijn
+met bestandshashes gebonden. De gewone publicatiepoort moet nog blokkeren op
+de werkbranch en ontbrekende commit. Centrale regie bundelt later de exacte
+gecontroleerde bron op main en gebruikt de normale publicatieroute.
+
+De 478 uitgesloten kandidaten en vier afzonderlijke ongeclassificeerde teksten
+zijn niet vrijgegeven. De audiopauze blijft gelden: geen nieuwe audio of
+koppelingen. Docentafronding blijft deelname, zonder onafhankelijke
+leesvrijgave, beheersingsclaim, menselijke itemreview of volledige methode- en
+niveaudekkingsclaim. Historische akkoorden en menselijke reviewstatussen blijven
+ongewijzigd. De eenvoudigere bedieningstaal van de zes spelers verandert geen
+hoger ingedeelde brontekst in A1-materiaal.
+
+Herstel gebruikt de eerder geverifieerde bronback-up en acht mediapakketten,
+aangevuld met de afzonderlijke bron-/bewijsdelta van deze overdracht. Controles,
+resterende publicatiestappen en delta-ontvangstcontrole worden vastgelegd in
+`outputs/publication-contract-handoff-20261018/HANDOFF.md` en het gedeelde
+`adapter-status-six-players.json`. Een back-up is geen livepublicatie.

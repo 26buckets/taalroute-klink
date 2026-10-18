@@ -11,6 +11,8 @@ import { contentLevels, sourceContentLevel, wordContentLevel } from '@/lib/conte
 import { contentById } from '@/lib/connected-content';
 import { contextReadiness, pictureGrowth, readinessLabels, practiceStages } from '@/lib/learner-route';
 import { MyRoute, useRouteSettings } from './route-settings';
+import { importedActivities, importedItems } from '@/lib/imported-practice';
+import { chapterHash } from '@/lib/practice-chapters';
 
 const statuses = Object.keys(planStatusLabels) as PlanStatus[];
 const statusClasses: Record<BuildStatus, PlanStatus> = { works: 'connected', partial: 'available', missing: 'missing', different: 'unnecessary' };
@@ -34,13 +36,18 @@ export function LessonCoverage({ onOpen }: { onOpen: (id: PackageId) => void }) 
     </div>
     <dl className="cp-coverage-words"><div><dt>Bekende woorden</dt><dd>{words(lesson.known)}</dd></div><div><dt>Nieuwe woorden</dt><dd>{words(lesson.newWords)}</dd></div><div><dt>Woorden die terugkomen</dt><dd>{words(lesson.returning)}</dd></div></dl>
     {lesson.scope && <p>{lesson.scope}</p>}
+    {importedActivities.length > 0 && <details className="cp-coverage-overview" data-content-practice><summary>Verder oefenen met de docent</summary>
+      <p>Deze opdrachten staan bij de bestaande oefenhoofdstukken. Bereid de genoemde woorden, vormen en bediening samen voor. Koppel de opdracht aan het boekdoel, de echte bijeenkomst en de beschikbare lestijd.</p>
+      <ul>{importedActivities.map(activity => <li key={activity.id}><a href={chapterHash({chapter: activity.chapter, activity: activity.id, level: 'all'})}>{activity.label}</a> — {importedItems.filter(item => item.domain === activity.domain).length} opdrachten</li>)}</ul>
+      <p>Docentopdrachten worden als geoefend bijgehouden. Een afgeronde opdracht bewijst geen zelfstandig lezen of algemeen taalniveau.</p>
+    </details>}
     <details className="cp-coverage-overview" data-level-coverage><summary>Niveaus, leeropbouw en beeldsteun</summary>
       <MyRoute />
       <p>Alfa A–C beschrijft de lees-/schrijflijn; A1–B1 betreft taalgebruik. Dit overzicht deelt broninhoud in, niet de beheersing van een cursist. Bronlabels en woordvoorwaarden zijn geen complete niveaucursus.</p>
       <div className="cp-coverage-table-wrap"><table className="cp-coverage-table"><caption>Aanbod in {pack.title}</caption><thead><tr><th>Groep</th><th>Woorden</th><th>Zinnen, teksten en gesprekken met bronlabel</th></tr></thead><tbody>{contentLevels.filter(level => !['all', 'support'].includes(level.id)).map(level => <tr key={level.id}><th scope="row">{level.label}</th><td>{pack.words.filter(word => wordContentLevel([word.id]) === level.id).length}</td><td>{[...pack.texts, ...pack.dialogues].filter(item => sourceContentLevel(contentById.get(item.id)?.sourceLevel) === level.id).length}</td></tr>)}</tbody></table></div>
       <p>Een nul betekent dat hier nog geen onderbouwde inhoud is ingedeeld. Niet-gelabelde bronnen blijven bij Gebruiken beschikbaar, maar worden niet tot Alfa C of B1 verklaard.</p>
       <ol>{practiceStages.map(stage => <li key={stage.id}><strong>{stage.label}.</strong> {stage.description}</li>)}</ol>
-      <p>Klikroute: Lessen → onderdeel → Woorden / Stap voor stap / Samen oefenen / Gebruiken. De gekozen kleine stap wordt meegenomen naar Samen oefenen en Gebruiken. Alle woorden blijft een bewuste keuze; een bord of leerreeks wordt nooit half aangeboden.</p>
+      <p>Klikroute: Lessen → onderdeel → Woorden / Stap voor stap / Oefenen met deze woorden / Gebruiken. De gekozen kleine stap wordt meegenomen naar Oefenen met deze woorden en Gebruiken. Alle woorden blijft een bewuste keuze; een bord of leerreeks wordt nooit half aangeboden.</p>
       <p>Bij dezelfde woorden telt groeien als minder voorbeeld, zelf terughalen, toepassen en gemengd herhalen. Klaar of een goede keuze bewijst geen algemeen niveau. Koppel de gekozen opdracht aan het bestaande boekdoel en het voorbeeldlesblok hieronder; controleer zichtbaar cursistgedrag voordat je moeilijker materiaal kiest.</p>
       <h3>Beeldopbouw</h3><ol>{pictureGrowth.map(stage => <li key={stage.id}><strong>{stage.label}.</strong> {stage.description} {stage.id === 'object' ? `${pack.words.filter(word => word.image).length} bestaande woordbeelden.` : stage.id === 'situation' ? `${pack.scenes.filter(scene => scene.image).length} bestaande situatiebeelden; bespreken met de docent, geen automatische beeldbegripscore.` : ''}</li>)}</ol>
       <p>Bij woordbouw en woorddictee: foto zichtbaar, foto als hulp of foto na een goed antwoord. Hulp blijft bereikbaar. Voorbeelden, antwoordkeuzes en situatiebeelden worden niet verborgen. Nieuwe beelden of beeldreeksen zijn niet gegenereerd; de bestaande afbeeldingen blijven ongewijzigd.</p>

@@ -18,7 +18,7 @@
     "test:ux": "node scripts/test-learner-ux-browser.mjs && node scripts/test-learner-ux-audio-browser.mjs",
     "inventory:audio": "node scripts/build-audio-register.mjs",
     "pretest:curriculum": "node --test scripts/test-audio-register.mjs",
-    "posttest:review": "node scripts/test-audio-register-browser.mjs && npm run test:group-practice && npm run test:chapters && npm run test:learning-paths && npm run test:menu && npm run test:routes",
+    "posttest:review": "node scripts/test-audio-register-browser.mjs && npm run test:group-practice && npm run test:chapters && npm run test:learning-paths && npm run test:menu && npm run test:routes && npm run test:standard-players && npm run test:content-import",
     "test:menu": "node scripts/test-menu-navigation-browser.mjs && node scripts/test-menu-refinement-browser.mjs && npm run test:didactic",
     "test:didactic": "node --test scripts/test-didactic-round3.mjs && node scripts/test-didactic-round3-browser.mjs",
     "test:routes": "node --test scripts/test-level-routes.mjs && node scripts/test-level-routes-browser.mjs && node scripts/test-route-panel-browser.mjs && node scripts/test-picture-guide-browser.mjs",
@@ -29,7 +29,9 @@
     "check:publication": "node scripts/check-curriculum-release.mjs",
     "deploy": "npm run check:publication && npm run build && wrangler deploy --config dist/server/wrangler.json",
     "format": "oxfmt",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "test:standard-players": "node --test scripts/test-standard-players.mjs && node scripts/test-standard-players-browser.mjs && node scripts/test-standard-player-variants-browser.mjs && node scripts/test-standard-integration-browser.mjs",
+    "test:content-import": "node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

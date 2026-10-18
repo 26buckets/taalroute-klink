@@ -156,7 +156,7 @@ try {
   await openLesson(packs[0], packs[0].lessons[0]);
   assert.equal(await page.locator('[data-build-checklist], [data-sentence-bridge]').count(), 0);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await page.locator('[data-activity="dictation"]').click();
   assert.equal(await page.locator('.cp-example-listen').count(), 0);
   assert(await page.locator('.cp-text-entry input').isDisabled());

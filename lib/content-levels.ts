@@ -1,3 +1,5 @@
+import { importedItems } from './imported-practice.ts';
+import { importedLevels } from './imported-practice-contract.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import { contentById } from './connected-content.ts';
 import type { PackageExercise } from './package-content';
@@ -39,11 +41,13 @@ export function wordContentLevel(ids: string[]): ContentLevel {
 
 // Presence is not a completed course or a learner's attained level.
 export const availableContentLevels = new Set<ContentLevel>([
+  ...importedItems.map(item => importedLevels[item.level]),
   ...curriculum.words.map(word => wordContentLevel([word.id])),
   ...[...contentById.values()].map(source => sourceContentLevel(source.sourceLevel)),
 ]);
 
 export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
+  if (exercise.componentId === 'KLINK-CONTENT' && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
   // A known word inside a sentence does not establish the level of that sentence.
   if (exercise.contextId) return sourceContentLevel(typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId)?.sourceLevel : undefined);
   const targets = [...(Array.isArray(exercise.targetWordIds) ? exercise.targetWordIds as string[] : []), ...(typeof exercise.wordId === 'string' ? [exercise.wordId] : [])];

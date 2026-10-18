@@ -42,14 +42,18 @@ try {
   pass('Source, question, stable retry choices, keyboard answer and deliberate continuation');
   await forward().click();
   item = await open('text-evidence');
-  await page.locator('.cp-evidence-options button').nth(item.options.findIndex(option => item.answer.correctOptionIds.includes(option.id))).click();
+  if (item.standardTask) {
+  for (const id of item.standardTask.acceptedSelections[0]) await page.locator(`[data-word-token="${id}"]`).click();
+  await page.getByRole('button', { name: 'Controleer', exact: true }).click();
+} else await page.locator('.cp-evidence-options button').nth(item.options.findIndex(option => item.answer.correctOptionIds.includes(option.id))).click();
   assert(await forward().isEnabled());
   pass('Evidence selection is answered against an exact existing source sentence');
 
   const grammarIndex = packs.findIndex(pack => extendedExercises(pack, 'verb-choice').length);
   item = await open('verb-choice', grammarIndex);
   assert.equal(await page.locator('.cp-source-text').count(), 0, 'No answer in the displayed source');
-  await page.getByRole('button', { name: 'Help', exact: true }).click();
+  await page.getByRole('button', { name: 'Kies een woord', exact: true }).click();
+await page.getByRole('button', { name: 'Voorbeeld', exact: true }).click();
   assert((await page.locator('.cp-source-text').innerText()).includes(item.sourceModel));
   await page.locator('.cp-choice-grid .cp-extended-option > button:first-child').nth(item.options.findIndex(option => item.answer.correctOptionIds.includes(option.id))).click();
   let attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));

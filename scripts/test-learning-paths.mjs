@@ -212,13 +212,16 @@ test('Review plans only encountered retrieval items, resets on help/error, and n
   assert.deepEqual(parseLearningReview(JSON.stringify(state)), state);
 });
 
-test('The historical publication approval remains bound to its published source, not this working tree', () => {
+test('Current release points to the cumulative instruction; historical approval retains its original published hashes', () => {
   const release = JSON.parse(
     readFileSync('data/klink-learning-paths-release.json'),
   );
   assert.equal(release.publicationApproved, true);
-  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-round3-20261018.json');
-  const approval = JSON.parse(readFileSync(release.ownerAuthorization));
+  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-cumulative-20261018.json');
+  const current = JSON.parse(readFileSync(release.ownerAuthorization));
+  assert.equal(current.userRequest, JSON.parse(readFileSync('docs/klink-cumulative-release-20261018/owner-instruction.json')).userRequest);
+  assert.equal(current.files['lib/learning-paths.ts'], createHash('sha256').update(readFileSync('lib/learning-paths.ts')).digest('hex'));
+  const approval = JSON.parse(readFileSync('docs/klink-owner-release-round3-20261018.json'));
   const published = JSON.parse(readFileSync('docs/klink-publication-didactic-round3-20261018.json'));
   assert.equal(approval.approvedBy, 'Nico');
   assert.equal(approval.userRequest, 'Ja, na de geslaagde eindcontrole publiceren');

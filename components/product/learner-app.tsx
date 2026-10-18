@@ -4,7 +4,8 @@ import { playMedia, stopMedia } from '@/components/product/shared';
 import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PracticeChapters, PracticeChapterCards } from '@/components/product/practice-chapters';
-import { chapterCollections, chapterHash } from '@/lib/practice-chapters';
+import type { ContentLevel } from '@/lib/content-levels';
+import { chapterCollections, chapterHash, chapterForLevel } from '@/lib/practice-chapters';
 import { learningReviewKey, parseLearningReview, updateLearningReview } from '@/lib/learning-review';
 import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
@@ -90,7 +91,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     const hash = next === 'package' ? `#learner/package/${packageId}` : `#learner/${next}`;
     if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
-  function openChapter(chapter?: string) { setView('chapters'); window.location.hash = chapterHash({ chapter, level: settings[chapterRouteAxis(chapter)] }); }
+  function openChapter(chapter?: string, level: ContentLevel = settings[chapterRouteAxis(chapter)]) { setView('chapters'); window.location.hash = chapterHash({ chapter, level }); }
 
   function saveProgress(next: RouteProgress) {
     setProgress(next);
@@ -156,11 +157,13 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   );
 }
 
-function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; onChapter: (chapter: string) => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
+function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; onChapter: (chapter: string, level?: ContentLevel) => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
   const { settings } = useRouteSettings();
   const candidates = contentPackages.filter(pack => pack.lessons.some(lesson => settings.literacy === 'all' || lessonContentLevel(pack, lesson) === settings.literacy));
   const first = candidates.find(pack => pack.id === progress.position?.packageId) ?? candidates.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? candidates[0] ?? contentPackages[0];
   const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId && (settings.literacy === 'all' || lessonContentLevel(first, lesson) === settings.literacy));
+  const selectedLevel = settings.literacy !== 'all' ? settings.literacy : settings.language;
+  const browseChapter = chapterForLevel(selectedLevel, selectedLevel.startsWith('alfa-') ? 'words' : 'texts');
   const languageRoute = settings.literacy === 'all' && settings.language !== 'all';
   const canResume = Boolean(activeLesson && !languageRoute);
   const preview = activeLesson ? lessonPreviewWords(first, activeLesson).find(word => word.image) : undefined;
@@ -171,9 +174,9 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
         <div><span className="cp-home-mark"><Layers3 /></span><h1>{languageRoute || !candidates.length ? 'Jouw route' : canResume ? 'Ga verder' : 'Begin hier'}</h1></div>
       </header>
 
-      <MyRoute onBrowse={() => onChapter(settings.literacy !== 'all' ? 'words' : settings.language !== 'all' ? 'texts' : 'words')} />
+      <MyRoute onBrowse={() => onChapter(browseChapter, selectedLevel)} />
 
-      {languageRoute || !candidates.length ? <section className="cp-home-hero"><div><h2>{languageRoute ? `Nederlands gebruiken · ${levelLabel(settings.language)}` : levelLabel(settings.literacy)}</h2><p>{languageRoute ? 'Bekijk het aanbod bij jouw route. Een niveaukeuze is geen behaald niveau.' : 'Voor deze keuze is nog geen leesroute ingedeeld.'}</p><button className="accent-button" onClick={() => onChapter(languageRoute ? 'texts' : 'words')}>Bekijk aanbod<ArrowRight /></button></div></section> : <section className="cp-home-hero">
+      {languageRoute || !candidates.length ? <section className="cp-home-hero"><div><h2>{languageRoute ? `Nederlands gebruiken · ${levelLabel(settings.language)}` : levelLabel(settings.literacy)}</h2><p>{languageRoute ? 'Bekijk het aanbod bij jouw route. Een niveaukeuze is geen behaald niveau.' : 'Voor deze keuze is nog geen leesroute ingedeeld.'}</p><button className="accent-button" onClick={() => onChapter(browseChapter, selectedLevel)}>Bekijk aanbod<ArrowRight /></button></div></section> : <section className="cp-home-hero">
         <div>
           <span className="eyebrow light">{activeLesson ? `Les ${first.lessons.indexOf(activeLesson) + 1}` : 'Kijk en luister'}</span>
           <h2>{activeLesson ? lessonPreviewWords(first, activeLesson).map(wordLabel).join(' · ') : learnerListName(first)}</h2>
@@ -191,9 +194,9 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
         <button className="secondary-button" onClick={onWords}><WholeWord />Alle woorden</button>
         <button className="secondary-button" onClick={onReview}><BookmarkCheck />Nog een keer{savedCount > 0 && ` (${savedCount})`}</button>
       </div>
-      <header className="cp-all-lists-heading"><h2>Alle onderdelen</h2><button className="text-back" onClick={onPackages}>Alle lessen<ArrowRight /></button></header>
+      <header className="cp-all-lists-heading"><h2>Oefenen met woorden</h2><button className="text-back" onClick={onPackages}>Alle lessen<ArrowRight /></button></header>
       <PackageGrid onOpen={onPackage} />
-      <section className="cp-home-chapters"><h2>Oefenen</h2><PracticeChapterCards onOpen={onChapter} /></section>
+      <section className="cp-home-chapters"><h2>Oefenen met vaardigheden</h2><PracticeChapterCards onOpen={onChapter} /></section>
     </div>
   );
 }

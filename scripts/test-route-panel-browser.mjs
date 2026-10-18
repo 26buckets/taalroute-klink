@@ -28,8 +28,8 @@ try {
   assert.equal(await page.locator('.taalroute-header img').count(), 2);
   assert(await page.locator('.header-brand-divider').isVisible());
   for (const label of ['Alfa C', 'B1']) {
-    assert(await choose(label).isDisabled());
-    assert((await choose(label).innerText()).includes('Nog niet beschikbaar'));
+    assert(await choose(label).isEnabled());
+    assert(!(await choose(label).innerText()).includes('Nog niet beschikbaar'));
     assert(await choose(label).getAttribute('aria-describedby'));
     assert.equal(await choose(label).evaluate(el => getComputedStyle(el).opacity), '1');
   }
@@ -64,22 +64,22 @@ try {
   await page.goto(`${base}/#learner/chapters`);
   await page.locator('[data-chapter="words"]').click();
   assert(page.url().includes('level=alfa-b'));
-  assert.equal(await page.locator('.cp-route-axis').count(), 1);
+  assert.equal(await page.locator('.cp-route-axis').count(), 2, 'Mixed source chapters expose literacy and language choices');
   assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'true');
   await page.goto(`${base}/#learner/chapters`);
   await page.locator('[data-chapter="texts"]').click();
   assert(page.url().includes('level=a2'));
-  assert.equal(await page.locator('.cp-route-axis').count(), 1);
+  assert.equal(await page.locator('.cp-route-axis').count(), 2, 'Mixed source chapters expose literacy and language choices');
   await choose('A2').click();
   assert.equal(await choose('A2').getAttribute('aria-pressed'), 'false');
   assert.equal(await page.locator('[data-level-picker]').count(), 0);
   await home();
   assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'true');
-  pass('One contextual toolbar follows the correct literacy/language axis; deselecting language preserves literacy');
+  pass('Mixed source chapters retain both literacy/language axes; deselecting language preserves literacy');
 
   await home(); await choose('Alfa A').click();
   await page.goto(`${base}/#learner/package/groep-1`);
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.locator('[data-stage-link="make"]').click();
   assert.equal(await page.locator('[data-stage-link="make"]').getAttribute('aria-current'), 'step');
   assert(await page.locator('[data-practice-stage="make"] h2').evaluate(el => el === document.activeElement));
@@ -89,7 +89,7 @@ try {
   assert.equal(await page.locator('[data-stage-link="make"]').getAttribute('aria-current'), 'step');
   await page.evaluate(() => localStorage.setItem('klink.taalroute.preferences.v1', JSON.stringify({ literacy: 'alfa-c', language: 'a2', pictures: 'always' })));
   await page.reload();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   assert.equal(await page.locator('[data-stage-link]:disabled').count(), 5);
   assert.equal(await page.locator('[data-activity]').count(), 0);
   pass('Exercise line jumps to the correct section with focus, remembers the chosen stage and greys unavailable stages without empty exercise links');

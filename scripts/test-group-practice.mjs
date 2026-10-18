@@ -5,6 +5,7 @@ import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { groupActivities, groupExercises, groupInstructionNeeds, restoreGroupSession } from '../lib/group-practice.ts';
 import { learningAreas } from '../lib/learning-areas.ts';
 import { contentById } from '../lib/connected-content.ts';
+import { importedItems, importedExercise, importedMatchesPack } from '../lib/imported-practice.ts';
 import groupRelease from '../data/klink-group-practice-release.json' with { type: 'json' };
 
 test('Whole word groups feed the exercise library, without changing the curriculum', () => {
@@ -16,10 +17,18 @@ test('Whole word groups feed the exercise library, without changing the curricul
       assert.equal(new Set(exercises.map(e => e.exerciseId)).size, exercises.length, `${pack.id}/${activity.id}: unique IDs`);
       assert.deepEqual(groupExercises(pack, activity.id), exercises, 'Stable order for retry and resume');
       for (const item of exercises) {
-        assert.equal(item.sourceStatus, 'concept');
-        assert.equal(item.combinationReview, 'open');
+        if (item.componentId === 'KLINK-CONTENT') {
+          const source = importedItems.find(source => `content:${source.id}` === item.exerciseId);
+          assert(source && importedMatchesPack(source, pack), 'Imported content must be admitted and linked to this list');
+          assert.deepEqual(item, importedExercise(source), 'The reviewed task must remain unchanged');
+          assert.equal(item.sourceStatus, 'reviewed-concept');
+          assert.equal(item.reviewEligible, false);
+        } else {
+          assert.equal(item.sourceStatus, 'concept');
+          assert.equal(item.combinationReview, 'open');
+          assert((item.targetWordIds ?? []).every(id => all.has(id)), `${item.exerciseId}: foreign target word`);
+        }
         if (item.requiresAudio) assert(item.prompt?.audio?.src, `${item.exerciseId}: missing stimulus`);
-        assert((item.targetWordIds ?? []).every(id => all.has(id)), `${item.exerciseId}: foreign target word`);
         for (const src of JSON.stringify(item).matchAll(/"src":"(\/package-audio\/[^\"]+)"/g)) assert(existsSync(`public${src[1]}`), src[1]);
       }
     }
@@ -86,7 +95,7 @@ test('Connected instructions do not change participation into proven skill or un
   assert(learningAreas.find(a => a.id === 'start').remaining.includes('t blijft'));
   assert(groupExercises(packs[0], 'write-letter').every(item => !item.prompt?.audio && item.letterModelOnly), 'Written t is not the rejected spoken sound');
   assert.equal(groupRelease.publicationApproved, true);
-  assert.equal(groupRelease.ownerAuthorization, 'docs/klink-owner-release-round3-20261018.json');
+  assert.equal(groupRelease.ownerAuthorization, 'docs/klink-owner-release-cumulative-20261018.json');
   assert.equal(groupRelease.instructionAudioUsage, 'withdrawn-by-owner');
   assert.equal(groupRelease.instructionAudioReview, 'open');
   assert.equal(groupRelease.existingMediaChanged, false);

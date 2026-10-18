@@ -1,3 +1,4 @@
+import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { taalroutePackages } from './taalroute-packages.ts';
 import { groupActivities, groupExercises, type GroupActivity } from './group-practice.ts';
 import { contentById } from './connected-content.ts';
@@ -7,19 +8,21 @@ import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
 export const practiceChapters: { id: string; title: string; icon: typeof groupActivities[number]['icon']; activities: GroupActivity[] }[] = [
-  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards'] },
+  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards'] },
   { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-path', 'sound-compare'] },
   { id: 'sentences', title: 'Zinnen', icon: 'book', activities: ['sentences', 'word-sentence', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'] },
-  { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence'] },
+  { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence', 'context-order'] },
   { id: 'listening', title: 'Luisteren', icon: 'ear', activities: ['listen', 'understand', 'text-question', 'dialogue-question'] },
-  { id: 'speaking', title: 'Spreken', icon: 'mic', activities: ['speak', 'sentence-speak', 'dialogues', 'dialogue-role'] },
+  { id: 'speaking', title: 'Spreken', icon: 'mic', activities: ['practice-branch', 'speak', 'sentence-speak', 'dialogues', 'dialogue-role'] },
   { id: 'writing', title: 'Schrijven', icon: 'pen', activities: ['write-letter', 'copy', 'write', 'dictation', 'paper-dictation', 'sentence-dictation', 'functional-message', 'functional-form'] },
-  { id: 'spelling', title: 'Spelling', icon: 'keyboard', activities: ['spelling-path', 'build-model', 'build', 'worksheet', 'worksheet-heard', 'missing', 'dictation'] },
+  { id: 'spelling', title: 'Spelling', icon: 'keyboard', activities: ['word-sort', 'spelling-path', 'build-model', 'build', 'worksheet', 'worksheet-heard', 'missing', 'dictation'] },
   { id: 'grammar', title: 'Grammatica', icon: 'puzzle', activities: ['grammar-path', 'sentence-build', 'verb-choice'] },
-  { id: 'practical', title: 'In de praktijk', icon: 'chat', activities: ['practical-path', 'dialogues', 'dialogue-role', 'dialogue-question', 'functional-message', 'functional-form'] },
+  { id: 'practical', title: 'In de praktijk', icon: 'chat', activities: ['practice-branch', 'situation-point', 'context-order', 'practical-path', 'dialogues', 'dialogue-role', 'dialogue-question', 'functional-message', 'functional-form'] },
   { id: 'repeat', title: 'Samen herhalen', icon: 'grid', activities: ['learning-review', 'word-bingo', 'image-bingo', 'memory', 'read-series', 'worksheet', 'worksheet-heard'] },
   { id: 'support', title: 'Rustig beginnen', icon: 'eye', activities: ['meet', 'build-model', 'copy'] },
 ];
+
+for (const activity of importedActivities) practiceChapters.find(chapter => chapter.id === activity.chapter)!.activities.push(activity.id);
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
@@ -32,9 +35,24 @@ export function chapterExerciseLevel(exercise: PackageExercise): ChapterLevel {
   return exerciseContentLevel(exercise);
 }
 
+export function chapterHasBothAxes(chapter: string) {
+  const levels = practiceChapters.find(item => item.id === chapter)?.activities.flatMap(activity => chapterCollections(activity).map(item => item.level)) ?? [];
+  return levels.some(level => level.startsWith('alfa-')) && levels.some(level => ['a1','a2','b1'].includes(level));
+}
+export function chapterForLevel(level: ChapterLevel, preferred: string) {
+  const ordered = [...practiceChapters.filter(item => item.id === preferred), ...practiceChapters.filter(item => item.id !== preferred)];
+  return ordered.find(chapter => chapter.activities.some(activity => chapterCollections(activity).some(item => level === 'all' || item.level === level)))?.id ?? preferred;
+}
+
 export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => matchesContent(item.level, exerciseSetHelp(item.exercises), selection);
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
+  if (activity.startsWith('content-')) {
+    const existing = cache.get(activity);
+    if (existing) return existing;
+    const result = importedCollections(activity as ImportedActivity, undefined, taalroutePackages);
+    cache.set(activity, result);return result;
+  }
   const cached = cache.get(activity);
   if (cached) return cached;
   const seen = new Set<string>();
@@ -44,7 +62,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
       // One source in free practice, even when it recurs in several word lessons.
       // Word-to-sentence chains deliberately retain their model and repetition.
       if (exercise.learningPathId || typeof exercise.contextId !== 'string' || !exercise.contextId || activity === 'word-sentence') return true;
-      const key = `${exercise.mode}:${exercise.contextId}`;
+      const key = `${exercise.mode}:${exercise.contextId}:${typeof exercise.collectionVariant === "string" ? exercise.collectionVariant : ""}`;
       if (seen.has(key)) return false;
       seen.add(key); return true;
     });

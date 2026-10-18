@@ -22,7 +22,7 @@ try {
   await page.goto(`${base}/#learner/home`);
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(2).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await page.locator('[data-activity="meet"]').click();
   const id = await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
   const model = groupExercises(packs[2], 'meet').find(item => item.exerciseId === id);

@@ -55,6 +55,7 @@ try {
   pass('Source-level selection, shareable deep links, reload and browser Back retain the correct content');
 
   const collection = await open('grammar', 'verb-choice');
+  await page.getByRole('button', { name: 'Kies een woord', exact: true }).click();
   const exercise = collection.exercises[0];
   const choices = page.locator('.cp-choice-grid .cp-extended-option > button:first-child');
   const labels = await choices.allTextContents();

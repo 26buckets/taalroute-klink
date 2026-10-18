@@ -67,7 +67,7 @@ try {
   await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
   console.log('PASS guided sequence, one-click choices, wrong/correct, undo relocks, focus/status, audio stops');
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await family('Typ');
   const typeId = await exerciseId();
   const typeExercise = groupExercise(typeId);

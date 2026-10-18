@@ -1,0 +1,84 @@
+{
+  "checkedAtUtc": "2026-10-18T19:49:43.897893+00:00",
+  "status": "passed-in-segments",
+  "head": "011b5d3be44c87ed152137f7e246bb47427c3ba0",
+  "branch": "codex/six-klink-players-20261018",
+  "finalBuild": {
+    "log": "build-final.log",
+    "exitCode": 0
+  },
+  "types": {
+    "log": "types-final.log",
+    "exitCode": 0
+  },
+  "lint": {
+    "targetedLog": "lint-changed.log",
+    "a1AndSharedPlayerLog": "lint-a1-final.log",
+    "exitCode": 0,
+    "wholeRepository": "Earlier baseline failures retained in lint.log; not claimed clean"
+  },
+  "unitTests": {
+    "log": "unit-final.log",
+    "exitCode": 0
+  },
+  "fullLocalRegression": {
+    "completed": true,
+    "segments": [
+      {
+        "log": "full-regression-final.log",
+        "passed": "curriculum, existing players, media, lifecycle, phase/lesson/continuous routes, sentences, connected content, learner language, UX, sections, landing, mixed practice, audio register, groups, chapters, learning paths, menu, didactic, level units and level browser",
+        "interruption": "Route panel asserted a single axis although imported source chapters now contain both; expectation corrected without weakening legacy invariants."
+      },
+      {
+        "log": "full-regression-resumed.log",
+        "passed": "route panel, picture guide, standard-player unit tests and full main browser tests",
+        "interruption": "Variant fixture expected the old audio-failure sentence; assertion updated to simplified text."
+      },
+      {
+        "log": "final-content-verification.log",
+        "exitCode": 0,
+        "passed": "standard variants, full six-player integration, all imported content unit/browser/workflow/real-route tests"
+      }
+    ],
+    "lastRuntimeChangeBetweenSegments": "Only the last button caption for the six standard forms changed to Klaar; all six were retested on the final build."
+  },
+  "browserReports": {
+    "outputs/standard-players-20261018/browser-checks.json": {
+      "checks": 8,
+      "errors": [],
+      "sha256": "66dfe16f524200ccea63aca832fa49a30efe5c9c0af07bca71004ea06131f3a1"
+    },
+    "outputs/standard-players-20261018/variant-checks.json": {
+      "checks": 5,
+      "errors": [],
+      "sha256": "eb773deb3726cb6e9624d703d4f63f9e70df0499a8fece48706ce21d516ab28f"
+    },
+    "outputs/standard-integration-20261018/integration-browser.json": {
+      "checks": 13,
+      "errors": [],
+      "sha256": "7e999f270cbc1dfc5121736399124a0f7d928585eab330fde304517402ed022b"
+    },
+    "outputs/cumulative-integration-20261018/workflow-browser-checks.json": {
+      "checks": 22,
+      "errors": [],
+      "sha256": "f124bc2a429255fae68c89f2bf68883eee19b48e0b88a4490bfb166b9345d463"
+    },
+    "outputs/cumulative-integration-20261018/routes-browser-checks.json": {
+      "checks": 10,
+      "errors": [],
+      "sha256": "f2c8675ea9876e92e0e13b662963c0ec9dcc9eaeda21e18f6cc1de274c719ca4"
+    }
+  },
+  "a1PageCheck": "a1-browser-final.json",
+  "protectedPublicFiles": 3187,
+  "protectedPublicDifferences": [],
+  "sourceCandidateHashes": "All eight identical to admissions.json",
+  "published": false,
+  "newAudioConnections": 0,
+  "audioPaused": true,
+  "limitations": [
+    "No formal language-level certification or learner trial claimed",
+    "Teacher-guided participation; no automatic mastery or independent-reading release",
+    "478 candidate records excluded; four additional unclassified texts preserved separately"
+  ]
+}

@@ -24,7 +24,7 @@ async function home() { await page.goto(`${base}/#learner/home`); await page.rel
 async function free(pack = packs[2]) {
   await home(); await nav().getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
 }
 async function family(label) {
   const back = page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first();

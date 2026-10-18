@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import audioPlan from '../data/klink-comprehension-audio.json' with { type: 'json' };
+import { isWithdrawnAudio } from '../lib/audio-policy.ts';
 import { klinkContexts } from '../lib/klink-context.ts';
 import { groupExercises, groupSessionKey } from '../lib/group-practice.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -44,7 +45,7 @@ async function openQuestion(exercise, targetPage = page) {
   } else {
     await targetPage.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
     await targetPage.locator('.cp-package-grid > button').nth(packs.indexOf(pack)).click();
-    await targetPage.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await targetPage.locator('.cp-step-scope select').selectOption('');
+    await targetPage.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await targetPage.locator('.cp-step-scope select').selectOption('');
     assert(!(await targetPage.locator('[data-group-practice]').innerText()).includes(klinkContexts.find(text => text.id === exercise.contextId).text), 'The activity hub must not reveal the sentence answer');
     const grouped = groupExercises(pack, 'understand').find(item => item.questionId === exercise.questionId);
     expectedId = grouped.exerciseId;
@@ -142,13 +143,14 @@ try {
   assert.deepEqual((await real.evaluate(() => window.__plays)).slice(-4).map(src => new URL(src).pathname), [biet.prompt.audio.src, biet.questionAudio.src, ...biet.options.map(option => option.audio.src)]);
   await real.locator('.cp-choice-grid').scrollIntoViewIfNeeded();
   await real.screenshot({ path: `${out}/toestand-met-gesproken-antwoorden.png` });
-  for (const item of audioPlan.items) {
+  assert((await real.evaluate(() => window.__plays)).every(src => !isWithdrawnAudio(src)), 'Withdrawn instructions or help must never play');
+  for (const item of audioPlan.items.filter(item => !isWithdrawnAudio(item.src))) {
     const response = await real.request.get(`${base}${item.src}`); assert(response.ok());
     const hash = buffer => createHash('sha256').update(buffer).digest('hex');
     assert.equal(hash(await response.body()), hash(readFileSync(`public${item.src}`)));
   }
   await real.close();
-  pass('Real browser audio completes sentence, question and spoken answers; all eight served recordings match the branded source bytes');
+  pass('Real browser audio completes sentence, question and spoken answers; all offered recordings match the branded source bytes; withdrawn instructions/help never play');
   assert.deepEqual(errors, []);
 } finally {
   writeFileSync(`${out}/browser-check.json`, JSON.stringify({ base, checks, errors }, null, 2));

@@ -49,7 +49,7 @@ type PackageTab =
 const tabLabels: { id: PackageTab; label: string; icon: typeof BookOpen }[] = [
   { id: 'words', label: 'Woorden', icon: WholeWord },
   { id: 'lessons', label: 'Stap voor stap', icon: Route },
-  { id: 'practice', label: 'Samen oefenen', icon: Shapes },
+  { id: 'practice', label: 'Oefenen met deze woorden', icon: Shapes },
   { id: 'use', label: 'Gebruiken', icon: MessageCircle },
 ];
 
@@ -68,7 +68,7 @@ export function PackageLibrary({
       </button>
       <header className="package-library-heading">
         <div>
-          <h1>Alle onderdelen</h1>
+          <h1>Oefenen met woorden</h1>
           <p>{contentPackages.length} onderdelen · {contentPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
         </div>
       </header>
@@ -79,7 +79,7 @@ export function PackageLibrary({
 }
 
 export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
-  return <section className="cp-package-grid" aria-label="Alle onderdelen">
+  return <section className="cp-package-grid" aria-label="Oefenen met woorden">
         {contentPackages.map((pack, index) => {
           // Navigation scenes are separate from the meaning images used in exercises.
           const image = (sectionPhotos as Record<string, string>)[pack.id] ?? pack.cover?.image;
@@ -163,7 +163,7 @@ export function PackagePlayer({
       </nav>
 
       <div className="cp-content">
-        <MyRoute axis={tab === 'use' ? 'language' : 'literacy'} selection={tab === 'practice' ? selection : undefined} onChange={() => setSelection(undefined)} onSelectionChange={tab === 'practice' ? setSelection : undefined} />
+        <MyRoute axis={tab === 'use' ? undefined : 'literacy'} selection={tab === 'practice' ? selection : undefined} onChange={() => setSelection(undefined)} onSelectionChange={tab === 'practice' ? setSelection : undefined} />
         {['practice', 'use'].includes(tab) && <label className="cp-step-scope">Oefenen met<select value={lessonId} onChange={event => { stopMedia(); setLessonId(event.target.value); }}><option value="">Alle woorden van dit onderdeel</option>{pack.lessons.map((item, index) => <option key={item.id} value={item.id}>{index + 1}. {lessonPreviewWords(pack, item).map(wordLabel).join(' · ')}</option>)}</select></label>}
         {tab === 'words' && (
           <PackageWords
@@ -189,7 +189,7 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio, onPractice }:
     <section className="cp-panel">
       <header className="cp-panel-heading">
         <div><h1>Alle woorden</h1></div>
-        <button className="primary-button" onClick={onPractice}>Samen oefenen<ArrowRight /></button>
+        <button className="primary-button" onClick={onPractice}>Oefenen met deze woorden<ArrowRight /></button>
       </header>
       <div className="cp-word-grid">
         {pack.words.map((word) => {
@@ -340,7 +340,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
     <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
         <h1>Stap voor stap</h1>
-        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Samen oefenen<ArrowRight aria-hidden="true" /></button>
+        <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Oefenen met deze woorden<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
         {!lessons.length && <output>Bij deze route zijn hier nog geen leesstappen ingedeeld. Kies samen met je docent bij Lezen bovenaan.</output>}

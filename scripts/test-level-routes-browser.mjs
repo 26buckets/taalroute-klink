@@ -34,13 +34,13 @@ try {
   assert.equal(await page.locator('[data-my-route]').getByRole('button', { name: 'A2', exact: true }).getAttribute('aria-pressed'), 'true');
   pass('Separate literacy and language choices persist without claiming a level or changing lesson progress');
   await openPack();
-  assert.deepEqual(await page.locator('.cp-tabs button span').allTextContents(), ['Woorden', 'Stap voor stap', 'Samen oefenen', 'Gebruiken']);
+  assert.deepEqual(await page.locator('.cp-tabs button span').allTextContents(), ['Woorden', 'Stap voor stap', 'Oefenen met deze woorden', 'Gebruiken']);
   assert.equal(await page.locator('.cp-word-grid article').count(), 6);
   await tab('Stap voor stap'); await page.locator('.cp-start-lesson').first().click();
   await page.locator('.cp-exercise-browser').waitFor();
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
   // A deliberate word-step selection carries into both next entrances.
-  await tab('Samen oefenen'); assert.equal(await page.locator('.cp-step-scope select').inputValue(), packs[0].lessons[0].id);
+  await tab('Oefenen met deze woorden'); assert.equal(await page.locator('.cp-step-scope select').inputValue(), packs[0].lessons[0].id);
   assert.equal(await page.locator('[data-activity="word-bingo"]').count(), 0);
   await page.locator('[data-activity="meet"]').click();
   assert((await page.locator('[data-exercise-id]').getAttribute('data-exercise-id')).includes('mat'));
@@ -60,7 +60,7 @@ try {
   pass('Source levels and readiness are separate; harder originals and all existing scene images remain reachable');
   await openPack(); const pictureSettings = page.locator('[data-picture-settings]'); await pictureSettings.locator('summary').click();
   await pictureSettings.getByRole('button', { name: 'Foto na je antwoord', exact: true }).click();
-  await tab('Samen oefenen'); await page.locator('[data-activity="dictation"]').click();
+  await tab('Oefenen met deze woorden'); await page.locator('[data-activity="dictation"]').click();
   await page.locator('.cp-text-entry input').waitFor();
   assert.equal(await page.locator('.cp-picture-help img').count(), 0);
   const id = await page.locator('[data-exercise-id]').getAttribute('data-exercise-id');
@@ -76,7 +76,7 @@ try {
   const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
   assert.equal(attempt.pictureSupport, 'after');
   pass('Word-production photo is held back until the answer, while optional help remains available');
-  await openPack(); await tab('Samen oefenen'); await page.locator('[data-activity="dictation"]').click();
+  await openPack(); await tab('Oefenen met deze woorden'); await page.locator('[data-activity="dictation"]').click();
   await page.locator('.cp-text-entry input').waitFor();
   await page.getByRole('button', { name: 'Toch hulp: toon foto', exact: true }).click();
   assert.equal(await page.locator('.cp-picture-help img').count(), 1);
@@ -87,7 +87,7 @@ try {
   const helpedAttempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
   assert.equal(helpedAttempt.helpUsed, true);
   assert.equal(helpedAttempt.support, 'requested-help');
-  await openPack(); await tab('Samen oefenen'); await page.locator('[data-activity="meet"]').click();
+  await openPack(); await tab('Oefenen met deze woorden'); await page.locator('[data-activity="meet"]').click();
   assert.equal(await page.locator('.cp-model-content img').count(), 1);
   pass('Optional picture help is recorded; delayed-picture mode never hides the teaching example');
   await page.goto(`${base}/#learner/chapters/texts/texts?level=b1`);
@@ -97,22 +97,22 @@ try {
   await page.locator('[data-collection]').first().click(); await page.locator('[data-exercise-id]').waitFor();
   const selectedUrl = page.url(); await page.reload(); await page.locator('[data-exercise-id]').waitFor();
   assert.equal(page.url(), selectedUrl);
-  pass('Missing B1 is honest; source level selection, deep links and reload keep the same content');
+  pass('The original texts activity has no B1; source level selection, deep links and reload keep the same content');
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 950 }); await openPack();
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     for (const button of await page.locator('.cp-tabs button').all()) { const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48); }
     await page.screenshot({ path: `${out}/words-${width}.png` });
-    await tab('Samen oefenen'); await page.screenshot({ path: `${out}/growth-${width}.png`, fullPage: true });
+    await tab('Oefenen met deze woorden'); await page.screenshot({ path: `${out}/growth-${width}.png`, fullPage: true });
   }
   pass('Desktop, tablet and narrow layouts preserve compact cards and 48px navigation');
   await page.goto(`${base}/#teacher/activities`); await page.locator('[data-level-coverage] > summary').click();
   assert((await page.locator('[data-level-coverage]').innerText()).includes('Beeldopbouw'));
   pass('Teacher view connects six groups, progression, image support and source preparation');
   await page.goto(`${base}/#learner/home`); const finalSettings = await settings();
-  assert(await finalSettings.getByRole('button', { name: 'Alfa C', exact: true }).isDisabled());
-  assert(await finalSettings.getByRole('button', { name: 'B1', exact: true }).isDisabled());
-  // Previously stored missing choices remain honest, even though new unavailable choices are disabled.
+  assert(await finalSettings.getByRole('button', { name: 'Alfa C', exact: true }).isEnabled());
+  assert(await finalSettings.getByRole('button', { name: 'B1', exact: true }).isEnabled());
+  // Imported content enables these choices without pretending there is a canonical word-reading route at every level.
   await page.evaluate(() => localStorage.setItem('klink.taalroute.preferences.v1', JSON.stringify({ literacy: 'alfa-c', language: 'all', pictures: 'always' })));
   await page.reload();
   assert((await page.locator('.cp-home-hero').innerText()).includes('nog geen leesroute'));
@@ -120,7 +120,7 @@ try {
   await page.reload();
   assert((await page.locator('.cp-home-hero').innerText()).includes('B1'));
   assert(!(await page.locator('.cp-home-hero').innerText()).includes('tas'));
-  pass('Start follows the chosen route; missing Alfa C or B1 never silently starts an Alfa A lesson');
+  pass('Start retains Alfa C or B1 and never silently starts an Alfa A lesson');
   const noStorage = await browser.newContext();
   await noStorage.addInitScript(() => { Storage.prototype.getItem = () => { throw new Error('Storage denied'); }; Storage.prototype.setItem = () => { throw new Error('Storage denied'); }; });
   const privatePage = await noStorage.newPage();

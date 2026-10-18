@@ -33,7 +33,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
     <GroupRound key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} exerciseSet={available.find(item => item.id === activity)?.exercises ?? []} sessionId={!usage && !scopeId && selection.level === 'all' && (!selection.help || selection.help === 'all') ? undefined : `${pack.id}:${selection.level}:${selection.help ?? 'all'}:${scopeId}${usage ? `:use:${usage.settings.language}:${usage.readiness}` : ''}`} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
   </section>;
   return <section className="cp-panel cp-group-practice" data-group-practice>
-    <header className="cp-panel-heading"><h1>{usage ? 'Oefenen met zinnen en situaties' : 'Samen oefenen'}</h1></header>
+    <header className="cp-panel-heading"><h1>{usage ? 'Oefenen met zinnen en situaties' : 'Oefenen met deze woorden'}</h1></header>
     {!usage && <PracticeLine available={practiceStages.filter(stage => available.some(item => stage.activities.includes(item.id)) || (stage.id === 'use' && onUse)).map(stage => stage.id)} selected={selectedStage} onSelect={id => {
       if (id === 'use' && onUse) { onUse(); return; }
       setSelectedStage(id);
@@ -67,7 +67,7 @@ export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain
   useEffect(scrollToStart, [sheet]);
   useEffect(() => { try { localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...session })); } catch { /* Optional storage. */ } }, [session, storageKey]);
   const title = groupActivities.find(item => item.id === activity)!.label;
-  function restart() { try { localStorage.removeItem(storageKey); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
+  function restart() { try { localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
   if (session.done) return <section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <BuildWorksheet exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} />;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
@@ -77,7 +77,7 @@ export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain
       <button className="secondary-button" aria-pressed={sheet} onClick={() => { stopMedia(); setSheetOpened(true); setSheet(true); }}><Grid2X2 aria-hidden="true" />Op één blad</button>
     </fieldset>}
     {sheetOpened && <div hidden={!sheet}><PracticeSheet pack={pack} exercises={exercises} title={title} active={sheet} onAudio={onAudio} onAttempt={onAttempt} onBack={onBack} /></div>}
-    {!sheet && <PackageExerciseBrowser pack={pack} exercises={exercises} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={session.exerciseId}
+    {!sheet && <PackageExerciseBrowser pack={pack} exercises={exercises.map(exercise=>exercise.componentId==='KLINK-CONTENT'?{...exercise,contentSessionId:storageKey}:exercise)} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={session.exerciseId}
     onPosition={exerciseId => setSession(current => current.exerciseId === exerciseId ? current : { ...current, exerciseId })}
     onAttempt={onAttempt} onLessonDone={() => setSession(current => ({ ...current, done: true }))} onComplete={onBack} />}
   </>;

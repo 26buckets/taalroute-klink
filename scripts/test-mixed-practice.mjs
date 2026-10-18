@@ -95,7 +95,7 @@ test('Cross-section review never pulls in an unprepared future section automatic
 
 test('Owner publication authorization does not pretend independent review happened', () => {
   assert.equal(release.publicationApproved, true);
-  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-round3-20261018.json');
+  assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-cumulative-20261018.json');
   assert.equal(release.combinationReview, 'open');
   assert.equal(release.existingMediaChanged, false);
 });

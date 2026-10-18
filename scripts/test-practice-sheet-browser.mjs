@@ -127,7 +127,7 @@ try {
   await page.goto(`${base}/#learner/home`);
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
   await page.locator('.cp-package-grid > button').first().click();
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await page.locator('[data-activity="meet"]').click();
   await page.getByRole('button', { name: 'Op één blad', exact: true }).focus();
   await page.keyboard.press('Enter');

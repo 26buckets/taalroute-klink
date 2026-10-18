@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
-import { chapterCollections, chapterHash, chapterLevels, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
+import { chapterCollections, chapterHasBothAxes, chapterHash, chapterLevels, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel } from '@/lib/content-levels';
 import { MyRoute, useRouteSettings } from './route-settings';
 import { chapterRouteAxis } from '@/lib/learner-route';
@@ -72,14 +72,14 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     .filter(item => item.exercises.length), [collections, location, reviewMode, review]);
   const collection = visible.find(item => item.id === location.collection);
   // Example words identify a collection, but must not reveal a listening/spelling answer during play.
-  const title = (collection?.exercises[0]?.learningPathId ? activity?.label : collection?.title) ?? activity?.label ?? chapter?.title ?? 'Oefenen';
+  const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' ? activity?.label : collection?.title) ?? activity?.label ?? chapter?.title ?? 'Oefenen met vaardigheden';
   const toCollections = () => open({ ...location, collection: undefined });
   const selection = { level: location.level, help: location.help };
   const back = collection ? toCollections : activity ? () => open({ chapter: chapter!.id, ...selection }) : chapter ? () => open(selection) : onBack;
   return <div className={`learner-page cp-chapters ${collection ? 'cp-chapter-playing' : ''}`} data-chapter-page={chapter?.id ?? 'all'}>
     <button className="text-back" onClick={back}><ArrowLeft />{collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'}</button>
     <header className="content-page-heading"><div>{chapter && <p className="cp-menu-location" aria-label="Je bent hier">Oefenen{activity ? ` · ${chapter.title}` : ''}</p>}<h1 ref={heading} tabIndex={-1}>{title}</h1>{collection && exerciseSetHelp(collection.exercises) === 'guided' && <p>Samen met je docent.</p>}</div></header>
-    {!collection && <MyRoute axis={chapter ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
+    {!collection && <MyRoute axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
     {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, level: settings[chapterRouteAxis(id)] })} />}
     {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{activities.map(item => {
       const Icon = icons[item.icon];

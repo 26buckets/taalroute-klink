@@ -1,17 +1,19 @@
 'use client';
+import { StandardPracticeSurface } from './standard-practice-surface';
 import { useState } from 'react';
 import { Check, Volume2, RotateCcw } from 'lucide-react';
 import type { AudioPlayer, PackageExercise, ExerciseAudio } from '@/lib/package-content';
 
-type Props = { exercise: PackageExercise; onAudio: AudioPlayer; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean };
+type Props = { exercise: PackageExercise; onAudio: AudioPlayer; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean };
 type Block = { id: string; text: string; speaker?: string; audio?: ExerciseAudio };
 type Task = { id: string; prompt: string; criteria: string[]; example: string; speakers: string[] };
 
-export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, onHelp, canAnswer }: Props) {
+export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: Props) {
   const [selected, setSelected] = useState('');
   const [help, setHelp] = useState(false);
   const options = (exercise.options ?? []) as { id: string; label: string; audio?: ExerciseAudio }[];
   const answer = (exercise.answer ?? {}) as { correctOptionIds?: string[] };
+  if (exercise.standardTask) return <StandardPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
   if (exercise.mode === 'functional-message' || exercise.mode === 'functional-form') return <FunctionalWriting exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onAudio={onAudio} canAnswer={canAnswer} />;
   const correct = answer.correctOptionIds?.includes(selected);
   return <section className="cp-task-card cp-extended-task">

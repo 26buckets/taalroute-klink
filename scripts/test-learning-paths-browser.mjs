@@ -23,6 +23,8 @@ async function open(chapter, activity, collection = chapterCollections(activity)
   await page.goto(`${base}/${chapterHash({ chapter, activity, collection: collection?.id, level: 'all' })}`);
   await page.reload();
   if (step) {
+    // Let the mounted player finish restoring its initial position before seeding the test step.
+    await page.locator('.is-mixed-round').waitFor();
     await page.evaluate(({ key, id }) => localStorage.setItem(key, JSON.stringify({ version: 1, exerciseId: id, done: false })), { key: `klink.group.v1:chapter:${activity}:${collection.id}:${activity}`, id: step.exerciseId });
     await page.reload();
   }
@@ -97,6 +99,9 @@ try {
         await page.getByRole('textbox', { name: 'Jouw bericht', exact: true }).fill(exercise.writingTask.example);
         await page.getByRole('button', { name: 'Kijk na', exact: true }).click();
         await page.getByRole('button', { name: 'Samen nakijken', exact: true }).click();
+      } else if (exercise.standardTask?.kind === 'mark') {
+        for (const id of exercise.standardTask.acceptedSelections[0]) await page.locator(`[data-word-token="${id}"]`).click();
+        await page.getByRole('button', { name: 'Controleer', exact: true }).click();
       } else {
         const answer = exercise.options.find(option => exercise.answer.correctOptionIds.includes(option.id));
         await page.locator('.cp-extended-task').getByRole('button', { name: answer.label, exact: true }).click();

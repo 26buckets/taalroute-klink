@@ -1,4 +1,6 @@
 import test from 'node:test';
+import { importedItems } from '../lib/imported-practice.ts';
+import { importedLevels } from '../lib/imported-practice-contract.ts';
 import assert from 'node:assert/strict';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { contentById } from '../lib/connected-content.ts';
@@ -9,7 +11,7 @@ import { defaultRouteSettings, parseRouteSettings, practiceStages, contextReadin
 
 test('Six levels and support are distinct; malformed preferences cannot change curriculum or grant a level', () => {
   assert.deepEqual(contentLevels.filter(item => !['all', 'support'].includes(item.id)).map(item => item.label), ['Alfa A', 'Alfa B', 'Alfa C', 'A1', 'A2', 'B1']);
-  assert.deepEqual(['alfa-a', 'alfa-b', 'alfa-c', 'a1', 'a2', 'b1'].filter(level => availableContentLevels.has(level)), ['alfa-a', 'alfa-b', 'a1', 'a2']);
+  assert.deepEqual(['alfa-a', 'alfa-b', 'alfa-c', 'a1', 'a2', 'b1'].filter(level => availableContentLevels.has(level)), ['alfa-a', 'alfa-b', 'alfa-c', 'a1', 'a2', 'b1'].filter(level=>['alfa-a','alfa-b','a1','a2'].includes(level)||importedItems.some(item=>importedLevels[item.level]===level)));
   assert.deepEqual(parseRouteSettings('bad'), defaultRouteSettings);
   assert.deepEqual(parseRouteSettings('null'), defaultRouteSettings);
   assert.deepEqual(parseRouteSettings('{"literacy":"b1","language":"alfa-a","pictures":"anything"}'), defaultRouteSettings);
@@ -90,5 +92,5 @@ test('Chapter navigation retains level, help and old supported path links', () =
   const old = parseChapterHash(chapterHash({ chapter: 'sounds', activity: 'sound-path', level: 'support', collection: collection.id }));
   assert.equal(old.collection, collection.id);
   assert.equal(old.level, collection.level);
-  for (const activity of groupActivities) assert(!chapterCollections(activity.id).some(item => ['alfa-c', 'b1'].includes(item.level)), 'Do not fabricate missing source levels');
+  for (const activity of groupActivities) for (const collection of chapterCollections(activity.id).filter(item=>['alfa-c','b1'].includes(item.level))) assert(collection.exercises.every(exercise=>importedItems.some(item=>exercise.exerciseId===`content:${item.id}` && importedLevels[item.level]===collection.level)), 'New levels require exact admitted content');
 });

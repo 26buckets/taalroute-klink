@@ -1,0 +1,26 @@
+import {mkdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {taalroutePackages as packs} from '../lib/taalroute-packages.ts';
+import {groupExercises} from '../lib/group-practice.ts';
+import {practiceChapters,chapterCollections,chapterHash} from '../lib/practice-chapters.ts';
+import {practiceStages,scopeWordExercises,lessonWordIds} from '../lib/learner-route.ts';
+import {teacherPracticePlan} from '../lib/teacher-practice-plan.ts';
+import {standardMediaNeeds} from '../lib/standard-practice.ts';
+const modes=['word-sort','text-evidence','verb-choice','context-order','situation-point','practice-branch'];
+const out='outputs/standard-integration-20261018';mkdirSync(out,{recursive:true});
+const save=(name,value)=>writeFileSync(`${out}/${name}.json`,JSON.stringify(value,null,2)+'\n');
+const inventory=packs.map(pack=>({id:pack.id,words:pack.words.length,players:modes.map(mode=>{const items=groupExercises(pack,mode);return {mode,count:items.length,reason:items.length?'':mode==='situation-point'?'Geen gecontroleerd situatiebeeld met een doelwoord uit deze lijst.':mode==='verb-choice'?'Geen bestaande korte Ik-zin met gecontroleerde werkwoordvorm.':'Geen geschikte bestaande bron.',exercises:items.map(e=>({id:e.exerciseId,sourceContentIds:e.sourceContentIds,contextId:e.contextId,variant:e.collectionVariant,sourceExerciseId:e.sourceExerciseId,sourceLessonIds:e.sourceLessonIds,targetWordIds:e.targetWordIds,objective:e.objective,readingConditions:e.readingConditions}))};})}));
+save('coverage',inventory);
+save('collections',modes.map(mode=>({mode,count:chapterCollections(mode).reduce((n,c)=>n+c.exercises.length,0),chapters:practiceChapters.filter(c=>c.activities.includes(mode)).map(c=>c.id),stage:practiceStages.find(s=>s.activities.includes(mode))?.id,collections:chapterCollections(mode).map(c=>({id:c.id,count:c.exercises.length,links:practiceChapters.filter(ch=>ch.activities.includes(mode)).map(ch=>chapterHash({chapter:ch.id,activity:mode,collection:c.id,level:c.level}))}))})));
+save('lesson-links',packs.flatMap(pack=>pack.lessons.map(lesson=>({pack:pack.id,lesson:lesson.id,plan:teacherPracticePlan(pack,lesson),players:Object.fromEntries(modes.map(mode=>{const items=groupExercises(pack,mode);return [mode, mode==='word-sort'?scopeWordExercises(items,lessonWordIds(pack,lesson)).map(e=>e.exerciseId):items.filter(e=>e.sourceLessonIds?.includes(lesson.id)).map(e=>e.exerciseId)];}))}))));
+save('media-needs',{audioPause:true,instructionNeeds:standardMediaNeeds,branchSpeechNeeds:chapterCollections('practice-branch').flatMap(c=>c.exercises).map(e=>({id:`${String(e.contextId)}:branch-speech`,status:'paused',sourceContentId:e.contextId})),scenes:['aa-cp001-scene-table-on','aa-cp001-scene-pan-dirty','aa-cp001-scene-kitchen'].map(id=>({id,src:`/package-media/cp001/${id}.webp`,status:'existing-reviewed',visibleHands:0})),park:'Niet toegevoegd: kleine handen onvoldoende duidelijk te beoordelen.'});
+const baseline=JSON.parse(readFileSync('outputs/standard-players-20261018/preservation.json'));
+const changed=baseline.hashes.filter(row=>row.path !== 'public/content-register/active.json' && createHash('sha256').update(readFileSync(row.path)).digest('hex')!==row.sha256);
+assert.deepEqual(changed,[],'Protected original content/media must stay byte-identical');
+const beforeRegister=JSON.parse(readFileSync(`${out}/audio-register-before.json`));
+const afterRegister=JSON.parse(readFileSync('public/content-register/active.json'));
+assert.equal(beforeRegister.length,afterRegister.length);
+for(let i=0;i<beforeRegister.length;i++) { const {lessonIds:before,...original}=beforeRegister[i], {lessonIds:after,...current}=afterRegister[i]; assert.deepEqual(current,original); if(JSON.stringify(before)!==JSON.stringify(after)) assert(['learning:grammar-question:example','learning:grammar-question:instruction'].includes(original.id)); }
+save('preservation',{...baseline,unchangedPaths:baseline.unchangedPaths-1,unchangedPublicPaths:baseline.mediaFiles-1,mediaFiles:undefined,administrativeChange:'Only lessonIds of two existing grammar-question audio-register rows; audio IDs, files, statuses and connections unchanged.',hashes:baseline.hashes.map(row=>({...row,sha256:createHash('sha256').update(readFileSync(row.path)).digest('hex')})),checkedAt:new Date().toISOString()});
+console.log(JSON.stringify(inventory.map(p=>({id:p.id,...Object.fromEntries(p.players.map(a=>[a.mode,a.count]))})),null,2));

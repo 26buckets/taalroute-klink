@@ -1,4 +1,5 @@
 'use client';
+import { ImportedPracticeSurface } from './imported-practice-surface';
 
 /* oxlint-disable jsx-a11y/media-has-caption -- Eigen oefenopnames hebben geen afzonderlijk ondertitelspoor. */
 
@@ -31,6 +32,8 @@ import {
 import Image from 'next/image';
 import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode, type MouseEvent } from 'react';
 import { stopMedia } from '@/components/product/shared';
+import { StandardPracticeSurface } from './standard-practice-surface';
+import { orderAccepted } from '@/lib/standard-player-contract';
 import { ExtendedPracticeSurface } from './extended-practice-surface';
 import { LearningPathSurface } from './learning-path-surface';
 import { useRouteSettings } from './route-settings';
@@ -168,7 +171,7 @@ export function PackageExerciseBrowser({
   const needsListen = Boolean(exercise?.requiresAudio);
   const sentenceQuestion = exercise?.mode === 'sentence-question';
   const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);
-  const automatic = guided && result === 'right' && !selfPaced && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;
+  const automatic = guided && result === 'right' && !selfPaced && !exercise?.manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   async function listen(source?: string, automaticStart = false) {
     if ((exercise?.readingTask || exercise?.componentId === 'KLINK-EXTENDED' || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
@@ -309,6 +312,7 @@ export function PackageExerciseBrowser({
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
+      ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
     setMessage(feedback ?? (correct
@@ -388,7 +392,7 @@ export function PackageExerciseBrowser({
             </div>
             <nav aria-label="Bladeren door oefeningen">
               <button onClick={() => guided ? openGuidedAt(guidedIndex - 1) : openAt(recordIndex - 1)} disabled={guided ? guidedIndex <= 0 : recordIndex === 0} aria-label="Vorige oefening"><ArrowLeft /></button>
-              {guided && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button aria-label={autoPaused ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused} onClick={() => setAutoPaused(value => !value)}>{autoPaused ? <Play /> : <Pause />}</button>}
+              {guided && !exercise.manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button aria-label={autoPaused ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused} onClick={() => setAutoPaused(value => !value)}>{autoPaused ? <Play /> : <Pause />}</button>}
               <b aria-label={`${guided ? 'Stap' : 'Oefening'} ${guided ? guidedIndex + 1 : recordIndex + 1} van ${guided ? exercises.length : records.length}`}>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
               {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
             </nav>
@@ -423,7 +427,7 @@ export function PackageExerciseBrowser({
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
             <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? !canAnswer ? 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise) : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
-            <button className="secondary-button" disabled={guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? 'Ronde afronden' : 'Les afronden' : 'Verder'}<ArrowRight /></button>
+            <button className="secondary-button" disabled={guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<ArrowRight /></button>
           </footer>
         </div>
       </div>
@@ -457,8 +461,10 @@ export function ExerciseSurface({
   answeredCorrectly?: boolean;
 }) {
   switch (exercise.componentId) {
+    case 'KLINK-CONTENT': return <ImportedPracticeSurface exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
+    case 'KLINK-STANDARD': return <StandardPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
     case 'KLINK-LEARNING': return <LearningPathSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onHelp={onHelp} canAnswer={canAnswer} />;
-    case 'KLINK-EXTENDED': return exercise.mode === 'dialogue-role' ? <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><p>Geef zelf antwoord.</p><WordHint exercise={{ ...exercise, helpWord: asString(asRecord(exercise.roleModel).text) }} onHelp={onHelp} />{canAnswer && <Recorder onFinish={onFinish} />}</section> : <ExtendedPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} />;
+    case 'KLINK-EXTENDED': return exercise.mode === 'dialogue-role' ? <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><p>Geef zelf antwoord.</p><WordHint exercise={{ ...exercise, helpWord: asString(asRecord(exercise.roleModel).text) }} onHelp={onHelp} />{canAnswer && <Recorder onFinish={onFinish} />}</section> : <ExtendedPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-001': return <ModelSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} />;
     case 'ALF-CMP-002': return <ChoiceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} canAnswer={canAnswer} speakingOptionId={speakingOptionId} />;
     case 'ALF-CMP-003': return <ContrastSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
@@ -471,7 +477,7 @@ export function ExerciseSurface({
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-011': return <FormSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
     case 'ALF-CMP-012': return <TraceSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} />;
-    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onFinish={onFinish} onReset={onReset} />;
+    case 'ALF-CMP-013': return <SequenceSurface exercise={exercise} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
     case 'ALF-CMP-014': return <BoardSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} canAnswer={canAnswer} />;
     case 'ALF-CMP-015': return <GameSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-016': return <CardsSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
@@ -724,11 +730,20 @@ function TraceSurface({ exercise, onAudio, onFinish, onReset, canAnswer }: Surfa
   return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Schrijf de letter op papier.' : 'Schrijf dit woord op papier of typ het hieronder.'}</span></div>{!exercise.letterModelOnly && <label className="cp-text-entry"><span>Typen is ook mogelijk</span><input value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} /></label>}<button className="primary-button" onClick={() => onFinish(value || 'op papier', !value || normalize(value) === normalize(target), 'Vergelijk jouw schrijfwerk met het model.')}>Ik heb geschreven<Check /></button></section>;
 }
 
-function SequenceSurface({ exercise, onFinish, onReset }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void }) {
+function SequenceSurface({ exercise, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {
   const items = asArray<ExerciseItem>(exercise.items);
   const target = asArray<string>(exercise.targetOrderIds);
   const [chosen, setChosen] = useState<string[]>([]);
-  return <section className="cp-task-card"><Prompt exercise={exercise} /><div className="cp-sequence-result">{chosen.map((id, index) => <span key={id}><b>{index + 1}</b>{items.find((item) => item.itemId === id)?.text}</span>)}</div><div className="cp-sequence-options">{items.map((item) => <button key={item.itemId} disabled={chosen.includes(item.itemId)} onClick={() => { setChosen([...chosen, item.itemId]); onReset(); }}>{item.text}</button>)}</div><div className="cp-task-actions"><button className="secondary-button" disabled={!chosen.length} onClick={() => { setChosen(chosen.slice(0, -1)); onReset(); }}><RotateCcw />Eén terug</button><button className="primary-button" disabled={chosen.length !== items.length} onClick={() => onFinish(chosen.join('|'), chosen.join('|') === target.join('|'))}>Controleer<Check /></button></div></section>;
+  const bank = useRef<HTMLDivElement>(null);
+  const itemContent = (item: ExerciseItem) => <>{item.content?.image && <ExerciseImageView image={item.content.image} />}{item.text ?? item.content?.text}</>;
+  function add(id: string) { if (!canAnswer || answeredCorrectly || chosen.includes(id) || !items.some(item => item.itemId === id)) return; setChosen([...chosen, id]); onReset(); requestAnimationFrame(() => bank.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus()); }
+  return <section className="cp-task-card cp-standard-task" data-standard-player="order"><Prompt exercise={exercise} />
+    {/* oxlint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- Dropping supplements the keyboard/tap buttons below. */}
+    <ol className="cp-sequence-result" aria-label="Jouw volgorde" onDragOver={event => event.preventDefault()} onDrop={event => { event.preventDefault(); add(event.dataTransfer.getData('text/plain')); }}>{chosen.map(id => <li key={id}>{itemContent(items.find(item => item.itemId === id)!)}</li>)}</ol>
+    <div className="cp-sequence-options" ref={bank}>{items.map(item => <button key={item.itemId} data-order-item={item.itemId} disabled={!canAnswer || answeredCorrectly || chosen.includes(item.itemId)} draggable={!chosen.includes(item.itemId) && canAnswer && !answeredCorrectly} onDragStart={event => event.dataTransfer.setData('text/plain', item.itemId)} onClick={() => add(item.itemId)}>{itemContent(item)}</button>)}</div>
+    <div className="cp-task-actions"><button className="secondary-button" disabled={!chosen.length || answeredCorrectly} onClick={() => { const id = chosen.at(-1)!; setChosen(chosen.slice(0, -1)); onReset(); requestAnimationFrame(() => Array.from(bank.current?.querySelectorAll<HTMLButtonElement>('button') ?? []).find(button => button.dataset.orderItem === id)?.focus()); }}><RotateCcw />Eén terug</button><button className="primary-button" disabled={!canAnswer || answeredCorrectly || chosen.length !== items.length} onClick={() => onFinish(chosen.join('|'), orderAccepted(chosen, target, asArray<string[]>(exercise.acceptedOrderIds)))}>Controleer<Check /></button></div>
+    <WordHint exercise={exercise} onHelp={onHelp} />
+  </section>;
 }
 
 function BoardSurface({ exercise, onAudio, onFinish, canAnswer }: SurfaceProps & { canAnswer: boolean }) {

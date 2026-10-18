@@ -83,7 +83,7 @@ try {
   pass('Learner home has six framed steps with 30px white numerals, connected above on desktop and vertically on mobile; no false active state, overflow or logo changes at four widths');
   pass('Teacher has five matching blocks and five real visual examples, keyboard jumps, unchanged app route and visible preparation/observation guidance');
   await page.goto(`${base}/#learner/package/groep-1`);
-  await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.locator('[data-stage-link="make"]').click();
   assert.equal(await page.locator('[data-stage-link="make"]').getAttribute('aria-current'), 'step');
   assert.equal(await page.locator('[data-stage-link="make"] .cp-line-number').evaluate(el => getComputedStyle(el).color), 'rgb(255, 255, 255)');

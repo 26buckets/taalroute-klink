@@ -24,7 +24,7 @@ async function home(index = 0) {
   await page.goto(base + '/#learner/home'); await page.reload();
   await page.locator('.cp-package-grid > button').nth(index).click();
 }
-async function hub() { await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption(''); await page.locator('[data-group-practice]').waitFor(); }
+async function hub() { await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption(''); await page.locator('[data-group-practice]').waitFor(); }
 async function open(mode) { await openGroupActivity(page, mode); }
 async function back() { await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click(); }
 async function pause() { const button = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }); if (await button.count()) await button.click(); }
@@ -34,7 +34,7 @@ async function next() { await page.locator('.cp-exercise-feedback > button').cli
 try {
   await home();
   assert.equal(await page.locator('.cp-word-grid > article').count(), 6);
-  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Samen oefenen', exact: true }).click();
+  await page.locator('.cp-content .cp-panel-heading').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   assert.equal(await page.locator('[data-group-practice] select').count(), 0);
   assert.equal(await page.locator('[data-activity]').count(), groupActivities.filter(activity => activity.id !== 'learning-review' && !practiceStages.find(stage => stage.id === 'use').activities.includes(activity.id) && groupExercises(packs[0], activity.id).length).length);
   await page.screenshot({ path: `${out}/exercise-hub-desktop.png`, fullPage: true });
