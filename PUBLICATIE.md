@@ -14,9 +14,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-didactic-round3-20261018.json`.
-Livebron: `46d64d8efd9b593fd5584d058410c003bf4c1dc0`.
-Worker-versie: `e60bd45e-1bed-4352-a096-1edf1fec7914`.
+Actief register: `docs/klink-publication-teacher-manual-20261018.json`.
+Livebron: `7ed0d51963f1f50f88c633950f71e1c95d7e5dc4`.
+Worker-versie: `b4a9ea7c-933e-428e-a1e4-f948ca84c441`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 De derde didactische review is gepubliceerd na Nico's expliciete akkoord en de
@@ -170,3 +170,8 @@ scope en lokale controles. De handleiding gebruikt de gecontroleerde knopnamen
 van de ronde-3-liveversie. Bij volgende wijzigingen van tabs, routes of knoppen
 moeten de bijbehorende klikroutes in data/klink-teacher-manual.json en de
 bewerkbare handleidingbron samen worden bijgewerkt vóór publicatie.
+
+Deze header en handleiding zijn gepubliceerd en live gecontroleerd. Alle 2.679
+aangeboden mediabestanden zijn bytegelijk teruggelezen. In leeslessen in vensters
+tot 600px hoog verdwijnt de header tijdelijk om de oorspronkelijke leesruimte
+te behouden; terugkeren naar het menu herstelt de docenteningang.

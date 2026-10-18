@@ -1,0 +1,77 @@
+{
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "freshClientPath": "/_next/static/chunks/page-CHF9h2Jq.js",
+  "freshClientSha256": "b001892dba5a27c65032e02dbef38a6fca79f2c878f1760df962381a717e8e6c",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "7ed0d51963f1f50f88c633950f71e1c95d7e5dc4",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "b4a9ea7c-933e-428e-a1e4-f948ca84c441",
+  "verifiedAt": "2026-10-18T09:52:27.245Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-18T09:51:26.062Z",
+    "sourceCommit": "7ed0d51963f1f50f88c633950f71e1c95d7e5dc4",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "sourceArchiveSha256": "16e4da0d6b385d2b527121acf58bf54465994024326ec9bad539376887a9f1df",
+  "sourceArchiveFormat": "git archive 7ed0d51963f1f50f88c633950f71e1c95d7e5dc4 (tar)",
+  "previousPublicationRecord": "docs/klink-publication-didactic-round3-20261018.json",
+  "scope": "Taalroute header, Voor docenten entry and native twelve-chapter teacher manual at /docenten.",
+  "manualSource": "docs/KLINK-DOCENTHANDLEIDING.md",
+  "webManual": "data/klink-teacher-manual.json",
+  "ownerAuthorization": "docs/klink-header-manual-scope-20261018.json",
+  "githubActionsUsed": false,
+  "workflows": "No workflows in local or remote main before push.",
+  "checks": {
+    "localExistingReview": "All required checks passed, including recorded focused retests.",
+    "typescript": "passed",
+    "publicationGate": "passed through npm run deploy",
+    "build": "passed",
+    "manualLocalAndLive": [
+      "1440px: header, 12 chapters, anchors/reload, teacher and learner return, no horizontal overflow",
+      "820px: header, 12 chapters, anchors/reload, teacher and learner return, no horizontal overflow",
+      "390px: header, 12 chapters, anchors/reload, teacher and learner return, no horizontal overflow",
+      "320px: header, 12 chapters, anchors/reload, teacher and learner return, no horizontal overflow",
+      "Short guided lesson retains its reading space; leaving restores the teacher entry."
+    ],
+    "livePlayer": "Five viewport sizes passed including short landscape, audio retry and navigation.",
+    "liveMedia": "All 2679 offered media files match the locally checked source bytes.",
+    "worker": "100% active version verified."
+  },
+  "audioPause": {
+    "newRecordings": 0,
+    "newAudioConnections": 0,
+    "existingMediaUnchanged": true,
+    "rate": 0.85,
+    "isolatedT": "parked",
+    "instructionAudio": "withdrawn"
+  },
+  "limitations": [
+    "No real learner trial or independent human expert review.",
+    "The teacher supplies actual book pages, timetable and learner needs.",
+    "DigiBord integration is not included."
+  ],
+  "sourceBackup": {
+    "id": "1sPFzEcNIonuNjG5JW2fg8iR9LKav_yrc",
+    "url": "https://drive.google.com/file/d/1sPFzEcNIonuNjG5JW2fg8iR9LKav_yrc/view?usp=drivesdk",
+    "bytes": 3703226,
+    "sha256": "116fb45a26f03a88d9961242d62779739d0da26772a0182bba727b64800a19ae",
+    "metadataAndBytesVerified": true,
+    "zipIntegrity": "passed",
+    "contains": "396 files: editable application sources, web manual, original Markdown, local/live evidence, and recovery references for all unchanged media. Final verified receipt is stored separately."
+  }
+}
