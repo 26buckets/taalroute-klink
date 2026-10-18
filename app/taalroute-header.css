@@ -43,24 +43,12 @@ body:has(.teacher-manual) { background: #fff; }
 .teacher-manual a { color: #126ab3; text-underline-offset: 3px; }
 .manual-back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 22px; font-size: 15px; text-decoration: none; }
 .manual-eyebrow { color: #526c80; font-size: 14px; }
-.manual-subtitle { font-size: 23px; line-height: 1.45; }
-.manual-intro > p { max-width: 76ch; }
-.manual-contents { margin: 36px 0; padding: 26px; background: #f3f8fc; border: 1px solid #d7e4ee; border-radius: 7px; }
-.manual-contents h2 { font-size: 22px; margin-bottom: 12px; }
-.manual-contents ol { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; padding-left: 24px; margin: 0; }
-.manual-contents li { margin: 0; }
-.manual-contents a { display: inline-block; padding: 8px 0; line-height: 1.5; }
-.manual-chapters > section { padding: 28px 0 32px; border-top: 1px solid #d7e4ee; scroll-margin-top: 24px; }
-.manual-chapters p, .manual-chapters li { max-width: 78ch; }
 .manual-table { max-width: 100%; overflow-x: auto; margin: 24px 0; border: 1px solid #d7e4ee; border-radius: 6px; }
 .manual-table table { width: 100%; min-width: 650px; border-collapse: collapse; font-size: 15px; line-height: 1.6; }
 .manual-table th, .manual-table td { padding: 14px; text-align: left; vertical-align: top; border-bottom: 1px solid #d7e4ee; }
 .manual-table th { font-weight: 500; background: #f3f8fc; }
 .manual-table tr:last-child td { border-bottom: 0; }
-.manual-top { display: inline-block; padding: 10px 0; font-size: 14px; }
 @media (max-width: 650px) {
   .teacher-manual { padding: 20px 18px 48px; font-size: 16px; }
-  .manual-contents { padding: 20px; }
-  .manual-contents ol { grid-template-columns: 1fr; }
   .teacher-manual h2 { font-size: 24px; }
 }

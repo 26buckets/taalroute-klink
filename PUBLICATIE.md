@@ -175,3 +175,14 @@ Deze header en handleiding zijn gepubliceerd en live gecontroleerd. Alle 2.679
 aangeboden mediabestanden zijn bytegelijk teruggelezen. In leeslessen in vensters
 tot 600px hoog verdwijnt de header tijdelijk om de oorspronkelijke leesruimte
 te behouden; terugkeren naar het menu herstelt de docenteningang.
+
+## Wiki-opzet handleiding — 18 oktober 2026
+
+Op verzoek van Nico is /docenten een compact overzicht geworden. De twaalf
+bestaande hoofdstukken hebben elk een eigen pagina onder
+/docenten/hoofdstuk-1 tot en met /docenten/hoofdstuk-12. Een onderwerpenmenu,
+kruimelpad en vorige/volgende-links houden de pagina's bereikbaar. Het menu is
+op mobiel inklapbaar. Oude hoofdstukankers blijven werken. De inhoudelijke
+hoofdstuktekst is exact behouden; alleen verwijzingen en kopniveaus zijn aan
+de losse pagina's aangepast. Scope en controles:
+`docs/klink-manual-wiki-review-20261018.json`.

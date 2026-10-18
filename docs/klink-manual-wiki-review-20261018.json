@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-18",
+  "requestedBy": "Nico",
+  "userRequest": "Veel te uitgebreid op één bladzijde. Maak een wiki-achtige opzet.",
+  "scope": [
+    "Compact /docenten overview grouped into three topic groups",
+    "Twelve separate /docenten/hoofdstuk-N pages",
+    "Desktop topic sidebar and collapsible mobile topic navigation",
+    "Current topic, breadcrumbs, previous/next, working original chapter bookmarks and clickable chapter references"
+  ],
+  "baseline": {
+    "sourceCommit": "7ed0d51963f1f50f88c633950f71e1c95d7e5dc4",
+    "workerVersion": "b4a9ea7c-933e-428e-a1e4-f948ca84c441"
+  },
+  "manualContentSha256": "5d64c42ffca4839f5b1e93cbdf6bd2272f5119ceb4c9d13730cfb80c0ed7d95d",
+  "contentReview": "All twelve article text bodies compare exactly with the existing reviewed manual; no educational text removed or rewritten.",
+  "checks": {
+    "wiki": "All twelve URLs, matching titles/current topic, compact overview under 200 words, four widths (1440/820/390/320), keyboard mobile menu, reload, next/back, teacher/learner returns, old bookmarks, internal references and unknown-topic recovery passed.",
+    "typescript": "passed",
+    "fullLocalRegression": "Complete npm run test:review including all posttest suites passed.",
+    "publicationProof": "All six checks passed."
+  },
+  "audio": "No new audio, changed audio or audio connections.",
+  "notIncluded": [
+    "DigiBord integration",
+    "New learning content",
+    "Search or collaborative editing"
+  ],
+  "limitations": [
+    "No human learner trial or independent human expert review."
+  ]
+}
