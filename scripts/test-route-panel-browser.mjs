@@ -35,10 +35,9 @@ try {
   }
   assert.equal(await page.locator('.cp-practice-line li').count(), 6);
   assert.equal(await page.locator('.cp-practice-line [aria-current]').count(), 0);
-  assert.equal(await page.locator('[data-picture-stage]').count(), 5);
-  assert.equal(await page.locator('[data-picture-stage][data-available="false"]').count(), 2);
-  assert.equal(await page.locator('.cp-picture-growth button').count(), 0);
-  pass('Six visible choices in two axes, six learning steps, and five image stages; missing content is labelled grey, not a locked achievement');
+  assert.equal(await page.locator('[data-picture-stage]').count(), 0);
+  assert.equal(await page.locator('.cp-practice-line button').count(), 0);
+  pass('Six visible choices in two axes and a neutral six-step overview; teacher image planning is absent from learner home');
 
   const progress = JSON.stringify({ completed: ['klink-leesstap-01'] });
   await page.evaluate(value => localStorage.setItem('klink.taalroute.route.v1', value), progress);
@@ -114,8 +113,6 @@ try {
     await page.locator('.cp-route-panel').screenshot({ path: `${out}/choices-${width}.png` });
     await page.locator('.cp-practice-line').evaluate(el => el.scrollIntoView({ block: 'center' }));
     await page.locator('.cp-practice-line').screenshot({ path: `${out}/line-${width}.png` });
-    await page.locator('.cp-picture-growth').evaluate(el => el.scrollIntoView({ block: 'center' }));
-    await page.locator('.cp-picture-growth').screenshot({ path: `${out}/images-${width}.png` });
   }
   pass('Desktop, tablet and 390/320px layouts retain readable labels, full availability text and 48px choice targets');
   for (const width of [1366, 820, 390, 320]) {

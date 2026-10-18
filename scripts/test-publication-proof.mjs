@@ -15,7 +15,7 @@ function check(candidate, changeApproval) {
     cpSync('data', join(dir, 'data'), { recursive: true });
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-compact-route-20261018.json';
+      const approvalPath = 'docs/klink-owner-release-picture-guide-20261018.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -61,6 +61,7 @@ test('New route approval rejects changed hashes and cannot drop the previous app
     approval => { approval.files['app/learner-ui.css'] = '0'.repeat(64); },
     approval => { delete approval.files['lib/teacher-practice-plan.ts']; },
     approval => { delete approval.files['components/product/route-settings.tsx']; },
+    approval => { delete approval.files['lib/teacher-picture-guide.ts']; },
     approval => { approval.previousAuthorization = 'unrelated.json'; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

@@ -90,6 +90,6 @@ export const pictureGrowth = [
   { id: 'object', label: 'Een woord in beeld', description: 'Herken het voorwerp bij het woord.' },
   { id: 'contrast', label: 'Beelden vergelijken', description: 'Kies en koppel voorbereide woorden en afbeeldingen.' },
   { id: 'situation', label: 'Een situatie bekijken', description: 'Bekijk met de docent wat er gebeurt.' },
-  { id: 'sequence', label: 'Een gebeurtenis volgen', description: 'Een samenhangende beeldreeks vraagt nog eigen inhoud.' },
+  { id: 'question', label: 'Een beeldvraag beantwoorden', description: 'Laat de cursist een antwoord in het beeld aanwijzen of benoemen. Dit is iets anders dan een verhaal in meerdere beelden volgen.' },
   { id: 'practical', label: 'Informatie gebruiken', description: 'Praktijkopdrachten bestaan; passende documentbeelden moeten apart worden gekoppeld.' },
 ] as const;

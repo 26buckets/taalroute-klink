@@ -20,7 +20,7 @@ import { nextLessonPosition, parseProgress, progressKey, type RouteProgress } fr
 import { lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
 import { MyRoute, useRouteSettings } from './route-settings';
-import { PracticeLine, PictureGrowthLine } from './practice-line';
+import { PracticeLine } from './practice-line';
 import { chapterRouteAxis, lessonContentLevel } from '@/lib/learner-route';
 import { levelLabel } from '@/lib/content-levels';
 import {
@@ -172,8 +172,6 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
       </header>
 
       <MyRoute onBrowse={() => onChapter(settings.literacy !== 'all' ? 'words' : settings.language !== 'all' ? 'texts' : 'words')} />
-      <PracticeLine />
-      <PictureGrowthLine />
 
       {languageRoute || !candidates.length ? <section className="cp-home-hero"><div><h2>{languageRoute ? `Nederlands gebruiken · ${levelLabel(settings.language)}` : levelLabel(settings.literacy)}</h2><p>{languageRoute ? 'Bekijk het aanbod bij jouw route. Een niveaukeuze is geen behaald niveau.' : 'Voor deze keuze is nog geen leesroute ingedeeld.'}</p><button className="accent-button" onClick={() => onChapter(languageRoute ? 'texts' : 'words')}>Bekijk aanbod<ArrowRight /></button></div></section> : <section className="cp-home-hero">
         <div>
@@ -186,6 +184,8 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
           <div className="cp-home-facts"><span><strong>{first.counts.lessons}</strong><small>lessen</small></span><span><strong>{first.counts.coreWords}</strong><small>woorden</small></span></div>
         </div>
       </section>}
+
+      <PracticeLine />
 
       <div className="cp-home-shortcuts">
         <button className="secondary-button" onClick={onWords}><WholeWord />Alle woorden</button>
