@@ -1,0 +1,71 @@
+{
+  "wordMeanings": 338,
+  "withdrawnInstructionFiles": 48,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "freshClientPath": "/_next/static/chunks/page-BV7ybm8w.js",
+  "freshClientSha256": "6b19fb5a2e18ff286494e0b99654b657613cae8b46e835243c0395213d479aa9",
+  "errors": [],
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "0c69fff6abcc6c03ac5bed4bf6b86af6500e48ff",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "cce9f582-bdcb-4360-8eff-1f422030b072",
+  "verifiedAt": "2026-10-18T10:10:11.203Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-18T10:08:57.618Z",
+    "sourceCommit": "0c69fff6abcc6c03ac5bed4bf6b86af6500e48ff",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "sourceArchiveSha256": "37eee8f1447f6145b722a6e1d00657cc7a5cbb5e6d7c1afdf58e97e2b739c62f",
+  "sourceArchiveFormat": "git archive 0c69fff6abcc6c03ac5bed4bf6b86af6500e48ff (tar)",
+  "previousPublicationRecord": "docs/klink-publication-teacher-manual-20261018.json",
+  "scope": "Compact teacher wiki overview with twelve separate topic pages and desktop/mobile topic navigation.",
+  "manualSource": "docs/KLINK-DOCENTHANDLEIDING.md",
+  "webManual": "data/klink-teacher-manual.json",
+  "ownerAuthorization": "docs/klink-manual-wiki-review-20261018.json",
+  "githubActionsUsed": false,
+  "workflows": "No GitHub workflows; full checks performed locally.",
+  "checks": {
+    "typescript": "passed",
+    "fullLocalRegression": "Complete npm run test:review including all posttest suites passed.",
+    "publicationProof": "Six checks passed.",
+    "publicationGate": "Normal npm run deploy passed.",
+    "wikiLocalAndLive": "Twelve topic URLs, original article text, titles, current navigation, four widths, keyboard mobile menu, reload, previous/next, teacher/learner return, old bookmarks, cross-references and custom 404 passed.",
+    "shortGuidedLesson": "Header hides during short guided lesson and returns afterwards.",
+    "liveMedia": "All 2679 offered files byte-equal; zero errors.",
+    "worker": "100% active version verified."
+  },
+  "audioPause": {
+    "newRecordings": 0,
+    "newAudioConnections": 0,
+    "existingMediaUnchanged": true,
+    "rate": 0.85,
+    "isolatedT": "parked",
+    "instructionAudio": "withdrawn"
+  },
+  "limitations": [
+    "No real learner trial or independent human expert review.",
+    "The teacher supplies actual book pages, timetable and learner needs.",
+    "DigiBord integration is not included."
+  ],
+  "sourceBackup": {
+    "id": "1vLoPGoS3sEldyV1JhzVbJw09xkzAXt0j",
+    "url": "https://drive.google.com/file/d/1vLoPGoS3sEldyV1JhzVbJw09xkzAXt0j/view?usp=drivesdk",
+    "bytes": 4251517,
+    "sha256": "dc68ac33b690931a20679b5667284a47b04bd96146baf295866f557c0ed4f43e",
+    "metadataAndBytesVerified": true,
+    "zipIntegrity": "passed",
+    "contains": "399 files: current editable source, manual, publication records, tests, live screenshots/evidence and existing unchanged media recovery references. Final verified receipt is separate."
+  }
+}

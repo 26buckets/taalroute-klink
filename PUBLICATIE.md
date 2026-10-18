@@ -14,9 +14,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-teacher-manual-20261018.json`.
-Livebron: `7ed0d51963f1f50f88c633950f71e1c95d7e5dc4`.
-Worker-versie: `b4a9ea7c-933e-428e-a1e4-f948ca84c441`.
+Actief register: `docs/klink-publication-teacher-wiki-20261018.json`.
+Livebron: `0c69fff6abcc6c03ac5bed4bf6b86af6500e48ff`.
+Worker-versie: `cce9f582-bdcb-4360-8eff-1f422030b072`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 De derde didactische review is gepubliceerd na Nico's expliciete akkoord en de

@@ -70,6 +70,16 @@ try {
   assert.equal(missing.status(), 404);
   await page.getByRole('heading', { name: 'Onderwerp niet gevonden', exact: true }).waitFor();
   checks.push('Existing chapter bookmarks, internal chapter links and unknown-topic recovery work.');
+  await page.setViewportSize({ width: 844, height: 390 });
+  await page.goto(`${base}/#learner/packages`);
+  await page.locator('.cp-package-grid > button').first().click();
+  await page.locator('.cp-tabs').getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.locator('.cp-start-lesson').first().click();
+  await page.locator('.cp-exercise-browser.is-guided').waitFor();
+  assert(await page.locator('.taalroute-header').isHidden());
+  await page.locator('.cp-lesson-player > .text-back').click();
+  assert(await page.getByRole('link', { name: 'Voor docenten', exact: true }).isVisible());
+  checks.push('Short guided lesson retains its reading space; leaving restores the teacher entry.');
   assert.deepEqual(errors, []);
   writeFileSync(`${out}/wiki-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), checks, errors }, null, 2));
   console.log('PASS wiki:', checks.join('\n'));
