@@ -1,0 +1,75 @@
+{
+  "proofType": "published-release-marker-and-byte-comparison",
+  "sourceCommit": "a69dfea97e81f1fd53a2accf6afbdf433869baae",
+  "sourceCommitDocumented": true,
+  "liveWorkerVersion": "074c3664-d842-40f1-9c09-497c54280438",
+  "verifiedAt": "2026-10-18T08:23:51.448Z",
+  "domain": "https://klink.taalroute.nl",
+  "canonicalBranch": "main",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-18T08:22:43.865Z",
+    "sourceCommit": "a69dfea97e81f1fd53a2accf6afbdf433869baae",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "freshClientPath": "/_next/static/chunks/page-1JqdBkEs.js",
+  "freshClientSha256": "d3cf6a8807b2df8d077bfc2f99f119ff96bb36f5b2bc2e38c69a5e305dfd9416",
+  "sourceArchiveSha256": "3e421924d82b3c825f5b465bef65945f1e85cfa742f8ff6fd5fcbc3bff762c67",
+  "sourceArchiveFormat": "git archive a69dfea97e81f1fd53a2accf6afbdf433869baae (tar)",
+  "wordMeanings": 338,
+  "connectedItems": 1612,
+  "mediaChecked": 2679,
+  "expectedMedia": 2679,
+  "errors": [],
+  "withdrawnInstructionFiles": 48,
+  "audioMetadataPreserved": "Fetched bytes equal the locally ffprobe-verified branded files.",
+  "previousPublicationRecord": "docs/klink-publication-practice-sheet-20261018.json",
+  "scope": "Publication of the completed learning paths and two menu reviews on the existing domain, not a new application or curriculum placement.",
+  "sections": 15,
+  "lessonRoutes": 302,
+  "practiceChapters": 12,
+  "learningSequences": 431,
+  "countBoundary": "431 sequences reuse existing material; not 431 new lessons or texts.",
+  "ownerAuthorization": "docs/klink-owner-release-20261018.json",
+  "audioPause": {
+    "newRecordings": 0,
+    "newAudioConnections": 0,
+    "existingMediaUnchanged": true,
+    "rate": 0.85,
+    "isolatedT": "parked",
+    "instructionAudio": "withdrawn"
+  },
+  "githubActionsUsed": false,
+  "workflows": "No workflows in local or remote main before push.",
+  "checks": [
+    "Full local npm run test:review passed: 75 unit tests and 132 script/browser checkpoints.",
+    "TypeScript, publication proof and playback policy tests, scoped changed-script lint and diff whitespace checks passed. Pre-existing lint findings in test-group-practice.mjs were not changed.",
+    "Normal npm run deploy publication gate and production build passed from a clean committed main descended from the previous live source.",
+    "39 live browser checkpoints passed: both menu reviews, learning paths, all twelve chapters, shared word sheets, stable player, compact full-photo cards and real audio.",
+    "All offered media were fetched and byte-compared to locally ffprobe-verified Taalroute metadata sources. Withdrawn instruction audio remains unavailable.",
+    "Live release marker and active 100% Worker version verified; GitHub main contains the runtime source."
+  ],
+  "reviewRecords": [
+    "docs/KLINK-LEERREEKSEN-20261018.md",
+    "docs/KLINK-MENUREVIEW-20261018.md",
+    "docs/KLINK-MENUREVIEW-RONDE2-20261018.md"
+  ],
+  "limitations": [
+    "No new independent human didactic, screen-reader or learner trial; owner publication instruction is recorded without inventing such reviews.",
+    "New explanation recordings remain missing under the owner's audio pause; teacher support remains needed.",
+    "DigLin comparison and full curriculum equivalence remain open. This publishes completed work, not a claim that all planned content exists."
+  ],
+  "sourceBackup": {
+    "id": "1TIJSrQJHpPkHVZDEDCcgYRbDhi8gr99h",
+    "url": "https://drive.google.com/file/d/1TIJSrQJHpPkHVZDEDCcgYRbDhi8gr99h/view?usp=drivesdk",
+    "bytes": 18686761,
+    "sha256": "e14f081f7903dc75a56508a7f61fd8787b7b836d3d210c98ad9717993e8dabcb",
+    "metadataAndBytesVerified": true
+  }
+}

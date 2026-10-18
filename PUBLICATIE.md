@@ -14,9 +14,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-practice-sheet-20261018.json`.
-Livebron: `31c093549965cb316dc90505e67a1c42cb5679fe`.
-Worker-versie: `e988ca6d-e77a-4537-9423-9e9c1465e558`.
+Actief register: `docs/klink-publication-menu-learning-20261018.json`.
+Livebron: `a69dfea97e81f1fd53a2accf6afbdf433869baae`.
+Worker-versie: `074c3664-d842-40f1-9c09-497c54280438`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 Publicatieopdracht van 18 oktober: Nico heeft de nieuwe klank-, spelling-,
@@ -25,8 +25,15 @@ menureviews expliciet vrijgegeven voor publicatie. Het nieuwe inhoudsgebonden
 akkoord staat in `docs/klink-owner-release-20261018.json`; de historische
 akkoorden blijven bewaard. Dit is geen bewijs van een onafhankelijke menselijke
 inhoudsbeoordeling. De audiopauze en beperkingen uit de reviewverslagen blijven
-gelden. Tot de nieuwe publicatie is gecontroleerd blijft de livebron hierboven
-leidend. De 431 reeksen hergebruiken bestaande inhoud; dit zijn geen 431 nieuwe lessen.
+gelden. Deze versie is nu gepubliceerd en online gecontroleerd. De 431 reeksen
+hergebruiken bestaande inhoud; dit zijn geen 431 nieuwe lessen. De vijf
+cursistknoppen en twaalf hoofdstukken blijven staan. De docentwijzer, vaste
+klikroutes, gelijke benamingen, terugkeer naar de gekozen kaart en geldige
+herhaalopdrachten zijn meegepubliceerd. Lokaal zijn 75 unittests en 132
+aanvullende controlepunten geslaagd; online 39 browsercontrolepunten.
+Alle 2.679 aangeboden mediabestanden zijn opnieuw bytegelijk teruggelezen;
+de audiopauze blijft van kracht. De eerdere reviewverslagen bewaren bewust
+hun toenmalige ontwikkelstatus; het actieve publicatieregister is leidend.
 
 Op 18 oktober is naast de bestaande reeks de keuze 'Op één blad' toegevoegd
 aan tien woordactiviteiten. Alle geselecteerde woorden blijven op dezelfde
