@@ -4,7 +4,7 @@ import { teacherPictureExamples } from '../lib/teacher-picture-guide.ts';
 import { pictureGrowth } from '../lib/learner-route.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830';
-const out = 'outputs/picture-guide-20261018';
+const out = process.env.KLINK_PICTURE_OUTPUT || 'outputs/picture-guide-20261018';
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage();
@@ -18,6 +18,13 @@ try {
     await page.goto(`${base}/#learner/home`); await page.locator('.cp-home-hero').waitFor();
     assert.equal(await page.locator('[data-picture-stage], [data-picture-example]').count(), 0);
     assert.equal(await page.locator('.cp-practice-line button, .cp-practice-line [aria-current]').count(), 0);
+    const frames = page.locator('.cp-practice-line-overview li > div');
+    assert.equal(await frames.count(), 6);
+    for (const frame of await frames.all()) {
+      const css = await frame.evaluate(el => { const s = getComputedStyle(el); return { borders: ['Top', 'Right', 'Bottom', 'Left'].map(side => [s[`border${side}Width`], s[`border${side}Style`]]), background: s.backgroundColor }; });
+      assert(css.borders.every(([width, style]) => width === '1px' && style === 'solid'));
+      assert.notEqual(css.background, 'rgba(0, 0, 0, 0)');
+    }
     assert(await page.locator('.cp-home-hero').evaluate(el => Boolean(el.compareDocumentPosition(document.querySelector('.cp-practice-line')) & Node.DOCUMENT_POSITION_FOLLOWING)));
     for (const number of await page.locator('.cp-line-number').all()) {
       const css = await number.evaluate(el => ({ radius: getComputedStyle(el).borderRadius, color: getComputedStyle(el).color }));
@@ -54,7 +61,7 @@ try {
       await page.screenshot({ path: `${out}/example-${width}.png` });
     }
   }
-  pass('Learner home has no teacher image planning, a neutral numbered overview below Start and a 15% smaller approved logo at four widths');
+  pass('Learner home retains six framed steps, circular numbers, no false active state and the smaller approved logo at four widths');
   pass('Teacher has five matching blocks and five real visual examples, keyboard jumps, unchanged app route and visible preparation/observation guidance');
   await page.goto(`${base}/#learner/package/groep-1`);
   await page.locator('.cp-tabs').getByRole('button', { name: 'Samen oefenen', exact: true }).click();

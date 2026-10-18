@@ -15,8 +15,8 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-origin-story-20261018.json';
-const previousAuthorizationPath = 'docs/klink-owner-release-picture-guide-20261018.json';
+const authorizationPath = 'docs/klink-owner-release-step-frames-20261018.json';
+const previousAuthorizationPath = 'docs/klink-owner-release-origin-story-20261018.json';
 try {
   const approval = JSON.parse(readFileSync(authorizationPath));
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));
@@ -31,7 +31,7 @@ try {
   }
   ownerAuthorized = true;
 } catch { issues.push('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'); }
-const ownerRelease = record => ownerAuthorized && [authorizationPath, previousAuthorizationPath, 'docs/klink-owner-release-compact-route-20261018.json', 'docs/klink-owner-release-route-panel-20261018.json', 'docs/klink-owner-release-round3-20261018.json'].includes(record.ownerAuthorization);
+const ownerRelease = record => ownerAuthorized && [authorizationPath, previousAuthorizationPath, 'docs/klink-owner-release-picture-guide-20261018.json', 'docs/klink-owner-release-compact-route-20261018.json', 'docs/klink-owner-release-route-panel-20261018.json', 'docs/klink-owner-release-round3-20261018.json'].includes(record.ownerAuthorization);
 try {
   const learning = read('../data/klink-learning-paths-release.json');
   if (!learning.publicationApproved || !ownerRelease(learning)) issues.push('De nieuwe leerreeksen wachten op actuele inhoudsgebonden vrijgave; het oude akkoord geldt niet voor nieuwe uitleg en samenstellingen.');

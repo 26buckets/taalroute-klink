@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-18",
+  "baselineSource": "691c43980ae9ee03c041e433fcefd88b37331bde",
+  "baselineWorker": "1d7e996e-27fa-413f-ae8f-b48851e453c2",
+  "scope": "Restore original border and paper background of all six Zo oefen je overview cards by removing only the borderless/transparent override.",
+  "preserved": [
+    "Current 26px circular numbers and active-step distinction.",
+    "Compact 82px minimum height, current icons/type, six labels, placement below Start and responsive six/three-column grid.",
+    "Overview remains explanatory; actual practice steps remain interactive.",
+    "Teacher image guide, smaller established logos, customer story, bottom menu, content, audio and progress."
+  ],
+  "documentation": "Matching sentence in Markdown and HTML teacher manual updated; other content unchanged.",
+  "checks": "Focused desktop/768/390/320px browser assertions cover six solid borders, nontransparent backgrounds, circular numbers, lack of false selected step, teacher guide and real step interaction. Full checks and live evidence in publication record.",
+  "styleReference": "Requested DigiBord reference directory absent; restored previously approved Klink tokens rather than introducing another style.",
+  "audioPause": "No new audio generation, replacement or connections.",
+  "humanPilot": "Not performed."
+}
