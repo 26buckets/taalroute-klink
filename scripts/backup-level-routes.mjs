@@ -2,14 +2,15 @@ import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSy
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
-if (process.argv[2] && !['route-panel', 'route-release', 'compact-route', 'picture-guide'].includes(process.argv[2])) throw Error('Unknown backup target.');
-const pictures = process.argv[2] === 'picture-guide';
+if (process.argv[2] && !['route-panel', 'route-release', 'compact-route', 'picture-guide', 'origin-story'].includes(process.argv[2])) throw Error('Unknown backup target.');
+const story = process.argv[2] === 'origin-story';
+const pictures = story || process.argv[2] === 'picture-guide';
 const compact = pictures || process.argv[2] === 'compact-route';
 const published = compact || process.argv[2] === 'route-release';
 const panel = published || process.argv[2] === 'route-panel';
-const out = pictures ? 'outputs/picture-guide-20261018' : compact ? 'outputs/compact-route-20261018' : published ? 'outputs/route-release-20261018' : panel ? 'outputs/route-panel-20261018' : 'outputs/level-routes-20261018';
+const out = story ? 'outputs/origin-story-20261018' : pictures ? 'outputs/picture-guide-20261018' : compact ? 'outputs/compact-route-20261018' : published ? 'outputs/route-release-20261018' : panel ? 'outputs/route-panel-20261018' : 'outputs/level-routes-20261018';
 mkdirSync(out, { recursive: true });
-const archive = `${out}/${pictures ? 'Klink-docentbeelden-en-rustige-oefenlijn-20261018' : compact ? 'Klink-compacte-route-header-gepubliceerd-20261018' : published ? 'Klink-routekeuze-gepubliceerd-20261018' : panel ? 'Klink-routekeuze-en-oefenlijn-20261018' : 'Klink-niveauroutes-lokale-bouw-20261018'}.zip`;
+const archive = `${out}/${story ? 'Klink-het-idee-achter-Klink-20261018' : pictures ? 'Klink-docentbeelden-en-rustige-oefenlijn-20261018' : compact ? 'Klink-compacte-route-header-gepubliceerd-20261018' : published ? 'Klink-routekeuze-gepubliceerd-20261018' : panel ? 'Klink-routekeuze-en-oefenlijn-20261018' : 'Klink-niveauroutes-lokale-bouw-20261018'}.zip`;
 if (existsSync(archive)) throw Error('Existing recovery archive must not be overwritten.');
 const candidates = execFileSync('git', ['ls-files', '-co', '--exclude-standard'], { encoding: 'utf8' }).trim().split('\n');
 const source = candidates.filter(path => !path.startsWith('outputs/') && (/\.(ts|tsx|js|mjs|cjs|json|jsonc|css|md|html|toml|yml|yaml|lock)$/.test(path) || path === 'public/.assetsignore'));
@@ -46,7 +47,7 @@ const manifest = {
   createdAt: new Date().toISOString(),
   baseCommit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
   state: published ? 'Published implementation; source and verification records included. Consult the active publication register for the runtime commit.' : 'Uncommitted local implementation; not published. Restore files over the stated base.',
-  scope: pictures ? 'Teacher-only image explanations with five concrete examples; neutral learner overview below Start, circular step numbers, smaller approved header logo. Existing learner content, players, progress and media unchanged.' : compact ? 'One compact contextual route toolbar, second-click deselection, unified help and header branding. Existing bottom navigation, content, players, progress and media unchanged.' : panel ? 'Visible route choice on Start, separate photo help, six-stage exercise navigation and honest unavailable placeholders. Includes the prior level-route implementation; media unchanged.' : 'Approved menu, separate literacy/language routes, within-route progression and optional picture support. Existing media unchanged.',
+  scope: story ? 'Customer-facing origin story in manual chapter 12; synchronized Markdown/HTML and title. Chapters 1–11, learner content, layout, media and progress unchanged. Internal source/review history preserved.' : pictures ? 'Teacher-only image explanations with five concrete examples; neutral learner overview below Start, circular step numbers, smaller approved header logo. Existing learner content, players, progress and media unchanged.' : compact ? 'One compact contextual route toolbar, second-click deselection, unified help and header branding. Existing bottom navigation, content, players, progress and media unchanged.' : panel ? 'Visible route choice on Start, separate photo help, six-stage exercise navigation and honest unavailable placeholders. Includes the prior level-route implementation; media unchanged.' : 'Approved menu, separate literacy/language routes, within-route progression and optional picture support. Existing media unchanged.',
   unchangedMediaRecovery: {
     previousSourceAndEvidence: panel ? '1-08CFDcFvx_lDzRzktziVSNUKdxJduox' : '1T8HJFDd9xFUuLntKzQP1QYdzyOhNbvOT',
     fullMediaPackages: ['12_bQiJUlJEPdrl8s8rjYEJzycWmsIkXy', '1uHj2hVUO30HO9r17iW4TJ3_QBCBWptE-', '1zdlnhScWKaiwJpd5-Sqbk9acY746Bx-4', '1j6z5Yw_lF2gvDFfXqPqbO9mR1NQL-JoK', '1t-tgdn5qJQ1tnZnLVya1CMB8XOiAj_jC'],

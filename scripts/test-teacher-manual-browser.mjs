@@ -26,6 +26,18 @@ try {
   checks.push('All twelve direct chapter URLs return exactly the reviewed article text, one article, a matching title and active navigation.');
   for (const width of [1440, 820, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
+    await page.goto(`${base}/docenten/hoofdstuk-12`);
+    await page.getByRole('heading', { name: 'Het idee achter Klink', exact: true }).waitFor();
+    const text = await page.locator('.wiki-article').innerText();
+    assert(text.includes('Lexicon Basis 1000') && text.includes('LASLLIAM'));
+    assert(!/bronnen|Lingua Academy|klikroutes|ontwerpbasis|echte lessen moet blijken|2026|gebruikstest|Cepeda|W3C/i.test(text));
+    assert.equal(await page.locator('.wiki-article a').count(), 0);
+    assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    await page.screenshot({ path: `${out}/idea-${width}.png` });
+  }
+  checks.push('Customer-facing origin story replaces internal sources and dated review notes, retains Lexicon Basis 1000 and LASLLIAM, and fits four widths.');
+  for (const width of [1440, 820, 390, 320]) {
+    await page.setViewportSize({ width, height: 1000 });
     await page.goto(base);
     await page.getByRole('link', { name: 'Voor docenten', exact: true }).click();
     await page.getByRole('heading', { name: 'Docentenhandleiding', exact: true }).waitFor();

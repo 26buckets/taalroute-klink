@@ -529,45 +529,36 @@ Een kort blok met één woord laat niet alles zien. Kijk bij andere lessen naar 
 
 Gebruik het oorspronkelijke lesbezoekkader voor de volledige beoordeling. Deze uitleg vervangt dat kader niet. Het voorbeeld is een plan; een lesbezoek laat zien hoe het in de praktijk gaat.
 
-## 12 Achtergrond en bronnen
+## 12 Het idee achter Klink
 
-Deze handleiding helpt je om Klink in je les te gebruiken. De praktische keuzes sluiten aan bij de bronnen hieronder.
+Leren lezen begint niet bij een vol scherm, maar bij iets dat je herkent. Een tas. Een map. Een woord dat je hoort, ziet en zelf leert maken. Vanuit die gedachte is Klink ontstaan: een plek waar volwassen cursisten stap voor stap kunnen oefenen met taal die dichtbij hun dagelijks leven staat.
 
-### Kijk naar verschillende vaardigheden
+### Kleine stappen, één herkenbare lijn
 
-Een cursist kan goed spreken en nog weinig lezen. Een andere cursist kan al lezen, maar kent weinig Nederlands. Ook het scherm bedienen kan extra hulp vragen.
+Klink brengt woorden, beelden en oefeningen bij elkaar. Een cursist maakt eerst kennis met een woord, leert het herkennen en gaat er daarna zelf mee aan de slag. Dezelfde woorden komen terug in verschillende opdrachten. Zo hoeft niet alles tegelijk nieuw te zijn en ontstaat er ruimte om verder te oefenen.
 
-Kijk daarom apart naar spreken, lezen, schrijven en bediening. De Raad van Europa beschrijft deze verschillen in **LASLLIAM**. Dat is een gids over leren lezen en een nieuwe taal leren als volwassene.
+De opbouw loopt van kijken en herkennen naar namaken, zelf maken, gebruiken en herhalen. Dat geeft richting, zonder iedereen in hetzelfde tempo door de oefeningen te sturen.
 
-### Geef korte uitleg en doe het voor
+### Bekende woorden krijgen steeds meer betekenis
 
-Geef één opdracht tegelijk. Doe een handeling voor en laat de cursist die uitvoeren. Zo zie je of je uitleg duidelijk is. Dit past bij de aanvullende uitleg van W3C over begrijpelijke instructies op websites.
+Lexicon Basis 1000 vormt binnen Taalroute de basis voor de woordenschat. Klink sluit daarop aan door woorden te verbinden met kleine leesstappen en verschillende manieren van oefenen.
 
-Deze werkwijze helpt bij de uitleg. Ze betekent niet dat alle toegankelijkheid van Klink al volledig is onderzocht.
+Een woord staat daarbij niet op zichzelf. Het komt terug naast andere woorden, in een zin, een tekst of een gesprek. Ook beelden groeien mee: van een herkenbaar voorwerp naar een situatie waarin je het woord kunt gebruiken. Denk aan een map herkennen, de map op tafel vinden en de map meenemen naar de les.
 
-### Herhaal op verschillende momenten
+### Een eigen vertrekpunt voor iedere cursist
 
-Laat woorden op meerdere dagen terugkomen. Onderzoek van Cepeda en collega's ondersteunt het spreiden van oefenmomenten. Het geeft geen vast rooster dat voor iedere Klink-cursist het beste is.
+Volwassen cursisten brengen verschillende ervaringen mee. De één spreekt al veel Nederlands en begint met lezen. De ander kan al lezen en wil de Nederlandse taal verder leren. Klink geeft ruimte om aan te sluiten bij wat iemand al kan.
 
-De momenten na 1, 3 en 7 dagen in Klink zijn keuzes van de app. Ze garanderen niet dat een cursist een woord onthoudt. Kijk zelf wat opnieuw oefenen vraagt.
+Die aandacht voor verschillende vaardigheden sluit aan bij LASLLIAM van de Raad van Europa: een kader voor volwassenen die leren lezen en een nieuwe taal leren. In Klink krijgt die gedachte een praktische plek: passende oefeningen kiezen en hulp bieden waar die nodig is.
 
-### Verbind Klink met je boek en lesplan
+### Rust om te oefenen, variatie om door te gaan
 
-De Taalroute-ontwerpbasis verbindt boek, cursusprogramma, lesplan en wat je in de les ziet. Vul daarom voor je eigen groep hoofdstuk 10 in. Kies passende punten uit je bestaande lesbezoekkader.
+Een herkenbare bediening laat de aandacht bij de opdracht. Je kunt één woord tegelijk oefenen of met meerdere woorden op één blad werken. Woorden keren terug in andere oefenvormen, zodat herhalen meer is dan steeds hetzelfde scherm doorlopen.
 
-Klink is een hulpmiddel binnen je onderwijs. Deze handleiding is geen volledig cursusprogramma. De aanwezigheid van een oefening betekent ook niet dat een heel taalniveau is gedekt.
+De docent kiest wat past, doet voor waar dat helpt en geeft ruimte om zelf te proberen. Klink ondersteunt daarmee zowel begeleid oefenen in de les als zelfstandig verder oefenen.
 
-### Wat nog in echte lessen moet blijken
+### Taal die verder gaat dan het scherm
 
-De tekst en klikroutes zijn nagekeken. De voorbeelden moeten ook in echte lessen worden uitgeprobeerd. Er is nog geen gebruikstest met docenten gedaan voor deze herschreven handleiding.
+Met Klink willen we de stap van oefenen naar gebruiken kleiner maken. Van een woord herkennen naar een boodschap begrijpen. Van letters kiezen naar zelf iets opschrijven. Van samen proberen naar steeds meer zelf doen.
 
-Gebruik je een voorbeeld? Kijk of de uitleg duidelijk is, de tijd past en de hulp werkt. Pas je eigen lesplan daarop aan.
-
-### Bronnen
-
-- **Klink:** de bestaande lessen, oefeningen en docentomgeving. De klikroutes zijn gecontroleerd op 18 oktober 2026.
-- **Taalroute:** de vaste ontwerpbasis van 17 oktober 2026. Deze gaat over de samenhang tussen boek, programma, les en begeleiding.
-- **Lingua Academy:** de bestaande *Checklist lesbezoek v2*. Dit is het eigen lesbezoekkader, geen landelijke norm.
-- **Raad van Europa (2022):** [LASLLIAM: leren lezen en een nieuwe taal leren als volwassene](https://rm.coe.int/prems-008922-eng-2518-literacy-and-second-language-learning-couv-texte/1680a70e18). Gebruikte delen: 1.4.3, 3.2.2–3.2.3 en 4.3. De bron is in het Engels.
-- **W3C WAI:** [uitleg over duidelijke instructies in stappen](https://www.w3.org/WAI/WCAG2/supplemental/patterns/o4p07-step-instructions/). De bron is in het Engels.
-- **Cepeda en collega's (2008):** [onderzoek naar herhalen op verschillende momenten](https://pubmed.ncbi.nlm.nih.gov/19076480/). De bron is in het Engels.
+Dat is het idee achter Klink: een rustige plek om te beginnen, genoeg variatie om te blijven oefenen en een herkenbare lijn om op verder te bouwen.

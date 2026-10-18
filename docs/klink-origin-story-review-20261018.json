@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-18",
+  "baselineSource": "3e098a090a523416d27a00c60b30b8b0d3d36e50",
+  "baselineWorker": "90a520da-c59c-4186-b52c-c4a1def51c55",
+  "scope": "Customer-facing rewrite of chapter 12 only; Het idee achter Klink.",
+  "requestedChanges": [
+    "Remove public source list, dates, technical click-route validation and internal review disclaimers.",
+    "Remove Lingua Academy and fixed design-basis reference from this chapter.",
+    "Retain Lexicon Basis 1000 and LASLLIAM in brief accessible prose.",
+    "Explain origin, purpose, small learning steps, repeated vocabulary, image support and practical use."
+  ],
+  "editorialReview": {
+    "audience": "Paying customers: teachers, schools and adult-education providers.",
+    "tone": "Warm, clear product story; no research-report language.",
+    "truthfulness": "No invented founder biography, customer testimonials, certification, research endorsement, complete level coverage or guaranteed learning gains.",
+    "spelling": "Speech-transcribed Lars Lierm interpreted as LASLLIAM, already named in the original chapter.",
+    "sources": "Previous sources and review caveats remain in Git history and internal review records; removing them from the customer page does not mean validation or pilots are complete.",
+    "internalDesignBasis": "Canonical TAALROUTE-ONTWERPBASIS.md read; no book, programme, lesson plan, observing criteria, hours or exercise design changed."
+  },
+  "preservation": {
+    "chapters1Through11": "Exact deep comparison of JSON and Markdown prefix with pre-edit commit passed.",
+    "learnerContent": "No source-bank, learner component, layout, route or progress changes.",
+    "media": "No generated, replaced or newly connected images or audio.",
+    "humanPilot": "Not performed; not claimed."
+  },
+  "checks": {
+    "localManual": "All twelve direct pages and matching titles; origin story free from removed terms at 1440/820/390/320px; menu links, reload, keyboard, return paths and short lesson header.",
+    "visual": "Desktop and 390px screenshots reviewed: existing layout, typography and logos retained.",
+    "publication": "Consult active publication record for final regression, live release and Drive receipt."
+  }
+}
