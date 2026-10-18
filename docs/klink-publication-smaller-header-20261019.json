@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "status": "published-and-live-verified",
+  "sourceCommit": "2aa047b23c9564d4f7c89e0824e9fdc8fb7d5f3d",
+  "branch": "main",
+  "workerVersion": "b12e037b-5222-4371-9a17-7ff23dd58780",
+  "previousSourceCommit": "6b2e8061543b94bd59297dc1ae1859ff2050f80a",
+  "previousWorkerVersion": "f9fd60f5-0df5-42ef-9c33-89bb47fabbbf",
+  "authorization": "docs/klink-owner-release-smaller-header-20261019.json",
+  "historicalContentAuthorizationPreserved": "docs/klink-owner-release-short-screen-20261018.json",
+  "runtimeFiles": [
+    "app/taalroute-header.css"
+  ],
+  "change": "Full Klink header logo reduced from78 to66px on desktop and65 to55px on mobile, about15.4%. Tagline, vector asset, header height and remaining composition unchanged.",
+  "publicationCommand": "npm run deploy",
+  "publicationGatePassed": true,
+  "publicationGateChange": "Scoped successor inherits all historical content authorization, binds source hashes and restricts header CSS to the exact two approved width replacements. Negative tests reject changed scope, dimensions, inherited approval and unrelated CSS edits.",
+  "sourceCleanAtBuild": true,
+  "fullLocalRegression": "Complete test:review body and posttest:review exit0; tsc,13 publication-proof tests and focused lint exit0.",
+  "liveBrowser": "Landing1440,1024,768,390,320px; home and teacher header1440,390,320px; correct widths, top placement, full asset byte equality, aspect ratio, no overflow and learner/teacher entrances.",
+  "verifiedLiveMediaFiles": 2679,
+  "audioMetadataChecked": 1979,
+  "freshClientSha256": "1efb1fe7d0ad6dd70fca771d2ed3499ca1e9b169991067168ebdc1cc44be2000",
+  "preservedContentHash": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b",
+  "newAudioOrAudioConnections": 0,
+  "githubWorkflows": 0,
+  "previousRecoveryRecord": "docs/klink-publication-logo-header-drive-20261019.json",
+  "evidenceDirectory": "outputs/smaller-header-publication-20261019",
+  "limitations": "No new human learner study; existing content-release limitations unchanged."
+}
