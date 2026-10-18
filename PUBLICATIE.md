@@ -31,10 +31,21 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-route-panel-20261018.json`.
-Livebron: `0ca61ce5833ad201d6b2652fa886765c07e399a5`.
-Worker-versie: `d93c7960-0576-4bfc-acc6-33c76534953b`.
+Actief register: `docs/klink-publication-compact-route-20261018.json`.
+Livebron: `c2f8cb559509f40fde3b4e1378adb82f09ce4eed`.
+Worker-versie: `7d465c92-a55d-4244-92c4-019e8bb466f9`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
+
+Laatste aanscherping op 18 oktober: één compacte keuzebalk met Lezen/Taal,
+contextgebonden rij, tweede klik deselecteert en één Hulp-knop. Taalroute en
+Klink staan met een zichtbare scheidingslijn in de header; de dubbele merken
+zijn uit beide zijmenu’s verwijderd. Bodemmenu, foto’s, oefenlijn, leerinhoud,
+spelers en audio blijven gelijk. Docentenhandleiding en verwijzingen zijn
+bijgewerkt. Akkoord: `docs/klink-owner-release-compact-route-20261018.json`.
+Volledige lokale regressie (87 unittests, 153 browsercontrolegroepen), zeven
+publicatiebewijstests, codecontrole en live route-, menu-, kaart-, speler-,
+werkblad- en wikicontroles geslaagd. Alle 2.679 media opnieuw bytegelijk
+teruggelezen. Geen nieuwe audio; geen menselijke cursistproef.
 
 De routekeuze en oefenlijn zijn lokaal én live gecontroleerd. De volledige
 lokale regressiereeks is geslaagd, evenals de aanvullende route- en
