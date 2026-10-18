@@ -358,7 +358,7 @@
   .learner-app .cp-panel:has(> .cp-exercise-browser:not(.is-guided)),
   .learner-app .cp-exercise-browser:not(.is-guided) { height: auto; overflow: visible; }
   .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-workspace { height: auto; }
-  .learner-app .cp-exercise-browser:not(.is-guided) .cp-exercise-stage { min-height: 320px; overflow: visible; }
+  .learner-app .cp-exercise-browser:not(.is-guided):not(.is-mixed-round) .cp-exercise-stage { min-height: 320px; overflow: visible; }
 }
 
 /* A mixed word page keeps the existing navigation, unlike the immersive single-word lesson. */

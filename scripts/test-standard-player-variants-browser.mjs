@@ -6,11 +6,13 @@ import { groupExercises } from '../lib/group-practice.ts';
 const { chromium }=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const page=await browser.newPage({viewport:{width:768,height:1024},hasTouch:true});
-page.on('pageerror',error=>console.log('BROWSER ERROR',error.message));
+const errors=[];
+page.on('pageerror',error=>errors.push(error.message));
 const checks=[]; const pass=text=>{checks.push(text);console.log('PASS',text);};
 try {
-await page.goto(process.env.KLINK_TEST_URL||'http://127.0.0.1:18830');
-const built=await build({stdin:{contents:`import React,{useState} from 'react';import {createRoot} from 'react-dom/client';import {ExerciseSurface} from './components/product/package-exercise-browser';window.mountVariant=(exercise)=>{window.__variantRoot?.unmount();document.body.innerHTML='<main class="learner-main"><div id="variant-fixture"></div></main>';window.__variantResults=[];window.__helps=0;window.__audioOk=false;function Fixture(){const [right,setRight]=useState(false);return <ExerciseSurface exercise={exercise} pack={{words:[],exercises:[]}} onAudio={async()=>{await new Promise(resolve=>setTimeout(resolve,100));return window.__audioOk}} onFinish={(answer,correct)=>{window.__variantResults.push({answer,correct});setRight(correct)}} onReset={()=>setRight(false)} onHelp={()=>window.__helps++} canAnswer={true} answeredCorrectly={right} onOpenExercise={()=>{}} guided={true} speakingOptionId=""/>;}window.__variantRoot=createRoot(document.getElementById('variant-fixture'));window.__variantRoot.render(<Fixture/>);};`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,alias:{'next/image':process.cwd()+'/node_modules/vinext/dist/shims/image.js'},format:'iife',write:false,jsx:'automatic',define:{'process.env':'{}','process.env.NODE_ENV':'"production"'}});
+await page.goto(`${process.env.KLINK_TEST_URL||'http://127.0.0.1:18830'}/#learner/home`);
+await page.locator('.cp-home').waitFor();
+const built=await build({stdin:{contents:`import React,{useState} from 'react';import {createRoot} from 'react-dom/client';import {ExerciseSurface} from './components/product/package-exercise-browser';window.mountVariant=(exercise)=>{window.__variantRoot?.unmount();document.querySelector('.learner-main').innerHTML='<div id="variant-fixture"></div>';window.__variantResults=[];window.__helps=0;window.__audioOk=false;function Fixture(){const [right,setRight]=useState(false);return <ExerciseSurface exercise={exercise} pack={{words:[],exercises:[]}} onAudio={async()=>{await new Promise(resolve=>setTimeout(resolve,100));return window.__audioOk}} onFinish={(answer,correct)=>{window.__variantResults.push({answer,correct});setRight(correct)}} onReset={()=>setRight(false)} onHelp={()=>window.__helps++} canAnswer={true} answeredCorrectly={right} onOpenExercise={()=>{}} guided={true} speakingOptionId=""/>;}window.__variantRoot=createRoot(document.getElementById('variant-fixture'));window.__variantRoot.render(<Fixture/>);};`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,alias:{'next/image':process.cwd()+'/node_modules/vinext/dist/shims/image.js'},format:'iife',write:false,jsx:'automatic',define:{'process.env':'{}','process.env.NODE_ENV':'"production"'}});
 await page.addScriptTag({content:built.outputFiles[0].text});
 const starter=packs.find(p=>p.id==='groep-1');
 const sort=groupExercises(starter,'word-sort')[0];
@@ -22,7 +24,7 @@ assert(await page.locator(`[data-sort-item="${word.id}"]`).isDisabled());
 for(const item of sort.standardTask.items.slice(1)){await page.locator(`[data-sort-item="${item.id}"]`).tap();await page.locator(`[data-sort-category="${item.categoryId}"]`).tap();}
 assert.equal((await page.evaluate(()=>window.__variantResults)).at(-1).correct,true);
 pass('Sort fixture: native drag and actual touchscreen tap alternative share the same grading');
-const sound=structuredClone(sort);sound.standardTask.basis='sound';sound.standardTask.items=sound.standardTask.items.slice(0,2).map((item,index)=>({...item,audioApproved:true,audio:{audioId:item.id,src:starter.words.find(w=>w.id===item.id).audio}}));
+const sound=structuredClone(sort);sound.standardTask.basis='sound';sound.standardTask.items=sound.standardTask.items.slice(0,2).map(item=>({...item,audioApproved:true,audio:{audioId:item.id,src:starter.words.find(w=>w.id===item.id).audio}}));
 await page.evaluate(e=>window.mountVariant(e),sound);
 assert(await page.locator('[data-sort-category]').first().isDisabled());
 await page.getByRole('button',{name:'Luister naar woord 1',exact:true}).tap();await page.getByText('Het geluid werkt niet. Probeer het nog eens.').waitFor();assert(await page.locator('[data-sort-category]').first().isDisabled());
@@ -49,5 +51,6 @@ await page.route('**/test-only-missing-scene.webp',route=>route.fulfill({status:
 await page.evaluate(e=>window.mountVariant(e),missing);await page.getByText('Je kunt het plaatje nu niet zien. Probeer het later nog eens.').waitFor();
 assert.equal(await page.locator('.cp-hotspot-target').count(),0);assert(await page.locator('.cp-hotspot-list button').first().isDisabled());
 pass('Scene fixture: a broken image never permits a guessed successful answer');
-writeFileSync('outputs/standard-players-20261018/variant-checks.json',JSON.stringify({checks,syntheticContent:'test only; no learner catalog entries'},null,2));
+assert.deepEqual(errors,[]);
+writeFileSync('outputs/standard-players-20261018/variant-checks.json',JSON.stringify({checks,errors,syntheticContent:'test only; no learner catalog entries'},null,2));
 } finally {await browser.close();}

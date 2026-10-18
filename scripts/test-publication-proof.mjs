@@ -21,7 +21,7 @@ function check(candidate, changeApproval, changeImported) {
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-cumulative-20261018.json';
+      const approvalPath = 'docs/klink-owner-release-short-screen-20261018.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -117,4 +117,17 @@ test('Incomplete media evidence or a missing source archive is rejected', () => 
   for (const changes of [{ mediaChecked: 0 }, { mediaChecked: proof.expectedMedia - 1 }, { errors: ['missing media'] }, { sourceArchiveSha256: null }]) {
     assert(check({ ...proof, ...changes }).includes('herkomstbewijs past niet'));
   }
+});
+
+test('Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval', () => {
+ for (const change of [
+  approval => { delete approval.files['docs/klink-owner-release-cumulative-20261018.json']; },
+  approval => { delete approval.files['docs/klink-short-screen-release-20261018/live-baseline-check.json']; },
+  approval => { delete approval.files['docs/klink-short-screen-release-20261018/review.json']; },
+  approval => { delete approval.files['docs/klink-short-screen-release-20261018/routes-browser-checks.json']; },
+  approval => { delete approval.files['docs/klink-short-screen-release-20261018/preservation.json']; },
+  approval => { approval.layoutRepair.baselineSourceCommit = 'bd21413c5673cab5758e454e656a6e89fd35a430'; },
+  approval => { approval.layoutRepair.runtimeChangedFiles.push('components/product/learner-app.tsx'); },
+  approval => { approval.layoutRepair.reviewEvidence = 'unrelated.json'; },
+ ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

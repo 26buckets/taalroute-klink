@@ -1,0 +1,54 @@
+{
+  "status": "passed-local",
+  "defect": "short-screen-workflow-footer-overlap-001",
+  "reviewer": "Same Codex agent; multiple passes, not independent or human validation",
+  "liveReproductionFailedAsExpected": true,
+  "fullLocalRegression": true,
+  "cssSha256": "7be511ab003e6414a5b5cc62cda0d2f4988cf6aa322d058c3ef2442a2f0615a6",
+  "routeTestSha256": "ff22f46c3855ed8b170491524ce3ec591221ddbfec618da64ba6c0097493598e",
+  "viewports": [
+    [
+      320,
+      480
+    ],
+    [
+      568,
+      320
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      1366,
+      950
+    ]
+  ],
+  "focusedRoutes": "routes-browser-checks.json",
+  "preservation": "preservation.json",
+  "buildPassed": true,
+  "typesPassed": true,
+  "visualReview": "Final320x480 and568x320 show separate task and footer controls; ordinary composition preserved. Final player-stability check passes all5 viewports, including landscape.",
+  "newAudioOrMedia": false,
+  "published": false,
+  "checkedAtUtc": "2026-10-18T20:52:29.666398+00:00",
+  "regressionCoverage": {
+    "completedInSegments": true,
+    "baseSuite": "full-regression-resumed.log: full primary test:review sequence passed; posttest found the rejected height:auto attempt.",
+    "finalMixedAndPost": "final-mixed-and-post-regression.log: reran mixed practice and posttest with final CSS through all groups, chapters, stability, worksheets, learning paths, menus, routes and standard main tests. Stopped at an existing variant fixture hydration race.",
+    "remaining": "final-variants-and-import-regression.log: corrected variant fixture, standard integration, all content-import unit/browser/workflow/routes completed with exit0.",
+    "fixtureChange": "Test waits for mounted home, replaces only main content, and asserts no browser errors. No learner code change.",
+    "finalBuild": "build-final.log: exit0",
+    "types": "types.log: exit0; no TypeScript source changed",
+    "lint": "lint-final.log: all four changed scripts pass",
+    "initialWrongPort": "full-regression.log: first orchestration used an old test default port; corrected by explicit KLINK_TEST_URL before suite rerun."
+  }
+}

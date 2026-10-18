@@ -31,9 +31,9 @@ Nico's expliciete akkoord staat in docs/klink-content-approval-20261017.json.
 Dat is geen onafhankelijk bewijs van item-voor-item luisterbeoordeling.
 De losse t blijft afgekeurd/geparkeerd. Geen automatische beheersingsclaim.
 
-Actief register: `docs/klink-publication-clear-step-line-20261018.json`.
-Livebron: `bd21413c5673cab5758e454e656a6e89fd35a430`.
-Worker-versie: `73ca978c-e65e-4e5f-8a5b-3e69e89de3a9`.
+Actief register: `docs/klink-publication-cumulative-20261018.json`.
+Livebron: `7008a35917f73f5ea52df1089c5c2e7c53a741f4`.
+Worker-versie: `22187f39-a827-442e-929b-280e4c79d653`.
 Latere registercommits op main zijn geen nieuwe runtimepublicatie.
 
 Vervolgopdracht 18 oktober: Nico koos Stappenlijn erboven met cijferrondjes
@@ -274,7 +274,7 @@ Boekdoel, echte bijeenkomst, materiaal, tijd en lesbezoekkader blijven verbonden
 Zie `docs/KLINK-HANDLEIDING-REVIEW-20261018.md` en het bijbehorende reviewrecord.
 Leerinhoud, audio, beelden, routes en opgeslagen voortgang blijven ongewijzigd.
 
-## Voorbereide cumulatieve overdracht — nog niet gepubliceerd
+## Cumulatieve uitbreiding — gepubliceerd op 18 oktober 2026
 
 De overdracht `publication-contract-handoff-001` legt Nico's bestaande opdracht
 van 18 oktober vast voor de lokaal gecontroleerde uitbreiding. Het nieuwe
@@ -285,13 +285,12 @@ zes spelers, kandidaat-/weergavehashes, reviewdossiers, lokale controles en de
 teruggelezen Drive-back-up. De exacte opdracht staat in het akkoord en in
 `docs/klink-cumulative-release-20261018/owner-instruction.json`.
 
-Dit is voorbereiding van de publicatieoverdracht, geen nieuwe liveversie.
-De actieve livebron en Worker-versie bovenaan dit document blijven leidend.
-De bronbasis van de werkmap is `011b5d3be44c87ed152137f7e246bb47427c3ba0`,
-een afstammeling van de livebron; de concrete on-gecommitte wijzigingen zijn
-met bestandshashes gebonden. De gewone publicatiepoort moet nog blokkeren op
-de werkbranch en ontbrekende commit. Centrale regie bundelt later de exacte
-gecontroleerde bron op main en gebruikt de normale publicatieroute.
+Centrale regie heeft deze uitbreiding via `npm run deploy` gepubliceerd vanuit
+schone main op de hierboven vastgelegde livebron. Alle 1.393 toegelaten records
+staan live; 2.679 aangeboden mediabestanden zijn bytegelijk teruggelezen.
+Het register beschrijft de echte routecontroles en de beperkingen van controles
+met lokaal ingevoegde spelers. Bij 320 × 480 bleef één zichtbare overlap tussen
+de opdracht en onderste knoppen open; dit is geen volledig foutloze oplevering.
 
 De 478 uitgesloten kandidaten en vier afzonderlijke ongeclassificeerde teksten
 zijn niet vrijgegeven. De audiopauze blijft gelden: geen nieuwe audio of
@@ -306,3 +305,20 @@ aangevuld met de afzonderlijke bron-/bewijsdelta van deze overdracht. Controles,
 resterende publicatiestappen en delta-ontvangstcontrole worden vastgelegd in
 `outputs/publication-contract-handoff-20261018/HANDOFF.md` en het gedeelde
 `adapter-status-six-players.json`. Een back-up is geen livepublicatie.
+
+## Herstel korte schermen — gereedmaken voor centrale publicatie
+
+`short-screen-workflow-footer-overlap-001` herstelt uitsluitend
+het scrollgedrag bij schermen tot 600 px hoog. Gemengde oefenrondes
+behouden hun vaste hoogte en eigen scrollruimte, zodat hun knoppen niet over
+de bestaande feedback en Verder-knop vallen.
+Indeling, tekst, lettertypes, inhoud, media, routes en opgeslagen gegevens blijven
+behouden. De uitgebreidere echte routetest controleert volledige knopvlakken,
+invulvelden en begin-, midden- en eindposities op zes schermformaten.
+
+De nieuwe brongebonden overdracht staat in
+`docs/klink-owner-release-short-screen-20261018.json`; het actuele herkomstbewijs
+staat in `docs/klink-short-screen-release-20261018/live-baseline-check.json`.
+Historische akkoorden en publicatieregisters blijven onveranderd. Dit lokale
+herstel is nog niet gepubliceerd. Centrale regie legt de gecontroleerde bron
+vast en gebruikt de normale publicatiepoort; een Drive-back-up is geen publicatie.

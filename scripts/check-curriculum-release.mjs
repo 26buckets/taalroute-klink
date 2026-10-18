@@ -16,8 +16,9 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-cumulative-20261018.json';
-const previousAuthorizationPath = 'docs/klink-owner-release-clear-step-line-20261018.json';
+const authorizationPath = 'docs/klink-owner-release-short-screen-20261018.json';
+const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.json';
+const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
   const approval = JSON.parse(readFileSync(authorizationPath));
@@ -28,6 +29,7 @@ try {
   required.push('components/product/teacher-picture-guide.tsx', 'lib/teacher-picture-guide.ts');
   required.push('data/klink-imported-practice.json', 'lib/imported-practice.ts', 'lib/imported-practice-contract.ts', 'lib/standard-practice.ts', 'lib/standard-player-contract.ts', 'components/product/imported-practice-surface.tsx', 'components/product/imported-teacher-workflow.tsx', 'components/product/standard-practice-surface.tsx', 'scripts/adapt-release-item.mjs', 'scripts/import-release-candidates.mjs', 'scripts/review-cumulative-candidates.mjs');
   required.push(...['owner-instruction', 'admissions', 'candidate-index', 'review-summary', 'verification-final', 'source-drive-verification', 'media-drive-verification', 'source-backup-manifest', 'live-baseline-check', ...importedDomains.map(domain => `${domain}-item-review`)].map(name => `${cumulativeEvidence}/${name}.json`));
+  required.push(previousAuthorizationPath, 'docs/klink-publication-cumulative-20261018.json', ...['live-baseline-check', 'review', 'routes-browser-checks', 'preservation'].map(name => `${repairEvidence}/${name}.json`));
   if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
@@ -40,7 +42,15 @@ try {
   requireProof(approval.userRequest === proof('owner-instruction').userRequest);
   requireProof(scope?.included === 1393 && scope.excluded === 478 && scope.pendingClassification === 4 && scope.teacherSupported === true && scope.independentReading === false && scope.reviewEligible === false && scope.humanReviewClaimed === false && scope.audioPaused === true && scope.newAudioConnections === 0);
   requireProof(JSON.stringify(scope.sixPlayers) === JSON.stringify(['word-sort', 'text-evidence', 'verb-choice', 'context-order', 'situation-point', 'practice-branch']));
-  const live = proof('live-baseline-check');
+  const originalLive = proof('live-baseline-check');
+  for (const [file, sha] of Object.entries(previous.files)) if (file.startsWith(`${cumulativeEvidence}/`)) requireProof(approval.files[file] === sha);
+  requireProof(previous.contentSourceCommit === originalLive.localHead && originalLive.liveSourceIsAncestor === true);
+  const live = JSON.parse(readFileSync(`${repairEvidence}/live-baseline-check.json`));
+  const repair = JSON.parse(readFileSync(`${repairEvidence}/review.json`));
+  requireProof(approval.layoutRepair?.id === 'short-screen-workflow-footer-overlap-001' && approval.layoutRepair.baselineSourceCommit === readiness.baseline.sourceCommit && approval.layoutRepair.reviewEvidence === `${repairEvidence}/review.json`);
+  requireProof(repair.status === 'passed-local' && repair.liveReproductionFailedAsExpected === true && repair.fullLocalRegression === true && repair.cssSha256 === approval.files['app/learner-ui.css'] && repair.routeTestSha256 === approval.files['scripts/test-cumulative-routes-browser.mjs']);
+  requireProof(JSON.stringify(approval.layoutRepair.runtimeChangedFiles) === JSON.stringify(['app/learner-ui.css']));
+  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'data/klink-release-readiness.json'].includes(file)) requireProof(approval.files[file] === sha);
   requireProof(live.liveRelease?.sourceCommit === readiness.baseline.sourceCommit && live.liveRelease?.sourceClean === true && live.liveRelease?.branch === readiness.canonicalBranch && live.liveWorkerVersion === readiness.baseline.liveWorkerVersion && live.liveSourceIsAncestor === true && approval.contentSourceCommit === live.localHead);
   const backup = proof('source-drive-verification');
   requireProof(backup.sourceArchive?.id === scope.sourceArchiveId && backup.sourceArchive?.sha256 === scope.sourceArchiveSha256 && backup.sourceArchive?.parentVerified === true && backup.sourceArchive?.downloadedByteIdentical === true && backup.sourceArchive?.zipCrcVerified === true);
