@@ -7,7 +7,7 @@ import { spawnSync } from 'node:child_process';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
-function check(candidate, changeApproval, changeImported) {
+function check(candidate, changeApproval, changeImported, changeHeaderCss) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
@@ -21,13 +21,19 @@ function check(candidate, changeApproval, changeImported) {
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-short-screen-20261018.json';
+      const approvalPath = 'docs/klink-owner-release-smaller-header-20261019.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
       writeFileSync(fixture, JSON.stringify(approval));
       const gate = join(dir, 'scripts/check-curriculum-release.mjs');
       writeFileSync(gate, readFileSync(gate, 'utf8').replace(`'${approvalPath}'`, JSON.stringify(fixture)));
+    }
+    if (changeHeaderCss) {
+      const cssFixture = join(dir, 'header.css');
+      writeFileSync(cssFixture, changeHeaderCss(readFileSync('app/taalroute-header.css', 'utf8')));
+      const gate = join(dir, 'scripts/check-curriculum-release.mjs');
+      writeFileSync(gate, readFileSync(gate, 'utf8').replace("readFileSync('app/taalroute-header.css', 'utf8')", `readFileSync(${JSON.stringify(cssFixture)}, 'utf8')`));
     }
     copyFileSync('lib/klink-context.ts', join(dir, 'lib/klink-context.ts'));
     for (const name of ['klink-media.json', 'klink-curriculum.json', 'klink-instructions.json', 'klink-comprehension-audio.json', 'klink-connected-content.json', 'klink-sections.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));
@@ -130,4 +136,27 @@ test('Short-screen repair retains current live provenance, reviewed CSS and the 
   approval => { approval.layoutRepair.runtimeChangedFiles.push('components/product/learner-app.tsx'); },
   approval => { approval.layoutRepair.reviewEvidence = 'unrelated.json'; },
  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Smaller header successor retains historical approval and permits only the exact approved dimensions', () => {
+  for (const change of [
+    approval => { delete approval.logoSizing; },
+    approval => { approval.logoSizing.userRequest = 'unrelated'; },
+    approval => { approval.logoSizing.desktopWidth = 60; },
+    approval => { approval.logoSizing.mobileWidth = 50; },
+    approval => { approval.logoSizing.breakpoint = 600; },
+    approval => { approval.logoSizing.baselineSourceCommit = '277147e4589459472713240e1566de39bf6e8d43'; },
+    approval => { approval.logoSizing.runtimeChangedFiles.push('components/product/learner-app.tsx'); },
+    approval => { approval.supersedesAuthorization = 'unrelated.json'; },
+    approval => { delete approval.files['docs/klink-owner-release-short-screen-20261018.json']; },
+    approval => { approval.files['app/taalroute-header.css'] = '0'.repeat(64); },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Header sizing rejects extra CSS changes even when approval hashes match the source files', () => {
+  for (const change of [
+    css => css.replace('width: 66px', 'width: 60px'),
+    css => css.replace('--taalroute-header-height: 60px', '--taalroute-header-height: 70px'),
+    css => css + '\n.unrelated { display: none; }\n',
+  ]) assert(check(proof, undefined, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

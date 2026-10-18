@@ -49,7 +49,7 @@ try {
       }
       assert.equal(connector === 'none', index === 5);
     }
-    assert.equal(Math.round((await page.locator('.header-klink-logo').boundingBox()).width), width <= 440 ? 65 : 78);
+    assert.equal(Math.round((await page.locator('.header-klink-logo').boundingBox()).width), width <= 440 ? 55 : 66);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     await page.screenshot({ path: `${out}/home-${width}.png` });
     await page.goto(`${base}/#teacher`); await page.locator('[data-teacher-picture-guide]').waitFor();

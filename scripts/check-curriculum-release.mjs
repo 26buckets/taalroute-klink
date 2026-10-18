@@ -16,7 +16,8 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-short-screen-20261018.json';
+const authorizationPath = 'docs/klink-owner-release-smaller-header-20261019.json';
+const inheritedAuthorizationPath = 'docs/klink-owner-release-short-screen-20261018.json';
 const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.json';
 const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
@@ -38,6 +39,21 @@ try {
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
   const proof = name => JSON.parse(readFileSync(`${cumulativeEvidence}/${name}.json`));
   const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+  // Preserve the historical content approval; this successor permits only the reviewed logo sizing.
+  const inherited = JSON.parse(readFileSync(inheritedAuthorizationPath));
+  requireProof(approval.supersedesAuthorization === inheritedAuthorizationPath && approval.files[inheritedAuthorizationPath]);
+  for (const [key, value] of Object.entries(inherited)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  const sizing = approval.logoSizing;
+  requireProof(sizing?.approvedBy === 'Nico' && sizing.userRequest === 'Ja, ik vind de klink nog steeds groot. mag voor mij wat minder groot weer.' && sizing.baselineSourceCommit === '6b2e8061543b94bd59297dc1ae1859ff2050f80a');
+  requireProof(sizing.desktopWidth === 66 && sizing.mobileWidth === 55 && sizing.breakpoint === 440);
+  requireProof(JSON.stringify(sizing.runtimeChangedFiles) === JSON.stringify(['app/taalroute-header.css']));
+  execFileSync('git', ['merge-base', '--is-ancestor', sizing.baselineSourceCommit, 'HEAD']);
+  const resizedFiles = ['app/taalroute-header.css', 'scripts/check-curriculum-release.mjs', 'scripts/test-picture-guide-browser.mjs', 'scripts/test-publication-proof.mjs'];
+  for (const [file, sha] of Object.entries(inherited.files)) requireProof(approval.files[file] && (resizedFiles.includes(file) || approval.files[file] === sha));
+  const baselineCss = execFileSync('git', ['show', `${sizing.baselineSourceCommit}:app/taalroute-header.css`], { encoding: 'utf8' });
+  requireProof(createHash('sha256').update(baselineCss).digest('hex') === inherited.files['app/taalroute-header.css']);
+  const resizedCss = baselineCss.replace('.header-klink-logo { width: 78px; }', '.header-klink-logo { width: 66px; }').replace('.header-klink-logo { width: 65px; }', '.header-klink-logo { width: 55px; }');
+  requireProof(readFileSync('app/taalroute-header.css', 'utf8') === resizedCss);
   const scope = approval.cumulativeRelease;
   requireProof(approval.userRequest === proof('owner-instruction').userRequest);
   requireProof(scope?.included === 1393 && scope.excluded === 478 && scope.pendingClassification === 4 && scope.teacherSupported === true && scope.independentReading === false && scope.reviewEligible === false && scope.humanReviewClaimed === false && scope.audioPaused === true && scope.newAudioConnections === 0);
@@ -50,7 +66,7 @@ try {
   requireProof(approval.layoutRepair?.id === 'short-screen-workflow-footer-overlap-001' && approval.layoutRepair.baselineSourceCommit === readiness.baseline.sourceCommit && approval.layoutRepair.reviewEvidence === `${repairEvidence}/review.json`);
   requireProof(repair.status === 'passed-local' && repair.liveReproductionFailedAsExpected === true && repair.fullLocalRegression === true && repair.cssSha256 === approval.files['app/learner-ui.css'] && repair.routeTestSha256 === approval.files['scripts/test-cumulative-routes-browser.mjs']);
   requireProof(JSON.stringify(approval.layoutRepair.runtimeChangedFiles) === JSON.stringify(['app/learner-ui.css']));
-  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'data/klink-release-readiness.json'].includes(file)) requireProof(approval.files[file] === sha);
+  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'app/taalroute-header.css', 'data/klink-release-readiness.json'].includes(file)) requireProof(approval.files[file] === sha);
   requireProof(live.liveRelease?.sourceCommit === readiness.baseline.sourceCommit && live.liveRelease?.sourceClean === true && live.liveRelease?.branch === readiness.canonicalBranch && live.liveWorkerVersion === readiness.baseline.liveWorkerVersion && live.liveSourceIsAncestor === true && approval.contentSourceCommit === live.localHead);
   const backup = proof('source-drive-verification');
   requireProof(backup.sourceArchive?.id === scope.sourceArchiveId && backup.sourceArchive?.sha256 === scope.sourceArchiveSha256 && backup.sourceArchive?.parentVerified === true && backup.sourceArchive?.downloadedByteIdentical === true && backup.sourceArchive?.zipCrcVerified === true);
@@ -82,7 +98,7 @@ try {
   for (const item of imported) requireProof(!excluded.has(item.id) && admitted.get(item.id)?.domain === item.domain && admitted.get(item.id)?.renderedItemSha256 === digest(item) && importedItemIssues(item).length === 0);
   ownerAuthorized = true;
 } catch { issues.push('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'); }
-const ownerRelease = record => ownerAuthorized && [authorizationPath, previousAuthorizationPath, 'docs/klink-owner-release-picture-guide-20261018.json', 'docs/klink-owner-release-compact-route-20261018.json', 'docs/klink-owner-release-route-panel-20261018.json', 'docs/klink-owner-release-round3-20261018.json'].includes(record.ownerAuthorization);
+const ownerRelease = record => ownerAuthorized && [authorizationPath, inheritedAuthorizationPath, previousAuthorizationPath, 'docs/klink-owner-release-picture-guide-20261018.json', 'docs/klink-owner-release-compact-route-20261018.json', 'docs/klink-owner-release-route-panel-20261018.json', 'docs/klink-owner-release-round3-20261018.json'].includes(record.ownerAuthorization);
 try {
   const learning = read('../data/klink-learning-paths-release.json');
   if (!learning.publicationApproved || !ownerRelease(learning)) issues.push('De nieuwe leerreeksen wachten op actuele inhoudsgebonden vrijgave; het oude akkoord geldt niet voor nieuwe uitleg en samenstellingen.');

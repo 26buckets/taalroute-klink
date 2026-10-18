@@ -25,7 +25,7 @@ try {
       const header = image.closest('header').getBoundingClientRect();
       return { width: box.width, ratio: box.width / box.height, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight, inside: box.top >= header.top && box.bottom <= header.bottom };
     });
-    assert.equal(Math.round(logo.width), width <= 440 ? 65 : 78, 'Keep the existing compact header width');
+    assert.equal(Math.round(logo.width), width <= 440 ? 55 : 66, 'Use the approved smaller header width');
     assert(Math.abs(logo.ratio - 770 / 340) < 0.01, 'Complete logo with tagline retains its rendered proportions');
     // Responsive srcset density correction rounds natural dimensions to whole pixels.
     assert(Math.abs(logo.naturalWidth - logo.naturalHeight * 770 / 340) <= 770 / 340 + 1, 'Complete asset retains its intrinsic proportions within pixel rounding');
