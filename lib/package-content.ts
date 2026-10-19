@@ -1,4 +1,6 @@
 import { taalroutePackages, primaryWordCards } from './taalroute-packages.ts';
+import lexiconWordBuild from '../data/klink-lexicon-wordbuild-20.json' with { type: 'json' };
+import lexiconRest from '../data/klink-lexicon-wordbuild-rest.json' with { type: 'json' };
 
 export type PackageId = string;
 export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
@@ -98,6 +100,7 @@ export type PackageDefinition = {
   aliases?: string[];
   id: PackageId;
   kind?: 'group' | 'route' | 'preparation';
+  practiceActivities?: string[];
   title: string;
   subtitle: string;
   description: string;
@@ -148,13 +151,15 @@ export type PackageDefinition = {
   };
 };
 
-export const contentPackages: PackageDefinition[] = taalroutePackages;
+const additionalPackages = [lexiconWordBuild, ...lexiconRest.packs] as PackageDefinition[];
+export const lessonPackages: PackageDefinition[] = taalroutePackages;
+export const contentPackages: PackageDefinition[] = [...taalroutePackages, ...additionalPackages];
 
 export function getPackage(packageId: PackageId) {
   return contentPackages.find((item) => item.id === packageId || item.aliases?.includes(packageId)) ?? contentPackages[0];
 }
 
-export const allPackageWords = primaryWordCards;
+export const allPackageWords: (PackageWord & { packageId: string })[] = [...primaryWordCards, ...additionalPackages.flatMap(pack => pack.words.map(word => ({ ...word, packageId: pack.id })))];
 
 export function wordLabel(word: { id: string; word: string }) {
   if (word.id === 'klink-woord-pak') return 'pak (kleding)';

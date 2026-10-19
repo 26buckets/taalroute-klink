@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { contentPackages, type PackageId } from '@/lib/package-content';
+import { lessonPackages as contentPackages, type PackageId } from '@/lib/package-content';
 import { lessonPlan, phaseLabels, planStatusLabels, type PlanStatus } from '@/lib/lesson-plan';
 import { buildChecklist, buildStatusLabels, sentenceBridge, type BuildStatus } from '@/lib/build-checklist';
 import { wordById } from '@/lib/klink-curriculum';

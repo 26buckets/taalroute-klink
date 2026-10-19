@@ -2,7 +2,7 @@ import test from 'node:test';
 import { importedItems, importedExercise, importedRoutes } from '../lib/imported-practice.ts';
 import assert from 'node:assert/strict';
 import { practiceChapters, chapterCollections, chapterExerciseLevel, chapterHash, parseChapterHash } from '../lib/practice-chapters.ts';
-import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
+import { contentPackages as packs } from '../lib/package-content.ts';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { contentById } from '../lib/connected-content.ts';
 

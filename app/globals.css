@@ -1042,6 +1042,9 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-match-board button small { color: var(--muted); font-size: 8px; }
 .cp-match-board img { width: 100%; height: 94px; object-fit: cover; border-radius: calc(var(--radius) - 1px); }
 .cp-build-slots, .cp-tile-bank { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; }
+/* Long word models must not widen the grid and clip the letter buttons. */
+.cp-task-card:has(.cp-build-slots) { grid-template-columns: minmax(0, 1fr); }
+.cp-task-card:has(.cp-build-slots) .cp-task-prompt { overflow-wrap: anywhere; }
 .cp-build-slots span, .cp-build-slots button, .cp-tile-bank button { min-width: 58px; min-height: 62px; display: grid; place-items: center; padding: 9px; border-radius: var(--radius); font-size: 28px; font-weight: 500; }
 .cp-build-slots span, .cp-build-slots button { background: var(--canvas); border: 2px dashed var(--line-strong); }
 .cp-build-slots button[aria-pressed="true"] { border-color: var(--primary); background: var(--primary-soft); }

@@ -1,0 +1,86 @@
+{
+  "at": "2026-10-19T01:12:07.178Z",
+  "round": 1,
+  "type": "AI-zelfreview plus volledige bron- en gegevenscontrole",
+  "selectionPolicyId": "klink-basisselectie-nico-20261019",
+  "findings": [
+    {
+      "issue": "Algemene catalogus was te ruim geïmporteerd.",
+      "action": "Canonieke collectieselectie gebruikt; 99 niet-geselecteerde en 9 ongewenste ingangen uitgesloten."
+    },
+    {
+      "issue": "Naam Basis 1000 is geen bewezen telling van duizend woorden.",
+      "action": "961 unieke bronwoorden geteld; geen nieuwe woorden verzonnen."
+    },
+    {
+      "issue": "Een woord kan meerdere niveaus en betekenissen hebben.",
+      "action": "Brongebonden niveautoegang zonder dubbele taken; betekenis-ID’s bewaard."
+    },
+    {
+      "issue": "Zeven hoofdletters weken af van expliciete brongebruiksregels; T-splitsing is aanvullend geverifieerd bij Taaladvies.net.",
+      "action": "Afgeleide correctie consequent in woordmodel, antwoord en audioscript; originele bron bewaard."
+    }
+  ],
+  "dataResult": {
+    "at": "2026-10-19T01:12:07.178Z",
+    "passed": true,
+    "selectionPolicyId": "klink-basisselectie-nico-20261019",
+    "checkedSourceItems": 4769,
+    "checkedBlockedItems": 9538,
+    "checkedAudioScripts": 4789,
+    "sourceInventoryAccountedFor": 5163,
+    "collectionCounts": [
+      {
+        "id": "basis1000",
+        "name": "Basis 1000",
+        "levels": [
+          "alfa-a",
+          "alfa-b",
+          "alfa-c",
+          "a1"
+        ],
+        "sourceWords": 961,
+        "sourceMeanings": 1028,
+        "selectedWords": 961,
+        "newModelTasks": 777,
+        "alreadyCore": 183,
+        "otherForm": 1
+      },
+      {
+        "id": "basis",
+        "name": "Basis 2000",
+        "levels": [
+          "a2"
+        ],
+        "sourceWords": 2000,
+        "sourceMeanings": 2391,
+        "selectedWords": 2000,
+        "newModelTasks": 1793,
+        "alreadyCore": 206,
+        "otherForm": 1
+      },
+      {
+        "id": "basis5000",
+        "name": "Basis 5000",
+        "levels": [
+          "b1"
+        ],
+        "sourceWords": 5000,
+        "sourceMeanings": 5398,
+        "selectedWords": 4991,
+        "newModelTasks": 4729,
+        "alreadyCore": 260,
+        "otherForm": 2
+      }
+    ],
+    "newAudio": 0,
+    "newBindings": 0,
+    "sourceUnchanged": true,
+    "limits": [
+      "AI- en gegevenscontrole; geen onafhankelijke menselijke review of cursistenproef.",
+      "Woordenschatselectie is geen zelfstandige leesvrijgave.",
+      "Actuele selectie is nog niet gepubliceerd."
+    ]
+  },
+  "release": "Lokaal gecontroleerd; publicatiecontrole nog open."
+}

@@ -16,7 +16,10 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-smaller-header-20261019.json';
+const authorizationPath = 'docs/klink-owner-release-wordbuild-20261019.json';
+const wordbuildPreviousPath = 'docs/klink-owner-release-smaller-header-20261019.json';
+const wordbuildEvidence = 'docs/klink-wordbuild-release-20261019';
+const wordbuildFiles = ['app/globals.css', 'components/product/learner-app.tsx', 'components/product/package-experience.tsx', 'components/product/practice-chapters.tsx', 'components/product/lesson-coverage.tsx', 'components/product/staff-apps.tsx', 'lib/content-levels.ts', 'lib/package-content.ts', 'lib/group-practice.ts', 'lib/practice-chapters.ts', 'data/klink-lexicon-wordbuild-20.json', 'data/klink-lexicon-wordbuild-rest.json'];
 const inheritedAuthorizationPath = 'docs/klink-owner-release-short-screen-20261018.json';
 const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.json';
 const repairEvidence = 'docs/klink-short-screen-release-20261018';
@@ -31,6 +34,7 @@ try {
   required.push('data/klink-imported-practice.json', 'lib/imported-practice.ts', 'lib/imported-practice-contract.ts', 'lib/standard-practice.ts', 'lib/standard-player-contract.ts', 'components/product/imported-practice-surface.tsx', 'components/product/imported-teacher-workflow.tsx', 'components/product/standard-practice-surface.tsx', 'scripts/adapt-release-item.mjs', 'scripts/import-release-candidates.mjs', 'scripts/review-cumulative-candidates.mjs');
   required.push(...['owner-instruction', 'admissions', 'candidate-index', 'review-summary', 'verification-final', 'source-drive-verification', 'media-drive-verification', 'source-backup-manifest', 'live-baseline-check', ...importedDomains.map(domain => `${domain}-item-review`)].map(name => `${cumulativeEvidence}/${name}.json`));
   required.push(previousAuthorizationPath, 'docs/klink-publication-cumulative-20261018.json', ...['live-baseline-check', 'review', 'routes-browser-checks', 'preservation'].map(name => `${repairEvidence}/${name}.json`));
+  required.push(wordbuildPreviousPath, ...wordbuildFiles, ...['owner-request', 'live-baseline', 'review', 'integratie-manifest', 'selectiebeleid', 'datacontrole', 'lokale-eindcontrole', 'review-1', 'review-2', 'source-drive-verification', 'source-manifest'].map(name => `${wordbuildEvidence}/${name}.json`));
   if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
@@ -39,6 +43,31 @@ try {
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
   const proof = name => JSON.parse(readFileSync(`${cumulativeEvidence}/${name}.json`));
   const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+  // This exact derivative release leaves the original Lexicon source status intact.
+  const wordbuild = approval.wordbuildRelease;
+  const wordbuildPrevious = JSON.parse(readFileSync(wordbuildPreviousPath));
+  const wordbuildProof = name => JSON.parse(readFileSync(`${wordbuildEvidence}/${name}.json`));
+  requireProof(wordbuild?.previousAuthorization === wordbuildPreviousPath && wordbuild.publicationApproved === true && wordbuild.approvedBy === 'Nico');
+  requireProof(wordbuild.userRequest === wordbuildProof('owner-request').userRequest && wordbuild.userRequest === 'Zorg dat je alles online zet wat nu offline gebouwd is. Alles meenemen. Alles. Alles push, alles online.');
+  requireProof(wordbuild.baselineSourceCommit === '2aa047b23c9564d4f7c89e0824e9fdc8fb7d5f3d' && wordbuild.additionalModelTasks === 4789 && wordbuild.audioPaused === true && wordbuild.newMediaBindings === 0 && wordbuild.humanReviewClaimed === false);
+  requireProof(JSON.stringify(wordbuild.runtimeChangedFiles) === JSON.stringify(wordbuildFiles));
+  const allowedChanges = [...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
+  for (const [file, sha] of Object.entries(wordbuildPrevious.files)) requireProof(approval.files[file] && (allowedChanges.includes(file) || approval.files[file] === sha));
+  for (const [key, value] of Object.entries(wordbuildPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  const wordbuildLive = wordbuildProof('live-baseline'), wordbuildReview = wordbuildProof('review'), wordbuildBackup = wordbuildProof('source-drive-verification');
+  requireProof(wordbuildLive.liveRelease.sourceCommit === wordbuild.baselineSourceCommit && wordbuildLive.liveRelease.sourceClean === true && wordbuildLive.liveRelease.branch === 'main' && wordbuildLive.liveSourceIsAncestor === true);
+  execFileSync('git', ['merge-base', '--is-ancestor', wordbuild.baselineSourceCommit, 'HEAD']);
+  requireProof(wordbuildReview.status === 'passed-local' && wordbuildReview.fullLocalRegression.passed === true && wordbuildReview.sourceFilesMatchCompletedFullRegression === true && wordbuildReview.additionalModelTasks === 4789);
+  requireProof(wordbuildBackup.downloadedByteIdentical === true && wordbuildBackup.zipCrcVerified === true && wordbuildBackup.parentVerified === true && wordbuildBackup.manifestEntriesVerified === wordbuildProof('source-manifest').length);
+  const backedUp = new Map(wordbuildProof('source-manifest').map(row => [row.path, row.sha256]));
+  for (const file of wordbuildFiles) requireProof(backedUp.get(file) === approval.files[file]);
+  const trial = read('../data/klink-lexicon-wordbuild-20.json'), rest = read('../data/klink-lexicon-wordbuild-rest.json');
+  for (const file of ['data/klink-lexicon-wordbuild-20.json', 'data/klink-lexicon-wordbuild-rest.json']) requireProof(createHash('sha256').update(readFileSync(new URL('../' + file, import.meta.url))).digest('hex') === approval.files[file]);
+  requireProof(rest.selectionPolicy.id === 'klink-basisselectie-nico-20261019' && digest(rest.selectionPolicy) === digest(wordbuildProof('selectiebeleid')));
+  const words = [trial, ...rest.packs].flatMap(pack => pack.words), tasks = [trial, ...rest.packs].flatMap(pack => pack.exercises);
+  requireProof(words.length === 4789 && tasks.length === 4789 && new Set(words.map(word => word.id)).size === 4789 && new Set(tasks.map(task => task.exerciseId)).size === 4789);
+  const excludedWordIds = new Set(rest.selectionPolicy.excludedLexemeIds);
+  requireProof(words.every(word => !excludedWordIds.has(word.id) && !word.audio && word.audioStatus === 'missing') && tasks.every(task => task.requiresAudio === false && !task.prompt.audio));
   // Preserve the historical content approval; this successor permits only the reviewed logo sizing.
   const inherited = JSON.parse(readFileSync(inheritedAuthorizationPath));
   requireProof(approval.supersedesAuthorization === inheritedAuthorizationPath && approval.files[inheritedAuthorizationPath]);
@@ -49,7 +78,7 @@ try {
   requireProof(JSON.stringify(sizing.runtimeChangedFiles) === JSON.stringify(['app/taalroute-header.css']));
   execFileSync('git', ['merge-base', '--is-ancestor', sizing.baselineSourceCommit, 'HEAD']);
   const resizedFiles = ['app/taalroute-header.css', 'scripts/check-curriculum-release.mjs', 'scripts/test-picture-guide-browser.mjs', 'scripts/test-publication-proof.mjs'];
-  for (const [file, sha] of Object.entries(inherited.files)) requireProof(approval.files[file] && (resizedFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(inherited.files)) requireProof(approval.files[file] && (resizedFiles.includes(file) || allowedChanges.includes(file) || approval.files[file] === sha));
   const baselineCss = execFileSync('git', ['show', `${sizing.baselineSourceCommit}:app/taalroute-header.css`], { encoding: 'utf8' });
   requireProof(createHash('sha256').update(baselineCss).digest('hex') === inherited.files['app/taalroute-header.css']);
   const resizedCss = baselineCss.replace('.header-klink-logo { width: 78px; }', '.header-klink-logo { width: 66px; }').replace('.header-klink-logo { width: 65px; }', '.header-klink-logo { width: 55px; }');
@@ -66,7 +95,7 @@ try {
   requireProof(approval.layoutRepair?.id === 'short-screen-workflow-footer-overlap-001' && approval.layoutRepair.baselineSourceCommit === readiness.baseline.sourceCommit && approval.layoutRepair.reviewEvidence === `${repairEvidence}/review.json`);
   requireProof(repair.status === 'passed-local' && repair.liveReproductionFailedAsExpected === true && repair.fullLocalRegression === true && repair.cssSha256 === approval.files['app/learner-ui.css'] && repair.routeTestSha256 === approval.files['scripts/test-cumulative-routes-browser.mjs']);
   requireProof(JSON.stringify(approval.layoutRepair.runtimeChangedFiles) === JSON.stringify(['app/learner-ui.css']));
-  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'app/taalroute-header.css', 'data/klink-release-readiness.json'].includes(file)) requireProof(approval.files[file] === sha);
+  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'app/taalroute-header.css', 'data/klink-release-readiness.json', ...wordbuildFiles].includes(file)) requireProof(approval.files[file] === sha);
   requireProof(live.liveRelease?.sourceCommit === readiness.baseline.sourceCommit && live.liveRelease?.sourceClean === true && live.liveRelease?.branch === readiness.canonicalBranch && live.liveWorkerVersion === readiness.baseline.liveWorkerVersion && live.liveSourceIsAncestor === true && approval.contentSourceCommit === live.localHead);
   const backup = proof('source-drive-verification');
   requireProof(backup.sourceArchive?.id === scope.sourceArchiveId && backup.sourceArchive?.sha256 === scope.sourceArchiveSha256 && backup.sourceArchive?.parentVerified === true && backup.sourceArchive?.downloadedByteIdentical === true && backup.sourceArchive?.zipCrcVerified === true);

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
-import { chapterCollections, chapterHasBothAxes, chapterHash, chapterLevels, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
+import { chapterCollections, chapterHasBothAxes, chapterHash, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel } from '@/lib/content-levels';
 import { MyRoute, useRouteSettings } from './route-settings';
 import { chapterRouteAxis } from '@/lib/learner-route';
@@ -88,7 +88,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     {activity && !collection && <>
       <div className="cp-chapter-collections">{visible.slice(0, limit).map(item => <button key={item.id} className="cp-chapter-collection" data-collection={item.id} onClick={() => open({ ...location, collection: item.id })}>
         {item.image ? <Image src={item.image} width={96} height={96} alt="" /> : <BookOpen aria-hidden="true" />}
-        <span><strong>{item.title}</strong><small>{chapterLevels.find(level => level.id === item.level)?.label} · {exerciseSetHelp(item.exercises) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}</small></span><ArrowRight aria-hidden="true" />
+        <span><strong>{item.title}</strong><small>{item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · {exerciseSetHelp(item.exercises) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}</small></span><ArrowRight aria-hidden="true" />
       </button>)}</div>
       {!visible.length && <output>{reviewMode ? 'Je hebt nu niets om te herhalen. Oefen eerst bij Klanken, Spelling, Grammatica, Teksten of In de praktijk.' : `Voor deze keuze (${levelLabel(location.level)}) zijn hier nog geen opdrachten ingedeeld. Kies samen met je docent ander aanbod.`}</output>}
       {visible.length > limit && <button className="secondary-button cp-chapter-more" onClick={() => setLimits(current => ({ ...current, [listKey]: limit + pageSize }))}>Meer opdrachten<ArrowRight /></button>}

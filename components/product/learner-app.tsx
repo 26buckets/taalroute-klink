@@ -11,6 +11,7 @@ import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
   allPackageWords,
   contentPackages,
+  lessonPackages,
   getPackage,
   wordLabel,
   type PackageId,
@@ -159,7 +160,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
 
 function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, savedCount, progress, onContinue }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; onChapter: (chapter: string, level?: ContentLevel) => void; savedCount: number; progress: RouteProgress; onContinue: () => void }) {
   const { settings } = useRouteSettings();
-  const candidates = contentPackages.filter(pack => pack.lessons.some(lesson => settings.literacy === 'all' || lessonContentLevel(pack, lesson) === settings.literacy));
+  const candidates = lessonPackages.filter(pack => pack.lessons.some(lesson => settings.literacy === 'all' || lessonContentLevel(pack, lesson) === settings.literacy));
   const first = candidates.find(pack => pack.id === progress.position?.packageId) ?? candidates.find(pack => pack.lessons.some(lesson => !progress.completed.includes(lesson.id))) ?? candidates[0] ?? contentPackages[0];
   const activeLesson = first.lessons.find(lesson => lesson.id === progress.position?.lessonId && (settings.literacy === 'all' || lessonContentLevel(first, lesson) === settings.literacy));
   const selectedLevel = settings.literacy !== 'all' ? settings.literacy : settings.language;

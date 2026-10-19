@@ -1,6 +1,7 @@
 import { importedItems } from './imported-practice.ts';
 import { importedLevels } from './imported-practice-contract.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
+import supplementary from '../data/klink-lexicon-wordbuild-rest.json' with { type: 'json' };
 import { contentById } from './connected-content.ts';
 import type { PackageExercise } from './package-content';
 
@@ -41,12 +42,17 @@ export function wordContentLevel(ids: string[]): ContentLevel {
 
 // Presence is not a completed course or a learner's attained level.
 export const availableContentLevels = new Set<ContentLevel>([
+  ...supplementary.packs.flatMap(pack => pack.exercises.flatMap(exercise => exercise.vocabularyLevels as ContentLevel[])),
   ...importedItems.map(item => importedLevels[item.level]),
   ...curriculum.words.map(word => wordContentLevel([word.id])),
   ...[...contentById.values()].map(source => sourceContentLevel(source.sourceLevel)),
 ]);
 
 export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
+  if (Array.isArray(exercise.vocabularyLevels)) {
+    const levels = exercise.vocabularyLevels;
+    return levels.includes('a1') ? 'a1' : levels.includes('a2') ? 'a2' : levels.includes('b1') ? 'b1' : 'support';
+  }
   if (exercise.componentId === 'KLINK-CONTENT' && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
   // A known word inside a sentence does not establish the level of that sentence.
   if (exercise.contextId) return sourceContentLevel(typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId)?.sourceLevel : undefined);
@@ -55,6 +61,14 @@ export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
   const cells = Array.isArray(exercise.cells) ? exercise.cells as { cellId?: string }[] : [];
   const prerequisites = Array.isArray(exercise.prerequisiteWordIds) ? exercise.prerequisiteWordIds as string[] : [];
   return wordContentLevel([...new Set([...targets, ...prerequisites, ...conditions.flatMap(item => item.wordId ? [item.wordId] : []), ...cells.flatMap(item => item.cellId ? [item.cellId] : [])])]);
+}
+
+// Shared vocabulary membership is not an independent-reading or mastery claim.
+export function exerciseVocabularyLevels(exercise: PackageExercise): ContentLevel[] {
+  const levels = exercise.vocabularyLevels;
+  return Array.isArray(levels)
+    ? contentLevels.filter(level => level.id !== 'all' && levels.includes(level.id)).map(level => level.id)
+    : [exerciseContentLevel(exercise)];
 }
 
 export function exerciseSetLevel(exercises: PackageExercise[]): ContentLevel {
@@ -82,6 +96,6 @@ export function selectExerciseSet(exercises: PackageExercise[], selection: Conte
     const group = groups.get(key) ?? [];
     group.push(item); groups.set(key, group);
   }
-  const allowed = new Set([...groups.values()].filter(group => matchesContent(exerciseSetLevel(group), exerciseSetHelp(group), selection)).flatMap(group => group.map(item => item.exerciseId)));
+  const allowed = new Set([...groups.values()].filter(group => (selection.level === 'all' || group.every(item => exerciseVocabularyLevels(item).includes(selection.level)) || exerciseSetLevel(group) === selection.level) && matchesContent(exerciseSetLevel(group), exerciseSetHelp(group), { ...selection, level: 'all' })).flatMap(group => group.map(item => item.exerciseId)));
   return exercises.filter(item => allowed.has(item.exerciseId));
 }

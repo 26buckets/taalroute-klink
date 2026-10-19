@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-19",
+  "status": "local-selection-verified-publication-gate-pending",
+  "userPublicationRequestReceived": true,
+  "scope": "4789 aanvullende woordbouwtaken met zichtbaar model uit de afgesproken Basis-selecties; geen nieuwe audio of audiokoppelingen",
+  "liveRelease": {
+    "sourceCommit": "2aa047b23c9564d4f7c89e0824e9fdc8fb7d5f3d",
+    "branch": "main",
+    "sourceClean": true,
+    "checkedVia": "HTTPS /release.json"
+  },
+  "localAndRemoteMain": "213523df03cb35195c83ef7e192fbe78a76f48e2",
+  "liveCommitIsAncestorOfLocalHead": true,
+  "source": {
+    "path": "/Users/nicoknoester/Documents/Codex/2026-10-15/ta/work/lexicon/data/catalog.json",
+    "releaseId": "lexicon-uitleg-20261009-1",
+    "publicReleaseAllowed": false,
+    "reason": "Canonieke catalogus bevat de oorspronkelijke ontbrekende-rechtenmelding; Nico heeft de rechten voor deze afgeleide Klink-bundel bevestigd. De catalogus is niet stilzwijgend gewijzigd.",
+    "rightsConfirmationFound": true,
+    "searchScope": "Actuele bronrelease, lokale Klink-vrijgaveregistratie, Lexicon-publicatiedocumenten en gerichte Drive-zoekopdracht. Geen uitputtende zoekclaim.",
+    "ownerConfirmation": {
+      "owner": "Taalroute",
+      "confirmedBy": "Nico",
+      "date": "2026-10-19",
+      "statement": "Ja natuurlijk, dit is van ons. Van de taalroute. Ja?",
+      "scope": "Gebruikte woordenlijst en bijbehorende omschrijvingen",
+      "humanContentReview": false
+    }
+  },
+  "checksThisTurn": {
+    "sourceAnswerAndAudioExclusionData": "passed",
+    "newExpansionItems": 4769,
+    "includingPrototype": 4789,
+    "selectionPolicyId": "klink-basisselectie-nico-20261019",
+    "excludedOutsideCollections": 99,
+    "excludedEditorial": 9,
+    "sourceWordsByCollection": [
+      961,
+      2000,
+      5000
+    ],
+    "allowedWordsByCollection": [
+      961,
+      2000,
+      4991
+    ],
+    "allExpansionTasksUseVisibleModelWithoutAudio": true,
+    "levelsAreVocabularyMembershipNotMastery": true,
+    "fullRegression": {
+      "passed": true,
+      "exitCode": 0,
+      "unitTests": 119
+    }
+  },
+  "notYetCompleted": [
+    "Nieuw inhoudsgebonden vrijgaverecord aan de bestaande publicatiepoort koppelen en controleren",
+    "Actuele livebron opnieuw controleren vóór publicatie",
+    "Commit, publicatie en live terugleescontrole"
+  ],
+  "safety": {
+    "sourceReleaseChanged": false,
+    "publicationGateChanged": false,
+    "published": false,
+    "pushed": false,
+    "newAudio": 0,
+    "newBindings": 0,
+    "githubActionsTriggered": false
+  },
+  "nextStep": "Alleen de gecontroleerde Basis-selectie via de bestaande publicatiepoort online zetten. Audio blijft apart geblokkeerd; geen brede Lexicon-import."
+}

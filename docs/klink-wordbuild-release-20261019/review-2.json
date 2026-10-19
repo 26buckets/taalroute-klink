@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-19T01:18:22.355Z",
+  "round": 2,
+  "type": "AI-zelfreview, volledige gegevenscontrole en gerichte browsercontrole; geen onafhankelijke menselijke beoordeling",
+  "selectionPolicyId": "klink-basisselectie-nico-20261019",
+  "checks": {
+    "allNewSourceItems": 4769,
+    "allBlockedListeningItems": 9538,
+    "allAudioScripts": 4789,
+    "browserCases": 98,
+    "fullSheetCases": 4,
+    "levelRouteCases": 6,
+    "viewports": [
+      1280,
+      768,
+      390
+    ],
+    "everyNewPackOpenedOnDesktop": true,
+    "originalLessonRoute": "15 oorspronkelijke onderdelen en 302 lessen behouden; extra pakketten zijn geen boeklessen.",
+    "publicationGuard": "blocked-as-required"
+  },
+  "findings": [
+    {
+      "issue": "Te ruime Lexicon-import en verkeerde niveaubenadering.",
+      "repair": "Exacte collecties gekoppeld aan Alfa A/B/C, A1, A2 en B1 volgens Nico. 99 niet-geselecteerde en 9 ongewenste woorden uitgesloten; geen terugkeer in actieve audio."
+    },
+    {
+      "issue": "Woordenschatlidmaatschap is niet hetzelfde als leesniveau.",
+      "repair": "Gedeelde toegang met stabiele taak-ID; docentvoorbereiding blijft nodig, bestaande leesroutes behouden."
+    },
+    {
+      "issue": "Toevoegingen verschenen als gewone lessen in cursist- en docentroute.",
+      "repair": "Oorspronkelijke lessen apart gehouden van aanvullende woordbouw en keuzeblokken."
+    },
+    {
+      "issue": "Lange woorden en herhaalde letters vragen echte spelertests.",
+      "repair": "Desktop, tablet en mobiel gecontroleerd op goede/foute antwoorden, herstel, toetsenbord en behoud van voortgang."
+    }
+  ],
+  "result": "Gecorrigeerde lokale selectie; niet gepubliceerd",
+  "counts": {
+    "sourceLexemes": 5163,
+    "new": 4763,
+    "already-core": 264,
+    "already-trial": 20,
+    "new-receptive": 6,
+    "outside-selection": 99,
+    "no-ordering-task": 2,
+    "excluded-editorial": 9,
+    "newWordBuild": 4769,
+    "newBlockedListening": 9538,
+    "previousTrialWordBuild": 20,
+    "totalNewWordBuild": 4789,
+    "totalNewBlockedListening": 9578,
+    "coreUniqueSpellings": 337,
+    "totalLocalUniqueSpellings": 5126,
+    "additionalPacks": 52,
+    "additionalChoiceBlocks": 480,
+    "newAudioScripts": 4769,
+    "generatedAudio": 0,
+    "newBindings": 0,
+    "newLive": 0,
+    "selectedLexemes": 5055,
+    "excludedEditorial": 9,
+    "outsideSelection": 99,
+    "receptiveModelOnly": 6
+  },
+  "limits": [
+    "Niet iedere taak afzonderlijk in de browser doorlopen; alle taakdata wel volledig gecontroleerd.",
+    "Geen onafhankelijke menselijke taalreview, screenreadertest of cursistenproef.",
+    "Geen audio geproduceerd of gekoppeld.",
+    "Volledige publicatieregressie en vrijgaverecord afzonderlijk vastleggen voordat publicatie is toegestaan."
+  ]
+}

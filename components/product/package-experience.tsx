@@ -11,7 +11,7 @@ import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages
 import { learnerListName } from '@/lib/learner-copy';
 import sectionPhotos from '@/data/klink-section-photos.json';
 import {
-  contentPackages,
+  lessonPackages,
   getPackage,
   wordLabel,
   type PackageDefinition,
@@ -69,7 +69,7 @@ export function PackageLibrary({
       <header className="package-library-heading">
         <div>
           <h1>Oefenen met woorden</h1>
-          <p>{contentPackages.length} onderdelen · {contentPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
+          <p>{lessonPackages.length} onderdelen · {lessonPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
         </div>
       </header>
 
@@ -80,7 +80,7 @@ export function PackageLibrary({
 
 export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
   return <section className="cp-package-grid" aria-label="Oefenen met woorden">
-        {contentPackages.map((pack, index) => {
+        {lessonPackages.map((pack, index) => {
           // Navigation scenes are separate from the meaning images used in exercises.
           const image = (sectionPhotos as Record<string, string>)[pack.id] ?? pack.cover?.image;
           return <button key={pack.id} className="cp-photo-section" onClick={() => onOpen(pack.id)} aria-label={`Onderdeel ${index + 1}: ${learnerListName(pack)}, ${pack.lessons.length} lessen`}>

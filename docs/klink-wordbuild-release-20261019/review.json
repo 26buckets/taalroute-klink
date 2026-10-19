@@ -1,0 +1,45 @@
+{
+  "status": "passed-local",
+  "sourceFilesMatchCompletedFullRegression": true,
+  "fullLocalRegression": {
+    "passed": true,
+    "exitCode": 0,
+    "unitTests": 119,
+    "log": "volledige-lokale-regressie.log"
+  },
+  "sourceManifest": "integratie-manifest.json",
+  "runtimeChangedFiles": [
+    "app/globals.css",
+    "components/product/learner-app.tsx",
+    "components/product/package-experience.tsx",
+    "components/product/practice-chapters.tsx",
+    "components/product/lesson-coverage.tsx",
+    "components/product/staff-apps.tsx",
+    "data/klink-lexicon-wordbuild-20.json",
+    "data/klink-lexicon-wordbuild-rest.json",
+    "lib/content-levels.ts",
+    "lib/package-content.ts",
+    "lib/group-practice.ts",
+    "lib/practice-chapters.ts"
+  ],
+  "existingLessons": 302,
+  "existingLessonPackages": 15,
+  "additionalPackages": 53,
+  "additionalModelTasks": 4789,
+  "levelSelectionCounts": {
+    "alfa-a": 777,
+    "alfa-b": 777,
+    "alfa-c": 777,
+    "a1": 777,
+    "a2": 1793,
+    "b1": 4729
+  },
+  "excludedEditorial": 9,
+  "excludedOutsideCollections": 99,
+  "newAudio": 0,
+  "newMediaBindings": 0,
+  "humanReviewClaimed": false,
+  "learnerPilotClaimed": false,
+  "designBasis": "Existing guided visual construction and writing goal; teacher prepares meaning first. Vocabulary membership is not independent literacy or mastery. No new course/program. Original15 packages and302 lessons unchanged.",
+  "sourceReleasePreserved": "Historical false publication flags remain in source snapshots; exact derivative authorization provides current Klink consent, not general Lexicon release."
+}

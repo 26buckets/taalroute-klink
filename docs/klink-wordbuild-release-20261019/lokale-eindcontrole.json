@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-19",
+  "selectionPolicyId": "klink-basisselectie-nico-20261019",
+  "status": "corrected-selection-locally-verified",
+  "manifestSha256": "fa0121600fa229de0e48ac9c660848d33da5c3c29ad13bb195a4e88cf25ffb41",
+  "logSha256": "7530d5e90ab3511a2b1ad519df676d23cb7bb4e066779e1497c2241510cb6d4d",
+  "fullRegression": {
+    "passed": true,
+    "exitCode": 0,
+    "unitTests": 119,
+    "log": "volledige-lokale-regressie.log"
+  },
+  "additionalSelectionTests": {
+    "passed": true,
+    "tests": 18,
+    "note": "Deels overlappend met de brede reeks; niet optellen als unieke testtelling."
+  },
+  "additionalBrowserChecks": {
+    "modelAndWorksheetCases": 98,
+    "fullSheetCases": 4,
+    "levelEntranceCases": 6
+  },
+  "typescript": "passed",
+  "targetedLint": "passed",
+  "diffWhitespace": "passed",
+  "existingSourceAndMediaRegisters": "unchanged",
+  "newAudio": 0,
+  "newBindings": 0,
+  "published": false,
+  "publicationAllowed": false,
+  "remaining": [
+    "Inhoudsgebonden vrijgaverecord voor deze selectie aan de bestaande publicatiepoort koppelen en controleren.",
+    "Voor publicatie opnieuw actuele livebron/afstamming controleren; uitsluitend normale publicatieroute gebruiken.",
+    "Na publicatie live release, spelers en media teruglezen."
+  ],
+  "nextStep": "Alleen de gecontroleerde Basis-selectie via de bestaande publicatiepoort online zetten. Audio blijft apart geblokkeerd; geen brede Lexicon-import."
+}

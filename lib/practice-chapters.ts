@@ -1,9 +1,9 @@
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
-import { taalroutePackages } from './taalroute-packages.ts';
+import { contentPackages } from './package-content.ts';
 import { groupActivities, groupExercises, type GroupActivity } from './group-practice.ts';
 import { contentById } from './connected-content.ts';
 import { learnerListName } from './learner-copy.ts';
-import { contentLevels, contentHelp, exerciseContentLevel, exerciseSetLevel, exerciseSetHelp, matchesContent, type ContentHelp } from './content-levels.ts';
+import { contentLevels, contentHelp, exerciseContentLevel, exerciseVocabularyLevels, exerciseSetLevel, exerciseSetHelp, matchesContent, type ContentHelp } from './content-levels.ts';
 import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
@@ -26,7 +26,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; pack: PackageDefinition; exercises: PackageExercise[]; image?: string };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; image?: string };
 export type ChapterLocation = { chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -36,28 +36,28 @@ export function chapterExerciseLevel(exercise: PackageExercise): ChapterLevel {
 }
 
 export function chapterHasBothAxes(chapter: string) {
-  const levels = practiceChapters.find(item => item.id === chapter)?.activities.flatMap(activity => chapterCollections(activity).map(item => item.level)) ?? [];
+  const levels = practiceChapters.find(item => item.id === chapter)?.activities.flatMap(activity => chapterCollections(activity).flatMap(item => item.levels ?? [item.level])) ?? [];
   return levels.some(level => level.startsWith('alfa-')) && levels.some(level => ['a1','a2','b1'].includes(level));
 }
 export function chapterForLevel(level: ChapterLevel, preferred: string) {
   const ordered = [...practiceChapters.filter(item => item.id === preferred), ...practiceChapters.filter(item => item.id !== preferred)];
-  return ordered.find(chapter => chapter.activities.some(activity => chapterCollections(activity).some(item => level === 'all' || item.level === level)))?.id ?? preferred;
+  return ordered.find(chapter => chapter.activities.some(activity => chapterCollections(activity).some(item => level === 'all' || (item.levels ?? [item.level]).includes(level))))?.id ?? preferred;
 }
 
-export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => matchesContent(item.level, exerciseSetHelp(item.exercises), selection);
+export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => (selection.level === 'all' || (item.levels ?? [item.level]).includes(selection.level)) && matchesContent(item.level, exerciseSetHelp(item.exercises), { ...selection, level: 'all' });
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
   if (activity.startsWith('content-')) {
     const existing = cache.get(activity);
     if (existing) return existing;
-    const result = importedCollections(activity as ImportedActivity, undefined, taalroutePackages);
+    const result = importedCollections(activity as ImportedActivity, undefined, contentPackages);
     cache.set(activity, result);return result;
   }
   const cached = cache.get(activity);
   if (cached) return cached;
   const seen = new Set<string>();
   const result: ChapterCollection[] = [];
-  for (const pack of taalroutePackages) {
+  for (const pack of contentPackages) {
     const exercises = groupExercises(pack, activity).filter(exercise => {
       // One source in free practice, even when it recurs in several word lessons.
       // Word-to-sentence chains deliberately retain their model and repetition.
@@ -83,6 +83,14 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     } else if (activity === 'word-sentence') {
       // Keep complete word + sentence chains together, including their harder reading conditions.
       if (exercises.length) result.push({ id: pack.id, title: learnerListName(pack), level: 'support', pack, exercises, image: pack.cover?.image });
+    } else if (exercises.some(exercise => Array.isArray(exercise.vocabularyLevels))) {
+      // One collection per shared membership, not one copied task per level.
+      const groups = new Map<string, PackageExercise[]>();
+      for (const exercise of exercises) {
+        const key = exerciseVocabularyLevels(exercise).join('-');
+        groups.set(key, [...(groups.get(key) ?? []), exercise]);
+      }
+      for (const [key, selected] of groups) result.push({ id: `${pack.id}.${key}`, title: learnerListName(pack), level: exerciseContentLevel(selected[0]), levels: exerciseVocabularyLevels(selected[0]), pack, exercises: selected, image: pack.cover?.image });
     } else {
       for (const level of chapterLevels.filter(item => item.id !== 'all')) {
         const selected = exercises.filter(exercise => chapterExerciseLevel(exercise) === level.id);

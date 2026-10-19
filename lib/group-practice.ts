@@ -109,6 +109,8 @@ function spokenWordBoards(pack: PackageDefinition, seed: number): PackageExercis
 
 const learningCache = new WeakMap<PackageDefinition, Map<string, PackageExercise[]>>();
 export function groupExercises(pack: PackageDefinition, activity: GroupActivity, seed = 1): PackageExercise[] {
+  // Supplemental packs offer only their authored activities; other generators require the core curriculum.
+  if (pack.practiceActivities && !pack.practiceActivities.includes(activity)) return [];
   if (activity.startsWith('content-')) return unique([...pack.exercises.filter(item => item.groupActivity === activity), ...importedExercisesForPack(pack, activity as ImportedActivity)], item => item.exerciseId);
   if (standardActivities.some(item => item.id === activity)) return standardExercises(pack, activity as StandardActivity, seed);
   if (activity === 'learning-review') return learningActivities.flatMap(item => groupExercises(pack, item.id, seed).filter(exercise => exercise.reviewEligible));

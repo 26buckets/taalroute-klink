@@ -7,12 +7,18 @@ import { spawnSync } from 'node:child_process';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
-function check(candidate, changeApproval, changeImported, changeHeaderCss) {
+function check(candidate, changeApproval, changeImported, changeHeaderCss, changeWordbuild) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     cpSync('lib', join(dir, 'lib'), { recursive: true });
     cpSync('data', join(dir, 'data'), { recursive: true });
+    if (changeWordbuild) {
+      const path = join(dir, 'data/klink-lexicon-wordbuild-rest.json');
+      const catalog = JSON.parse(readFileSync(path));
+      changeWordbuild(catalog);
+      writeFileSync(path, JSON.stringify(catalog));
+    }
     if (changeImported) {
       const path = join(dir, 'data/klink-imported-practice.json');
       const catalog = JSON.parse(readFileSync(path));
@@ -21,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss) {
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-smaller-header-20261019.json';
+      const approvalPath = 'docs/klink-owner-release-wordbuild-20261019.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -159,4 +165,29 @@ test('Header sizing rejects extra CSS changes even when approval hashes match th
     css => css.replace('--taalroute-header-height: 60px', '--taalroute-header-height: 70px'),
     css => css + '\n.unrelated { display: none; }\n',
   ]) assert(check(proof, undefined, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Wordbuild publication requires exact consent, reviewed selection and verified source backup', () => {
+  for (const change of [
+    approval => { delete approval.wordbuildRelease; },
+    approval => { approval.wordbuildRelease.userRequest = 'unrelated'; },
+    approval => { approval.wordbuildRelease.publicationApproved = false; },
+    approval => { approval.wordbuildRelease.additionalModelTasks++; },
+    approval => { approval.wordbuildRelease.audioPaused = false; },
+    approval => { approval.wordbuildRelease.humanReviewClaimed = true; },
+    approval => { approval.wordbuildRelease.baselineSourceCommit = '7008a35917f73f5ea52df1089c5c2e7c53a741f4'; },
+    approval => { approval.wordbuildRelease.runtimeChangedFiles.push('data/klink-curriculum.json'); },
+    approval => { delete approval.files['data/klink-lexicon-wordbuild-rest.json']; },
+    approval => { delete approval.files['docs/klink-wordbuild-release-20261019/source-drive-verification.json']; },
+    approval => { delete approval.files['docs/klink-owner-release-smaller-header-20261019.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval', () => {
+  for (const change of [
+    catalog => { catalog.packs[0].exercises.pop(); },
+    catalog => { catalog.packs[0].exercises[0].exampleWord += 'x'; },
+    catalog => { catalog.packs[0].words[0].audio = '/new.mp3'; },
+    catalog => { catalog.selectionPolicy.excludedLexemeIds = []; },
+  ]) assert(check(proof, undefined, undefined, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
