@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-24",
+  "url": "https://klink.taalroute.nl/",
+  "sourceCommit": "e4d58e12752f8f181d277cb999660ae891df4f0d",
+  "baselineCommit": "ae860b9c36271539a97d3205b9663e31dda187d7",
+  "workerVersion": "51ae5576-9165-454a-b3bb-de2a79f05ff2",
+  "activeTrafficPercent": 100,
+  "deploymentCommand": "npm run deploy",
+  "pullRequest": "https://github.com/26buckets/taalroute-klink/pull/4",
+  "pullRequestStatus": "merged",
+  "localTests": {
+    "lintErrors": 0,
+    "typescript": "passed",
+    "build": "passed",
+    "catalog": "passed",
+    "fullReview": "passed in full, exit 0",
+    "unitTests": 119,
+    "browserPassMessages": 169,
+    "publicationAndLogoTests": 19,
+    "landingWidths": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "axeScans": 37,
+    "axeViolations": 0,
+    "manualGeometryChecksUnchanged": 10,
+    "workflows": 0
+  },
+  "live": {
+    "landingWidths": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "axeScans": 37,
+    "axeViolations": 0,
+    "geometryMatchesLocal": 15,
+    "mediaByteIdentical": 2679,
+    "brandAndPhotoAssetsByteIdentical": 7,
+    "manualChapters": 12,
+    "pageErrors": []
+  },
+  "approval": "docs/klink-owner-release-landing-footer-20261024.json",
+  "evidenceDirectory": "docs/klink-landing-footer-20261024",
+  "backupReceipt": "docs/klink-landing-footer-20261024/drive-backup.json",
+  "remainingKnownIssuesWithinScope": []
+}
