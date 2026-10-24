@@ -16,7 +16,9 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-header-repair-20261024.json';
+const authorizationPath = 'docs/klink-owner-release-appmenu-20261024.json';
+const appMenuPreviousPath = 'docs/klink-owner-release-header-repair-20261024.json';
+const appMenuFiles = ["components/product/taalroute-header.tsx", "public/taalroute-menu/menu-controls.css", "public/taalroute-menu/klink.svg", "public/taalroute-menu/klink-dark.svg", "public/taalroute-menu/klink-brand.svg", "scripts/test-shared-header-browser.mjs", "scripts/check-curriculum-release.mjs", "scripts/test-publication-proof.mjs"];
 const headerRepairPreviousPath = 'docs/klink-owner-release-sharing-20261024.json';
 const headerRepairFiles = ["app/taalroute-header.css", "components/product/taalroute-header.tsx", "public/taalroute-menu/app-chooser.css", "scripts/check-curriculum-release.mjs", "scripts/test-publication-proof.mjs", "scripts/test-shared-header-browser.mjs"];
 const sharingPreviousPath = 'docs/klink-owner-release-landing-footer-20261024.json';
@@ -49,6 +51,17 @@ try {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
+  const appMenu = approval.appMenu;
+  const appMenuPrevious = JSON.parse(readFileSync(appMenuPreviousPath));
+  requireProof(appMenu?.approvedBy === 'Nico' && appMenu.publicationApproved === true && appMenu.userRequest === 'Ook KLINK in alle appmenu’s toevoegen');
+  requireProof(appMenu.previousAuthorization === appMenuPreviousPath && appMenu.baselineSourceCommit === '6d4d012738e9f4332bfd7ff80212192a1d805607');
+  requireProof(JSON.stringify(appMenu.changedFiles) === JSON.stringify(appMenuFiles));
+  execFileSync('git', ['merge-base', '--is-ancestor', appMenu.baselineSourceCommit, 'HEAD']);
+  for (const [key, value] of Object.entries(appMenuPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  for (const [file, sha] of Object.entries(appMenuPrevious.files)) requireProof(approval.files[file] && (appMenuFiles.includes(file) || approval.files[file] === sha));
+  requireProof(appMenuFiles.every(file => approval.files[file]));
+  const appMenuChanges = execFileSync('git', ['diff', '--name-only', appMenu.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], {encoding:'utf8'}).trim().split('\n').filter(Boolean);
+  requireProof(appMenuChanges.every(file => appMenuFiles.includes(file)));
   const headerRepair = approval.headerRepair;
   const headerPrevious = JSON.parse(readFileSync(headerRepairPreviousPath));
   requireProof(headerRepair?.approvedBy === 'Nico' && headerRepair.publicationApproved === true);
@@ -58,10 +71,10 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', headerRepair.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${headerRepair.baselineSourceCommit}:${headerRepairPreviousPath}`])).digest('hex') === approval.files[headerRepairPreviousPath]);
   for (const [key, value] of Object.entries(headerPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(headerPrevious.files)) requireProof(approval.files[file] && (headerRepairFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(headerPrevious.files)) requireProof(approval.files[file] && ((headerRepairFiles.includes(file) || appMenuFiles.includes(file)) || approval.files[file] === sha));
   requireProof(headerRepairFiles.every(file => approval.files[file]));
   const headerChanges = execFileSync('git', ['diff', '--name-only', headerRepair.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], {encoding:'utf8'}).trim().split('\n').filter(Boolean);
-  requireProof(headerChanges.every(file => headerRepairFiles.includes(file)));
+  requireProof(headerChanges.every(file => (headerRepairFiles.includes(file) || appMenuFiles.includes(file))));
   const sharing = approval.sharingRelease;
   const sharingPrevious = JSON.parse(readFileSync(sharingPreviousPath));
   requireProof(sharing?.approvedBy === 'Nico' && sharing.publicationApproved === true);
@@ -71,10 +84,10 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', sharing.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${sharing.baselineSourceCommit}:${sharingPreviousPath}`])).digest('hex') === approval.files[sharingPreviousPath]);
   for (const [key, value] of Object.entries(sharingPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(sharingPrevious.files)) requireProof(approval.files[file] && (sharingFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(sharingPrevious.files)) requireProof(approval.files[file] && ((sharingFiles.includes(file) || appMenuFiles.includes(file)) || approval.files[file] === sha));
   requireProof(sharingFiles.every(file => approval.files[file]));
   const sharingChanges = execFileSync('git', ['diff', '--name-only', sharing.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], {encoding:'utf8'}).trim().split('\n').filter(Boolean);
-  requireProof(sharingChanges.every(file => sharingFiles.includes(file)));
+  requireProof(sharingChanges.every(file => (sharingFiles.includes(file) || appMenuFiles.includes(file))));
   const landing = approval.landingRelease;
   const landingPrevious = JSON.parse(readFileSync(landingPreviousPath));
   requireProof(landing?.approvedBy === 'Nico' && landing.publicationApproved === true);
@@ -85,9 +98,9 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', landing.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${landing.baselineSourceCommit}:${landingPreviousPath}`])).digest('hex') === approval.files[landingPreviousPath]);
   for (const [key, value] of Object.entries(landingPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(landingPrevious.files)) requireProof(approval.files[file] && (landingFiles.includes(file) || sharingFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(landingPrevious.files)) requireProof(approval.files[file] && ((landingFiles.includes(file) || appMenuFiles.includes(file)) || (sharingFiles.includes(file) || appMenuFiles.includes(file)) || approval.files[file] === sha));
   const landingRuntimeChanges = execFileSync('git', ['diff', '--name-only', landing.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  requireProof(landingRuntimeChanges.every(file => landingFiles.includes(file) || sharingFiles.includes(file)));
+  requireProof(landingRuntimeChanges.every(file => (landingFiles.includes(file) || appMenuFiles.includes(file)) || (sharingFiles.includes(file) || appMenuFiles.includes(file))));
   const maintenance = approval.maintenanceRelease;
   const maintenancePrevious = JSON.parse(readFileSync(maintenancePreviousPath));
   requireProof(maintenance?.approvedBy === 'Nico' && maintenance.publicationApproved === true);
@@ -98,9 +111,9 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', maintenance.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${maintenance.baselineSourceCommit}:${maintenancePreviousPath}`])).digest('hex') === approval.files[maintenancePreviousPath]);
   for (const [key, value] of Object.entries(maintenancePrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(maintenancePrevious.files)) requireProof(approval.files[file] && (maintenanceFiles.includes(file) || landingFiles.includes(file) || sharingFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(maintenancePrevious.files)) requireProof(approval.files[file] && ((maintenanceFiles.includes(file) || appMenuFiles.includes(file)) || (landingFiles.includes(file) || appMenuFiles.includes(file)) || (sharingFiles.includes(file) || appMenuFiles.includes(file)) || approval.files[file] === sha));
   const runtimeChanges = execFileSync('git', ['diff', '--name-only', maintenance.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  requireProof(runtimeChanges.every(file => maintenanceFiles.includes(file) || landingFiles.includes(file) || sharingFiles.includes(file)));
+  requireProof(runtimeChanges.every(file => (maintenanceFiles.includes(file) || appMenuFiles.includes(file)) || (landingFiles.includes(file) || appMenuFiles.includes(file)) || (sharingFiles.includes(file) || appMenuFiles.includes(file))));
   const proof = name => JSON.parse(readFileSync(`${cumulativeEvidence}/${name}.json`));
   const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
   // This exact derivative release leaves the original Lexicon source status intact.
@@ -111,7 +124,7 @@ try {
   requireProof(wordbuild.userRequest === wordbuildProof('owner-request').userRequest && wordbuild.userRequest === 'Zorg dat je alles online zet wat nu offline gebouwd is. Alles meenemen. Alles. Alles push, alles online.');
   requireProof(wordbuild.baselineSourceCommit === '2aa047b23c9564d4f7c89e0824e9fdc8fb7d5f3d' && wordbuild.additionalModelTasks === 4789 && wordbuild.audioPaused === true && wordbuild.newMediaBindings === 0 && wordbuild.humanReviewClaimed === false);
   requireProof(JSON.stringify(wordbuild.runtimeChangedFiles) === JSON.stringify(wordbuildFiles));
-  const allowedChanges = [...sharingFiles, ...landingFiles, ...maintenanceFiles, ...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
+  const allowedChanges = [...appMenuFiles, ...sharingFiles, ...landingFiles, ...maintenanceFiles, ...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
   for (const [file, sha] of Object.entries(wordbuildPrevious.files)) requireProof(approval.files[file] && (allowedChanges.includes(file) || approval.files[file] === sha));
   for (const [key, value] of Object.entries(wordbuildPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   const wordbuildLive = wordbuildProof('live-baseline'), wordbuildReview = wordbuildProof('review'), wordbuildBackup = wordbuildProof('source-drive-verification');

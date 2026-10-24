@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-header-repair-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-appmenu-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -225,4 +225,8 @@ test('Sharing release cannot extend runtime scope or erase the previous maintena
 
 test('Header repair retains the published sharing and content approval', () => {
  for (const change of [a=>{a.headerRepair.changedFiles.push('data/klink-curriculum.json');},a=>{a.headerRepair.baselineSourceCommit='0'.repeat(40);},a=>{delete a.files['docs/klink-owner-release-sharing-20261024.json'];},a=>{a.headerRepair.userRequest='unrelated';}]) assert(check(proof,change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('KLINK menu addition cannot widen content scope or discard the approved header repair',()=>{
+ for(const change of [a=>{a.appMenu.changedFiles.push('data/klink-curriculum.json');},a=>{a.appMenu.userRequest='unrelated';},a=>{a.headerRepair.userRequest='unrelated';}])assert(check(proof,change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

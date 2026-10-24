@@ -78,3 +78,8 @@
 @media print{.tr-share-dialog{display:none!important}}
 
 .tr-share-dialog[data-share-app="scenario"]{--share-accent:#2e4b54}.tr-share-dialog[data-share-app="lexicon"]{--share-accent:#0090f2}
+
+/* Canonical KLINK D wordmark; keep the blue i-dot in both appearances. */
+nav.taalroute-suite-links .tr-klink-wordmark{display:inline-block;flex:none;width:50px;height:17px;padding:0!important;border:0!important;font-size:0!important;line-height:0!important;background:url('./klink.svg') no-repeat left center;background-size:contain;color:transparent!important}
+[data-theme=dark] nav.taalroute-suite-links .tr-klink-wordmark{background-image:url('./klink-dark.svg')}
+nav.taalroute-suite-links [data-app-id=klink] :is(.taalroute-beta,.suite-beta){--app-accent:#482c46;--app-color:#482c46}
