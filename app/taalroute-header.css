@@ -12,7 +12,7 @@
 /* The new header reserves space above the existing exercise and navigation layout. */
 body > .product-root, .product-root .entry-screen, .product-root .entry-window, .product-root .learner-app, .product-root .staff-app, .product-root .cp-player { min-height: var(--klink-app-height); }
 .product-root .learner-app .learner-main:has(.cp-exercise-browser), .product-root .learner-app .learner-main:has(.cp-chapter-playing), .product-root .learner-app .cp-player:has(.cp-exercise-browser.is-guided) { height: var(--klink-app-height); min-height: 0; }
-.product-root .learner-app .learner-main:has(.is-mixed-round) { height: auto; min-height: var(--klink-app-height); }
+.product-root .learner-app .learner-main:has(.is-mixed-round) { height: var(--klink-app-height); min-height: 0; }
 @media (min-width: 821px) {
   .product-root .learner-app, .product-root .learner-nav, .product-root .learner-main, .product-root .staff-main { height: var(--klink-app-height); }
 }

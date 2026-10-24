@@ -108,6 +108,7 @@ try {
     await page.goto(`${base}/${chapterHash({ chapter: 'sounds', activity: 'sound-path', collection: collection.id, level: 'all' })}`);
     await page.locator('.is-mixed-round').waitFor();
     assert.equal(await page.locator('[aria-label="Je bent hier"]').innerText(), 'Oefenen · Klanken');
+    assert(await page.locator('[aria-label="Je bent hier"]').evaluate(el => el.classList.contains('sr-only')), 'Keep orientation for screen readers without the repeated visual heading');
     assert.equal(await page.locator('.cp-chapters h1').innerText(), 'Klanken in woorden');
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `learner overflow ${width}`);
     const next = page.locator('.cp-exercise-feedback > button');
@@ -115,7 +116,7 @@ try {
     assert(await next.evaluate(el => { const r = el.getBoundingClientRect(); return el.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
     await page.screenshot({ path: `${out}/learner-${width}.png` });
   }
-  pass('Location stays visible without answer leakage; desktop, tablet and phone fit with reachable continuation');
+  pass('Compact title and screen-reader orientation avoid answer leakage; desktop, tablet and phone fit with reachable continuation');
   await teacher();
   const link = page.locator('.cp-menu-guide').getByRole('link', { name: 'Woorden', exact: true });
   await link.focus(); await page.keyboard.press('Enter'); await page.locator('.word-library-page').waitFor();
