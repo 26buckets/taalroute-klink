@@ -1,0 +1,122 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "b372ea2b20872a382c1ea3fc1290b72e8d723f70",
+  "guidedExercises": 409,
+  "lessonSteps": 167,
+  "lessons": 32,
+  "targetedRegressionPassed": true,
+  "fullLocalRegressionRerun": false,
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "unitTests": {
+    "passed": 147,
+    "failed": 0,
+    "skipped": 1
+  },
+  "targetedBrowserChecks": [
+    "klink-leesstap-13: 15 real-audio steps passed",
+    "klink-leesstap-14: 12 real-audio steps passed",
+    "klink-leesstap-15: 16 real-audio steps passed",
+    "klink-leesstap-16: 16 real-audio steps passed",
+    "klink-uitbreiding-5: 11 real-audio steps passed",
+    "klink-uitbreiding-6: 11 real-audio steps passed",
+    "klink-uitbreiding-7: 11 real-audio steps passed",
+    "woord-klink-woord-boon: 3 real-audio steps passed",
+    "woord-klink-woord-bord: 3 real-audio steps passed",
+    "woord-klink-woord-jurk: 3 real-audio steps passed",
+    "woord-klink-woord-kaak: 3 real-audio steps passed",
+    "woord-klink-woord-kook: 3 real-audio steps passed",
+    "woord-klink-woord-koop: 3 real-audio steps passed",
+    "woord-klink-woord-maak: 3 real-audio steps passed",
+    "woord-klink-woord-maand: 3 real-audio steps passed",
+    "woord-klink-woord-mee: 3 real-audio steps passed",
+    "woord-klink-woord-meer: 3 real-audio steps passed",
+    "woord-klink-woord-neem: 3 real-audio steps passed",
+    "woord-klink-woord-oor: 3 real-audio steps passed",
+    "woord-klink-woord-paard: 3 real-audio steps passed",
+    "woord-klink-woord-rok: 3 real-audio steps passed",
+    "woord-klink-woord-rood: 3 real-audio steps passed",
+    "woord-klink-woord-rook: 3 real-audio steps passed",
+    "woord-klink-woord-sport: 3 real-audio steps passed",
+    "woord-klink-woord-spreek: 3 real-audio steps passed",
+    "woord-klink-woord-staart: 3 real-audio steps passed",
+    "woord-klink-woord-staat: 3 real-audio steps passed",
+    "woord-klink-woord-start: 3 real-audio steps passed",
+    "woord-klink-woord-storm: 3 real-audio steps passed",
+    "woord-klink-woord-straat: 3 real-audio steps passed",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "strand: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-strand: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "traan: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-traan: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+  ],
+  "combinedReview": {
+    "priorRealAudioSteps": 161,
+    "priorRouteSteps": 403,
+    "finalRecoverySteps": 6,
+    "totalRealAudioSteps": 167,
+    "totalRouteSteps": 409,
+    "finalCssFixAffectedExerciseIds": [
+      "woord-klink-woord-strand:klink-woord-strand:recall-word"
+    ],
+    "reason": "Final CSS change applies only to six-tile unguided recall within a guided lesson on short mobile screens. Inventory of the 409 covered steps contains only strand in this selector. The preceding 30 new lessons use unchanged behavior; strand and traan passed on final build."
+  },
+  "reviewMethod": "User requested faster review. All unit tests passed. Combined browser review: 403 route steps and 161 real-audio steps passed before the final CSS fix; the only affected exercise was six-tile strand recall. Strand and traan then passed all 6 remaining steps on the final build. Thus all 409 route steps and all 167 steps across 32 new lessons were tested with real audio, forward jump/recovery, three letter-help viewport sizes, combined-letter help, alternative identical-tile selection and mobile demonstration fitting, every within-group continuation and resume. Broad unrelated UI suites and media metadata reuse the hash-preserved approved baseline.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-groep5-route.log",
+      "sha256": "88e9eceab893d3a1976bc9f85819d68989b5b6d82359d52b773137333c987574"
+    },
+    {
+      "path": "work/klink-groep5-units.log",
+      "sha256": "01a10f5f0fba06a2ac131adb63f85f511f12e03f33d0c19565f0f0a086e704b7"
+    },
+    {
+      "path": "work/klink-groep5-focused.log",
+      "sha256": "324b941772be87507646b7ef36c389647bf3446329b10bba4e9a1942515c807d"
+    },
+    {
+      "path": "work/klink-groep5-build.log",
+      "sha256": "08c68c4df33e9028b03b548aacc590e98634b12d7084f90cf294503669579f29"
+    },
+    {
+      "path": "work/klink-groep5-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-groep5-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-groep5-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-groep5-preview-before-strand-fix.log",
+      "sha256": "c899fa8e4d0112501976161c68db3a428da8ba4aaae749528bf7c8fb2d8c8644"
+    },
+    {
+      "path": "work/klink-groep5-route-before-strand-fix.log",
+      "sha256": "88e9eceab893d3a1976bc9f85819d68989b5b6d82359d52b773137333c987574"
+    },
+    {
+      "path": "work/klink-groep5-tail.log",
+      "sha256": "428a3d40aba706c13a2622ad00830e11474832093711d746c1290cd1a9880784"
+    },
+    {
+      "path": "work/klink-groep5-demo-width.log",
+      "sha256": "9c59bae48996e8d67fea8770f9d732edfb69f3d70b8a2e10203b11ef31328947"
+    },
+    {
+      "path": "work/klink-groep5-duplicate.log",
+      "sha256": "ad5f0d71e7523ee4460923251814ba0033a52d1788735dfb2b62495ee30e7950"
+    }
+  ]
+}

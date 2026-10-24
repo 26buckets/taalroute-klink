@@ -1,0 +1,18 @@
+{
+  "baselineSourceCommit": "b372ea2b20872a382c1ea3fc1290b72e8d723f70",
+  "runtimeChanged": [
+    "app/learner-ui.css",
+    "components/product/package-exercise-browser.tsx",
+    "data/klink-teacher-manual.json",
+    "lib/lesson-plan.ts",
+    "lib/teacher-practice-plan.ts"
+  ],
+  "mediaContentRoutesStorageAndLandingByteUnchanged": true,
+  "layout": "Existing app composition retained. Mobile demos wrap within the canvas; six-tile recall grows with its content so letters cannot sit behind feedback. Typography, buttons, icons and assets retained.",
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "audioPauseRetained": true,
+  "sessionStabilityFixRetained": true,
+  "finalCssFixAffectedExerciseIds": [
+    "woord-klink-woord-strand:klink-woord-strand:recall-word"
+  ]
+}

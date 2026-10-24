@@ -630,6 +630,8 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
     tileBank.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
   }, [firstLetterGuide, guideStep, guideIndex, canAnswer]);
   const token = (id: string) => tiles.find((tile) => tile.id === id)?.token ?? '';
+  const guideTileId = chosen.includes(target[guideIndex]) ? tiles.find(tile => !chosen.includes(tile.id) && tile.token === token(target[guideIndex]))?.id : target[guideIndex];
+  const guideLetters = token(target[guideIndex]).length > 1;
   function choose(next: string[]) {
     if (!canAnswer) return;
     setChosen(next);
@@ -645,19 +647,19 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
   }
   if (guideStep === 'demo') return <section className="cp-task-card cp-first-letter-guide">
     <Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />
-    <p className="cp-letter-cue">{guideIndex === 0 ? 'Kijk: zo begin je.' : 'Kijk: deze letter komt nu.'}</p>
-    <figure className="cp-letter-demo" aria-label={`Voorbeeld: tik op ${token(target[guideIndex])}. Die letter komt in vak ${guideIndex + 1}.`}>
+    <p className="cp-letter-cue">{guideIndex === 0 ? 'Kijk: zo begin je.' : guideLetters ? 'Kijk: deze letters komen nu.' : 'Kijk: deze letter komt nu.'}</p>
+    <figure className="cp-letter-demo" aria-label={`Voorbeeld: tik op ${token(target[guideIndex])}. ${guideLetters ? 'Die letters komen' : 'Die letter komt'} in vak ${guideIndex + 1}.`}>
       <span className="cp-demo-source">{token(target[guideIndex])}<Hand aria-hidden="true" /></span><ArrowRight aria-hidden="true" />
       <div>{target.map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : index === guideIndex ? token(target[guideIndex]) : ''}</span>)}</div>
     </figure>
     <button className="primary-button" onClick={() => { onHelp(); setGuideRetry(false); setGuideStep('word'); }}>Nu jij<ArrowRight aria-hidden="true" /></button>
   </section>;
   return <section className={`cp-task-card${firstLetterGuide ? ' cp-first-letter-guide' : ''}`}><Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />
-    {firstLetterGuide && <output className="cp-letter-cue">{guideIndex < 0 ? 'Het woord is klaar.' : guideRetry ? 'Kijk naar het voorbeeld. Tik op dezelfde letter.' : 'Tik op dezelfde letter.'}</output>}
+    {firstLetterGuide && <output className="cp-letter-cue">{guideIndex < 0 ? 'Het woord is klaar.' : `${guideRetry ? 'Kijk naar het voorbeeld. ' : ''}Tik op dezelfde ${guideLetters ? 'letters' : 'letter'}.`}</output>}
     <div className={`cp-build-slots ${exercise.buildKind === 'sentence' ? 'cp-sentence-slots' : ''}`} aria-label={exercise.buildKind === 'sentence' ? 'Jouw zin' : 'Jouw woord'} aria-live="polite">{target.map((_, index) => <button key={index} disabled={!canAnswer} aria-pressed={destination === index} aria-label={`Plek ${index + 1}${chosen[index] ? `: ${token(chosen[index])}, weghalen` : index === guideIndex ? `, leeg, voorbeeld: ${token(target[guideIndex])}` : ', leeg'}`}
       onDragOver={event => { if (canAnswer) event.preventDefault(); }} onDrop={event => { event.preventDefault(); place(event.dataTransfer.getData('text/plain'), index); }}
       onClick={() => { if (!firstLetterGuide) setDestination(index); if (chosen[index]) choose(chosen.map((value, at) => at === index ? '' : value)); }}>{chosen[index] ? token(chosen[index]) : index === guideIndex ? <span className="cp-letter-model">{token(target[guideIndex])}</span> : ''}</button>)}</div>
-    <div className="cp-tile-bank" ref={tileBank}>{tiles.map(tile => <button key={tile.id} ref={tile.id === target[guideIndex] ? guidedTile : undefined} className={tile.id === target[guideIndex] ? 'cp-first-tile' : undefined} aria-label={tile.id === target[guideIndex] ? `${tile.token}, ${guideIndex === 0 ? 'begin hier' : 'deze letter nu'}` : undefined} draggable={canAnswer && !chosen.includes(tile.id)} disabled={!canAnswer || chosen.includes(tile.id)} onDragStart={event => { event.dataTransfer.setData('text/plain', tile.id); event.dataTransfer.effectAllowed = 'move'; }} onClick={() => place(tile.id)}>{tile.token}{tile.id === target[guideIndex] && <Hand aria-hidden="true" />}</button>)}</div>
+    <div className="cp-tile-bank" ref={tileBank}>{tiles.map(tile => <button key={tile.id} ref={tile.id === guideTileId ? guidedTile : undefined} className={tile.id === guideTileId ? 'cp-first-tile' : undefined} aria-label={tile.id === guideTileId ? `${tile.token}, ${guideIndex === 0 ? 'begin hier' : guideLetters ? 'deze letters nu' : 'deze letter nu'}` : undefined} draggable={canAnswer && !chosen.includes(tile.id)} disabled={!canAnswer || chosen.includes(tile.id)} onDragStart={event => { event.dataTransfer.setData('text/plain', tile.id); event.dataTransfer.effectAllowed = 'move'; }} onClick={() => place(tile.id)}>{tile.token}{tile.id === guideTileId && <Hand aria-hidden="true" />}</button>)}</div>
     <div className="cp-task-actions"><button className="secondary-button" onClick={() => { const at = chosen.findLastIndex(Boolean); choose(chosen.map((value, index) => index === at ? '' : value)); }} disabled={!canAnswer || !chosen.some(Boolean)}><RotateCcw />Eén terug</button>{firstLetterGuide && <button className="secondary-button" disabled={answeredCorrectly} onClick={() => { onHelp(); setGuideStep('demo'); }}>Kijk nog eens</button>}<WordHint exercise={exercise} onHelp={onHelp} /></div></section>;
 }
 
