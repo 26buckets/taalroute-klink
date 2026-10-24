@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-consistent-layout-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-en-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -286,5 +286,17 @@ test('Consistent layout keeps the current beginners release, owner consent and e
     approval => { approval.consistentLayout.changedFiles.push('lib/lesson-plan.ts'); },
     approval => { delete approval.files['docs/klink-owner-release-in-20261024.json']; },
     approval => { delete approval.files['docs/klink-consistent-layout-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('En release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+  for (const change of [
+    a => { delete a.enRelease; },
+    a => { a.enRelease.publicationApproved = false; },
+    a => { a.enRelease.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.enRelease.guidedExercises = 116; },
+    a => { a.enRelease.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.enRelease.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-en-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
