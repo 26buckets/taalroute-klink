@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `b3d06d9d25fdef0557b0054ce1d5ea8773d17b94` op canonieke branch `main`.
+Worker-versie: `9592292e-9e68-46ad-8e0c-6c0c94b4a3bc`.
+
+Het vastlopen bij herhaald oefenen en herladen is hersteld. De antwoordkeuzes gebruiken één letterverdeling per woord, in plaats van deze tijdens iedere vergelijking bij het sorteren opnieuw te maken. Dezelfde 120 oefenrondes zijn inhoudelijk bytegelijk gebleven. Alle huidige schermen, nieuwste kop/sok-lessen en startpagina, media, routes en opslag blijven behouden.
+
+Register: `docs/klink-publication-session-stability-20261024.json`; vrijgave: `docs/klink-owner-release-session-stability-20261024.json`. Volledige lokale review- en vervolgreeks, 146 begeleide stappen, alle aanvullende werkruimte-/menu-/scrollcontroles en 37 publicatiebewijstests slagen. De oude liveversie crashte tweemaal in de scènecontrole; na het herstel slaagt die zonder geïsoleerde browsers per verzameling. Lokaal en live: 110 herladingen plus 80 afgeronde scène-opdrachten in één context, met behoud van bewaarde woorden en exact hervatten. De nieuwste les, vervolgroute, layout en scrollen zijn online gecontroleerd. Alle 2.679 aangeboden media en de gebouwde client zijn bytegelijk teruggelezen. De bronback-up is uit Drive teruggelezen en gecontroleerd.
+
+Controlegrenzen: Chrome-browserautomatisering, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `c5e64c865f1b6e7e9e519c85986bcc561d662c8f` op canonieke branch `main`.
 Worker-versie: `c1210018-fd36-4b1b-a168-3f19a916b6fb`.
 
