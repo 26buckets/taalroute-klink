@@ -1,0 +1,85 @@
+{
+  "status": "local-development-not-published",
+  "base": {
+    "application": "Klink",
+    "builtAt": "2026-10-24T21:44:32.812Z",
+    "sourceCommit": "98d6364dcbd0b45f24e14c2b30e2594b9a291920",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "sources": {
+    "klankstudio": "https://klankstudio.taalroute.nl/",
+    "poster": "https://klankstudio.taalroute.nl/downloads/Taalroute-Klankstudio-Nederlandse-Klanken-A5.pdf",
+    "checked": "2026-10-24",
+    "htmlSha256": "0c5c305f1d1a8075ffddbf786b422c469af8f261333ee6a61fdda7aee2bc05bd",
+    "alfaBetaSourceSha256": "500a906e9ca26ffd48192939f46ce9e674a6c069832a5a17b51a0fd45e83704f"
+  },
+  "canonicalPosterAgreement": {
+    "groups": 9,
+    "cards": 46,
+    "labels": "exact",
+    "examples": "exact",
+    "colours": "AlfaBeta+ poster palette",
+    "font": "unchanged Inter source from AlfaBeta+ poster"
+  },
+  "entryPoints": [
+    "Oefenen → Klanken",
+    "Start → Oefenen met vaardigheden → Klanken",
+    "Kijk en luister → Klanken bij dit woord"
+  ],
+  "scope": "One sound reference view and inline reference for direct spellings. Existing chapters, lesson content, logo D, photographs, audio files and storage keys preserved. No new isolated audio bindings.",
+  "limits": [
+    "Inline references skip changed sound values until spelling explanations exist.",
+    "No learning score or mastery claim.",
+    "No human learner trial or physical phone test.",
+    "Existing audio and picture review boundaries remain."
+  ],
+  "publication": "No deployment or push; reviewed result is on feat/klankenkaart. Recheck live ancestry and publication gate before any future release.",
+  "designBasis": "Google Drive 1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz read before implementation; linked to existing word goal and lesson plan, 2–3 minutes within existing activity, no new curriculum hours.",
+  "styleReference": "Requested /Users/nicoknoester/Taalroute/Apps/Stijlsheet/digibord-settings unavailable on this host; preserved current Klink font, weight, Lucide icons, buttons, navigation and composition. Poster-specific glyph uses original Inter.",
+  "cloudCost": "No GitHub Actions or publication workflow run.",
+  "verification": {
+    "newTests": 3,
+    "existingTargetedUnitTests": 7,
+    "curriculum": {
+      "passed": 48,
+      "skipped": 1,
+      "failed": 0
+    },
+    "browser": {
+      "checks": [
+        "Overview, keyboard, 46 cards, correct a/aa details and reload at 1366px",
+        "Overview, keyboard, 46 cards, correct a/aa details and reload at 768px",
+        "Overview, keyboard, 46 cards, correct a/aa details and reload at 390px",
+        "Overview, keyboard, 46 cards, correct a/aa details and reload at 320px",
+        "All 46 detail links retain the exact canonical spelling, example and Klankstudio sound ID",
+        "Existing mat recording plays to the end with real browser audio",
+        "Audio errors allow retry; navigation stops playback",
+        "mat opens m-a-t inline without leaving the lesson or changing progress; desktop/mobile stay in bounds",
+        "tas lesson entry, malformed links and browser Back/Forward work"
+      ],
+      "errors": []
+    },
+    "existingChapterBrowser": "6 groups passed, all 12 chapters",
+    "existingLifecycleBrowser": "5 groups passed",
+    "build": "passed",
+    "types": "passed",
+    "lint": "passed",
+    "visualQA": "Overview desktop, a detail on 320px, inline mat on 320px inspected; canonical coloured frames and glyphs, retained app layout.",
+    "liveKlankstudioDeepLink": "?sound=a selected with aria-pressed=true and anchor word kat in real browser"
+  },
+  "preservation": {
+    "noExistingAudioImageCurriculumBindingsChanged": true,
+    "sourceBase": "b4a3bc7911dcad3a45ee8919fb2eef9f759a1287",
+    "appNavigationButtons": 5,
+    "chapterRoutes": 12,
+    "contentPackages": 15,
+    "noCloudRuns": true,
+    "noDeployment": true
+  }
+}

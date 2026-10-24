@@ -25,7 +25,7 @@ function revealCollection(limits: Record<string, number>, location: ChapterLocat
 }
 
 export function PracticeChapterCards({ onOpen }: { onOpen: (chapter: string) => void }) {
-  return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken">{practiceChapters.map(chapter => {
+  return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken"><a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klanken</span><ArrowRight aria-hidden="true" /></a>{practiceChapters.map(chapter => {
     const Icon = icons[chapter.icon];
     return <button key={chapter.id} className="cp-activity-button" data-chapter={chapter.id} onClick={() => onOpen(chapter.id)}><Icon aria-hidden="true" /><span>{chapter.title}</span><ArrowRight aria-hidden="true" /></button>;
   })}</div>;

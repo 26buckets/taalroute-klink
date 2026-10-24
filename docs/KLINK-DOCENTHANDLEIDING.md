@@ -68,6 +68,16 @@ Deze oefening bevat zes woorden: *mat, tas, jas, man, map, pan*. De volgorde kan
 
 **Oefen je alleen mat?** Kies bij **Oefenen met** de stap **1. mat**, of blijf bij de kleine les. Een gekozen kleine stap blijft bij Samen oefenen behouden. Kies bewust **Alle woorden van dit onderdeel** om alle zes woorden te oefenen. Laat een cursist pas zelfstandig met het hele blad werken als die woorden zijn voorbereid.
 
+### De klankenkaart gebruiken
+
+Kies **Oefenen → Klanken → a**. Je ziet dezelfde schrijfwijzen, kleuren en ankerwoorden als op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ze blijven apart. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
+
+Onder **Woorden in Klink** staan bij **a** onder meer *mat* en *tas*. **Luister** speelt het hele bestaande woord af. **Oefen mat** opent de bijbehorende bestaande leesles. **Open deze klank in Klankstudio** opent die klank in een nieuw tabblad. Je kunt daarna terugkeren naar Klink. De klankenkaart zelf opent met **Open de klankenkaart**.
+
+Bij **Kijk en luister** kun je bij woorden met een rechtstreekse klank-tekenkoppeling **Klanken bij dit woord** openklappen. Bij *mat* zie je **m · a · t**, bij *tas* **t · a · s**. Dit laat de les en de bewaarde lesplek staan. Bij woorden met een veranderde klankwaarde, zoals de d in *bed*, verschijnt dit hulpmiddel nog niet; bespreek de spelling met de docent. De klankenkaart blijft via Oefenen beschikbaar.
+
+Gebruik dit binnen het bestaande boekdoel en docentlesplan: wijs de klank op de klasposter aan, laat één klank horen, laat de cursist hem in het bekende woord aanwijzen of zeggen en keer terug naar de woordopdracht. Reserveer bijvoorbeeld 2–3 minuten uit die opdracht; dit voegt geen lesuren, huiswerk of nieuw leerdoel toe. Noteer herkenning met hulp en zelfstandig lezen afzonderlijk. Nieuwe losse klankaudio in Klink blijft gepauzeerd; de bestaande woordaudio is geen opname van een losse klank. Praktijkbeoordeling met cursisten blijft open.
+
 ### Oefenen via een onderwerp
 
 De knop **Oefenen** opent twaalf hoofdstukken. Een voorbeeld van een route is:

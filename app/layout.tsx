@@ -9,6 +9,7 @@ import './learner-ui.css';
 import './landing.css';
 import './taalroute-header.css';
 import './learner-layout.css';
+import './sounds.css';
 import { TaalrouteHeader } from '@/components/product/taalroute-header';
 
 const geistSans = Geist({

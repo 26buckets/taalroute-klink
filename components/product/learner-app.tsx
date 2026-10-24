@@ -23,6 +23,7 @@ import { lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
 import { MyRoute, useRouteSettings } from './route-settings';
 import { PracticeLine } from './practice-line';
+import { SoundReference } from './sound-reference';
 import { chapterRouteAxis } from '@/lib/learner-route';
 import { levelLabel } from '@/lib/content-levels';
 import {
@@ -44,7 +45,7 @@ import {
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 
-type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters';
+type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds';
 type WordFilter = string;
 
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
@@ -88,6 +89,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
           setView('package');
         } else setView('packages');
       } else if (route === 'chapters') setView('chapters');
+      else if (route === 'sounds') setView('sounds');
       else if (route === 'packages' || route === 'words' || route === 'review') setView(route);
       else setView('home');
     };
@@ -149,7 +151,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <nav id="klink-learner-navigation" aria-label="Cursistnavigatie">
           <button title="Start" aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
           <button title="Lessen" aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button title="Oefenen" aria-current={view === 'chapters' ? 'page' : undefined} className={view === 'chapters' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
+          <button title="Oefenen" aria-current={view === 'chapters' || view === 'sounds' ? 'page' : undefined} className={view === 'chapters' || view === 'sounds' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
           <button title="Woorden" aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
           <button title="Herhalen" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
@@ -163,6 +165,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'chapters' && <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />}
+        {view === 'sounds' && <SoundReference onBack={() => openChapter()} onLesson={openLesson} />}
       </main>
     </div>
   );

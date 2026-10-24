@@ -1,4 +1,6 @@
 'use client';
+
+import { WordSounds } from './sound-reference';
 import { ImportedPracticeSurface } from './imported-practice-surface';
 import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
 
@@ -528,7 +530,7 @@ function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { 
   const text = asRecord(exercise.text);
   const source = findAudioSource(exercise);
   const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}{source && <Volume2 aria-hidden="true" />}</strong></>;
-  return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
+  return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
 function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer = true, speakingOptionId = '', demoAvailable = false, showDemoInitially = false, onHelp }: SurfaceProps & { nested?: boolean; canAnswer?: boolean; speakingOptionId?: string; demoAvailable?: boolean; showDemoInitially?: boolean; onHelp?: () => void }) {

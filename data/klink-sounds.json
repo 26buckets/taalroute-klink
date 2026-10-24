@@ -1,0 +1,532 @@
+{
+  "source": {
+    "klankstudio": "https://klankstudio.taalroute.nl/",
+    "poster": "https://klankstudio.taalroute.nl/downloads/Taalroute-Klankstudio-Nederlandse-Klanken-A5.pdf",
+    "checked": "2026-10-24",
+    "htmlSha256": "0c5c305f1d1a8075ffddbf786b422c469af8f261333ee6a61fdda7aee2bc05bd",
+    "alfaBetaSourceSha256": "500a906e9ca26ffd48192939f46ce9e674a6c069832a5a17b51a0fd45e83704f"
+  },
+  "groups": [
+    {
+      "id": "short",
+      "title": "Kort",
+      "color": "#D63F32",
+      "soft": "#FFF1EE",
+      "line": "#F2A89D",
+      "items": [
+        "a",
+        "e",
+        "i",
+        "o",
+        "u"
+      ],
+      "posterColor": "#E04F3F"
+    },
+    {
+      "id": "long",
+      "title": "Lang",
+      "color": "#2471C6",
+      "soft": "#EEF6FF",
+      "line": "#9CC4F2",
+      "items": [
+        "aa",
+        "ee",
+        "oo",
+        "uu"
+      ],
+      "posterColor": "#2878D4"
+    },
+    {
+      "id": "double",
+      "title": "Twee letters — één klank",
+      "color": "#007D82",
+      "soft": "#ECFBFA",
+      "line": "#8ED4D4",
+      "items": [
+        "ie",
+        "oe",
+        "eu",
+        "ui"
+      ],
+      "posterColor": "#008A8F"
+    },
+    {
+      "id": "spellings",
+      "title": "Eén klank — twee spellingen",
+      "color": "#7452C8",
+      "soft": "#F5F1FF",
+      "line": "#C5B7EB",
+      "items": [
+        "ei",
+        "au"
+      ],
+      "posterColor": "#7452C8"
+    },
+    {
+      "id": "with-i",
+      "title": "Met een i erachter",
+      "color": "#277D50",
+      "soft": "#EFFAF3",
+      "line": "#A9DDBD",
+      "items": [
+        "aai",
+        "ooi",
+        "oei"
+      ],
+      "posterColor": "#2C8A58"
+    },
+    {
+      "id": "with-w",
+      "title": "Met een w erachter",
+      "color": "#246C9D",
+      "soft": "#EFF8FD",
+      "line": "#ADD3E9",
+      "items": [
+        "eeuw",
+        "ieuw",
+        "uw"
+      ],
+      "posterColor": "#246C9D"
+    },
+    {
+      "id": "uh",
+      "title": "Zonder klemtoon — je hoort uh",
+      "color": "#A85E00",
+      "soft": "#FFF7E9",
+      "line": "#ECC584",
+      "items": [
+        "sjwa",
+        "-ig",
+        "-lijk"
+      ],
+      "labels": {
+        "sjwa": "e"
+      },
+      "posterColor": "#B56600"
+    },
+    {
+      "id": "consonants",
+      "title": "Medeklinkers",
+      "color": "#173F72",
+      "soft": "#F2F6FC",
+      "line": "#9DB7D6",
+      "items": [
+        "b",
+        "d",
+        "f",
+        "g",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "p",
+        "r",
+        "s",
+        "t",
+        "v",
+        "w",
+        "z"
+      ],
+      "posterColor": "#173F72"
+    },
+    {
+      "id": "clusters",
+      "title": "Combinaties",
+      "color": "#B43C78",
+      "soft": "#FFF0F7",
+      "line": "#E5A2C5",
+      "items": [
+        "ng",
+        "nk",
+        "ch",
+        "sch",
+        "schr"
+      ],
+      "posterColor": "#B43C78"
+    }
+  ],
+  "sounds": {
+    "a": {
+      "label": "a",
+      "example": "kat",
+      "words": [
+        "mat",
+        "tas",
+        "map",
+        "man",
+        "pan",
+        "kat",
+        "jas"
+      ]
+    },
+    "e": {
+      "label": "e",
+      "example": "pen",
+      "words": [
+        "pen",
+        "pet",
+        "mes",
+        "nek"
+      ]
+    },
+    "i": {
+      "label": "i",
+      "example": "vis",
+      "words": [
+        "ik",
+        "kip",
+        "vis",
+        "kin"
+      ]
+    },
+    "o": {
+      "label": "o",
+      "example": "zon",
+      "words": [
+        "kop",
+        "sok",
+        "zon"
+      ]
+    },
+    "u": {
+      "label": "u",
+      "example": "bus",
+      "words": [
+        "bus",
+        "mus",
+        "kus"
+      ]
+    },
+    "aa": {
+      "label": "aa",
+      "example": "maan",
+      "words": [
+        "maan",
+        "raam",
+        "kaas"
+      ]
+    },
+    "ee": {
+      "label": "ee",
+      "example": "been",
+      "words": [
+        "been",
+        "teen"
+      ]
+    },
+    "ie": {
+      "label": "ie",
+      "example": "fiets",
+      "words": [
+        "fiets",
+        "riem",
+        "tien"
+      ]
+    },
+    "oo": {
+      "label": "oo",
+      "example": "boom",
+      "words": [
+        "boom",
+        "boot",
+        "roos"
+      ]
+    },
+    "uu": {
+      "label": "uu",
+      "example": "muur",
+      "words": [
+        "muur",
+        "vuur",
+        "duur"
+      ]
+    },
+    "oe": {
+      "label": "oe",
+      "example": "boek",
+      "words": [
+        "boek",
+        "voet",
+        "koe"
+      ]
+    },
+    "eu": {
+      "label": "eu",
+      "example": "neus",
+      "words": [
+        "neus",
+        "deur",
+        "kleur"
+      ]
+    },
+    "sjwa": {
+      "label": "e",
+      "example": "de · lopen · vader",
+      "words": [
+        "de",
+        "vader"
+      ]
+    },
+    "ei": {
+      "label": "ei / ij",
+      "example": "trein / ijs",
+      "words": [
+        "trein",
+        "ijs",
+        "ei",
+        "bij"
+      ]
+    },
+    "au": {
+      "label": "au / ou",
+      "example": "saus / hout",
+      "words": [
+        "saus",
+        "hout",
+        "au",
+        "koud"
+      ]
+    },
+    "ui": {
+      "label": "ui",
+      "example": "huis",
+      "words": [
+        "huis",
+        "muis",
+        "tuin"
+      ]
+    },
+    "p": {
+      "label": "p",
+      "example": "pen",
+      "words": [
+        "pen",
+        "pet",
+        "pan"
+      ]
+    },
+    "b": {
+      "label": "b",
+      "example": "bal",
+      "words": [
+        "bus",
+        "boek",
+        "been",
+        "boom"
+      ]
+    },
+    "t": {
+      "label": "t",
+      "example": "teen",
+      "words": [
+        "mat",
+        "tas",
+        "teen",
+        "pet",
+        "kat"
+      ]
+    },
+    "d": {
+      "label": "d",
+      "example": "dak",
+      "words": [
+        "dak",
+        "deur",
+        "de"
+      ]
+    },
+    "k": {
+      "label": "k",
+      "example": "koel",
+      "words": [
+        "kat",
+        "kop",
+        "kip",
+        "koe"
+      ]
+    },
+    "f": {
+      "label": "f",
+      "example": "fiets",
+      "words": [
+        "fiets"
+      ]
+    },
+    "v": {
+      "label": "v",
+      "example": "vol",
+      "words": [
+        "vis",
+        "voet",
+        "vader"
+      ]
+    },
+    "s": {
+      "label": "s",
+      "example": "sap",
+      "words": [
+        "tas",
+        "sok",
+        "sap"
+      ]
+    },
+    "z": {
+      "label": "z",
+      "example": "zand",
+      "words": [
+        "zon",
+        "zand"
+      ]
+    },
+    "ch": {
+      "label": "ch",
+      "example": "lach",
+      "words": [
+        "lach"
+      ]
+    },
+    "g": {
+      "label": "g",
+      "example": "goed",
+      "words": [
+        "goed"
+      ]
+    },
+    "h": {
+      "label": "h",
+      "example": "hoorn",
+      "words": [
+        "huis",
+        "hout"
+      ]
+    },
+    "m": {
+      "label": "m",
+      "example": "man",
+      "words": [
+        "mat",
+        "map",
+        "man",
+        "maan",
+        "muur",
+        "muis"
+      ]
+    },
+    "n": {
+      "label": "n",
+      "example": "neus",
+      "words": [
+        "neus",
+        "nek"
+      ]
+    },
+    "ng": {
+      "label": "ng",
+      "example": "ring",
+      "words": [
+        "tong",
+        "wang"
+      ]
+    },
+    "l": {
+      "label": "l",
+      "example": "laat",
+      "words": [
+        "lam",
+        "les",
+        "leeuw"
+      ]
+    },
+    "r": {
+      "label": "r",
+      "example": "rat",
+      "words": [
+        "raam",
+        "roos",
+        "riem"
+      ]
+    },
+    "w": {
+      "label": "w",
+      "example": "water",
+      "words": [
+        "water"
+      ]
+    },
+    "j": {
+      "label": "j",
+      "example": "jas",
+      "words": [
+        "jas"
+      ]
+    },
+    "aai": {
+      "label": "aai",
+      "example": "draai",
+      "words": []
+    },
+    "ooi": {
+      "label": "ooi",
+      "example": "mooi",
+      "words": []
+    },
+    "oei": {
+      "label": "oei",
+      "example": "groei",
+      "words": []
+    },
+    "eeuw": {
+      "label": "eeuw",
+      "example": "leeuw",
+      "words": [
+        "leeuw",
+        "meeuw",
+        "sneeuw"
+      ]
+    },
+    "ieuw": {
+      "label": "ieuw",
+      "example": "nieuw",
+      "words": [
+        "nieuw"
+      ]
+    },
+    "uw": {
+      "label": "uw",
+      "example": "duw",
+      "words": []
+    },
+    "nk": {
+      "label": "nk",
+      "example": "bank",
+      "words": [
+        "bank"
+      ]
+    },
+    "sch": {
+      "label": "sch",
+      "example": "school",
+      "words": [
+        "school",
+        "schaap"
+      ]
+    },
+    "schr": {
+      "label": "schr",
+      "example": "schrijf",
+      "words": []
+    },
+    "-ig": {
+      "label": "-ig",
+      "example": "aardig",
+      "words": []
+    },
+    "-lijk": {
+      "label": "-lijk",
+      "example": "moeilijk",
+      "words": []
+    }
+  }
+}
