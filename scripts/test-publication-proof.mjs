@@ -234,7 +234,11 @@ test('Compact exercise release requires exact consent, scope, source and verifie
     a => { a.compactExercises.userRequest = 'unrelated'; },
     a => { a.compactExercises.baselineSourceCommit = '0'.repeat(40); },
     a => { a.compactExercises.changedFiles.push('data/klink-curriculum.json'); },
-    a => { delete a.files['docs/klink-owner-release-header-repair-20261024.json']; },
+    a => { delete a.files['docs/klink-owner-release-appmenu-20261024.json']; },
     a => { delete a.files['docs/klink-compact-exercises-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('KLINK menu addition cannot widen content scope or discard the approved header repair',()=>{
+ for(const change of [a=>{a.appMenu.changedFiles.push('data/klink-curriculum.json');},a=>{a.appMenu.userRequest='unrelated';},a=>{a.headerRepair.userRequest='unrelated';}])assert(check(proof,change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
