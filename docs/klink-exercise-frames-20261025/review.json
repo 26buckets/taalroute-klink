@@ -1,0 +1,82 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "944782134a704f038be87c8e90c1ccf94ab84b5f",
+  "targetedRegressionPassed": true,
+  "preservationPassed": true,
+  "checks": {
+    "activities": 11,
+    "frameBoards": 66,
+    "spokenAnswerStates": 12,
+    "latestGroup7RealAudioSteps": 57,
+    "previousGroup6RealAudioSteps": 57,
+    "existingMatchingStates": 18,
+    "modelAudioLoadingAndFailureViewports": 5,
+    "lifecycle": "passed",
+    "typescript": "passed",
+    "lint": "passed"
+  },
+  "findings": [
+    "Spoken answer text moved 9 pixels when the audio icon appeared; its space is now reserved.",
+    "Chauffeur was clipped in a narrow bingo card; two columns retain whole readable words on narrow screens.",
+    "Explanation after a correct text answer recentered the cards; hidden explanation space is now reserved until the answer is correct.",
+    "Equal automatic grid rows retain matching card sizes even with different label lengths."
+  ],
+  "reactReview": "No hooks, fetching, dependencies, grading or storage changes. Audio indicators remain aria-hidden; hidden answer explanations are also aria-hidden and become visible only after the existing correct-answer state. Existing button/focus semantics retained.",
+  "integration": "The concurrent group-seven publication was fast-forwarded before final tests. A group-six check timed out while sources were integrating; a fresh complete 57-step run then passed.",
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "limits": [
+    "Browser automation, no physical-device or learner test.",
+    "Frame geometry tests use deterministic audio events and a real-component fixture for active spoken-option states; group-six/seven checks use real existing audio.",
+    "Existing content review boundaries and audio pause remain."
+  ],
+  "evidence": [
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/answer-visibility.json",
+      "sha256": "8ce7c83b5e5757cadfa1a0a7cb24aa323feb3f25c096bb6f1166618b3bafd448"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/browser-final.log",
+      "sha256": "752bbec57823be490601e585fd40d96e0fce1d955d960bc6bd196177292839e0"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/frames.json",
+      "sha256": "558c5a190b0d9f53001f9f2782a2a4fad9c0ff4deed597c56611d111a059c3bb"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/group6-final.log",
+      "sha256": "fe7345f07fd51500303d8e8d94e5c6518dd6b4d7e8094e0531f4adfa4f7d54dd"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/group6.json",
+      "sha256": "8cc264ff8d4ecf9a4fcd9e45f46f56ea780acf45e3fa88f3e85794cd57906f18"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/group7.json",
+      "sha256": "1831c08df46c75733abde34f8681f84dd9f89622bd85713b2be2f416e8c46298"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/group7.log",
+      "sha256": "ad7b2cb7783159af0b5c6091512060df5e93f66c16f4a674607b9a72914e203d"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/lifecycle.log",
+      "sha256": "4c7e24c294e59c85c89c7cc4146c4926c60b229ac8c1d9ad2cfa9d68f19f6ede"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/lint.log",
+      "sha256": "108b999abc88e4de7d0ff6588f0602517a1668739509347aa1480744836add2e"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/matching.log",
+      "sha256": "627198e6493a77e3addb4d6adb7b35efb01eae3564355ed5bdac3c0ef03782d2"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/player.log",
+      "sha256": "08d807e02da47b2e32f87f0f43635a848a14ca0a1ab580ee3a7acd020339dcf7"
+    },
+    {
+      "path": "docs/klink-exercise-frames-20261025/checks/types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

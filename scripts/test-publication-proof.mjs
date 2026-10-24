@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-groep7-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-exercise-frames-20261025.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -506,5 +506,16 @@ test('Group seven letter combinations requires scoped counts, review and verifie
     a => { a.group7Guidance.changedFiles.push('data/klink-curriculum.json'); },
     a => { delete a.files['docs/klink-groep7-publication-20261024/review.json']; },
     a => { delete a.files['docs/klink-groep7-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Exercise frame changes require exact scope, review, predecessor and verified backup', () => {
+  for (const change of [
+    a => { delete a.exerciseFrames; },
+    a => { a.exerciseFrames.publicationApproved = false; },
+    a => { a.exerciseFrames.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.exerciseFrames.changedFiles.push('lib/lesson-plan.ts'); },
+    a => { delete a.files['docs/klink-exercise-frames-20261025/review.json']; },
+    a => { delete a.files['docs/klink-exercise-frames-20261025/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
