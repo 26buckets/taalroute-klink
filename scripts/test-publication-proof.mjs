@@ -267,13 +267,24 @@ test('Beginner release binds current live ancestry, exact scope and owner public
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
+test('In release preserves beginner scope and binds its publication and backup', () => {
+  for (const change of [
+    a => { delete a.inRelease; },
+    a => { a.inRelease.publicationApproved = false; },
+    a => { a.inRelease.guidedExercises = 113; },
+    a => { a.inRelease.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.inRelease.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-in-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
 test('Consistent layout keeps the current beginners release, owner consent and exact source scope', () => {
   for (const change of [
     approval => { delete approval.consistentLayout; },
     approval => { approval.consistentLayout.publicationApproved = false; },
     approval => { approval.consistentLayout.baselineSourceCommit = '6f7de9248c933e538a2fec928694db726158bbf4'; },
     approval => { approval.consistentLayout.changedFiles.push('lib/lesson-plan.ts'); },
-    approval => { delete approval.files['docs/klink-owner-release-beginners-20261024.json']; },
+    approval => { delete approval.files['docs/klink-owner-release-in-20261024.json']; },
     approval => { delete approval.files['docs/klink-consistent-layout-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

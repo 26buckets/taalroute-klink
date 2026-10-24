@@ -1,7 +1,7 @@
 {
   "status": "passed-local",
-  "baselineSourceCommit": "2a91ffb0f2329827019ec593cc70eb62c8cd457d",
-  "guidedExercises": 102,
+  "baselineSourceCommit": "a648f1699f257f9db15638810e886527a4000096",
+  "guidedExercises": 112,
   "preservationPassed": true,
   "fullLocalRegressionPassed": true,
   "physicalPhoneTest": false,
@@ -32,5 +32,13 @@
     "Browser emulation; no physical-phone or learner pilot.",
     "Existing content review and pronunciation limitations remain unchanged."
   ],
-  "publicationProofTests": 24
+  "integratedLatestLive": {
+    "sourceCommit": "a648f1699f257f9db15638810e886527a4000096",
+    "guidedExercisesPassed": 112,
+    "automaticFlowPassed": true,
+    "curriculumAndBeginnerUnitsPassed": true,
+    "typesLintBuildPassed": true,
+    "layoutChecksPassed": 15,
+    "unchangedRuntimeOutsideFourLayoutFiles": true
+  }
 }
