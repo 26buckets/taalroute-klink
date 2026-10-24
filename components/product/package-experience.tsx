@@ -63,18 +63,12 @@ export function PackageLibrary({
 }) {
   return (
     <div className="learner-page package-library-page cp-library-page">
-      <button className="text-back" onClick={onBack}>
-        <ArrowLeft />
-        Terug
-      </button>
-      <header className="package-library-heading">
-        <div>
-          <h1>Oefenen met woorden</h1>
-          <p>{lessonPackages.length} onderdelen · {lessonPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</p>
-        </div>
+      <header className="cp-context-header">
+        <button onClick={onBack} aria-label="Terug"><ArrowLeft /></button>
+        <h1>Oefenen met woorden</h1>
+        <small className="cp-context-meta">{lessonPackages.length} onderdelen · {lessonPackages.reduce((sum, pack) => sum + pack.lessons.length, 0)} lessen</small>
       </header>
-
-      <PackageGrid onOpen={onOpen} />
+      <div className="cp-page-workspace"><PackageGrid onOpen={onOpen} /></div>
     </div>
   );
 }
@@ -189,7 +183,7 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio, onPractice }:
   return (
     <section className="cp-panel">
       <header className="cp-panel-heading">
-        <div><h1>Alle woorden</h1></div>
+        <div><h1 className="sr-only">Alle woorden</h1></div>
         <button className="primary-button" onClick={onPractice}>Oefenen met deze woorden<ArrowRight /></button>
       </header>
       <div className="cp-word-grid">
@@ -345,7 +339,7 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
   return (
     <section className="cp-panel cp-lesson-picker">
       <header className="cp-panel-heading">
-        <h1>Stap voor stap</h1>
+        <h1 className="sr-only">Stap voor stap</h1>
         <button className="secondary-button cp-open-mixed" onClick={onMixed}><Shapes aria-hidden="true" />Oefenen met deze woorden<ArrowRight aria-hidden="true" /></button>
       </header>
       <div className="cp-lesson-list">
@@ -379,13 +373,13 @@ function PackageUse({ pack, onAudio, onAttempt, lesson }: { pack: PackageDefinit
   const visible = items.filter(item => item.placement.status === readiness);
   const records = visible.map(item => item.exercise!);
   function changeKind(next: typeof kind) { stopMedia(); setSelectedId(''); setPracticing(false); setKind(next); }
-  if (selectedId && records.some(item => item.exerciseId === selectedId)) return <section className="cp-panel">
+  if (selectedId && records.some(item => item.exerciseId === selectedId)) return <section className="cp-panel cp-use-player">
     <button className="text-back" onClick={() => { stopMedia(); setSelectedId(''); }}><ArrowLeft />Gebruiken</button>
     <p>Met de docent{readiness === 'later' ? ' · eerst samen voorbereiden' : ''}.</p>
     <PackageExerciseBrowser key={selectedId} pack={pack} exercises={records} initialExerciseId={selectedId} onAudio={onAudio} onAttempt={onAttempt} title="Luister en lees mee" description="" />
   </section>;
   return <section className="cp-panel cp-package-use" data-package-use>
-    <header className="cp-panel-heading"><h1>Gebruiken</h1></header>
+    <header className="cp-panel-heading"><h1 className="sr-only">Gebruiken</h1></header>
     <div className="cp-chapter-levels" aria-label="Wat wil je gebruiken?">{([['sentence', 'Zinnen', FileText], ['text', 'Teksten en verhalen', BookOpen], ['dialogue', 'Gesprekken', MessageCircle], ['scene', 'Situaties', Images]] as const).map(([id, label, Icon]) => <button className="secondary-button" key={id} aria-pressed={kind === id} onClick={() => changeKind(id)}><Icon aria-hidden="true" />{label}</button>)}</div>
     {kind === 'scene' ? <PackageScenes pack={pack} /> : <>
       <fieldset className="cp-chapter-levels"><legend className="sr-only">Wanneer oefenen?</legend>{(Object.keys(readinessLabels) as ContentReadiness[]).map(id => <button key={id} className="secondary-button" aria-pressed={readiness === id} onClick={() => { stopMedia(); setReadiness(id); }}>{readinessLabels[id]} <span aria-label="bronnen">({items.filter(item => item.placement.status === id).length})</span></button>)}</fieldset>

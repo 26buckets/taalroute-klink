@@ -37,7 +37,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
     } }} key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} exerciseSet={available.find(item => item.id === activity)?.exercises ?? []} sessionId={!usage && !scopeId && selection.level === 'all' && (!selection.help || selection.help === 'all') ? undefined : `${pack.id}:${selection.level}:${selection.help ?? 'all'}:${scopeId}${usage ? `:use:${usage.settings.language}:${usage.readiness}` : ''}`} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
   </section>;
   return <section className="cp-panel cp-group-practice" data-group-practice>
-    <header className="cp-panel-heading"><h1>{usage ? 'Oefenen met zinnen en situaties' : 'Oefenen met deze woorden'}</h1></header>
+    <header className="cp-panel-heading"><h1 className="sr-only">{usage ? 'Oefenen met zinnen en situaties' : 'Oefenen met deze woorden'}</h1></header>
     {!usage && <PracticeLine available={practiceStages.filter(stage => available.some(item => stage.activities.includes(item.id)) || (stage.id === 'use' && onUse)).map(stage => stage.id)} selected={selectedStage} onSelect={id => {
       if (id === 'use' && onUse) { onUse(); return; }
       setSelectedStage(id);
@@ -73,7 +73,7 @@ export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain
   const title = groupActivities.find(item => item.id === activity)!.label;
   function restart() { try { localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
   if (session.done) return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
-  if (activity === 'worksheet' || activity === 'worksheet-heard') return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
+  if (activity === 'worksheet' || activity === 'worksheet-heard') return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
   return <>
     {canUseSheet && <fieldset className="cp-practice-display" aria-label="Hoe wil je oefenen?">
@@ -81,21 +81,21 @@ export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain
       <button className="secondary-button" aria-pressed={sheet} onClick={() => { stopMedia(); setSheetOpened(true); setSheet(true); }}><Grid2X2 aria-hidden="true" />Op één blad</button>
     </fieldset>}
     {sheet && exerciseMenu && <ExerciseMenu {...exerciseMenu} />}
-    {sheetOpened && <div hidden={!sheet}><PracticeSheet pack={pack} exercises={exercises} title={title} active={sheet} onAudio={onAudio} onAttempt={onAttempt} onBack={onBack} /></div>}
+    {sheetOpened && <div hidden={!sheet}><PracticeSheet pack={pack} exercises={exercises} title={title} showTitle={!exerciseMenu} active={sheet} onAudio={onAudio} onAttempt={onAttempt} onBack={onBack} /></div>}
     {!sheet && <PackageExerciseBrowser exerciseMenu={exerciseMenu} pack={pack} exercises={exercises.map(exercise=>exercise.componentId==='KLINK-CONTENT'?{...exercise,contentSessionId:storageKey}:exercise)} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={session.exerciseId}
     onPosition={exerciseId => setSession(current => current.exerciseId === exerciseId ? current : { ...current, exerciseId })}
     onAttempt={onAttempt} onLessonDone={() => setSession(current => ({ ...current, done: true }))} onComplete={onBack} />}
   </>;
 }
 
-function PracticeSheet({ pack, exercises, title, active, onAudio, onAttempt, onBack }: { pack: PackageDefinition; exercises: PackageExercise[]; title: string; active: boolean; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void }) {
+function PracticeSheet({ pack, exercises, title, showTitle, active, onAudio, onAttempt, onBack }: { pack: PackageDefinition; exercises: PackageExercise[]; title: string; showTitle: boolean; active: boolean; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void }) {
   const playback = useRef<AbortController | null>(null);
   const [round, setRound] = useState(0);
   const [done, setDone] = useState<string[]>([]);
   useEffect(() => { if (!active) playback.current?.abort(); return () => playback.current?.abort(); }, [active]);
   function startPlayback() { playback.current?.abort(); const controller = new AbortController(); playback.current = controller; return controller; }
-  return <section className="cp-practice-sheet" aria-label={title}>
-    <header><h2>{title}</h2><output aria-label={`${done.length} van ${exercises.length} geoefend`}>{done.length} / {exercises.length}</output></header>
+  return <section className="cp-practice-sheet cp-page-workspace" aria-label={title}>
+    <header>{showTitle && <h2>{title}</h2>}<output aria-label={`${done.length} van ${exercises.length} geoefend`}>{done.length} / {exercises.length}</output></header>
     <div className="cp-practice-sheet-grid">{exercises.map((exercise, index) => <SheetExercise key={`${round}:${exercise.exerciseId}`} pack={pack} exercise={exercise} number={index + 1} onAudio={onAudio} startPlayback={startPlayback} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
     <footer><button className="secondary-button" onClick={() => { playback.current?.abort(); stopMedia(); setDone([]); setRound(value => value + 1); }}><RefreshCw />Nog een keer</button><button className="primary-button" onClick={() => { playback.current?.abort(); stopMedia(); onBack(); }}>Klaar<Check /></button></footer>
   </section>;
@@ -134,14 +134,14 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
   </article>;
 }
 
-function BuildWorksheet({ exercises, onAudio, onAttempt, initialId, onPosition, onDone }: { exercises: PackageExercise[]; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; initialId?: string; onPosition: (id: string) => void; onDone: () => void }) {
+function BuildWorksheet({ showTitle, exercises, onAudio, onAttempt, initialId, onPosition, onDone }: { showTitle: boolean; exercises: PackageExercise[]; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; initialId?: string; onPosition: (id: string) => void; onDone: () => void }) {
   const [page, setPage] = useState(() => Math.floor(Math.max(0, exercises.findIndex(item => item.exerciseId === initialId)) / 4));
   const [done, setDone] = useState<string[]>([]);
   useEffect(scrollToStart, [page]);
   const rows = exercises.slice(page * 4, page * 4 + 4);
   const ready = rows.every(item => done.includes(item.exerciseId));
-  return <section className="cp-word-worksheet" aria-label="Meer woorden maken">
-    <h2>Meer woorden maken</h2>
+  return <section className="cp-word-worksheet cp-page-workspace" aria-label="Meer woorden maken">
+    {showTitle && <h2>Meer woorden maken</h2>}
     <div className="cp-worksheet-grid">{rows.map(exercise => <WorksheetRow key={exercise.exerciseId} exercise={exercise} onAudio={onAudio} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
     <button className="primary-button" disabled={!ready} onClick={() => { stopMedia(); if ((page + 1) * 4 >= exercises.length) onDone(); else { const nextPage = page + 1; setPage(nextPage); onPosition(exercises[nextPage * 4].exerciseId); } }}>Verder<ArrowRight /></button>
   </section>;

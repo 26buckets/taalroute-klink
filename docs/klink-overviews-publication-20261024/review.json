@@ -1,0 +1,141 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "1905846f3f2e7f108e6346c6d6cbe929b8e163c1",
+  "guidedExercises": 130,
+  "preservationPassed": true,
+  "fullLocalRegressionPassed": true,
+  "checks": {
+    "overviewWorksheetStates": 70,
+    "existingWorkspaceComparisons": 56,
+    "consistentLayoutChecks": 21,
+    "headerSizeThemeChecks": 8,
+    "menuSizes": 6,
+    "compactScrollSizes": 4,
+    "teacherManual": "all 12 articles, four widths and navigation",
+    "sourcePreservation": "No lib/data/public/hooks changes compared with latest nek release",
+    "mediaMetadata": "1979 recordings checked; no media changes"
+  },
+  "fullRegressionExecution": "All test:review and posttest:review members completed. The full run stopped in standard-player geometry after the added text-view styling also reached unrelated players; the CSS was scoped to cp-use-player. The complete standard-player and content-import suites (including cumulative routes) and full UX suites then passed again. Latest nek release was integrated after the full run; all 130 guided steps, first-letter guidance, teacher manual and preservation checks passed on the combined source. Final overview geometry covers 70 states and the connected-content suite passed on the new text layout.",
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "visualReview": [
+    "library desktop and mobile",
+    "package tabs desktop and mobile",
+    "worksheet desktop and mobile"
+  ],
+  "limitations": [
+    "Browser emulation; no physical phone or learner pilot.",
+    "Inherited pronunciation/content review limits and audio pause remain.",
+    "Inherited long single-renderer reload stress issue remains open; new geometry checks isolate each viewport/menu state."
+  ],
+  "evidence": [
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/full-review.log",
+      "sha256": "e63637239a332c0391bc2238f4ea33e9f493d5a6aef2aa56cc4f13b53db14b62"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/geometry.log",
+      "sha256": "c64484291444ccbf4fabaf7df200665a6e17bedc9998dc9492e370e1e58c0503"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/build.log",
+      "sha256": "cf0581c224fc9098fff07f619c01c80e77db7ac4363ebbe82f10f3127dc269f6"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/connected-metadata.log",
+      "sha256": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/connected-final.log",
+      "sha256": "c8192354ca587d8ad8ed835b2033ca25d76a47bcc68afe8005324dd6f0345379"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/standard-final.log",
+      "sha256": "24902189b1d8856394870d84eb2c592482828635ef64614f166454f6ae36416d"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/content-final.log",
+      "sha256": "d8b5f50256865303a9b605808be0390c9cfc59ae1602e1fe68df570a6f21ffc5"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/ux-final.log",
+      "sha256": "b0dc4fafacf9ee7b9faf7582f82af4fa98d5dc4f7e89a3fb5e4241fa2c7d01be"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/types-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/lint-final.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/build-final.log",
+      "sha256": "400b46226977159e33cdaf28425739c419b28801b813ac429910075b68817267"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/workspace.log",
+      "sha256": "9313832bde167f2f206d6fd2091f8a9ca6f2968ac66c42a628caa4f2a28f1ec4"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/layout.log",
+      "sha256": "3385203d4495485b769e687c86e90cc1819c3392a1f4884f87fd2cac36018f0f"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/menu.log",
+      "sha256": "eeba4748f0bcfa0839f1347dba84687a13e99767bb51081b497ded4fe99b1a24"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/scroll.log",
+      "sha256": "f48d2eecd1a9f25f3367ec93c221be86b3bce47ebc3acfcc3f1bd0afdad21ee3"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/header.log",
+      "sha256": "d8cddc5a471d1b3529456f9bc8e35813e46137f71ec432b09540ec04e7dc3f5d"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/beginners.log",
+      "sha256": "f1ad820dcf502d3e72724adf09110f87707ded26971d3f61c4d4243fb8b9d7f4"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/manual.log",
+      "sha256": "2f735163369c25fdd0e708a0097a949bb2ab1022b2be1dc9818f65766bdfd6dd"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/letters.log",
+      "sha256": "237e3cfbbbc6ba88fdced29669239f1fb9f71204556129d462649f50e0f3237e"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/media.log",
+      "sha256": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/audio.log",
+      "sha256": "20714d7a8f73766feee874f63317ef38aaf9c6388128fc98c9c1c687e55f35aa"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/logo.log",
+      "sha256": "4ae9600f8eb31cb43cdacad6ce03276b99e7690409df46cda01e8573f4298f82"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/overview-checks.json",
+      "sha256": "4a73b7edcf7bca260d6ea2de19807f5d4f6cb2f241938fac120af86e8e8cb4be"
+    },
+    {
+      "path": "docs/klink-overviews-publication-20261024/checks/white-workspace-checks.json",
+      "sha256": "7d455b647fcb3393a6a0cb50c758884dbdae7ef1cabfd1d9b9987036577507e6"
+    }
+  ]
+}

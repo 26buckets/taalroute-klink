@@ -1,0 +1,50 @@
+
+> taalroute-klink@0.1.0 test:standard-players
+> node --test scripts/test-standard-players.mjs && node scripts/test-standard-players-browser.mjs && node scripts/test-standard-player-variants-browser.mjs && node scripts/test-standard-integration-browser.mjs
+
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.977709ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.218292ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.479458ms)
+✔ Every attached precise mark task refers literally to its existing source and question (177.852708ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (148.380334ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (51.083542ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.641584ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.39175ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (6617.553541ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (3.020125ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (502.8895ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (1.481ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7951.55125
+PASS Sort: wrong retry retains order, keyboard/tap and board mode, 48px, help/attempt storage, explicit advance
+PASS Sort: saved position resumes through existing session contract
+PASS Mark: exact multiword proof, stable wrong selection, toggling and keyboard, no whole-sentence substitution
+PASS Gap: empty/model-free typed mode, wrong answer stays, normalized allowed answer, choice/model help recorded
+PASS Order: source text lines, keyboard, wrong order stable, undo, explicit check and completion
+PASS Branch: distinct consequences, focus at decision changes, return and retry, participation only
+PASS Six connected players: completed by tablet/mobile taps and keyboard, layouts and >=48px targets; original app routes retained
+PASS Scene technical fixture: scaled coordinates, keyboard markers/list alternative, correct/wrong grading; unreviewed media blocked
+PASS Sort fixture: native drag and actual touchscreen tap alternative share the same grading
+PASS Sound fixture: failed/unplayed audio locks category answers; retry unlocks without revealing the word
+PASS Order fixture: images/text rendered in chosen sequence; explicit alternative order accepted
+PASS Gap fixture: additional authorized typed answer accepted without copying the complete model
+PASS Scene fixture: a broken image never permits a guessed successful answer
+Existing chapter deep link reaches expanded word-sort collection voorbereiding.alfa-b
+Existing chapter deep link reaches expanded text-evidence collection klink-text-0c98ca5e7c1fbe77
+Existing chapter deep link reaches expanded verb-choice collection route-verbinden.support
+Existing chapter deep link reaches expanded context-order collection route-verbinden.a2
+Existing chapter deep link reaches expanded situation-point collection groep-7.support
+Existing chapter deep link reaches expanded practice-branch collection groep-9.a1
+All eight real scene tasks within the actual 320px app frame: separate targets and successful continuation
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 1366px
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 768px
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 390px
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 320px
+All fifteen added conversations: source-specific alternate path reaches explicit completion
+Nonliteral source answer: select complete evidence sentence, with matching instruction

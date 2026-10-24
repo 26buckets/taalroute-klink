@@ -1,0 +1,12 @@
+
+> taalroute-klink@0.1.0 test:ux
+> node scripts/test-learner-ux-browser.mjs && node scripts/test-learner-ux-audio-browser.mjs
+
+PASS Nine free-practice families at seven viewport sizes including short and landscape: no overlap, fixed square cards, one next action and reachable controls
+PASS Seven guided modes across desktop, tablet, narrow, short and landscape viewports; long words and focused inputs stay reachable
+PASS Writing exercise exposes the linked word audio
+PASS All lesson filters and saved words remain accessible, with saved state surviving reload
+PASS Free-practice model starts the word recording directly, without spoken instructions
+PASS The writing button plays the actual matching word file
+PASS Failed automatic playback exposes a working retry and does not unlock listening answers early
+PASS Actual task, word, retry and teacher playback use 0.85; instructions stay silent; learner recording controls also default to 0.85
