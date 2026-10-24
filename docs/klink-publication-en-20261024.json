@@ -1,0 +1,22 @@
+{
+  "status": "published-and-verified",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "5cc1a46f5b80aa48555bf3161ac77e36ea0fb7b5",
+  "branch": "main",
+  "workerVersion": "3d745278-01a5-4360-87c1-d1eff5725d59",
+  "previousSourceCommit": "566548fa8a8670d040a1ef20aceb90bf204301e1",
+  "ownerAuthorization": "docs/klink-owner-release-en-20261024.json",
+  "scope": "En joins manual pace and letter guidance with Kijk nog eens. Latest consistent headers, collapsible navigation, layout, content, media and storage retained.",
+  "localReview": "docs/klink-en-publication-20261024/review.json",
+  "sourceBackup": "docs/klink-en-publication-20261024/source-drive-verification.json",
+  "localAndLiveGuidedSteps": 115,
+  "enSteps": 3,
+  "publicationProofTestsPassed": 26,
+  "liveMediaVerified": 2679,
+  "liveClientByteIdentical": true,
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ]
+}
