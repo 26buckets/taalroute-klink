@@ -29,7 +29,7 @@ test('Whole word groups feed the exercise library, without changing the curricul
           assert((item.targetWordIds ?? []).every(id => all.has(id)), `${item.exerciseId}: foreign target word`);
         }
         if (item.requiresAudio) assert(item.prompt?.audio?.src, `${item.exerciseId}: missing stimulus`);
-        for (const src of JSON.stringify(item).matchAll(/"src":"(\/package-audio\/[^\"]+)"/g)) assert(existsSync(`public${src[1]}`), src[1]);
+        for (const src of JSON.stringify(item).matchAll(/"src":"(\/package-audio\/[^"]+)"/g)) assert(existsSync(`public${src[1]}`), src[1]);
       }
     }
     assert.equal(JSON.stringify(pack), before);
@@ -37,16 +37,16 @@ test('Whole word groups feed the exercise library, without changing the curricul
 });
 
 test('Every first-group word is a target in all basic word activities', () => {
-  const pack = packs[0], expected = pack.words.map(w => w.id).sort();
+  const pack = packs[0], expected = pack.words.map(w => w.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
   for (const mode of ['meet','listen','hear-word','read','match','hear-match','build-model','build','worksheet','worksheet-heard','missing','copy','dictation','write','paper-dictation','read-series','speak','word-bingo','image-bingo','memory']) {
-    assert.deepEqual([...new Set(groupExercises(pack, mode).flatMap(e => e.targetWordIds))].sort(), expected, mode);
+    assert.deepEqual([...new Set(groupExercises(pack, mode).flatMap(e => e.targetWordIds))].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), expected, mode);
   }
-  assert.deepEqual(pack.words.map(w => w.word).sort(), ['mat','tas','map','man','pan','jas'].sort());
+  assert.deepEqual(pack.words.map(w => w.word).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), ['mat','tas','map','man','pan','jas'].sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
 });
 
 test('Bingo has per-word turns, stable boards, no answer model, and audio gating', () => {
   for (const pack of packs) for (const mode of ['word-bingo', 'hear-match']) {
-    assert.deepEqual([...new Set(groupExercises(pack, mode).flatMap(item => item.targetWordIds))].sort(), pack.words.filter(word => word.audio).map(word => word.id).sort(), `${pack.id}/${mode}: words without an exercise photo must not disappear`);
+    assert.deepEqual([...new Set(groupExercises(pack, mode).flatMap(item => item.targetWordIds))].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), pack.words.filter(word => word.audio).map(word => word.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), `${pack.id}/${mode}: words without an exercise photo must not disappear`);
   }
   for (const pack of packs) for (const mode of ['word-bingo', 'image-bingo']) {
     const records = groupExercises(pack, mode), boards = Map.groupBy(records, e => e.boardId);

@@ -1,0 +1,123 @@
+
+> taalroute-klink@0.1.0 test:standard-players
+> node --test scripts/test-standard-players.mjs && node scripts/test-standard-players-browser.mjs && node scripts/test-standard-player-variants-browser.mjs && node scripts/test-standard-integration-browser.mjs
+
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.567ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.16125ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.32175ms)
+✔ Every attached precise mark task refers literally to its existing source and question (109.784292ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (92.142ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (34.362ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.360167ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.474958ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (5127.843083ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (3.031083ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (391.079042ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.6465ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5998.758166
+PASS Sort: wrong retry retains order, keyboard/tap and board mode, 48px, help/attempt storage, explicit advance
+PASS Sort: saved position resumes through existing session contract
+PASS Mark: exact multiword proof, stable wrong selection, toggling and keyboard, no whole-sentence substitution
+PASS Gap: empty/model-free typed mode, wrong answer stays, normalized allowed answer, choice/model help recorded
+PASS Order: source text lines, keyboard, wrong order stable, undo, explicit check and completion
+PASS Branch: distinct consequences, focus at decision changes, return and retry, participation only
+PASS Six connected players: completed by tablet/mobile taps and keyboard, layouts and >=48px targets; original app routes retained
+PASS Scene technical fixture: scaled coordinates, keyboard markers/list alternative, correct/wrong grading; unreviewed media blocked
+PASS Sort fixture: native drag and actual touchscreen tap alternative share the same grading
+PASS Sound fixture: failed/unplayed audio locks category answers; retry unlocks without revealing the word
+PASS Order fixture: images/text rendered in chosen sequence; explicit alternative order accepted
+PASS Gap fixture: additional authorized typed answer accepted without copying the complete model
+PASS Scene fixture: a broken image never permits a guessed successful answer
+Existing chapter deep link reaches expanded word-sort collection voorbereiding.alfa-b
+Existing chapter deep link reaches expanded text-evidence collection klink-text-0c98ca5e7c1fbe77
+Existing chapter deep link reaches expanded verb-choice collection route-verbinden.support
+Existing chapter deep link reaches expanded context-order collection route-verbinden.a2
+Existing chapter deep link reaches expanded situation-point collection groep-7.support
+Existing chapter deep link reaches expanded practice-branch collection groep-9.a1
+All eight real scene tasks within the actual 320px app frame: separate targets and successful continuation
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 1366px
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 768px
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 390px
+All eight real scene tasks: full images, nonoverlapping 48px targets and correct answers at 320px
+All fifteen added conversations: source-specific alternate path reaches explicit completion
+Nonliteral source answer: select complete evidence sentence, with matching instruction
+
+> taalroute-klink@0.1.0 test:content-import
+> node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs
+
+✔ All admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery (62.008834ms)
+✔ Every admitted item is reachable once in its chapter and in every source-linked canonical list (2136.357583ms)
+✔ Word surfaces exactly preserve all producer phases; semantic follow-up and delayed transitions cannot disappear (76.766833ms)
+✔ Writing retains four real forms, tiles, hidden models, numeric models and legible invalid old number (6.719834ms)
+✔ Ambiguous spelling, unrepaired chauffeur and all four unclassified texts remain excluded (0.91675ms)
+✔ Broken phase, response and correction contracts are rejected (0.239041ms)
+✔ All questions for the same text are collected before any answer choices (2.326709ms)
+✔ Typed responses never discard capitalization, accents, punctuation or whitespace (1.338ms)
+✔ Choice grading requires every authorized ID and rejects extras, duplicate IDs and incomplete answers (0.220208ms)
+✔ Teacher completion has no automatic correctness judgment and never enters mastery/review (0.40225ms)
+✔ Missing audio, blockers, missing preparation, wrong axis and unrenderable sources are excluded (0.214375ms)
+✔ An exact candidate and item review is required; source changes invalidate earlier admission (3.084667ms)
+✔ Missing or escaped evidence cannot be substituted by a filename or a release claim (1.20475ms)
+✔ Producer-specific delivery and dependency rules are never silently flattened (1.736625ms)
+✔ One blocked item does not suppress independently reviewed items; source patches stay separate (1.713208ms)
+✔ Duplicate item identities are rejected within and across domains (2.5785ms)
+✔ Public items retain response and preparation, but never private dossier paths or automatic reading release (0.463583ms)
+✔ Additional presentation and media contracts cannot be silently dropped (0.108333ms)
+✔ Teacher choices retain their reference without becoming automatic correctness (0.113541ms)
+✔ The same complete choice task is rejected even with renamed and reordered options (1.158125ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13342.372917
+Teacher reference at 1366px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 1366px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Teacher reference at 768px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 768px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Teacher reference at 390px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 390px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Teacher reference at 320px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 320px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Single choice replaces the earlier selection before explicit checking.
+Modelafbouw 1366px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 1366px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 1366px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 1366px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 1366px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Modelafbouw 768px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 768px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 768px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 768px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 768px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Modelafbouw 390px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 390px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 390px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 390px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 390px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Modelafbouw 320px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 320px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 320px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 320px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 320px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Alle eigen antwoorden bij dezelfde bron vastgelegd vóór eerste antwoordkeuzes; docentvoorbereiding afgeschermd.
+Geblokkeerde browseropslag verhindert oefenen of afronden niet.
+spelling: echte catalogusroute, besloten voorbereiding en herladen.
+grammatica: echte catalogusroute, besloten voorbereiding en herladen.
+teksten: echte catalogusroute, besloten voorbereiding en herladen.
+gesprekken: echte catalogusroute, besloten voorbereiding en herladen.
+schrijven: echte catalogusroute, besloten voorbereiding en herladen.
+woordpakketten: echte catalogusroute, besloten voorbereiding en herladen.
+alfa-c: aanbod vanaf start bereikbaar zonder terugval naar een lager niveau.
+b1: aanbod vanaf start bereikbaar zonder terugval naar een lager niveau.
+Bestaande eerste lijst: nieuwe woordopdrachten bij Gebruiken; omliggende woordkeuze en titel lekken geen verborgen model.
+Werkelijke lijst: volledige knopvlakken en invulvelden, start/midden/einde, kleine/liggende/gewone schermen en doorklikken naar volgende opdracht.

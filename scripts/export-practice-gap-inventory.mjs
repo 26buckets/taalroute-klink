@@ -76,7 +76,7 @@ const rows=definitions.map(([id,title,status,modes,note])=>{
 });
 assert.equal(new Set(rows.map(r=>r.id)).size,rows.length);
 for(const r of rows){assert(labels[r.status]);if(r.status==='works')assert.equal(r.sectionIds.length,packs.length);}
-const sections=packs.map(p=>({id:p.id,title:p.title,wordIds:p.words.map(w=>w.id),words:p.words.map(w=>w.word),routeIds:p.lessons.map(l=>l.id),modes:Object.fromEntries([...new Set(p.exercises.map(e=>e.mode))].sort().map(m=>[m,p.exercises.filter(e=>e.mode===m).length])),mixed:Object.fromEntries(['listen','read','match','build'].map(mode=>{const rounds=createMixedRound(p,mode,123);return [mode,{rounds:rounds.length,targetWordIds:[...new Set(rounds.flatMap(e=>e.targetWordIds??[]))]}]}))}));
+const sections=packs.map(p=>({id:p.id,title:p.title,wordIds:p.words.map(w=>w.id),words:p.words.map(w=>w.word),routeIds:p.lessons.map(l=>l.id),modes:Object.fromEntries([...new Set(p.exercises.map(e=>e.mode))].sort((a, b) => a < b ? -1 : a > b ? 1 : 0).map(m=>[m,p.exercises.filter(e=>e.mode===m).length])),mixed:Object.fromEntries(['listen','read','match','build'].map(mode=>{const rounds=createMixedRound(p,mode,123);return [mode,{rounds:rounds.length,targetWordIds:[...new Set(rounds.flatMap(e=>e.targetWordIds??[]))]}]}))}));
 const release=JSON.parse(readFileSync('data/klink-mixed-practice-release.json'));
 for (const section of sections) {
   const pack=packs.find(pack=>pack.id===section.id);
@@ -108,7 +108,7 @@ const lists=Array.from({length:16},(_,i)=>{
 });
 const allABC=lists.every(l=>l.exerciseMenuVerified);
 const domainNames=['ABC','Junior','Schrijven','Lezen','Klanken','Luisteren','Spreken',"Thema's",'Woorden','Regels','Grammatica','Extra'];
-const domains=domainNames.map(title=>{const c=categories.find(c=>c.category===title);return {title,navigationObserved:true,currentSubmenusVisited:Boolean(c),groups:c?.items.length??null,exerciseLinks:c?.items.reduce((n,g)=>n+g.entries.length,0)??null,otherLinks:c?.items.reduce((n,g)=>n+(g.otherLinks?.length??0),0)??null,unresolvedGroups:c?.items.filter(g=>!g.entries.length&&!g.otherLinks?.length).map(g=>g.title)??[],applicationTypes:[...new Set(c?.items.flatMap(g=>g.entries.map(e=>e.application))??[])].sort()}});
+const domains=domainNames.map(title=>{const c=categories.find(c=>c.category===title);return {title,navigationObserved:true,currentSubmenusVisited:Boolean(c),groups:c?.items.length??null,exerciseLinks:c?.items.reduce((n,g)=>n+g.entries.length,0)??null,otherLinks:c?.items.reduce((n,g)=>n+(g.otherLinks?.length??0),0)??null,unresolvedGroups:c?.items.filter(g=>!g.entries.length&&!g.otherLinks?.length).map(g=>g.title)??[],applicationTypes:[...new Set(c?.items.flatMap(g=>g.entries.map(e=>e.application))??[])].sort((a, b) => a < b ? -1 : a > b ? 1 : 0)}});
 const menuComplete=allABC&&domains.every(d=>d.currentSubmenusVisited&&!d.unresolvedGroups.length);
 const diglin={
   scope:'All sixteen ABC lists and the eleven adjoining domains',

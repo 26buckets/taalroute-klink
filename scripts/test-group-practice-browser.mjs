@@ -3,7 +3,7 @@ import { openGroupActivity } from './browser-route-helpers.mjs';
 import { practiceStages } from '../lib/learner-route.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
-import { groupActivities, groupExercises, groupSessionKey } from '../lib/group-practice.ts';
+import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -166,7 +166,7 @@ try {
 
   for (let index = 0; index < packs.length; index++) {
     await home(index); await hub();
-    const expected = groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[index], activity.id).length).map(item => item.id).sort();
+    const expected = groupActivities.filter(activity => activity.id !== 'learning-review' && groupExercises(packs[index], activity.id).length).map(item => item.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
     const found = new Set(await page.locator('[data-activity]').evaluateAll(nodes => nodes.map(node => node.dataset.activity)));
     await page.locator('.cp-tabs').getByRole('button', { name: 'Gebruiken', exact: true }).click();
     await page.getByRole('button', { name: 'Oefenen met zinnen en situaties', exact: true }).click();
@@ -174,7 +174,7 @@ try {
       await page.getByRole('button', { name: label }).click();
       for (const id of await page.locator('[data-activity]').evaluateAll(nodes => nodes.map(node => node.dataset.activity))) found.add(id);
     }
-    assert.deepEqual([...found].sort(), expected, packs[index].id);
+    assert.deepEqual([...found].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), expected, packs[index].id);
   }
   pass('All 15 existing word groups expose their own eligible activity sets');
   assert.deepEqual(errors, []);

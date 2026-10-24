@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-wordbuild-20261019.json';
+      const approvalPath = 'docs/klink-owner-release-maintenance-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -190,4 +190,15 @@ test('Wordbuild source changes, hidden omissions and new audio cannot reuse the 
     catalog => { catalog.packs[0].words[0].audio = '/new.mp3'; },
     catalog => { catalog.selectionPolicy.excludedLexemeIds = []; },
   ]) assert(check(proof, undefined, undefined, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+// A maintenance release cannot loosen historical content approvals or its exact scope.
+test('Maintenance approval rejects an expanded scope, missing consent and altered source hashes', () => {
+  for (const change of [
+    approval => { approval.maintenanceRelease.publicationApproved = false; },
+    approval => { approval.maintenanceRelease.changedFiles.push('data/klink-curriculum.json'); },
+    approval => { approval.maintenanceRelease.baselineSourceCommit = '0'.repeat(40); },
+    approval => { delete approval.files['app/landing.css']; },
+    approval => { approval.files['scripts/test-group-practice.mjs'] = '0'.repeat(64); },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

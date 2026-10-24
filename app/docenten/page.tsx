@@ -1,3 +1,5 @@
+
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import chapters from '@/data/klink-teacher-manual.json';
@@ -14,8 +16,8 @@ export default function TeacherManual() {
   return <>
     <ManualLegacyLink />
     <header className="wiki-heading"><p className="manual-eyebrow">Klink · Voor docenten en begeleiders</p><h1>Docentenhandleiding</h1><p>Kies het onderwerp dat je nodig hebt. Elk onderwerp heeft een eigen pagina.</p></header>
-    <a className="wiki-quickstart" href="/docenten/hoofdstuk-1"><span><strong>Voor het eerst met Klink?</strong><span>Begin met de snelstart voor de docent.</span></span><ArrowRight aria-hidden="true" /></a>
-    <div className="wiki-topic-groups">{groups.map(group => <section key={group.title}><h2>{group.title}</h2><ul>{group.chapters.map(chapter => <li key={chapter.id}><a href={`/docenten/${chapter.id}`}>{chapter.title.replace(/^\d+ /, '')}<ArrowRight aria-hidden="true" /></a></li>)}</ul></section>)}</div>
-    <a className="manual-teacher-entry" href="/#teacher/activities">Open de docentomgeving<ArrowRight aria-hidden="true" /></a>
+    <Link className="wiki-quickstart" href="/docenten/hoofdstuk-1"><span><strong>Voor het eerst met Klink?</strong><span>Begin met de snelstart voor de docent.</span></span><ArrowRight aria-hidden="true" /></Link>
+    <div className="wiki-topic-groups">{groups.map(group => <section key={group.title}><h2>{group.title}</h2><ul>{group.chapters.map(chapter => <li key={chapter.id}><Link href={`/docenten/${chapter.id}`}>{chapter.title.replace(/^\d+ /, '')}<ArrowRight aria-hidden="true" /></Link></li>)}</ul></section>)}</div>
+    <Link className="manual-teacher-entry" href="/#teacher/activities">Open de docentomgeving<ArrowRight aria-hidden="true" /></Link>
   </>;
 }

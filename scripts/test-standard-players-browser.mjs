@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { build } from 'esbuild';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { groupExercises } from '../lib/group-practice.ts';
@@ -20,7 +20,7 @@ async function open(mode,index=0) {
   const id=await page.locator('.is-mixed-round').getAttribute('data-exercise-id');
   return groupExercises(packs[index],mode).find(i=>i.exerciseId===id);
 }
-async function keyboardClick(locator){await locator.focus();await page.keyboard.press('Enter');}
+async function keyboardClick(locator){await locator.click({trial:true});await locator.focus();await page.keyboard.press('Enter');}
 async function checkLayout(label){
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),label+' horizontal overflow');
   const small=await page.locator('.cp-standard-task button:visible, .cp-standard-task input:visible').evaluateAll(nodes=>nodes.filter(n=>{const b=n.getBoundingClientRect();return b.width<47.5||b.height<47.5;}).map(n=>({text:n.textContent,w:n.getBoundingClientRect().width,h:n.getBoundingClientRect().height})));
