@@ -1,0 +1,50 @@
+{
+  "status": "published-verified",
+  "publishedAt": "2026-10-24T10:09:44.790Z",
+  "verifiedAt": "2026-10-24T10:12:40.231410+00:00",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "15c064bbbee48c5fc4bad499801e5f3b59b1d962",
+  "branch": "main",
+  "workerVersion": "1c8293dd-fbeb-4401-a3ab-7d3831994c64",
+  "baselineSourceCommit": "9162c82cc74515ddc9ebbbb71d62efc3b7c1244c",
+  "previousWorkerVersion": "6ad525ae-7dea-49b9-a5ed-cbbaea7fbd14",
+  "authorization": "docs/klink-owner-release-compact-exercises-20261024.json",
+  "runtimeChangedFiles": [
+    "app/learner-ui.css",
+    "app/taalroute-header.css",
+    "components/product/practice-chapters.tsx"
+  ],
+  "checks": {
+    "localRegression": "complete; initial full chain and focused repaired/rebased checks documented in review",
+    "publicationProofTests": 21,
+    "liveScrollSizes": 4,
+    "liveHeaderThemeSizes": 8,
+    "liveMenuNavigation": "passed",
+    "mediaByteIdentical": 2679,
+    "withdrawnAudioStillUnavailable": 48,
+    "liveClientMatchesBuiltSource": true,
+    "audioMetadataPreserved": true,
+    "contentMediaRoutesAndStorageSourceUnchanged": true,
+    "githubActionsWorkflows": 0
+  },
+  "sourceBackup": {
+    "verifiedAt": "2026-10-24T10:08:37.982281+00:00",
+    "archiveId": "1OrcpTQB_EzlIEbqR7vlGxiBbzBnQ-4BL",
+    "archiveUrl": "https://drive.google.com/file/d/1OrcpTQB_EzlIEbqR7vlGxiBbzBnQ-4BL/view",
+    "archiveSha256": "121105ac608e4965f08ba64c65c93fac09d5c6936925e182e6205ebf0604444f",
+    "bytes": 7420778,
+    "downloadedByteIdentical": true,
+    "zipCrcVerified": true,
+    "parentVerified": true,
+    "parentId": "1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar",
+    "manifestEntriesVerified": 8
+  },
+  "limitations": [
+    "Browser viewport emulation; no physical phone or classroom test."
+  ],
+  "changes": [
+    "Bounded page scrolling with wheel chaining, reachable form fields and navigation.",
+    "Compact exercise header: back, word pair and display choices together.",
+    "Keep the latest published app-menu addition and official KLINK D logo."
+  ]
+}

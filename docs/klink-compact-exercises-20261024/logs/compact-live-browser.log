@@ -1,0 +1,8 @@
+PASS: wheel scrolling, footer reachability, sheet switching and return navigation at four screen sizes
+8 header/menu checks passed
+PASS Five unchanged main buttons have correct active states; refresh and browser history retain each destination
+PASS Section links reopen the correct shared word overview; invalid sections fail back to the lesson library
+PASS Teacher labels match learners; all twelve guide links open the intended chapter and return without altering lesson progress
+PASS Verder still resumes the exact saved exercise after the navigation change
+PASS Compact title and screen-reader orientation avoid answer leakage; desktop, tablet and phone fit with reachable continuation
+PASS Guide works by keyboard and stays out of the learner interface; no page errors

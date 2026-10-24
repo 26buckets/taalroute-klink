@@ -2,6 +2,19 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `15c064bbbee48c5fc4bad499801e5f3b59b1d962` op canonieke branch `main`.
+Worker-versie: `1c8293dd-fbeb-4401-a3ab-7d3831994c64`.
+
+De goedgekeurde compacte oefenkop en het herstel van scrollen staan online. Andere opdracht, woordpaar en weergavekeuze staan bij elkaar. Invoervelden en vervolgknoppen blijven bereikbaar, ook op kleine en liggende schermen. Het laatst gepubliceerde appmenu inclusief KLINK, logo D, inhoud, media, routes en opslag blijven behouden.
+
+Register: `docs/klink-publication-compact-exercises-20261024.json`; vrijgave: `docs/klink-owner-release-compact-exercises-20261024.json`. Volledige lokale regressiedekking en 21 publicatiebewijstests geslaagd; live scrollen op vier schermformaten, header/menu in acht combinaties en navigatie gecontroleerd. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk. Browseremulatie, geen fysieke telefoontest. Bronback-up en uploadcontrole: `docs/klink-compact-exercises-20261024/source-drive-verification.json`.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via de bestaande beveiligde publicatieroute. De eerdere inhoudsakkoorden en audiopauze blijven gelden.
+
+## Vorige actieve publicatie (historie)
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `6d4d012738e9f4332bfd7ff80212192a1d805607` op canonieke branch `main`.
 Worker-versie: `00753a7c-4dd1-4e34-ba71-77ecd1849fe8`.
 

@@ -1,0 +1,29 @@
+✔ Valid publication proof resolves provenance, not outstanding media approval (406.690542ms)
+✔ New route approval rejects changed hashes and cannot drop the previous approval scope (983.54025ms)
+✔ Cumulative approval requires every new source, review and verified backup binding (1502.649292ms)
+✔ Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity (2213.307167ms)
+✔ Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected (2008.514583ms)
+✔ Proof for a different live version cannot satisfy the publication gate (409.846083ms)
+✔ A boolean without its underlying publication record is rejected (400.612ms)
+✔ Missing fresh public client evidence is rejected (420.189458ms)
+✔ A mismatching or dirty live release marker is rejected (1224.050167ms)
+✔ Incomplete media evidence or a missing source archive is rejected (1680.237ms)
+✔ Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval (1579.995667ms)
+✔ Smaller header successor retains historical approval and permits only the exact approved dimensions (2114.993208ms)
+✔ Header sizing rejects extra CSS changes even when approval hashes match the source files (1125.082958ms)
+✔ Wordbuild publication requires exact consent, reviewed selection and verified source backup (2266.708625ms)
+✔ Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval (1588.774208ms)
+✔ Maintenance approval rejects an expanded scope, missing consent and altered source hashes (1225.372167ms)
+✔ Landing footer approval remains limited to the explicit request (1071.592625ms)
+✔ Sharing release cannot extend runtime scope or erase the previous maintenance approval (815.143292ms)
+✔ Header repair retains the published sharing and content approval (795.743125ms)
+✔ Compact exercise release requires exact consent, scope, source and verified backup (1167.535583ms)
+✔ KLINK menu addition cannot widen content scope or discard the approved header repair (595.74925ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25641.411
