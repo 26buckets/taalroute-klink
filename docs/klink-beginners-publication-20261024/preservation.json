@@ -1,0 +1,23 @@
+{
+  "baselineSourceCommit": "6f7de9248c933e538a2fec928694db726158bbf4",
+  "unchangedPaths": [
+    "public",
+    "app/taalroute-header.css",
+    "app/landing.css",
+    "components/product/taalroute-header.tsx",
+    "components/product/entry-design.tsx",
+    "components/product/exercise-menu.tsx",
+    "components/product/package-group-practice.tsx",
+    "components/product/practice-chapters.tsx",
+    "lib/practice-chapters.ts",
+    "db",
+    "drizzle"
+  ],
+  "unexpectedChanges": [],
+  "newMediaBindings": 0,
+  "schemaMigrations": 0,
+  "officialLogoAndSharedHeaderRetained": true,
+  "currentExerciseMenuRetained": true,
+  "audioMetadataChecks": "check-klink-media-files and check-connected-audio passed; all offered media will be read back byte-for-byte after publication",
+  "browserFullRegression": "passed"
+}

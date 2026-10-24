@@ -65,14 +65,17 @@ try {
   if (await resume.count()) await resume.click();
   await answerActivity(page, audioChoice, { advance: false, checkFocus: false });
   const current = audioChoice.exerciseId;
-  await page.waitForFunction(id => document.querySelector('.cp-exercise-browser')?.dataset.exerciseId !== id, current);
+  await page.waitForTimeout(900);
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), current);
+  await page.locator('.cp-exercise-feedback button').click();
+  assert.notEqual(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), current);
   assert.equal(await page.locator('.cp-exercise-feedback').getAttribute('class'), 'cp-exercise-feedback idle');
-  pass('Failed sound cannot be answered; retry works and a correct choice advances automatically');
+  pass('Failed sound cannot be answered; retry works and a correct choice waits for Verder');
 
   const gap = exercisesForLesson(core, coreLesson).find(item => item.mode === 'missing-grapheme');
   await seedAt(core, coreLesson, gap);
   await answerActivity(page, gap, { advance: false });
-  await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
+  assert.equal(await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).count(), 0);
   await page.waitForTimeout(1600);
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), gap.exerciseId);
   await page.getByRole('button', { name: 'Terug naar alle lessen', exact: true }).click();
@@ -109,6 +112,7 @@ try {
     await page.screenshot({ path: new URL(`fotostrook-${width}.png`, out).pathname });
     const matching = exercisesForLesson(packs[0], packs[0].lessons[1]).find(item => item.mode === 'word-image-match');
     await seedAt(packs[0], packs[0].lessons[1], matching);
+    await page.getByRole('button', { name: 'Nu jij', exact: true }).click();
     await page.waitForFunction(() => [...document.querySelectorAll('.cp-match-board img')].every(image => image.naturalWidth > 0));
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     const footer = await page.locator('.cp-exercise-feedback').boundingBox();
@@ -177,8 +181,6 @@ try {
   noStorage.on('pageerror', error => errors.push(error.message));
   await noStorage.goto(`${base}/#learner/home`);
   await noStorage.getByRole('button', { name: 'Begin hier', exact: true }).click();
-  await noStorage.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
-  await noStorage.locator('.cp-start-lesson').first().click();
   await noStorage.locator('.cp-model-content').waitFor();
   assert((await noStorage.locator('.toast-message').innerText()).includes('Oefenen kan doorgaan'));
   await noStorage.close();

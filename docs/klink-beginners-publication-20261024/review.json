@@ -1,0 +1,37 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "6f7de9248c933e538a2fec928694db726158bbf4",
+  "pakKatSteps": 14,
+  "guidedExercises": 102,
+  "preservationPassed": true,
+  "fullLocalRegressionPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "manualBrowserChecks": [
+    "pak/kat all 14 steps at 320x568",
+    "wrong letter, repeat demonstration preserves correct prefix",
+    "matching replay preserves completed pairs",
+    "390x844 jump to recall and return to first unfinished step",
+    "1366x900 letter help and existing composition"
+  ],
+  "checks": {
+    "build": true,
+    "types": true,
+    "lint": true,
+    "mediaMetadata": true,
+    "catalog": true
+  },
+  "limitations": [
+    "Browser emulation, not physical phones or learner pilot.",
+    "Existing broader content and pronunciation review statuses remain unchanged.",
+    "A long single-renderer scene test crashed identically on the current published baseline and locally after repeated full-app reloads. Every scene remains tested using isolated collection contexts; no long-session memory stress claim."
+  ],
+  "unitTests": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 1,
+    "skip": "Existing source-fidelity ledger check; no change to original source review status."
+  },
+  "browserSteps": 102,
+  "regressionExecution": "Complete existing review/postreview coverage, resumed after updating obsolete automatic-advance and demo expectations; no runtime change after successful combined build."
+}

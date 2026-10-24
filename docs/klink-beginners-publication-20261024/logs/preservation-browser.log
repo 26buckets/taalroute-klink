@@ -1,0 +1,7 @@
+RUN test-shared-header-browser
+8 header/menu checks passed
+RUN test-compact-exercise-scroll-browser
+PASS: wheel scrolling, footer reachability, sheet switching and return navigation at four screen sizes
+RUN test-maintenance-browser
+PASS 15 responsive layout/accessibility checks; baseline=false; navigation=true
+PRESERVATION_PASSED

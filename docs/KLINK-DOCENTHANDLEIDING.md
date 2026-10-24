@@ -21,7 +21,7 @@ Begin met één woord en één duidelijk doel. In dit voorbeeld oefen je met *ma
 
 1. **Kies je doel.** Bijvoorbeeld: de cursist leest *mat* en wijst de mat aan. Zoek daarbij het doel uit je boek en lesplan. Vul je voorbereiding in bij hoofdstuk 10.
 2. **Kijk wat al lukt.** Kent de cursist het woord *mat*? Herkent de cursist de letters m, a en t en de klanken die erbij horen? Oefen wat nog niet bekend is. Je hoeft niet alles in één keer te doen.
-3. **Open de les.** Kies in de cursistomgeving **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**. De kaart **tas · map** opent eerst een overzicht. De eerste les gaat over *mat*.
+3. **Open de les.** Kies bij een nieuwe start in de cursistomgeving **Start → Begin hier**. Je komt direct bij **Kijk en luister** met *mat*. Wil je bewust terug naar deze les? Kies **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**.
 4. **Doe het voor.** Open **Kijk en luister**. Laat het woord horen en wijs de mat aan. Open daarna **Maak**. Laat zien hoe je één letter kiest. Haal die met **Eén terug** weg voor de cursist begint.
 5. **Laat de cursist proberen.** Zeg: “Nu jij.” Wacht rustig. Loopt de cursist vast? Geef één aanwijzing. Laat daarna opnieuw proberen.
 6. **Kijk wat zelfstandig lukt.** Toon de woordkaart zonder het woord eerst te zeggen. Vraag: “Lees.” Vraag daarna: “Waar is de mat?” Noteer het lezen en het aanwijzen apart.
@@ -39,7 +39,7 @@ Kies eerst wat je wilt oefenen. Gebruik daarna de route die daarbij past. De kno
 
 ### Je oefenroute kiezen
 
-Kies bovenaan bij Lezen samen Alfa A of Alfa B en zo nodig bij Taal A1 of A2. Deze keuzes staan los van elkaar. Ze bepalen het aanbod, niet het behaalde niveau. Nogmaals op de gekozen knop tikken zet die keuze uit; Alles toont alle niveaus van die rij. Alfa C en B1 zijn grijs: daarvoor is nog geen aanbod. Met Bekijk mijn oefeningen open je het passende aanbod. Bij een woordhoofdstuk zie je alleen de leeskeuze; bij een taalhoofdstuk alleen de taalkeuze. De keuze blijft op dit apparaat staan. Een geopende deellink kan een eigen niveaukeuze tonen.
+Op Start opent Begin hier direct de eerstvolgende kleine les. Zonder bewaarde les of niveaukeuze begin je met mat: Kijk en luister. De cursist hoeft geen niveau te kiezen. Open Samen met je docent om de oefenroute of fotohulp aan te passen. Kies daar bij Lezen samen Alfa A of Alfa B en zo nodig bij Taal A1 of A2. Deze keuzes staan los van elkaar. Ze bepalen het aanbod, niet het behaalde niveau. Nogmaals op de gekozen knop tikken zet die keuze uit; Alles toont alle niveaus van die rij. Heeft een keuze nog geen kleine leesroute, dan verwijst Bekijk aanbod naar de beschikbare oefeningen. Met Bekijk mijn oefeningen open je het passende aanbod. Bij een woordhoofdstuk zie je alleen de leeskeuze; bij een taalhoofdstuk alleen de taalkeuze. De keuze blijft op dit apparaat staan. Een geopende deellink kan een eigen niveaukeuze tonen.
 
 Onder de startknop staat de rustige uitleg Zo oefen je: Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Elke stap heeft een eigen kadertje; de cijfers blijven in rondjes staan. Op Start is geen stap actief en kun je deze uitleg niet aanklikken. Binnen Samen oefenen zijn de stappen knoppen; het witte cijfer in het donkere rondje laat de gekozen stap zien, niet een behaald resultaat. Grijs betekent dat er bij deze keuze nog geen passend aanbod is. Bij Hulp kies je wanneer de woordfoto helpt; voorbeelden en situatiebeelden blijven zichtbaar.
 
@@ -49,13 +49,13 @@ In de docentomgeving bij Overzicht staat Van woordbeeld naar situatie. De vijf b
 
 Kies **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**.
 
-Deze les heeft drie delen: **Kijk en luister → Maak → Nog een keer**. Bij **Maak** staat **Leg het woord**. Met **Eén terug** haal je de laatst gekozen letter weg.
+Deze les heeft drie delen: **Kijk en luister → Maak → Nog een keer**. Bij **Maak** staat **Leg het woord**. In de eerste vijf lessen en de aansluitende lessen pen · pet, kam, ik · kip en pak · kat laat Klink eerst zien hoe de eerste letter in het eerste vak komt. Kies **Nu jij** en laat de cursist dezelfde letter aantikken. Daarna wijst Klink telkens de volgende letter en het bijbehorende lege vak aan. Een verkeerde tik vult het vak niet. Met **Kijk nog eens** verschijnt een voorbeeld van de huidige letter; al gekozen letters blijven bewaard. Met **Eén terug** haal je de laatst gekozen letter weg.
 
-Binnen **tas · map** is de lesvolgorde: **mat → tas → map → man · pan → jas**. Bereid bij een volgend woord de nieuwe letters en de betekenis voor.
+Binnen **tas · map** is de lesvolgorde: **mat → tas → map → man · pan → jas**. Bereid bij een volgend woord de nieuwe letters en de betekenis voor. Na de laatste beginnersles jas kies je op het rustige afrondscherm Verder met pen · pet. Deze volgende les begint met Kijk en luister en herhaalt eerst jas. Je hoeft geen nieuw onderdeel of niveau te kiezen. Ook Ga verder op Start bewaart deze vervolgplek. De nieuwe les is daarmee nog niet afgerond. Bij de eerste keuze- of koppeloefening van elke beginnersles, inclusief pen · pet, kam, ik · kip en pak · kat, verschijnt een kort voorbeeld. Kies Nu jij om zelf te oefenen. Bij koppelen wordt één woord-fotopaar voorgedaan: eerst het woord, daarna de foto. Het voorbeeld telt niet als antwoord. Met Kijk nog eens kun je het herhalen; al gemaakte koppelingen blijven staan. Een tik op een foto zonder gekozen woord geeft de aanwijzing om eerst een woord te kiezen. Beoordeel een voorgedaan antwoord als oefenen met hulp, niet als zelfstandig lezen. Bij Wat ontbreekt? laat een voorbeeld zien hoe de e de lege plek in p…n vult, in kam hoe de k de lege plek in …am vult, en in ik · kip hoe de i de lege plek in …k vult. Het handje wijst de juiste keuze aan. Na Nu jij kiest de cursist zelf; Kijk nog eens herhaalt het voorbeeld. Het voorbeeld telt niet als een gemaakte opdracht.
 
-Na een goed antwoord kan de les vanzelf doorgaan. Wil je zelf het tempo bepalen? Klik op het pauzeteken boven de opdracht. Daarmee pauzeer je het automatisch doorgaan.
+In de eerste vijf lessen en de aansluitende lessen pen · pet, kam, ik · kip en pak · kat kiest de cursist na iedere opdracht zelf **Verder**. Een goed antwoord blijft staan totdat de cursist doorgaat. Aan het einde kiest de cursist **Les afronden**. Bij andere lessen en vrije oefenronden kan Klink vanzelf doorgaan. Gebruik daar het pauzeteken als je zelf het tempo wilt bepalen.
 
-Via de stappenbalk kun je naar een ander deel gaan. Een stap openen betekent nog niet dat de cursist de opdracht heeft gedaan. Klink kan teruggaan naar werk dat nog niet af is.
+Via de stappenbalk kun je naar een ander deel gaan. Een stap openen betekent nog niet dat de cursist de opdracht heeft gedaan. Klink kan teruggaan naar werk dat nog niet af is. Na het laatste onderdeel staat bij Verder: “Er staat nog een oefening open.” Klink gaat dan naar de eerste oefening die nog niet af is. Daar staat: “Eerst deze oefening. Deze oefening was nog niet af.” Dit is geen foutmelding. De uitleg blijft staan tot de cursist antwoord geeft of een andere oefening opent. Bij gewoon stap voor stap oefenen verschijnt deze uitleg niet.
 
 ### Een oefenvorm met meerdere woorden
 
@@ -93,7 +93,7 @@ Let op het verschil: **Oefenen** in de docentomgeving toont andere keuzes dan **
 
 ### Verdergaan met eerder werk
 
-**Verder** opent de bewaarde lesroute op het gebruikte apparaat. Bij een nieuwe start staat er **Begin hier**. Op een gedeeld apparaat kan de bewaarde route van iemand anders zijn. Controleer daarom zelf waar jouw cursist moet beginnen.
+**Ga verder** opent de bewaarde lesroute op het gebruikte apparaat. Bij een nieuwe start staat er **Begin hier**. Op een gedeeld apparaat kan de bewaarde route van iemand anders zijn. Controleer daarom zelf waar jouw cursist moet beginnen.
 
 ## 3 Kijken wat de cursist zelf kan
 
@@ -183,7 +183,7 @@ Controleer of de cursist de betekenis van *mat* kent. Controleer ook de letters 
 
 Zet Klink klaar met de les **mat** en werkend geluid. Leg een mat of beeld en een woordkaart **mat** klaar. Leg ook de losse letters m, a en t klaar. Gebruik papier en pen alleen als schrijven ook je doel is.
 
-Open **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**. Klik op het pauzeteken boven de opdracht. Zo gaat de les niet vanzelf verder.
+Open **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**. De cursist bepaalt het tempo met **Verder**; deze les gaat niet vanzelf door.
 
 ### Minuut 0 tot 2: betekenis en doel
 
@@ -199,9 +199,9 @@ Open **Kijk en luister**. Laat het hele woord horen en wijs de mat aan. Geef zo 
 
 De woordopname laat het hele woord horen. Voor dit voorbeeld gebruik je geen losse klankopnamen.
 
-Open **Maak**. Het woord staat als voorbeeld in beeld. Zeg: “Ik kies de eerste letter.” Tik op **m**. Kies daarna **Eén terug**. De plek is weer leeg.
+Open **Maak**. Het woord staat als voorbeeld in beeld. Bekijk samen het voorbeeld: de **m** gaat naar het eerste vak. Kies **Nu jij**. De app wijst de **m** aan; diezelfde vorm staat als steun in het eerste vak. Laat de cursist de aangewezen letter aantikken. Een verkeerde tik laat het huidige vak leeg en geeft opnieuw een aanwijzing. Dit geldt ook voor de volgende letters.
 
-Vraag: “Wijs aan waar je begint.” Laat de cursist alleen aanwijzen. Daarna begint de eigen poging.
+Vraag: “Wijs aan waar je begint.” Laat eerst aanwijzen en daarna tikken. Laat vervolgens de rest van het woord namaken. De aanwijzing schuift mee naar de volgende letter en het bijbehorende lege vak. Gebruik zo nodig **Kijk nog eens**. Nadoen toont dat de handeling lukt; het bewijst nog niet dat de cursist de letterklank kent of zelfstandig leest.
 
 **Je let op:** weet de cursist wat de opdracht is? Lukt aanwijzen of tikken?
 

@@ -54,6 +54,8 @@ async function openQuestion(exercise, targetPage = page) {
     } });
   }
   assert.equal(await targetPage.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), expectedId);
+  const demo = targetPage.getByRole('button', { name: 'Nu jij', exact: true });
+  if (await demo.count()) await demo.click();
 }
 const ready = (p = page) => p.waitForFunction(() => [...document.querySelectorAll('.cp-choice-grid button')].every(button => !button.disabled));
 try {
@@ -82,7 +84,7 @@ try {
   pass('All eight questions run in the existing player; sentence/question/answers play in order, the menu does not reveal the sentence, wrong choices stay put, and listening is not recorded as reading');
 
   await openQuestion(man); await ready();
-  await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
+  assert.equal(await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).count(), 0);
   await page.evaluate(src => { window.__fail = src; }, man.questionAudio.src);
   await page.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
   await page.getByText('Probeer Luister opnieuw', { exact: true }).waitFor();
@@ -101,8 +103,11 @@ try {
 
   await openQuestion(man); await ready();
   await page.locator('.cp-choice-grid button').nth(man.options.findIndex(option => man.answer.correctOptionIds.includes(option.id))).click();
-  await page.waitForFunction(id => document.querySelector('.cp-exercise-browser')?.dataset.exerciseId !== id, man.exerciseId);
-  pass('A correct guided answer advances automatically');
+  await page.waitForTimeout(900);
+  assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), man.exerciseId);
+  await page.locator('.cp-exercise-feedback button').click();
+  assert.notEqual(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), man.exerciseId);
+  pass('A correct beginner listening answer waits for Verder');
 
   await openQuestion(man); await ready();
   await page.evaluate(() => { window.__duration = 1000; window.__plays = []; });

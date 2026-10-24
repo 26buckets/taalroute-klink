@@ -61,12 +61,28 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
   return result;
 }
 
-export function exerciseHelp(exercise: PackageExercise): string {
+export function isBeginnerLesson(exercise: PackageExercise, guided: boolean): boolean {
+  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-0[1-8]|klink-uitbreiding-1)$/.test(exercise.lessonId ?? '');
+}
+
+export function hasFirstLetterGuide(exercise: PackageExercise, guided: boolean): boolean {
+  return isBeginnerLesson(exercise, guided) && exercise.mode === 'word-build' && typeof exercise.exampleWord === 'string';
+}
+
+export function beginnerExerciseDemo(pack: PackageDefinition, exercise: PackageExercise, guided: boolean): 'first' | 'repeat' | undefined {
+  if (!isBeginnerLesson(exercise, guided) || !['same-word', 'heard-word', 'heard-image', 'sentence-question', 'word-image-match', 'missing-grapheme'].includes(exercise.mode)) return;
+  const lesson = pack.lessons.find(item => item.id === exercise.lessonId);
+  const first = lesson?.guidedExerciseIds?.map(id => pack.exercises.find(item => item.exerciseId === id)).find(item => item?.mode === exercise.mode);
+  return first?.exerciseId === exercise.exerciseId ? 'first' : 'repeat';
+}
+
+export function exerciseHelp(exercise: PackageExercise, guided = false): string {
+  if (hasFirstLetterGuide(exercise, guided)) return 'Kijk naar het voorbeeld. Doe rustig mee.';
   if (exercise.buildKind === 'sentence') return 'Tik op de woorden. Met Eén terug verander je de volgorde.';
   if (exercise.componentId === 'KLINK-EXTENDED') return exercise.mode === 'sound-compare' ? 'Luister naar beide woorden. Kies daarna.' : 'Neem je tijd. Je mag terugkijken of hulp vragen.';
   if (exercise.mode === 'sentence-question') return 'Luister opnieuw als je twijfelt. Kies één antwoord.';
   if (exercise.mode === 'missing-grapheme') return 'Luister. Kies wat ontbreekt.';
-  if (exercise.componentId === 'ALF-CMP-004') return 'Kies een woord. Kies daarna de foto.';
+  if (exercise.componentId === 'ALF-CMP-004') return exercise.audioOnlySources === true ? 'Tik op Luister. Kies daarna het woord.' : 'Kies een woord. Kies daarna de foto.';
   if (exercise.componentId === 'ALF-CMP-005') return 'Tik op de letters. Met Eén terug verander je een letter.';
   if (exercise.componentId === 'ALF-CMP-006') return 'Typ het woord. Tik daarna op Controleer.';
   if (exercise.componentId === 'ALF-CMP-002') return 'Tik op jouw antwoord.';

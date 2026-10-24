@@ -53,7 +53,10 @@ try {
   for (const exercise of exercises.slice(firstRecall)) await answerActivity(page, exercise);
   assert.equal(await step().getAttribute('data-exercise-id'), exercises[0].exerciseId);
   assert(!(await position()).completed.includes(lesson.id));
+  assert.equal(await step().locator('output strong').innerText(), 'Eerst deze oefening');
+  assert.equal(await step().locator('output small').innerText(), 'Deze oefening was nog niet af.');
   await phases().getByRole('button', { name: 'Maak', exact: true }).click();
+  assert(!(await step().locator('output').innerText()).includes('Deze oefening was nog niet af.'));
   await page.reload();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
   assert.equal(await step().getAttribute('data-exercise-id'), exercises[0].exerciseId);
@@ -71,6 +74,13 @@ try {
       assert.equal(await button.getAttribute('aria-current'), 'step');
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     }
+    // The phase loop already ends on Nog een keer; do not click it twice and steal heading focus.
+    for (const exercise of exercises.slice(firstRecall)) await answerActivity(page, exercise);
+    assert(await phases().evaluate(element => {
+      const nav = element.getBoundingClientRect();
+      const active = element.querySelector('[aria-current="step"]').getBoundingClientRect();
+      return active.left >= nav.left - 1 && active.right <= nav.right + 1;
+    }), 'The active phase stays fully visible after returning to unfinished work');
     await phases().getByRole('button', { name: 'Kijk en luister', exact: true }).click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     await page.screenshot({ path: `${out}/lesson-${width}.png` });
@@ -81,6 +91,17 @@ try {
   await page.waitForFunction(n => window.__plays.length > n, before);
   assert.equal(await page.evaluate(() => window.__plays.at(-1)), exercises[0].prompt.audio.src);
   assert(!(await page.evaluate(() => window.__plays)).some(src => src.includes('/instructions/')));
+  await page.setViewportSize({ width: 390, height: 844 });
+  await phases().getByRole('button', { name: 'Nog een keer', exact: true }).click();
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.waitForFunction(() => {
+    const nav = document.querySelector('[aria-label="Stappen van de les"]');
+    const active = nav.querySelector('[aria-current="step"]').getBoundingClientRect();
+    const bounds = nav.getBoundingClientRect();
+    return active.left >= bounds.left - 1 && active.right <= bounds.right + 1;
+  });
+  pass('The active phase remains visible when a mobile viewport becomes narrower');
+
   pass('Clicking the current model phase replays only the word, never the withdrawn explanation');
   assert.deepEqual(errors, []);
 } finally {

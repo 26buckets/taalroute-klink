@@ -1,7 +1,16 @@
 import type { LessonPosition, PackageDefinition } from './package-content';
+import { lessonContentLevel, type RouteSettings } from './learner-route.ts';
 
 export const progressKey = 'klink.taalroute.route.v1';
 export type RouteProgress = { position?: LessonPosition; completed: string[] };
+
+export function homeLessonPosition(packs: PackageDefinition[], progress: RouteProgress, literacy: RouteSettings['literacy']): LessonPosition | undefined {
+  const lessons = packs.flatMap(pack => pack.lessons
+    .filter(lesson => lesson.guidedExerciseIds?.length && (literacy === 'all' || lessonContentLevel(pack, lesson) === literacy))
+    .map(lesson => ({ packageId: pack.id, lessonId: lesson.id, exerciseId: lesson.guidedExerciseIds![0] })));
+  if (lessons.some(lesson => lesson.packageId === progress.position?.packageId && lesson.lessonId === progress.position.lessonId)) return progress.position;
+  return lessons.find(lesson => !progress.completed.includes(lesson.lessonId)) ?? lessons[0];
+}
 
 export function parseProgress(raw: string | null, packs: PackageDefinition[]): RouteProgress {
   try {
@@ -26,7 +35,14 @@ export function nextLessonPosition(packs: PackageDefinition[], packId: string, l
   const pack = packs.find(item => item.id === packId || item.aliases?.includes(packId));
   const index = pack?.lessons.findIndex(item => item.id === lessonId) ?? -1;
   if (!pack || index < 0) return;
-  const lesson = pack.lessons[index + 1];
+  let nextPack = pack;
+  let lesson = pack.lessons[index + 1];
+  if (!lesson && lessonId === 'klink-leesstap-05') {
+    const continuation = packs.find(item => item.lessons.some(next => next.id === 'klink-leesstap-06'));
+    if (!continuation) return;
+    nextPack = continuation;
+    lesson = continuation.lessons.find(item => item.id === 'klink-leesstap-06')!;
+  }
   if (!lesson?.guidedExerciseIds?.length) return;
-  return { packageId: pack.id, lessonId: lesson.id, exerciseId: lesson.guidedExerciseIds[0] };
+  return { packageId: nextPack.id, lessonId: lesson.id, exerciseId: lesson.guidedExerciseIds[0] };
 }

@@ -86,7 +86,7 @@ test('Route cursor is validated, meaning-safe and separate from mastery; complet
   assert.equal(parseProgress(JSON.stringify({ position: { ...position, exerciseId: packs[1].lessons[0].guidedExerciseIds[0] } }), packs).position, undefined);
   assert.equal(nextLessonPosition(packs, pack.id, pack.lessons[0].id).lessonId, lesson.id);
   assert.equal(nextLessonPosition(packs, pack.id, lesson.id).lessonId, pack.lessons[2].id);
-  assert.equal(nextLessonPosition(packs, pack.id, pack.lessons.at(-1).id), undefined);
+  assert.equal(nextLessonPosition(packs, pack.id, pack.lessons.at(-1).id).lessonId, 'klink-leesstap-06');
   assert.equal(nextLessonPosition(packs, 'bad', 'bad'), undefined);
 });
 test('Explicit release approval does not turn recording/self-check into mastery', () => {

@@ -42,7 +42,7 @@ const stopped = () => page.evaluate(() => window.__mediaAudit.audios.every(audio
 const exerciseId = () => page.locator('.cp-exercise-browser').getAttribute('data-exercise-id');
 async function openFirst() {
   await page.goto(`${base}/#learner/home`);
-  await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
+  await page.locator('.cp-home .cp-package-grid > button').first().click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
 }
 async function family(name) {

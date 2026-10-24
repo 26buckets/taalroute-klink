@@ -22,7 +22,7 @@ await page.addInitScript(() => {
 const pass = text => { checks.push(text); console.log('PASS', text); };
 const tab = label => page.locator('.cp-tabs').getByRole('button', { name: label, exact: true }).click();
 async function openPack() { await page.goto(`${base}/#learner/package/groep-1`); await page.locator('.cp-word-grid').waitFor(); }
-async function settings() { const block = page.locator('[data-my-route]'); await block.waitFor(); return block; }
+async function settings() { if (await page.locator('.cp-home-route:not([open])').count()) await page.locator('.cp-home-route > summary').click(); const block = page.locator('[data-my-route]'); await block.waitFor(); return block; }
 try {
   await page.goto(`${base}/#learner/home`); await page.locator('.cp-home').waitFor();
   assert.deepEqual(await page.locator('.learner-nav nav button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
@@ -125,6 +125,7 @@ try {
   await noStorage.addInitScript(() => { Storage.prototype.getItem = () => { throw new Error('Storage denied'); }; Storage.prototype.setItem = () => { throw new Error('Storage denied'); }; });
   const privatePage = await noStorage.newPage();
   await privatePage.goto(`${base}/#learner/home`);
+  await privatePage.locator('.cp-home-route > summary').click();
   await privatePage.locator('[data-my-route]').getByRole('button', { name: 'Alfa B', exact: true }).click();
   assert.equal(await privatePage.locator('[data-my-route]').getByRole('button', { name: 'Alfa B', exact: true }).getAttribute('aria-pressed'), 'true');
   assert((await privatePage.locator('[data-my-route] output').innerText()).includes('kan hier niet worden bewaard'));

@@ -96,8 +96,6 @@ try {
     await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
     await home();
     await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
-    await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
-    await page.locator('.cp-start-lesson').first().click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     const footer = await page.locator('.cp-exercise-feedback').boundingBox();

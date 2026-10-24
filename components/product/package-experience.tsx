@@ -8,6 +8,7 @@ import { MyRoute, useRouteSettings } from './route-settings';
 import { contextReadiness, lessonContentLevel, lessonWordIds, readinessLabels, type ContentReadiness } from '@/lib/learner-route';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
+import { nextLessonPosition } from '@/lib/learner-progress';
 import { learnerListName } from '@/lib/learner-copy';
 import sectionPhotos from '@/data/klink-section-photos.json';
 import {
@@ -106,6 +107,7 @@ export function PackagePlayer({
   initialPosition,
   onPosition,
   onLessonDone,
+  onOpenLesson,
   onAttempt,
 }: {
   packageId: PackageId;
@@ -116,6 +118,7 @@ export function PackagePlayer({
   initialPosition?: LessonPosition;
   onPosition?: (position: LessonPosition) => void;
   onLessonDone?: (lessonId: string) => void;
+  onOpenLesson?: (position: LessonPosition) => void;
   onAttempt?: (attempt: PracticeAttempt) => void;
 }) {
   const pack = getPackage(packageId);
@@ -174,7 +177,7 @@ export function PackagePlayer({
             onPractice={() => setTab('practice')}
           />
         )}
-        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onAttempt={onAttempt} onMixed={() => setTab('practice')} selectedLessonId={lessonId} onSelectLesson={setLessonId} />}
+        {tab === 'lessons' && <PackageLessons pack={pack} onAudio={playAudio} initialPosition={initialPosition} onPosition={onPosition} onLessonDone={onLessonDone} onOpenLesson={onOpenLesson} onAttempt={onAttempt} onMixed={() => setTab('practice')} selectedLessonId={lessonId} onSelectLesson={setLessonId} />}
         {tab === 'mixed' && <PackageMixedPractice pack={pack} onAudio={playAudio} onBack={() => setTab('practice')} onAttempt={onAttempt} />}
         {tab === 'practice' && <PackageGroupPractice key={`${selection.level}:${selection.help}:${lessonId}`} pack={pack} onAudio={playAudio} onAttempt={onAttempt} selection={selection} wordIds={lesson ? lessonWordIds(pack, lesson) : undefined} scopeId={lessonId} onUse={() => setTab('use')} onMixed={() => setTab('mixed')} />}
         {tab === 'use' && <PackageUse key={`${lessonId}:${settings.language}`} pack={pack} onAudio={playAudio} onAttempt={onAttempt} lesson={lesson} />}
@@ -297,7 +300,7 @@ function lessonExercises(pack: PackageDefinition, lesson: PackageLesson) {
     .map((exercise) => addLessonWordAudio(exercise, pack, lesson));
 }
 
-function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onAttempt, onMixed, selectedLessonId, onSelectLesson: setSelectedLessonId }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onAttempt?: (attempt: PracticeAttempt) => void; onMixed: () => void; selectedLessonId: string; onSelectLesson: (id: string) => void }) {
+function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDone, onOpenLesson, onAttempt, onMixed, selectedLessonId, onSelectLesson: setSelectedLessonId }: { pack: PackageDefinition; onAudio: AudioPlayer; initialPosition?: LessonPosition; onPosition?: (position: LessonPosition) => void; onLessonDone?: (lessonId: string) => void; onOpenLesson?: (position: LessonPosition) => void; onAttempt?: (attempt: PracticeAttempt) => void; onMixed: () => void; selectedLessonId: string; onSelectLesson: (id: string) => void }) {
   const { settings } = useRouteSettings();
   const lessons = pack.lessons.filter(item => settings.literacy === 'all' || lessonContentLevel(pack, item) === settings.literacy);
   const [playing, setPlaying] = useState(Boolean(initialPosition && initialPosition.lessonId === selectedLessonId));
@@ -309,6 +312,11 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
     const lessonNumber = pack.lessons.findIndex((lesson) => lesson.id === selectedLesson.id) + 1;
     const label = lessonPreviewWords(pack, selectedLesson).map(wordLabel).join(' · ') || `Les ${lessonNumber}`;
     const following = lessons[lessons.indexOf(selectedLesson) + 1];
+    const nextPosition = !following && onOpenLesson ? nextLessonPosition(lessonPackages, pack.id, selectedLesson.id) : undefined;
+    const nextPack = lessonPackages.find(item => item.id === nextPosition?.packageId);
+    const nextLesson = nextPack?.lessons.find(item => item.id === nextPosition?.lessonId);
+    const continuation = nextPack && nextLesson && (settings.literacy === 'all' || lessonContentLevel(nextPack, nextLesson) === settings.literacy) ? nextPosition : undefined;
+    const nextLabel = continuation ? lessonPreviewWords(nextPack!, nextLesson!).map(wordLabel).join(' · ') : '';
     return (
       <section className="cp-panel cp-lesson-player">
         <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => { stopMedia(); setPlaying(false); }}><ArrowLeft />Alle lessen</button>
@@ -325,8 +333,8 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
           onPosition={exerciseId => onPosition?.({ packageId: pack.id, lessonId: selectedLesson.id, exerciseId })}
           onLessonDone={() => onLessonDone?.(selectedLesson.id)}
           onAttempt={onAttempt}
-          completeLabel={following ? 'Volgende les' : 'Alle lessen'}
-          onComplete={() => { setResumeId(undefined); if (following) setSelectedLessonId(following.id); else setPlaying(false); }}
+          completeLabel={following ? 'Volgende les' : continuation ? `Verder met ${nextLabel}` : 'Alle lessen'}
+          onComplete={() => { setResumeId(undefined); if (following) setSelectedLessonId(following.id); else if (continuation) onOpenLesson?.(continuation); else setPlaying(false); }}
           onAudio={onAudio}
           eyebrow={`Les ${lessonNumber}`}
           title={`Oefen met ${label}`}

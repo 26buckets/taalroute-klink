@@ -7,7 +7,7 @@ import {chapterCollections,chapterHash,practiceChapters} from '../lib/practice-c
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||'playwright');
 const out='outputs/standard-integration-20261018';mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
-const page=await browser.newPage({viewport:{width:1366,height:950}});
+let page=await browser.newPage({viewport:{width:1366,height:950}});
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18830', errors=[], checks=[];
 page.on('pageerror',e=>errors.push(e.message));
 try {
@@ -23,6 +23,8 @@ for(const mode of ['word-sort','text-evidence','verb-choice','context-order','si
 // Check the actual narrow app frame as well as the reusable-renderer fixtures below.
 await page.setViewportSize({width:320,height:844});
 for(const collection of chapterCollections('situation-point')) {
+ // Keep each real collection isolated; repeated full-app reloads retain large renderer heaps.
+ await page.close();page=await browser.newPage({viewport:{width:320,height:844}});page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/'+chapterHash({chapter:'practical',activity:'situation-point',collection:collection.id,level:collection.level}));await page.reload();
  for(const exercise of collection.exercises) {
   await page.locator(`[data-exercise-id="${exercise.exerciseId}"]`).waitFor();

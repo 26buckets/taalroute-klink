@@ -27,7 +27,8 @@ async function openExercise(exercise) {
   assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
 }
 const ready = () => page.waitForFunction(() => !/Je hoort het geluid vanzelf|Probeer Luister opnieuw|Tik op Luister/.test(document.querySelector('.cp-exercise-feedback output')?.textContent ?? ''), undefined, { timeout: 20000 });
-const route = exercisesForLesson(packs[0], packs[0].lessons[1]);
+// Automatic pace remains available after the guided beginner lessons.
+const route = exercisesForLesson(packs[1], packs[1].lessons[4]);
 const heard = route.find(item => item.mode === 'heard-word');
 try {
   await openExercise(heard);

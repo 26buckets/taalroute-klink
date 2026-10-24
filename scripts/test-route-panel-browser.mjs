@@ -15,7 +15,7 @@ await page.addInitScript(() => {
     pause() { clearTimeout(this.timer); }
   };
 });
-const home = async () => { await page.goto(`${base}/#learner/home`); await page.locator('.cp-route-panel').waitFor(); };
+const home = async () => { await page.goto(`${base}/#learner/home`); if (!await page.locator('.cp-route-panel').isVisible()) await page.locator('.cp-home-route > summary').click(); await page.locator('.cp-route-panel').waitFor(); };
 const choose = label => page.locator('.cp-route-panel').getByRole('button', { name: label, exact: true });
 try {
   await home();
@@ -55,6 +55,7 @@ try {
   assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'false');
   assert.equal(await choose('A2').getAttribute('aria-pressed'), 'true');
   await page.reload();
+  await page.locator('.cp-home-route > summary').click();
   assert.equal(await page.getByRole('button', { name: 'Alle leesniveaus', exact: true }).getAttribute('aria-pressed'), 'true');
   await page.getByRole('button', { name: 'Bekijk mijn oefeningen', exact: true }).click();
   await page.locator('[data-chapter-page="texts"]').waitFor(); assert(page.url().includes('level=a2'));
@@ -130,7 +131,8 @@ try {
     await nav.getByRole('button', { name: 'Lessen', exact: true }).click();
     await page.locator('.cp-package-grid').waitFor();
     await nav.getByRole('button', { name: 'Start', exact: true }).click();
-    await page.locator('.cp-route-panel').waitFor();
+    await page.locator('.cp-home-route > summary').waitFor();
+    assert.equal(await page.locator('.cp-home-route').getAttribute('open'), null);
   }
   pass('Approved five-button bottom menu preserved through 820px, original desktop placement retained, buttons navigate correctly');
   assert.deepEqual(errors, []);

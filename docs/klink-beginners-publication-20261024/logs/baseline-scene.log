@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Target crashed 
+Call log:
+[2m  - waiting for locator('[data-exercise-id="groep-7:group:situation-point:situatie-keuken:klink-woord-kool"]') to be visible[22m
+
+    at /Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-publicatie/scripts/test-standard-integration-browser.mjs:28:69 {
+  log: [
+    `  - waiting for locator('[data-exercise-id="groep-7:group:situation-point:situatie-keuken:klink-woord-kool"]') to be visible`
+  ],
+  name: 'Error'
+}
+
+Node.js v26.4.0

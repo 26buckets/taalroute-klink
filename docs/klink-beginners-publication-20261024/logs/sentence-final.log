@@ -1,0 +1,6 @@
+PASS All eight questions run in the existing player; sentence/question/answers play in order, the menu does not reveal the sentence, wrong choices stay put, and listening is not recorded as reading
+PASS Failed question audio keeps answers locked; retry, keyboard choice, pause and Verder work without a separate checking click
+PASS A correct beginner listening answer waits for Verder
+PASS Leaving during the sentence cancels the pending question and answers
+PASS Photo answers have accessible names, 48px targets, contained images and a reachable footer on desktop/tablet/390/320px
+PASS Real browser audio completes sentence, question and spoken answers; all offered recordings match the branded source bytes; withdrawn instructions/help never play

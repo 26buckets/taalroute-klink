@@ -99,7 +99,7 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
       }
       const labels = [question.answer, ...question.distractors];
       if (new Set(labels).size !== labels.length || labels.length < 2) return [];
-      return [{ ...common, title: markTask(item.text, question.evidence, question.answer) ? 'Tik op de woorden met het antwoord.' : 'Tik op alle woorden van de zin met het antwoord.', question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
+      return [{ ...common, title: 'Kies het antwoord.', question: question.question, questionAudio: registered(`${item.id}:question`, question.question), evidence: question.evidence, activityTypeId: 'TE-02',
         options: orderedChoices(labels.map((label, at) => ({ id: `${at}`, label, audio: registered(`${item.id}:answer:${at}`, label, 'target') })), seed + index),
         answer: { correctOptionIds: ['0'] }, distractorReason: 'Antwoord en betekenisafleiders ongewijzigd uit de bestaande bronvraag.',
       }];

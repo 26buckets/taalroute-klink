@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-exercise-menu-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-beginners-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -251,5 +251,18 @@ test('Collapsible exercise menu binds consent, unchanged content scope and verif
     a => { a.exerciseMenu.changedFiles.push('data/klink-curriculum.json'); },
     a => { delete a.files['docs/klink-owner-release-compact-exercises-20261024.json']; },
     a => { delete a.files['docs/klink-exercise-menu-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Beginner release binds current live ancestry, exact scope and owner publication request', () => {
+  for (const change of [
+    approval => { delete approval.beginnerRelease; },
+    approval => { approval.beginnerRelease.baselineSourceCommit = '0'.repeat(40); },
+    approval => { approval.beginnerRelease.guidedExercises = 103; },
+    approval => { approval.beginnerRelease.userRequest = 'No publication'; },
+    approval => { approval.beginnerRelease.humanReviewClaimed = true; },
+    approval => { approval.beginnerRelease.changedFiles.pop(); },
+    approval => { delete approval.files['lib/lesson-plan.ts']; },
+    approval => { delete approval.files['docs/klink-beginners-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

@@ -30,6 +30,8 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
     // The learner's Start action now starts the stimulus; no mandatory replay click.
     await page.waitForFunction(() => !/Tik op Luister|Je hoort het geluid vanzelf|Probeer Luister opnieuw/.test(document.querySelector('.cp-exercise-feedback output').textContent));
   }
+  const demo = page.getByRole('button', { name: 'Nu jij', exact: true });
+  if (await demo.count()) await demo.click();
   if (exercise.componentId === 'ALF-CMP-001') {
     if (exercise.prompt.image) await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
   } else if (exercise.componentId === 'ALF-CMP-002') {
@@ -44,7 +46,7 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
     assert.equal(await page.getByRole('button', { name: 'Controleer', exact: true }).count(), 0);
   } else if (exercise.componentId === 'ALF-CMP-005') {
     const bank = page.locator('.cp-tile-bank button');
-    await bank.first().click();
+    await bank.nth(exercise.tiles.findIndex(tile => tile.id === exercise.answer.targetTileIds[0])).click();
     await page.getByRole('button', { name: 'Eén terug', exact: true }).click();
     for (const id of exercise.answer.targetTileIds) {
       const index = exercise.tiles.findIndex(tile => tile.id === id);

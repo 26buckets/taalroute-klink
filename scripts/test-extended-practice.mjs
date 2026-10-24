@@ -25,6 +25,8 @@ test('All source questions retained with exact answer and source evidence, no ra
   assert.equal(new Set(all('text-question').map(item => item.contextId)).size, 180);
   assert.equal(new Set(all('dialogue-question').map(item => item.contextId)).size, 120);
   for (const item of [...all('text-question'), ...all('dialogue-question')]) {
+    assert.equal(item.title, 'Kies het antwoord.');
+    assert.equal(item.standardTask, undefined, 'Choice questions must not ask learners to mark words in the source');
     const source = contentById.get(item.contextId);
     assert(source.text.includes(item.evidence));
     assert.equal(item.question, source.discussion.question);
@@ -32,6 +34,8 @@ test('All source questions retained with exact answer and source evidence, no ra
     assert.equal(new Set(item.options.map(option => option.label)).size, item.options.length);
   }
   for (const item of all('text-evidence')) {
+    assert.match(item.title, /^Tik op .*woorden/);
+    assert.equal(item.standardTask.kind, 'mark');
     assert.equal(item.options.filter(option => option.label === item.evidence).length, 1);
     assert.equal(item.options.find(option => item.answer.correctOptionIds.includes(option.id)).label, item.evidence);
     assert(item.options.every(option => contentById.get(item.contextId).text.includes(option.label)));

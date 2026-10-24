@@ -1,0 +1,30 @@
+RUN node scripts/test-lesson-extension-browser.mjs
+PASS Complete core route includes new gap tasks, image choice, matching, recall and next lesson
+PASS Complete longer-word route includes actual dictation without a visible model
+PASS Failed sound cannot be answered; retry works and a correct choice waits for Verder
+PASS Pause, navigating away, Verder and reloading resume the exact exercise without restoring a correct answer
+PASS Explicit word help is hidden by default and recorded as assistance, not independent success
+PASS Photo strips and matching preserve all sections and 48px controls at desktop, tablet, 390px and 320px
+PASS Teacher checklist covers every step, distinguishes listening from reading, and opens the sentence bridge at desktop/390/320px
+PASS Free practice visibly separates copying from dictation and works with keyboard submission
+PASS Blocked browser storage does not prevent starting a lesson
+RUN node scripts/test-continuous-flow-browser.mjs
+PASS Real word audio starts automatically; one answer click advances in about 650ms
+PASS Self-paced mode stays put, and Verder always advances instead of becoming a pause action
+PASS Wrong answers preserve the choices; an immediate Verder click skips the feedback wait
+PASS Sentence and situation recordings play automatically; text replays them and participation is not marked independent reading
+PASS Context presentation keeps its image proportions, large targets and reachable Verder at four screen widths
+PASS The model has one large photo/word listening target, not duplicate listening buttons
+RUN node scripts/test-sentence-comprehension-browser.mjs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at ready (/Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-publicatie/scripts/test-sentence-comprehension-browser.mjs:58:31)
+    at /Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-publicatie/scripts/test-sentence-comprehension-browser.mjs:61:41 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0

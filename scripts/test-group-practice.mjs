@@ -7,6 +7,18 @@ import { learningAreas } from '../lib/learning-areas.ts';
 import { contentById } from '../lib/connected-content.ts';
 import { importedItems, importedExercise, importedMatchesPack } from '../lib/imported-practice.ts';
 import groupRelease from '../data/klink-group-practice-release.json' with { type: 'json' };
+import { exerciseHelp } from '../lib/lesson-plan.ts';
+test('Matching help describes the actual source and target controls', () => {
+  for (const mode of ['match', 'hear-match']) {
+    const exercises = packs.flatMap(pack => groupExercises(pack, mode));
+    assert(exercises.length > 0);
+    for (const exercise of exercises) {
+      assert.equal(exercise.componentId, 'ALF-CMP-004');
+      assert.equal(exerciseHelp(exercise), mode === 'hear-match' ? 'Tik op Luister. Kies daarna het woord.' : 'Kies een woord. Kies daarna de foto.');
+      assert(exercise.targets.every(target => mode === 'hear-match' ? target.label && !target.image : target.image));
+    }
+  }
+});
 
 test('Whole word groups feed the exercise library, without changing the curriculum', () => {
   for (const pack of packs) {
