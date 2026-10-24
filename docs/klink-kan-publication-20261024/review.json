@@ -1,0 +1,90 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "86f2513716544f355f0d29f66bcaee45528cbffd",
+  "kanSteps": 3,
+  "guidedExercises": 121,
+  "fullLocalRegressionPassed": true,
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "checks": {
+    "build": true,
+    "types": true,
+    "lint": true,
+    "mediaMetadata": true,
+    "catalog": true,
+    "completeReviewAndPostReview": true,
+    "additionalConsistentLayoutMenuHeaderScrollAccessibility": true,
+    "mobileFullButtonClearanceAll121Steps": true
+  },
+  "unitTests": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 1,
+    "skip": "Existing source-fidelity ledger check; original source review unchanged."
+  },
+  "targetedBrowserChecks": [
+    "Wrong first letter leaves the first slot empty",
+    "Kijk nog eens shows a in the second slot and retains k",
+    "320x568: visible letter help and repeat control, 48px targets, no horizontal overflow",
+    "390x844: visible letter help and repeat control, 48px targets, no horizontal overflow",
+    "1366x900: visible letter help and repeat control, 48px targets, no horizontal overflow",
+    "Real-audio route: correct answers wait for Verder or Les afronden; recall has no answer cues; quiet completion"
+  ],
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-kan-review.log",
+      "sha256": "3369df1b50c81f685e2cfc6838001a1d96ea104e122982842641c3137b1a2019"
+    },
+    {
+      "path": "work/klink-kan-route.log",
+      "sha256": "14bc05734497c490c819a15f5b2a5fe7ffd75905535513fde20eca89bc72bf9f"
+    },
+    {
+      "path": "work/klink-kan-units.log",
+      "sha256": "ca1daca6b5d701bb310e4d8819fb228f6179b409df1a71882801ae4058fcd075"
+    },
+    {
+      "path": "work/klink-kan-focused.log",
+      "sha256": "8a7d7f51cc93b49e95ff88e0e43ac2aa75d21e102dbf8c3c75c4ee4db40de4dd"
+    },
+    {
+      "path": "work/klink-kan-build.log",
+      "sha256": "8321d48e4375979ef0a8f8d13f01a6fb3694d57f9050eacb7fd00952f36ca505"
+    },
+    {
+      "path": "work/klink-kan-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-kan-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-kan-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-kan-media.log",
+      "sha256": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4"
+    },
+    {
+      "path": "work/klink-kan-connected-audio.log",
+      "sha256": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa"
+    },
+    {
+      "path": "work/klink-kan-extra.log",
+      "sha256": "f8ac25cc4a91402d4ee87d96ba7fde86d9643b824ee656cd5917821c3504658f"
+    },
+    {
+      "path": "work/klink-kan-preview.log",
+      "sha256": "fe010baf7d405b2e9c4a74649cb88a0979afe7cb4afd39df502657f901f8472a"
+    }
+  ],
+  "preservedPublishedLayout": "Latest white workspace, collapsed exercise menu and full mobile continuation clearance retained byte-identically."
+}

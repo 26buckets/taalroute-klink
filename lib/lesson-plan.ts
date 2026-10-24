@@ -62,7 +62,7 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
 }
 
 export function isBeginnerLesson(exercise: PackageExercise, guided: boolean): boolean {
-  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-0[1-8]|klink-uitbreiding-[12]|woord-klink-woord-(?:en|is))$/.test(exercise.lessonId ?? '');
+  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-0[1-8]|klink-uitbreiding-[12]|woord-klink-woord-(?:en|is|kan))$/.test(exercise.lessonId ?? '');
 }
 
 export function hasFirstLetterGuide(exercise: PackageExercise, guided: boolean): boolean {
