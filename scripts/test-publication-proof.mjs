@@ -310,3 +310,15 @@ test('White workspace approval preserves the latest lessons and binds menu, geom
     approval => { delete approval.files['docs/klink-white-workspace-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
+
+test('Is release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+  for (const change of [
+    a => { delete a.isRelease; },
+    a => { a.isRelease.publicationApproved = false; },
+    a => { a.isRelease.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.isRelease.guidedExercises = 119; },
+    a => { a.isRelease.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.isRelease.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-is-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});

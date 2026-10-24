@@ -1,0 +1,90 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "5cc1a46f5b80aa48555bf3161ac77e36ea0fb7b5",
+  "isSteps": 3,
+  "guidedExercises": 118,
+  "fullLocalRegressionPassed": true,
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "checks": {
+    "build": true,
+    "types": true,
+    "lint": true,
+    "mediaMetadata": true,
+    "catalog": true,
+    "completeReviewAndPostReview": true,
+    "additionalConsistentLayoutMenuHeaderScrollAccessibility": true,
+    "mobileFullButtonClearanceAll118Steps": true
+  },
+  "unitTests": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 1,
+    "skip": "Existing source-fidelity ledger check; original source review unchanged."
+  },
+  "targetedBrowserChecks": [
+    "Wrong first letter leaves the first slot empty",
+    "Kijk nog eens shows s in the second slot and retains i",
+    "320x568: visible letter help and repeat control, 48px targets, no horizontal overflow",
+    "390x844: visible letter help and repeat control, 48px targets, no horizontal overflow",
+    "1366x900: visible letter help and repeat control, 48px targets, no horizontal overflow",
+    "Real-audio route: correct answers wait for Verder or Les afronden; recall has no answer cues; quiet completion"
+  ],
+  "mobileFix": "Guided lesson content reserves 92px at the bottom on narrow screens, retaining all layout positions and allowing the full continuation button to clear navigation. Browser regression now checks the whole button against navigation, not just its clickable centre.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-is-review.log",
+      "sha256": "4437335d790010ab12744c04fb5be44a928baf588cbd6d6ab58bfb7c9706cc20"
+    },
+    {
+      "path": "work/klink-is-route.log",
+      "sha256": "667822b8ae03c315f443d3d5f772528268ce72548e83dc542022cbb7ae1a3ae5"
+    },
+    {
+      "path": "work/klink-is-units.log",
+      "sha256": "8ace1476aa0a2ca3e7dbf8d87a3956c39e78385a67789bf7451dfc7aa1032ac4"
+    },
+    {
+      "path": "work/klink-is-focused.log",
+      "sha256": "14b7d041e67d1621bcece4a049a35350b19a8f57fec3c4307e9d1802a80a377c"
+    },
+    {
+      "path": "work/klink-is-build.log",
+      "sha256": "0813822a834e375be4bc0dcc28579df374a3d8203d84b394ca2a4ce06c41fb0a"
+    },
+    {
+      "path": "work/klink-is-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-is-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-is-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-is-media.log",
+      "sha256": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4"
+    },
+    {
+      "path": "work/klink-is-connected-audio.log",
+      "sha256": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa"
+    },
+    {
+      "path": "work/klink-is-extra.log",
+      "sha256": "4c297ad14be3cc57fbc3ebd2af9fc66aa56ef06d11d7b97202176ed5ba126ba7"
+    },
+    {
+      "path": "work/klink-is-preview.log",
+      "sha256": "fe010baf7d405b2e9c4a74649cb88a0979afe7cb4afd39df502657f901f8472a"
+    }
+  ]
+}
