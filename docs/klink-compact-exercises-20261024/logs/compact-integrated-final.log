@@ -1,0 +1,14 @@
+8 header/menu checks passed
+PASS: wheel scrolling, footer reachability, sheet switching and return navigation at four screen sizes
+PASS Five unchanged main buttons have correct active states; refresh and browser history retain each destination
+PASS Section links reopen the correct shared word overview; invalid sections fail back to the lesson library
+PASS Teacher labels match learners; all twelve guide links open the intended chapter and return without altering lesson progress
+PASS Verder still resumes the exact saved exercise after the navigation change
+PASS Compact title and screen-reader orientation avoid answer leakage; desktop, tablet and phone fit with reachable continuation
+PASS Guide works by keyboard and stays out of the learner interface; no page errors
+PASS Six visible choices in two axes and a neutral six-step overview; teacher image planning is absent from learner home
+PASS Keyboard choice stays on Start; explicit Continue follows literacy or language choice without changing saved lesson progress
+PASS Mixed source chapters retain both literacy/language axes; deselecting language preserves literacy
+PASS Exercise line jumps to the correct section with focus, remembers the chosen stage and greys unavailable stages without empty exercise links
+PASS Desktop, tablet and 390/320px layouts retain readable labels, full availability text and 48px choice targets
+PASS Approved five-button bottom menu preserved through 820px, original desktop placement retained, buttons navigate correctly

@@ -1,7 +1,7 @@
 {
   "status": "passed-local",
   "fullLocalRegressionPassed": true,
-  "baselineSourceCommit": "6d4d012738e9f4332bfd7ff80212192a1d805607",
+  "baselineSourceCommit": "9162c82cc74515ddc9ebbbb71d62efc3b7c1244c",
   "reviewedAt": "2026-10-24T10:04:13.512402+00:00",
   "fullSuiteCoverage": "test:review main chain passed; posttest:review passed through route-level browser tests. Route-panel test corrected to count the two header logos separately from the already-live chooser logos; remaining routes, standard players and imported content tests completed separately. Cumulative routes initially exposed sticky tabs and bottom-navigation overlap on 320x480/568x320; CSS repaired and full cumulative routes passed on six sizes. Final scroll, player stability and menu navigation rerun passed.",
   "checks": [
@@ -81,6 +81,22 @@
     {
       "path": "docs/klink-compact-exercises-20261024/logs/compact-publication-lint.log",
       "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-integrated-final.log",
+      "sha256": "da05901234d7a456d01fe2f5e62f57f93b6f111a23136e63328e785290fcffc5"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-lint-final.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-types-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
-  ]
+  ],
+  "initialTestBaselineSourceCommit": "6d4d012738e9f4332bfd7ff80212192a1d805607",
+  "integrationRecheck": "Published app-menu addition preserved; focused shared-header, menu, scroll and route checks performed again.",
+  "integrationChecksPassed": true,
+  "latestBaselineWorkerVersion": "6ad525ae-7dea-49b9-a5ed-cbbaea7fbd14"
 }
