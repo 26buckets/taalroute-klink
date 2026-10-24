@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-24",
+  "url": "https://klink.taalroute.nl/",
+  "sourceCommit": "ae860b9c36271539a97d3205b9663e31dda187d7",
+  "baselineCommit": "2956a13ddfeb8109ffa30caa2ff7330a34729d60",
+  "workerVersion": "f6e569d7-9bfc-4689-b9bf-ad483d8fb4bf",
+  "activeTrafficPercent": 100,
+  "deploymentCommand": "npm run deploy",
+  "pullRequest": "https://github.com/26buckets/taalroute-klink/pull/3",
+  "pullRequestStatus": "merged",
+  "localTests": {
+    "install": "passed",
+    "lintErrors": 0,
+    "lintConfigurationUnchanged": true,
+    "typescript": "passed",
+    "build": "passed",
+    "fullReview": "All groups passed; standard-players and content-import rerun after adding actionability wait to keyboard test.",
+    "reviewUnitTests": 119,
+    "browserPassMessages": 169,
+    "publicationAndLogoTests": 18,
+    "localAxeScans": 37,
+    "localAxeViolations": 0,
+    "unchangedGeometryChecks": 15,
+    "manualChapters": 12,
+    "componentFixture": "passed",
+    "cloudWorkflows": 0
+  },
+  "live": {
+    "axeScans": 37,
+    "axeViolations": 0,
+    "unchangedGeometryComparisons": 15,
+    "mediaByteIdentical": 2679,
+    "approvedLogoAssetsUnchanged": 5,
+    "manualChapters": 12
+  },
+  "preserved": [
+    "layout",
+    "functions",
+    "content",
+    "media",
+    "local storage",
+    "official logo D"
+  ],
+  "approval": "docs/klink-owner-release-maintenance-20261024.json",
+  "evidenceDirectory": "docs/klink-maintenance-20261024",
+  "backupReceipt": "docs/klink-maintenance-20261024/drive-backup.json",
+  "remainingKnownIssuesWithinScope": []
+}
