@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `944782134a704f038be87c8e90c1ccf94ab84b5f` op canonieke branch `main`.
+Worker-versie: `7ca03e1a-2d1b-46d2-b231-1fa6345ee2af`.
+
+Alle 28 lessen van **neus · buik**, van lam · lip tot en met vloer, wachten op Verder of Les afronden. Letterhulp en Kijk nog eens blijven beschikbaar. eu en ui blijven samen op één knop en in één vak. De bestaande appindeling, even grote koppelkaarten, inhoud, media, routes, opslag, nieuwste startpagina en het herstel van lange oefensessies zijn behouden.
+
+Register: `docs/klink-publication-groep7-20261024.json`; vrijgave: `docs/klink-owner-release-groep7-20261024.json`. Gerichte review: alle 145 stappen in 28 nieuwe lessen lokaal met echte audio, foutkeuzes, Kijk nog eens, vooruit springen, hervatten en lesovergangen; letterhulp op 320/390/1366 pixels. Daarnaast 57 representatieve stappen uit de voorgaande groep, de nieuwste startpagina op vijf breedtes, 147 unittests (één bestaande controle overgeslagen), types, lint, catalogus en 43 publicatiebewijstests. Online zijn 57 stappen in zes representatieve lessen opnieuw doorlopen. De brede ongewijzigde regressie is niet volledig herhaald. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `98d6364dcbd0b45f24e14c2b30e2594b9a291920` op canonieke branch `main`.
 Worker-versie: `0ff610a7-c055-4e47-869d-de1b8cb04d5c`.
 
