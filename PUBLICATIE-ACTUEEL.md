@@ -2,6 +2,17 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `6d4d012738e9f4332bfd7ff80212192a1d805607` op canonieke branch `main`.
+Worker-versie: `00753a7c-4dd1-4e34-ba71-77ecd1849fe8`.
+
+De gezamenlijke header en het appmenu zijn hersteld naar de vaste maten. Bestaande KLINK-logo D, foto, inhoud, media, functies, deelopties en headerknoppen blijven behouden. Register: `docs/klink-publication-header-repair-20261024.json`; exacte vrijgave: `docs/klink-owner-release-header-repair-20261024.json`. Mobiel/desktop, licht/donker en de live bron- en inhoudshashes zijn gecontroleerd. De bestaande publicatiepoort en audiopauze blijven gelden.
+
+## Eerdere publicaties (historie)
+
+### Landingspagina en delen
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `e4d58e12752f8f181d277cb999660ae891df4f0d` op canonieke branch `main`.
 Worker-versie: `51ae5576-9165-454a-b3bb-de2a79f05ff2`.
 

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-24",
+  "sourceCommit": "6d4d012738e9f4332bfd7ff80212192a1d805607",
+  "liveVersion": "00753a7c-4dd1-4e34-ba71-77ecd1849fe8",
+  "previousSourceCommit": "deb7a0cce5e12a5c1fbe067a07e8808c80ca7f61",
+  "url": "https://klink.taalroute.nl/",
+  "status": "published-verified",
+  "scope": "Shared header geometry and matching app chooser, eager menu logos; official KLINK logo, content, functions and existing header controls retained.",
+  "checks": {
+    "headerLocal": 8,
+    "headerLive": 8,
+    "widths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "officialLogoAndPublicationProofTests": 21,
+    "landingWidths": 5,
+    "navigation": "passed including saved progress and twelve manual chapters",
+    "types": "passed",
+    "lint": "passed",
+    "publishedContentHashes": "identical to previous live source"
+  },
+  "testNotes": [
+    "Navigation test initially could not find its default browser; rerun with installed Chromium passed.",
+    "Initial live Escape check ran before React attached the menu controls; deterministic application-readiness wait added and all eight live combinations passed."
+  ],
+  "limitations": [
+    "No physical-phone or classroom test."
+  ],
+  "authorization": "docs/klink-owner-release-header-repair-20261024.json"
+}
