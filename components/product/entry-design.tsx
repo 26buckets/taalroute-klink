@@ -1,8 +1,9 @@
 'use client';
 
 import type { Portal } from '@/app/page';
-import { ArrowLeft, ArrowRight, BookOpen, Building2, ChevronRight, CircleAlert, Headphones, KeyRound, Library, LockKeyhole, MessageCircle } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Building2, ChevronRight, CircleAlert, Headphones, KeyRound, Library, LockKeyhole } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }) {
@@ -33,11 +34,11 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
           <div className="entry-copy">
             {mode === 'choose' ? (
               <>
-                <span className="landing-eyebrow">Nederlands, stap voor stap</span>
-                <h1 className="landing-title">Klink jij ook?</h1>
-                <p className="landing-intro">Samen in de klas of zelf aan de slag. Geef jezelf de ruimte om te oefenen.</p>
-                <button className="landing-start" onClick={chooseLearner}><BookOpen aria-hidden="true" /><span>Open je lessen</span><ArrowRight aria-hidden="true" /></button>
-                <span className="landing-start-note">Voor cursisten · met je klascode</span>
+                <span className="landing-eyebrow">Klink · Van klank naar taal</span>
+                <h1 className="landing-title">Stap voor stap Nederlands leren</h1>
+                <p className="landing-intro">Met Klink oefen je klanken, woorden en uitspraak. Samen in de les, tijdens begeleiding of zelfstandig. Met ruimte om te luisteren, te herhalen en in je eigen tempo te oefenen.</p>
+                <button className="landing-start" onClick={chooseLearner}><BookOpen aria-hidden="true" /><span>Start met oefenen</span><ArrowRight aria-hidden="true" /></button>
+                <span className="landing-start-note">Voor cursisten · met je klascode en oefencode</span>
               </>
             ) : (
               <form className="learner-login" onSubmit={submitLearner}>
@@ -57,10 +58,26 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
         </div>
         {mode === 'choose' && <>
           <div className="landing-wordrow" aria-label="Luisteren, oefenen, groeien"><span>Luisteren.</span><span>Oefenen.</span><span>Groeien.</span></div>
-          <section className="landing-professionals" id="begeleiders" aria-label="Voor begeleiders">
+          <section className="landing-professionals" id="begeleiders" aria-label="Lesgeven, begeleiden en organiseren">
             <div className="landing-professional-grid">
-              <article className="landing-professional-card"><Library aria-hidden="true" /><h2>Met je klas</h2><p>Voor docenten die samen willen oefenen.</p><button onClick={() => onPortal('teacher')}>Naar de docentomgeving<ArrowRight aria-hidden="true" /></button></article>
-              <article className="landing-professional-card"><MessageCircle aria-hidden="true" /><h2>Tijdens je begeleiding</h2><p>Ontdek de oefeningen als therapeut.</p><details><summary>Bekijk de mogelijkheden<ChevronRight aria-hidden="true" /></summary><p>Luister samen naar klanken, woorden en zinnen. Laat de cursist oefenen en herhaal waar nodig. Je gebruikt hiervoor dezelfde oefeningen.</p><button onClick={chooseLearner}>Open de oefeningen<ArrowRight aria-hidden="true" /></button></details></article>
+              <article className="landing-professional-card">
+                <Library aria-hidden="true" /><h2>Lesgeven en begeleiden</h2>
+                <p>Gebruik Klink in je les of tijdens individuele begeleiding. Bekijk hoe je de oefeningen kunt inzetten en open je omgeving.</p>
+                <details><summary>Voor docenten en begeleiders<ChevronRight aria-hidden="true" /></summary>
+                  <Link href="/docenten">Bekijk hoe Klink werkt<ArrowRight aria-hidden="true" /></Link>
+                  <button onClick={() => onPortal('teacher')}>Open je omgeving<ArrowRight aria-hidden="true" /></button>
+                </details>
+              </article>
+              <article className="landing-professional-card">
+                <Building2 aria-hidden="true" /><h2>Klink voor jouw organisatie</h2>
+                <p>Wil je Klink inzetten binnen een school, gemeente of andere organisatie? Bekijk hoe het werkt en neem contact op over gebruik en aanschaf.</p>
+                <details><summary>Gebruik en aanschaf<ChevronRight aria-hidden="true" /></summary>
+                  <p>Klink is bedoeld voor volwassenen die werken aan alfabetisering en Nederlands. Bekijk de uitleg, probeer de oefeningen en bespreek met Taalroute wat past bij jouw organisatie.</p>
+                  <Link href="/docenten/hoofdstuk-12">Lees over Klink<ArrowRight aria-hidden="true" /></Link>
+                  <button onClick={chooseLearner}>Probeer de oefeningen<ArrowRight aria-hidden="true" /></button>
+                  <a href="mailto:info@taalroute.nl?subject=Gebruik%20en%20aanschaf%20van%20Klink">Neem contact op met Taalroute<ArrowRight aria-hidden="true" /></a>
+                </details>
+              </article>
             </div>
           </section>
         </>}
