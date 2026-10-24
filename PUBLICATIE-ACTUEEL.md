@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `98d6364dcbd0b45f24e14c2b30e2594b9a291920` op canonieke branch `main`.
+Worker-versie: `0ff610a7-c055-4e47-869d-de1b8cb04d5c`.
+
+De landingspagina is in drie rondes beoordeeld: gesimuleerde cursist-/docent-/begeleider-/inkopersperspectieven, advocaat van de duivel en een tweede review met correcties. De kop benoemt concrete oefeninhoud. Docentomgeving, handleiding, proberen en contact zijn direct zichtbaar. De oefencodes worden eerlijk uitgelegd als gedeelde oefentoegang; de lokale oefenplek en gebruik op gedeelde apparaten zijn toegelicht. Alfabeta+ en de Z-route zijn concreet afgebakend. Prijzen, licenties en resultaatgaranties zijn niet verzonnen.
+
+Foto, officieel logo, footeruitlijning, rustige opzet, nieuwste groep-zeslessen, gelijke koppelkaarten, sessiestabiliteit, media, routes en opslag blijven behouden. De enige runtimewijziging is `components/product/entry-design.tsx`.
+
+Register: `docs/klink-publication-landing-review-20261024.json`; vrijgave: `docs/klink-owner-release-landing-review-20261024.json`. Lokaal: vijf startpaginaformaten, 320 × 568 eerste oefenknop, toetsenbordfocus en Enter, geldige/ongeldige codes, vijftien lesingangen, docent-/handleiding-/contactroutes, 15 toegankelijkheidstoestanden, 18 koppelkaarttoestanden en lifecyclecontrole. Na overname van groep zes: startpagina, types/lint/build en 57 nieuwste begeleide stappen opnieuw gecontroleerd. 42 publicatiebewijstests slagen. Live zijn de startpagina en alle 2.679 media plus de gebouwde client gecontroleerd. De bronback-up is teruggelezen uit de bestaande Drive-projectmap.
+
+Controlegrenzen: gesimuleerde perspectieven, geen echte gebruikerstest, conversiemeting of fysieke telefoon. Prijzen, licenties en ondersteuning zijn niet door deze review vastgesteld. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `a7dea7abbbba21456a637ceb93aa527b2cba68f0` op canonieke branch `main`.
 Worker-versie: `bf082cf9-9ec4-4402-85a9-61b7cc4c2ede`.
 

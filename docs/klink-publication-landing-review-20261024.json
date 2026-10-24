@@ -1,0 +1,36 @@
+{
+  "status": "published-and-verified",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "98d6364dcbd0b45f24e14c2b30e2594b9a291920",
+  "branch": "main",
+  "workerVersion": "0ff610a7-c055-4e47-869d-de1b8cb04d5c",
+  "baselineSourceCommit": "a7dea7abbbba21456a637ceb93aa527b2cba68f0",
+  "ownerAuthorization": "docs/klink-owner-release-landing-review-20261024.json",
+  "runtimeChanged": [
+    "components/product/entry-design.tsx"
+  ],
+  "reviewRounds": "docs/klink-landing-review-20261024/review-rounds.json",
+  "review": "docs/klink-landing-review-20261024/review.json",
+  "sourceBackup": "docs/klink-landing-review-20261024/source-drive-verification.json",
+  "checks": {
+    "landingWidths": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "smallPhonePrimaryAction": "320x568",
+    "accessibilityStates": 15,
+    "matchingCardStates": 18,
+    "latestGuidedSteps": 57,
+    "publicationProofTests": 42,
+    "liveMediaByteIdentical": 2679,
+    "liveClientByteIdentical": true
+  },
+  "limits": [
+    "Simulated user perspectives; no real user study, conversion results or physical-device test.",
+    "Prices, licenses and support terms are not established by this review.",
+    "Existing content/audio review limits retained."
+  ]
+}
