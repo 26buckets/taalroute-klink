@@ -1,0 +1,86 @@
+{
+  "status": "passed-local",
+  "fullLocalRegressionPassed": true,
+  "baselineSourceCommit": "6d4d012738e9f4332bfd7ff80212192a1d805607",
+  "reviewedAt": "2026-10-24T10:04:13.512402+00:00",
+  "fullSuiteCoverage": "test:review main chain passed; posttest:review passed through route-level browser tests. Route-panel test corrected to count the two header logos separately from the already-live chooser logos; remaining routes, standard players and imported content tests completed separately. Cumulative routes initially exposed sticky tabs and bottom-navigation overlap on 320x480/568x320; CSS repaired and full cumulative routes passed on six sizes. Final scroll, player stability and menu navigation rerun passed.",
+  "checks": [
+    "TypeScript",
+    "lint",
+    "catalog 1187 records",
+    "full curriculum and all posttest groups",
+    "338 base audio, 338 pictures, 1979 connected audio and instruction/context/comprehension media metadata",
+    "WAV metadata self-tests",
+    "shared header eight light/dark responsive combinations",
+    "official logo",
+    "maintenance accessibility and manuals",
+    "scroll wheel and footer four sizes",
+    "player stability five sizes",
+    "cumulative routes six sizes"
+  ],
+  "limitations": [
+    "Responsive desktop browser emulation; no physical phone test or classroom trial."
+  ],
+  "logs": [
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-full-review.log",
+      "sha256": "bfbe93d0d78d98d045bc5edc6f62377a6949cbc9b97436437661dc48e229077d"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-remaining-routes.log",
+      "sha256": "b3d6981fac53194dc2e812a494655b35c639710cea5d40b09213b561f4615af5"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-remaining-standard.log",
+      "sha256": "429c7c325cf148f8ff8a3abd158febf6e849394e1bfcfa660aa334ffe33d275f"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-remaining-content.log",
+      "sha256": "9c5a432823bb73f838c44ddd895afad1253beecc440a7b3f1941e0600a827f00"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-cumulative-final.log",
+      "sha256": "40e251219bd7b24a051779fd8e63509310ee6acb34cf3637b7d2f6a5bbbdebd3"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-final-scroll.log",
+      "sha256": "0cc3d08d60b74d46e0f615168f1e55802ab9b4cf832d6440c97128c0812b6fac"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-media.log",
+      "sha256": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-connected-metadata.log",
+      "sha256": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-wav-test.log",
+      "sha256": "dd3aa1d5fe4082cc65e2e564a530dc3c9a96b7b0d17ecb06170a3fe41998884d"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-header.log",
+      "sha256": "d8cddc5a471d1b3529456f9bc8e35813e46137f71ec432b09540ec04e7dc3f5d"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-logo.log",
+      "sha256": "5d14db400157fa1d088c92aad073b5b37d99bb84c4bf8b2e1f4c09b231da5641"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-maintenance.log",
+      "sha256": "b8267063c8753c682ad17c14cc7602bbb4ae6775e6147f90f1a7ebd0818479d0"
+    },
+    {
+      "path": "docs/klink-compact-exercises-20261024/logs/compact-publication-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    }
+  ]
+}

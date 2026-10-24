@@ -1,0 +1,104 @@
+
+> taalroute-klink@0.1.0 test:content-import
+> node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs
+
+✔ All admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery (67.844458ms)
+✔ Every admitted item is reachable once in its chapter and in every source-linked canonical list (2192.606833ms)
+✔ Word surfaces exactly preserve all producer phases; semantic follow-up and delayed transitions cannot disappear (61.092959ms)
+✔ Writing retains four real forms, tiles, hidden models, numeric models and legible invalid old number (6.995875ms)
+✔ Ambiguous spelling, unrepaired chauffeur and all four unclassified texts remain excluded (1.102875ms)
+✔ Broken phase, response and correction contracts are rejected (0.441375ms)
+✔ All questions for the same text are collected before any answer choices (3.134833ms)
+✔ Typed responses never discard capitalization, accents, punctuation or whitespace (1.288667ms)
+✔ Choice grading requires every authorized ID and rejects extras, duplicate IDs and incomplete answers (0.22075ms)
+✔ Teacher completion has no automatic correctness judgment and never enters mastery/review (0.320334ms)
+✔ Missing audio, blockers, missing preparation, wrong axis and unrenderable sources are excluded (0.165292ms)
+✔ An exact candidate and item review is required; source changes invalidate earlier admission (4.057667ms)
+✔ Missing or escaped evidence cannot be substituted by a filename or a release claim (1.689916ms)
+✔ Producer-specific delivery and dependency rules are never silently flattened (3.294458ms)
+✔ One blocked item does not suppress independently reviewed items; source patches stay separate (2.776875ms)
+✔ Duplicate item identities are rejected within and across domains (4.212125ms)
+✔ Public items retain response and preparation, but never private dossier paths or automatic reading release (0.809833ms)
+✔ Additional presentation and media contracts cannot be silently dropped (0.188375ms)
+✔ Teacher choices retain their reference without becoming automatic correctness (0.14975ms)
+✔ The same complete choice task is rejected even with renamed and reordered options (1.742792ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 49139.257875
+Teacher reference at 1366px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 1366px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Teacher reference at 768px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 768px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Teacher reference at 390px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 390px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Teacher reference at 320px: preparation confirmed, choices and answer guidance hidden until own response, initial note retained, participation only even for a different option.
+Text, multiple choice and teacher participation through the existing round at 320px; exact grading, stable retry, preparation, keyboard/touch, 48px targets, feedback and no audio.
+Single choice replaces the earlier selection before explicit checking.
+Modelafbouw 1366px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 1366px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 1366px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 1366px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 1366px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Modelafbouw 768px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 768px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 768px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 768px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 768px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Modelafbouw 390px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 390px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 390px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 390px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 390px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Modelafbouw 320px: exact fruit → f → leeg, eerste respons bewaard na remount, observaties verplicht, participatie, geen audio, 48px en footer bereikbaar.
+Terughalen 320px: betekeniscontrole zonder kaart, eerdere respons verborgen, activiteit/tijd/blootstelling verplicht.
+Formulier 320px: echte invoervelden; leeg formulier blokkeert, niet gegeven tijd blijft leeg.
+Lettertegels 320px: eigen volgorde, herstelknop en antwoordregistratie.
+Nummercorrectie 320px: oud 24 leesbaar doorgestreept; 42 als actief model.
+Alle eigen antwoorden bij dezelfde bron vastgelegd vóór eerste antwoordkeuzes; docentvoorbereiding afgeschermd.
+Geblokkeerde browseropslag verhindert oefenen of afronden niet.
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: {"label":"320x480: nog niet ingevuld","result":{"text":"TEXTAREA","width":246,"height":160,"blockedByFooter":false,"covered":[{"x":40,"y":193.25,"by":"cp-tabs"},{"x":40,"y":193.25,"by":"cp-tabs"},{"x":280,"y":193.25,"by":"cp-tabs"}]}}
++ actual - expected
+
++ [
++   {
++     by: 'cp-tabs',
++     x: 40,
++     y: 193.25
++   },
++   {
++     by: 'cp-tabs',
++     x: 40,
++     y: 193.25
++   },
++   {
++     by: 'cp-tabs',
++     x: 280,
++     y: 193.25
++   }
++ ]
+- []
+
+    at checkControls (file:///Users/nicoknoester/Documents/Codex/2026-10-24/mijn-tweede-klink-chat-gaat-over/work/klink-ui-preview/scripts/test-cumulative-routes-browser.mjs:27:10)
+    at async file:///Users/nicoknoester/Documents/Codex/2026-10-24/mijn-tweede-klink-chat-gaat-over/work/klink-ui-preview/scripts/test-cumulative-routes-browser.mjs:52:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    { x: 40, y: 193.25, by: 'cp-tabs' },
+    { x: 40, y: 193.25, by: 'cp-tabs' },
+    { x: 280, y: 193.25, by: 'cp-tabs' }
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

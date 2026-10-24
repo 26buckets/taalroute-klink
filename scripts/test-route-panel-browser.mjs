@@ -25,7 +25,7 @@ try {
   assert.equal(await page.locator('.cp-route-panel [data-picture-settings]').count(), 1);
   assert.equal(await page.locator('[data-level-picker]').count(), 0);
   assert.equal(await page.locator('.learner-nav .brand-button, .learner-nav .brand').count(), 0);
-  assert.equal(await page.locator('.taalroute-header img').count(), 2);
+  assert.equal(await page.locator('.taalroute-header .header-taalroute-logo, .taalroute-header .header-klink-logo').count(), 2);
   assert(await page.locator('.header-brand-divider').isVisible());
   for (const label of ['Alfa C', 'B1']) {
     assert(await choose(label).isEnabled());
