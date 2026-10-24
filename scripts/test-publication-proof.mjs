@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-groep5-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-matching-cards-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -455,5 +455,16 @@ test('Group five letter combinations requires scoped counts, review and verified
     a => { a.group5Guidance.changedFiles.push('data/klink-curriculum.json'); },
     a => { delete a.files['docs/klink-groep5-publication-20261024/review.json']; },
     a => { delete a.files['docs/klink-groep5-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Matching card layout requires scoped approval and verified review/backup', () => {
+  for (const change of [
+    a => { delete a.matchingCards; },
+    a => { a.matchingCards.publicationApproved = false; },
+    a => { a.matchingCards.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.matchingCards.changedFiles.push('lib/lesson-plan.ts'); },
+    a => { delete a.files['docs/klink-matching-cards-publication-20261024/review.json']; },
+    a => { delete a.files['docs/klink-matching-cards-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

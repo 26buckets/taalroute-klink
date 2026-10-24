@@ -1,0 +1,72 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "4f8af751db3cff87b9211435ecb29ac80c28feac",
+  "targetedRegressionPassed": true,
+  "preservationPassed": true,
+  "matchingStates": 18,
+  "pairCounts": [
+    2,
+    3
+  ],
+  "screenSizes": [
+    "1280x800",
+    "844x390",
+    "390x844",
+    "320x568"
+  ],
+  "testExecutionNote": "Two overlapping launches shared a log while a cancelled run shut down; use the successful 59-step group5/checks.json result rather than the interleaved raw log. The completed run reports no page errors.",
+  "integrationNote": "Initial group-four, lifecycle and overview tests passed before the concurrent group-five publication. After rebasing on the verified live group-five source: matching geometry, scroll and 59 representative newest lesson steps rerun; group-five runtime changes preserved byte for byte outside the three added matching CSS rules.",
+  "checks": "Equal card rectangles and unchanged absolute board position for selection, wrong and correct answers; images loaded by scrolling; footer reachable; no horizontal overflow; 96 newest group-four lesson steps with real audio, letter help, resume and continuation; lifecycle and four-viewport scroll regressions; 70 overview/worksheet states; TypeScript and lint.",
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "limits": [
+    "Chrome browser automation; no physical device or learner pilot.",
+    "Matching geometry tests use mocked audio completion; latest lesson tests use real existing audio.",
+    "Unchanged media/content retains existing approval boundaries and audio pause."
+  ],
+  "evidence": [
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/group4.log",
+      "sha256": "c3e15ed1503d3363158b8cac31baffe6a41cd0d0cb40b292daf74f35a18acf0e"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/group5.json",
+      "sha256": "409c9cb763c40b9196a5d09c23d81c2448a59a435ab554a244238039c040f4da"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/latest-matching.log",
+      "sha256": "627198e6493a77e3addb4d6adb7b35efb01eae3564355ed5bdac3c0ef03782d2"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/latest-scroll.log",
+      "sha256": "f48d2eecd1a9f25f3367ec93c221be86b3bce47ebc3acfcc3f1bd0afdad21ee3"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/lifecycle.log",
+      "sha256": "4c7e24c294e59c85c89c7cc4146c4926c60b229ac8c1d9ad2cfa9d68f19f6ede"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/matching.json",
+      "sha256": "2bbb514b748835e76b34f2c6c4f6d35dcce32face45330c7627adbae2e8a39ba"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/matching.log",
+      "sha256": "627198e6493a77e3addb4d6adb7b35efb01eae3564355ed5bdac3c0ef03782d2"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/overviews.log",
+      "sha256": "c64484291444ccbf4fabaf7df200665a6e17bedc9998dc9492e370e1e58c0503"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/scroll.log",
+      "sha256": "f48d2eecd1a9f25f3367ec93c221be86b3bce47ebc3acfcc3f1bd0afdad21ee3"
+    },
+    {
+      "path": "docs/klink-matching-cards-publication-20261024/checks/types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
