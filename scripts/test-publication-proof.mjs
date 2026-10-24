@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-landing-review-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-groep7-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -492,5 +492,19 @@ test('Landing review preserves exact approved baseline, scope and review evidenc
     a => { a.landingReview.userRequest = 'unrelated'; },
     a => { delete a.files['docs/klink-landing-review-20261024/review-rounds.json']; },
     a => { delete a.files['docs/klink-landing-review-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+
+test('Group seven letter combinations requires scoped counts, review and verified source backup', () => {
+  for (const change of [
+    a => { delete a.group7Guidance; },
+    a => { a.group7Guidance.publicationApproved = false; },
+    a => { a.group7Guidance.steps++; },
+    a => { a.group7Guidance.lessons++; },
+    a => { a.group7Guidance.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.group7Guidance.changedFiles.push('data/klink-curriculum.json'); },
+    a => { delete a.files['docs/klink-groep7-publication-20261024/review.json']; },
+    a => { delete a.files['docs/klink-groep7-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

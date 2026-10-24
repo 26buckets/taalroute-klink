@@ -11,12 +11,12 @@ test('Only the first instance of each choice or matching form opens a demo withi
     for (const exercise of exercisesForLesson(pack, lesson)) {
       const demo = beginnerExerciseDemo(pack, exercise, true);
       if (!demo) continue;
-      assert.match(lesson.id, /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[01])|klink-uitbreiding-(?:[1-9]|10))$/);
+      assert.match(lesson.id, /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[0-4])|klink-uitbreiding-(?:[1-9]|1[0-2]))$/);
       assert.equal(demo, seen.has(exercise.mode) ? 'repeat' : 'first');
       seen.add(exercise.mode); counts[demo]++;
     }
   }
-  assert.deepEqual(counts, { first: 101, repeat: 25 });
+  assert.deepEqual(counts, { first: 114, repeat: 32 });
 });
 
 test('Every demonstrated pair uses a real label, approved exercise image and source answer mapping', () => {
@@ -59,5 +59,5 @@ test('The missing-letter example fills the actual gap and uses the source answer
     assert.equal(letter, exercise.targetGrapheme);
     demonstrated.push(exercise.exerciseId);
   }
-  assert.deepEqual(demonstrated, ['klink-leesstap-06:klink-woord-pen:missing-grapheme', 'klink-leesstap-07:klink-woord-kam:missing-grapheme', 'klink-leesstap-08:klink-woord-ik:missing-grapheme', 'klink-leesstap-09:klink-woord-kop:missing-grapheme', 'klink-leesstap-10:klink-woord-bon:missing-grapheme', 'klink-leesstap-12:klink-woord-dak:missing-grapheme', 'klink-leesstap-13:klink-woord-maan:missing-grapheme', 'klink-leesstap-14:klink-woord-raam:missing-grapheme', 'klink-leesstap-16:klink-woord-teen:missing-grapheme', 'klink-leesstap-18:klink-woord-fit:missing-grapheme', 'klink-leesstap-20:klink-woord-voet:missing-grapheme', 'klink-leesstap-21:klink-woord-muur:missing-grapheme']);
+  assert.deepEqual(demonstrated, ['klink-leesstap-06:klink-woord-pen:missing-grapheme', 'klink-leesstap-07:klink-woord-kam:missing-grapheme', 'klink-leesstap-08:klink-woord-ik:missing-grapheme', 'klink-leesstap-09:klink-woord-kop:missing-grapheme', 'klink-leesstap-10:klink-woord-bon:missing-grapheme', 'klink-leesstap-12:klink-woord-dak:missing-grapheme', 'klink-leesstap-13:klink-woord-maan:missing-grapheme', 'klink-leesstap-14:klink-woord-raam:missing-grapheme', 'klink-leesstap-16:klink-woord-teen:missing-grapheme', 'klink-leesstap-18:klink-woord-fit:missing-grapheme', 'klink-leesstap-20:klink-woord-voet:missing-grapheme', 'klink-leesstap-21:klink-woord-muur:missing-grapheme', 'klink-leesstap-23:klink-woord-neus:missing-grapheme']);
 });
