@@ -99,3 +99,32 @@ test('Owner publication authorization does not pretend independent review happen
   assert.equal(release.combinationReview, 'open');
   assert.equal(release.existingMediaChanged, false);
 });
+
+test('Choice sorting segments each spelling only once and preserves Unicode distractors', () => {
+  const spellings = ['e\u0301', 'é', '👨‍👩‍👧', '👨‍👩‍👦', 'ab', 'a', 'a\u0301b'];
+  const pack = { ...packs[0], words: spellings.map((word, i) => ({ id: `unicode-${i}`, word, audio: '/fixture.wav' })), exercises: [] };
+  const original = Reflect.get(Intl.Segmenter.prototype, 'segment');
+  let calls = 0;
+  Intl.Segmenter.prototype.segment = function (...args) { calls++; return original.apply(this, args); };
+  let round;
+  try {
+    round = createMixedRound(pack, 'listen', 177);
+    assert.equal(calls, spellings.length);
+    calls = 0;
+    createMixedRound(pack, 'build', 177);
+    createMixedRound(pack, 'match', 177);
+    assert.equal(calls, 0, 'Modes without distractor sorting need no segmentation');
+  } finally { Intl.Segmenter.prototype.segment = original; }
+  const segmenter = new Intl.Segmenter('nl', { granularity: 'grapheme' });
+  const distance = (a, b) => {
+    const left = Array.from(segmenter.segment(a), item => item.segment);
+    const right = Array.from(segmenter.segment(b), item => item.segment);
+    return Math.abs(left.length - right.length) + left.filter((letter, i) => letter !== right[i]).length;
+  };
+  for (const exercise of round) {
+    const target = pack.words.find(word => word.id === exercise.wordId);
+    const closest = pack.words.filter(word => word.word !== target.word)
+      .sort((a, b) => distance(target.word, a.word) - distance(target.word, b.word) || a.id.localeCompare(b.id)).slice(0, 3);
+    assert.deepEqual(exercise.options.map(option => option.id).sort(), [target, ...closest].map(word => word.id).sort());
+  }
+});

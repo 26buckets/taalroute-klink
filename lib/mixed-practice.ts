@@ -30,9 +30,7 @@ function shuffled<T>(items: T[], next: () => number): T[] {
   }
   return copy;
 }
-function distance(a: string, b: string) {
-  const left = Array.from(segmenter.segment(a), item => item.segment);
-  const right = Array.from(segmenter.segment(b), item => item.segment);
+function distance(left: string[], right: string[]) {
   return Math.abs(left.length - right.length) + left.filter((letter, i) => letter !== right[i]).length;
 }
 
@@ -89,6 +87,8 @@ export function createMixedRound(pack: PackageDefinition, mode: MixedMode, seed:
     }
     return rounds;
   }
+  // Segment once per word: sorting must not allocate thousands of native ICU iterators.
+  const letters = new Map(mode === 'build' ? [] : [...new Set(words.map(word => word.word))].map(word => [word, Array.from(segmenter.segment(word), item => item.segment)]));
   return eligible.flatMap<PackageExercise>(word => {
     if (mode === 'build') {
       const template = templates.get(word.id)!;
@@ -99,7 +99,7 @@ export function createMixedRound(pack: PackageDefinition, mode: MixedMode, seed:
     }
     const photoChoices = mode === 'read' || pictured(word);
     const candidates = words.filter(other => other.word !== word.word && (!photoChoices || (pictured(other) && other.image !== word.image)))
-      .sort((a, b) => distance(word.word, a.word) - distance(word.word, b.word) || a.id.localeCompare(b.id));
+      .sort((a, b) => distance(letters.get(word.word)!, letters.get(a.word)!) - distance(letters.get(word.word)!, letters.get(b.word)!) || a.id.localeCompare(b.id));
     const choices = [word];
     for (const other of candidates) {
       if (choices.length >= 4) break;

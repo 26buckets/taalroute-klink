@@ -1,0 +1,34 @@
+{"stage":"word-sort","heapMB":71.3109130859375,"nodes":1610,"listeners":375,"rss":"68240 184400\n68241  98176\n68242 5079856"}
+{"stage":"text-evidence","heapMB":105.39627456665039,"nodes":2893,"listeners":720,"rss":"68240 184448\n68241  98128\n68242 5545568"}
+{"stage":"verb-choice","heapMB":146.37152481079102,"nodes":3509,"listeners":713,"rss":"68240 184592\n68241  98192\n68242 5596944"}
+{"stage":"context-order","heapMB":198.45949172973633,"nodes":4686,"listeners":1058,"rss":"68240 146512\n68241  81584\n68242 8203392"}
+{"stage":"situation-point","heapMB":220.27063369750977,"nodes":6060,"listeners":1434,"rss":"68240 129856\n68241  76368\n68242 7094368"}
+{"stage":"practice-branch","heapMB":267.2296905517578,"nodes":5303,"listeners":1044,"rss":"68240 129936\n68241  76384\n68242 10245856"}
+{"stage":"opened groep-1.support","heapMB":301.09002685546875,"nodes":5786,"listeners":1275,"rss":"68240 142032\n68241  76640\n68242 10200704"}
+{"stage":"answered groep-1:group:situation-point:situatie-map","heapMB":299.4695587158203,"nodes":6734,"listeners":1494,"rss":"68240 140992\n68241  76640\n68242 15122128"}
+{"stage":"answered groep-1:group:situation-point:situatie-pan:klink-woord-pan","heapMB":300.1152153015137,"nodes":6781,"listeners":1558,"rss":"68240 137280\n68241  75088\n68242 14223856"}
+{"stage":"answered groep-1:group:situation-point:situatie-keuken:klink-woord-pan","heapMB":300.71402740478516,"nodes":6913,"listeners":1605,"rss":"68240 137280\n68241  75088\n68242 13959280"}
+{"stage":"opened groep-3.support","heapMB":333.17900466918945,"nodes":7387,"listeners":1825,"rss":"68240 137680\n68241  75088\n68242 13240032"}
+{"stage":"answered groep-3:group:situation-point:situatie-map:klink-woord-pen","heapMB":345.0411682128906,"nodes":8407,"listeners":2028,"rss":"68240 137664\n68241  75088\n68242 12695664"}
+{"stage":"opened groep-5.support","heapMB":378.54823303222656,"nodes":8903,"listeners":2258,"rss":"68240 137696\n68241  75088\n68242 12756400"}
+{"stage":"answered groep-5:group:situation-point:situatie-keuken:klink-woord-noot","heapMB":392.0343437194824,"nodes":9953,"listeners":2474,"rss":"68240 134944\n68241  74832\n68242 9946944"}
+{"stage":"opened groep-6.support","heapMB":425.4278678894043,"nodes":10410,"listeners":2666,"rss":"68240 136544\n68241  74832\n68242 9815600"}
+{"stage":"answered groep-6:group:situation-point:situatie-map:klink-woord-boek","heapMB":434.2397994995117,"nodes":8994,"listeners":1861,"rss":"68240 136544\n68241  74832\n68242 12287712"}
+{"stage":"answered groep-6:group:situation-point:situatie-keuken:klink-woord-biet","heapMB":434.83470916748047,"nodes":9130,"listeners":1908,"rss":"68240 136544\n68241  74832\n68242 12288464"}
+{"stage":"opened groep-7.support","heapMB":468.2631530761719,"nodes":9626,"listeners":2094,"rss":"68240 136576\n68241  74832\n68242 12315424"}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.waitFor: Target crashed 
+Call log:
+[2m  - waiting for locator('[data-exercise-id="groep-7:group:situation-point:situatie-keuken:klink-woord-kool"]') to be visible[22m
+
+    at /Users/nicoknoester/Documents/Codex/2026-10-24/mijn-tweede-klink-chat-gaat-over/work/klink-publication/outputs/session-stability-20261024/scenes-metrics.mjs:33:69 {
+  log: [
+    `  - waiting for locator('[data-exercise-id="groep-7:group:situation-point:situatie-keuken:klink-woord-kool"]') to be visible`
+  ],
+  name: 'Error'
+}
+
+Node.js v26.4.0

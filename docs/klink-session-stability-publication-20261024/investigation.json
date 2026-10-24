@@ -1,0 +1,23 @@
+{
+  "cause": "Repeated Intl.Segmenter.segment calls inside the sorting comparator allocated native ICU iterators far faster than browser collection. The scene sequence twice crashed its renderer; normal home reloads did not reproduce it.",
+  "fix": "Segment each distinct spelling once within createMixedRound; reuse arrays in the unchanged distance formula. No persistent/global cache.",
+  "beforeReproduction": "Live da537c9 (same mixed-practice source as c5e64c8), two full-app scene runs crashed at groep-7.",
+  "beforePeakRendererRssMiB": 14768,
+  "afterPeakRendererRssMiB": 1065,
+  "normalHomeReloadsBeforeFix": 150,
+  "localStress": {
+    "reloads": 110,
+    "sceneAnswers": 80,
+    "savedWordsAndPositionPreserved": true,
+    "resumedAfterStress": true,
+    "realAudio": true
+  },
+  "sourceImpact": [
+    "lib/mixed-practice.ts"
+  ],
+  "checksWithoutForcedGarbageCollection": true,
+  "limits": [
+    "Browser automation on macOS Chrome; no physical low-memory device or learner usability session.",
+    "Audio recordings and their content review are unchanged."
+  ]
+}

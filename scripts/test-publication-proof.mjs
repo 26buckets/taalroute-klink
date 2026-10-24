@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-landing-audiences-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-session-stability-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -417,5 +417,17 @@ test('Landing audiences release requires exact scope, owner request and verified
     a => { a.landingAudiences.userRequest = 'unrelated'; },
     a => { delete a.files['docs/klink-landing-audiences-20261024/source-drive-verification.json']; },
     a => { a.files['public/klink-entry-hero.webp'] = '0'.repeat(64); },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+
+test('Session stability requires current source, scoped authorization, stress proof and verified backup', () => {
+  for (const change of [
+    a => { delete a.sessionStability; },
+    a => { a.sessionStability.publicationApproved = false; },
+    a => { a.sessionStability.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.sessionStability.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.sessionStability.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-session-stability-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

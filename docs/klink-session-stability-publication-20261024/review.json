@@ -1,0 +1,48 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "c5e64c865f1b6e7e9e519c85986bcc561d662c8f",
+  "fullLocalRegressionPassed": true,
+  "preservationPassed": true,
+  "stressPassed": true,
+  "regression": "npm run test:review including automatic posttest:review; latest curriculum and 146 beginner steps; nek continuation and kop/sok real-audio browser checks; workspace, overview, layout, menus, scroll and header; TypeScript/lint/catalog; unchanged-media file and embedded branding checks",
+  "checks": {
+    "reloadsInOneContext": 110,
+    "sceneAnswers": 80,
+    "guidedSteps": 146,
+    "identicalGeneratedRounds": 120,
+    "savedWordsAndExactResumePreserved": true,
+    "noForcedGarbageCollection": true
+  },
+  "baselineFailure": "Two old live scene sequences crashed; the same production-build sequence passes with the fix.",
+  "logs": {
+    "docs/klink-session-stability-publication-20261024/checks/beginners-latest.log": "59d838e6597374e513247fe14a7cbcce30efcab46084bd1a73c0b53d89465503",
+    "docs/klink-session-stability-publication-20261024/checks/catalog.log": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273",
+    "docs/klink-session-stability-publication-20261024/checks/connected-audio.log": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa",
+    "docs/klink-session-stability-publication-20261024/checks/curriculum-latest.log": "1fff0e2fc638728de8400d3c8147e038bcda412efda5bc080b966a14fa350116",
+    "docs/klink-session-stability-publication-20261024/checks/full-review.log": "aaf46e551b31570980126be89aba9d748f31ffb0c7d5de672133124da556f956",
+    "docs/klink-session-stability-publication-20261024/checks/full-saved-review.json": "22140eb526bbc8776d6018bb2485e802974d92f9000f10d0477c40d022425d13",
+    "docs/klink-session-stability-publication-20261024/checks/header.log": "d8cddc5a471d1b3529456f9bc8e35813e46137f71ec432b09540ec04e7dc3f5d",
+    "docs/klink-session-stability-publication-20261024/checks/kopsok.log": "183bf16d181167b3e092291e31c915e591f96b2750a00c7f5f20d017ef67e8b2",
+    "docs/klink-session-stability-publication-20261024/checks/layout.log": "3385203d4495485b769e687c86e90cc1819c3392a1f4884f87fd2cac36018f0f",
+    "docs/klink-session-stability-publication-20261024/checks/lint.log": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199",
+    "docs/klink-session-stability-publication-20261024/checks/logo.log": "7eedd02f230ae73cb6a35eaad9a139e3a9a20302b123e571c3456bc31ed5d3db",
+    "docs/klink-session-stability-publication-20261024/checks/media.log": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4",
+    "docs/klink-session-stability-publication-20261024/checks/menu.log": "eeba4748f0bcfa0839f1347dba84687a13e99767bb51081b497ded4fe99b1a24",
+    "docs/klink-session-stability-publication-20261024/checks/mixed-after.json": "bd17f26cafafdad45ebd0bf83ca7cb8d23378c6a1de04e16ba28916932ea5402",
+    "docs/klink-session-stability-publication-20261024/checks/mixed-baseline.json": "4c1ab6e75ae0bb23cc09245466010ee2396596e4022b5c8d3cae02bcb890cc81",
+    "docs/klink-session-stability-publication-20261024/checks/nek.log": "dc362eefd7e0c92224909aafaaadc720ab060600ef561383e48d4cbd4691ba18",
+    "docs/klink-session-stability-publication-20261024/checks/overviews.log": "c64484291444ccbf4fabaf7df200665a6e17bedc9998dc9492e370e1e58c0503",
+    "docs/klink-session-stability-publication-20261024/checks/scenes-fixed-production.log": "6dddf4c4616e473c7eeb939077309447b27ebde11b3e3e4689fcb7479d07f779",
+    "docs/klink-session-stability-publication-20261024/checks/scenes-metrics.log": "3349f01673df745fcd3d50c8d6074abeb8dc1e4a89c4888af865df8013e28e80",
+    "docs/klink-session-stability-publication-20261024/checks/scroll.log": "f48d2eecd1a9f25f3367ec93c221be86b3bce47ebc3acfcc3f1bd0afdad21ee3",
+    "docs/klink-session-stability-publication-20261024/checks/stress-local.log": "5bbdbc01876dde77e3747de5888955c55ca9705075bfc75449be3625593cc29a",
+    "docs/klink-session-stability-publication-20261024/checks/stress.json": "c918f9571681c8952121ddb3500155f239b0731b29f214de31aedd72579db206",
+    "docs/klink-session-stability-publication-20261024/checks/types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/klink-session-stability-publication-20261024/checks/units-latest.log": "2a06faca4d17a8bbee805f6130ed79b1f8dec9b19e489db94afe1ace674d7677",
+    "docs/klink-session-stability-publication-20261024/checks/workspace.log": "9313832bde167f2f206d6fd2091f8a9ca6f2968ac66c42a628caa4f2a28f1ec4"
+  },
+  "limits": [
+    "Chrome browser automation; no physical phone or learner session.",
+    "No new audio or item-by-item pronunciation approval."
+  ]
+}
