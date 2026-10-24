@@ -318,8 +318,8 @@
 .learner-app .cp-choice-grid img { height: 160px; }
 .learner-app :is(.cp-choice-grid, .cp-board-grid) { grid-auto-rows: 1fr; }
 .learner-app :is(.cp-board-grid, .cp-memory-grid) > button { min-width: 0; overflow-wrap: anywhere; }
-.learner-app .cp-choice-grid .cp-option-audio { visibility: hidden; }
-.learner-app .cp-choice-grid [data-speaking="true"] .cp-option-audio { visibility: visible; }
+.cp-choice-grid .cp-option-audio { visibility: hidden; }
+.cp-choice-grid [data-speaking="true"] .cp-option-audio { visibility: visible; }
 .learner-app .cp-match-board { gap: 12px; }
 .learner-app .cp-match-board button { min-height: 104px; font-size: 24px; }
 .learner-app .cp-match-board img { height: 84px; object-fit: contain; }

@@ -7,6 +7,7 @@
     "activities": 11,
     "frameBoards": 66,
     "spokenAnswerStates": 12,
+    "teacherPreviewSpokenStates": 12,
     "latestGroup7RealAudioSteps": 57,
     "previousGroup6RealAudioSteps": 57,
     "existingMatchingStates": 18,
@@ -21,7 +22,8 @@
     "Explanation after a correct text answer recentered the cards; hidden explanation space is now reserved until the answer is correct.",
     "Equal automatic grid rows retain matching card sizes even with different label lengths."
   ],
-  "reactReview": "No hooks, fetching, dependencies, grading or storage changes. Audio indicators remain aria-hidden; hidden answer explanations are also aria-hidden and become visible only after the existing correct-answer state. Existing button/focus semantics retained.",
+  "reactReview": "No hooks, fetching, dependencies, grading or storage changes. Audio indicator visibility also works outside the learner shell in the shared teacher preview, with twelve tested states. Audio indicators remain aria-hidden; hidden answer explanations are also aria-hidden and become visible only after the existing correct-answer state. Existing button/focus semantics retained.",
+  "latestPublishedTaskSource": "0d110cce3152011d72e443c7b2f1f4ced5fc5ca1",
   "integration": "The concurrent group-seven publication was fast-forwarded before final tests. A group-six check timed out while sources were integrating; a fresh complete 57-step run then passed.",
   "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
   "limits": [
@@ -40,7 +42,7 @@
     },
     {
       "path": "docs/klink-exercise-frames-20261025/checks/frames.json",
-      "sha256": "558c5a190b0d9f53001f9f2782a2a4fad9c0ff4deed597c56611d111a059c3bb"
+      "sha256": "33db8d285398b3bf138b08a8dfcfc5b63c7b2bf1ef10b5d1b71e6d64ec6b4be6"
     },
     {
       "path": "docs/klink-exercise-frames-20261025/checks/group6-final.log",

@@ -222,7 +222,7 @@ try {
     await p.goto(base + '/#learner/home');
     await p.locator('.learner-main').waitFor();
     await p.addScriptTag({ content: code.outputFiles[0].text });
-    let initial;
+    let initial, staffInitial;
     for (const speaking of ['', ...spoken.options.map((o) => o.id), '']) {
       await p.evaluate(({ e, speaking }) => window.mount(e, speaking), {
         e: spoken,
@@ -253,8 +253,43 @@ try {
               .length,
         );
       assert.equal(visible, speaking ? 1 : 0);
+      const staff = await p.evaluate(() => {
+        const shell = document.querySelector('.learner-app');
+        shell.classList.remove('learner-app');
+        const rects = [
+          ...document.querySelectorAll(
+            '.cp-choice-grid button,.cp-choice-grid strong',
+          ),
+        ].map((e) => {
+          const r = e.getBoundingClientRect();
+          return { x: r.x, y: r.y, w: r.width, h: r.height };
+        });
+        const visible = [
+          ...document.querySelectorAll('.cp-option-audio'),
+        ].filter((e) => getComputedStyle(e).visibility === 'visible').length;
+        shell.classList.add('learner-app');
+        return { rects, visible };
+      });
+      if (!staffInitial) staffInitial = staff.rects;
+      else
+        assert.deepEqual(
+          staff.rects,
+          staffInitial,
+          'Shared teacher preview stays still',
+        );
+      assert.equal(
+        staff.visible,
+        speaking ? 1 : 0,
+        'Shared teacher preview only shows the active audio icon',
+      );
     }
-    results.push({ activity: 'spoken-answer', width, states: 4, stable: true });
+    results.push({
+      activity: 'spoken-answer',
+      width,
+      states: 4,
+      stable: true,
+      teacherPreviewStates: 4,
+    });
     await p.close();
   }
   writeFileSync(`${out}/checks.json`, JSON.stringify(results, null, 2));

@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "db0fa569ed4194a4d3fcc41ae40f74737634474d",
+  "branch": "main",
+  "workerVersion": "0337b06e-c100-44f6-ac1e-b58ee4ede9a1",
+  "url": "https://klink.taalroute.nl",
+  "baselineSourceCommit": "0d110cce3152011d72e443c7b2f1f4ced5fc5ca1",
+  "initialTaskBaselineSourceCommit": "944782134a704f038be87c8e90c1ccf94ab84b5f",
+  "runtimeChanged": [
+    "app/learner-ui.css",
+    "components/product/extended-practice-surface.tsx",
+    "components/product/package-exercise-browser.tsx"
+  ],
+  "localChecks": {
+    "frameBoards": 66,
+    "spokenAnswerStates": 12,
+    "teacherPreviewSpokenStates": 12,
+    "newestGroup7RealAudioSteps": 57,
+    "previousGroup6RealAudioSteps": 57,
+    "modelViewports": 5,
+    "matchingStates": 18,
+    "worksheets": "passed",
+    "lifecycle": "passed",
+    "types": "passed",
+    "lint": "passed",
+    "publicationProofTests": 44,
+    "explanationVisibility": "hidden before correct, visible after correct; corresponding aria-hidden state checked"
+  },
+  "liveChecks": {
+    "frameBoards": 66,
+    "spokenAnswerStates": 12,
+    "teacherPreviewSpokenStates": 12,
+    "frameGeometrySourceCommit": "0d110cce3152011d72e443c7b2f1f4ced5fc5ca1",
+    "spokenAndScrollSourceCommit": "db0fa569ed4194a4d3fcc41ae40f74737634474d",
+    "scrollViewports": 4,
+    "mediaByteIdentical": 2679,
+    "builtClientByteIdentical": true
+  },
+  "preserved": "Newest group-seven lessons, latest landing page, existing design, logos, media, routes, scoring, saved data and session stability fix.",
+  "sourceBackup": "https://drive.google.com/file/d/1w3RUa-E_ZivY4ZYhNHy61v2N3FTvyAPm/view",
+  "limits": [
+    "Browser automation; no physical device or learner pilot.",
+    "Full live frame geometry was verified on 0d110cc; final follow-up only widens audio-icon visibility selectors for teacher previews, rechecked with twelve spoken states per shell and four scroll viewports. Frame geometry uses deterministic audio and an actual-component spoken-state fixture; lesson checks use real existing audio.",
+    "Existing content review boundaries and audio pause remain."
+  ]
+}
