@@ -1,0 +1,31 @@
+/* HDR 001: left app chooser, right 44px controls and the existing 60px brand row. */
+.hdr001-controls{display:flex!important;align-items:center;gap:4px;flex:0 0 auto;margin-left:auto;position:relative}
+.hdr001-fullscreen,.hdr001-menu-trigger{box-sizing:border-box!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;width:44px!important;min-width:44px!important;height:44px!important;min-height:44px!important;max-height:44px!important;padding:0!important;flex:0 0 44px!important;border:1px solid var(--tr-color-border,#d7e4ee)!important;border-radius:6px!important;background:transparent!important;color:inherit;cursor:pointer;list-style:none}
+.hdr001-menu-trigger::-webkit-details-marker{display:none}
+.hdr001-fullscreen svg,.hdr001-menu-trigger svg{width:20px!important;height:20px!important;stroke:currentColor;fill:none;stroke-width:2}
+.hdr001-fullscreen:focus-visible,.hdr001-menu-trigger:focus-visible{outline:2px solid var(--tr-color-primary,#126ab3);outline-offset:2px}
+.hdr001-fullscreen:disabled{opacity:.5;cursor:not-allowed}
+[data-hdr001-old-fullscreen]{display:none!important}
+.hdr001-controls>.hdr001-menu{display:block!important;position:relative;flex:none;padding:0!important;margin:0!important}
+.hdr001-menu>.hdr001-panel{display:flex!important;flex-direction:column;gap:6px}
+.hdr001-menu>.hdr001-panel{box-sizing:border-box!important;position:fixed!important;inset:64px 8px auto auto!important;width:344px!important;max-width:calc(100vw - 16px)!important;max-height:calc(100dvh - 80px)!important;overflow:auto!important;padding:12px!important;margin:0!important;z-index:1000;border:1px solid var(--tr-color-border,#d7e4ee);border-radius:6px;background:var(--tr-color-card,var(--tr-surface,#fff));color:var(--tr-color-foreground,var(--ink,#173752));box-shadow:0 8px 24px #17375220}
+.hdr001-panel button:not([hidden]),.hdr001-panel>a{min-height:44px;max-width:100%;font-size:14px}
+.hdr001-status:empty{display:none}
+.hdr001-status{position:absolute;right:0;top:48px;width:240px;max-width:calc(100vw - 24px);padding:8px;background:var(--tr-color-card,#fff);color:var(--tr-color-foreground,#173752);border:1px solid #d7e4ee;font-size:13px;z-index:1001}
+[data-theme=dark] .hdr001-panel,[data-mode=dark] .hdr001-panel{background:#202832;color:#f4f6f8}
+@media print{.hdr001-controls{display:none!important}}
+
+.hdr001-shell{z-index:1000!important}
+.hdr001-panel>button:not([hidden]),.hdr001-panel>[data-header-action]:not([hidden]){display:flex!important;align-items:center;justify-content:flex-start;gap:8px;width:100%!important;min-height:44px;padding:8px 12px!important;font-size:14px!important}
+.hdr001-panel .header-language-label{display:inline!important}
+
+@media(max-width:760px){.hdr001-menu>.hdr001-panel{width:296px!important}}
+
+.hdr001-status{pointer-events:none}
+
+.hdr001-panel>a.hdr001-manual{display:flex;align-items:center;padding:8px 12px;text-decoration:none;color:inherit;font-weight:500;border-bottom:1px solid var(--tr-color-border,#d7e4ee)}
+
+/* Studio is the fixed first destination; its subtitle shares one compact wordmark. */
+nav.taalroute-suite-links .tr-suite-wordmark{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:0;min-width:0;line-height:1.1}
+nav.taalroute-suite-links .tr-suite-wordmark>small{font:400 10px/1.2 Arial,sans-serif;letter-spacing:0;white-space:nowrap;color:inherit}
+nav.taalroute-suite-links [data-app-id="studio"] .taalroute-beta{--app-accent:#096cdb}

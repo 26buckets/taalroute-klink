@@ -14,7 +14,7 @@ try {
     await page.goto(base);
     await page.waitForLoadState('networkidle');
     await page.getByRole('heading', { name: 'Klink jij ook?', exact: true }).waitFor();
-    await page.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
+    await page.locator('img').evaluateAll(images => Promise.all(images.filter(image => image.checkVisibility()).map(image => image.decode())));
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `Horizontal overflow at ${width}`);
     assert.equal(await page.locator('h1').count(), 1);
     assert(await page.evaluate(() => document.querySelector('.taalroute-header').getBoundingClientRect().bottom <= document.querySelector('.entry-layout').getBoundingClientRect().top), `Header overlaps hero at ${width}`);
@@ -51,7 +51,7 @@ try {
   }
   assert.equal(await page.getByRole('link', { name: 'Voor begeleiders', exact: true }).count(), 0);
   await page.getByText('Bekijk de mogelijkheden', { exact: true }).click();
-  assert(await page.locator('details').getAttribute('open') !== null);
+  assert(await page.locator('.landing-professional-card details').getAttribute('open') !== null);
   await page.getByRole('button', { name: 'Open de oefeningen', exact: true }).click();
   await page.locator('.learner-login').waitFor();
   assert(await page.evaluate(() => scrollY < 10));

@@ -16,7 +16,9 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-landing-footer-20261024.json';
+const authorizationPath = 'docs/klink-owner-release-sharing-20261024.json';
+const sharingPreviousPath = 'docs/klink-owner-release-landing-footer-20261024.json';
+const sharingFiles = ["app/layout.tsx", "app/taalroute-header.css", "components/product/taalroute-header.tsx", "public/klink-wordmark-dark.svg", "scripts/check-curriculum-release.mjs", "scripts/test-publication-proof.mjs", "scripts/test-landing-browser.mjs", "public/taalroute-menu/actief.svg", "public/taalroute-menu/app-chooser.css", "public/taalroute-menu/appearance.js", "public/taalroute-menu/digibord.svg", "public/taalroute-menu/header-controls.css", "public/taalroute-menu/header-controls.js", "public/taalroute-menu/klankstudio.svg", "public/taalroute-menu/menu-controls.css", "public/taalroute-menu/menu-controls.js", "public/taalroute-menu/missies.svg", "public/taalroute-menu/muziek.svg", "public/taalroute-menu/oppad.svg", "public/taalroute-menu/share-card.png", "public/taalroute-menu/spreektijd.svg", "public/taalroute-menu/studio.svg", "public/taalroute-menu/theaterlezen.svg", "public/taalroute-menu/zinnen.svg"];
 const landingPreviousPath = 'docs/klink-owner-release-maintenance-20261024.json';
 const landingFiles = ['app/landing.css', 'components/product/entry-design.tsx', 'scripts/check-curriculum-release.mjs', 'scripts/test-landing-browser.mjs', 'scripts/test-publication-proof.mjs'];
 const maintenancePreviousPath = 'docs/klink-owner-release-wordbuild-20261019.json';
@@ -45,6 +47,19 @@ try {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
+  const sharing = approval.sharingRelease;
+  const sharingPrevious = JSON.parse(readFileSync(sharingPreviousPath));
+  requireProof(sharing?.approvedBy === 'Nico' && sharing.publicationApproved === true);
+  requireProof(sharing.userRequest === "Ja, voer dit overal zo door, met Kopieer link bovenaan en de eigen afbeelding en appkleur. Behoud de bestaande deelopties voor lessen en de headerindeling. Controleer mobiel, desktop, licht en donker voordat je het online zet." && sharing.headerRequest === 'KLINK en Scenario ook laten aansluiten');
+  requireProof(sharing.previousAuthorization === sharingPreviousPath && sharing.baselineSourceCommit === 'e4d58e12752f8f181d277cb999660ae891df4f0d');
+  requireProof(JSON.stringify(sharing.changedFiles) === JSON.stringify(sharingFiles));
+  execFileSync('git', ['merge-base', '--is-ancestor', sharing.baselineSourceCommit, 'HEAD']);
+  requireProof(createHash('sha256').update(execFileSync('git', ['show', `${sharing.baselineSourceCommit}:${sharingPreviousPath}`])).digest('hex') === approval.files[sharingPreviousPath]);
+  for (const [key, value] of Object.entries(sharingPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  for (const [file, sha] of Object.entries(sharingPrevious.files)) requireProof(approval.files[file] && (sharingFiles.includes(file) || approval.files[file] === sha));
+  requireProof(sharingFiles.every(file => approval.files[file]));
+  const sharingChanges = execFileSync('git', ['diff', '--name-only', sharing.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], {encoding:'utf8'}).trim().split('\n').filter(Boolean);
+  requireProof(sharingChanges.every(file => sharingFiles.includes(file)));
   const landing = approval.landingRelease;
   const landingPrevious = JSON.parse(readFileSync(landingPreviousPath));
   requireProof(landing?.approvedBy === 'Nico' && landing.publicationApproved === true);
@@ -55,9 +70,9 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', landing.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${landing.baselineSourceCommit}:${landingPreviousPath}`])).digest('hex') === approval.files[landingPreviousPath]);
   for (const [key, value] of Object.entries(landingPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(landingPrevious.files)) requireProof(approval.files[file] && (landingFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(landingPrevious.files)) requireProof(approval.files[file] && (landingFiles.includes(file) || sharingFiles.includes(file) || approval.files[file] === sha));
   const landingRuntimeChanges = execFileSync('git', ['diff', '--name-only', landing.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  requireProof(landingRuntimeChanges.every(file => landingFiles.includes(file)));
+  requireProof(landingRuntimeChanges.every(file => landingFiles.includes(file) || sharingFiles.includes(file)));
   const maintenance = approval.maintenanceRelease;
   const maintenancePrevious = JSON.parse(readFileSync(maintenancePreviousPath));
   requireProof(maintenance?.approvedBy === 'Nico' && maintenance.publicationApproved === true);
@@ -68,9 +83,9 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', maintenance.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${maintenance.baselineSourceCommit}:${maintenancePreviousPath}`])).digest('hex') === approval.files[maintenancePreviousPath]);
   for (const [key, value] of Object.entries(maintenancePrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(maintenancePrevious.files)) requireProof(approval.files[file] && (maintenanceFiles.includes(file) || landingFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(maintenancePrevious.files)) requireProof(approval.files[file] && (maintenanceFiles.includes(file) || landingFiles.includes(file) || sharingFiles.includes(file) || approval.files[file] === sha));
   const runtimeChanges = execFileSync('git', ['diff', '--name-only', maintenance.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  requireProof(runtimeChanges.every(file => maintenanceFiles.includes(file) || landingFiles.includes(file)));
+  requireProof(runtimeChanges.every(file => maintenanceFiles.includes(file) || landingFiles.includes(file) || sharingFiles.includes(file)));
   const proof = name => JSON.parse(readFileSync(`${cumulativeEvidence}/${name}.json`));
   const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
   // This exact derivative release leaves the original Lexicon source status intact.
@@ -81,7 +96,7 @@ try {
   requireProof(wordbuild.userRequest === wordbuildProof('owner-request').userRequest && wordbuild.userRequest === 'Zorg dat je alles online zet wat nu offline gebouwd is. Alles meenemen. Alles. Alles push, alles online.');
   requireProof(wordbuild.baselineSourceCommit === '2aa047b23c9564d4f7c89e0824e9fdc8fb7d5f3d' && wordbuild.additionalModelTasks === 4789 && wordbuild.audioPaused === true && wordbuild.newMediaBindings === 0 && wordbuild.humanReviewClaimed === false);
   requireProof(JSON.stringify(wordbuild.runtimeChangedFiles) === JSON.stringify(wordbuildFiles));
-  const allowedChanges = [...landingFiles, ...maintenanceFiles, ...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
+  const allowedChanges = [...sharingFiles, ...landingFiles, ...maintenanceFiles, ...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
   for (const [file, sha] of Object.entries(wordbuildPrevious.files)) requireProof(approval.files[file] && (allowedChanges.includes(file) || approval.files[file] === sha));
   for (const [key, value] of Object.entries(wordbuildPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   const wordbuildLive = wordbuildProof('live-baseline'), wordbuildReview = wordbuildProof('review'), wordbuildBackup = wordbuildProof('source-drive-verification');
@@ -112,7 +127,8 @@ try {
   const baselineCss = execFileSync('git', ['show', `${sizing.baselineSourceCommit}:app/taalroute-header.css`], { encoding: 'utf8' });
   requireProof(createHash('sha256').update(baselineCss).digest('hex') === inherited.files['app/taalroute-header.css']);
   const resizedCss = baselineCss.replace('.header-klink-logo { width: 78px; }', '.header-klink-logo { width: 66px; }').replace('.header-klink-logo { width: 65px; }', '.header-klink-logo { width: 55px; }');
-  requireProof(readFileSync('app/taalroute-header.css', 'utf8') === resizedCss);
+  const currentHeaderCss = readFileSync('app/taalroute-header.css', 'utf8');
+  requireProof(currentHeaderCss.startsWith(resizedCss) && createHash('sha256').update(currentHeaderCss).digest('hex') === approval.files['app/taalroute-header.css']);
   const scope = approval.cumulativeRelease;
   requireProof(approval.userRequest === proof('owner-instruction').userRequest);
   requireProof(scope?.included === 1393 && scope.excluded === 478 && scope.pendingClassification === 4 && scope.teacherSupported === true && scope.independentReading === false && scope.reviewEligible === false && scope.humanReviewClaimed === false && scope.audioPaused === true && scope.newAudioConnections === 0);
@@ -125,7 +141,7 @@ try {
   requireProof(approval.layoutRepair?.id === 'short-screen-workflow-footer-overlap-001' && approval.layoutRepair.baselineSourceCommit === readiness.baseline.sourceCommit && approval.layoutRepair.reviewEvidence === `${repairEvidence}/review.json`);
   requireProof(repair.status === 'passed-local' && repair.liveReproductionFailedAsExpected === true && repair.fullLocalRegression === true && repair.cssSha256 === approval.files['app/learner-ui.css'] && repair.routeTestSha256 === approval.files['scripts/test-cumulative-routes-browser.mjs']);
   requireProof(JSON.stringify(approval.layoutRepair.runtimeChangedFiles) === JSON.stringify(['app/learner-ui.css']));
-  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'app/taalroute-header.css', 'data/klink-release-readiness.json', ...wordbuildFiles].includes(file)) requireProof(approval.files[file] === sha);
+  for (const [file, sha] of Object.entries(previous.files)) if (/^(app|components|lib|data)\//.test(file) && !['app/learner-ui.css', 'app/taalroute-header.css', 'data/klink-release-readiness.json', ...sharingFiles, ...wordbuildFiles].includes(file)) requireProof(approval.files[file] === sha);
   requireProof(live.liveRelease?.sourceCommit === readiness.baseline.sourceCommit && live.liveRelease?.sourceClean === true && live.liveRelease?.branch === readiness.canonicalBranch && live.liveWorkerVersion === readiness.baseline.liveWorkerVersion && live.liveSourceIsAncestor === true && approval.contentSourceCommit === live.localHead);
   const backup = proof('source-drive-verification');
   requireProof(backup.sourceArchive?.id === scope.sourceArchiveId && backup.sourceArchive?.sha256 === scope.sourceArchiveSha256 && backup.sourceArchive?.parentVerified === true && backup.sourceArchive?.downloadedByteIdentical === true && backup.sourceArchive?.zipCrcVerified === true);
