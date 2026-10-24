@@ -1,0 +1,135 @@
+
+> taalroute-klink@0.1.0 posttest:review
+> node scripts/test-audio-register-browser.mjs && npm run test:group-practice && npm run test:chapters && npm run test:learning-paths && npm run test:menu && npm run test:routes && npm run test:standard-players && npm run test:content-import
+
+PASS Learner home and all 15 sections preserved; no audio inventory downloaded by learners
+PASS All 12 domains shown; missing audio and parked short t never pretend to play
+PASS Word playback uses the existing recording; search and section filter work
+PASS Prepared-script inventory loads on demand, remains unplaced and supports bounded pagination
+PASS 16 instruction recordings are retained but withdrawn from playback on the owner's request
+PASS Desktop, tablet, phone and keyboard work; no source links in the interface
+
+> taalroute-klink@0.1.0 test:group-practice
+> node --test scripts/test-group-practice.mjs scripts/test-extended-practice.mjs && node scripts/test-group-practice-browser.mjs && node scripts/test-extended-practice-browser.mjs
+
+✔ Every new activity has stable scoped source references, preparation and honest release status (1777.29025ms)
+✔ All source questions retained with exact answer and source evidence, no random distractors (449.716084ms)
+✔ Klankvergelijking uses actual wholeword recordings, balanced equal/different trials and no answer leaks (0.900584ms)
+✔ Sentence construction preserves exact word boundaries; grammar targets only the stated ik-form (299.73725ms)
+✔ Writing and role work use source tasks and participation, never fabricated mastery (240.346333ms)
+✔ Sixteen branded instructions are connected by owner authorization, without inventing a listening review (2.076584ms)
+✔ Matching help describes the actual source and target controls (656.498667ms)
+✔ Whole word groups feed the exercise library, without changing the curriculum (9747.51675ms)
+✔ Every first-group word is a target in all basic word activities (2.122375ms)
+✔ Bingo has per-word turns, stable boards, no answer model, and audio gating (1599.741917ms)
+✔ Sentence recognition reuses real near-contrast sentences and retains reading conditions (145.980625ms)
+✔ Connected instructions do not change participation into proven skill or unpark the short t (1.478542ms)
+✔ Group progress rejects unknown IDs and never uses lesson-progress keys (0.324459ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12493.415833
+PASS Words first; all first-group activities available without a dropdown
+PASS Drag and keyboard construction, independent resume and preserved lesson data
+PASS Multiword worksheet covers all six words in two manageable pages
+PASS Bingo retains board after error and visits every target without revealing the answer
+PASS Unavailable word audio blocks dictation; retry recovers
+PASS Find sentence runs on existing source sentences and never claims independent comprehension
+PASS Audio-to-word matching waits for each sound and has a tap alternative
+PASS Heard worksheet gates each row on its own audio; tapping can choose a destination
+PASS Paper dictation hides its model until comparison, without a handwriting mastery claim
+PASS Reading pace is optional, can be stopped and never advances in a hidden tab
+PASS Desktop, tablet and 390/320px layouts fit with accessible targets
+PASS All 15 existing word groups expose their own eligible activity sets
+PASS Source, question, stable retry choices, keyboard answer and deliberate continuation
+PASS Evidence selection is answered against an exact existing source sentence
+PASS Grammar target has no answer leak; help is recorded, not independent performance
+PASS Both real word recordings play in order on start and replay, without revealing spellings
+PASS Full sentence construction uses the existing tap player
+PASS Writing has criteria, same-tab recovery, explicit finish and deletion; no invented grading or remote delivery
+PASS Message card uses separate sender and message fields, not a false broad form-writing claim
+PASS Role turn plays the other speaker and hides the response model; microphone is optional
+PASS Tablet/mobile fit, 48px answer targets and existing layout retained
+
+> taalroute-klink@0.1.0 test:chapters
+> node --test scripts/test-practice-chapters.mjs && node scripts/test-practice-chapters-browser.mjs && node scripts/test-player-stability-browser.mjs && node scripts/test-practice-sheet-browser.mjs
+
+✔ Twelve independent chapters cover all forty existing activities without changing Lexicon (20895.985417ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.758666ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (1.28525ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21330.427291
+PASS All 12 chapters open real exercises directly, without a word lesson gate
+PASS Source-level selection, shareable deep links, reload and browser Back retain the correct content
+PASS Existing answer/retry/keyboard player works, without completing the word route or inventing mastery
+PASS Word-contrast audio recovers from errors; withdrawn instruction audio stays off
+PASS Long chapter libraries show a small first page, with more real content available
+PASS Desktop/tablet/phone fit, 48px chapter targets, accessible Verder and unchanged player layout
+PASS 1366×950: lam/kat, audio, image loading, error recovery, other activities and reachable controls
+PASS 820×950: lam/kat, audio, image loading, error recovery, other activities and reachable controls
+PASS 390×844: lam/kat, audio, image loading, error recovery, other activities and reachable controls
+PASS 320×640: lam/kat, audio, image loading, error recovery, other activities and reachable controls
+PASS 844×390: lam/kat, audio, image loading, error recovery, other activities and reachable controls
+PASS Every eligible word stays on one page; audio is selected, not automatic; switching preserves sheet state without a mastery claim
+PASS Each dictation row has its own audio gate; errors, interruption, retry, typing and keyboard submission work without moving other words
+PASS Existing letter-building player works per row, with tap alternative and no forced next-word screen
+PASS Word/image/letter choices reuse the existing targets and distractors; errors keep all positions
+PASS Desktop/tablet/phone/landscape fit; all 68 eligible words in the largest collection appear on one scrollable page
+PASS The same sheet is accessible from the existing lesson-group practice page, including keyboard selection
+
+> taalroute-klink@0.1.0 test:learning-paths
+> node --test scripts/test-learning-paths.mjs && node scripts/test-learning-paths-browser.mjs
+
+✔ Every new rule is reachable; intact short paths retain source references and honest scope (532.051833ms)
+✔ Sound positions use transparent words and no isolated rejected sound; no visible target leak (0.834208ms)
+✔ Spelling gaps rebuild exactly the canonical form; longer forms keep their prerequisites (0.181ms)
+✔ Grammar sources, dialogue turns, writing goals and text evidence are reused rather than rewritten (0.500375ms)
+✔ Review plans only encountered retrieval items, resets on help/error, and never inflates in one session (0.245375ms)
+✔ Current release points to the cumulative instruction; historical approval retains its original published hashes (131.226958ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 924.449709
+PASS model, sound gating, stable error recovery, help tracking and deliberate continuation
+PASS canonical spelling mask, five viewport widths and 48px targets
+PASS original grammar question without visible answer model
+PASS complete text and dialogue paths, own speaking turn and writing criteria finish without dead ends
+PASS only due encountered work appears, successful recall schedules the next day
+PASS complete sound, spelling and grammar routes, including the existing word/sentence builders
+PASS failed audio blocks answers, retry restores the exercise, no page errors
+
+> taalroute-klink@0.1.0 test:menu
+> node scripts/test-menu-navigation-browser.mjs && node scripts/test-menu-refinement-browser.mjs && npm run test:didactic
+
+PASS Five unchanged main buttons have correct active states; refresh and browser history retain each destination
+PASS Section links reopen the correct shared word overview; invalid sections fail back to the lesson library
+PASS Teacher labels match learners; all twelve guide links open the intended chapter and return without altering lesson progress
+PASS Verder still resumes the exact saved exercise after the navigation change
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.innerText: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[aria-label="Je bent hier"]')[22m
+
+    at /Users/nicoknoester/Documents/Codex/2026-10-24/mijn-tweede-klink-chat-gaat-over/work/klink-publication/scripts/test-menu-navigation-browser.mjs:110:68 {
+  log: [ `  - waiting for locator('[aria-label="Je bent hier"]')` ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0

@@ -39,13 +39,14 @@ try {
       const display=document.querySelector('.cp-chapter-playing > .cp-practice-display');
       const rect=workspace.getBoundingClientRect();const h=header.getBoundingClientRect();
       const surfaceTop=display && innerWidth<=900 ? display.getBoundingClientRect().top : rect.top;
-      return {left:rect.left,right:rect.right,top:surfaceTop,headerBottom:h.bottom,overflow:document.documentElement.scrollWidth>innerWidth+1};
+      return {left:rect.left,right:rect.right,top:surfaceTop,headerBottom:h.bottom,windowScroll:scrollY,overflow:document.documentElement.scrollWidth>innerWidth+1};
     });
     const edges=[geometry.left,geometry.right,geometry.top].map(Math.round);
     if(!expected)expected=edges;
     assert.deepEqual(edges,expected,`${name}, ${width}x${height}, collapsed=${collapsed}: white edges match`);
     assert.equal(Math.round(geometry.top),Math.round(geometry.headerBottom),`${name}: no gap before white workspace`);
     assert.equal(geometry.overflow,false);
+    assert.equal(geometry.windowScroll,0,'Only the content may scroll; the app header must stay in place');
     if(width===1280&&!collapsed){await page.waitForFunction(()=>[...document.querySelectorAll('.learner-main img')].filter(e=>{const r=e.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).every(e=>e.complete&&e.naturalWidth>0));await page.screenshot({path:`${out}/${name}.png`});}
     checks.push({name,width,height,collapsed,edges});
    }

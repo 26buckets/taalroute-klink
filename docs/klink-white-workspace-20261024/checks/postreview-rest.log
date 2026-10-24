@@ -1,0 +1,24 @@
+
+> taalroute-klink@0.1.0 test:menu
+> node scripts/test-menu-navigation-browser.mjs && node scripts/test-menu-refinement-browser.mjs && npm run test:didactic
+
+PASS Five unchanged main buttons have correct active states; refresh and browser history retain each destination
+PASS Section links reopen the correct shared word overview; invalid sections fail back to the lesson library
+PASS Teacher labels match learners; all twelve guide links open the intended chapter and return without altering lesson progress
+PASS Verder still resumes the exact saved exercise after the navigation change
+PASS Compact title and screen-reader orientation avoid answer leakage; desktop, tablet and phone fit with reachable continuation
+PASS Guide works by keyboard and stays out of the learner interface; no page errors
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.cp-mixed-practice > .text-back')[22m
+
+    at /Users/nicoknoester/Documents/Codex/2026-10-24/mijn-tweede-klink-chat-gaat-over/work/klink-publication/scripts/test-menu-refinement-browser.mjs:31:57 {
+  log: [ "  - waiting for locator('.cp-mixed-practice > .text-back')" ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0
