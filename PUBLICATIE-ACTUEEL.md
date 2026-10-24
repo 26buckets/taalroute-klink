@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `4f8af751db3cff87b9211435ecb29ac80c28feac` op canonieke branch `main`.
+Worker-versie: `5b48178f-b0ac-40ec-8841-c1755504cc58`.
+
+Alle 32 lessen van **raam · boot**, van maan · naam tot en met traan, wachten op Verder of Les afronden. Letterhulp en Kijk nog eens blijven beschikbaar. aa, oo en ee blijven één combinatie; de hulp zegt daarbij deze letters. Bij gelijke letters wijst de hulp altijd een nog beschikbare knop aan. Langere voorbeelden blijven binnen het mobiele oefenvlak. Bij zelfstandig terughalen krijgen zes letterknoppen genoeg ruimte boven de feedback. De bestaande appindeling, inhoud, media, routes, opslag, startpagina en het herstel van lange oefensessies zijn behouden.
+
+Register: `docs/klink-publication-groep5-20261024.json`; vrijgave: `docs/klink-owner-release-groep5-20261024.json`. Eén gerichte review: lokaal alle 409 begeleide stappen in gerichte deelreeksen, 147 unittests (één bestaande controle overgeslagen) en 39 publicatiebewijstests. Alle 167 gewijzigde stappen zijn lokaal met echte audio gecontroleerd, inclusief letterhulp op 320/390/1366 pixels, Kijk nog eens, foutkeuzes, alternatieve identieke letters, vooruit springen, hervatten en lesovergangen binnen het onderdeel. Online zijn 59 stappen in zeven representatieve lessen opnieuw doorlopen: aa/oo/ee, een combinatie vooraan, gelijke letters en het langste woord. De brede regressie blijft gekoppeld aan ongewijzigde onderdelen; die is niet volledig herhaald. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `b372ea2b20872a382c1ea3fc1290b72e8d723f70` op canonieke branch `main`.
 Worker-versie: `7f655fc7-3e7f-4a04-9e80-217850b2a7e5`.
 
