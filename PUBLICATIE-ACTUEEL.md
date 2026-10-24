@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `0591327365eb02d9934dbdfa2257d0b664779588` op canonieke branch `main`.
+Worker-versie: `61862c55-07ce-4762-b706-1278840d48c1`.
+
+Op expliciet verzoek staat de Klankenkaart binnen het bestaande onderdeel Klanken: **Oefenen → Klanken → Klankenkaart**. Eén ingang Klanken in het overzicht. Alle 46 kaarten behouden de groepen, schrijfwijzen, kleuren en ankerwoorden van Klankstudio en AlfaBeta+. Bij Kijk en luister kan de cursist de klanken van rechtstreeks gespelde woorden openklappen, bijvoorbeeld m · a · t en t · a · s, zonder de lesplek te verliezen. De kaart verwijst naar de gekozen klank in Klankstudio en naar bestaande woordlessen. Nieuwe losse klankaudio blijft gepauzeerd.
+
+De nieuwste neus/buik-lessen, stabiele antwoordkaders, geluidsiconen in cursist- en docentweergave, startpagina, logo D, inhoud, media, routes en opslag blijven behouden. Register: `docs/klink-publication-klanken-20261025.json`; vrijgave: `docs/klink-owner-release-klanken-20261025.json`. Lokaal: 150 unittests geslaagd, één bestaande test overgeslagen; 45 publicatiebewijstests; 66 stabiele kaartopzetten en twaalf voorleesstatussen per weergave; 57 nieuwste groep-zevenstappen; bestaande hoofdstukken en lifecycle; types, lint en catalogus. Een eenmalige footer-hit-testmelding is vergeleken met live en door een volledige geslaagde herhaling opgevolgd. De daarna gepubliceerde selectorcorrectie voor docentvoorvertoningen is behouden en gericht opnieuw gecontroleerd. Live: 46 klankdetails, vier schermbreedtes, echte woordaudio, fouten/herstel, lesplek, terug/vooruit en de twaalf bestaande oefenhoofdstukken. Alle 2.679 aangeboden media en de gebouwde client zijn bytegelijk teruggelezen. De actuele bronback-up is teruggelezen uit de bestaande Drive-projectmap.
+
+Definitieve herstelback-up: https://drive.google.com/file/d/1vS6dKBvk-gxTXgp8kAXu8RnIix8_-mXU/view — bronbestanden, vrijgave, lokale/livecontroles en herstelgegevens teruggelezen en bytegelijk.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. De eerdere inhoudelijke reviewgrenzen en audiopauze blijven gelden. Geen beheersingsclaim. Woorden met veranderde klankwaarden krijgen de inline hulp pas na spellinguitleg.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+Live: https://klink.taalroute.nl
 Broncommit: `db0fa569ed4194a4d3fcc41ae40f74737634474d` op canonieke branch `main`.
 Worker-versie: `0337b06e-c100-44f6-ac1e-b58ee4ede9a1`.
 
