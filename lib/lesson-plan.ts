@@ -62,7 +62,7 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
 }
 
 export function isBeginnerLesson(exercise: PackageExercise, guided: boolean): boolean {
-  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-(?:0[1-9]|1[0-6])|klink-uitbreiding-[1-7]|woord-klink-woord-(?:en|is|kan|kast|mens|nek|kind|mand|mond|munt|post|stad|stop|tand|boon|bord|jurk|kaak|kook|koop|maak|maand|mee|meer|neem|oor|paard|rok|rood|rook|sport|spreek|staart|staat|start|storm|straat|strand|traan))$/.test(exercise.lessonId ?? '');
+  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[01])|klink-uitbreiding-(?:[1-9]|10)|woord-klink-woord-(?:en|is|kan|kast|mens|nek|kind|mand|mond|munt|post|stad|stop|tand|boon|bord|jurk|kaak|kook|koop|maak|maand|mee|meer|neem|oor|paard|rok|rood|rook|sport|spreek|staart|staat|start|storm|straat|strand|traan|biet|brief|broek|buur|dief|duur|feest|stoep|stuur|uur|vier|vies|voor|vork))$/.test(exercise.lessonId ?? '');
 }
 
 export function hasFirstLetterGuide(exercise: PackageExercise, guided: boolean): boolean {

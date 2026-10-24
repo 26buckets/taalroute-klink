@@ -42,6 +42,6 @@ try {
     await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
     console.log('PASS', lesson.id, exercises.length, 'steps: manual pace, recovery and mobile footer');
   }
-  assert.equal(checked, 409);
+  assert.equal(checked, 559);
   assert.deepEqual(errors, []);
 } finally { await browser.close(); }
