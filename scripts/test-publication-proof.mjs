@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-session-stability-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-groep4-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -429,5 +429,18 @@ test('Session stability requires current source, scoped authorization, stress pr
     a => { a.sessionStability.changedFiles.push('data/klink-curriculum.json'); },
     a => { a.sessionStability.userRequest = 'unrelated'; },
     a => { delete a.files['docs/klink-session-stability-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Grouped lesson guidance requires scoped counts, review and verified source backup', () => {
+  for (const change of [
+    a => { delete a.group4Guidance; },
+    a => { a.group4Guidance.publicationApproved = false; },
+    a => { a.group4Guidance.steps++; },
+    a => { a.group4Guidance.lessons++; },
+    a => { a.group4Guidance.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.group4Guidance.changedFiles.push('data/klink-curriculum.json'); },
+    a => { delete a.files['docs/klink-groep4-publication-20261024/review.json']; },
+    a => { delete a.files['docs/klink-groep4-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

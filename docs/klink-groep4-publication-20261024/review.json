@@ -1,0 +1,103 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "b3d06d9d25fdef0557b0054ce1d5ea8773d17b94",
+  "guidedExercises": 242,
+  "lessonSteps": 96,
+  "lessons": 13,
+  "targetedRegressionPassed": true,
+  "fullLocalRegressionRerun": false,
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "unitTests": {
+    "passed": 147,
+    "failed": 0,
+    "skipped": 1
+  },
+  "targetedBrowserChecks": [
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bon: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "bot: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-10: all 15 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bus: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "mus: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "kus: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-11: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "dak: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "dit: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-12: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "kok: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "op: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-uitbreiding-3: all 14 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bed: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-uitbreiding-4: all 11 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "kind: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-kind: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "mand: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-mand: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "mond: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-mond: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "munt: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-munt: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "post: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-post: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "stad: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-stad: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "stop: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-stop: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "tand: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-tand: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+  ],
+  "reviewMethod": "User requested faster review. All guided steps and all unit tests rerun; All 13 new lessons tested with real audio, forward jump/recovery, three letter-help viewport sizes, every within-group continuation and resume. Broad unrelated UI suites and media metadata reuse the hash-preserved approved baseline.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-groep4-route.log",
+      "sha256": "aea6bd40ab5b5065c915c8c0a3eb66a229033365da017e9dd534ce4397ba89bd"
+    },
+    {
+      "path": "work/klink-groep4-units.log",
+      "sha256": "830a81620bfe2c4d0c87ac952d9cba9ab0766fc4c4eb92f1d5bdb61efc5d88d7"
+    },
+    {
+      "path": "work/klink-groep4-focused.log",
+      "sha256": "bd981e8f86df31c9aa5ba14ae78214400abaaf93479d0057b74639fc0a501691"
+    },
+    {
+      "path": "work/klink-groep4-build.log",
+      "sha256": "de6f034c20c0ac008c16cb50b69ce00e78922c263251605b60d1694613c927fd"
+    },
+    {
+      "path": "work/klink-groep4-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-groep4-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-groep4-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-groep4-preview.log",
+      "sha256": "c3e15ed1503d3363158b8cac31baffe6a41cd0d0cb40b292daf74f35a18acf0e"
+    }
+  ]
+}
