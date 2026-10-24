@@ -11,12 +11,12 @@ test('Only the first instance of each choice or matching form opens a demo withi
     for (const exercise of exercisesForLesson(pack, lesson)) {
       const demo = beginnerExerciseDemo(pack, exercise, true);
       if (!demo) continue;
-      assert.match(lesson.id, /^(?:klink-leesstap-0[1-8]|klink-uitbreiding-[12])$/);
+      assert.match(lesson.id, /^(?:klink-leesstap-0[1-9]|klink-uitbreiding-[12])$/);
       assert.equal(demo, seen.has(exercise.mode) ? 'repeat' : 'first');
       seen.add(exercise.mode); counts[demo]++;
     }
   }
-  assert.deepEqual(counts, { first: 33, repeat: 8 });
+  assert.deepEqual(counts, { first: 37, repeat: 9 });
 });
 
 test('Every demonstrated pair uses a real label, approved exercise image and source answer mapping', () => {
@@ -59,5 +59,5 @@ test('The missing-letter example fills the actual gap and uses the source answer
     assert.equal(letter, exercise.targetGrapheme);
     demonstrated.push(exercise.exerciseId);
   }
-  assert.deepEqual(demonstrated, ['klink-leesstap-06:klink-woord-pen:missing-grapheme', 'klink-leesstap-07:klink-woord-kam:missing-grapheme', 'klink-leesstap-08:klink-woord-ik:missing-grapheme']);
+  assert.deepEqual(demonstrated, ['klink-leesstap-06:klink-woord-pen:missing-grapheme', 'klink-leesstap-07:klink-woord-kam:missing-grapheme', 'klink-leesstap-08:klink-woord-ik:missing-grapheme', 'klink-leesstap-09:klink-woord-kop:missing-grapheme']);
 });

@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-nekvervolg-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-kopsok-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -393,5 +393,16 @@ test('Nek continuation requires scoped owner authorization, current ancestry and
     a => { a.nekContinuation.changedFiles.push('data/klink-curriculum.json'); },
     a => { a.nekContinuation.userRequest = 'unrelated'; },
     a => { delete a.files['docs/klink-nekvervolg-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Kop/sok binds exact scope and preserves the full checked baseline with targeted regression', () => {
+  for (const change of [
+    a => { delete a.kopSokRelease; },
+    a => { a.kopSokRelease.publicationApproved = false; },
+    a => { a.kopSokRelease.lessonId = 'unrelated'; },
+    a => { a.kopSokRelease.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.kopSokRelease.changedFiles.push('data/klink-curriculum.json'); },
+    a => { delete a.files['docs/klink-kopsok-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

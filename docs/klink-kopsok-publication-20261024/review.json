@@ -1,0 +1,67 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "da537c9c489196541944c9a45272b4d61ffde49f",
+  "guidedExercises": 146,
+  "lessonSteps": 16,
+  "targetedRegressionPassed": true,
+  "fullLocalRegressionRerun": false,
+  "inheritedFullRegression": "docs/klink-nekvervolg-publication-20261024/review.json",
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "unitTests": {
+    "passed": 146,
+    "failed": 0,
+    "skipped": 1
+  },
+  "targetedBrowserChecks": [
+    "Forward jump returns to unfinished first exercise with explanation",
+    "kop: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "sok: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "All 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+  ],
+  "reviewMethod": "User requested faster review. All guided steps and all unit tests rerun; new lesson tested with real audio, forward jump/recovery and three letter-help viewport sizes; nek continuation and resume rerun. Broad unrelated UI suites and media metadata reuse the hash-preserved approved baseline.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-kopsok-route.log",
+      "sha256": "59d838e6597374e513247fe14a7cbcce30efcab46084bd1a73c0b53d89465503"
+    },
+    {
+      "path": "work/klink-kopsok-units.log",
+      "sha256": "a0c9ff915c62740269fe71f8dde6baee381170ca7db57bcf341769089e45dadb"
+    },
+    {
+      "path": "work/klink-kopsok-focused.log",
+      "sha256": "4bcbf781f5245d8f40ca2bc5e498c6c192a2a77d2b63577fe5704e8d51b4dfba"
+    },
+    {
+      "path": "work/klink-kopsok-build.log",
+      "sha256": "4fe88ae7bfa4bb74ff8156898c2c47cf222cba675d1ea8daded11ba0d7138d5b"
+    },
+    {
+      "path": "work/klink-kopsok-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-kopsok-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-kopsok-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-kopsok-preview.log",
+      "sha256": "183bf16d181167b3e092291e31c915e591f96b2750a00c7f5f20d017ef67e8b2"
+    },
+    {
+      "path": "work/klink-kopsok-continuation.log",
+      "sha256": "dc362eefd7e0c92224909aafaaadc720ab060600ef561383e48d4cbd4691ba18"
+    }
+  ]
+}
