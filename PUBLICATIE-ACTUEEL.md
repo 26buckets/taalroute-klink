@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `c9b603411423278a981ef4e00375741edc5383be` op canonieke branch `main`.
+Worker-versie: `649fa016-6e69-4173-9e85-487e3e32af00`.
+
+Ook **mens** gebruikt nu het eigen tempo van de cursist: iedere opdracht wacht op Verder of Les afronden, met letterhulp en Kijk nog eens bij het namaken. De actuele witte werkruimte, het rustige ingeklapte oefenmenu, de volledige mobiele vervolgknop, inhoud, media, routes en opslag zijn behouden. De docentenhandleiding noemt mens nu ook.
+
+Register: `docs/klink-publication-mens-20261024.json`; vrijgave: `docs/klink-owner-release-mens-20261024.json`. Alle 127 begeleide stappen, inclusief de 3 stappen van mens, zijn lokaal en live doorlopen. De volledige lokale review- en vervolgreeks, aanvullende werkruimte-/layout-/menu-/header-/scroll-/toegankelijkheids-/handleidingcontroles, 145 unittests (één bestaande broncontrole overgeslagen) en 31 publicatiebewijstests slagen. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. Bronback-up teruggelezen en gecontroleerd: `docs/klink-mens-publication-20261024/source-drive-verification.json`.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. De bekende vastloper bij zeer lange reeksen herladen in één browserproces blijft open; volledige scènecontrole gebruikt bestaande geïsoleerde testcontexten. Inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `73bf836ed42a8f0d2d3e9f378d2dd7d827b4bea6` op canonieke branch `main`.
 Worker-versie: `777793fb-8e3a-4673-af11-d4d98f5c7a4c`.
 
