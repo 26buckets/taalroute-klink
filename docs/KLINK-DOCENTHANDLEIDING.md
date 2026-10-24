@@ -70,7 +70,7 @@ Deze oefening bevat zes woorden: *mat, tas, jas, man, map, pan*. De volgorde kan
 
 ### De klankenkaart gebruiken
 
-Kies **Oefenen → Klanken → a**. Je ziet dezelfde schrijfwijzen, kleuren en ankerwoorden als op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ze blijven apart. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
+Kies **Oefenen → Klanken → Klankenkaart → a**. Je ziet dezelfde schrijfwijzen, kleuren en ankerwoorden als op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ze blijven apart. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
 
 Onder **Woorden in Klink** staan bij **a** onder meer *mat* en *tas*. **Luister** speelt het hele bestaande woord af. **Oefen mat** opent de bijbehorende bestaande leesles. **Open deze klank in Klankstudio** opent die klank in een nieuw tabblad. Je kunt daarna terugkeren naar Klink. De klankenkaart zelf opent met **Open de klankenkaart**.
 
@@ -80,7 +80,7 @@ Gebruik dit binnen het bestaande boekdoel en docentlesplan: wijs de klank op de 
 
 ### Oefenen via een onderwerp
 
-De knop **Oefenen** opent twaalf hoofdstukken. Een voorbeeld van een route is:
+De knop **Oefenen** opent twaalf hoofdstukken. Binnen **Klanken** staat ook **Klankenkaart**, naast de bestaande klankoefeningen. Een voorbeeld van een route is:
 
 **Oefenen → Rustig beginnen → Leg het woord na → tas · map Alfa A → Op één blad**.
 

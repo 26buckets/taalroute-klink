@@ -28,8 +28,8 @@
     "font": "unchanged Inter source from AlfaBeta+ poster"
   },
   "entryPoints": [
-    "Oefenen → Klanken",
-    "Start → Oefenen met vaardigheden → Klanken",
+    "Oefenen → Klanken → Klankenkaart",
+    "Start → Oefenen met vaardigheden → Klanken → Klankenkaart",
     "Kijk en luister → Klanken bij dit woord"
   ],
   "scope": "One sound reference view and inline reference for direct spellings. Existing chapters, lesson content, logo D, photographs, audio files and storage keys preserved. No new isolated audio bindings.",
@@ -80,6 +80,30 @@
     "chapterRoutes": 12,
     "contentPackages": 15,
     "noCloudRuns": true,
+    "noDeployment": true
+  },
+  "placementReview": {
+    "date": "2026-10-25",
+    "reason": "User found duplicate Klanken entry and requested a better location.",
+    "change": "Removed duplicate overview card; placed Klankenkaart inside existing Klanken chapter. Renamed reference heading and made Back return to that chapter. Inline word help unchanged.",
+    "browser": {
+      "checks": [
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 1366px",
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 768px",
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 390px",
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 320px",
+        "All 46 detail links retain the exact canonical spelling, example and Klankstudio sound ID",
+        "Existing mat recording plays to the end with real browser audio",
+        "Audio errors allow retry; navigation stops playback",
+        "mat opens m-a-t inline without leaving the lesson or changing progress; desktop/mobile stay in bounds",
+        "tas lesson entry, malformed links and browser Back/Forward work"
+      ],
+      "errors": []
+    },
+    "existingChapters": "All six existing chapter browser groups pass.",
+    "types": "passed",
+    "lint": "passed",
+    "build": "Not repeated: navigation/copy only; original feature production build remains recorded.",
     "noDeployment": true
   }
 }

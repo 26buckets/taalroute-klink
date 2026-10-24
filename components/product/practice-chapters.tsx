@@ -25,7 +25,7 @@ function revealCollection(limits: Record<string, number>, location: ChapterLocat
 }
 
 export function PracticeChapterCards({ onOpen }: { onOpen: (chapter: string) => void }) {
-  return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken"><a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klanken</span><ArrowRight aria-hidden="true" /></a>{practiceChapters.map(chapter => {
+  return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken">{practiceChapters.map(chapter => {
     const Icon = icons[chapter.icon];
     return <button key={chapter.id} className="cp-activity-button" data-chapter={chapter.id} onClick={() => onOpen(chapter.id)}><Icon aria-hidden="true" /><span>{chapter.title}</span><ArrowRight aria-hidden="true" /></button>;
   })}</div>;
@@ -87,7 +87,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     {!collection && <div className="cp-page-workspace">
     {!collection && <MyRoute axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
     {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, level: settings[chapterRouteAxis(id)] })} />}
-    {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{activities.map(item => {
+    {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
       const Icon = icons[item.icon];
       return <button className="cp-activity-button" key={item.id} data-chapter-activity={item.id} onClick={() => open({ chapter: chapter.id, activity: item.id, ...selection })}><Icon aria-hidden="true" /><span>{item.label}</span><ArrowRight aria-hidden="true" /></button>;
     })}</div>}

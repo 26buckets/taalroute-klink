@@ -20,7 +20,12 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width === 320 ? 568 : 900 });
     await page.goto(`${base}/#learner/chapters`);
-    await page.getByRole('link', { name: 'Klanken', exact: true }).click();
+    await page.getByRole('button', { name: 'Klanken', exact: true }).waitFor();
+    assert.equal(await page.locator('[aria-label=Oefenhoofdstukken] .cp-activity-button').count(), 12);
+    assert.equal(await page.getByRole('link', { name: 'Klanken', exact: true }).count(), 0);
+    await page.getByRole('button', { name: 'Klanken', exact: true }).click();
+    await page.getByRole('link', { name: 'Klankenkaart', exact: true }).click();
+    await page.getByRole('heading', { name: 'Klankenkaart', exact: true }).waitFor();
     await page.locator('[data-sound=a]').waitFor();
     assert.equal(await page.locator('[data-sound]').count(), 46);
     assert.equal(await page.locator('.learner-nav nav > button').count(), 5);
@@ -41,7 +46,12 @@ try {
     await page.locator('[data-sound=aa]').click();
     await page.getByRole('heading', { name: 'De klank aa', exact: true }).waitFor();
     assert.equal(await page.getByRole('button', { name: 'Oefen mat', exact: true }).count(), 0);
-    pass(`Overview, keyboard, 46 cards, correct a/aa details and reload at ${width}px`);
+    await page.getByRole('button', { name: 'Alle klanken', exact: true }).click();
+    await page.getByRole('button', { name: 'Terug naar Klanken', exact: true }).click();
+    await page.getByRole('heading', { name: 'Klanken', exact: true }).waitFor();
+    assert.equal(await page.locator('[data-chapter-activity]').count(), 2);
+    await page.screenshot({ path: `${out}/klanken-ingang-${width}.png` });
+    pass(`Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at ${width}px`);
   }
   await page.setViewportSize({ width: 1366, height: 900 });
   for (const sound of soundCards) {

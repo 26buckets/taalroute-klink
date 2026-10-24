@@ -66,7 +66,7 @@ export function SoundReference({ onBack, onLesson }: { onBack: () => void; onLes
   function open(id?: string) { stopMedia(); setSelected(id); window.history.pushState(null, '', soundHash(id)); document.querySelector('.learner-main')?.scrollTo({ top: 0 }); }
   const sound = selected ? soundById.get(selected) : undefined;
   return <div className="learner-page cp-sounds">
-    <header className="cp-context-header"><button className="text-back" type="button" aria-label={sound ? 'Alle klanken' : 'Terug naar Oefenen'} onClick={() => sound ? open() : onBack()}><ArrowLeft /></button><div><h1>{sound ? `De klank ${sound.label}` : 'Klanken'}</h1><small>Dezelfde klanken als op de klankenkaart</small></div></header>
+    <header className="cp-context-header"><button className="text-back" type="button" aria-label={sound ? 'Alle klanken' : 'Terug naar Klanken'} onClick={() => sound ? open() : onBack()}><ArrowLeft /></button><div><h1>{sound ? `De klank ${sound.label}` : 'Klankenkaart'}</h1><small>Dezelfde klanken als op de klankenkaart</small></div></header>
     {sound ? <SoundDetail key={sound.id} sound={sound} onLesson={onLesson} /> : <>
       <p>Kies een klank. Kijk op de poster en oefen samen.</p>
       <a className="text-back" href={soundPosterUrl} target="_blank" rel="noopener noreferrer">Open de klankenkaart<ExternalLink aria-hidden="true" /><span className="sr-only"> (nieuw tabblad)</span></a>
