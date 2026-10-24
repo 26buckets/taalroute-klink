@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-groep6-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-landing-review-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -479,5 +479,18 @@ test('Group six letter combinations requires scoped counts, review and verified 
     a => { a.group6Guidance.changedFiles.push('data/klink-curriculum.json'); },
     a => { delete a.files['docs/klink-groep6-publication-20261024/review.json']; },
     a => { delete a.files['docs/klink-groep6-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+
+test('Landing review preserves exact approved baseline, scope and review evidence', () => {
+  for (const change of [
+    a => { delete a.landingReview; },
+    a => { a.landingReview.publicationApproved = false; },
+    a => { a.landingReview.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.landingReview.changedFiles.push('lib/mixed-practice.ts'); },
+    a => { a.landingReview.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-landing-review-20261024/review-rounds.json']; },
+    a => { delete a.files['docs/klink-landing-review-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

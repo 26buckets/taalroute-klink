@@ -1,0 +1,53 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "f361c87da2a99e5a8ef585cc8df323b9951a140e",
+  "targetedRegressionPassed": true,
+  "preservationPassed": true,
+  "simulatedUserReview": true,
+  "roundsApplied": 3,
+  "desktopAndMobileVisualReview": true,
+  "physicalDeviceTest": false,
+  "actualUserInterviews": false,
+  "checks": "Five landing widths, 320x568 primary action, keyboard focus and Enter, invalid/valid access codes, 15 lesson entrances, direct teacher/manual/contact links, disclosure contents, photo geometry, official logo and aligned footer; 15 accessibility/layout states, 18 matching-card states, lifecycle/audio/microphone/storage behavior, types/lint/build.",
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "latestSourceRegression": "docs/klink-matching-cards-publication-20261024/review.json",
+  "logs": [
+    {
+      "path": "types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "build.log",
+      "sha256": "c42a59ae69021db130bfe20da23503c832042e83c3aafd3ff72d00e96cdac694"
+    },
+    {
+      "path": "round1.log",
+      "sha256": "7672ebece7d82401d69d59d03e05e54ebf42713538bceb5b7343d5d54902254e"
+    },
+    {
+      "path": "final-landing.log",
+      "sha256": "7672ebece7d82401d69d59d03e05e54ebf42713538bceb5b7343d5d54902254e"
+    },
+    {
+      "path": "accessibility.log",
+      "sha256": "b8267063c8753c682ad17c14cc7602bbb4ae6775e6147f90f1a7ebd0818479d0"
+    },
+    {
+      "path": "matching.log",
+      "sha256": "627198e6493a77e3addb4d6adb7b35efb01eae3564355ed5bdac3c0ef03782d2"
+    },
+    {
+      "path": "lifecycle.log",
+      "sha256": "4c7e24c294e59c85c89c7cc4146c4926c60b229ac8c1d9ad2cfa9d68f19f6ede"
+    }
+  ],
+  "limits": [
+    "Simulated perspectives, no real user study or conversion measurements.",
+    "Existing media/content review limits remain.",
+    "No prices, license terms, complete-method coverage or outcome guarantees invented."
+  ]
+}

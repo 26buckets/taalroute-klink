@@ -1,0 +1,116 @@
+{
+  "title": "Klink — gebruikersreview, productpositionering en tweede review",
+  "date": "2026-10-24",
+  "method": "Gesimuleerde taakgerichte gebruikersperspectieven en bron-/browsercontrole. Geen interviews, gebruikersonderzoek, conversiemeting of onafhankelijke menselijke beoordeling geclaimd.",
+  "baselineSourceCommit": "f361c87da2a99e5a8ef585cc8df323b9951a140e",
+  "positioning": "Digitaal oefenonderdeel voor volwassen alfabetisering en beginnend lezen binnen Alfabeta+, inzetbaar naast begeleide lessen en binnen een breder Z-routetraject.",
+  "rounds": [
+    {
+      "name": "1. Gebruikers- en productreview",
+      "findings": [
+        [
+          "Cursist",
+          "De brede kop maakt niet direct duidelijk wat ik ga doen.",
+          "De kop noemt klanken, letters en woorden; de korte intro benoemt kijken, luisteren, lezen en uitspraak.",
+          "components/product/entry-design.tsx:43"
+        ],
+        [
+          "Cursist zonder code",
+          "De vermelding van een klascode suggereert dat ik eerst toegang moet aanvragen.",
+          "Vooraf staat dat de oefencodes klaarstaan; in het formulier staat dat Begin voldoende is. Bestaande codecontrole blijft werken.",
+          "components/product/entry-design.tsx:46"
+        ],
+        [
+          "Docent",
+          "Een terugkerende docent moet een uitklapper openen voordat de werkomgeving bereikbaar is.",
+          "Docentomgeving en handleiding zijn direct zichtbare ingangen.",
+          "components/product/entry-design.tsx:71"
+        ],
+        [
+          "Begeleider",
+          "Zelfstandig oefenen kan worden gelezen als oefenen zonder selectie of begeleiding.",
+          "De toelichting beschrijft eerst samen kiezen en daarna dezelfde oefening zelfstandig herhalen.",
+          "components/product/entry-design.tsx:75"
+        ],
+        [
+          "School of taalaanbieder",
+          "Ik zie geen concrete stap om inzet en kosten te bespreken.",
+          "Direct zichtbare contact- en probeeractie; geen onbevestigde prijs, leverdatum of licentiebelofte.",
+          "components/product/entry-design.tsx:81"
+        ],
+        [
+          "Gemeente",
+          "De pagina moet duidelijk maken of dit een volledig Z-routetraject is.",
+          "Klink wordt afgebakend als oefenonderdeel, gekoppeld aan taalles, begeleiding en participatie in het bredere traject.",
+          "components/product/entry-design.tsx:94"
+        ]
+      ]
+    },
+    {
+      "name": "2. Advocaat van de duivel — toegepast",
+      "findings": [
+        [
+          "Een account dat er niet is",
+          "Vaste codes, Open je omgeving en een sloticoon kunnen een persoonlijke beveiligde leeromgeving suggereren.",
+          "Geen persoonlijk account beloofd; de actuele gedeelde oefentoegang is expliciet uitgelegd. Het sloticoon bij Begin is vervangen door het bestaande oefenicoon.",
+          "README.md:43; app/page.tsx; components/product/entry-design.tsx"
+        ],
+        [
+          "Een compleet product suggereren",
+          "De koppeling aan Alfabeta+ kan worden opgevat als de aanschaf van alle methodeonderdelen.",
+          "De pagina benoemt alleen Klink als digitaal oefenonderdeel naast de lessen. Pakketinhoud, contract en kosten blijven onderwerpen voor een gesprek.",
+          "components/product/entry-design.tsx:93"
+        ],
+        [
+          "Niet onderbouwde marktclaims",
+          "Een brede leerbelofte kan worden opgevat als gegarandeerd niveau, leerresultaat of volledige inburgeringsdekking.",
+          "De tekst beschrijft concrete oefenhandelingen. Geen resultaatgarantie, certificering, keurmerk, klantenbewijs of gegarandeerde Z-route-uren toegevoegd.",
+          "https://duo.nl/zakelijk/inburgering-ketenpartners/wet-inburgering-2021/leerbaarheidstoets-en-leerroutes/voorwaarden-z-route.jsp"
+        ],
+        [
+          "Te veel doelgroepen tegelijk",
+          "Zes gelijkwaardige hoofdknoppen zouden een beginnende cursist laten kiezen tussen organisatiebegrippen.",
+          "Eén primaire oefenknop blijft bovenaan; de twee bestaande professionele blokken blijven onder het hoofdvlak.",
+          "components/product/entry-design.tsx:45; app/landing.css"
+        ]
+      ]
+    },
+    {
+      "name": "3. Tweede review — laatste correcties toegepast",
+      "findings": [
+        [
+          "Toetsenbord",
+          "Na Start verdwijnt de actieve knop; zonder nieuwe focus moet een gebruiker de pagina opnieuw doorlopen.",
+          "Begin krijgt focus wanneer het formulier verschijnt; Enter opent de bestaande cursistomgeving.",
+          "components/product/entry-design.tsx:58; scripts/test-landing-browser.mjs"
+        ],
+        [
+          "Contactverwachting",
+          "Bespreek gebruik en kosten vertelt niet dat een e-mailprogramma opent.",
+          "De knop zegt Mail over gebruik en kosten. Het adres en nuttige gegevens voor de aanvraag staan ook als kopieerbare tekst in de toelichting.",
+          "components/product/entry-design.tsx:82"
+        ],
+        [
+          "Gedeelde apparaten",
+          "Een docent kan nog aannemen dat codes gebruikers uit elkaar houden.",
+          "De toelichting benoemt dat gebruikers op een gedeeld apparaat dezelfde oefenplek zien. Het startformulier zegt dat de oefenplek in deze browser blijft.",
+          "components/product/entry-design.tsx:60; components/product/entry-design.tsx:85"
+        ],
+        [
+          "Kleine telefoon",
+          "Meer productuitleg mag de primaire oefenknop niet buiten het eerste scherm drukken.",
+          "De knop is gecontroleerd op 320 × 568; de pagina op vijf breedtes. De foto, logo’s en footeruitlijning blijven behouden.",
+          "scripts/test-landing-browser.mjs"
+        ]
+      ]
+    }
+  ],
+  "verdict": "De concrete verbeteringen zijn toegepast. Geschikt als ingang om te oefenen, de aanpak te bekijken en gebruik te bespreken. Verkoopvoorwaarden en praktijkbewijs moeten afzonderlijk worden vastgesteld.",
+  "openPoints": [
+    "Prijzen, licentievorm, pakketinhoud, ondersteuning en voorwaarden zijn niet als feit vastgesteld en daarom niet ingevuld.",
+    "Geen persoonlijk account, scheiding van gebruikers op een gedeeld apparaat of synchronisatie tussen apparaten toegevoegd.",
+    "Geen volledige Z-route, gegarandeerde leerresultaten of commerciële gereedheid van alle methodeonderdelen geclaimd.",
+    "De bestaande inhoudelijke/audioreviewgrenzen blijven gelden.",
+    "Een praktijkronde met echte cursisten, docenten, begeleiders en inkopers en tests op fysieke telefoons blijven nodig om begrijpelijkheid en conversie te onderbouwen."
+  ]
+}
