@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-compact-exercises-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-exercise-menu-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -241,4 +241,15 @@ test('Compact exercise release requires exact consent, scope, source and verifie
 
 test('KLINK menu addition cannot widen content scope or discard the approved header repair',()=>{
  for(const change of [a=>{a.appMenu.changedFiles.push('data/klink-curriculum.json');},a=>{a.appMenu.userRequest='unrelated';},a=>{a.headerRepair.userRequest='unrelated';}])assert(check(proof,change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Collapsible exercise menu binds consent, unchanged content scope and verified backup', () => {
+  for (const change of [
+    a => { a.exerciseMenu.publicationApproved = false; },
+    a => { a.exerciseMenu.userRequest = 'unrelated'; },
+    a => { a.exerciseMenu.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.exerciseMenu.changedFiles.push('data/klink-curriculum.json'); },
+    a => { delete a.files['docs/klink-owner-release-compact-exercises-20261024.json']; },
+    a => { delete a.files['docs/klink-exercise-menu-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

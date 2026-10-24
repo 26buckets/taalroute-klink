@@ -498,3 +498,28 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 .cp-player:has([data-teacher-workflow]) .cp-step-scope { display: none; }
 .cp-player:has([data-teacher-workflow]) .cp-player-bar strong { visibility: hidden; }
 .cp-workflow-source del { text-decoration-thickness: 2px; }
+
+/* Keep exercise choices out of the way until the learner wants to switch. */
+.learner-app .cp-exercise-menu { min-width: 0; background: var(--paper); border-bottom: 1px solid var(--line); }
+.learner-app .cp-exercise-menu-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; }
+.learner-app .cp-exercise-menu-current { display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 500; }
+.learner-app .cp-exercise-menu svg { width: 20px; height: 20px; flex-shrink: 0; }
+.learner-app .cp-exercise-menu button { min-height: 48px; font-size: 16px; font-weight: 400; }
+.learner-app .cp-exercise-menu-options { margin: 0; border: 0; }
+.learner-app .cp-exercise-menu-options:not([hidden]) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 0 16px 16px; }
+.learner-app .cp-exercise-menu-options button { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 10px 12px; border: 1px solid transparent; border-radius: 6px; background: var(--paper); color: var(--ink); text-align: left; }
+.learner-app .cp-exercise-menu-options button > span { color: inherit; flex: 1; overflow-wrap: anywhere; }
+.learner-app .cp-exercise-menu-options button:hover { border-color: var(--line-strong); }
+.learner-app .cp-exercise-menu-options button[aria-pressed="true"] { background: var(--primary); color: white; }
+.learner-app .cp-exercise-menu-check { visibility: hidden; }
+.learner-app [aria-pressed="true"] > .cp-exercise-menu-check { visibility: visible; }
+@media (max-width: 600px) {
+  .learner-app .cp-exercise-menu-options:not([hidden]) { grid-template-columns: minmax(0, 1fr); }
+}
+
+.learner-app .cp-exercise-record-head:has(.cp-exercise-menu) { display: block; padding: 0; }
+.learner-app .cp-exercise-menu-bar > .cp-exercise-menu-current { flex: 1; min-width: 0; }
+.learner-app .cp-exercise-menu-bar > nav { flex-shrink: 0; }
+@media (max-width: 600px) {
+  .learner-app .cp-exercise-menu-bar > .cp-exercise-menu-current { flex-basis: 100%; }
+}

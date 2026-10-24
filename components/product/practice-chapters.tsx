@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
-import { chapterCollections, chapterHasBothAxes, chapterHash, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
+import { chapterCollections, chapterExerciseChoices, chapterHasBothAxes, chapterHash, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel } from '@/lib/content-levels';
 import { MyRoute, useRouteSettings } from './route-settings';
 import { chapterRouteAxis } from '@/lib/learner-route';
@@ -71,6 +71,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     .map(item => reviewMode ? { ...item, exercises: item.exercises.filter(exercise => review[exercise.exerciseId]?.due <= Date.now()) } : item)
     .filter(item => item.exercises.length), [collections, location, reviewMode, review]);
   const collection = visible.find(item => item.id === location.collection);
+  const exerciseChoices = useMemo(() => collection ? chapterExerciseChoices(location) : [], [collection, location]);
   // Example words identify a collection, but must not reveal a listening/spelling answer during play.
   const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' ? activity?.label : collection?.title) ?? activity?.label ?? chapter?.title ?? 'Oefenen met vaardigheden';
   const toCollections = () => open({ ...location, collection: undefined });
@@ -93,6 +94,9 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
       {!visible.length && <output>{reviewMode ? 'Je hebt nu niets om te herhalen. Oefen eerst bij Klanken, Spelling, Grammatica, Teksten of In de praktijk.' : `Voor deze keuze (${levelLabel(location.level)}) zijn hier nog geen opdrachten ingedeeld. Kies samen met je docent ander aanbod.`}</output>}
       {visible.length > limit && <button className="secondary-button cp-chapter-more" onClick={() => setLimits(current => ({ ...current, [listKey]: limit + pageSize }))}>Meer opdrachten<ArrowRight /></button>}
     </>}
-    {collection && activity && <GroupRound key={`${activity.id}:${collection.id}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
+    {collection && activity && <GroupRound exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+      const next = exerciseChoices.find(item => item.id === id);
+      if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection });
+    } }} key={`${activity.id}:${collection.id}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
   </div>;
 }

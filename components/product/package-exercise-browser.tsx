@@ -1,5 +1,6 @@
 'use client';
 import { ImportedPracticeSurface } from './imported-practice-surface';
+import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
 
 /* oxlint-disable jsx-a11y/media-has-caption -- Eigen oefenopnames hebben geen afzonderlijk ondertitelspoor. */
 
@@ -116,6 +117,7 @@ export function PackageExerciseBrowser({
   onLessonDone,
   onAttempt,
   practiceRound = false,
+  exerciseMenu,
 }: {
   pack: PackageDefinition;
   onAudio: AudioPlayer;
@@ -131,6 +133,7 @@ export function PackageExerciseBrowser({
   onLessonDone?: () => void;
   onAttempt?: (attempt: PracticeAttempt) => void;
   practiceRound?: boolean;
+  exerciseMenu?: ExerciseMenuProps;
 }) {
   const exerciseTypes = pack.exerciseTypes
     .map((type) => ({ ...type, label: learnerExerciseNames[type.id] ?? type.label, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))
@@ -143,6 +146,7 @@ export function PackageExerciseBrowser({
   const [recordIndex, setRecordIndex] = useState(() => guided || initialExerciseId ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));
   const [completed, setCompleted] = useState(false);
   const [result, setResult] = useState<ResultState>('idle');
+  const [exerciseMenuOpen, setExerciseMenuOpen] = useState(false);
   const [message, setMessage] = useState('Neem je tijd.');
   const [heard, setHeard] = useState(false);
   const [audioError, setAudioError] = useState(false);
@@ -171,7 +175,7 @@ export function PackageExerciseBrowser({
   const needsListen = Boolean(exercise?.requiresAudio);
   const sentenceQuestion = exercise?.mode === 'sentence-question';
   const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);
-  const automatic = guided && result === 'right' && !selfPaced && !exercise?.manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;
+  const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !exercise?.manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   async function listen(source?: string, automaticStart = false) {
     if ((exercise?.readingTask || exercise?.componentId === 'KLINK-EXTENDED' || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
@@ -345,10 +349,10 @@ export function PackageExerciseBrowser({
     return () => document.removeEventListener('visibilitychange', update);
   }, []);
   useEffect(() => {
-    if (!guided || !pacedReading || !paceSeconds || !pageVisible || !canAnswer || audioPending || completed || holdFeedback) return;
+    if (exerciseMenuOpen || !guided || !pacedReading || !paceSeconds || !pageVisible || !canAnswer || audioPending || completed || holdFeedback) return;
     const timer = window.setTimeout(() => advanceAfterFeedback(), paceSeconds * 1000);
     return () => window.clearTimeout(timer);
-  }, [guided, pacedReading, paceSeconds, pageVisible, canAnswer, audioPending, completed, holdFeedback, exerciseId]);
+  }, [exerciseMenuOpen, guided, pacedReading, paceSeconds, pageVisible, canAnswer, audioPending, completed, holdFeedback, exerciseId]);
   useEffect(() => {
     if (!automatic || completed) return;
     const timer = window.setTimeout(() => advanceAfterFeedback(), 650);
@@ -363,6 +367,16 @@ export function PackageExerciseBrowser({
   const isIndividual = (item: PackageExercise) => item.mode === 'sentence-question' || item.mode.startsWith('connected-');
   const modes = records.filter((item, index, all) => isIndividual(item) || all.findIndex(other => other.mode === item.mode) === index);
   const questionModes = modes.filter(item => item.mode === 'sentence-question');
+  const exerciseHeading = (<div>
+              {!guided && <small>Vrij oefenen</small>}
+              <h3 ref={taskHeading} tabIndex={-1}>{instructionAudioEnabled && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
+            </div>);
+  const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
+              <button onClick={() => guided ? openGuidedAt(guidedIndex - 1) : openAt(recordIndex - 1)} disabled={guided ? guidedIndex <= 0 : recordIndex === 0} aria-label="Vorige oefening"><ArrowLeft /></button>
+              {guided && !exercise.manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button aria-label={autoPaused ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused} onClick={() => setAutoPaused(value => !value)}>{autoPaused ? <Play /> : <Pause />}</button>}
+              <b aria-label={`${guided ? 'Stap' : 'Oefening'} ${guided ? guidedIndex + 1 : recordIndex + 1} van ${guided ? exercises.length : records.length}`}>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
+              {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
+            </nav>);
   return (
     <section className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
       <header>
@@ -386,16 +400,7 @@ export function PackageExerciseBrowser({
 
         <div className="cp-exercise-main">
           <header className="cp-exercise-record-head">
-            <div>
-              {!guided && <small>Vrij oefenen</small>}
-              <h3 ref={taskHeading} tabIndex={-1}>{instructionAudioEnabled && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
-            </div>
-            <nav aria-label="Bladeren door oefeningen">
-              <button onClick={() => guided ? openGuidedAt(guidedIndex - 1) : openAt(recordIndex - 1)} disabled={guided ? guidedIndex <= 0 : recordIndex === 0} aria-label="Vorige oefening"><ArrowLeft /></button>
-              {guided && !exercise.manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button aria-label={autoPaused ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused} onClick={() => setAutoPaused(value => !value)}>{autoPaused ? <Play /> : <Pause />}</button>}
-              <b aria-label={`${guided ? 'Stap' : 'Oefening'} ${guided ? guidedIndex + 1 : recordIndex + 1} van ${guided ? exercises.length : records.length}`}>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
-              {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
-            </nav>
+            {exerciseMenu ? <ExerciseMenu {...exerciseMenu} onOpenChange={setExerciseMenuOpen} heading={exerciseHeading} controls={exerciseControls} /> : <>{exerciseHeading}{exerciseControls}</>}
           </header>
 
           <div className="cp-exercise-stage">

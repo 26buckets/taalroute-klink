@@ -111,6 +111,17 @@ export function chapterHash(location: ChapterLocation = { level: 'all' }) {
   return `#learner/chapters${path ? `/${path}` : ''}${query.size ? `?${query}` : ''}`;
 }
 
+export function chapterExerciseChoices(location: ChapterLocation) {
+  if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
+  // Only switch within the exact existing collection and its selected level/help filters.
+  return groupActivities.filter(activity => activity.id !== 'learning-review').flatMap(activity => {
+    const collection = chapterCollections(activity.id).find(item => item.id === location.collection && matchesChapterSelection(item, location));
+    const chapters = practiceChapters.filter(chapter => chapter.activities.includes(activity.id));
+    const chapter = chapters.find(chapter => chapter.id === location.chapter) ?? chapters[0];
+    return collection && chapter ? [{ ...activity, chapter: chapter.id, collection: collection.id }] : [];
+  });
+}
+
 export function parseChapterHash(hash: string): ChapterLocation {
   const fallback: ChapterLocation = { level: 'all' };
   try {

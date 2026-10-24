@@ -10,6 +10,7 @@ import { selectExerciseSet, levelLabel, type ContentSelection } from '@/lib/cont
 import { practiceStages, scopeWordExercises, selectUsageExercises, type RouteSettings, type ContentReadiness } from '@/lib/learner-route';
 import { useRouteSettings } from './route-settings';
 import { PracticeLine } from './practice-line';
+import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const sheetActivities: GroupActivity[] = ['meet', 'same-word', 'listen', 'hear-word', 'read', 'build-model', 'build', 'missing', 'copy', 'dictation'];
@@ -30,7 +31,10 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
   function back() { stopMedia(); setActivity(undefined); }
   if (activity) return <section className="cp-group-practice">
     <button className="text-back" onClick={back}><ArrowLeft />Alle oefeningen</button>
-    <GroupRound key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} exerciseSet={available.find(item => item.id === activity)?.exercises ?? []} sessionId={!usage && !scopeId && selection.level === 'all' && (!selection.help || selection.help === 'all') ? undefined : `${pack.id}:${selection.level}:${selection.help ?? 'all'}:${scopeId}${usage ? `:use:${usage.settings.language}:${usage.readiness}` : ''}`} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
+    <GroupRound exerciseMenu={{ value: activity, options: available.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+      const next = available.find(item => item.id === id);
+      if (next) { stopMedia(); setActivity(next.id); }
+    } }} key={`${pack.id}:${activity}:${round}`} pack={pack} activity={activity} exerciseSet={available.find(item => item.id === activity)?.exercises ?? []} sessionId={!usage && !scopeId && selection.level === 'all' && (!selection.help || selection.help === 'all') ? undefined : `${pack.id}:${selection.level}:${selection.help ?? 'all'}:${scopeId}${usage ? `:use:${usage.settings.language}:${usage.readiness}` : ''}`} onAudio={onAudio} onAttempt={onAttempt} onBack={back} onAgain={() => setRound(value => value + 1)} />
   </section>;
   return <section className="cp-panel cp-group-practice" data-group-practice>
     <header className="cp-panel-heading"><h1>{usage ? 'Oefenen met zinnen en situaties' : 'Oefenen met deze woorden'}</h1></header>
@@ -55,7 +59,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
   </section>;
 }
 
-export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen' }: { pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string }) {
+export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: { pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps }) {
   const exercises = useMemo(() => exerciseSet ?? groupExercises(pack, activity), [pack, activity, exerciseSet]);
   const storageKey = groupSessionKey(sessionId ?? pack.id, activity);
   const [session, setSession] = useState(() => {
@@ -68,16 +72,17 @@ export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain
   useEffect(() => { try { localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...session })); } catch { /* Optional storage. */ } }, [session, storageKey]);
   const title = groupActivities.find(item => item.id === activity)!.label;
   function restart() { try { localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
-  if (session.done) return <section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section>;
-  if (activity === 'worksheet' || activity === 'worksheet-heard') return <BuildWorksheet exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} />;
+  if (session.done) return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
+  if (activity === 'worksheet' || activity === 'worksheet-heard') return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
   return <>
     {canUseSheet && <fieldset className="cp-practice-display" aria-label="Hoe wil je oefenen?">
       <button className="secondary-button" aria-pressed={!sheet} onClick={() => { stopMedia(); setSheet(false); }}><Eye aria-hidden="true" />Eén voor één</button>
       <button className="secondary-button" aria-pressed={sheet} onClick={() => { stopMedia(); setSheetOpened(true); setSheet(true); }}><Grid2X2 aria-hidden="true" />Op één blad</button>
     </fieldset>}
+    {sheet && exerciseMenu && <ExerciseMenu {...exerciseMenu} />}
     {sheetOpened && <div hidden={!sheet}><PracticeSheet pack={pack} exercises={exercises} title={title} active={sheet} onAudio={onAudio} onAttempt={onAttempt} onBack={onBack} /></div>}
-    {!sheet && <PackageExerciseBrowser pack={pack} exercises={exercises.map(exercise=>exercise.componentId==='KLINK-CONTENT'?{...exercise,contentSessionId:storageKey}:exercise)} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={session.exerciseId}
+    {!sheet && <PackageExerciseBrowser exerciseMenu={exerciseMenu} pack={pack} exercises={exercises.map(exercise=>exercise.componentId==='KLINK-CONTENT'?{...exercise,contentSessionId:storageKey}:exercise)} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={session.exerciseId}
     onPosition={exerciseId => setSession(current => current.exerciseId === exerciseId ? current : { ...current, exerciseId })}
     onAttempt={onAttempt} onLessonDone={() => setSession(current => ({ ...current, done: true }))} onComplete={onBack} />}
   </>;
