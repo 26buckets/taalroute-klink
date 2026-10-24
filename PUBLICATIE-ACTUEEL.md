@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `f361c87da2a99e5a8ef585cc8df323b9951a140e` op canonieke branch `main`.
+Worker-versie: `3b68c7d4-a635-4abe-9616-041b3c1db8cc`.
+
+Woord-, foto- en luisterkaarten in koppelopdrachten hebben per bord dezelfde maat en uitgelijnde rijen. Vinkjes krijgen vooraf ruimte, zodat kiezen, luisteren en afronden niets verschuiven. De nieuwste raam/boot-lessen, lettercombinaties, mobiele letterhulp, huidige uitstraling, media, routes, opgeslagen gegevens en het herstel van lange oefensessies blijven behouden. De runtimewijziging bestaat uit drie gedeelde CSS-regels.
+
+Register: `docs/klink-publication-matching-cards-20261024.json`; vrijgave: `docs/klink-owner-release-matching-cards-20261024.json`. Lokaal en live: 18 kaartcontroles met twee/drie koppels, woord/foto/luistervarianten, vier schermformaten en menu open/ingeklapt; geen maat- of positieverspringing na een verkeerde of juiste keuze. Scrollen en de vervolgknop zijn gecontroleerd. Na overname van de tussentijds gepubliceerde groep-vijfversie zijn 59 representatieve nieuwste lesstappen met echte audio opnieuw gecontroleerd. Voor die integratie waren ook 96 groep-vierstappen, 70 overzicht-/werkbladtoestanden en de lifecyclecontrole geslaagd. Types, lint en 40 publicatiebewijstests slagen. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. De gecontroleerde bronback-up staat in de bestaande Drive-projectmap.
+
+Controlegrenzen: browserautomatisering, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `4f8af751db3cff87b9211435ecb29ac80c28feac` op canonieke branch `main`.
 Worker-versie: `5b48178f-b0ac-40ec-8841-c1755504cc58`.
 

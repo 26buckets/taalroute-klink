@@ -1,0 +1,34 @@
+{
+  "sourceCommit": "f361c87da2a99e5a8ef585cc8df323b9951a140e",
+  "branch": "main",
+  "workerVersion": "3b68c7d4-a635-4abe-9616-041b3c1db8cc",
+  "url": "https://klink.taalroute.nl",
+  "baselineSourceCommit": "4f8af751db3cff87b9211435ecb29ac80c28feac",
+  "runtimeChanged": [
+    "app/learner-ui.css"
+  ],
+  "localChecks": {
+    "matchingStates": 18,
+    "latestGroup5RealAudioSteps": 59,
+    "earlierGroup4RealAudioSteps": 96,
+    "overviewStates": 70,
+    "scrollViewports": 4,
+    "lifecycle": "passed",
+    "types": "passed",
+    "lint": "passed",
+    "publicationProofTests": 40
+  },
+  "liveChecks": {
+    "matchingStates": 18,
+    "scrollViewports": 4,
+    "mediaByteIdentical": 2679,
+    "builtClientByteIdentical": true
+  },
+  "preserved": "Latest group-five and group-four lessons, letter combinations, current design, media, saved data, routes and session stability fix.",
+  "sourceBackup": "https://drive.google.com/file/d/1R8jc17tmGNzLyI0GnH80OkV_SyAo1Chp/view",
+  "limits": [
+    "Browser automation, no physical phone or learner pilot.",
+    "Matching geometry uses mocked audio; latest lesson checks use real existing audio.",
+    "Existing content review boundaries and audio pause retained."
+  ]
+}
