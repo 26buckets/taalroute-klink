@@ -81,8 +81,9 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     <header className="cp-context-header">
       <button className="text-back" onClick={back} aria-label={collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'} title={collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'}><ArrowLeft /></button>
       <h1 ref={heading} tabIndex={-1}>{title}</h1>
-      <small className="cp-context-meta">{collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activity ? ` · ${chapter.title}` : ''}` : ''}</small>
+      <small className="cp-context-meta" aria-label={!collection && chapter ? 'Je bent hier' : undefined}>{collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activity ? ` · ${chapter.title}` : ''}` : ''}</small>
     </header>
+    {collection && chapter && <p className="sr-only" aria-label="Je bent hier">Oefenen · {chapter.title}</p>}
     {!collection && <div className="cp-page-workspace">
     {!collection && <MyRoute axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
     {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, level: settings[chapterRouteAxis(id)] })} />}

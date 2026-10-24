@@ -35,6 +35,7 @@ try {
   await page.waitForFunction(() => !document.querySelector('.cp-choice-grid button')?.disabled);
   checks.push('The word file plays directly in mixed listening, without a spoken instruction');
   await page.evaluate(() => { window.__started = []; });
+  await page.getByRole('button', { name: 'Andere oefening', exact: true }).click();
   await page.getByRole('button', { name: 'Lees en kies', exact: true }).click();
   const read = await current('read');
   await page.waitForFunction(() => !document.querySelector('.cp-choice-grid button')?.disabled);
@@ -42,6 +43,7 @@ try {
   await page.locator('.cp-example-listen').click();
   await heard(read.prompt.audio.src);
   checks.push('Reading stays silent until explicit word-audio help');
+  await page.getByRole('button', { name: 'Andere oefening', exact: true }).click();
   await page.getByRole('button', { name: 'Koppel', exact: true }).click();
   const match = await current('match');
   await page.waitForFunction(() => !document.querySelector('.cp-match-board button')?.disabled);
@@ -55,6 +57,7 @@ try {
     if (name === 'mobile') await page.locator('.cp-exercise-feedback > button').scrollIntoViewIfNeeded();
     await page.screenshot({ path: `outputs/mixed-practice-20261017/match-${name}-final.png` });
   }
+  await page.getByRole('button', { name: 'Andere oefening', exact: true }).click();
   await page.getByRole('button', { name: 'Maak het woord', exact: true }).click();
   const build = await current('build');
   await heard(build.prompt.audio.src);

@@ -28,9 +28,9 @@ try {
   await page.locator('.cp-lesson-picker').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click();
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   assert.equal(await page.locator('.cp-tabs [aria-current="page"]').innerText(), 'Oefenen met deze woorden');
-  await page.locator('.cp-mixed-practice > .text-back').click();
+  await page.locator('.cp-mixed-practice > .cp-context-header .text-back').click();
   await page.locator('[data-group-practice]').waitFor();
-  pass('Word overview button, section tab and practice heading agree; mixed lessons keep a visible parent and return to lessons');
+  pass('Word overview button, section tab and practice heading agree; mixed lessons preserve their parent selection and return to lessons');
 
   const list = { chapter: 'texts', activity: 'text-question', level: 'all' };
   const collections = chapterCollections(list.activity);
@@ -45,7 +45,7 @@ try {
     await page.getByRole('button', { name: 'Meer opdrachten', exact: true }).click();
     await page.locator('[data-collection]').nth(12).click();
     await page.locator('.is-mixed-round').waitFor();
-    await page.locator('.cp-chapters > .text-back').click();
+    await page.locator('.cp-chapters > .cp-context-header .text-back').click();
     await page.locator('[data-collection]').first().waitFor();
     assert(await selected(), `13th collection retained ${width}`);
     await page.waitForFunction(id => document.activeElement?.getAttribute('data-collection') === id, id);
@@ -57,7 +57,7 @@ try {
     await page.waitForFunction(id => document.activeElement?.getAttribute('data-collection') === id, id);
     await page.goto(`${base}/${chapterHash({ ...list, collection: id })}`); await page.reload();
     await page.locator('.is-mixed-round').waitFor();
-    await page.locator('.cp-chapters > .text-back').click();
+    await page.locator('.cp-chapters > .cp-context-header .text-back').click();
     await page.waitForFunction(id => document.activeElement?.getAttribute('data-collection') === id, id);
     assert(await selected());
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));

@@ -39,7 +39,7 @@ try {
   for (const width of [1440, 820, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto(base);
-    await page.getByRole('link', { name: 'Voor docenten', exact: true }).click();
+    await page.goto(`${base}/docenten`);
     await page.getByRole('heading', { name: 'Docentenhandleiding', exact: true }).waitFor();
     assert.equal(await page.locator('.wiki-article').count(), 0);
     assert.equal(await page.locator('.wiki-topic-groups a').count(), 12);
@@ -67,7 +67,7 @@ try {
     await page.getByRole('navigation', { name: 'Kruimelpad' }).getByRole('link', { name: 'Docentenhandleiding', exact: true }).click();
     await page.getByRole('link', { name: 'Open de docentomgeving', exact: true }).click();
     await page.locator('.staff-app').waitFor();
-    await page.getByRole('link', { name: 'Voor docenten', exact: true }).click();
+    await page.goto(`${base}/docenten`);
     await page.getByRole('link', { name: 'Naar Klink', exact: true }).click();
     await page.locator('.cp-home').waitFor();
     checks.push(`${width}px: compact overview, topic selection, reload, next/back, return to teacher/learner, no page overflow.`);
@@ -88,10 +88,10 @@ try {
   await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-start-lesson').first().click();
   await page.locator('.cp-exercise-browser.is-guided').waitFor();
-  assert(await page.locator('.taalroute-header').isHidden());
-  await page.locator('.cp-lesson-player > .text-back').click();
-  assert(await page.getByRole('link', { name: 'Voor docenten', exact: true }).isVisible());
-  checks.push('Short guided lesson retains its reading space; leaving restores the teacher entry.');
+  assert(await page.locator('.taalroute-header').isVisible());
+  await page.locator('.cp-lesson-player > .cp-context-header .text-back').click();
+  assert(await page.locator('.taalroute-header').isVisible());
+  checks.push('Short guided lesson and its overview retain the shared header.');
   assert.deepEqual(errors, []);
   writeFileSync(`${out}/wiki-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, checkedAt: new Date().toISOString(), checks, errors }, null, 2));
   console.log('PASS wiki:', checks.join('\n'));

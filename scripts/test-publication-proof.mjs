@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-en-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-white-workspace-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -298,5 +298,15 @@ test('En release binds its scope, live ancestry and verified backup without weak
     a => { a.enRelease.changedFiles.push('data/klink-curriculum.json'); },
     a => { a.enRelease.userRequest = 'unrelated'; },
     a => { delete a.files['docs/klink-en-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence', () => {
+  for (const change of [
+    approval => { approval.whiteWorkspace.baselineSourceCommit = '0'.repeat(40); },
+    approval => { approval.whiteWorkspace.publicationApproved = false; },
+    approval => { approval.whiteWorkspace.changedFiles.pop(); },
+    approval => { delete approval.files['scripts/test-white-workspace-browser.mjs']; },
+    approval => { delete approval.files['docs/klink-white-workspace-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

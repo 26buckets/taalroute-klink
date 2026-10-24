@@ -148,7 +148,7 @@ if (await evaluate("document.querySelector('.toast-message')?.textContent.includ
 await screenshot('02-werkende-les-desktop');
 if (await evaluate('document.documentElement.scrollHeight > innerHeight + 1 || document.documentElement.scrollWidth > innerWidth + 1'))
   throw new Error('De geopende desktoples veroorzaakt pagina-overloop.');
-await evaluate("document.querySelector('.cp-lesson-player > .text-back').click()");
+await evaluate("document.querySelector('.cp-lesson-player > .cp-context-header .text-back').click()");
 await evaluate(
   "[...document.querySelectorAll('.cp-tabs button')].find((button) => button.textContent.includes('Oefeningen')).click()",
 );
