@@ -16,7 +16,8 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-kan-20261024.json';
+const authorizationPath = 'docs/klink-owner-release-kast-20261024.json';
+const kastPreviousPath = 'docs/klink-owner-release-kan-20261024.json';
 const kanPreviousPath = 'docs/klink-owner-release-white-workspace-20261024.json';
 const workspacePreviousPath = 'docs/klink-owner-release-is-20261024.json';
 const isPreviousPath = 'docs/klink-owner-release-en-20261024.json';
@@ -24,6 +25,7 @@ const workspaceFiles = ["app/learner-layout.css", "components/product/learner-ap
 const enPreviousPath = 'docs/klink-owner-release-consistent-layout-20261024.json';
 const enFiles = ['lib/lesson-plan.ts', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'scripts/test-first-letter-guide.mjs', 'scripts/test-beginner-route-browser.mjs', 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs'];
 const kanFiles = [...enFiles];
+const kastFiles = [...kanFiles];
 const isFiles = [...enFiles, 'app/learner-layout.css'];
 
 const layoutPreviousPath = 'docs/klink-owner-release-in-20261024.json';
@@ -75,6 +77,28 @@ try {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
+  const kastPrevious = JSON.parse(readFileSync(kastPreviousPath));
+  const kastRelease = approval.kastRelease;
+  const kastEvidence = 'docs/klink-kast-publication-20261024';
+  const kastRequest = JSON.parse(readFileSync(`${kastEvidence}/owner-request.json`));
+  requireProof(kastRelease?.approvedBy === 'Nico' && kastRelease.publicationApproved === true);
+  requireProof(kastRelease.previousAuthorization === kastPreviousPath && kastRelease.baselineSourceCommit === 'e39b9fa5f98008a1deca4d0d06771ec074ae4e31');
+  requireProof(kastRelease.userRequest === kastRequest.userRequest && kastRelease.userRequest.includes('zet het daarna online') && kastRequest.lessonId === 'woord-klink-woord-kast');
+  requireProof(kastRelease.guidedExercises === 124 && kastRelease.kastSteps === 3 && kastRelease.humanReviewClaimed === false && kastRelease.newMediaBindings === 0);
+  requireProof(JSON.stringify(kastRelease.changedFiles) === JSON.stringify(kastFiles));
+  execFileSync('git', ['merge-base', '--is-ancestor', kastRelease.baselineSourceCommit, 'HEAD']);
+  requireProof(createHash('sha256').update(execFileSync('git', ['show', `${kastRelease.baselineSourceCommit}:${kastPreviousPath}`])).digest('hex') === approval.files[kastPreviousPath]);
+  for (const [key, value] of Object.entries(kastPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  for (const [file, sha] of Object.entries(kastPrevious.files)) requireProof(approval.files[file] && (kastFiles.includes(file) || approval.files[file] === sha));
+  const kastChanges = execFileSync('git', ['diff', '--name-only', kastRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  requireProof(kastChanges.every(file => kastFiles.includes(file)));
+  const kastReview = JSON.parse(readFileSync(`${kastEvidence}/review.json`));
+  const kastSources = JSON.parse(readFileSync(`${kastEvidence}/source-manifest.json`));
+  const kastBackup = JSON.parse(readFileSync(`${kastEvidence}/source-drive-verification.json`));
+  requireProof(kastReview.status === 'passed-local' && kastReview.baselineSourceCommit === kastRelease.baselineSourceCommit && kastReview.fullLocalRegressionPassed === true && kastReview.preservationPassed === true);
+  requireProof(kastFiles.every(file => kastSources.some(row => row.path === file && row.sha256 === approval.files[file])));
+  requireProof(kastBackup.parentVerified === true && kastBackup.downloadedByteIdentical === true && kastBackup.zipCrcVerified === true && kastBackup.manifestEntriesVerified === kastFiles.length);
+  for (const name of ['owner-request', 'review', 'source-manifest', 'source-drive-verification', 'live-baseline', 'preservation']) requireProof(approval.files[`${kastEvidence}/${name}.json`]);
   const kanPrevious = JSON.parse(readFileSync(kanPreviousPath));
   const kanRelease = approval.kanRelease;
   const kanEvidence = 'docs/klink-kan-publication-20261024';
@@ -94,7 +118,7 @@ try {
   const kanSources = JSON.parse(readFileSync(`${kanEvidence}/source-manifest.json`));
   const kanBackup = JSON.parse(readFileSync(`${kanEvidence}/source-drive-verification.json`));
   requireProof(kanReview.status === 'passed-local' && kanReview.baselineSourceCommit === kanRelease.baselineSourceCommit && kanReview.fullLocalRegressionPassed === true && kanReview.preservationPassed === true);
-  requireProof(kanFiles.every(file => kanSources.some(row => row.path === file && row.sha256 === approval.files[file])));
+  requireProof(kanFiles.every(file => kanSources.some(row => row.path === file && row.sha256 === kastPrevious.files[file])));
   requireProof(kanBackup.parentVerified === true && kanBackup.downloadedByteIdentical === true && kanBackup.zipCrcVerified === true && kanBackup.manifestEntriesVerified === kanFiles.length);
   for (const name of ['owner-request', 'review', 'source-manifest', 'source-drive-verification', 'live-baseline', 'preservation']) requireProof(approval.files[`${kanEvidence}/${name}.json`]);
   const workspacePrevious = JSON.parse(readFileSync(workspacePreviousPath));
