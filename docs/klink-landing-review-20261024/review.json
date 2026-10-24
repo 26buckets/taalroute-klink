@@ -1,6 +1,6 @@
 {
   "status": "passed-local",
-  "baselineSourceCommit": "f361c87da2a99e5a8ef585cc8df323b9951a140e",
+  "baselineSourceCommit": "a7dea7abbbba21456a637ceb93aa527b2cba68f0",
   "targetedRegressionPassed": true,
   "preservationPassed": true,
   "simulatedUserReview": true,
@@ -10,7 +10,7 @@
   "actualUserInterviews": false,
   "checks": "Five landing widths, 320x568 primary action, keyboard focus and Enter, invalid/valid access codes, 15 lesson entrances, direct teacher/manual/contact links, disclosure contents, photo geometry, official logo and aligned footer; 15 accessibility/layout states, 18 matching-card states, lifecycle/audio/microphone/storage behavior, types/lint/build.",
   "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
-  "latestSourceRegression": "docs/klink-matching-cards-publication-20261024/review.json",
+  "latestSourceRegression": "docs/klink-groep6-publication-20261024/review.json",
   "logs": [
     {
       "path": "types.log",
@@ -22,7 +22,7 @@
     },
     {
       "path": "build.log",
-      "sha256": "c42a59ae69021db130bfe20da23503c832042e83c3aafd3ff72d00e96cdac694"
+      "sha256": "fdd7beaf3b0a9fc4f0e69adc1afa0a639a02c1d2a528a4a8790503e41feb7445"
     },
     {
       "path": "round1.log",
@@ -30,6 +30,10 @@
     },
     {
       "path": "final-landing.log",
+      "sha256": "7672ebece7d82401d69d59d03e05e54ebf42713538bceb5b7343d5d54902254e"
+    },
+    {
+      "path": "integrated-landing.log",
       "sha256": "7672ebece7d82401d69d59d03e05e54ebf42713538bceb5b7343d5d54902254e"
     },
     {
@@ -43,11 +47,17 @@
     {
       "path": "lifecycle.log",
       "sha256": "4c7e24c294e59c85c89c7cc4146c4926c60b229ac8c1d9ad2cfa9d68f19f6ede"
+    },
+    {
+      "path": "group6.log",
+      "sha256": "fe7345f07fd51500303d8e8d94e5c6518dd6b4d7e8094e0531f4adfa4f7d54dd"
     }
   ],
   "limits": [
     "Simulated perspectives, no real user study or conversion measurements.",
     "Existing media/content review limits remain.",
     "No prices, license terms, complete-method coverage or outcome guarantees invented."
-  ]
+  ],
+  "integration": "Latest group-six runtime preserved byte for byte. After rebase, landing, types/lint/build and 57 representative newest guided steps passed locally.",
+  "latestGuidedSteps": 57
 }
