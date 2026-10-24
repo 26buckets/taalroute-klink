@@ -78,8 +78,11 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
   const selection = { level: location.level, help: location.help };
   const back = collection ? toCollections : activity ? () => open({ chapter: chapter!.id, ...selection }) : chapter ? () => open(selection) : onBack;
   return <div className={`learner-page cp-chapters ${collection ? 'cp-chapter-playing' : ''}`} data-chapter-page={chapter?.id ?? 'all'}>
-    <button className="text-back" onClick={back}><ArrowLeft />{collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'}</button>
-    <header className="content-page-heading"><div>{chapter && <p className={`cp-menu-location${collection ? ' sr-only' : ''}`} aria-label="Je bent hier">Oefenen{activity ? ` · ${chapter.title}` : ''}</p>}<h1 ref={heading} tabIndex={-1}>{title}</h1>{collection && exerciseSetHelp(collection.exercises) === 'guided' && <p>Samen met je docent.</p>}</div></header>
+    <header className="cp-context-header">
+      <button className="text-back" onClick={back} aria-label={collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'} title={collection ? 'Andere opdracht' : activity ? chapter!.title : chapter ? 'Oefenen' : 'Terug'}><ArrowLeft /></button>
+      <h1 ref={heading} tabIndex={-1}>{title}</h1>
+      <small className="cp-context-meta">{collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activity ? ` · ${chapter.title}` : ''}` : ''}</small>
+    </header>
     {!collection && <MyRoute axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
     {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, level: settings[chapterRouteAxis(id)] })} />}
     {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{activities.map(item => {

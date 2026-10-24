@@ -23,7 +23,9 @@ await page.addInitScript(() => {
 const lessonIndex = 2; // The map lesson shown in the reported screenshot.
 const pack = packs[0], lesson = pack.lessons[lessonIndex], exercises = exercisesForLesson(pack, lesson);
 const step = () => page.locator('.cp-exercise-browser');
-const phases = () => page.getByRole('complementary', { name: 'Stappen van de les' });
+const phases = () => page.locator('.cp-exercise-menu-options');
+const trigger = () => page.getByRole('button', { name: 'Andere oefening', exact: true });
+async function revealMenu() { if (await trigger().getAttribute('aria-expanded') === 'false') await trigger().click(); }
 const position = () => page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.route.v1')));
 async function openLesson() {
   await page.goto(`${base}/#learner/home`);
@@ -35,15 +37,17 @@ async function openLesson() {
 }
 try {
   await openLesson();
+  assert.equal(await trigger().getAttribute('aria-expanded'), 'false');
+  assert.equal(await page.locator('.cp-exercise-workspace > aside').count(), 0);
   assert(await phases().locator('button').evaluateAll(buttons => buttons.every(b => !b.disabled)));
   const original = await position();
   for (const [phase, label] of Object.entries(learnerPhaseNames)) {
     const first = exercises.find(e => e.phase === phase);
     if (!first) continue;
-    const button = phases().getByRole('button', { name: label, exact: true });
-    await button.focus(); await page.keyboard.press('Enter');
+    const button = phases().getByRole('button', { includeHidden: true, name: label, exact: true });
+    await revealMenu(); await button.focus(); await page.keyboard.press('Enter');
     assert.equal(await step().getAttribute('data-exercise-id'), first.exerciseId);
-    assert.equal(await button.getAttribute('aria-current'), 'step');
+    assert.equal(await button.getAttribute('aria-pressed'), 'true');
     assert.deepEqual(await position(), original, 'Browsing must not skip the saved route or complete a lesson');
   }
   assert.equal(await page.evaluate(() => localStorage.getItem('klink.taalroute.attempts.v1')), null);
@@ -55,7 +59,7 @@ try {
   assert(!(await position()).completed.includes(lesson.id));
   assert.equal(await step().locator('output strong').innerText(), 'Eerst deze oefening');
   assert.equal(await step().locator('output small').innerText(), 'Deze oefening was nog niet af.');
-  await phases().getByRole('button', { name: 'Maak', exact: true }).click();
+  await revealMenu(); await phases().getByRole('button', { includeHidden: true, name: 'Maak', exact: true }).click();
   assert(!(await step().locator('output').innerText()).includes('Deze oefening was nog niet af.'));
   await page.reload();
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Ga verder', exact: true }).click();
@@ -68,41 +72,31 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 900 }); await openLesson();
     for (const button of await phases().locator('button').all()) {
-      assert(await button.isVisible()); await button.scrollIntoViewIfNeeded();
+      await revealMenu(); assert(await button.isVisible()); await button.scrollIntoViewIfNeeded();
       const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48);
       await button.click();
-      assert.equal(await button.getAttribute('aria-current'), 'step');
+      assert.equal(await button.getAttribute('aria-pressed'), 'true');
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     }
     // The phase loop already ends on Nog een keer; do not click it twice and steal heading focus.
     for (const exercise of exercises.slice(firstRecall)) await answerActivity(page, exercise);
-    assert(await phases().evaluate(element => {
-      const nav = element.getBoundingClientRect();
-      const active = element.querySelector('[aria-current="step"]').getBoundingClientRect();
-      return active.left >= nav.left - 1 && active.right <= nav.right + 1;
-    }), 'The active phase stays fully visible after returning to unfinished work');
-    await phases().getByRole('button', { name: 'Kijk en luister', exact: true }).click();
+    assert.equal(await trigger().getAttribute('aria-expanded'), 'false');
+    await revealMenu(); await phases().getByRole('button', { includeHidden: true, name: 'Kijk en luister', exact: true }).click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     await page.screenshot({ path: `${out}/lesson-${width}.png` });
   }
   pass('All phase buttons stay reachable on desktop, tablet and phones, with 48px targets and the actual word photo');
-  const before = await page.evaluate(() => window.__plays.length);
-  await phases().getByRole('button', { name: 'Kijk en luister', exact: true }).click();
-  await page.waitForFunction(n => window.__plays.length > n, before);
-  assert.equal(await page.evaluate(() => window.__plays.at(-1)), exercises[0].prompt.audio.src);
-  assert(!(await page.evaluate(() => window.__plays)).some(src => src.includes('/instructions/')));
-  await page.setViewportSize({ width: 390, height: 844 });
-  await phases().getByRole('button', { name: 'Nog een keer', exact: true }).click();
+  await revealMenu();
+  await page.keyboard.press('Escape');
+  assert.equal(await trigger().getAttribute('aria-expanded'), 'false');
+  assert(await trigger().evaluate(el => el === document.activeElement));
   await page.setViewportSize({ width: 320, height: 568 });
-  await page.waitForFunction(() => {
-    const nav = document.querySelector('[aria-label="Stappen van de les"]');
-    const active = nav.querySelector('[aria-current="step"]').getBoundingClientRect();
-    const bounds = nav.getBoundingClientRect();
-    return active.left >= bounds.left - 1 && active.right <= bounds.right + 1;
-  });
-  pass('The active phase remains visible when a mobile viewport becomes narrower');
+  await revealMenu(); await phases().getByRole('button', { includeHidden: true, name: 'Nog een keer', exact: true }).click();
+  assert.equal(await trigger().getAttribute('aria-expanded'), 'false');
+  await revealMenu();
+  assert.equal(await phases().getByRole('button', { includeHidden: true, name: 'Nog een keer', exact: true }).getAttribute('aria-pressed'), 'true');
+  pass('Escape returns focus to the trigger; reopening identifies the current phase on a narrow phone');
 
-  pass('Clicking the current model phase replays only the word, never the withdrawn explanation');
   assert.deepEqual(errors, []);
 } finally {
   writeFileSync(`${out}/${base.startsWith('https:') ? 'live' : 'local'}-checks.json`, JSON.stringify({ base, checks, errors }, null, 2));

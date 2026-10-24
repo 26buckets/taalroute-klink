@@ -29,6 +29,10 @@ async function open(pack = packs[0]) {
   await page.getByRole('button', { name: 'Woordenmix', exact: true }).click();
   await page.locator('.is-mixed-round, .cp-mixed-complete').waitFor();
 }
+async function chooseMode(label) {
+  await page.getByRole('button', { name: 'Andere oefening', exact: true }).click();
+  await page.locator('.cp-exercise-menu-options').getByRole('button', { name: label, exact: true }).click();
+}
 async function exercise(pack, mode) {
   const session = await page.evaluate(key => JSON.parse(localStorage.getItem(key)), mixedStorageKey(pack.id, mode));
   const records = withMixedRetries(createMixedRound(pack, mode, session.seed), session.retries);
@@ -47,7 +51,7 @@ async function answerChoice(item) {
 async function next() { await page.locator('.cp-exercise-feedback > button').click(); }
 try {
   await open();
-  assert.equal(await page.locator('.cp-mixed-modes button').count(), 4);
+  assert.equal(await page.locator('.cp-exercise-menu-options button').count(), 4);
   assert(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).isVisible());
   const unchanged = JSON.stringify({ completed: [packs[0].lessons[0].id], position: { packageId: packs[0].id, lessonId: packs[0].lessons[1].id, exerciseId: packs[0].lessons[1].guidedExerciseIds[0] } });
   await page.evaluate(value => localStorage.setItem('klink.taalroute.route.v1', value), unchanged);
@@ -74,7 +78,7 @@ try {
   pass('All six targets, bounded retry, stable choices, independent resume and unchanged lesson progress');
 
   await page.evaluate(() => { window.__played = []; });
-  await page.getByRole('button', { name: 'Lees en kies', exact: true }).click();
+  await chooseMode('Lees en kies');
   await pause();
   const read = await exercise(packs[0], 'read');
   await page.waitForTimeout(150);
@@ -89,7 +93,7 @@ try {
   assert.equal(assisted.helpUsed, true); assert.equal(assisted.independentReading, false);
   pass('Reading target is visible without automatic word audio; requested audio is recorded as help');
 
-  await page.getByRole('button', { name: 'Koppel', exact: true }).click(); await pause();
+  await chooseMode('Koppel'); await pause();
   const match = await exercise(packs[0], 'match');
   const sources = page.locator('.cp-match-board > div').nth(0).locator('button');
   const targets = page.locator('.cp-match-board > div').nth(1).locator('button');
@@ -105,7 +109,7 @@ try {
   assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Goed'));
   pass('Three words and photos share a board; keyboard/tap pairing and wrong-answer recovery preserve correct pairs');
 
-  await page.getByRole('button', { name: 'Maak het woord', exact: true }).click(); await pause();
+  await chooseMode('Maak het woord'); await pause();
   const build = await exercise(packs[0], 'build');
   assert.equal(await page.locator('.cp-example-listen').count(), 0);
   await page.getByRole('button', { name: 'Help', exact: true }).click();
@@ -116,14 +120,16 @@ try {
   pass('Existing word-building player works with optional, explicitly recorded help');
 
   for (const label of ['Luister en kies', 'Lees en kies', 'Koppel', 'Maak het woord']) {
-    await page.getByRole('button', { name: label, exact: true }).click();
+    await chooseMode(label);
     if (await page.locator('.cp-mixed-complete').count()) await page.getByRole('button', { name: 'Nog een ronde', exact: true }).click();
     for (const [width,height] of [[1366,950],[768,950],[390,844],[320,568],[667,375]]) {
       await page.setViewportSize({width,height});
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${label} overflow ${width}`);
-      for (const button of await page.locator('.cp-mixed-modes button').all()) {
+      await page.getByRole('button', { name: 'Andere oefening', exact: true }).click();
+      for (const button of await page.locator('.cp-exercise-menu-options button').all()) {
         assert(await button.evaluate(el => el.getBoundingClientRect().height >= 48));
       }
+      await page.getByRole('button', { name: 'Andere oefening', exact: true }).click();
       await page.locator('.cp-exercise-feedback > button').scrollIntoViewIfNeeded();
   assert(await page.locator('.cp-exercise-feedback output').evaluate(el => el.getBoundingClientRect().width >= 100), `${label} feedback remains readable ${width}`);
       assert(await page.locator('.cp-exercise-feedback > button').evaluate(el => {
@@ -135,11 +141,11 @@ try {
   }
   pass('Four modes retain readable controls, no horizontal overflow and reachable feedback on five viewport sizes');
   await page.setViewportSize({width:1366,height:950});
-  for (const pack of packs.slice(1)) { await open(pack); assert.equal(await page.locator('.cp-mixed-modes button').count(), 4); }
+  for (const pack of packs.slice(1)) { await open(pack); assert.equal(await page.locator('.cp-exercise-menu-options button').count(), 4); }
   pass('Same mixed page is reachable in all fifteen original sections');
 
   await page.evaluate(() => { window.__audioFail = true; });
-  await page.getByRole('button', { name: 'Maak het woord', exact: true }).click();
+  await chooseMode('Maak het woord');
   await page.locator('.cp-audio-retry').waitFor();
   assert(await page.locator('.cp-tile-bank button').first().isDisabled());
   await page.evaluate(() => { window.__audioFail = false; });
@@ -156,7 +162,7 @@ try {
 
   await page.addInitScript(() => { Storage.prototype.getItem = () => { throw Error('blocked'); }; Storage.prototype.setItem = () => { throw Error('blocked'); }; });
   await open();
-  assert.equal(await page.locator('.cp-mixed-modes button').count(), 4);
+  assert.equal(await page.locator('.cp-exercise-menu-options button').count(), 4);
   pass('Blocked storage does not prevent mixed practice');
   assert.deepEqual(errors, []);
 } finally {

@@ -28,9 +28,9 @@ try {
   await trigger().focus();await page.keyboard.press('Enter');assert.equal(await trigger().getAttribute('aria-expanded'),'true');
   assert((await choice('sound-compare').innerText()).includes('Vergelijk klanken'));
   for(const id of ['meet','listen','read','build-model','sound-compare','speak']) {
-   const button=choice(id);await button.scrollIntoViewIfNeeded();
+   const button=choice(id);await button.evaluate(el=>el.scrollIntoView({block:'center',behavior:'instant'}));
    const box=await button.boundingBox();assert(box.width>=48&&box.height>=48);
-   assert(await button.evaluate(el=>{const r=el.getBoundingClientRect();return el.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));}));
+   assert(await button.evaluate(el=>{const r=el.getBoundingClientRect();return el.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2));}), `${width}x${height}: ${id} is reachable`);
   }
   await choice('meet').focus();await page.keyboard.press('Escape');assert.equal(await trigger().getAttribute('aria-expanded'),'false');assert(await trigger().evaluate(el=>el===document.activeElement));
   await trigger().click();await choice('listen').click();await page.waitForURL(/\/listen\//);await pause();

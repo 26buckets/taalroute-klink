@@ -19,6 +19,7 @@ import {
   ArrowLeft,
   ArrowRight,
   Check,
+Eye,
   CircleAlert,
   FileText,
   Hand,
@@ -29,10 +30,11 @@ import {
   RefreshCw,
   RotateCcw,
   Shapes,
+Search,
   Volume2,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode, type MouseEvent } from 'react';
+import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { stopMedia } from '@/components/product/shared';
 import { StandardPracticeSurface } from './standard-practice-surface';
 import { orderAccepted } from '@/lib/standard-player-contract';
@@ -168,7 +170,6 @@ export function PackageExerciseBrowser({
   });
   const currentId = useRef('');
   const taskHeading = useRef<HTMLHeadingElement>(null);
-  const phaseNavigation = useRef<HTMLElement>(null);
   const exerciseStage = useRef<HTMLDivElement>(null);
   const completionHeading = useRef<HTMLHeadingElement>(null);
   const records = exercises.filter((exercise) => exercise.componentId === familyId);
@@ -250,13 +251,6 @@ export function PackageExerciseBrowser({
   useLayoutEffect(() => {
     if (!guided || !exerciseId) return;
     reportPosition(exerciseId);
-    const navigation = phaseNavigation.current;
-    if (!navigation) return;
-    const revealPhase = () => navigation.querySelector('[aria-current="step"]')?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' });
-    revealPhase();
-    const resize = new ResizeObserver(revealPhase);
-    resize.observe(navigation);
-    return () => resize.disconnect();
   }, [exerciseId, guided]);
   useEffect(() => {
     stopMedia();
@@ -298,8 +292,7 @@ export function PackageExerciseBrowser({
     if (target) openExercise(target.exerciseId);
   }
 
-  function openPhase(event: MouseEvent<HTMLButtonElement>) {
-    const phase = event.currentTarget.dataset.phase;
+  function openPhase(phase: string) {
     const index = exercises.findIndex(item => item.phase === phase);
     if (index < 0) return;
     if (index === guidedIndex) {
@@ -391,6 +384,13 @@ export function PackageExerciseBrowser({
   const isIndividual = (item: PackageExercise) => item.mode === 'sentence-question' || item.mode.startsWith('connected-');
   const modes = records.filter((item, index, all) => isIndividual(item) || all.findIndex(other => other.mode === item.mode) === index);
   const questionModes = modes.filter(item => item.mode === 'sentence-question');
+  const phaseIcons = { meet: Eye, recognize: Search, make: PencilLine, use: Shapes, recall: RefreshCw };
+  const menu = exerciseMenu ?? (!practiceRound ? {
+    value: guided ? exercise.phase ?? '' : familyId,
+    options: guided
+      ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([id, label]) => ({ id, label, icon: phaseIcons[id as keyof typeof phaseIcons] ?? Shapes }))
+      : exerciseTypes.map(type => ({ id: type.id, label: type.label, icon: Shapes })),
+  } : undefined);
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
               <h3 ref={taskHeading} tabIndex={-1}>{instructionAudioEnabled && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
@@ -412,19 +412,9 @@ export function PackageExerciseBrowser({
       </header>
 
       <div className="cp-exercise-workspace">
-        {!guided && <label className="cp-family-picker">Oefening<select value={familyId} onChange={event => chooseFamily(event.target.value)}>{exerciseTypes.map(type => <option key={type.id} value={type.id}>{type.label}</option>)}</select></label>}
-        {!practiceRound && <aside ref={phaseNavigation} aria-label={guided ? 'Stappen van de les' : 'Soort oefening'}>
-          {guided ? Object.entries(learnerPhaseNames).filter(([phase]) => exercises.some(item => item.phase === phase)).map(([phase, label]) => <button key={phase} type="button" data-phase={phase} onClick={openPhase} className={exercise.phase === phase ? 'active' : ''} aria-current={exercise.phase === phase ? 'step' : undefined}><span aria-hidden="true">{exercise.phase === phase ? '•' : '–'}</span><span><strong>{label}</strong></span></button>) : exerciseTypes.map((type, index) => (
-            <button key={type.id} className={familyId === type.id ? 'active' : ''} disabled={guided} aria-current={familyId === type.id ? 'step' : undefined} onClick={() => chooseFamily(type.id)}>
-              <span aria-hidden="true">{guided ? familyId === type.id ? '•' : '–' : String(index + 1).padStart(2, '0')}</span>
-                <span><strong>{type.label}</strong>{!guided && <small>{type.count} {type.count === 1 ? 'oefening' : 'oefeningen'}</small>}</span>
-            </button>
-          ))}
-        </aside>}
-
         <div className="cp-exercise-main">
           <header className="cp-exercise-record-head">
-            {exerciseMenu ? <ExerciseMenu {...exerciseMenu} onOpenChange={setExerciseMenuOpen} heading={exerciseHeading} controls={exerciseControls} /> : <>{exerciseHeading}{exerciseControls}</>}
+            {menu ? <ExerciseMenu value={menu.value} options={menu.options} onSelect={id => { if (exerciseMenu) exerciseMenu.onSelect(id); else if (guided) openPhase(id); else chooseFamily(id); }} onOpenChange={setExerciseMenuOpen} heading={exerciseHeading} controls={exerciseControls} /> : <>{exerciseHeading}{exerciseControls}</>}
           </header>
 
           <div className="cp-exercise-stage" ref={exerciseStage}>

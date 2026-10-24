@@ -153,11 +153,11 @@ await evaluate(
   "[...document.querySelectorAll('.cp-tabs button')].find((button) => button.textContent.includes('Oefeningen')).click()",
 );
 await waitFor("Boolean(document.querySelector('.cp-exercise-browser'))");
-if (await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button').length") !== 18)
+if (await evaluate("document.querySelectorAll('.cp-exercise-menu-options button').length") !== 18)
   throw new Error('De bronspeler toont niet alle 18 componentfamilies.');
 
 for (let index = 0; index < 18; index += 1) {
-  await evaluate(`document.querySelectorAll('.cp-exercise-workspace > aside button')[${index}].click()`);
+  await evaluate(`document.querySelectorAll('.cp-exercise-menu-options button')[${index}].click()`);
   await waitFor("Boolean(document.querySelector('.cp-task-card'))");
   const title = await evaluate("document.querySelector('.cp-exercise-record-head strong')?.textContent");
   if (!title) throw new Error(`Componentfamilie ${index + 1} heeft geen oefening.`);
@@ -166,7 +166,7 @@ await evaluate("document.querySelector('.cp-exercise-browser').scrollIntoView({b
 await new Promise((resolve) => setTimeout(resolve, 120));
 await screenshot('03-bronspeler-18-families-desktop');
 
-await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button')[14].click()");
+await evaluate("document.querySelectorAll('.cp-exercise-menu-options button')[14].click()");
 await waitFor("Boolean(document.querySelector('.cp-memory-grid'))");
 const gameModes = [];
 for (let index = 0; index < 5; index += 1) {
@@ -184,7 +184,7 @@ await evaluate("document.querySelectorAll('.cp-package-grid > button')[1].click(
 await waitFor("document.querySelectorAll('.cp-start-lesson').length === 4");
 await evaluate("document.querySelectorAll('.cp-start-lesson')[1].click()");
 await waitFor("Boolean(document.querySelector('.cp-lesson-player .cp-task-card'))");
-const cp002LessonSteps = await evaluate("document.querySelectorAll('.cp-exercise-workspace > aside button').length");
+const cp002LessonSteps = await evaluate("document.querySelectorAll('.cp-exercise-menu-options button').length");
 if (cp002LessonSteps < 8 || cp002LessonSteps > 16)
   throw new Error(`CP002-les heeft ${cp002LessonSteps} stappen; verwacht 8 tot en met 16.`);
 const firstProgress = await evaluate("document.querySelector('.cp-exercise-record-head nav b').textContent");

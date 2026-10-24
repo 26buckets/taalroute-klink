@@ -220,8 +220,8 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
   const visibleWords = allPackageWords.filter((word) => filter === 'all' || filter === word.packageId || (filter === 'saved' && savedWordIds.includes(word.id)));
   return (
     <div className="learner-page word-library-page">
-      <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
-      <header className="content-page-heading"><div><h1>Alle woorden</h1><p>Tik en luister.</p></div><div className="content-count"><strong>{allPackageWords.length}</strong><span>woorden</span></div></header>
+      <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Alle woorden</h1><small className="cp-context-meta">{visibleWords.length} woorden</small></header>
+      <p>Tik en luister.</p>
       <div className="word-filters" aria-label="Filter woorden">
         <label>Kies een onderdeel<select value={filter} onChange={event => setFilter(event.target.value)}><option value="all">Alle woorden</option>{contentPackages.map((pack, index) => <option key={pack.id} value={pack.id}>{index + 1}. {learnerListName(pack)}</option>)}<option value="saved">Bewaard ({savedWordIds.length})</option></select></label>
       </div>
@@ -243,8 +243,8 @@ function ReviewQueue({ savedWordIds, completed, onAttempt, onWords, onBack, onTo
   if (mixed) return <div className="learner-page"><PackageMixedPractice pack={pack} onAudio={(source, options) => source ? playMedia(source, options) : false} onBack={() => setMixed(false)} onAttempt={onAttempt} /></div>;
   return (
     <div className="learner-page review-page">
-      <button className="text-back" onClick={onBack}><ArrowLeft />Terug</button>
-      <header className="content-page-heading"><div><span className="eyebrow">Herhalen</span><h1>Nog een keer</h1><p>Tik en luister.</p></div><div className="content-count"><strong>{items.length}</strong><span>bewaard</span></div></header>
+      <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Nog een keer</h1><small className="cp-context-meta">{items.length} bewaard</small></header>
+      <p>Tik en luister.</p>
       {hasScheduled && <div className="cp-review-mixed"><a className="primary-button" href={chapterHash({ chapter: 'repeat', activity: 'learning-review', level: 'all' })} onClick={stopMedia}><RefreshCw aria-hidden="true" />Oefen opnieuw<ArrowRight aria-hidden="true" /></a></div>}
       {pack.words.length >= 2 && <div className="cp-review-mixed"><button className="primary-button" onClick={() => { stopMedia(); setMixed(true); }}><RefreshCw aria-hidden="true" />Woordenmix<ArrowRight aria-hidden="true" /></button></div>}
       {items.length === 0 ? (pack.words.length >= 2 || hasScheduled ? null : <section className="honest-empty"><RefreshCw /><h2>Kies eerst een woord</h2><p>Tik bij een woord op Bewaar.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section>) : <section className="review-word-list"><header><div><span className="eyebrow"></span><h2>Jouw woorden</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial">{word.word.slice(0, 1)}</span>}<span><small>{learnerListName(getPackage(word.packageId))}</small><strong>{wordLabel(word)}</strong><small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
