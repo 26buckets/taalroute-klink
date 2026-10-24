@@ -1,0 +1,40 @@
+{
+  "application": "Klink",
+  "url": "https://klink.taalroute.nl",
+  "publishedSourceCommit": "2a91ffb0f2329827019ec593cc70eb62c8cd457d",
+  "workerVersion": "e0e06f2a-4797-4c34-9494-e3b7e217e908",
+  "baselineSourceCommit": "6f7de9248c933e538a2fec928694db726158bbf4",
+  "canonicalBranch": "main",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-10-24T11:40:28.213Z",
+    "sourceCommit": "2a91ffb0f2329827019ec593cc70eb62c8cd457d",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "status": "published-and-verified",
+  "verifiedAt": "2026-10-24T11:44:25.957113+00:00",
+  "authorization": "docs/klink-owner-release-beginners-20261024.json",
+  "sourceBackup": "docs/klink-beginners-publication-20261024/source-drive-verification.json",
+  "publicationProofTests": 23,
+  "localUnitTests": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 1
+  },
+  "guidedStepsVerifiedLocallyAndLive": 102,
+  "liveMediaChecked": 2679,
+  "liveClientAndMediaByteIdentical": true,
+  "scope": "Accumulated beginner instructions, mobile readability, initial and following letter help, demos, quiet completion, manual pace through pak/kat, next lesson and unfinished-step explanation. Retains latest published exercise menu and official logo D.",
+  "limitations": [
+    "Browser emulation, not physical phones or learner pilot.",
+    "Existing broader content and pronunciation review statuses remain unchanged.",
+    "A long single-renderer scene test crashed identically on the current published baseline and locally after repeated full-app reloads. Every scene remains tested using isolated collection contexts; no long-session memory stress claim."
+  ],
+  "githubActions": "No workflows present; all heavy checks ran locally."
+}

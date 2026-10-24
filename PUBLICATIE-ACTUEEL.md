@@ -2,6 +2,23 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `2a91ffb0f2329827019ec593cc70eb62c8cd457d` op canonieke branch `main`.
+Worker-versie: `e0e06f2a-4797-4c34-9494-e3b7e217e908`.
+
+De opgebouwde beginnersverbeteringen staan online, inclusief pak · kat: zelf Verder kiezen, letterhulp en Kijk nog eens, voordoen, leesbare mobiele bediening, rustige lesafronding en uitleg bij terugkeren na vooruit springen. De laatst gepubliceerde inklapbare oefenkeuze, gedeelde header, logo D, inhoud, media, routes en opslag blijven behouden.
+
+Register: `docs/klink-publication-beginners-20261024.json`; exacte vrijgave: `docs/klink-owner-release-beginners-20261024.json`. Alle 102 begeleide stappen zijn lokaal en live doorlopen. De bestaande lokale regressiedekking, 145 geslaagde unitcontroles (één bestaande broncontrole overgeslagen), 23 publicatiebewijstests, media- en audiometadatacontroles zijn afgerond. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk. Bronback-up is teruggelezen en gecontroleerd in de bestaande Drive-projectmap; zie `docs/klink-beginners-publication-20261024/source-drive-verification.json`.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Een lange reeks volledige herlaadacties crashte zowel op de vorige liveversie als lokaal. De volledige routecontrole slaagt met geïsoleerde testcontexten per verzameling; langdurige geheugenbelasting blijft een onderzoekspunt. Bestaande inhoudelijke beoordelingsgrenzen en de audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud de bestaande publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicaties (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `6f7de9248c933e538a2fec928694db726158bbf4` op canonieke branch `main`.
 Worker-versie: `39763c79-c443-4368-b31a-31ef49a84c5a`.
 
