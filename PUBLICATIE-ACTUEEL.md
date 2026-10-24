@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `0d110cce3152011d72e443c7b2f1f4ced5fc5ca1` op canonieke branch `main`.
+Worker-versie: `b0fd439c-1738-4e5d-8921-bf340629dbdd`.
+
+De gedeelde antwoordkaders hebben even hoge rijen. Bij voorgelezen antwoorden is de ruimte voor het geluidsicoon vooraf gereserveerd, zodat woorden niet omhoog springen. De uitleg onder tekstvragen verschijnt pas na een goed antwoord op een vooraf gereserveerde plaats. Bingo krijgt op smalle schermen twee kolommen, zodat onder meer chauffeur als heel woord leesbaar blijft. Kiezen, luisteren, fotokeuzes, woordkeuzes, bingo, memory, omdraaikaarten, klankvergelijking en tekst-/zinsvragen zijn gecontroleerd. Huidige uitstraling, nieuwste neus/buik-lessen, startpagina, koppelkaarten, media, routes, scoring, opgeslagen gegevens en sessiestabiliteit blijven behouden.
+
+Register: `docs/klink-publication-exercise-frames-20261025.json`; vrijgave: `docs/klink-owner-release-exercise-frames-20261025.json`. Lokaal en live: 66 kaartopzetten in elf oefensoorten, vier schermformaten en menu open/ingeklapt, plus twaalf voorleesstatussen. Lokaal ook 57 nieuwste groep-zevenstappen en 57 voorgaande groep-zesstappen met echte audio, 18 koppelkaarttoestanden, vijf model-/laad-/audiofoutformaten, werkbladen en lifecyclecontrole. De verborgen uitleg is ook op zichtbaarheid en aria-hidden gecontroleerd. Types, lint en 44 publicatiebewijstests slagen. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. De bronback-up staat gecontroleerd in de bestaande Drive-projectmap.
+
+Controlegrenzen: browserautomatisering, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `944782134a704f038be87c8e90c1ccf94ab84b5f` op canonieke branch `main`.
 Worker-versie: `7ca03e1a-2d1b-46d2-b231-1fa6345ee2af`.
 
