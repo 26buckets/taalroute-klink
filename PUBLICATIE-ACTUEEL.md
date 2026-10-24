@@ -2,6 +2,23 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `a648f1699f257f9db15638810e886527a4000096` op canonieke branch `main`.
+Worker-versie: `332f7b60-e7c4-49a1-aef0-9cd2f4155c65`.
+
+Ook de les **in** gebruikt nu het eigen tempo van de cursist: iedere opdracht wacht op Verder, met letterhulp en Kijk nog eens. De bestaande indeling, inhoud, beelden, audio, menu's, routes en opslag blijven behouden. De docentenhandleiding noemt deze les nu ook.
+
+Register: `docs/klink-publication-in-20261024.json`; exacte vrijgave: `docs/klink-owner-release-in-20261024.json`. Alle 112 begeleide stappen, inclusief de 10 stappen van in, zijn lokaal en live doorlopen. De volledige lokale review- en vervolgreeks, aanvullende menu-/header-/scroll-/toegankelijkheidscontroles, 145 unittests (één bestaande broncontrole overgeslagen) en 24 publicatiebewijstests slagen. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. Bronback-up teruggelezen en gecontroleerd: `docs/klink-in-publication-20261024/source-drive-verification.json`.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. De reeds bekende vastloper bij zeer lange reeksen herladen in één browserproces blijft een onderzoekspunt; de bestaande volledige scènecontrole gebruikt geïsoleerde testcontexten. Inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `2a91ffb0f2329827019ec593cc70eb62c8cd457d` op canonieke branch `main`.
 Worker-versie: `e0e06f2a-4797-4c34-9494-e3b7e217e908`.
 
