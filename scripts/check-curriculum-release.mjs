@@ -16,7 +16,9 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-maintenance-20261024.json';
+const authorizationPath = 'docs/klink-owner-release-landing-footer-20261024.json';
+const landingPreviousPath = 'docs/klink-owner-release-maintenance-20261024.json';
+const landingFiles = ['app/landing.css', 'components/product/entry-design.tsx', 'scripts/check-curriculum-release.mjs', 'scripts/test-landing-browser.mjs', 'scripts/test-publication-proof.mjs'];
 const maintenancePreviousPath = 'docs/klink-owner-release-wordbuild-20261019.json';
 const maintenanceFiles = ["app/docenten/[chapter]/not-found.tsx", "app/docenten/[chapter]/page.tsx", "app/docenten/page.tsx", "app/docenten/wiki.css", "app/landing.css", "components/product/compact-learner-app.tsx", "components/product/manual-navigation.tsx", "components/ui/breadcrumb.tsx", "components/ui/button-group.tsx", "components/ui/carousel.tsx", "components/ui/chart.tsx", "components/ui/field.tsx", "components/ui/input-group.tsx", "components/ui/input-otp.tsx", "components/ui/item.tsx", "components/ui/label.tsx", "components/ui/pagination.tsx", "components/ui/spinner.tsx", "hooks/use-mobile.ts", "scripts/audit-diglin-menus.mjs", "scripts/check-curriculum-release.mjs", "scripts/export-practice-gap-inventory.mjs", "scripts/test-demo-api-disabled.mjs", "scripts/test-group-practice-browser.mjs", "scripts/test-group-practice.mjs", "scripts/test-maintenance-browser.mjs", "scripts/test-maintenance-components.mjs", "scripts/test-publication-proof.mjs", "scripts/test-standard-players-browser.mjs"];
 const wordbuildPreviousPath = 'docs/klink-owner-release-smaller-header-20261019.json';
@@ -43,6 +45,19 @@ try {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
+  const landing = approval.landingRelease;
+  const landingPrevious = JSON.parse(readFileSync(landingPreviousPath));
+  requireProof(landing?.approvedBy === 'Nico' && landing.publicationApproved === true);
+  requireProof(landing.userRequest === 'Ja, voer dat nu uit: Taalroute-vermelding onderaan, de losse link ‘Voor begeleiders’ weg en het hoofdvlak hoger en centraal. Behoud de rest, controleer het en publiceer het daarna.');
+  requireProof(landing.previousAuthorization === landingPreviousPath && landing.baselineSourceCommit === 'ae860b9c36271539a97d3205b9663e31dda187d7');
+  requireProof(JSON.stringify(landing.changedFiles) === JSON.stringify(landingFiles));
+  requireProof(landingFiles.every(file => approval.files[file]) && approval.files[landingPreviousPath]);
+  execFileSync('git', ['merge-base', '--is-ancestor', landing.baselineSourceCommit, 'HEAD']);
+  requireProof(createHash('sha256').update(execFileSync('git', ['show', `${landing.baselineSourceCommit}:${landingPreviousPath}`])).digest('hex') === approval.files[landingPreviousPath]);
+  for (const [key, value] of Object.entries(landingPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  for (const [file, sha] of Object.entries(landingPrevious.files)) requireProof(approval.files[file] && (landingFiles.includes(file) || approval.files[file] === sha));
+  const landingRuntimeChanges = execFileSync('git', ['diff', '--name-only', landing.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  requireProof(landingRuntimeChanges.every(file => landingFiles.includes(file)));
   const maintenance = approval.maintenanceRelease;
   const maintenancePrevious = JSON.parse(readFileSync(maintenancePreviousPath));
   requireProof(maintenance?.approvedBy === 'Nico' && maintenance.publicationApproved === true);
@@ -53,9 +68,9 @@ try {
   execFileSync('git', ['merge-base', '--is-ancestor', maintenance.baselineSourceCommit, 'HEAD']);
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${maintenance.baselineSourceCommit}:${maintenancePreviousPath}`])).digest('hex') === approval.files[maintenancePreviousPath]);
   for (const [key, value] of Object.entries(maintenancePrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
-  for (const [file, sha] of Object.entries(maintenancePrevious.files)) requireProof(approval.files[file] && (maintenanceFiles.includes(file) || approval.files[file] === sha));
+  for (const [file, sha] of Object.entries(maintenancePrevious.files)) requireProof(approval.files[file] && (maintenanceFiles.includes(file) || landingFiles.includes(file) || approval.files[file] === sha));
   const runtimeChanges = execFileSync('git', ['diff', '--name-only', maintenance.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
-  requireProof(runtimeChanges.every(file => maintenanceFiles.includes(file)));
+  requireProof(runtimeChanges.every(file => maintenanceFiles.includes(file) || landingFiles.includes(file)));
   const proof = name => JSON.parse(readFileSync(`${cumulativeEvidence}/${name}.json`));
   const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
   // This exact derivative release leaves the original Lexicon source status intact.
@@ -66,7 +81,7 @@ try {
   requireProof(wordbuild.userRequest === wordbuildProof('owner-request').userRequest && wordbuild.userRequest === 'Zorg dat je alles online zet wat nu offline gebouwd is. Alles meenemen. Alles. Alles push, alles online.');
   requireProof(wordbuild.baselineSourceCommit === '2aa047b23c9564d4f7c89e0824e9fdc8fb7d5f3d' && wordbuild.additionalModelTasks === 4789 && wordbuild.audioPaused === true && wordbuild.newMediaBindings === 0 && wordbuild.humanReviewClaimed === false);
   requireProof(JSON.stringify(wordbuild.runtimeChangedFiles) === JSON.stringify(wordbuildFiles));
-  const allowedChanges = [...maintenanceFiles, ...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
+  const allowedChanges = [...landingFiles, ...maintenanceFiles, ...wordbuildFiles, 'scripts/check-curriculum-release.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-level-routes.mjs', 'scripts/test-practice-chapters.mjs'];
   for (const [file, sha] of Object.entries(wordbuildPrevious.files)) requireProof(approval.files[file] && (allowedChanges.includes(file) || approval.files[file] === sha));
   for (const [key, value] of Object.entries(wordbuildPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   const wordbuildLive = wordbuildProof('live-baseline'), wordbuildReview = wordbuildProof('review'), wordbuildBackup = wordbuildProof('source-drive-verification');

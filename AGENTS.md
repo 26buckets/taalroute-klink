@@ -7,3 +7,7 @@ Nico heeft op 24 oktober 2026 variant D gekozen als officieel KLINK-logo en toep
 public/klink-wordmark.svg en public/klink-logo.svg behouden het onderschrift Van klank naar taal. Behoud kadermaat, headerformaat, indeling en alle functies. Het logo-akkoord geeft geen toestemming om ongepubliceerde les-/UI-werkversies mee te publiceren. De audiopauze blijft gelden. Zware controles lokaal; geen betaalde workflows of automatische publicatie.
 
 Browser- en appiconen gebruiken dezelfde canonieke D-vector; exporteer bestaande ICO-formaten zonder nieuwe lettervormen. Controleer logo’s met node --test scripts/test-official-logo.mjs.
+
+## Startpagina — Nico, 24 oktober 2026
+
+Op expliciete vervolgopdracht staat de vermelding ‘Een leermiddel van Taalroute’ voortaan in de footer, boven klink.taalroute.nl. De losse bovenste link ‘Voor begeleiders’ is verwijderd; het bestaande hoofdvlak staat direct onder de vaste header en blijft horizontaal gecentreerd. De foto, teksten, logo D, header, toegang tot lessen, docentomgeving en begeleidingsuitleg blijven behouden. Zie docs/klink-owner-release-landing-footer-20261024.json en docs/klink-landing-footer-20261024/. Deze gerichte opdracht wijzigt uitsluitend deze plaatsing.

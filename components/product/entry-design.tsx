@@ -29,10 +29,6 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
   return (
     <main className="entry-screen klink-landing">
       <section className="entry-window">
-        <header className="entry-appbar">
-          {mode === 'choose' && <nav aria-label="Op deze pagina"><a href="#begeleiders">Voor begeleiders<ArrowRight aria-hidden="true" /></a></nav>}
-          <div className="landing-publisher"><span>Een leermiddel van</span><Image src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} priority /></div>
-        </header>
         <div className="entry-layout">
           <div className="entry-copy">
             {mode === 'choose' ? (
@@ -68,7 +64,7 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
             </div>
           </section>
         </>}
-        <footer className="landing-footer"><div className="landing-alfa"><Image src="/alfabetaplus-logo.png" alt="Alfabeta+" width={449} height={241} /><span><strong>Klink hoort bij Alfabeta+.</strong><span>De specialistische alfa-leerlijn van Taalroute.</span></span></div><span className="landing-address">klink.taalroute.nl</span></footer>
+        <footer className="landing-footer"><div className="landing-alfa"><Image src="/alfabetaplus-logo.png" alt="Alfabeta+" width={449} height={241} /><span><strong>Klink hoort bij Alfabeta+.</strong><span>De specialistische alfa-leerlijn van Taalroute.</span></span></div><div className="landing-footer-brand"><div className="landing-publisher"><span>Een leermiddel van</span><Image src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} /></div><span className="landing-address">klink.taalroute.nl</span></div></footer>
       </section>
     </main>
   );

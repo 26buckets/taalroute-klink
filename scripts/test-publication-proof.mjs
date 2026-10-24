@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-maintenance-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-landing-footer-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -200,5 +200,16 @@ test('Maintenance approval rejects an expanded scope, missing consent and altere
     approval => { approval.maintenanceRelease.baselineSourceCommit = '0'.repeat(40); },
     approval => { delete approval.files['app/landing.css']; },
     approval => { approval.files['scripts/test-group-practice.mjs'] = '0'.repeat(64); },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+// Footer consent cannot admit unrelated changes or replace historical approval.
+test('Landing footer approval remains limited to the explicit request', () => {
+  for (const change of [
+    approval => { approval.landingRelease.publicationApproved = false; },
+    approval => { approval.landingRelease.changedFiles.push('data/klink-curriculum.json'); },
+    approval => { approval.landingRelease.baselineSourceCommit = '0'.repeat(40); },
+    approval => { delete approval.files['components/product/entry-design.tsx']; },
+    approval => { approval.files['docs/klink-owner-release-maintenance-20261024.json'] = '0'.repeat(64); },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
