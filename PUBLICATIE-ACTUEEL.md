@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `c5e64c865f1b6e7e9e519c85986bcc561d662c8f` op canonieke branch `main`.
+Worker-versie: `c1210018-fd36-4b1b-a168-3f19a916b6fb`.
+
+De startpagina biedt duidelijke ingangen voor cursisten, docenten/begeleiders en organisaties. Klink wordt zichtbaar geplaatst binnen Alfabeta+ en als oefenonderdeel van een breder Z-routetraject. De Alfabeta+- en Taalroute-logo’s staan links en rechts op dezelfde lijn. De goedgekeurde foto, het officiële logo D, de rustige opzet en alle bestaande lessen, media, routes en opslag zijn behouden, inclusief de nieuwste begeleiding bij kop · sok.
+
+Register: `docs/klink-publication-landing-audiences-20261024.json`; vrijgave: `docs/klink-owner-release-landing-audiences-20261024.json`. De volledige lokale review is in opeenvolgende batches afgerond; 146 unittests en 36 publicatiebewijstests slagen (één bestaande broncontrole overgeslagen). 15 toegankelijkheidstoestanden, 126 overzicht-/werkruimtetoestanden en alle 146 begeleide stappen zijn lokaal gecontroleerd. Live slagen de startpagina op vijf breedtes, alle 16 kop/sok-stappen en de overgang/hervatting vanuit nek. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. De bronback-up is teruggelezen uit de bestaande Drive-projectmap.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden. De bekende vastloper bij zeer lange herlaadreeksen blijft open; de getroffen menutest slaagt afzonderlijk in een vers proces. Het historische woordkaartscript verwijst naar een verwijderde tab; actuele overzicht-/werkruimte- en routecontroles dekken de huidige interface.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `913e6b545d247858069c573c7aa625b65ac01209` op canonieke branch `main`.
 Worker-versie: `27b24e2d-7e53-4ba5-a3ff-bb5b58d8d220`.
 

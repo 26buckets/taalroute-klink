@@ -1,0 +1,38 @@
+{
+  "status": "published-and-verified",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "c5e64c865f1b6e7e9e519c85986bcc561d662c8f",
+  "branch": "main",
+  "workerVersion": "c1210018-fd36-4b1b-a168-3f19a916b6fb",
+  "previousSourceCommit": "913e6b545d247858069c573c7aa625b65ac01209",
+  "ownerAuthorization": "docs/klink-owner-release-landing-audiences-20261024.json",
+  "scope": "Landing page audience entrances, Alfabeta+ method context, Z-route context and aligned footer. Existing photo, official D logo, all lessons, media, routes and storage retained.",
+  "localReview": "docs/klink-landing-audiences-20261024/review.json",
+  "sourceBackup": "docs/klink-landing-audiences-20261024/source-drive-verification.json",
+  "unitTestsPassed": 146,
+  "unitTestsSkipped": 1,
+  "publicationProofTestsPassed": 36,
+  "localGuidedSteps": 146,
+  "liveKopSokSteps": 16,
+  "continuationViewports": [
+    320,
+    390,
+    1366
+  ],
+  "liveLandingWidths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "liveMediaVerified": 2679,
+  "liveClientByteIdentical": true,
+  "githubActionsWorkflows": 0,
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open.",
+    "Historical word-card script targets a removed tab; current overview/workspace and route suites provide coverage."
+  ]
+}
