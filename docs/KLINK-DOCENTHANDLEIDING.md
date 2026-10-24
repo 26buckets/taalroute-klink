@@ -22,7 +22,7 @@ Begin met één woord en één duidelijk doel. In dit voorbeeld oefen je met *ma
 1. **Kies je doel.** Bijvoorbeeld: de cursist leest *mat* en wijst de mat aan. Zoek daarbij het doel uit je boek en lesplan. Vul je voorbereiding in bij hoofdstuk 10.
 2. **Kijk wat al lukt.** Kent de cursist het woord *mat*? Herkent de cursist de letters m, a en t en de klanken die erbij horen? Oefen wat nog niet bekend is. Je hoeft niet alles in één keer te doen.
 3. **Open de les.** Kies bij een nieuwe start in de cursistomgeving **Start → Begin hier**. Je komt direct bij **Kijk en luister** met *mat*. Wil je bewust terug naar deze les? Kies **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**.
-4. **Doe het voor.** Open **Kijk en luister**. Laat het woord horen en wijs de mat aan. Open daarna **Maak**. Laat zien hoe je één letter kiest. Haal die met **Eén terug** weg voor de cursist begint.
+4. **Doe het voor.** Open **Kijk en luister**. Laat het woord horen en wijs de mat aan. Kies daarna **Andere oefening → Maak**. Laat zien hoe je één letter kiest. Haal die met **Eén terug** weg voor de cursist begint.
 5. **Laat de cursist proberen.** Zeg: “Nu jij.” Wacht rustig. Loopt de cursist vast? Geef één aanwijzing. Laat daarna opnieuw proberen.
 6. **Kijk wat zelfstandig lukt.** Toon de woordkaart zonder het woord eerst te zeggen. Vraag: “Lees.” Vraag daarna: “Waar is de mat?” Noteer het lezen en het aanwijzen apart.
 7. **Plan een nieuwe poging.** Begin de volgende les kort met hetzelfde woord. Laat de cursist eerst zelf proberen. Geef daarna pas een voorbeeld als dat nodig is.
@@ -55,7 +55,7 @@ Binnen **tas · map** is de lesvolgorde: **mat → tas → map → man · pan �
 
 In de eerste vijf lessen en de aansluitende lessen pen · pet, kam, ik · kip, pak · kat, ‘in’ en ‘en’ kiest de cursist na iedere opdracht zelf **Verder**. Een goed antwoord blijft staan totdat de cursist doorgaat. Aan het einde kiest de cursist **Les afronden**. Bij andere lessen en vrije oefenronden kan Klink vanzelf doorgaan. Gebruik daar het pauzeteken als je zelf het tempo wilt bepalen.
 
-Via de stappenbalk kun je naar een ander deel gaan. Een stap openen betekent nog niet dat de cursist de opdracht heeft gedaan. Klink kan teruggaan naar werk dat nog niet af is. Na het laatste onderdeel staat bij Verder: “Er staat nog een oefening open.” Klink gaat dan naar de eerste oefening die nog niet af is. Daar staat: “Eerst deze oefening. Deze oefening was nog niet af.” Dit is geen foutmelding. De uitleg blijft staan tot de cursist antwoord geeft of een andere oefening opent. Bij gewoon stap voor stap oefenen verschijnt deze uitleg niet.
+Open Andere oefening om naar een ander deel te gaan. Deze keuze staat standaard ingeklapt; de huidige opdracht staat één keer boven het witte werkvlak. Een stap openen betekent nog niet dat de cursist de opdracht heeft gedaan. Klink kan teruggaan naar werk dat nog niet af is. Na het laatste onderdeel staat bij Verder: “Er staat nog een oefening open.” Klink gaat dan naar de eerste oefening die nog niet af is. Daar staat: “Eerst deze oefening. Deze oefening was nog niet af.” Dit is geen foutmelding. De uitleg blijft staan tot de cursist antwoord geeft of een andere oefening opent. Bij gewoon stap voor stap oefenen verschijnt deze uitleg niet.
 
 ### Een oefenvorm met meerdere woorden
 
@@ -199,7 +199,7 @@ Open **Kijk en luister**. Laat het hele woord horen en wijs de mat aan. Geef zo 
 
 De woordopname laat het hele woord horen. Voor dit voorbeeld gebruik je geen losse klankopnamen.
 
-Open **Maak**. Het woord staat als voorbeeld in beeld. Bekijk samen het voorbeeld: de **m** gaat naar het eerste vak. Kies **Nu jij**. De app wijst de **m** aan; diezelfde vorm staat als steun in het eerste vak. Laat de cursist de aangewezen letter aantikken. Een verkeerde tik laat het huidige vak leeg en geeft opnieuw een aanwijzing. Dit geldt ook voor de volgende letters.
+Kies **Andere oefening → Maak**. Het woord staat als voorbeeld in beeld. Bekijk samen het voorbeeld: de **m** gaat naar het eerste vak. Kies **Nu jij**. De app wijst de **m** aan; diezelfde vorm staat als steun in het eerste vak. Laat de cursist de aangewezen letter aantikken. Een verkeerde tik laat het huidige vak leeg en geeft opnieuw een aanwijzing. Dit geldt ook voor de volgende letters.
 
 Vraag: “Wijs aan waar je begint.” Laat eerst aanwijzen en daarna tikken. Laat vervolgens de rest van het woord namaken. De aanwijzing schuift mee naar de volgende letter en het bijbehorende lege vak. Gebruik zo nodig **Kijk nog eens**. Nadoen toont dat de handeling lukt; het bewijst nog niet dat de cursist de letterklank kent of zelfstandig leest.
 

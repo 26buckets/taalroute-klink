@@ -83,6 +83,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
       <h1 ref={heading} tabIndex={-1}>{title}</h1>
       <small className="cp-context-meta">{collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activity ? ` · ${chapter.title}` : ''}` : ''}</small>
     </header>
+    {!collection && <div className="cp-page-workspace">
     {!collection && <MyRoute axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter ? location : undefined} onChange={next => { if (!chapter) open({ ...location, level: next.literacy, collection: undefined }); }} onSelectionChange={chapter ? next => open({ ...location, ...next, collection: undefined }) : undefined} />}
     {!chapter && <PracticeChapterCards onOpen={id => open({ chapter: id, level: settings[chapterRouteAxis(id)] })} />}
     {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{activities.map(item => {
@@ -97,6 +98,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
       {!visible.length && <output>{reviewMode ? 'Je hebt nu niets om te herhalen. Oefen eerst bij Klanken, Spelling, Grammatica, Teksten of In de praktijk.' : `Voor deze keuze (${levelLabel(location.level)}) zijn hier nog geen opdrachten ingedeeld. Kies samen met je docent ander aanbod.`}</output>}
       {visible.length > limit && <button className="secondary-button cp-chapter-more" onClick={() => setLimits(current => ({ ...current, [listKey]: limit + pageSize }))}>Meer opdrachten<ArrowRight /></button>}
     </>}
+    </div>}
     {collection && activity && <GroupRound exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);
       if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection });
