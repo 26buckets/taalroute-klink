@@ -1,0 +1,26 @@
+{
+  "status": "published-and-verified",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "da537c9c489196541944c9a45272b4d61ffde49f",
+  "branch": "main",
+  "workerVersion": "ad837ec6-5b33-4317-8073-b15d0ddbe1e2",
+  "previousSourceCommit": "bcfbe41618eb6f7af03aaa6b056988ee3d0a0904",
+  "ownerAuthorization": "docs/klink-owner-release-nekvervolg-20261024.json",
+  "scope": "Nek finishes with Verder met kop \u00b7 sok. Opens the existing first listening model, saves the next position without completing that lesson, resumes via Start after reload. Existing layout, overview workspace, media, routes and storage schema retained.",
+  "localReview": "docs/klink-nekvervolg-publication-20261024/review.json",
+  "sourceBackup": "docs/klink-nekvervolg-publication-20261024/source-drive-verification.json",
+  "localAndLiveGuidedSteps": 130,
+  "continuationViewports": [
+    320,
+    390,
+    1366
+  ],
+  "publicationProofTestsPassed": 34,
+  "liveMediaVerified": 2679,
+  "liveClientByteIdentical": true,
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ]
+}

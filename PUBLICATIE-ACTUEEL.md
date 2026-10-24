@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `da537c9c489196541944c9a45272b4d61ffde49f` op canonieke branch `main`.
+Worker-versie: `ad837ec6-5b33-4317-8073-b15d0ddbe1e2`.
+
+Na **nek** verschijnt **Verder met kop · sok** in het bestaande rustige afrondscherm. De knop opent de eerste Kijk en luister-opdracht van kop · sok. De vervolgplek blijft bewaard en is na herladen via Ga verder op Start bereikbaar; de nieuwe les is daarmee nog niet afgerond. De bestaande indeling, nieuwste overzicht-/werkbladwerkruimte, letterhulp en eigen tempo tot en met nek, inhoud, media, routes en opslagopmaak zijn behouden.
+
+Register: `docs/klink-publication-nekvervolg-20261024.json`; vrijgave: `docs/klink-owner-release-nekvervolg-20261024.json`. Volledige lokale review- en vervolgreeks, 146 unittests (één bestaande broncontrole overgeslagen), aanvullende overzicht-/werkruimte-/menu-/header-/toegankelijkheidscontroles en 34 publicatiebewijstests slagen. Alle 130 begeleide stappen en de overgang inclusief hervatten zijn lokaal en live gecontroleerd. Overgang met echte audio op 320, 390 en 1366 pixels. Alle 2.679 media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. De bekende vastloper bij zeer lange herlaadreeksen blijft open. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `bcfbe41618eb6f7af03aaa6b056988ee3d0a0904` op canonieke branch `main`.
 Worker-versie: `d6d67c31-9775-4d81-886b-a901f54e2b74`.
 
