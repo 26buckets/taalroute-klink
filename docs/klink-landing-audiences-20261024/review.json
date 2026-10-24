@@ -1,0 +1,98 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "913e6b545d247858069c573c7aa625b65ac01209",
+  "fullLocalRegressionPassed": true,
+  "preservationPassed": true,
+  "checks": {
+    "unitSuiteExit0": true,
+    "fullReviewMembersCompletedAcrossBatches": true,
+    "remainingReviewBatchExit0": true,
+    "currentKopSokContinuationLandingExit0": true,
+    "accessibility15StatesPassed": true,
+    "componentsPassed": true,
+    "header8StatesPassed": true,
+    "teacherManualPassed": true,
+    "overview70StatesPassed": true,
+    "whiteWorkspace56StatesPassed": true,
+    "guided130PreviousAnd16LatestStepsPassed": true,
+    "audioMetadata1979Passed": true,
+    "typesExit0": true,
+    "lintExit0": true,
+    "buildExit0": true,
+    "catalogPassed": true,
+    "sourceBackupReadbackVerified": true
+  },
+  "unitTests": {
+    "passed": 146,
+    "skipped": 1,
+    "failed": 0
+  },
+  "guidedSteps": 146,
+  "browserWidths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "limitations": [
+    "Browseremulatie, geen fysieke telefoon of cursistenproef.",
+    "De volledige lokale review is in opeenvolgende batches voltooid; een browsercrash in de langdurige menureeks is in een vers proces hercontroleerd. De nieuwste kop/sok-basis is aanvullend gericht gecontroleerd.",
+    "Het historische test-word-card-layout.mjs verwacht de verwijderde tab Foto en geluid en is niet toepasbaar op de huidige vier tabbladen. De actuele overzicht-/werkruimtecontroles, routes en oefenvormen zijn wel gecontroleerd.",
+    "Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.",
+    "Bekende vastloper bij zeer lange herlaadreeksen in één browserproces blijft buiten deze landingspaginawijziging.",
+    "Historische mediascripts die afzonderlijke oude productiemanifesten vereisen zijn niet als nieuwe mediareview uitgevoerd; alle media zijn bytegelijk behouden en worden na publicatie teruggelezen."
+  ],
+  "evidence": [
+    {
+      "path": "landing-full-review.log",
+      "sha256": "0c97ab901d2d7dc63d701d3e4d28406088a446e6a801166c1f17209401143d93"
+    },
+    {
+      "path": "landing-final-unit-suite.log",
+      "sha256": "aa62f2570faf66914b972bc4ebb4f97c5aadef299b41af1609ccfccd95d33c42"
+    },
+    {
+      "path": "landing-final-guided.log",
+      "sha256": "f1ad820dcf502d3e72724adf09110f87707ded26971d3f61c4d4243fb8b9d7f4"
+    },
+    {
+      "path": "landing-final-targeted.log",
+      "sha256": "7672ebece7d82401d69d59d03e05e54ebf42713538bceb5b7343d5d54902254e"
+    },
+    {
+      "path": "landing-final-build.log",
+      "sha256": "02b1a9c7c4c5365f24af44551d4165beaadcd46c2e0e07a587dadfacea1a880c"
+    },
+    {
+      "path": "landing-final-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "landing-final-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "landing-final-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "landing-extra-review.log",
+      "sha256": "974a6854a7bca04be8b6008ba88d76e7ec9a8938e0803f067e3f55666deaa5f4"
+    },
+    {
+      "path": "landing-review-remainder.log",
+      "sha256": "dee3a781bfff730bd4c3f04d4b171d3e22e23ee9a697965084033fea9715a6c3"
+    },
+    {
+      "path": "landing-rebased-targeted.log",
+      "sha256": "db5a768dea5060f41dd7b7a77c4de90f9abf1e2383247db112852b46aa9d9d03"
+    },
+    {
+      "path": "landing-current-flows.log",
+      "sha256": "0cf8bc69dbecb3717adfabf152fa43fcf3f66de012dd1a1263574e0251abfe60"
+    }
+  ]
+}
