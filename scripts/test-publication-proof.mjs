@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-overviews-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-nekvervolg-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -381,5 +381,17 @@ test('Overview workspace release binds the three exceptions to the latest lesson
     a => { a.overviewWorkspace.userRequest = 'unrelated'; },
     a => { delete a.files['scripts/test-overview-workspace-browser.mjs']; },
     a => { delete a.files['docs/klink-overviews-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Nek continuation requires scoped owner authorization, current ancestry and verified backup', () => {
+  for (const change of [
+    a => { delete a.nekContinuation; },
+    a => { a.nekContinuation.publicationApproved = false; },
+    a => { a.nekContinuation.nextLessonId = 'unrelated'; },
+    a => { a.nekContinuation.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.nekContinuation.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.nekContinuation.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-nekvervolg-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

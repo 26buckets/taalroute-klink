@@ -37,11 +37,12 @@ export function nextLessonPosition(packs: PackageDefinition[], packId: string, l
   if (!pack || index < 0) return;
   let nextPack = pack;
   let lesson = pack.lessons[index + 1];
-  if (!lesson && lessonId === 'klink-leesstap-05') {
-    const continuation = packs.find(item => item.lessons.some(next => next.id === 'klink-leesstap-06'));
+  const continuationId = lessonId === 'klink-leesstap-05' ? 'klink-leesstap-06' : lessonId === 'woord-klink-woord-nek' ? 'klink-leesstap-09' : undefined;
+  if (!lesson && continuationId) {
+    const continuation = packs.find(item => item.lessons.some(next => next.id === continuationId));
     if (!continuation) return;
     nextPack = continuation;
-    lesson = continuation.lessons.find(item => item.id === 'klink-leesstap-06')!;
+    lesson = continuation.lessons.find(item => item.id === continuationId)!;
   }
   if (!lesson?.guidedExerciseIds?.length) return;
   return { packageId: nextPack.id, lessonId: lesson.id, exerciseId: lesson.guidedExerciseIds[0] };

@@ -1,0 +1,76 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "bcfbe41618eb6f7af03aaa6b056988ee3d0a0904",
+  "guidedExercises": 130,
+  "fullLocalRegressionPassed": true,
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "unitTests": {
+    "passed": 146,
+    "failed": 0,
+    "skipped": 1,
+    "skip": "Existing source-fidelity ledger check; original source review unchanged."
+  },
+  "targetedBrowserChecks": [
+    "320x568: manual completion, named continuation, 48px target, next model, reload and Start resume without completing next lesson",
+    "390x844: manual completion, named continuation, 48px target, next model, reload and Start resume without completing next lesson",
+    "1366x900: manual completion, named continuation, 48px target, next model, reload and Start resume without completing next lesson"
+  ],
+  "preservedPublishedLayout": "Latest overview and worksheet workspace, white lesson workspace, collapsed menu and full mobile continuation clearance retained byte-identically.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-nekvervolg-review.log",
+      "sha256": "a134e40181161472d4f37f45ec6ebdddd7e00cfe77c003cff6a04504be54cad0"
+    },
+    {
+      "path": "work/klink-nekvervolg-route.log",
+      "sha256": "f1ad820dcf502d3e72724adf09110f87707ded26971d3f61c4d4243fb8b9d7f4"
+    },
+    {
+      "path": "work/klink-nekvervolg-units.log",
+      "sha256": "bc43592f2179fe84624abc2e3260ebf4049b5dfea008aa85850e124b37026c6c"
+    },
+    {
+      "path": "work/klink-nekvervolg-focused.log",
+      "sha256": "e625d9d7160e79b88217edbddba164e21abe79a0f6d71deb2790ade046009e14"
+    },
+    {
+      "path": "work/klink-nekvervolg-build.log",
+      "sha256": "ee26bdd61980185a6249b2613a13c57b352235ecc9f3cdc08a2350d01b2696fb"
+    },
+    {
+      "path": "work/klink-nekvervolg-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-nekvervolg-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-nekvervolg-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-nekvervolg-media.log",
+      "sha256": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4"
+    },
+    {
+      "path": "work/klink-nekvervolg-connected-audio.log",
+      "sha256": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa"
+    },
+    {
+      "path": "work/klink-nekvervolg-extra.log",
+      "sha256": "ead07179078deef77ce2305dcd8ce9ca2d7e02452f10b26dcb1860be5261128b"
+    },
+    {
+      "path": "work/klink-nekvervolg-preview.log",
+      "sha256": "dc362eefd7e0c92224909aafaaadc720ab060600ef561383e48d4cbd4691ba18"
+    }
+  ]
+}

@@ -51,5 +51,18 @@ test('The final beginner lesson continues with pen/pet, including after saving a
   assert.equal(progress.completed.length, 5);
   assert(!progress.completed.includes(next.lessonId));
   assert.equal(nextLessonPosition([first], first.id, 'klink-leesstap-05'), undefined);
-  assert.equal(nextLessonPosition(packs, packs[1].id, packs[1].lessons.at(-1).id), undefined);
+  assert.equal(nextLessonPosition(packs, packs.at(-1).id, packs.at(-1).lessons.at(-1).id), undefined);
+});
+
+ test('Nek continues with kop/sok and preserves progress without completing the next lesson', () => {
+  const next = nextLessonPosition(packs, 'groep-3', 'woord-klink-woord-nek');
+  const pack = packs.find(item => item.id === next.packageId);
+  const lesson = pack.lessons.find(item => item.id === next.lessonId);
+  assert.equal(next.lessonId, 'klink-leesstap-09');
+  assert.equal(next.exerciseId, lesson.guidedExerciseIds[0]);
+  assert.equal(pack.exercises.find(item => item.exerciseId === next.exerciseId).mode, 'model');
+  const progress = parseProgress(JSON.stringify({ completed: ['woord-klink-woord-nek'], position: next }), packs);
+  assert.deepEqual(homeLessonPosition(packs, progress, 'all'), next);
+  assert.deepEqual(progress.completed, ['woord-klink-woord-nek']);
+  assert.equal(nextLessonPosition([packs[1]], 'groep-3', 'woord-klink-woord-nek'), undefined);
 });
