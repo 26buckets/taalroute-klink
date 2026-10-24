@@ -34,13 +34,14 @@ try {
       await next.scrollIntoViewIfNeeded();
       assert(await next.evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
       const box = await next.boundingBox();
-      assert(box.height >= 48 && box.y + box.height <= 569);
+      const navigation = await page.getByRole('navigation', { name: 'Cursistnavigatie' }).boundingBox();
+      assert(box.height >= 48 && box.y + box.height <= navigation.y + 1, 'The whole continuation button stays above the mobile navigation');
       await next.click();
       checked++;
     }
     await page.getByRole('heading', { name: 'Goed geoefend', exact: true }).waitFor();
     console.log('PASS', lesson.id, exercises.length, 'steps: manual pace, recovery and mobile footer');
   }
-  assert.equal(checked, 115);
+  assert.equal(checked, 118);
   assert.deepEqual(errors, []);
 } finally { await browser.close(); }

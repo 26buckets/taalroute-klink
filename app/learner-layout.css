@@ -46,6 +46,7 @@ body:has(.learner-app.consistent-layout) > .taalroute-header { display: flex; }
   .consistent-layout .learner-profile, .consistent-layout.is-collapsed .learner-profile { display: none; }
   .product-root .consistent-layout .learner-main { padding-bottom: 84px; scroll-padding-bottom: 84px; }
   .consistent-layout .learner-page, .consistent-layout .cp-player > .cp-player-bar, .consistent-layout .cp-player > .cp-tabs, .consistent-layout .cp-player:has(.is-guided) > .cp-content { width: calc(100% - 24px); }
+  .consistent-layout .cp-player:has(.is-guided) > .cp-content { padding-bottom: 92px; }
   .consistent-layout .cp-lesson-player { gap: 12px; }
 }
 
