@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-beginners-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-in-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -264,5 +264,16 @@ test('Beginner release binds current live ancestry, exact scope and owner public
     approval => { approval.beginnerRelease.changedFiles.pop(); },
     approval => { delete approval.files['lib/lesson-plan.ts']; },
     approval => { delete approval.files['docs/klink-beginners-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('In release preserves beginner scope and binds its publication and backup', () => {
+  for (const change of [
+    a => { delete a.inRelease; },
+    a => { a.inRelease.publicationApproved = false; },
+    a => { a.inRelease.guidedExercises = 113; },
+    a => { a.inRelease.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.inRelease.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-in-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
