@@ -60,3 +60,6 @@ body:has(.teacher-manual) { background: #fff; }
 .taalroute-header{border-bottom:2px solid #482c46;position:relative;z-index:1000}.taalroute-header-brand{gap:8px}.taalroute-header .tr-app-chooser nav img{width:74px}.taalroute-header-brand .header-brand-divider{height:25px}[data-theme=dark] .taalroute-header{background:#172232;color:#e7edf5}[data-theme=dark] .header-taalroute-logo{filter:brightness(0) invert(1)}[data-theme=dark] .header-klink-logo{content:url('/klink-wordmark-dark.svg')}@media(max-width:380px){.taalroute-header-brand .header-taalroute-logo{width:80px}.taalroute-header{padding:0 8px;gap:5px}}
 
 .klink-header-beta{font:500 8px/1.2 system-ui;border:1px solid #482c46;border-radius:3px;padding:2px 4px}[data-theme=dark] .klink-header-beta{border-color:#e2c1db;color:#e2c1db}
+
+/* Restore the approved suite geometry without changing KLINK's own logo. */
+.taalroute-header{box-sizing:border-box;width:100%;height:60px;min-height:60px;padding-inline:var(--suite-edge);font-family:Arial,sans-serif}.taalroute-header-brand{gap:var(--suite-brand-gap)}.taalroute-header-brand .header-taalroute-logo{width:var(--suite-logo-width);height:var(--suite-logo-height);min-width:var(--suite-logo-width)}.taalroute-header-brand .header-brand-divider{height:28px}.taalroute-header .tr-app-chooser nav img{width:var(--suite-logo-width)}

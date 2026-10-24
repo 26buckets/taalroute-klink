@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-24",
+  "base": {
+    "application": "Klink",
+    "builtAt": "2026-10-24T03:36:13.576Z",
+    "sourceCommit": "deb7a0cce5e12a5c1fbe067a07e8808c80ca7f61",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "scope": "Restore the shared 60px header geometry and app chooser styling; eagerly load existing menu wordmarks; existing KLINK D wordmark, tagline, right controls, manual and share action retained.",
+  "checks": [
+    "8 header/menu combinations: 320/390/768/1440, light/dark",
+    "21 official-logo/publication-proof tests passed",
+    "Landing: five widths, learner/teacher entrances preserved",
+    "Navigation: history, all twelve manual chapters, saved exercise continuation, keyboard and responsive routes passed",
+    "TypeScript and lint passed"
+  ],
+  "limitations": [
+    "No physical phone or classroom test",
+    "No changes to the global list of destinations in other apps"
+  ],
+  "workflowReview": "No GitHub workflows in this canonical repository; heavy checks local."
+}
