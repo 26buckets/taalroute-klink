@@ -16,7 +16,8 @@ const comprehensionAudio = read('../data/klink-comprehension-audio.json');
 const connectedContent = read('../data/klink-connected-content.json');
 const issues = [];
 let ownerAuthorized = false;
-const authorizationPath = 'docs/klink-owner-release-mens-20261024.json';
+const authorizationPath = 'docs/klink-owner-release-nek-20261024.json';
+const nekPreviousPath = 'docs/klink-owner-release-mens-20261024.json';
 const mensPreviousPath = 'docs/klink-owner-release-kast-20261024.json';
 const kastPreviousPath = 'docs/klink-owner-release-kan-20261024.json';
 const kanPreviousPath = 'docs/klink-owner-release-white-workspace-20261024.json';
@@ -28,6 +29,7 @@ const enFiles = ['lib/lesson-plan.ts', 'data/klink-teacher-manual.json', 'docs/K
 const kanFiles = [...enFiles];
 const kastFiles = [...kanFiles];
 const mensFiles = [...kastFiles];
+const nekFiles = [...mensFiles];
 const isFiles = [...enFiles, 'app/learner-layout.css'];
 
 const layoutPreviousPath = 'docs/klink-owner-release-in-20261024.json';
@@ -79,6 +81,28 @@ try {
     if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
+  const nekPrevious = JSON.parse(readFileSync(nekPreviousPath));
+  const nekRelease = approval.nekRelease;
+  const nekEvidence = 'docs/klink-nek-publication-20261024';
+  const nekRequest = JSON.parse(readFileSync(`${nekEvidence}/owner-request.json`));
+  requireProof(nekRelease?.approvedBy === 'Nico' && nekRelease.publicationApproved === true);
+  requireProof(nekRelease.previousAuthorization === nekPreviousPath && nekRelease.baselineSourceCommit === 'c9b603411423278a981ef4e00375741edc5383be');
+  requireProof(nekRelease.userRequest === nekRequest.userRequest && nekRelease.userRequest.includes('zet het daarna online') && nekRequest.lessonId === 'woord-klink-woord-nek');
+  requireProof(nekRelease.guidedExercises === 130 && nekRelease.nekSteps === 3 && nekRelease.humanReviewClaimed === false && nekRelease.newMediaBindings === 0);
+  requireProof(JSON.stringify(nekRelease.changedFiles) === JSON.stringify(nekFiles));
+  execFileSync('git', ['merge-base', '--is-ancestor', nekRelease.baselineSourceCommit, 'HEAD']);
+  requireProof(createHash('sha256').update(execFileSync('git', ['show', `${nekRelease.baselineSourceCommit}:${nekPreviousPath}`])).digest('hex') === approval.files[nekPreviousPath]);
+  for (const [key, value] of Object.entries(nekPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
+  for (const [file, sha] of Object.entries(nekPrevious.files)) requireProof(approval.files[file] && (nekFiles.includes(file) || approval.files[file] === sha));
+  const nekChanges = execFileSync('git', ['diff', '--name-only', nekRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  requireProof(nekChanges.every(file => nekFiles.includes(file)));
+  const nekReview = JSON.parse(readFileSync(`${nekEvidence}/review.json`));
+  const nekSources = JSON.parse(readFileSync(`${nekEvidence}/source-manifest.json`));
+  const nekBackup = JSON.parse(readFileSync(`${nekEvidence}/source-drive-verification.json`));
+  requireProof(nekReview.status === 'passed-local' && nekReview.baselineSourceCommit === nekRelease.baselineSourceCommit && nekReview.fullLocalRegressionPassed === true && nekReview.preservationPassed === true);
+  requireProof(nekFiles.every(file => nekSources.some(row => row.path === file && row.sha256 === approval.files[file])));
+  requireProof(nekBackup.parentVerified === true && nekBackup.downloadedByteIdentical === true && nekBackup.zipCrcVerified === true && nekBackup.manifestEntriesVerified === nekFiles.length);
+  for (const name of ['owner-request', 'review', 'source-manifest', 'source-drive-verification', 'live-baseline', 'preservation']) requireProof(approval.files[`${nekEvidence}/${name}.json`]);
   const mensPrevious = JSON.parse(readFileSync(mensPreviousPath));
   const mensRelease = approval.mensRelease;
   const mensEvidence = 'docs/klink-mens-publication-20261024';
@@ -98,7 +122,7 @@ try {
   const mensSources = JSON.parse(readFileSync(`${mensEvidence}/source-manifest.json`));
   const mensBackup = JSON.parse(readFileSync(`${mensEvidence}/source-drive-verification.json`));
   requireProof(mensReview.status === 'passed-local' && mensReview.baselineSourceCommit === mensRelease.baselineSourceCommit && mensReview.fullLocalRegressionPassed === true && mensReview.preservationPassed === true);
-  requireProof(mensFiles.every(file => mensSources.some(row => row.path === file && row.sha256 === approval.files[file])));
+  requireProof(mensFiles.every(file => mensSources.some(row => row.path === file && row.sha256 === nekPrevious.files[file])));
   requireProof(mensBackup.parentVerified === true && mensBackup.downloadedByteIdentical === true && mensBackup.zipCrcVerified === true && mensBackup.manifestEntriesVerified === mensFiles.length);
   for (const name of ['owner-request', 'review', 'source-manifest', 'source-drive-verification', 'live-baseline', 'preservation']) requireProof(approval.files[`${mensEvidence}/${name}.json`]);
   const kastPrevious = JSON.parse(readFileSync(kastPreviousPath));
