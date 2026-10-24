@@ -118,7 +118,7 @@ dist/client/_next/static/chunks/vinext-DopYeiDS.js                        153.36
 dist/client/_next/static/chunks/framework-5hhgsyNd.js                     190.03 kB │ gzip:    59.71 kB
 dist/client/_next/static/chunks/page-yI43E4yh.js                       19,036.01 kB │ gzip: 1,910.16 kB
 
-[plugin builtin:vite-reporter] 
+[plugin builtin:vite-reporter]
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
@@ -175,10 +175,10 @@ dist/server/ssr/_next/static/page-eL5QQTSc.js                       19,034.84 kB
 ✓ built in 1.42s
 
   Route (app)
-  ┌ ? /                 
-  ├ λ /api/attempts     
-  ├ λ /api/review-items 
-  ├ ? /docenten         
+  ┌ ? /
+  ├ λ /api/attempts
+  ├ λ /api/review-items
+  ├ ? /docenten
   └ ƒ /docenten/:chapter
 
   λ API  ƒ Dynamic  ? Unknown

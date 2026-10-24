@@ -1,0 +1,65 @@
+{
+  "application": "Klink",
+  "domain": "https://klink.taalroute.nl",
+  "sourceCommit": "2956a13ddfeb8109ffa30caa2ff7330a34729d60",
+  "canonicalBranch": "main",
+  "liveWorkerVersion": "b2f31ffd-4e3f-4b99-9c24-60a7f281db06",
+  "verifiedAt": "2026-10-24T01:37:51.923070+00:00",
+  "previousLiveCommit": "c4eddedeb7c1a859aa4f0808ac916b8329c7d9ed",
+  "pullRequest": "https://github.com/26buckets/taalroute-klink/pull/2",
+  "pullRequestMerged": true,
+  "runtimeScope": "Five existing logo/icon assets only",
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-10-24T01:34:01.042Z",
+    "sourceCommit": "2956a13ddfeb8109ffa30caa2ff7330a34729d60",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "localTests": {
+    "npmCi": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "publicationProofTests": 15,
+    "officialLogoTests": 2,
+    "reviewSuite": "All scripts completed; original review main portion, posttest portion resumed after source records restored, final content-import group rerun successfully.",
+    "unitTestsInReview": 119,
+    "browserPassMessages": 169,
+    "targetedLogoLint": "passed",
+    "generalLint": "45 pre-existing errors in unchanged files",
+    "accessibility": "One existing landing-eyebrow contrast violation, identical live baseline/local; teacher page zero violations",
+    "viewports": "320px through desktop, including short and landscape in regression suite",
+    "restoredHistoricalReports": 17,
+    "cloudWorkflows": 0
+  },
+  "liveTests": {
+    "landingWidths": [
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "landingAndTeacherRoutesPassed": true,
+    "logoAssetsMatchApprovedSource": 5,
+    "mediaByteMatches": 2679,
+    "withdrawnAudioStillPrivate": true,
+    "clientBundleMatches": true,
+    "newBrowserErrors": 0,
+    "horizontalOverflow": false,
+    "existingContrastIssue": ".landing-eyebrow, unchanged from baseline"
+  },
+  "approval": "docs/klink-logo-d-20261024/approval.json",
+  "contentApprovalUnchanged": "docs/klink-owner-release-wordbuild-20261019.json",
+  "screenshots": [
+    "docs/klink-logo-d-20261024/live-visual/landing-1440.png",
+    "docs/klink-logo-d-20261024/live-visual/landing-390.png"
+  ],
+  "studioRuntimeUnchanged": true,
+  "backupRecord": "docs/klink-logo-d-20261024/drive-backup.json"
+}

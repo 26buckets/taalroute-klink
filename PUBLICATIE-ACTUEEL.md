@@ -2,10 +2,10 @@
 
 Live: https://klink.taalroute.nl
 
-Broncommit: `c4eddedeb7c1a859aa4f0808ac916b8329c7d9ed` op canonieke branch `main`.
-Worker-versie: `8f18cc31-cbee-4bf6-abdf-3f2f0153d403`.
+Broncommit: `2956a13ddfeb8109ffa30caa2ff7330a34729d60` op canonieke branch `main`.
+Worker-versie: `b2f31ffd-4e3f-4b99-9c24-60a7f281db06`.
 
-Het actuele register is `docs/klink-publication-wordbuild-20261019.json`; het bevat de publicatie- en controlestatus. Herstelbestanden en gecontroleerde Drive-kopieën staan in dat register en `docs/klink-publication-wordbuild-drive-20261019.json`.
+Het actuele register is `docs/klink-publication-official-logo-d-20261024.json`. Op 24 oktober is uitsluitend het officiële logo D toegepast op de vijf bestaande logo-/icoonbestanden. De goedgekeurde headermaat, indeling, inhoud, media en lokale opslag zijn behouden. Zie `docs/klink-logo-d-20261024/approval.json`, de lokale en livecontrole in die map, en `docs/klink-logo-d-20261024/drive-backup.json`. De eerdere volledige inhouds- en mediaback-ups blijven vastgelegd in `docs/klink-publication-wordbuild-20261019.json`, `docs/klink-publication-wordbuild-drive-20261019.json` en `docs/klink-cumulative-release-20261018/source-drive-verification.json`.
 
 De actuele brongebonden vrijgave is `docs/klink-owner-release-wordbuild-20261019.json`. Nico gaf op 19 oktober expliciet opdracht alle lokaal gebouwde Klink-wijzigingen te publiceren. Dit opvolgende akkoord geldt voor de exact gecontroleerde Basis-selectie van 4.789 aanvullende modelwoordbouwtaken en de bijbehorende niveaukeuze. De volledige kleine header, zes oefenspelers, eerdere inhoud, media, routes en opslag blijven behouden.
 
