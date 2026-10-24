@@ -1,0 +1,25 @@
+{
+  "status": "published-and-verified",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "1905846f3f2e7f108e6346c6d6cbe929b8e163c1",
+  "branch": "main",
+  "workerVersion": "32545af0-7bb8-4b47-9678-7b15e7bc09c3",
+  "previousSourceCommit": "c9b603411423278a981ef4e00375741edc5383be",
+  "ownerAuthorization": "docs/klink-owner-release-nek-20261024.json",
+  "scope": "Nek joins manual pace and letter guidance with Kijk nog eens. Existing white workspace, collapsed menu, mobile continuation clearance, content, media and storage retained.",
+  "localReview": "docs/klink-nek-publication-20261024/review.json",
+  "sourceBackup": "docs/klink-nek-publication-20261024/source-drive-verification.json",
+  "localAndLiveGuidedSteps": 130,
+  "nekSteps": 3,
+  "publicationProofTestsPassed": 32,
+  "liveMediaVerified": 2679,
+  "liveClientByteIdentical": true,
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ],
+  "publicationNotes": [
+    "The immediate post-deploy release check briefly returned the previous version during propagation. The initial browser route also timed out waiting for the home screen. After the new release was confirmed, a fresh full route passed all 130 steps; full media/client verification and the focused real-audio route passed."
+  ]
+}
