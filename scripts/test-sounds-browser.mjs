@@ -87,6 +87,7 @@ try {
     await page.setViewportSize({ width, height: width === 320 ? 568 : 900 });
     assert(await noOverflow());
     await page.locator('.cp-word-sounds').scrollIntoViewIfNeeded();
+    await page.locator('.cp-word-sounds a').click({ trial: true });
     await page.screenshot({ path: `${out}/mat-klanken-${width}.png` });
   }
   await page.locator('.cp-word-sounds summary').click();

@@ -1,0 +1,167 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "db0fa569ed4194a4d3fcc41ae40f74737634474d",
+  "targetedRegressionPassed": true,
+  "preservationPassed": true,
+  "newCards": 46,
+  "groups": 9,
+  "duplicateOverviewEntryRemoved": true,
+  "chosenRoute": "Oefenen → Klanken → Klankenkaart",
+  "inlineWordHelp": "mat: m/a/t, tas: t/a/s; reachable without leaving the current lesson",
+  "testResults": {
+    "unitTests": {
+      "passed": 150,
+      "skipped": 1,
+      "failed": 0
+    },
+    "soundBrowser": {
+      "checks": [
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 1366px",
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 768px",
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 390px",
+        "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 320px",
+        "All 46 detail links retain the exact canonical spelling, example and Klankstudio sound ID",
+        "Existing mat recording plays to the end with real browser audio",
+        "Audio errors allow retry; navigation stops playback",
+        "mat opens m-a-t inline without leaving the lesson or changing progress; desktop/mobile stay in bounds",
+        "tas lesson entry, malformed links and browser Back/Forward work"
+      ],
+      "errors": []
+    },
+    "group7Browser": {
+      "steps": 57,
+      "checks": [
+        "Forward jump returns to unfinished first exercise with explanation",
+        "lam: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "lip: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "kool: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "klink-leesstap-22: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+        "Forward jump returns to unfinished first exercise with explanation",
+        "neus: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "deuk: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "klink-leesstap-23: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+        "Forward jump returns to unfinished first exercise with explanation",
+        "buik: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "duim: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "muis: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "klink-leesstap-24: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+        "Forward jump returns to unfinished first exercise with explanation",
+        "klok: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "woord-klink-woord-klok: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+        "Forward jump returns to unfinished first exercise with explanation",
+        "slaap: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "woord-klink-woord-slaap: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+        "Forward jump returns to unfinished first exercise with explanation",
+        "vloer: wrong letter, retained first letter after Kijk nog eens, three viewports and complete guided build",
+        "woord-klink-woord-vloer: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+      ],
+      "errors": [],
+      "smoke": true,
+      "realAudio": true,
+      "physicalPhone": false
+    },
+    "chapterBrowser": "6 groups passed; all 12 chapters",
+    "lifecycleBrowser": "5 groups passed",
+    "types": "passed",
+    "lint": "passed",
+    "catalog": "passed: 1187 records, 18 families, 52 variants",
+    "publicationProof": {
+      "passed": 45,
+      "failed": 0
+    }
+  },
+  "frameRegression": {
+    "initial": "One instantaneous footer hit-test failed for listen at 844×390 with collapsed navigation after earlier cases passed.",
+    "focusedComparison": "Identical correct hit target and geometry on current source and actual live baseline. Both pass.",
+    "fullRerun": {
+      "passed": true,
+      "stableFrameStates": 66,
+      "spokenAnswerStates": 12,
+      "failed": 0
+    },
+    "resolution": "Full unmodified regression passed after the focused comparison; no product or inherited test logic changed."
+  },
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "limits": [
+    "Browser emulation, no physical phone or learner test.",
+    "Original audio approval boundaries and audio pause remain; only existing whole-word audio reused.",
+    "Inline help skips changed spelling-to-sound values until explanations exist."
+  ],
+  "publication": "explicit user approval; not yet deployed",
+  "evidence": [
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/browser.log",
+      "sha256": "9924a82694a724e2c3a88a8d5ea95db567114b0e975f0d15fa5947c70e24a56f"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/chapters.log",
+      "sha256": "e036d88a0470a93693b28f5a93659bd06d654426fb4137648f835e9b1abae10f"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/frames-final.log",
+      "sha256": "752bbec57823be490601e585fd40d96e0fce1d955d960bc6bd196177292839e0"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/frames.json",
+      "sha256": "558c5a190b0d9f53001f9f2782a2a4fad9c0ff4deed597c56611d111a059c3bb"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/group7.json",
+      "sha256": "1831c08df46c75733abde34f8681f84dd9f89622bd85713b2be2f416e8c46298"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/group7.log",
+      "sha256": "ad7b2cb7783159af0b5c6091512060df5e93f66c16f4a674607b9a72914e203d"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/lifecycle.log",
+      "sha256": "4c7e24c294e59c85c89c7cc4146c4926c60b229ac8c1d9ad2cfa9d68f19f6ede"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/sounds.json",
+      "sha256": "0258cc457098a7b2e8ea12e9b722be1ed1268087336fc936c1f9ccd9883dbf7b"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/units.log",
+      "sha256": "bcdd6d6f6480c03916a5a02e05650feb6be1fe111d4f03e639bf5ff5ee6e17a3"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/spoken-current.json",
+      "sha256": "0dbe718f432a4b96e00f72a1552f3b91910e92a32d18a53e811f5fd0f52521d7"
+    },
+    {
+      "path": "docs/klink-klanken-publication-20261025/checks/publication-proof.log",
+      "sha256": "8831fde0a59a86f2bf02de218d885f87c7e520d945aa98cff9f57e78eb9520c5"
+    }
+  ],
+  "integration": {
+    "latestLiveSource": "db0fa569ed4194a4d3fcc41ae40f74737634474d",
+    "inheritedCorrection": "Broader selectors retain spoken-option indicators in shared teacher previews. Runtime change: two selectors in app/learner-ui.css.",
+    "retainedFullFrameRegression": "66 frame states and 12 learner speaking states passed on direct predecessor 0d110cc; selector-only successor is rechecked in learner and teacher views.",
+    "currentSpokenFrames": {
+      "widths": [
+        1280,
+        390,
+        320
+      ],
+      "statesPerView": 12,
+      "views": [
+        "learner",
+        "shared teacher preview"
+      ],
+      "stable": true
+    }
+  }
+}

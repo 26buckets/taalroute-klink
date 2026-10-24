@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-exercise-frames-20261025.json';
+      const approvalPath = 'docs/klink-owner-release-klanken-20261025.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -517,5 +517,20 @@ test('Exercise frame changes require exact scope, review, predecessor and verifi
     a => { a.exerciseFrames.changedFiles.push('lib/lesson-plan.ts'); },
     a => { delete a.files['docs/klink-exercise-frames-20261025/review.json']; },
     a => { delete a.files['docs/klink-exercise-frames-20261025/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+
+test('Klankenkaart publication requires exact live ancestry, owner instruction, scope and verified backup', () => {
+  for (const change of [
+    a => { delete a.soundReference; },
+    a => { a.soundReference.publicationApproved = false; },
+    a => { a.soundReference.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.soundReference.userRequest = 'unrelated'; },
+    a => { a.soundReference.cards++; },
+    a => { a.soundReference.newAudioConnections++; },
+    a => { a.soundReference.changedFiles.push('data/klink-curriculum.json'); },
+    a => { delete a.files['docs/klink-klanken-publication-20261025/source-drive-verification.json']; },
+    a => { delete a.files['docs/klink-owner-release-exercise-frames-20261025.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
