@@ -22,7 +22,7 @@ await page.addInitScript(() => {
 const pass = text => { checks.push(text); console.log('PASS', text); };
 const tab = label => page.locator('.cp-tabs').getByRole('button', { name: label, exact: true }).click();
 async function openPack() { await page.goto(`${base}/#learner/package/groep-1`); await page.locator('.cp-word-grid').waitFor(); }
-async function settings() { if (await page.locator('.cp-home-route:not([open])').count()) await page.locator('.cp-home-route > summary').click(); const block = page.locator('[data-my-route]'); await block.waitFor(); return block; }
+async function settings() { await page.locator('.cp-home-route > summary').waitFor(); if (await page.locator('.cp-home-route:not([open])').count()) await page.locator('.cp-home-route > summary').click(); const block = page.locator('[data-my-route]'); await block.waitFor(); return block; }
 try {
   await page.goto(`${base}/#learner/home`); await page.locator('.cp-home').waitFor();
   assert.deepEqual(await page.locator('.learner-nav nav button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);

@@ -125,6 +125,8 @@ try {
     for (const button of await page.locator('.cp-choice-grid button, .cp-task-prompt button, .cp-exercise-feedback button').all()) {
       const box = await button.boundingBox(); assert(box.width >= 48 && box.height >= 48);
     }
+    await page.locator('.cp-exercise-feedback button').scrollIntoViewIfNeeded();
+    assert(await page.locator('.cp-exercise-feedback button').evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
     const footer = await page.locator('.cp-exercise-feedback button').boundingBox();
     assert(footer.y + footer.height <= (width < 700 ? 844 : 900) + 2);
     assert((await page.locator('.cp-choice-grid').ariaSnapshot()).includes('button "man"'));

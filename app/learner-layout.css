@@ -1,0 +1,83 @@
+/* One persistent frame for browsing and practice. */
+body:has(.learner-app.consistent-layout) { --taalroute-header-height: 60px; --klink-app-height: calc(100dvh - 60px); }
+body:has(.learner-app.consistent-layout) > .taalroute-header { display: flex; }
+.product-root .learner-app.consistent-layout { grid-template-columns: 220px minmax(0, 1fr); height: var(--klink-app-height); min-height: 0; }
+.product-root .learner-app.consistent-layout.is-collapsed { grid-template-columns: 72px minmax(0, 1fr); }
+.product-root .learner-app.consistent-layout > .learner-nav { display: flex; height: var(--klink-app-height); min-height: 0; padding: 16px 12px 12px; }
+.consistent-layout .cp-nav-toggle { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; margin-top: auto; flex-shrink: 0; }
+.consistent-layout .cp-nav-toggle svg { width: 22px; height: 22px; flex-shrink: 0; }
+.consistent-layout .learner-nav nav { margin-top: 12px; margin-bottom: 16px; flex: 1; min-height: 0; overflow-y: auto; align-content: start; }
+.consistent-layout .learner-profile { margin-top: 8px; }
+.consistent-layout.is-collapsed .cp-nav-toggle { padding: 0; justify-content: center; width: 48px; }
+.consistent-layout.is-collapsed .learner-nav nav button { width: 48px; padding: 0; display: flex; justify-content: center; }
+.consistent-layout.is-collapsed .learner-profile { display: flex; justify-content: center; padding: 0; }
+.consistent-layout.is-collapsed .learner-nav :is(nav button > span, .cp-nav-toggle > span, .learner-profile > small) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.product-root .consistent-layout .learner-main { height: var(--klink-app-height); min-height: 0; padding: 0; overflow: auto; scroll-padding-block: 16px; }
+.consistent-layout .learner-page { width: min(1210px, calc(100% - 42px)); padding-top: 0; }
+.consistent-layout .cp-home h1 { font-size: 24px; font-weight: 500; }
+.consistent-layout .cp-player { min-height: 0; }
+.consistent-layout .cp-player > .cp-player-bar { width: min(1210px, calc(100% - 42px)); margin: 0 auto; padding: 16px 0 12px; background: transparent; color: var(--ink); border: 0; }
+.consistent-layout .cp-player > .cp-player-bar button { color: var(--muted); border: 0; background: transparent; }
+.consistent-layout .cp-player > .cp-player-bar :is(small, span) { color: var(--muted); }
+.consistent-layout .cp-player > .cp-player-bar strong { font-size: 24px; font-weight: 500; }
+.consistent-layout .cp-player > .cp-tabs { width: min(1210px, calc(100% - 42px)); margin: 0 auto; }
+.consistent-layout .cp-content { padding-top: 16px; }
+/* Guided lessons use the same bounded canvas as free practice. */
+.product-root .consistent-layout .cp-player:has(.is-guided) { display: block; height: auto; min-height: 0; overflow: visible; background: var(--canvas); }
+.consistent-layout .cp-player:has(.is-guided) > .cp-content { width: min(1210px, calc(100% - 42px)); height: auto; padding: 0 0 24px; margin: 0 auto; overflow: visible; }
+.consistent-layout .cp-lesson-player { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; gap: 0; height: auto; overflow: visible; background: transparent; border: 0; padding: 0; }
+.consistent-layout .cp-lesson-player > .cp-exercise-browser { grid-column: 1 / -1; }
+.consistent-layout .cp-exercise-browser.is-guided { height: auto; overflow: visible; background: var(--paper); }
+.consistent-layout .is-guided .cp-exercise-workspace { display: block; height: auto; overflow: visible; }
+.consistent-layout .is-guided .cp-exercise-workspace > aside { flex-wrap: wrap; overflow: visible; background: var(--paper); }
+.consistent-layout .is-guided .cp-exercise-main { display: grid; height: auto; grid-template-rows: auto auto auto; }
+.consistent-layout .is-guided .cp-exercise-stage { height: auto; min-height: clamp(320px, calc(var(--klink-app-height) - 340px), 660px); overflow: visible; }
+.consistent-layout .is-guided .cp-model-content { grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; gap: 16px; }
+.consistent-layout .is-guided .cp-model-content > img { width: min(220px, 100%); height: auto; max-height: none; object-fit: contain; }
+.consistent-layout .is-guided .cp-model-content > strong { font-size: clamp(36px, 5.5vw, 72px); }
+.consistent-layout .is-guided .cp-exercise-feedback { min-height: 112px; height: auto; }
+@media (max-width: 820px) {
+  .product-root .learner-app.consistent-layout, .product-root .learner-app.consistent-layout.is-collapsed { grid-template-columns: minmax(0, 1fr); }
+  .product-root .learner-app.consistent-layout > .learner-nav { display: block; height: 68px; padding: 0; }
+  .consistent-layout .cp-nav-toggle { display: none; }
+  .consistent-layout .learner-nav nav { margin: 0; overflow: visible; }
+  .consistent-layout.is-collapsed .learner-nav nav button { display: grid; width: auto; }
+  .consistent-layout.is-collapsed .learner-nav nav button > span { position: static; width: auto; height: auto; clip-path: none; overflow: visible; }
+  .consistent-layout .learner-profile, .consistent-layout.is-collapsed .learner-profile { display: none; }
+  .product-root .consistent-layout .learner-main { padding-bottom: 84px; scroll-padding-bottom: 84px; }
+  .consistent-layout .learner-page, .consistent-layout .cp-player > .cp-player-bar, .consistent-layout .cp-player > .cp-tabs, .consistent-layout .cp-player:has(.is-guided) > .cp-content { width: calc(100% - 24px); }
+  .consistent-layout .cp-lesson-player { gap: 12px; }
+}
+
+/* The same title baseline, back-button slot and metadata position on every route. */
+.product-root .consistent-layout .cp-context-header {
+  display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center;
+  gap: 12px; min-height: 72px; padding: 12px 0; margin-block: 0; border: 0;
+  position: sticky; top: 0; z-index: 20; background: var(--canvas); color: var(--ink);
+}
+.consistent-layout .cp-context-header > :is(button, .cp-context-icon) {
+  display: flex; align-items: center; justify-content: center; width: 48px; height: 48px;
+  min-width: 48px; padding: 0; margin: 0; border: 0; background: transparent; color: var(--muted);
+}
+.consistent-layout .cp-context-header svg { width: 20px; height: 20px; }
+.product-root .consistent-layout .cp-context-header h1 { font-size: 24px; font-weight: 500; line-height: 1.25; margin: 0; letter-spacing: -.025em; }
+.consistent-layout .cp-context-header > .cp-lesson-launch { display: block; min-height: 0; padding: 0; border: 0; background: transparent; color: var(--ink); }
+.consistent-layout .cp-context-meta { font-size: 14px; color: var(--muted); text-align: right; }
+.product-root .consistent-layout .learner-main { scroll-padding-top: 88px; }
+@media (max-width: 480px) {
+  .product-root .consistent-layout .cp-context-header { grid-template-columns: 48px minmax(0, 1fr); grid-template-rows: 48px 18px; gap: 0 8px; }
+  .consistent-layout .cp-context-meta { grid-column: 2; text-align: left; }
+  .product-root .consistent-layout .cp-context-header h1 { font-size: 22px; }
+}
+
+.consistent-layout .cp-context-header h1 strong { font: inherit; }
+
+/* Center focused controls in the space below the sticky title and above mobile navigation. */
+.consistent-layout .learner-main :is(button, input, select, textarea, [tabindex]) { scroll-margin-block: 84px; }
+@media (max-width: 480px) {
+  .product-root .consistent-layout .learner-main { scroll-padding-top: 106px; }
+  .consistent-layout .learner-main :is(button, input, select, textarea, [tabindex]) { scroll-margin-top: 102px; }
+}
+@media (max-height: 400px) and (max-width: 820px) {
+  .consistent-layout .cp-teacher-workflow textarea { height: 96px; min-height: 96px; }
+}

@@ -34,9 +34,9 @@ async function family(label) {
 }
 async function geometry(label) {
   await page.waitForTimeout(90);
-  if (await page.locator('.is-mixed-round').count()) await page.locator('.cp-exercise-feedback > button').scrollIntoViewIfNeeded();
+  if (await page.locator('.is-mixed-round, .is-guided').count()) await page.locator('.cp-exercise-feedback').scrollIntoViewIfNeeded();
   // Scroll the app panel to its end: WebKit's visibility check ignores the fixed bottom navigation.
-  if (page.viewportSize().height <= 600 && !(await page.locator('.is-guided').count())) await page.evaluate(async () => {
+  if (page.viewportSize().height <= 600) await page.evaluate(async () => {
     const panel = document.querySelector('.learner-main');
     panel.scrollTo({ top: panel.scrollHeight, behavior: 'instant' });
     await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));

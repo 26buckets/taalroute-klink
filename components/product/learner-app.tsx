@@ -35,6 +35,8 @@ import {
   Layers3,
   LogOut,
   PackageOpen,
+  PanelLeftClose,
+  PanelLeftOpen,
   RefreshCw,
   Volume2,
   WholeWord,
@@ -48,6 +50,14 @@ type WordFilter = string;
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
   const { settings } = useRouteSettings();
   const [view, setView] = useState<LearnerView>('home');
+  const [navCollapsed, setNavCollapsed] = useState(() => {
+    try { return typeof window !== 'undefined' && sessionStorage.getItem('klink.nav-collapsed.v1') === 'true'; } catch { return false; }
+  });
+  function toggleNavigation() {
+    const next = !navCollapsed;
+    setNavCollapsed(next);
+    try { sessionStorage.setItem('klink.nav-collapsed.v1', String(next)); } catch { /* Navigation remains usable without storage. */ }
+  }
   const [selectedPackage, setSelectedPackage] = useState<PackageId>(contentPackages[0].id);
   const [progress, setProgress] = useState<RouteProgress>(() => {
     if (typeof window === 'undefined') return { completed: [] };
@@ -134,15 +144,16 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   }
 
   return (
-    <div className="learner-app">
+    <div className={`learner-app consistent-layout${navCollapsed ? ' is-collapsed' : ''}`}>
       <aside className="learner-nav">
-        <nav aria-label="Cursistnavigatie">
-          <button aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
-          <button aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button aria-current={view === 'chapters' ? 'page' : undefined} className={view === 'chapters' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
-          <button aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
-          <button aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
+        <nav id="klink-learner-navigation" aria-label="Cursistnavigatie">
+          <button title="Start" aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
+          <button title="Lessen" aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
+          <button title="Oefenen" aria-current={view === 'chapters' ? 'page' : undefined} className={view === 'chapters' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
+          <button title="Woorden" aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
+          <button title="Herhalen" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
+        <button className="secondary-button cp-nav-toggle" type="button" onClick={toggleNavigation} aria-expanded={!navCollapsed} aria-controls="klink-learner-navigation" aria-label={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'} title={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'}>{navCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}</button>
         <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
@@ -170,8 +181,8 @@ function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, save
   const previewImage = preview?.image ?? first.cover?.image;
   return (
     <div className="learner-page cp-home">
-      <header className="learner-page-head">
-        <div><span className="cp-home-mark"><Layers3 /></span><h1>{languageRoute || !position ? 'Jouw route' : canResume ? 'Ga verder' : 'Begin hier'}</h1></div>
+      <header className="learner-page-head cp-context-header">
+        <span className="cp-context-icon"><Layers3 /></span><h1>{languageRoute || !position ? 'Jouw route' : canResume ? 'Ga verder' : 'Begin hier'}</h1>
       </header>
 
       <details className="cp-level-picker cp-home-route">

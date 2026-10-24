@@ -1,0 +1,36 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "2a91ffb0f2329827019ec593cc70eb62c8cd457d",
+  "guidedExercises": 102,
+  "preservationPassed": true,
+  "fullLocalRegressionPassed": true,
+  "physicalPhoneTest": false,
+  "humanReviewClaimed": false,
+  "layoutBrowserChecks": 15,
+  "sharedHeaderChecks": 8,
+  "screenSizes": [
+    "1280x800",
+    "1280x550",
+    "844x390",
+    "768x1024",
+    "390x844",
+    "320x480"
+  ],
+  "checks": {
+    "types": true,
+    "lint": true,
+    "build": true,
+    "catalog": true,
+    "officialLogo": true,
+    "audioMetadataFiles": 1979,
+    "compactScroll": true,
+    "exerciseMenu": true,
+    "allCurrentReviewAndPostReviewCoverage": true
+  },
+  "regressionExecution": "Complete test:review and posttest:review coverage. Resumed at continuous-flow, UX and level-route checks after aligning old no-scroll assertions and waiting for the existing route disclosure after reload. Final cumulative route check passes all controls at 320x480, 568x320, 844x390, 390x844, 768x1024 and 1366x950. No assertions about control overlap, target size, content, storage or completion removed.",
+  "limitations": [
+    "Browser emulation; no physical-phone or learner pilot.",
+    "Existing content review and pronunciation limitations remain unchanged."
+  ],
+  "publicationProofTests": 24
+}

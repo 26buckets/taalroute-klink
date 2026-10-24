@@ -145,12 +145,10 @@ export function PackagePlayer({
 
   return (
     <div className="cp-player">
-      <header className="cp-player-bar">
-        <button onClick={onClose} aria-label="Terug naar lessen"><ArrowLeft /></button>
-        <div>
-          <span>Woorden · {pack.level}</span>
-          <strong>{learnerListName(pack)}</strong>
-        </div>
+      <header className="cp-player-bar cp-context-header">
+        <button onClick={onClose} aria-label="Terug naar lessen" title="Terug naar lessen"><ArrowLeft /></button>
+        <h1><strong>{learnerListName(pack)}</strong></h1>
+        <small className="cp-context-meta">Woorden · {pack.level}</small>
       </header>
 
       <nav className="cp-tabs" aria-label="Onderdelen">
@@ -319,11 +317,11 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
     const nextLabel = continuation ? lessonPreviewWords(nextPack!, nextLesson!).map(wordLabel).join(' · ') : '';
     return (
       <section className="cp-panel cp-lesson-player">
-        <button className="text-back" aria-label="Terug naar alle lessen" onClick={() => { stopMedia(); setPlaying(false); }}><ArrowLeft />Alle lessen</button>
-        <div className="cp-lesson-launch">
-          <span className="cp-lesson-number">{String(lessonNumber).padStart(2, '0')}</span>
-          <div><small>Les {lessonNumber} van {pack.lessons.length}</small><h1>{label}</h1></div>
-        </div>
+        <header className="cp-context-header">
+          <button className="text-back" aria-label="Terug naar alle lessen" title="Terug naar alle lessen" onClick={() => { stopMedia(); setPlaying(false); }}><ArrowLeft /></button>
+          <div className="cp-lesson-launch"><h1>{label}</h1></div>
+          <small className="cp-context-meta">Les {lessonNumber} van {pack.lessons.length}</small>
+        </header>
         <PackageExerciseBrowser
           key={selectedLesson.id}
           pack={pack}

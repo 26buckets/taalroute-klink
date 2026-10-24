@@ -115,6 +115,8 @@ try {
     await page.getByRole('button', { name: 'Nu jij', exact: true }).click();
     await page.waitForFunction(() => [...document.querySelectorAll('.cp-match-board img')].every(image => image.naturalWidth > 0));
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    await page.locator('.cp-exercise-feedback').scrollIntoViewIfNeeded();
+    assert(await page.locator('.cp-exercise-feedback > button').evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
     const footer = await page.locator('.cp-exercise-feedback').boundingBox();
     assert(footer.y + footer.height <= (width > 700 ? 900 : 844) + 2);
     assert.equal(await page.locator('.cp-match-board > div').first().locator('button').first().innerText(), matching.sources[0].label);

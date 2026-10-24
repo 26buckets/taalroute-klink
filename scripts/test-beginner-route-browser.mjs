@@ -31,6 +31,8 @@ try {
       assert.equal(await page.locator('.cp-exercise-browser').getAttribute('data-exercise-id'), exercise.exerciseId);
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       const next = page.locator('.cp-exercise-feedback > button');
+      await next.scrollIntoViewIfNeeded();
+      assert(await next.evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
       const box = await next.boundingBox();
       assert(box.height >= 48 && box.y + box.height <= 569);
       await next.click();

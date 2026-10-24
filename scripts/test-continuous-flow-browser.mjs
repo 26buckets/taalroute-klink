@@ -87,6 +87,8 @@ try {
     await openExercise(situation); await ready();
     await page.waitForFunction(() => document.querySelector('.cp-context-image img')?.naturalWidth > 0);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
+    await page.locator('.cp-exercise-feedback button').scrollIntoViewIfNeeded();
+    assert(await page.locator('.cp-exercise-feedback button').evaluate(e => { const r = e.getBoundingClientRect(); return e.contains(document.elementFromPoint(r.x + r.width / 2, r.y + r.height / 2)); }));
     const next = await page.locator('.cp-exercise-feedback button').boundingBox();
     assert(next.y + next.height <= (width < 700 ? 844 : 900) + 2);
     for (const selector of ['.cp-context-image', '.cp-reading-blocks button', '.cp-exercise-feedback button', '.cp-exercise-record-head nav button']) {
