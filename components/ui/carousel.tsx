@@ -58,14 +58,13 @@ function Carousel({
     },
     plugins,
   );
-  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
-  const [canScrollNext, setCanScrollNext] = React.useState(false);
-
-  const onSelect = React.useCallback((api: CarouselApi) => {
-    if (!api) return;
-    setCanScrollPrev(api.canScrollPrev());
-    setCanScrollNext(api.canScrollNext());
-  }, []);
+  const subscribe = React.useCallback((onChange: () => void) => {
+    api?.on('reInit', onChange);
+    api?.on('select', onChange);
+    return () => { api?.off('reInit', onChange); api?.off('select', onChange); };
+  }, [api]);
+  const canScrollPrev = React.useSyncExternalStore(subscribe, () => api?.canScrollPrev() ?? false, () => false);
+  const canScrollNext = React.useSyncExternalStore(subscribe, () => api?.canScrollNext() ?? false, () => false);
 
   const scrollPrev = React.useCallback(() => {
     api?.scrollPrev();
@@ -93,16 +92,6 @@ function Carousel({
     setApi(api);
   }, [api, setApi]);
 
-  React.useEffect(() => {
-    if (!api) return;
-    onSelect(api);
-    api.on('reInit', onSelect);
-    api.on('select', onSelect);
-
-    return () => {
-      api?.off('select', onSelect);
-    };
-  }, [api, onSelect]);
 
   return (
     <CarouselContext.Provider
@@ -118,16 +107,15 @@ function Carousel({
         canScrollNext,
       }}
     >
-      <div
+      <section
         onKeyDownCapture={handleKeyDown}
         className={cn('relative', className)}
-        role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
         {...props}
       >
         {children}
-      </div>
+      </section>
     </CarouselContext.Provider>
   );
 }
@@ -153,15 +141,14 @@ function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
   );
 }
 
-function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
+function CarouselItem({ className, ...props }: React.ComponentProps<'fieldset'>) {
   const { orientation } = useCarousel();
 
   return (
-    <div
-      role="group"
+    <fieldset
       aria-roledescription="slide"
       data-slot="carousel-item"
-      className={cn(
+      className={cn('m-0 min-w-0 p-0 border-0',
         'min-w-0 shrink-0 grow-0 basis-full',
         orientation === 'horizontal' ? 'pl-4' : 'pt-4',
         className,

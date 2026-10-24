@@ -14,7 +14,6 @@ import {
   Headphones,
   ImageIcon,
   Keyboard,
-  ListChecks,
   LogOut,
   Mic,
   Pause,
@@ -25,7 +24,6 @@ import {
   Route,
   Volume2,
   WholeWord,
-  X,
 } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
@@ -92,17 +90,12 @@ export function CompactLearnerApp({ onExit }: { onExit: () => void }) {
   const [completed, setCompleted] = useState<string[]>([]);
   const [finished, setFinished] = useState(false);
   const [recordingReady, setRecordingReady] = useState(false);
-  const startedAt = useRef(Date.now());
+  const startedAt = useRef(0);
   const exercise = exercises[currentIndex];
   const built = tileIndexes.map((index) => exercise.letters?.[index] ?? '').join('');
   const progress = Math.round(((currentIndex + (feedback === 'right' ? 1 : 0)) / exercises.length) * 100);
 
   useEffect(() => {
-    setSelected('');
-    setTyped('');
-    setTileIndexes([]);
-    setFeedback('idle');
-    setRecordingReady(false);
     startedAt.current = Date.now();
   }, [currentIndex]);
 
@@ -110,7 +103,7 @@ export function CompactLearnerApp({ onExit }: { onExit: () => void }) {
     playAudio(audioByExercise[exercise.id] ?? exercise.word.toLocaleLowerCase('nl-NL'));
   }
 
-  function saveAttempt(answer: string, isCorrect: boolean) {
+  function saveAttempt(answer: string, isCorrect: boolean, now: number) {
     void fetch('/api/attempts', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -120,13 +113,13 @@ export function CompactLearnerApp({ onExit }: { onExit: () => void }) {
         answer,
         isCorrect,
         helpCount: isCorrect ? 0 : 1,
-        responseMs: Date.now() - startedAt.current,
+        responseMs: now - startedAt.current,
       }),
     }).catch(() => undefined);
   }
 
-  function mark(answer: string, isCorrect: boolean) {
-    saveAttempt(answer, isCorrect);
+  function mark(answer: string, isCorrect: boolean, now: number) {
+    saveAttempt(answer, isCorrect, now);
     setFeedback(isCorrect ? 'right' : 'wrong');
     if (isCorrect) setCompleted((items) => Array.from(new Set([...items, exercise.id])));
     else listen();
@@ -142,23 +135,30 @@ export function CompactLearnerApp({ onExit }: { onExit: () => void }) {
     return ['intro', 'paper', 'read', 'speak'].includes(exercise.kind);
   }
 
-  function primaryAction() {
+  function primaryAction(now: number) {
     if (feedback === 'right') {
       if (currentIndex === exercises.length - 1) setFinished(true);
-      else setCurrentIndex((index) => index + 1);
+      else openExercise(currentIndex + 1);
       return;
     }
     if (isSelfChecked()) {
       const value = exercise.kind === 'speak' ? 'opgenomen' : exercise.answer ?? exercise.word;
-      mark(value, true);
+      mark(value, true, now);
       return;
     }
     const value = answerValue();
-    mark(value, normalize(value) === normalize(exercise.answer ?? exercise.word));
+    mark(value, normalize(value) === normalize(exercise.answer ?? exercise.word), now);
   }
 
   function openExercise(index: number) {
     setFinished(false);
+    if (index !== currentIndex) {
+      setSelected('');
+      setTyped('');
+      setTileIndexes([]);
+      setFeedback('idle');
+      setRecordingReady(false);
+    }
     setCurrentIndex(index);
   }
 
@@ -243,7 +243,7 @@ export function CompactLearnerApp({ onExit }: { onExit: () => void }) {
           {feedback === 'wrong' && <><RotateCcw /><span><strong>Probeer opnieuw</strong><small>Let op de eerste klank.</small></span></>}
           {feedback === 'right' && <><CheckCircle2 /><span><strong>Goed</strong><small>De volgende oefening staat klaar.</small></span></>}
         </div>
-        <button className="compact-primary" onClick={primaryAction} disabled={!canSubmit && feedback !== 'right'}>
+        <button className="compact-primary" onClick={() => primaryAction(Date.now())} disabled={!canSubmit && feedback !== 'right'}>
           <span>{feedback === 'right' ? currentIndex === exercises.length - 1 ? 'Afronden' : 'Verder' : isSelfChecked() ? 'Klaar' : 'Controleer'}</span>
           {feedback === 'right' ? <ArrowRight /> : <Check />}
         </button>
@@ -290,7 +290,7 @@ function ExerciseSurface({
   }
 
   if (exercise.kind === 'type') {
-    return <div className="compact-type"><button className="compact-audio-square" onClick={listen}><Volume2 /><span>Luister</span></button><label><span>Typ het woord</span><input value={typed} onChange={(event) => setTyped(event.target.value)} autoComplete="off" disabled={disabled} autoFocus /></label></div>;
+    return <div className="compact-type"><button className="compact-audio-square" onClick={listen}><Volume2 /><span>Luister</span></button><label><span>Typ het woord</span><input value={typed} onChange={(event) => setTyped(event.target.value)} autoComplete="off" disabled={disabled} /></label></div>;
   }
 
   if (exercise.kind === 'paper') {

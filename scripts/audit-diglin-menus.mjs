@@ -3,6 +3,7 @@
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
+import { Script } from 'node:vm';
 
 const out = 'outputs/diglin-comparison-20261017';
 mkdirSync(out, { recursive: true });
@@ -31,7 +32,7 @@ end repeat
 end repeat
 end tell`;
 const run = (js) => {
-  new Function(`return ${js}`); // Validate the read expression before sending it to Chrome.
+  new Script(`(${js})`); // Validate the read expression before sending it to Chrome.
   const wrapped = `(()=>{try{return ${js}}catch(e){return JSON.stringify({auditError:String(e)})}})()`;
   const value = execFileSync('osascript', ['-e', script(wrapped)], { encoding: 'utf8' }).trim();
   if (!value) throw new Error('Intended logged-in menu tab unavailable');

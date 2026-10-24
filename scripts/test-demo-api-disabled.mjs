@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import * as attempts from '../app/api/attempts/route.ts';
 import * as reviewItems from '../app/api/review-items/route.ts';
 
-for (const [path, handlers] of [['attempts', attempts], ['review-items', reviewItems]]) {
+for (const [path, handlers] of Object.entries({ attempts, 'review-items': reviewItems })) {
   for (const method of ['GET', 'POST']) {
     const request = new Request(`https://klink.taalroute.nl/api/${path}`, {
       method,
@@ -18,5 +18,5 @@ for (const [path, handlers] of [['attempts', attempts], ['review-items', reviewI
     console.log(`PASS ${method} /api/${path}: retired without storage access`);
   }
   const malformed = new Request(`https://klink.taalroute.nl/api/${path}`, { method: 'POST', body: '{invalid' });
-  assert.equal((await handlers.POST(malformed)).status, 410);
+  assert.equal(handlers.POST(malformed).status, 410);
 }
