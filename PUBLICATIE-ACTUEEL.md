@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `bcfbe41618eb6f7af03aaa6b056988ee3d0a0904` op canonieke branch `main`.
+Worker-versie: `d6d67c31-9775-4d81-886b-a901f54e2b74`.
+
+Het lessenoverzicht, de pakket-tabbladen en de werkbladen gebruiken nu dezelfde vaste witte werkruimte. Dubbele zichtbare titels zijn verwijderd, met behoud van toegankelijke namen. Ook geopende teksten binnen Gebruiken houden de gedeelde breedte en kunnen doorlopen in de pagina. De nieuwste lessen tot en met **nek**, inhoud, media, routes, opslag, logo D en bestaande uitstraling zijn behouden.
+
+Register: `docs/klink-publication-overviews-20261024.json`; vrijgave: `docs/klink-owner-release-overviews-20261024.json`. Alle leden van de volledige lokale reviewreeks zijn afgerond, inclusief herhaalde standaardspelers, inhoudsroutes en UX na gerichte afbakening van de tekstweergave. Lokaal en live: 70 overzicht-/werkbladtoestanden, 56 bestaande werkruimtevergelijkingen en alle 130 begeleide stappen. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. 33 publicatiebewijstests slagen. De bronback-up is uit de bestaande Drive-projectmap teruggelezen en gecontroleerd.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen, audiopauze en het bekende onderzoekspunt bij zeer lange herlaadreeksen in één browserproces blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `1905846f3f2e7f108e6346c6d6cbe929b8e163c1` op canonieke branch `main`.
 Worker-versie: `32545af0-7bb8-4b47-9678-7b15e7bc09c3`.
 

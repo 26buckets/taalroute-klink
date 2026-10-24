@@ -1,0 +1,35 @@
+{
+  "publishedAt": "2026-10-24T16:06:05.105638+00:00",
+  "url": "https://klink.taalroute.nl",
+  "sourceCommit": "bcfbe41618eb6f7af03aaa6b056988ee3d0a0904",
+  "branch": "main",
+  "workerVersion": "d6d67c31-9775-4d81-886b-a901f54e2b74",
+  "baselineSourceCommit": "1905846f3f2e7f108e6346c6d6cbe929b8e163c1",
+  "ownerAuthorization": "docs/klink-owner-release-overviews-20261024.json",
+  "changes": [
+    "Shared white workspace and compact header in the lesson library",
+    "Continuous white package tabs/content and aligned opened-text view",
+    "White worksheets with one visible title and retained accessible naming"
+  ],
+  "preserved": [
+    "latest nek/mens/kast/kan lesson updates",
+    "all lessons and content",
+    "media and recordings",
+    "routes and user storage",
+    "official logo D and existing visual style"
+  ],
+  "checks": {
+    "localFullRegression": true,
+    "localAndLiveOverviewStates": 70,
+    "localAndLiveExistingWorkspaceStates": 56,
+    "localAndLiveGuidedSteps": 130,
+    "localPublicationProofTests": 33,
+    "liveMediaFilesByteIdentical": 2679,
+    "freshClientMatchesBuild": true
+  },
+  "evidenceDirectory": "docs/klink-overviews-publication-20261024",
+  "limitations": [
+    "Browser emulation; no physical phone or learner pilot.",
+    "Inherited content-review limits and audio pause unchanged."
+  ]
+}
