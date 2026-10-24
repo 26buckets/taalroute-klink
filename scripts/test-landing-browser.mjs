@@ -17,7 +17,7 @@ try {
     await page.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `Horizontal overflow at ${width}`);
     assert.equal(await page.locator('h1').count(), 1);
-    assert(await page.evaluate(() => document.querySelector('.entry-appbar').getBoundingClientRect().bottom <= document.querySelector('.entry-layout').getBoundingClientRect().top), `Header overlaps hero at ${width}`);
+    assert(await page.evaluate(() => document.querySelector('.taalroute-header').getBoundingClientRect().bottom <= document.querySelector('.entry-layout').getBoundingClientRect().top), `Header overlaps hero at ${width}`);
     assert.equal(await page.locator('.landing-brand').count(), 0, 'The duplicate logo below the top header is removed');
     const headerLogo = page.locator('.taalroute-header .header-klink-logo');
     const logo = await headerLogo.evaluate(image => {
@@ -33,11 +33,23 @@ try {
     assert(await page.locator('.landing-publisher').innerText() === 'Een leermiddel van');
     assert.equal(await page.locator('.landing-publisher img').getAttribute('alt'), 'Taalroute');
     assert(await page.locator('.landing-alfa').evaluate(element => !!element.closest('footer')));
+    assert(await page.locator('.landing-publisher').evaluate(element => !!element.closest('footer')));
+    const placement = await page.evaluate(() => {
+      const hero = document.querySelector('.entry-layout').getBoundingClientRect();
+      const header = document.querySelector('.taalroute-header').getBoundingClientRect();
+      const footer = document.querySelector('.landing-footer').getBoundingClientRect();
+      const publisher = document.querySelector('.landing-publisher').getBoundingClientRect();
+      return { gap: hero.top - header.bottom, center: hero.x + hero.width / 2, width: innerWidth, publisherBelow: publisher.top >= footer.top && publisher.top > hero.bottom };
+    });
+    assert(placement.gap >= 12 && placement.gap <= 24, `Hero sits directly below header at ${width}`);
+    assert(Math.abs(placement.center - placement.width / 2) < 1, `Hero remains centered at ${width}`);
+    assert(placement.publisherBelow, `Publisher belongs at the bottom at ${width}`);
+
     assert(await page.locator('.landing-start').evaluate(element => element.getBoundingClientRect().height >= 48));
     await page.screenshot({ path: `${out}/Klink-startpagina-${width}.png`, fullPage: true });
     if (width === 1440) await page.screenshot({ path: `${out}/Klink-startpagina-scherm.png` });
   }
-  await page.getByRole('link', { name: 'Voor begeleiders', exact: true }).click();
+  assert.equal(await page.getByRole('link', { name: 'Voor begeleiders', exact: true }).count(), 0);
   await page.getByText('Bekijk de mogelijkheden', { exact: true }).click();
   assert(await page.locator('details').getAttribute('open') !== null);
   await page.getByRole('button', { name: 'Open de oefeningen', exact: true }).click();
@@ -59,6 +71,6 @@ try {
   await page.locator('.staff-app').waitFor();
   assert(page.url().endsWith('#teacher'));
   assert.deepEqual(errors, []);
-  writeFileSync(`${out}/landing-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, widths: [1440, 1024, 768, 390, 320], heading: 'Klink jij ook?', publisher: 'Een leermiddel van Taalroute', alfabetaPlacement: 'footer', learner: 'invalid code, valid code and 15 sections checked', teacher: 'existing environment opens', therapists: 'details and exercise entry checked', errors }, null, 2));
+  writeFileSync(`${out}/landing-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, widths: [1440, 1024, 768, 390, 320], heading: 'Klink jij ook?', publisher: 'Een leermiddel van Taalroute', publisherPlacement: 'footer', hero: 'higher and centered', alfabetaPlacement: 'footer', learner: 'invalid code, valid code and 15 sections checked', teacher: 'existing environment opens', therapists: 'details and exercise entry checked', errors }, null, 2));
   console.log('PASS landing: five widths, Taalroute publisher, Alfabeta footer, learner and teacher entrances.');
 } finally { await browser.close(); }
