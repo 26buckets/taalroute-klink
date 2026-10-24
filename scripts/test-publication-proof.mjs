@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-kast-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-mens-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -344,5 +344,17 @@ test('Kast release binds its scope, live ancestry and verified backup without we
     a => { a.kastRelease.changedFiles.push('data/klink-curriculum.json'); },
     a => { a.kastRelease.userRequest = 'unrelated'; },
     a => { delete a.files['docs/klink-kast-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+test('Mens release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+  for (const change of [
+    a => { delete a.mensRelease; },
+    a => { a.mensRelease.publicationApproved = false; },
+    a => { a.mensRelease.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.mensRelease.guidedExercises = 128; },
+    a => { a.mensRelease.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.mensRelease.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-mens-publication-20261024/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
