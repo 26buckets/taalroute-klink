@@ -1,6 +1,22 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `913e6b545d247858069c573c7aa625b65ac01209` op canonieke branch `main`.
+Worker-versie: `27b24e2d-7e53-4ba5-a3ff-bb5b58d8d220`.
+
+Ook **kop · sok** werkt op het tempo van de cursist: iedere opdracht wacht op Verder of Les afronden. Letterhulp en Kijk nog eens blijven beschikbaar bij kop en sok. De voorbeelden bij kiezen, koppelen en Wat ontbreekt? gebruiken de bestaande begeleiding. De overgang vanaf nek, bewaren/hervatten, indeling, overzicht-/werkbladwerkruimte, media en opslag zijn behouden.
+
+Register: `docs/klink-publication-kopsok-20261024.json`; vrijgave: `docs/klink-owner-release-kopsok-20261024.json`. Op verzoek van Nico is de review gericht uitgevoerd: alle 146 begeleide stappen en alle 146 unittests slagen (één bestaande broncontrole overgeslagen), plus 35 publicatiebewijstests. De zestien stappen van kop · sok zijn lokaal en live met echte audio gecontroleerd, inclusief letterhulp op 320/390/1366 pixels, vooruit springen en terugkeer, en alle vervolgknoppen. Overgang vanaf nek en hervatten opnieuw getest. De brede regressie van de vorige publicatie blijft gekoppeld aan de ongewijzigde bron; deze is niet opnieuw gedraaid. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. De bekende vastloper bij zeer lange herlaadreeksen blijft open. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `da537c9c489196541944c9a45272b4d61ffde49f` op canonieke branch `main`.
 Worker-versie: `ad837ec6-5b33-4317-8073-b15d0ddbe1e2`.
 
