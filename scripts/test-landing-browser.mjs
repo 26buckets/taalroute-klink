@@ -36,6 +36,14 @@ try {
     assert.equal(await page.locator('.landing-publisher img').getAttribute('alt'), 'Taalroute');
     assert(await page.locator('.landing-alfa').evaluate(element => !!element.closest('footer')));
     assert(await page.locator('.landing-publisher').evaluate(element => !!element.closest('footer')));
+    assert.equal(await page.getByRole('heading', { name: 'Onderdeel van Alfabeta+', exact: true }).count(), 1);
+    assert.equal(await page.getByRole('heading', { name: 'Oefenen binnen de Z-route', exact: true }).count(), 1);
+    const footerAlignment = await page.evaluate(() => {
+      const a = document.querySelector('.landing-alfa img').getBoundingClientRect();
+      const b = document.querySelector('.landing-publisher img').getBoundingClientRect();
+      return { centers: Math.abs(a.y + a.height / 2 - b.y - b.height / 2), separated: a.right < b.left };
+    });
+    assert(footerAlignment.centers < 1 && footerAlignment.separated, `Footer logos align on one row at ${width}`);
     const placement = await page.evaluate(() => {
       const hero = document.querySelector('.entry-layout').getBoundingClientRect();
       const header = document.querySelector('.taalroute-header').getBoundingClientRect();

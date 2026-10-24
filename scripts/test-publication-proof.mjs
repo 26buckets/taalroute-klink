@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-kopsok-20261024.json';
+      const approvalPath = 'docs/klink-owner-release-landing-audiences-20261024.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -404,5 +404,18 @@ test('Kop/sok binds exact scope and preserves the full checked baseline with tar
     a => { a.kopSokRelease.baselineSourceCommit = '0'.repeat(40); },
     a => { a.kopSokRelease.changedFiles.push('data/klink-curriculum.json'); },
     a => { delete a.files['docs/klink-kopsok-publication-20261024/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});
+
+
+test('Landing audiences release requires exact scope, owner request and verified backup', () => {
+  for (const change of [
+    a => { delete a.landingAudiences; },
+    a => { a.landingAudiences.publicationApproved = false; },
+    a => { a.landingAudiences.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.landingAudiences.changedFiles.push('data/klink-curriculum.json'); },
+    a => { a.landingAudiences.userRequest = 'unrelated'; },
+    a => { delete a.files['docs/klink-landing-audiences-20261024/source-drive-verification.json']; },
+    a => { a.files['public/klink-entry-hero.webp'] = '0'.repeat(64); },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });

@@ -39,6 +39,7 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
                 <p className="landing-intro">Met Klink oefen je klanken, woorden en uitspraak. Samen in de les, tijdens begeleiding of zelfstandig. Met ruimte om te luisteren, te herhalen en in je eigen tempo te oefenen.</p>
                 <button className="landing-start" onClick={chooseLearner}><BookOpen aria-hidden="true" /><span>Start met oefenen</span><ArrowRight aria-hidden="true" /></button>
                 <span className="landing-start-note">Voor cursisten · met je klascode en oefencode</span>
+                <p className="landing-method-note">Onderdeel van Alfabeta+, de alfabetiseringsmethode van Taalroute.</p>
               </>
             ) : (
               <form className="learner-login" onSubmit={submitLearner}>
@@ -80,8 +81,12 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
               </article>
             </div>
           </section>
+          <section className="landing-context" aria-label="Alfabeta+ en de Z-route">
+            <div><h2>Onderdeel van Alfabeta+</h2><p>Alfabeta+ is de alfabetiseringsmethode van Taalroute voor volwassenen. Klink is het digitale oefenonderdeel: luisteren naar klanken, werken met letters en woorden, en stap voor stap oefenen met lezen en uitspraak. De docent verbindt de oefeningen aan de les en aan wat de cursist nodig heeft.</p></div>
+            <div><h2>Oefenen binnen de Z-route</h2><p>Binnen de Z-route werken cursisten aan Nederlands en meedoen in het dagelijks leven. Je kunt Klink inzetten voor de alfabetisering en het oefenen met klanken, woorden en lezen. Combineer dit met begeleiding en taal gebruiken in echte situaties, als onderdeel van het bredere traject.</p></div>
+          </section>
         </>}
-        <footer className="landing-footer"><div className="landing-alfa"><Image src="/alfabetaplus-logo.png" alt="Alfabeta+" width={449} height={241} /><span><strong>Klink hoort bij Alfabeta+.</strong><span>De specialistische alfa-leerlijn van Taalroute.</span></span></div><div className="landing-footer-brand"><div className="landing-publisher"><span>Een leermiddel van</span><Image src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} /></div><span className="landing-address">klink.taalroute.nl</span></div></footer>
+        <footer className="landing-footer"><div className="landing-alfa"><span>Onderdeel van</span><Image src="/alfabetaplus-logo.png" alt="Alfabeta+" width={449} height={241} /><span>Alfabetisering voor volwassenen</span></div><div className="landing-footer-brand"><div className="landing-publisher"><span>Een leermiddel van</span><Image src="/taalroute-logo.svg" alt="Taalroute" width={750} height={94} /></div><span className="landing-address">klink.taalroute.nl</span></div></footer>
       </section>
     </main>
   );
