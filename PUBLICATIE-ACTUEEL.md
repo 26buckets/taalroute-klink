@@ -2,6 +2,25 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `566548fa8a8670d040a1ef20aceb90bf204301e1` op canonieke branch `main`.
+Worker-versie: `0d4b3647-3f74-4db1-963b-7036e254bf51`.
+
+Start, het lesoverzicht en de actieve les gebruiken dezelfde uitgelijnde, vaste groene kopstrook. De gedeelde header en navigatie blijven aanwezig. Het zijmenu klapt met uitsluitend een icoon linksonder in en uit; de keuze blijft bij navigeren en herladen bewaard. Oefeningen, vervolgknoppen en invulvelden blijven bereikbaar, ook op lage en liggende schermen. Op smalle schermen blijft het bestaande bodemmenu staan.
+
+De actuele beginnersroute inclusief pak · kat en in blijft behouden, evenals logo D, inhoud, media, oefenmenu, opgeslagen voortgang en overige functies. Alle 112 beginnersstappen zijn lokaal en live doorlopen. De volledige bestaande lokale regressiedekking, gerichte controle van de samengevoegde nieuwste beginnersroute, 25 publicatiebewijstests en live layout-/headercontroles slagen. Alle 2.679 aangeboden media en de gebouwde client zijn bytegelijk teruggelezen. Geen nieuwe audio of mediakoppelingen.
+
+Register: `docs/klink-publication-consistent-layout-20261024.json`. Exacte vrijgave: `docs/klink-owner-release-consistent-layout-20261024.json`. Controles, behoudbewijs en gecontroleerde bronback-up staan in `docs/klink-consistent-layout-20261024/`.
+
+Controlegrens: browseremulatie, geen fysieke telefoon- of cursistenproef. Eerdere inhoudelijke beoordelingsgrenzen, uitspraakbeoordeling en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud alle eerdere inhoudsakkoorden en de bestaande publicatiepoort.
+
+## Voorgaande publicaties (historie)
+
+### Vorige actieve publicatie
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `a648f1699f257f9db15638810e886527a4000096` op canonieke branch `main`.
 Worker-versie: `332f7b60-e7c4-49a1-aef0-9cd2f4155c65`.
 
