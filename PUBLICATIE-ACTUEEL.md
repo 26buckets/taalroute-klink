@@ -2,6 +2,19 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `6f7de9248c933e538a2fec928694db726158bbf4` op canonieke branch `main`.
+Worker-versie: `39763c79-c443-4368-b31a-31ef49a84c5a`.
+
+Het goedgekeurde inklapbare oefenmenu staat online. ‘Andere oefening’ toont de beschikbare vormen voor precies dezelfde woordgroep en filters; na kiezen sluit het menu. Oefenpositie blijft bewaard. Automatisch doorgaan en lezen op tempo wachten zolang het menu openstaat. De compacte kop, scrollreparatie, het gezamenlijke appmenu, logo D, inhoud, media, routes en opslag blijven behouden.
+
+Register: `docs/klink-publication-exercise-menu-20261024.json`; vrijgave: `docs/klink-owner-release-exercise-menu-20261024.json`. Volledige lokale regressie en 22 publicatiebewijstests geslaagd. Live: menu op zes schermformaten, scrollen op vier formaten, header in acht combinaties, alle 2.679 media en gebouwde client bytegelijk gecontroleerd. Browseremulatie, geen fysieke telefoontest. Bronback-up: `docs/klink-exercise-menu-20261024/source-drive-verification.json`; definitief dossier: `docs/klink-exercise-menu-20261024/published/drive-backup.json`.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via de bestaande beveiligde publicatieroute. Eerdere inhoudsakkoorden en audiopauze blijven gelden.
+
+## Vorige actieve publicatie (historie)
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `15c064bbbee48c5fc4bad499801e5f3b59b1d962` op canonieke branch `main`.
 Worker-versie: `1c8293dd-fbeb-4401-a3ab-7d3831994c64`.
 
