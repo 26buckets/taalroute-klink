@@ -18,3 +18,8 @@ Alfa A/B/C en A1 gebruiken Basis 1000; A2 gebruikt Basis 2000; B1 gebruikt Basis
 De historische bronbestanden behouden hun oorspronkelijke `publicationAllowed:false`/`blocked`-velden. De nieuwe, op exacte bestandshashes gebonden Klink-vrijgave is leidend voor deze afgeleide selectie; dit verandert de algemene Lexicon-bronvrijgave niet. Nieuwe audio en audiokoppelingen blijven gepauzeerd. Niet-geselecteerde woorden, redactionele uitsluitingen en de eerdere 478 uitgesloten kandidaatrecords en vier ongeclassificeerde teksten blijven buiten vrijgave.
 
 Lees ook `PUBLICATIE.md` voor de bestaande publicatieroute en voorwaarden; historische liveverwijzingen daarin zijn geen actuele publicatiebasis. Publiceer alleen een afstammeling van bovenstaande actuele livecommit via `npm run deploy`, met opnieuw passende brongebonden vrijgave. Behoud de publicatiepoort en historische akkoorden. Geen blokkades omzeilen.
+
+
+## Deelvenster gepubliceerd — 24 oktober 2026
+
+Broncommit `deb7a0cce5e12a5c1fbe067a07e8808c80ca7f61`, liveversie `50d504df-84fa-4e2d-b4f9-a3dc60710276`. Zie `DELEN-PUBLICATIE-20261024.json`. Bestaande inhoud, media, opslag en lesdeelopties behouden; mobiel, desktop, licht en donker gecontroleerd.
