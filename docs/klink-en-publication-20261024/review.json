@@ -1,0 +1,84 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "566548fa8a8670d040a1ef20aceb90bf204301e1",
+  "enSteps": 3,
+  "guidedExercises": 115,
+  "fullLocalRegressionPassed": true,
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "checks": {
+    "build": true,
+    "types": true,
+    "lint": true,
+    "mediaMetadata": true,
+    "catalog": true,
+    "completeReviewAndPostReview": true,
+    "additionalConsistentLayoutMenuHeaderScrollAccessibility": true
+  },
+  "unitTests": {
+    "passed": 145,
+    "failed": 0,
+    "skipped": 1,
+    "skip": "Existing source-fidelity ledger check; original source review unchanged."
+  },
+  "manualBrowserChecks": [
+    "Wrong first letter does not fill slot",
+    "Kijk nog eens retains e and demonstrates n",
+    "Correct answer waits for Verder, recall waits for Les afronden",
+    "Quiet completion with Volgende les",
+    "320x568, 390x844 and 1366x900: no overflow, visible letter help and 48px continuation"
+  ],
+  "concurrentPublicationRetained": "Consistent learner headers and collapsible navigation; full checks restarted on the newly published 566548f baseline.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits and audio pause retained.",
+    "Existing long single-renderer reload stress crash remains open; full scene coverage uses established isolated test contexts."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-en-review.log",
+      "sha256": "90733b6e31a8f1f8664546ef322ea8907664f68eda0a897357080c81eb35fe7d"
+    },
+    {
+      "path": "work/klink-en-route.log",
+      "sha256": "3f1f5196bf8dc20e016ec12f2bfabd91e2ea1582d21e7e749607090aa70b69e9"
+    },
+    {
+      "path": "work/klink-en-units.log",
+      "sha256": "22f1cd819b91957e281864d9a118520522a824adcfecddf20f28e6afa5d16310"
+    },
+    {
+      "path": "work/klink-en-focused.log",
+      "sha256": "da4b2664b135f882a188da6ce260d7caa599caa6fffaa316701db86dcc2a0b90"
+    },
+    {
+      "path": "work/klink-en-build.log",
+      "sha256": "a9090b5a798b1a86326081e52038766264f481831eaac56722f3fea98954701c"
+    },
+    {
+      "path": "work/klink-en-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-en-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-en-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-en-media.log",
+      "sha256": "85b5a6b7fb95bb657d2b475ffb79499a83d8103b2ddf378ee0573b9795936ca4"
+    },
+    {
+      "path": "work/klink-en-connected-audio.log",
+      "sha256": "f710c520eea4f912a7dc6b96847ee8ce7e47fba3e69ea1e975d1db6663dbf2aa"
+    },
+    {
+      "path": "work/klink-en-extra.log",
+      "sha256": "4c297ad14be3cc57fbc3ebd2af9fc66aa56ef06d11d7b97202176ed5ba126ba7"
+    }
+  ]
+}
