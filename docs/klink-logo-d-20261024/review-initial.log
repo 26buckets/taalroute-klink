@@ -1,0 +1,215 @@
+
+> taalroute-klink@0.1.0 test:review
+> npm run test:curriculum && node scripts/test-demo-api-disabled.mjs && npm run test:curriculum:browser && node scripts/test-ui-lifecycle-browser.mjs && node scripts/test-phase-navigation-browser.mjs && node scripts/test-lesson-extension-browser.mjs && node scripts/test-continuous-flow-browser.mjs && node scripts/test-sentence-comprehension-browser.mjs && node scripts/test-connected-content-browser.mjs && node scripts/test-learner-language-browser.mjs && npm run test:ux && node scripts/test-sections-browser.mjs && node scripts/test-landing-browser.mjs && node scripts/test-mixed-practice-browser.mjs && node scripts/test-mixed-practice-audio.mjs
+
+
+> taalroute-klink@0.1.0 pretest:curriculum
+> node --test scripts/test-audio-register.mjs
+
+✔ Stable script IDs preserve exact language and separate instruction from target (0.690459ms)
+✔ Later binding is exact, reviewed, branded and never silently replaces current audio (0.107709ms)
+✔ All active word, context, instruction and comprehension audio IDs have a register slot (29.790916ms)
+✔ Prepared scripts remain unplaced, deduplicated by role, with honest archive status (52.321459ms)
+✔ Inventory generation is deterministic, and does not mutate the learner curriculum (782.550916ms)
+✔ Broader domains do not claim a full method from renderers or exercise counts (0.175208ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1876.80775
+
+> taalroute-klink@0.1.0 test:curriculum
+> node --test scripts/test-curriculum.mjs scripts/test-existing-player-curriculum.mjs scripts/test-lesson-extension.mjs scripts/test-listening-route.mjs scripts/test-build-checklist.mjs scripts/test-sentence-comprehension.mjs scripts/test-connected-content.mjs scripts/test-content-routing.mjs scripts/test-sections.mjs scripts/test-mixed-practice.mjs
+
+✔ Every existing step has the same goal checklist, exact bindings and no source mutations (171.468833ms)
+✔ Works requires target coverage, guided connection, word media and instruction audio (0.462666ms)
+✔ One word is consciously not made into a fake comparison; copying is not recognition (0.122667ms)
+✔ Sentence bridge uses only contexts actually attached to the selected meaning and step (36.900042ms)
+✔ All original recorded content is deduplicated, word-linked and reachable in existing players (145.497042ms)
+✔ New listening content never inflates a word lesson or asserts independent reading/mastery (36.796791ms)
+✔ Suit, jug and molar are not attached to verb-only occurrences; no public source references (5.177875ms)
+﹣ Source-fidelity ledger retains original text, speakers, questions and recording pointers (0.066542ms) # SKIP
+✔ Every Klink route takes its exact content placement from the same Lexicon edition (1.562166ms)
+✔ Recorded texts remain exact and every repeat remains an optional supported-listening proposal (35.435917ms)
+✔ Every meaning and all 40 base parts come from the fixed Lexicon edition (0.730834ms)
+✔ All words, core steps and extensions resolve and produce scaffolded activities (29.873167ms)
+✔ Recall never silently introduces words that have not yet been introduced (2.640375ms)
+✔ Long-word prerequisites do not silently place the 78 words in a core group (2.790875ms)
+✔ Every spelling construction produces the original form, including repeated letters (3.308375ms)
+✔ The two pak meanings stay distinct and cannot be ambiguous distractors (1.291917ms)
+✔ Storage is optional, validated and independent from old CP progress (0.472458ms)
+✔ Every linked media file exists; no Drive links or rejected standalone sound (16.029667ms)
+✔ Context pictures remain learning support and never become scored image answers (0.687958ms)
+✔ Compact lesson previews preserve the full lesson and choose target meanings, including recall (89.8455ms)
+✔ Every Lexicon meaning has exactly one first home; all core and extension steps remain exact (0.673125ms)
+✔ Long words retain all five reading routes; support is not mistaken for a core step (0.118125ms)
+✔ Guided lessons use explicit IDs, introduce choices first and never borrow from another lesson (8.510417ms)
+✔ Existing renderer contracts have valid answers, tiles, models, and nonambiguous pairs (6.779459ms)
+✔ Both pak meanings remain distinct, missing media is not invented and public files contain no Drive links (41.604958ms)
+✔ Only the established learner, teacher and exercise players are mounted; existing CSS remains the shell (0.303625ms)
+✔ All 302 routes have a complete status inventory and monotonically ordered phases (172.188625ms)
+✔ Dictation and independent rebuilding never contain a visible model; missing audio excludes them (1.88275ms)
+✔ Gap items mask a complete source unit with two prepared distinct alternatives (2.009208ms)
+✔ Single-word entry has no manufactured choice or pair; matching uses unique prepared meanings and images (1.417208ms)
+✔ Route cursor is validated, meaning-safe and separate from mastery; completion has a real next lesson (0.985125ms)
+✔ Explicit release approval does not turn recording/self-check into mastery (1.477125ms)
+✔ Playback waits for actual completion, handles denial/errors, cancels, and reuses the unlocked element (2.1305ms)
+✔ Eight sentences and four situations reuse exact authored Taalroute text and audio without fabricated approval (348.821917ms)
+✔ Every active mode has a separate-voice instruction script; absent recordings stay explicit (0.679ms)
+✔ All six first-section words are targets, not just distractors, in each applicable mode (5.0475ms)
+✔ Fifteen sections retain their own words and valid media across varied rounds (2546.302375ms)
+✔ Seeded order and retries are reproducible; invalid saved sessions are rejected (5.45875ms)
+✔ Cross-section review never pulls in an unprepared future section automatically (1.54925ms)
+✔ Owner publication authorization does not pretend independent review happened (0.072333ms)
+✔ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (77.611417ms)
+✔ Former group 2 resumes at its actual exercise; first a steps remain small and consecutive (0.970833ms)
+✔ Approved navigation photos remain separate from every preserved word cover (3.19825ms)
+✔ Eight authored questions cover the existing sentences with real evidence, feedback and stable bindings (1.638625ms)
+✔ Guided questions use prepared options; oral contrasts stay explicit and optional (9.295291ms)
+✔ Condition and conjunction items cannot be solved by spotting only the subject word (0.128584ms)
+✔ Teacher checklist reports connected, optional and absent comprehension without claiming independent reading (1.918084ms)
+✔ Released audio retains separate roles, embedded Taalroute branding and explicit user approval (285.092292ms)
+ℹ tests 48
+ℹ suites 0
+ℹ pass 47
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 2866.387667
+PASS GET /api/attempts: retired without storage access
+PASS POST /api/attempts: retired without storage access
+PASS GET /api/review-items: retired without storage access
+PASS POST /api/review-items: retired without storage access
+
+> taalroute-klink@0.1.0 test:curriculum:browser
+> node scripts/test-existing-player-browser.mjs
+
+PASS Existing package screens contain every core, recall, extension and additional word route
+PASS Existing guided player runs model, same word, listening, building, error recovery and completion
+PASS All eligible group activities render in the existing exercise players
+PASS The existing word bank and saved-word review share the new stable meaning IDs
+PASS Learner tabs have no known system labels; meaning and missing-audio help are explicit
+PASS Existing shell and player retain usable controls at desktop, tablet and 390/320px widths
+PASS Existing teacher screens use actual Taalroute totals instead of CP sample counts
+PASS guided sequence, one-click choices, wrong/correct, undo relocks, focus/status, audio stops
+PASS typing/writing reset feedback; matching preserves correct pairs and permits recovery
+PASS memory timer cancelled when leaving exercise
+PASS late microphone grant stops tracks without starting recorder
+PASS main navigation and exit stop audio; no API writes or browser errors
+PASS All five phases open their own first exercise by keyboard, without invented results or skipped saved progress
+PASS Finishing a later phase returns to unfinished work; reload preserves the real route, and completing the whole route still works
+PASS All phase buttons stay reachable on desktop, tablet and phones, with 48px targets and the actual word photo
+PASS Clicking the current model phase replays only the word, never the withdrawn explanation
+PASS Complete core route includes new gap tasks, image choice, matching, recall and next lesson
+PASS Complete longer-word route includes actual dictation without a visible model
+PASS Failed sound cannot be answered; retry works and a correct choice advances automatically
+PASS Pause, navigating away, Verder and reloading resume the exact exercise without restoring a correct answer
+PASS Explicit word help is hidden by default and recorded as assistance, not independent success
+PASS Photo strips and matching preserve all sections and 48px controls at desktop, tablet, 390px and 320px
+PASS Teacher checklist covers every step, distinguishes listening from reading, and opens the sentence bridge at desktop/390/320px
+PASS Free practice visibly separates copying from dictation and works with keyboard submission
+PASS Blocked browser storage does not prevent starting a lesson
+PASS Real word audio starts automatically; one answer click advances in about 650ms
+PASS Self-paced mode stays put, and Verder always advances instead of becoming a pause action
+PASS Wrong answers preserve the choices; an immediate Verder click skips the feedback wait
+PASS Sentence and situation recordings play automatically; text replays them and participation is not marked independent reading
+PASS Context presentation keeps its image proportions, large targets and reachable Verder at four screen widths
+PASS The model has one large photo/word listening target, not duplicate listening buttons
+PASS All eight questions run in the existing player; sentence/question/answers play in order, the menu does not reveal the sentence, wrong choices stay put, and listening is not recorded as reading
+PASS Failed question audio keeps answers locked; retry, keyboard choice, pause and Verder work without a separate checking click
+PASS A correct guided answer advances automatically
+PASS Leaving during the sentence cancels the pending question and answers
+PASS Photo answers have accessible names, 48px targets, contained images and a reachable footer on desktop/tablet/390/320px
+PASS Real browser audio completes sentence, question and spoken answers; all offered recordings match the branded source bytes; withdrawn instructions/help never play
+PASS All 15 sections expose the exact connected library; word-step filters return the correct entries
+PASS Sentence, text and dialogue open in the existing player, play in order, record listening participation and allow Verder
+PASS A failed middle turn cannot complete the conversation; retry works and leaving cancels pending turns
+PASS Desktop, tablet and narrow screens retain the existing layout, keyboard listening and large targets
+PASS Real served conversation files decode in the browser; no synthesized substitutes
+PASS Teacher map shows the matched items and separate word, sound, language-load and comprehension conditions
+PASS All 15 lists and 302 lesson routes are visible and reachable with simple learner labels
+
+> taalroute-klink@0.1.0 test:ux
+> node scripts/test-learner-ux-browser.mjs && node scripts/test-learner-ux-audio-browser.mjs
+
+PASS Nine free-practice families at seven viewport sizes including short and landscape: no overlap, fixed square cards, one next action and reachable controls
+PASS Seven guided modes across desktop, tablet, narrow, short and landscape viewports; long words and focused inputs stay reachable
+PASS Writing exercise exposes the linked word audio
+PASS All lesson filters and saved words remain accessible, with saved state surviving reload
+PASS Free-practice model starts the word recording directly, without spoken instructions
+PASS The writing button plays the actual matching word file
+PASS Failed automatic playback exposes a working retry and does not unlock listening answers early
+PASS Actual task, word, retry and teacher playback use 0.85; instructions stay silent; learner recording controls also default to 0.85
+PASS 15 photo-above cards, four separate navigation scenes, preserved first steps and old group-2 resume
+PASS landing: five widths, Taalroute publisher, Alfabeta footer, learner and teacher entrances.
+PASS All six targets, bounded retry, stable choices, independent resume and unchanged lesson progress
+PASS Reading target is visible without automatic word audio; requested audio is recorded as help
+PASS Three words and photos share a board; keyboard/tap pairing and wrong-answer recovery preserve correct pairs
+PASS Existing word-building player works with optional, explicitly recorded help
+PASS Four modes retain readable controls, no horizontal overflow and reachable feedback on five viewport sizes
+PASS Same mixed page is reachable in all fifteen original sections
+PASS Audio failure blocks guessing and recovers with the existing retry control
+PASS Existing Herhalen screen adds a prepared cross-section mix without removing saved words
+PASS Blocked storage does not prevent mixed practice
+PASS The word file plays directly in mixed listening, without a spoken instruction
+PASS Reading stays silent until explicit word-audio help
+PASS Pairing uses the existing spoken word on selection
+PASS Existing word recordings unlock mixed word building without spoken instructions
+
+> taalroute-klink@0.1.0 posttest:review
+> node scripts/test-audio-register-browser.mjs && npm run test:group-practice && npm run test:chapters && npm run test:learning-paths && npm run test:menu && npm run test:routes && npm run test:standard-players && npm run test:content-import
+
+PASS Learner home and all 15 sections preserved; no audio inventory downloaded by learners
+PASS All 12 domains shown; missing audio and parked short t never pretend to play
+PASS Word playback uses the existing recording; search and section filter work
+PASS Prepared-script inventory loads on demand, remains unplaced and supports bounded pagination
+PASS 16 instruction recordings are retained but withdrawn from playback on the owner's request
+PASS Desktop, tablet, phone and keyboard work; no source links in the interface
+
+> taalroute-klink@0.1.0 test:group-practice
+> node --test scripts/test-group-practice.mjs scripts/test-extended-practice.mjs && node scripts/test-group-practice-browser.mjs && node scripts/test-extended-practice-browser.mjs
+
+✔ Every new activity has stable scoped source references, preparation and honest release status (2912.350125ms)
+✔ All source questions retained with exact answer and source evidence, no random distractors (1283.996292ms)
+✔ Klankvergelijking uses actual wholeword recordings, balanced equal/different trials and no answer leaks (1.014541ms)
+✔ Sentence construction preserves exact word boundaries; grammar targets only the stated ik-form (390.582208ms)
+✔ Writing and role work use source tasks and participation, never fabricated mastery (279.563917ms)
+✖ Sixteen branded instructions are connected by owner authorization, without inventing a listening review (1.532583ms)
+✔ Whole word groups feed the exercise library, without changing the curriculum (12661.967583ms)
+✔ Every first-group word is a target in all basic word activities (2.402459ms)
+✔ Bingo has per-word turns, stable boards, no answer model, and audio gating (1588.027208ms)
+✔ Sentence recognition reuses real near-contrast sentences and retains reading conditions (132.276792ms)
+✔ Connected instructions do not change participation into proven skill or unpark the short t (2.540042ms)
+✔ Group progress rejects unknown IDs and never uses lesson-progress keys (0.480959ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 11
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 14832.848458
+
+✖ failing tests:
+
+test at scripts/test-extended-practice.mjs:79:1
+✖ Sixteen branded instructions are connected by owner authorization, without inventing a listening review (1.532583ms)
+  Error: ENOENT: no such file or directory, open 'outputs/extended-instruction-audio-20261017/extra-klankvergelijk.json'
+      at Object.openSync (node:fs:697:18)
+      at readFileSync (node:fs:543:35)
+      at TestContext.<anonymous> (file:///Users/nicoknoester/Documents/Codex/2026-10-23/werk-verder-aan-taalroute-studio-repository/work/taalroute-klink-logo-d/scripts/test-extended-practice.mjs:89:31)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    errno: -2,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'outputs/extended-instruction-audio-20261017/extra-klankvergelijk.json'
+  }
