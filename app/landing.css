@@ -13,7 +13,7 @@
 .landing-start svg { width: 21px; height: 21px; }
 .landing-start:hover { background: #603c5d; }
 .landing-start-note { display: block; margin-top: 12px; color: #6c5b69; font-size: 13px; }
-.klink-landing .landing-method-note { margin: 16px 0 0; max-width: 395px; color: var(--landing-muted); font-size: 14px; line-height: 1.5; }
+.klink-landing .entry-copy > .landing-method-note { margin: 16px 0 0; max-width: 395px; color: #6c5b69; font-size: 14px; line-height: 1.5; }
 .landing-context { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; width: min(1200px, calc(100% - 96px)); margin: 0 auto; padding: 28px 0; border-top: 1px solid #e2d8df; }
 .landing-context h2 { margin: 0 0 10px; font-size: 24px; font-weight: 400; line-height: 1.2; letter-spacing: -.025em; }
 .landing-context p { margin: 0; color: var(--landing-muted); font-size: 15px; line-height: 1.6; }
