@@ -2,6 +2,24 @@
 
 Live: https://klink.taalroute.nl
 
+Broncommit: `86f2513716544f355f0d29f66bcaee45528cbffd` op canonieke branch `main`.
+Worker-versie: `9564aae6-557c-4ee1-b742-e2d4c8edc64d`.
+
+**Vaste witte werkruimte en rustig oefenmenu.** De boven- en zijranden van het witte werkvlak staan op dezelfde positie in actieve lessen, pen · kip, luisteren, klanken, woordenmix, Oefenen, Woorden en Herhalen. Filters en aanwijzingen staan binnen dit vlak. De titelbalk blijft vast; alleen inhoud en zijmenu scrollen. Andere oefening staat standaard ingeklapt en de opdrachttekst staat één keer in de balk. Bestaande kleuren, lettertypen, knoppen, logo D, routes, opslag en media zijn behouden. De nieuwste les **is** en de mobiele ruimte onder Verder blijven behouden.
+
+Register: `docs/klink-publication-white-workspace-20261024.json`; vrijgave: `docs/klink-owner-release-white-workspace-20261024.json`.
+Volledige lokale review- en vervolgreeks afgerond, met bijgewerkte selectoren voor het goedgekeurde menu. Lokaal en online: 56 vergelijkingen van witte werkvlakranden, zes menuformaten, acht headercontroles en alle 118 begeleide stappen. 28 publicatiebewijstests geslaagd. Alle 2.679 aangeboden media en de gebouwde client online bytegelijk gecontroleerd. De bronback-up is teruggelezen uit de bestaande Drive-projectmap.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen, audiopauze en het bekende onderzoekspunt bij zeer lange herlaadreeksen in één browserproces blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
+
 Broncommit: `7f4985aacbb40f0bd7c3e0e3c649f0059e5e375c` op canonieke branch `main`.
 Worker-versie: `4b9daad4-6310-4d76-8ca8-a57a611e1b1a`.
 

@@ -1,0 +1,36 @@
+✔ Valid publication proof resolves provenance, not outstanding media approval (509.385042ms)
+✔ New route approval rejects changed hashes and cannot drop the previous approval scope (885.27575ms)
+✔ Cumulative approval requires every new source, review and verified backup binding (1411.948333ms)
+✔ Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity (2043.019417ms)
+✔ Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected (2559.029ms)
+✔ Proof for a different live version cannot satisfy the publication gate (494.696917ms)
+✔ A boolean without its underlying publication record is rejected (495.94875ms)
+✔ Missing fresh public client evidence is rejected (490.187125ms)
+✔ A mismatching or dirty live release marker is rejected (1512.920041ms)
+✔ Incomplete media evidence or a missing source archive is rejected (1974.4145ms)
+✔ Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval (1510.570042ms)
+✔ Smaller header successor retains historical approval and permits only the exact approved dimensions (2125.070958ms)
+✔ Header sizing rejects extra CSS changes even when approval hashes match the source files (1408.557333ms)
+✔ Wordbuild publication requires exact consent, reviewed selection and verified source backup (2100.332416ms)
+✔ Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval (1862.050958ms)
+✔ Maintenance approval rejects an expanded scope, missing consent and altered source hashes (1036.015458ms)
+✔ Landing footer approval remains limited to the explicit request (978.166209ms)
+✔ Sharing release cannot extend runtime scope or erase the previous maintenance approval (790.571917ms)
+✔ Header repair retains the published sharing and content approval (789.511917ms)
+✔ Compact exercise release requires exact consent, scope, source and verified backup (1211.044042ms)
+✔ KLINK menu addition cannot widen content scope or discard the approved header repair (592.96925ms)
+✔ Collapsible exercise menu binds consent, unchanged content scope and verified backup (1194.27575ms)
+✔ Beginner release binds current live ancestry, exact scope and owner publication request (1639.114291ms)
+✔ In release preserves beginner scope and binds its publication and backup (1229.503083ms)
+✔ Consistent layout keeps the current beginners release, owner consent and exact source scope (1231.792209ms)
+✔ En release binds its scope, live ancestry and verified backup without weakening earlier approvals (1406.059333ms)
+✔ White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence (997.854875ms)
+✔ Is release binds its scope, live ancestry and verified backup without weakening earlier approvals (1396.640541ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 35924.791042
