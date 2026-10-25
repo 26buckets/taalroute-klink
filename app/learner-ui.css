@@ -272,12 +272,12 @@
 .learner-app .cp-first-letter-guide .cp-picture-help img { height: 144px; max-height: 144px; }
 .cp-letter-cue { margin: 0; text-align: center; font-size: 18px; line-height: 1.4; }
 .cp-letter-demo { margin: 0; display: flex; align-items: center; justify-content: center; gap: 12px; }
-.cp-letter-demo > div { display: flex; gap: 6px; }
-.cp-letter-demo span { display: grid; place-items: center; width: 48px; height: 64px; border: 2px dashed var(--line-strong); border-radius: var(--radius); font-size: 36px; }
-.cp-letter-demo > .cp-demo-source { position: relative; width: 64px; border: 2px solid var(--primary); background: var(--primary-soft); }
+.cp-letter-demo > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+.cp-letter-demo span { display: grid; place-items: center; width: auto; min-width: 48px; flex-shrink: 0; padding: 0 6px; height: 64px; border: 2px dashed var(--line-strong); border-radius: var(--radius); font-size: 36px; }
+.cp-letter-demo > .cp-demo-source { position: relative; min-width: 64px; border: 2px solid var(--primary); background: var(--primary-soft); }
 .cp-letter-demo > svg { width: 24px; flex-shrink: 0; }
 .cp-demo-source > svg, .cp-first-tile > svg { position: absolute; right: -8px; bottom: -12px; width: 28px; height: 28px; padding: 2px; background: var(--paper); color: var(--primary); }
-.learner-app .cp-first-letter-guide :is(.cp-build-slots button, .cp-tile-bank button) { position: relative; width: 64px; height: 64px; min-width: 64px; min-height: 64px; font-size: 36px; }
+.learner-app .cp-first-letter-guide :is(.cp-build-slots button, .cp-tile-bank button) { position: relative; width: auto; height: 64px; min-width: 64px; min-height: 64px; font-size: 36px; }
 .learner-app .cp-first-letter-guide .cp-letter-model { display: inline; padding: 0; font-size: 36px; color: var(--primary); border-bottom: 2px solid var(--primary); }
 .learner-app .cp-first-letter-guide .cp-first-tile { border: 2px solid var(--primary); background: var(--primary-soft); }
 .cp-exercise-demo .cp-choice-grid > button { position: relative; }
@@ -301,7 +301,7 @@
   .learner-app .cp-first-letter-guide .cp-task-prompt > button { height: 48px; }
   .learner-app .cp-first-letter-guide .cp-picture-help { height: 48px; min-height: 48px; }
   .learner-app .cp-first-letter-guide .cp-picture-help img { height: 48px; max-height: 48px; }
-  .learner-app .cp-first-letter-guide :is(.cp-build-slots button, .cp-tile-bank button) { width: 48px; height: 48px; min-width: 48px; min-height: 48px; padding: 4px; font-size: 32px; }
+  .learner-app .cp-first-letter-guide :is(.cp-build-slots button, .cp-tile-bank button) { width: auto; height: 48px; min-width: 48px; min-height: 48px; padding: 4px; font-size: 32px; }
   .learner-app .cp-first-letter-guide .cp-letter-model { min-width: 0; min-height: 0; font-size: 32px; }
   .learner-app :is(.cp-beginner-match, .cp-exercise-demo) { gap: 8px; padding: 0; }
   .learner-app .cp-beginner-match .cp-match-board button { min-height: 72px; padding: 8px; }
