@@ -1,0 +1,38 @@
+{
+  "status": "passed-local",
+  "allDialogueRoutes": 128,
+  "browserChecks": 393,
+  "widths": [
+    320,
+    390,
+    630,
+    760,
+    761,
+    1366,
+    1920
+  ],
+  "shortScreenHeight": 480,
+  "naturalImageRatio": true,
+  "noImageCropping": true,
+  "controlsReachable": true,
+  "sourceAndMediaPreserved": true,
+  "buildPassed": true,
+  "typesPassed": true,
+  "lintPassed": true,
+  "lintScope": "Alle gewijzigde scripts. Brede lint meldt twee bestaande ongebruikte imports in ongewijzigd scripts/test-dialogue-repair.mjs; aanwezig in baseline.",
+  "curriculum": {
+    "passed": 48,
+    "skipped": 1
+  },
+  "dialogueRepairTests": 3,
+  "playerControls": "passed: per-turn, full conversation, pause, optional transcript, responsive controls",
+  "visualReview": "Bestaande Sara-foto volledig met hoofd en gezicht zichtbaar in 630px-browser; afbeeldingsverhouding gelijk aan bron. Foto blijft van schuin opzij/omlaag. Geen nieuwe beeldgeneratie.",
+  "handsReview": "Ongewijzigde bronbeelden: bestaande volledige beeld-/handenreview behouden in docs/klink-gesprekken-release-20261025/image-review.json. Geen beeldpixels veranderd.",
+  "humanListeningReview": "open; audio niet veranderd",
+  "physicalDeviceTrial": false,
+  "newImages": 0,
+  "newAudio": 0,
+  "runtimeChangedFiles": [
+    "app/globals.css"
+  ]
+}

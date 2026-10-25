@@ -2558,7 +2558,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-dialogue-support .secondary-button[aria-pressed="true"] { background: var(--primary-soft); border-color: var(--primary); }
 .cp-dialogue-scene { display: grid; gap: 24px; align-items: center; }
 .cp-dialogue-scene.has-image { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-.cp-dialogue-scene > img { width: 100%; max-height: 280px; object-fit: cover; border: 0; }
+.cp-dialogue-scene > img { width: 100%; height: auto; max-height: none; object-fit: contain; border: 0; }
 .cp-dialogue-current { min-width: 0; padding: 20px; background: var(--primary-soft); border-radius: var(--radius); }
 .cp-dialogue-current h3 { font-size: 24px; font-weight: 500; margin: 6px 0 12px; }
 .cp-dialogue-current p { font-size: clamp(24px, 2.3vw, 32px); line-height: 1.45; margin: 0; }
@@ -2569,7 +2569,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-dialogue-transcript summary { cursor: pointer; min-height: 48px; padding: 12px 0; }
 .cp-dialogue-transcript > button { width: 100%; margin-top: 8px; text-align: left; white-space: normal; align-items: flex-start; }
 .cp-dialogue-transcript strong { display: block; font-weight: 500; margin-bottom: 6px; }
-@media (max-width: 760px) { .cp-dialogue-scene.has-image { grid-template-columns: 1fr; gap: 12px; } .cp-dialogue-scene > img { max-height: 170px; } .cp-dialogue-current { padding: 14px; } }
+@media (max-width: 760px) { .cp-dialogue-scene.has-image { grid-template-columns: 1fr; gap: 12px; } .cp-dialogue-current { padding: 14px; } }
 
 .cp-dialogue-support { border: 0; padding: 0; margin: 0; }
 .cp-dialogue-support legend { margin-bottom: 8px; }
