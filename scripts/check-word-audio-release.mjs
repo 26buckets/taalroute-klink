@@ -26,7 +26,7 @@ export function assertWordAudioMappings(before, after, recordings, expectedWords
   return seen.size;
 }
 
-export function verifyWordAudioRelease() {
+export function verifyWordAudioRelease(readReleaseFile = readFileSync, sourceCommit = 'HEAD') {
   const release = read('docs/klink-owner-release-wordaudio-20261025.json');
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, request); assert.equal(read(`${evidence}/owner-request.json`).userRequest, request);
@@ -57,9 +57,9 @@ export function verifyWordAudioRelease() {
   assert.equal(review.wordAudioManifestSha256, release.audioManifestSha256);
   const backup = read(`${evidence}/source-drive-verification.json`);
   assert.equal(backup.parentVerified, true); assert.equal(backup.downloadedByteIdentical, true); assert.equal(backup.zipCrcVerified, true);
-  for (const [file, sha] of Object.entries(release.files)) assert.equal(digest(readFileSync(file)), sha, file);
+  for (const [file, sha] of Object.entries(release.files)) assert.equal(digest(readReleaseFile(file)), sha, file);
   const expected = ['data/klink-media.json', 'lib/package-content.ts', 'public/content-register/active.json', 'public/content-register/planned.json', 'public/content-register/summary.json', ...manifest.map(row => `public${row.src}`)].sort((a,b)=>a.localeCompare(b));
-  const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').trim().split('\n').filter(Boolean).sort((a,b)=>a.localeCompare(b));
+  const changed = git('diff', '--name-only', release.baselineSourceCommit, sourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').trim().split('\n').filter(Boolean).sort((a,b)=>a.localeCompare(b));
   assert.deepEqual(changed, expected, 'No unrelated runtime change may enter the word-audio release');
   return release;
 }

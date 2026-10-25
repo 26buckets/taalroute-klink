@@ -639,3 +639,15 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
     text-align: left;
   }
 }
+
+/* A guided teacher preview has no sidebar: let its exercise use the whole row. */
+.is-guided .cp-exercise-workspace:not(:has(> aside)) { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+.product-root > .cp-player:has(.is-guided) { height: calc(100dvh - var(--taalroute-header-height, 60px)); min-height: 0; }
+.product-root > .cp-player .cp-lesson-player { grid-template-rows: auto minmax(0, 1fr); }
+.product-root > .cp-player .is-guided .cp-exercise-main { grid-template-rows: auto minmax(0, 1fr) auto; }
+.product-root > .cp-player .cp-lesson-player > .cp-context-header { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 8px 16px; background: var(--canvas); color: var(--ink); }
+.product-root > .cp-player .cp-lesson-player > .cp-context-header > .cp-lesson-launch { display: block; min-height: 0; padding: 0; background: transparent; color: inherit; }
+.product-root > .cp-player .cp-lesson-player > .cp-context-header h1 { margin: 0; font-size: 24px; font-weight: 500; }
+.product-root > .cp-player .cp-context-meta { margin-left: auto; }
+.product-root > .cp-player .cp-exercise-record-head { flex-direction: row; flex-wrap: wrap; gap: 8px; min-height: 64px; }
+.product-root > .cp-player .cp-exercise-record-head h3 { margin: 0; max-width: none; font-size: 18px; white-space: normal; }

@@ -1,0 +1,368 @@
+{
+  "status": "passed-local",
+  "preservationPassed": true,
+  "teacherClippingFixed": true,
+  "baselineSourceCommit": "313932512785d4962937cab1191ab4f4240729ee",
+  "perspectives": [
+    "Simulated learner: main word stays dominant; 16–18px neutral article line, no new icons or controls.",
+    "Simulated teacher: selected sense is visible; plurals and non-nouns do not receive incorrect articles. Guided preview had obsolete sidebar column/row and fixed header tracks, clipping the word and article. Corrected without adding a sidebar or moving controls."
+  ],
+  "finding": {
+    "severity": "must-fix",
+    "before": "Teacher desktop main area was 218px wide in a 1366px view. Mobile exercise area collapsed to zero height.",
+    "cause": "Old two-track grid reserved space for an absent sidebar, plus fixed header heights despite wrapped controls.",
+    "fix": "Use one grid track without an aside, fit below the existing header, and let teacher lesson headers size to their contents."
+  },
+  "layout": {
+    "status": "passed",
+    "checks": [
+      {
+        "role": "learner",
+        "width": 1366,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1366,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1366,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1366,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1366,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1100,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1100,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1100,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1100,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 1100,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 768,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 768,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 768,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 768,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 768,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 390,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 390,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 390,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 390,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 390,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 320,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 320,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 320,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 320,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "learner",
+        "width": 320,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1366,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1366,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1366,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1366,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1366,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1100,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1100,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1100,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1100,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 1100,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 768,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 768,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 768,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 768,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 768,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 390,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 390,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 390,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 390,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 390,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 320,
+        "group": "groep-1",
+        "labels": 6,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 320,
+        "group": "groep-4",
+        "labels": 24,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 320,
+        "group": "groep-8",
+        "labels": 52,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 320,
+        "group": "route-verbinden",
+        "labels": 10,
+        "fit": true
+      },
+      {
+        "role": "teacher",
+        "width": 320,
+        "view": "meet-and-complete-lesson",
+        "fit": true
+      }
+    ],
+    "errors": []
+  },
+  "functional": "Complete first lesson in learner and teacher views at five widths; article absent from letter/recall tasks. Existing nine card/first-lesson/save/reload checks also passed online before the fix.",
+  "unitTests": 4,
+  "limitations": [
+    "Simulated perspectives, no real learner trial or physical phone.",
+    "Broad unrelated regression and existing audio review inherited; no new audio."
+  ]
+}
