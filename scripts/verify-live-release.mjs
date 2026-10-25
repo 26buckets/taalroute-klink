@@ -20,7 +20,7 @@ const release = await releaseResponse.json();
 assert.deepEqual(release, expected);
 assert.equal(release.sourceClean, true);
 const paths = [...new Set([
-  ...Object.values(sectionPhotos),
+  ...Object.values(sectionPhotos), ...Object.values(media).map(item => item.image),
   ...words.flatMap(word => [media[word.id].image, media[word.id].audio]),
   ...content.items.flatMap(item => item.blocks.map(block => block.audio.src)),
   ...klinkContexts.flatMap(item => [item.audio, item.image]),

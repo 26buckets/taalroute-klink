@@ -7,6 +7,7 @@ import { extendedInstructionNeeds } from '../lib/extended-practice.ts';
 import { resolveRegisteredAudio } from '../lib/audio-register.ts';
 import { instructionAudioEnabled } from '../lib/audio-policy.ts';
 import { importedDomains, importedItemIssues } from '../lib/imported-practice-contract.ts';
+import { verifyImageRelease } from './check-image-release.mjs';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
 const media = read('../data/klink-media.json');
@@ -18,7 +19,7 @@ const issues = [];
 let ownerAuthorized = false;
 const authorizationPath = 'docs/klink-owner-release-articles-20261025.json';
 const articlePreviousPath = 'docs/klink-owner-release-groep8-20261025.json';
-const articleFiles = ["app/learner-ui.css", "components/product/learner-app.tsx", "components/product/package-experience.tsx", "components/product/package-exercise-browser.tsx", "data/klink-word-articles.json", "lib/word-articles.ts", "scripts/test-word-articles.mjs", "scripts/test-word-articles-browser.mjs", "scripts/check-curriculum-release.mjs", "scripts/test-publication-proof.mjs"];
+const articleFiles = ["app/learner-ui.css", "components/product/learner-app.tsx", "components/product/package-experience.tsx", "components/product/package-exercise-browser.tsx", "data/klink-word-articles.json", "lib/word-articles.ts", "scripts/test-word-articles.mjs", "scripts/test-word-articles-browser.mjs", "scripts/check-curriculum-release.mjs", "scripts/test-publication-proof.mjs", "scripts/check-image-release.mjs"];
 const articleRuntimeFiles = articleFiles.filter(file => !file.startsWith('scripts/'));
 const group8PreviousPath = 'docs/klink-owner-release-klanken-20261025.json';
 const group8Files = ["lib/lesson-plan.ts", "lib/teacher-practice-plan.ts", "data/klink-teacher-manual.json", "docs/KLINK-DOCENTHANDLEIDING.md", "scripts/test-first-letter-guide.mjs", "scripts/test-beginner-demos.mjs", "scripts/test-beginner-route-browser.mjs", "scripts/test-group8-guidance-browser.mjs", "scripts/check-curriculum-release.mjs", "scripts/test-publication-proof.mjs"];
@@ -106,6 +107,7 @@ const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
   const approval = JSON.parse(readFileSync(authorizationPath));
+  const imageRelease = verifyImageRelease({ ...approval.wordArticles, files: approval.files });
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));
   if (approval.previousAuthorization !== previousAuthorizationPath || Object.keys(previous.files).some(file => !approval.files?.[file])) throw Error('Previous approval scope must be retained');
   const required = ['lib/group-practice.ts', 'lib/extended-practice.ts', 'lib/mixed-practice.ts', 'data/klink-functional-writing.json', 'data/klink-audio-policy.json', 'lib/learning-paths.ts', 'lib/learning-review.ts', 'data/klink-learning-rules.json', 'components/product/learning-path-surface.tsx', 'data/klink-learning-paths-release.json'];
@@ -118,15 +120,20 @@ try {
   if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
-    if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
+    const actualHash = createHash('sha256').update(readFileSync(file)).digest('hex');
+    const authorizedImageGate = actualHash === imageRelease.files[file]
+      && createHash('sha256').update(execFileSync('git', ['show', `${imageRelease.baselineSourceCommit}:${file}`])).digest('hex') === hash;
+    if (actualHash !== hash && !authorizedImageGate) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
   const articlePrevious = JSON.parse(readFileSync(articlePreviousPath));
   const articles = approval.wordArticles;
   const articleEvidence = 'docs/klink-articles-20261025';
+  requireProof(articles.previousImageAuthorization === 'docs/klink-owner-release-images-20261025.json');
+  requireProof(approval.files[articles.previousImageAuthorization] === createHash('sha256').update(execFileSync('git', ['show', `${articles.baselineSourceCommit}:${articles.previousImageAuthorization}`])).digest('hex'));
   const articleRequest = JSON.parse(readFileSync(`${articleEvidence}/owner-request.json`));
   requireProof(articles?.approvedBy === 'Nico' && articles.publicationApproved === true);
-  requireProof(articles.previousAuthorization === articlePreviousPath && articles.baselineSourceCommit === 'dac55cccb475b6d2ef2c18187fa56173bd3606aa');
+  requireProof(articles.previousAuthorization === articlePreviousPath && articles.baselineSourceCommit === 'b850233c4445a6974728051fcfb73673f75bfcec');
   requireProof(articles.userRequest === articleRequest.userRequest && articles.userRequest.includes('Audio doen we later'));
   requireProof(articles.meaningsChecked === 5127 && articles.articleLabels === 2520 && articles.newAudio === 0);
   requireProof(JSON.stringify(articles.changedFiles) === JSON.stringify(articleFiles));
@@ -156,7 +163,7 @@ try {
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${group8.baselineSourceCommit}:${group8PreviousPath}`])).digest('hex') === approval.files[group8PreviousPath]);
   for (const [key, value] of Object.entries(group8Previous)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   for (const [file, sha] of Object.entries(group8Previous.files)) requireProof(approval.files[file] && ((articleFiles.includes(file) || group8Files.includes(file)) || approval.files[file] === sha));
-  const group8Changes = execFileSync('git', ['diff', '--name-only', group8.baselineSourceCommit, articles.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  const group8Changes = execFileSync('git', ['diff', '--name-only', group8.baselineSourceCommit, imageRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   requireProof(JSON.stringify(group8Changes) === JSON.stringify(group8RuntimeFiles));
   const group8Review = JSON.parse(readFileSync(`${group8Evidence}/review.json`));
   const group8Sources = JSON.parse(readFileSync(`${group8Evidence}/source-manifest.json`));
@@ -178,7 +185,7 @@ try {
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${sound.baselineSourceCommit}:${soundPreviousPath}`])).digest('hex') === approval.files[soundPreviousPath]);
   for (const [key, value] of Object.entries(soundPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   for (const [file, sha] of Object.entries(soundPrevious.files)) requireProof(approval.files[file] && (((articleFiles.includes(file) || group8Files.includes(file)) || soundFiles.includes(file)) || approval.files[file] === sha));
-  const soundChanges = execFileSync('git', ['diff', '--name-only', sound.baselineSourceCommit, articles.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  const soundChanges = execFileSync('git', ['diff', '--name-only', sound.baselineSourceCommit, imageRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   requireProof(JSON.stringify(soundChanges.filter(file => !group8RuntimeFiles.includes(file) || soundRuntimeFiles.includes(file))) === JSON.stringify(soundRuntimeFiles));
   const soundReview = JSON.parse(readFileSync(`${soundEvidence}/review.json`));
   const soundSources = JSON.parse(readFileSync(`${soundEvidence}/source-manifest.json`));
@@ -199,7 +206,7 @@ try {
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${frames.baselineSourceCommit}:${framePreviousPath}`])).digest('hex') === approval.files[framePreviousPath]);
   for (const [key, value] of Object.entries(framePrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   for (const [file, sha] of Object.entries(framePrevious.files)) requireProof(approval.files[file] && ((((articleFiles.includes(file) || group8Files.includes(file)) || soundFiles.includes(file)) || frameFiles.includes(file)) || approval.files[file] === sha));
-  const frameChanges = execFileSync('git', ['diff', '--name-only', frames.baselineSourceCommit, sound.baselineSourceCommit, articles.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  const frameChanges = execFileSync('git', ['diff', '--name-only', frames.baselineSourceCommit, sound.baselineSourceCommit, imageRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   requireProof(JSON.stringify(frameChanges) === JSON.stringify([...frameRuntimeFiles].sort()));
   const frameReview = JSON.parse(readFileSync(`${frameEvidence}/review.json`));
   const frameSources = JSON.parse(readFileSync(`${frameEvidence}/source-manifest.json`));
