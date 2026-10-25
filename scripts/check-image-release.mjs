@@ -19,8 +19,8 @@ export function verifyImageRelease() {
   const release = read('docs/klink-owner-release-images-20261025.json');
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, 'Zet de 225 goedgekeurde afbeeldingen ook meteen online in de Klink-app en ga verder met de rest. Houd het Codex Work-verbruik zo laag mogelijk.');
-  assert.equal(release.baselineSourceCommit, '0591327365eb02d9934dbdfa2257d0b664779588');
-  assert.equal(release.previousAuthorization, 'docs/klink-owner-release-klanken-20261025.json');
+  assert.equal(release.baselineSourceCommit, 'dac55cccb475b6d2ef2c18187fa56173bd3606aa');
+  assert.equal(release.previousAuthorization, 'docs/klink-owner-release-groep8-20261025.json');
   const git = (...args) => execFileSync('git', args, { encoding: 'utf8', maxBuffer: 32 * 1024 * 1024 });
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
   assert.equal(digest(readFileSync(release.previousAuthorization)), release.previousAuthorizationSha256);

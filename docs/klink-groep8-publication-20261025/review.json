@@ -1,0 +1,4464 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "0591327365eb02d9934dbdfa2257d0b664779588",
+  "guidedExercises": 942,
+  "lessonSteps": 238,
+  "lessons": 45,
+  "targetedRegressionPassed": true,
+  "fullLocalRegressionRerun": false,
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "latestSourceReview": "docs/klink-klanken-publication-20261025/review.json",
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "unitTests": {
+    "passed": 150,
+    "failed": 0,
+    "skipped": 1
+  },
+  "targetedBrowserChecks": [
+    "Forward jump returns to unfinished first exercise with explanation",
+    "hek: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-25: all 13 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "week: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-26: all 10 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zon: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "zeep: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "zeef: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-27: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ei: single combination, repeat demo and undo/retry, three viewports and complete guided build",
+    "klink-leesstap-28: all 13 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ijs: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "vijf: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "pijn: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-29: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "saus: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-30: all 13 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "hout: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "kous: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "zout: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-leesstap-31: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "huis: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-uitbreiding-13: all 11 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zak: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "zes: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-uitbreiding-14: all 14 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "touw: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "klink-uitbreiding-15: all 11 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "au: single combination, repeat demo and undo/retry, three viewports and complete guided build",
+    "woord-klink-woord-au: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bij: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-bij: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "blauw: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-blauw: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bouw: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-bouw: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "eind: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-eind: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "fout: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-fout: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "haak: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-haak: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "haan: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-haan: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "haar: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-haar: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "hand: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-hand: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "heb: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-heb: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "heeft: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-heeft: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "hij: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-hij: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "hoed: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-hoed: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "huid: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-huid: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "klein: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-klein: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "koud: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-koud: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "krijt: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-krijt: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "lijst: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-lijst: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "oud: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-oud: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "plein: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-plein: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "prijs: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-prijs: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "rijk: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-rijk: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "rijst: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-rijst: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "trein: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-trein: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "want: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-want: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "warm: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-warm: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "woord: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-woord: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "worst: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-worst: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zaak: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zaak: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zand: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zand: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zie: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zie: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ziet: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-ziet: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zit: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zit: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zoon: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zoon: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+  ],
+  "previousGroupSteps": 57,
+  "soundReferenceChecks": {
+    "checks": [
+      "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 1366px",
+      "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 768px",
+      "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 390px",
+      "Single Klanken entry, Klankenkaart inside existing chapter, return route, keyboard and 46 cards at 320px",
+      "All 46 detail links retain the exact canonical spelling, example and Klankstudio sound ID",
+      "Existing mat recording plays to the end with real browser audio",
+      "Audio errors allow retry; navigation stops playback",
+      "mat opens m-a-t inline without leaving the lesson or changing progress; desktop/mobile stay in bounds",
+      "tas lesson entry, malformed links and browser Back/Forward work"
+    ],
+    "errors": []
+  },
+  "frameChecks": [
+    {
+      "activity": "read",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 302,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 756,
+          "y": 302,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 378,
+          "y": 500,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 756,
+          "y": 500,
+          "w": 366,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 302,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 756,
+              "y": 302,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 378,
+              "y": 500,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 756,
+              "y": 500,
+              "w": 366,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "listen",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 310,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 756,
+          "y": 310,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 378,
+          "y": 508,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 756,
+          "y": 508,
+          "w": 366,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 310,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 756,
+              "y": 310,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 378,
+              "y": 508,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 756,
+              "y": 508,
+              "w": 366,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "hear-word",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 372,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 756,
+          "y": 372,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 378,
+          "y": 480,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 756,
+          "y": 480,
+          "w": 366,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 372,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 756,
+              "y": 372,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 378,
+              "y": 480,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 756,
+              "y": 480,
+              "w": 366,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "same-word",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 368,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 756,
+          "y": 368,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 378,
+          "y": 476,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 756,
+          "y": 476,
+          "w": 366,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 368,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 756,
+              "y": 368,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 378,
+              "y": 476,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 756,
+              "y": 476,
+              "w": 366,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "word-bingo",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 431.5,
+          "w": 241.328125,
+          "h": 120
+        },
+        {
+          "x": 629.328125,
+          "y": 431.5,
+          "w": 241.328125,
+          "h": 120
+        },
+        {
+          "x": 880.65625,
+          "y": 431.5,
+          "w": 241.328125,
+          "h": 120
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 431.5,
+              "w": 241.328125,
+              "h": 120
+            },
+            {
+              "x": 629.328125,
+              "y": 431.5,
+              "w": 241.328125,
+              "h": 120
+            },
+            {
+              "x": 880.65625,
+              "y": 431.5,
+              "w": 241.328125,
+              "h": 120
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "image-bingo",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 426.5,
+          "w": 241.328125,
+          "h": 130
+        },
+        {
+          "x": 629.328125,
+          "y": 426.5,
+          "w": 241.328125,
+          "h": 130
+        },
+        {
+          "x": 880.65625,
+          "y": 426.5,
+          "w": 241.328125,
+          "h": 130
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 426.5,
+              "w": 241.328125,
+              "h": 130
+            },
+            {
+              "x": 629.328125,
+              "y": 426.5,
+              "w": 241.328125,
+              "h": 130
+            },
+            {
+              "x": 880.65625,
+              "y": 426.5,
+              "w": 241.328125,
+              "h": 130
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "memory",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 630,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 882,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 378,
+          "y": 486,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 630,
+          "y": 486,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 882,
+          "y": 486,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "opened-0",
+          "rects": [
+            {
+              "x": 378,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 630,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 882,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 378,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 630,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 882,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        },
+        {
+          "name": "opened-1",
+          "rects": [
+            {
+              "x": 378,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 630,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 882,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 378,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 630,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 882,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        },
+        {
+          "name": "resolved",
+          "rects": [
+            {
+              "x": 378,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 630,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 882,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 378,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 630,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 882,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "cards",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 630,
+          "y": 261.5,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "flipped",
+          "rects": [
+            {
+              "x": 630,
+              "y": 261.5,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "sound-compare",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 438,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 756,
+          "y": 438,
+          "w": 366,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 438,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 756,
+              "y": 438,
+              "w": 366,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "verb-choice",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 406,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 756,
+          "y": 406,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 378,
+          "y": 482,
+          "w": 366,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 406,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 756,
+              "y": 406,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 378,
+              "y": 482,
+              "w": 366,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "text-question",
+      "width": 1280,
+      "height": 800,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 378,
+          "y": 443.5625,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 756,
+          "y": 443.5625,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 378,
+          "y": 519.5625,
+          "w": 366,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 378,
+              "y": 443.5625,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 756,
+              "y": 443.5625,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 378,
+              "y": 519.5625,
+              "w": 366,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "read",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 302,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 682,
+          "y": 302,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 304,
+          "y": 500,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 682,
+          "y": 500,
+          "w": 366,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 302,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 682,
+              "y": 302,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 304,
+              "y": 500,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 682,
+              "y": 500,
+              "w": 366,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "listen",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 310,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 682,
+          "y": 310,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 304,
+          "y": 508,
+          "w": 366,
+          "h": 186
+        },
+        {
+          "x": 682,
+          "y": 508,
+          "w": 366,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 310,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 682,
+              "y": 310,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 304,
+              "y": 508,
+              "w": 366,
+              "h": 186
+            },
+            {
+              "x": 682,
+              "y": 508,
+              "w": 366,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "hear-word",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 372,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 682,
+          "y": 372,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 304,
+          "y": 480,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 682,
+          "y": 480,
+          "w": 366,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 372,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 682,
+              "y": 372,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 304,
+              "y": 480,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 682,
+              "y": 480,
+              "w": 366,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "same-word",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 368,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 682,
+          "y": 368,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 304,
+          "y": 476,
+          "w": 366,
+          "h": 96
+        },
+        {
+          "x": 682,
+          "y": 476,
+          "w": 366,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 368,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 682,
+              "y": 368,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 304,
+              "y": 476,
+              "w": 366,
+              "h": 96
+            },
+            {
+              "x": 682,
+              "y": 476,
+              "w": 366,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "word-bingo",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 431.5,
+          "w": 241.328125,
+          "h": 120
+        },
+        {
+          "x": 555.328125,
+          "y": 431.5,
+          "w": 241.328125,
+          "h": 120
+        },
+        {
+          "x": 806.65625,
+          "y": 431.5,
+          "w": 241.328125,
+          "h": 120
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 431.5,
+              "w": 241.328125,
+              "h": 120
+            },
+            {
+              "x": 555.328125,
+              "y": 431.5,
+              "w": 241.328125,
+              "h": 120
+            },
+            {
+              "x": 806.65625,
+              "y": 431.5,
+              "w": 241.328125,
+              "h": 120
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "image-bingo",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 426.5,
+          "w": 241.328125,
+          "h": 130
+        },
+        {
+          "x": 555.328125,
+          "y": 426.5,
+          "w": 241.328125,
+          "h": 130
+        },
+        {
+          "x": 806.65625,
+          "y": 426.5,
+          "w": 241.328125,
+          "h": 130
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 426.5,
+              "w": 241.328125,
+              "h": 130
+            },
+            {
+              "x": 555.328125,
+              "y": 426.5,
+              "w": 241.328125,
+              "h": 130
+            },
+            {
+              "x": 806.65625,
+              "y": 426.5,
+              "w": 241.328125,
+              "h": 130
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "memory",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 556,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 808,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 304,
+          "y": 486,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 556,
+          "y": 486,
+          "w": 240,
+          "h": 240
+        },
+        {
+          "x": 808,
+          "y": 486,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "opened-0",
+          "rects": [
+            {
+              "x": 304,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 556,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 808,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 304,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 556,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 808,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        },
+        {
+          "name": "opened-1",
+          "rects": [
+            {
+              "x": 304,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 556,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 808,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 304,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 556,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 808,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        },
+        {
+          "name": "resolved",
+          "rects": [
+            {
+              "x": 304,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 556,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 808,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 304,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 556,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            },
+            {
+              "x": 808,
+              "y": 486,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "cards",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 556,
+          "y": 261.5,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "flipped",
+          "rects": [
+            {
+              "x": 556,
+              "y": 261.5,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "sound-compare",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 438,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 682,
+          "y": 438,
+          "w": 366,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 438,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 682,
+              "y": 438,
+              "w": 366,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "verb-choice",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 406,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 682,
+          "y": 406,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 304,
+          "y": 482,
+          "w": 366,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 406,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 682,
+              "y": 406,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 304,
+              "y": 482,
+              "w": 366,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "text-question",
+      "width": 1280,
+      "height": 800,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 304,
+          "y": 443.5625,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 682,
+          "y": 443.5625,
+          "w": 366,
+          "h": 64
+        },
+        {
+          "x": 304,
+          "y": 519.5625,
+          "w": 366,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 304,
+              "y": 443.5625,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 682,
+              "y": 443.5625,
+              "w": 366,
+              "h": 64
+            },
+            {
+              "x": 304,
+              "y": 519.5625,
+              "w": 366,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "read",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 370,
+          "w": 257,
+          "h": 186
+        },
+        {
+          "x": 538,
+          "y": 370,
+          "w": 257,
+          "h": 186
+        },
+        {
+          "x": 269,
+          "y": 568,
+          "w": 257,
+          "h": 186
+        },
+        {
+          "x": 538,
+          "y": 568,
+          "w": 257,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 370,
+              "w": 257,
+              "h": 186
+            },
+            {
+              "x": 538,
+              "y": 370,
+              "w": 257,
+              "h": 186
+            },
+            {
+              "x": 269,
+              "y": 568,
+              "w": 257,
+              "h": 186
+            },
+            {
+              "x": 538,
+              "y": 568,
+              "w": 257,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "listen",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 378,
+          "w": 257,
+          "h": 186
+        },
+        {
+          "x": 538,
+          "y": 378,
+          "w": 257,
+          "h": 186
+        },
+        {
+          "x": 269,
+          "y": 576,
+          "w": 257,
+          "h": 186
+        },
+        {
+          "x": 538,
+          "y": 576,
+          "w": 257,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 378,
+              "w": 257,
+              "h": 186
+            },
+            {
+              "x": 538,
+              "y": 378,
+              "w": 257,
+              "h": 186
+            },
+            {
+              "x": 269,
+              "y": 576,
+              "w": 257,
+              "h": 186
+            },
+            {
+              "x": 538,
+              "y": 576,
+              "w": 257,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "hear-word",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 390,
+          "w": 257,
+          "h": 96
+        },
+        {
+          "x": 538,
+          "y": 390,
+          "w": 257,
+          "h": 96
+        },
+        {
+          "x": 269,
+          "y": 498,
+          "w": 257,
+          "h": 96
+        },
+        {
+          "x": 538,
+          "y": 498,
+          "w": 257,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 390,
+              "w": 257,
+              "h": 96
+            },
+            {
+              "x": 538,
+              "y": 390,
+              "w": 257,
+              "h": 96
+            },
+            {
+              "x": 269,
+              "y": 498,
+              "w": 257,
+              "h": 96
+            },
+            {
+              "x": 538,
+              "y": 498,
+              "w": 257,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "same-word",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 386,
+          "w": 257,
+          "h": 96
+        },
+        {
+          "x": 538,
+          "y": 386,
+          "w": 257,
+          "h": 96
+        },
+        {
+          "x": 269,
+          "y": 494,
+          "w": 257,
+          "h": 96
+        },
+        {
+          "x": 538,
+          "y": 494,
+          "w": 257,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 386,
+              "w": 257,
+              "h": 96
+            },
+            {
+              "x": 538,
+              "y": 386,
+              "w": 257,
+              "h": 96
+            },
+            {
+              "x": 269,
+              "y": 494,
+              "w": 257,
+              "h": 96
+            },
+            {
+              "x": 538,
+              "y": 494,
+              "w": 257,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "word-bingo",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 381.5,
+          "w": 168.65625,
+          "h": 120
+        },
+        {
+          "x": 447.65625,
+          "y": 381.5,
+          "w": 168.671875,
+          "h": 120
+        },
+        {
+          "x": 626.328125,
+          "y": 381.5,
+          "w": 168.671875,
+          "h": 120
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 381.5,
+              "w": 168.65625,
+              "h": 120
+            },
+            {
+              "x": 447.65625,
+              "y": 381.5,
+              "w": 168.671875,
+              "h": 120
+            },
+            {
+              "x": 626.328125,
+              "y": 381.5,
+              "w": 168.671875,
+              "h": 120
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "image-bingo",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 376.5,
+          "w": 168.65625,
+          "h": 130
+        },
+        {
+          "x": 447.65625,
+          "y": 376.5,
+          "w": 168.671875,
+          "h": 130
+        },
+        {
+          "x": 626.328125,
+          "y": 376.5,
+          "w": 168.671875,
+          "h": 130
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 376.5,
+              "w": 168.65625,
+              "h": 130
+            },
+            {
+              "x": 447.65625,
+              "y": 376.5,
+              "w": 168.671875,
+              "h": 130
+            },
+            {
+              "x": 626.328125,
+              "y": 376.5,
+              "w": 168.671875,
+              "h": 130
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "memory",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 234,
+          "w": 167.328125,
+          "h": 167.328125
+        },
+        {
+          "x": 448.328125,
+          "y": 234,
+          "w": 167.328125,
+          "h": 167.328125
+        },
+        {
+          "x": 627.65625,
+          "y": 234,
+          "w": 167.328125,
+          "h": 167.328125
+        },
+        {
+          "x": 269,
+          "y": 413.328125,
+          "w": 167.328125,
+          "h": 167.328125
+        },
+        {
+          "x": 448.328125,
+          "y": 413.328125,
+          "w": 167.328125,
+          "h": 167.328125
+        },
+        {
+          "x": 627.65625,
+          "y": 413.328125,
+          "w": 167.328125,
+          "h": 167.328125
+        }
+      ],
+      "phases": [
+        {
+          "name": "opened-0",
+          "rects": [
+            {
+              "x": 269,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 448.328125,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 627.65625,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 269,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 448.328125,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 627.65625,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            }
+          ]
+        },
+        {
+          "name": "opened-1",
+          "rects": [
+            {
+              "x": 269,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 448.328125,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 627.65625,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 269,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 448.328125,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 627.65625,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            }
+          ]
+        },
+        {
+          "name": "resolved",
+          "rects": [
+            {
+              "x": 269,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 448.328125,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 627.65625,
+              "y": 234,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 269,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 448.328125,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            },
+            {
+              "x": 627.65625,
+              "y": 413.328125,
+              "w": 167.328125,
+              "h": 167.328125
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "cards",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 412,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "flipped",
+          "rects": [
+            {
+              "x": 412,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "sound-compare",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 388,
+          "w": 257,
+          "h": 64
+        },
+        {
+          "x": 538,
+          "y": 388,
+          "w": 257,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 388,
+              "w": 257,
+              "h": 64
+            },
+            {
+              "x": 538,
+              "y": 388,
+              "w": 257,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "verb-choice",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 406,
+          "w": 257,
+          "h": 64
+        },
+        {
+          "x": 538,
+          "y": 406,
+          "w": 257,
+          "h": 64
+        },
+        {
+          "x": 269,
+          "y": 482,
+          "w": 257,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 406,
+              "w": 257,
+              "h": 64
+            },
+            {
+              "x": 538,
+              "y": 406,
+              "w": 257,
+              "h": 64
+            },
+            {
+              "x": 269,
+              "y": 482,
+              "w": 257,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "text-question",
+      "width": 844,
+      "height": 390,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 269,
+          "y": 443.5625,
+          "w": 257,
+          "h": 64
+        },
+        {
+          "x": 538,
+          "y": 443.5625,
+          "w": 257,
+          "h": 64
+        },
+        {
+          "x": 269,
+          "y": 519.5625,
+          "w": 257,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 269,
+              "y": 443.5625,
+              "w": 257,
+              "h": 64
+            },
+            {
+              "x": 538,
+              "y": 443.5625,
+              "w": 257,
+              "h": 64
+            },
+            {
+              "x": 269,
+              "y": 519.5625,
+              "w": 257,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "read",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 370,
+          "w": 331,
+          "h": 186
+        },
+        {
+          "x": 464,
+          "y": 370,
+          "w": 331,
+          "h": 186
+        },
+        {
+          "x": 121,
+          "y": 568,
+          "w": 331,
+          "h": 186
+        },
+        {
+          "x": 464,
+          "y": 568,
+          "w": 331,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 370,
+              "w": 331,
+              "h": 186
+            },
+            {
+              "x": 464,
+              "y": 370,
+              "w": 331,
+              "h": 186
+            },
+            {
+              "x": 121,
+              "y": 568,
+              "w": 331,
+              "h": 186
+            },
+            {
+              "x": 464,
+              "y": 568,
+              "w": 331,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "listen",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 378,
+          "w": 331,
+          "h": 186
+        },
+        {
+          "x": 464,
+          "y": 378,
+          "w": 331,
+          "h": 186
+        },
+        {
+          "x": 121,
+          "y": 576,
+          "w": 331,
+          "h": 186
+        },
+        {
+          "x": 464,
+          "y": 576,
+          "w": 331,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 378,
+              "w": 331,
+              "h": 186
+            },
+            {
+              "x": 464,
+              "y": 378,
+              "w": 331,
+              "h": 186
+            },
+            {
+              "x": 121,
+              "y": 576,
+              "w": 331,
+              "h": 186
+            },
+            {
+              "x": 464,
+              "y": 576,
+              "w": 331,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "hear-word",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 390,
+          "w": 331,
+          "h": 96
+        },
+        {
+          "x": 464,
+          "y": 390,
+          "w": 331,
+          "h": 96
+        },
+        {
+          "x": 121,
+          "y": 498,
+          "w": 331,
+          "h": 96
+        },
+        {
+          "x": 464,
+          "y": 498,
+          "w": 331,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 390,
+              "w": 331,
+              "h": 96
+            },
+            {
+              "x": 464,
+              "y": 390,
+              "w": 331,
+              "h": 96
+            },
+            {
+              "x": 121,
+              "y": 498,
+              "w": 331,
+              "h": 96
+            },
+            {
+              "x": 464,
+              "y": 498,
+              "w": 331,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "same-word",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 386,
+          "w": 331,
+          "h": 96
+        },
+        {
+          "x": 464,
+          "y": 386,
+          "w": 331,
+          "h": 96
+        },
+        {
+          "x": 121,
+          "y": 494,
+          "w": 331,
+          "h": 96
+        },
+        {
+          "x": 464,
+          "y": 494,
+          "w": 331,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 386,
+              "w": 331,
+              "h": 96
+            },
+            {
+              "x": 464,
+              "y": 386,
+              "w": 331,
+              "h": 96
+            },
+            {
+              "x": 121,
+              "y": 494,
+              "w": 331,
+              "h": 96
+            },
+            {
+              "x": 464,
+              "y": 494,
+              "w": 331,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "word-bingo",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 381.5,
+          "w": 218,
+          "h": 120
+        },
+        {
+          "x": 349,
+          "y": 381.5,
+          "w": 218,
+          "h": 120
+        },
+        {
+          "x": 577,
+          "y": 381.5,
+          "w": 218,
+          "h": 120
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 381.5,
+              "w": 218,
+              "h": 120
+            },
+            {
+              "x": 349,
+              "y": 381.5,
+              "w": 218,
+              "h": 120
+            },
+            {
+              "x": 577,
+              "y": 381.5,
+              "w": 218,
+              "h": 120
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "image-bingo",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 376.5,
+          "w": 218,
+          "h": 130
+        },
+        {
+          "x": 349,
+          "y": 376.5,
+          "w": 218,
+          "h": 130
+        },
+        {
+          "x": 577,
+          "y": 376.5,
+          "w": 218,
+          "h": 130
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 376.5,
+              "w": 218,
+              "h": 130
+            },
+            {
+              "x": 349,
+              "y": 376.5,
+              "w": 218,
+              "h": 130
+            },
+            {
+              "x": 577,
+              "y": 376.5,
+              "w": 218,
+              "h": 130
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "memory",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 234,
+          "w": 216.65625,
+          "h": 216.65625
+        },
+        {
+          "x": 349.65625,
+          "y": 234,
+          "w": 216.671875,
+          "h": 216.671875
+        },
+        {
+          "x": 578.328125,
+          "y": 234,
+          "w": 216.671875,
+          "h": 216.671875
+        },
+        {
+          "x": 121,
+          "y": 462.671875,
+          "w": 216.65625,
+          "h": 216.65625
+        },
+        {
+          "x": 349.65625,
+          "y": 462.671875,
+          "w": 216.671875,
+          "h": 216.671875
+        },
+        {
+          "x": 578.328125,
+          "y": 462.671875,
+          "w": 216.671875,
+          "h": 216.671875
+        }
+      ],
+      "phases": [
+        {
+          "name": "opened-0",
+          "rects": [
+            {
+              "x": 121,
+              "y": 234,
+              "w": 216.65625,
+              "h": 216.65625
+            },
+            {
+              "x": 349.65625,
+              "y": 234,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 578.328125,
+              "y": 234,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 121,
+              "y": 462.671875,
+              "w": 216.65625,
+              "h": 216.65625
+            },
+            {
+              "x": 349.65625,
+              "y": 462.671875,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 578.328125,
+              "y": 462.671875,
+              "w": 216.671875,
+              "h": 216.671875
+            }
+          ]
+        },
+        {
+          "name": "opened-1",
+          "rects": [
+            {
+              "x": 121,
+              "y": 234,
+              "w": 216.65625,
+              "h": 216.65625
+            },
+            {
+              "x": 349.65625,
+              "y": 234,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 578.328125,
+              "y": 234,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 121,
+              "y": 462.671875,
+              "w": 216.65625,
+              "h": 216.65625
+            },
+            {
+              "x": 349.65625,
+              "y": 462.671875,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 578.328125,
+              "y": 462.671875,
+              "w": 216.671875,
+              "h": 216.671875
+            }
+          ]
+        },
+        {
+          "name": "resolved",
+          "rects": [
+            {
+              "x": 121,
+              "y": 234,
+              "w": 216.65625,
+              "h": 216.65625
+            },
+            {
+              "x": 349.65625,
+              "y": 234,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 578.328125,
+              "y": 234,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 121,
+              "y": 462.671875,
+              "w": 216.65625,
+              "h": 216.65625
+            },
+            {
+              "x": 349.65625,
+              "y": 462.671875,
+              "w": 216.671875,
+              "h": 216.671875
+            },
+            {
+              "x": 578.328125,
+              "y": 462.671875,
+              "w": 216.671875,
+              "h": 216.671875
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "cards",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 338,
+          "y": 234,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "flipped",
+          "rects": [
+            {
+              "x": 338,
+              "y": 234,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "sound-compare",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 388,
+          "w": 331,
+          "h": 64
+        },
+        {
+          "x": 464,
+          "y": 388,
+          "w": 331,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 388,
+              "w": 331,
+              "h": 64
+            },
+            {
+              "x": 464,
+              "y": 388,
+              "w": 331,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "verb-choice",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 406,
+          "w": 331,
+          "h": 64
+        },
+        {
+          "x": 464,
+          "y": 406,
+          "w": 331,
+          "h": 64
+        },
+        {
+          "x": 121,
+          "y": 482,
+          "w": 331,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 406,
+              "w": 331,
+              "h": 64
+            },
+            {
+              "x": 464,
+              "y": 406,
+              "w": 331,
+              "h": 64
+            },
+            {
+              "x": 121,
+              "y": 482,
+              "w": 331,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "text-question",
+      "width": 844,
+      "height": 390,
+      "collapsed": true,
+      "initial": [
+        {
+          "x": 121,
+          "y": 443.5625,
+          "w": 331,
+          "h": 64
+        },
+        {
+          "x": 464,
+          "y": 443.5625,
+          "w": 331,
+          "h": 64
+        },
+        {
+          "x": 121,
+          "y": 519.5625,
+          "w": 331,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 121,
+              "y": 443.5625,
+              "w": 331,
+              "h": 64
+            },
+            {
+              "x": 464,
+              "y": 443.5625,
+              "w": 331,
+              "h": 64
+            },
+            {
+              "x": 121,
+              "y": 519.5625,
+              "w": 331,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "read",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 466.09375,
+          "w": 161,
+          "h": 186
+        },
+        {
+          "x": 201,
+          "y": 466.09375,
+          "w": 161,
+          "h": 186
+        },
+        {
+          "x": 28,
+          "y": 664.09375,
+          "w": 161,
+          "h": 186
+        },
+        {
+          "x": 201,
+          "y": 664.09375,
+          "w": 161,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 466.09375,
+              "w": 161,
+              "h": 186
+            },
+            {
+              "x": 201,
+              "y": 466.09375,
+              "w": 161,
+              "h": 186
+            },
+            {
+              "x": 28,
+              "y": 664.09375,
+              "w": 161,
+              "h": 186
+            },
+            {
+              "x": 201,
+              "y": 664.09375,
+              "w": 161,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "listen",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 474.09375,
+          "w": 161,
+          "h": 186
+        },
+        {
+          "x": 201,
+          "y": 474.09375,
+          "w": 161,
+          "h": 186
+        },
+        {
+          "x": 28,
+          "y": 672.09375,
+          "w": 161,
+          "h": 186
+        },
+        {
+          "x": 201,
+          "y": 672.09375,
+          "w": 161,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 474.09375,
+              "w": 161,
+              "h": 186
+            },
+            {
+              "x": 201,
+              "y": 474.09375,
+              "w": 161,
+              "h": 186
+            },
+            {
+              "x": 28,
+              "y": 672.09375,
+              "w": 161,
+              "h": 186
+            },
+            {
+              "x": 201,
+              "y": 672.09375,
+              "w": 161,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "hear-word",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 522.09375,
+          "w": 161,
+          "h": 96
+        },
+        {
+          "x": 201,
+          "y": 522.09375,
+          "w": 161,
+          "h": 96
+        },
+        {
+          "x": 28,
+          "y": 630.09375,
+          "w": 161,
+          "h": 96
+        },
+        {
+          "x": 201,
+          "y": 630.09375,
+          "w": 161,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 522.09375,
+              "w": 161,
+              "h": 96
+            },
+            {
+              "x": 201,
+              "y": 522.09375,
+              "w": 161,
+              "h": 96
+            },
+            {
+              "x": 28,
+              "y": 630.09375,
+              "w": 161,
+              "h": 96
+            },
+            {
+              "x": 201,
+              "y": 630.09375,
+              "w": 161,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "same-word",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 518.09375,
+          "w": 161,
+          "h": 96
+        },
+        {
+          "x": 201,
+          "y": 518.09375,
+          "w": 161,
+          "h": 96
+        },
+        {
+          "x": 28,
+          "y": 626.09375,
+          "w": 161,
+          "h": 96
+        },
+        {
+          "x": 201,
+          "y": 626.09375,
+          "w": 161,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 518.09375,
+              "w": 161,
+              "h": 96
+            },
+            {
+              "x": 201,
+              "y": 518.09375,
+              "w": 161,
+              "h": 96
+            },
+            {
+              "x": 28,
+              "y": 626.09375,
+              "w": 161,
+              "h": 96
+            },
+            {
+              "x": 201,
+              "y": 626.09375,
+              "w": 161,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "word-bingo",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 470.59375,
+          "w": 162,
+          "h": 96
+        },
+        {
+          "x": 200,
+          "y": 470.59375,
+          "w": 162,
+          "h": 96
+        },
+        {
+          "x": 28,
+          "y": 576.59375,
+          "w": 162,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 470.59375,
+              "w": 162,
+              "h": 96
+            },
+            {
+              "x": 200,
+              "y": 470.59375,
+              "w": 162,
+              "h": 96
+            },
+            {
+              "x": 28,
+              "y": 576.59375,
+              "w": 162,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "image-bingo",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 437.09375,
+          "w": 162,
+          "h": 130
+        },
+        {
+          "x": 200,
+          "y": 437.09375,
+          "w": 162,
+          "h": 130
+        },
+        {
+          "x": 28,
+          "y": 577.09375,
+          "w": 162,
+          "h": 130
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 437.09375,
+              "w": 162,
+              "h": 130
+            },
+            {
+              "x": 200,
+              "y": 437.09375,
+              "w": 162,
+              "h": 130
+            },
+            {
+              "x": 28,
+              "y": 577.09375,
+              "w": 162,
+              "h": 130
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "memory",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 334.09375,
+          "w": 161,
+          "h": 161
+        },
+        {
+          "x": 201,
+          "y": 334.09375,
+          "w": 161,
+          "h": 161
+        },
+        {
+          "x": 28,
+          "y": 507.09375,
+          "w": 161,
+          "h": 161
+        },
+        {
+          "x": 201,
+          "y": 507.09375,
+          "w": 161,
+          "h": 161
+        },
+        {
+          "x": 28,
+          "y": 680.09375,
+          "w": 161,
+          "h": 161
+        },
+        {
+          "x": 201,
+          "y": 680.09375,
+          "w": 161,
+          "h": 161
+        }
+      ],
+      "phases": [
+        {
+          "name": "opened-0",
+          "rects": [
+            {
+              "x": 28,
+              "y": 334.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 334.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 28,
+              "y": 507.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 507.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 28,
+              "y": 680.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 680.09375,
+              "w": 161,
+              "h": 161
+            }
+          ]
+        },
+        {
+          "name": "opened-1",
+          "rects": [
+            {
+              "x": 28,
+              "y": 334.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 334.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 28,
+              "y": 507.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 507.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 28,
+              "y": 680.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 680.09375,
+              "w": 161,
+              "h": 161
+            }
+          ]
+        },
+        {
+          "name": "resolved",
+          "rects": [
+            {
+              "x": 28,
+              "y": 334.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 334.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 28,
+              "y": 507.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 507.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 28,
+              "y": 680.09375,
+              "w": 161,
+              "h": 161
+            },
+            {
+              "x": 201,
+              "y": 680.09375,
+              "w": 161,
+              "h": 161
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "cards",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 75,
+          "y": 353.59375,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "flipped",
+          "rects": [
+            {
+              "x": 75,
+              "y": 353.59375,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "sound-compare",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 460.09375,
+          "w": 161,
+          "h": 64
+        },
+        {
+          "x": 201,
+          "y": 460.09375,
+          "w": 161,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 460.09375,
+              "w": 161,
+              "h": 64
+            },
+            {
+              "x": 201,
+              "y": 460.09375,
+              "w": 161,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "verb-choice",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 434.09375,
+          "w": 161,
+          "h": 64
+        },
+        {
+          "x": 201,
+          "y": 434.09375,
+          "w": 161,
+          "h": 64
+        },
+        {
+          "x": 28,
+          "y": 510.09375,
+          "w": 161,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 434.09375,
+              "w": 161,
+              "h": 64
+            },
+            {
+              "x": 201,
+              "y": 434.09375,
+              "w": 161,
+              "h": 64
+            },
+            {
+              "x": 28,
+              "y": 510.09375,
+              "w": 161,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "text-question",
+      "width": 390,
+      "height": 844,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 502.046875,
+          "w": 161,
+          "h": 64
+        },
+        {
+          "x": 201,
+          "y": 502.046875,
+          "w": 161,
+          "h": 64
+        },
+        {
+          "x": 28,
+          "y": 578.046875,
+          "w": 161,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 502.046875,
+              "w": 161,
+              "h": 64
+            },
+            {
+              "x": 201,
+              "y": 502.046875,
+              "w": 161,
+              "h": 64
+            },
+            {
+              "x": 28,
+              "y": 578.046875,
+              "w": 161,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "read",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 466.09375,
+          "w": 126,
+          "h": 186
+        },
+        {
+          "x": 166,
+          "y": 466.09375,
+          "w": 126,
+          "h": 186
+        },
+        {
+          "x": 28,
+          "y": 664.09375,
+          "w": 126,
+          "h": 186
+        },
+        {
+          "x": 166,
+          "y": 664.09375,
+          "w": 126,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 466.09375,
+              "w": 126,
+              "h": 186
+            },
+            {
+              "x": 166,
+              "y": 466.09375,
+              "w": 126,
+              "h": 186
+            },
+            {
+              "x": 28,
+              "y": 664.09375,
+              "w": 126,
+              "h": 186
+            },
+            {
+              "x": 166,
+              "y": 664.09375,
+              "w": 126,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "listen",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 474.09375,
+          "w": 126,
+          "h": 186
+        },
+        {
+          "x": 166,
+          "y": 474.09375,
+          "w": 126,
+          "h": 186
+        },
+        {
+          "x": 28,
+          "y": 672.09375,
+          "w": 126,
+          "h": 186
+        },
+        {
+          "x": 166,
+          "y": 672.09375,
+          "w": 126,
+          "h": 186
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 474.09375,
+              "w": 126,
+              "h": 186
+            },
+            {
+              "x": 166,
+              "y": 474.09375,
+              "w": 126,
+              "h": 186
+            },
+            {
+              "x": 28,
+              "y": 672.09375,
+              "w": 126,
+              "h": 186
+            },
+            {
+              "x": 166,
+              "y": 672.09375,
+              "w": 126,
+              "h": 186
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "hear-word",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 480.09375,
+          "w": 126,
+          "h": 96
+        },
+        {
+          "x": 166,
+          "y": 480.09375,
+          "w": 126,
+          "h": 96
+        },
+        {
+          "x": 28,
+          "y": 588.09375,
+          "w": 126,
+          "h": 96
+        },
+        {
+          "x": 166,
+          "y": 588.09375,
+          "w": 126,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 480.09375,
+              "w": 126,
+              "h": 96
+            },
+            {
+              "x": 166,
+              "y": 480.09375,
+              "w": 126,
+              "h": 96
+            },
+            {
+              "x": 28,
+              "y": 588.09375,
+              "w": 126,
+              "h": 96
+            },
+            {
+              "x": 166,
+              "y": 588.09375,
+              "w": 126,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "same-word",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 476.09375,
+          "w": 126,
+          "h": 96
+        },
+        {
+          "x": 166,
+          "y": 476.09375,
+          "w": 126,
+          "h": 96
+        },
+        {
+          "x": 28,
+          "y": 584.09375,
+          "w": 126,
+          "h": 96
+        },
+        {
+          "x": 166,
+          "y": 584.09375,
+          "w": 126,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 476.09375,
+              "w": 126,
+              "h": 96
+            },
+            {
+              "x": 166,
+              "y": 476.09375,
+              "w": 126,
+              "h": 96
+            },
+            {
+              "x": 28,
+              "y": 584.09375,
+              "w": 126,
+              "h": 96
+            },
+            {
+              "x": 166,
+              "y": 584.09375,
+              "w": 126,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "word-bingo",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 437.09375,
+          "w": 127,
+          "h": 96
+        },
+        {
+          "x": 165,
+          "y": 437.09375,
+          "w": 127,
+          "h": 96
+        },
+        {
+          "x": 28,
+          "y": 543.09375,
+          "w": 127,
+          "h": 96
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 437.09375,
+              "w": 127,
+              "h": 96
+            },
+            {
+              "x": 165,
+              "y": 437.09375,
+              "w": 127,
+              "h": 96
+            },
+            {
+              "x": 28,
+              "y": 543.09375,
+              "w": 127,
+              "h": 96
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "image-bingo",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 437.09375,
+          "w": 127,
+          "h": 130
+        },
+        {
+          "x": 165,
+          "y": 437.09375,
+          "w": 127,
+          "h": 130
+        },
+        {
+          "x": 28,
+          "y": 577.09375,
+          "w": 127,
+          "h": 130
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 437.09375,
+              "w": 127,
+              "h": 130
+            },
+            {
+              "x": 165,
+              "y": 437.09375,
+              "w": 127,
+              "h": 130
+            },
+            {
+              "x": 28,
+              "y": 577.09375,
+              "w": 127,
+              "h": 130
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "memory",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 334.09375,
+          "w": 126,
+          "h": 126
+        },
+        {
+          "x": 166,
+          "y": 334.09375,
+          "w": 126,
+          "h": 126
+        },
+        {
+          "x": 28,
+          "y": 472.09375,
+          "w": 126,
+          "h": 126
+        },
+        {
+          "x": 166,
+          "y": 472.09375,
+          "w": 126,
+          "h": 126
+        },
+        {
+          "x": 28,
+          "y": 610.09375,
+          "w": 126,
+          "h": 126
+        },
+        {
+          "x": 166,
+          "y": 610.09375,
+          "w": 126,
+          "h": 126
+        }
+      ],
+      "phases": [
+        {
+          "name": "opened-0",
+          "rects": [
+            {
+              "x": 28,
+              "y": 334.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 334.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 28,
+              "y": 472.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 472.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 28,
+              "y": 610.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 610.09375,
+              "w": 126,
+              "h": 126
+            }
+          ]
+        },
+        {
+          "name": "opened-1",
+          "rects": [
+            {
+              "x": 28,
+              "y": 334.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 334.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 28,
+              "y": 472.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 472.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 28,
+              "y": 610.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 610.09375,
+              "w": 126,
+              "h": 126
+            }
+          ]
+        },
+        {
+          "name": "resolved",
+          "rects": [
+            {
+              "x": 28,
+              "y": 334.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 334.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 28,
+              "y": 472.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 472.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 28,
+              "y": 610.09375,
+              "w": 126,
+              "h": 126
+            },
+            {
+              "x": 166,
+              "y": 610.09375,
+              "w": 126,
+              "h": 126
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "cards",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 40,
+          "y": 334.09375,
+          "w": 240,
+          "h": 240
+        }
+      ],
+      "phases": [
+        {
+          "name": "flipped",
+          "rects": [
+            {
+              "x": 40,
+              "y": 334.09375,
+              "w": 240,
+              "h": 240
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "sound-compare",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 478.09375,
+          "w": 126,
+          "h": 64
+        },
+        {
+          "x": 166,
+          "y": 478.09375,
+          "w": 126,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 478.09375,
+              "w": 126,
+              "h": 64
+            },
+            {
+              "x": 166,
+              "y": 478.09375,
+              "w": 126,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "verb-choice",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 550.09375,
+          "w": 126,
+          "h": 64
+        },
+        {
+          "x": 166,
+          "y": 550.09375,
+          "w": 126,
+          "h": 64
+        },
+        {
+          "x": 28,
+          "y": 626.09375,
+          "w": 126,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 550.09375,
+              "w": 126,
+              "h": 64
+            },
+            {
+              "x": 166,
+              "y": 550.09375,
+              "w": 126,
+              "h": 64
+            },
+            {
+              "x": 28,
+              "y": 626.09375,
+              "w": 126,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "text-question",
+      "width": 320,
+      "height": 568,
+      "collapsed": false,
+      "initial": [
+        {
+          "x": 28,
+          "y": 588.4375,
+          "w": 126,
+          "h": 64
+        },
+        {
+          "x": 166,
+          "y": 588.4375,
+          "w": 126,
+          "h": 64
+        },
+        {
+          "x": 28,
+          "y": 664.4375,
+          "w": 126,
+          "h": 64
+        }
+      ],
+      "phases": [
+        {
+          "name": "correct",
+          "rects": [
+            {
+              "x": 28,
+              "y": 588.4375,
+              "w": 126,
+              "h": 64
+            },
+            {
+              "x": 166,
+              "y": 588.4375,
+              "w": 126,
+              "h": 64
+            },
+            {
+              "x": 28,
+              "y": 664.4375,
+              "w": 126,
+              "h": 64
+            }
+          ]
+        }
+      ],
+      "changed": false
+    },
+    {
+      "activity": "spoken-answer",
+      "width": 1280,
+      "states": 4,
+      "stable": true,
+      "teacherPreviewStates": 4
+    },
+    {
+      "activity": "spoken-answer",
+      "width": 390,
+      "states": 4,
+      "stable": true,
+      "teacherPreviewStates": 4
+    },
+    {
+      "activity": "spoken-answer",
+      "width": 320,
+      "states": 4,
+      "stable": true,
+      "teacherPreviewStates": 4
+    }
+  ],
+  "reviewMethod": "All 238 steps in 45 group-eight lessons checked in two disjoint parallel runs with real audio, manual continuation, letter help at 320/390/1366 pixels, ei/ij/au/ou combinations, single-tile ei and au, wrong choices where available, repeated-letter choices, Kijk nog eens, undo/retry, jump/recovery and within-group continuation. 57 previous-group steps, all sound-reference checks and 66 frame setups plus twelve spoken-answer states in learner and teacher views passed again. Unchanged broad regression and prior media reviews inherited from hash-preserved live source.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits retained. No new audio or media bindings."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-groep8-part1.log",
+      "sha256": "2989e173882b888533e22676484522e880ecf2958314871975f81f999d7f0ed5"
+    },
+    {
+      "path": "work/klink-groep8-part2.log",
+      "sha256": "c5044692115f55822788d4ada1714dcfe6e59c6c2003fa516fb0896375fae520"
+    },
+    {
+      "path": "work/klink-groep8-regression.log",
+      "sha256": "ad7b2cb7783159af0b5c6091512060df5e93f66c16f4a674607b9a72914e203d"
+    },
+    {
+      "path": "work/klink-groep8-sounds.log",
+      "sha256": "9924a82694a724e2c3a88a8d5ea95db567114b0e975f0d15fa5947c70e24a56f"
+    },
+    {
+      "path": "work/klink-groep8-frames.log",
+      "sha256": "752bbec57823be490601e585fd40d96e0fce1d955d960bc6bd196177292839e0"
+    },
+    {
+      "path": "work/klink-groep8-units.log",
+      "sha256": "95c68c7c5129fa6c934896c34f231c641e50a01f868141767c6f6d36fd19342a"
+    },
+    {
+      "path": "work/klink-groep8-build.log",
+      "sha256": "a7c81552ab1f6b9b5c72ee80f7f7ef9f7e883e9eced6c0d7de7ccd48d1f75603"
+    },
+    {
+      "path": "work/klink-groep8-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-groep8-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-groep8-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    },
+    {
+      "path": "work/klink-groep8-git-integrity.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

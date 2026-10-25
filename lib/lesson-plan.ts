@@ -62,7 +62,7 @@ export function lessonPlan(pack: PackageDefinition, lesson: PackageLesson): Plan
 }
 
 export function isBeginnerLesson(exercise: PackageExercise, guided: boolean): boolean {
-  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[0-4])|klink-uitbreiding-(?:[1-9]|1[0-2])|woord-klink-woord-(?:en|is|kan|kast|mens|nek|kind|mand|mond|munt|post|stad|stop|tand|boon|bord|jurk|kaak|kook|koop|maak|maand|mee|meer|neem|oor|paard|rok|rood|rook|sport|spreek|staart|staat|start|storm|straat|strand|traan|biet|brief|broek|buur|dief|duur|feest|stoep|stuur|uur|vier|vies|voor|vork|bloem|bloes|bruin|deur|film|fles|fruit|jeuk|keel|kleur|klok|laars|land|leer|leest|meel|melk|pil|slaap|speel|spel|vlees|vloer))$/.test(exercise.lessonId ?? '');
+  return guided && !exercise.groupActivity && !exercise.learningPathId && /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[0-9]|3[01])|klink-uitbreiding-(?:[1-9]|1[0-5])|woord-klink-woord-(?:en|is|kan|kast|mens|nek|kind|mand|mond|munt|post|stad|stop|tand|boon|bord|jurk|kaak|kook|koop|maak|maand|mee|meer|neem|oor|paard|rok|rood|rook|sport|spreek|staart|staat|start|storm|straat|strand|traan|biet|brief|broek|buur|dief|duur|feest|stoep|stuur|uur|vier|vies|voor|vork|bloem|bloes|bruin|deur|film|fles|fruit|jeuk|keel|kleur|klok|laars|land|leer|leest|meel|melk|pil|slaap|speel|spel|vlees|vloer|au|bij|blauw|bouw|eind|fout|haak|haan|haar|hand|heb|heeft|hij|hoed|huid|klein|koud|krijt|lijst|oud|plein|prijs|rijk|rijst|trein|want|warm|woord|worst|zaak|zand|zie|ziet|zit|zoon))$/.test(exercise.lessonId ?? '');
 }
 
 export function hasFirstLetterGuide(exercise: PackageExercise, guided: boolean): boolean {
