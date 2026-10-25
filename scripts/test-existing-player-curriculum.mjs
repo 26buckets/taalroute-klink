@@ -91,7 +91,7 @@ test('Both pak meanings remain distinct, missing media is not invented and publi
   assert.equal(pak.length, 2);
   const packaging = pak.find(word => word.id.endsWith('verpakking'));
   const garment = pak.find(word => !word.id.endsWith('verpakking'));
-  assert.equal(packaging.image, '/package-media/candidates/klink-woord-pak-verpakking.webp');
+  assert.equal(packaging.image, media['klink-woord-pak-verpakking'].image);
   assert.notEqual(packaging.image, garment.image);
   for (const word of primaryWordCards) for (const path of [word.audio, word.image].filter(Boolean)) assert(existsSync(new URL(`../public${path}`, import.meta.url)), path);
   assert(!/drive\.google|docs\.google|diglin/i.test(JSON.stringify(packs)));

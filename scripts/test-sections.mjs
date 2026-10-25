@@ -11,7 +11,9 @@ import photoApproval from '../docs/klink-square-photo-cards-approval-20261017.js
 import {taalroutePackages as packs, primaryWordCards} from '../lib/taalroute-packages.ts';
 import {getPackage} from '../lib/package-content.ts';
 import {parseProgress,nextLessonPosition} from '../lib/learner-progress.ts';
-const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)))).digest('hex');
+const originalImages = JSON.parse(readFileSync('scripts/fixtures/klink-images-before-20261025.json'));
+const imageChanges = new Map(Object.entries(originalImages).filter(([id, path]) => media[id].image !== path).map(([id, path]) => [media[id].image, path]));
+const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)), (_key, value) => imageChanges.get(value) ?? value)).digest('hex');
 test('15 authoritative entrances preserve all 302 exact lessons and exercise payloads',()=>{
   assert.equal(packs.length,15);
   assert.equal(sections.release.curriculumInputHash,curriculum.release.inputHash);
@@ -24,7 +26,7 @@ test('15 authoritative entrances preserve all 302 exact lessons and exercise pay
     assert.equal(p.title,s.title);assert.equal(p.title.split(' · ').length,2);
     assert.deepEqual(p.lessons.map(l=>l.id),s.stepIds);
     assert.deepEqual(primaryWordCards.filter(w=>w.packageId===p.id).map(w=>w.id),s.wordIds);
-    assert.equal(p.cover.image,media[p.cover.wordId].image);
+    assert.equal(p.cover.image,sections.sections[i].cover.image);
     assert(p.title.split(' · ').includes(p.cover.label));
     assert(s.wordIds.includes(p.cover.wordId));assert(readFileSync('public'+p.cover.image).length);
   }
@@ -50,7 +52,7 @@ test('Approved navigation photos remain separate from every preserved word cover
   assert.deepEqual(Object.keys(sectionPhotos).sort((a,b)=>a.localeCompare(b)),photoApproval.assets.map(a=>a.sectionId).sort((a,b)=>a.localeCompare(b)));
   assert.equal(photoApproval.assets.length,4);
   for(const section of sections.sections) {
-    assert.equal(section.cover.image,media[section.cover.wordId].image);
+    assert.equal(section.cover.image,originalImages[section.cover.wordId]);
     assert.equal(createHash('sha256').update(readFileSync('public'+section.cover.image)).digest('hex'),section.cover.sha256);
     if(!sectionPhotos[section.id])continue;
     const asset=photoApproval.assets.find(a=>a.sectionId===section.id);

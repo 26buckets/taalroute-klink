@@ -7,6 +7,7 @@ import { extendedInstructionNeeds } from '../lib/extended-practice.ts';
 import { resolveRegisteredAudio } from '../lib/audio-register.ts';
 import { instructionAudioEnabled } from '../lib/audio-policy.ts';
 import { importedDomains, importedItemIssues } from '../lib/imported-practice-contract.ts';
+import { verifyImageRelease } from './check-image-release.mjs';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
 const media = read('../data/klink-media.json');
@@ -99,6 +100,7 @@ const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.
 const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
+  const imageRelease = verifyImageRelease();
   const approval = JSON.parse(readFileSync(authorizationPath));
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));
   if (approval.previousAuthorization !== previousAuthorizationPath || Object.keys(previous.files).some(file => !approval.files?.[file])) throw Error('Previous approval scope must be retained');
@@ -112,7 +114,10 @@ try {
   if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
-    if (createHash('sha256').update(readFileSync(file)).digest('hex') !== hash) throw Error(`Approval no longer covers ${file}`);
+    const actualHash = createHash('sha256').update(readFileSync(file)).digest('hex');
+    const authorizedImageGate = actualHash === imageRelease.files[file]
+      && createHash('sha256').update(execFileSync('git', ['show', `${imageRelease.baselineSourceCommit}:${file}`])).digest('hex') === hash;
+    if (actualHash !== hash && !authorizedImageGate) throw Error(`Approval no longer covers ${file}`);
   }
   const requireProof = condition => { if (!condition) throw Error('Incomplete or mismatching cumulative release evidence'); };
   const soundPrevious = JSON.parse(readFileSync(soundPreviousPath));
@@ -128,7 +133,7 @@ try {
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${sound.baselineSourceCommit}:${soundPreviousPath}`])).digest('hex') === approval.files[soundPreviousPath]);
   for (const [key, value] of Object.entries(soundPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   for (const [file, sha] of Object.entries(soundPrevious.files)) requireProof(approval.files[file] && (soundFiles.includes(file) || approval.files[file] === sha));
-  const soundChanges = execFileSync('git', ['diff', '--name-only', sound.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  const soundChanges = execFileSync('git', ['diff', '--name-only', sound.baselineSourceCommit, imageRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   requireProof(JSON.stringify(soundChanges) === JSON.stringify(soundRuntimeFiles));
   const soundReview = JSON.parse(readFileSync(`${soundEvidence}/review.json`));
   const soundSources = JSON.parse(readFileSync(`${soundEvidence}/source-manifest.json`));

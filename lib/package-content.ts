@@ -1,6 +1,7 @@
 import { taalroutePackages, primaryWordCards } from './taalroute-packages.ts';
 import lexiconWordBuild from '../data/klink-lexicon-wordbuild-20.json' with { type: 'json' };
 import lexiconRest from '../data/klink-lexicon-wordbuild-rest.json' with { type: 'json' };
+import wordMedia from '../data/klink-media.json' with { type: 'json' };
 
 export type PackageId = string;
 export type LessonPhase = 'meet' | 'recognize' | 'make' | 'use' | 'recall';
@@ -151,7 +152,11 @@ export type PackageDefinition = {
   };
 };
 
-const additionalPackages = [lexiconWordBuild, ...lexiconRest.packs] as PackageDefinition[];
+const additionalPackages = ([lexiconWordBuild, ...lexiconRest.packs] as PackageDefinition[]).map(pack => {
+  const words = pack.words.map(word => ({ ...word, image: (wordMedia as Record<string, { image?: string }>)[word.id]?.image ?? word.image }));
+  const images = words.filter(word => word.image).length;
+  return { ...pack, words, counts: { ...pack.counts, images }, media: { ...pack.media, imageAvailable: images, imageExpected: Math.max(pack.media.imageExpected, images) } };
+});
 export const lessonPackages: PackageDefinition[] = taalroutePackages;
 export const contentPackages: PackageDefinition[] = [...taalroutePackages, ...additionalPackages];
 

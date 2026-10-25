@@ -26,6 +26,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
       writeFileSync(path, JSON.stringify(catalog));
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
+    copyFileSync('scripts/check-image-release.mjs', join(dir, 'scripts/check-image-release.mjs'));
     if (changeApproval) {
       const approvalPath = 'docs/klink-owner-release-klanken-20261025.json';
       const approval = JSON.parse(readFileSync(approvalPath));

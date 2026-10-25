@@ -1,0 +1,32 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "0591327365eb02d9934dbdfa2257d0b664779588",
+  "images": 225,
+  "wordCards": 227,
+  "pixelIdentical": true,
+  "originalsOnDriveVerified": true,
+  "browser": {
+    "checkedAt": "2026-10-25T11:19:54.826Z",
+    "base": "http://127.0.0.1:18850",
+    "checks": [
+      "All 225 images decode on their 227 existing word cards with their expected proportions",
+      "Existing and additional vocabulary images retain their proportions on desktop and mobile",
+      "Saving and restoring a word survives reload"
+    ],
+    "errors": []
+  },
+  "unitSummary": [
+    "ℹ tests 153",
+    "ℹ suites 0",
+    "ℹ pass 152",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 1",
+    "ℹ todo 0",
+    "ℹ duration_ms 13917.193458"
+  ],
+  "types": "passed",
+  "lint": "passed",
+  "preservation": "Alleen nieuwe beeldbestanden, bijbehorende woordbeelden, aanvullende woordkaartkoppelingen en afgeleide beeldaantallen. Bestaande lesdoelen, audio, betekenissen, navigatiefoto’s, routes en opslag behouden.",
+  "limits": "Browseremulatie; geen fysieke cursistenproef. Geen drukvrijgave."
+}
