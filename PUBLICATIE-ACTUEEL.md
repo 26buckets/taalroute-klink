@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `bb2f7add5ab7bc790cfa37f36e581f83fdd3dc02` op canonieke branch `main`.
+Worker-versie: `3be6ab53-f9a0-4332-b9f8-3596a92cde93`.
+
+Alle 78 lessen van **huiskamer · rugzak, keuken · moeder, jassen · sokken, foto · ramen en pakje · tomaten** wachten op Verder of Les afronden. Letterhulp en Kijk nog eens blijven beschikbaar bij woorden bouwen. Lettergroepen, dubbele letters en lange woorden behouden hun bronindeling. Dictee en zelfstandig terughalen tonen geen lettermodel. De aparte voorbereidingsgroep is niet uitgebreid. Bestaande indeling, ruime letterknoppen, zichtbare actieve vakjes, Klankenkaart, de/het-labels, inhoud, media, routes, opslag, startpagina en sessiestabiliteit zijn behouden.
+
+Register: `docs/klink-publication-vervolg-20261025.json`; vrijgave: `docs/klink-owner-release-vervolg-20261025.json`. Gerichte review: alle 337 stappen in 78 lessen lokaal met echte audio, foutkeuzes, Kijk nog eens, vooruit springen, hervatten, lesovergangen en alle vijf groepsafrondingen. Vier gescheiden parallelle reeksen zijn tegen de volledige lijst van 78 les-ID's gecontroleerd. Letterhulp op 320/390/1366 pixels. Daarnaast 42 stappen uit sjaal/taxi, 154 unittests (één bestaande controle overgeslagen), types, lint, catalogus en 50 publicatiebewijstests. Online zijn 57 stappen in tien representatieve lessen uit alle vijf groepen opnieuw doorlopen. De brede ongewijzigde regressie is niet volledig herhaald. Alle 2.772 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Actuele schone werkkopie: `/Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-groep8-source`, canonieke repository 26buckets/taalroute-klink, branch main. Gebruik de oude werkkopie klink-publicatie met onleesbare Git-objecten niet als publicatiebron zonder herstel.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `9ae8db441a2fc47af9f7cc97b5a19741697f094d` op canonieke branch `main`.
 Worker-versie: `b8c11946-1ddd-4702-ae82-5add21611f7b`.
 
