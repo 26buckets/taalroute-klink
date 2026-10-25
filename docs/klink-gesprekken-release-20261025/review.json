@@ -1,0 +1,47 @@
+{
+  "status": "passed-local",
+  "humanListeningReview": "open",
+  "buildPassed": true,
+  "typesPassed": true,
+  "lintPassed": true,
+  "sourcePreservationPassed": true,
+  "dialogueBrowserPassed": true,
+  "all128RoutesPassed": true,
+  "all512PlaybackPassed": true,
+  "metadataPassed": true,
+  "regressionPassed": true,
+  "tests": {
+    "dialogueAndAudioRegister": {
+      "passed": 25,
+      "skipped": 1
+    },
+    "curriculum": {
+      "passed": 48,
+      "skipped": 1
+    },
+    "audioInventory": 6,
+    "wordLibrary": 7,
+    "allDialogueRoutes": 128,
+    "realAudioFiles": 512,
+    "linkedContentBrowser": 6,
+    "lifecycleBrowser": 5,
+    "soundsWidths": [
+      320,
+      390,
+      768,
+      1366
+    ],
+    "dialogueWidths": [
+      320,
+      390,
+      1366
+    ]
+  },
+  "limits": [
+    "Geen menselijke luisterreview of cursistenproef.",
+    "16 gekoppelde beelden: één concrete scène, verder gedeelde locaties. Geen 128 unieke scènes.",
+    "Geen nieuwe beeldgeneratie.",
+    "Alfa B/C zijn luistersteun; geen volledige niveauvrijgave.",
+    "Technische audio-afspeelronde is versneld en gedempt."
+  ]
+}

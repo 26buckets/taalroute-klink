@@ -1,3 +1,4 @@
+import { verifyDialogueRelease, readBeforeDialogueRelease } from './check-dialogue-release.mjs';
 import { verifySoundAudioRelease, readBeforeSoundAudioRelease } from './check-sound-audio-release.mjs';
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -119,8 +120,10 @@ const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.
 const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
-  const soundAudioRelease = verifySoundAudioRelease();
-  const readBeforeSounds = file => readBeforeSoundAudioRelease(file, soundAudioRelease);
+  const dialogueRelease = verifyDialogueRelease();
+  const readBeforeDialogues = file => readBeforeDialogueRelease(file, dialogueRelease);
+  const soundAudioRelease = verifySoundAudioRelease(undefined, readBeforeDialogues, dialogueRelease.baselineSourceCommit);
+  const readBeforeSounds = file => readBeforeSoundAudioRelease(file, soundAudioRelease, readBeforeDialogues);
   const wordLibraryRelease = verifyWordLibraryRelease(undefined, readBeforeSounds, soundAudioRelease.baselineSourceCommit);
   const readPrevious = file => readBeforeWordLibrary(file, wordLibraryRelease, readBeforeSounds);
   const articleReviewRelease = verifyArticleReviewRelease(undefined, readPrevious, wordLibraryRelease.baselineSourceCommit);

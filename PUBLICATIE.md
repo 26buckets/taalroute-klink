@@ -350,3 +350,24 @@ De Klink-poort valideert de begrensde opvolger en blijft de eerdere vrijgaven te
 hun eigen bron controleren. Instructieaudio buiten de eerdere vrijgave blijft geblokkeerd.
 De uiteindelijke broncommit, livecontrole en back-up staan in het publicatieregister
 voor deze klankenuitgave. Een Drive-back-up is geen livepublicatie.
+
+## Gesprekken herstellen — 25 oktober 2026
+
+Nico vraagt de gemaakte herstelversie online en standaard bij de juiste opdrachten.
+De brongebonden vrijgave docs/klink-owner-release-gesprekken-20261025.json beperkt dit
+uitdrukkelijk tot 128 gesprekken, 512 nieuwe beurten, 16 gekoppelde scène-/locatiebeelden
+en de bijbehorende speler en registratie. Het eerste gesprek gebruikt Sara en Daan.
+De 505 unieke oorspronkelijke opnamen blijven ongewijzigd beschikbaar als bron en
+staan ook apart in de herstelback-up. Vaste personen behouden dezelfde voice-ID.
+
+De speler toont één actieve beurt met zichtbare knoppen, per beurt of als geheel
+luisteren en optioneel meelezen. De steunkeuzes Alfa B/C wijzigen het A1/A2-bronlabel
+niet en zijn geen volledige niveaucertificering. Menselijke luisterreview blijft open.
+De overige lessen, woorden, klankenkaart, opgeslagen voortgang en historische akkoorden
+blijven behouden. Beeldgeneratie in Work is gestopt; er worden voor deze publicatie
+geen nieuwe beelden gemaakt. Het merendeel van de beelden is een gedeeld locatiebeeld,
+niet een unieke uitbeelding van alle 128 gesprekken.
+
+Publiceer alleen via npm run deploy op main. De opvolgende publicatiepoort controleert
+deze begrensde wijziging en toetst eerdere vrijgaven tegen hun eigen bewaarde bron.
+Vermeld de werkelijke controles en beperkingen in docs/klink-gesprekken-release-20261025/.

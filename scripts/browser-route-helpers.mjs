@@ -27,7 +27,8 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
     if (await pause.count()) await pause.click();
   }
   if (exercise.requiresAudio) {
-    // The learner's Start action now starts the stimulus; no mandatory replay click.
+    if (exercise.mode === 'connected-dialogue') await page.getByRole('button', {name: 'Hele gesprek', exact: true}).click();
+    // Other exercises retain their existing automatic stimulus.
     await page.waitForFunction(() => !/Tik op Luister|Je hoort het geluid vanzelf|Probeer Luister opnieuw/.test(document.querySelector('.cp-exercise-feedback output').textContent));
   }
   const demo = page.getByRole('button', { name: 'Nu jij', exact: true });
@@ -83,7 +84,7 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
     assert.equal(exercise.assessment, 'participation');
     assert.equal(exercise.independentReading, false);
     assert.equal(await page.getByRole('button', { name: 'Ik heb gelezen', exact: true }).count(), 0);
-    assert(await page.locator('.cp-reading-blocks').isVisible());
+    assert(await page.locator(exercise.mode === 'connected-dialogue' ? '.cp-dialogue' : '.cp-reading-blocks').isVisible());
   } else throw Error(`Untested guided component: ${exercise.componentId}/${exercise.mode}`);
   if (exercise.assessment === 'answer') assert((await feedback.innerText()).includes('Goed'));
   if (advance) {

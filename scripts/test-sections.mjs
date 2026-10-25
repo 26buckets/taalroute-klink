@@ -1,3 +1,5 @@
+import sourceDialogs from '../data/klink-connected-content.json' with {type:'json'};
+import {repairedDialogue,dialogueScene} from '../lib/dialogue-repair.ts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -15,13 +17,24 @@ const originalImages = JSON.parse(readFileSync('scripts/fixtures/klink-images-be
 const imageChanges = new Map(Object.entries(originalImages).filter(([id, path]) => media[id].image !== path).map(([id, path]) => [media[id].image, path]));
 const originalMedia = JSON.parse(readFileSync('docs/klink-wordaudio-publication-20261025/media-before.json'));
 const audioChanges = new Map([['/package-audio/woorden-20261025/klink-woord-man.mp3', originalMedia['klink-woord-man'].audio]]);
+function beforeDialogueRepair(exercise) {
+  if (exercise.mode !== 'connected-dialogue') return exercise;
+  const source = sourceDialogs.items.find(item => item.id === exercise.contextId);
+  assert(source);
+  assert.deepEqual(exercise.textBlocks, repairedDialogue(source).blocks);
+  assert.deepEqual(exercise.prompt.image, dialogueScene(source.id));
+  assert.deepEqual(exercise.prompt.audio, exercise.textBlocks[0].audio);
+  const prompt = {...exercise.prompt, audio: source.blocks[0].audio};
+  delete prompt.image;
+  return {...exercise, prompt, textBlocks: source.blocks};
+}
 const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)), (_key, value) => imageChanges.get(value) ?? audioChanges.get(value) ?? value)).digest('hex');
 test('15 authoritative entrances preserve all 302 exact lessons and exercise payloads',()=>{
   assert.equal(packs.length,15);
   assert.equal(sections.release.curriculumInputHash,curriculum.release.inputHash);
   assert.deepEqual(sections.sections.flatMap(s=>s.wordIds).sort(),curriculum.words.map(w=>w.id).sort());
   assert.equal(hash(packs.flatMap(p=>p.lessons)),before.lessons);
-  assert.equal(hash(packs.flatMap(p=>p.exercises)),before.exercises);
+  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeDialogueRepair)),before.exercises);
   assert.equal(packs.flatMap(p=>p.lessons).length,302);
   for(const [i,p] of packs.entries()) {
     const s=sections.sections[i];

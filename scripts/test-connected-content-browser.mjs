@@ -58,10 +58,14 @@ try {
   for (const kind of ['sentence', 'text', 'dialogue']) {
     const item = connectedContent.find(item => item.kind === kind);
     await openItem(item);
+    if (kind === 'dialogue') await page.getByRole('button', {name: 'Hele gesprek', exact: true}).click();
     await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
     const played = await page.evaluate(() => window.__plays);
     assert.deepEqual(played.slice(-item.blocks.length), item.blocks.map(block => block.audio.src));
-    assert.deepEqual(await page.locator('.cp-reading-blocks > button').allTextContents(), item.blocks.map(block => `${block.speaker ?? ''}${block.text}`));
+    if (kind === 'dialogue') {
+      await page.locator('.cp-dialogue-transcript summary').click();
+      assert.deepEqual(await page.locator('.cp-dialogue-transcript > button').allTextContents(), item.blocks.map(block => `${block.speaker ?? ''}${block.text}`));
+    } else assert.deepEqual(await page.locator('.cp-reading-blocks > button').allTextContents(), item.blocks.map(block => `${block.speaker ?? ''}${block.text}`));
     assert(!/CP00|bron|media_gecontroleerd|sourceStatus|Antwoord:|Zelfstandig lezen/.test(await page.locator('.cp-exercise-stage').innerText()));
     await page.getByRole('button', { name: 'Klaar', exact: true }).click();
     const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
@@ -74,18 +78,19 @@ try {
   pass('Sentence, text and dialogue open in the existing player, play in order, record listening participation and allow Verder');
   const dialogue = connectedContent.find(item => item.kind === 'dialogue');
   await openItem(dialogue);
-  // Finish the initial autoplay before measuring the explicit failed replay.
+  await page.getByRole('button', {name: 'Hele gesprek', exact: true}).click();
+  // Finish explicit playback before measuring a failed replay.
   await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
   await page.evaluate(src => { window.__fail = src; window.__plays = []; }, dialogue.blocks[1].audio.src);
-  await page.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
+  await page.getByRole('button', { name: 'Hele gesprek', exact: true }).click();
   await page.getByText('Probeer Luister opnieuw', { exact: true }).waitFor();
   assert.equal(await ready(), false);
   assert.deepEqual(await page.evaluate(() => window.__plays), dialogue.blocks.slice(0, 2).map(block => block.audio.src));
   await page.evaluate(() => { window.__fail = ''; window.__duration = 120; });
-  await page.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
+  await page.getByRole('button', { name: 'Hele gesprek', exact: true }).click();
   await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
   await page.evaluate(() => { window.__duration = 1200; window.__plays = []; });
-  await page.getByRole('button', { name: 'Luister opnieuw', exact: true }).click();
+  await page.getByRole('button', { name: 'Hele gesprek', exact: true }).click();
   await page.locator('.cp-content .text-back').click();
   await page.waitForTimeout(1300);
   assert.deepEqual(await page.evaluate(() => window.__plays), [dialogue.blocks[0].audio.src]);
@@ -94,8 +99,9 @@ try {
     await page.setViewportSize({ width, height: 900 });
     await openItem(dialogue);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
-    for (const button of await page.locator('.cp-reading-blocks > button').all()) { const box = await button.boundingBox(); assert(box.height >= 48 && box.width >= 48); }
-    await page.locator('.cp-reading-blocks > button').nth(1).focus(); await page.keyboard.press('Enter');
+    await page.locator('.cp-dialogue-transcript summary').click();
+    for (const button of await page.locator('.cp-dialogue-transcript > button').all()) { const box = await button.boundingBox(); assert(box.height >= 48 && box.width >= 48); }
+    await page.locator('.cp-dialogue-transcript > button').nth(1).focus(); await page.keyboard.press('Enter');
     await page.screenshot({ path: `${out}/connected-dialogue-${width}.png` });
   }
   pass('Desktop, tablet and narrow screens retain the existing layout, keyboard listening and large targets');

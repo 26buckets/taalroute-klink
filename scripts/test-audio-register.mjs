@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { connectedContent } from '../lib/connected-content.ts';
 import { buildAudioRegister, plannedAudioId } from './build-audio-register.mjs';
 import { resolveRegisteredAudio } from '../lib/audio-register.ts';
 import { isWithdrawnAudio } from '../lib/audio-policy.ts';
@@ -63,7 +64,7 @@ test('All active word, context, instruction and comprehension audio IDs have a r
   assert.equal(byId.size, rows.length);
   for (const word of read('data/klink-curriculum.json').words)
     assert(byId.has(word.id));
-  for (const item of read('data/klink-connected-content.json').items)
+  for (const item of connectedContent)
     for (const block of item.blocks)
       assert.equal(byId.get(block.audio.audioId)?.src, block.audio.src);
   for (const item of [

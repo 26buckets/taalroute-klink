@@ -1,3 +1,4 @@
+import { verifyDialogueRelease, readBeforeDialogueRelease } from './check-dialogue-release.mjs';
 import {verifySoundAudioRelease,readBeforeSoundAudioRelease} from './check-sound-audio-release.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -5,8 +6,10 @@ import {readFileSync} from 'node:fs';
 import {verifyWordLibraryRelease,readBeforeWordLibrary} from './check-word-library-release.mjs';
 import {verifyArticleReviewRelease} from './check-article-review-release.mjs';
 test('The review release requires exact scope, owner approval and unchanged audio',()=>{
- const sounds=verifySoundAudioRelease();
- const readBeforeSounds=file=>readBeforeSoundAudioRelease(file,sounds);
+ const dialogueRelease = verifyDialogueRelease();
+  const readBeforeDialogues = file => readBeforeDialogueRelease(file, dialogueRelease);
+  const sounds = verifySoundAudioRelease(undefined, readBeforeDialogues, dialogueRelease.baselineSourceCommit);
+ const readBeforeSounds=file=>readBeforeSoundAudioRelease(file, sounds, readBeforeDialogues);
  const library=verifyWordLibraryRelease(undefined,readBeforeSounds,sounds.baselineSourceCommit);
  const verify=release=>verifyArticleReviewRelease(release,file=>readBeforeWordLibrary(file,library,readBeforeSounds),library.baselineSourceCommit);
  const release=JSON.parse(readFileSync('docs/klink-owner-release-article-review-20261025.json'));

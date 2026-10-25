@@ -1,3 +1,4 @@
+import { verifyDialogueRelease, readBeforeDialogueRelease } from './check-dialogue-release.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -20,8 +21,10 @@ test('All 46 delivered files carry brand metadata; the eight owner-approved soun
 });
 test('The bounded release cannot drop prior approval, scope, backup or the open human review status',()=>{
  const release=JSON.parse(readFileSync('docs/klink-owner-release-klankaudio-20261025.json'));
- verifySoundAudioRelease(release);
+ const dialogue=verifyDialogueRelease();
+ const verify=r=>verifySoundAudioRelease(r,file=>readBeforeDialogueRelease(file,dialogue),dialogue.baselineSourceCommit);
+ verify(release);
  for(const mutate of [r=>r.publicationApproved=false,r=>r.newAudio=8,r=>r.ownerApprovedAudio=46,r=>r.humanReviewNewRecordings=true,r=>r.baselineSourceCommit='0'.repeat(40),r=>delete r.files['components/product/sound-reference.tsx'],r=>delete r.files['docs/klink-klanken-release-20261025/source-drive-verification.json'],r=>r.previousAuthorization='unrelated.json']){
-  const changed=structuredClone(release);mutate(changed);assert.throws(()=>verifySoundAudioRelease(changed));
+  const changed=structuredClone(release);mutate(changed);assert.throws(()=>verify(changed));
  }
 });

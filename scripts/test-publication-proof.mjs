@@ -1,3 +1,4 @@
+import { verifyDialogueRelease, readBeforeDialogueRelease } from './check-dialogue-release.mjs';
 import { verifySoundAudioRelease, readBeforeSoundAudioRelease } from './check-sound-audio-release.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -11,8 +12,10 @@ import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
-const verifiedSounds = verifySoundAudioRelease();
-const readBeforeSounds = file => readBeforeSoundAudioRelease(file, verifiedSounds);
+const dialogueRelease = verifyDialogueRelease();
+  const readBeforeDialogues = file => readBeforeDialogueRelease(file, dialogueRelease);
+  const verifiedSounds = verifySoundAudioRelease(undefined, readBeforeDialogues, dialogueRelease.baselineSourceCommit);
+const readBeforeSounds = file => readBeforeSoundAudioRelease(file, verifiedSounds, readBeforeDialogues);
 const wordLibrary = verifyWordLibraryRelease(undefined, readBeforeSounds, verifiedSounds.baselineSourceCommit);
 const readPrevious = file => readBeforeWordLibrary(file, wordLibrary, readBeforeSounds);
 const reviewedArticles = verifyArticleReviewRelease(undefined, readPrevious, wordLibrary.baselineSourceCommit);
@@ -41,6 +44,8 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     writeFileSync(reviewGate, readFileSync(reviewGate, 'utf8').replace('export function verifyArticleReviewRelease(release =', 'export function verifyArticleReviewReleaseUnused(release =') + `\nexport const verifyArticleReviewRelease = () => (${JSON.stringify(reviewedArticles)});`);
     const libraryGate = join(dir, 'scripts/check-word-library-release.mjs');
     writeFileSync(libraryGate, readFileSync('scripts/check-word-library-release.mjs', 'utf8').replace('export function verifyWordLibraryRelease(release =', 'export function verifyWordLibraryReleaseUnused(release =') + `\nexport const verifyWordLibraryRelease = () => (${JSON.stringify(wordLibrary)});`);
+    const dialogueGate = join(dir, 'scripts/check-dialogue-release.mjs');
+    writeFileSync(dialogueGate, readFileSync('scripts/check-dialogue-release.mjs', 'utf8').replace('export function verifyDialogueRelease(release =', 'export function verifyDialogueReleaseUnused(release =') + `\nexport const verifyDialogueRelease = () => (${JSON.stringify(dialogueRelease)});`);
     copyFileSync('scripts/check-sound-audio-release.mjs', join(dir, 'scripts/check-sound-audio-release.mjs'));
     const soundGate = join(dir, 'scripts/check-sound-audio-release.mjs');
     writeFileSync(soundGate, readFileSync(soundGate, 'utf8').replace('export function verifySoundAudioRelease(release =', 'export function verifySoundAudioReleaseUnused(release =') + `\nexport const verifySoundAudioRelease = () => (${JSON.stringify(verifiedSounds)});`);

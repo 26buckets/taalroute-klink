@@ -3,6 +3,7 @@
 import { useId } from 'react';
 import { wordWithArticle } from '@/lib/word-articles';
 
+import { DialogueSurface, type DialogueControls } from './dialogue-surface';
 import { WordSounds } from './sound-reference';
 import { ImportedPracticeSurface } from './imported-practice-surface';
 import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
@@ -158,6 +159,8 @@ export function PackageExerciseBrowser({
   const [exerciseMenuOpen, setExerciseMenuOpen] = useState(false);
   const [message, setMessage] = useState('Neem je tijd.');
   const [heard, setHeard] = useState(false);
+  const [activeTurn, setActiveTurn] = useState(0);
+  const heardTurns = useRef(new Set<number>());
   const [audioError, setAudioError] = useState(false);
   const [autoPaused, setAutoPaused] = useState(false);
   const [holdFeedback, setHoldFeedback] = useState(false);
@@ -186,10 +189,10 @@ export function PackageExerciseBrowser({
   const sentenceQuestion = exercise?.mode === 'sentence-question';
   const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);
   const firstLetterGuide = exercise && hasFirstLetterGuide(exercise, guided);
-  const manualAdvance = exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));
+  const manualAdvance = exercise?.mode === 'connected-dialogue' || exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));
   const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
-  async function listen(source?: string, automaticStart = false) {
+  async function listen(source?: string, automaticStart = false, singleTurn?: number) {
     if ((exercise?.readingTask || exercise?.componentId === 'KLINK-EXTENDED' || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
     if (!automaticStart && result === 'right') setHoldFeedback(true);
     const id = exercise?.exerciseId;
@@ -212,12 +215,12 @@ export function PackageExerciseBrowser({
         setInstructionFailed(false);
       }
       if (!source) return true;
-      const sequence: { src: string; optionId?: string }[] = exercise.playAllBlocks && source === stimulus
-        ? asArray<{ audio?: unknown }>(exercise.textBlocks).map(block => {
+      const sequence: { src: string; optionId?: string; turn?: number }[] = exercise.playAllBlocks && source === stimulus && singleTurn === undefined
+        ? asArray<{ audio?: unknown }>(exercise.textBlocks).map((block, turn) => {
           const src = findAudioSource(block.audio);
           if (!src) throw new Error('recorded block unavailable');
-          return { src };
-        }) : [{ src: source }];
+          return { src, turn };
+        }) : [{ src: source, turn: singleTurn }];
       if (sentenceQuestion && source === stimulus) {
         const questionAudio = findAudioSource(exercise.questionAudio);
         if (!questionAudio) throw new Error('question unavailable');
@@ -230,11 +233,14 @@ export function PackageExerciseBrowser({
       }
       for (const clip of sequence) {
         setSpeakingOptionId(clip.optionId ?? '');
+        if (exercise.mode === 'connected-dialogue' && clip.turn !== undefined) setActiveTurn(clip.turn);
         const played = await onAudio(clip.src, { waitUntilEnd: true, signal: controller.signal });
         if (!isCurrent()) return false;
         if (played === false) throw new Error('audio unavailable');
+        if (exercise.mode === 'connected-dialogue' && clip.turn !== undefined) heardTurns.current.add(clip.turn);
       }
-      if (source === stimulus) setHeard(true);
+      if (exercise.mode === 'connected-dialogue') setHeard(heardTurns.current.size === asArray(exercise.textBlocks).length);
+      else if (source === stimulus) setHeard(true);
       setAudioError(false);
       metrics.current.plays++;
       if (metrics.current.plays > 1) metrics.current.helpUsed = true;
@@ -248,6 +254,7 @@ export function PackageExerciseBrowser({
   }
 
   const beginAudio = useEffectEvent(() => {
+    if (exercise?.mode === 'connected-dialogue') return;
     if (needsListen || exercise?.mode === 'model' || (instructionAudioEnabled && exercise?.instructionAudio)) {
       void listen(needsListen || exercise?.mode === 'model' ? stimulus : undefined, true);
     }
@@ -260,6 +267,7 @@ export function PackageExerciseBrowser({
   useEffect(() => {
     stopMedia();
     currentId.current = exerciseId;
+    heardTurns.current.clear();
     metrics.current = { started: Date.now(), attempts: 0, helpUsed: false, plays: 0 };
     taskHeading.current?.focus({ preventScroll: true });
     exerciseStage.current?.scrollTo({ top: 0 });
@@ -267,7 +275,7 @@ export function PackageExerciseBrowser({
     if (guided && tiles && exerciseStage.current && tiles.getBoundingClientRect().bottom > exerciseStage.current.getBoundingClientRect().bottom) {
       tiles.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     }
-    const timer = window.setTimeout(() => beginAudio(), 0);
+    const timer = window.setTimeout(() => { setActiveTurn(0); beginAudio(); }, 0);
     return () => { window.clearTimeout(timer); currentId.current = ''; playback.current?.abort(); stopMedia(); };
   }, [exerciseId, guided]);
 
@@ -440,6 +448,11 @@ export function PackageExerciseBrowser({
               guided={guided}
               onReset={resetResult}
               canAnswer={canAnswer && (exercise.componentId !== 'ALF-CMP-002' || result !== 'right')}
+              dialogueControls={{ active: activeTurn, playing: audioPending,
+                pause: () => { playback.current?.abort(); stopMedia(); setAudioPending(false); },
+                select: turn => { playback.current?.abort(); stopMedia(); setAudioPending(false); setActiveTurn(turn); },
+                play: turn => { const blocks = asArray<{ audio?: unknown }>(exercise.textBlocks); void listen(turn === undefined ? stimulus : findAudioSource(blocks[turn]?.audio), false, turn); },
+              }}
               speakingOptionId={speakingOptionId}
               answeredCorrectly={result === 'right'}
               onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }}
@@ -450,7 +463,7 @@ export function PackageExerciseBrowser({
             {result === 'idle' && <Shapes />}
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
-            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
+            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' ? 'Tik op Deze beurt of Hele gesprek.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
             <button className="secondary-button" disabled={guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right'))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<ArrowRight /></button>
           </footer>
         </div>
@@ -470,6 +483,7 @@ export function ExerciseSurface({
   canAnswer,
   onHelp,
   speakingOptionId,
+  dialogueControls,
   answeredCorrectly = false,
 }: {
   exercise: PackageExercise;
@@ -482,6 +496,7 @@ export function ExerciseSurface({
   canAnswer: boolean;
   onHelp: () => void;
   speakingOptionId: string;
+  dialogueControls?: DialogueControls;
   answeredCorrectly?: boolean;
 }) {
   const demo = beginnerExerciseDemo(pack, exercise, guided);
@@ -496,7 +511,7 @@ export function ExerciseSurface({
     case 'ALF-CMP-004': return <MatchingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} demoAvailable={Boolean(demo)} showDemoInitially={demo === 'first'} onHelp={onHelp} />;
     case 'ALF-CMP-005': return <BuildSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} firstLetterGuide={hasFirstLetterGuide(exercise, guided)} />;
     case 'ALF-CMP-006': return <InputSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} canAnswer={canAnswer} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />;
-    case 'ALF-CMP-007': return <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} canAnswer={canAnswer} />;
+    case 'ALF-CMP-007': return exercise.mode === 'connected-dialogue' && dialogueControls ? <DialogueSurface exercise={exercise} controls={dialogueControls} onFinish={onFinish} guided={guided} canAnswer={canAnswer} /> : <ReadingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} guided={guided} canAnswer={canAnswer} />;
     case 'ALF-CMP-008': return <LinkedQuestionSurface exercise={exercise} pack={pack} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-009': return <SpeakSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} />;
     case 'ALF-CMP-010': return <WritingSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} />;

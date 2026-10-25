@@ -2,11 +2,12 @@ import bank from '../data/klink-connected-content.json' with { type: 'json' };
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
 import routing from '../data/klink-content-routing.json' with { type: 'json' };
+import { repairedDialogue, dialogueScene } from './dialogue-repair.ts';
 import type { PackageExercise, PackageLesson } from './package-content';
 
 export type ConnectedContent = typeof bank.items[number];
 const canonicalItems = new Map(routing.items.map(item => [item.id, item]));
-export const connectedContent = bank.items.map(item => ({ ...item, wordIds: canonicalItems.get(item.id)!.wordIds }));
+export const connectedContent = bank.items.map(item => ({ ...repairedDialogue(item), wordIds: canonicalItems.get(item.id)!.wordIds }));
 export const contentById = new Map(connectedContent.map(item => [item.id, item]));
 const wordsById = new Map(curriculum.words.map(word => [word.id, word]));
 const unique = (ids: string[]) => [...new Set(ids)];
@@ -50,7 +51,7 @@ export function connectedExercisesForStep(step: Step): PackageExercise[] {
     objective: 'Een voorbereid woord volgen in bestaande samenhangende taal, met luistersteun. Geen zelfstandig lees- of begripsresultaat.',
     sourceStatus: 'approved', assessment: 'participation', requiresAudio: true,
     instructionAudio: { src: instruction.src, audioId: instruction.id },
-    prompt: { text: 'Luister en lees mee.', audio: item.blocks[0].audio },
+    prompt: { text: 'Luister en lees mee.', audio: item.blocks[0].audio, ...(item.kind === 'dialogue' && dialogueScene(item.id) ? { image: dialogueScene(item.id) } : {}) },
     textBlocks: item.blocks, playAllBlocks: true, access: 'supported-listening', independentReading: false, humanReview: item.humanReview,
     contentPlacement: placement, recurrenceOnlyAfterIntroduction: placement.returningWordIds.length > 0,
   }); });

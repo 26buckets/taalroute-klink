@@ -15,3 +15,7 @@ Nico heeft de publicatie van alle 4.789 nieuwe woordopnamen en de vervanging van
 ## Startpagina — Nico, 24 oktober 2026
 
 Op expliciete vervolgopdracht staat de vermelding ‘Een leermiddel van Taalroute’ voortaan in de footer, boven klink.taalroute.nl. De losse bovenste link ‘Voor begeleiders’ is verwijderd; het bestaande hoofdvlak staat direct onder de vaste header en blijft horizontaal gecentreerd. De foto, teksten, logo D, header, toegang tot lessen, docentomgeving en begeleidingsuitleg blijven behouden. Zie docs/klink-owner-release-landing-footer-20261024.json en docs/klink-landing-footer-20261024/. Deze gerichte opdracht wijzigt uitsluitend deze plaatsing.
+
+## Gesprekken — Nico, 25 oktober 2026
+
+Nico heeft de herstelversie online gevraagd, standaard gekoppeld aan de juiste opdrachten. De gerichte vrijgave staat in docs/klink-owner-release-gesprekken-20261025.json: 128 gesprekken, 512 nieuwe spreekbeurten met vaste personen en voice-ID’s, 16 bestaande beeldbestanden en de gespreksspeler met één actieve beurt en optioneel meelezen. Alle oorspronkelijke bestanden blijven bewaard. A1/A2 blijven bronlabels; Alfa B/C zijn luistersteun, geen volledige niveauvrijgave. Menselijke luisterreview blijft open. Beeldgeneratie in Work is op Nico’s opdracht gestopt; verdere generatie alleen in een gewone chat. Deze vrijgave wijzigt de overige audiopauze niet. Gebruik main en npm run deploy met behoud van historische publicatiecontroles.

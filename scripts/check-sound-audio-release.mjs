@@ -7,7 +7,7 @@ const read = path => JSON.parse(readFileSync(path));
 const git = (...args) => execFileSync('git', args, { maxBuffer: 32 * 1024 * 1024 });
 const evidence = 'docs/klink-klanken-release-20261025';
 export const soundAudioFiles = ['PUBLICATIE.md', 'app/sounds.css', 'components/product/sound-reference.tsx', 'data/klink-sounds.json', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/media-player.ts', 'lib/package-content.ts', 'lib/sounds.ts', 'scripts/check-article-review-release.mjs', 'scripts/check-curriculum-release.mjs', 'scripts/check-sound-audio-release.mjs', 'scripts/check-word-library-release.mjs', 'scripts/test-word-library-release.mjs', 'scripts/test-article-review-release.mjs', 'scripts/test-media-rate.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-sound-audio-release.mjs', 'scripts/test-sounds.mjs', 'scripts/test-sounds-browser.mjs'];
-export function verifySoundAudioRelease(release = read('docs/klink-owner-release-klankaudio-20261025.json')) {
+export function verifySoundAudioRelease(release = read('docs/klink-owner-release-klankaudio-20261025.json'), readReleaseFile = readFileSync, sourceCommit = 'HEAD') {
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.baselineSourceCommit, 'aaf30187e858c0f9638e99544872e4713a0b446a');
   assert.equal(release.previousAuthorization, 'docs/klink-owner-release-word-library-20261025.json');
@@ -24,20 +24,20 @@ export function verifySoundAudioRelease(release = read('docs/klink-owner-release
   for (const row of audio.files) {
     assert.equal(row.path, `public/klank-audio/klanken-20261025/${row.id}.mp3`);
     assert.equal(reference.sounds[row.id].audio, row.path.slice(6));
-    assert.equal(digest(readFileSync(row.path)), row.sha256, row.path);
+    assert.equal(digest(readReleaseFile(row.path)), row.sha256, row.path);
     assert.equal(release.files[row.path], row.sha256);
     assert.equal(row.clippedSamples, 0); assert(row.losslessMetadataVerified);
     for (const field of ['artist','album_artist','publisher']) assert.equal(row.metadata[field], 'Taalroute');
     assert(!/eleven|suno|openai|generator/i.test(JSON.stringify(row.metadata)));
   }
-  const runtime = git('diff', '--name-only', release.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').toString().trim().split('\n').filter(Boolean).sort((a, b) => a.localeCompare(b));
+  const runtime = git('diff', '--name-only', release.baselineSourceCommit, sourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').toString().trim().split('\n').filter(Boolean).sort((a, b) => a.localeCompare(b));
   const expected = [...soundAudioFiles.filter(file => /^(app|components|data|lib|public)\//.test(file)), ...audio.files.map(row => row.path)].sort((a, b) => a.localeCompare(b));
   assert.deepEqual(runtime, expected);
   const manifest = read(`${evidence}/source-manifest.json`);
   assert.deepEqual(manifest.map(row => row.path), soundAudioFiles);
   for (const row of manifest) assert.equal(row.sha256, release.files[row.path]);
   for (const name of ['owner-request','audio-manifest','review','source-manifest','source-drive-verification','live-baseline','preservation']) assert(release.files[`${evidence}/${name}.json`]);
-  for (const [file, hash] of Object.entries(release.files)) assert.equal(digest(readFileSync(file)), hash, file);
+  for (const [file, hash] of Object.entries(release.files)) assert.equal(digest(readReleaseFile(file)), hash, file);
   const review = read(`${evidence}/review.json`), backup = read(`${evidence}/source-drive-verification.json`);
   assert.equal(review.status, 'passed-local'); assert(review.preservationPassed && review.directPlaybackPassed && review.all46PlaybackPassed && review.metadataPassed);
   assert.equal(review.humanReviewNewRecordings, false);
@@ -45,6 +45,6 @@ export function verifySoundAudioRelease(release = read('docs/klink-owner-release
   assert.equal(backup.manifestEntriesVerified, soundAudioFiles.length);
   return release;
 }
-export function readBeforeSoundAudioRelease(file, release) {
-  return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readFileSync(file);
+export function readBeforeSoundAudioRelease(file, release, readCurrent = readFileSync) {
+  return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readCurrent(file);
 }

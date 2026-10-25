@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { connectedContent, contentForStep, contentReadingConditions } from '../lib/connected-content.ts';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
+import originalBank from '../data/klink-connected-content.json' with { type: 'json' };
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 const wordIds = new Set(curriculum.words.map(word => word.id));
 const connected = packs.flatMap(pack => pack.exercises.filter(exercise => exercise.mode.startsWith('connected-')));
@@ -54,13 +55,14 @@ test('Suit, jug and molar are not attached to verb-only occurrences; no public s
   assert(pan && !pan.wordIds.includes('klink-woord-pak') && !pan.wordIds.includes('klink-woord-pak-verpakking'));
   assert(connectedContent.some(item => item.wordIds.includes('klink-woord-pak')));
   assert(!/drive\.google|docs\.google|diglin|CP0\d\d|ALFALABS|SERIES-AUD/i.test(JSON.stringify(connectedContent)));
-  assert.equal(new Set(connectedContent.flatMap(item => item.blocks.map(block => block.audio.src))).size, 1979);
+  assert.equal(new Set(originalBank.items.flatMap(item => item.blocks.map(block => block.audio.src))).size, 1979);
+  assert.equal(new Set(connectedContent.filter(item => item.kind === 'dialogue').flatMap(item => item.blocks.map(block => block.audio.src))).size, 512);
 });
 test('Source-fidelity ledger retains original text, speakers, questions and recording pointers', { skip: !existsSync('outputs/content-connection-20261017/source-ledger.json') }, () => {
   const ledger = JSON.parse(readFileSync('outputs/content-connection-20261017/source-ledger.json'));
   assert.equal(ledger.sources.length, 1618);
   for (const source of ledger.sources) {
-    const item = connectedContent.find(item => item.id === source.contentId);
+    const item = originalBank.items.find(item => item.id === source.contentId);
     assert.equal(item.text, source.originalText);
     assert.deepEqual(item.blocks.map(({ text, speaker }) => [text, speaker]), source.blocks.map(({ text, speaker }) => [text, speaker]));
     if (source.question) assert.equal(item.discussion.question, source.question);

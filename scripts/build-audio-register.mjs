@@ -171,10 +171,11 @@ export function buildAudioRegister(inventory) {
         text: block.text,
         src: block.audio.src,
         wordIds: item.wordIds,
+        ...(block.voiceId ? { voiceId: block.voiceId, personId: block.personId, originalSrc: block.originalAudio.src, review: 'Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.' } : {}),
         lessonIds: unique(linked.map((item) => item.lesson).filter(Boolean)),
         sectionIds: unique(linked.map((item) => item.pack)),
         note: block.speaker
-          ? `Spreker: ${block.speaker}. Bestaande rolverdeling behouden.`
+          ? `Spreker: ${block.speaker}. ${block.voiceId ? 'Vaste stemkoppeling.' : 'Bestaande rolverdeling behouden.'}`
           : undefined,
       });
     }
@@ -220,7 +221,7 @@ export function buildAudioRegister(inventory) {
   }
   const audioIds = (value) => {
     if (!value || typeof value !== 'object') return [];
-    return [...(typeof value.audioId === 'string' ? [value.audioId] : []), ...Object.values(value).flatMap(audioIds)];
+    return [...(typeof value.audioId === 'string' ? [value.audioId] : []), ...Object.entries(value).filter(([key]) => key !== 'originalAudio').flatMap(([, child]) => audioIds(child))];
   };
   const uses = new Map();
   for (const pack of packs) for (const exercise of pack.exercises) for (const id of unique(audioIds(exercise))) {
