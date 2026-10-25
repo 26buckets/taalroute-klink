@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `aaf30187e858c0f9638e99544872e4713a0b446a` op canonieke branch `main`.
+Worker-versie: `e398cd83-29ec-4566-8c9c-e24d941ded07`.
+
+Alle woorden heeft drie ingangen: Woorden uit de lessen, Meer woorden en Bewaard. De vijftien lespakketten behouden hun volgorde. Extra woorden staan alfabetisch in vijf oplopende lengtecategorieën, met apostrof/koppelteken ook apart vindbaar. Technische deelreeksen en het aparte label Extra woorden met voorbeeld verdwijnen uit de keuze; alle 5.127 woordbetekenissen blijven beschikbaar. Kaarten, 2.520 lidwoorden, lessen, letterhulp, Verder, Kijk nog eens, 7.561 media, routes, opslag en logo blijven behouden.
+
+De lokale productieversie en liveversie slagen voor zeven gerichte browsercontroles op 320/390/1366 pixels, inclusief alle filters, bewaren/herladen, lege bewaarlijst en echte audio. Vijf inhoudstests, twee vrijgavetests, vijftig publicatiebewijstests, types, lint en build slagen. Alle 7.561 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd. Het eerdere lokale voorstel bevat ook negen lidwoord-/lescontroles en 28 echte audio-afspeelcontroles.
+
+Vrijgave: `docs/klink-owner-release-word-library-20261025.json`; register: `docs/klink-publication-word-library-20261025.json`. Canonieke bron: 26buckets/taalroute-klink, branch main. Actuele checkout: `/Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-groep8-source`. Gecontroleerde bronback-up: https://drive.google.com/file/d/1dG5TgqAD8NrR6ExRMWmXgkTVzYOnNLrf/view . Definitieve herstelcontrole: `docs/klink-word-library-20261025/final-drive-verification.json`.
+
+Controlegrenzen: geen fysieke telefoon- of cursistenproef; de brede ongewijzigde oefenreeks en menselijke uitspraakreview zijn niet opnieuw uitgevoerd. Geen nieuwe audio.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud alle historische publicatiepoorten en inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `b80670b12ea21d3561ba833af9fb668ab78efb9f` op canonieke branch `main`.
 Worker-versie: `86d51669-5084-4068-acf6-52a73e8b7626`.
 
