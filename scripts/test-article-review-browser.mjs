@@ -11,7 +11,7 @@ for(const role of ['learner','teacher'])for(const width of [1366,1100,768,390,32
  await p.setViewportSize({width,height:width===320?568:900});
  for(const group of ['groep-1','groep-4','groep-8','route-verbinden']){
   console.log('CHECK',role,width,group);await p.goto(`${base}/#${role}`);await p.goto(`${base}/#${role}/package/${group}`);await p.locator('.cp-tabs').getByRole('button',{name:'Woorden',exact:true}).click();await p.locator('.cp-word-grid').waitFor();
-  const labels=await p.locator('.cp-word-grid .cp-word-article').evaluateAll(es=>es.map(el=>{let r=el.getBoundingClientRect(),c=el.closest('article').getBoundingClientRect(),s=getComputedStyle(el);return {text:el.textContent,font:parseFloat(s.fontSize),weight:s.fontWeight,color:s.color,fits:r.left>=c.left&&r.right<=c.right&&el.scrollWidth<=el.clientWidth+1}}));
+  const labels=await p.locator('.cp-word-grid .cp-word-article').evaluateAll(es=>es.map(el=>{const r=el.getBoundingClientRect(),c=el.closest('article').getBoundingClientRect(),s=getComputedStyle(el);return {text:el.textContent,font:parseFloat(s.fontSize),weight:s.fontWeight,color:s.color,fits:r.left>=c.left&&r.right<=c.right&&el.scrollWidth<=el.clientWidth+1}}));
   assert(labels.length);assert(labels.every(x=>x.fits&&x.font>=16&&x.font<=18&&x.weight==='400'),JSON.stringify({role,width,group,labels}));
   assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(group==='groep-4')assert(labels.some(x=>x.text==='het bed'));
