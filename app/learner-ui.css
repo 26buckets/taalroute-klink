@@ -609,3 +609,33 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 @media (max-width: 600px) and (max-height: 740px) {
   .learner-app .is-guided .cp-exercise-stage:has(.cp-tile-bank > button:nth-child(6)):not(:has(.cp-first-letter-guide)) { container-type: inline-size; }
 }
+
+/* A quiet reading aid, separate from the word used in letter exercises. */
+.cp-word-article,
+.learner-app .cp-word-article,
+.cp-player .cp-word-copy .cp-word-article {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+.cp-model-content .cp-word-article { font-size: 18px; }
+.cp-flash-card.flipped .cp-word-article { color: inherit; }
+@media (min-width: 1100px) {
+  .consistent-layout .is-guided .cp-model-content:has(> img) { position: relative; }
+  /* The approved guided photo is 220px; keep the aid just to its right. */
+  .consistent-layout .is-guided .cp-model-content:has(> img) .cp-word-article {
+    position: absolute;
+    top: 110px;
+    left: calc(50% + 128px);
+    right: 0;
+    margin: 0;
+    transform: translateY(-50%);
+    text-align: left;
+  }
+}

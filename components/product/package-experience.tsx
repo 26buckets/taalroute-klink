@@ -1,5 +1,7 @@
 'use client';
 
+import { wordWithArticle } from '@/lib/word-articles';
+
 import { PackageExerciseBrowser } from '@/components/product/package-exercise-browser';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PackageGroupPractice } from '@/components/product/package-group-practice';
@@ -191,12 +193,12 @@ function PackageWords({ pack, savedWordIds, onToggleWord, onAudio, onPractice }:
           const saved = savedWordIds.includes(word.id);
           return (
             <article key={word.id}>
-              <button className="cp-package-word-listen" disabled={!word.audio} onClick={() => onAudio(word.audio)} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen.`}>
+              <button className="cp-package-word-listen" disabled={!word.audio} onClick={() => onAudio(word.audio)} aria-describedby={wordWithArticle(word) ? `article-package-${word.id}` : undefined} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen.`}>
               <div className="cp-word-image">
                 {word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span>{word.word.slice(0, 1)}</span>}
               </div>
               <div className="cp-word-copy">
-                <strong>{wordLabel(word)}</strong>
+                <strong>{wordLabel(word)}</strong>{wordWithArticle(word) && <small id={`article-package-${word.id}`} className="cp-word-article">{wordWithArticle(word)}</small>}
                 <span>{word.segmentation.replaceAll('|', ' · ')}</span>
                 {!word.audio && <span>Lees samen</span>}
               </div>

@@ -1,5 +1,8 @@
 'use client';
 
+import { useId } from 'react';
+import { wordWithArticle } from '@/lib/word-articles';
+
 import { WordSounds } from './sound-reference';
 import { ImportedPracticeSurface } from './imported-practice-surface';
 import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
@@ -529,8 +532,10 @@ function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht' }: { imag
 function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
   const text = asRecord(exercise.text);
   const source = findAudioSource(exercise);
-  const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}{source && <Volume2 aria-hidden="true" />}</strong></>;
-  return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
+  const articleId = useId();
+  const phrase = wordWithArticle({ id: asString(exercise.wordId), word: asString(text.primary) });
+  const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}{source && <Volume2 aria-hidden="true" />}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></>;
+  return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-describedby={phrase ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
 function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer = true, speakingOptionId = '', demoAvailable = false, showDemoInitially = false, onHelp }: SurfaceProps & { nested?: boolean; canAnswer?: boolean; speakingOptionId?: string; demoAvailable?: boolean; showDemoInitially?: boolean; onHelp?: () => void }) {
@@ -943,8 +948,10 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
   const card = cards[index];
   const backText = card?.back?.text ?? wordForImage(pack, card?.front?.image) ?? 'Luister naar het woord';
   const source = findAudioSource(card?.audio);
+  const articleId = useId();
+  const phrase = wordWithArticle(pack.words.find(word => word.id === card?.cardId && word.word === backText) ?? pack.words.find(word => word.image && word.image === card?.front?.image?.src && word.word === backText));
   return <section className="cp-task-card">
-    {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-label={flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}>{flipped ? <strong>{backText}</strong> : <ExerciseImageView image={card.front?.image} />}</button>}
+    {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}>{flipped ? <strong>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong> : <ExerciseImageView image={card.front?.image} />}</button>}
     <span className="cp-card-hint">Tik op de kaart.</span>
     <div className="cp-task-actions">
       {source && <button className="secondary-button" aria-label="Luister naar het woord" onClick={() => onAudio(source)}><Volume2 />Luister</button>}

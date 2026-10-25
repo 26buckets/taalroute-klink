@@ -27,7 +27,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-groep8-20261025.json';
+      const approvalPath = 'docs/klink-owner-release-articles-20261025.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -548,3 +548,16 @@ test('Group eight letter combinations requires scoped counts, review and verifie
     a => { delete a.files['docs/klink-groep8-publication-20261025/source-drive-verification.json']; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
+
+ test('Article release requires meaning review, preserved previous scope and verified source backup', () => {
+ for (const change of [
+ a => { delete a.wordArticles; },
+ a => { a.wordArticles.publicationApproved = false; },
+ a => { a.wordArticles.meaningsChecked++; },
+ a => { a.wordArticles.articleLabels++; },
+ a => { a.wordArticles.newAudio++; },
+ a => { a.wordArticles.changedFiles.push('data/klink-curriculum.json'); },
+ a => { delete a.files['docs/klink-articles-20261025/meaning-review.json']; },
+ a => { delete a.files['docs/klink-articles-20261025/source-drive-verification.json']; },
+ ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+ });
