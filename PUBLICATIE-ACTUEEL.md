@@ -1,6 +1,36 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `2707c1043126db023229c89b8b86ec9085c5f3eb` op canonieke branch `main`.
+Worker-versie: `826d0077-7578-4840-ba05-7ae6e62e383e`.
+
+Alle 128 gesprekken tonen de volledige bestaande foto zonder bijsnijden of vervormen.
+De vaste maximale beeldhoogten zijn verwijderd; foto’s schalen in hun eigen verhouding.
+Geen nieuwe beelden of audio. Bronbeelden, 512 herstelde spreekbeurten, alle lessen,
+woord- en klankfuncties, indeling, logo D, routes en lokale voortgang blijven behouden.
+
+Lokaal en online: ieder 393 beeld-/bedieningscontroles, alle 128 gesprekken op mobiel,
+tablet en desktop; eerste gesprek op zeven breedtes en korte schermen. Gespreksspeler
+en optioneel meelezen gecontroleerd. Alle 8.135 aangeboden media en client/CSS zijn
+online bytegelijk teruggelezen. Lokaal slagen types, gerichte lint, curriculum,
+52 publicatiebewijstests, de normale publicatiepoort, les-/opslaggedrag en bronkoppelingen.
+Twee bestaande ongebruikte imports in een ongewijzigde test blijven bij brede lint gemeld.
+Geen fysieke telefoonproef; oorspronkelijke fotohoeken en open luisterreview blijven bestaan.
+
+Vrijgave: `docs/klink-owner-release-dialogue-image-fit-20261025.json`.
+Register: `docs/klink-publication-dialogue-image-fit-20261025.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-gesprekken-publicatie-20261025`.
+Bronback-up: https://drive.google.com/file/d/1kyX6D3nrCDrpo4XFOXNsjN0Zpx4LTvzk/view .
+Herstelpakket: https://drive.google.com/file/d/1NIv70Zr9I6Q8sOkIu56UxXxbhj_wCB7x/view .
+Publiceer alleen afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `4221681fda5449b66485e3d21b55893d9682b73e` op canonieke branch `main`.
 Worker-versie: `e8a2142c-303e-4ab0-afc9-a2fe99425582`.
 
