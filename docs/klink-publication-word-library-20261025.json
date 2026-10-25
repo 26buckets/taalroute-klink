@@ -1,0 +1,41 @@
+{
+  "published": true,
+  "domain": "https://klink.taalroute.nl",
+  "sourceCommit": "aaf30187e858c0f9638e99544872e4713a0b446a",
+  "workerVersion": "e398cd83-29ec-4566-8c9c-e24d941ded07",
+  "baselineSourceCommit": "b80670b12ea21d3561ba833af9fb668ab78efb9f",
+  "authorization": "docs/klink-owner-release-word-library-20261025.json",
+  "scope": "Word-library selection only: lesson words, extra words by length/punctuation, saved cards.",
+  "checks": {
+    "unitTests": 5,
+    "releaseTests": 2,
+    "publicationProofTests": 50,
+    "productionBrowserChecks": 7,
+    "liveBrowserChecks": 7,
+    "mediaByteIdentical": 7561,
+    "clientByteIdentical": true,
+    "typecheck": true,
+    "lint": true,
+    "build": true
+  },
+  "unchanged": [
+    "5127 word meanings",
+    "2520 article entries",
+    "all lesson guidance",
+    "all audio and images",
+    "routes and learner storage",
+    "logo and approved layout"
+  ],
+  "sourceBackup": {
+    "id": "1dG5TgqAD8NrR6ExRMWmXgkTVzYOnNLrf",
+    "url": "https://drive.google.com/file/d/1dG5TgqAD8NrR6ExRMWmXgkTVzYOnNLrf/view",
+    "parentVerified": true,
+    "downloadedByteIdentical": true,
+    "zipCrcVerified": true,
+    "manifestEntriesVerified": 14
+  },
+  "limits": [
+    "No physical-device or learner trial",
+    "Broad unchanged exercise suite and human pronunciation review not repeated"
+  ]
+}
