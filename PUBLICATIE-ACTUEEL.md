@@ -1,6 +1,42 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `4221681fda5449b66485e3d21b55893d9682b73e` op canonieke branch `main`.
+Worker-versie: `e8a2142c-303e-4ab0-afc9-a2fe99425582`.
+
+Alle 128 luistergesprekken gebruiken standaard de herstelversie: 512 nieuwe beurten
+met vaste personen en voice-ID’s, één actieve beurt, zichtbare afspeelknoppen,
+per beurt of het hele gesprek luisteren en optioneel meelezen. Het eerste gesprek
+gebruikt Sara en Daan. De 16 beeldbestanden zijn gekoppeld: één concrete scène en
+vooral gedeelde locatiebeelden, geen 128 unieke scènes. Er zijn voor deze publicatie
+geen nieuwe beelden gegenereerd; beeldgeneratie in Work blijft gestopt.
+
+Alle 505 unieke oorspronkelijke opnamen blijven bewaard. De 302 lessen, 10.965 bestaande
+lesopdrachten, woordenbibliotheek, klankenkaart, A1/A2-bronlabels, routes, inhoud,
+logo D en lokale voortgang blijven behouden; 740 gespreksplaatsingen gebruiken de
+nieuwe bronkoppelingen. Alfa B/C zijn luistersteun, geen volledige niveauvrijgave.
+
+Lokaal: 55 publicatiebewijstests, curriculum, audioregister, bronbehoud, alle 128 routes,
+alle 512 echte afspeelbeurten, spelerbediening op 320/390/1366 pixels, bestaande bibliotheek,
+klankenkaart, lesbediening, foutafhandeling, verlaten/hervatten, types, lint en build.
+Online: alle 128 gesprekken, 512 audio-afspeelbeurten, spelerbediening en bibliotheek.
+Alle 8.135 aangeboden mediabestanden en de gebouwde client zijn bytegelijk teruggelezen.
+Menselijke luisterreview en een fysieke telefoon-/cursistenproef blijven open.
+
+Vrijgave: `docs/klink-owner-release-gesprekken-20261025.json`.
+Register: `docs/klink-publication-gesprekken-20261025.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-gesprekken-publicatie-20261025`.
+Bronback-up: https://drive.google.com/file/d/1AFFCybyMbIAjG8Yqd1h-KUM1mHLxH31c/view .
+Hersteloverzicht: https://drive.google.com/file/d/1NIv70Zr9I6Q8sOkIu56UxXxbhj_wCB7x/view .
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`.
+Behoud alle eerdere vrijgaven en de overige instructie-audiopauze.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `8b493aecf3eb8249b2f9109d3758aa21424694da` op canonieke branch `main`.
 Worker-versie: `35deb3d6-53fa-43f2-bf7d-4eea36452237`.
 
