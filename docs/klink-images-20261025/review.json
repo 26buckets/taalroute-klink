@@ -1,6 +1,6 @@
 {
   "status": "passed-local",
-  "baselineSourceCommit": "0591327365eb02d9934dbdfa2257d0b664779588",
+  "baselineSourceCommit": "dac55cccb475b6d2ef2c18187fa56173bd3606aa",
   "images": 225,
   "wordCards": 227,
   "pixelIdentical": true,
@@ -23,10 +23,55 @@
     "ℹ cancelled 0",
     "ℹ skipped 1",
     "ℹ todo 0",
-    "ℹ duration_ms 13917.193458"
+    "ℹ duration_ms 15286.4135"
   ],
   "types": "passed",
   "lint": "passed",
   "preservation": "Alleen nieuwe beeldbestanden, bijbehorende woordbeelden, aanvullende woordkaartkoppelingen en afgeleide beeldaantallen. Bestaande lesdoelen, audio, betekenissen, navigatiefoto’s, routes en opslag behouden.",
-  "limits": "Browseremulatie; geen fysieke cursistenproef. Geen drukvrijgave."
+  "limits": "Browseremulatie; geen fysieke cursistenproef. Geen drukvrijgave.",
+  "publicationProofSummary": [
+    "ℹ tests 46",
+    "ℹ suites 0",
+    "ℹ pass 46",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0",
+    "ℹ duration_ms 157869.346375"
+  ],
+  "newestLessonPreservation": {
+    "steps": 67,
+    "checks": [
+      "Forward jump returns to unfinished first exercise with explanation",
+      "ei: single combination, repeat demo and undo/retry, three viewports and complete guided build",
+      "klink-leesstap-28: all 13 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+      "Forward jump returns to unfinished first exercise with explanation",
+      "ijs: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "vijf: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "pijn: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "klink-leesstap-29: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+      "Forward jump returns to unfinished first exercise with explanation",
+      "saus: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "klink-leesstap-30: all 13 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+      "Forward jump returns to unfinished first exercise with explanation",
+      "hout: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "kous: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "zout: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "klink-leesstap-31: all 16 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+      "Forward jump returns to unfinished first exercise with explanation",
+      "au: single combination, repeat demo and undo/retry, three viewports and complete guided build",
+      "woord-klink-woord-au: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+      "Forward jump returns to unfinished first exercise with explanation",
+      "woord: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "woord-klink-woord-woord: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+      "Forward jump returns to unfinished first exercise with explanation",
+      "worst: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+      "woord-klink-woord-worst: all 3 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+    ],
+    "errors": [],
+    "smoke": true,
+    "part": 0,
+    "realAudio": true,
+    "physicalPhone": false
+  }
 }
