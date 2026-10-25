@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `313932512785d4962937cab1191ab4f4240729ee` op canonieke branch `main`.
+Worker-versie: `046f7be3-e603-4167-aeb7-f46b6f4b7040`.
+
+Alle 5.127 woordkaarten hebben audio. Er zijn 4.789 ontbrekende woordopnamen gekoppeld en de opname van **man** is vervangen; 337 bestaande woordopnamen zijn behouden. Alle recent gepubliceerde lessen, letterhulp, Klankenkaart, de/het-labels, 225 beelden op 227 kaarten, indeling, routes, opslag, startpagina en logo D blijven behouden. Overige audioproductie blijft onder de bestaande pauze vallen.
+
+Vrijgave: `docs/klink-owner-release-wordaudio-20261025.json`; publicatie: `docs/klink-publication-wordaudio-20261025.json`. Alle 4.790 nieuwe/vervangen bestanden zijn lokaal volledig gedecodeerd en op ingebedde Taalroute-merkmetadata gecontroleerd. Alle 5.127 woordopnamen zijn lokaal én live met echte browseraudio tot hun einde afgespeeld, technisch versneld en gedempt. De woordknoppen zijn live op desktop en mobiel gebruikt, inclusief man en de gerichte herstellingen. Alle 7.561 aangeboden media en de gebouwde client zijn online bytegelijk teruggelezen. Lokaal slagen curriculum, audio-inventaris, gerichte audio-/beeld-/lidwoordtests, typecontrole, lint, catalogus, 50 publicatiebewijstests, alle 155 sjaal/taxi-stappen en 57 stappen uit de nieuwste vijf vervolggroepen. De eerste online browserafsluiting bleef hangen; de volledige afspeelronde is met tussentijdse opslag opnieuw geslaagd.
+
+Controlegrenzen: 28 uitspraaknotities en menselijke uitspraakreview blijven open; geen fysieke telefoon- of cursistenproef. De brede ongewijzigde regressie is niet volledig herhaald. Geen menselijke uitspraakgoedkeuring geclaimd.
+
+Canonieke bron: 26buckets/taalroute-klink, branch main. Actuele publicatiecheckout: `/Users/nicoknoester/.codex/workspaces/klink-woordaudio-publicatie-20261025`. Herstelbestanden en publicatiebewijzen staan teruggelezen en gecontroleerd in de bestaande Drive-projectmap: https://drive.google.com/drive/folders/1N80N1Ld7lES0C4FatvlQ4Iy3y0QHIqjL . Gebruik de eerdere vastgelegde basis, de brondelta, de zeven audioherstelpakketten en het definitieve publicatiepakket; losse oude voorbereidingsbestanden zijn geen publicatiebron.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en alle historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `bb2f7add5ab7bc790cfa37f36e581f83fdd3dc02` op canonieke branch `main`.
 Worker-versie: `3be6ab53-f9a0-4332-b9f8-3596a92cde93`.
 
