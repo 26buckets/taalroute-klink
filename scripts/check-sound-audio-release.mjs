@@ -6,11 +6,11 @@ const digest = value => createHash('sha256').update(value).digest('hex');
 const read = path => JSON.parse(readFileSync(path));
 const git = (...args) => execFileSync('git', args, { maxBuffer: 32 * 1024 * 1024 });
 const evidence = 'docs/klink-klanken-release-20261025';
-export const soundAudioFiles = ['PUBLICATIE.md', 'app/sounds.css', 'components/product/sound-reference.tsx', 'data/klink-sounds.json', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/media-player.ts', 'lib/package-content.ts', 'lib/sounds.ts', 'scripts/check-article-review-release.mjs', 'scripts/check-curriculum-release.mjs', 'scripts/check-sound-audio-release.mjs', 'scripts/test-article-review-release.mjs', 'scripts/test-media-rate.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-sound-audio-release.mjs', 'scripts/test-sounds.mjs', 'scripts/test-sounds-browser.mjs'];
+export const soundAudioFiles = ['PUBLICATIE.md', 'app/sounds.css', 'components/product/sound-reference.tsx', 'data/klink-sounds.json', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/media-player.ts', 'lib/package-content.ts', 'lib/sounds.ts', 'scripts/check-article-review-release.mjs', 'scripts/check-curriculum-release.mjs', 'scripts/check-sound-audio-release.mjs', 'scripts/check-word-library-release.mjs', 'scripts/test-word-library-release.mjs', 'scripts/test-article-review-release.mjs', 'scripts/test-media-rate.mjs', 'scripts/test-publication-proof.mjs', 'scripts/test-sound-audio-release.mjs', 'scripts/test-sounds.mjs', 'scripts/test-sounds-browser.mjs'];
 export function verifySoundAudioRelease(release = read('docs/klink-owner-release-klankaudio-20261025.json')) {
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
-  assert.equal(release.baselineSourceCommit, '10e5a1d09aba20fc6df7780486f69a72751bb979');
-  assert.equal(release.previousAuthorization, 'docs/klink-owner-release-article-review-20261025.json');
+  assert.equal(release.baselineSourceCommit, 'aaf30187e858c0f9638e99544872e4713a0b446a');
+  assert.equal(release.previousAuthorization, 'docs/klink-owner-release-word-library-20261025.json');
   assert.equal(release.newAudio, 46); assert.equal(release.ownerApprovedAudio, 8); assert.equal(release.humanReviewNewRecordings, false);
   const request = read(`${evidence}/owner-request.json`);
   assert.equal(release.userRequest, request.audioRequest); assert(request.shortAApproved && request.interactionRequest.includes('als ik de letter klik'));

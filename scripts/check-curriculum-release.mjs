@@ -10,6 +10,7 @@ import { instructionAudioEnabled } from '../lib/audio-policy.ts';
 import { importedDomains, importedItemIssues } from '../lib/imported-practice-contract.ts';
 import { verifyImageRelease } from './check-image-release.mjs';
 import { verifyArticleReviewRelease, readBeforeArticleReview } from './check-article-review-release.mjs';
+import { verifyWordLibraryRelease, readBeforeWordLibrary } from './check-word-library-release.mjs';
 import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
@@ -120,12 +121,14 @@ const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
   const soundAudioRelease = verifySoundAudioRelease();
   const readBeforeSounds = file => readBeforeSoundAudioRelease(file, soundAudioRelease);
-  const articleReviewRelease = verifyArticleReviewRelease(undefined, readBeforeSounds, soundAudioRelease.baselineSourceCommit);
-  const wordAudioRelease = verifyWordAudioRelease(file => readBeforeArticleReview(file, articleReviewRelease, readBeforeSounds), articleReviewRelease.baselineSourceCommit);
+  const wordLibraryRelease = verifyWordLibraryRelease(undefined, readBeforeSounds, soundAudioRelease.baselineSourceCommit);
+  const readPrevious = file => readBeforeWordLibrary(file, wordLibraryRelease, readBeforeSounds);
+  const articleReviewRelease = verifyArticleReviewRelease(undefined, readPrevious, wordLibraryRelease.baselineSourceCommit);
+  const wordAudioRelease = verifyWordAudioRelease(file => readBeforeArticleReview(file, articleReviewRelease, readPrevious), articleReviewRelease.baselineSourceCommit);
   // Historical approvals keep their exact pre-audio files; the successor validates the current audio-only delta.
   const readApprovedFile = file => wordAudioRelease.files[file]
     ? execFileSync('git', ['show', `${wordAudioRelease.baselineSourceCommit}:${file}`], { maxBuffer: 32 * 1024 * 1024 })
-    : readBeforeArticleReview(file, articleReviewRelease, readBeforeSounds);
+    : readBeforeArticleReview(file, articleReviewRelease, readPrevious);
   const approval = JSON.parse(readFileSync(authorizationPath));
   const imageRelease = verifyImageRelease({ ...approval.wordArticles, files: approval.files }, readApprovedFile);
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));

@@ -15,7 +15,7 @@ export function verifyArticleReviewRelease(release = read('docs/klink-owner-rele
   assert.equal(release.previousAuthorization, 'docs/klink-owner-release-wordaudio-20261025.json');
   const git = (...args) => execFileSync('git', args, { maxBuffer: 32 * 1024 * 1024 });
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
-  assert.equal(digest(readReleaseFile(release.previousAuthorization)), digest(git('show', `${release.baselineSourceCommit}:${release.previousAuthorization}`)));
+  assert.equal(digest(readFileSync(release.previousAuthorization)), digest(git('show', `${release.baselineSourceCommit}:${release.previousAuthorization}`)));
   assert.deepEqual(git('diff', '--name-only', release.baselineSourceCommit, sourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').toString().trim().split('\n').filter(Boolean), ['app/learner-ui.css']);
   const manifest = read(`${evidence}/source-manifest.json`);
   assert.deepEqual(manifest.map(row => row.path), articleReviewFiles);
@@ -28,6 +28,6 @@ export function verifyArticleReviewRelease(release = read('docs/klink-owner-rele
   assert.equal(backup.parentVerified, true); assert.equal(backup.downloadedByteIdentical, true); assert.equal(backup.zipCrcVerified, true); assert.equal(backup.manifestEntriesVerified, articleReviewFiles.length);
   return release;
 }
-export function readBeforeArticleReview(file, release, readReleaseFile = readFileSync) {
-  return release.files[file] ? execFileSync('git', ['show', `${release.baselineSourceCommit}:${file}`], { maxBuffer: 32 * 1024 * 1024 }) : readReleaseFile(file);
+export function readBeforeArticleReview(file, release, readCurrent = readFileSync) {
+  return release.files[file] ? execFileSync('git', ['show', `${release.baselineSourceCommit}:${file}`], { maxBuffer: 32 * 1024 * 1024 }) : readCurrent(file);
 }

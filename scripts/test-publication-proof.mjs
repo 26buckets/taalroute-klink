@@ -6,14 +6,17 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { verifyArticleReviewRelease, readBeforeArticleReview } from './check-article-review-release.mjs';
+import { verifyWordLibraryRelease, readBeforeWordLibrary } from './check-word-library-release.mjs';
 import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
 const verifiedSounds = verifySoundAudioRelease();
 const readBeforeSounds = file => readBeforeSoundAudioRelease(file, verifiedSounds);
-const reviewedArticles = verifyArticleReviewRelease(undefined, readBeforeSounds, verifiedSounds.baselineSourceCommit);
-const verifiedWordAudio = verifyWordAudioRelease(file => readBeforeArticleReview(file, reviewedArticles, readBeforeSounds), reviewedArticles.baselineSourceCommit);
+const wordLibrary = verifyWordLibraryRelease(undefined, readBeforeSounds, verifiedSounds.baselineSourceCommit);
+const readPrevious = file => readBeforeWordLibrary(file, wordLibrary, readBeforeSounds);
+const reviewedArticles = verifyArticleReviewRelease(undefined, readPrevious, wordLibrary.baselineSourceCommit);
+const verifiedWordAudio = verifyWordAudioRelease(file => readBeforeArticleReview(file, reviewedArticles, readPrevious), reviewedArticles.baselineSourceCommit);
 function check(candidate, changeApproval, changeImported, changeHeaderCss, changeWordbuild) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
@@ -36,6 +39,8 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     copyFileSync('scripts/check-article-review-release.mjs', join(dir, 'scripts/check-article-review-release.mjs'));
     const reviewGate = join(dir, 'scripts/check-article-review-release.mjs');
     writeFileSync(reviewGate, readFileSync(reviewGate, 'utf8').replace('export function verifyArticleReviewRelease(release =', 'export function verifyArticleReviewReleaseUnused(release =') + `\nexport const verifyArticleReviewRelease = () => (${JSON.stringify(reviewedArticles)});`);
+    const libraryGate = join(dir, 'scripts/check-word-library-release.mjs');
+    writeFileSync(libraryGate, readFileSync('scripts/check-word-library-release.mjs', 'utf8').replace('export function verifyWordLibraryRelease(release =', 'export function verifyWordLibraryReleaseUnused(release =') + `\nexport const verifyWordLibraryRelease = () => (${JSON.stringify(wordLibrary)});`);
     copyFileSync('scripts/check-sound-audio-release.mjs', join(dir, 'scripts/check-sound-audio-release.mjs'));
     const soundGate = join(dir, 'scripts/check-sound-audio-release.mjs');
     writeFileSync(soundGate, readFileSync(soundGate, 'utf8').replace('export function verifySoundAudioRelease(release =', 'export function verifySoundAudioReleaseUnused(release =') + `\nexport const verifySoundAudioRelease = () => (${JSON.stringify(verifiedSounds)});`);
