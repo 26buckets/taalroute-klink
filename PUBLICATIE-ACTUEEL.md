@@ -1,6 +1,39 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `8b493aecf3eb8249b2f9109d3758aa21424694da` op canonieke branch `main`.
+Worker-versie: `35deb3d6-53fa-43f2-bf7d-4eea36452237`.
+
+De Klankenkaart speelt alle 46 losse klanken direct wanneer je op een letter klikt.
+Je blijft op de kaart; de aparte knop Woorden opent de bijbehorende woorden.
+De letter boven de woorden en de letters bij Kijk en luister spelen dezelfde opname.
+Klankstudio blijft als rustige link beschikbaar; overbodige uitleg en de losse luisterknop zijn verwijderd.
+De acht goedgekeurde opnamen, inclusief de korte donkere a, blijven bytegelijk.
+Voor de 38 nieuwe opnamen blijft menselijke uitspraakbeoordeling open.
+
+De nieuwste Woorden-pagina met Leswoorden, Extra woorden en opgeslagen kaarten blijft behouden,
+evenals alle 5.127 betekenissen, 2.520 lidwoorden, lessen, routes, opslag, foto en logo D.
+Alle 7.561 bestaande media plus de 46 nieuwe bestanden zijn online bytegelijk gecontroleerd.
+Lokaal: de 46 directe klankknoppen en detailknoppen, alle woordenlijsten, toetsenbord,
+320/390/768/1366 pixels, inline m-a-t zonder voortgangswijziging, foutafhandeling,
+50 lidwoordweergaven, zeven bibliotheekcontroles, types, lint, build, 50 publicatiebewijstests en vier vrijgavetests.
+Online: de directe klankflow en bibliotheek, de gebouwde client en alle genoemde media.
+Geen fysieke telefoon- of cursistenproef. De extra automatische luisterdienst had geen bestaand tegoed;
+er is geen budget verhoogd. Technische controle is geen menselijke uitspraakgoedkeuring.
+
+Vrijgave: `docs/klink-owner-release-klankaudio-20261025.json`.
+Publicatieregister: `docs/klink-publication-klankaudio-20261025.json`.
+Bron: 26buckets/taalroute-klink, main; actieve checkout `/Users/nicoknoester/.codex/workspaces/klink-klanken-publicatie-20261025`.
+Herstel: https://drive.google.com/file/d/1a4eEH5a5u85wjuwSk1BJUf-_XqpdH4l1/view .
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`.
+Behoud alle historische goedkeuringen; de instructie-audiopauze buiten de bestaande vrijgave blijft gelden.
+Latere documentatiecommits kunnen deze bron volgen zonder de appbestanden te wijzigen.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `aaf30187e858c0f9638e99544872e4713a0b446a` op canonieke branch `main`.
 Worker-versie: `e398cd83-29ec-4566-8c9c-e24d941ded07`.
 
