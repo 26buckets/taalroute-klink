@@ -11,12 +11,12 @@ test('Only the first instance of each choice or matching form opens a demo withi
     for (const exercise of exercisesForLesson(pack, lesson)) {
       const demo = beginnerExerciseDemo(pack, exercise, true);
       if (!demo) continue;
-      assert.match(lesson.id, /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[0-9]|3[0-9]|40)|klink-uitbreiding-(?:[1-9]|1[0-9]|2[0-3]))$/);
+      assert.match(lesson.id, /^(?:klink-leesstap-(?:0[1-9]|1[0-9]|2[0-9]|3[0-9]|40)|klink-uitbreiding-(?:[1-9]|1[0-9]|2[0-3])|woord-klink-woord-(?:appelsap|huiskamer|koekjes|pakje|spuitje|tomaten))$/);
       assert.equal(demo, seen.has(exercise.mode) ? 'repeat' : 'first');
       seen.add(exercise.mode); counts[demo]++;
     }
   }
-  assert.deepEqual(counts, { first: 195, repeat: 43 });
+  assert.deepEqual(counts, { first: 213, repeat: 43 });
 });
 
 test('Every demonstrated pair uses a real label, approved exercise image and source answer mapping', () => {

@@ -1,0 +1,702 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "9ae8db441a2fc47af9f7cc97b5a19741697f094d",
+  "packageIds": [
+    "route-delen",
+    "route-zwakke-e",
+    "route-dubbel",
+    "route-open",
+    "route-verbinden"
+  ],
+  "guidedExercises": 1616,
+  "lessonSteps": 337,
+  "lessons": 78,
+  "targetedRegressionPassed": true,
+  "fullLocalRegressionRerun": false,
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "latestSourceReview": "docs/klink-groep10-publication-20261025/review.json",
+  "preservationPassed": true,
+  "humanReviewClaimed": false,
+  "physicalPhoneTest": false,
+  "unitTests": {
+    "passed": 154,
+    "failed": 0,
+    "skipped": 1
+  },
+  "targetedBrowserChecks": [
+    "Forward jump returns to unfinished first exercise with explanation",
+    "appelsap: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-appelsap: all 9 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "fietspad: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-fietspad: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "paspoort: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-paspoort: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "vliegtuig: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-vliegtuig: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "borstels: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-borstels: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "gebouw: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-gebouw: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "keuken: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-keuken: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "paarden: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-paarden: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "spiegel: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-spiegel: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "wangen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-wangen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "emmer: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-emmer: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "messen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-messen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "sokken: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-sokken: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "boter: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-boter: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "kassa: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-kassa: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ogen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-ogen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "slager: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-slager: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "water: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-water: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "balkon: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-balkon: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "spuitje: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-spuitje: all 8 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bloemkool: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-bloemkool: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "huiskamer: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-huiskamer: all 8 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "rugzak: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-rugzak: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "voordeur: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-voordeur: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "donker: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-donker: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "gevaar: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-gevaar: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "kleuter: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-kleuter: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "pleister: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-pleister: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "springen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-springen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zingen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zingen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "jassen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-jassen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "mussen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-mussen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "auto: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-auto: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "buren: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-buren: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "lepel: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-lepel: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "oma: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-oma: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "tafel: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-tafel: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zeven: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zeven: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "beneden: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-beneden: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "tomaten: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-tomaten: all 8 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "buurman: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-buurman: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "koelkast: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-koelkast: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "speelgoed: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-speelgoed: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "begin: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-begin: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "drinken: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-drinken: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "gezin: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-gezin: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "moeder: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-moeder: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ringen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-ringen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "suiker: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-suiker: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "brillen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-brillen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "koffer: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-koffer: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "pakken: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-pakken: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bomen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-bomen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "euro: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-euro: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "muren: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-muren: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "oven: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-oven: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "tenen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-tenen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "zomer: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-zomer: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "koekjes: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-koekjes: all 8 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "dakraam: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-dakraam: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "leesboek: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-leesboek: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "stoplicht: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-stoplicht: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "beleg: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-beleg: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "druiven: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-druiven: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "groente: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-groente: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ouders: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-ouders: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "sleutel: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-sleutel: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "vinger: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-vinger: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "bussen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-bussen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "mappen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-mappen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "pennen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-pennen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "boten: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-boten: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "foto: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-foto: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "negen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-negen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "ramen: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-ramen: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "vader: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-vader: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "aardappel: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-aardappel: all 4 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer",
+    "Forward jump returns to unfinished first exercise with explanation",
+    "pakje: wrong letter and retained first letter after Kijk nog eens, three viewports and complete guided build",
+    "woord-klink-woord-pakje: all 8 steps with real audio, deliberate continuation, error recovery, demos, independent recall and mobile footer"
+  ],
+  "coverage": [
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-appelsap",
+      "steps": 9
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-fietspad",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-paspoort",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-vliegtuig",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-borstels",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-gebouw",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-keuken",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-paarden",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-spiegel",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-wangen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-emmer",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-messen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-sokken",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-boter",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-kassa",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-ogen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-slager",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-water",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-balkon",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-spuitje",
+      "steps": 8
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-bloemkool",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-huiskamer",
+      "steps": 8
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-rugzak",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-voordeur",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-donker",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-gevaar",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-kleuter",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-pleister",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-springen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-zingen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-jassen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-mussen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-auto",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-buren",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-lepel",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-oma",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-tafel",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-zeven",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-beneden",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-tomaten",
+      "steps": 8
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-buurman",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-koelkast",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-speelgoed",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-begin",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-drinken",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-gezin",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-moeder",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-ringen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-suiker",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-brillen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-koffer",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-pakken",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-bomen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-euro",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-muren",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-oven",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-tenen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-zomer",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-koekjes",
+      "steps": 8
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-dakraam",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-leesboek",
+      "steps": 4
+    },
+    {
+      "packageId": "route-delen",
+      "lessonId": "woord-klink-woord-stoplicht",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-beleg",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-druiven",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-groente",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-ouders",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-sleutel",
+      "steps": 4
+    },
+    {
+      "packageId": "route-zwakke-e",
+      "lessonId": "woord-klink-woord-vinger",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-bussen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-mappen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-dubbel",
+      "lessonId": "woord-klink-woord-pennen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-boten",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-foto",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-negen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-ramen",
+      "steps": 4
+    },
+    {
+      "packageId": "route-open",
+      "lessonId": "woord-klink-woord-vader",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-aardappel",
+      "steps": 4
+    },
+    {
+      "packageId": "route-verbinden",
+      "lessonId": "woord-klink-woord-pakje",
+      "steps": 8
+    }
+  ],
+  "previousGroupSteps": 42,
+  "reviewMethod": "All 337 steps in all 78 lessons of the five follow-up groups checked in four disjoint local browser runs with real audio. Explicit coverage comparison prevents missing or duplicate lessons. Manual continuation, every source letter group, repeated letters, eight-slot words, matching demos, wrong choices, Kijk nog eens, resume, forward jumps, within-group continuation and all five group endings were exercised. Guided active slots and buttons fit together on small screens; layout checked at 320/390/1366 pixels. Dictation and recall do not reveal model letters. All existing components, layout, media, article labels, routes and storage are byte-unchanged. Preparation is outside this extension. 42 representative steps from sjaal/taxi passed again.",
+  "limitations": [
+    "Browser emulation, no physical phone or learner pilot.",
+    "Existing content and pronunciation review limits retained. No new audio, content or media bindings."
+  ],
+  "evidence": [
+    {
+      "path": "work/klink-vervolg-part1.log",
+      "sha256": "5c9325b09bd28cd69d287c394af5c56a45970c75b8c033b38c2973a0109e2fc1"
+    },
+    {
+      "path": "work/klink-vervolg-part2.log",
+      "sha256": "2c8c24d9411b8a3c870025a6dfe69976654ff906afc2deadd4e6d0bbb13d7288"
+    },
+    {
+      "path": "work/klink-vervolg-part3.log",
+      "sha256": "7d49cdcef2c04bc41f808e81636ef3cc817894c58a062dd8d112343e7b88f701"
+    },
+    {
+      "path": "work/klink-vervolg-part4.log",
+      "sha256": "89ff3b4fb81f66942f9d44aca74371ce4fb5f675cfaf2eca36e391ddbc1bc241"
+    },
+    {
+      "path": "work/klink-vervolg-regression.log",
+      "sha256": "757c9c1ebc93c362c44495f80f19d07f8fb3b58b3098ead7aeb076812f275ac0"
+    },
+    {
+      "path": "work/klink-vervolg-units.log",
+      "sha256": "4f8536229cfa4e700239df654613830c3a97e8d9df9417f3faf15f06d8560ddc"
+    },
+    {
+      "path": "work/klink-vervolg-build.log",
+      "sha256": "973120c2779080bba150d3d01aef4658e6b4462eabe870c49825b326fce60592"
+    },
+    {
+      "path": "work/klink-vervolg-types.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/klink-vervolg-lint.log",
+      "sha256": "878860ac88fae5a028cffe4085c16110929e90d9ce37311978233e955f8d7199"
+    },
+    {
+      "path": "work/klink-vervolg-catalog.log",
+      "sha256": "7c85a7259a52dae131385d1f8d13e00c9142b11b49af5307d8db5f626858e273"
+    }
+  ]
+}
