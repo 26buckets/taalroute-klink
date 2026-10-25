@@ -8,6 +8,7 @@ import { resolveRegisteredAudio } from '../lib/audio-register.ts';
 import { instructionAudioEnabled } from '../lib/audio-policy.ts';
 import { importedDomains, importedItemIssues } from '../lib/imported-practice-contract.ts';
 import { verifyImageRelease } from './check-image-release.mjs';
+import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
 const read = path => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const readiness = read('../data/klink-release-readiness.json');
 const media = read('../data/klink-media.json');
@@ -115,8 +116,13 @@ const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.
 const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
+  const wordAudioRelease = verifyWordAudioRelease();
+  // Historical approvals keep their exact pre-audio files; the successor validates the current audio-only delta.
+  const readApprovedFile = file => wordAudioRelease.files[file]
+    ? execFileSync('git', ['show', `${wordAudioRelease.baselineSourceCommit}:${file}`], { maxBuffer: 32 * 1024 * 1024 })
+    : readFileSync(file);
   const approval = JSON.parse(readFileSync(authorizationPath));
-  const imageRelease = verifyImageRelease({ ...approval.wordArticles, files: approval.files });
+  const imageRelease = verifyImageRelease({ ...approval.wordArticles, files: approval.files }, readApprovedFile);
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));
   if (approval.previousAuthorization !== previousAuthorizationPath || Object.keys(previous.files).some(file => !approval.files?.[file])) throw Error('Previous approval scope must be retained');
   const required = ['lib/group-practice.ts', 'lib/extended-practice.ts', 'lib/mixed-practice.ts', 'data/klink-functional-writing.json', 'data/klink-audio-policy.json', 'lib/learning-paths.ts', 'lib/learning-review.ts', 'data/klink-learning-rules.json', 'components/product/learning-path-surface.tsx', 'data/klink-learning-paths-release.json'];
@@ -129,7 +135,7 @@ try {
   if (approval.approvedBy !== 'Nico' || !approval.userRequest || required.some(file => !approval.files?.[file])) throw Error('Incomplete scoped approval');
   execFileSync('git', ['merge-base', '--is-ancestor', approval.contentSourceCommit, 'HEAD']);
   for (const [file, hash] of Object.entries(approval.files)) {
-    const actualHash = createHash('sha256').update(readFileSync(file)).digest('hex');
+    const actualHash = createHash('sha256').update(readApprovedFile(file)).digest('hex');
     const authorizedImageGate = actualHash === imageRelease.files[file]
       && createHash('sha256').update(execFileSync('git', ['show', `${imageRelease.baselineSourceCommit}:${file}`])).digest('hex') === hash;
     if (actualHash !== hash && !authorizedImageGate) throw Error(`Approval no longer covers ${file}`);
@@ -149,7 +155,7 @@ try {
   requireProof(createHash('sha256').update(execFileSync('git', ['show', `${followup.baselineSourceCommit}:${followupPreviousPath}`])).digest('hex') === approval.files[followupPreviousPath]);
   for (const [key, value] of Object.entries(followupPrevious)) if (key !== 'files') requireProof(JSON.stringify(approval[key]) === JSON.stringify(value));
   for (const [file, sha] of Object.entries(followupPrevious.files)) requireProof(approval.files[file] && (followupFiles.includes(file) || approval.files[file] === sha));
-  const followupChanges = execFileSync('git', ['diff', '--name-only', followup.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
+  const followupChanges = execFileSync('git', ['diff', '--name-only', followup.baselineSourceCommit, wordAudioRelease.baselineSourceCommit, '--', 'app', 'components', 'hooks', 'data', 'lib', 'public'], { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
   requireProof(JSON.stringify(followupChanges) === JSON.stringify(followupRuntimeFiles));
   const followupReview = JSON.parse(readFileSync(`${followupEvidence}/review.json`));
   const followupSources = JSON.parse(readFileSync(`${followupEvidence}/source-manifest.json`));

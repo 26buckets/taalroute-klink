@@ -1,0 +1,71 @@
+{
+  "status": "passed-local",
+  "checkedAt": "2026-10-25T13:39:14.681Z",
+  "baselineSourceCommit": "9a3b7e33c55c28e282b6eb025869a53be5f89f14",
+  "totalWordCards": 5127,
+  "newWordRecordings": 4789,
+  "replacedWord": "man",
+  "allWordAudioPlayedToEnd": true,
+  "preservationPassed": true,
+  "wordAudioManifestSha256": "23923aa04818d1c35d981bab2f7c2e4732cd796cea2e73119ddedcdf25369be9",
+  "audioDecodingAndBrandMetadata": {
+    "checked": 4790,
+    "failed": 0
+  },
+  "nativePlayback": {
+    "played": 5127,
+    "failed": 0,
+    "rate": 8,
+    "muted": true
+  },
+  "actualWordButtons": {
+    "desktop": 20,
+    "mobile": 8,
+    "includesMan": true
+  },
+  "unitTests": {
+    "targetedPassed": 13,
+    "curriculumPassed": 48,
+    "curriculumSkipped": 1,
+    "audioRegisterPassed": 6
+  },
+  "group10": {
+    "lessons": 30,
+    "steps": 155,
+    "checks": 90,
+    "errors": []
+  },
+  "previousGroup9": {
+    "steps": 182,
+    "checks": 94,
+    "errors": []
+  },
+  "imageCards": 227,
+  "uniqueImages": 225,
+  "articlesFourWidthsPassed": true,
+  "humanReviewClaimed": false,
+  "openListeningFlags": 28,
+  "limits": [
+    "Accelerated native browser playback does not certify pronunciation.",
+    "Browser emulation; no physical phone or learner pilot."
+  ],
+  "inheritedFullRegression": "docs/klink-session-stability-publication-20261024/review.json",
+  "latestFollowupSmoke": {
+    "steps": 57,
+    "checks": 30,
+    "errors": []
+  },
+  "lintPassed": true,
+  "typesPassed": true,
+  "cataloguePassed": true,
+  "reviewedClientChunks": [
+    {
+      "path": "_next/static/chunks/page-DC7_rXFs.js",
+      "sha256": "467e8073a7d39e2a30ba4e3525c19b8d2c9e783357f481e50a4482b1f5978327"
+    }
+  ],
+  "publicationNegativeProofTests": {
+    "passed": 50,
+    "failed": 0
+  }
+}

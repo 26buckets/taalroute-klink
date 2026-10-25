@@ -8,6 +8,10 @@ public/klink-wordmark.svg en public/klink-logo.svg behouden het onderschrift Van
 
 Browser- en appiconen gebruiken dezelfde canonieke D-vector; exporteer bestaande ICO-formaten zonder nieuwe lettervormen. Controleer logo’s met node --test scripts/test-official-logo.mjs.
 
+## Woordaudio — Nico, 25 oktober 2026
+
+Nico heeft de publicatie van alle 4.789 nieuwe woordopnamen en de vervanging van man expliciet opgedragen. De brongebonden woordaudio-vrijgave staat in docs/klink-owner-release-wordaudio-20261025.json. Behoud de historische audiopauze en inhoudsakkoorden; deze nieuwe opdracht geeft uitsluitend deze woordopnamen vrij. Instructies, losse klanken en overige nieuwe audio vallen buiten deze vrijgave. Menselijke uitspraakreview blijft open; technische afspeelcontrole is geen menselijke luistergoedkeuring. Gebruik de normale publicatiepoort en behoud de nieuwste lessen, beelden, lidwoorden, routes en opslag.
+
 ## Startpagina — Nico, 24 oktober 2026
 
 Op expliciete vervolgopdracht staat de vermelding ‘Een leermiddel van Taalroute’ voortaan in de footer, boven klink.taalroute.nl. De losse bovenste link ‘Voor begeleiders’ is verwijderd; het bestaande hoofdvlak staat direct onder de vaste header en blijft horizontaal gecentreerd. De foto, teksten, logo D, header, toegang tot lessen, docentomgeving en begeleidingsuitleg blijven behouden. Zie docs/klink-owner-release-landing-footer-20261024.json en docs/klink-landing-footer-20261024/. Deze gerichte opdracht wijzigt uitsluitend deze plaatsing.

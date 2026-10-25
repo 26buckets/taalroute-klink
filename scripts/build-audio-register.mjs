@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
+import { allPackageWords } from '../lib/package-content.ts';
 import { connectedContent } from '../lib/connected-content.ts';
 import { klinkContexts } from '../lib/klink-context.ts';
 import { resolveRegisteredAudio } from '../lib/audio-register.ts';
@@ -26,7 +27,6 @@ export const plannedAudioId = (role, text) =>
 
 export function buildAudioRegister(inventory) {
   const curriculum = json('data/klink-curriculum.json');
-  const media = json('data/klink-media.json');
   const instructions = json('data/klink-instructions.json');
   const comprehension = json('data/klink-comprehension-audio.json');
   const candidates = existsSync(join(root, 'data/klink-audio-candidates.json')) ? json('data/klink-audio-candidates.json').items : [];
@@ -111,14 +111,17 @@ export function buildAudioRegister(inventory) {
     id: `${task.id}:prompt`, kind: 'instruction', role: 'instruction', text: task.prompt,
     ...place(connectedContent.find(item => item.id === task.contentId).wordIds),
   });
-  for (const word of curriculum.words)
+  const coreWordIds = new Set(curriculum.words.map(word => word.id));
+  for (const word of allPackageWords)
     add({
       id: word.id,
       kind: 'word',
       role: 'target',
       text: word.word,
-      src: media[word.id]?.audio,
-      ...place([word.id]),
+      src: word.audio,
+      ...(coreWordIds.has(word.id) ? place([word.id]) : { wordIds: [word.id], lessonIds: [], sectionIds: [word.packageId] }),
+      placement: coreWordIds.has(word.id) ? 'active' : 'preparation',
+      ...(word.audio?.startsWith('/package-audio/woorden-20261025/') ? { voiceId: '0qLmDzgqulxcvv0yf3kg', review: 'Bestand gekoppeld; menselijke uitspraakreview staat open.' } : {}),
     });
   for (const item of instructions.items)
     add({

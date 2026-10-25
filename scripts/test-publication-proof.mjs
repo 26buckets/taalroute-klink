@@ -4,9 +4,11 @@ import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSy
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
+import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
+const verifiedWordAudio = verifyWordAudioRelease();
 function check(candidate, changeApproval, changeImported, changeHeaderCss, changeWordbuild) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
@@ -27,6 +29,8 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     copyFileSync('scripts/check-image-release.mjs', join(dir, 'scripts/check-image-release.mjs'));
+    // The new scope has its own negative tests; these fixtures exercise the inherited approvals.
+    writeFileSync(join(dir, 'scripts/check-word-audio-release.mjs'), `export const verifyWordAudioRelease = () => (${JSON.stringify(verifiedWordAudio)});`);
     if (changeApproval) {
       const approvalPath = 'docs/klink-owner-release-vervolg-20261025.json';
       const approval = JSON.parse(readFileSync(approvalPath));

@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 import { klinkContexts } from '../lib/klink-context.ts';
 import { isWithdrawnAudio } from '../lib/audio-policy.ts';
+import { allPackageWords } from '../lib/package-content.ts';
 const base = 'https://klink.taalroute.nl';
 const output = process.argv[2] ?? 'outputs/sections-20261017/live-verification.json';
 const read = path => JSON.parse(readFileSync(path));
@@ -20,6 +21,7 @@ const release = await releaseResponse.json();
 assert.deepEqual(release, expected);
 assert.equal(release.sourceClean, true);
 const paths = [...new Set([
+  ...allPackageWords.map(word => word.audio),
   ...Object.values(sectionPhotos), ...Object.values(media).map(item => item.image),
   ...words.flatMap(word => [media[word.id].image, media[word.id].audio]),
   ...content.items.flatMap(item => item.blocks.map(block => block.audio.src)),

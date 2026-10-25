@@ -15,7 +15,7 @@ export function assertImageMappings(before, after, images) {
   return ids.size;
 }
 
-export function verifyImageRelease(successor) {
+export function verifyImageRelease(successor, readApprovedFile = readFileSync) {
   if (successor) assert.equal(successor.baselineSourceCommit, "b850233c4445a6974728051fcfb73673f75bfcec");
   const release = read('docs/klink-owner-release-images-20261025.json');
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
@@ -35,9 +35,9 @@ export function verifyImageRelease(successor) {
     assert.equal(release.files[`public${row.image}`], row.sha256);
   }
   const before = JSON.parse(git('show', `${release.baselineSourceCommit}:data/klink-media.json`));
-  assert.equal(assertImageMappings(before, read('data/klink-media.json'), images), 227);
+  assert.equal(assertImageMappings(before, JSON.parse(readApprovedFile('data/klink-media.json')), images), 227);
   for (const [file, sha] of Object.entries(release.files)) {
-    const actual = digest(readFileSync(file));
+    const actual = digest(readApprovedFile(file));
     if (actual !== sha) {
       assert(successor?.changedFiles.includes(file), file);
       assert.equal(successor.files[file], actual, file);

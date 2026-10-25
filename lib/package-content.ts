@@ -153,9 +153,14 @@ export type PackageDefinition = {
 };
 
 const additionalPackages = ([lexiconWordBuild, ...lexiconRest.packs] as PackageDefinition[]).map(pack => {
-  const words = pack.words.map(word => ({ ...word, image: (wordMedia as Record<string, { image?: string }>)[word.id]?.image ?? word.image }));
+  const words = pack.words.map(word => {
+    const media = (wordMedia as Record<string, { image?: string; audio?: string }>)[word.id];
+    return { ...word, image: media?.image ?? word.image, audio: media?.audio ?? word.audio, audioStatus: media?.audio ? 'review-open' as const : word.audioStatus };
+  });
   const images = words.filter(word => word.image).length;
-  return { ...pack, words, counts: { ...pack.counts, images }, media: { ...pack.media, imageAvailable: images, imageExpected: Math.max(pack.media.imageExpected, images) } };
+  const audio = words.filter(word => word.audio).length;
+  const voiced = new Set(words.filter(word => word.audio).map(word => `${word.id}:word-audio`));
+  return { ...pack, words, counts: { ...pack.counts, images, audio }, media: { ...pack.media, imageAvailable: images, imageExpected: Math.max(pack.media.imageExpected, images), audioAvailable: audio, missing: pack.media.missing.filter(item => !voiced.has(item)), audioReview: 'Woordaudio beschikbaar; menselijke uitspraakreview staat open.' } };
 });
 export const lessonPackages: PackageDefinition[] = taalroutePackages;
 export const contentPackages: PackageDefinition[] = [...taalroutePackages, ...additionalPackages];

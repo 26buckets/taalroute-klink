@@ -13,7 +13,9 @@ import {getPackage} from '../lib/package-content.ts';
 import {parseProgress,nextLessonPosition} from '../lib/learner-progress.ts';
 const originalImages = JSON.parse(readFileSync('scripts/fixtures/klink-images-before-20261025.json'));
 const imageChanges = new Map(Object.entries(originalImages).filter(([id, path]) => media[id].image !== path).map(([id, path]) => [media[id].image, path]));
-const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)), (_key, value) => imageChanges.get(value) ?? value)).digest('hex');
+const originalMedia = JSON.parse(readFileSync('docs/klink-wordaudio-publication-20261025/media-before.json'));
+const audioChanges = new Map([['/package-audio/woorden-20261025/klink-woord-man.mp3', originalMedia['klink-woord-man'].audio]]);
+const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)), (_key, value) => imageChanges.get(value) ?? audioChanges.get(value) ?? value)).digest('hex');
 test('15 authoritative entrances preserve all 302 exact lessons and exercise payloads',()=>{
   assert.equal(packs.length,15);
   assert.equal(sections.release.curriculumInputHash,curriculum.release.inputHash);
