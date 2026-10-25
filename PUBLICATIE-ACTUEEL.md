@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `9ae8db441a2fc47af9f7cc97b5a19741697f094d` op canonieke branch `main`.
+Worker-versie: `b8c11946-1ddd-4702-ae82-5add21611f7b`.
+
+Alle 30 lessen van **sjaal · taxi**, van sjaal tot en met visje, wachten op Verder of Les afronden. Letterhulp en Kijk nog eens blijven beschikbaar. Lettergroepen zoals sj, eau, eeuw en ieuw blijven samen op één knop en in één vak. Knoppen en voorbeeldvakjes groeien mee met brede lettergroepen; lange voorbeelden passen binnen het bestaande oefenvlak. Het actieve lege vak en de bijbehorende letterknop blijven samen zichtbaar. De herhalingslessen en langere woorden zoals centrum en maximum zijn meegenomen. De bestaande appindeling, antwoordkaders, Klankenkaart, inhoud, media, routes, opslag, startpagina en sessiestabiliteit zijn behouden.
+
+Register: `docs/klink-publication-groep10-20261025.json`; vrijgave: `docs/klink-owner-release-groep10-20261025.json`. Gerichte review: alle 155 stappen in 30 nieuwe lessen lokaal met echte audio, foutkeuzes, Kijk nog eens, vooruit springen, hervatten en lesovergangen; letterhulp op 320/390/1366 pixels. Drie gescheiden parallelle reeksen dekken samen de volledige groep. Daarnaast 83 stappen uit de voorgaande groep, 154 unittests (één bestaande controle overgeslagen), types, lint, catalogus en 49 publicatiebewijstests. Online zijn 42 stappen in zeven representatieve lessen opnieuw doorlopen. De bestaande Klankenkaart, algemene indeling en woordbeelden zijn behouden; de brede ongewijzigde regressie is niet volledig herhaald. Alle 2.772 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Actuele schone werkkopie: `/Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-groep8-source`, canonieke repository 26buckets/taalroute-klink, branch main. De oude werkkopie klink-publicatie had onleesbare Git-objecten en is onaangeroerd bewaard; gebruik die niet als publicatiebron zonder herstel.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `5b4cb5e53308bf6c041a1e95d90e1d760b45da55` op canonieke branch `main`.
 Worker-versie: `fefb91f7-b9e8-4981-ab43-10b903f79f79`.
 
