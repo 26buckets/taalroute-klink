@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `dac55cccb475b6d2ef2c18187fa56173bd3606aa` op canonieke branch `main`.
+Worker-versie: `910b9a1f-fa57-4fa2-b994-7667f2bc385b`.
+
+Alle 45 lessen van **zeep · hek**, van hek tot en met zoon, wachten op Verder of Les afronden. Letterhulp en Kijk nog eens blijven beschikbaar. ei, ij, au en ou blijven samen op één knop en in één vak; ook ei en au als volledig woord op één knop zijn gecontroleerd. De bestaande appindeling, stabiele antwoordkaders, Klankenkaart, inhoud, media, routes, opslag, startpagina en sessiestabiliteit zijn behouden.
+
+Register: `docs/klink-publication-groep8-20261025.json`; vrijgave: `docs/klink-owner-release-groep8-20261025.json`. Gerichte review: alle 238 stappen in 45 nieuwe lessen lokaal met echte audio, foutkeuzes waar aanwezig, Kijk nog eens, terugnemen/herstellen, vooruit springen, hervatten en lesovergangen; letterhulp op 320/390/1366 pixels. Twee gescheiden parallelle reeksen dekken samen de volledige groep. Daarnaast 57 stappen uit de voorgaande groep, de Klankenkaart, 66 antwoordkaders en twaalf voorleesstatussen in cursist- en docentweergave, 150 unittests (één bestaande controle overgeslagen), types, lint, catalogus en 46 publicatiebewijstests. Online zijn 67 stappen in zeven representatieve lessen opnieuw doorlopen. De brede ongewijzigde regressie is niet volledig herhaald. Alle 2.679 aangeboden media en de gebouwde client zijn online bytegelijk gecontroleerd.
+
+Actuele schone werkkopie: `/Users/nicoknoester/Documents/Codex/2026-10-24/ok-we-gaan-hier-verder-met/work/klink-groep8-source`, canonieke repository 26buckets/taalroute-klink, branch main. De oude werkkopie klink-publicatie had onleesbare Git-objecten en is onaangeroerd bewaard; gebruik die niet als publicatiebron zonder herstel.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Bestaande inhoudelijke reviewgrenzen en audiopauze blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy`. Behoud publicatiepoort en historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `0591327365eb02d9934dbdfa2257d0b664779588` op canonieke branch `main`.
 Worker-versie: `61862c55-07ce-4762-b706-1278840d48c1`.
 
