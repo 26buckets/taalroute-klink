@@ -121,11 +121,11 @@ try {
   assert((await page.evaluate(() => window.__played)).includes(writing.prompt.audio.src), 'Writing must expose its existing word recording');
   checks.push('Writing exercise exposes the linked word audio');
   await home(); await nav().getByRole('button', { name: 'Woorden', exact: true }).click();
-  const filter = page.getByLabel('Kies een onderdeel');
+  const filter = page.getByLabel('Kies een lespakket', {exact:true});
   for (const pack of packs) { await filter.selectOption(pack.id); assert.equal(await page.locator('.cp-global-word-grid article').count(), primaryWordCards.filter(word => word.packageId === pack.id).length); }
   await filter.selectOption('all');
   const save = page.getByRole('button', { name: 'aardappel bewaren', exact: true }); await save.click();
-  await filter.selectOption('saved'); assert.equal(await page.locator('.cp-global-word-grid article').count(), 1);
+  await page.getByLabel('Welke woorden?', {exact:true}).selectOption('saved'); assert.equal(await page.locator('.cp-global-word-grid article').count(), 1);
   await page.reload(); await nav().getByRole('button', { name: 'Herhalen', exact: true }).click();
   assert.match(await page.locator('.review-word-list').innerText(), /aardappel/);
   checks.push('All lesson filters and saved words remain accessible, with saved state surviving reload');

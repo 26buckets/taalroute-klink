@@ -1,0 +1,87 @@
+{
+  "status": "passed-local",
+  "baselineSourceCommit": "b80670b12ea21d3561ba833af9fb668ab78efb9f",
+  "preservationPassed": true,
+  "wordCount": 5127,
+  "lessonPackages": 15,
+  "extraWords": 4789,
+  "localProductionBrowser": {
+    "passed": true,
+    "checks": [
+      "All fifteen lesson filters retain their word cards",
+      "Five ascending lengths, punctuation and all extra words; no technical subseries",
+      "Saving across both sources, reload, removing and empty-state recovery",
+      "1366px: filters fit, 48px targets and original word cards",
+      "390px: filters fit, 48px targets and original word cards",
+      "320px: filters fit, 48px targets and original word cards",
+      "Existing word recording plays from the regrouped card"
+    ],
+    "errors": []
+  },
+  "unitTestsPassed": 5,
+  "typesPassed": true,
+  "lintPassed": true,
+  "productionBuildPassed": true,
+  "previousLocalReview": {
+    "status": "local-preview-not-published",
+    "baseCommit": "10e5a1d09aba20fc6df7780486f69a72751bb979",
+    "liveBaseline": {
+      "application": "Klink",
+      "builtAt": "2026-10-25T14:38:34.978Z",
+      "sourceCommit": "b80670b12ea21d3561ba833af9fb668ab78efb9f",
+      "branch": "main",
+      "sourceClean": true,
+      "curriculumEdition": "klink-leerlijn-20261016-v1",
+      "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+      "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+      "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+      "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+    },
+    "preview": "http://127.0.0.1:18839/#learner/words",
+    "scope": "Only word-library filter presentation and selection; lesson content, audio, cards, routes and storage preserved.",
+    "changes": [
+      "Three sources: lesson words, extra words, saved",
+      "Fifteen original lesson packages",
+      "Five ascending letter-count groups without numbered technical subseries",
+      "Punctuation separately findable with examples; former extra-example words included by length",
+      "Alphabetical extra words; 48px selects wrap on mobile"
+    ],
+    "checks": {
+      "unitTests": 3,
+      "browserChecks": 7,
+      "articleChecks": 9,
+      "realAudioPlaybacks": 28,
+      "types": "passed",
+      "lint": "passed",
+      "widths": [
+        320,
+        390,
+        1366
+      ],
+      "wordIdsPreserved": 5127
+    },
+    "limits": [
+      "Local development preview only; production build and publication gate not run for this proposal.",
+      "No physical-device or learner trial.",
+      "Existing broader exercise-route suite not rerun."
+    ],
+    "files": {
+      "app/learner-ui.css": "127698a4827643bf5250cc5a119f0b6c7eb72683b552b1f5378f4690b46041d0",
+      "components/product/learner-app.tsx": "7607e7b42471230607c874cd5ad99ab50221d3674f5f0f5038e628890dc45939",
+      "scripts/test-learner-ux-browser.mjs": "77f3ba6b76f4082482004518228f74de100ceeb866a75fd32c0970ffebe94dbb",
+      "scripts/test-word-articles-browser.mjs": "3f8a7d606616237c96dace77a88bcb106075ca1fb74fd7aabbfd4b37165df1e3",
+      "scripts/test-word-audio-ui-browser.mjs": "db8a6a27f0eedcf71c998938f16e1504846f93b29b41ac06bd718a641b139d94",
+      "lib/word-library.ts": "c6d48b7ba9de988a6c0435b5a566935091487aff658748e1e12df9894719dcca",
+      "scripts/test-word-library-browser.mjs": "2a87c144d42f0fb20c5bebf2dd16f8dc93c54a133367641b433609af3aba6df5",
+      "scripts/test-word-library.mjs": "09523b80bd23d95274b8af080c0ed559c456914d8d82bcb81e3ca22c3aeb6ea3"
+    }
+  },
+  "priorArticleChecks": 9,
+  "priorNativeAudioPlaybacks": 28,
+  "productionProof": "Run separately after committing this reviewed source; recorded in publication register.",
+  "limits": [
+    "No physical phone or learner trial",
+    "No new audio or human pronunciation review",
+    "Unchanged broad exercise suite not repeated"
+  ]
+}
