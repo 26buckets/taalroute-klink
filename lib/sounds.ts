@@ -3,7 +3,7 @@ import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import { allPackageWords, lessonPackages } from './package-content.ts';
 
 export const soundGroups = reference.groups;
-export const soundCards = Object.entries(reference.sounds as Record<string, { label: string; example: string; words: string[] }>).map(([id, sound]) => ({
+export const soundCards = Object.entries(reference.sounds as Record<string, { label: string; example: string; words: string[]; audio?: string }>).map(([id, sound]) => ({
   id, ...sound, group: soundGroups.find(group => group.items.includes(id))!,
 }));
 export const soundById = new Map(soundCards.map(sound => [sound.id, sound]));
@@ -13,7 +13,7 @@ export const klankstudioUrl = (id: string) => `${reference.source.klankstudio}?s
 export const soundPosterUrl = reference.source.poster;
 
 export function wordsForSound(sound: SoundCard) {
-  return sound.words.map(word => allPackageWords.find(item => item.word === word && item.id.startsWith('klink-woord-'))!).filter(Boolean);
+  return sound.words.map(word => (allPackageWords.find(item => item.word === word && item.id.startsWith('klink-woord-')) ?? allPackageWords.find(item => item.word === word))!).filter(Boolean);
 }
 
 export function soundsForWord(wordId: string) {

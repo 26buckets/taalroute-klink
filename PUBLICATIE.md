@@ -322,3 +322,31 @@ staat in `docs/klink-short-screen-release-20261018/live-baseline-check.json`.
 Historische akkoorden en publicatieregisters blijven onveranderd. Dit lokale
 herstel is nog niet gepubliceerd. Centrale regie legt de gecontroleerde bron
 vast en gebruikt de normale publicatiepoort; een Drive-back-up is geen publicatie.
+
+
+## Losse klanken — 25 oktober 2026
+
+De canonieke publicatiebron blijft deze repository, branch `main`.
+Het dossier `docs/klink-klanken-release-20261025/` legt de actuele livebasis,
+46 losse opnamen, de acht goedgekeurde ongewijzigde bestanden, metadata,
+bronbehoud, lokale controles en teruggelezen Drive-herstelkopie vast.
+Voor de 38 nieuwe opnamen staat menselijke uitspraakbeoordeling nog open;
+de extra automatische luisterdienst was door een uitgeput bestaand tegoed niet beschikbaar.
+Er is geen budget verhoogd. Technische audiocontroles vervangen die beoordeling niet.
+
+Klink: de letter op de klankenkaart speelt direct de klank. De aparte knop
+Woorden opent de bijbehorende bestaande woorden. De letter boven de woorden
+en de letters bij Kijk en luister spelen dezelfde losse opname op normale snelheid.
+De bestaande woordaudio houdt tempo 0,85. Posteruitleg en de losse luisterknop
+zijn verwijderd; de rustige Klankstudio-link blijft. De zeven lege woordenlijsten
+zijn aangevuld met bestaande woorden, zonder nieuwe lessen of woordaudio.
+
+Klankstudio: dezelfde 46 referentieopnamen hebben hun eigen stemvermelding Remko.
+De vier bestaande stemmen voor voorbeeldwoorden, oude media, inhoud, header,
+instellingen en lokale gegevens blijven behouden.
+
+Publiceer via de bestaande normale route. Bewaar historische akkoorden ongewijzigd.
+De Klink-poort valideert de begrensde opvolger en blijft de eerdere vrijgaven tegen
+hun eigen bron controleren. Instructieaudio buiten de eerdere vrijgave blijft geblokkeerd.
+De uiteindelijke broncommit, livecontrole en back-up staan in het publicatieregister
+voor deze klankenuitgave. Een Drive-back-up is geen livepublicatie.

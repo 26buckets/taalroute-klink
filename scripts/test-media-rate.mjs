@@ -13,7 +13,7 @@ test('Withdrawn explanation is blocked; task questions and words remain availabl
   assert.equal(isWithdrawnAudio('/audio/pb/biet.m4a'), false);
 });
 
-test('Every playback uses 0.85, retains pitch and can still finish or be cancelled', async () => {
+test('Default playback uses 0.85; isolated models retain their natural rate without changing other audio', async () => {
   assert.equal(DEFAULT_AUDIO_RATE, 0.85);
   assert.doesNotThrow(() => applyDefaultAudioRate(null));
   const ownRecording = { playbackRate: 1, defaultPlaybackRate: 1, preservesPitch: false };
@@ -37,5 +37,10 @@ test('Every playback uses 0.85, retains pitch and can still finish or be cancell
     const instruction = playMedia('/instruction.wav', { waitUntilEnd: true, signal: controller.signal });
     controller.abort(); assert.equal(await instruction, false);
     for (const event of played) { assert.equal(event.rate, .85); assert.equal(event.defaultRate, .85); assert.equal(event.pitch, true); }
+    const sound = playMedia('/klank-audio/a.mp3', { playbackRate: 1, waitUntilEnd: true });
+    assert.deepEqual(played.at(-1), { src: '/klank-audio/a.mp3', rate: 1, defaultRate: 1, pitch: true });
+    stopMedia(); assert.equal(await sound, false);
+    await playMedia('/word-again.wav');
+    assert.equal(played.at(-1).rate, .85);
   } finally { stopMedia(); globalThis.Audio = originalAudio; }
 });

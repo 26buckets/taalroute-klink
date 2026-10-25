@@ -6,10 +6,10 @@ let cancelPlayback: (() => void) | undefined;
 
 export const DEFAULT_AUDIO_RATE = 0.85;
 
-export function applyDefaultAudioRate(audio: HTMLMediaElement | null) {
+export function applyDefaultAudioRate(audio: HTMLMediaElement | null, rate = DEFAULT_AUDIO_RATE) {
   if (!audio) return;
-  audio.defaultPlaybackRate = DEFAULT_AUDIO_RATE;
-  audio.playbackRate = DEFAULT_AUDIO_RATE;
+  audio.defaultPlaybackRate = rate;
+  audio.playbackRate = rate;
   audio.preservesPitch = true;
 }
 
@@ -25,7 +25,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
   // Reuse the element unlocked by the learner's gesture, including on mobile.
   const audio = activeAudio ??= new Audio();
   audio.src = source;
-  applyDefaultAudioRate(audio);
+  applyDefaultAudioRate(audio, options.playbackRate);
   return new Promise((resolve, reject) => {
     let settled = false;
     const cleanup = () => {

@@ -39,6 +39,7 @@ test('Word links open the existing lesson with intact registered audio and no ne
   assert(!wordsForSound(soundById.get('a')).some(word => word.word === 'maan'));
   for (const sound of soundCards) {
     const words = wordsForSound(sound);
+    assert(words.length > 0, sound.id);
     assert.equal(words.length, sound.words.length, sound.id);
     for (const word of words) {
       if (word.audio) { assert(existsSync(`public${word.audio}`)); assert(!isWithdrawnAudio(word.audio)); }

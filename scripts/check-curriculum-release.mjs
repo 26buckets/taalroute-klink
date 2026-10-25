@@ -1,3 +1,4 @@
+import { verifySoundAudioRelease, readBeforeSoundAudioRelease } from './check-sound-audio-release.mjs';
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -117,12 +118,14 @@ const previousAuthorizationPath = 'docs/klink-owner-release-cumulative-20261018.
 const repairEvidence = 'docs/klink-short-screen-release-20261018';
 const cumulativeEvidence = 'docs/klink-cumulative-release-20261018';
 try {
-  const articleReviewRelease = verifyArticleReviewRelease();
-  const wordAudioRelease = verifyWordAudioRelease(file => readBeforeArticleReview(file, articleReviewRelease), articleReviewRelease.baselineSourceCommit);
+  const soundAudioRelease = verifySoundAudioRelease();
+  const readBeforeSounds = file => readBeforeSoundAudioRelease(file, soundAudioRelease);
+  const articleReviewRelease = verifyArticleReviewRelease(undefined, readBeforeSounds, soundAudioRelease.baselineSourceCommit);
+  const wordAudioRelease = verifyWordAudioRelease(file => readBeforeArticleReview(file, articleReviewRelease, readBeforeSounds), articleReviewRelease.baselineSourceCommit);
   // Historical approvals keep their exact pre-audio files; the successor validates the current audio-only delta.
   const readApprovedFile = file => wordAudioRelease.files[file]
     ? execFileSync('git', ['show', `${wordAudioRelease.baselineSourceCommit}:${file}`], { maxBuffer: 32 * 1024 * 1024 })
-    : readBeforeArticleReview(file, articleReviewRelease);
+    : readBeforeArticleReview(file, articleReviewRelease, readBeforeSounds);
   const approval = JSON.parse(readFileSync(authorizationPath));
   const imageRelease = verifyImageRelease({ ...approval.wordArticles, files: approval.files }, readApprovedFile);
   const previous = JSON.parse(readFileSync(previousAuthorizationPath));

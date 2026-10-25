@@ -1,3 +1,4 @@
+import { verifySoundAudioRelease, readBeforeSoundAudioRelease } from './check-sound-audio-release.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
@@ -9,8 +10,10 @@ import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
 
 const baseline = JSON.parse(readFileSync('data/klink-release-readiness.json')).baseline;
 const proof = JSON.parse(readFileSync(baseline.proofFile));
-const reviewedArticles = verifyArticleReviewRelease();
-const verifiedWordAudio = verifyWordAudioRelease(file => readBeforeArticleReview(file, reviewedArticles), reviewedArticles.baselineSourceCommit);
+const verifiedSounds = verifySoundAudioRelease();
+const readBeforeSounds = file => readBeforeSoundAudioRelease(file, verifiedSounds);
+const reviewedArticles = verifyArticleReviewRelease(undefined, readBeforeSounds, verifiedSounds.baselineSourceCommit);
+const verifiedWordAudio = verifyWordAudioRelease(file => readBeforeArticleReview(file, reviewedArticles, readBeforeSounds), reviewedArticles.baselineSourceCommit);
 function check(candidate, changeApproval, changeImported, changeHeaderCss, changeWordbuild) {
   const dir = mkdtempSync(join(tmpdir(), 'klink-proof-test-'));
   try {
@@ -33,6 +36,9 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     copyFileSync('scripts/check-article-review-release.mjs', join(dir, 'scripts/check-article-review-release.mjs'));
     const reviewGate = join(dir, 'scripts/check-article-review-release.mjs');
     writeFileSync(reviewGate, readFileSync(reviewGate, 'utf8').replace('export function verifyArticleReviewRelease(release =', 'export function verifyArticleReviewReleaseUnused(release =') + `\nexport const verifyArticleReviewRelease = () => (${JSON.stringify(reviewedArticles)});`);
+    copyFileSync('scripts/check-sound-audio-release.mjs', join(dir, 'scripts/check-sound-audio-release.mjs'));
+    const soundGate = join(dir, 'scripts/check-sound-audio-release.mjs');
+    writeFileSync(soundGate, readFileSync(soundGate, 'utf8').replace('export function verifySoundAudioRelease(release =', 'export function verifySoundAudioReleaseUnused(release =') + `\nexport const verifySoundAudioRelease = () => (${JSON.stringify(verifiedSounds)});`);
     copyFileSync('scripts/check-image-release.mjs', join(dir, 'scripts/check-image-release.mjs'));
     // The new scope has its own negative tests; these fixtures exercise the inherited approvals.
     writeFileSync(join(dir, 'scripts/check-word-audio-release.mjs'), `export const verifyWordAudioRelease = () => (${JSON.stringify(verifiedWordAudio)});`);

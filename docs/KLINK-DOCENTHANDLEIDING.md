@@ -70,13 +70,13 @@ Deze oefening bevat zes woorden: *mat, tas, jas, man, map, pan*. De volgorde kan
 
 ### De klankenkaart gebruiken
 
-Kies **Oefenen → Klanken → Klankenkaart → a**. Je ziet dezelfde schrijfwijzen, kleuren en ankerwoorden als op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ze blijven apart. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
+Kies **Oefenen → Klanken → Klankenkaart**. Klik op een letter om de losse klank te horen. Je blijft op de kaart. Dezelfde 46 schrijfwijzen, kleuren en ankerwoorden staan op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
 
-Onder **Woorden in Klink** staan bij **a** onder meer *mat* en *tas*. **Luister** speelt het hele bestaande woord af. **Oefen mat** opent de bijbehorende bestaande leesles. **Open deze klank in Klankstudio** opent die klank in een nieuw tabblad. Je kunt daarna terugkeren naar Klink. De klankenkaart zelf opent met **Open de klankenkaart**.
+Kies **Woorden** bij een klank voor de bijbehorende woorden. Klik op een woord om het te horen; **Oefen** opent de bestaande leesles. De letter boven de woorden speelt dezelfde losse klank. **Klankstudio** opent de gekozen klank in een nieuw tabblad.
 
-Bij **Kijk en luister** kun je bij woorden met een rechtstreekse klank-tekenkoppeling **Klanken bij dit woord** openklappen. Bij *mat* zie je **m · a · t**, bij *tas* **t · a · s**. Dit laat de les en de bewaarde lesplek staan. Bij woorden met een veranderde klankwaarde, zoals de d in *bed*, verschijnt dit hulpmiddel nog niet; bespreek de spelling met de docent. De klankenkaart blijft via Oefenen beschikbaar.
+Bij **Kijk en luister** kun je **Klanken bij dit woord** openklappen. Bij *mat* zie je **m · a · t**, bij *tas* **t · a · s**. Klik op de letters om ze te horen. De les en bewaarde lesplek blijven staan. Bij veranderde klankwaarden, zoals de d in *bed*, verschijnt dit hulpmiddel nog niet; bespreek de spelling met de docent.
 
-Gebruik dit binnen het bestaande boekdoel en docentlesplan: wijs de klank op de klasposter aan, laat één klank horen, laat de cursist hem in het bekende woord aanwijzen of zeggen en keer terug naar de woordopdracht. Reserveer bijvoorbeeld 2–3 minuten uit die opdracht; dit voegt geen lesuren, huiswerk of nieuw leerdoel toe. Noteer herkenning met hulp en zelfstandig lezen afzonderlijk. Nieuwe losse klankaudio in Klink blijft gepauzeerd; de bestaande woordaudio is geen opname van een losse klank. Praktijkbeoordeling met cursisten blijft open.
+Koppel dit aan het bestaande boekdoel en docentlesplan: wijs de klank op de klasposter aan, laat de klank horen en laat de cursist hem in het bekende woord aanwijzen of zeggen. Keer daarna terug naar de woordopdracht. Reserveer bijvoorbeeld 2–3 minuten uit die opdracht. Noteer herkenning met hulp en zelfstandig lezen afzonderlijk. De acht door Nico goedgekeurde opnamen blijven behouden. De overige 38 zijn nieuwe opnamen; menselijke uitspraak- en praktijkbeoordeling blijven open. De audiopauze voor niet-vrijgegeven instructieaudio blijft gelden.
 
 ### Oefenen via een onderwerp
 
