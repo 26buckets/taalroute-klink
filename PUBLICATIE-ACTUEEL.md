@@ -1,6 +1,24 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `a503086a0654acff147f47e8a680c8d253e215f9` op canonieke branch `main`.
+Worker-versie: `fca99ec7-e221-4709-935c-c53634771e98`.
+
+Woordkaarten en Kennismaken tonen een kleine regel met het passende lidwoord, bijvoorbeeld de jas of het lam. Op brede schermen staat de regel bij Kennismaken rechts naast de foto; op kleine schermen onder het oefenwoord. Omkeerkaarten geven het lidwoord uitsluitend aan de woordkant. Ook bewaarde woorden tonen de regel. Letteroefeningen, antwoorden, bestaande audio en opslag blijven ongewijzigd.
+
+Alle 338 kernbetekenissen zijn individueel nagekeken; 4789 aanvullende woorden zijn exact gekoppeld aan hun getoonde Lexicon-betekenis. 2520 woorden krijgen een lidwoordregel, overige woordsoorten niet. Woorden met meerdere correcte lidwoorden krijgen één consistente correcte variant. Geen nieuwe audio.
+
+Register: `docs/klink-publication-articles-20261025.json`; vrijgave: `docs/klink-owner-release-articles-20261025.json`. Lokaal: betekenisdekking, 17 gerichte unittests, woordkaarten en kennismaken op vier breedtes, complete eerste les, omdraaien zonder antwoordlek, bewaren/hervatten, nieuwste lessen (67 stappen), Klankenkaart, 66 antwoordkaders en 15 toegankelijkheidstoestanden, types/lint/build en publicatiebewijstests. Online: vier breedtes en dezelfde gerichte woord-/les-/opslagcontrole; alle 2772 media en de gebouwde client bytegelijk. De recent gepubliceerde 225 afbeeldingen op 227 kaarten blijven behouden.
+
+Controlegrenzen: browseremulatie, geen fysieke telefoon- of cursistenproef. Extra lidwoorden zijn tegen de bestaande betekenisgebonden Lexicon-bron gecontroleerd, niet ieder afzonderlijk tegen een extern woordenboek. Bestaande inhoudelijke reviewgrenzen blijven gelden.
+
+Publiceer uitsluitend een afstammeling van deze livecommit via `npm run deploy` vanuit canonieke branch `main`. De schone publicatiecheckout is `/Users/nicoknoester/Documents/Codex/2026-10-24/klink-resterende-drive-222/work/klink-lidwoorden-publicatie`; de andere oude lokale main-checkouts kunnen achterlopen. Behoud deze lidwoordvrijgave, beeldvrijgave en alle historische inhoudsakkoorden.
+
+## Voorgaande publicatie (historie)
+
+### Voorgaande actieve publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `b850233c4445a6974728051fcfb73673f75bfcec` op canonieke branch `main`.
 Worker-versie: `831403e7-0db7-4e5c-8480-f2b721bdce56`.
 
