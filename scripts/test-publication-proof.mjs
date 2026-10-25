@@ -28,7 +28,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
     copyFileSync('scripts/check-image-release.mjs', join(dir, 'scripts/check-image-release.mjs'));
     if (changeApproval) {
-      const approvalPath = 'docs/klink-owner-release-articles-20261025.json';
+      const approvalPath = 'docs/klink-owner-release-groep9-20261025.json';
       const approval = JSON.parse(readFileSync(approvalPath));
       changeApproval(approval);
       const fixture = join(dir, 'approval.json');
@@ -562,3 +562,16 @@ test('Group eight letter combinations requires scoped counts, review and verifie
  a => { delete a.files['docs/klink-articles-20261025/source-drive-verification.json']; },
  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
  });
+
+test('Group nine letter combinations requires scoped counts, review and verified source backup', () => {
+  for (const change of [
+    a => { delete a.group9Guidance; },
+    a => { a.group9Guidance.publicationApproved = false; },
+    a => { a.group9Guidance.steps++; },
+    a => { a.group9Guidance.lessons++; },
+    a => { a.group9Guidance.baselineSourceCommit = '0'.repeat(40); },
+    a => { a.group9Guidance.changedFiles.push('data/klink-curriculum.json'); },
+    a => { delete a.files['docs/klink-groep9-publication-20261025/review.json']; },
+    a => { delete a.files['docs/klink-groep9-publication-20261025/source-drive-verification.json']; },
+  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
+});

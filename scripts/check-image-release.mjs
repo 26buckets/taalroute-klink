@@ -44,8 +44,8 @@ export function verifyImageRelease(successor) {
       assert.equal(digest(git('show', `${successor.baselineSourceCommit}:${file}`)), sha, file);
     }
   }
-  const expected = ['data/klink-media.json', 'lib/package-content.ts', ...images.map(row => `public${row.image}`)].sort();
-  const actual = git('diff', '--name-only', release.baselineSourceCommit, successor?.baselineSourceCommit ?? 'HEAD', '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').trim().split('\n').filter(Boolean).sort();
+  const expected = ['data/klink-media.json', 'lib/package-content.ts', ...images.map(row => `public${row.image}`)].sort((a, b) => a.localeCompare(b));
+  const actual = git('diff', '--name-only', release.baselineSourceCommit, successor?.baselineSourceCommit ?? 'HEAD', '--', 'app', 'components', 'hooks', 'data', 'lib', 'public').trim().split('\n').filter(Boolean).sort((a, b) => a.localeCompare(b));
   assert.deepEqual(actual, expected, 'No unrelated runtime change may enter the image release');
   return release;
 }
