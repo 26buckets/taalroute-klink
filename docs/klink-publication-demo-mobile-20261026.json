@@ -1,0 +1,102 @@
+{
+  "published": true,
+  "sourceCommit": "9465da5a30b26deb1bdb50e059935f264518ba34",
+  "workerVersion": "b8235bf0-4444-4e6a-8f6a-6a943eea8559",
+  "domain": "https://klink.taalroute.nl",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-10-26T21:50:40.965Z",
+    "sourceCommit": "9465da5a30b26deb1bdb50e059935f264518ba34",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "authorization": "docs/klink-owner-release-demo-mobile-20261026.json",
+  "previousLive": "79f0583d32fc9c6315a6680ec76442ffaafcbce1",
+  "canonicalBranch": "main",
+  "runtimeFiles": [
+    "app/learner-ui.css",
+    "components/product/package-exercise-browser.tsx"
+  ],
+  "scope": "Gezamenlijke mobiele review van zeven soorten voorbeelden. Keuzevoorbeelden, doelkaart en Nu jij zichtbaar houden, ook liggend; Kijk eerst overal; kaartkeuze volgt de handtik.",
+  "validation": {
+    "sourceConfigurations": 591,
+    "representativeSamples": 12,
+    "types": [
+      "word-build",
+      "same-word",
+      "heard-word",
+      "heard-image",
+      "word-image-match",
+      "sentence-question",
+      "missing-grapheme"
+    ],
+    "localBrowserCases": 144,
+    "liveBrowserCases": 48,
+    "manualRouteRegressionCases": 36,
+    "popupCases": 36,
+    "popupLargeText": true,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "localViewports": [
+      [
+        320,
+        480
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        667,
+        375
+      ],
+      [
+        1366,
+        900
+      ]
+    ],
+    "liveViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        667,
+        375
+      ]
+    ],
+    "reducedMotionLocal": true,
+    "publicationProofTests": 50,
+    "releaseTests": 5,
+    "focusedUnitTests": 9,
+    "curriculumPassed": 48,
+    "curriculumPreexistingSkipped": 1,
+    "typesPassed": true,
+    "scopedLintPassed": true,
+    "canonicalGatePassed": true,
+    "mediaByteIdentical": 8135,
+    "clientByteIdentical": true,
+    "sourceClean": true,
+    "githubActionsWorkflows": 0
+  },
+  "limits": [
+    "Browser simulations, no physical phone or learner trial.",
+    "No new audio or pronunciation review.",
+    "The unchanged full 1616-step sequence was not replayed.",
+    "591 source configurations validated; 12 representative first/long variants tested interactively. Not 591 individual browser walkthroughs."
+  ],
+  "sourceBackup": "https://drive.google.com/file/d/1psI3kpUD4EE2FPrp3LrxhxEKiq6e-2qA/view",
+  "finalBackupProof": "docs/klink-demo-mobile-20261026/final-drive-verification.json",
+  "canonicalCheckout": "/Users/nicoknoester/.codex/workspaces/klink-handje-20261026"
+}
