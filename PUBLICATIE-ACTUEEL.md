@@ -1,6 +1,44 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `d3a1942487cb61b1fb7de6ecfe983d5a16afc687` op canonieke branch `main`.
+Worker-versie: `78c67a0b-d2af-482e-b8a8-095b6c42a981`.
+
+Bij alle 128 dialogen staat Meelezen bij openen aan. Bij de start van de
+volgende volledige luisterronde na één succesvolle afronding gaat Meelezen
+uit en sluit ook de volledige gesprekstekst. Afgebroken pogingen en losse
+beurten tellen niet als een volledige ronde. De cursist kan zelf de tekst
+weer aan- of uitzetten. Een nieuw geopend gesprek begint opnieuw met tekst.
+De handleiding beschrijft dezelfde bediening.
+
+De sessiebrede slakkenknop, standaard hele gesprek, per beurt luisteren,
+transcriptopmaak, volledige foto's, woordbeelden, opnamen, lessen, logo D,
+routes en lokale voortgang blijven behouden. Geen nieuwe media.
+
+Lokaal én live: alle 128 eerste/tweede/handmatig herstelde derde rondes,
+afbreken, losse beurten, fout/herpoging, nieuw gesprek, toetsenbord en vier
+schermbreedtes. Twee echte onversnelde luisterrondes met langzaam tempo getest.
+Lokaal: 58 publicatiebewijstests, curriculum, types, gerichte lint, build,
+393 fotocontroles, 384 transcriptweergaven, normale en langzame bediening,
+bronverbindingen en les-/opslaggedrag. Alle 8.135 aangeboden media en de
+gebouwde client online bytegelijk teruggelezen.
+Geen fysieke telefoonproef of nieuwe menselijke luisterreview.
+
+Vrijgave: `docs/klink-owner-release-readalong-20261026.json`.
+Register: `docs/klink-publication-readalong-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-gesprekken-publicatie-20261025`.
+Bronback-up: https://drive.google.com/file/d/1psIw49AfAXFJWRM37XytYdGtD18ZEV9k/view .
+Herstelbewijs: `docs/klink-readalong-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `5bfebf4db52631b54dcb3a8c927050487f4ae54f` op canonieke branch `main`.
 Worker-versie: `9bc366ed-60c1-4ea8-931b-271d2f8ab281`.
 
