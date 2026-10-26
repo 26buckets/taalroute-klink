@@ -1,6 +1,46 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `52d051ca357c1dcd579db57f59f3ee44dc4b4908` op canonieke branch `main`.
+Worker-versie: `51fc6769-f1ef-4197-aba4-ce056f51a904`.
+
+De zes uitlegvensters gebruiken nu de werkelijke Klink-kleuren en het
+lettertype van de app. De helderblauwe afspeelknop, checkbox en focusrand
+zijn vervangen door de bestaande gedempte Klink-stijl. Knoppen en venster
+hebben dezelfde 4px-hoeken. De uitlegtekst blijft 18px, met behoud van
+leesbaarheid en scrollen bij 200% vergroting. Tikvlakken zijn minimaal 48px hoog.
+Op smalle telefoons blijven de knoppen compact; in korte liggende schermen
+staan voorbeeld en bediening naast elkaar. Uitleg in woorden blijft onderaan
+bereikbaar en opent omhoog. De overige appindeling is ongewijzigd.
+
+De gelijktijdig goedgekeurde handanimatie van 068301d is volledig behouden,
+evenals lessen, docentfuncties, routes, opslag, foto's, logo D en alle audio.
+Geen nieuwe lessen, beelden of opnamen.
+
+Lokaal: 108 telefoongevallen in drie browsers, zes schermformaten, aanraken,
+200% uitlegtekst, 72 toetsenbordgevallen, productiecontrole, bestaande routes,
+nieuwe hand, echte audio, curriculum, types, gerichte lint, build en
+55 publicatiebewijstests. Online: iPhone 13/WebKit en Pixel 5/Chromium-profielen,
+alle zes schermformaten, handanimatie, echte audio en automatisch meelezen.
+Alle 8.135 mediabestanden en de gebouwde client zijn bytegelijk teruggelezen.
+Dit zijn browsersimulaties: geen fysieke telefoon-, schermlezer- of cursistenproef.
+
+Vrijgave: `docs/klink-owner-release-popup-style-20261026.json`.
+Register: `docs/klink-publication-popup-style-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/Documents/Codex/2026-10-26/klink-oefenanimaties/work/klink-current`.
+Bronback-up: https://drive.google.com/file/d/1BW7vCj0TUHDybJrzeTAxgcsCkBG4-75B/view .
+Definitief herstelbewijs: `docs/klink-popup-style-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+Geen GitHub Actions-workflows aanwezig of gestart.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `068301d2f0055ac69a184a6ab06efe04b4def597` op canonieke branch `main`.
 Worker-versie: `e6ef0e64-1b8d-4234-bda7-83765b27059d`.
 

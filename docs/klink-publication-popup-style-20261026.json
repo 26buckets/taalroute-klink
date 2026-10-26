@@ -1,0 +1,119 @@
+{
+  "application": "Klink",
+  "date": "2026-10-26",
+  "liveUrl": "https://klink.taalroute.nl",
+  "sourceCommit": "52d051ca357c1dcd579db57f59f3ee44dc4b4908",
+  "canonicalBranch": "main",
+  "sourceClean": true,
+  "workerVersion": "51fc6769-f1ef-4197-aba4-ce056f51a904",
+  "previousLiveSourceCommit": "068301d2f0055ac69a184a6ab06efe04b4def597",
+  "baselineMain": "9960478c7da01a1a28e1dede2271136ed9a6b0b0",
+  "authorization": "docs/klink-owner-release-popup-style-20261026.json",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-10-26T20:31:40.164Z",
+    "sourceCommit": "52d051ca357c1dcd579db57f59f3ee44dc4b4908",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "runtimeFiles": [
+    "app/learner-ui.css",
+    "components/product/practice-line.tsx",
+    "public/practice-explanations/style.css"
+  ],
+  "changes": [
+    "Klink colour variables and actual body font inherited by iframe",
+    "4px control and popup corners",
+    "48px or larger touch target rows",
+    "18px word instructions, checked enlarged to 36px",
+    "Persistent words disclosure, compact portrait buttons, visible example alongside controls on short landscape screens"
+  ],
+  "localChecks": {
+    "mobileTouchCases": 108,
+    "browsers": [
+      "chromium",
+      "webkit",
+      "firefox"
+    ],
+    "phoneViewports": [
+      [
+        320,
+        568
+      ],
+      [
+        360,
+        640
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        430,
+        932
+      ],
+      [
+        667,
+        375
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "keyboardRegressionCases": 72,
+    "productionMobileCases": 36,
+    "nativeAudioTurns": 8,
+    "latestHandDemoChecks": 8,
+    "publicationProofPassed": 55,
+    "curriculumPassed": 48,
+    "audioRegisterPassed": 6,
+    "curriculumExistingSkipped": 1,
+    "typesPassed": true,
+    "scopedLintPassed": true,
+    "buildPassed": true,
+    "metadataGatePassed": true,
+    "existingRoutesAndLayoutPassed": true
+  },
+  "liveChecks": {
+    "iPhone13WebKitCases": 6,
+    "Pixel5ChromiumCases": 6,
+    "additionalPhoneCases": 36,
+    "wordsAt200Percent": true,
+    "latestHandDemoChecks": 8,
+    "nativeAudioTurns": 8,
+    "slowRate": 0.65,
+    "automaticReadalongRounds": 2,
+    "mediaByteIdentical": 8135,
+    "freshClientByteIdentical": true,
+    "errors": []
+  },
+  "contrast": {
+    "ratios": {
+      "uitlegtekst": 16.64,
+      "primaire_knop": 11.36,
+      "uitgeschakelde_knop": 4.44
+    },
+    "disabledControl": "Matches existing Klink muted text and canvas; no claim that inactive controls meet the active-text threshold."
+  },
+  "publicationCommand": "npm run deploy",
+  "sourceBackup": "https://drive.google.com/file/d/1BW7vCj0TUHDybJrzeTAxgcsCkBG4-75B/view",
+  "finalBackupVerification": "docs/klink-popup-style-20261026/final-drive-verification.json",
+  "githubWorkflows": {
+    "present": false,
+    "runsStarted": 0
+  },
+  "concurrentRelease": "The approved 068301d green demo hand was merged before publication and verified locally and live; its original sources and approval remain intact.",
+  "limitations": [
+    "Phone testing used browser emulation, not physical devices.",
+    "No screen-reader or learner trial.",
+    "200% text enlargement applies to the explanation text, not every OS setting.",
+    "Unchanged full 1,616-step sequence not rerun; focused preservation and existing approval chain verified.",
+    "Historical unrelated broad lint findings remain."
+  ]
+}
