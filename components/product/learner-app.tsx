@@ -47,13 +47,14 @@ import {
   WholeWord,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds';
 
-export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
+export function LearnerApp({ onExit, onToast, practicePreview }: { onExit: () => void; onToast: (message: string) => void; practicePreview?: ReactNode }) {
   const { settings } = useRouteSettings();
-  const [view, setView] = useState<LearnerView>('home');
+  const hasPracticePreview = Boolean(practicePreview);
+  const [view, setView] = useState<LearnerView>(practicePreview ? 'chapters' : 'home');
   const [navCollapsed, setNavCollapsed] = useState(() => {
     try { return typeof window !== 'undefined' && sessionStorage.getItem('klink.nav-collapsed.v1') === 'true'; } catch { return false; }
   });
@@ -91,14 +92,14 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
           setPlayerVisit(value => value + 1);
           setView('package');
         } else setView('packages');
-      } else if (route === 'chapters') setView('chapters');
+      } else if (route === 'chapters' || (!route && hasPracticePreview)) setView('chapters');
       else if (route === 'sounds') setView('sounds');
       else if (route === 'packages' || route === 'words' || route === 'review') setView(route);
       else setView('home');
     };
     restore(); window.addEventListener('hashchange', restore); window.addEventListener('popstate', restore);
     return () => { window.removeEventListener('hashchange', restore); window.removeEventListener('popstate', restore); };
-  }, []);
+  }, [hasPracticePreview]);
 
   function openView(next: LearnerView, packageId = selectedPackage) {
     stopMedia();
@@ -167,7 +168,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={recordAttempt} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
-        {view === 'chapters' && <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />}
+        {view === 'chapters' && (practicePreview ?? <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />)}
         {view === 'sounds' && <SoundReference onBack={() => openChapter('sounds')} onLesson={openLesson} />}
       </main>
     </div>

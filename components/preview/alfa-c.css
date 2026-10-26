@@ -1,0 +1,183 @@
+.pilot-library {
+  padding: 24px;
+}
+.pilot-library > p {
+  margin: 0 0 24px;
+}
+.pilot-library .cp-chapter-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.pilot-editor {
+  margin-top: 32px;
+  border-top: 1px solid var(--border, #ccd5d2);
+  padding-top: 16px;
+}
+.pilot-editor summary {
+  cursor: pointer;
+}
+.pilot-editor p {
+  max-width: 75ch;
+}
+.pilot-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.pilot-head h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.pilot-head > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  white-space: nowrap;
+}
+.pilot-player .cp-exercise-stage {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  padding: 20px;
+  gap: 16px;
+}
+.pilot-player .cp-task-card {
+  flex: 1;
+  min-height: 300px;
+}
+.pilot-tools {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pilot-model {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.pilot-model strong {
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 500;
+  text-align: center;
+}
+.pilot-help {
+  padding: 14px;
+  background: #eef3f1;
+}
+.pilot-help p {
+  margin: 0 0 8px;
+}
+.pilot-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid #d4ddda;
+  padding: 20px;
+}
+.pilot-footer > output {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  max-width: 70%;
+}
+.pilot-footer small {
+  display: block;
+  flex-basis: 100%;
+  color: #63716c;
+}
+.pilot-complete {
+  min-height: 480px;
+}
+.pilot-note {
+  font-size: 14px;
+  color: #63716c;
+}
+.pilot-player .cp-model-content img {
+  max-height: 230px;
+  object-fit: contain;
+}
+.pilot-player .cp-choice-grid img {
+  height: 150px;
+  width: 100%;
+  object-fit: contain;
+}
+.pilot-player .cp-choice-grid button {
+  min-height: 170px;
+}
+.pilot-player .cp-model-content strong {
+  font-size: 44px;
+}
+.pilot-player .cp-task-card:not(.pilot-model) > button.primary-button {
+  display: none;
+}
+@media (max-width: 700px) {
+  .pilot-library .cp-chapter-grid {
+    grid-template-columns: 1fr;
+  }
+  .pilot-library {
+    padding: 16px;
+  }
+  .pilot-player .cp-exercise-stage {
+    padding: 12px;
+  }
+  .pilot-tools button {
+    min-height: 48px;
+  }
+  .pilot-head {
+    flex-wrap: wrap;
+  }
+  .pilot-footer {
+    padding: 14px;
+  }
+  .pilot-player .cp-choice-grid {
+    grid-template-columns: 1fr;
+  }
+  .pilot-player .cp-choice-grid button {
+    min-height: 100px;
+  }
+  .pilot-player .cp-choice-grid img {
+    height: 110px;
+  }
+  .pilot-player .cp-model-content {
+    flex-direction: column;
+  }
+  .pilot-complete {
+    min-height: 400px;
+  }
+}
+/* The preview shares the page scroll; models with extra word help must grow. */
+.learner-app .pilot-player .cp-exercise-stage {
+  height: auto;
+  min-height: 430px;
+  overflow: visible;
+}
+.learner-app .pilot-player .cp-task-card {
+  flex-shrink: 0;
+  height: auto;
+}
+.learner-app .pilot-player .cp-model-content {
+  height: auto;
+}
+.learner-app .pilot-player .pilot-head > div {
+  flex: 0 0 auto;
+}
+@media (max-width: 360px) {
+  .learner-app .pilot-player .pilot-head h2 {
+    flex-basis: 100%;
+  }
+}
+.pilot-library .cp-activity-button > span {
+  min-width: 0;
+}
+.pilot-library .cp-activity-button small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}

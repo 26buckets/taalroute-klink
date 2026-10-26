@@ -1,0 +1,80 @@
+{
+  "status": "Lokale proef, niet gepubliceerd en niet didactisch vrijgegeven",
+  "date": "2026-10-26",
+  "baseCommit": "7661c5b",
+  "approvedLiveSource": "79f0583d32fc9c6315a6680ec76442ffaafcbce1",
+  "branch": "codex/alfa-c-proefblokken-20261026",
+  "preview": "http://127.0.0.1:18856/proef-alfa-c/",
+  "storage": "klink.preview.alfa-c.v1; bestaande voortgang niet geschreven",
+  "reuse": [
+    {
+      "reeks": "Woordbeelden en woordaudio",
+      "besluit": "Hergebruiken in de proef",
+      "toelichting": "Negen bestaande woordkoppelingen geselecteerd. De echte bestanden bestaan, beelden zijn visueel bekeken. Uitspraak en beeldbetekenis vragen nog de menselijke eindcontrole. Geen nieuwe beelden of audio gemaakt."
+    },
+    {
+      "reeks": "Woordbouw met voorbeeld",
+      "besluit": "Aanpassen voor zelfstandig werken",
+      "toelichting": "De bestaande bouwspeler is hergebruikt met drie woordselecties en twee woorddelen per woord: win–kel, au–to, ka–mer. Eerst een model, daarna zelf leggen. Dit is woorddeelherkenning; geen volledige nieuwe spellingroute en geen vrijgave van alle 777 bronitems."
+    },
+    {
+      "reeks": "Zinsmateriaal",
+      "besluit": "Selectie hergebruiken, zelfstandige opdrachten toevoegen",
+      "toelichting": "Negen bestaande korte zinnen en hun opnamen geselecteerd. De bronindeling met ondersteuning blijft behouden. De proef voegt luisteren/kiezen en zinsbouw toe. Het voorgestelde niveau Alfa C is nog niet inhoudelijk vrijgegeven."
+    },
+    {
+      "reeks": "Gesorteerde woorden",
+      "besluit": "Aanpassen; nog niet in deze drie blokken",
+      "toelichting": "De gesloten sorteerinteractie biedt hergebruik. De begeleide Alfa A/B-reeksen worden niet automatisch zelfstandige Alfa C-opdrachten: categorie, afleiders, voorbeeld, taalsteun en foutfeedback moeten per set worden beoordeeld."
+    },
+    {
+      "reeks": "Bestaande begripsvragen",
+      "besluit": "Gesloten vragen gericht aanpassen; open vragen bij docent houden",
+      "toelichting": "De proef gebruikt een korte bestaande vraagopname en nieuwe gesloten fotokeuzes bij bestaande zinnen. Dit toont vooral herkenning van woorden in een gehoorde zin; nog geen bewijs van zelfstandig tekstbegrip. Open uitlegvragen en docentgesprekken zijn niet overgezet."
+    },
+    {
+      "reeks": "Vrij schrijven, spelling uitleggen en open gesprekken",
+      "besluit": "Met je docent behouden",
+      "toelichting": "Deze taken vragen inhoudelijke beoordeling en begeleiding. Ze krijgen niet alleen een ander toegangsvlaggetje."
+    },
+    {
+      "reeks": "Gesproken instructies en hulp",
+      "besluit": "Uitgeschakeld houden",
+      "toelichting": "De bestaande audiopauze van 17 oktober blijft van kracht. Zes oude instructiebestanden zijn uitsluitend als bronverwijzing geregistreerd en worden niet afgespeeld. Een korte hoorbare instructie per nieuwe oefening blijft een open voorwaarde voor zelfstandige vrijgave."
+    }
+  ],
+  "counts": {
+    "blocks": 3,
+    "steps": 36,
+    "models": 9,
+    "answerSteps": 27,
+    "images": 9,
+    "wordAudio": 9,
+    "sentenceAudio": 9,
+    "questionAudio": 1,
+    "withdrawnInstructionSources": 6,
+    "optionalSoundHelpAudio": 14
+  },
+  "imageReview": {
+    "inspected": "Alle negen bronbeelden volledig bekeken en in de speler gecontroleerd. Geen beelden gewijzigd.",
+    "hands": "Acht beelden bevatten geen personen of handen. Het busbeeld bevat verre personen en een bestuurder achter glas; geen afzonderlijke vingers/grepen betrouwbaar te beoordelen. Geen zichtbare handfout vastgesteld; geen claim van anatomische detailvrijgave voor die verre personen.",
+    "semanticLimits": "De kamerfoto bevat ook een raam/deur. Begripsvragen mogen niet alleen de kamer/raam/deur-detailkeuze meten. Het busdisplay wordt niet gebruikt als leesdoel."
+  },
+  "open": [
+    "Menselijke luistercontrole van alle hergebruikte opnamen",
+    "Docentcontrole op niveau, woorddelen, leeslast en afleiders",
+    "Goedgekeurde korte hoorbare instructies na besluit over audiopauze",
+    "Drie kleine gebruiksproeven met echte Alfa C-cursisten",
+    "Echte functionele praktijktaak en transfer; huidige fotokeuze is slechts voorbereiding",
+    "Koppeling aan definitief boekdoel en werkelijk ingeroosterde docentbijeenkomst: broncontexten aanwezig, concreet lesplan nog niet vastgesteld",
+    "Publicatiecontrole van audiometadata en volledige productiecontrole bij eventuele latere vrijgave"
+  ],
+  "checks": {
+    "unit": "8 tests passed: preview + existing beginner demonstrations",
+    "browser": "36 full steps + 36 narrow layouts, mistakes/retry, review, refresh, isolated storage, 6 menu/viewport combinations, normal navigation",
+    "audio": "Native playback of winkel, auto, kamer; all referenced audio durations validated; simulated error/retry passed",
+    "types": "TypeScript passed",
+    "lint": "Targeted lint passed",
+    "publicationGuard": "Existing missing-letter release-scope check rejects these additional unapproved changes as expected. Guard not changed; no publication attempted. Production build/deployment not run."
+  }
+}
