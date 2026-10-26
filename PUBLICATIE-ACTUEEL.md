@@ -1,6 +1,47 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `068301d2f0055ac69a184a6ab06efe04b4def597` op canonieke branch `main`.
+Worker-versie: `e6ef0e64-1b8d-4234-bda7-83765b27059d`.
+
+Het koppelvoorbeeld toont één groen wijzend handje zonder achtergrond of kader.
+Het tikt eenmalig eerst op het woord en daarna op de foto; de cursist gaat zelf
+verder met Nu jij. Kijk eerst vervangt de oude voorbeeldzin en de twee losse
+tikinstructies. Geen stop-, pauze- of extra uitlegknoppen. Kijk nog eens herstart
+het voorbeeld. Op mobiel schuift het voorbeeld bij openen volledig in beeld.
+Bij verminderde beweging blijft de volgorde zichtbaar zonder tikbeweging.
+De overige voorbeeldhandjes gebruiken dezelfde groene vorm zonder wit vlak.
+
+De bestaande indeling, lessen, opgeslagen voortgang, afbeeldingen, logo D,
+instructie- en woordaudio, zes startpagina-uitlegvensters en gesprekken blijven
+behouden. Geen nieuwe audio, beelden of lessen. Alleen twee runtimebestanden
+zijn gewijzigd: app/learner-ui.css en components/product/package-exercise-browser.tsx.
+
+Lokaal en live: acht browsercontroles in Chromium/WebKit op 320/390/1366 pixels,
+inclusief verminderde beweging, tikvolgorde, herhalen, Verder en gegevensbehoud.
+Lokaal bovendien 23 volledige tas- en pen/pet-stappen met echte audio en herstel,
+de zes bestaande uitlegvensters op vier breedtes, negen gerichte unittests,
+48 curriculumtests (één bestaande skip), twee vrijgavetests, 50 publicatiebewijstests,
+types, gerichte lint, build en de normale publicatiepoort.
+Online zijn alle 8.135 aangeboden media en de gebouwde client bytegelijk teruggelezen.
+Geen fysieke telefoon-, schermlezer- of cursistenproef; geen volledige herhaling
+van de ongewijzigde 1.616-stappenreeks.
+
+Vrijgave: docs/klink-owner-release-demo-hand-20261026.json.
+Register: docs/klink-publication-demo-hand-20261026.json.
+Canonieke repository: 26buckets/taalroute-klink, branch main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-handje-20261026`.
+Bronback-up: https://drive.google.com/file/d/1ZnevzF1BT2KnvAMHrIbs5VqobK1XB0ME/view .
+Definitief herstelbewijs: docs/klink-demo-hand-20261026/final-drive-verification.json.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via npm run deploy.
+Geen GitHub Actions-workflows aanwezig of gestart; behoud historische vrijgaven.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `84827995817bfca452a01365d7b0d0b0bfaced3e` op canonieke branch `main`.
 Worker-versie: `8abb29da-f4bb-4244-acb4-fb313af0b43e`.
 
