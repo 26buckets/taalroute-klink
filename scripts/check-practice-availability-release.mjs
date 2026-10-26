@@ -13,7 +13,7 @@ export const availabilityFiles=[
   "components/product/route-settings.tsx",
   "lib/practice-chapters.ts",
   "scripts/check-practice-availability-release.mjs",
-  "scripts/check-session-audio-release.mjs",
+  "scripts/check-readalong-release.mjs",
   "scripts/test-cumulative-routes-browser.mjs",
   "scripts/test-cumulative-workflow-browser.mjs",
   "scripts/test-existing-player-browser.mjs",
@@ -32,9 +32,9 @@ export const availabilityFiles=[
 export function verifyPracticeAvailabilityRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-practice-availability-20261026.json')),readFile=readFileSync){
  assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
  assert.equal(release.userRequest,'doe dit en zet online');
- assert.equal(release.baselineSourceCommit,'2747e03b49c2253ee32e740a6671ce7375034d26');
- assert.equal(release.liveSourceCommit,'5bfebf4db52631b54dcb3a8c927050487f4ae54f');
- assert.equal(release.previousAuthorization,'docs/klink-owner-release-session-audio-20261026.json');
+ assert.equal(release.baselineSourceCommit,'d3a1942487cb61b1fb7de6ecfe983d5a16afc687');
+ assert.equal(release.liveSourceCommit,'d3a1942487cb61b1fb7de6ecfe983d5a16afc687');
+ assert.equal(release.previousAuthorization,'docs/klink-owner-release-readalong-20261026.json');
  assert.equal(release.newImages,0);assert.equal(release.newAudio,0);assert.equal(release.newLessons,0);
  git('merge-base','--is-ancestor',release.liveSourceCommit,release.baselineSourceCommit);git('merge-base','--is-ancestor',release.baselineSourceCommit,'HEAD');
  assert.equal(sha(readFile(release.previousAuthorization)),sha(git('show',`${release.baselineSourceCommit}:${release.previousAuthorization}`)));

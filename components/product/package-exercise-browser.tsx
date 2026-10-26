@@ -160,6 +160,7 @@ export function PackageExerciseBrowser({
   const [message, setMessage] = useState('Neem je tijd.');
   const [heard, setHeard] = useState(false);
   const [activeTurn, setActiveTurn] = useState(0);
+  const [completedDialoguePlays, setCompletedDialoguePlays] = useState(0);
   const heardTurns = useRef(new Set<number>());
   const [audioError, setAudioError] = useState(false);
   const [autoPaused, setAutoPaused] = useState(false);
@@ -239,6 +240,7 @@ export function PackageExerciseBrowser({
         if (played === false) throw new Error('audio unavailable');
         if (exercise.mode === 'connected-dialogue' && clip.turn !== undefined) heardTurns.current.add(clip.turn);
       }
+      if (exercise.mode === 'connected-dialogue' && exercise.playAllBlocks && source === stimulus && singleTurn === undefined) setCompletedDialoguePlays(count => count + 1);
       if (exercise.mode === 'connected-dialogue') setHeard(heardTurns.current.size === asArray(exercise.textBlocks).length);
       else if (source === stimulus) setHeard(true);
       setAudioError(false);
@@ -275,7 +277,7 @@ export function PackageExerciseBrowser({
     if (guided && tiles && exerciseStage.current && tiles.getBoundingClientRect().bottom > exerciseStage.current.getBoundingClientRect().bottom) {
       tiles.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     }
-    const timer = window.setTimeout(() => { setActiveTurn(0); beginAudio(); }, 0);
+    const timer = window.setTimeout(() => { setActiveTurn(0); setCompletedDialoguePlays(0); beginAudio(); }, 0);
     return () => { window.clearTimeout(timer); currentId.current = ''; playback.current?.abort(); stopMedia(); };
   }, [exerciseId, guided]);
 
@@ -448,7 +450,7 @@ export function PackageExerciseBrowser({
               guided={guided}
               onReset={resetResult}
               canAnswer={canAnswer && (exercise.componentId !== 'ALF-CMP-002' || result !== 'right')}
-              dialogueControls={{ active: activeTurn, playing: audioPending,
+              dialogueControls={{ active: activeTurn, playing: audioPending, completedPlays: completedDialoguePlays,
                 pause: () => { playback.current?.abort(); stopMedia(); setAudioPending(false); },
                 select: turn => { playback.current?.abort(); stopMedia(); setAudioPending(false); setActiveTurn(turn); },
                 play: turn => { const blocks = asArray<{ audio?: unknown }>(exercise.textBlocks); void listen(turn === undefined ? stimulus : findAudioSource(blocks[turn]?.audio), false, turn); },

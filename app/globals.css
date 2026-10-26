@@ -2565,7 +2565,7 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 .cp-dialogue-position { color: var(--muted); font-size: 16px; }
 .cp-dialogue-listen-label { display: flex; align-items: center; gap: 10px; }
 .cp-dialogue-controls button { min-height: 48px; }
-.cp-slow-audio[aria-pressed="true"] { background: var(--primary-soft); border-color: var(--primary); }
+.cp-dialogue-controls .secondary-button[aria-pressed="true"] { background: var(--primary-soft); border-color: var(--primary); }
 .cp-dialogue-support-note { margin: 0; color: var(--muted); }
 .cp-dialogue-transcript summary { cursor: pointer; min-height: 48px; padding: 12px 0; font-size: 20px; font-weight: 500; }
 .cp-dialogue-transcript > button { width: 100%; margin-top: 12px; padding: 16px; gap: 16px; justify-content: flex-start; align-items: flex-start; text-align: left; white-space: normal; }
