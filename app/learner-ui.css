@@ -651,3 +651,32 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 .product-root > .cp-player .cp-context-meta { margin-left: auto; }
 .product-root > .cp-player .cp-exercise-record-head { flex-direction: row; flex-wrap: wrap; gap: 8px; min-height: 64px; }
 .product-root > .cp-player .cp-exercise-record-head h3 { margin: 0; max-width: none; font-size: 18px; white-space: normal; }
+
+.learner-app .cp-page-workspace:has(> .cp-practice-entry) { display: grid; place-items: center; }
+.learner-app .cp-practice-entry { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; width: 100%; max-width: 900px; }
+.learner-app .cp-practice-entry > button { min-height: 144px; padding: 24px; }
+.learner-app .cp-practice-entry strong { display: block; font-size: 24px; font-weight: 500; }
+.learner-app .cp-practice-entry small { display: block; margin-top: 8px; color: var(--muted); font-size: 16px; }
+.learner-app .cp-practice-modes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.learner-app .cp-practice-modes [aria-pressed="true"] { background: var(--primary); color: white; border-color: var(--primary); }
+.cp-guided-start, .cp-guided-review { text-align: left; }
+.learner-app .cp-task-card:is(.cp-guided-start, .cp-guided-review) { display: block; margin-block: 0; }
+.cp-guided-start > .primary-button { display: flex; margin-left: auto; }
+.cp-guided-start > h3, .cp-guided-review > h3 { margin: 0 0 12px; font-weight: 500; }
+.cp-guided-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 16px 0; }
+.cp-guided-steps > section { border-top: 1px solid var(--line); padding-top: 16px; }
+.cp-guided-steps h4, .cp-guided-answers h4 { margin: 0 0 8px; font-weight: 500; }
+.cp-guided-details { margin: 16px 0; }
+.cp-guided-details summary, .cp-guided-answers summary { min-height: 48px; padding: 12px 0; }
+.cp-guided-details li { margin-bottom: 12px; }
+.cp-guided-answers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.cp-guided-answers > section { min-width: 0; }
+.cp-guided-instructions { text-align: left; margin: 0 0 20px; }
+.cp-guided-instructions li { margin-bottom: 8px; }
+@media (max-width: 680px) {
+  .learner-app .cp-practice-entry, .cp-guided-steps, .cp-guided-answers { grid-template-columns: minmax(0, 1fr); }
+  .learner-app .cp-practice-entry > button { min-height: 112px; padding: 16px; }
+}
+
+.learner-app .cp-activity-button:disabled { cursor:default; color:var(--muted); background:var(--canvas); opacity:0.62; }
+.learner-app .cp-activity-button:disabled span small { display:block; margin-top:4px; font-size:0.85rem; font-weight:400; }

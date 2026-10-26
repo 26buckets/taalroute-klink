@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Check } from 'lucide-react';
 import { contentTaskIssues, gradeContentResponse, type ContentTask } from '@/lib/imported-practice-contract';
 import type { PackageExercise } from '@/lib/package-content';
-import {ImportedTeacherWorkflow} from './imported-teacher-workflow';
+import {ImportedTeacherWorkflow,TeacherPreparation} from './imported-teacher-workflow';
 type Props = { exercise: PackageExercise; onFinish: (answer: string, correct: boolean, feedback?: string) => void; onReset: () => void; onHelp: () => void; canAnswer: boolean; answeredCorrectly?: boolean };
 export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: Props) {
   const task = exercise.contentTask as ContentTask;
@@ -11,7 +11,6 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
   const [selected, setSelected] = useState<string[]>([]);
   const [guidance, setGuidance] = useState(false);
   const [prepared, setPrepared] = useState(false);
-  const [privateView, setPrivateView] = useState(false);
   const questions = task.initialQuestions?.length ? task.initialQuestions : [{id: exercise.exerciseId.replace(/^content:/,''), prompt: task.prompt}];
   const sourceVersion = JSON.stringify([task.stimulus, questions]);
   const initialKey = `klink.taalroute.content-initial.v1:${typeof exercise.contentSessionId === 'string' ? exercise.contentSessionId : exercise.exerciseId}:${questions[0].id}`;
@@ -33,8 +32,8 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
     // The existing completion contract uses true for finished participation, not a teacher's correctness judgment.
     onFinish(JSON.stringify(staged ? { firstResponse, selected, finalNote: answer, preparedTogether: prepared, ...(questions.length>1?{sourceInitialResponses:initialAnswers}:{}) } : response), result.assessment === 'participation' || result.correct === true, result.assessment === 'participation' ? 'Je hebt de opdracht geoefend. Bespreek je antwoord met je docent.' : result.correct ? task.feedback.correct : task.feedback.retry);
   }
+  if(!prepared)return <TeacherPreparation task={task} locked={Boolean(locked)} onBegin={()=>setPrepared(true)}/>;
   return <section className="cp-task-card cp-content-task" data-content-player={task.mode}>
-    {!prepared ? <div className="cp-content-preparation"><h4>Eerst samen voorbereiden</h4>{!privateView ? <><p>De voorbereiding kan antwoorden bevatten. Laat de cursist niet meekijken.</p><button className="secondary-button" onClick={()=>setPrivateView(true)}>De cursist kijkt niet mee</button></> : <><ul>{task.prerequisites.map((note,index) => <li key={index}>{note}</li>)}</ul><p>Bereid de woorden, de situatie en de bediening voor. Laat de cursist de bedoeling teruggeven.</p><button className="primary-button" disabled={locked} onClick={()=>{setPrepared(true);setPrivateView(false);}}>We hebben de opdracht samen voorbereid</button></>}</div> : <>
     <p className="cp-content-stimulus">{task.stimulus}</p><h4>{staged&&pendingQuestion?pendingQuestion.prompt:task.prompt}</h4>
     {task.mode === 'choice' && <><p>{task.correctOptionIds.length > 1 ? 'Kies alle passende antwoorden.' : 'Kies één antwoord.'}</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className="secondary-button" aria-pressed={selected.includes(option.id)} disabled={locked} onClick={() => { setSelected(previous => task.correctOptionIds.length > 1 ? previous.includes(option.id) ? previous.filter(id => id !== option.id) : [...previous,option.id] : [option.id]); onReset(); }}>{option.text}</button>)}</div></>}
     {staged && !firstResponse && <p>Geef eerst zelf antwoord en wijs aan waar je dat in de tekst ziet. Je mag je antwoord zeggen. {questions.length>1?`Vraag ${questions.findIndex(question=>question.id===pendingQuestion?.id)+1} van ${questions.length}. Eerst alle eigen antwoorden; daarna bespreken we de mogelijkheden.`:''}</p>}
@@ -45,6 +44,5 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
     {(!staged || firstResponse) && <button className="secondary-button" aria-expanded={guidance} onClick={() => {setGuidance(value => !value);onHelp();}}>Hulp met je docent</button>}
     {guidance && <div className="cp-source-text">{typeof exercise.objective === 'string' && <p><strong>Doel: </strong>{exercise.objective}</p>}<p>{task.teacherGuidance}</p></div>}
     {task.mode === 'teacher' && <p>Deze opdracht bespreek je samen. Er is geen automatische beoordeling van je antwoord.</p>}
-    </>}
   </section>;
 }

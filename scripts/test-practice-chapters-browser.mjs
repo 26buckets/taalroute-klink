@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { exerciseSetHelp } from '../lib/content-levels.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { practiceChapters, chapterCollections, chapterHash } from '../lib/practice-chapters.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -34,9 +35,13 @@ try {
   for (const chapter of practiceChapters) {
     await page.goto(`${base}/${chapterHash({ chapter: chapter.id, level: 'all' })}`);
     await page.locator(`[data-chapter-page="${chapter.id}"]`).waitFor();
-    assert.equal(await page.locator('[data-chapter-activity]').count(), chapter.activities.length);
     const activity = chapter.activities.find(id => id !== 'learning-review');
-    await page.locator(`[data-chapter-activity="${activity}"]`).click();
+    const mode = exerciseSetHelp(chapterCollections(activity)[0].exercises);
+    await page.locator('.cp-practice-entry').getByRole('button', { name: mode === 'guided' ? /Met je docent/ : /Zelf oefenen/ }).click();
+    if (await page.locator('[data-chapter-activity]').count()) {
+      assert.equal(await page.locator('[data-chapter-activity]').count(), chapter.activities.length);
+      await page.locator(`[data-chapter-activity="${activity}"]`).click();
+    }
     await page.locator('[data-collection]').first().click();
     await page.locator('[data-exercise-id], .cp-word-worksheet').waitFor();
     assert.equal(await page.locator('.cp-lesson-list').count(), 0);
@@ -90,6 +95,7 @@ try {
   for (const width of [1366, 820, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width < 500 ? 844 : 950 });
     await page.goto(`${base}/#learner/chapters`);
+    await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
     await page.locator('[data-chapter]').first().waitFor();
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     for (const button of await page.locator('[data-chapter]').all()) {

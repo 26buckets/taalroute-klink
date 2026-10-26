@@ -63,11 +63,13 @@ try {
 
   await home(); await choose('Alfa B').click();
   await page.goto(`${base}/#learner/chapters`);
+  await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
   await page.locator('[data-chapter="words"]').click();
   assert(page.url().includes('level=alfa-b'));
   assert.equal(await page.locator('.cp-route-axis').count(), 2, 'Mixed source chapters expose literacy and language choices');
   assert.equal(await choose('Alfa B').getAttribute('aria-pressed'), 'true');
   await page.goto(`${base}/#learner/chapters`);
+  await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
   await page.locator('[data-chapter="texts"]').click();
   assert(page.url().includes('level=a2'));
   assert.equal(await page.locator('.cp-route-axis').count(), 2, 'Mixed source chapters expose literacy and language choices');

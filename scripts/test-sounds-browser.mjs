@@ -27,6 +27,7 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width === 320 ? 568 : 900 });
     await page.goto(`${base}/#learner/chapters`);
+    await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
     await page.getByRole('button', { name: 'Klanken', exact: true }).click();
     await page.getByRole('link', { name: 'Klankenkaart', exact: true }).click();
     await page.getByRole('heading', { name: 'Klankenkaart', exact: true }).waitFor();
@@ -54,6 +55,7 @@ try {
     await page.getByRole('button', { name: 'Alle klanken', exact: true }).click();
     await page.getByRole('button', { name: 'Terug naar Klanken', exact: true }).click();
     await page.getByRole('heading', { name: 'Klanken', exact: true }).waitFor();
+    if (await page.locator('.cp-practice-entry').count()) await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
     assert.equal(await page.locator('[data-chapter-activity]').count(), 2);
     pass(`Direct letter playback, separate words, keyboard, quiet text and original chapter at ${width}px`);
   }

@@ -4,6 +4,7 @@ import { groupActivities, groupExercises, type GroupActivity } from './group-pra
 import { contentById } from './connected-content.ts';
 import { learnerListName } from './learner-copy.ts';
 import { contentLevels, contentHelp, exerciseContentLevel, exerciseVocabularyLevels, exerciseSetLevel, exerciseSetHelp, matchesContent, type ContentHelp } from './content-levels.ts';
+import type { LearningReview } from './learning-review';
 import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
@@ -45,6 +46,17 @@ export function chapterForLevel(level: ChapterLevel, preferred: string) {
 }
 
 export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => (selection.level === 'all' || (item.levels ?? [item.level]).includes(selection.level)) && matchesContent(item.level, exerciseSetHelp(item.exercises), { ...selection, level: 'all' });
+
+// Use the same filtered tasks for entrance buttons and the collection list.
+export function availableChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}, now = Date.now()): ChapterCollection[] {
+  return chapterCollections(activity).filter(item => matchesChapterSelection(item, selection))
+    .map(item => activity === 'learning-review' ? { ...item, exercises: item.exercises.filter(exercise => review[exercise.exerciseId]?.due <= now) } : item)
+    .filter(item => item.exercises.length);
+}
+
+export function availableChapterActivities(chapter: string, selection: ChapterLocation, review: LearningReview = {}) {
+  return practiceChapters.find(item => item.id === chapter)?.activities.filter(id => availableChapterCollections(id, selection, review).length) ?? [];
+}
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
   if (activity.startsWith('content-')) {
@@ -132,10 +144,16 @@ export function parseChapterHash(hash: string): ChapterLocation {
     const params = new URLSearchParams(query);
     const level = chapterLevels.find(item => item.id === params.get('level'))?.id ?? 'all';
     const help = contentHelp.find(item => item.id !== 'all' && item.id === params.get('help'))?.id;
-    const selection = { level, ...(help ? { help } : {}) };
+    const selection: ChapterLocation = { level, ...(help ? { help } : {}) };
     if (!chapter) return chapterId ? fallback : selection;
     const activity = chapter.activities.find(id => id === activityId);
     const candidate = activity && chapterCollections(activity).find(item => item.id === collection);
+    // Old direct links keep their exercise, with its existing support requirement visible.
+    if (!selection.help && candidate) selection.help = exerciseSetHelp(candidate.exercises);
+    if (!selection.help && activity) {
+      const modes = new Set(chapterCollections(activity).map(item => exerciseSetHelp(item.exercises)));
+      if (modes.size === 1) selection.help = [...modes][0];
+    }
     // Historical learning-path links used support as a catch-all level. Keep them playable.
     if (candidate && level === 'support' && candidate.level !== 'support' && candidate.exercises.some(item => item.learningPathId)) selection.level = candidate.level;
     return { chapter: chapter.id, activity, ...selection, collection: candidate && matchesChapterSelection(candidate, selection) ? collection : undefined };

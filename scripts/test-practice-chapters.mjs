@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { exerciseSetHelp } from '../lib/content-levels.ts';
 import { importedItems, importedExercise, importedRoutes } from '../lib/imported-practice.ts';
 import assert from 'node:assert/strict';
 import { practiceChapters, chapterCollections, chapterExerciseLevel, chapterHash, parseChapterHash } from '../lib/practice-chapters.ts';
@@ -56,7 +57,7 @@ test('Deep links validate chapter, activity, collection and level; stale links f
   for (const chapter of practiceChapters) for (const activity of chapter.activities) {
     const collection = chapterCollections(activity)[0];
     const location = { chapter: chapter.id, activity, collection: collection.id, level: collection.level };
-    assert.deepEqual(parseChapterHash(chapterHash(location)), location);
+    assert.deepEqual(parseChapterHash(chapterHash(location)), { ...location, help: exerciseSetHelp(collection.exercises) });
   }
   assert.deepEqual(parseChapterHash('#learner/chapters/%ED'), { level: 'all' });
   assert.deepEqual(parseChapterHash('#learner/chapters/unknown/texts'), { level: 'all' });

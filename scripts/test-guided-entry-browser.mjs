@@ -1,0 +1,57 @@
+import assert from 'node:assert/strict';
+import { mkdirSync, writeFileSync } from 'node:fs';
+import { chromium } from 'playwright';
+const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18847';
+const out = 'outputs/guided-practice';
+mkdirSync(out, { recursive: true });
+const browser = await chromium.launch({ channel: 'chrome', headless: true });
+const errors = [], results = [];
+try {
+  for (const [width, height, collapsed] of [[1280,800,false],[1280,800,true],[390,844,false],[320,568,false]]) {
+    const page = await browser.newPage({ viewport: { width, height } });
+    page.on('pageerror', e => errors.push(e.message));
+    await page.goto(`${base}/#learner/chapters`);
+    await page.locator('.cp-practice-entry').waitFor();
+    if (collapsed) await page.getByRole('button', { name: 'Menu inklappen', exact: true }).click();
+    const start = await page.locator('.cp-page-workspace').boundingBox();
+    await page.screenshot({path:`${out}/choice-${width}-${collapsed}.png`});
+    await page.locator('.cp-practice-entry').getByRole('button', { name: /Zelf oefenen/ }).click();
+    await page.locator('[data-chapter="spelling"]').click();
+    assert(await page.locator('[data-chapter-activity="content-spelling"]').isDisabled());
+    await page.getByRole('navigation',{name:'Manier van oefenen'}).getByRole('button',{name:'Met je docent',exact:true}).click();
+    await page.locator('[data-chapter-activity="content-spelling"]').click();
+    const link = page.url();
+    await page.reload();
+    await page.locator('.cp-chapter-collection').first().waitFor();
+    assert.equal(page.url(),link);
+    await page.locator('.cp-chapter-collection').first().click();
+    await page.locator('.cp-guided-start').waitFor();
+    assert(!(await page.getByRole('button',{name:'De cursist kijkt niet mee',exact:true}).isVisible()));
+    await page.screenshot({path:`${out}/teacher-${width}-${collapsed}.png`});
+    await page.getByRole('button',{name:'Begin samen',exact:true}).click();
+    await page.getByRole('textbox',{name:'Je antwoord',exact:true}).fill('De ramen zitten aan de straatkant.');
+    await page.getByRole('button',{name:'Ik heb deze stap uitgevoerd',exact:true}).click();
+    await page.getByRole('button',{name:'Samen bekijken',exact:true}).click();
+    await page.locator('.cp-guided-review').waitFor();
+    const saved = await page.evaluate(() => Object.entries(localStorage).filter(([key])=>key.startsWith('klink.taalroute.content-workflow.v1:')));
+    assert.equal(saved.length,1);
+    assert.equal(JSON.parse(saved[0][1]).replies[0].answer,'De ramen zitten aan de straatkant.');
+    assert(!(await page.getByText('teacher-only-after-attempt',{exact:true}).isVisible()));
+    await page.reload();
+    await page.locator('.cp-guided-review').waitFor();
+    assert.deepEqual(await page.evaluate(() => Object.entries(localStorage).filter(([key])=>key.startsWith('klink.taalroute.content-workflow.v1:'))),saved);
+    await page.getByText('Voor de docent: afronden',{exact:true}).click();
+    const finish = page.getByRole('button',{name:'Waarnemingen vastleggen',exact:true});
+    assert(!(await finish.isEnabled()));
+    for (const select of await page.locator('.cp-observation select').all()) await select.selectOption({label:'Gezien met hulp'});
+    assert(await finish.isEnabled());
+    await finish.scrollIntoViewIfNeeded();
+    assert(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1)));
+    await page.screenshot({path:`${out}/review-${width}-${collapsed}.png`});
+    results.push({width,height,collapsed,workspaceTop:start.y,answerPreserved:true,completionRequiresObservations:true});
+    await page.close();
+  }
+  assert.deepEqual(errors,[]);
+  writeFileSync(`${out}/checks.json`,JSON.stringify(results,null,2));
+  console.log('PASS',results.length,'layouts, role separation, preparation, shared review and saved answers');
+} finally { await browser.close(); }
