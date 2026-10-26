@@ -1,3 +1,4 @@
+import { verifyDemoHandRelease, readBeforeDemoHand } from './check-demo-hand-release.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -14,7 +15,9 @@ export const explanationFiles = [
   'scripts/test-practice-explanations-release.mjs', 'scripts/check-self-listening-release.mjs',
   'scripts/test-publication-proof.mjs', `${evidence}/README.md`, `${evidence}/TAALCONTROLE.md`,
 ];
-export function verifyPracticeExplanationsRelease(release = JSON.parse(readFileSync('docs/klink-owner-release-practice-explanations-20261026.json')), readFile = readFileSync) {
+export function verifyPracticeExplanationsRelease(release = JSON.parse(readFileSync('docs/klink-owner-release-practice-explanations-20261026.json')), readFile) {
+  const handDemo = verifyDemoHandRelease();
+  readFile ||= file => readBeforeDemoHand(file, handDemo);
   assert.equal(release.approvedBy, 'Nico');
   assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, 'Ja, zo is het goed. Zet deze versie nu online in Klink, met behoud van de bestaande indeling en functies.');
@@ -26,8 +29,8 @@ export function verifyPracticeExplanationsRelease(release = JSON.parse(readFileS
   for (const [before, after] of [[release.liveSourceCommit, release.baselineSourceCommit], [release.baselineSourceCommit, release.approvedPreviewCommit], [release.approvedPreviewCommit, 'HEAD']]) git('merge-base', '--is-ancestor', before, after);
   assert.equal(sha(readFile(release.previousAuthorization)), sha(git('show', `${release.baselineSourceCommit}:${release.previousAuthorization}`)));
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts'];
-  const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
-  const untracked = git('ls-files', '--others', '--exclude-standard', '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const changed = git('diff', '--name-only', release.baselineSourceCommit, handDemo.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const untracked = []; // The hand-demo successor checks the current delta.
   assert.deepEqual([...new Set([...changed, ...untracked])].sort((a, b) => a.localeCompare(b)), explanationFiles.filter(file => !file.startsWith('docs/')).sort((a, b) => a.localeCompare(b)));
   // Publication adds only evidence and guards to the exact preview the owner approved.
   for (const file of explanationFiles.filter(file => /^(app|components|public)\//.test(file))) assert.equal(sha(readFile(file)), sha(git('show', `${release.approvedPreviewCommit}:${file}`)), file);
@@ -45,8 +48,8 @@ export function verifyPracticeExplanationsRelease(release = JSON.parse(readFileS
   const backup = JSON.parse(readFile(`${evidence}/source-drive-verification.json`));
   assert(backup.parentVerified && backup.downloadedByteIdentical && backup.zipCrcVerified);
   assert.equal(backup.manifestEntriesVerified, manifest.length);
-  return release;
+  return { ...release, handDemo };
 }
 export function readBeforePracticeExplanations(file, release, readFile = readFileSync) {
-  return release?.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readFile(file);
+  return release?.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeDemoHand(file, release?.handDemo, readFile);
 }

@@ -1,0 +1,86 @@
+{
+  "status": "passed-local",
+  "singleGreenHand": true,
+  "transparentBackground": true,
+  "orderedTaps": true,
+  "manualPace": true,
+  "replay": true,
+  "mobile": true,
+  "reducedMotion": true,
+  "progressPreserved": true,
+  "contentAndMediaPreserved": true,
+  "typesPassed": true,
+  "lintPassed": true,
+  "buildPassed": true,
+  "browserChecks": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": "no-preference",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 740,
+      "reducedMotion": "no-preference",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1366,
+      "height": 900,
+      "reducedMotion": "no-preference",
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": "reduce",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": "no-preference",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 740,
+      "reducedMotion": "no-preference",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1366,
+      "height": 900,
+      "reducedMotion": "no-preference",
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "reducedMotion": "reduce",
+      "passed": true
+    }
+  ],
+  "baselineHomeExplanations": "Chromium: six existing windows at four widths passed",
+  "unitChecks": "9 focused tests passed; curriculum 48 passed, 1 pre-existing skipped",
+  "runtimeFiles": [
+    "app/learner-ui.css",
+    "components/product/package-exercise-browser.tsx"
+  ],
+  "noNewAudio": true,
+  "limitations": [
+    "No physical phone, screen reader or learner trial.",
+    "No new audio or pronunciation review.",
+    "The broad unchanged 1616-step sequence was not replayed."
+  ],
+  "styleReference": "Original DigiBord reference path unavailable; current existing layout/icons/buttons retained, using the already approved light green from practice explanations."
+}

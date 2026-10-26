@@ -28,7 +28,7 @@ import {
 Eye,
   CircleAlert,
   FileText,
-  Hand,
+  Pointer as Hand,
   Mic,
   Pause,
  Play,
@@ -586,6 +586,7 @@ function MatchingSurface({ exercise, onAudio, onFinish, onReset, demoAvailable =
   const [showDemo, setShowDemo] = useState(showDemoInitially);
   const [needsSource, setNeedsSource] = useState(false);
   const sourceBank = useRef<HTMLDivElement>(null);
+  const demoCard = useRef<HTMLElement>(null);
   const [activeSource, setActiveSource] = useState('');
   const [pairs, setPairs] = useState<Record<string, string>>({});
   const [wrongTarget, setWrongTarget] = useState('');
@@ -593,6 +594,7 @@ function MatchingSurface({ exercise, onAudio, onFinish, onReset, demoAvailable =
   const audioOnly = exercise.audioOnlySources === true;
   const currentSource = useRef('');
   useEffect(() => () => { currentSource.current = ''; }, []);
+  useEffect(() => { if (showDemo) demoCard.current?.scrollIntoView({ block: 'center' }); }, [showDemo]);
   useEffect(() => { if (demoAvailable && !showDemo) sourceBank.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus({ preventScroll: true }); }, [demoAvailable, showDemo]);
   async function select(source: ChoiceOption) {
     setNeedsSource(false);
@@ -617,11 +619,12 @@ function MatchingSurface({ exercise, onAudio, onFinish, onReset, demoAvailable =
   }
   const exampleSource = sources.find(source => !pairs[source.id]);
   const exampleTarget = targets.find(target => target.id === mapping[exampleSource?.id ?? '']);
-  if (showDemo && exampleSource && exampleTarget) return <section className="cp-task-card cp-exercise-demo" aria-label="Voorbeeld">
-    <p className="cp-letter-cue">Kijk: zo horen ze bij elkaar.</p>
+  if (showDemo && exampleSource && exampleTarget) return <section ref={demoCard} className="cp-task-card cp-exercise-demo" aria-label="Voorbeeld">
+    <p className="cp-letter-cue">Kijk eerst</p>
     <figure className="cp-match-board cp-match-demo" aria-label="Eerst het woord. Daarna de foto die erbij hoort.">
-      <div><p>1. Tik op het woord.</p><div className="cp-demo-item"><strong>{exampleSource.label}</strong><Hand aria-hidden="true" /></div></div>
-      <div><p>2. Tik op de foto.</p><div className="cp-demo-item"><ExerciseImageView image={exampleTarget.image} /><Hand aria-hidden="true" /></div></div>
+      <div><div className="cp-demo-item"><strong>{exampleSource.label}</strong></div></div>
+      <div><div className="cp-demo-item"><ExerciseImageView image={exampleTarget.image} /></div></div>
+      <Hand className="cp-match-hand" aria-hidden="true" />
     </figure>
     <button className="primary-button" onClick={() => { onHelp?.(); setNeedsSource(false); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button>
   </section>;
