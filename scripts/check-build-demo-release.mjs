@@ -1,3 +1,4 @@
+import {verifyGapDemoRelease,readBeforeGapDemo} from './check-gap-demo-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -7,7 +8,9 @@ const git=(...args)=>execFileSync('git',args,{maxBuffer:32*1024*1024});
 const sort=items=>items.toSorted((a,b)=>a.localeCompare(b));
 const evidence='docs/klink-build-demo-20261026';
 export const buildDemoFiles=['app/learner-ui.css','components/product/package-exercise-browser.tsx','scripts/test-build-demo-browser.mjs','scripts/check-build-demo-release.mjs','scripts/test-build-demo-release.mjs','scripts/check-popup-style-release.mjs','scripts/test-publication-proof.mjs'];
-export function verifyBuildDemoRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-build-demo-20261026.json')),readFile=readFileSync){
+export function verifyBuildDemoRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-build-demo-20261026.json')),readFile){
+  const gapDemo=verifyGapDemoRelease();
+  readFile ||= file=>readBeforeGapDemo(file,gapDemo);
   assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
   assert.equal(release.userRequest,'Oké, maak het voordoen bij woorden bouwen ook zo duidelijk: een groen handje tikt op de letter en je ziet die in het vak komen. Geen extra knoppen. Behoud de indeling, controleer mobiel en zet het online.');
   assert.equal(release.baselineSourceCommit,'52d051ca357c1dcd579db57f59f3ee44dc4b4908');
@@ -17,8 +20,8 @@ export function verifyBuildDemoRelease(release=JSON.parse(readFileSync('docs/kli
   git('merge-base','--is-ancestor',release.baselineSourceCommit,'HEAD');
   assert.equal(sha(readFile(release.previousAuthorization)),sha(git('show',`${release.baselineSourceCommit}:${release.previousAuthorization}`)));
   const roots=['app','components','hooks','data','lib','public','scripts'];
-  const changed=git('diff','--name-only',release.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
-  const untracked=git('ls-files','--others','--exclude-standard','--',...roots).toString().trim().split('\n').filter(Boolean);
+  const changed=git('diff','--name-only',release.baselineSourceCommit,gapDemo.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
+  const untracked=[]; // The gap-demo successor checks the current delta.
   assert.deepEqual(sort([...new Set([...changed,...untracked])]),sort(buildDemoFiles));
   const required=[...buildDemoFiles,...['owner-request','live-baseline','review','source-manifest','source-drive-verification'].map(n=>`${evidence}/${n}.json`)];
   assert.deepEqual(sort(Object.keys(release.files)),sort(required));
@@ -31,6 +34,6 @@ export function verifyBuildDemoRelease(release=JSON.parse(readFileSync('docs/kli
   for(const field of ['tapBeforeArrival','greenHandWithoutFrame','replayCurrentLetter','letterGroups','manualPace','noExtraControls','mobile','reducedMotion','progressPreserved','matchingPreserved','contentAndMediaPreserved','typesPassed','lintPassed','buildPassed'])assert.equal(review[field],true,field);
   const backup=JSON.parse(readFile(`${evidence}/source-drive-verification.json`));
   assert(backup.parentVerified&&backup.downloadedByteIdentical&&backup.zipCrcVerified);assert.equal(backup.manifestEntriesVerified,manifest.length);
-  return release;
+  return {...release,gapDemo};
 }
-export function readBeforeBuildDemo(file,release,readFile=readFileSync){return release?.files[file]?git('show',`${release.baselineSourceCommit}:${file}`):readFile(file);}
+export function readBeforeBuildDemo(file,release,readFile=readFileSync){return release?.files[file]?git('show',`${release.baselineSourceCommit}:${file}`):readBeforeGapDemo(file,release?.gapDemo,readFile);}

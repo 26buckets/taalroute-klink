@@ -286,7 +286,7 @@
 .cp-demo-hand, .cp-demo-source > svg, .cp-first-tile > svg, .cp-match-hand { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: #244b43; fill: #c9ddd2; pointer-events: none; }
 .cp-demo-hand, .cp-demo-source > svg { transform-origin: 50% 20%; animation: cp-demo-tap 1.6s ease-in-out 1; }
 @keyframes cp-demo-tap { 0%, 100% { transform: translateY(0) scale(1); } 45%, 65% { transform: translateY(5px) scale(.85); } }
-.cp-letter-demo .cp-demo-arrival { font: inherit; animation: cp-demo-arrival 1.6s ease-out 1 both; }
+.cp-letter-demo .cp-demo-arrival, .cp-gap-demo .cp-demo-arrival { font: inherit; animation: cp-demo-arrival 1.6s ease-out 1 both; }
 /* The empty slot fills only after the finger has tapped the source letter. */
 @keyframes cp-demo-arrival { 0%, 65% { opacity: 0; transform: translateY(-8px); } 85%, 100% { opacity: 1; transform: translateY(0); } }
 .cp-match-demo { position: relative; margin: 0; }
@@ -308,7 +308,7 @@
 @keyframes cp-demo-select-photo { 0% { border-color: var(--line-strong); } 68%, 100% { border-color: #244b43; } }
 @media (prefers-reduced-motion: reduce) {
   .cp-demo-hand, .cp-demo-source > svg { animation: none; }
-  .cp-letter-demo .cp-demo-arrival { animation-timing-function: step-end; transform: none !important; }
+  .cp-letter-demo .cp-demo-arrival, .cp-gap-demo .cp-demo-arrival { animation-timing-function: step-end; transform: none !important; }
   .cp-match-hand { animation-timing-function: step-end; transform: none !important; }
 }
 .cp-demo-item { position: relative; display: grid; place-items: center; min-height: 120px; padding: 16px; border: 2px solid var(--primary); border-radius: var(--radius); background: var(--primary-soft); }
@@ -316,6 +316,7 @@
 .learner-app :is(.cp-picture-help, .cp-demo-item:has(> img)) { background: #fff; }
 .cp-gap-demo { display: flex; align-items: center; justify-content: center; gap: 16px; }
 .cp-gap-demo > svg { width: 28px; flex-shrink: 0; }
+.cp-gap-demo .cp-demo-arrival { display: inline-block; }
 .cp-gap-demo mark { color: inherit; background: var(--primary-soft); border-bottom: 2px solid var(--primary); }
 @media (max-width: 600px) and (max-height: 740px) {
   .learner-app .is-guided .cp-gap-choice { gap: 8px; padding: 0; }
