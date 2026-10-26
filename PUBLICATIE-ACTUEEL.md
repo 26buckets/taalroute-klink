@@ -1,6 +1,40 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `5c49940e8bbc0688a187840a606886550def9b2a` op canonieke branch `main`.
+Worker-versie: `e33cbd4b-b4f5-4533-af9c-f10827526346`.
+
+Alle 128 dialogen gebruiken dezelfde duidelijkere opmaak voor Hele gesprek meelezen:
+links uitgelijnde beurten, sprekersnaam boven de tekst, grotere leesletters van 22–26 px,
+meer tussenruimte en het bestaande luistericoon in een herkenbaar vlak.
+Alleen de gedeelde transcriptregels in app/globals.css zijn aangepast.
+
+Hele gesprek blijft standaard, per beurt luisteren en meelezen blijven optioneel.
+De recente vijftien woordbeelden, volledige gespreksfoto’s, alle audio, lessen,
+logo D, routes en lokale voortgang blijven behouden. Geen nieuwe media.
+
+Lokaal en live: 384 transcriptweergaven en 1.536 beurten op drie breedtes;
+alle 128 volledige afspeelreeksen, bediening en toetsenbord. Echte audio getest.
+Lokaal: 56 publicatiebewijstests, curriculum, types, gerichte lint, build,
+393 fotocontroles, bronkoppelingen en les-/opslaggedrag.
+Alle 8.135 aangeboden media en de gebouwde client online bytegelijk teruggelezen.
+Geen fysieke telefoonproef of nieuwe menselijke luisterreview.
+
+Vrijgave: `docs/klink-owner-release-dialogue-transcript-20261026.json`.
+Register: `docs/klink-publication-dialogue-transcript-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-gesprekken-publicatie-20261025`.
+Bronback-up: https://drive.google.com/file/d/1KeM2p_78ZeYtbRsAc4k2sg3rE6BMv9bI/view .
+Herstelbewijs: `docs/klink-dialogue-transcript-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `548caafc11f8d8e8d9695822a7837808735d4652` op canonieke branch `main`.
 Worker-versie: `ec72f13a-0ef6-4c5f-8bd5-4e8a284baa30`.
 
