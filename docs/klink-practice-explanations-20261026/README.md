@@ -92,3 +92,7 @@ De uitgebreide browsercontrole controleert bij alle zes stappen ook openen
 naar boven, afdekking van bediening, gelijke venstermaat, geen extra paginahoogte,
 Tab/Shift+Tab, sluiting en pauzeren. Controlebewijzen bij het herstelpakket.
 Er zijn geen SVG-vormen, kleuren, media, oefeninhoud of opslag aangepast.
+
+## Publicatieopdracht — 26 oktober 2026
+
+Nico heeft na controle van de lokale versie expliciet opdracht gegeven deze versie online te zetten. Het akkoord is vastgelegd in owner-request.json. De publicatie volgt de actuele main en de normale publicatiepoort. Historische vrijgaven blijven ongewijzigd; de opvolger controleert de exacte goedgekeurde voorbeeldversie en uitsluitend de zes uitlegvensters plus bijbehorende controles en bewijsbestanden. De bestaande oefeningen, gesprekken, docentfuncties, opslag, audio, afbeeldingen en logo D blijven behouden.

@@ -1,0 +1,45 @@
+{
+  "status": "passed-local",
+  "approvedPreviewCommit": "5c1aa430b3657cb141015768adf0e24968f99409",
+  "sixSteps": true,
+  "threeBrowserEngines": true,
+  "keyboardAndFocus": true,
+  "upwardWords": true,
+  "layoutPreserved": true,
+  "progressPreserved": true,
+  "existingRoutesPreserved": true,
+  "audioPreserved": true,
+  "contentAndMediaPreserved": true,
+  "buildPassed": true,
+  "typesPassed": true,
+  "scopedLintPassed": true,
+  "engines": [
+    "chromium",
+    "webkit",
+    "firefox"
+  ],
+  "widths": [
+    1366,
+    768,
+    390,
+    320
+  ],
+  "dialogueRoutes": 128,
+  "dialogueCardViews": 384,
+  "readalongRounds": 384,
+  "rootChoices": 168,
+  "curriculumPassed": 48,
+  "curriculumExistingSkipped": 1,
+  "runtimeChangeScope": [
+    "app/learner-ui.css",
+    "components/product/practice-line.tsx",
+    "public/practice-explanations/"
+  ],
+  "existingContentMediaRoutesStorage": "Unchanged sources relative to verified current live baseline. Existing navigation and persistence regression passed.",
+  "buildLog": "/tmp/klink-words-build.log",
+  "browserEvidenceBackup": "https://drive.google.com/file/d/1IAyIhop-2X_m3YF6F1IjYGwMUCsQO2f9/view",
+  "limitations": [
+    "No physical phone, screen reader or learner trial.",
+    "Remaining unrelated broad lint failures retained; changed files pass scoped lint."
+  ]
+}
