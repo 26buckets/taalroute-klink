@@ -280,7 +280,10 @@
 .learner-app .cp-first-letter-guide :is(.cp-build-slots button, .cp-tile-bank button) { position: relative; width: auto; height: 64px; min-width: 64px; min-height: 64px; font-size: 36px; }
 .learner-app .cp-first-letter-guide .cp-letter-model { display: inline; padding: 0; font-size: 36px; color: var(--primary); border-bottom: 2px solid var(--primary); }
 .learner-app .cp-first-letter-guide .cp-first-tile { border: 2px solid var(--primary); background: var(--primary-soft); }
+.consistent-layout .cp-task-card:is(.cp-exercise-demo, .cp-first-letter-guide) > .primary-button { scroll-margin-block: 0; }
 .cp-exercise-demo .cp-choice-grid > button { position: relative; }
+.cp-exercise-demo .cp-choice-grid > button.selected { animation: cp-demo-select-choice 1.6s step-end 1 both; }
+@keyframes cp-demo-select-choice { 0% { background: var(--paper); border-color: var(--line-strong); box-shadow: none; } 45%, 100% { background: var(--primary-soft); border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary); } }
 .learner-app .cp-exercise-demo .cp-choice-grid > button:disabled { opacity: 1; }
 .cp-demo-hand { position: absolute; right: 6px; bottom: 6px; width: 28px; height: 28px; }
 .cp-demo-hand, .cp-demo-source > svg, .cp-first-tile > svg, .cp-match-hand { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: #244b43; fill: #c9ddd2; pointer-events: none; }
@@ -318,7 +321,7 @@
 .cp-gap-demo > svg { width: 28px; flex-shrink: 0; }
 .cp-gap-demo .cp-demo-arrival { display: inline-block; }
 .cp-gap-demo mark { color: inherit; background: var(--primary-soft); border-bottom: 2px solid var(--primary); }
-@media (max-width: 600px) and (max-height: 740px) {
+@media (max-width: 820px) and (max-height: 740px) {
   .learner-app .is-guided .cp-gap-choice { gap: 8px; padding: 0; }
   .learner-app .cp-gap-choice .cp-task-prompt > button { height: 48px; }
   .learner-app .cp-gap-choice .cp-missing-word { font-size: 36px; line-height: 1.2; }

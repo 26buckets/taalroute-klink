@@ -1,6 +1,43 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `9465da5a30b26deb1bdb50e059935f264518ba34` op canonieke branch `main`.
+Worker-versie: `b8235bf0-4444-4e6a-8f6a-6a943eea8559`.
+
+Alle zeven soorten lesdemo's gebruiken Kijk eerst. De groene hand en de kaart
+waarop die tikt blijven samen met Nu jij in beeld. De keuzevoorbeelden worden
+nu ook automatisch in beeld gebracht. De gekozen kaart licht pas op bij de tik.
+De bestaande compacte weergave geldt ook voor liggende telefoons; Nu jij krijgt
+geen dubbele scrollmarges. Bestaande indeling, media, voorbeeldvolgorde,
+Kijk nog eens, letterhulp en handmatig Verder blijven behouden. Geen extra knoppen.
+
+Broncontrole: 591 demo-configuraties. Browsercontrole: 12 eerste/lange voorbeelden
+voor alle zeven soorten, samen 144 lokale gevallen in Chromium en WebKit,
+inclusief 320x480, 320x568, 390x844, 667x375, 1366x900 en minder beweging.
+Online 48 gevallen op smal staand en liggend scherm in beide browsers.
+De 591 configuraties zijn niet elk afzonderlijk in de browser doorlopen.
+Aanvullend 36 controles van echte antwoordroutes en 36 mobiele controles
+van de zes bestaande uitlegvensters, plus vergrote uitlegtekst.
+Types, gerichte lint, build, curriculum, 50 publicatiebewijstests en normale
+publicatiepoort geslaagd. Alle 8135 aangeboden mediabestanden en de client
+bytegelijk teruggelezen. Geen fysieke telefoon-, schermlezer- of cursistenproef.
+Geen GitHub Actions-workflows aanwezig of gestart.
+
+Vrijgave: `docs/klink-owner-release-demo-mobile-20261026.json`.
+Register: `docs/klink-publication-demo-mobile-20261026.json`.
+Bronback-up: https://drive.google.com/file/d/1psI3kpUD4EE2FPrp3LrxhxEKiq6e-2qA/view .
+Definitief herstelbewijs: `docs/klink-demo-mobile-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-handje-20261026`.
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven, officiële logo D, inhoud, media en gebruikersgegevens.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `79f0583d32fc9c6315a6680ec76442ffaafcbce1` op canonieke branch `main`.
 Worker-versie: `0d7e1c0c-70f8-44fd-be1b-b0244326b2a8`.
 

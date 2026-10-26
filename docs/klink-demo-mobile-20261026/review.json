@@ -1,0 +1,164 @@
+{
+  "status": "passed-local",
+  "sevenTypesReviewed": true,
+  "greenHandWithoutFrame": true,
+  "replay": true,
+  "selectionAfterTap": true,
+  "manualPace": true,
+  "noExtraControls": true,
+  "mobile": true,
+  "landscape": true,
+  "reducedMotion": true,
+  "progressPreserved": true,
+  "popupPreserved": true,
+  "contentAndMediaPreserved": true,
+  "typesPassed": true,
+  "lintPassed": true,
+  "buildPassed": true,
+  "coverage": {
+    "catalogueConfigurationsChecked": 591,
+    "types": [
+      "word-build",
+      "same-word",
+      "heard-word",
+      "heard-image",
+      "word-image-match",
+      "sentence-question",
+      "missing-grapheme"
+    ],
+    "representativeFirstAndLongestSamples": [
+      {
+        "mode": "word-build",
+        "id": "klink-leesstap-01:klink-woord-mat:word-build"
+      },
+      {
+        "mode": "word-build",
+        "id": "woord-klink-woord-chauffeur:klink-woord-chauffeur:word-build"
+      },
+      {
+        "mode": "same-word",
+        "id": "klink-leesstap-02:klink-woord-tas:same-word"
+      },
+      {
+        "mode": "heard-word",
+        "id": "klink-leesstap-02:klink-woord-tas:heard-word"
+      },
+      {
+        "mode": "heard-word",
+        "id": "woord-klink-woord-huiskamer:klink-woord-huiskamer:heard-word"
+      },
+      {
+        "mode": "heard-image",
+        "id": "klink-leesstap-02:klink-woord-tas:heard-image"
+      },
+      {
+        "mode": "word-image-match",
+        "id": "klink-leesstap-02:klink-woord-tas:word-image-match"
+      },
+      {
+        "mode": "word-image-match",
+        "id": "woord-klink-woord-huiskamer:klink-woord-huiskamer:word-image-match"
+      },
+      {
+        "mode": "sentence-question",
+        "id": "klink-leesstap-04:begrip-man"
+      },
+      {
+        "mode": "sentence-question",
+        "id": "klink-leesstap-15:begrip-boom"
+      },
+      {
+        "mode": "missing-grapheme",
+        "id": "klink-leesstap-06:klink-woord-pen:missing-grapheme"
+      },
+      {
+        "mode": "missing-grapheme",
+        "id": "klink-leesstap-13:klink-woord-maan:missing-grapheme"
+      }
+    ],
+    "browserCases": 144,
+    "browsers": [
+      "chromium",
+      "webkit"
+    ],
+    "viewports": [
+      [
+        320,
+        480
+      ],
+      [
+        320,
+        568
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        667,
+        375
+      ],
+      [
+        1366,
+        900
+      ]
+    ],
+    "reducedMotion": [
+      320,
+      568
+    ],
+    "scopeNote": "591 source configurations validated; 12 representative first/long variants tested interactively. Not 591 individual browser walkthroughs."
+  },
+  "baseline": {
+    "cases": 72,
+    "failingCases": 30,
+    "issues": [
+      "Choice examples initially outside the visible area on small phones.",
+      "Nu jij partially behind bottom navigation in landscape.",
+      "Some selected choice cards were already highlighted before the demo tap."
+    ]
+  },
+  "fixes": [
+    "All seven demonstration types use Kijk eerst.",
+    "Shared bounded scrolling keeps the demonstration and Nu jij visible.",
+    "The existing compact styles also apply to landscape phone widths.",
+    "Nu jij no longer doubles the existing scroll safety margins.",
+    "Choice highlight follows the green tap."
+  ],
+  "regressionCases": {
+    "building": 16,
+    "gap": 16,
+    "matching": 4
+  },
+  "popupChecks": {
+    "passed": true,
+    "results": [
+      "chromium 320x568: six touch popups, matching app style, readable words, reachable controls and no page overflow",
+      "chromium 360x640: six touch popups, matching app style, readable words, reachable controls and no page overflow",
+      "chromium 390x844: six touch popups, matching app style, readable words, reachable controls and no page overflow",
+      "chromium 430x932: six touch popups, matching app style, readable words, reachable controls and no page overflow",
+      "chromium 667x375: six touch popups, matching app style, readable words, reachable controls and no page overflow",
+      "chromium 844x390: six touch popups, matching app style, readable words, reachable controls and no page overflow",
+      "chromium: 200% explanation text remains complete and scrollable"
+    ],
+    "physicalDeviceTested": false
+  },
+  "unitChecks": {
+    "focused": 9,
+    "curriculum": 48,
+    "existingSkipped": 1,
+    "audioRegister": 6
+  },
+  "runtimeFiles": [
+    "app/learner-ui.css",
+    "components/product/package-exercise-browser.tsx"
+  ],
+  "newAudio": 0,
+  "infrastructureRetry": "Concurrent local preview traffic caused a Wrangler proxy failure. Final production preview run used sequential browsers.",
+  "limitations": [
+    "Browser simulations, no physical phone or learner trial.",
+    "No new audio or pronunciation review.",
+    "The unchanged full 1616-step sequence was not replayed."
+  ],
+  "styleReference": "Preserved current approved fonts, icons, buttons and layout; original DigiBord settings reference location remains unavailable."
+}

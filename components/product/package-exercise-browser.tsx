@@ -555,6 +555,11 @@ function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { 
   return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-describedby={phrase ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
+function scrollDemoIntoView(anchor: HTMLElement | null) {
+  anchor?.scrollIntoView({ block: 'center' });
+  anchor?.closest('.cp-task-card')?.querySelector(':scope > .primary-button')?.scrollIntoView({ block: 'nearest' });
+}
+
 function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer = true, speakingOptionId = '', demoAvailable = false, showDemoInitially = false, onHelp }: SurfaceProps & { nested?: boolean; canAnswer?: boolean; speakingOptionId?: string; demoAvailable?: boolean; showDemoInitially?: boolean; onHelp?: () => void }) {
   const [selected, setSelected] = useState('');
   const [showDemo, setShowDemo] = useState(showDemoInitially);
@@ -567,9 +572,9 @@ function ChoiceSurface({ exercise, onAudio, onFinish, nested = false, canAnswer 
   const gapLetter = gapOption?.label ?? gapOption?.grapheme;
   const gapParts = maskedWord?.split('…');
   const showGapDemo = showDemo && gapLetter && gapParts?.length === 2;
-  useEffect(() => { if (showGapDemo) choices.current?.scrollIntoView({ block: 'center' }); }, [showGapDemo]);
+  useEffect(() => { if (showDemo) scrollDemoIntoView(choices.current); }, [showDemo]);
   useEffect(() => { if (demoAvailable && !showDemo && canAnswer) choices.current?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true }); }, [demoAvailable, showDemo, canAnswer]);
-  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{showDemo && <p className="cp-letter-cue">{exercise.mode === 'missing-grapheme' ? 'Kijk eerst' : exercise.mode === 'same-word' ? 'Kijk. Tik op hetzelfde woord.' : exercise.mode === 'heard-word' ? 'Luister. Tik op het woord.' : 'Luister. Tik op de foto.'}</p>}{maskedWord && (showGapDemo ? <figure className="cp-missing-word cp-gap-demo" aria-label={`Voorbeeld: ${gapLetter} vult de lege plek. Het woord is ${gapParts.join(gapLetter)}.`}><span>{maskedWord}</span><ArrowRight aria-hidden="true" /><span>{gapParts[0]}<mark><b className="cp-demo-arrival">{gapLetter}</b></mark>{gapParts[1]}</span></figure> : <p className="cp-missing-word" aria-label={`Woord met een lege plek: ${maskedWord}`}>{maskedWord}</p>)}{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid" ref={choices}>{options.map((option) => <button key={option.id} disabled={showDemo || !canAnswer} className={(showDemo ? correct.includes(option.id) : selected === option.id) ? 'selected' : ''} data-speaking={speakingOptionId === option.id ? 'true' : undefined} aria-pressed={showDemo ? correct.includes(option.id) : selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}{showDemo && correct.includes(option.id) && <Hand className="cp-demo-hand" aria-hidden="true" />}{Boolean(option.audio) && <Volume2 className="cp-option-audio" aria-hidden="true" />}</button>)}</div>{demoAvailable && (showDemo ? <button className="primary-button" disabled={!canAnswer} onClick={() => { onHelp?.(); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" disabled={correct.includes(selected)} onClick={() => { onHelp?.(); setShowDemo(true); }}>Kijk nog eens</button>)}</>;
+  const content = <>{!nested && <Prompt exercise={exercise} onAudio={onAudio} />}{showDemo && <p className="cp-letter-cue">Kijk eerst</p>}{maskedWord && (showGapDemo ? <figure className="cp-missing-word cp-gap-demo" aria-label={`Voorbeeld: ${gapLetter} vult de lege plek. Het woord is ${gapParts.join(gapLetter)}.`}><span>{maskedWord}</span><ArrowRight aria-hidden="true" /><span>{gapParts[0]}<mark><b className="cp-demo-arrival">{gapLetter}</b></mark>{gapParts[1]}</span></figure> : <p className="cp-missing-word" aria-label={`Woord met een lege plek: ${maskedWord}`}>{maskedWord}</p>)}{exercise.prompt?.image && <ExerciseImageView image={exercise.prompt.image} />}<div className="cp-choice-grid" ref={choices}>{options.map((option) => <button key={option.id} disabled={showDemo || !canAnswer} className={(showDemo ? correct.includes(option.id) : selected === option.id) ? 'selected' : ''} data-speaking={speakingOptionId === option.id ? 'true' : undefined} aria-pressed={showDemo ? correct.includes(option.id) : selected === option.id} onClick={() => { setSelected(option.id); onFinish(option.id, correct.includes(option.id)); }}>{option.image ? <ExerciseImageView image={option.image} /> : <strong>{option.label ?? option.grapheme ?? 'Kies'}</strong>}{showDemo && correct.includes(option.id) && <Hand className="cp-demo-hand" aria-hidden="true" />}{Boolean(option.audio) && <Volume2 className="cp-option-audio" aria-hidden="true" />}</button>)}</div>{demoAvailable && (showDemo ? <button className="primary-button" disabled={!canAnswer} onClick={() => { onHelp?.(); setShowDemo(false); }}>Nu jij<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" disabled={correct.includes(selected)} onClick={() => { onHelp?.(); setShowDemo(true); }}>Kijk nog eens</button>)}</>;
   return nested ? <div className="cp-linked-choice">{content}</div> : <section className={`cp-task-card${demoAvailable ? ' cp-beginner-choice' : ''}${demoAvailable && exercise.mode === 'missing-grapheme' ? ' cp-gap-choice' : ''}${showDemo ? ' cp-exercise-demo' : ''}`} aria-label={showDemo ? 'Voorbeeld' : undefined}>{content}</section>;
 }
 
@@ -595,7 +600,7 @@ function MatchingSurface({ exercise, onAudio, onFinish, onReset, demoAvailable =
   const audioOnly = exercise.audioOnlySources === true;
   const currentSource = useRef('');
   useEffect(() => () => { currentSource.current = ''; }, []);
-  useEffect(() => { if (showDemo) demoCard.current?.scrollIntoView({ block: 'center' }); }, [showDemo]);
+  useEffect(() => { if (showDemo) scrollDemoIntoView(demoCard.current); }, [showDemo]);
   useEffect(() => { if (demoAvailable && !showDemo) sourceBank.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus({ preventScroll: true }); }, [demoAvailable, showDemo]);
   async function select(source: ChoiceOption) {
     setNeedsSource(false);
@@ -654,7 +659,7 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
   const guidedSlot = useRef<HTMLButtonElement>(null);
   const tileBank = useRef<HTMLDivElement>(null);
   const demoCard = useRef<HTMLElement>(null);
-  useEffect(() => { if (guideStep === 'demo') demoCard.current?.scrollIntoView({ block: 'center' }); }, [guideStep, guideIndex]);
+  useEffect(() => { if (guideStep === 'demo') scrollDemoIntoView(demoCard.current); }, [guideStep, guideIndex]);
   useEffect(() => {
     if (!firstLetterGuide || guideStep === 'demo' || guideIndex < 0 || !canAnswer) return;
     guidedTile.current?.focus({ preventScroll: true });
