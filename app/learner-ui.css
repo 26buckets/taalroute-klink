@@ -77,8 +77,8 @@
 .cp-practice-line-overview li { position: relative; display: flex; flex-direction: column; align-items: center; }
 .cp-practice-line-overview li:not(:last-child)::before { content: ''; position: absolute; top: 15px; left: 50%; width: calc(100% + 8px); height: 2px; background: var(--line-strong); }
 .cp-practice-line-overview .cp-line-number { position: relative; top: auto; left: auto; z-index: 1; flex-shrink: 0; width: 30px; height: 30px; background: var(--primary); color: white; font-size: 17px; }
-.cp-practice-line-overview li > div { margin-top: 12px; min-height: 82px; height: 82px; align-content: center; border-radius: var(--radius); }
-.cp-practice-line-overview li > div::before { content: ''; position: absolute; top: -13px; left: calc(50% - 1px); width: 2px; height: 13px; background: var(--line-strong); }
+.cp-practice-line-overview li > :is(div, button) { font-weight: 400; margin-top: 12px; min-height: 82px; height: 82px; align-content: center; border-radius: var(--radius); }
+.cp-practice-line-overview li > :is(div, button)::before { content: ''; position: absolute; top: -13px; left: calc(50% - 1px); width: 2px; height: 13px; background: var(--line-strong); }
 .cp-practice-line-overview li svg { margin-top: 0; width: 20px; height: 20px; }
 .cp-practice-line-overview strong { font-size: 14px; }
 .cp-practice-line small { font-size: 12px; line-height: 1.4; }
@@ -121,8 +121,8 @@
   .cp-practice-line-overview ol { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .cp-practice-line-overview li { flex-direction: row; gap: 14px; }
   .cp-practice-line-overview li:not(:last-child)::before { top: 50%; left: 14px; width: 2px; height: calc(100% + 10px); }
-  .cp-practice-line-overview li > div { flex: 1; display: flex; align-items: center; justify-content: flex-start; gap: 14px; margin-top: 0; min-height: 58px; height: 58px; padding: 10px 16px; text-align: left; }
-  .cp-practice-line-overview li > div::before { top: calc(50% - 1px); left: -15px; width: 15px; height: 2px; }
+  .cp-practice-line-overview li > :is(div, button) { flex: 1; display: flex; align-items: center; justify-content: flex-start; gap: 14px; margin-top: 0; min-height: 58px; height: 58px; padding: 10px 16px; text-align: left; }
+  .cp-practice-line-overview li > :is(div, button)::before { top: calc(50% - 1px); left: -15px; width: 15px; height: 2px; }
   .cp-route-actions { width: 100%; }
   .cp-route-options { left: 0; right: auto; width: min(480px, calc(100vw - 48px)); }
 }
@@ -680,3 +680,12 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 
 .learner-app .cp-activity-button:disabled { cursor:default; color:var(--muted); background:var(--canvas); opacity:0.62; }
 .learner-app .cp-activity-button:disabled span small { display:block; margin-top:4px; font-size:0.85rem; font-weight:400; }
+
+/* Step explanations sit above the existing navigation without moving the page. */
+body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000; }
+.cp-practice-explanation[data-slot="dialog-content"] { z-index: 2001; width: min(850px, calc(100vw - 24px)); max-width: none; height: min(760px, calc(100dvh - 24px)); max-height: calc(100dvh - 24px); display: flex; flex-direction: column; gap: 12px; padding: 16px; color: var(--ink); background: var(--paper); border-radius: var(--radius); }
+.cp-practice-explanation-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cp-practice-explanation-heading h2 { margin: 0; font-size: 24px; font-weight: 500; }
+.cp-practice-explanation-heading button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--ink); font-size: 16px; font-weight: 400; }
+.cp-practice-explanation-heading svg { width: 20px; height: 20px; }
+.cp-practice-explanation iframe { flex: 1; min-height: 0; width: 100%; border: 0; }

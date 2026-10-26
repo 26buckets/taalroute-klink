@@ -36,7 +36,7 @@ try {
   assert.equal(await page.locator('.cp-practice-line li').count(), 6);
   assert.equal(await page.locator('.cp-practice-line [aria-current]').count(), 0);
   assert.equal(await page.locator('[data-picture-stage]').count(), 0);
-  assert.equal(await page.locator('.cp-practice-line button').count(), 0);
+  assert.equal(await page.locator('.cp-practice-line button[aria-haspopup="dialog"]').count(), 6);
   pass('Six visible choices in two axes and a neutral six-step overview; teacher image planning is absent from learner home');
 
   const progress = JSON.stringify({ completed: ['klink-leesstap-01'] });

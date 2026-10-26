@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="nl">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zo oefen je · Klink</title>
+<link rel="stylesheet" href="style.css">
+<main class="embedded">
+
+  <nav hidden aria-label="Kies een uitleg"><ol id="steps"></ol></nav>
+  <section class="player" aria-labelledby="title">
+    <div class="player-heading"><h2 id="title"></h2><span id="instruction"></span></div>
+    <div id="scene"></div>
+    <p id="caption" aria-live="off"></p>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <div class="controls">
+      <button id="play" class="primary"></button>
+      <button id="pause" disabled></button>
+      <button id="replay"></button>
+    </div>
+    <div class="manual" hidden><button id="previous">Vorig beeld</button><span id="frame"></span><button id="next">Volgend beeld</button></div>
+    <label class="mode"><input id="still" type="checkbox"> Zonder beweging</label>
+    <p id="status" class="sr" role="status"></p>
+  </section>
+  <details class="description"><summary>Uitleg in woorden</summary><p id="description"></p></details>
+</main>
+<script src="app.js"></script>
+</html>

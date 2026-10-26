@@ -17,8 +17,8 @@ try {
     await page.setViewportSize({ width, height: 950 });
     await page.goto(`${base}/#learner/home`); await page.locator('.cp-home-hero').waitFor();
     assert.equal(await page.locator('[data-picture-stage], [data-picture-example]').count(), 0);
-    assert.equal(await page.locator('.cp-practice-line button, .cp-practice-line [aria-current]').count(), 0);
-    const frames = page.locator('.cp-practice-line-overview li > div');
+    assert.equal(await page.locator('.cp-practice-line [aria-current]').count(), 0);
+    const frames = page.locator('.cp-practice-line-overview li > button');
     assert.equal(await frames.count(), 6);
     for (const frame of await frames.all()) {
       const css = await frame.evaluate(el => { const s = getComputedStyle(el); return { borders: ['Top', 'Right', 'Bottom', 'Left'].map(side => [s[`border${side}Width`], s[`border${side}Style`]]), background: s.backgroundColor }; });
@@ -32,7 +32,7 @@ try {
     }
     const steps = await page.locator('.cp-practice-line-overview li').evaluateAll(items => items.map(li => {
       const number = li.querySelector('.cp-line-number').getBoundingClientRect();
-      const card = li.querySelector('div').getBoundingClientRect();
+      const card = li.querySelector('button').getBoundingClientRect();
       const connector = getComputedStyle(li, '::before');
       return { n: { x: number.x, y: number.y, w: number.width, h: number.height }, c: { x: card.x, y: card.y, w: card.width, h: card.height }, connector: connector.content };
     }));
