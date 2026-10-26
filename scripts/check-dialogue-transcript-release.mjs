@@ -1,3 +1,4 @@
+import {verifySessionAudioRelease,readBeforeSessionAudio} from './check-session-audio-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -6,7 +7,9 @@ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const git=(...args)=>execFileSync('git',args,{maxBuffer:32*1024*1024});
 const evidence='docs/klink-dialogue-transcript-20261026';
 export const transcriptFiles=['app/globals.css','scripts/check-dialogue-transcript-release.mjs','scripts/check-word-image-replacements.mjs','scripts/test-dialogue-transcript-browser.mjs','scripts/test-dialogue-transcript-release.mjs','scripts/test-publication-proof.mjs'];
-export function verifyDialogueTranscriptRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-dialogue-transcript-20261026.json')),readFile=readFileSync){
+export function verifyDialogueTranscriptRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-dialogue-transcript-20261026.json')),readFile){
+ const sessionAudio=verifySessionAudioRelease();
+ readFile ||= file=>readBeforeSessionAudio(file,sessionAudio);
  assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
  assert.equal(release.userRequest,'kunnen we deze duidelijker maken en weergeven. Standaard opmaak voor alle dialogen');
  assert.equal(release.baselineSourceCommit,'9db5424f254263d43bb1d77669a69f5127c00a2a');
@@ -16,8 +19,8 @@ export function verifyDialogueTranscriptRelease(release=JSON.parse(readFileSync(
  git('merge-base','--is-ancestor',release.liveSourceCommit,release.baselineSourceCommit);git('merge-base','--is-ancestor',release.baselineSourceCommit,'HEAD');
  assert.equal(sha(readFile(release.previousAuthorization)),sha(git('show',`${release.baselineSourceCommit}:${release.previousAuthorization}`)));
  const roots=['app','components','hooks','data','lib','public','scripts'];
- const changed=git('diff','--name-only',release.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
- const untracked=git('ls-files','--others','--exclude-standard','--',...roots).toString().trim().split('\n').filter(Boolean);
+ const changed=git('diff','--name-only',release.baselineSourceCommit,sessionAudio.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
+ const untracked=[]; // The session-audio successor checks the current source delta.
  assert.deepEqual([...new Set([...changed,...untracked])].sort((a,b)=>a.localeCompare(b)),[...transcriptFiles].sort((a,b)=>a.localeCompare(b)));
  const strip=css=>css.replace(/\.cp-dialogue-transcript summary[\s\S]*?(?=@media \(max-width: 760px\))/, '');
  assert.equal(strip(readFile('app/globals.css').toString()),strip(git('show',`${release.baselineSourceCommit}:app/globals.css`).toString()),'Only transcript styles may change');
@@ -30,6 +33,6 @@ export function verifyDialogueTranscriptRelease(release=JSON.parse(readFileSync(
  const review=JSON.parse(readFile(`${evidence}/review.json`));assert.equal(review.status,'passed-local');assert.equal(review.transcriptLayouts,384);
  for(const field of ['keyboardAudio','wholeConversationPreserved','fullPhotosPreserved','sourceAndMediaPreserved','buildPassed','typesPassed','scopedLintPassed'])assert.equal(review[field],true,field);
  const backup=JSON.parse(readFile(`${evidence}/source-drive-verification.json`));assert(backup.parentVerified&&backup.downloadedByteIdentical&&backup.zipCrcVerified);assert.equal(backup.manifestEntriesVerified,manifest.length);
- return release;
+ return {...release,sessionAudio};
 }
-export function readBeforeDialogueTranscript(file,release,readFile=readFileSync){return release?.files[file]?git('show',`${release.baselineSourceCommit}:${file}`):readFile(file);}
+export function readBeforeDialogueTranscript(file,release,readFile=readFileSync){return release?.files[file]?git('show',`${release.baselineSourceCommit}:${file}`):readBeforeSessionAudio(file,release?.sessionAudio,readFile);}

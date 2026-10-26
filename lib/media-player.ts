@@ -5,11 +5,43 @@ let activeAudio: HTMLAudioElement | undefined;
 let cancelPlayback: (() => void) | undefined;
 
 export const DEFAULT_AUDIO_RATE = 0.85;
+export const SLOW_AUDIO_RATE = 0.65;
+const slowAudioKey = 'klink.slow-audio.v1';
+let slowAudio: boolean | undefined;
+const rateListeners = new Set<() => void>();
+const baseRates = new WeakMap<HTMLMediaElement, number>();
+
+export function getSlowAudio() {
+  if (typeof window === 'undefined') return false;
+  if (slowAudio === undefined) {
+    try { slowAudio = sessionStorage.getItem(slowAudioKey) === 'true'; }
+    catch { slowAudio = false; }
+  }
+  return slowAudio;
+}
+
+export function subscribeSlowAudio(listener: () => void) {
+  rateListeners.add(listener);
+  return () => { rateListeners.delete(listener); };
+}
+
+export function setSlowAudio(slow: boolean) {
+  slowAudio = slow;
+  try { if (slow) sessionStorage.setItem(slowAudioKey, 'true'); else sessionStorage.removeItem(slowAudioKey); }
+  catch { /* The session preference still works when storage is blocked. */ }
+  if (activeAudio) applyDefaultAudioRate(activeAudio, baseRates.get(activeAudio));
+  if (typeof document !== 'undefined') {
+    document.querySelectorAll('audio').forEach(audio => applyDefaultAudioRate(audio, baseRates.get(audio)));
+  }
+  rateListeners.forEach(listener => listener());
+}
 
 export function applyDefaultAudioRate(audio: HTMLMediaElement | null, rate = DEFAULT_AUDIO_RATE) {
   if (!audio) return;
-  audio.defaultPlaybackRate = rate;
-  audio.playbackRate = rate;
+  baseRates.set(audio, rate);
+  const selectedRate = getSlowAudio() ? Math.min(rate, SLOW_AUDIO_RATE) : rate;
+  audio.defaultPlaybackRate = selectedRate;
+  audio.playbackRate = selectedRate;
   audio.preservesPitch = true;
 }
 
@@ -45,7 +77,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
     const ended = () => finish(true);
     const failed = () => { audio.pause(); finish(false, new Error('audio unavailable')); };
     // A stalled recording must leave a usable retry instead of an endless lock.
-    const timeout = setTimeout(failed, 60000 / DEFAULT_AUDIO_RATE);
+    const timeout = setTimeout(failed, 60000 / Math.min(audio.playbackRate, SLOW_AUDIO_RATE));
     cancelPlayback = cancel;
     audio.addEventListener('ended', ended);
     audio.addEventListener('error', failed);

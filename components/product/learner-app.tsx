@@ -3,6 +3,7 @@
 import { wordWithArticle } from '@/lib/word-articles';
 import { libraryWords, wordLengths, type WordLibrarySource } from '@/lib/word-library';
 
+import { setSlowAudio } from '@/lib/media-player';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
@@ -158,7 +159,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
           <button title="Herhalen" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
         <button className="secondary-button cp-nav-toggle" type="button" onClick={toggleNavigation} aria-expanded={!navCollapsed} aria-controls="klink-learner-navigation" aria-label={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'} title={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'}>{navCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}</button>
-        <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } onExit(); }}><small>Afsluiten</small><LogOut /></button>
+        <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } setSlowAudio(false); onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
         {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => openView('packages')} onWords={() => openView('words')} onReview={() => openView('review')} onChapter={openChapter} savedCount={savedWordIds.length} progress={progress} onLesson={openLesson} />}

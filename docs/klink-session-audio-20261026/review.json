@@ -1,0 +1,34 @@
+{
+  "status": "passed-local",
+  "slowDialogues": 128,
+  "slowTurns": 512,
+  "immediateRateChange": true,
+  "sessionPersistence": true,
+  "otherSections": true,
+  "exitResets": true,
+  "blockedStorage": true,
+  "normalPlaybackPreserved": true,
+  "nativeAudio": true,
+  "sourceAndMediaPreserved": true,
+  "buildPassed": true,
+  "typesPassed": true,
+  "scopedLintPassed": true,
+  "audioUnitTests": 6,
+  "curriculumPassed": 48,
+  "existingCurriculumSkipped": 1,
+  "photoChecks": 393,
+  "transcriptLayouts": 384,
+  "reactReview": {
+    "stableExternalStoreSubscription": true,
+    "unsubscribeOnUnmount": true,
+    "serverSnapshotFalse": true,
+    "nativeKeyboardButton": true,
+    "ariaPressed": true,
+    "existingLucideSnail": true,
+    "newDependencies": 0
+  },
+  "limitations": [
+    "No physical phone test or human listening review.",
+    "When sessionStorage is denied the preference works in memory until reload."
+  ]
+}

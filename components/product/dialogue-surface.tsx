@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight, Check, Eye, Pause, Volume2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Eye, Pause, Snail, Volume2 } from 'lucide-react';
+import { getSlowAudio, setSlowAudio, subscribeSlowAudio } from '@/lib/media-player';
 import type { PackageExercise } from '@/lib/package-content';
 
 export type DialogueControls = {
@@ -20,6 +21,7 @@ export function DialogueSurface({ exercise, controls, guided, canAnswer, onFinis
   const blocks = exercise.textBlocks as { id: string; text: string; speaker?: string }[];
   const [readAlong, setReadAlong] = useState(false);
   const [perTurn, setPerTurn] = useState(false);
+  const slow = useSyncExternalStore(subscribeSlowAudio, getSlowAudio, () => false);
   const active = Math.min(controls.active, blocks.length - 1);
   const block = blocks[active];
   const image = exercise.prompt?.image;
@@ -42,6 +44,7 @@ export function DialogueSurface({ exercise, controls, guided, canAnswer, onFinis
       <button className="primary-button" onClick={() => controls.play(perTurn ? active : undefined)}><Volume2 />{perTurn ? 'Luister naar deze beurt' : 'Luister naar het gesprek'}</button>
       <button className="secondary-button" disabled={active === blocks.length - 1} onClick={() => controls.select(active + 1)} aria-label="Volgende spreekbeurt"><ArrowRight /></button>
       <button className="secondary-button" disabled={!controls.playing} onClick={controls.pause}><Pause />Pauze</button>
+      <button type="button" className="secondary-button cp-slow-audio" aria-label="Langzamer afspelen" aria-pressed={slow} title="Langzamer luisteren in alle onderdelen tijdens deze sessie" onClick={() => setSlowAudio(!slow)}><Snail aria-hidden="true" />Langzamer</button>
       <button className="secondary-button" aria-pressed={readAlong} onClick={() => setReadAlong(!readAlong)}><Eye />{readAlong ? 'Tekst verbergen' : 'Meelezen'}</button>
     </nav>
     <p className="cp-dialogue-support-note">{perTurn ? 'Luister per beurt. Herhaal en bespreek samen wat je hoort.' : 'Luister naar het hele gesprek. Vertel daarna wat de mensen afspreken.'}</p>

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-26",
+  "types": true,
+  "scopedLint": true,
+  "build": true,
+  "curriculum": {
+    "passed": 48,
+    "existingSkipped": 1
+  },
+  "audioUnitTests": 6,
+  "sessionBrowser": {
+    "passed": true,
+    "dialogues": 128,
+    "slowTurns": 512,
+    "immediateWithoutRestart": true,
+    "keyboard": true,
+    "widths": [
+      320,
+      390,
+      630,
+      1366
+    ],
+    "reloadPersistence": true,
+    "perTurn": true,
+    "transcript": true,
+    "otherSections": [
+      "words",
+      "sounds"
+    ],
+    "normalRatesRestored": true,
+    "exitResets": true,
+    "blockedStorageWorks": true,
+    "errors": []
+  },
+  "native": {
+    "passed": true,
+    "nativeAudio": true,
+    "muted": true,
+    "noAcceleration": true,
+    "immediateWithoutRestart": true,
+    "normalRestored": true,
+    "manualUpdated": true,
+    "started": [
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-1.mp3",
+        "rate": 0.85,
+        "pitch": true
+      },
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-2.mp3",
+        "rate": 0.65,
+        "pitch": true
+      },
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-3.mp3",
+        "rate": 0.65,
+        "pitch": true
+      },
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-4.mp3",
+        "rate": 0.65,
+        "pitch": true
+      }
+    ],
+    "ended": [
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-1.mp3",
+        "rate": 0.65
+      },
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-2.mp3",
+        "rate": 0.65
+      },
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-3.mp3",
+        "rate": 0.65
+      },
+      {
+        "src": "/package-audio/dialogue-repair/klink-dialogue-d0a263adf67c1b3c-4.mp3",
+        "rate": 0.65
+      }
+    ]
+  },
+  "normalWholeConversationPlayback": 128,
+  "photoChecks": 393,
+  "transcriptLayouts": 384,
+  "connectedContentChecks": 6,
+  "lifecycleChecks": 5,
+  "realAudioRegressionChecks": 4,
+  "physicalDeviceTest": false
+}
