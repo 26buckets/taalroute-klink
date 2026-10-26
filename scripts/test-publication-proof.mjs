@@ -44,6 +44,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     writeFileSync(reviewGate, readFileSync(reviewGate, 'utf8').replace('export function verifyArticleReviewRelease(release =', 'export function verifyArticleReviewReleaseUnused(release =') + `\nexport const verifyArticleReviewRelease = () => (${JSON.stringify(reviewedArticles)});`);
     const libraryGate = join(dir, 'scripts/check-word-library-release.mjs');
     writeFileSync(libraryGate, readFileSync('scripts/check-word-library-release.mjs', 'utf8').replace('export function verifyWordLibraryRelease(release =', 'export function verifyWordLibraryReleaseUnused(release =') + `\nexport const verifyWordLibraryRelease = () => (${JSON.stringify(wordLibrary)});`);
+    copyFileSync('scripts/check-dialogue-playback-release.mjs', join(dir, 'scripts/check-dialogue-playback-release.mjs'));
     copyFileSync('scripts/check-dialogue-image-fit-release.mjs', join(dir, 'scripts/check-dialogue-image-fit-release.mjs'));
     const dialogueGate = join(dir, 'scripts/check-dialogue-release.mjs');
     writeFileSync(dialogueGate, readFileSync('scripts/check-dialogue-release.mjs', 'utf8').replace('export function verifyDialogueRelease(release =', 'export function verifyDialogueReleaseUnused(release =') + `\nexport const verifyDialogueRelease = () => (${JSON.stringify(dialogueRelease)});`);

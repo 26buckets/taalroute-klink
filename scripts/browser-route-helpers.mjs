@@ -27,7 +27,7 @@ export async function answerActivity(page, exercise, { advance = true, checkFocu
     if (await pause.count()) await pause.click();
   }
   if (exercise.requiresAudio) {
-    if (exercise.mode === 'connected-dialogue') await page.getByRole('button', {name: 'Hele gesprek', exact: true}).click();
+    if (exercise.mode === 'connected-dialogue') await page.getByRole('button', {name: 'Luister naar het gesprek', exact: true}).click();
     // Other exercises retain their existing automatic stimulus.
     await page.waitForFunction(() => !/Tik op Luister|Je hoort het geluid vanzelf|Probeer Luister opnieuw/.test(document.querySelector('.cp-exercise-feedback output').textContent));
   }

@@ -6,7 +6,7 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const git = (...args) => execFileSync('git', args, {maxBuffer: 32 * 1024 * 1024});
 const evidence = 'docs/klink-dialogue-image-fit-20261025';
 export const imageFitFiles = ['app/globals.css', 'scripts/check-dialogue-image-fit-release.mjs', 'scripts/check-dialogue-release.mjs', 'scripts/test-dialogue-image-fit-release.mjs', 'scripts/test-dialogue-image-fit-browser.mjs', 'scripts/test-publication-proof.mjs'];
-export function verifyDialogueImageFitRelease(release = JSON.parse(readFileSync('docs/klink-owner-release-dialogue-image-fit-20261025.json')), readFile = readFileSync) {
+export function verifyDialogueImageFitRelease(release = JSON.parse(readFileSync('docs/klink-owner-release-dialogue-image-fit-20261025.json')), readFile = readFileSync, sourceCommit) {
  assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
  assert.equal(release.userRequest, JSON.parse(readFile(`${evidence}/owner-request.json`)).userRequest);
  assert(release.userRequest.startsWith('Herstel dan ook meteen die mobiele weergave'));
@@ -22,8 +22,8 @@ export function verifyDialogueImageFitRelease(release = JSON.parse(readFileSync(
  assert.notEqual(expected, before);
  assert.equal(readFile('app/globals.css').toString(), expected, 'Only the full-photo sizing correction is authorized');
  const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public'];
- const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
- const untracked = git('ls-files', '--others', '--exclude-standard', '--', ...roots).toString().trim().split('\n').filter(Boolean);
+ const changed = git('diff', '--name-only', release.baselineSourceCommit, ...(sourceCommit ? [sourceCommit] : []), '--', ...roots).toString().trim().split('\n').filter(Boolean);
+ const untracked = sourceCommit ? [] : git('ls-files', '--others', '--exclude-standard', '--', ...roots).toString().trim().split('\n').filter(Boolean);
  assert.deepEqual([...new Set([...changed, ...untracked])], ['app/globals.css']);
  const required = [...imageFitFiles, ...['owner-request', 'live-baseline', 'review', 'source-manifest', 'source-drive-verification'].map(name => `${evidence}/${name}.json`)];
  assert.deepEqual(Object.keys(release.files).sort(), required.sort());
@@ -39,6 +39,6 @@ export function verifyDialogueImageFitRelease(release = JSON.parse(readFileSync(
  assert.equal(backup.manifestEntriesVerified, manifest.length);
  return release;
 }
-export function readBeforeDialogueImageFit(file, release) {
- return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readFileSync(file);
+export function readBeforeDialogueImageFit(file, release, readFile = readFileSync) {
+ return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readFile(file);
 }

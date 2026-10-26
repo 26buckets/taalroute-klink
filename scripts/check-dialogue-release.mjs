@@ -1,3 +1,4 @@
+import { verifyDialoguePlaybackRelease, readBeforeDialoguePlayback } from './check-dialogue-playback-release.mjs';
 import { verifyDialogueImageFitRelease, readBeforeDialogueImageFit } from './check-dialogue-image-fit-release.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -18,7 +19,9 @@ export const dialogueSourceFiles = [
  'scripts/test-word-library-release.mjs', 'scripts/test-article-review-release.mjs', 'scripts/verify-live-release.mjs',
 ];
 export function verifyDialogueRelease(release = read('docs/klink-owner-release-gesprekken-20261025.json')) {
- const imageFit = verifyDialogueImageFitRelease();
+ const playback = verifyDialoguePlaybackRelease();
+ const beforePlayback = file => readBeforeDialoguePlayback(file, playback);
+ const imageFit = verifyDialogueImageFitRelease(undefined, beforePlayback, playback.baselineSourceCommit);
  assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
  assert.equal(release.userRequest, 'zorg dat dit online komt te staan alvast, zodat dat gelijk standaard doorgevoerd is bij de juiste opdrachten.');
  assert.equal(read(`${evidence}/owner-request.json`).userRequest, release.userRequest);
@@ -56,15 +59,15 @@ export function verifyDialogueRelease(release = read('docs/klink-owner-release-g
  }
  assert.equal(media.size, 528);
  const expected = [...dialogueSourceFiles.filter(p => /^(app|components|data|lib|public)\//.test(p)), ...media].sort((a,b)=>a.localeCompare(b));
- const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', 'app','components','hooks','data','lib','public').toString().trim().split('\n').filter(Boolean);
- const untracked = git('ls-files', '--others', '--exclude-standard', '--', 'app','components','hooks','data','lib','public').toString().trim().split('\n').filter(Boolean);
+ const changed = git('diff', '--name-only', release.baselineSourceCommit, playback.baselineSourceCommit, '--', 'app','components','hooks','data','lib','public').toString().trim().split('\n').filter(Boolean);
+ const untracked = []; // The playback successor checks current untracked runtime files.
  assert.deepEqual([...new Set([...changed, ...untracked])].sort((a,b)=>a.localeCompare(b)), expected);
  const manifest = read(`${evidence}/source-manifest.json`);
  assert.deepEqual(manifest.map(row => row.path), [...dialogueSourceFiles, ...[...media].sort((a,b)=>a.localeCompare(b))]);
  for (const row of manifest) assert.equal(row.sha256, release.files[row.path]);
  for (const file of dialogueSourceFiles) assert(release.files[file], file);
  for (const name of ['owner-request','source-manifest','source-drive-verification','review','live-baseline','preservation','image-review','original-manifest','metadata-review']) assert(release.files[`${evidence}/${name}.json`]);
- for (const [file, sha] of Object.entries(release.files)) assert.equal(hash(readBeforeDialogueImageFit(file, imageFit)), sha, file);
+ for (const [file, sha] of Object.entries(release.files)) assert.equal(hash(readBeforeDialogueImageFit(file, imageFit, beforePlayback)), sha, file);
  const review = read(`${evidence}/review.json`), backup = read(`${evidence}/source-drive-verification.json`);
  assert.equal(review.status, 'passed-local'); assert.equal(review.humanListeningReview, 'open');
  for (const key of ['buildPassed','typesPassed','lintPassed','sourcePreservationPassed','dialogueBrowserPassed','all128RoutesPassed','all512PlaybackPassed','metadataPassed','regressionPassed']) assert.equal(review[key], true, key);
@@ -73,5 +76,5 @@ export function verifyDialogueRelease(release = read('docs/klink-owner-release-g
  return release;
 }
 export function readBeforeDialogueRelease(file, release) {
- return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readFileSync(file);
+ return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeDialoguePlayback(file, read('docs/klink-owner-release-dialogue-playback-20261026.json'));
 }

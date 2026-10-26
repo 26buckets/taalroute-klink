@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight, Check, Eye, Pause, Play, Volume2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Eye, Pause, Volume2 } from 'lucide-react';
 import type { PackageExercise } from '@/lib/package-content';
 
 export type DialogueControls = {
@@ -19,15 +19,15 @@ export function DialogueSurface({ exercise, controls, guided, canAnswer, onFinis
 }) {
   const blocks = exercise.textBlocks as { id: string; text: string; speaker?: string }[];
   const [readAlong, setReadAlong] = useState(false);
-  const [support, setSupport] = useState<'b' | 'c'>('b');
+  const [perTurn, setPerTurn] = useState(false);
   const active = Math.min(controls.active, blocks.length - 1);
   const block = blocks[active];
   const image = exercise.prompt?.image;
   return <section className="cp-task-card cp-dialogue" aria-label="Gesprek">
-    <fieldset className="cp-dialogue-support" aria-label="Luistersteun">
-      <legend>Luistersteun</legend>
-      <button className="secondary-button" aria-pressed={support === 'b'} onClick={() => { controls.pause(); setSupport('b'); }}>Alfa B · per beurt</button>
-      <button className="secondary-button" aria-pressed={support === 'c'} onClick={() => { controls.pause(); setSupport('c'); }}>Alfa C · samenhang</button>
+    <fieldset className="cp-dialogue-support" aria-label="Oefenvorm">
+      <legend>Luisteren</legend>
+      <button className="secondary-button" aria-pressed={!perTurn} onClick={() => { controls.pause(); setPerTurn(false); }}>Hele gesprek</button>
+      <button className="secondary-button" aria-pressed={perTurn} onClick={() => { controls.pause(); setPerTurn(true); }}>Oefen per beurt</button>
     </fieldset>
     <div className={`cp-dialogue-scene${image?.src ? ' has-image' : ''}`}>
       {image?.src && <Image src={image.src} alt={image.altText ?? ''} width={1536} height={1024} unoptimized />}
@@ -39,13 +39,12 @@ export function DialogueSurface({ exercise, controls, guided, canAnswer, onFinis
     </div>
     <nav className="cp-dialogue-controls" aria-label="Gesprek afspelen">
       <button className="secondary-button" disabled={active === 0} onClick={() => controls.select(active - 1)} aria-label="Vorige spreekbeurt"><ArrowLeft /></button>
-      <button className="primary-button" onClick={() => controls.play(support === 'b' ? active : undefined)}><Volume2 />{support === 'b' ? 'Deze beurt' : 'Hele gesprek'}</button>
+      <button className="primary-button" onClick={() => controls.play(perTurn ? active : undefined)}><Volume2 />{perTurn ? 'Luister naar deze beurt' : 'Luister naar het gesprek'}</button>
       <button className="secondary-button" disabled={active === blocks.length - 1} onClick={() => controls.select(active + 1)} aria-label="Volgende spreekbeurt"><ArrowRight /></button>
-      <button className="secondary-button" onClick={() => controls.play(support === 'b' ? undefined : active)}><Play />{support === 'b' ? 'Hele gesprek' : 'Deze beurt'}</button>
       <button className="secondary-button" disabled={!controls.playing} onClick={controls.pause}><Pause />Pauze</button>
       <button className="secondary-button" aria-pressed={readAlong} onClick={() => setReadAlong(!readAlong)}><Eye />{readAlong ? 'Tekst verbergen' : 'Meelezen'}</button>
     </nav>
-    <p className="cp-dialogue-support-note">{support === 'b' ? 'Luister per beurt. Herhaal en bespreek samen wat je hoort.' : 'Luister naar het hele gesprek. Vertel daarna wat de mensen afspreken.'}</p>
+    <p className="cp-dialogue-support-note">{perTurn ? 'Luister per beurt. Herhaal en bespreek samen wat je hoort.' : 'Luister naar het hele gesprek. Vertel daarna wat de mensen afspreken.'}</p>
     <details className="cp-dialogue-transcript"><summary>Hele gesprek meelezen</summary>{blocks.map((turn, index) => <button key={turn.id} className="secondary-button" aria-label={`Luister naar beurt ${index + 1} van ${turn.speaker}`} onClick={() => controls.play(index)}><Volume2 /><span><strong>{turn.speaker}</strong>{turn.text}</span></button>)}</details>
     {!guided && <button className="primary-button" disabled={!canAnswer} onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}
   </section>;

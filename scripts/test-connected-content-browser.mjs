@@ -58,7 +58,7 @@ try {
   for (const kind of ['sentence', 'text', 'dialogue']) {
     const item = connectedContent.find(item => item.kind === kind);
     await openItem(item);
-    if (kind === 'dialogue') await page.getByRole('button', {name: 'Hele gesprek', exact: true}).click();
+    if (kind === 'dialogue') await page.getByRole('button', {name: 'Luister naar het gesprek', exact: true}).click();
     await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
     const played = await page.evaluate(() => window.__plays);
     assert.deepEqual(played.slice(-item.blocks.length), item.blocks.map(block => block.audio.src));
@@ -78,19 +78,19 @@ try {
   pass('Sentence, text and dialogue open in the existing player, play in order, record listening participation and allow Verder');
   const dialogue = connectedContent.find(item => item.kind === 'dialogue');
   await openItem(dialogue);
-  await page.getByRole('button', {name: 'Hele gesprek', exact: true}).click();
+  await page.getByRole('button', {name: 'Luister naar het gesprek', exact: true}).click();
   // Finish explicit playback before measuring a failed replay.
   await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
   await page.evaluate(src => { window.__fail = src; window.__plays = []; }, dialogue.blocks[1].audio.src);
-  await page.getByRole('button', { name: 'Hele gesprek', exact: true }).click();
+  await page.getByRole('button', { name: 'Luister naar het gesprek', exact: true }).click();
   await page.getByText('Probeer Luister opnieuw', { exact: true }).waitFor();
   assert.equal(await ready(), false);
   assert.deepEqual(await page.evaluate(() => window.__plays), dialogue.blocks.slice(0, 2).map(block => block.audio.src));
   await page.evaluate(() => { window.__fail = ''; window.__duration = 120; });
-  await page.getByRole('button', { name: 'Hele gesprek', exact: true }).click();
+  await page.getByRole('button', { name: 'Luister naar het gesprek', exact: true }).click();
   await page.waitForFunction(() => [...document.querySelectorAll('button')].some(button => button.textContent.startsWith('Klaar') && !button.disabled));
   await page.evaluate(() => { window.__duration = 1200; window.__plays = []; });
-  await page.getByRole('button', { name: 'Hele gesprek', exact: true }).click();
+  await page.getByRole('button', { name: 'Luister naar het gesprek', exact: true }).click();
   await page.locator('.cp-content .text-back').click();
   await page.waitForTimeout(1300);
   assert.deepEqual(await page.evaluate(() => window.__plays), [dialogue.blocks[0].audio.src]);

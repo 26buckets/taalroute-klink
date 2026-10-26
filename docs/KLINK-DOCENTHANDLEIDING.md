@@ -350,6 +350,10 @@ Na het oefenen met *tas* kun je dit doen:
 
 Gebruik een tas die er echt is. De cursist hoeft de hele voorbeeldzin nog niet te lezen. Deze opdracht geef je zelf, buiten de app.
 
+### Een gesprek beluisteren
+
+Kies **Luister naar het gesprek** om alle beurten achter elkaar te horen. Het geluid begint pas als je op deze knop drukt. De spreker wisselt zichtbaar mee. Kies daarna zo nodig **Oefen per beurt** en **Luister naar deze beurt** om een losse beurt te herhalen. Met de pijlen kies je de vorige of volgende beurt. **Meelezen** toont de tekst; met **Tekst verbergen** zet je die weer uit. **Pauze** stopt het afspelen. Bij een volgend gesprek staat **Hele gesprek** weer geselecteerd. Deze oefenvormen zijn geen Alfa B/C-niveaus.
+
 ### Een zin, tekst of gesprek kiezen
 
 Open binnen een onderdeel **Gebruiken**. Kies **Nu zelf**, **Met de docent** of **Voor later**. Zinnen, teksten en gesprekken staan hier bij de gekozen woorden en leesvoorwaarden. Een hoger taalniveau of een gespreksopname is geen bewijs dat de cursist de tekst zelf kan lezen. Bekijk de inhoud vóór de les. Welke woorden zijn bekend? Welke woorden moet je eerst uitleggen? Past het lezen of luisteren bij je doel?
