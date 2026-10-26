@@ -1,0 +1,64 @@
+{
+  "published": true,
+  "sourceCommit": "79f0583d32fc9c6315a6680ec76442ffaafcbce1",
+  "workerVersion": "0d7e1c0c-70f8-44fd-be1b-b0244326b2a8",
+  "domain": "https://klink.taalroute.nl",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-10-26T21:07:19.728Z",
+    "sourceCommit": "79f0583d32fc9c6315a6680ec76442ffaafcbce1",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "authorization": "docs/klink-owner-release-gap-demo-20261026.json",
+  "previousLive": "5019e9e3c75a31ff2060d28e42f9a8e5b4cdbd5b",
+  "canonicalBranch": "main",
+  "runtimeFiles": [
+    "app/learner-ui.css",
+    "components/product/package-exercise-browser.tsx"
+  ],
+  "scope": "Bij Wat ontbreekt tikt het groene handje op de juiste letter; daarna verschijnt die in de lege plek van het woord. Bestaande indeling en bediening behouden.",
+  "validation": {
+    "localBrowserCases": 32,
+    "liveBrowserCases": 32,
+    "preservedMatchingCases": 8,
+    "preservedBuildingCases": 32,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "widths": [
+      320,
+      390,
+      1366
+    ],
+    "reducedMotion": true,
+    "replayAndLetterGroups": true,
+    "manualPaceAndStorage": true,
+    "publicationProofTests": 50,
+    "releaseTests": 4,
+    "focusedUnitTests": 9,
+    "curriculumPassed": 48,
+    "curriculumPreexistingSkipped": 1,
+    "typesPassed": true,
+    "scopedLintPassed": true,
+    "canonicalGatePassed": true,
+    "mediaByteIdentical": 8135,
+    "clientByteIdentical": true,
+    "sourceClean": true,
+    "githubActionsWorkflows": 0
+  },
+  "limits": [
+    "Browseremulatie; geen fysieke telefoon-, schermlezer- of cursistenproef.",
+    "Ongewijzigde brede 1616-stappenreeks niet opnieuw volledig uitgevoerd.",
+    "Geen nieuwe audio; bestaande opnamen en metadata bytegelijk behouden."
+  ],
+  "sourceBackup": "https://drive.google.com/file/d/1DjTdunWDwEUX6kZO3coRv_GwXyGpEj8D/view",
+  "finalBackupProof": "docs/klink-gap-demo-20261026/final-drive-verification.json",
+  "canonicalCheckout": "/Users/nicoknoester/.codex/workspaces/klink-handje-20261026"
+}
