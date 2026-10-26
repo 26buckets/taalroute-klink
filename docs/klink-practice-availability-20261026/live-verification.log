@@ -1,0 +1,20 @@
+{"sourceCommit":"5ddaee5e98a4ef17aadf5e4d0e254b60c624de24","mediaChecked":8134,"expectedMedia":8135,"errors":[{"path":"/package-audio/woorden-20261025/TL1422.mp3","error":"AssertionError [ERR_ASSERTION]: /package-audio/woorden-20261025/TL1422.mp3\n\n502 !== 200\n"}]}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+1 !== 0
+
+    at file:///Users/nicoknoester/.codex/scratch/klink-practice-availability-20261026/scripts/verify-live-release.mjs:73:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0

@@ -1,6 +1,47 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `5ddaee5e98a4ef17aadf5e4d0e254b60c624de24` op canonieke branch `main`.
+Worker-versie: `a6b5b63e-8be9-486e-9a5b-01192dfd9625`.
+
+Oefenen begint met de gecentreerde keuze Zelf oefenen / Met je docent.
+Hoofdstukken, oefenvormen en niveaus worden vóór aanklikken gecontroleerd
+op het echte aanbod bij de gekozen oefenwijze. Niet-beschikbare kaarten
+blijven grijs op hun vaste plek, zonder pijl. Een enige beschikbare oefenvorm
+opent direct. Oude lege links tonen een bruikbare vervolgstap; het gekozen
+niveau wordt nooit automatisch verlaagd. Docentopdrachten hebben drie korte
+voorbereidingsstappen en besloten bronuitleg, met behoud van opgeslagen antwoorden.
+
+De gelijktijdig gepubliceerde automatische meeleesfunctie is samengevoegd:
+eerste volledige luisterronde met tekst, tweede zonder, handmatig verstelbaar.
+Ook de sessiebrede slakkenknop, alle nieuwste lessen, afbeeldingen, audio,
+woordbibliotheek, werkbladen, logo D, bestaande opslag en routes zijn behouden.
+Geen nieuwe lessen of media.
+
+Lokaal: 1.200 beschikbaarheidscombinaties, 168 hoofdstukkeuzes, vier
+scherm-/menutoestanden, oude Alfa C-link, herladen, antwoorden en scrollen.
+Bestaande lesroutes, werkbladen, woordbibliotheek, 46 klanken, 128 dialogen,
+meeleesrondes en echt geluid gecontroleerd. 38 aanvullende unittests,
+54 curriculum-/audioregistertests en 54 publicatiebewijstests slagen.
+Eén bestaande voorwaardelijke broncontrole blijft overgeslagen.
+Online: oefenkeuzes, docentopdrachten, bewaren/herladen en automatische
+meeleesfunctie gecontroleerd; alle 8.135 media en de client bytegelijk.
+Geen fysieke telefoon- of cursistenproef; geen nieuwe menselijke luisterreview.
+
+Vrijgave: `docs/klink-owner-release-practice-availability-20261026.json`.
+Register: `docs/klink-publication-practice-availability-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/scratch/klink-practice-availability-20261026`.
+Gecontroleerde bronback-up: https://drive.google.com/file/d/1i5g9GYm6UhQTfBoQAsrhqIAolnEj--5j/view .
+Definitief herstelbewijs: `docs/klink-practice-availability-20261026/final-drive-verification.json`.
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud alle eerdere inhoudsakkoorden en publicatiecontroles.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `d3a1942487cb61b1fb7de6ecfe983d5a16afc687` op canonieke branch `main`.
 Worker-versie: `78c67a0b-d2af-482e-b8a8-095b6c42a981`.
 
