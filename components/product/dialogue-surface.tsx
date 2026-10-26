@@ -56,8 +56,8 @@ export function DialogueSurface({ exercise, controls, guided, canAnswer, onFinis
       <button type="button" className="secondary-button cp-slow-audio" aria-label="Langzamer afspelen" aria-pressed={slow} title="Langzamer luisteren in alle onderdelen tijdens deze sessie" onClick={() => setSlowAudio(!slow)}><Snail aria-hidden="true" />Langzamer</button>
       <button className="secondary-button" aria-pressed={readAlong} onClick={() => setReadAlong(!readAlong)}><Eye />{readAlong ? 'Tekst verbergen' : 'Meelezen'}</button>
     </nav>
-    <p className="cp-dialogue-support-note">{perTurn ? 'Luister per beurt. Herhaal en bespreek samen wat je hoort.' : 'Luister naar het hele gesprek. Vertel daarna wat de mensen afspreken.'}</p>
+    <p className="cp-dialogue-support-note">{perTurn ? 'Luister per beurt. Je kunt elke beurt opnieuw afspelen.' : 'Luister naar het hele gesprek. Je kunt daarna nog een keer luisteren.'}</p>
     <details ref={transcript} className="cp-dialogue-transcript"><summary>Hele gesprek meelezen</summary>{blocks.map((turn, index) => <button key={turn.id} className="secondary-button" aria-label={`Luister naar beurt ${index + 1} van ${turn.speaker}`} onClick={() => controls.play(index)}><Volume2 /><span><strong>{turn.speaker}</strong>{turn.text}</span></button>)}</details>
-    {!guided && <button className="primary-button" disabled={!canAnswer} onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}
+    {!guided && <button className="primary-button" disabled={!canAnswer} onClick={() => onFinish('geluisterd', true)}>Klaar<Check /></button>}
   </section>;
 }

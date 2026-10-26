@@ -50,6 +50,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     copyFileSync('scripts/check-dialogue-transcript-release.mjs', join(dir, 'scripts/check-dialogue-transcript-release.mjs'));
     copyFileSync('scripts/check-session-audio-release.mjs', join(dir, 'scripts/check-session-audio-release.mjs'));
     copyFileSync('scripts/check-practice-availability-release.mjs', join(dir, 'scripts/check-practice-availability-release.mjs'));
+    copyFileSync('scripts/check-self-listening-release.mjs', join(dir, 'scripts/check-self-listening-release.mjs'));
     copyFileSync('scripts/check-readalong-release.mjs', join(dir, 'scripts/check-readalong-release.mjs'));
     const dialogueGate = join(dir, 'scripts/check-dialogue-release.mjs');
     writeFileSync(dialogueGate, readFileSync('scripts/check-dialogue-release.mjs', 'utf8').replace('export function verifyDialogueRelease(release =', 'export function verifyDialogueReleaseUnused(release =') + `\nexport const verifyDialogueRelease = () => (${JSON.stringify(dialogueRelease)});`);

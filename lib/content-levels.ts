@@ -81,7 +81,10 @@ export function exerciseSetLevel(exercises: PackageExercise[]): ContentLevel {
 }
 
 export function exerciseSetHelp(exercises: PackageExercise[]): Exclude<ContentHelp, 'all'> {
-  return exercises.some(item => item.contextId || item.learningPathId || item.access === 'teacher-supported' || exerciseContentLevel(item) === 'support') ? 'guided' : 'practice';
+  return exercises.some(item => {
+    if (item.mode === 'connected-dialogue' && item.access === 'supported-listening' && item.assessment === 'participation' && !item.learningPathId) return false;
+    return item.contextId || item.learningPathId || item.access === 'teacher-supported' || exerciseContentLevel(item) === 'support';
+  }) ? 'guided' : 'practice';
 }
 
 export function matchesContent(level: ContentLevel, help: ContentHelp, selection: ContentSelection) {

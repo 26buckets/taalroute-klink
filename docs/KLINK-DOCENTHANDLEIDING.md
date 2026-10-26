@@ -352,6 +352,8 @@ Gebruik een tas die er echt is. De cursist hoeft de hele voorbeeldzin nog niet t
 
 ### Een gesprek beluisteren
 
+Bij Oefenen staan de luistergesprekken onder Zelf oefenen. De cursist kan zelfstandig luisteren, vertragen en meelezen. Afronden registreert alleen dat er is geoefend; het bewijst geen begrip of zelfstandig lezen. Samen bespreken en begrip beoordelen blijven docentactiviteiten.
+
 Kies **Luister naar het gesprek** om alle beurten achter elkaar te horen. Het geluid begint pas als je op deze knop drukt. De spreker wisselt zichtbaar mee. Kies daarna zo nodig **Oefen per beurt** en **Luister naar deze beurt** om een losse beurt te herhalen. Met de pijlen kies je de vorige of volgende beurt. **Meelezen** staat bij elk nieuw gesprek aan. Bij het voor de tweede keer volledig afspelen gaat de tekst automatisch uit. Een afgebroken poging of losse beurt telt niet als een volledige ronde. Met **Meelezen** en **Tekst verbergen** kun je de tekst altijd zelf aan- of uitzetten. **Pauze** stopt het afspelen. Bij een volgend gesprek staat **Hele gesprek** weer geselecteerd. Deze oefenvormen zijn geen Alfa B/C-niveaus.
 
 Met de slakkenknop **Langzamer** vertraag je het geluid, ook tijdens het afspelen. Klik opnieuw voor het gewone tempo. Deze keuze geldt voor alle onderdelen in hetzelfde tabblad, blijft na verversen bewaard en stopt bij **Afsluiten**. De toonhoogte blijft gelijk.
