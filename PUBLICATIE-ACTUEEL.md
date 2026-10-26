@@ -1,6 +1,45 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `346791a4b3952a3cc46d25ca419ac88ecbcc6efd` op canonieke branch `main`.
+Worker-versie: `d8614374-ccfd-41f4-a7d4-3f9ddce09670`.
+
+Alle 128 bestaande luistergesprekken staan bij Oefenen onder Zelf oefenen.
+De classificatie geldt uitsluitend voor opgenomen dialogen met luistersteun
+en beoordeling op deelname, buiten begeleide leerroutes. Docentopdrachten,
+samen bespreken en begrip beoordelen blijven onder begeleiding vallen.
+De speler geeft zelfstandige luisterinstructies. Afronden blijft deelname,
+zonder bewijs van begrip of zelfstandig lezen. De handleiding is bijgewerkt.
+
+Automatisch meelezen, de sessiebrede slakkenknop, hele gesprek/per beurt,
+volledige foto's, woordbeelden, opnamen, beschikbaarheidskeuzes, docentwerk,
+lessen, logo D, routes en opgeslagen voortgang blijven behouden.
+Het zesstappenschema op Start is niet gewijzigd. Geen nieuwe media.
+
+Lokaal en live: 128 routes, 384 kaartweergaven op 320/390/1366 pixels,
+oude directe links, deelname zonder begripsclaim, docentopdrachten,
+voortgang en handleiding. Echte audio met twee luisterrondes op langzaam tempo,
+meelezen eerst aan en daarna uit. Lokaal ook 60 publicatiebewijstests, 13
+gerichte unittests, curriculum, 1.200 beschikbaarheidscombinaties, 168 zichtbare
+hoofdkeuzes, docentwerkwijze, types, lint en build. Alle 8.135 aangeboden media
+en de gebouwde client online bytegelijk teruggelezen.
+Geen fysieke telefoon- of cursistenproef.
+
+Vrijgave: `docs/klink-owner-release-self-listening-20261026.json`.
+Register: `docs/klink-publication-self-listening-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-gesprekken-publicatie-20261025`.
+Bronback-up: https://drive.google.com/file/d/1kwnobzQEfgoIB0HH1XBqfuy6nzrzQNyA/view .
+Herstelbewijs: `docs/klink-self-listening-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `5ddaee5e98a4ef17aadf5e4d0e254b60c624de24` op canonieke branch `main`.
 Worker-versie: `a6b5b63e-8be9-486e-9a5b-01192dfd9625`.
 
