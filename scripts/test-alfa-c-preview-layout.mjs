@@ -1,13 +1,15 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { pilotBlocks, pilotStorageKey } from '../lib/preview/alfa-c.ts';
+import { pilotBlocks, pilotStorageKey } from '../lib/alfa-c-practice.ts';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const checks = [];
 try {
   const p = await browser.newPage({ viewport: { width: 320, height: 900 } });
   p.setDefaultTimeout(10000);
-  await p.goto('http://127.0.0.1:18856/proef-alfa-c/');
+  await p.goto(
+    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c',
+  );
   await p.locator('[data-pilot-block]').first().waitFor();
   for (const block of pilotBlocks)
     for (const [i, s] of block.steps.entries()) {
@@ -19,8 +21,13 @@ try {
           ),
         { key: pilotStorageKey, id: block.id, i },
       );
+      await p.goto(
+        (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') +
+          '/#learner/alfa-c',
+      );
       await p.reload();
       await p.locator(`[data-pilot-block="${block.id}"]`).click();
+      await p.locator(`[data-pilot-step="${s.id}"]`).waitFor();
       if (await p.getByRole('button', { name: 'Nu jij', exact: true }).count())
         await p.getByRole('button', { name: 'Nu jij', exact: true }).click();
       assert(
@@ -43,9 +50,7 @@ try {
       );
       if (s.id === 'pilot-alfa-c:bus:2') {
         const article = await p.locator('.cp-word-article').boundingBox();
-        const sounds = await p
-          .locator('.cp-word-sounds summary')
-          .boundingBox();
+        const sounds = await p.locator('.cp-word-sounds summary').boundingBox();
         assert(
           article.y + article.height <= sounds.y,
           'article must not overlap sound help',

@@ -1,4 +1,5 @@
 'use client';
+import { AlfaCBlockCards } from './alfa-c-practice';
 
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, Search, UserRound, UsersRound } from 'lucide-react';
@@ -72,12 +73,14 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     (location.activity ? [location.activity] : chapter?.activities ?? groupActivities.map(item => item.id))
       .some(id => availableChapterCollections(id, { level, help: location.help }, review).length)
   ).map(item => item.id));
+  if (!chapter && location.help !== 'guided') availableLevels.add('alfa-c');
+  const alfaCSelected = !chapter && (location.level === 'alfa-c' || (location.level === 'all' && ['all','alfa-c'].includes(settings.literacy)));
   const chapterSelection = (id: string) => ({ level: location.level === 'all' && !chapter ? settings[chapterRouteAxis(id)] : location.level, help: location.help });
   const openChapter = (id: string) => {
     const selection = chapterSelection(id), available = availableChapterActivities(id, selection, review);
     open({ chapter: id, ...selection, activity: available.length === 1 && id !== 'sounds' ? available[0] : undefined });
   };
-  const modeAvailable = (help: ContentHelp) => (chapter ? [chapter] : practiceChapters).some(item => availableChapterActivities(item.id, { ...chapterSelection(item.id), help }, review).length);
+  const modeAvailable = (help: ContentHelp) => (help === 'practice' && alfaCSelected) || (chapter ? [chapter] : practiceChapters).some(item => availableChapterActivities(item.id, { ...chapterSelection(item.id), help }, review).length);
   const openMode = (help: ContentHelp) => {
     const available = chapter ? availableChapterActivities(chapter.id, { ...location, help }, review) : [];
     open({ chapter: location.chapter, level: location.level, help, activity: available.length === 1 && chapter?.id !== 'sounds' ? available[0] : undefined });
@@ -106,6 +109,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     </div> : <>
     <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" disabled={!modeAvailable(id)} aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>
     <MyRoute showPracticeChoice={false} availableLevels={availableLevels} axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter || location.level !== 'all' ? location : undefined} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
+    {alfaCSelected && location.help === 'practice' && <section aria-label="Alfa C"><h2>Alfa C</h2><AlfaCBlockCards /></section>}
     {!chapter && <PracticeChapterCards isAvailable={id => availableChapterActivities(id, chapterSelection(id), review).length > 0} onOpen={openChapter} />}
     {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
       const Icon = icons[item.icon], available = availableActivities.includes(item.id);

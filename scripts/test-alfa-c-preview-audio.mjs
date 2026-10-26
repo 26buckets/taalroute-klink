@@ -1,9 +1,10 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { pilotBlocks } from '../lib/preview/alfa-c.ts';
+import { pilotBlocks } from '../lib/alfa-c-practice.ts';
 const out = 'outputs/alfa-c-proefblokken-20261026',
-  url = 'http://127.0.0.1:18856/proef-alfa-c/';
+  url =
+    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 try {
   const p = await browser.newPage({ viewport: { width: 1366, height: 900 } });

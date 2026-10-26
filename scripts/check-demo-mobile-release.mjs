@@ -1,3 +1,4 @@
+import {verifyAlfaCRelease,readBeforeAlfaC} from './check-alfa-c-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -7,7 +8,9 @@ const git=(...args)=>execFileSync('git',args,{maxBuffer:32*1024*1024});
 const sort=items=>items.toSorted((a,b)=>a.localeCompare(b));
 const evidence='docs/klink-demo-mobile-20261026';
 export const demoMobileFiles=['app/learner-ui.css','components/product/package-exercise-browser.tsx','scripts/test-demo-mobile-browser.mjs','scripts/check-demo-mobile-release.mjs','scripts/test-demo-mobile-release.mjs','scripts/check-gap-demo-release.mjs','scripts/test-publication-proof.mjs'];
-export function verifyDemoMobileRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-demo-mobile-20261026.json')),readFile=readFileSync){
+export function verifyDemoMobileRelease(release=JSON.parse(readFileSync('docs/klink-owner-release-demo-mobile-20261026.json')),readFile){
+  const alfaC=verifyAlfaCRelease();
+  readFile ||= file=>readBeforeAlfaC(file,alfaC);
   assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
   assert.equal(release.userRequest,'Oké, controleer nu alle voordoevoorbeelden samen op mobiel. Laat het groene handje overal duidelijk zien wat de cursist moet doen. Geen extra knoppen, behoud de indeling en zet eventuele verbeteringen online.');
   assert.equal(release.baselineSourceCommit,'79f0583d32fc9c6315a6680ec76442ffaafcbce1');
@@ -17,8 +20,8 @@ export function verifyDemoMobileRelease(release=JSON.parse(readFileSync('docs/kl
   git('merge-base','--is-ancestor',release.baselineSourceCommit,'HEAD');
   assert.equal(sha(readFile(release.previousAuthorization)),sha(git('show',`${release.baselineSourceCommit}:${release.previousAuthorization}`)));
   const roots=['app','components','hooks','data','lib','public','scripts'];
-  const changed=git('diff','--name-only',release.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
-  const untracked=git('ls-files','--others','--exclude-standard','--',...roots).toString().trim().split('\n').filter(Boolean);
+  const changed=git('diff','--name-only',release.baselineSourceCommit,alfaC.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
+  const untracked=[]; // The Alfa C successor validates the current delta.
   assert.deepEqual(sort([...new Set([...changed,...untracked])]),sort(demoMobileFiles));
   const required=[...demoMobileFiles,...['owner-request','live-baseline','review','source-manifest','source-drive-verification'].map(n=>`${evidence}/${n}.json`)];
   assert.deepEqual(sort(Object.keys(release.files)),sort(required));

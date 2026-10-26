@@ -580,3 +580,10 @@ De docent kiest wat past, doet voor waar dat helpt en geeft ruimte om zelf te pr
 Met Klink willen we de stap van oefenen naar gebruiken kleiner maken. Van een woord herkennen naar een boodschap begrijpen. Van letters kiezen naar zelf iets opschrijven. Van samen proberen naar steeds meer zelf doen.
 
 Dat is het idee achter Klink: een rustige plek om te beginnen, genoeg variatie om te blijven oefenen en een herkenbare lijn om op verder te bouwen.
+
+
+## Drie Alfa C-oefenblokken — 26 oktober 2026
+
+Oefenen → Zelf oefenen → Alfa C: In de winkel, Met de bus en Thuis. Elk blok telt twaalf stappen met bestaande woordbeelden, woord- en zinsaudio. Voorbeeld, Help, antwoordcontrole, Verder, positiebehoud en gerichte herhaling horen bij dezelfde rustige speler.
+
+De fotokeuze bij een zin is herkenning, geen volledige praktijktaak of bewijs van zelfstandig lezen. Gesproken instructies blijven uitgeschakeld. Observeer of de cursist na het voorbeeld gericht hulp gebruikt, een fout verbetert en zelfstandig verdergaat. Koppel aan boekdoel en ingeplande bijeenkomst; gebruiksproef en menselijke luistercontrole blijven open. Bronkoppelingen en inhoudscontrole: docs/klink-alfa-c-release-20261026/.

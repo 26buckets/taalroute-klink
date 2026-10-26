@@ -9,8 +9,6 @@ import {
   RefreshCw,
   Volume2,
 } from 'lucide-react';
-import { LearnerApp } from '@/components/product/learner-app';
-import { RouteSettingsProvider } from '@/components/product/route-settings';
 import { ExerciseSurface } from '@/components/product/package-exercise-browser';
 import { isWithdrawnAudio } from '@/lib/audio-policy';
 import { playMedia, stopMedia } from '@/components/product/shared';
@@ -23,26 +21,39 @@ import {
   type PilotProgress,
   type PilotRecord,
   type PilotStep,
-} from '@/lib/preview/alfa-c';
-import './alfa-c.css';
+} from '@/lib/alfa-c-practice';
+import './alfa-c-practice.css';
 
-export function AlfaCPreview() {
+export function AlfaCBlockCards() {
   return (
-    <RouteSettingsProvider>
-      <div className="product-root" data-theme="taalroute">
-        <LearnerApp
-          onExit={() => {
-            window.location.href = '/';
-          }}
-          onToast={() => {}}
-          practicePreview={<Pilot />}
-        />
-      </div>
-    </RouteSettingsProvider>
+    <div
+      className="cp-chapter-grid pilot-block-cards"
+      aria-label="Alfa C oefenblokken"
+    >
+      {pilotBlocks.map((block) => (
+        <a
+          key={block.id}
+          className="cp-activity-button"
+          data-pilot-block={block.id}
+          href={`#learner/alfa-c/${block.id}`}
+        >
+          <Eye aria-hidden="true" />
+          <span>
+            {block.title}
+            <small>{block.words.join(' · ')}</small>
+          </span>
+          <ArrowRight aria-hidden="true" />
+        </a>
+      ))}
+    </div>
   );
 }
-function Pilot() {
-  const [selected, setSelected] = useState<string>();
+export function AlfaCPractice({ onBack }: { onBack: () => void }) {
+  const [selected, setSelected] = useState<string | undefined>(() =>
+    typeof window === 'undefined'
+      ? undefined
+      : window.location.hash.split('/')[2],
+  );
   const [progress, setProgress] = useState<PilotProgress>({
     version: 1,
     positions: {},
@@ -53,6 +64,17 @@ function Pilot() {
   const [review, setReview] = useState<PilotStep[]>(),
     [reviewAt, setReviewAt] = useState(0);
   const [visit, setVisit] = useState(0);
+  useEffect(() => {
+    const restore = () => {
+      stopMedia();
+      setSelected(window.location.hash.split('/')[2]);
+      setReview(undefined);
+      setReviewAt(0);
+      setVisit((v) => v + 1);
+    };
+    window.addEventListener('hashchange', restore);
+    return () => window.removeEventListener('hashchange', restore);
+  }, []);
   const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
@@ -79,10 +101,7 @@ function Pilot() {
   }
   function choose(id?: string) {
     stopMedia();
-    setSelected(id);
-    setReview(undefined);
-    setReviewAt(0);
-    setVisit((v) => v + 1);
+    window.location.hash = id ? `#learner/alfa-c/${id}` : '#learner/alfa-c';
     document.querySelector('.learner-main')?.scrollTo({ top: 0 });
   }
   const block = pilotBlocks.find((b) => b.id === selected),
@@ -104,14 +123,14 @@ function Pilot() {
         <button
           className="text-back"
           aria-label="Andere oefening"
-          onClick={() => choose()}
+          onClick={block ? () => choose() : onBack}
         >
           <ArrowLeft />
         </button>
         <h1 ref={heading} tabIndex={-1}>
           {block?.title ?? 'Zelf oefenen'}
         </h1>
-        <small className="cp-context-meta">Alfa C · lokale proef</small>
+        <small className="cp-context-meta">Alfa C</small>
       </header>
       {storageError && (
         <output>
@@ -142,26 +161,6 @@ function Pilot() {
               </button>
             ))}
           </div>
-          <details className="pilot-editor">
-            <summary>Toelichting bij deze proef</summary>
-            <p>
-              Drie lokale proefblokken met bestaande beelden, woordaudio en
-              zinsaudio. De niveau-indeling is een voorstel. De nieuwste online
-              lessen en hun voortgang worden niet aangepast.
-            </p>
-            <p>
-              De opdrachten lopen van voordoen naar kiezen, woorddelen leggen,
-              zinnen begrijpen, zinnen maken en herhalen. Een goede keuze met
-              hulp telt niet als zelfstandig beheersen. De gebruikstaak is nog
-              beperkt tot een gehoorde situatie herkennen.
-            </p>
-            <p>
-              Gesproken instructies blijven uitgeschakeld volgens de bestaande
-              afspraak. Woord- en zinsaudio zijn beschikbaar. De inhoudelijke
-              docentcontrole, menselijke luistercontrole en proef met echte
-              cursisten staan nog open.
-            </p>
-          </details>
         </section>
       ) : !step ? (
         <section className="honest-empty pilot-complete">
@@ -199,7 +198,6 @@ function Pilot() {
             Kies een ander blok
             <ArrowRight />
           </button>
-          <p className="pilot-note">Geoefend is geen niveaubeoordeling.</p>
         </section>
       ) : (
         <PilotPlayer
@@ -304,7 +302,7 @@ function PilotPlayer({
           waitUntilEnd: true,
         });
         if (controller.signal.aborted) return false;
-        if (ok === false) throw Error('audio');
+        if (ok === false) return false;
       }
       if (source === step.exercise.prompt?.audio?.src) setHeard(true);
       return true;

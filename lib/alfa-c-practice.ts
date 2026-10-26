@@ -2,8 +2,8 @@ import {
   allPackageWords,
   contentPackages,
   type PackageExercise,
-} from '../package-content.ts';
-import { contentById } from '../connected-content.ts';
+} from './package-content.ts';
+import { contentById } from './connected-content.ts';
 
 export type PilotStep = {
   id: string;
@@ -81,7 +81,7 @@ const definitions = [
     practical: 1,
   },
 ];
-export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
+export const pilotBlocks: PilotBlock[] = definitions.map((def, blockIndex) => {
   const ws = def.words.map(word),
     ss = def.sentences.map(sentence),
     steps: PilotStep[] = [];
@@ -93,7 +93,7 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
     contractVersion: '1.0',
     assessment: 'answer',
     independentReading: false,
-    sourceStatus: 'concept',
+    sourceStatus: 'owner-approved',
     requiresAudio: true,
     reviewEligible: false,
   });
@@ -151,6 +151,13 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
       [w.id],
     ),
   );
+  // Keep a retry stable, but vary the target position between steps and blocks.
+  function placeAnswer<T extends { id: string }>(options: T[], target: string) {
+    const answer = options.find((option) => option.id === target)!;
+    const others = options.filter((option) => option.id !== target);
+    others.splice((steps.length + blockIndex) % options.length, 0, answer);
+    return others;
+  }
   const pictureChoice = (index: number, contextual = false) => ({
     ...base('ALF-CMP-002', contextual ? 'sentence-question' : 'heard-image'),
     wordId: contextual ? undefined : ws[index].id,
@@ -160,10 +167,10 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
         src: contextual ? ss[index].blocks[0].audio!.src : ws[index].audio,
       },
     },
-    options: [...ws.slice(index + 1), ...ws.slice(0, index + 1)].map((w) => ({
-      id: w.id,
-      image: { src: w.image, altText: w.word },
-    })),
+    options: placeAnswer(
+      ws.map((w) => ({ id: w.id, image: { src: w.image, altText: w.word } })),
+      ws[index].id,
+    ),
     answer: { correctOptionIds: [ws[index].id] },
   });
   [0, 1].forEach((i) =>
@@ -190,7 +197,7 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
       answer: { targetTileIds: tiles.map((t) => t.id) },
     },
     ws[0].word,
-    `Zet de delen van links naar rechts: ${def.parts.join(' · ')}.`,
+    `Tik eerst op ‘${def.parts[0]}’. Tik dan op ‘${def.parts[1]}’.`,
     [ws[0].id],
   );
   [0, 2].forEach((i) =>
@@ -202,14 +209,14 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
         ...base('ALF-CMP-002', 'heard-sentence'),
         contextId: ss[i].id,
         prompt: { audio: { src: ss[i].blocks[0].audio!.src } },
-        options: [...ss.slice(i + 1), ...ss.slice(0, i + 1)].map((s) => ({
-          id: s.id,
-          label: s.text,
-        })),
+        options: placeAnswer(
+          ss.map((s) => ({ id: s.id, label: s.text })),
+          ss[i].id,
+        ),
         answer: { correctOptionIds: [ss[i].id] },
       },
       ss[i].text,
-      'Luister nog eens naar de hele zin. Kijk hoe de zin begint.',
+      'Luister nog eens. Lees mee. Kies dezelfde zin.',
       ss.map((s) => s.id),
     ),
   );
@@ -233,7 +240,7 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def) => {
     [ss[1].id],
   );
   add(
-    'Gebruiken',
+    'Zin en foto',
     'Luister naar de zin. Kies de foto.',
     'zinnen-begrijpen',
     {

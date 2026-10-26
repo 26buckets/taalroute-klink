@@ -1,0 +1,438 @@
+{
+  "status": "Reviewed for this bounded owner-approved release",
+  "reviewer": "AI-assisted editorial and technical review, with Nico approving the shown blocks and publication",
+  "humanLearnerTrial": false,
+  "humanPronunciationReview": false,
+  "sourceLevelsUnchanged": true,
+  "instructionAudioPaused": true,
+  "blocks": [
+    {
+      "id": "winkel",
+      "title": "In de winkel",
+      "goal": "Woorden en korte zinnen over boodschappen begrijpen.",
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Kijk en luister.",
+          "model": "winkel",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-winkel"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 2,
+          "instruction": "Kijk en luister.",
+          "model": "brood",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "TL0277"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 3,
+          "instruction": "Kijk en luister.",
+          "model": "melk",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-melk"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 4,
+          "instruction": "Luister. Kies de foto.",
+          "model": "winkel",
+          "help": "Luister nog eens. Kijk naar de drie foto’s.",
+          "sourceIds": [
+            "klink-woord-winkel"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 5,
+          "instruction": "Luister. Kies de foto.",
+          "model": "brood",
+          "help": "Luister nog eens. Kijk naar de drie foto’s.",
+          "sourceIds": [
+            "TL0277"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 6,
+          "instruction": "Maak het woord.",
+          "model": "winkel",
+          "help": "Tik eerst op ‘win’. Tik dan op ‘kel’.",
+          "sourceIds": [
+            "klink-woord-winkel"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 7,
+          "instruction": "Luister. Kies de zin.",
+          "model": "Ik loop de winkel in.",
+          "help": "Luister nog eens. Lees mee. Kies dezelfde zin.",
+          "sourceIds": [
+            "klink-sentence-298dcbc336e05ab6",
+            "klink-sentence-3c5f60793da6b7cc",
+            "klink-sentence-d0beea91ea0fcaee"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 8,
+          "instruction": "Luister. Kies de zin.",
+          "model": "Dit is melk.",
+          "help": "Luister nog eens. Lees mee. Kies dezelfde zin.",
+          "sourceIds": [
+            "klink-sentence-298dcbc336e05ab6",
+            "klink-sentence-3c5f60793da6b7cc",
+            "klink-sentence-d0beea91ea0fcaee"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 9,
+          "instruction": "Maak de zin.",
+          "model": "Ik kies een klein brood.",
+          "help": "Luister naar de zin. Tik de woorden in dezelfde volgorde aan.",
+          "sourceIds": [
+            "klink-sentence-3c5f60793da6b7cc"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 10,
+          "instruction": "Luister naar de zin. Kies de foto.",
+          "model": "Ik kies een klein brood.",
+          "help": "Luister naar de zin. Welke foto hoort erbij?",
+          "sourceIds": [
+            "klink-sentence-3c5f60793da6b7cc",
+            "TL0277"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 11,
+          "instruction": "Luister. Kies de foto.",
+          "model": "brood",
+          "help": "Luister nog eens. Kijk rustig naar de foto’s.",
+          "sourceIds": [
+            "TL0277"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 12,
+          "instruction": "Luister. Kies de foto.",
+          "model": "winkel",
+          "help": "Luister nog eens. Kijk rustig naar de foto’s.",
+          "sourceIds": [
+            "klink-woord-winkel"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        }
+      ]
+    },
+    {
+      "id": "bus",
+      "title": "Met de bus",
+      "goal": "Vervoer herkennen en een korte zin maken.",
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Kijk en luister.",
+          "model": "auto",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-auto"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 2,
+          "instruction": "Kijk en luister.",
+          "model": "bus",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-bus"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 3,
+          "instruction": "Kijk en luister.",
+          "model": "fiets",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-fiets"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 4,
+          "instruction": "Luister. Kies de foto.",
+          "model": "auto",
+          "help": "Luister nog eens. Kijk naar de drie foto’s.",
+          "sourceIds": [
+            "klink-woord-auto"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 5,
+          "instruction": "Luister. Kies de foto.",
+          "model": "bus",
+          "help": "Luister nog eens. Kijk naar de drie foto’s.",
+          "sourceIds": [
+            "klink-woord-bus"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 6,
+          "instruction": "Maak het woord.",
+          "model": "auto",
+          "help": "Tik eerst op ‘au’. Tik dan op ‘to’.",
+          "sourceIds": [
+            "klink-woord-auto"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 7,
+          "instruction": "Luister. Kies de zin.",
+          "model": "Dit is mijn auto.",
+          "help": "Luister nog eens. Lees mee. Kies dezelfde zin.",
+          "sourceIds": [
+            "klink-sentence-cce5455391a0409c",
+            "klink-sentence-23cd8bc8b19b7db3",
+            "klink-sentence-85e6fc237dbfd73a"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 8,
+          "instruction": "Luister. Kies de zin.",
+          "model": "Dit is mijn fiets.",
+          "help": "Luister nog eens. Lees mee. Kies dezelfde zin.",
+          "sourceIds": [
+            "klink-sentence-cce5455391a0409c",
+            "klink-sentence-23cd8bc8b19b7db3",
+            "klink-sentence-85e6fc237dbfd73a"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 9,
+          "instruction": "Maak de zin.",
+          "model": "Ik stap in de bus.",
+          "help": "Luister naar de zin. Tik de woorden in dezelfde volgorde aan.",
+          "sourceIds": [
+            "klink-sentence-23cd8bc8b19b7db3"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 10,
+          "instruction": "Luister naar de zin. Kies de foto.",
+          "model": "Ik stap in de bus.",
+          "help": "Luister naar de zin. Welke foto hoort erbij?",
+          "sourceIds": [
+            "klink-sentence-23cd8bc8b19b7db3",
+            "klink-woord-bus"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 11,
+          "instruction": "Luister. Kies de foto.",
+          "model": "bus",
+          "help": "Luister nog eens. Kijk rustig naar de foto’s.",
+          "sourceIds": [
+            "klink-woord-bus"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 12,
+          "instruction": "Luister. Kies de foto.",
+          "model": "auto",
+          "help": "Luister nog eens. Kijk rustig naar de foto’s.",
+          "sourceIds": [
+            "klink-woord-auto"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        }
+      ]
+    },
+    {
+      "id": "thuis",
+      "title": "Thuis",
+      "goal": "Woorden en korte zinnen over een woning begrijpen.",
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Kijk en luister.",
+          "model": "kamer",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-kamer"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 2,
+          "instruction": "Kijk en luister.",
+          "model": "deur",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-deur"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 3,
+          "instruction": "Kijk en luister.",
+          "model": "raam",
+          "help": "Tik op het woord om nog eens te luisteren.",
+          "sourceIds": [
+            "klink-woord-raam"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 4,
+          "instruction": "Luister. Kies de foto.",
+          "model": "kamer",
+          "help": "Luister nog eens. Kijk naar de drie foto’s.",
+          "sourceIds": [
+            "klink-woord-kamer"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 5,
+          "instruction": "Luister. Kies de foto.",
+          "model": "deur",
+          "help": "Luister nog eens. Kijk naar de drie foto’s.",
+          "sourceIds": [
+            "klink-woord-deur"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 6,
+          "instruction": "Maak het woord.",
+          "model": "kamer",
+          "help": "Tik eerst op ‘ka’. Tik dan op ‘mer’.",
+          "sourceIds": [
+            "klink-woord-kamer"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 7,
+          "instruction": "Luister. Kies de zin.",
+          "model": "Er is licht in de kamer.",
+          "help": "Luister nog eens. Lees mee. Kies dezelfde zin.",
+          "sourceIds": [
+            "klink-sentence-2dd98c8ee69e9abd",
+            "klink-sentence-25cdba808d623eba",
+            "klink-sentence-6cf7ed7796c97b8c"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 8,
+          "instruction": "Luister. Kies de zin.",
+          "model": "Het raam staat open.",
+          "help": "Luister nog eens. Lees mee. Kies dezelfde zin.",
+          "sourceIds": [
+            "klink-sentence-2dd98c8ee69e9abd",
+            "klink-sentence-25cdba808d623eba",
+            "klink-sentence-6cf7ed7796c97b8c"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 9,
+          "instruction": "Maak de zin.",
+          "model": "Dit is de deur.",
+          "help": "Luister naar de zin. Tik de woorden in dezelfde volgorde aan.",
+          "sourceIds": [
+            "klink-sentence-25cdba808d623eba"
+          ],
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 10,
+          "instruction": "Luister naar de zin. Kies de foto.",
+          "model": "Dit is de deur.",
+          "help": "Luister naar de zin. Welke foto hoort erbij?",
+          "sourceIds": [
+            "klink-sentence-25cdba808d623eba",
+            "klink-woord-deur"
+          ],
+          "answerPosition": 2,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 11,
+          "instruction": "Luister. Kies de foto.",
+          "model": "deur",
+          "help": "Luister nog eens. Kijk rustig naar de foto’s.",
+          "sourceIds": [
+            "klink-woord-deur"
+          ],
+          "answerPosition": 0,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        },
+        {
+          "step": 12,
+          "instruction": "Luister. Kies de foto.",
+          "model": "kamer",
+          "help": "Luister nog eens. Kijk rustig naar de foto’s.",
+          "sourceIds": [
+            "klink-woord-kamer"
+          ],
+          "answerPosition": 1,
+          "review": "Short Dutch instruction; concrete existing vocabulary; one target answer; same-context distractors; no reading-mastery claim."
+        }
+      ]
+    }
+  ],
+  "findings": [
+    "Fixed all-correct-answers-last pattern; choices now use all positions, with stable retry order.",
+    "Word-part help now tells exactly which two parts to tap.",
+    "The picture selection after a sentence is word/context recognition, not a complete practical task.",
+    "The three source words are introduced before answer tasks. Nine source sentences remain labeled with support.",
+    "Completed with help or extra attempts schedules an in-block retry; merely watching a model is participation.",
+    "No full Alfa C coverage or independent-reading certification claimed.",
+    "Existing approved mobile demonstrations and all source media preserved.",
+    "Nine images previously visually reviewed; no image changes. Distant people in the bus photo have no clearly assessable fingers."
+  ],
+  "lessonPlan": "Three short 10–15 minute practice blocks can be attached to the existing shopping, transport or home lesson goal. Actual scheduled session and independent learner performance remain for the teacher to establish; see updated manual chapter 2."
+}

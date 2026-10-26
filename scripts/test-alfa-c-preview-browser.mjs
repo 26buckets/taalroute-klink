@@ -1,9 +1,10 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { pilotBlocks, pilotStorageKey } from '../lib/preview/alfa-c.ts';
+import { pilotBlocks, pilotStorageKey } from '../lib/alfa-c-practice.ts';
 const out = 'outputs/alfa-c-proefblokken-20261026',
-  url = 'http://127.0.0.1:18856/proef-alfa-c/';
+  url =
+    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const errors = [],
   checks = [];
@@ -144,7 +145,6 @@ try {
   );
   await page.getByRole('button', { name: 'Verder', exact: true }).click();
   await page.reload();
-  await page.locator('[data-pilot-block="bus"]').click();
   await page.locator('[data-pilot-step="pilot-alfa-c:bus:2"]').waitFor();
   assert.equal(
     await page.evaluate(() =>

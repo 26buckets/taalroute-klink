@@ -6,7 +6,7 @@ import {
   readPilotProgress,
   practiceAgain,
   pilotStorageKey,
-} from '../lib/preview/alfa-c.ts';
+} from '../lib/alfa-c-practice.ts';
 import { contentById } from '../lib/connected-content.ts';
 import { allPackageWords } from '../lib/package-content.ts';
 test('Three bounded pilots reuse real source media without modifying source levels', () => {
@@ -115,9 +115,28 @@ test('Repeat uses help and actual attempts, never merely seeing a model', () => 
     [b.steps[3].id, b.steps[5].id],
   );
 });
-test('Preview is explicitly excluded from production', () =>
+test('The reviewed preview address opens the normal learner route', () =>
   assert(
     fs
       .readFileSync('app/proef-alfa-c/page.tsx', 'utf8')
-      .includes("if (process.env.NODE_ENV === 'production') notFound();"),
+      .includes("redirect('/#learner/alfa-c')"),
   ));
+test('Correct choices use all three positions and retries stay stable', () => {
+  for (const block of pilotBlocks) {
+    const steps = block.steps.filter((s) => s.exercise.options);
+    assert.equal(
+      new Set(
+        steps.map((s) =>
+          s.exercise.options.findIndex((o) =>
+            s.exercise.answer.correctOptionIds.includes(o.id),
+          ),
+        ),
+      ).size,
+      3,
+    );
+    assert.notDeepEqual(
+      steps[0].exercise.options.map((o) => o.id),
+      steps.at(-1).exercise.options.map((o) => o.id),
+    );
+  }
+});

@@ -1,4 +1,5 @@
 'use client';
+import { AlfaCPractice } from './alfa-c-practice';
 
 import { wordWithArticle } from '@/lib/word-articles';
 import { libraryWords, wordLengths, type WordLibrarySource } from '@/lib/word-library';
@@ -47,14 +48,13 @@ import {
   WholeWord,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
-type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds';
+type LearnerView = 'alfa-c' | 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds';
 
-export function LearnerApp({ onExit, onToast, practicePreview }: { onExit: () => void; onToast: (message: string) => void; practicePreview?: ReactNode }) {
+export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
   const { settings } = useRouteSettings();
-  const hasPracticePreview = Boolean(practicePreview);
-  const [view, setView] = useState<LearnerView>(practicePreview ? 'chapters' : 'home');
+  const [view, setView] = useState<LearnerView>('home');
   const [navCollapsed, setNavCollapsed] = useState(() => {
     try { return typeof window !== 'undefined' && sessionStorage.getItem('klink.nav-collapsed.v1') === 'true'; } catch { return false; }
   });
@@ -92,14 +92,15 @@ export function LearnerApp({ onExit, onToast, practicePreview }: { onExit: () =>
           setPlayerVisit(value => value + 1);
           setView('package');
         } else setView('packages');
-      } else if (route === 'chapters' || (!route && hasPracticePreview)) setView('chapters');
+      } else if (route === 'alfa-c') setView('alfa-c');
+      else if (route === 'chapters') setView('chapters');
       else if (route === 'sounds') setView('sounds');
       else if (route === 'packages' || route === 'words' || route === 'review') setView(route);
       else setView('home');
     };
     restore(); window.addEventListener('hashchange', restore); window.addEventListener('popstate', restore);
     return () => { window.removeEventListener('hashchange', restore); window.removeEventListener('popstate', restore); };
-  }, [hasPracticePreview]);
+  }, []);
 
   function openView(next: LearnerView, packageId = selectedPackage) {
     stopMedia();
@@ -155,7 +156,7 @@ export function LearnerApp({ onExit, onToast, practicePreview }: { onExit: () =>
         <nav id="klink-learner-navigation" aria-label="Cursistnavigatie">
           <button title="Start" aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
           <button title="Lessen" aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button title="Oefenen" aria-current={view === 'chapters' || view === 'sounds' ? 'page' : undefined} className={view === 'chapters' || view === 'sounds' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
+          <button title="Oefenen" aria-current={view === 'chapters' || view === 'sounds' || view === 'alfa-c' ? 'page' : undefined} className={view === 'chapters' || view === 'sounds' || view === 'alfa-c' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
           <button title="Woorden" aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
           <button title="Herhalen" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
@@ -168,7 +169,8 @@ export function LearnerApp({ onExit, onToast, practicePreview }: { onExit: () =>
         {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={recordAttempt} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
-        {view === 'chapters' && (practicePreview ?? <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />)}
+        {view === 'alfa-c' && <AlfaCPractice onBack={() => { window.location.hash = chapterHash({level: 'alfa-c', help: 'practice'}); }} />}
+        {view === 'chapters' && <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />}
         {view === 'sounds' && <SoundReference onBack={() => openChapter('sounds')} onLesson={openLesson} />}
       </main>
     </div>
