@@ -55,3 +55,18 @@ De bewerkbare animaties staan in public/practice-explanations.
 Het losse voorbeeld, bronwijzigingen, herstelpatch, screenshots en meetgegevens
 worden samen in de bestaande Drive-projectmap Alfabeta+ Klink geback-upt.
 Uploadcontrole wordt naast het ZIP-pakket vastgelegd; back-up is geen publicatie.
+
+## Laatste bijstelling — lichtgroene hand, compact venster
+
+Nico koos daarna lichtgroen met een donkergroene rand en een kleinere pop-up.
+De cursor gebruikt nu #c9ddd2 / #244b43. Het venster is maximaal 640 × 600 px
+(was 850 × 760), begrensd door het scherm. Alleen de uitleg is compacter;
+de zes kaarten en de rest van de app blijven staan. Knoppen behouden hun
+bedieningsmaat. Animaties en stilstaande beelden blijven dezelfde.
+De bestaande browsercontrole opnieuw geslaagd in de drie engines op vier
+breedtes, inclusief focus, Escape, opslagbehoud, afspelen en minder beweging.
+Alle zes beelden en de vier zichtbare cursorhanden opnieuw visueel bekeken;
+de ongewijzigde anatomie en aanwijscontacten blijven intact. Ook vensterresize
+gecontroleerd. Geen inhoudswijziging: curriculum/build niet opnieuw gedraaid.
+De eerdere geslaagde controles en bestaande lintbeperkingen blijven gelden.
+Nog steeds uitsluitend lokaal, zonder publicatie of push.

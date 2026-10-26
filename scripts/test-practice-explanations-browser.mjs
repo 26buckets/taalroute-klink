@@ -51,7 +51,7 @@ for (const engine of (process.env.KLINK_TEST_ENGINES || 'chromium,webkit,firefox
         for (let n = 0; n < 3; n++) await frame.locator('#next').click();
         assert.equal(await frame.locator('#frame').textContent(), '4 / 4');
         assert(await frame.locator('#next').isDisabled());
-        assert.equal(await frame.locator('#hand').evaluate(el => getComputedStyle(el).fill), 'rgb(184, 190, 197)');
+        assert.equal(await frame.locator('#hand').evaluate(el => getComputedStyle(el).fill), 'rgb(201, 221, 210)');
         if (engine === 'chromium' && width === 1366) await dialog.screenshot({ path: `${out}/step-${index + 1}.png` });
         if (engine === 'chromium' && width === 390 && index === 2) {
           await frame.locator('#previous').click(); await frame.locator('#previous').click();
@@ -69,7 +69,7 @@ for (const engine of (process.env.KLINK_TEST_ENGINES || 'chromium,webkit,firefox
         assert.equal(await page.evaluate(() => JSON.stringify(localStorage)), storage);
         assert.deepEqual(await card.boundingBox(), position, 'closing restores the same position');
       }
-      checks.push(`${engine} ${width}: six steps, controls, gray hand, keyboard, Escape, focus, layout, storage`);
+      checks.push(`${engine} ${width}: six steps, controls, light green hand, keyboard, Escape, focus, layout, storage`);
     }
     await page.setViewportSize({ width: 1366, height: 950 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
