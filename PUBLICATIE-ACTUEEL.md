@@ -1,6 +1,43 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `84827995817bfca452a01365d7b0d0b0bfaced3e` op canonieke branch `main`.
+Worker-versie: `8abb29da-f4bb-4244-acb4-fb313af0b43e`.
+
+De zes bestaande kaarten onder Zo oefen je openen de goedgekeurde compacte
+uitleg. De hand is lichtgroen met een donkergroene rand. Uitleg in woorden
+opent naar boven over de afspeelbediening en bevat korte cursistinstructies
+voor Alfa C/A1. Afspelen, pauze, opnieuw en stilstaande beelden blijven
+toegankelijk via toetsenbord, met behoud van focus en de bestaande indeling.
+
+Oefeningen, lesroutes, docentfuncties, opgeslagen voortgang, foto's, logo D,
+alle opnamen, automatisch meelezen en de sessiebrede slakkenknop zijn behouden.
+Geen nieuwe lessen, audio of wijzigingen aan bestaande beelden.
+
+Lokaal gecontroleerd in Chromium, WebKit en Firefox op vier schermbreedtes;
+ook de gebouwde productieversie, bestaande navigatie, 128 luisterroutes,
+meeleesrondes, 512 langzame beurten, opslag, curriculum, types, gerichte lint
+en 53 publicatiebewijstests. Online zijn de zes vensters en 128 gesprekken
+gecontroleerd, inclusief echte audio met twee meeleesrondes op langzaam tempo.
+Alle 8.135 aangeboden mediabestanden en de gebouwde client zijn online
+bytegelijk teruggelezen. Geen fysieke telefoon-, schermlezer- of cursistenproef.
+
+Vrijgave: `docs/klink-owner-release-practice-explanations-20261026.json`.
+Register: `docs/klink-publication-practice-explanations-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/Documents/Codex/2026-10-26/klink-oefenanimaties/work/klink-current`.
+Bronback-up: https://drive.google.com/file/d/1RMC6Hu2E06hrgrB5iFghBRIgI91_nSBH/view .
+Definitief herstelbewijs: `docs/klink-practice-explanations-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+Er zijn geen GitHub Actions-workflows aanwezig of gestart.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `346791a4b3952a3cc46d25ca419ac88ecbcc6efd` op canonieke branch `main`.
 Worker-versie: `d8614374-ccfd-41f4-a7d4-3f9ddce09670`.
 

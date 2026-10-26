@@ -1,0 +1,83 @@
+{
+  "application": "Klink",
+  "date": "2026-10-26",
+  "liveUrl": "https://klink.taalroute.nl",
+  "sourceCommit": "84827995817bfca452a01365d7b0d0b0bfaced3e",
+  "canonicalBranch": "main",
+  "sourceClean": true,
+  "workerVersion": "8abb29da-f4bb-4244-acb4-fb313af0b43e",
+  "previousLiveSourceCommit": "346791a4b3952a3cc46d25ca419ac88ecbcc6efd",
+  "approvedPreviewCommit": "5c1aa430b3657cb141015768adf0e24968f99409",
+  "authorization": "docs/klink-owner-release-practice-explanations-20261026.json",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-10-26T19:58:22.654Z",
+    "sourceCommit": "84827995817bfca452a01365d7b0d0b0bfaced3e",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "runtimeScope": [
+    "app/learner-ui.css",
+    "components/product/practice-line.tsx",
+    "public/practice-explanations/"
+  ],
+  "publicationCommand": "npm run deploy",
+  "localChecks": {
+    "publicationProofPassed": 53,
+    "curriculumPassed": 48,
+    "audioRegisterPassed": 6,
+    "existingCurriculumSkipped": 1,
+    "additionalPreservationUnits": 5,
+    "browserEngines": [
+      "chromium",
+      "webkit",
+      "firefox"
+    ],
+    "widths": [
+      1366,
+      768,
+      390,
+      320
+    ],
+    "builtProductionBrowserPassed": true,
+    "dialogueRoutes": 128,
+    "readalongRounds": 384,
+    "slowTurns": 512,
+    "existingRoutePictureChecksPassed": true,
+    "typesPassed": true,
+    "scopedLintPassed": true,
+    "buildPassed": true,
+    "metadataGatePassed": true
+  },
+  "liveChecks": {
+    "sixExplanations": true,
+    "responsiveKeyboardPlaybackAndStorage": true,
+    "independentDialogueRoutes": 128,
+    "dialogueCards": 384,
+    "nativeAudioEightTurns": true,
+    "slowRate": 0.65,
+    "automaticReadalongRounds": 2,
+    "mediaByteIdentical": 8135,
+    "freshClientByteIdentical": true,
+    "explanationFilesByteIdentical": 4,
+    "canonicalLogosByteIdentical": true,
+    "contentMarkersUnchanged": true,
+    "errors": []
+  },
+  "initialLiveCheck": "First two browser checks timed out waiting for initial page hydration. Independent page inspection showed HTTP 200 and no script errors; both complete retries passed. No source changes or protection changes were needed.",
+  "sourceBackup": "https://drive.google.com/file/d/1RMC6Hu2E06hrgrB5iFghBRIgI91_nSBH/view",
+  "finalBackupVerification": "docs/klink-practice-explanations-20261026/final-drive-verification.json",
+  "githubWorkflows": {
+    "present": false,
+    "runsStarted": 0
+  },
+  "limitations": [
+    "No physical-device, screen-reader or learner trial.",
+    "Unrelated existing lint findings remain; all changed files passed scoped lint."
+  ]
+}
