@@ -34,6 +34,6 @@ export function verifyDemoMobileRelease(release=JSON.parse(readFileSync('docs/kl
   for(const field of ['sevenTypesReviewed','greenHandWithoutFrame','replay','selectionAfterTap','manualPace','noExtraControls','mobile','landscape','reducedMotion','progressPreserved','popupPreserved','contentAndMediaPreserved','typesPassed','lintPassed','buildPassed'])assert.equal(review[field],true,field);
   const backup=JSON.parse(readFile(`${evidence}/source-drive-verification.json`));
   assert(backup.parentVerified&&backup.downloadedByteIdentical&&backup.zipCrcVerified);assert.equal(backup.manifestEntriesVerified,manifest.length);
-  return release;
+  return {...release,alfaC};
 }
-export function readBeforeDemoMobile(file,release,readFile=readFileSync){return release?.files[file]?git('show',`${release.baselineSourceCommit}:${file}`):readFile(file);}
+export function readBeforeDemoMobile(file,release,readFile=readFileSync){return release?.files[file]?git('show',`${release.baselineSourceCommit}:${file}`):readBeforeAlfaC(file,release?.alfaC,readFile);}
