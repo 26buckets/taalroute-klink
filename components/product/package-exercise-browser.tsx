@@ -652,6 +652,8 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
   const guidedTile = useRef<HTMLButtonElement>(null);
   const guidedSlot = useRef<HTMLButtonElement>(null);
   const tileBank = useRef<HTMLDivElement>(null);
+  const demoCard = useRef<HTMLElement>(null);
+  useEffect(() => { if (guideStep === 'demo') demoCard.current?.scrollIntoView({ block: 'center' }); }, [guideStep, guideIndex]);
   useEffect(() => {
     if (!firstLetterGuide || guideStep === 'demo' || guideIndex < 0 || !canAnswer) return;
     guidedTile.current?.focus({ preventScroll: true });
@@ -676,10 +678,10 @@ export function BuildSurface({ exercise, onAudio, onFinish, onReset, canAnswer, 
   }
   if (guideStep === 'demo') return <section className="cp-task-card cp-first-letter-guide">
     <Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} />
-    <p className="cp-letter-cue">{guideIndex === 0 ? 'Kijk: zo begin je.' : guideLetters ? 'Kijk: deze letters komen nu.' : 'Kijk: deze letter komt nu.'}</p>
-    <figure className="cp-letter-demo" aria-label={`Voorbeeld: tik op ${token(target[guideIndex])}. ${guideLetters ? 'Die letters komen' : 'Die letter komt'} in vak ${guideIndex + 1}.`}>
+    <p className="cp-letter-cue">Kijk eerst</p>
+    <figure ref={demoCard} className="cp-letter-demo" aria-label={`Voorbeeld: tik op ${token(target[guideIndex])}. ${guideLetters ? 'Die letters komen' : 'Die letter komt'} in vak ${guideIndex + 1}.`}>
       <span className="cp-demo-source">{token(target[guideIndex])}<Hand aria-hidden="true" /></span><ArrowRight aria-hidden="true" />
-      <div>{target.map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : index === guideIndex ? token(target[guideIndex]) : ''}</span>)}</div>
+      <div>{target.map((_, index) => <span key={index}>{chosen[index] ? token(chosen[index]) : index === guideIndex ? <b className="cp-demo-arrival">{token(target[guideIndex])}</b> : ''}</span>)}</div>
     </figure>
     <button className="primary-button" onClick={() => { onHelp(); setGuideRetry(false); setGuideStep('word'); }}>Nu jij<ArrowRight aria-hidden="true" /></button>
   </section>;

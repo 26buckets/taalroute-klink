@@ -286,6 +286,9 @@
 .cp-demo-hand, .cp-demo-source > svg, .cp-first-tile > svg, .cp-match-hand { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; color: #244b43; fill: #c9ddd2; pointer-events: none; }
 .cp-demo-hand, .cp-demo-source > svg { transform-origin: 50% 20%; animation: cp-demo-tap 1.6s ease-in-out 1; }
 @keyframes cp-demo-tap { 0%, 100% { transform: translateY(0) scale(1); } 45%, 65% { transform: translateY(5px) scale(.85); } }
+.cp-letter-demo .cp-demo-arrival { font: inherit; animation: cp-demo-arrival 1.6s ease-out 1 both; }
+/* The empty slot fills only after the finger has tapped the source letter. */
+@keyframes cp-demo-arrival { 0%, 65% { opacity: 0; transform: translateY(-8px); } 85%, 100% { opacity: 1; transform: translateY(0); } }
 .cp-match-demo { position: relative; margin: 0; }
 .cp-match-hand { position: absolute; width: 36px; height: 36px; bottom: 6px; left: calc(50% - 46px); transform-origin: 50% 20%; opacity: 0; animation: cp-match-tap 4.4s linear 1 both; }
 .cp-match-demo > div:first-child .cp-demo-item { animation: cp-demo-select-word 4.4s step-end 1 both; }
@@ -305,6 +308,7 @@
 @keyframes cp-demo-select-photo { 0% { border-color: var(--line-strong); } 68%, 100% { border-color: #244b43; } }
 @media (prefers-reduced-motion: reduce) {
   .cp-demo-hand, .cp-demo-source > svg { animation: none; }
+  .cp-letter-demo .cp-demo-arrival { animation-timing-function: step-end; transform: none !important; }
   .cp-match-hand { animation-timing-function: step-end; transform: none !important; }
 }
 .cp-demo-item { position: relative; display: grid; place-items: center; min-height: 120px; padding: 16px; border: 2px solid var(--primary); border-radius: var(--radius); background: var(--primary-soft); }
