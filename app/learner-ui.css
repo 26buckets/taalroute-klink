@@ -683,7 +683,7 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 
 /* Step explanations sit above the existing navigation without moving the page. */
 body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000; }
-.cp-practice-explanation[data-slot="dialog-content"] { z-index: 2001; width: min(640px, calc(100vw - 24px)); max-width: none; height: min(600px, calc(100dvh - 24px)); max-height: calc(100dvh - 24px); display: flex; flex-direction: column; gap: 12px; padding: 16px; color: var(--ink); background: var(--paper); border-radius: var(--radius); }
+.cp-practice-explanation[data-slot="dialog-content"] { z-index: 2001; width: min(640px, calc(100vw - 24px)); max-width: none; height: min(540px, calc(100dvh - 24px)); max-height: calc(100dvh - 24px); display: flex; flex-direction: column; gap: 12px; padding: 16px; color: var(--ink); background: var(--paper); border-radius: var(--radius); }
 .cp-practice-explanation-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .cp-practice-explanation-heading h2 { margin: 0; font-size: 24px; font-weight: 500; }
 .cp-practice-explanation-heading button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--ink); font-size: 16px; font-weight: 400; }

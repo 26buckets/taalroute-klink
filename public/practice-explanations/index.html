@@ -11,6 +11,7 @@
     <div class="player-heading"><h2 id="title"></h2><span id="instruction"></span></div>
     <div id="scene"></div>
     <p id="caption" aria-live="off"></p>
+    <div id="playback">
     <div class="progress" aria-hidden="true"><span></span></div>
     <div class="controls">
       <button id="play" class="primary"></button>
@@ -20,8 +21,9 @@
     <div class="manual" hidden><button id="previous">Vorig beeld</button><span id="frame"></span><button id="next">Volgend beeld</button></div>
     <label class="mode"><input id="still" type="checkbox"> Zonder beweging</label>
     <p id="status" class="sr" role="status"></p>
+    </div>
   </section>
-  <details class="description"><summary>Uitleg in woorden</summary><p id="description"></p></details>
+  <div class="description-anchor"><details class="description"><summary>Uitleg in woorden</summary><p id="description" tabindex="0" role="region" aria-label="Uitleg in woorden"></p></details></div>
 </main>
 <script src="app.js"></script>
 </html>

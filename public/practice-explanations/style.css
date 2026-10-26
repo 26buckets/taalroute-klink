@@ -20,3 +20,5 @@ nav ol{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;list-
 :root{background:#fff}.embedded{padding:0 12px 12px}.embedded .player{border:0;padding:0}.embedded h2{display:none}.embedded .player-heading{display:block;text-align:center}.embedded #scene>svg{height:min(240px,42vh)}.embedded .description{margin:8px 0 0}
 
 .embedded #caption{font-size:20px;margin-bottom:8px}.embedded .progress{margin-bottom:12px}.embedded .mode{margin-top:10px}
+
+.embedded .description-anchor{position:relative;height:44px;margin-top:8px}.embedded .description{position:absolute;z-index:2;bottom:0;left:0;right:0;margin:0;padding-bottom:44px}.embedded .description summary{position:absolute;bottom:0;left:0;right:0;height:44px}.embedded .description[open]>p{margin:0;padding:16px;background:#fff;border:1px solid #a8bcb5;border-radius:6px;box-shadow:0 -4px 14px #183f491a;min-height:min(140px,calc(100vh - 80px));max-height:min(320px,calc(100vh - 80px));overflow:auto;font-size:18px;line-height:1.55}.embedded .description>p:focus-visible{outline:3px solid #126ab3;outline-offset:-3px}

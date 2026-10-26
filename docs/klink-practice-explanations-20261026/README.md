@@ -70,3 +70,25 @@ de ongewijzigde anatomie en aanwijscontacten blijven intact. Ook vensterresize
 gecontroleerd. Geen inhoudswijziging: curriculum/build niet opnieuw gedraaid.
 De eerdere geslaagde controles en bestaande lintbeperkingen blijven gelden.
 Nog steeds uitsluitend lokaal, zonder publicatie of push.
+
+## Uitleg naar boven en cursistinstructies — 26 oktober 2026
+
+Uitleg in woorden opent boven de knop, over de afspeelbediening. De knop blijft
+zichtbaar om de uitleg weer te sluiten. Het venster groeit niet en heeft nu
+maximaal 540 px hoogte, zodat onderaan minder lege ruimte blijft. Een lopende
+animatie pauzeert bij openen; afgedekte knoppen zijn tijdelijk niet bedienbaar.
+Toetsenbordfocus blijft bereikbaar via de samenvatting, tekst en sluitknop.
+
+Alle zes cursistteksten zijn geredigeerd voor Alfa C/A1: korte natuurlijke
+zinnen, concrete woorden, directe instructies, correcte spelling en grammatica.
+De uitleg beschrijft wat de cursist moet doen. Verwijzingen naar de bewegende
+hand en het potlood staan uitsluitend in de afzonderlijke toegankelijke
+beeldomschrijving. Knopnamen, korte beeldteksten en statusmeldingen zijn ook
+nagekeken. Het verschil tussen kijken, herkennen, namaken en zelf maken blijft
+expliciet. Herhalen blijft later opnieuw oefenen, zonder verplichte exacte dag.
+Dit is een redactionele niveaukeuze; een cursistenproef blijft open.
+
+De uitgebreide browsercontrole controleert bij alle zes stappen ook openen
+naar boven, afdekking van bediening, gelijke venstermaat, geen extra paginahoogte,
+Tab/Shift+Tab, sluiting en pauzeren. Controlebewijzen bij het herstelpakket.
+Er zijn geen SVG-vormen, kleuren, media, oefeninhoud of opslag aangepast.

@@ -18,7 +18,7 @@ export function PracticeLine({ available, selected, onSelect }: { available?: st
     const dismiss = (event: MessageEvent) => {
       if (event.origin !== location.origin || event.source !== frame.current?.contentWindow) return;
       if (event.data === 'klink:close-explanation') setExplanation(null);
-      if (event.data === 'klink:focus-close') close.current?.focus();
+      if (event.data === 'klink:focus-close') { window.focus(); close.current?.focus(); }
     };
     window.addEventListener('message', dismiss);
     return () => window.removeEventListener('message', dismiss);
@@ -36,7 +36,8 @@ export function PracticeLine({ available, selected, onSelect }: { available?: st
         <DialogTitle>{stageLabels[explanation]}</DialogTitle>
         <DialogClose ref={close} type="button" aria-label="Uitleg sluiten" onKeyDown={event => {
           if (event.key === 'Tab' && event.shiftKey) {
-            const last = frame.current?.contentDocument?.querySelector('summary');
+            const doc = frame.current?.contentDocument;
+            const last = doc?.querySelector<HTMLElement>('.description[open] #description') ?? doc?.querySelector('summary');
             if (last) { event.preventDefault(); last.focus(); }
           }
         }}><X aria-hidden="true" />Sluiten</DialogClose>

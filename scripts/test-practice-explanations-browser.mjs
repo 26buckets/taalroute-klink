@@ -29,6 +29,7 @@ for (const engine of (process.env.KLINK_TEST_ENGINES || 'chromium,webkit,firefox
         await page.keyboard.press(index % 2 ? 'Space' : 'Enter');
         const dialog = page.getByRole('dialog');
         await dialog.waitFor();
+        await dialog.evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished)));
         assert.equal(await dialog.getAttribute('aria-modal'), 'true');
         assert.equal(await dialog.getByRole('heading').textContent(), name);
         const frame = page.frameLocator('.cp-practice-explanation iframe');
@@ -57,6 +58,27 @@ for (const engine of (process.env.KLINK_TEST_ENGINES || 'chromium,webkit,firefox
           await frame.locator('#previous').click(); await frame.locator('#previous').click();
           await page.screenshot({ path: `${out}/mobile-hand.png` });
         }
+        const closedBox = await dialog.boundingBox();
+        const summary = frame.locator('.description summary');
+        const scrollHeight = await frame.locator('body').evaluate(() => document.documentElement.scrollHeight);
+        await summary.focus(); await page.keyboard.press('Enter');
+        await frame.locator('#playback[inert]').waitFor({ state: 'attached' });
+        const words = frame.locator('#description');
+        const wordBox = await words.boundingBox(), summaryBox = await summary.boundingBox();
+        const playbackBox = await frame.locator('.manual').boundingBox();
+        assert(wordBox.y + wordBox.height <= summaryBox.y + 1, 'words open above the disclosure');
+        assert(wordBox.y < playbackBox.y && wordBox.y + wordBox.height > playbackBox.y + playbackBox.height, 'words cover the playback buttons');
+        assert.deepEqual(await dialog.boundingBox(), closedBox, 'opening words does not resize the popup');
+        assert.equal(await frame.locator('body').evaluate(() => document.documentElement.scrollHeight), scrollHeight, 'opening words does not extend the page');
+        await page.keyboard.press('Tab');
+        assert(await words.evaluate(el => el === document.activeElement));
+        await page.keyboard.press('Tab');
+        await page.waitForFunction(() => document.activeElement?.getAttribute('aria-label') === 'Uitleg sluiten');
+        await page.keyboard.press('Shift+Tab');
+        assert(await words.evaluate(el => el === document.activeElement));
+        if (engine === 'chromium' && [1366, 390].includes(width) && index === 2) await page.screenshot({ path: `${out}/words-${width}.png` });
+        await summary.click();
+        await frame.locator('#playback[inert]').waitFor({ state: 'detached' });
         // Only the matching embedded document may request a close.
         await page.evaluate(() => window.postMessage('klink:close-explanation', location.origin));
         assert(await dialog.isVisible());
@@ -69,7 +91,7 @@ for (const engine of (process.env.KLINK_TEST_ENGINES || 'chromium,webkit,firefox
         assert.equal(await page.evaluate(() => JSON.stringify(localStorage)), storage);
         assert.deepEqual(await card.boundingBox(), position, 'closing restores the same position');
       }
-      checks.push(`${engine} ${width}: six steps, controls, light green hand, keyboard, Escape, focus, layout, storage`);
+      checks.push(`${engine} ${width}: six steps, upward words overlay, inert controls, light green hand, keyboard, Escape, focus, unchanged layout and storage`);
     }
     await page.setViewportSize({ width: 1366, height: 950 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -83,7 +105,10 @@ for (const engine of (process.env.KLINK_TEST_ENGINES || 'chromium,webkit,firefox
       const observer = new MutationObserver(() => { if (Number(el.dataset.time) > 500) { observer.disconnect(); resolve(); } });
       observer.observe(el, { attributes: true, attributeFilter: ['data-time'] });
     }));
-    await frame.locator('#pause').click();
+    await frame.locator('.description summary').click();
+    await frame.locator('#playback[inert]').waitFor({ state: 'attached' });
+    assert(await frame.locator('#pause').isDisabled());
+    await frame.locator('.description summary').click();
     const paused = await frame.locator('#scene').getAttribute('data-time');
     await page.waitForTimeout(150);
     assert.equal(await frame.locator('#scene').getAttribute('data-time'), paused);
