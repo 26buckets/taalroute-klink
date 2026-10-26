@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26",
+  "runtimeScope": [
+    "app/globals.css: transcript rules only"
+  ],
+  "typesPassed": true,
+  "buildPassed": true,
+  "scopedLintPassed": true,
+  "curriculum": {
+    "passed": 48,
+    "skipped": 1
+  },
+  "transcript": {
+    "passed": true,
+    "dialogues": 128,
+    "checks": 384,
+    "turns": 1536,
+    "widths": [
+      320,
+      630,
+      1366
+    ],
+    "keyboardAllFourTurns": true,
+    "errors": []
+  },
+  "all128WholeConversationPlayback": true,
+  "photoChecks": 393,
+  "connectedContentChecks": 6,
+  "lifecycleChecks": 5,
+  "nativeAudio": {
+    "passed": true,
+    "base": "http://localhost:18929",
+    "dialogue": "klink-dialogue-d0a263adf67c1b3c",
+    "realAudio": 4,
+    "method": "Native browser audio through actual primary button; muted 8x; not human listening",
+    "keyboard": true,
+    "footer": true,
+    "teacherChapter": true,
+    "width": 320
+  },
+  "sourceAndMediaChanged": false,
+  "physicalPhoneTest": false
+}

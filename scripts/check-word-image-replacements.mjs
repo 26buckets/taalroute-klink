@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import {verifyDialogueTranscriptRelease, readBeforeDialogueTranscript} from './check-dialogue-transcript-release.mjs';
 import { assertImageMappings } from './check-image-release.mjs';
 
 const evidence = 'docs/klink-word-images-20261026';
@@ -10,7 +11,9 @@ const git = (...args) => execFileSync('git', args, { maxBuffer: 32 * 1024 * 1024
 const read = file => JSON.parse(readFileSync(file));
 const expectedCodes = ['K201', 'K202', 'K207', 'K224', 'K230', 'K311', 'K323', 'K325', 'K329', 'K340', 'K352', 'K364', 'K368', 'K369', 'K370'];
 
-export function verifyWordImageReplacements(release = read('docs/klink-owner-release-word-images-20261026.json'), readFile = readFileSync) {
+export function verifyWordImageReplacements(release = read('docs/klink-owner-release-word-images-20261026.json'), readFile) {
+  const transcript = verifyDialogueTranscriptRelease();
+  readFile ||= file => readBeforeDialogueTranscript(file, transcript);
   assert.equal(release.approvedBy, 'Nico');
   assert.equal(release.publicationApproved, true);
   assert.equal(release.baselineSourceCommit, 'cc2ef6f4f18ddf20fb20e5f142d95a863c72bc8c');
@@ -45,13 +48,13 @@ export function verifyWordImageReplacements(release = read('docs/klink-owner-rel
 
   const runtime = ['data/klink-media.json', ...images.map(row => `public${row.image}`)].sort((a, b) => a.localeCompare(b));
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public'];
-  const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', ...roots).trim().split('\n').filter(Boolean);
-  const untracked = git('ls-files', '--others', '--exclude-standard', '--', ...roots).trim().split('\n').filter(Boolean);
+  const changed = git('diff', '--name-only', release.baselineSourceCommit, transcript.baselineSourceCommit, '--', ...roots).trim().split('\n').filter(Boolean);
+  const untracked = []; // The transcript successor checks the current delta.
   assert.deepEqual([...new Set([...changed, ...untracked])].sort((a, b) => a.localeCompare(b)), runtime, 'Only fifteen image mappings and their files may change');
   assert.deepEqual(release.changedFiles.filter(file => /^(app|components|hooks|data|lib|public)\//.test(file)).sort((a, b) => a.localeCompare(b)), runtime);
   const codeRoots = [...roots, 'scripts'];
-  const codeChanges = git('diff', '--name-only', release.baselineSourceCommit, '--', ...codeRoots).trim().split('\n').filter(Boolean);
-  const newCode = git('ls-files', '--others', '--exclude-standard', '--', ...codeRoots).trim().split('\n').filter(Boolean);
+  const codeChanges = git('diff', '--name-only', release.baselineSourceCommit, transcript.baselineSourceCommit, '--', ...codeRoots).trim().split('\n').filter(Boolean);
+  const newCode = [];
   assert.deepEqual([...new Set([...codeChanges, ...newCode])].sort((a, b) => a.localeCompare(b)), release.changedFiles.filter(file => /^(app|components|hooks|data|lib|public|scripts)\//.test(file)).sort((a, b) => a.localeCompare(b)));
   for (const file of release.changedFiles) assert(release.files[file], file);
   for (const [file, hash] of Object.entries(release.files)) assert.equal(sha(readFile(file)), hash, file);
@@ -64,9 +67,9 @@ export function verifyWordImageReplacements(release = read('docs/klink-owner-rel
   const manifest = JSON.parse(readFile(`${evidence}/source-manifest.json`));
   assert.equal(backup.manifestEntriesVerified, manifest.length);
   for (const row of manifest) assert.equal(row.sha256, release.files[row.path], row.path);
-  return release;
+  return {...release, transcript};
 }
 
 export function readBeforeWordImageReplacements(file, release, readFile = readFileSync) {
-  return release?.changedFiles.includes(file) ? Buffer.from(git('show', `${release.baselineSourceCommit}:${file}`)) : readFile(file);
+  return release?.changedFiles.includes(file) ? Buffer.from(git('show', `${release.baselineSourceCommit}:${file}`)) : readBeforeDialogueTranscript(file, release?.transcript, readFile);
 }
