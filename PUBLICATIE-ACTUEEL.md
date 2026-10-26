@@ -1,6 +1,39 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `5019e9e3c75a31ff2060d28e42f9a8e5b4cdbd5b` op canonieke branch `main`.
+Worker-versie: `10b62fb2-939e-4cd8-9abb-9d69eaf72bed`.
+
+Bij woorden bouwen toont het bestaande voorbeeld eerst een leeg vak. Eén groen
+handje zonder kader tikt op de letter; daarna verschijnt die letter in het vak.
+Kijk eerst, Nu jij en Kijk nog eens blijven de bestaande bediening. Er zijn geen
+extra knoppen of opnamen. De animatie telt niet als antwoord en gaat niet vanzelf
+door naar de oefening. Eerder gekozen letters blijven bij opnieuw kijken staan.
+Het voorbeeld en Nu jij blijven op 320px in beeld, ook bij langere woorden.
+Bestaande indeling, woord-fotoanimatie en de actuele mobiele uitlegvensters behouden.
+
+Controle: 32 gevallen lokaal en 32 online in Chromium en WebKit, op 320/390/1366px,
+ook met minder beweging; mat, maan, mappen en huiskamer. Bestaande woord-fotodemo:
+8 gevallen. Types, gerichte lint, build, curriculum, 50 publicatiebewijstests
+en normale publicatiepoort geslaagd. Alle 8,135 aangeboden mediabestanden
+plus de gebouwde client bytegelijk teruggelezen. Geen fysieke telefoon- of cursistenproef.
+Geen GitHub Actions-workflows aanwezig of gestart.
+
+Vrijgave: `docs/klink-owner-release-build-demo-20261026.json`.
+Register: `docs/klink-publication-build-demo-20261026.json`.
+Bronback-up: https://drive.google.com/file/d/1r-z5ZHfMpSoRhS1voXTZLozGan6WVhoH/view .
+Definitief herstelbewijs: `docs/klink-build-demo-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-handje-20261026`.
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven, officiële logo D, inhoud, media en gebruikersgegevens.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `52d051ca357c1dcd579db57f59f3ee44dc4b4908` op canonieke branch `main`.
 Worker-versie: `51fc6769-f1ef-4197-aba4-ce056f51a904`.
 
