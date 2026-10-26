@@ -73,8 +73,8 @@ export function verifyDialogueRelease(release = read('docs/klink-owner-release-g
  for (const key of ['buildPassed','typesPassed','lintPassed','sourcePreservationPassed','dialogueBrowserPassed','all128RoutesPassed','all512PlaybackPassed','metadataPassed','regressionPassed']) assert.equal(review[key], true, key);
  assert(backup.parentVerified && backup.downloadedByteIdentical && backup.zipCrcVerified);
  assert.equal(backup.manifestEntriesVerified, manifest.length);
- return release;
+ return {...release,playback};
 }
 export function readBeforeDialogueRelease(file, release) {
- return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeDialoguePlayback(file, read('docs/klink-owner-release-dialogue-playback-20261026.json'));
+ return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeDialoguePlayback(file, release.playback);
 }

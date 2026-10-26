@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
+import { verifyWordImageReplacements, readBeforeWordImageReplacements } from './check-word-image-replacements.mjs';
 
 const evidence = 'docs/klink-wordaudio-publication-20261025';
 const request = 'Zet alle nieuwe woordaudio, inclusief de vervanging van man, nu maar live in Klink en controleer of alles goed afspeelt.';
@@ -27,6 +28,7 @@ export function assertWordAudioMappings(before, after, recordings, expectedWords
 }
 
 export function verifyWordAudioRelease(readReleaseFile = readFileSync, sourceCommit = 'HEAD') {
+  const wordImages = verifyWordImageReplacements();
   const release = read('docs/klink-owner-release-wordaudio-20261025.json');
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, request); assert.equal(read(`${evidence}/owner-request.json`).userRequest, request);
@@ -46,7 +48,7 @@ export function verifyWordAudioRelease(readReleaseFile = readFileSync, sourceCom
   const expectedWords = new Map([trial, ...rest.packs].flatMap(pack => pack.words.map(word => [word.id, word.word])));
   assert.equal(expectedWords.size, 4789); expectedWords.set('klink-woord-man', 'man');
   const before = JSON.parse(git('show', `${release.baselineSourceCommit}:data/klink-media.json`));
-  const after = JSON.parse(readFileSync(new URL('../data/klink-media.json', import.meta.url)));
+  const after = JSON.parse(readBeforeWordImageReplacements('data/klink-media.json', wordImages));
   assert.equal(assertWordAudioMappings(before, after, manifest, expectedWords), 4790);
   for (const row of manifest) assert.equal(digest(readFileSync(`public${row.src}`)), row.sha256, row.id);
   const validation = read(`${evidence}/audio-validation.json`);
