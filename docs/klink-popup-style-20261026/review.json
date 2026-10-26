@@ -1,0 +1,64 @@
+{
+  "status": "passed-local",
+  "appStyleMatched": true,
+  "threeBrowserEngines": true,
+  "sixPhoneViewports": true,
+  "touchTargets": true,
+  "landscapePlaybackVisible": true,
+  "largeTextReadable": true,
+  "keyboardAndFocus": true,
+  "layoutAndProgressPreserved": true,
+  "contentAndMediaPreserved": true,
+  "typesPassed": true,
+  "scopedLintPassed": true,
+  "buildPassed": true,
+  "physicalDeviceTested": false,
+  "browserEngines": [
+    "chromium",
+    "webkit",
+    "firefox"
+  ],
+  "phoneViewports": [
+    [
+      320,
+      568
+    ],
+    [
+      360,
+      640
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      430,
+      932
+    ],
+    [
+      667,
+      375
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "phoneTouchPopupsChecked": 108,
+  "additionalKeyboardPopupsChecked": 72,
+  "descriptionFontPixels": 18,
+  "descriptionEnlargementPixels": 36,
+  "buttonRadiusPixels": 4,
+  "touchTargetHeightMinimumPixels": 48,
+  "styleSource": "Actual computed Klink palette, radius and body font passed to embedded explanation; no new font dependency.",
+  "styleReferenceAvailability": "Requested digibord-settings folder is absent. Read the retained DigiBord settings/settings.css and open-quiet.css in the 2026-10-16 herstel checkout; viewed the retained digibord-settings-reference.png in the 2026-10-01 Missies checkout. Current Klink controls remain the colour reference.",
+  "landscape": "The example and playback controls share one row only on short landscape phone screens; the surrounding app layout is unchanged.",
+  "unchangedAssets": "SVG scene source and green hand unchanged. Existing photos, audio, curriculum, logo, routes and storage untouched.",
+  "limitations": [
+    "No physical phone, screen-reader or learner trial.",
+    "200% enlargement tests the explanation text, not every operating-system accessibility setting.",
+    "Historical unrelated broad lint findings remain."
+  ],
+  "concurrentHandDemoPreserved": true,
+  "currentBaseline": "9960478c7da01a1a28e1dede2271136ed9a6b0b0"
+}

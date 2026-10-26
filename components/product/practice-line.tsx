@@ -11,6 +11,7 @@ const stageLabels = ['Kijken', 'Herkennen', 'Namaken', 'Zelf maken', 'Gebruiken'
 export function PracticeLine({ available, selected, onSelect }: { available?: string[]; selected?: string; onSelect?: (id: string) => void }) {
   const [explanation, setExplanation] = useState<number | null>(null);
   const frame = useRef<HTMLIFrameElement>(null);
+  const line = useRef<HTMLElement>(null);
   const close = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     if (explanation === null) return;
@@ -23,7 +24,7 @@ export function PracticeLine({ available, selected, onSelect }: { available?: st
     window.addEventListener('message', dismiss);
     return () => window.removeEventListener('message', dismiss);
   }, [explanation]);
-  return <Dialog open={explanation !== null} onOpenChange={open => { if (!open) setExplanation(null); }}><section className={`cp-practice-line${onSelect ? '' : ' cp-practice-line-overview'}`} aria-label="Oefenlijn"><h2>Zo oefen je</h2>
+  return <Dialog open={explanation !== null} onOpenChange={open => { if (!open) setExplanation(null); }}><section ref={line} className={`cp-practice-line${onSelect ? '' : ' cp-practice-line-overview'}`} aria-label="Oefenlijn"><h2>Zo oefen je</h2>
     <ol>{practiceStages.map((stage, index) => {
       const Icon = stageIcons[index], enabled = !available || available.includes(stage.id);
       const number = <span className="cp-line-number">{index + 1}</span>;
@@ -42,7 +43,13 @@ export function PracticeLine({ available, selected, onSelect }: { available?: st
           }
         }}><X aria-hidden="true" />Sluiten</DialogClose>
       </div>
-      <iframe ref={frame} title={`${stageLabels[explanation]}: zo oefen je`} src={`/practice-explanations/index.html?step=${explanation}`} />
+      <iframe ref={frame} title={`${stageLabels[explanation]}: zo oefen je`} src={`/practice-explanations/index.html?step=${explanation}`} onLoad={event => {
+        const root = event.currentTarget.contentDocument?.documentElement;
+        if (!root || !line.current) return;
+        const theme = getComputedStyle(line.current);
+        for (const name of ['--ink', '--muted', '--primary', '--primary-dark', '--paper', '--canvas', '--line-strong', '--focus', '--radius']) root.style.setProperty(name, theme.getPropertyValue(name));
+        root.style.fontFamily = theme.fontFamily;
+      }} />
     </DialogContent>}
   </Dialog>;
 }
