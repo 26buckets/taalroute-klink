@@ -17,18 +17,18 @@ try{
   assert.equal((await p.evaluate(()=>window.__plays)).length,0,'Opening never starts audio');
   assert.equal(await button('Hele gesprek').getAttribute('aria-pressed'),'true');
   assert.equal(await p.locator('.cp-dialogue').getByText(/Alfa [BC]/).count(),0);
-  assert.equal(await p.locator('.cp-dialogue-current').getByText(pilot.turns[0].text,{exact:true}).count(),0);
+  assert.equal(await p.locator('.cp-dialogue-current').getByText(pilot.turns[0].text,{exact:true}).count(),1);
   assert(await button('Ronde afronden').isDisabled());
   await button('Oefen per beurt').click();await button('Luister naar deze beurt').click();await p.waitForFunction(()=>window.__ended.length===1);
   assert.deepEqual(await p.evaluate(()=>window.__plays),[pilot.turns[0].src]);assert(await button('Ronde afronden').isDisabled());
-  await button('Volgende spreekbeurt').click();await button('Meelezen').click();assert.equal(await p.locator('.cp-dialogue-current p').innerText(),pilot.turns[1].text);
+  await button('Volgende spreekbeurt').click();await button('Tekst verbergen').click();await button('Meelezen').click();assert.equal(await p.locator('.cp-dialogue-current p').innerText(),pilot.turns[1].text);
   await clear();await button('Luister naar deze beurt').click();await p.waitForFunction(()=>window.__ended.length===1);assert.deepEqual(await p.evaluate(()=>window.__plays),[pilot.turns[1].src]);
   await button('Hele gesprek').click();await whole(pilot);assert(await button('Ronde afronden').isEnabled());
   await p.evaluate(()=>window.__duration=200);await clear();await button('Luister naar het gesprek').click();await p.waitForTimeout(40);await button('Pauze').click();const count=(await p.evaluate(()=>window.__plays)).length;await p.waitForTimeout(300);assert.equal((await p.evaluate(()=>window.__plays)).length,count);
   await clear();await button('Luister naar het gesprek').click();await p.waitForTimeout(40);await button('Oefen per beurt').click();await p.waitForTimeout(300);assert.equal((await p.evaluate(()=>window.__plays)).length,1,'Changing mode stops the sequence');
   await p.evaluate(()=>window.__duration=40);await p.locator('summary').filter({hasText:'Hele gesprek meelezen'}).click();assert.equal(await p.locator('.cp-dialogue-transcript > button').count(),4);await clear();await button('Luister naar beurt 1 van Sara').click();await p.waitForFunction(()=>window.__ended.length===1);assert.deepEqual(await p.evaluate(()=>window.__plays),[pilot.turns[0].src]);
   assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await p.screenshot({path:`${out}/${width}.png`});
-  await open(data.find(d=>d.id==='klink-dialogue-d0a263adf67c1b3c'));assert.equal(await button('Hele gesprek').getAttribute('aria-pressed'),'true');assert.equal(await button('Meelezen').getAttribute('aria-pressed'),'false');
+  await open(data.find(d=>d.id==='klink-dialogue-d0a263adf67c1b3c'));assert.equal(await button('Hele gesprek').getAttribute('aria-pressed'),'true');assert.equal(await button('Tekst verbergen').getAttribute('aria-pressed'),'true');
  }
  await p.setViewportSize({width:390,height:900});
  for(const d of data){await open(d);await clear();assert.equal(await button('Hele gesprek').getAttribute('aria-pressed'),'true');assert.equal(await button('Luister naar het gesprek').count(),1);await whole(d);checks.push(d.id);}

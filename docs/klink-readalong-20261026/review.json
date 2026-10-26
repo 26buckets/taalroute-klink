@@ -1,0 +1,33 @@
+{
+  "status": "passed-local",
+  "firstWithText": 128,
+  "secondWithoutText": 128,
+  "manualChoice": true,
+  "abortedAttempt": true,
+  "singleTurns": true,
+  "retry": true,
+  "newConversationReset": true,
+  "slowPreserved": true,
+  "nativeAudio": true,
+  "sourceAndMediaPreserved": true,
+  "buildPassed": true,
+  "typesPassed": true,
+  "scopedLintPassed": true,
+  "curriculumPassed": 48,
+  "existingCurriculumSkipped": 1,
+  "photoChecks": 393,
+  "transcriptLayouts": 384,
+  "reactReview": {
+    "existingStatePattern": true,
+    "completedOnlyAfterSuccessfulAudio": true,
+    "cancellationPreserved": true,
+    "resetWithExistingExerciseTimer": true,
+    "nativeKeyboardButton": true,
+    "ariaPressed": true,
+    "newDependencies": 0
+  },
+  "limitations": [
+    "No physical phone test or new human listening review.",
+    "Completion count resets when leaving a dialogue; readalong starts enabled at a newly opened dialogue."
+  ]
+}
