@@ -1,6 +1,40 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `eacef4f95f7717fafccf6988878ecf38f912f492` op canonieke branch `main`.
+Worker-versie: `032a58cd-9ae7-4292-99a5-72aa45a0423b`.
+
+Onder Oefenen → Zelf oefenen → Alfa C staan drie goedgekeurde blokken:
+In de winkel, Met de bus en Thuis. Ieder blok heeft twaalf stappen, voorbeelden,
+herhaalbare hulp, wisselende antwoordposities en gericht opnieuw oefenen.
+Voortgang van deze blokken wordt apart opgeslagen; bestaande lesvoortgang,
+bewaarde woorden, nieuwste lessen, media en mobiele voorbeelden blijven behouden.
+De vroegere lokale proefroute verwijst naar de normale cursistomgeving.
+De docenthandleiding beschrijft de nieuwe ingang en de grenzen van deze proefblokken.
+
+Lokaal geslaagd: inhoudscontrole van 36 stappen; 11 gerichte tests;
+48 curriculumtests met 1 bedoelde overslag; types, lint en productiebuild;
+36 volledige stappen en 36 smalle schermen; 50 integratiegevallen in Chromium en WebKit;
+144 bestaande mobiele demo-controles; 110 herladingen met 80 scèneantwoorden en
+behouden voortgang; 50 publicatiebewijstests en de normale publicatiepoort.
+Online geslaagd: 36 stappen met foutantwoord/herhaling/hervatten, 50 schermgevallen
+in twee browsers, echt woordgeluid en fout/herstel, 42 bytegelijke mediabestanden,
+inclusief Taalroute-metadata in alle 33 aangeboden audiobestanden.
+Geen nieuwe afbeeldingen of audio. De bestaande instructieaudio-pauze blijft gelden.
+Geen GitHub Actions-workflows aanwezig of gestart.
+Geen fysieke telefoon-, schermlezer-, menselijke uitspraak- of cursistenproef uitgevoerd.
+Deze drie blokken zijn geen volledige dekking van Alfa C.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-20261026.json`.
+Register: `docs/klink-publication-alfa-c-20261026.json`.
+Bronback-up: https://drive.google.com/file/d/1xyVbD9hxyygPcah1SGAOcTsBw-PnsbRE/view .
+Definitief herstelbewijs: `docs/klink-alfa-c-release-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+
+## Vorige goedgekeurde publicatie
+
+
+Live: https://klink.taalroute.nl
 Broncommit: `9465da5a30b26deb1bdb50e059935f264518ba34` op canonieke branch `main`.
 Worker-versie: `b8235bf0-4444-4e6a-8f6a-6a943eea8559`.
 
