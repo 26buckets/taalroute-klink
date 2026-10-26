@@ -1,6 +1,45 @@
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
+Broncommit: `5bfebf4db52631b54dcb3a8c927050487f4ae54f` op canonieke branch `main`.
+Worker-versie: `9bc366ed-60c1-4ea8-931b-271d2f8ab281`.
+
+Alle 128 dialogen hebben de selecteerbare slakkenknop Langzamer.
+Aan: afspelen op 0,65 met behoud van toonhoogte, ook direct tijdens lopende audio.
+Uit: het bestaande tempo terug (spraak 0,85; losse klankmodellen 1).
+De keuze geldt voor de hele sessie in hetzelfde tabblad, inclusief woorden,
+zinnen, klanken en eigen opnamen; blijft na verversen staan en wordt gewist bij Afsluiten.
+Bij geblokkeerde sessieopslag blijft de keuze in het geheugen werken tot verversen.
+De docentenhandleiding beschrijft dezelfde bediening.
+
+Hele gesprek blijft standaard; per beurt en meelezen blijven beschikbaar.
+De duidelijke transcriptopmaak, volledige foto’s, recente woordbeelden, alle
+opnamen, lessen, logo D, routes en voortgang blijven behouden. Geen nieuwe media.
+
+Lokaal en live: alle 128 gesprekken / 512 beurten op langzaam tempo, direct
+schakelen zonder herstart, vier schermbreedtes, toetsenbord, per beurt,
+transcript, verversen, andere onderdelen, terugschakelen, Afsluiten en
+geblokkeerde opslag. Echte gespreksaudio op 0,65 afgespeeld en handleiding gecontroleerd.
+Lokaal ook 57 publicatiebewijstests, zes audiotests, curriculum, types, lint,
+build, 393 fotocontroles, 384 transcriptweergaven, normale bediening en opnamefunctie.
+Alle 8.135 aangeboden media en de gebouwde client online bytegelijk teruggelezen.
+Geen fysieke telefoonproef of nieuwe menselijke luisterreview.
+
+Vrijgave: `docs/klink-owner-release-session-audio-20261026.json`.
+Register: `docs/klink-publication-session-audio-20261026.json`.
+Canonieke repository: 26buckets/taalroute-klink; main.
+Actuele checkout: `/Users/nicoknoester/.codex/workspaces/klink-gesprekken-publicatie-20261025`.
+Bronback-up: https://drive.google.com/file/d/1QioFqkastYsaLj073mXye7WcrNK0XJ1_/view .
+Herstelbewijs: `docs/klink-session-audio-20261026/final-drive-verification.json`.
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar .
+Publiceer uitsluitend afstammelingen van deze livecommit via `npm run deploy`.
+Behoud historische vrijgaven en de stop op beeldgeneratie in Work.
+
+## Voorgaande publicatie (historie)
+
+# Actuele Klink-publicatie
+
+Live: https://klink.taalroute.nl
 Broncommit: `5c49940e8bbc0688a187840a606886550def9b2a` op canonieke branch `main`.
 Worker-versie: `e33cbd4b-b4f5-4533-af9c-f10827526346`.
 
