@@ -19,3 +19,7 @@ Op expliciete vervolgopdracht staat de vermelding ‘Een leermiddel van Taalrout
 ## Gesprekken — Nico, 25 oktober 2026
 
 Nico heeft de herstelversie online gevraagd, standaard gekoppeld aan de juiste opdrachten. De gerichte vrijgave staat in docs/klink-owner-release-gesprekken-20261025.json: 128 gesprekken, 512 nieuwe spreekbeurten met vaste personen en voice-ID’s, 16 bestaande beeldbestanden en de gespreksspeler met één actieve beurt en optioneel meelezen. Alle oorspronkelijke bestanden blijven bewaard. A1/A2 blijven bronlabels; Alfa B/C zijn luistersteun, geen volledige niveauvrijgave. Menselijke luisterreview blijft open. Beeldgeneratie in Work is op Nico’s opdracht gestopt; verdere generatie alleen in een gewone chat. Deze vrijgave wijzigt de overige audiopauze niet. Gebruik main en npm run deploy met behoud van historische publicatiecontroles.
+
+## Klink — zes stappen en video’s behouden — Nico, 27 oktober 2026
+
+De zes stappen (Kijken, Herkennen, Namaken, Zelf maken, Gebruiken en Herhalen) en de bijbehorende video’s blijven op de cursistenstartpagina van Klink staan, zoals door Nico goedgekeurd. Niet verwijderen, verbergen of verplaatsen naar de docentomgeving of een andere plek zonder een nieuwe expliciete opdracht van Nico. Het eerdere advies om dit schema van de cursistenstartpagina te halen vervalt. Een algemeen verzoek om vereenvoudiging, vormgeving of opschoning geeft geen toestemming om deze onderdelen weg te halen of te verplaatsen. Controleer bij wijzigingen aan de startpagina dat de zes stappen en hun video’s behouden blijven.
