@@ -1,3 +1,4 @@
+import {verifyAlfaCAudioRelease,readBeforeAlfaCAudio} from './check-alfa-c-audio-release.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -20,6 +21,9 @@ export const alfaCTextFiles = [
   'scripts/test-publication-proof.mjs',
 ];
 export function verifyAlfaCTextRelease(readFile = readFileSync, release = JSON.parse(readFileSync('docs/klink-owner-release-alfa-c-texts-20261027.json'))) {
+  const audioRelease = verifyAlfaCAudioRelease(readFile);
+  const currentReader = readFile;
+  readFile = file => readBeforeAlfaCAudio(file, audioRelease, currentReader);
   assert.equal(release.approvedBy, 'Nico');
   assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, 'zet alles dan online in het alfa-c gedeelte');
@@ -30,10 +34,10 @@ export function verifyAlfaCTextRelease(readFile = readFileSync, release = JSON.p
   assert.equal(release.humanLearnerTrial, false);
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts'];
-  const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
-  const untracked = git('ls-files', '--others', '--exclude-standard', '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const changed = git('diff', '--name-only', release.baselineSourceCommit, audioRelease.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const untracked = []; // The audio successor validates the current delta.
   assert.deepEqual(sorted([...new Set([...changed, ...untracked])]), sorted(alfaCTextFiles));
-  assert.equal(git('diff', release.baselineSourceCommit, '--', 'public').length, 0, 'Media must be preserved');
+  assert.equal(git('diff', release.baselineSourceCommit, audioRelease.baselineSourceCommit, '--', 'public').length, 0, 'Media must be preserved');
   assert.equal(JSON.parse(readFile('data/klink-audio-policy.json')).instructionAudioEnabled, false);
   assert.equal(sha(readFile('AGENTS.md')), sha(git('show', 'db8d290:AGENTS.md')), 'Preserve the approved homepage agreement');
   const expected = [...alfaCTextFiles, 'AGENTS.md', ...['owner-request', 'live-baseline', 'reviewed-text-package', 'review', 'source-manifest', 'source-drive-verification'].map(n => `${evidence}/${n}.json`), `${evidence}/review-36-steps.txt`];
@@ -56,8 +60,8 @@ export function verifyAlfaCTextRelease(readFile = readFileSync, release = JSON.p
   assert.equal(backup.manifestEntriesVerified, manifest.length);
   const previous = 'docs/klink-owner-release-alfa-c-20261026.json';
   assert.equal(sha(readFile(previous)), sha(git('show', `${release.baselineSourceCommit}:${previous}`)));
-  return release;
+  return { ...release, audioRelease };
 }
 export function readBeforeAlfaCText(file, release, readFile = readFileSync) {
-  return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readFile(file);
+  return release.files[file] ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeAlfaCAudio(file, release.audioRelease, readFile);
 }

@@ -23,3 +23,7 @@ Nico heeft de herstelversie online gevraagd, standaard gekoppeld aan de juiste o
 ## Klink — zes stappen en video’s behouden — Nico, 27 oktober 2026
 
 De zes stappen (Kijken, Herkennen, Namaken, Zelf maken, Gebruiken en Herhalen) en de bijbehorende video’s blijven op de cursistenstartpagina van Klink staan, zoals door Nico goedgekeurd. Niet verwijderen, verbergen of verplaatsen naar de docentomgeving of een andere plek zonder een nieuwe expliciete opdracht van Nico. Het eerdere advies om dit schema van de cursistenstartpagina te halen vervalt. Een algemeen verzoek om vereenvoudiging, vormgeving of opschoning geeft geen toestemming om deze onderdelen weg te halen of te verplaatsen. Controleer bij wijzigingen aan de startpagina dat de zes stappen en hun video’s behouden blijven.
+
+## Alfa C-instructieaudio — Nico, 27 oktober 2026
+
+Nico vraagt: “Maak nu ook de audio voor de herziene instructies en hulpteksten en zet die bij de juiste Alfa C-opdrachten. Gebruik een aparte instructiestem en behoud de bestaande goede audio.” Dit geeft uitsluitend de nieuwe, gecontroleerde Alfa C-uitleg en hulp vrij. Roland (h6uBOiAjLKklte8hdYio) spreekt uitleg en hulp in; bestaande goede oefentaal, waaronder Remko (0qLmDzgqulxcvv0yf3kg), blijft behouden. De nieuwe bestanden staan apart onder /package-audio/alfa-c-uitleg-20261027/. De historische instructieaudio-pauze en ingetrokken bestanden van andere onderdelen blijven gelden. Lees de actuele Alfa C-audiovrijgave en behoud de gewone publicatiepoort, metadata, lessen en opslag.

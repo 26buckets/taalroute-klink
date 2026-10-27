@@ -587,3 +587,10 @@ Dat is het idee achter Klink: een rustige plek om te beginnen, genoeg variatie o
 Oefenen → Zelf oefenen → Alfa C: In de winkel, Met de bus en Thuis. Elk blok telt twaalf stappen met bestaande woordbeelden, woord- en zinsaudio. Voorbeeld, Help, antwoordcontrole, Verder, positiebehoud en gerichte herhaling horen bij dezelfde rustige speler.
 
 De fotokeuze bij een zin is herkenning, geen volledige praktijktaak of bewijs van zelfstandig lezen. Gesproken instructies blijven uitgeschakeld. Observeer of de cursist na het voorbeeld gericht hulp gebruikt, een fout verbetert en zelfstandig verdergaat. Koppel aan boekdoel en ingeplande bijeenkomst; gebruiksproef en menselijke luistercontrole blijven open. Bronkoppelingen en inhoudscontrole: docs/klink-alfa-c-release-20261026/.
+
+
+## Gesproken uitleg bij de drie Alfa C-blokken
+
+Bij In de winkel, Met de bus en Thuis leest Luister eerst de herziene uitleg voor en daarna de bestaande oefenopname. Uitleg en oefentaal hebben een verschillende stem. Voorbeeld laat het hele woord of de hele zin zien en spreekt de passende aanwijzing uit. Help geeft een gesproken tip; Luister nog eens herhaalt de tip en de oefenopname. Fout- en goedfeedback worden uitgesproken. Een fout bouwantwoord blijft staan totdat de cursist Eén terug of Voorbeeld en Nu jij gebruikt. Bij het sluiten of verlaten stopt het geluid. De afronding kan met Luister worden herhaald. Andere ingetrokken instructieaudio blijft uitgeschakeld.
+
+De 36 nieuwe uitleg- en hulpbestanden zijn technisch en met automatische transcriptie gecontroleerd. Dit is geen menselijke luistergoedkeuring of proef met cursisten. De bestaande goede oefenopnamen zijn niet opnieuw gemaakt.

@@ -19,6 +19,7 @@ import {
   readPilotProgress,
   practiceAgain,
   alfaCCommonTexts,
+  alfaCGuideAudio,
   type PilotProgress,
   type PilotRecord,
   type PilotStep,
@@ -65,12 +66,16 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
   const [review, setReview] = useState<PilotStep[]>(),
     [reviewAt, setReviewAt] = useState(0);
   const [visit, setVisit] = useState(0);
+  const [completionBusy, setCompletionBusy] = useState(false);
+  const [completionAudioError, setCompletionAudioError] = useState(false);
   useEffect(() => {
     const restore = () => {
       stopMedia();
       setSelected(window.location.hash.split('/')[2]);
       setReview(undefined);
       setReviewAt(0);
+      setCompletionBusy(false);
+      setCompletionAudioError(false);
       setVisit((v) => v + 1);
     };
     window.addEventListener('hashchange', restore);
@@ -168,6 +173,24 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
           <Check />
           <h2>Goed geoefend</h2>
           <p>{block.endText}</p>
+          <button
+            className="secondary-button"
+            disabled={completionBusy}
+            onClick={async () => {
+              setCompletionBusy(true);
+              setCompletionAudioError(false);
+              try {
+                await playMedia(alfaCGuideAudio(block.endText)!, { waitUntilEnd: true, playbackRate: 1 });
+              } catch {
+                setCompletionAudioError(true);
+              } finally {
+                setCompletionBusy(false);
+              }
+            }}
+          >
+            <Volume2 />{completionBusy ? 'Luisteren…' : 'Luister'}
+          </button>
+          {completionAudioError && <p role="alert">{alfaCCommonTexts['Geluidsbestand werkt niet'].text}</p>}
           {practiceAgain(block, progress.records).length > 0 && (
             <button
               className="primary-button"
@@ -295,7 +318,7 @@ function PilotPlayer({
       stopMedia();
     };
   }, []);
-  async function play(source?: string, explain = false) {
+  async function play(source?: string, guide?: 'instruction' | 'example' | 'help' | 'error' | 'good') {
     playback.current?.abort();
     stopMedia();
     const controller = new AbortController();
@@ -303,22 +326,30 @@ function PilotPlayer({
     setBusy(true);
     setAudioError(false);
     try {
+      const guidance = guide === 'instruction' ? [startText, reviewText, step.spokenInstruction]
+        : guide === 'example' ? [step.exampleInstruction]
+        : guide === 'help' ? [step.help]
+        : guide === 'error' ? [step.errorFeedback]
+        : guide === 'good' ? [step.goodFeedback] : [];
       const sources = [
-        ...(explain ? [step.instructionAudio] : []),
+        ...guidance.map(alfaCGuideAudio),
         source,
-        ...(explain && typeof step.exercise.questionAudio === 'string'
+        ...(source && guide && typeof step.exercise.questionAudio === 'string'
           ? [step.exercise.questionAudio]
           : []),
+        ...(source && guide === 'example' ? [alfaCGuideAudio('Tik op Nu jij.')] : []),
+        ...(source && guide === 'instruction' && participation ? [alfaCGuideAudio(step.afterListening)] : []),
       ].filter((s): s is string => Boolean(s) && !isWithdrawnAudio(s));
       for (const src of sources) {
         const ok = await playMedia(src, {
           signal: controller.signal,
           waitUntilEnd: true,
+          playbackRate: src.startsWith('/package-audio/alfa-c-uitleg-20261027/') ? 1 : undefined,
         });
         if (controller.signal.aborted) return false;
         if (ok === false) return false;
+        if (src === step.exercise.prompt?.audio?.src) setHeard(true);
       }
-      if (source === step.exercise.prompt?.audio?.src) setHeard(true);
       return true;
     } catch {
       if (!controller.signal.aborted) setAudioError(true);
@@ -331,6 +362,7 @@ function PilotPlayer({
     if (!heard || model || busy || result === 'right') return;
     metrics.current.tries++;
     setResult(correct ? 'right' : 'wrong');
+    void play(undefined, correct ? 'good' : 'error');
     onRecord({
       correct,
       helpUsed: metrics.current.helpUsed,
@@ -340,6 +372,11 @@ function PilotPlayer({
   }
   function markHelp() {
     metrics.current.helpUsed = true;
+  }
+  function stopPlayback() {
+    playback.current?.abort();
+    stopMedia();
+    setBusy(false);
   }
   return (
     <section
@@ -371,7 +408,7 @@ function PilotPlayer({
               <button
                 className="secondary-button"
                 onClick={() =>
-                  void play(step.exercise.prompt?.audio?.src, true)
+                  void play(step.exercise.prompt?.audio?.src, model ? 'example' : 'instruction')
                 }
                 disabled={busy}
               >
@@ -389,6 +426,8 @@ function PilotPlayer({
                       setHelp(false);
                       setResult('idle');
                       setModel(!model);
+                      if (!model) void play(undefined, 'example');
+                      else stopPlayback();
                     }}
                   >
                     <Eye />
@@ -400,6 +439,8 @@ function PilotPlayer({
                     onClick={() => {
                       markHelp();
                       setHelp(!help);
+                      if (!help) void play(undefined, 'help');
+                      else stopPlayback();
                     }}
                   >
                     <HelpCircle />
@@ -423,7 +464,7 @@ function PilotPlayer({
                 <p>{step.help}</p>
                 <button
                   className="secondary-button"
-                  onClick={() => void play(step.exercise.prompt?.audio?.src)}
+                  onClick={() => void play(step.exercise.prompt?.audio?.src, 'help')}
                   disabled={busy}
                 >
                   <Volume2 />
@@ -439,7 +480,7 @@ function PilotPlayer({
                 <button
                   className="secondary-button"
                   onClick={() =>
-                    void play(step.exercise.prompt?.audio?.src, true)
+                    void play(step.exercise.prompt?.audio?.src, 'example')
                   }
                   disabled={busy}
                 >
@@ -452,6 +493,7 @@ function PilotPlayer({
                     setModel(false);
                     setHelp(false);
                     setResult('idle');
+                    stopPlayback();
                   }}
                 >
                   Nu jij

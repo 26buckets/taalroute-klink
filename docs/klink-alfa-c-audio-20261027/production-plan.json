@@ -1,0 +1,806 @@
+{
+  "createdAt": "2026-10-27",
+  "role": "instruction",
+  "voiceName": "Roland - Clear Educational Narrator",
+  "voiceId": "h6uBOiAjLKklte8hdYio",
+  "targetVoiceId": "0qLmDzgqulxcvv0yf3kg",
+  "targetVoiceName": "Remko - Clear Dutch Narrator",
+  "model": "eleven_v4",
+  "language": "nl",
+  "format": "mp3_44100_128",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 0.9
+  },
+  "textNormalization": "off",
+  "newTargetAudio": 0,
+  "existingTargetsPreserved": true,
+  "clips": [
+    {
+      "id": "alfa-c-uitleg-3961e33abcbd",
+      "text": "Je oefent met winkel, brood en melk. Tik op Luister.",
+      "uses": [
+        "winkel.start",
+        "common.Start In de winkel"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-8f406c2ba866",
+      "text": "Je bent klaar. Je hebt geoefend met winkel, brood en melk.",
+      "uses": [
+        "winkel.end",
+        "common.Afronding In de winkel"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-9e8cf5313c56",
+      "text": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+      "uses": [
+        "winkel.1.spoken",
+        "winkel.2.spoken",
+        "winkel.3.spoken",
+        "bus.1.spoken",
+        "bus.2.spoken",
+        "bus.3.spoken",
+        "thuis.1.spoken",
+        "thuis.2.spoken",
+        "thuis.3.spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-c0d2c04700b4",
+      "text": "Je hebt geluisterd. Tik op Verder.",
+      "uses": [
+        "winkel.1.finish_spoken",
+        "winkel.2.finish_spoken",
+        "winkel.3.finish_spoken",
+        "bus.1.finish_spoken",
+        "bus.2.finish_spoken",
+        "bus.3.finish_spoken",
+        "thuis.1.finish_spoken",
+        "thuis.2.finish_spoken",
+        "thuis.3.finish_spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-60c4422b9aa3",
+      "text": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+      "uses": [
+        "winkel.4.spoken",
+        "winkel.5.spoken",
+        "winkel.11.spoken",
+        "winkel.12.spoken",
+        "bus.4.spoken",
+        "bus.5.spoken",
+        "bus.11.spoken",
+        "bus.12.spoken",
+        "thuis.4.spoken",
+        "thuis.5.spoken",
+        "thuis.11.spoken",
+        "thuis.12.spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-0bbb4ca53380",
+      "text": "Kijk naar het woord. Tik op Luister.",
+      "uses": [
+        "winkel.4.example_spoken",
+        "winkel.5.example_spoken",
+        "winkel.6.example_spoken",
+        "winkel.11.example_spoken",
+        "winkel.12.example_spoken",
+        "bus.4.example_spoken",
+        "bus.5.example_spoken",
+        "bus.6.example_spoken",
+        "bus.11.example_spoken",
+        "bus.12.example_spoken",
+        "thuis.4.example_spoken",
+        "thuis.5.example_spoken",
+        "thuis.6.example_spoken",
+        "thuis.11.example_spoken",
+        "thuis.12.example_spoken",
+        "common.Voorbeeld met een woord"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-c9b01a3d3b06",
+      "text": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+      "uses": [
+        "winkel.4.help_visible",
+        "winkel.5.help_visible",
+        "winkel.11.help_visible",
+        "winkel.12.help_visible",
+        "bus.4.help_visible",
+        "bus.5.help_visible",
+        "bus.11.help_visible",
+        "bus.12.help_visible",
+        "thuis.4.help_visible",
+        "thuis.5.help_visible",
+        "thuis.11.help_visible",
+        "thuis.12.help_visible"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-bbab2f9893ef",
+      "text": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+      "uses": [
+        "winkel.4.error",
+        "winkel.5.error",
+        "winkel.11.error",
+        "winkel.12.error",
+        "bus.4.error",
+        "bus.5.error",
+        "bus.11.error",
+        "bus.12.error",
+        "thuis.4.error",
+        "thuis.5.error",
+        "thuis.11.error",
+        "thuis.12.error"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-336827049e78",
+      "text": "Dat klopt. Tik op Verder.",
+      "uses": [
+        "winkel.4.good",
+        "winkel.5.good",
+        "winkel.6.good",
+        "winkel.7.good",
+        "winkel.8.good",
+        "winkel.9.good",
+        "winkel.10.good",
+        "winkel.11.good",
+        "winkel.12.good",
+        "bus.4.good",
+        "bus.5.good",
+        "bus.6.good",
+        "bus.7.good",
+        "bus.8.good",
+        "bus.9.good",
+        "bus.10.good",
+        "bus.11.good",
+        "bus.12.good",
+        "thuis.4.good",
+        "thuis.5.good",
+        "thuis.6.good",
+        "thuis.7.good",
+        "thuis.8.good",
+        "thuis.9.good",
+        "thuis.10.good",
+        "thuis.11.good",
+        "thuis.12.good"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-aaf5866103ec",
+      "text": "Tik op Nu jij.",
+      "uses": [
+        "winkel.4.transition_spoken",
+        "winkel.5.transition_spoken",
+        "winkel.6.transition_spoken",
+        "winkel.7.transition_spoken",
+        "winkel.8.transition_spoken",
+        "winkel.9.transition_spoken",
+        "winkel.10.transition_spoken",
+        "winkel.11.transition_spoken",
+        "winkel.12.transition_spoken",
+        "bus.4.transition_spoken",
+        "bus.5.transition_spoken",
+        "bus.6.transition_spoken",
+        "bus.7.transition_spoken",
+        "bus.8.transition_spoken",
+        "bus.9.transition_spoken",
+        "bus.10.transition_spoken",
+        "bus.11.transition_spoken",
+        "bus.12.transition_spoken",
+        "thuis.4.transition_spoken",
+        "thuis.5.transition_spoken",
+        "thuis.6.transition_spoken",
+        "thuis.7.transition_spoken",
+        "thuis.8.transition_spoken",
+        "thuis.9.transition_spoken",
+        "thuis.10.transition_spoken",
+        "thuis.11.transition_spoken",
+        "thuis.12.transition_spoken",
+        "common.Overgang naar Nu jij"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-493cbc06d8d2",
+      "text": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+      "uses": [
+        "winkel.6.spoken",
+        "bus.6.spoken",
+        "thuis.6.spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-9d671750ce3b",
+      "text": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+      "uses": [
+        "winkel.6.help_visible",
+        "bus.6.help_visible",
+        "thuis.6.help_visible"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-59a207e8a2f1",
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+      "uses": [
+        "winkel.6.error",
+        "bus.6.error",
+        "thuis.6.error"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-d62995acdb28",
+      "text": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+      "uses": [
+        "winkel.7.spoken",
+        "winkel.8.spoken",
+        "bus.7.spoken",
+        "bus.8.spoken",
+        "thuis.7.spoken",
+        "thuis.8.spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-ba99b5d9c3d7",
+      "text": "Kijk naar de zin. Tik op Luister.",
+      "uses": [
+        "winkel.7.example_spoken",
+        "winkel.8.example_spoken",
+        "winkel.9.example_spoken",
+        "winkel.10.example_spoken",
+        "bus.7.example_spoken",
+        "bus.8.example_spoken",
+        "bus.9.example_spoken",
+        "bus.10.example_spoken",
+        "thuis.7.example_spoken",
+        "thuis.8.example_spoken",
+        "thuis.9.example_spoken",
+        "thuis.10.example_spoken",
+        "common.Voorbeeld met een zin"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-628e36114990",
+      "text": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+      "uses": [
+        "winkel.7.help_visible",
+        "winkel.8.help_visible",
+        "thuis.7.help_visible",
+        "thuis.8.help_visible"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-98998ac541c2",
+      "text": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+      "uses": [
+        "winkel.7.error",
+        "winkel.8.error",
+        "bus.7.error",
+        "bus.8.error",
+        "thuis.7.error",
+        "thuis.8.error"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-9d75de3ee976",
+      "text": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+      "uses": [
+        "winkel.9.spoken",
+        "bus.9.spoken",
+        "thuis.9.spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-6c19c89d10b3",
+      "text": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+      "uses": [
+        "winkel.9.help_visible",
+        "bus.9.help_visible",
+        "thuis.9.help_visible"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-d946c03d8ce6",
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+      "uses": [
+        "winkel.9.error",
+        "bus.9.error",
+        "thuis.9.error"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-59b54695c336",
+      "text": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+      "uses": [
+        "winkel.10.spoken",
+        "bus.10.spoken",
+        "thuis.10.spoken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-12ae571e1f4b",
+      "text": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+      "uses": [
+        "winkel.10.help_visible",
+        "bus.10.help_visible",
+        "thuis.10.help_visible"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-ff5f28a10a02",
+      "text": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+      "uses": [
+        "winkel.10.error",
+        "bus.10.error",
+        "thuis.10.error"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-f1cbe1a8c70c",
+      "text": "Je oefent met auto, bus en fiets. Tik op Luister.",
+      "uses": [
+        "bus.start",
+        "common.Start Met de bus"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-a980aed9e42a",
+      "text": "Je bent klaar. Je hebt geoefend met auto, bus en fiets.",
+      "uses": [
+        "bus.end",
+        "common.Afronding Met de bus"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-23d570bfa88d",
+      "text": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+      "uses": [
+        "bus.7.help_visible",
+        "bus.8.help_visible"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-5e46b7714162",
+      "text": "Je oefent met kamer, deur en raam. Tik op Luister.",
+      "uses": [
+        "thuis.start",
+        "common.Start Thuis"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-2206a7a2acc6",
+      "text": "Je bent klaar. Je hebt geoefend met kamer, deur en raam.",
+      "uses": [
+        "thuis.end",
+        "common.Afronding Thuis"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-5fe6081e9283",
+      "text": "Tik op Voorbeeld. Bekijk het woord of de zin.",
+      "uses": [
+        "common.Voorbeeld openen"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-324cb88fad0e",
+      "text": "Tik op Help. Je krijgt een tip.",
+      "uses": [
+        "common.Help gebruiken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-a6c20b2b1321",
+      "text": "Tik op Eén terug. Het laatste kaartje gaat weg. Wil je nog een kaartje weghalen? Tik weer op Eén terug.",
+      "uses": [
+        "common.Eén terug gebruiken"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-e7729601a8b7",
+      "text": "Tik op Luister. Probeer het nog een keer. Wil je hulp? Tik op Help.",
+      "uses": [
+        "common.Lastige keuze opnieuw oefenen"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-e0dbe7d0dfff",
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Begin opnieuw.",
+      "uses": [
+        "common.Lastige bouwopdracht opnieuw oefenen"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-947da054ef5c",
+      "text": "Hoor je niets? Zet het geluid van je laptop aan. Tik daarna op Luister.",
+      "uses": [
+        "common.Geluid niet hoorbaar"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-ec5a57fba4ac",
+      "text": "Het geluid werkt nu niet. Probeer het later nog een keer.",
+      "uses": [
+        "common.Geluidsbestand werkt niet"
+      ]
+    },
+    {
+      "id": "alfa-c-uitleg-492923edfa7b",
+      "text": "Je kunt later weer oefenen.",
+      "uses": [
+        "common.Later verdergaan"
+      ]
+    }
+  ],
+  "bindings": {
+    "blocks": {
+      "winkel": {
+        "start": "alfa-c-uitleg-3961e33abcbd",
+        "end": "alfa-c-uitleg-8f406c2ba866",
+        "steps": [
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-493cbc06d8d2",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-9d671750ce3b",
+            "error": "alfa-c-uitleg-59a207e8a2f1",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-d62995acdb28",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-628e36114990",
+            "error": "alfa-c-uitleg-98998ac541c2",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-d62995acdb28",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-628e36114990",
+            "error": "alfa-c-uitleg-98998ac541c2",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-9d75de3ee976",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-6c19c89d10b3",
+            "error": "alfa-c-uitleg-d946c03d8ce6",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-59b54695c336",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-12ae571e1f4b",
+            "error": "alfa-c-uitleg-ff5f28a10a02",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          }
+        ]
+      },
+      "bus": {
+        "start": "alfa-c-uitleg-f1cbe1a8c70c",
+        "end": "alfa-c-uitleg-a980aed9e42a",
+        "steps": [
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-493cbc06d8d2",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-9d671750ce3b",
+            "error": "alfa-c-uitleg-59a207e8a2f1",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-d62995acdb28",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-23d570bfa88d",
+            "error": "alfa-c-uitleg-98998ac541c2",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-d62995acdb28",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-23d570bfa88d",
+            "error": "alfa-c-uitleg-98998ac541c2",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-9d75de3ee976",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-6c19c89d10b3",
+            "error": "alfa-c-uitleg-d946c03d8ce6",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-59b54695c336",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-12ae571e1f4b",
+            "error": "alfa-c-uitleg-ff5f28a10a02",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          }
+        ]
+      },
+      "thuis": {
+        "start": "alfa-c-uitleg-5e46b7714162",
+        "end": "alfa-c-uitleg-2206a7a2acc6",
+        "steps": [
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-9e8cf5313c56",
+            "example_spoken": null,
+            "help_visible": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "alfa-c-uitleg-c0d2c04700b4",
+            "transition_spoken": null
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-493cbc06d8d2",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-9d671750ce3b",
+            "error": "alfa-c-uitleg-59a207e8a2f1",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-d62995acdb28",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-628e36114990",
+            "error": "alfa-c-uitleg-98998ac541c2",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-d62995acdb28",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-628e36114990",
+            "error": "alfa-c-uitleg-98998ac541c2",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-9d75de3ee976",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-6c19c89d10b3",
+            "error": "alfa-c-uitleg-d946c03d8ce6",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-59b54695c336",
+            "example_spoken": "alfa-c-uitleg-ba99b5d9c3d7",
+            "help_visible": "alfa-c-uitleg-12ae571e1f4b",
+            "error": "alfa-c-uitleg-ff5f28a10a02",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          },
+          {
+            "spoken": "alfa-c-uitleg-60c4422b9aa3",
+            "example_spoken": "alfa-c-uitleg-0bbb4ca53380",
+            "help_visible": "alfa-c-uitleg-c9b01a3d3b06",
+            "error": "alfa-c-uitleg-bbab2f9893ef",
+            "good": "alfa-c-uitleg-336827049e78",
+            "finish_spoken": null,
+            "transition_spoken": "alfa-c-uitleg-aaf5866103ec"
+          }
+        ]
+      }
+    },
+    "common": {
+      "Start In de winkel": "alfa-c-uitleg-3961e33abcbd",
+      "Start Met de bus": "alfa-c-uitleg-f1cbe1a8c70c",
+      "Start Thuis": "alfa-c-uitleg-5e46b7714162",
+      "Voorbeeld met een woord": "alfa-c-uitleg-0bbb4ca53380",
+      "Voorbeeld met een zin": "alfa-c-uitleg-ba99b5d9c3d7",
+      "Voorbeeld openen": "alfa-c-uitleg-5fe6081e9283",
+      "Overgang naar Nu jij": "alfa-c-uitleg-aaf5866103ec",
+      "Help gebruiken": "alfa-c-uitleg-324cb88fad0e",
+      "Eén terug gebruiken": "alfa-c-uitleg-a6c20b2b1321",
+      "Lastige keuze opnieuw oefenen": "alfa-c-uitleg-e7729601a8b7",
+      "Lastige bouwopdracht opnieuw oefenen": "alfa-c-uitleg-e0dbe7d0dfff",
+      "Geluid niet hoorbaar": "alfa-c-uitleg-947da054ef5c",
+      "Geluidsbestand werkt niet": "alfa-c-uitleg-ec5a57fba4ac",
+      "Later verdergaan": "alfa-c-uitleg-492923edfa7b",
+      "Afronding In de winkel": "alfa-c-uitleg-8f406c2ba866",
+      "Afronding Met de bus": "alfa-c-uitleg-a980aed9e42a",
+      "Afronding Thuis": "alfa-c-uitleg-2206a7a2acc6"
+    }
+  },
+  "textSourceSha256": "4abbfc53a9d8cefb12b79ee933e699780c1835744299a6287395f639c08a06ea"
+}

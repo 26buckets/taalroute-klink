@@ -5,6 +5,10 @@ import {
 } from './package-content.ts';
 import { contentById } from './connected-content.ts';
 import reviewedTexts from '../data/klink-alfa-c-texts.json' with { type: 'json' };
+import guideAudio from '../data/klink-alfa-c-audio.json' with { type: 'json' };
+
+const guideSources = new Map<string, string>(Object.values(guideAudio.clips).map(clip => [clip.text, clip.src]));
+export const alfaCGuideAudio = (text?: string | null) => text ? guideSources.get(text) : undefined;
 
 export type PilotStep = {
   id: string;
@@ -45,7 +49,6 @@ const sentence = (text: string) => {
     throw Error(`Missing existing sentence: ${text}`);
   return found;
 };
-const instruction = (id: string) => `/package-audio/instructions/${id}.wav`;
 export const pilotPack = contentPackages[0];
 export const pilotStorageKey = 'klink.preview.alfa-c.v1';
 export const alfaCCommonTexts = reviewedTexts.common;
@@ -133,7 +136,7 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def, blockIndex) => {
       id,
       stage,
       instruction: text.screen,
-      instructionAudio: instruction(audio),
+      instructionAudio: alfaCGuideAudio(text.spoken)!,
       exercise: { ...exercise, exerciseId: id, title: text.screen },
       model,
       help: text.help_visible ?? '',
