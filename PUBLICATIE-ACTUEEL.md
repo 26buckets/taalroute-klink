@@ -1,3 +1,42 @@
+# Actuele Klink-publicatie — 27 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/alfa-c
+Broncommit: `195a5673fc654ef3dbdd75b3c107bbdcff36a1fb`, canonieke branch `main`.
+Worker: `2f8deba7-447d-4036-b242-9858a7610858`.
+
+Alle 36 stappen in In de winkel, Met de bus en Thuis gebruiken het herziene
+tekstpakket: concrete foutinstructies, antwoordvrije hulp en voorbeelden die
+het werkelijk getoonde hele woord of de hele zin beschrijven. Voorbeeld en Nu jij
+wissen oude hulp en feedback. Afronding van luisterstappen wordt samen met de
+nieuwe positie opgeslagen en niet meer door een tweede opslag overschreven.
+
+Lokaal: types, gerichte lint, curriculum (48 geslaagd, 1 bedoelde overslag),
+productiebuild, 50 historische publicatiebewijstests, gerichte vrijgavetests en
+normale publicatiepoort geslaagd. Alle 36 stappen in Chromium en WebKit, alle
+36 smalle schermen, fout/herstel en behoud van voortgang gecontroleerd.
+Online: 72 stapgevallen, 54 foutherpogingen, zes kaartresets en 36 smalle schermen;
+echt geluid, fout/herstel en actuele bron/bundel gecontroleerd. Voor de eerste
+publicatie in deze taak zijn alle 8.135 media bytegelijk gecontroleerd; de
+laatste opvolging wijzigt geen publieke mediabestanden. De laatste liveversie
+is aanvullend op alle 48 Alfa C-media-/intrekkingsgevallen gecontroleerd.
+33 aangeboden opnamen behouden hun gecontroleerde Taalroute-metadata.
+De bestaande instructieaudio-pauze blijft gelden; geen nieuwe audio of beelden.
+De eerdere integratiecontrole van 50 schermgevallen, lessen, docentroute,
+toetsenbord, logo D, startpagina en bestaande opslag blijft behouden.
+Geen GitHub Actions-workflows aanwezig of gestart.
+
+Geen fysieke telefoon-, schermlezer- of cursistenproef uitgevoerd.
+De drie blokken vormen geen volledige dekking van Alfa C.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-texts-20261027.json`.
+Register: `docs/klink-publication-alfa-c-texts-20261027.json`.
+Bronback-up: https://drive.google.com/file/d/1QqXbxVvUbTcIUL9z8y29VFedntadjg1u/view
+Definitief herstelpakket: https://drive.google.com/file/d/1lzvRhvWs6V8sJPQ6OgnhXCd3Q7o-URUB/view
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar
+Actuele werkmap: `/Users/nicoknoester/Documents/Codex/2026-10-26/files-pasted-by-the-user-werk/work/klink-alfa-c-publicatie`.
+
+## Eerder publicatieregister
+
 # Actuele Klink-publicatie
 
 Live: https://klink.taalroute.nl
