@@ -1,3 +1,53 @@
+# Actuele Klink-publicatie — Alfa C-audio, 27 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/alfa-c
+Broncommit: `bc6ac526f2879962d13b848a4fd63c6c5ce1fd1a`, canonieke branch `main`.
+Worker: `a2a30b7b-67b7-47e9-95aa-0fd5833df7ff`.
+
+Alle 36 herziene Alfa C-stappen hebben passende gesproken uitleg, voorbeelden,
+hulp, feedback en afronding via 36 gedeelde nieuwe bestanden. Roland
+(`h6uBOiAjLKklte8hdYio`) is de instructiestem; de bestaande goede oefentaal,
+waaronder Remko (`0qLmDzgqulxcvv0yf3kg`), is bytegelijk behouden.
+Luister speelt uitleg vóór de oefenopname. Voorbeeld, Help en feedback spreken
+hun eigen tekst. Verder wacht tot feedback klaar is. Navigeren of een voorbeeld
+sluiten stopt het geluid. De afronding heeft een herhaalbare Luister-knop.
+
+Alle nieuwe bestanden staan onder `/package-audio/alfa-c-uitleg-20261027/`.
+De oude instructieaudio-pauze en alle ingetrokken bestanden blijven gelden.
+Uitleg speelt op 1,0 na rustige generatie; bestaande oefenaudio blijft op 0,85.
+De bestaande keuze voor langzamer afspelen blijft werken.
+
+Lokaal geslaagd: alle 36 teksten automatisch teruggetranscribeerd zonder
+woordverschillen na normalisatie, metadata en verliesloze merkvelden, types,
+gerichte lint, productiebuild, 48 curriculumtests met één bedoelde overslag,
+50 historische publicatiebewijstests, gerichte vrijgavetests, normale
+publicatiepoort, 72 stappen in Chromium/WebKit, 36 smalle schermen,
+36 native audiobestanden, 50 integratiegevallen en de oudere 36-stappentest.
+Online geslaagd: 72 stapgevallen, 54 foutherpogingen, zes kaartresets en
+36 smalle schermen; alle 36 nieuwe bestanden native afgespeeld en hun
+Taalroute-metadata na downloaden opnieuw gecontroleerd; alle 8.135 bestaande
+media bytegelijk en ingetrokken instructies niet aangeboden. Nieuwe audio,
+actuele bron en werkelijke cliëntbundel zijn gecontroleerd.
+Geen nieuwe GitHub-workflows of Actions-runs.
+
+Menselijke luistercontrole, een cursistenproef, fysieke telefoons en een
+schermlezerproef blijven open. De drie blokken dekken niet heel Alfa C.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-audio-20261027.json`.
+Register: `docs/klink-publication-alfa-c-audio-20261027.json`.
+Bronback-up: https://drive.google.com/file/d/1DoqFwRorRpLzeO21HJtSiqHLsJmTCLBQ/view
+Definitief herstelpakket: https://drive.google.com/file/d/1rBJ8ei2f7yMpyfNQfrnYklwAml1zw9fw/view
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar
+
+De actuele bron blijft in de canonieke werkmap. Voor deze bouw is een identieke,
+schone kopie van main buiten iCloud gebruikt met de gewone `npm run deploy`.
+Git-objecten van de canonieke werkmap staan in een blijvende lokale cache
+buiten iCloud: `/Users/nicoknoester/.cache/klink-alfa-c-audio-object-cache-20261027.git/objects`.
+Een volgende publicatie moet weer de actuele livebasis controleren en een
+identieke, schone canonieke bron gebruiken; geen oude bouwmap herpubliceren.
+
+## Eerder publicatieregister
+
 # Actuele Klink-publicatie — 27 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/alfa-c
