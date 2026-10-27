@@ -9,7 +9,7 @@ export const alfaCAudioCodeFiles=[
  'components/product/alfa-c-practice.tsx','lib/alfa-c-practice.ts','data/klink-alfa-c-audio.json','data/klink-teacher-manual.json',
  'scripts/check-alfa-c-texts-release.mjs','scripts/check-alfa-c-audio-release.mjs',
  'scripts/test-alfa-c-audio.mjs','scripts/test-alfa-c-audio-browser.mjs','scripts/test-alfa-c-audio-release.mjs',
- 'scripts/test-alfa-c-texts-browser.mjs','scripts/test-publication-proof.mjs',
+ 'scripts/test-alfa-c-texts-browser.mjs','scripts/test-alfa-c-preview-browser.mjs','scripts/test-publication-proof.mjs',
 ];
 export const alfaCAudioEvidence=['owner-request','live-baseline','production-plan','metadata','transcripts','review'];
 export function verifyAlfaCAudioRelease(readFile=readFileSync,release=JSON.parse(readFileSync('docs/klink-owner-release-alfa-c-audio-20261027.json'))){

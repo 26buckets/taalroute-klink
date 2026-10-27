@@ -84,6 +84,7 @@ try {
             .click();
         }
       await page.getByRole('button', { name: 'Verder', exact: true }).waitFor();
+      await page.waitForFunction(() => { const next = document.querySelector('.pilot-footer button'); return next && !next.disabled; });
       assert(
         await page
           .getByRole('button', { name: 'Verder', exact: true })
