@@ -41,6 +41,8 @@ export function verifyAlfaCTextRelease(readFile = readFileSync, release = JSON.p
   for (const [file, hash] of Object.entries(release.files)) assert.equal(sha(readFile(file)), hash, file);
   const live = JSON.parse(readFile(`${evidence}/live-baseline.json`));
   assert.equal(live.sourceCommit, release.baselineSourceCommit);
+  assert.equal(live.followupLiveSourceCommit, 'c6e0a3e63a1f879b4db5a4abc7a1be767f2165f3');
+  git('merge-base', '--is-ancestor', live.followupLiveSourceCommit, 'HEAD');
   const owner = JSON.parse(readFile(`${evidence}/owner-request.json`));
   assert.equal(owner.userRequest, release.userRequest);
   const review = JSON.parse(readFile(`${evidence}/review.json`));

@@ -386,6 +386,8 @@ function PilotPlayer({
                     disabled={result === 'right'}
                     onClick={() => {
                       markHelp();
+                      setHelp(false);
+                      setResult('idle');
                       setModel(!model);
                     }}
                   >

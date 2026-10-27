@@ -76,6 +76,8 @@ for (const [engineName, engine] of Object.entries({ chromium, webkit })) {
           } else {
             await page.getByRole('button', { name: 'Help', exact: true }).click();
             await page.getByRole('button', { name: 'Voorbeeld', exact: true }).click();
+            assert.equal(await page.locator('.pilot-help').count(), 0);
+            assert(!(await page.locator('.pilot-footer output').innerText()).includes(step.errorFeedback));
             await page.getByRole('button', { name: 'Nu jij', exact: true }).click();
             assert((await slots.allTextContents()).every(x => !x.trim()));
             assert.equal(await page.locator('.pilot-help').count(), 0);
