@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { pilotBlocks, pilotStorageKey } from '../lib/alfa-c-practice.ts';
+import { pilotBlocks } from '../lib/alfa-c-practice.ts';
 const out = 'outputs/alfa-c-proefblokken-20261026',
   url =
     (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c';
@@ -55,11 +55,7 @@ try {
       await page
         .getByRole('button', { name: 'Luister', exact: true })
         .waitFor();
-      await page.waitForFunction(() =>
-        document
-          .querySelector('.pilot-footer')
-          ?.textContent.includes('Neem rustig'),
-      );
+      await page.waitForFunction(() => !document.querySelector('.pilot-tools button')?.disabled);
       if (s.exercise.options) {
         const opts = s.exercise.options;
         const right = opts.findIndex((o) =>
@@ -74,7 +70,7 @@ try {
               .isDisabled(),
           );
           assert(
-            (await page.locator('.pilot-footer').innerText()).includes(s.help),
+            (await page.locator('.pilot-footer').innerText()).includes(s.errorFeedback),
           );
         }
         await buttons.nth(right).click();

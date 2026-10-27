@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { verifyAlfaCTextRelease, readBeforeAlfaCText } from './check-alfa-c-texts-release.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -39,6 +40,9 @@ export function verifyAlfaCRelease(
   ),
   readFile = readFileSync,
 ) {
+  const textRelease = verifyAlfaCTextRelease(readFile);
+  const currentReader = readFile;
+  readFile = file => readBeforeAlfaCText(file, textRelease, currentReader);
   assert.equal(release.approvedBy, 'Nico');
   assert.equal(release.publicationApproved, true);
   assert.equal(
@@ -82,6 +86,7 @@ export function verifyAlfaCRelease(
     'diff',
     '--name-only',
     release.baselineSourceCommit,
+    textRelease.baselineSourceCommit,
     '--',
     ...roots,
   )
@@ -89,17 +94,7 @@ export function verifyAlfaCRelease(
     .trim()
     .split('\n')
     .filter(Boolean);
-  const untracked = git(
-    'ls-files',
-    '--others',
-    '--exclude-standard',
-    '--',
-    ...roots,
-  )
-    .toString()
-    .trim()
-    .split('\n')
-    .filter(Boolean);
+  const untracked = []; // The approved text successor validates the current delta.
   assert.deepEqual(
     sort([...new Set([...changed, ...untracked])]),
     sort(alfaCFiles),
@@ -183,10 +178,10 @@ export function verifyAlfaCRelease(
       backup.zipCrcVerified,
   );
   assert.equal(backup.manifestEntriesVerified, manifest.length);
-  return release;
+  return { ...release, textRelease };
 }
 export function readBeforeAlfaC(file, release, readFile = readFileSync) {
   return release?.files[file]
     ? git('show', `${release.baselineSourceCommit}:${file}`)
-    : readFile(file);
+    : readBeforeAlfaCText(file, release.textRelease, readFile);
 }

@@ -1,0 +1,3078 @@
+{
+  "product": "KLINK",
+  "status": "tekst_gecontroleerd_na_live_bedieningscontrole_niet_ingebouwd",
+  "blocks": [
+    {
+      "theme": {
+        "label": "Winkel",
+        "title": "In de winkel",
+        "words": [
+          "winkel",
+          "brood",
+          "melk"
+        ],
+        "parts": [
+          "win",
+          "kel"
+        ],
+        "sentences": [
+          "Ik loop de winkel in.",
+          "Dit is melk.",
+          "Ik kies een klein brood."
+        ],
+        "start": "Je oefent met winkel, brood en melk. Tik op Luister.",
+        "end": "Je bent klaar. Je hebt geoefend met winkel, brood en melk."
+      },
+      "steps": [
+        {
+          "id": "Winkel 01",
+          "number": 1,
+          "target": "winkel",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar winkel",
+          "objective": "Koppelt het gesproken woord winkel aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij winkel, met het geschreven woord winkel. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord winkel staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O001",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Winkel 02",
+          "number": 2,
+          "target": "brood",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar brood",
+          "objective": "Koppelt het gesproken woord brood aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij brood, met het geschreven woord brood. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord brood staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O002",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Winkel 03",
+          "number": 3,
+          "target": "melk",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar melk",
+          "objective": "Koppelt het gesproken woord melk aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij melk, met het geschreven woord melk. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord melk staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O003",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Winkel 04",
+          "number": 4,
+          "target": "winkel",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Hoor het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord winkel aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij winkel, brood en melk. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij winkel.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O001",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 05",
+          "number": 5,
+          "target": "brood",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Hoor het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord brood aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij winkel, brood en melk. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij brood.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O002",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 06",
+          "number": 6,
+          "target": "winkel",
+          "recordingRefs": {
+            "spoken": "U009",
+            "example_spoken": "U004",
+            "help_spoken": "U010",
+            "error": "U011",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woordbouw",
+          "title": "Maak het woord met twee delen",
+          "objective": "Zet de twee aangeboden delen van winkel in de juiste volgorde.",
+          "screen": "Luister. Maak het woord.",
+          "spoken": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "material": "De bestaande afbeelding bij winkel, twee bestaande deelkaartjes (win en kel), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "help_spoken": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "win → kel = winkel.",
+          "finish": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O001",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 07",
+          "number": 7,
+          "target": "Ik loop de winkel in.",
+          "recordingRefs": {
+            "spoken": "U012",
+            "example_spoken": "U013",
+            "help_spoken": "U014",
+            "error": "U015",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-keuze",
+          "title": "Kies dezelfde geschreven zin",
+          "objective": "Herkent de gehoorde zin tussen de drie bestaande geschreven zinnen; dit is zinsherkenning.",
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "material": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Ik loop de winkel in.\n• Dit is melk.\n• Ik kies een klein brood.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Ik loop de winkel in. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "help_spoken": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Ik loop de winkel in.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.",
+          "finish_spoken": null,
+          "targetRecordingId": "O004",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 08",
+          "number": 8,
+          "target": "Dit is melk.",
+          "recordingRefs": {
+            "spoken": "U012",
+            "example_spoken": "U013",
+            "help_spoken": "U014",
+            "error": "U015",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-keuze",
+          "title": "Kies dezelfde geschreven zin",
+          "objective": "Herkent de gehoorde zin tussen de drie bestaande geschreven zinnen; dit is zinsherkenning.",
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "material": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Ik loop de winkel in.\n• Dit is melk.\n• Ik kies een klein brood.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Dit is melk. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "help_spoken": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Dit is melk.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.",
+          "finish_spoken": null,
+          "targetRecordingId": "O005",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 09",
+          "number": 9,
+          "target": "Ik kies een klein brood.",
+          "recordingRefs": {
+            "spoken": "U016",
+            "example_spoken": "U013",
+            "help_spoken": "U017",
+            "error": "U018",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zinsbouw",
+          "title": "Maak de gehoorde zin met woordkaartjes",
+          "objective": "Zet de bestaande woordkaartjes in de volgorde van de gehoorde zin.",
+          "screen": "Luister. Maak de zin.",
+          "spoken": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+          "material": "De bestaande woordkaartjes met deze bronwoorden: Ik | kies | een | klein | brood. Er zijn 5 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Ik kies een klein brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "help_spoken": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Ik → kies → een → klein → brood.",
+          "finish": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O006",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 10",
+          "number": 10,
+          "target": "Ik kies een klein brood.",
+          "recordingRefs": {
+            "spoken": "U019",
+            "example_spoken": "U013",
+            "help_spoken": "U020",
+            "error": "U021",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-foto",
+          "title": "Hoor de zin en kies de foto",
+          "objective": "Koppelt de gehoorde zin aan de bestaande foto bij brood; dit is geen volledige praktijktaak.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+          "material": "De drie bestaande foto’s bij winkel, brood en melk. Er wordt geen nieuwe scènefoto toegevoegd.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Ik kies een klein brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "help_spoken": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "error": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij brood.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing.",
+          "finish_spoken": null,
+          "targetRecordingId": "O006",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 11",
+          "number": 11,
+          "target": "brood",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Herhaal het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord brood aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij winkel, brood en melk. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij brood.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O002",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Winkel 12",
+          "number": 12,
+          "target": "winkel",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Herhaal het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord winkel aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij winkel, brood en melk. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij winkel.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O001",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        }
+      ]
+    },
+    {
+      "theme": {
+        "label": "Bus",
+        "title": "Met de bus",
+        "words": [
+          "auto",
+          "bus",
+          "fiets"
+        ],
+        "parts": [
+          "au",
+          "to"
+        ],
+        "sentences": [
+          "Dit is mijn auto.",
+          "Dit is mijn fiets.",
+          "Ik stap in de bus."
+        ],
+        "start": "Je oefent met auto, bus en fiets. Tik op Luister.",
+        "end": "Je bent klaar. Je hebt geoefend met auto, bus en fiets."
+      },
+      "steps": [
+        {
+          "id": "Bus 01",
+          "number": 1,
+          "target": "auto",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar auto",
+          "objective": "Koppelt het gesproken woord auto aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij auto, met het geschreven woord auto. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord auto staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O007",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Bus 02",
+          "number": 2,
+          "target": "bus",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar bus",
+          "objective": "Koppelt het gesproken woord bus aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij bus, met het geschreven woord bus. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord bus staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O008",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Bus 03",
+          "number": 3,
+          "target": "fiets",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar fiets",
+          "objective": "Koppelt het gesproken woord fiets aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij fiets, met het geschreven woord fiets. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord fiets staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O009",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Bus 04",
+          "number": 4,
+          "target": "auto",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Hoor het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord auto aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij auto, bus en fiets. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij auto.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O007",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 05",
+          "number": 5,
+          "target": "bus",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Hoor het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord bus aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij auto, bus en fiets. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij bus.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O008",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 06",
+          "number": 6,
+          "target": "auto",
+          "recordingRefs": {
+            "spoken": "U009",
+            "example_spoken": "U004",
+            "help_spoken": "U010",
+            "error": "U011",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woordbouw",
+          "title": "Maak het woord met twee delen",
+          "objective": "Zet de twee aangeboden delen van auto in de juiste volgorde.",
+          "screen": "Luister. Maak het woord.",
+          "spoken": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "material": "De bestaande afbeelding bij auto, twee bestaande deelkaartjes (au en to), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "help_spoken": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "au → to = auto.",
+          "finish": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O007",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 07",
+          "number": 7,
+          "target": "Dit is mijn auto.",
+          "recordingRefs": {
+            "spoken": "U012",
+            "example_spoken": "U013",
+            "help_spoken": "U022",
+            "error": "U015",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-keuze",
+          "title": "Kies dezelfde geschreven zin",
+          "objective": "Herkent de gehoorde zin tussen de drie bestaande geschreven zinnen; dit is zinsherkenning.",
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "material": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Dit is mijn auto.\n• Dit is mijn fiets.\n• Ik stap in de bus.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Dit is mijn auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+          "help_spoken": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Dit is mijn auto.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.",
+          "finish_spoken": null,
+          "targetRecordingId": "O010",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 08",
+          "number": 8,
+          "target": "Dit is mijn fiets.",
+          "recordingRefs": {
+            "spoken": "U012",
+            "example_spoken": "U013",
+            "help_spoken": "U022",
+            "error": "U015",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-keuze",
+          "title": "Kies dezelfde geschreven zin",
+          "objective": "Herkent de gehoorde zin tussen de drie bestaande geschreven zinnen; dit is zinsherkenning.",
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "material": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Dit is mijn auto.\n• Dit is mijn fiets.\n• Ik stap in de bus.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Dit is mijn fiets. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+          "help_spoken": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Dit is mijn fiets.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.",
+          "finish_spoken": null,
+          "targetRecordingId": "O011",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 09",
+          "number": 9,
+          "target": "Ik stap in de bus.",
+          "recordingRefs": {
+            "spoken": "U016",
+            "example_spoken": "U013",
+            "help_spoken": "U017",
+            "error": "U018",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zinsbouw",
+          "title": "Maak de gehoorde zin met woordkaartjes",
+          "objective": "Zet de bestaande woordkaartjes in de volgorde van de gehoorde zin.",
+          "screen": "Luister. Maak de zin.",
+          "spoken": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+          "material": "De bestaande woordkaartjes met deze bronwoorden: Ik | stap | in | de | bus. Er zijn 5 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Ik stap in de bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "help_spoken": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Ik → stap → in → de → bus.",
+          "finish": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O012",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 10",
+          "number": 10,
+          "target": "Ik stap in de bus.",
+          "recordingRefs": {
+            "spoken": "U019",
+            "example_spoken": "U013",
+            "help_spoken": "U020",
+            "error": "U021",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-foto",
+          "title": "Hoor de zin en kies de foto",
+          "objective": "Koppelt de gehoorde zin aan de bestaande foto bij bus; dit is geen volledige praktijktaak.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+          "material": "De drie bestaande foto’s bij auto, bus en fiets. Er wordt geen nieuwe scènefoto toegevoegd.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Ik stap in de bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "help_spoken": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "error": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij bus.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing.",
+          "finish_spoken": null,
+          "targetRecordingId": "O012",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 11",
+          "number": 11,
+          "target": "bus",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Herhaal het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord bus aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij auto, bus en fiets. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij bus.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O008",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Bus 12",
+          "number": 12,
+          "target": "auto",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Herhaal het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord auto aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij auto, bus en fiets. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij auto.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O007",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        }
+      ]
+    },
+    {
+      "theme": {
+        "label": "Thuis",
+        "title": "Thuis",
+        "words": [
+          "kamer",
+          "deur",
+          "raam"
+        ],
+        "parts": [
+          "ka",
+          "mer"
+        ],
+        "sentences": [
+          "Er is licht in de kamer.",
+          "Het raam staat open.",
+          "Dit is de deur."
+        ],
+        "start": "Je oefent met kamer, deur en raam. Tik op Luister.",
+        "end": "Je bent klaar. Je hebt geoefend met kamer, deur en raam."
+      },
+      "steps": [
+        {
+          "id": "Thuis 01",
+          "number": 1,
+          "target": "kamer",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar kamer",
+          "objective": "Koppelt het gesproken woord kamer aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij kamer, met het geschreven woord kamer. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord kamer staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O013",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Thuis 02",
+          "number": 2,
+          "target": "deur",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar deur",
+          "objective": "Koppelt het gesproken woord deur aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij deur, met het geschreven woord deur. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord deur staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O014",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Thuis 03",
+          "number": 3,
+          "target": "raam",
+          "recordingRefs": {
+            "spoken": "U001",
+            "example_spoken": null,
+            "help_spoken": null,
+            "error": null,
+            "good": null,
+            "finish_spoken": "U002",
+            "transition_spoken": null
+          },
+          "kind": "aanbod",
+          "title": "Kijk en luister naar raam",
+          "objective": "Koppelt het gesproken woord raam aan het bestaande beeld en het geschreven woord.",
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "material": "De bestaande foto bij raam, met het geschreven woord raam. Geen antwoordkeuzes.",
+          "example_visible": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord raam staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.",
+          "example_spoken": null,
+          "help_visible": null,
+          "help_spoken": null,
+          "error": null,
+          "good": null,
+          "answer": null,
+          "finish": "Verder mag beschikbaar zijn zodra de cursist het woord één keer volledig heeft beluisterd. Een tweede luisterbeurt blijft mogelijk. Kijken of luisteren telt als aanbod, niet als bewezen beheersing.",
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "targetRecordingId": "O015",
+          "transition_spoken": null,
+          "instruction_use": "Bij dit aanbodscherm. Herhalen gebeurt met Luister; voeg geen aparte Help- of Voorbeeldhandeling toe."
+        },
+        {
+          "id": "Thuis 04",
+          "number": 4,
+          "target": "kamer",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Hoor het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord kamer aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij kamer, deur en raam. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij kamer.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O013",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 05",
+          "number": 5,
+          "target": "deur",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Hoor het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord deur aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij kamer, deur en raam. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij deur.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O014",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 06",
+          "number": 6,
+          "target": "kamer",
+          "recordingRefs": {
+            "spoken": "U009",
+            "example_spoken": "U004",
+            "help_spoken": "U010",
+            "error": "U011",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woordbouw",
+          "title": "Maak het woord met twee delen",
+          "objective": "Zet de twee aangeboden delen van kamer in de juiste volgorde.",
+          "screen": "Luister. Maak het woord.",
+          "spoken": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "material": "De bestaande afbeelding bij kamer, twee bestaande deelkaartjes (ka en mer), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "help_spoken": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "ka → mer = kamer.",
+          "finish": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O013",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 07",
+          "number": 7,
+          "target": "Er is licht in de kamer.",
+          "recordingRefs": {
+            "spoken": "U012",
+            "example_spoken": "U013",
+            "help_spoken": "U014",
+            "error": "U015",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-keuze",
+          "title": "Kies dezelfde geschreven zin",
+          "objective": "Herkent de gehoorde zin tussen de drie bestaande geschreven zinnen; dit is zinsherkenning.",
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "material": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Er is licht in de kamer.\n• Het raam staat open.\n• Dit is de deur.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Er is licht in de kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "help_spoken": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Er is licht in de kamer.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.",
+          "finish_spoken": null,
+          "targetRecordingId": "O016",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 08",
+          "number": 8,
+          "target": "Het raam staat open.",
+          "recordingRefs": {
+            "spoken": "U012",
+            "example_spoken": "U013",
+            "help_spoken": "U014",
+            "error": "U015",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-keuze",
+          "title": "Kies dezelfde geschreven zin",
+          "objective": "Herkent de gehoorde zin tussen de drie bestaande geschreven zinnen; dit is zinsherkenning.",
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "material": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Er is licht in de kamer.\n• Het raam staat open.\n• Dit is de deur.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Het raam staat open. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "help_spoken": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Het raam staat open.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.",
+          "finish_spoken": null,
+          "targetRecordingId": "O017",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 09",
+          "number": 9,
+          "target": "Dit is de deur.",
+          "recordingRefs": {
+            "spoken": "U016",
+            "example_spoken": "U013",
+            "help_spoken": "U017",
+            "error": "U018",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zinsbouw",
+          "title": "Maak de gehoorde zin met woordkaartjes",
+          "objective": "Zet de bestaande woordkaartjes in de volgorde van de gehoorde zin.",
+          "screen": "Luister. Maak de zin.",
+          "spoken": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+          "material": "De bestaande woordkaartjes met deze bronwoorden: Dit | is | de | deur. Er zijn 4 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Dit is de deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "help_spoken": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "Dit → is → de → deur.",
+          "finish": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O018",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 10",
+          "number": 10,
+          "target": "Dit is de deur.",
+          "recordingRefs": {
+            "spoken": "U019",
+            "example_spoken": "U013",
+            "help_spoken": "U020",
+            "error": "U021",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "zin-foto",
+          "title": "Hoor de zin en kies de foto",
+          "objective": "Koppelt de gehoorde zin aan de bestaande foto bij deur; dit is geen volledige praktijktaak.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+          "material": "De drie bestaande foto’s bij kamer, deur en raam. Er wordt geen nieuwe scènefoto toegevoegd.",
+          "example_visible": "Het geopende Voorbeeld toont de hele zin: Dit is de deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "help_spoken": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "error": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij deur.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing.",
+          "finish_spoken": null,
+          "targetRecordingId": "O018",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 11",
+          "number": 11,
+          "target": "deur",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Herhaal het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord deur aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij kamer, deur en raam. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij deur.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O014",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        },
+        {
+          "id": "Thuis 12",
+          "number": 12,
+          "target": "kamer",
+          "recordingRefs": {
+            "spoken": "U003",
+            "example_spoken": "U004",
+            "help_spoken": "U005",
+            "error": "U006",
+            "good": "U007",
+            "finish_spoken": null,
+            "transition_spoken": "U008"
+          },
+          "kind": "woord-foto",
+          "title": "Herhaal het woord en kies de foto",
+          "objective": "Koppelt het gehoorde woord kamer aan de juiste bestaande foto.",
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "material": "De drie bestaande foto’s bij kamer, deur en raam. Geen geschreven woord als extra antwoordhint.",
+          "example_visible": "Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "help_spoken": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "answer": "De bestaande foto bij kamer.",
+          "finish": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.",
+          "finish_spoken": null,
+          "targetRecordingId": "O013",
+          "transition_spoken": "Tik op Nu jij.",
+          "instruction_use": "De gesproken opdracht hoort bij de eigen oefening. Als Voorbeeld openstaat, gebruik eerst de voorbeelduitleg; na Nu jij zijn de eigen keuzes zichtbaar. De bestaande speler wacht op Luister. Er wordt geen automatische start van oefengeluid toegevoegd."
+        }
+      ]
+    }
+  ],
+  "commonTexts": [
+    [
+      "Start In de winkel",
+      "Je oefent met winkel, brood en melk. Tik op Luister.",
+      "Bij de start van In de winkel, zonder extra startscherm of knop."
+    ],
+    [
+      "Start Met de bus",
+      "Je oefent met auto, bus en fiets. Tik op Luister.",
+      "Bij de start van Met de bus, zonder extra startscherm of knop."
+    ],
+    [
+      "Start Thuis",
+      "Je oefent met kamer, deur en raam. Tik op Luister.",
+      "Bij de start van Thuis, zonder extra startscherm of knop."
+    ],
+    [
+      "Voorbeeld met een woord",
+      "Kijk naar het woord. Tik op Luister.",
+      "Bij geopend Voorbeeld van een woord-fotokeuze of woordbouw. Het model toont het hele woord. De doelopname blijft afzonderlijk via Luister beschikbaar."
+    ],
+    [
+      "Voorbeeld met een zin",
+      "Kijk naar de zin. Tik op Luister.",
+      "Bij geopend Voorbeeld van een zinskeuze, zinsbouw of zin-fotokoppeling. Het model toont één hele zin, zonder losse kaartjes of antwoordopties."
+    ],
+    [
+      "Voorbeeld openen",
+      "Tik op Voorbeeld. Bekijk het woord of de zin.",
+      "Als uitleg bij deze bestaande knop nodig is. Daarna volgt de passende voorbeelduitleg. Geen gekozen foto of losse kaartjes beloven."
+    ],
+    [
+      "Overgang naar Nu jij",
+      "Tik op Nu jij.",
+      "Bij stappen 04–12, alleen na een geopend Voorbeeld. Daarna hoort de gesproken opdracht bij de eigen keuzes; die noemt Luister en de concrete taak. Bij bouwen worden de vakjes leeg. Eerder geopende Help en oude foutfeedback kunnen blijven staan; geen volledig schoon scherm beloven."
+    ],
+    [
+      "Help gebruiken",
+      "Tik op Help. Je krijgt een tip.",
+      "Uitsluitend bij de eigen oefeningen 04–12. De nieuwe Help-tekst bevat geen doelantwoord. De huidige antwoordgevende woordbouw-Help moet bij een latere inbouw samen met foutfeedback worden vervangen."
+    ],
+    [
+      "Eén terug gebruiken",
+      "Tik op Eén terug. Het laatste kaartje gaat weg. Wil je nog een kaartje weghalen? Tik weer op Eén terug.",
+      "Uitsluitend als uitleg bij de bestaande bouwknop nodig is. Bij een volle foutpoging geldt de volledige hersteltekst van stap 06 of 09. Geen nieuwe knop of handeling toevoegen."
+    ],
+    [
+      "Lastige keuze opnieuw oefenen",
+      "Tik op Luister. Probeer het nog een keer. Wil je hulp? Tik op Help.",
+      "Voor een bestaande opnieuw aangeboden keuzeopdracht. De foutfeedback per stap noemt concreet een andere foto of een andere zin. Geen extra herhaalroute ontwerpen."
+    ],
+    [
+      "Lastige bouwopdracht opnieuw oefenen",
+      "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Begin opnieuw.",
+      "Voor een nog gevulde bouwpoging. Zijn de vakjes al leeg, dan is het leegmaakdoel al bereikt; begin bij Luister. Een afzonderlijk geplaatst kaartje kan ook worden verwijderd, maar de cursist krijgt in de hoofdroute één vaste herstelmethode: Eén terug."
+    ],
+    [
+      "Geluid niet hoorbaar",
+      "Hoor je niets? Zet het geluid van je laptop aan. Tik daarna op Luister.",
+      "Zichtbare melding bij een geluidsprobleem. Alleen uitspreken als uitleg nog hoorbaar is; onhoorbare uitleg kan het probleem niet oplossen."
+    ],
+    [
+      "Geluidsbestand werkt niet",
+      "Het geluid werkt nu niet. Probeer het later nog een keer.",
+      "Alleen bij een werkelijk niet afspeelbaar bestand. Ook zichtbaar tonen. Geen antwoord eisen op een opname die niet is afgespeeld."
+    ],
+    [
+      "Later verdergaan",
+      "Je kunt later weer oefenen.",
+      "Geen belofte dat de exacte positie wordt bewaard. Dat is in de bedieningscontrole niet vastgesteld."
+    ],
+    [
+      "Afronding In de winkel",
+      "Je bent klaar. Je hebt geoefend met winkel, brood en melk.",
+      "Na de eigen afronding van Winkel 12. Oefenen betekent niet automatisch beheersen."
+    ],
+    [
+      "Afronding Met de bus",
+      "Je bent klaar. Je hebt geoefend met auto, bus en fiets.",
+      "Na de eigen afronding van Bus 12. Oefenen betekent niet automatisch beheersen."
+    ],
+    [
+      "Afronding Thuis",
+      "Je bent klaar. Je hebt geoefend met kamer, deur en raam.",
+      "Na de eigen afronding van Thuis 12. Oefenen betekent niet automatisch beheersen."
+    ]
+  ],
+  "recordings": [
+    {
+      "id": "U001",
+      "role": "uitlegstem",
+      "text": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+      "uses": [
+        "Winkel 01 — gesproken opdracht",
+        "Winkel 02 — gesproken opdracht",
+        "Winkel 03 — gesproken opdracht",
+        "Bus 01 — gesproken opdracht",
+        "Bus 02 — gesproken opdracht",
+        "Bus 03 — gesproken opdracht",
+        "Thuis 01 — gesproken opdracht",
+        "Thuis 02 — gesproken opdracht",
+        "Thuis 03 — gesproken opdracht"
+      ]
+    },
+    {
+      "id": "U002",
+      "role": "uitlegstem",
+      "text": "Je hebt geluisterd. Tik op Verder.",
+      "uses": [
+        "Winkel 01 — na luisteren",
+        "Winkel 02 — na luisteren",
+        "Winkel 03 — na luisteren",
+        "Bus 01 — na luisteren",
+        "Bus 02 — na luisteren",
+        "Bus 03 — na luisteren",
+        "Thuis 01 — na luisteren",
+        "Thuis 02 — na luisteren",
+        "Thuis 03 — na luisteren"
+      ]
+    },
+    {
+      "id": "O001",
+      "role": "oefenstem",
+      "text": "winkel",
+      "uses": [
+        "Winkel 01 — bestaande afzonderlijke doelopname via Luister",
+        "Winkel 04 — bestaande afzonderlijke doelopname via Luister",
+        "Winkel 06 — bestaande afzonderlijke doelopname via Luister",
+        "Winkel 12 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O002",
+      "role": "oefenstem",
+      "text": "brood",
+      "uses": [
+        "Winkel 02 — bestaande afzonderlijke doelopname via Luister",
+        "Winkel 05 — bestaande afzonderlijke doelopname via Luister",
+        "Winkel 11 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O003",
+      "role": "oefenstem",
+      "text": "melk",
+      "uses": [
+        "Winkel 03 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "U003",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+      "uses": [
+        "Winkel 04 — gesproken opdracht",
+        "Winkel 05 — gesproken opdracht",
+        "Winkel 11 — gesproken opdracht",
+        "Winkel 12 — gesproken opdracht",
+        "Bus 04 — gesproken opdracht",
+        "Bus 05 — gesproken opdracht",
+        "Bus 11 — gesproken opdracht",
+        "Bus 12 — gesproken opdracht",
+        "Thuis 04 — gesproken opdracht",
+        "Thuis 05 — gesproken opdracht",
+        "Thuis 11 — gesproken opdracht",
+        "Thuis 12 — gesproken opdracht"
+      ]
+    },
+    {
+      "id": "U004",
+      "role": "uitlegstem",
+      "text": "Kijk naar het woord. Tik op Luister.",
+      "uses": [
+        "Winkel 04 — uitleg bij Voorbeeld",
+        "Winkel 05 — uitleg bij Voorbeeld",
+        "Winkel 06 — uitleg bij Voorbeeld",
+        "Winkel 11 — uitleg bij Voorbeeld",
+        "Winkel 12 — uitleg bij Voorbeeld",
+        "Bus 04 — uitleg bij Voorbeeld",
+        "Bus 05 — uitleg bij Voorbeeld",
+        "Bus 06 — uitleg bij Voorbeeld",
+        "Bus 11 — uitleg bij Voorbeeld",
+        "Bus 12 — uitleg bij Voorbeeld",
+        "Thuis 04 — uitleg bij Voorbeeld",
+        "Thuis 05 — uitleg bij Voorbeeld",
+        "Thuis 06 — uitleg bij Voorbeeld",
+        "Thuis 11 — uitleg bij Voorbeeld",
+        "Thuis 12 — uitleg bij Voorbeeld",
+        "Gezamenlijk — Voorbeeld met een woord"
+      ]
+    },
+    {
+      "id": "U005",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+      "uses": [
+        "Winkel 04 — Help",
+        "Winkel 05 — Help",
+        "Winkel 11 — Help",
+        "Winkel 12 — Help",
+        "Bus 04 — Help",
+        "Bus 05 — Help",
+        "Bus 11 — Help",
+        "Bus 12 — Help",
+        "Thuis 04 — Help",
+        "Thuis 05 — Help",
+        "Thuis 11 — Help",
+        "Thuis 12 — Help"
+      ]
+    },
+    {
+      "id": "U006",
+      "role": "uitlegstem",
+      "text": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+      "uses": [
+        "Winkel 04 — foutfeedback",
+        "Winkel 05 — foutfeedback",
+        "Winkel 11 — foutfeedback",
+        "Winkel 12 — foutfeedback",
+        "Bus 04 — foutfeedback",
+        "Bus 05 — foutfeedback",
+        "Bus 11 — foutfeedback",
+        "Bus 12 — foutfeedback",
+        "Thuis 04 — foutfeedback",
+        "Thuis 05 — foutfeedback",
+        "Thuis 11 — foutfeedback",
+        "Thuis 12 — foutfeedback"
+      ]
+    },
+    {
+      "id": "U007",
+      "role": "uitlegstem",
+      "text": "Dat klopt. Tik op Verder.",
+      "uses": [
+        "Winkel 04 — goedfeedback",
+        "Winkel 05 — goedfeedback",
+        "Winkel 06 — goedfeedback",
+        "Winkel 07 — goedfeedback",
+        "Winkel 08 — goedfeedback",
+        "Winkel 09 — goedfeedback",
+        "Winkel 10 — goedfeedback",
+        "Winkel 11 — goedfeedback",
+        "Winkel 12 — goedfeedback",
+        "Bus 04 — goedfeedback",
+        "Bus 05 — goedfeedback",
+        "Bus 06 — goedfeedback",
+        "Bus 07 — goedfeedback",
+        "Bus 08 — goedfeedback",
+        "Bus 09 — goedfeedback",
+        "Bus 10 — goedfeedback",
+        "Bus 11 — goedfeedback",
+        "Bus 12 — goedfeedback",
+        "Thuis 04 — goedfeedback",
+        "Thuis 05 — goedfeedback",
+        "Thuis 06 — goedfeedback",
+        "Thuis 07 — goedfeedback",
+        "Thuis 08 — goedfeedback",
+        "Thuis 09 — goedfeedback",
+        "Thuis 10 — goedfeedback",
+        "Thuis 11 — goedfeedback",
+        "Thuis 12 — goedfeedback"
+      ]
+    },
+    {
+      "id": "U008",
+      "role": "uitlegstem",
+      "text": "Tik op Nu jij.",
+      "uses": [
+        "Winkel 04 — overgang naar Nu jij",
+        "Winkel 05 — overgang naar Nu jij",
+        "Winkel 06 — overgang naar Nu jij",
+        "Winkel 07 — overgang naar Nu jij",
+        "Winkel 08 — overgang naar Nu jij",
+        "Winkel 09 — overgang naar Nu jij",
+        "Winkel 10 — overgang naar Nu jij",
+        "Winkel 11 — overgang naar Nu jij",
+        "Winkel 12 — overgang naar Nu jij",
+        "Bus 04 — overgang naar Nu jij",
+        "Bus 05 — overgang naar Nu jij",
+        "Bus 06 — overgang naar Nu jij",
+        "Bus 07 — overgang naar Nu jij",
+        "Bus 08 — overgang naar Nu jij",
+        "Bus 09 — overgang naar Nu jij",
+        "Bus 10 — overgang naar Nu jij",
+        "Bus 11 — overgang naar Nu jij",
+        "Bus 12 — overgang naar Nu jij",
+        "Thuis 04 — overgang naar Nu jij",
+        "Thuis 05 — overgang naar Nu jij",
+        "Thuis 06 — overgang naar Nu jij",
+        "Thuis 07 — overgang naar Nu jij",
+        "Thuis 08 — overgang naar Nu jij",
+        "Thuis 09 — overgang naar Nu jij",
+        "Thuis 10 — overgang naar Nu jij",
+        "Thuis 11 — overgang naar Nu jij",
+        "Thuis 12 — overgang naar Nu jij",
+        "Gezamenlijk — Overgang naar Nu jij"
+      ]
+    },
+    {
+      "id": "U009",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+      "uses": [
+        "Winkel 06 — gesproken opdracht",
+        "Bus 06 — gesproken opdracht",
+        "Thuis 06 — gesproken opdracht"
+      ]
+    },
+    {
+      "id": "U010",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+      "uses": [
+        "Winkel 06 — Help",
+        "Bus 06 — Help",
+        "Thuis 06 — Help"
+      ]
+    },
+    {
+      "id": "U011",
+      "role": "uitlegstem",
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+      "uses": [
+        "Winkel 06 — foutfeedback",
+        "Bus 06 — foutfeedback",
+        "Thuis 06 — foutfeedback"
+      ]
+    },
+    {
+      "id": "U012",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+      "uses": [
+        "Winkel 07 — gesproken opdracht",
+        "Winkel 08 — gesproken opdracht",
+        "Bus 07 — gesproken opdracht",
+        "Bus 08 — gesproken opdracht",
+        "Thuis 07 — gesproken opdracht",
+        "Thuis 08 — gesproken opdracht"
+      ]
+    },
+    {
+      "id": "U013",
+      "role": "uitlegstem",
+      "text": "Kijk naar de zin. Tik op Luister.",
+      "uses": [
+        "Winkel 07 — uitleg bij Voorbeeld",
+        "Winkel 08 — uitleg bij Voorbeeld",
+        "Winkel 09 — uitleg bij Voorbeeld",
+        "Winkel 10 — uitleg bij Voorbeeld",
+        "Bus 07 — uitleg bij Voorbeeld",
+        "Bus 08 — uitleg bij Voorbeeld",
+        "Bus 09 — uitleg bij Voorbeeld",
+        "Bus 10 — uitleg bij Voorbeeld",
+        "Thuis 07 — uitleg bij Voorbeeld",
+        "Thuis 08 — uitleg bij Voorbeeld",
+        "Thuis 09 — uitleg bij Voorbeeld",
+        "Thuis 10 — uitleg bij Voorbeeld",
+        "Gezamenlijk — Voorbeeld met een zin"
+      ]
+    },
+    {
+      "id": "U014",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+      "uses": [
+        "Winkel 07 — Help",
+        "Winkel 08 — Help",
+        "Thuis 07 — Help",
+        "Thuis 08 — Help"
+      ]
+    },
+    {
+      "id": "U015",
+      "role": "uitlegstem",
+      "text": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+      "uses": [
+        "Winkel 07 — foutfeedback",
+        "Winkel 08 — foutfeedback",
+        "Bus 07 — foutfeedback",
+        "Bus 08 — foutfeedback",
+        "Thuis 07 — foutfeedback",
+        "Thuis 08 — foutfeedback"
+      ]
+    },
+    {
+      "id": "O004",
+      "role": "oefenstem",
+      "text": "Ik loop de winkel in.",
+      "uses": [
+        "Winkel 07 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O005",
+      "role": "oefenstem",
+      "text": "Dit is melk.",
+      "uses": [
+        "Winkel 08 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "U016",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+      "uses": [
+        "Winkel 09 — gesproken opdracht",
+        "Bus 09 — gesproken opdracht",
+        "Thuis 09 — gesproken opdracht"
+      ]
+    },
+    {
+      "id": "U017",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+      "uses": [
+        "Winkel 09 — Help",
+        "Bus 09 — Help",
+        "Thuis 09 — Help"
+      ]
+    },
+    {
+      "id": "U018",
+      "role": "uitlegstem",
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+      "uses": [
+        "Winkel 09 — foutfeedback",
+        "Bus 09 — foutfeedback",
+        "Thuis 09 — foutfeedback"
+      ]
+    },
+    {
+      "id": "O006",
+      "role": "oefenstem",
+      "text": "Ik kies een klein brood.",
+      "uses": [
+        "Winkel 09 — bestaande afzonderlijke doelopname via Luister",
+        "Winkel 10 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "U019",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+      "uses": [
+        "Winkel 10 — gesproken opdracht",
+        "Bus 10 — gesproken opdracht",
+        "Thuis 10 — gesproken opdracht"
+      ]
+    },
+    {
+      "id": "U020",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+      "uses": [
+        "Winkel 10 — Help",
+        "Bus 10 — Help",
+        "Thuis 10 — Help"
+      ]
+    },
+    {
+      "id": "U021",
+      "role": "uitlegstem",
+      "text": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+      "uses": [
+        "Winkel 10 — foutfeedback",
+        "Bus 10 — foutfeedback",
+        "Thuis 10 — foutfeedback"
+      ]
+    },
+    {
+      "id": "O007",
+      "role": "oefenstem",
+      "text": "auto",
+      "uses": [
+        "Bus 01 — bestaande afzonderlijke doelopname via Luister",
+        "Bus 04 — bestaande afzonderlijke doelopname via Luister",
+        "Bus 06 — bestaande afzonderlijke doelopname via Luister",
+        "Bus 12 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O008",
+      "role": "oefenstem",
+      "text": "bus",
+      "uses": [
+        "Bus 02 — bestaande afzonderlijke doelopname via Luister",
+        "Bus 05 — bestaande afzonderlijke doelopname via Luister",
+        "Bus 11 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O009",
+      "role": "oefenstem",
+      "text": "fiets",
+      "uses": [
+        "Bus 03 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "U022",
+      "role": "uitlegstem",
+      "text": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+      "uses": [
+        "Bus 07 — Help",
+        "Bus 08 — Help"
+      ]
+    },
+    {
+      "id": "O010",
+      "role": "oefenstem",
+      "text": "Dit is mijn auto.",
+      "uses": [
+        "Bus 07 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O011",
+      "role": "oefenstem",
+      "text": "Dit is mijn fiets.",
+      "uses": [
+        "Bus 08 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O012",
+      "role": "oefenstem",
+      "text": "Ik stap in de bus.",
+      "uses": [
+        "Bus 09 — bestaande afzonderlijke doelopname via Luister",
+        "Bus 10 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O013",
+      "role": "oefenstem",
+      "text": "kamer",
+      "uses": [
+        "Thuis 01 — bestaande afzonderlijke doelopname via Luister",
+        "Thuis 04 — bestaande afzonderlijke doelopname via Luister",
+        "Thuis 06 — bestaande afzonderlijke doelopname via Luister",
+        "Thuis 12 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O014",
+      "role": "oefenstem",
+      "text": "deur",
+      "uses": [
+        "Thuis 02 — bestaande afzonderlijke doelopname via Luister",
+        "Thuis 05 — bestaande afzonderlijke doelopname via Luister",
+        "Thuis 11 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O015",
+      "role": "oefenstem",
+      "text": "raam",
+      "uses": [
+        "Thuis 03 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O016",
+      "role": "oefenstem",
+      "text": "Er is licht in de kamer.",
+      "uses": [
+        "Thuis 07 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O017",
+      "role": "oefenstem",
+      "text": "Het raam staat open.",
+      "uses": [
+        "Thuis 08 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "O018",
+      "role": "oefenstem",
+      "text": "Dit is de deur.",
+      "uses": [
+        "Thuis 09 — bestaande afzonderlijke doelopname via Luister",
+        "Thuis 10 — bestaande afzonderlijke doelopname via Luister"
+      ]
+    },
+    {
+      "id": "U023",
+      "role": "uitlegstem",
+      "text": "Je oefent met winkel, brood en melk. Tik op Luister.",
+      "uses": [
+        "Gezamenlijk — Start In de winkel"
+      ]
+    },
+    {
+      "id": "U024",
+      "role": "uitlegstem",
+      "text": "Je oefent met auto, bus en fiets. Tik op Luister.",
+      "uses": [
+        "Gezamenlijk — Start Met de bus"
+      ]
+    },
+    {
+      "id": "U025",
+      "role": "uitlegstem",
+      "text": "Je oefent met kamer, deur en raam. Tik op Luister.",
+      "uses": [
+        "Gezamenlijk — Start Thuis"
+      ]
+    },
+    {
+      "id": "U026",
+      "role": "uitlegstem",
+      "text": "Tik op Voorbeeld. Bekijk het woord of de zin.",
+      "uses": [
+        "Gezamenlijk — Voorbeeld openen"
+      ]
+    },
+    {
+      "id": "U027",
+      "role": "uitlegstem",
+      "text": "Tik op Help. Je krijgt een tip.",
+      "uses": [
+        "Gezamenlijk — Help gebruiken"
+      ]
+    },
+    {
+      "id": "U028",
+      "role": "uitlegstem",
+      "text": "Tik op Eén terug. Het laatste kaartje gaat weg. Wil je nog een kaartje weghalen? Tik weer op Eén terug.",
+      "uses": [
+        "Gezamenlijk — Eén terug gebruiken"
+      ]
+    },
+    {
+      "id": "U029",
+      "role": "uitlegstem",
+      "text": "Tik op Luister. Probeer het nog een keer. Wil je hulp? Tik op Help.",
+      "uses": [
+        "Gezamenlijk — Lastige keuze opnieuw oefenen"
+      ]
+    },
+    {
+      "id": "U030",
+      "role": "uitlegstem",
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Begin opnieuw.",
+      "uses": [
+        "Gezamenlijk — Lastige bouwopdracht opnieuw oefenen"
+      ]
+    },
+    {
+      "id": "U031",
+      "role": "uitlegstem",
+      "text": "Hoor je niets? Zet het geluid van je laptop aan. Tik daarna op Luister.",
+      "uses": [
+        "Gezamenlijk — Geluid niet hoorbaar"
+      ]
+    },
+    {
+      "id": "U032",
+      "role": "uitlegstem",
+      "text": "Het geluid werkt nu niet. Probeer het later nog een keer.",
+      "uses": [
+        "Gezamenlijk — Geluidsbestand werkt niet"
+      ]
+    },
+    {
+      "id": "U033",
+      "role": "uitlegstem",
+      "text": "Je kunt later weer oefenen.",
+      "uses": [
+        "Gezamenlijk — Later verdergaan"
+      ]
+    },
+    {
+      "id": "U034",
+      "role": "uitlegstem",
+      "text": "Je bent klaar. Je hebt geoefend met winkel, brood en melk.",
+      "uses": [
+        "Gezamenlijk — Afronding In de winkel"
+      ]
+    },
+    {
+      "id": "U035",
+      "role": "uitlegstem",
+      "text": "Je bent klaar. Je hebt geoefend met auto, bus en fiets.",
+      "uses": [
+        "Gezamenlijk — Afronding Met de bus"
+      ]
+    },
+    {
+      "id": "U036",
+      "role": "uitlegstem",
+      "text": "Je bent klaar. Je hebt geoefend met kamer, deur en raam.",
+      "uses": [
+        "Gezamenlijk — Afronding Thuis"
+      ]
+    }
+  ],
+  "check": "Alle 36 stappen zijn opnieuw tekstueel gecontroleerd: Winkel 01–12, Bus 01–12 en Thuis 01–12. De negen kernwoorden, negen doelzinnen, bestaande beelden, drie sets woorddelen, antwoorden en twaalf stappen per blok zijn behouden. Er zijn 27 passende Help-teksten en negen aanbodstappen zonder aparte Help. De inspreeklijst bevat 54 unieke teksten, waarvan 18 ongewijzigde oefenteksten. Voorbeelden beschrijven het hele woord of de hele zin; de zes bouwstappen bevatten herstel met Eén terug. De zes bouwopdrachten zijn eerder live met fout en geslaagde herpoging gecontroleerd. Dit is een tekstpakket, nog niet ingebouwd of met cursisten beproefd. Geen audio gemaakt en niets in de app gewijzigd of gepubliceerd.",
+  "audioCreated": false,
+  "appChanged": false,
+  "published": false,
+  "reviewDate": "2026-10-27",
+  "stepReviews": [
+    {
+      "id": "Winkel 01",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij winkel en het geschreven woord winkel blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord winkel staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Winkel 02",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij brood en het geschreven woord brood blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord brood staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Winkel 03",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij melk en het geschreven woord melk blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord melk staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Winkel 04",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij winkel als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij brood, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de winkel is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Winkel 05",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij brood als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij winkel, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van het brood is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Winkel 06",
+      "knelpunt": "Het voorbeeld beschreef losse kaartjes die daar niet zichtbaar zijn. De fouttekst vertelde niet hoe een volle foute poging wordt leeggemaakt.",
+      "herstel": "Voorbeeld beschrijft het hele woord. Help verklaart Eén terug. Foutfeedback laat de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "wordt": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje."
+        },
+        "material": {
+          "was": "De twee bestaande deelkaartjes win en kel. Behoud de huidige plaatsing en de bestaande tikbediening; geen nieuwe kaartjes of sleepbeweging.",
+          "wordt": "De bestaande afbeelding bij winkel, twee bestaande deelkaartjes (win en kel), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de kaartjes in deze volgorde: win → kel. Samen vormen zij winkel. De pijl is alleen redactienotatie; de bestaande voorbeeldweergave blijft behouden. Het goede antwoord staat uitsluitend in Voorbeeld.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Het eerste kaartje is win. Het tweede kaartje is kel. Zo staat het woord goed.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?",
+          "wordt": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?",
+          "wordt": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "error": {
+          "was": "De kaartjes staan nog niet goed. Tik op Luister. Let op het begin van het woord. Probeer het nog een keer.",
+          "wordt": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging de twee delen zelf in de juiste volgorde heeft getikt, eventueel na hulp. Alleen het volledige antwoord in Voorbeeld zien is niet voldoende. De eigen poging na Voorbeeld blijft een geholpen poging.",
+          "wordt": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd."
+    },
+    {
+      "id": "Winkel 07",
+      "knelpunt": "Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.",
+      "herstel": "Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.",
+          "wordt": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden."
+        },
+        "material": {
+          "was": "De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:\n• Ik loop de winkel in.\n• Dit is melk.\n• Ik kies een klein brood.",
+          "wordt": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Ik loop de winkel in.\n• Dit is melk.\n• Ik kies een klein brood."
+        },
+        "example_visible": {
+          "was": "De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Ik loop de winkel in. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Ik loop de winkel in. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Deze zin is gekozen. Je ziet precies de woorden die je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.",
+          "wordt": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip."
+    },
+    {
+      "id": "Winkel 08",
+      "knelpunt": "Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.",
+      "herstel": "Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.",
+          "wordt": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden."
+        },
+        "material": {
+          "was": "De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:\n• Ik loop de winkel in.\n• Dit is melk.\n• Ik kies een klein brood.",
+          "wordt": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Ik loop de winkel in.\n• Dit is melk.\n• Ik kies een klein brood."
+        },
+        "example_visible": {
+          "was": "De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Dit is melk. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Dit is melk. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Deze zin is gekozen. Je ziet precies de woorden die je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.",
+          "wordt": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip."
+    },
+    {
+      "id": "Winkel 09",
+      "knelpunt": "Het voorbeeld beschreef afzonderlijke kaartjes. De fouttekst noemde geen bestaande herstelhandeling.",
+      "herstel": "Voorbeeld beschrijft de hele zin. Eén terug wordt uitgelegd. Foutfeedback laat eerst de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Tik op het kaartje met het eerste woord van de zin. Tik daarna op de volgende woorden.",
+          "wordt": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden."
+        },
+        "material": {
+          "was": "De bestaande woordkaartjes in antwoordvolgorde voor de redactie: Ik | kies | een | klein | brood. Behoud de bestaande beginopstelling en tikbediening. De punt bij het laatste woord blijft behouden.",
+          "wordt": "De bestaande woordkaartjes met deze bronwoorden: Ik | kies | een | klein | brood. Er zijn 5 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont alle kaartjes in deze volgorde: Ik → kies → een → klein → brood. De hoofdletter en het eindteken blijven zoals in de bron. Dit is het antwoordmodel; geen nieuwe animatie of kaartjes toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Ik kies een klein brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Het eerste kaartje is Ik. Daarna komen kies, een, klein en brood. Zo staat de zin goed.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.",
+          "wordt": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.",
+          "wordt": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "error": {
+          "was": "De kaartjes staan nog niet goed. Tik op Luister. Let op welk woord eerst komt. Probeer het nog een keer.",
+          "wordt": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging alle bestaande woordkaartjes zelf in de bronvolgorde heeft getikt, eventueel na hulp. Alleen het model bekijken is niet genoeg. Een poging na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd."
+    },
+    {
+      "id": "Winkel 10",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto. In werkelijkheid toont het model alleen de hele doelzin.",
+      "herstel": "Voorbeeld beschrijft de doelzin. De eigen opdracht noemt Luister. Foutfeedback laat opnieuw luisteren naar het laatste woord en een andere foto kiezen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij brood als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De andere twee bestaande woordfoto’s blijven de andere keuzes. Geen nieuw scènebeeld of nieuwe beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Ik kies een klein brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van het brood is gekozen. Die foto past bij wat je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Let op het laatste woord van de zin.",
+          "wordt": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na hulp. Alleen de zin beluisteren of het model zien is onvoldoende. De keuze toont hier vooral herkenning van het kernbegrip; geen volledige praktijkbeheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Winkel 11",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij brood als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij winkel, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van het brood is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Winkel 12",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij winkel als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij brood, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de winkel is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Bus 01",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij auto en het geschreven woord auto blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord auto staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Bus 02",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij bus en het geschreven woord bus blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord bus staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Bus 03",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij fiets en het geschreven woord fiets blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord fiets staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Bus 04",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij auto als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij bus, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de auto is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Bus 05",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij bus als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij auto, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de bus is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Bus 06",
+      "knelpunt": "Het voorbeeld beschreef losse kaartjes die daar niet zichtbaar zijn. De fouttekst vertelde niet hoe een volle foute poging wordt leeggemaakt.",
+      "herstel": "Voorbeeld beschrijft het hele woord. Help verklaart Eén terug. Foutfeedback laat de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "wordt": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje."
+        },
+        "material": {
+          "was": "De twee bestaande deelkaartjes au en to. Behoud de huidige plaatsing en de bestaande tikbediening; geen nieuwe kaartjes of sleepbeweging.",
+          "wordt": "De bestaande afbeelding bij auto, twee bestaande deelkaartjes (au en to), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de kaartjes in deze volgorde: au → to. Samen vormen zij auto. De pijl is alleen redactienotatie; de bestaande voorbeeldweergave blijft behouden. Het goede antwoord staat uitsluitend in Voorbeeld.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Het eerste kaartje is au. Het tweede kaartje is to. Zo staat het woord goed.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?",
+          "wordt": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?",
+          "wordt": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "error": {
+          "was": "De kaartjes staan nog niet goed. Tik op Luister. Let op het begin van het woord. Probeer het nog een keer.",
+          "wordt": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging de twee delen zelf in de juiste volgorde heeft getikt, eventueel na hulp. Alleen het volledige antwoord in Voorbeeld zien is niet voldoende. De eigen poging na Voorbeeld blijft een geholpen poging.",
+          "wordt": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd."
+    },
+    {
+      "id": "Bus 07",
+      "knelpunt": "Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.",
+      "herstel": "Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.",
+          "wordt": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden."
+        },
+        "material": {
+          "was": "De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:\n• Dit is mijn auto.\n• Dit is mijn fiets.\n• Ik stap in de bus.",
+          "wordt": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Dit is mijn auto.\n• Dit is mijn fiets.\n• Ik stap in de bus."
+        },
+        "example_visible": {
+          "was": "De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Dit is mijn auto. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Dit is mijn auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Deze zin is gekozen. Je ziet precies de woorden die je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.",
+          "wordt": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip."
+    },
+    {
+      "id": "Bus 08",
+      "knelpunt": "Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.",
+      "herstel": "Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.",
+          "wordt": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden."
+        },
+        "material": {
+          "was": "De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:\n• Dit is mijn auto.\n• Dit is mijn fiets.\n• Ik stap in de bus.",
+          "wordt": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Dit is mijn auto.\n• Dit is mijn fiets.\n• Ik stap in de bus."
+        },
+        "example_visible": {
+          "was": "De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Dit is mijn fiets. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Dit is mijn fiets. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Deze zin is gekozen. Je ziet precies de woorden die je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.",
+          "wordt": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip."
+    },
+    {
+      "id": "Bus 09",
+      "knelpunt": "Het voorbeeld beschreef afzonderlijke kaartjes. De fouttekst noemde geen bestaande herstelhandeling.",
+      "herstel": "Voorbeeld beschrijft de hele zin. Eén terug wordt uitgelegd. Foutfeedback laat eerst de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Tik op het kaartje met het eerste woord van de zin. Tik daarna op de volgende woorden.",
+          "wordt": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden."
+        },
+        "material": {
+          "was": "De bestaande woordkaartjes in antwoordvolgorde voor de redactie: Ik | stap | in | de | bus. Behoud de bestaande beginopstelling en tikbediening. De punt bij het laatste woord blijft behouden.",
+          "wordt": "De bestaande woordkaartjes met deze bronwoorden: Ik | stap | in | de | bus. Er zijn 5 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont alle kaartjes in deze volgorde: Ik → stap → in → de → bus. De hoofdletter en het eindteken blijven zoals in de bron. Dit is het antwoordmodel; geen nieuwe animatie of kaartjes toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Ik stap in de bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Het eerste kaartje is Ik. Daarna komen stap, in, de en bus. Zo staat de zin goed.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.",
+          "wordt": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.",
+          "wordt": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "error": {
+          "was": "De kaartjes staan nog niet goed. Tik op Luister. Let op welk woord eerst komt. Probeer het nog een keer.",
+          "wordt": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging alle bestaande woordkaartjes zelf in de bronvolgorde heeft getikt, eventueel na hulp. Alleen het model bekijken is niet genoeg. Een poging na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd."
+    },
+    {
+      "id": "Bus 10",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto. In werkelijkheid toont het model alleen de hele doelzin.",
+      "herstel": "Voorbeeld beschrijft de doelzin. De eigen opdracht noemt Luister. Foutfeedback laat opnieuw luisteren naar het laatste woord en een andere foto kiezen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij bus als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De andere twee bestaande woordfoto’s blijven de andere keuzes. Geen nieuw scènebeeld of nieuwe beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Ik stap in de bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de bus is gekozen. Die foto past bij wat je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Let op het laatste woord van de zin.",
+          "wordt": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na hulp. Alleen de zin beluisteren of het model zien is onvoldoende. De keuze toont hier vooral herkenning van het kernbegrip; geen volledige praktijkbeheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Bus 11",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij bus als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij auto, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de bus is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Bus 12",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij auto als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij bus, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de auto is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Thuis 01",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij kamer en het geschreven woord kamer blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord kamer staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Thuis 02",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij deur en het geschreven woord deur blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord deur staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Thuis 03",
+      "knelpunt": "De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.",
+      "herstel": "De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.",
+      "gewijzigde_velden": {
+        "example_visible": {
+          "was": "De bestaande foto bij raam en het geschreven woord raam blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.",
+          "wordt": "Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord raam staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.",
+          "wordt": null
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Thuis 04",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij kamer als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij deur, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de kamer is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Thuis 05",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij deur als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij kamer, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de deur is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd."
+    },
+    {
+      "id": "Thuis 06",
+      "knelpunt": "Het voorbeeld beschreef losse kaartjes die daar niet zichtbaar zijn. De fouttekst vertelde niet hoe een volle foute poging wordt leeggemaakt.",
+      "herstel": "Voorbeeld beschrijft het hele woord. Help verklaart Eén terug. Foutfeedback laat de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "wordt": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje."
+        },
+        "material": {
+          "was": "De twee bestaande deelkaartjes ka en mer. Behoud de huidige plaatsing en de bestaande tikbediening; geen nieuwe kaartjes of sleepbeweging.",
+          "wordt": "De bestaande afbeelding bij kamer, twee bestaande deelkaartjes (ka en mer), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de kaartjes in deze volgorde: ka → mer. Samen vormen zij kamer. De pijl is alleen redactienotatie; de bestaande voorbeeldweergave blijft behouden. Het goede antwoord staat uitsluitend in Voorbeeld.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Het eerste kaartje is ka. Het tweede kaartje is mer. Zo staat het woord goed.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?",
+          "wordt": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?",
+          "wordt": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "error": {
+          "was": "De kaartjes staan nog niet goed. Tik op Luister. Let op het begin van het woord. Probeer het nog een keer.",
+          "wordt": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging de twee delen zelf in de juiste volgorde heeft getikt, eventueel na hulp. Alleen het volledige antwoord in Voorbeeld zien is niet voldoende. De eigen poging na Voorbeeld blijft een geholpen poging.",
+          "wordt": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd."
+    },
+    {
+      "id": "Thuis 07",
+      "knelpunt": "Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.",
+      "herstel": "Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.",
+          "wordt": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden."
+        },
+        "material": {
+          "was": "De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:\n• Er is licht in de kamer.\n• Het raam staat open.\n• Dit is de deur.",
+          "wordt": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Er is licht in de kamer.\n• Het raam staat open.\n• Dit is de deur."
+        },
+        "example_visible": {
+          "was": "De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Er is licht in de kamer. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Er is licht in de kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Deze zin is gekozen. Je ziet precies de woorden die je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.",
+          "wordt": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip."
+    },
+    {
+      "id": "Thuis 08",
+      "knelpunt": "Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.",
+      "herstel": "Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.",
+          "wordt": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden."
+        },
+        "material": {
+          "was": "De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:\n• Er is licht in de kamer.\n• Het raam staat open.\n• Dit is de deur.",
+          "wordt": "De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:\n• Er is licht in de kamer.\n• Het raam staat open.\n• Dit is de deur."
+        },
+        "example_visible": {
+          "was": "De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Het raam staat open. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Het raam staat open. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Deze zin is gekozen. Je ziet precies de woorden die je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.",
+          "wordt": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip."
+    },
+    {
+      "id": "Thuis 09",
+      "knelpunt": "Het voorbeeld beschreef afzonderlijke kaartjes. De fouttekst noemde geen bestaande herstelhandeling.",
+      "herstel": "Voorbeeld beschrijft de hele zin. Eén terug wordt uitgelegd. Foutfeedback laat eerst de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Tik op het kaartje met het eerste woord van de zin. Tik daarna op de volgende woorden.",
+          "wordt": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden."
+        },
+        "material": {
+          "was": "De bestaande woordkaartjes in antwoordvolgorde voor de redactie: Dit | is | de | deur. Behoud de bestaande beginopstelling en tikbediening. De punt bij het laatste woord blijft behouden.",
+          "wordt": "De bestaande woordkaartjes met deze bronwoorden: Dit | is | de | deur. Er zijn 4 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont alle kaartjes in deze volgorde: Dit → is → de → deur. De hoofdletter en het eindteken blijven zoals in de bron. Dit is het antwoordmodel; geen nieuwe animatie of kaartjes toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Dit is de deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "Het eerste kaartje is Dit. Daarna komen is, de en deur. Zo staat de zin goed.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "help_visible": {
+          "was": "Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.",
+          "wordt": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "help_spoken": {
+          "was": "Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.",
+          "wordt": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg."
+        },
+        "error": {
+          "was": "De kaartjes staan nog niet goed. Tik op Luister. Let op welk woord eerst komt. Probeer het nog een keer.",
+          "wordt": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging alle bestaande woordkaartjes zelf in de bronvolgorde heeft getikt, eventueel na hulp. Alleen het model bekijken is niet genoeg. Een poging na Voorbeeld blijft geholpen oefenen.",
+          "wordt": "Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd."
+    },
+    {
+      "id": "Thuis 10",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto. In werkelijkheid toont het model alleen de hele doelzin.",
+      "herstel": "Voorbeeld beschrijft de doelzin. De eigen opdracht noemt Luister. Foutfeedback laat opnieuw luisteren naar het laatste woord en een andere foto kiezen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar de zin. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij deur als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De andere twee bestaande woordfoto’s blijven de andere keuzes. Geen nieuw scènebeeld of nieuwe beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont de hele zin: Dit is de deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de deur is gekozen. Die foto past bij wat je hoort.",
+          "wordt": "Kijk naar de zin. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Let op het laatste woord van de zin.",
+          "wordt": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na hulp. Alleen de zin beluisteren of het model zien is onvoldoende. De keuze toont hier vooral herkenning van het kernbegrip; geen volledige praktijkbeheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Thuis 11",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij deur als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij kamer, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de deur is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    },
+    {
+      "id": "Thuis 12",
+      "knelpunt": "Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.",
+      "herstel": "Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.",
+      "gewijzigde_velden": {
+        "spoken": {
+          "was": "Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.",
+          "wordt": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort."
+        },
+        "example_visible": {
+          "was": "Het bestaande voorbeeld toont de foto bij kamer als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij deur, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.",
+          "wordt": "Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave."
+        },
+        "example_spoken": {
+          "was": "De foto van de kamer is gekozen. Die foto hoort bij het woord.",
+          "wordt": "Kijk naar het woord. Tik op Luister."
+        },
+        "error": {
+          "was": "Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.",
+          "wordt": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto."
+        },
+        "transition_spoken": {
+          "was": "Tik op Nu jij. Maak de opdracht zelf.",
+          "wordt": "Tik op Nu jij."
+        },
+        "finish": {
+          "was": "Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.",
+          "wordt": "Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen."
+        }
+      },
+      "open": "Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd."
+    }
+  ],
+  "bedieningsbron": "KLINK-Alfa-C-bedieningscontrole-20261027: CONTROLEVERSLAG.txt en browserbevindingen.json. Zes bouwopdrachten met fout en geslaagde herpoging; aanvullende herpogingen Bus 04 en Bus 07."
+}

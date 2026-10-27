@@ -4,6 +4,7 @@ import {
   type PackageExercise,
 } from './package-content.ts';
 import { contentById } from './connected-content.ts';
+import reviewedTexts from '../data/klink-alfa-c-texts.json' with { type: 'json' };
 
 export type PilotStep = {
   id: string;
@@ -13,6 +14,11 @@ export type PilotStep = {
   exercise: PackageExercise;
   model: string;
   help: string;
+  spokenInstruction: string;
+  exampleInstruction: string | null;
+  errorFeedback: string | null;
+  goodFeedback: string | null;
+  afterListening: string | null;
   sourceIds: string[];
   recurrenceOf?: string;
 };
@@ -21,6 +27,8 @@ export type PilotBlock = {
   title: string;
   goal: string;
   words: string[];
+  startText: string;
+  endText: string;
   steps: PilotStep[];
 };
 const word = (text: string) => {
@@ -40,6 +48,7 @@ const sentence = (text: string) => {
 const instruction = (id: string) => `/package-audio/instructions/${id}.wav`;
 export const pilotPack = contentPackages[0];
 export const pilotStorageKey = 'klink.preview.alfa-c.v1';
+export const alfaCCommonTexts = reviewedTexts.common;
 const definitions = [
   {
     id: 'winkel',
@@ -108,6 +117,7 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def, blockIndex) => {
     recurrenceOf?: string,
   ) {
     const id = `pilot-alfa-c:${def.id}:${steps.length + 1}`;
+    const text = reviewedTexts.blocks[def.id as keyof typeof reviewedTexts.blocks].steps[steps.length];
     if (exercise.prompt?.audio?.src)
       exercise = {
         ...exercise,
@@ -122,11 +132,16 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def, blockIndex) => {
     steps.push({
       id,
       stage,
-      instruction: title,
+      instruction: text.screen,
       instructionAudio: instruction(audio),
-      exercise: { ...exercise, exerciseId: id, title },
+      exercise: { ...exercise, exerciseId: id, title: text.screen },
       model,
-      help,
+      help: text.help_visible ?? '',
+      spokenInstruction: text.spoken,
+      exampleInstruction: text.example_spoken,
+      errorFeedback: text.error,
+      goodFeedback: text.good,
+      afterListening: text.finish_spoken,
       sourceIds,
       recurrenceOf,
     });
@@ -268,6 +283,8 @@ export const pilotBlocks: PilotBlock[] = definitions.map((def, blockIndex) => {
     title: def.title,
     goal: def.goal,
     words: def.words,
+    startText: reviewedTexts.blocks[def.id as keyof typeof reviewedTexts.blocks].start,
+    endText: reviewedTexts.blocks[def.id as keyof typeof reviewedTexts.blocks].end,
     steps,
   };
 });

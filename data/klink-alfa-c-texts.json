@@ -1,0 +1,435 @@
+{
+  "blocks": {
+    "winkel": {
+      "start": "Je oefent met winkel, brood en melk. Tik op Luister.",
+      "end": "Je bent klaar. Je hebt geoefend met winkel, brood en melk.",
+      "steps": [
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Maak het woord.",
+          "spoken": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Maak de zin.",
+          "spoken": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "error": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        }
+      ]
+    },
+    "bus": {
+      "start": "Je oefent met auto, bus en fiets. Tik op Luister.",
+      "end": "Je bent klaar. Je hebt geoefend met auto, bus en fiets.",
+      "steps": [
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Maak het woord.",
+          "spoken": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Sommige zinnen beginnen hetzelfde. Tik op Luister. Let op het laatste woord. Kijk welke zin dat woord heeft.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Maak de zin.",
+          "spoken": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "error": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        }
+      ]
+    },
+    "thuis": {
+      "start": "Je oefent met kamer, deur en raam. Tik op Luister.",
+      "end": "Je bent klaar. Je hebt geoefend met kamer, deur en raam.",
+      "steps": [
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Kijk en luister.",
+          "spoken": "Kijk naar de foto. Tik op Luister. Kijk ook naar het woord.",
+          "example_spoken": null,
+          "help_visible": null,
+          "error": null,
+          "good": null,
+          "finish_spoken": "Je hebt geluisterd. Tik op Verder.",
+          "transition_spoken": null
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Maak het woord.",
+          "spoken": "Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de zin die je hoort.",
+          "spoken": "Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Zoek het eerste woord dat je hoort. Lees daarna de hele zin mee.",
+          "error": "Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Maak de zin.",
+          "spoken": "Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.",
+          "error": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.",
+          "example_spoken": "Kijk naar de zin. Tik op Luister.",
+          "help_visible": "Tik op Luister. Let op het laatste woord. Welke foto hoort bij dat woord?",
+          "error": "Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        },
+        {
+          "screen": "Luister. Tik op de foto.",
+          "spoken": "Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.",
+          "example_spoken": "Kijk naar het woord. Tik op Luister.",
+          "help_visible": "Tik op Luister. Kijk naar de foto’s, één voor één. Welke foto hoort bij het woord?",
+          "error": "Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.",
+          "good": "Dat klopt. Tik op Verder.",
+          "finish_spoken": null,
+          "transition_spoken": "Tik op Nu jij."
+        }
+      ]
+    }
+  },
+  "common": {
+    "Start In de winkel": {
+      "text": "Je oefent met winkel, brood en melk. Tik op Luister."
+    },
+    "Start Met de bus": {
+      "text": "Je oefent met auto, bus en fiets. Tik op Luister."
+    },
+    "Start Thuis": {
+      "text": "Je oefent met kamer, deur en raam. Tik op Luister."
+    },
+    "Voorbeeld met een woord": {
+      "text": "Kijk naar het woord. Tik op Luister."
+    },
+    "Voorbeeld met een zin": {
+      "text": "Kijk naar de zin. Tik op Luister."
+    },
+    "Voorbeeld openen": {
+      "text": "Tik op Voorbeeld. Bekijk het woord of de zin."
+    },
+    "Overgang naar Nu jij": {
+      "text": "Tik op Nu jij."
+    },
+    "Help gebruiken": {
+      "text": "Tik op Help. Je krijgt een tip."
+    },
+    "Eén terug gebruiken": {
+      "text": "Tik op Eén terug. Het laatste kaartje gaat weg. Wil je nog een kaartje weghalen? Tik weer op Eén terug."
+    },
+    "Lastige keuze opnieuw oefenen": {
+      "text": "Tik op Luister. Probeer het nog een keer. Wil je hulp? Tik op Help."
+    },
+    "Lastige bouwopdracht opnieuw oefenen": {
+      "text": "Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Begin opnieuw."
+    },
+    "Geluid niet hoorbaar": {
+      "text": "Hoor je niets? Zet het geluid van je laptop aan. Tik daarna op Luister."
+    },
+    "Geluidsbestand werkt niet": {
+      "text": "Het geluid werkt nu niet. Probeer het later nog een keer."
+    },
+    "Later verdergaan": {
+      "text": "Je kunt later weer oefenen."
+    },
+    "Afronding In de winkel": {
+      "text": "Je bent klaar. Je hebt geoefend met winkel, brood en melk."
+    },
+    "Afronding Met de bus": {
+      "text": "Je bent klaar. Je hebt geoefend met auto, bus en fiets."
+    },
+    "Afronding Thuis": {
+      "text": "Je bent klaar. Je hebt geoefend met kamer, deur en raam."
+    }
+  }
+}

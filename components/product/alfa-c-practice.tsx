@@ -18,6 +18,7 @@ import {
   pilotStorageKey,
   readPilotProgress,
   practiceAgain,
+  alfaCCommonTexts,
   type PilotProgress,
   type PilotRecord,
   type PilotStep,
@@ -139,7 +140,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
       )}
       {!block ? (
         <section className="cp-panel pilot-library">
-          <p>Kies een blok. Je kunt tussendoor stoppen en later verdergaan.</p>
+          <p>Kies een blok. {alfaCCommonTexts['Later verdergaan'].text}</p>
           <div className="cp-chapter-grid">
             {pilotBlocks.map((b) => (
               <button
@@ -166,7 +167,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
         <section className="honest-empty pilot-complete">
           <Check />
           <h2>Goed geoefend</h2>
-          <p>Dit blok is klaar.</p>
+          <p>{block.endText}</p>
           {practiceAgain(block, progress.records).length > 0 && (
             <button
               className="primary-button"
@@ -205,6 +206,8 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
           step={step}
           index={at}
           total={steps.length}
+          startText={!review && at === 0 ? block.startText : undefined}
+          reviewText={review ? alfaCCommonTexts[step.exercise.tiles ? 'Lastige bouwopdracht opnieuw oefenen' : 'Lastige keuze opnieuw oefenen'].text : undefined}
           firstExample={
             !review &&
             at > 0 &&
@@ -232,12 +235,19 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
               records: { ...progress.records, [step.id]: record },
             })
           }
-          onNext={() => {
+          onNext={(participationRecord) => {
             stopMedia();
-            if (review) setReviewAt(at + 1);
+            const records = participationRecord
+              ? { ...progress.records, [step.id]: participationRecord }
+              : progress.records;
+            if (review) {
+              if (participationRecord) save({ ...progress, records });
+              setReviewAt(at + 1);
+            }
             else
               save({
                 ...progress,
+                records,
                 positions: { ...progress.positions, [block.id]: at + 1 },
               });
           }}
@@ -250,6 +260,8 @@ function PilotPlayer({
   step,
   index,
   total,
+  startText,
+  reviewText,
   firstExample,
   previous,
   onRecord,
@@ -258,10 +270,12 @@ function PilotPlayer({
   step: PilotStep;
   index: number;
   total: number;
+  startText?: string;
+  reviewText?: string;
   firstExample: boolean;
   previous?: () => void;
   onRecord: (r: PilotRecord) => void;
-  onNext: () => void;
+  onNext: (participationRecord?: PilotRecord) => void;
 }) {
   const [model, setModel] = useState(firstExample),
     [help, setHelp] = useState(false),
@@ -393,9 +407,14 @@ function PilotPlayer({
               )}
             </div>
             {audioError && (
-              <p role="alert">
-                Het geluid werkt niet. Tik nog eens op Luister.
-              </p>
+              <p role="alert">{alfaCCommonTexts['Geluidsbestand werkt niet'].text}</p>
+            )}
+            {!model && (
+              <div className="pilot-instruction">
+                {startText && <p>{startText}</p>}
+                {reviewText && <p>{reviewText}</p>}
+                <p>{step.spokenInstruction}</p>
+              </div>
             )}
             {help && (
               <div className="pilot-help">
@@ -414,6 +433,7 @@ function PilotPlayer({
               <section className="cp-task-card pilot-model">
                 <p>Kijk eerst.</p>
                 <strong>{step.model}</strong>
+                <p>{step.exampleInstruction}</p>
                 <button
                   className="secondary-button"
                   onClick={() =>
@@ -426,7 +446,11 @@ function PilotPlayer({
                 </button>
                 <button
                   className="primary-button"
-                  onClick={() => setModel(false)}
+                  onClick={() => {
+                    setModel(false);
+                    setHelp(false);
+                    setResult('idle');
+                  }}
                 >
                   Nu jij
                   <ArrowRight />
@@ -455,18 +479,18 @@ function PilotPlayer({
               {result === 'right' ? (
                 <>
                   <Check />
-                  Goed. Ga verder.
+                  {step.goodFeedback}
                 </>
               ) : result === 'wrong' ? (
                 <>
                   <RefreshCw />
-                  {step.help}
+                  {step.errorFeedback}
                 </>
               ) : (
                 <>
                   <span>{step.stage}</span>
                   <small>
-                    {heard ? 'Neem rustig de tijd.' : 'Luister eerst.'}
+                    {heard ? (participation ? step.afterListening : 'Neem rustig de tijd.') : 'Luister eerst.'}
                   </small>
                 </>
               )}
@@ -477,14 +501,12 @@ function PilotPlayer({
                 model || busy || !(participation ? heard : result === 'right')
               }
               onClick={() => {
-                if (participation)
-                  onRecord({
+                onNext(participation ? {
                     correct: true,
                     helpUsed: metrics.current.helpUsed,
                     tries: 0,
                     assessment: 'participation',
-                  });
-                onNext();
+                  } : undefined);
               }}
             >
               Verder

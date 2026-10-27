@@ -1,0 +1,651 @@
+KLINK ALFA C — HERCONTROLE VAN ALLE 36 STAPPEN NA APPCONTROLE
+27 oktober 2026
+
+Alle 36 stappen zijn opnieuw tekstueel gecontroleerd: Winkel 01–12, Bus 01–12 en Thuis 01–12. De negen kernwoorden, negen doelzinnen, bestaande beelden, drie sets woorddelen, antwoorden en twaalf stappen per blok zijn behouden. Er zijn 27 passende Help-teksten en negen aanbodstappen zonder aparte Help. De inspreeklijst bevat 54 unieke teksten, waarvan 18 ongewijzigde oefenteksten. Voorbeelden beschrijven het hele woord of de hele zin; de zes bouwstappen bevatten herstel met Eén terug. De zes bouwopdrachten zijn eerder live met fout en geslaagde herpoging gecontroleerd. Dit is een tekstpakket, nog niet ingebouwd of met cursisten beproefd. Geen audio gemaakt en niets in de app gewijzigd of gepubliceerd.
+
+Winkel 01
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij winkel en het geschreven woord winkel blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord winkel staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Winkel 02
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij brood en het geschreven woord brood blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord brood staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Winkel 03
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij melk en het geschreven woord melk blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord melk staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Winkel 04
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij winkel als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij brood, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de winkel is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Winkel 05
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij brood als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij winkel, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van het brood is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Winkel 06
+KNELPUNT: Het voorbeeld beschreef losse kaartjes die daar niet zichtbaar zijn. De fouttekst vertelde niet hoe een volle foute poging wordt leeggemaakt.
+VERWERKT: Voorbeeld beschrijft het hele woord. Help verklaart Eén terug. Foutfeedback laat de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.
+spoken — WAS: Luister naar het woord. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.
+spoken — WORDT: Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.
+material — WAS: De twee bestaande deelkaartjes win en kel. Behoud de huidige plaatsing en de bestaande tikbediening; geen nieuwe kaartjes of sleepbeweging.
+material — WORDT: De bestaande afbeelding bij winkel, twee bestaande deelkaartjes (win en kel), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie.
+example_visible — WAS: Het bestaande voorbeeld toont de kaartjes in deze volgorde: win → kel. Samen vormen zij winkel. De pijl is alleen redactienotatie; de bestaande voorbeeldweergave blijft behouden. Het goede antwoord staat uitsluitend in Voorbeeld.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Het eerste kaartje is win. Het tweede kaartje is kel. Zo staat het woord goed.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+help_visible — WAS: Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?
+help_visible — WORDT: Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.
+help_spoken — WAS: Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?
+help_spoken — WORDT: Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.
+error — WAS: De kaartjes staan nog niet goed. Tik op Luister. Let op het begin van het woord. Probeer het nog een keer.
+error — WORDT: Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging de twee delen zelf in de juiste volgorde heeft getikt, eventueel na hulp. Alleen het volledige antwoord in Voorbeeld zien is niet voldoende. De eigen poging na Voorbeeld blijft een geholpen poging.
+finish — WORDT: Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd.
+
+Winkel 07
+KNELPUNT: Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.
+VERWERKT: Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.
+spoken — WAS: Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.
+spoken — WORDT: Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.
+material — WAS: De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:
+• Ik loop de winkel in.
+• Dit is melk.
+• Ik kies een klein brood.
+material — WORDT: De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:
+• Ik loop de winkel in.
+• Dit is melk.
+• Ik kies een klein brood.
+example_visible — WAS: De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Ik loop de winkel in. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Ik loop de winkel in. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Deze zin is gekozen. Je ziet precies de woorden die je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.
+error — WORDT: Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip.
+
+Winkel 08
+KNELPUNT: Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.
+VERWERKT: Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.
+spoken — WAS: Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.
+spoken — WORDT: Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.
+material — WAS: De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:
+• Ik loop de winkel in.
+• Dit is melk.
+• Ik kies een klein brood.
+material — WORDT: De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:
+• Ik loop de winkel in.
+• Dit is melk.
+• Ik kies een klein brood.
+example_visible — WAS: De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Dit is melk. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Dit is melk. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Deze zin is gekozen. Je ziet precies de woorden die je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.
+error — WORDT: Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip.
+
+Winkel 09
+KNELPUNT: Het voorbeeld beschreef afzonderlijke kaartjes. De fouttekst noemde geen bestaande herstelhandeling.
+VERWERKT: Voorbeeld beschrijft de hele zin. Eén terug wordt uitgelegd. Foutfeedback laat eerst de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.
+spoken — WAS: Luister naar de zin. Tik op het kaartje met het eerste woord van de zin. Tik daarna op de volgende woorden.
+spoken — WORDT: Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.
+material — WAS: De bestaande woordkaartjes in antwoordvolgorde voor de redactie: Ik | kies | een | klein | brood. Behoud de bestaande beginopstelling en tikbediening. De punt bij het laatste woord blijft behouden.
+material — WORDT: De bestaande woordkaartjes met deze bronwoorden: Ik | kies | een | klein | brood. Er zijn 5 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening.
+example_visible — WAS: Het bestaande voorbeeld toont alle kaartjes in deze volgorde: Ik → kies → een → klein → brood. De hoofdletter en het eindteken blijven zoals in de bron. Dit is het antwoordmodel; geen nieuwe animatie of kaartjes toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Ik kies een klein brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Het eerste kaartje is Ik. Daarna komen kies, een, klein en brood. Zo staat de zin goed.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+help_visible — WAS: Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.
+help_visible — WORDT: Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.
+help_spoken — WAS: Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.
+help_spoken — WORDT: Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.
+error — WAS: De kaartjes staan nog niet goed. Tik op Luister. Let op welk woord eerst komt. Probeer het nog een keer.
+error — WORDT: Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging alle bestaande woordkaartjes zelf in de bronvolgorde heeft getikt, eventueel na hulp. Alleen het model bekijken is niet genoeg. Een poging na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd.
+
+Winkel 10
+KNELPUNT: Het voorbeeld beschreef een gekozen foto. In werkelijkheid toont het model alleen de hele doelzin.
+VERWERKT: Voorbeeld beschrijft de doelzin. De eigen opdracht noemt Luister. Foutfeedback laat opnieuw luisteren naar het laatste woord en een andere foto kiezen.
+spoken — WAS: Luister naar de zin. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij brood als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De andere twee bestaande woordfoto’s blijven de andere keuzes. Geen nieuw scènebeeld of nieuwe beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Ik kies een klein brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van het brood is gekozen. Die foto past bij wat je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Let op het laatste woord van de zin.
+error — WORDT: Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na hulp. Alleen de zin beluisteren of het model zien is onvoldoende. De keuze toont hier vooral herkenning van het kernbegrip; geen volledige praktijkbeheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Winkel 11
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij brood als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij winkel, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: brood. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van het brood is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Winkel 12
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij winkel als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij brood, melk blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: winkel. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de winkel is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Bus 01
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij auto en het geschreven woord auto blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord auto staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Bus 02
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij bus en het geschreven woord bus blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord bus staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Bus 03
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij fiets en het geschreven woord fiets blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord fiets staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Bus 04
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij auto als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij bus, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de auto is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Bus 05
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij bus als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij auto, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de bus is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Bus 06
+KNELPUNT: Het voorbeeld beschreef losse kaartjes die daar niet zichtbaar zijn. De fouttekst vertelde niet hoe een volle foute poging wordt leeggemaakt.
+VERWERKT: Voorbeeld beschrijft het hele woord. Help verklaart Eén terug. Foutfeedback laat de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.
+spoken — WAS: Luister naar het woord. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.
+spoken — WORDT: Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.
+material — WAS: De twee bestaande deelkaartjes au en to. Behoud de huidige plaatsing en de bestaande tikbediening; geen nieuwe kaartjes of sleepbeweging.
+material — WORDT: De bestaande afbeelding bij auto, twee bestaande deelkaartjes (au en to), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie.
+example_visible — WAS: Het bestaande voorbeeld toont de kaartjes in deze volgorde: au → to. Samen vormen zij auto. De pijl is alleen redactienotatie; de bestaande voorbeeldweergave blijft behouden. Het goede antwoord staat uitsluitend in Voorbeeld.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Het eerste kaartje is au. Het tweede kaartje is to. Zo staat het woord goed.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+help_visible — WAS: Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?
+help_visible — WORDT: Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.
+help_spoken — WAS: Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?
+help_spoken — WORDT: Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.
+error — WAS: De kaartjes staan nog niet goed. Tik op Luister. Let op het begin van het woord. Probeer het nog een keer.
+error — WORDT: Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging de twee delen zelf in de juiste volgorde heeft getikt, eventueel na hulp. Alleen het volledige antwoord in Voorbeeld zien is niet voldoende. De eigen poging na Voorbeeld blijft een geholpen poging.
+finish — WORDT: Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd.
+
+Bus 07
+KNELPUNT: Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.
+VERWERKT: Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.
+spoken — WAS: Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.
+spoken — WORDT: Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.
+material — WAS: De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:
+• Dit is mijn auto.
+• Dit is mijn fiets.
+• Ik stap in de bus.
+material — WORDT: De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:
+• Dit is mijn auto.
+• Dit is mijn fiets.
+• Ik stap in de bus.
+example_visible — WAS: De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Dit is mijn auto. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Dit is mijn auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Deze zin is gekozen. Je ziet precies de woorden die je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.
+error — WORDT: Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip.
+
+Bus 08
+KNELPUNT: Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.
+VERWERKT: Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.
+spoken — WAS: Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.
+spoken — WORDT: Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.
+material — WAS: De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:
+• Dit is mijn auto.
+• Dit is mijn fiets.
+• Ik stap in de bus.
+material — WORDT: De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:
+• Dit is mijn auto.
+• Dit is mijn fiets.
+• Ik stap in de bus.
+example_visible — WAS: De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Dit is mijn fiets. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Dit is mijn fiets. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Deze zin is gekozen. Je ziet precies de woorden die je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.
+error — WORDT: Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip.
+
+Bus 09
+KNELPUNT: Het voorbeeld beschreef afzonderlijke kaartjes. De fouttekst noemde geen bestaande herstelhandeling.
+VERWERKT: Voorbeeld beschrijft de hele zin. Eén terug wordt uitgelegd. Foutfeedback laat eerst de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.
+spoken — WAS: Luister naar de zin. Tik op het kaartje met het eerste woord van de zin. Tik daarna op de volgende woorden.
+spoken — WORDT: Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.
+material — WAS: De bestaande woordkaartjes in antwoordvolgorde voor de redactie: Ik | stap | in | de | bus. Behoud de bestaande beginopstelling en tikbediening. De punt bij het laatste woord blijft behouden.
+material — WORDT: De bestaande woordkaartjes met deze bronwoorden: Ik | stap | in | de | bus. Er zijn 5 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening.
+example_visible — WAS: Het bestaande voorbeeld toont alle kaartjes in deze volgorde: Ik → stap → in → de → bus. De hoofdletter en het eindteken blijven zoals in de bron. Dit is het antwoordmodel; geen nieuwe animatie of kaartjes toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Ik stap in de bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Het eerste kaartje is Ik. Daarna komen stap, in, de en bus. Zo staat de zin goed.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+help_visible — WAS: Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.
+help_visible — WORDT: Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.
+help_spoken — WAS: Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.
+help_spoken — WORDT: Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.
+error — WAS: De kaartjes staan nog niet goed. Tik op Luister. Let op welk woord eerst komt. Probeer het nog een keer.
+error — WORDT: Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging alle bestaande woordkaartjes zelf in de bronvolgorde heeft getikt, eventueel na hulp. Alleen het model bekijken is niet genoeg. Een poging na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd.
+
+Bus 10
+KNELPUNT: Het voorbeeld beschreef een gekozen foto. In werkelijkheid toont het model alleen de hele doelzin.
+VERWERKT: Voorbeeld beschrijft de doelzin. De eigen opdracht noemt Luister. Foutfeedback laat opnieuw luisteren naar het laatste woord en een andere foto kiezen.
+spoken — WAS: Luister naar de zin. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij bus als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De andere twee bestaande woordfoto’s blijven de andere keuzes. Geen nieuw scènebeeld of nieuwe beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Ik stap in de bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de bus is gekozen. Die foto past bij wat je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Let op het laatste woord van de zin.
+error — WORDT: Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na hulp. Alleen de zin beluisteren of het model zien is onvoldoende. De keuze toont hier vooral herkenning van het kernbegrip; geen volledige praktijkbeheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Bus 11
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij bus als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij auto, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: bus. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de bus is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Bus 12
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij auto als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij bus, fiets blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: auto. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de auto is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Thuis 01
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij kamer en het geschreven woord kamer blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord kamer staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Thuis 02
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij deur en het geschreven woord deur blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord deur staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Thuis 03
+KNELPUNT: De aparte Help-tekst paste niet bij deze schermen zonder Help-knop.
+VERWERKT: De luisteropdracht blijft concreet. Aparte Help-tekst vervalt; Luister biedt de herhaling.
+example_visible — WAS: De bestaande foto bij raam en het geschreven woord raam blijven samen zichtbaar. De afzonderlijke bestaande woordopname is het luistermodel. Geen extra antwoord of nabootsing vragen.
+example_visible — WORDT: Dit aanbodscherm is het model: de bestaande foto en het hele geschreven woord raam staan samen in beeld. De bestaande woordopname klinkt via Luister. Er is hier geen aparte Voorbeeld-, Help- of Nu jij-knop.
+help_visible — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_visible — WORDT: None
+help_spoken — WAS: Tik op Luister. Je hoort het woord nog een keer. Kijk naar de foto.
+help_spoken — WORDT: None
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Thuis 04
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij kamer als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij deur, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de kamer is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Thuis 05
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij deur als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij kamer, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de deur is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd.
+
+Thuis 06
+KNELPUNT: Het voorbeeld beschreef losse kaartjes die daar niet zichtbaar zijn. De fouttekst vertelde niet hoe een volle foute poging wordt leeggemaakt.
+VERWERKT: Voorbeeld beschrijft het hele woord. Help verklaart Eén terug. Foutfeedback laat de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.
+spoken — WAS: Luister naar het woord. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.
+spoken — WORDT: Tik op Luister. Je ziet twee kaartjes. Tik op het kaartje met het begin van het woord. Tik dan op het andere kaartje.
+material — WAS: De twee bestaande deelkaartjes ka en mer. Behoud de huidige plaatsing en de bestaande tikbediening; geen nieuwe kaartjes of sleepbeweging.
+material — WORDT: De bestaande afbeelding bij kamer, twee bestaande deelkaartjes (ka en mer), twee invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige beginopstelling en tikbediening. Antwoordvolgorde staat uitsluitend bij Antwoord voor de redactie.
+example_visible — WAS: Het bestaande voorbeeld toont de kaartjes in deze volgorde: ka → mer. Samen vormen zij kamer. De pijl is alleen redactienotatie; de bestaande voorbeeldweergave blijft behouden. Het goede antwoord staat uitsluitend in Voorbeeld.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Het eerste kaartje is ka. Het tweede kaartje is mer. Zo staat het woord goed.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+help_visible — WAS: Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?
+help_visible — WORDT: Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.
+help_spoken — WAS: Tik op Luister. Let op het begin van het woord. Welk kaartje hoort daarbij?
+help_spoken — WORDT: Tik op Luister. Let op het begin van het woord. Met Eén terug haal je het laatste kaartje weg.
+error — WAS: De kaartjes staan nog niet goed. Tik op Luister. Let op het begin van het woord. Probeer het nog een keer.
+error — WORDT: Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak het woord opnieuw.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging de twee delen zelf in de juiste volgorde heeft getikt, eventueel na hulp. Alleen het volledige antwoord in Voorbeeld zien is niet voldoende. De eigen poging na Voorbeeld blijft een geholpen poging.
+finish — WORDT: Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot de twee bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste volgorde. Het model bekijken telt niet als eigen antwoord; een poging daarna blijft geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd.
+
+Thuis 07
+KNELPUNT: Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.
+VERWERKT: Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.
+spoken — WAS: Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.
+spoken — WORDT: Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.
+material — WAS: De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:
+• Er is licht in de kamer.
+• Het raam staat open.
+• Dit is de deur.
+material — WORDT: De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:
+• Er is licht in de kamer.
+• Het raam staat open.
+• Dit is de deur.
+example_visible — WAS: De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Er is licht in de kamer. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Er is licht in de kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Deze zin is gekozen. Je ziet precies de woorden die je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.
+error — WORDT: Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip.
+
+Thuis 08
+KNELPUNT: Het voorbeeld beschreef een gekozen antwoord tussen drie zinnen. In werkelijkheid staat alleen de hele doelzin in het model.
+VERWERKT: Voorbeeld beschrijft die ene hele zin. De eigen opdracht noemt Luister. Na een fout kan direct een andere zin worden gekozen.
+spoken — WAS: Luister naar de zin. Je ziet drie zinnen. Tik op de zin met precies dezelfde woorden.
+spoken — WORDT: Tik op Luister. Kijk naar de drie zinnen. Tik op de zin met dezelfde woorden.
+material — WAS: De drie bestaande antwoordzinnen, zonder een extra transcript boven de keuzes:
+• Er is licht in de kamer.
+• Het raam staat open.
+• Dit is de deur.
+material — WORDT: De drie bestaande antwoordzinnen, uitsluitend in de eigen oefening en in de huidige aangeboden volgorde. Geen extra transcript boven de antwoordopties:
+• Er is licht in de kamer.
+• Het raam staat open.
+• Dit is de deur.
+example_visible — WAS: De bestaande voorbeeldweergave toont deze geschreven zin als gekozen antwoord: Het raam staat open. Alle woorden blijven zichtbaar. De andere twee bronzinnen blijven de andere twee keuzes. Geen extra meeleesmarkering of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Het raam staat open. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Deze zin is gekozen. Je ziet precies de woorden die je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze zin is nog niet goed. Tik op Luister. Vergelijk alle woorden van de zin.
+error — WORDT: Dit is niet de zin die je hoort. Tik op Luister. Tik op een andere zin.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen keuze van precies de gehoorde bronzin in de eigen oefenpoging, eventueel na hulp. Alleen luisteren of het juiste voorbeeld zien telt niet als een eigen antwoord. Een keuze na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. Een andere zin kan direct worden aangetikt; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen keuze van precies de gehoorde bronzin. Alleen het model beluisteren of bekijken is niet genoeg. Een keuze na het model blijft geholpen zinsherkenning en bewijst geen volledig leesbegrip.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. Een goede keuze kan op een begin- of eindwoord berusten; geen bewijs van volledig leesbegrip.
+
+Thuis 09
+KNELPUNT: Het voorbeeld beschreef afzonderlijke kaartjes. De fouttekst noemde geen bestaande herstelhandeling.
+VERWERKT: Voorbeeld beschrijft de hele zin. Eén terug wordt uitgelegd. Foutfeedback laat eerst de bovenste vakjes leegmaken en daarna opnieuw luisteren en bouwen.
+spoken — WAS: Luister naar de zin. Tik op het kaartje met het eerste woord van de zin. Tik daarna op de volgende woorden.
+spoken — WORDT: Tik op Luister. Tik op het kaartje met het eerste woord. Tik daarna op de volgende woorden.
+material — WAS: De bestaande woordkaartjes in antwoordvolgorde voor de redactie: Dit | is | de | deur. Behoud de bestaande beginopstelling en tikbediening. De punt bij het laatste woord blijft behouden.
+material — WORDT: De bestaande woordkaartjes met deze bronwoorden: Dit | is | de | deur. Er zijn 4 invulvakjes bovenaan en de bestaande knop Eén terug. Behoud de huidige aangeboden kaartvolgorde, hoofdletter, eindpunt en tikbediening. Dit is redactie-informatie, geen extra antwoordmodel in de eigen oefening.
+example_visible — WAS: Het bestaande voorbeeld toont alle kaartjes in deze volgorde: Dit → is → de → deur. De hoofdletter en het eindteken blijven zoals in de bron. Dit is het antwoordmodel; geen nieuwe animatie of kaartjes toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Dit is de deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: Het eerste kaartje is Dit. Daarna komen is, de en deur. Zo staat de zin goed.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+help_visible — WAS: Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.
+help_visible — WORDT: Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.
+help_spoken — WAS: Tik op Luister. Let op het eerste woord van de zin. Zoek het kaartje met dat woord.
+help_spoken — WORDT: Tik op Luister. Let op het eerste woord. Met Eén terug haal je het laatste kaartje weg.
+error — WAS: De kaartjes staan nog niet goed. Tik op Luister. Let op welk woord eerst komt. Probeer het nog een keer.
+error — WORDT: Tik op Eén terug tot de vakjes bovenaan leeg zijn. Tik op Luister. Maak de zin opnieuw.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn nadat de cursist in de eigen oefenpoging alle bestaande woordkaartjes zelf in de bronvolgorde heeft getikt, eventueel na hulp. Alleen het model bekijken is niet genoeg. Een poging na Voorbeeld blijft geholpen oefenen.
+finish — WORDT: Verder blijft bij een volle foute volgorde geblokkeerd. Eén terug verwijdert het laatst geplaatste kaartje. Voor een volledige nieuwe poging wordt dit herhaald tot alle bovenste vakjes leeg zijn. Daarna opnieuw luisteren en zelf bouwen. Verder wordt beschikbaar na de eigen juiste bronvolgorde. Alleen de hele zin in het model bekijken is niet genoeg. Een poging daarna blijft geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De bouwbediening en een geslaagde herpoging zijn live gecontroleerd. Voorbeeld → Nu jij maakt de vakjes leeg, maar eerdere foutfeedback en open Help kunnen blijven staan. De nieuwe hersteltekst is doelgericht en zegt niet dat lege vakjes fout zijn. De teksten zijn nog niet ingebouwd.
+
+Thuis 10
+KNELPUNT: Het voorbeeld beschreef een gekozen foto. In werkelijkheid toont het model alleen de hele doelzin.
+VERWERKT: Voorbeeld beschrijft de doelzin. De eigen opdracht noemt Luister. Foutfeedback laat opnieuw luisteren naar het laatste woord en een andere foto kiezen.
+spoken — WAS: Luister naar de zin. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij de zin hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij deur als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De andere twee bestaande woordfoto’s blijven de andere keuzes. Geen nieuw scènebeeld of nieuwe beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont de hele zin: Dit is de deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de deur is gekozen. Die foto past bij wat je hoort.
+example_spoken — WORDT: Kijk naar de zin. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Let op het laatste woord van de zin.
+error — WORDT: Deze foto past niet. Tik op Luister. Let op het laatste woord. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na hulp. Alleen de zin beluisteren of het model zien is onvoldoende. De keuze toont hier vooral herkenning van het kernbegrip; geen volledige praktijkbeheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kiest een andere foto; leegmaken is niet nodig. Verder wordt beschikbaar na de eigen juiste fotokeuze. Alleen de zin in het model bekijken of beluisteren is niet genoeg. De foto koppelt hier vooral het laatste begrip van de zin; de keuze bewijst geen volledige praktijkbeheersing.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Thuis 11
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij deur als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij kamer, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: deur. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de deur is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+Thuis 12
+KNELPUNT: Het voorbeeld beschreef een gekozen foto die niet wordt getoond. De eigen opdracht veronderstelde al gestart oefengeluid.
+VERWERKT: Voorbeeld beschrijft het hele woord. De eigen opdracht noemt Luister. Na een fout wordt expliciet een andere foto gekozen.
+spoken — WAS: Luister naar het woord. Kijk naar de drie foto’s. Tik op de foto die erbij hoort.
+spoken — WORDT: Tik op Luister. Kijk naar de drie foto’s. Tik op de foto die bij het woord hoort.
+example_visible — WAS: Het bestaande voorbeeld toont de foto bij kamer als gekozen antwoord, met de bestaande aanduiding van een juiste keuze. De foto’s bij deur, raam blijven de andere twee keuzes. Geen nieuwe pijl, aanwijzer of beweging toevoegen.
+example_visible — WORDT: Het geopende Voorbeeld toont het hele woord: kamer. Boven het model staat de tekst Kijk eerst. Er zijn een luisterknop en Nu jij. Het model toont geen losse kaartjes, antwoordopties of gekozen foto. Behoud deze bestaande weergave.
+example_spoken — WAS: De foto van de kamer is gekozen. Die foto hoort bij het woord.
+example_spoken — WORDT: Kijk naar het woord. Tik op Luister.
+error — WAS: Deze foto is nog niet goed. Tik op Luister. Kijk naar alle drie de foto’s.
+error — WORDT: Deze foto past niet bij het woord. Tik op Luister. Tik op een andere foto.
+transition_spoken — WAS: Tik op Nu jij. Maak de opdracht zelf.
+transition_spoken — WORDT: Tik op Nu jij.
+finish — WAS: Verder mag beschikbaar zijn na een eigen juiste fotokeuze in de eigen oefenpoging, eventueel na Help of Voorbeeld. Alleen het voorbeeld bekijken is niet voldoende. Een juiste poging na een getoond antwoord is geholpen oefenen, geen bewijs van zelfstandige beheersing.
+finish — WORDT: Verder blijft na een foute keuze geblokkeerd. De cursist kan direct een andere foto aantikken; leegmaken is niet nodig. Verder wordt beschikbaar na een eigen juiste fotokeuze. Alleen het model bekijken is niet genoeg. Een juiste keuze na het zien van het doelwoord is geholpen oefenen.
+OPEN: Zelfstandig begrip is nog niet met Alfa C-cursisten beproefd. De tekst is tegen het waargenomen interactiepatroon gecontroleerd. De exacte herpoging van deze stap is niet afzonderlijk live uitgevoerd.
+
+GEZAMENLIJKE CONTROLE
+Voorbeelden, de overgang naar Nu jij, Eén terug, twee herhaalteksten, geluid en later oefenen zijn opnieuw beoordeeld. Later oefenen belooft geen ongetoetst positiebehoud.
+
+Geen audio gemaakt. Geen appwijziging. Geen publicatie.
