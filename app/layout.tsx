@@ -23,6 +23,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://klink.taalroute.nl'),
+  openGraph: {
+    title: 'KLINK | Taalroute',
+    description: 'Van klank naar woord en lezen. Kijk. Luister. Lees.',
+    url: 'https://klink.taalroute.nl/',
+    siteName: 'Taalroute',
+    locale: 'nl_NL',
+    type: 'website',
+    images: [{ url: '/social/klink-social-20261023.jpg', width: 1200, height: 630, alt: 'Taalroute KLINK. Van klank naar woord en lezen. Kijk. Luister. Lees.' }],
+  },
+  twitter: { card: 'summary_large_image', title: 'KLINK | Taalroute', description: 'Van klank naar woord en lezen. Kijk. Luister. Lees.', images: ['/social/klink-social-20261023.jpg'] },
   title: 'Taalroute | Klink',
   description:
     'Klink — Van klank naar taal. Kijken, luisteren, inoefenen, nazeggen en koppelen met Alfabeta+.',
