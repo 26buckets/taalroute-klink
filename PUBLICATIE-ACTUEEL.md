@@ -1,3 +1,31 @@
+# Actuele Klink-publicatie — 72 dagelijkse berichten en documenten, 28 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/alfa-c
+Broncommit: `5e3b0dd344862b0e9dfb495ed9d4d4d6cfac7c64`, schone canonieke branch `main`.
+Worker: `14d40239-ee5d-4105-b331-f423b60e9c92`.
+
+De zes blokken uit productiedossier 028 bevatten 72 nieuwe opdrachten: 64 keuzes en acht volgordeopdrachten. De vier definitieve audiotekstcorrecties en twee bijbehorende schermvragen uit de recente Drive-documenten zijn verwerkt. De negen bestaande Alfa C-blokken met 108 opdrachten blijven behouden; samen zijn dit vijftien blokken met 180 opdrachten. Dit is geen volledige vrijgave van de hele Alfa C-leerlijn of van alle 84 canonieke herzieningen.
+
+Roland spreekt uitleg en steun, Remko de oefentaal. Er zijn 375 unieke definitieve audiobestanden: 360 worden gebruikt in de opdrachten en blokken; vijftien algemene UI-opnamen zijn beschikbaar zonder automatische activering bij iedere knop. Alle 375 zijn automatisch teruggetranscribeerd en op technische opnamekwaliteit gecontroleerd. Taalroute-merkvelden zijn verliesloos toegevoegd. De eerste poging, laatste poging, aantal pogingen en verschillende vormen van hulp blijven afzonderlijk bewaard; dit is oefenvoortgang, geen zelfstandig beheersingsbewijs.
+
+Lokaal geslaagd: bron- en antwoordcontrole, typen, gerichte lint, curriculum, productiebuild, bestaande en nieuwe browserreeksen, audiocontroles, 52 publicatiebewijstests en de gewone publicatiepoort. Door een lokale bestandsleesfout in de gesynchroniseerde map is een identieke schone main-kopie buiten die map gebruikt. De gewone npm run deploy is uitgevoerd; geen publicatiebeveiliging omzeild. Alle 27 runtime-JS/CSS-bestanden zijn inhoudelijk gelijk aan de geteste build, afgezien van gegenereerde buildcodes en daaruit volgende bestandsnamen.
+
+Online geslaagd: 144 nieuwe stapgevallen en 144 smalle gevallen, 144 bestaande aanvullende stapgevallen, 72 eerdere stapgevallen en 50 integratiegevallen. Eerste fouten, herstel, hulp, herladen en oude voortgang blijven behouden. Alle 375 nieuwe en 429 bestaande Alfa C-opnamen zijn bytegelijk teruggelezen met hun ingebedde Taalroute-merkvelden. Alle 750 nieuwe audio-decoderingen, echt afspelen van beide stemrollen en fout/herstel zijn in Chromium en WebKit gecontroleerd. De werkelijke cliëntbundel komt overeen met de gebouwde bestanden. Bestaande publieke bronnen en de database zijn niet gewijzigd. Geen GitHub Actions-workflows of -runs.
+
+Nog open: de 27 niet toegelaten onderdelen uit het canonieke register; de 57 bestaande oorspronkelijke onderdelen blijven aanwezig, maar hun recentste herzieningen zijn niet als geheel vrijgegeven. De afzonderlijke reeks van 72 woord-/spellingopdrachten is niet volledig teruggevonden en is niet verzonnen of vervangen door deze 72 dagelijkse opdrachten. De actuele opdracht vervangt oude administratieve toestemmings-HOLDs, maar geen ontbrekende broninhoud, vereiste menselijke beoordelingen, individuele voorbereiding of herhaalvoorwaarden. Volledige menselijke luistercontrole, cursistenproef, fysieke telefoons en schermlezerproef blijven open.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-dagelijks-20261028.json`.
+Publicatieregister: `docs/klink-publication-alfa-c-dagelijks-20261028.json`.
+Online bewijs: `docs/klink-alfa-c-dagelijks-20261028/online/`.
+Herstel en bronstatus: `docs/klink-alfa-c-dagelijks-20261028/canonical-84-status.json`.
+Gecontroleerde bronback-up: https://drive.google.com/file/d/1fWH6UdZClpfCjJjDb5FUIvrvDGXFuQ71/view
+Aanvullende publicatiecontrole: https://drive.google.com/file/d/1kt5EACx4VJ9dxOF6F2DmH0rjhv_wxiBh/view
+Definitieve herstelset: `Klink-Alfa-C-P028-definitieve-herstelset-20261028.zip` in de bestaande projectmap https://drive.google.com/drive/folders/1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR; ontvangstbewijs met exacte bestandslink volgt na uploadcontrole apart.
+
+Main bevat deze bron en de daaropvolgende publicatiemetadata. Stel vóór een volgende publicatie opnieuw de werkelijke livebron vast. Een metadata-opvolging is geen nieuwe runtimepublicatie. Een herstelback-up is geen cursistdownload en geen automatische rollback.
+
+## Eerder publicatieregister
+
 # Actuele Klink-publicatie — duidelijke Alfa C-opdracht bij de antwoorden, 28 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/alfa-c/lijst
