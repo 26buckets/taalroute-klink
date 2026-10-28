@@ -861,8 +861,8 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           Delen is gestopt · voorbereiding openen
         </button>
       </section>
-      <div hidden={ending}>
-        <div hidden={pause}>
+      <div className="kpd-session" hidden={ending}>
+        <div className="kpd-board" hidden={pause}>
           <nav className="kpd-phases" aria-label="Lesfasen">
             {phases.map((p, i) => (
               <button
@@ -881,47 +881,57 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
               {state.phase === 1 && saySelf ? 'Wat is dit?' : phase.prompt}
             </h2>
             {[0, 1].includes(state.phase) && (
-              <>
-                <div className="kpd-picture-space">{state.image && photo}</div>
-                <div className="kpd-actions">
-                  <button
-                    className="secondary-button"
-                    onClick={() => update({ image: !state.image })}
-                  >
-                    {state.image ? <EyeOff /> : <Eye />}
-                    {state.image ? 'Beeld verbergen' : 'Beeld tonen'}
-                  </button>
-                  {state.image && (
+              <div className="kpd-picture-lesson">
+                <div className="kpd-picture-column">
+                  <div className="kpd-picture-space">
+                    {state.image && photo}
+                  </div>
+                  <div className="kpd-actions">
                     <button
                       className="secondary-button"
-                      onClick={() => setLargePhoto(!largePhoto)}
+                      onClick={() => update({ image: !state.image })}
                     >
-                      {largePhoto ? 'Foto kleiner' : 'Foto groter'}
+                      {state.image ? <EyeOff /> : <Eye />}
+                      {state.image ? 'Beeld verbergen' : 'Beeld tonen'}
                     </button>
-                  )}
-                  {state.phase === 1 && wordAudio}
-                  <button className="secondary-button" onClick={reveal}>
-                    {shown ? 'Woord verbergen' : 'Toon woord'}
-                  </button>
-                  {state.phase === 1 && (
-                    <button
-                      className="secondary-button"
-                      onClick={() => {
-                        audio.stop();
-                        setSaySelf(!saySelf);
-                      }}
-                    >
-                      {saySelf ? 'Luister en zeg na' : 'Zeg zelf'}
-                    </button>
-                  )}
+                    {state.image && (
+                      <button
+                        className="secondary-button"
+                        onClick={() => setLargePhoto(!largePhoto)}
+                      >
+                        {largePhoto ? 'Foto kleiner' : 'Foto groter'}
+                      </button>
+                    )}
+                  </div>
                 </div>
-                {shown && (
-                  <>
-                    <p>de mat</p>
-                    <p className="kpd-big-word">{matWord.word}</p>
-                  </>
-                )}
-              </>
+                <div className="kpd-word-column">
+                  <div className="kpd-word-space">
+                    {shown && (
+                      <>
+                        <p>de mat</p>
+                        <p className="kpd-big-word">{matWord.word}</p>
+                      </>
+                    )}
+                  </div>
+                  <div className="kpd-actions">
+                    {state.phase === 1 && wordAudio}
+                    <button className="secondary-button" onClick={reveal}>
+                      {shown ? 'Woord verbergen' : 'Toon woord'}
+                    </button>
+                    {state.phase === 1 && (
+                      <button
+                        className="secondary-button"
+                        onClick={() => {
+                          audio.stop();
+                          setSaySelf(!saySelf);
+                        }}
+                      >
+                        {saySelf ? 'Luister en zeg na' : 'Zeg zelf'}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </div>
             )}
             {state.phase === 2 && (
               <>
@@ -1049,41 +1059,49 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
               </>
             )}
             {state.phase === 4 && (
-              <>
-                <div className="kpd-reading-card">
-                  {shown ? (
-                    <p className="kpd-big-word">{matWord.word}</p>
-                  ) : (
-                    <span aria-label="Woord afgedekt">—</span>
-                  )}
-                </div>
-                <div className="kpd-actions">
-                  <button
-                    className="secondary-button"
-                    onClick={() => {
-                      reveal();
-                      setReadCheck(false);
-                    }}
-                  >
-                    <Eye />
-                    {shown ? 'Woord verbergen' : 'Woord tonen'}
-                  </button>
-                  {shown && (
+              <div
+                className={
+                  readCheck && shown ? 'kpd-picture-lesson' : 'kpd-read-lesson'
+                }
+              >
+                {readCheck && shown && (
+                  <div className="kpd-picture-column">
+                    <div className="kpd-picture-space">{photo}</div>
+                    <div className="kpd-actions">{wordAudio}</div>
+                  </div>
+                )}
+                <div className="kpd-word-column">
+                  <div className="kpd-reading-card">
+                    {shown ? (
+                      <p className="kpd-big-word">{matWord.word}</p>
+                    ) : (
+                      <span aria-label="Woord afgedekt">—</span>
+                    )}
+                  </div>
+                  <div className="kpd-actions">
                     <button
                       className="secondary-button"
-                      onClick={() => setReadCheck(!readCheck)}
+                      onClick={() => {
+                        reveal();
+                        setReadCheck(false);
+                      }}
                     >
-                      {readCheck ? 'Foto verbergen' : 'Controleer met de foto'}
+                      <Eye />
+                      {shown ? 'Woord verbergen' : 'Woord tonen'}
                     </button>
-                  )}
+                    {shown && (
+                      <button
+                        className="secondary-button"
+                        onClick={() => setReadCheck(!readCheck)}
+                      >
+                        {readCheck
+                          ? 'Foto verbergen'
+                          : 'Controleer met de foto'}
+                      </button>
+                    )}
+                  </div>
                 </div>
-                {readCheck && shown && (
-                  <>
-                    {photo}
-                    {wordAudio}
-                  </>
-                )}
-              </>
+              </div>
             )}
             {state.phase === 5 && (
               <>

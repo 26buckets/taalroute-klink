@@ -217,6 +217,8 @@ for (const { engine, type, options } of [
       for (const size of [
         { width: 390, height: 844 },
         { width: 768, height: 1024 },
+        { width: 1280, height: 720 },
+        { width: 1366, height: 768 },
         { width: 1920, height: 1080 },
       ]) {
         await page.setViewportSize(size);
@@ -231,6 +233,22 @@ for (const { engine, type, options } of [
           `${engine} overflow ${size.width}`,
         );
         await safe(page, `${engine}/${variant}/${size.width}`);
+        if (size.width >= 900) {
+          await page
+            .getByRole('button', { name: 'Toon woord', exact: true })
+            .click();
+          const picture = await page
+            .locator('.kpd-picture-space')
+            .boundingBox();
+          const word = await page.locator('.kpd-word-space').boundingBox();
+          assert(picture.x + picture.width <= word.x);
+          assert(
+            await page.evaluate(
+              () => document.documentElement.scrollHeight <= innerHeight + 1,
+            ),
+            `${engine} vertical overflow ${size.width}`,
+          );
+        }
         if (variant === 'basic') {
           await page.evaluate(() => scrollTo(0, 0));
           await page.waitForTimeout(350);
@@ -239,6 +257,10 @@ for (const { engine, type, options } of [
             fullPage: true,
           });
         }
+        if (size.width >= 900)
+          await page
+            .getByRole('button', { name: 'Woord verbergen', exact: true })
+            .click();
       }
       if (engine === 'chromium') {
         await page
