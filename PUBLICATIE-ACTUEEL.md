@@ -1,3 +1,30 @@
+# Actuele Klink-publicatie — herkenbare Alfa C-documenten en oefenindeling, 28 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/chapters?level=alfa-c&help=practice
+Broncommit: `25704b43de178d62baa81a1eb1aa5cd2eab883dc`, schone canonieke branch `main`.
+Worker: `0b863bad-565c-47fc-9752-2b80a0516cf1`. Build: `2026-10-28T22:27:23.742Z`.
+
+De laatste expliciete opdracht van Nico is verwerkt: herkenbare briefjes, bonnen, berichten, formulieren en roosters; één korte zichtbare vraag; uitleg, voorlezen, voorbeeld en hulp in een aparte strook boven het werkvlak. Op de gecontroleerde laptopmaat 1366×768 staan document en antwoorden volledig naast elkaar zonder scrollen in het midden. Bij smalle of korte schermen blijven Tekst en Opdracht apart leesbaar met normale paginadoorloop. Dit is geen belofte van nul scrollen op iedere telefoon of zoomstand.
+
+De vijftien praktijksituaties zijn verdeeld over Woorden en zinnen (3), Lezen en schrijven (6) en Berichten lezen (6). Lege Alfa C-keuzes voor Zelf oefenen zijn verborgen; acht beschikbare categorieën bij Met je docent blijven zichtbaar. Alle 180 blokopdrachten, broninhoud, antwoorden, audio, eerste-poging-/hulpregistratie, bestaande voortgang, database, logo en algemene navigatie zijn behouden. Er is geen nieuwe audio gegenereerd voor deze UX-aanpassing.
+
+Lokaal: alle 180 blokopdrachten doorlopen; 854 document-/voorbeeld-/hulpweergaven in Chromium en WebKit; 288 smalle dagelijkse/functionele stapgevallen; 112 keuzecontroles; extra foutfeedback en korte schermen. Typen, lint, curriculum, logo, productiebuild, 52 publicatiebewijstests en de gewone publicatiepoort slagen. De volledige respons-/audiocontrole is gevolgd door het verwijderen van één dubbele kaartjesinstructie; daarna zijn alle dagelijkse opdrachten en alle 854 werkvlakcontroles opnieuw uitgevoerd. Geen antwoord- of audiologica is gewijzigd.
+
+Online: 42 responsieve/foutfeedbackgevallen, 50 integratiegevallen en 750 audiodecoderingen met echt afspelen, foutmelding en herstel slagen. Alle 804 Alfa C-opnamen zijn bytegelijk teruggelezen met ingebedde Taalroute-merkvelden; alle 29 aangeboden JS/CSS-bestanden passen bij de build. De 21 runtimebestanden zijn inhoudelijk gelijk aan de geteste build na uitsluitend normalisatie van aantoonbaar gegenereerde Vinext-buildcodes/RSC-identiteiten en bijbehorende chunknamen. Het aangeboden Rivaro-vectorbestand is bytegelijk gecontroleerd. Geen GitHub-workflows; nul Actions-runs voor deze broncommit. Alle zware controles zijn lokaal uitgevoerd.
+
+Dit blijft een gerichte publicatie van 15 blokken, geen volledige Alfa C-vrijgave. De 27 afzonderlijk vastgelegde canonieke HOLD-items en het onvolledige bronherstel van de andere 72 woord-/spellingopdrachten blijven open. Volledige menselijke luisterreview, cursistenproef, fysieke telefoons en schermlezerproef zijn niet als voltooid aangemerkt.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-workspace-20261028.json`.
+Register: `docs/klink-publication-alfa-c-workspace-20261028.json`.
+Bewijs: `docs/klink-alfa-c-werkvlak-20261028/` en `online/`.
+Bronback-up gecontroleerd: https://drive.google.com/file/d/1PWF2Um5wjMBQmMRYBZJpMEN6lmTSZ2wH/view
+Audio-/bronherstel gecontroleerd: https://drive.google.com/file/d/1fWH6UdZClpfCjJjDb5FUIvrvDGXFuQ71/view
+De gebundelde definitieve herstelset en het aparte ontvangstbewijs staan onder de vaste bestandsnamen Klink-Alfa-C-P028-definitieve-herstelset-20261028.zip en Klink-Alfa-C-ontvangstbewijs-20261028.json in https://drive.google.com/drive/folders/1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR; raadpleeg het afzonderlijke ontvangstbewijs voor de gecontroleerde uploadidentiteit. Een back-up is geen livepublicatie of automatische rollback.
+
+Main bevat deze bron en de daaropvolgende publicatiemetadata. Controleer vóór een volgende publicatie opnieuw de werkelijk actieve livebron.
+
+## Eerder publicatieregister
+
 # Actuele Klink-publicatie — 72 dagelijkse berichten en documenten, 28 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/alfa-c
