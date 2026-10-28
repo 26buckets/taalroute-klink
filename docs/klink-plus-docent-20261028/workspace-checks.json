@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-28",
+  "publication": false,
+  "storage": "local D1, isolated teaching tables",
+  "service_tests": 2,
+  "browser_checks": {
+    "checks": [
+      "Group and two learners persist after reload; access codes shown once",
+      "Individual preselection and whole-group assignment reuse the same lesson without duplicates",
+      "Learner code opens only own work; canonical mat player completion appears for teacher",
+      "Code reset revokes existing browser session and old code; renewed code retains work",
+      "Desktop and mobile fit; Chrome and WebKit personal login and logout work",
+      "Landing entry opens personal work; existing learner start and six steps remain"
+    ],
+    "errors": [],
+    "fixture": "Fictitious test learners removed after run"
+  },
+  "board_journeys": 6,
+  "board_edge_cases": 8,
+  "menu_scripts": [
+    "test-menu-navigation-browser.mjs",
+    "test-menu-refinement-browser.mjs"
+  ],
+  "typecheck": "passed",
+  "scoped_lint": "passed",
+  "build": "passed",
+  "cloud_actions": "No workflows found in local HEAD or fetched origin/main; no Actions added",
+  "open": [
+    "classroom pilot",
+    "physical devices",
+    "screen reader",
+    "external security audit",
+    "production provisioning and explicit publication"
+  ]
+}

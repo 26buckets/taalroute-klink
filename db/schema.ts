@@ -1,5 +1,9 @@
+import { sql } from 'drizzle-orm';
 import {
   integer,
+  index,
+  uniqueIndex,
+  check,
   primaryKey,
   sqliteTable,
   text,
@@ -55,4 +59,72 @@ export const reviewItems = sqliteTable('review_items', {
     .default('draft'),
   createdAt: text('created_at').notNull(),
   updatedAt: text('updated_at').notNull(),
+});
+
+export const teachingTeachers = sqliteTable('teaching_teachers', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  codeHash: text('code_hash').notNull().unique(),
+});
+export const teachingGroups = sqliteTable(
+  'teaching_groups',
+  {
+    id: text('id').primaryKey(),
+    teacherId: text('teacher_id')
+      .notNull()
+      .references(() => teachingTeachers.id),
+    name: text('name').notNull(),
+  },
+  (t) => [index('teaching_groups_owner').on(t.teacherId)],
+);
+export const teachingLearners = sqliteTable(
+  'teaching_learners',
+  {
+    id: text('id').primaryKey(),
+    groupId: text('group_id')
+      .notNull()
+      .references(() => teachingGroups.id),
+    name: text('name').notNull(),
+    codeHash: text('code_hash').notNull().unique(),
+  },
+  (t) => [index('teaching_learners_group').on(t.groupId)],
+);
+export const teachingAssignments = sqliteTable(
+  'teaching_assignments',
+  {
+    id: text('id').primaryKey(),
+    learnerId: text('learner_id')
+      .notNull()
+      .references(() => teachingLearners.id),
+    packageId: text('package_id').notNull(),
+    lessonId: text('lesson_id').notNull(),
+    createdAt: text('created_at').notNull(),
+    completedAt: text('completed_at'),
+  },
+  (t) => [
+    index('teaching_assignments_learner').on(t.learnerId),
+    uniqueIndex('teaching_assignment_once').on(
+      t.learnerId,
+      t.packageId,
+      t.lessonId,
+    ),
+  ],
+);
+export const teachingSessions = sqliteTable(
+  'teaching_sessions',
+  {
+    tokenHash: text('token_hash').primaryKey(),
+    role: text('role', { enum: ['teacher', 'learner'] }).notNull(),
+    personId: text('person_id').notNull(),
+    expiresAt: integer('expires_at').notNull(),
+  },
+  (t) => [
+    index('teaching_sessions_person').on(t.role, t.personId),
+    check('teaching_session_role', sql`${t.role} IN ('teacher','learner')`),
+  ],
+);
+export const teachingLoginLimits = sqliteTable('teaching_login_limits', {
+  key: text('key').primaryKey(),
+  attempts: integer('attempts').notNull(),
+  expiresAt: integer('expires_at').notNull(),
 });

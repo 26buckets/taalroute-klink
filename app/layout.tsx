@@ -10,6 +10,7 @@ import './landing.css';
 import './taalroute-header.css';
 import './learner-layout.css';
 import './sounds.css';
+import './teaching.css';
 import { ClassroomBoundary } from '@/components/product/classroom-boundary';
 
 const geistSans = Geist({

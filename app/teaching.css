@@ -1,0 +1,257 @@
+.tw {
+  font-size: 17px;
+  line-height: 1.5;
+}
+.tw :is(h1, h2, h3, legend) {
+  font-weight: 500;
+}
+.tw h1 {
+  font-size: 28px;
+}
+.tw h2 {
+  font-size: 21px;
+  margin: 0 0 8px;
+}
+.tw h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.tw p {
+  margin: 6px 0 14px;
+}
+.tw .staff-topbar {
+  position: static;
+  flex-wrap: wrap;
+}
+.tw .staff-topbar p {
+  font-size: 16px;
+}
+.tw-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+.tw :is(.primary-button, .secondary-button) {
+  min-height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.tw label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.tw :is(input, select) {
+  font-size: 18px;
+  min-height: 48px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+}
+.tw-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin: 20px 0;
+}
+.tw-inline > label {
+  flex: 1 1 220px;
+  max-width: 480px;
+}
+.tw-login {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 24px;
+}
+.tw-login > svg {
+  width: 34px;
+  height: 34px;
+  color: var(--primary);
+}
+.tw-login form {
+  display: grid;
+  gap: 20px;
+  margin: 24px 0;
+}
+.tw-home {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.tw-home > button {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 24px;
+  min-height: 230px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+}
+.tw-home > button > svg {
+  margin-bottom: 20px;
+  width: 28px;
+  height: 28px;
+  color: var(--primary);
+}
+.tw-home button > span {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tw-home button:hover {
+  border-color: var(--primary);
+}
+.tw button:focus-visible,
+.tw a:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+.tw-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 0;
+  color: var(--primary);
+  min-height: 44px;
+}
+.tw-roster {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0;
+}
+.tw-roster article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.tw-roster p {
+  margin: 0;
+}
+.tw-row-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tw-code {
+  padding: 24px;
+  background: var(--primary-soft);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+}
+.tw-code strong {
+  display: block;
+  font-size: clamp(22px, 4vw, 32px);
+  letter-spacing: 0.06em;
+  margin: 16px 0;
+}
+.tw-code button {
+  margin: 8px 8px 0 0;
+}
+.tw-message {
+  padding: 12px 16px;
+  border-left: 4px solid var(--primary);
+  background: var(--paper);
+}
+.tw-empty {
+  padding: 36px 0;
+}
+.tw-assignment {
+  display: grid;
+  gap: 20px;
+  margin: 24px 0 32px;
+}
+.tw-assignment fieldset {
+  min-width: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.tw-assignment legend {
+  padding: 0 8px;
+  font-size: 20px;
+}
+.tw-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 12px 0;
+}
+.tw .tw-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+.tw-check input {
+  width: 22px;
+  min-height: 22px;
+  height: 22px;
+}
+.tw-assignment > button {
+  justify-self: start;
+}
+.tw-learner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+.tw-learner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.tw-learner .cp-exercise-browser.is-guided {
+  height: calc(100svh - 150px);
+  min-height: 500px;
+}
+@media (max-width: 850px) {
+  .tw-home {
+    grid-template-columns: 1fr;
+  }
+  .tw-home > button {
+    min-height: 180px;
+  }
+  .tw-content,
+  .tw-learner {
+    padding: 16px;
+  }
+  .tw-roster article {
+    align-items: stretch;
+  }
+  .tw-row-actions {
+    width: 100%;
+  }
+  .tw-row-actions button {
+    flex: 1;
+  }
+  .tw .staff-topbar h1 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 851px) {
+  .staff-app:has(.tw) {
+    height: var(--klink-app-height);
+    min-height: 0;
+  }
+  .staff-app:has(.tw) .staff-sidebar {
+    height: 100%;
+  }
+}

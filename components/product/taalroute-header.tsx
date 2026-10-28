@@ -1,6 +1,6 @@
 "use client";
 import { useLayoutEffect, useRef, useState } from 'react';
-import { Maximize, Minimize, Menu, ChevronDown, Presentation } from 'lucide-react';
+import { Maximize, Minimize, Menu, ChevronDown, Presentation, BookOpen } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 const apps = [["studio", "Studio", "/", "#096cdb"], ["muziek", "Muziek", "/", "#7545e8"], ["actief", "Actief", "/", "#0090f2"], ["digibord", "DigiBord", "/", "#0090f2"], ["spreektijd", "Spreektijd", "/", "#c76349"], ["klankstudio", "Klankstudio", "/", "#285f47"], ["missies", "Missies", "/#docent", "#59402d"], ["oppad", "Op Pad", "/docent/", "#096cdb"], ["theaterlezen", "Theaterlezen", "/", "#a27722"], ["zinnen", "Zinnen", "/", "#91472f"], ["klink", "KLINK", "/", "#482c46"]];
@@ -25,6 +25,7 @@ export function TaalrouteHeader({ classroom = false }: { classroom?: boolean }) 
     <div className="hdr001-controls"><button className="hdr001-fullscreen" type="button" onClick={fullscreen} aria-label={full?'Normale weergave':'Volledig scherm'} aria-pressed={full}>{full?<Minimize/>:<Maximize/>}</button><details className="hdr001-menu" hidden={classroom}><summary className="hdr001-menu-trigger" aria-label="Menu"><Menu/></summary><div ref={panel} className="hdr001-panel"><a href="https://studio.taalroute.nl/#/apps/klink/handleiding">Docentenhandleiding</a>
       {/* oxlint-disable-next-line next/no-html-link-for-pages -- Native navigation emits the hashchange used by the existing app router. */}
       <a href="/#teacher"><Presentation aria-hidden="true" /><span>Docentomgeving</span></a>
+      <Link href="/opdrachten"><BookOpen aria-hidden="true" /><span>Mijn opdrachten</span></Link>
     </div></details><output className="hdr001-status" aria-label="Schermmelding">{message}</output></div>
   </header>;
 }

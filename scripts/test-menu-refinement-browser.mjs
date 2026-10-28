@@ -78,7 +78,7 @@ try {
   await page.locator('[data-collection]').first().click(); await page.locator('.is-mixed-round').waitFor();
   assert.equal(await page.locator('[data-exercise-id]').getAttribute('data-exercise-id'), recall);
   pass('Removed review IDs do not create dead-end links; available due work opens the exact real exercise');
-  await page.goto(`${base}/#teacher/overview`);
+  await page.goto(`${base}/#teacher/reference/overview`);
   await page.locator('.cp-menu-guide').waitFor();
   await page.keyboard.press('Tab');
   for (const control of [page.locator('.cp-menu-guide a').first(), page.locator('.cp-menu-guide summary')]) {
