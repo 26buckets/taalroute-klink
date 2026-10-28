@@ -31,6 +31,7 @@ import {
   classroomContent,
   classroomRoutes,
   routeIds,
+  roundLabels,
   phasesForRoute,
   prerequisitesForRoute,
   type ClassroomRoute,
@@ -529,11 +530,13 @@ function MirrorBoard() {
 
 export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   const [state, setState] = useState<ClassroomState>(() => readClassroom());
-  const [screen, setScreen] = useState<"gate" | "prepare" | "lesson">(() =>
-    readClassroom().active && readClassroom().prepared ? "lesson" : "gate",
+  const [screen, setScreen] = useState<"entry" | "lesson">(() =>
+    readClassroom().active ? "lesson" : "entry",
+  );
+  const roundStates = useRef<Partial<Record<ClassroomRoute, ClassroomState>>>(
+    {},
   );
   const [pause, setPause] = useState(false),
-    [ending, setEnding] = useState(false),
     [feedback, setFeedback] = useState("");
   const [tool, setTool] = useState<BoardTool | null>(null);
   const [strokes, setStrokes] = useState<Stroke[]>([]),
@@ -541,8 +544,6 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   const [toolWord, setToolWord] = useState(false),
     [toolImage, setToolImage] = useState(false);
   const [storageError, setStorageError] = useState(false);
-  const [preparation, setPreparation] = useState("");
-  const [printKind, setPrintKind] = useState("worksheet");
   const [saySelf, setSaySelf] = useState(false);
   const [readCheck, setReadCheck] = useState(false);
   const [photoError, setPhotoError] = useState(false);
@@ -553,7 +554,6 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   const dragged = useRef(false);
   const audio = useClassroomAudio();
   const phases = phasesForRoute(state.route);
-  const route = classroomRoutes[state.route];
   const phase = phases[state.phase];
   const shown = state.shown[state.phase];
   function commit(next: ClassroomState) {
@@ -578,9 +578,29 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     });
   }
   function go(index: number) {
+    const round = routeIds.indexOf(state.route);
+    if (index >= phases.length && round < routeIds.length - 1) {
+      switchRound(routeIds[round + 1], 0);
+      return;
+    }
+    if (index < 0 && round > 0) {
+      switchRound(routeIds[round - 1], phases.length - 1);
+      return;
+    }
     audio.stop();
     setFeedback("");
     update({ phase: index });
+  }
+  function switchRound(route: ClassroomRoute, phase?: number) {
+    audio.stop();
+    roundStates.current[state.route] = state;
+    const next =
+      roundStates.current[route] ?? freshClassroom(state.variant, route);
+    commit({ ...next, active: true, phase: phase ?? next.phase });
+    setFeedback("");
+    setSaySelf(false);
+    setReadCheck(false);
+    setFinished(false);
   }
   function chooseVariant() {
     const next =
@@ -605,8 +625,17 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     opener.current?.focus();
   }
   function start() {
-    if (!state.prepared) return;
-    const next = { ...state, active: true };
+    roundStates.current = {};
+    setFeedback("");
+    setFinished(false);
+    setReadCheck(false);
+    setSaySelf(false);
+    const next = { ...freshClassroom(), active: true };
+    setStrokes([]);
+    setBoardText("");
+    setToolWord(false);
+    setToolImage(false);
+    setLargePhoto(false);
     commit(next);
     setScreen("lesson");
     window.scrollTo({ top: 0 });
@@ -616,8 +645,8 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     audio.stop();
     const next = { ...state, active: false };
     commit(next);
-    setEnding(false);
-    setScreen("prepare");
+    setPause(false);
+    setScreen("entry");
   }
   function reset() {
     audio.stop();
@@ -626,21 +655,6 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
       shown: state.shown.map((value, i) => (i === state.phase ? false : value)),
     });
     setFeedback("");
-  }
-  function printMaterial() {
-    const previous = document.title;
-    document.title =
-      printKind === "observation" && screen === "prepare"
-        ? "Klink docentobservatie"
-        : "DE MAT";
-    window.addEventListener(
-      "afterprint",
-      () => {
-        document.title = previous;
-      },
-      { once: true },
-    );
-    window.print();
   }
   const photo = photoError ? (
     <output>De foto kan niet laden. Gebruik een echte mat.</output>
@@ -669,279 +683,20 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     </button>
   );
 
-  if (screen === "gate")
+  if (screen === "entry")
     return (
       <main className="kpd kpd-gate">
         <h1>
           <ClassroomBrand />
         </h1>
-        <p>
-          De cursist oefent thuis. De docent brengt het in de klas tot leven.
-        </p>
-        <h2>Bereid je les voor</h2>
-        <p>
-          Stop eerst het delen of projecteren van je scherm. De voorbereiding is
-          alleen voor jou.
-        </p>
-        <button className="primary-button" onClick={() => setScreen("prepare")}>
-          Mijn scherm wordt niet gedeeld
+        <h2>mat</h2>
+        <button className="primary-button" onClick={start}>
+          <Play />
+          Les openen
         </button>
         <button className="secondary-button" onClick={onExit}>
           Sluiten
         </button>
-      </main>
-    );
-  if (screen === "prepare")
-    return (
-      <main className="kpd kpd-prepare">
-        <header>
-          <h1>
-            <ClassroomBrand />
-          </h1>
-          <button className="secondary-button" onClick={onExit}>
-            Sluiten
-          </button>
-        </header>
-        <p>
-          De cursist oefent thuis. De docent brengt het in de klas tot leven.
-        </p>
-        <h2>Les: {matWord.word}</h2>
-        <p>
-          <strong>Doel:</strong> {route.goal}
-        </p>
-        <p>{route.bookGoal}</p>
-        <fieldset>
-          <legend>Leerroute</legend>
-          <div className="kpd-route-options">
-            {routeIds.map((id) => (
-              <label key={id}>
-                <input
-                  type="radio"
-                  name="route"
-                  value={id}
-                  checked={state.route === id}
-                  onChange={() => {
-                    commit(freshClassroom(state.variant, id));
-                    setPrintKind("worksheet");
-                  }}
-                />
-                <strong>{classroomRoutes[id].label}</strong>
-                <span>{classroomRoutes[id].goal}</span>
-                <em>{classroomRoutes[id].example}</em>
-              </label>
-            ))}
-          </div>
-        </fieldset>
-        <section
-          className="kpd-prerequisites"
-          aria-label="Voorkennis voor deze route"
-        >
-          <h3>Voorkennis controleren</h3>
-          <ul>
-            {route.prerequisites.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          {state.route !== "a" && (
-            <>
-              <p>
-                Deze route volgt niet automatisch na de eerste mat-les. De
-                aanwezigheid van een woord in Klink bewijst nog geen beheersing
-                door de cursist.
-              </p>
-              <ul>
-                {prerequisitesForRoute(state.route).map((item) => (
-                  <li key={item.token}>
-                    <strong>{item.token}</strong> —{" "}
-                    {item.wordRef
-                      ? `aanwezig in Klink; voorbereide klanken: ${item.units.join(", ")}`
-                      : "nieuw contextwoord in deze les; geen eigen Klink-leesstap gevonden. Eerst betekenis en lezen voorbereiden."}
-                  </li>
-                ))}
-              </ul>
-              <label className="kpd-ready">
-                <input
-                  type="checkbox"
-                  checked={state.prepared}
-                  onChange={(e) => update({ prepared: e.target.checked })}
-                />
-                Ik heb deze woorden, zinsvormen en handelingen vooraf voorbereid
-                en gecontroleerd.
-              </label>
-            </>
-          )}
-        </section>
-        <fieldset>
-          <legend>Ondersteuning binnen deze leerroute</legend>
-          <div className="kpd-variants">
-            {variants.map((variant) => (
-              <label key={variant.id}>
-                <input
-                  type="radio"
-                  name="variant"
-                  value={variant.id}
-                  checked={state.variant === variant.id}
-                  onChange={() => {
-                    update({
-                      variant: variant.id,
-                      tiles: freshClassroom(variant.id, state.route).tiles,
-                      shown: freshClassroom(variant.id, state.route).shown,
-                    });
-                  }}
-                />
-                <strong>{variant.label}</strong>
-                <span>{variant.description}</span>
-              </label>
-            ))}
-          </div>
-        </fieldset>
-        <p>Leg klaar: {route.materials}</p>
-        <p>
-          Andere hulp wisselt tijdens de les alleen de ondersteuning. De
-          leerroute blijft gelijk. Een leesbeurt na een model telt niet als
-          zelfstandig leesbewijs.
-        </p>
-        <details>
-          <summary>Lesplan en observatie</summary>
-          <p>
-            Voorstel: {phases.reduce((sum, p) => sum + p.minutes, 0)} actieve
-            minuten, aanpasbaar aan de groep. Pauze en zelfstandige oefentijd
-            staan apart. Koppel dit blok aan je werkelijk ingeroosterde
-            bijeenkomst en boekdoel.
-          </p>
-          <label>
-            Boekdoel, bijeenkomst, tijd, pauze en vervolg
-            <textarea
-              value={preparation}
-              onChange={(e) => setPreparation(e.target.value)}
-              rows={3}
-              placeholder="Eigen lesvoorbereiding; alleen bewaard zolang dit scherm open is. Geen namen of leerlingdossier."
-            />
-          </label>
-          <ol>
-            {phases.map((p) => (
-              <li key={p.title}>
-                <strong>
-                  {p.title} · {p.minutes} min.
-                </strong>
-                <p>{p.action}</p>
-                {p.expected && <p>Verwacht: {p.expected}</p>}
-                {p.hint && <p>Hulp: {p.hint}</p>}
-                {p.feedback && <p>Feedback: {p.feedback}</p>}
-                <p>Observeer: {p.observe}</p>
-                <small>Lesbezoekkader: {p.framework}</small>
-                {state.route === "a" && (
-                  <details>
-                    <summary>Docentscript, hulp en feedback</summary>
-                    {classroomContent.screens
-                      .filter((screen) => screen.phase === phases.indexOf(p))
-                      .map((screen) => (
-                        <p className="kpd-script" key={screen.id}>
-                          {screen.text}
-                        </p>
-                      ))}
-                  </details>
-                )}
-              </li>
-            ))}
-          </ol>
-          <p>Vervolg: {route.followUp}</p>
-          <p>
-            De foto toont de mat bij een deur; niet dat hij nat is. Het bericht
-            is een denkbeeldige situatie. Zin- en berichtaudio zijn niet
-            gekoppeld: doe een benodigde luisterbeurt zelf voor. Bestaande
-            woordaudio is geen zinopname. Menselijke mediareview en klasproef
-            blijven open.
-          </p>
-        </details>
-        <details>
-          <summary>Werkbladen voorbereiden</summary>
-          <p>
-            Laat de papierhandeling eerst zien. Gebruik schrijven alleen als
-            voorbereid doel; anders legt de cursist de{" "}
-            {state.route === "a" ? "losse letters" : "kaartjes"}. Een nabouwtaak
-            is geen zelfstandige leestoets.
-          </p>
-          <label>
-            Materiaal
-            <select
-              value={printKind}
-              onChange={(e) => setPrintKind(e.target.value)}
-            >
-              <option value="worksheet">Cursistenblad</option>
-              <option value="letters">
-                {state.route === "a"
-                  ? "Letterkaarten"
-                  : state.route === "b"
-                    ? "Woordkaartjes"
-                    : "Berichtkaartjes"}
-              </option>
-              <option value="observation">Docentobservatie</option>
-            </select>
-          </label>
-          {printKind === "worksheet" ? (
-            state.route === "a" ? (
-              <Worksheet variant={state.variant} />
-            ) : (
-              <RouteWorksheet route={state.route} variant={state.variant} />
-            )
-          ) : printKind === "letters" ? (
-            state.route === "a" ? (
-              <LetterCards />
-            ) : (
-              <RouteCards route={state.route} />
-            )
-          ) : (
-            <ObservationSheet route={state.route} />
-          )}
-          <button className="secondary-button" onClick={printMaterial}>
-            <Printer />
-            Print materiaal
-          </button>
-        </details>
-        <details>
-          <summary>Geluid controleren</summary>
-          <p>
-            De losse klankopnamen worden later aangeleverd. Een kruisje betekent
-            dat deze opname ontbreekt of niet afspeelt. Doe de klank dan zelf
-            voor. De bestaande algemene klankopnamen worden niet stilzwijgend
-            als vervanging gekoppeld.
-          </p>
-          <SoundButtons audio={audio} />
-          {wordAudio}
-          <button className="secondary-button" onClick={audio.retry}>
-            Opnamen opnieuw controleren
-          </button>
-          <p>
-            De bestaande woordopname heeft nog een open menselijke
-            uitspraakreview.
-          </p>
-        </details>
-        <div className="kpd-actions">
-          <button
-            className="primary-button"
-            onClick={start}
-            disabled={!state.prepared}
-          >
-            <Play />
-            {state.phase || state.tiles.some(Boolean)
-              ? "Les openen"
-              : "Start de les"}
-          </button>
-          <button
-            className="secondary-button"
-            onClick={() => commit(freshClassroom(state.variant, state.route))}
-          >
-            <RotateCcw />
-            Nieuwe les klaarzetten
-          </button>
-        </div>
-        {storageError && (
-          <output>
-            Bewaren lukt niet. Houd deze pagina open; na herladen kan voortgang
-            ontbreken.
-          </output>
-        )}
       </main>
     );
 
@@ -951,6 +706,18 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
         <h1>
           <ClassroomBrand />
         </h1>
+        <nav className="kpd-rounds" aria-label="Stappen">
+          {routeIds.map((route) => (
+            <button
+              key={route}
+              className="secondary-button"
+              aria-current={state.route === route ? "step" : undefined}
+              onClick={() => switchRound(route)}
+            >
+              {roundLabels[route]}
+            </button>
+          ))}
+        </nav>
         <div className="kpd-actions">
           <button
             className="secondary-button"
@@ -962,28 +729,12 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             <Pause />
             {pause ? "Hervatten" : "Pauze"}
           </button>
-          <button
-            className="secondary-button"
-            onClick={() => {
-              audio.stop();
-              setEnding(true);
-            }}
-          >
+          <button className="secondary-button" onClick={leave}>
             Les sluiten
           </button>
         </div>
       </header>
-      <section className="kpd-curtain" hidden={!ending}>
-        <h2>De les staat stil</h2>
-        <p>Stop het delen of projecteren voordat je de voorbereiding opent.</p>
-        <button className="primary-button" onClick={() => setEnding(false)}>
-          Terug naar de les
-        </button>
-        <button className="secondary-button" onClick={leave}>
-          Delen is gestopt · voorbereiding openen
-        </button>
-      </section>
-      <div className="kpd-session" hidden={ending}>
+      <div className="kpd-session">
         <div className="kpd-board" hidden={pause}>
           <nav className="kpd-phases" aria-label="Lesfasen">
             {phases.map((p, i) => (
@@ -1262,7 +1013,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             {state.route === "a" && state.phase === 7 && (
               <>
                 <p>
-                  {finished ? "Les afgerond" : "Oefen straks verder in Klink."}
+                  {finished ? "Woord geoefend" : "Lees het woord nog een keer."}
                 </p>
                 <button
                   className="primary-button"
@@ -1275,7 +1026,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                   className="secondary-button"
                   onClick={() => setFinished(!finished)}
                 >
-                  {finished ? "Opnieuw oefenen" : "Les afronden"}
+                  {finished ? "Opnieuw oefenen" : "Woord geoefend"}
                 </button>
               </>
             )}
@@ -1326,7 +1077,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           <footer className="kpd-footer">
             <button
               className="secondary-button"
-              disabled={state.phase === 0}
+              disabled={state.phase === 0 && state.route === "a"}
               onClick={() => go(state.phase - 1)}
             >
               <ArrowLeft />
@@ -1337,10 +1088,19 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             </button>
             <button
               className="primary-button"
-              disabled={state.phase === phases.length - 1}
-              onClick={() => go(state.phase + 1)}
+              onClick={() =>
+                state.phase === phases.length - 1 && state.route === "c"
+                  ? leave()
+                  : go(state.phase + 1)
+              }
             >
-              Volgende
+              {state.phase < phases.length - 1
+                ? "Volgende"
+                : state.route === "a"
+                  ? "Verder met zin"
+                  : state.route === "b"
+                    ? "Verder met bericht"
+                    : "Les afronden"}
               <ArrowRight />
             </button>
           </footer>
@@ -1420,6 +1180,262 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           />
         )}
       </dialog>
+    </main>
+  );
+}
+
+export function TeacherMaterials({ onExit }: { onExit: () => void }) {
+  const [state, setState] = useState(() => freshClassroom());
+  const [preparation, setPreparation] = useState("");
+  const [printKind, setPrintKind] = useState("worksheet");
+  const audio = useClassroomAudio();
+  const route = classroomRoutes[state.route];
+  const phases = phasesForRoute(state.route);
+  const commit = setState;
+  function update(change: Partial<ClassroomState>) {
+    setState({ ...state, ...change });
+  }
+  function printMaterial() {
+    const previous = document.title;
+    document.title =
+      printKind === "observation" ? "Klink docentobservatie" : "DE MAT";
+    window.addEventListener(
+      "afterprint",
+      () => {
+        document.title = previous;
+      },
+      { once: true },
+    );
+    window.print();
+  }
+  const wordAudio = (
+    <button
+      className="primary-button"
+      disabled={audio.status.word !== "ready"}
+      onClick={() => void audio.listen("word")}
+    >
+      <Volume2 />
+      Luister
+    </button>
+  );
+  return (
+    <main className="kpd kpd-prepare">
+      <header>
+        <h1>
+          <ClassroomBrand />
+        </h1>
+        <button className="secondary-button" onClick={onExit}>
+          Sluiten
+        </button>
+      </header>
+      <p>De cursist oefent thuis. De docent brengt het in de klas tot leven.</p>
+      <h2>Docentinformatie en werkbladen · {matWord.word}</h2>
+      <p>
+        Deze informatie staat los van het digibord. Keuzes hier veranderen de
+        les niet. Op het bord begint iedereen bij stap 1 en gaat samen verder
+        naar stap 2 en 3.
+      </p>
+      <p>
+        <strong>Doel:</strong> {route.goal}
+      </p>
+      <p>{route.bookGoal}</p>
+      <fieldset>
+        <legend>Leerroute</legend>
+        <div className="kpd-route-options">
+          {routeIds.map((id) => (
+            <label key={id}>
+              <input
+                type="radio"
+                name="route"
+                value={id}
+                checked={state.route === id}
+                onChange={() => {
+                  commit(freshClassroom(state.variant, id));
+                  setPrintKind("worksheet");
+                }}
+              />
+              <strong>{classroomRoutes[id].label}</strong>
+              <span>{classroomRoutes[id].goal}</span>
+              <em>{classroomRoutes[id].example}</em>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <section
+        className="kpd-prerequisites"
+        aria-label="Voorkennis voor deze route"
+      >
+        <h3>Voorkennis controleren</h3>
+        <ul>
+          {route.prerequisites.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        {state.route !== "a" && (
+          <>
+            <p>
+              Introduceer nieuwe woorden samen voordat je verdergaat. De
+              aanwezigheid van een woord in Klink bewijst nog geen beheersing
+              door de cursist.
+            </p>
+            <ul>
+              {prerequisitesForRoute(state.route).map((item) => (
+                <li key={item.token}>
+                  <strong>{item.token}</strong> —{" "}
+                  {item.wordRef
+                    ? `aanwezig in Klink; voorbereide klanken: ${item.units.join(", ")}`
+                    : "nieuw contextwoord in deze les; geen eigen Klink-leesstap gevonden. Eerst betekenis en lezen voorbereiden."}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </section>
+      <fieldset>
+        <legend>Ondersteuning op het werkblad</legend>
+        <div className="kpd-variants">
+          {variants.map((variant) => (
+            <label key={variant.id}>
+              <input
+                type="radio"
+                name="variant"
+                value={variant.id}
+                checked={state.variant === variant.id}
+                onChange={() => {
+                  update({
+                    variant: variant.id,
+                    tiles: freshClassroom(variant.id, state.route).tiles,
+                    shown: freshClassroom(variant.id, state.route).shown,
+                  });
+                }}
+              />
+              <strong>{variant.label}</strong>
+              <span>{variant.description}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+      <p>Leg klaar: {route.materials}</p>
+      <p>
+        De drie bordstappen horen bij Alfa A, Alfa B en Alfa C. Iedereen kan
+        meedoen aan de eerdere stappen. Een leesbeurt na een model telt niet als
+        zelfstandig leesbewijs.
+      </p>
+      <details>
+        <summary>Lesplan en observatie</summary>
+        <p>
+          Voorstel: {phases.reduce((sum, p) => sum + p.minutes, 0)} actieve
+          minuten, aanpasbaar aan de groep. Pauze en zelfstandige oefentijd
+          staan apart. Koppel dit blok aan je werkelijk ingeroosterde
+          bijeenkomst en boekdoel.
+        </p>
+        <label>
+          Boekdoel, bijeenkomst, tijd, pauze en vervolg
+          <textarea
+            value={preparation}
+            onChange={(e) => setPreparation(e.target.value)}
+            rows={3}
+            placeholder="Eigen lesvoorbereiding; alleen bewaard zolang dit scherm open is. Geen namen of leerlingdossier."
+          />
+        </label>
+        <ol>
+          {phases.map((p) => (
+            <li key={p.title}>
+              <strong>
+                {p.title} · {p.minutes} min.
+              </strong>
+              <p>{p.action}</p>
+              {p.expected && <p>Verwacht: {p.expected}</p>}
+              {p.hint && <p>Hulp: {p.hint}</p>}
+              {p.feedback && <p>Feedback: {p.feedback}</p>}
+              <p>Observeer: {p.observe}</p>
+              <small>Lesbezoekkader: {p.framework}</small>
+              {state.route === "a" && (
+                <details>
+                  <summary>Docentscript, hulp en feedback</summary>
+                  {classroomContent.screens
+                    .filter((screen) => screen.phase === phases.indexOf(p))
+                    .map((screen) => (
+                      <p className="kpd-script" key={screen.id}>
+                        {screen.text}
+                      </p>
+                    ))}
+                </details>
+              )}
+            </li>
+          ))}
+        </ol>
+        <p>Vervolg: {route.followUp}</p>
+        <p>
+          De foto toont de mat bij een deur; niet dat hij nat is. Het bericht is
+          een denkbeeldige situatie. Zin- en berichtaudio zijn niet gekoppeld:
+          doe een benodigde luisterbeurt zelf voor. Bestaande woordaudio is geen
+          zinopname. Menselijke mediareview en klasproef blijven open.
+        </p>
+      </details>
+      <details>
+        <summary>Werkbladen printen</summary>
+        <p>
+          Laat de papierhandeling eerst zien. Gebruik schrijven alleen als
+          voorbereid doel; anders legt de cursist de{" "}
+          {state.route === "a" ? "losse letters" : "kaartjes"}. Een nabouwtaak
+          is geen zelfstandige leestoets.
+        </p>
+        <label>
+          Materiaal
+          <select
+            value={printKind}
+            onChange={(e) => setPrintKind(e.target.value)}
+          >
+            <option value="worksheet">Cursistenblad</option>
+            <option value="letters">
+              {state.route === "a"
+                ? "Letterkaarten"
+                : state.route === "b"
+                  ? "Woordkaartjes"
+                  : "Berichtkaartjes"}
+            </option>
+            <option value="observation">Docentobservatie</option>
+          </select>
+        </label>
+        {printKind === "worksheet" ? (
+          state.route === "a" ? (
+            <Worksheet variant={state.variant} />
+          ) : (
+            <RouteWorksheet route={state.route} variant={state.variant} />
+          )
+        ) : printKind === "letters" ? (
+          state.route === "a" ? (
+            <LetterCards />
+          ) : (
+            <RouteCards route={state.route} />
+          )
+        ) : (
+          <ObservationSheet route={state.route} />
+        )}
+        <button className="secondary-button" onClick={printMaterial}>
+          <Printer />
+          Print materiaal
+        </button>
+      </details>
+      <details>
+        <summary>Geluid controleren</summary>
+        <p>
+          De losse klankopnamen worden later aangeleverd. Een kruisje betekent
+          dat deze opname ontbreekt of niet afspeelt. Doe de klank dan zelf
+          voor. De bestaande algemene klankopnamen worden niet stilzwijgend als
+          vervanging gekoppeld.
+        </p>
+        <SoundButtons audio={audio} />
+        {wordAudio}
+        <button className="secondary-button" onClick={audio.retry}>
+          Opnamen opnieuw controleren
+        </button>
+        <p>
+          De bestaande woordopname heeft nog een open menselijke
+          uitspraakreview.
+        </p>
+      </details>
     </main>
   );
 }

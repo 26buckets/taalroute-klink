@@ -1,5 +1,8 @@
 # Drie leerroutes bij mat — inhoud vóór interface
 
+**Latere correctie:** de verplichte voorbereiding, voorkennisbevestiging en voorafgaande routekeuze hieronder zijn vervallen. Zie [DIRECT-LESOPENEN.md](DIRECT-LESOPENEN.md). De inhoud wordt nu gezamenlijk doorlopen in drie zichtbare bordstappen; stap 3 bouwt het bericht uit zeven woordkaartjes.
+
+
 Nico heeft op 28 oktober 2026 expliciet opdracht gegeven de naam als **Klink+Docent** samen te voegen en Alfa A, B en C inhoudelijk te onderscheiden. Dit vervangt voor deze les de eerdere gelijkstelling van de drie steunvarianten aan het volledige aanbod. De acht fasen en projectieveilige privévoorbereiding blijven behouden. Dit is geen vrijgave voor livepublicatie.
 
 De uitgewerkte docentinhoud staat in `data/klink-docent-routes.json`; Alfa A blijft verbonden aan de bestaande acht fasen in `lib/teacher-classroom.ts` en KPD 02. Iedere route heeft een doel, voorbeeld, gecontroleerde bronverwijzingen, voorkennis, materiaal, boekdoelkoppeling en vervolg. B en C hebben ieder acht eigen faseplannen met docenthandeling, verwachte reactie, hulp, feedback, observatie, actieve tijd en verwijzing naar het bestaande eigen lesbezoekkader. De docent verbindt het losse onderdeel aan een werkelijk ingeroosterde bijeenkomst; pauze en thuis oefenen worden niet in actieve minuten verstopt.

@@ -13,15 +13,7 @@ const browser = await chromium.launch({
 });
 async function start(page) {
   await page.goto(base + '/#teacher/plus');
-  await page
-    .getByRole('button', {
-      name: 'Mijn scherm wordt niet gedeeld',
-      exact: true,
-    })
-    .click();
-  await page
-    .getByRole('button', { name: /^Start de les$|^Les openen$/ })
-    .click();
+  await page.getByRole('button', { name: 'Les openen', exact: true }).click();
   await page.locator('[data-classroom="active"]').waitFor();
 }
 async function safe(page) {
@@ -84,11 +76,23 @@ try {
   checks.push(
     'native touch drag to distinct slots, wrong-order hint, local reset, keyboard placement',
   );
-  await page.getByRole('button', {name:'Toon oplossing',exact:true}).click();
-  assert.equal((await page.locator('.kpd-slots').innerText()).replace(/\s/g,''),'mat');
-  await page.getByRole('button', {name:'Oplossing verbergen',exact:true}).click();
-  assert.equal((await page.locator('.kpd-slots').innerText()).replace(/\s/g,''),'m');
-  checks.push('solution fills the three slots; hiding restores the original partial work');
+  await page
+    .getByRole('button', { name: 'Toon oplossing', exact: true })
+    .click();
+  assert.equal(
+    (await page.locator('.kpd-slots').innerText()).replace(/\s/g, ''),
+    'mat',
+  );
+  await page
+    .getByRole('button', { name: 'Oplossing verbergen', exact: true })
+    .click();
+  assert.equal(
+    (await page.locator('.kpd-slots').innerText()).replace(/\s/g, ''),
+    'm',
+  );
+  checks.push(
+    'solution fills the three slots; hiding restores the original partial work',
+  );
   const mirror = page.getByRole('button', { name: 'Spiegelbord', exact: true });
   await mirror.focus();
   await page.keyboard.press('Enter');
@@ -170,7 +174,7 @@ try {
   await bp.reload();
   await bp
     .getByRole('button', {
-      name: 'Mijn scherm wordt niet gedeeld',
+      name: 'Les openen',
       exact: true,
     })
     .waitFor();
@@ -187,9 +191,7 @@ try {
   await start(fp);
   await fp.getByRole('button', { name: '2 Luisteren', exact: true }).click();
   await fp.locator('.kpd-stage .kpd-missing').waitFor();
-  assert(
-    await fp.locator('.kpd-stage button:has(.kpd-missing)').isDisabled(),
-  );
+  assert(await fp.locator('.kpd-stage button:has(.kpd-missing)').isDisabled());
   await safe(fp);
   checks.push(
     'failed whole-word media disables its control; lesson remains usable',

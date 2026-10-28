@@ -79,6 +79,7 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
     <StaffShell area="Docent" name="Docent" initials="TR" onExit={onExit} nav={<>
       <NavButton active={view === 'overview'} icon={<LayoutDashboard />} label="Overzicht" onClick={() => openView('overview')} />
       <NavButton icon={<Shapes />} label="Klink+Docent" onClick={() => { window.location.hash = 'teacher/plus'; }} />
+      <NavButton icon={<PackageOpen />} label="Docentinformatie" onClick={() => { window.location.hash = 'teacher/materials'; }} />
       <NavButton active={view === 'packages'} icon={<PackageOpen />} label="Lessen" onClick={() => openView('packages')} />
       <NavButton active={view === 'activities'} icon={<Shapes />} label="Oefenen" onClick={() => openView('activities')} />
       <NavButton active={view === 'media'} icon={<Images />} label="Media" onClick={() => openView('media')} />

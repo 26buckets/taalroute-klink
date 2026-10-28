@@ -20,6 +20,12 @@ import { lessonPackages } from './package-content.ts';
 import { exercisesForLesson } from './taalroute-packages.ts';
 
 export const classroomHash = '#teacher/plus';
+export const classroomMaterialsHash = '#teacher/materials';
+export const roundLabels = {
+  a: 'Stap 1 · Woord',
+  b: 'Stap 2 · Zin',
+  c: 'Stap 3 · Bericht',
+};
 export const classroomKey = 'klink.docent.les.v1';
 export const matPack = lessonPackages.find((pack) =>
   pack.lessons.some((lesson) =>
@@ -171,7 +177,6 @@ export type ClassroomState = {
   active: boolean;
   variant: Variant;
   route: ClassroomRoute;
-  prepared: boolean;
   order: number[];
   phase: number;
   tiles: string[];
@@ -188,7 +193,6 @@ export function freshClassroom(
     active: false,
     variant,
     route,
-    prepared: route === 'a',
     order: [],
     phase: 0,
     tiles: matUnits.map((unit, i) =>
@@ -212,7 +216,6 @@ export function restoreClassroom(raw: string | null): ClassroomState {
       variants.some((v) => v.id === value.variant) ? value.variant : 'basic',
       routeIds.includes(value.route) ? value.route : 'a',
     );
-    state.prepared = state.route === 'a' || value.prepared === true;
     state.order = Array.isArray(value.order)
       ? value.order.filter(
           (i: unknown, index: number) =>
@@ -222,6 +225,8 @@ export function restoreClassroom(raw: string | null): ClassroomState {
             value.order.indexOf(i) === index,
         )
       : [];
+    // Legacy C saved sentence cards; their indexes do not describe the new word cards.
+    if (state.route === 'c' && 'prepared' in value) state.order = [];
     state.active = value.active !== false;
     state.phase =
       Number.isInteger(value.phase) &&

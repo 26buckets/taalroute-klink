@@ -42,25 +42,15 @@ for (const engine of [
         );
         await page.goto(base + '/#teacher/plus');
         await page
-          .getByRole('button', {
-            name: 'Mijn scherm wordt niet gedeeld',
-            exact: true,
-          })
+          .getByRole('button', { name: 'Les openen', exact: true })
           .click();
-        await page.locator(`input[name="route"][value="${route}"]`).check();
-        await page.locator(`input[name="variant"][value="${support}"]`).check();
-        if (route !== 'a') {
-          assert(
-            await page
-              .getByRole('button', { name: /^Start de les$|^Les openen$/ })
-              .isDisabled(),
-          );
+        for (let i = 0; i < { basic: 0, extend: 1, support: 2 }[support]; i++)
           await page
-            .getByRole('checkbox', { name: /Ik heb deze woorden/ })
-            .check();
-        }
+            .getByRole('button', { name: 'Andere hulp', exact: true })
+            .click();
         await page
-          .getByRole('button', { name: /^Start de les$|^Les openen$/ })
+          .locator('.kpd-rounds button')
+          .nth(['a', 'b', 'c'].indexOf(route))
           .click();
         await page.locator('[data-classroom="active"]').waitFor();
         assert.equal(
@@ -131,7 +121,7 @@ for (const engine of [
           const answer =
             route === 'b'
               ? ['De', 'mat', 'ligt', 'bij', 'de', 'deur.']
-              : ['De mat is nat.', 'Leg hem buiten.'];
+              : ['De', 'mat', 'is', 'nat.', 'Leg', 'hem', 'buiten.'];
           await bank
             .getByRole('button', { name: answer.at(-1), exact: true })
             .click();
@@ -255,15 +245,9 @@ for (const engine of [
           await page
             .getByRole('button', { name: 'Les sluiten', exact: true })
             .click();
-          await page
-            .getByRole('button', {
-              name: 'Delen is gestopt · voorbereiding openen',
-              exact: true,
-            })
-            .click();
-          await page
-            .getByText('Werkbladen voorbereiden', { exact: true })
-            .click();
+          await page.goto(base + '/#teacher/materials');
+          await page.locator(`input[name="route"][value="${route}"]`).check();
+          await page.getByText('Werkbladen printen', { exact: true }).click();
           for (const [kind, name] of [
             ['worksheet', 'werkblad'],
             ['letters', 'kaartjes'],

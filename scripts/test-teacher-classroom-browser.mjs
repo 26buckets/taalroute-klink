@@ -29,16 +29,11 @@ async function safe(page, label) {
 }
 async function start(page, variant = 'basic') {
   await page.goto(base + '/#teacher/plus');
-  await page
-    .getByRole('button', {
-      name: 'Mijn scherm wordt niet gedeeld',
-      exact: true,
-    })
-    .click();
-  await page.locator(`input[value="${variant}"]`).check();
-  await page
-    .getByRole('button', { name: /^Start de les$|^Les openen$/ })
-    .click();
+  await page.getByRole('button', { name: 'Les openen', exact: true }).click();
+  for (let i = 0; i < { basic: 0, extend: 1, support: 2 }[variant]; i++)
+    await page
+      .getByRole('button', { name: 'Andere hulp', exact: true })
+      .click();
   await page.locator('[data-classroom="active"]').waitFor();
 }
 for (const { engine, type, options } of [
@@ -70,8 +65,7 @@ for (const { engine, type, options } of [
       );
       await safe(page, `${engine}/${variant}/missing sounds`);
       await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
-      if (variant !== 'support')
-        await page.getByRole('button', { name: 'Leg m', exact: true }).click();
+      await page.getByRole('button', { name: 'Leg m', exact: true }).click();
       await page.getByRole('button', { name: 'Leg a', exact: true }).click();
       await page
         .getByRole('button', { name: 'Toon oplossing', exact: true })
@@ -144,12 +138,12 @@ for (const { engine, type, options } of [
         .getByRole('button', { name: 'Verder met de les', exact: true })
         .click();
       await page
-        .getByRole('button', { name: 'Les sluiten', exact: true })
+        .getByRole('button', { name: 'Stap 2 · Zin', exact: true })
         .click();
-      await safe(page, `${engine}/${variant}/close curtain`);
       await page
-        .getByRole('button', { name: 'Terug naar de les', exact: true })
+        .getByRole('button', { name: 'Stap 1 · Woord', exact: true })
         .click();
+      await safe(page, `${engine}/${variant}/return to word round`);
       for (const hash of [
         '#teacher/media',
         '#learner/chapters',
@@ -266,15 +260,9 @@ for (const { engine, type, options } of [
         await page
           .getByRole('button', { name: 'Les sluiten', exact: true })
           .click();
-        await page
-          .getByRole('button', {
-            name: 'Delen is gestopt · voorbereiding openen',
-            exact: true,
-          })
-          .click();
-        await page
-          .getByText('Werkbladen voorbereiden', { exact: true })
-          .click();
+        await page.goto(base + '/#teacher/materials');
+        await page.locator(`input[name="variant"][value="${variant}"]`).check();
+        await page.getByText('Werkbladen printen', { exact: true }).click();
         await page.locator('.kpd-paper-image').evaluate((img) => img.decode());
         await page.evaluate(() => (document.title = 'DE MAT'));
         await page.pdf({

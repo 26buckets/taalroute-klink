@@ -41,7 +41,7 @@ test('three content routes are independent of support and trace prerequisites ho
       const state = freshClassroom(variant.id, route);
       assert.equal(state.route, route);
       assert.equal(state.variant, variant.id);
-      assert.equal(state.prepared, route === 'a');
+      assert(!('prepared' in state));
       assert.equal(phasesForRoute(route).length, 8);
       assert(
         phasesForRoute(route).every(
@@ -71,7 +71,7 @@ test('sentence and message cards preserve duplicates and reject invalid ordering
   assert(!isCorrectSequence('b', [5, 4, 3, 2, 1, 0]));
   assert(!isCorrectSequence('b', [0, 1, 2, 3, 0, 5]));
   assert(!isCorrectSequence('b', [0, 1, 2, 3, 4]));
-  assert(isCorrectSequence('c', [0, 1]));
+  assert(isCorrectSequence('c', [0, 1, 2, 3, 4, 5, 6]));
   assert(!isCorrectSequence('c', [1, 0]));
   const state = restoreClassroom(
     JSON.stringify({
@@ -82,7 +82,13 @@ test('sentence and message cards preserve duplicates and reject invalid ordering
     }),
   );
   assert.deepEqual(state.order, [2, 0]);
-  assert.equal(state.prepared, true);
+  assert(!('prepared' in state));
+  assert.deepEqual(
+    restoreClassroom(
+      JSON.stringify({ route: 'c', prepared: true, order: [0, 1] }),
+    ).order,
+    [],
+  );
   assert(!('response' in state));
 });
 test('tile actions preserve unique known letters and allow reordering', () => {

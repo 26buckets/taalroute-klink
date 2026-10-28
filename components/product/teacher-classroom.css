@@ -19,6 +19,20 @@
   width: auto;
   height: 24px;
 }
+.kpd-rounds {
+  display: flex;
+  gap: 6px;
+}
+.kpd-rounds .secondary-button {
+  padding: 9px 10px;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.kpd-rounds [aria-current='step'] {
+  background: var(--primary);
+  color: var(--paper);
+  border-color: var(--primary);
+}
 .kpd-route-options {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -34,8 +48,7 @@
   grid-column: 2;
   font-size: 18px;
 }
-.kpd-route-options input,
-.kpd-ready input {
+.kpd-route-options input {
   width: 20px;
   height: 20px;
 }
@@ -48,14 +61,6 @@
 }
 .kpd-prerequisites li {
   margin: 12px 0;
-}
-.kpd-ready {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-}
-.kpd-ready input {
-  flex-shrink: 0;
 }
 .kpd .kpd-route-text {
   font-size: clamp(30px, 3.2vw, 46px);
@@ -159,9 +164,6 @@
   padding: 8mm;
   font-size: 32px;
   margin: 4mm 0;
-}
-.kpd-message-cards > div {
-  width: 100%;
 }
 @media (max-width: 750px) {
   .kpd-route-options,

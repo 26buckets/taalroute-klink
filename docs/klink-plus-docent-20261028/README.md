@@ -2,9 +2,9 @@
 
 28 oktober 2026. Status: **GEBOUWD EN LOKAAL GETEST; NIET GEPUBLICEERD**.
 
-De actuele uitbreiding met drie inhoudelijke leerroutes staat in [DRIE-LEERROUTES.md](DRIE-LEERROUTES.md). Alfa A/B/C bepalen doel en opdracht; Voordoen/Samen doen/Zelfstandig bepalen de ondersteuning binnen elke route. Het officiële logo vormt samen met +Docent één compact woordmerk. De oudere controles hieronder blijven historische bewijsstukken van de basisles.
+De actuele bediening staat in [DIRECT-LESOPENEN.md](DIRECT-LESOPENEN.md). **Les openen** gaat direct naar Stap 1 · Woord. Daarna volgen Stap 2 · Zin en Stap 3 · Bericht; alle drie zijn op het bord zichtbaar. Iedereen kan vanaf dezelfde woordopbouw meedoen. De inhoudelijke uitwerking in DRIE-LEERROUTES.md blijft bron; de vroegere verplichte voorbereiding en routekeuze zijn vervallen.
 
-De les staat in de bestaande docentenomgeving bij **Klink+Docent**, route `/#teacher/plus`. De docent bevestigt eerst dat het scherm niet wordt gedeeld, kiest leerroute en ondersteuning en start de les. Alle acht fasen en vijf hulpmiddelen werken binnen hetzelfde scherm. Voorbereiding, variantnamen en observaties worden tijdens de les niet gemount. Afsluiten toont eerst een neutraal gordijn; de voorbereiding verschijnt pas na de expliciete handeling dat delen is gestopt.
+Docentinformatie en werkbladen staan apart op `/#teacher/materials` en wijzigen de bordles niet. Het bord staat op `/#teacher/plus`. Afsluiten keert terug naar de neutrale start met Les openen. Een nieuwe les begint steeds bij het woord; herladen hervat alleen de actuele stap. Acht fasen en vijf hulpmiddelen blijven op één laptopscherm beschikbaar. De oudere controles hieronder beschrijven eerdere versies.
 
 ## Bron en begrenzing
 

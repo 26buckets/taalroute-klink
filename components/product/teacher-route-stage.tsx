@@ -86,7 +86,7 @@ export function TeacherRouteStage({
           : 'Tekst tonen'}
     </button>
   );
-  const messageParts = sequenceForRoute('c');
+  const messageParts = ['De mat is nat.', 'Leg hem buiten.'];
   const sequence = sequenceForRoute(state.route);
   const assistance =
     state.variant === 'support'
@@ -513,7 +513,7 @@ export function RouteCards({ route }: { route: ClassroomRoute }) {
         <h2>DE MAT</h2>
       </header>
       <div
-        className={`kpd-route-cut-cards${route === 'c' ? ' kpd-message-cards' : ''}`}
+        className="kpd-route-cut-cards"
       >
         {sequenceForRoute(route).map((text, i) => (
           <div key={i}>{text}</div>

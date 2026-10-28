@@ -197,14 +197,14 @@
           "framework": "5.1–5.5, 15.7"
         },
         {
-          "title": "Ordenen",
-          "prompt": "Zet het bericht op volgorde.",
+          "title": "Bouwen",
+          "prompt": "Bouw het bericht.",
           "minutes": 3,
-          "action": "Laat de twee berichtkaartjes ordenen: eerst de situatie, daarna de handeling. Vraag waarom die volgorde helpt. Laat het bericht vervolgens als geheel lezen.",
+          "action": "Bouw samen voort op het woord uit stap 1 en de zin uit stap 2. Laat de zeven woordkaartjes tot twee zinnen leggen: eerst de situatie, daarna de handeling. Laat het hele bericht lezen.",
           "expected": "De mat is nat. / Leg hem buiten.",
-          "hint": "Vraag: wat lees je eerst over de mat? Wat moet daarna gebeuren?",
+          "hint": "Zoek eerst De mat. Bouw de eerste zin af en begin daarna de opdracht met Leg.",
           "feedback": "Je bericht maakt duidelijk wat er is en wat je moet doen.",
-          "observe": "Beredeneert de cursist de relatie tussen de zinnen?",
+          "observe": "Bouwt de cursist met woorden een samenhangend bericht en begrijpt die de relatie tussen de zinnen?",
           "framework": "4.8–4.9, 10.5–10.8"
         },
         {
@@ -253,8 +253,13 @@
         }
       ],
       "cards": [
-        "De mat is nat.",
-        "Leg hem buiten."
+        "De",
+        "mat",
+        "is",
+        "nat.",
+        "Leg",
+        "hem",
+        "buiten."
       ],
       "replyModel": "De mat ligt buiten."
     }

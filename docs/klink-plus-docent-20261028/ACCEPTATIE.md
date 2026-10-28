@@ -60,3 +60,7 @@ Niet als productfout verhuld: de bestaande publicatie-whitelist accepteert de ni
 - Papier: negen A4-pagina's, één werkblad, kaartvel en observatieblad per route, alle visueel bekeken. Alleen docentobservaties dragen alfalabels. Originele foto 800×800, effectief circa 369 ppi in de werkbladen, geen Krea-bewerking; geen personen of handen in dit beeld.
 - Lokale controle: zes gerichte logica-/hersteltests, 222 routecontroles in Chrome en WebKit, 159 bestaande lescontroles, 33 extra scherm-/herstelcontroles, acht randgevallen en bestaande menu-/logocontroles geslaagd. Productiebouw, typecontrole en gerichte lintcontrole geslaagd. Geen GitHub Actions uitgevoerd.
 - Open: onafhankelijke didactische tegenreview, echte klasproef, fysiek bord en printer. Losse klankopnamen ontbreken; geen nieuwe zin-/berichtaudio gemaakt. Docent spreekt waar nodig zelf voor. Geen livepublicatie.
+
+## Actuele correctie — direct openen en drie gezamenlijke stappen
+
+De eerdere voorbereidingspoort en voorkennisbevestiging zijn expliciet vervallen. Zie DIRECT-LESOPENEN.md. Starten vereist uitsluitend Les openen; daarna samen Woord, Zin en Bericht, inclusief bouwen in alle drie. Docentinformatie en werkbladen zijn onafhankelijk van de bordles. Zes volledige gebruikersreizen op drie schermmaten/twee browsers, 222 routecontroles, 159 bestaande lescontroles, acht randgevallen, zes logica-/hersteltests, menu, types, lint en bouw geslaagd. Nieuwe les wist bordnotities. Bij herladen wordt alleen de actuele stap hersteld. Geen praktijkreview of livepublicatie.
