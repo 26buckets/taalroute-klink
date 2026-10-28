@@ -1,0 +1,168 @@
+✔ official app uses D contours, spacing and blue dot, retaining the tagline and frame (3.28725ms)
+✔ browser and app icons use exact canonical D, including every exported ICO size (0.698667ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
++   'app/layout.tsx',
+    'components/product/alfa-c-practice.tsx',
++   'components/product/classroom-boundary.tsx',
++   'components/product/staff-apps.tsx',
++   'components/product/taalroute-header.tsx',
++   'components/product/teacher-classroom.css',
++   'components/product/teacher-classroom.tsx',
+    'data/klink-alfa-c-audio.json',
+    'data/klink-teacher-manual.json',
+    'lib/alfa-c-practice.ts',
++   'lib/teacher-classroom.ts',
++   'public/content/klink-docent-audio.json',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-0bbb4ca53380.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-12ae571e1f4b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-2206a7a2acc6.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-23d570bfa88d.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-324cb88fad0e.mp3',
+
+    at verifyAlfaCAudioRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-alfa-c-audio-release.mjs:29:9)
+    at verifyAlfaCTextRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-alfa-c-texts-release.mjs:24:24)
+    at verifyAlfaCRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-alfa-c-release.mjs:43:23)
+    at verifyDemoMobileRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-demo-mobile-release.mjs:12:15)
+    at verifyGapDemoRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-gap-demo-release.mjs:12:20)
+    at verifyBuildDemoRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-build-demo-release.mjs:12:17)
+    at verifyPopupStyleRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-popup-style-release.mjs:11:18)
+    at verifyDemoHandRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-demo-hand-release.mjs:11:22)
+    at verifyPracticeExplanationsRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-practice-explanations-release.mjs:19:20)
+    at verifySelfListeningRelease (file:///Users/nicoknoester/Documents/Codex/2026-10-28/klink-plus-docent-bouw/work/taalroute-klink/scripts/check-self-listening-release.mjs:11:21) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'app/layout.tsx',
+    'components/product/alfa-c-practice.tsx',
+    'components/product/classroom-boundary.tsx',
+    'components/product/staff-apps.tsx',
+    'components/product/taalroute-header.tsx',
+    'components/product/teacher-classroom.css',
+    'components/product/teacher-classroom.tsx',
+    'data/klink-alfa-c-audio.json',
+    'data/klink-teacher-manual.json',
+    'lib/alfa-c-practice.ts',
+    'lib/teacher-classroom.ts',
+    'public/content/klink-docent-audio.json',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-0bbb4ca53380.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-12ae571e1f4b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-2206a7a2acc6.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-23d570bfa88d.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-324cb88fad0e.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-336827049e78.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-3961e33abcbd.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-492923edfa7b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-493cbc06d8d2.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-59a207e8a2f1.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-59b54695c336.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-5e46b7714162.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-5fe6081e9283.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-60c4422b9aa3.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-628e36114990.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-6c19c89d10b3.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-8f406c2ba866.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-947da054ef5c.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-98998ac541c2.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-9d671750ce3b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-9d75de3ee976.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-9e8cf5313c56.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-a6c20b2b1321.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-a980aed9e42a.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-aaf5866103ec.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-ba99b5d9c3d7.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-bbab2f9893ef.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-c0d2c04700b4.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-c9b01a3d3b06.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-d62995acdb28.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-d946c03d8ce6.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-e0dbe7d0dfff.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-e7729601a8b7.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-ec5a57fba4ac.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-f1cbe1a8c70c.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-ff5f28a10a02.mp3',
+    'scripts/check-alfa-c-audio-release.mjs',
+    'scripts/check-alfa-c-texts-release.mjs',
+    'scripts/test-alfa-c-audio-browser.mjs',
+    'scripts/test-alfa-c-audio-release.mjs',
+    'scripts/test-alfa-c-audio.mjs',
+    'scripts/test-alfa-c-preview-browser.mjs',
+    'scripts/test-alfa-c-texts-browser.mjs',
+    'scripts/test-publication-proof.mjs'
+  ],
+  expected: [
+    'components/product/alfa-c-practice.tsx',
+    'data/klink-alfa-c-audio.json',
+    'data/klink-teacher-manual.json',
+    'lib/alfa-c-practice.ts',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-0bbb4ca53380.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-12ae571e1f4b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-2206a7a2acc6.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-23d570bfa88d.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-324cb88fad0e.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-336827049e78.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-3961e33abcbd.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-492923edfa7b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-493cbc06d8d2.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-59a207e8a2f1.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-59b54695c336.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-5e46b7714162.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-5fe6081e9283.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-60c4422b9aa3.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-628e36114990.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-6c19c89d10b3.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-8f406c2ba866.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-947da054ef5c.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-98998ac541c2.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-9d671750ce3b.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-9d75de3ee976.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-9e8cf5313c56.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-a6c20b2b1321.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-a980aed9e42a.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-aaf5866103ec.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-ba99b5d9c3d7.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-bbab2f9893ef.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-c0d2c04700b4.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-c9b01a3d3b06.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-d62995acdb28.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-d946c03d8ce6.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-e0dbe7d0dfff.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-e7729601a8b7.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-ec5a57fba4ac.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-f1cbe1a8c70c.mp3',
+    'public/package-audio/alfa-c-uitleg-20261027/alfa-c-uitleg-ff5f28a10a02.mp3',
+    'scripts/check-alfa-c-audio-release.mjs',
+    'scripts/check-alfa-c-texts-release.mjs',
+    'scripts/test-alfa-c-audio-browser.mjs',
+    'scripts/test-alfa-c-audio-release.mjs',
+    'scripts/test-alfa-c-audio.mjs',
+    'scripts/test-alfa-c-preview-browser.mjs',
+    'scripts/test-alfa-c-texts-browser.mjs',
+    'scripts/test-publication-proof.mjs'
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ scripts/test-publication-proof.mjs (4253.911167ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4259.153208
+
+✖ failing tests:
+
+test at scripts/test-publication-proof.mjs:1:1
+✖ scripts/test-publication-proof.mjs (4253.911167ms)
+  'test failed'

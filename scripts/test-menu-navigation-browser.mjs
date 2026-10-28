@@ -60,7 +60,7 @@ try {
   const saved = JSON.stringify({ completed: [], position });
   await page.evaluate(value => localStorage.setItem('klink.taalroute.route.v1', value), saved);
   await teacher();
-  assert.deepEqual(await page.locator('.staff-nav button span').allTextContents(), ['Overzicht', 'Lessen', 'Oefenen', 'Media']);
+  assert.deepEqual(await page.locator('.staff-nav button span').allTextContents(), ['Overzicht', 'Klink + Docent', 'Lessen', 'Oefenen', 'Media']);
   assert.equal(await page.getByRole('button', { name: 'Zoeken', exact: true }).count(), 0);
   assert.equal(await page.getByRole('button', { name: 'Meer', exact: true }).count(), 0);
   for (const [label, path] of [['Lessen', 'packages'], ['Oefenen', 'activities'], ['Media', 'media'], ['Overzicht', 'overview']]) {

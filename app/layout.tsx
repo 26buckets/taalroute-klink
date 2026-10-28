@@ -10,7 +10,7 @@ import './landing.css';
 import './taalroute-header.css';
 import './learner-layout.css';
 import './sounds.css';
-import { TaalrouteHeader } from '@/components/product/taalroute-header';
+import { ClassroomBoundary } from '@/components/product/classroom-boundary';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -56,8 +56,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TaalrouteHeader />
-        {children}
+        <ClassroomBoundary>{children}</ClassroomBoundary>
       </body>
     </html>
   );
