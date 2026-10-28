@@ -208,6 +208,26 @@ for (const { name, engine, options } of [
       await page
         .getByRole('button', { name: 'Les openen', exact: true })
         .waitFor();
+      await page
+        .getByRole('button', { name: 'Overzicht', exact: true })
+        .click();
+      await page
+        .getByRole('heading', { name: 'Docentomgeving', exact: true })
+        .waitFor();
+      await page
+        .getByRole('navigation', { name: 'Docentnavigatie' })
+        .getByRole('button', { name: 'Klink+docent', exact: true })
+        .click();
+      await page
+        .getByRole('button', { name: 'Les openen', exact: true })
+        .click();
+      await page
+        .getByRole('button', { name: 'Overzicht', exact: true })
+        .click();
+      await page
+        .getByRole('heading', { name: 'Docentomgeving', exact: true })
+        .waitFor();
+      assert.equal(await page.locator('[data-classroom="active"]').count(), 0);
       assert.deepEqual(errors, []);
       checks.push({
         browser: name,

@@ -12,12 +12,10 @@ import {
   Users,
 } from 'lucide-react';
 import {
-  NavButton,
-  StaffShell,
-  StaffTopbar,
   playMedia,
   stopMedia,
 } from './shared';
+import { TeacherWorkspaceFrame } from './teacher-workspace-frame';
 import { PackageExerciseBrowser } from './package-exercise-browser';
 import { RouteSettingsProvider } from './route-settings';
 import {
@@ -248,51 +246,11 @@ export function TeachingWorkspace({ onExit }: { onExit: () => void }) {
     </label>
   );
   return (
-    <StaffShell
-      area="Docent"
-      name={workspace?.person.name ?? 'Docent'}
-      initials="TR"
+    <TeacherWorkspaceFrame view={view} identity={workspace?.person.name ?? null}
+      onNavigate={next => { if (next === 'plus' || next === 'materials') window.location.hash = `teacher/${next}`; else navigate(next); }}
       onExit={() => {
-        void request('teacher', { action: 'logout' })
-          .then(() => {
-            setWorkspace(null);
-            setIssued(null);
-            onExit();
-          })
-          .catch((e) => setError(e.message));
-      }}
-      nav={
-        <>
-          <NavButton
-            icon={<Users />}
-            active={view === 'groups'}
-            label="Cursisten en groepen"
-            onClick={() => navigate('groups')}
-          />
-          <NavButton
-            icon={<BookOpen />}
-            active={view === 'assignments'}
-            label="Opdrachten"
-            onClick={() => navigate('assignments')}
-          />
-          <NavButton
-            icon={<Presentation />}
-            label="Klink+docent"
-            onClick={() => {
-              window.location.hash = 'teacher/plus';
-            }}
-          />
-          <NavButton
-            icon={<BookOpen />}
-            label="Werkbladen"
-            onClick={() => {
-              window.location.hash = 'teacher/materials';
-            }}
-          />
-        </>
-      }
-    >
-      <div className="tw">
+        void request('teacher', { action: 'logout' }).then(() => { setWorkspace(null); setIssued(null); onExit(); }).catch(e => setError(e.message));
+      }}>
         {loading ? (
           <output>Even laden…</output>
         ) : !workspace ? (
@@ -302,28 +260,6 @@ export function TeachingWorkspace({ onExit }: { onExit: () => void }) {
           </>
         ) : (
           <>
-            <StaffTopbar
-              title={
-                view === 'home'
-                  ? 'Wat wil je doen?'
-                  : view === 'groups'
-                    ? 'Cursisten en groepen'
-                    : 'Opdrachten klaarzetten'
-              }
-              subtitle={workspace.person.name}
-              actions={
-                <a
-                  className="secondary-button"
-                  href="https://studio.taalroute.nl/#/apps/klink/handleiding"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Handleiding in Studio
-                  <ArrowRight />
-                </a>
-              }
-            />
-            <div className="tw-content">
               {messages}
               {view === 'home' ? (
                 <div className="tw-home">
@@ -366,10 +302,6 @@ export function TeachingWorkspace({ onExit }: { onExit: () => void }) {
                 </div>
               ) : (
                 <>
-                  <button className="tw-back" onClick={() => navigate('home')}>
-                    <ArrowLeft />
-                    Overzicht
-                  </button>
                   {view === 'groups' && (
                     <form
                       className="tw-inline"
@@ -780,11 +712,9 @@ export function TeachingWorkspace({ onExit }: { onExit: () => void }) {
                   )}
                 </>
               )}
-            </div>
           </>
         )}
-      </div>
-    </StaffShell>
+    </TeacherWorkspaceFrame>
   );
 }
 export function AssignedLearner() {

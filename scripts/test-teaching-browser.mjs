@@ -68,6 +68,74 @@ try {
   await page.getByLabel('Docentcode').fill(teacherCode);
   await page.getByRole('button', { name: 'Openen', exact: true }).click();
   await page.getByRole('heading', { name: 'Wat wil je doen?' }).waitFor();
+  await page.getByText('Aangemeld als Testdocent', { exact: true }).waitFor();
+  for (const width of [1280, 1024, 390]) {
+    await page.setViewportSize({ width, height: width === 390 ? 844 : 720 });
+    const initial = await page.locator('[data-teacher-card]').boundingBox();
+    const back = await page
+      .getByRole('button', { name: 'Overzicht', exact: true })
+      .boundingBox();
+    for (const label of [
+      'Cursisten en groepen',
+      'Opdrachten',
+      'Klink+docent',
+      'Werkbladen',
+    ]) {
+      await page
+        .getByRole('navigation', { name: 'Docentnavigatie' })
+        .getByRole('button', { name: label, exact: true })
+        .click();
+      await page
+        .getByText('Aangemeld als Testdocent', { exact: true })
+        .waitFor();
+      assert.equal(
+        await page
+          .getByRole('heading', { name: 'Docentomgeving', exact: true })
+          .count(),
+        1,
+      );
+      const card = await page.locator('[data-teacher-card]').boundingBox();
+      const currentBack = await page
+        .getByRole('button', { name: 'Overzicht', exact: true })
+        .boundingBox();
+      for (const key of ['x', 'y', 'width'])
+        assert(
+          Math.abs(card[key] - initial[key]) < 2,
+          label + ': same card ' + key,
+        );
+      if (width > 850)
+        assert(
+          Math.abs(card.height - initial.height) < 2,
+          label + ': same card height',
+        );
+      for (const key of ['x', 'y'])
+        assert(
+          Math.abs(currentBack[key] - back[key]) < 2,
+          label + ': same overview position',
+        );
+      assert.equal(await page.locator('main').count(), 1);
+      assert(
+        await page.evaluate(
+          () => document.documentElement.scrollWidth <= innerWidth,
+        ),
+      );
+      if (width === 1280)
+        await page.screenshot({
+          path: join(out, 'frame-' + label.replaceAll(' ', '-') + '.png'),
+        });
+      await page
+        .getByRole('button', { name: 'Overzicht', exact: true })
+        .click();
+      await page
+        .getByRole('heading', { name: 'Wat wil je doen?', exact: true })
+        .waitFor();
+    }
+  }
+  await page.setViewportSize({ width: 1280, height: 720 });
+  pass(
+    'Four teacher options retain one frame and overview position at three widths; identity follows signed-in account',
+  );
+
   assert.equal(
     await page.getByText('Volledige inhoudslijn', { exact: false }).count(),
     0,

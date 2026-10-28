@@ -24,6 +24,7 @@ import {
   PencilLine,
 } from "lucide-react";
 import Image from "next/image";
+import { TeacherWorkspaceFrame } from "./teacher-workspace-frame";
 import { PackageExerciseBrowser } from "./package-exercise-browser";
 import { playMedia, stopMedia } from "@/lib/media-player";
 import { isWithdrawnAudio } from "@/lib/audio-policy";
@@ -528,7 +529,7 @@ function MirrorBoard() {
   );
 }
 
-export function TeacherClassroom({ onExit }: { onExit: () => void }) {
+export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => void; onActiveChange?: (active: boolean) => void }) {
   const [state, setState] = useState<ClassroomState>(() => readClassroom());
   const [screen, setScreen] = useState<"entry" | "lesson">(() =>
     readClassroom().active ? "lesson" : "entry",
@@ -638,6 +639,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     setLargePhoto(false);
     commit(next);
     setScreen("lesson");
+    onActiveChange?.(true);
     window.scrollTo({ top: 0 });
     window.history.replaceState(null, "", classroomHash);
   }
@@ -647,6 +649,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     commit(next);
     setPause(false);
     setScreen("entry");
+    onActiveChange?.(false);
   }
   function reset() {
     audio.stop();
@@ -685,19 +688,15 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
 
   if (screen === "entry")
     return (
-      <main className="kpd kpd-gate">
-        <h1>
-          <ClassroomBrand />
-        </h1>
+      <TeacherWorkspaceFrame view="plus" title={<ClassroomBrand />}>
+      <section className="kpd kpd-gate">
         <h2>mat</h2>
         <button className="primary-button" onClick={start}>
           <Play />
           Les openen
         </button>
-        <button className="secondary-button" onClick={onExit}>
-          Sluiten
-        </button>
-      </main>
+      </section>
+      </TeacherWorkspaceFrame>
     );
 
   return (
@@ -731,6 +730,9 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           </button>
           <button className="secondary-button" onClick={leave}>
             Les sluiten
+          </button>
+          <button className="secondary-button" onClick={() => { leave(); onExit(); }}>
+            <ArrowLeft />Overzicht
           </button>
         </div>
       </header>
@@ -1184,7 +1186,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   );
 }
 
-export function TeacherMaterials({ onExit }: { onExit: () => void }) {
+export function TeacherMaterials() {
   const [state, setState] = useState(() => freshClassroom());
   const [preparation, setPreparation] = useState("");
   const [printKind, setPrintKind] = useState("worksheet");
@@ -1219,15 +1221,8 @@ export function TeacherMaterials({ onExit }: { onExit: () => void }) {
     </button>
   );
   return (
-    <main className="kpd kpd-prepare">
-      <header>
-        <h1>
-          <ClassroomBrand />
-        </h1>
-        <button className="secondary-button" onClick={onExit}>
-          Sluiten
-        </button>
-      </header>
+    <TeacherWorkspaceFrame view="materials">
+    <section className="kpd kpd-prepare">
       <p>De cursist oefent thuis. De docent brengt het in de klas tot leven.</p>
       <h2>Docentinformatie en werkbladen · {matWord.word}</h2>
       <p>
@@ -1436,6 +1431,7 @@ export function TeacherMaterials({ onExit }: { onExit: () => void }) {
           uitspraakreview.
         </p>
       </details>
-    </main>
+    </section>
+    </TeacherWorkspaceFrame>
   );
 }

@@ -12,12 +12,14 @@ import { TaalrouteHeader } from './taalroute-header';
 // Check before showing any route: Back and reload must not reveal teacher-only material.
 export function ClassroomBoundary({ children }: { children: ReactNode }) {
   const [classroom, setClassroom] = useState<boolean | null>(null);
+  const [projecting, setProjecting] = useState(false);
   const [materials, setMaterials] = useState(false);
   useLayoutEffect(() => {
     const restore = () => {
       const active = readClassroom().active;
       if (active && !window.location.hash.startsWith(classroomHash))
         window.history.replaceState(null, '', classroomHash);
+      setProjecting(active);
       setClassroom(active || window.location.hash.startsWith(classroomHash));
       setMaterials(!active && window.location.hash === classroomMaterialsHash);
     };
@@ -43,11 +45,11 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
   if (classroom === null) return <output>Klink wordt geopend…</output>;
   return (
     <>
-      <TaalrouteHeader classroom={classroom} />
+      <TaalrouteHeader classroom={projecting} />
       {classroom ? (
-        <TeacherClassroom onExit={exit} />
+        <TeacherClassroom onExit={exit} onActiveChange={setProjecting} />
       ) : materials ? (
-        <TeacherMaterials onExit={exit} />
+        <TeacherMaterials />
       ) : (
         children
       )}
