@@ -134,7 +134,11 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
               ? <p key={n}>Pak jouw antwoordblad. Kijk naar je antwoord bij opdracht {block.steps.find(s => s.id === ('fromTask' in view ? view.fromTask : ''))?.number}.</p>
               : <section key={n} className="cp-task-card functional-source"><h3>{view.title}</h3>{step.handwriting ? <Image unoptimized width={1254} height={1254} className="functional-handwriting" src={step.handwriting} alt={view.text} /> : <p>{view.text}</p>}{view.kind !== 'audioOnly' && <button className="secondary-button" disabled={busy} onClick={() => { markHelp(); void play([{ role: 'target', text: view.text }]); }}><Volume2 />Luister naar de tekst</button>}</section>)}
             {step.dictationTexts.map((text, n) => <button key={n} className="secondary-button" disabled={busy} onClick={() => void play([{ role: 'target', text }], n)}><Volume2 />Luister{step.dictationTexts.length > 1 ? ` ${n + 1}` : step.id.endsWith('formulier-08') ? ' naar het nummer' : ' naar de zin'}</button>)}
-            {choice ? <div className="functional-choice-grid" aria-label="Kies een antwoord">{functionalOptions(step).map(option => <button className="cp-option" key={option.id} aria-pressed={selected === option.id} disabled={busy || result === 'right'} onClick={() => answer(option.id)}>{option.text}</button>)}</div>
+            {choice ? <fieldset className="functional-choice">
+              <legend>{step.instruction}</legend>
+              <p>Kies één antwoord.</p>
+              <div className="functional-choice-grid">{functionalOptions(step).map(option => <button className="cp-option" key={option.id} aria-pressed={selected === option.id} disabled={busy || result === 'right'} onClick={() => answer(option.id)}>{option.text}</button>)}</div>
+            </fieldset>
               : <button className="secondary-button" disabled={busy || result === 'done' || heardItems.length < step.dictationTexts.length} onClick={() => { setResult('done'); onRecord({ ...metrics.current, assessment: 'participation' }); void guide(step.automaticAcknowledgement ?? step.successFeedback); }}><Check />Ik ben klaar</button>}
           </>}
         </>

@@ -1,3 +1,4 @@
+import {verifyChoiceRelease,readBeforeChoice} from './check-alfa-c-choice-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -14,6 +15,8 @@ export const functionalFiles=[
  ...JSON.parse(readFileSync('data/klink-alfa-c-functioneel-audio.json')).clips.filter(c=>!c.reused).map(c=>'public'+c.src),
 ];
 export function verifyFunctionalRelease(read=readFileSync,release=JSON.parse(readFileSync('docs/klink-owner-release-alfa-c-functioneel-20261028.json'))){
+ const choiceRelease=verifyChoiceRelease(read);
+ const currentReader=read;read=file=>readBeforeChoice(file,choiceRelease,currentReader);
  assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
  assert.equal(release.userRequest,'Oké, dan mogen ze online gezet worden.');
  assert.equal(release.completionRequest,'Maak alles.');
@@ -24,11 +27,11 @@ export function verifyFunctionalRelease(read=readFileSync,release=JSON.parse(rea
  assert.equal(release.tasks,72);assert.equal(release.availableTasks,72);assert.equal(release.closedTasks,0);
  assert.equal(release.newAudio,386);assert.equal(release.newImages,2);assert.equal(release.humanLearnerTrial,false);
  const roots=['app','components','hooks','data','lib','public','scripts'];
- const changed=git('diff','--name-only',release.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
- const untracked=git('ls-files','--others','--exclude-standard','--',...roots).toString().trim().split('\n').filter(Boolean);
- assert.deepEqual([...new Set([...changed,...untracked])].sort(),[...functionalFiles].sort());
+ const changed=git('diff','--name-only',release.baselineSourceCommit,choiceRelease.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
+ const untracked=[]; // The choice successor validates the current delta.
+ assert.deepEqual([...new Set([...changed,...untracked])].sort((a,b)=>a<b?-1:a>b?1:0),[...functionalFiles].sort((a,b)=>a<b?-1:a>b?1:0));
  const expected=[...functionalFiles,'docs/KLINK-DOCENTHANDLEIDING.md',...['owner-request','live-baseline','reviewed-package','audio-plan','audio-metadata','transcripts','image-review','review','source-manifest','source-drive-verification'].map(n=>`${evidence}/${n}.json`)];
- assert.deepEqual(Object.keys(release.files).sort(),expected.sort());
+ assert.deepEqual(Object.keys(release.files).sort((a,b)=>a<b?-1:a>b?1:0),expected.sort((a,b)=>a<b?-1:a>b?1:0));
  for(const [path,hash] of Object.entries(release.files))assert.equal(sha(read(path)),hash,path);
  const source=JSON.parse(read(`${evidence}/reviewed-package.json`));
  const data=JSON.parse(read('data/klink-alfa-c-functioneel.json'));
@@ -69,8 +72,8 @@ export function verifyFunctionalRelease(read=readFileSync,release=JSON.parse(rea
  for(const path of ['docs/klink-owner-release-alfa-c-audio-20261027.json','lib/alfa-c-practice.ts','data/klink-alfa-c-audio.json','data/klink-alfa-c-texts.json','data/klink-audio-policy.json','components/product/learner-app.tsx','vite.config.ts'])
   assert.equal(sha(read(path)),sha(git('show',release.baselineSourceCommit+':'+path)),'Preserve '+path);
  const publicFiles=functionalFiles.filter(p=>p.startsWith('public/'));
- assert.deepEqual([...new Set([...changed,...untracked])].filter(p=>p.startsWith('public/')).sort(),publicFiles.sort());
+ assert.deepEqual([...new Set([...changed,...untracked])].filter(p=>p.startsWith('public/')).sort((a,b)=>a<b?-1:a>b?1:0),publicFiles.sort((a,b)=>a<b?-1:a>b?1:0));
  assert.equal(git('ls-tree',release.baselineSourceCommit,'--','public/alfa-c/antwoordbladen.html').length,0);
- return release;
+ return {...release,choiceRelease};
 }
-export function readBeforeFunctional(file,release,read=readFileSync){return release.files[file]?git('show',release.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeFunctional(file,release,read=readFileSync){return release.files[file]?git('show',release.baselineSourceCommit+':'+file):readBeforeChoice(file,release.choiceRelease,read);}

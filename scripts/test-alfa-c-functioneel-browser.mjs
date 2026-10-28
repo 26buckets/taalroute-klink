@@ -4,7 +4,22 @@ import fs from 'node:fs';
 import { functionalAudio, functionalBlocks, functionalStorageKey } from '../lib/alfa-c-functioneel.ts';
 const base=process.env.KLINK_URL??'http://127.0.0.1:18868';
 const out=process.env.KLINK_FUNCTIONEEL_OUTPUT??'outputs/alfa-c-functioneel';fs.mkdirSync(out,{recursive:true});
-const checks=[],errors=[];
+const checks=[],errors=[],choiceChecks=[];
+async function checkChoices(page, player, step, engine, viewport) {
+  const group=player.getByRole('group',{name:step.instruction,exact:true});
+  assert(await group.isVisible(), 'Concrete task labels the answer group: '+step.id);
+  assert.equal(await group.locator('legend').innerText(),step.instruction);
+  assert.equal(await group.locator(':scope > p').innerText(),'Kies één antwoord.');
+  const buttons=group.getByRole('button');assert.equal(await buttons.count(),3);
+  const styles=await buttons.evaluateAll(items=>items.map(button=>{
+    const css=getComputedStyle(button),circle=getComputedStyle(button,'::before'),box=button.getBoundingClientRect();
+    return {border:parseFloat(css.borderTopWidth),borderColor:css.borderTopColor,background:css.backgroundColor,height:box.height,width:box.width,circle:parseFloat(circle.width),pressed:button.getAttribute('aria-pressed')};
+  }));
+  assert(styles.every(s=>s.border>=1&&s.borderColor!=='rgba(0, 0, 0, 0)'&&s.background!=='rgba(0, 0, 0, 0)'&&s.height>=56&&s.width>0&&s.circle>=24&&s.pressed==='false'),'All three look selectable before an answer: '+step.id);
+  await group.scrollIntoViewIfNeeded();
+  if(viewport==='desktop'||step.number===2)await page.screenshot({path:`${out}/${engine}-${step.id}-${viewport}-choices.png`});
+  choiceChecks.push({engine,task:step.id,viewport,concreteInstruction:true,threeVisibleControls:true});
+}
 for(const [name,engine] of Object.entries({chromium,webkit})) {
   const browser=await engine.launch();
   try {
@@ -39,8 +54,9 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
             assert(await next.isDisabled());await player.locator('.functional-source').getByRole('button',{name:'Nu jij',exact:true}).click();}
           await player.getByRole('button',{name:'Help',exact:true}).click();await idle();assert.equal(await player.locator('.pilot-help p').innerText(),step.helpVisible);assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('guide',step.helpVisible));await player.getByRole('button',{name:'Help',exact:true}).click();
           if(step.kind==='choice') {
+            await checkChoices(page,player,step,name,'desktop');
             const wrong=step.options.find(o=>o.id!==step.correctOptionId),right=step.options.find(o=>o.id===step.correctOptionId);
-            await player.getByRole('button',{name:wrong.text,exact:true}).click();await idle();assert.equal(await player.locator('output').innerText(),step.retryVisible);assert(await next.isDisabled());
+            await player.getByRole('button',{name:wrong.text,exact:true}).focus();await page.keyboard.press('Enter');await idle();assert.equal(await player.getByRole('button',{name:wrong.text,exact:true}).getAttribute('aria-pressed'),'true');assert.equal(await player.locator('output').innerText(),step.retryVisible);assert(await next.isDisabled());
             await player.getByRole('button',{name:right.text,exact:true}).click();await idle();assert.equal(await player.locator('output').innerText(),'Dat klopt.');
           } else {
             assert.equal(await player.getByRole('textbox').count(),0);
@@ -79,6 +95,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal overflow: '+step.id);
       const sizes=await page.locator('.functional-player button').evaluateAll(a=>a.filter(x=>x.getBoundingClientRect().height).map(x=>({label:x.textContent,h:x.getBoundingClientRect().height})));
       assert(sizes.every(x=>x.h>=44),'Touch targets: '+JSON.stringify(sizes));
+      if(step.kind==='choice')await checkChoices(page,page.locator('[data-functional-step]'),step,name,'mobile');
       if(step.number===1)await page.screenshot({path:`${out}/${name}-${block.id}-mobile.png`,fullPage:true});
     }
     await page.goto(base+'/alfa-c/antwoordbladen.html');assert.equal(await page.locator('.sheet').count(),9);
@@ -89,4 +106,4 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
     await denied.goto(base+'/#learner/alfa-c/lijst');await denied.locator('[data-functional-step]').waitFor();assert((await denied.getByRole('alert').innerText()).includes('Bewaren lukt niet'));await denied.close();
   } finally {await browser.close();}
 }
-assert.deepEqual(errors,[]);fs.writeFileSync(`${out}/report.json`,JSON.stringify({steps:checks,narrowScreens:144,storagePreserved:true,errors},null,2));console.log(JSON.stringify({steps:checks.length,narrowScreens:144,errors}));
+assert.deepEqual(errors,[]);fs.writeFileSync(`${out}/report.json`,JSON.stringify({steps:checks,narrowScreens:144,choiceChecks,storagePreserved:true,errors},null,2));console.log(JSON.stringify({steps:checks.length,narrowScreens:144,choiceChecks:choiceChecks.length,errors}));
