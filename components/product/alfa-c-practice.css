@@ -197,3 +197,28 @@
   line-height: 1.5;
   color: var(--muted);
 }
+.functional-source {
+  min-height: 0 !important;
+  flex: 0 0 auto !important;
+  padding: 20px;
+}
+.functional-source h3 { font-size: 18px; font-weight: 500; margin: 0 0 12px; }
+.functional-source p { white-space: pre-wrap; font-size: 22px; line-height: 1.7; margin: 0; overflow-wrap: anywhere; }
+.functional-choice { min-width: 0; margin: 0; padding: 0; border: 0; }
+.functional-choice legend { width: 100%; padding: 0; font-size: 22px; font-weight: 500; line-height: 1.5; }
+.functional-choice > p { margin: 8px 0 16px; font-size: 18px; line-height: 1.5; }
+.functional-choice-grid { display: grid; gap: 12px; }
+.functional-choice-grid button { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 56px; padding: 14px 18px; border: 1px solid var(--muted, #63716d); border-radius: var(--radius); background: var(--paper); color: var(--ink); font-size: 20px; font-weight: 400; line-height: 1.5; text-align: left; cursor: pointer; overflow-wrap: anywhere; }
+.functional-choice-grid button::before { content: ''; flex: 0 0 24px; width: 24px; height: 24px; border: 2px solid currentColor; border-radius: 50%; }
+.functional-choice-grid button[aria-pressed="true"] { border-color: var(--primary); background: var(--primary-soft); outline: 2px solid var(--primary); outline-offset: 1px; }
+.functional-choice-grid button[aria-pressed="true"]::before { background: var(--primary); box-shadow: inset 0 0 0 4px var(--paper); }
+.functional-choice-grid button:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+.functional-choice-grid button:disabled { cursor: default; opacity: 1; }
+@media (hover: hover) { .functional-choice-grid button:hover:enabled { border-color: var(--primary); background: var(--primary-soft); } }
+.functional-player .pilot-footer { flex-wrap: wrap; }
+.functional-player .pilot-footer > output { max-width: 100%; flex: 1 1 260px; font-size: 18px; }
+.functional-player .pilot-help p { font-size: 18px; line-height: 1.6; }
+.functional-player .secondary-button { white-space: normal; min-height: 48px; }
+.functional-player .primary-button { min-height: 48px; }
+.functional-handwriting { display: block; width: 100%; height: auto; margin: 12px 0; }
+.learner-app .functional-player .cp-task-card > .functional-handwriting { max-height: none; }

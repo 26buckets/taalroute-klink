@@ -25,6 +25,8 @@ import {
   type PilotStep,
 } from '@/lib/alfa-c-practice';
 import './alfa-c-practice.css';
+import { functionalBlocks } from '@/lib/alfa-c-functioneel';
+import { AlfaCFunctionalPractice, FunctionalBlockCards } from './alfa-c-functioneel';
 
 export function AlfaCBlockCards() {
   return (
@@ -47,6 +49,7 @@ export function AlfaCBlockCards() {
           <ArrowRight aria-hidden="true" />
         </a>
       ))}
+      <FunctionalBlockCards />
     </div>
   );
 }
@@ -123,6 +126,8 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
         <p>Even laden…</p>
       </div>
     );
+  const functionalBlock = functionalBlocks.find(b => b.id === selected);
+  if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} />;
   return (
     <div className="learner-page cp-chapters cp-chapter-playing pilot-page">
       <header className="cp-context-header">
@@ -166,6 +171,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
                 <ArrowRight />
               </button>
             ))}
+            <FunctionalBlockCards />
           </div>
         </section>
       ) : !step ? (

@@ -1,3 +1,4 @@
+import {verifyFunctionalRelease,readBeforeFunctional} from './check-alfa-c-functioneel-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -13,6 +14,8 @@ export const alfaCAudioCodeFiles=[
 ];
 export const alfaCAudioEvidence=['owner-request','live-baseline','production-plan','metadata','transcripts','review'];
 export function verifyAlfaCAudioRelease(readFile=readFileSync,release=JSON.parse(readFileSync('docs/klink-owner-release-alfa-c-audio-20261027.json'))){
+ const functionalRelease=verifyFunctionalRelease(readFile);
+ const currentReader=readFile;readFile=file=>readBeforeFunctional(file,functionalRelease,currentReader);
  assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
  assert.equal(release.userRequest,'Maak nu ook de audio voor de herziene instructies en hulpteksten en zet die bij de juiste Alfa C-opdrachten. Gebruik een aparte instructiestem en behoud de bestaande goede audio.');
  assert.equal(release.baselineSourceCommit,'195a5673fc654ef3dbdd75b3c107bbdcff36a1fb');
@@ -24,8 +27,8 @@ export function verifyAlfaCAudioRelease(readFile=readFileSync,release=JSON.parse
  const media=Object.values(audio.clips).map(c=>'public'+c.src);
  for(const c of Object.values(audio.clips)){assert(c.src.startsWith('/package-audio/alfa-c-uitleg-20261027/'));assert.equal(c.voiceId,release.voiceId);assert.equal(sha(readFile('public'+c.src)),c.sha256);}
  const roots=['app','components','hooks','data','lib','public','scripts'];
- const changed=git('diff','--name-only',release.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
- const untracked=git('ls-files','--others','--exclude-standard','--',...roots).toString().trim().split('\n').filter(Boolean);
+ const changed=git('diff','--name-only',release.baselineSourceCommit,functionalRelease.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
+ const untracked=[]; // The functional successor verifies the current delta.
  assert.deepEqual(sort([...new Set([...changed,...untracked])]),sort([...alfaCAudioCodeFiles,...media]));
  const files=[...alfaCAudioCodeFiles,...media,'AGENTS.md','docs/KLINK-DOCENTHANDLEIDING.md',...alfaCAudioEvidence.map(n=>`${evidence}/${n}.json`)];
  const required=[...files,`${evidence}/source-manifest.json`,`${evidence}/source-drive-verification.json`];assert.deepEqual(sort(Object.keys(release.files)),sort(required));
@@ -42,6 +45,6 @@ export function verifyAlfaCAudioRelease(readFile=readFileSync,release=JSON.parse
  const previous='docs/klink-owner-release-alfa-c-texts-20261027.json';assert.equal(sha(readFile(previous)),sha(git('show',release.baselineSourceCommit+':'+previous)));
  const manifest=JSON.parse(readFile(`${evidence}/source-manifest.json`));assert.deepEqual(manifest.map(r=>r.path),files);for(const row of manifest)assert.equal(row.sha256,release.files[row.path]);
  const backup=JSON.parse(readFile(`${evidence}/source-drive-verification.json`));assert(backup.parentVerified&&backup.downloadedByteIdentical&&backup.zipCrcVerified);assert.equal(backup.manifestEntriesVerified,manifest.length);assert.equal(backup.originalsVerified,36);assert.equal(backup.provenanceRecordsVerified,36);
- return release;
+ return {...release,functionalRelease};
 }
-export function readBeforeAlfaCAudio(file,release,reader=readFileSync){return release.files[file]?git('show',release.baselineSourceCommit+':'+file):reader(file);}
+export function readBeforeAlfaCAudio(file,release,reader=readFileSync){return release.files[file]?git('show',release.baselineSourceCommit+':'+file):readBeforeFunctional(file,release.functionalRelease,reader);}

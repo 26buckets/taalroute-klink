@@ -1,3 +1,54 @@
+# Actuele Klink-publicatie — duidelijke Alfa C-opdracht bij de antwoorden, 28 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/alfa-c/lijst
+Broncommit: `2b6372862abd57268ecbc959f590f92abfbc9a2c`, canonieke branch `main`.
+Worker: `1561297e-59fe-453f-8e7e-982aa47d7973`.
+
+Bij alle 28 meerkeuzeopdrachten in de zes aanvullende Alfa C-blokken staat de volledige concrete opdracht nu direct boven de antwoorden. Het gaat om dezelfde tekst die Luister uitspreekt. De aanwijzing om één antwoord te kiezen staat bij drie vanaf het begin duidelijk omrande knoppen met keuzerondjes. Selectie en toetsenbordfocus zijn zichtbaar; een gekozen fout antwoord kan opnieuw worden geprobeerd. De bron en bestaande uitleg bovenaan blijven behouden.
+
+Alle 72 aanvullende opdrachten blijven beschikbaar. De drie eerdere blokken met 36 opdrachten, alle teksten, bronnen, voorbeelden, hulp, dictees, beelden, antwoordbladen, audio, beoordelingen, voortgang, routes en logo D zijn behouden. Geen nieuwe audio of beelden en geen wijziging in data of opslag. De correctie wijzigt slechts twee runtimebestanden; de publicatiepoort bindt deze opvolging aan de werkelijk gecontroleerde livebasis.
+
+Lokaal geslaagd: alle 72 stappen in twee browsers, 144 smalle gevallen, alle 28 antwoordgroepen op desktop en mobiel (112 gevallen), fout/herstel met toetsenbord, behoud van voortgang, 72 eerdere stapgevallen met 54 foutherpogingen en zes kaartresets, 50 integratiegevallen, typen, gerichte lint, curriculum, productiebuild, vier gerichte vrijgavetests, 50 historische publicatiebewijstests en de gewone publicatiepoort. De definitieve browsercontrole is op de productiebuild uitgevoerd.
+
+Online geslaagd: opnieuw alle 72 stappen in Chromium/WebKit, 144 smalle gevallen en 112 controles van de 28 antwoordgroepen. Alle 8.135 bestaande media en de werkelijke cliëntbundel komen bytegelijk overeen met de gecontroleerde bron. Alle 429 gebruikte Alfa C-audiobestanden behouden hun bytes en ingebedde Taalroute-merkvelden; beide handschriftbeelden en het antwoordblad zijn gelijk gebleven. Geen GitHub-workflows toegevoegd en geen Actions-runs waargenomen.
+
+Een proef met Alfa C-cursisten, fysieke telefoons, een schermlezer en volledige menselijke luistercontrole blijven open. Deze negen blokken vormen nog geen volledige Alfa C-leerlijn.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-keuze-opdracht-20261028.json`.
+Register: `docs/klink-publication-alfa-c-keuze-opdracht-20261028.json`.
+Gecontroleerde bronback-up: https://drive.google.com/file/d/1yfS_ywq7tGVxfZDQvc4xcr2D5jn6wthy/view?usp=drivesdk
+Gecontroleerde definitieve herstelset: https://drive.google.com/file/d/1KFOUvnyvXuHI7qDfipHgvOyLsI8C8k76/view?usp=drivesdk
+Projectmap: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar
+
+De canonieke werkmap is bijgewerkt naar deze main-opvolging. De gewone npm run deploy is uitgevoerd vanuit een identieke, schone main-kopie buiten iCloud. Metadata-opvolgingen zijn geen nieuwe runtimepublicatie. Stel vóór een volgende publicatie opnieuw de actuele livebasis vast; geen oudere bron publiceren.
+
+## Eerder publicatieregister
+
+# Actuele Klink-publicatie — 72 aanvullende Alfa C-opdrachten, 28 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/alfa-c
+Broncommit: `a66670f8016306e6952ed456be5876374584a80d`, canonieke branch `main`.
+Worker: `0cd58d7b-c177-4191-9986-50673960df8c`.
+
+Zes nieuwe blokken van twaalf opdrachten staan online, naast de drie bestaande blokken. In totaal negen blokken met 108 opdrachten. Alle 72 herziene teksten zijn aangesloten, inclusief bronnen, voorbeelden, hulp, concreet herstel na een fout en 27 schrijfplekken op negen afdrukbare antwoordbladen. Vier dictees gebruiken losse herhaalbare fragmenten zonder zichtbaar schrijfmodel. Twee gecontroleerde handschriftbeelden ondersteunen lezen van een briefje; de hoofdtekst is op telefoons groter op drie regels gezet.
+
+Roland spreekt de uitleg en steun, Remko de nieuwe oefentaal; zeven passende bestaande woordopnamen zijn behouden. De 386 nieuwe afgiftebestanden hebben Taalroute-merkvelden en zijn zonder hercodering van metadata voorzien. Alle 393 gebruikte opnamen zijn automatisch teruggetranscribeerd; twee herkenningsverschillen bij de spelling van Safa/Elmi zijn afzonderlijk onderbouwd. Drie ongeschikte kandidaten zijn gericht hersteld. Dit is geen menselijke luistergoedkeuring.
+
+Open schrijven, lezen, spreken en doen worden als eigen poging bevestigd en niet automatisch inhoudelijk beoordeeld. Voorbeeld- en hulpgebruik worden apart bewaard. Oude voortgang, 36 eerdere Alfa C-opdrachten, nieuwste lessen, zes startstappen en video’s, logo D, routes en bestaande media blijven behouden.
+
+Lokaal geslaagd: alle 72 opdrachten in Chromium/WebKit, 144 smalle gevallen, 786 native afspeelgevallen, dictee- en geluidsfoutherstel, 27 schrijfplekken, definitief handschrift op telefoongrootte, typen, gerichte lint, build, curriculum, 50 historische publicatiebewijstests, gerichte vrijgavetests en gewone publicatiepoort. Online geslaagd: 144 nieuwe stapgevallen en 144 smalle gevallen, 72 oude stapgevallen met 54 foutherpogingen en zes kaartresets, 50 integratiegevallen, echte gesproken uitleg en dictee in beide browsers. Alle 429 nieuwe/gebruikt-behouden audiobestanden zijn bytegelijk teruggelezen met hun ingebedde Taalroute-metadata. Alle 8.135 bestaande media, twee beelden, het antwoordblad en de werkelijke cliëntbundel zijn gecontroleerd. Geen GitHub Actions-runs of nieuwe workflows.
+
+Menselijke luister-/inhoudelijke eindcontrole, cursistenproef, fysieke telefoons en schermlezerproef blijven open. Het is nog geen volledige Alfa C-leerlijn. De oude losse mappen-opname buiten deze uitbreiding is als luisterpunt vastgelegd; deze 72 opdrachten gebruiken de herstelde nieuwe opname.
+
+Vrijgave: `docs/klink-owner-release-alfa-c-functioneel-20261028.json`.
+Register: `docs/klink-publication-alfa-c-functioneel-20261028.json`.
+Gecontroleerde bron-/mediaback-up: https://drive.google.com/file/d/1sP_L_seDR7lm7974FFyj-GS7yxlM0NiA/view
+Projectmap met bron, definitieve herstelset en ontvangstcontrole: https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar
+
+De canonieke werkmap is bijgewerkt naar dezelfde bron. De gewone `npm run deploy` is uitgevoerd op een identieke, schone main-kopie buiten iCloud. Een volgende publicatie moet de actuele livebron opnieuw vaststellen; geen oude bouwmap herpubliceren. Historische vrijgaven en de audiopauze buiten de expliciete Alfa C-vrijgave blijven behouden.
+
+## Eerder publicatieregister
+
 # Actuele Klink-publicatie — Alfa C-audio, 27 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/alfa-c

@@ -1,0 +1,4139 @@
+{
+  "createdAt": "2026-10-28",
+  "ownerRequest": "Maak alles.",
+  "voices": {
+    "guide": "h6uBOiAjLKklte8hdYio",
+    "target": "0qLmDzgqulxcvv0yf3kg"
+  },
+  "model": "eleven_v4",
+  "format": "mp3_44100_128",
+  "language": "nl",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 0.85
+  },
+  "clips": [
+    {
+      "id": "alfa-c-f-a10b8f9e9c7324",
+      "role": "guide",
+      "text": "Je leest een boodschappenlijst en een bon. Je schrijft ook een eigen lijst. Leg het antwoordblad en een pen klaar.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "lijst:start"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d8709da0c727d2",
+      "role": "target",
+      "text": "Boodschappen\n1 appel",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f70576060be3df",
+      "role": "target",
+      "text": "achtentwintig",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-08:dictation",
+        "klink-alfa-c-aanvulling-verbinden-03:dictation"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-469d93c5a66cfb",
+      "role": "guide",
+      "text": "Je hebt gelezen en geschreven met boodschappen. Lees je eigen lijst nog eens terug.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "lijst:end"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b74d99219ebb40",
+      "role": "guide",
+      "text": "Lees één regel tegelijk. Onder het woord Boodschappen staan de dingen voor de winkel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2bfa2ea32006a0",
+      "role": "guide",
+      "text": "Lees de lijst nog eens, van boven naar beneden.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-699ad2d03451db",
+      "role": "guide",
+      "text": "Kijk naar de korte lijst in het voorbeeld. Daarop staat wat je gaat kopen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7ee072990d5177",
+      "role": "guide",
+      "text": "Je hebt geoefend met deze opdracht.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-07:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-08:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-10:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-12:successFeedback",
+        "klink-alfa-c-aanvulling-les-01:successFeedback",
+        "klink-alfa-c-aanvulling-les-07:successFeedback",
+        "klink-alfa-c-aanvulling-les-08:successFeedback",
+        "klink-alfa-c-aanvulling-les-09:successFeedback",
+        "klink-alfa-c-aanvulling-les-11:successFeedback",
+        "klink-alfa-c-aanvulling-les-12:successFeedback",
+        "klink-alfa-c-aanvulling-post-01:successFeedback",
+        "klink-alfa-c-aanvulling-post-06:successFeedback",
+        "klink-alfa-c-aanvulling-post-07:successFeedback",
+        "klink-alfa-c-aanvulling-post-08:successFeedback",
+        "klink-alfa-c-aanvulling-post-11:successFeedback",
+        "klink-alfa-c-aanvulling-post-12:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-01:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-03:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-04:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-06:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-07:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-08:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-09:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-11:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-12:successFeedback",
+        "klink-alfa-c-aanvulling-werk-01:successFeedback",
+        "klink-alfa-c-aanvulling-werk-05:successFeedback",
+        "klink-alfa-c-aanvulling-werk-06:successFeedback",
+        "klink-alfa-c-aanvulling-werk-08:successFeedback",
+        "klink-alfa-c-aanvulling-werk-09:successFeedback",
+        "klink-alfa-c-aanvulling-werk-10:successFeedback",
+        "klink-alfa-c-aanvulling-werk-11:successFeedback",
+        "klink-alfa-c-aanvulling-werk-12:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-01:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-02:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-03:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-04:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-05:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-06:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-07:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-09:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-10:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-12:successFeedback"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a03b9287734e8d",
+      "role": "guide",
+      "text": "Kijk naar de boodschappenlijst. Lees wat je gaat kopen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-317bb740bbaf20",
+      "role": "target",
+      "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-01:source",
+        "klink-alfa-c-aanvulling-lijst-02:source",
+        "klink-alfa-c-aanvulling-lijst-03:source",
+        "klink-alfa-c-aanvulling-lijst-06:source",
+        "klink-alfa-c-aanvulling-lijst-07:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ec3f75e6dba15d",
+      "role": "guide",
+      "text": "Lees de namen op de lijst. Kijk daarna welk antwoord dezelfde namen heeft.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ca873ee4edea9c",
+      "role": "guide",
+      "text": "Dit antwoord past niet bij de hele lijst. Lees alle namen nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cf1ded6280090f",
+      "role": "guide",
+      "text": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:exampleSpoken",
+        "klink-alfa-c-aanvulling-lijst-03:exampleSpoken",
+        "klink-alfa-c-aanvulling-lijst-04:exampleSpoken",
+        "klink-alfa-c-aanvulling-lijst-05:exampleSpoken",
+        "klink-alfa-c-aanvulling-lijst-06:exampleSpoken",
+        "klink-alfa-c-aanvulling-lijst-09:exampleSpoken",
+        "klink-alfa-c-aanvulling-lijst-11:exampleSpoken",
+        "klink-alfa-c-aanvulling-les-02:exampleSpoken",
+        "klink-alfa-c-aanvulling-les-03:exampleSpoken",
+        "klink-alfa-c-aanvulling-les-04:exampleSpoken",
+        "klink-alfa-c-aanvulling-les-05:exampleSpoken",
+        "klink-alfa-c-aanvulling-les-06:exampleSpoken",
+        "klink-alfa-c-aanvulling-les-10:exampleSpoken",
+        "klink-alfa-c-aanvulling-post-02:exampleSpoken",
+        "klink-alfa-c-aanvulling-post-03:exampleSpoken",
+        "klink-alfa-c-aanvulling-post-04:exampleSpoken",
+        "klink-alfa-c-aanvulling-post-05:exampleSpoken",
+        "klink-alfa-c-aanvulling-post-10:exampleSpoken",
+        "klink-alfa-c-aanvulling-formulier-02:exampleSpoken",
+        "klink-alfa-c-aanvulling-formulier-05:exampleSpoken",
+        "klink-alfa-c-aanvulling-werk-02:exampleSpoken",
+        "klink-alfa-c-aanvulling-werk-03:exampleSpoken",
+        "klink-alfa-c-aanvulling-werk-04:exampleSpoken",
+        "klink-alfa-c-aanvulling-werk-07:exampleSpoken",
+        "klink-alfa-c-aanvulling-verbinden-08:exampleSpoken",
+        "klink-alfa-c-aanvulling-verbinden-11:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-530561db55b3d3",
+      "role": "guide",
+      "text": "Dat klopt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-03:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-04:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-05:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-06:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-09:successFeedback",
+        "klink-alfa-c-aanvulling-lijst-11:successFeedback",
+        "klink-alfa-c-aanvulling-les-02:successFeedback",
+        "klink-alfa-c-aanvulling-les-03:successFeedback",
+        "klink-alfa-c-aanvulling-les-04:successFeedback",
+        "klink-alfa-c-aanvulling-les-05:successFeedback",
+        "klink-alfa-c-aanvulling-les-06:successFeedback",
+        "klink-alfa-c-aanvulling-les-10:successFeedback",
+        "klink-alfa-c-aanvulling-post-02:successFeedback",
+        "klink-alfa-c-aanvulling-post-03:successFeedback",
+        "klink-alfa-c-aanvulling-post-04:successFeedback",
+        "klink-alfa-c-aanvulling-post-05:successFeedback",
+        "klink-alfa-c-aanvulling-post-09:successFeedback",
+        "klink-alfa-c-aanvulling-post-10:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-02:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-05:successFeedback",
+        "klink-alfa-c-aanvulling-formulier-10:successFeedback",
+        "klink-alfa-c-aanvulling-werk-02:successFeedback",
+        "klink-alfa-c-aanvulling-werk-03:successFeedback",
+        "klink-alfa-c-aanvulling-werk-04:successFeedback",
+        "klink-alfa-c-aanvulling-werk-07:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-08:successFeedback",
+        "klink-alfa-c-aanvulling-verbinden-11:successFeedback"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-83e3683170cda2",
+      "role": "guide",
+      "text": "Lees de hele lijst. Wat wil je kopen? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6c3fc2697199b6",
+      "role": "target",
+      "text": "2 pakken melk\n1 stuk kaas",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7285c7ee5be92c",
+      "role": "target",
+      "text": "Brood, melk en kaas.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c7f2878078f789",
+      "role": "guide",
+      "text": "Kijk naar het getal op de regel met melk.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-03:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a78c5992fcb647",
+      "role": "guide",
+      "text": "Dit aantal past niet bij de regel met melk. Lees die regel nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-03:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-753d997a12c78d",
+      "role": "guide",
+      "text": "Zoek melk op de lijst. Hoeveel pakken staan er? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-03:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-03d6be0cc238d5",
+      "role": "target",
+      "text": "2 pakken melk",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a789032227d2b8",
+      "role": "target",
+      "text": "2 pakken",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ad9142d79f2dc8",
+      "role": "guide",
+      "text": "Zoek melk op de bon. Lees het bedrag dat ernaast staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-04:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d22b4769bffbfc",
+      "role": "guide",
+      "text": "Dit is niet de prijs van de melk. Zoek melk nog eens. Tik op het bedrag op die regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-04:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6822ff35fb8861",
+      "role": "guide",
+      "text": "Lees de bon. Wat kost de melk? Tik op het bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-04:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1bce1345d0d37c",
+      "role": "target",
+      "text": "melk  € 1,20",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-04:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-44b691f5f04a16",
+      "role": "target",
+      "text": "€ 1,20",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-04:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-174126ef1e3d03",
+      "role": "target",
+      "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-04:source",
+        "klink-alfa-c-aanvulling-lijst-05:source",
+        "klink-alfa-c-aanvulling-lijst-06:source",
+        "klink-alfa-c-aanvulling-lijst-11:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-873a6d05ba6fe6",
+      "role": "guide",
+      "text": "Kijk onderaan de bon. Welke regel gaat over alles samen?",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-05:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5d5765c00b1d5e",
+      "role": "guide",
+      "text": "Je hebt een losse prijs gekozen. Zoek het bedrag voor alles samen. Tik op een ander bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-05:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-955997f82e4517",
+      "role": "guide",
+      "text": "Lees de bon. Wat betaal je voor alles samen? Tik op het bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-05:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-56c3b5d93878e8",
+      "role": "target",
+      "text": "Totaal  € 6,70",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-67184d0a6facdf",
+      "role": "target",
+      "text": "€ 6,70",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d6b35c04c65642",
+      "role": "guide",
+      "text": "Zoek één naam van de lijst op de bon. Doe dat daarna met de andere namen. Je hoeft de aantallen niet te vergelijken.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-06:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1be978c81a0803",
+      "role": "guide",
+      "text": "Vergelijk de namen nog eens, één voor één. Tik daarna op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-06:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-91e975d4d31984",
+      "role": "guide",
+      "text": "Lees de lijst en de bon. Staan de drie namen van de lijst ook op de bon? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-06:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-daf04dd8d26570",
+      "role": "target",
+      "text": "Bon: brood, melk, kaas.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1d4ad7c1a7d66e",
+      "role": "target",
+      "text": "Ja, alle drie staan op de bon.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1099f74237c5e7",
+      "role": "guide",
+      "text": "Schrijf alleen de namen. De getallen hoef je niet over te schrijven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-07:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-09c78bdc2e7769",
+      "role": "guide",
+      "text": "Vergelijk jouw drie regels met de lijst. Ontbreekt er een naam? Schrijf die erbij.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-07:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-fab7bd7e966bac",
+      "role": "guide",
+      "text": "Kijk naar de twee namen. Elke naam staat op een eigen regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-07:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-09f3042ba56e7b",
+      "role": "guide",
+      "text": "Je hebt geschreven. Lees je antwoord nog eens.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-07:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-lijst-08:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-lijst-10:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-les-07:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-les-08:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-les-09:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-les-11:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-post-06:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-post-07:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-post-08:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-post-11:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-03:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-04:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-06:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-07:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-08:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-09:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-formulier-11:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-werk-06:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-werk-08:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-werk-10:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-werk-11:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-verbinden-03:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-verbinden-04:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-verbinden-05:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-verbinden-09:automaticAcknowledgement",
+        "klink-alfa-c-aanvulling-verbinden-12:automaticAcknowledgement"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-497790f44410b8",
+      "role": "guide",
+      "text": "Pak het antwoordblad. Schrijf bij opdracht 7 de drie namen van de lijst. Schrijf elke naam op een nieuwe regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-07:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9a419e88b7675f",
+      "role": "target",
+      "text": "1 appel\n1 peer\n\nZo schrijf je de namen\nappel\npeer",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-986068b2999976",
+      "role": "guide",
+      "text": "Denk aan de drie dingen die je nu wilt kopen. Lees daarna jouw lijst terug.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-08:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-fd3de680a0e21b",
+      "role": "guide",
+      "text": "Lees de drie dingen in de opdracht nog eens. Kijk of die op jouw lijst staan. Verander je lijst als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-08:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0eeda6cfb5d366",
+      "role": "guide",
+      "text": "Dit is een andere boodschappenlijst. Maak bij jouw opdracht een lijst met jouw drie dingen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-08:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-97c258da92d51e",
+      "role": "guide",
+      "text": "Je wilt brood, kaas en water kopen. Schrijf die drie dingen bij opdracht 8 op het antwoordblad. Schrijf elke naam op een nieuwe regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-08:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1017c3a235b92f",
+      "role": "target",
+      "text": "rijst en melk\n\nVoorbeeldlijst\nrijst\nmelk",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-08:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-aee391b45bb8ee",
+      "role": "guide",
+      "text": "Zoek het bedrag onderaan dat over de hele aankoop gaat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-09:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-42c4f86dd48b2e",
+      "role": "guide",
+      "text": "Je hebt een losse prijs gekozen. Zoek opnieuw het bedrag voor alles samen. Tik op een ander bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-09:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-54326aa613b7f8",
+      "role": "guide",
+      "text": "Lees deze andere bon. Wat betaal je voor alles samen? Tik op het bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-09:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9063af93fcd6b3",
+      "role": "target",
+      "text": "Totaal  € 3,00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a43be1c65cf541",
+      "role": "target",
+      "text": "€ 3,00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a0e9954fa1f9ae",
+      "role": "target",
+      "text": "Kassabon\nrijst  € 1,80\nmelk  € 1,20\nTotaal  € 3,00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-09:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b0786f45f97c78",
+      "role": "guide",
+      "text": "Lees elke naam op het briefje. Hoort die bij wat je nu wilt kopen?",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-10:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8796de6891a38e",
+      "role": "guide",
+      "text": "Lees wat je wilt kopen nog eens. Kijk of er nog iets te veel op het briefje staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-10:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2a021eb45e0e3e",
+      "role": "guide",
+      "text": "Op het voorbeeldbriefje staat één ding te veel. Na het verbeteren staan alleen de twee nodige dingen er nog.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-10:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-98fd74c52e94f2",
+      "role": "guide",
+      "text": "Je wilt alleen rijst en melk kopen. Kijk naar het briefje bij opdracht 10 op het antwoordblad. Streep weg wat je niet wilt kopen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-10:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d1c2583d3ba570",
+      "role": "target",
+      "text": "appel en peer\n\nBriefje vóór het verbeteren\nappel\npeer\nsoep\n\nBriefje na het verbeteren\nappel\npeer",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1b91a20178be17",
+      "role": "guide",
+      "text": "Zoek kaas op de bon. Lees het bedrag ernaast.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-11:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-40af5fc97f1bc0",
+      "role": "guide",
+      "text": "Dit bedrag hoort niet bij de kaas. Zoek de goede regel. Tik op een ander bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-11:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-476245333c809b",
+      "role": "guide",
+      "text": "Lees de bon. Wat kost de kaas? Tik op het bedrag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-11:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-39c40c4a3d5ab8",
+      "role": "target",
+      "text": "kaas  € 3,10",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d6cc5010327540",
+      "role": "target",
+      "text": "€ 3,10",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-805a7b68c1f7d9",
+      "role": "guide",
+      "text": "Lees één naam tegelijk. Je mag ook zeggen dat je geen woord meer wilt oefenen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-12:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c6845c7837dd44",
+      "role": "guide",
+      "text": "Kijk nog eens naar jouw lijst bij opdracht 8. Kies zelf wat je wilt herhalen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-12:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d9c63e068af8b8",
+      "role": "guide",
+      "text": "Kijk naar jouw lijst bij opdracht 8. Lees de drie dingen hardop. Zeg welk woord je nog wilt oefenen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-12:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0f11be07f6e964",
+      "role": "guide",
+      "text": "Je leest een rooster en berichten over de les. Je schrijft ook een briefje. Leg het antwoordblad en een pen klaar.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "les:start"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c5920b31544cdc",
+      "role": "guide",
+      "text": "Je hebt berichten over de les gelezen en zelf een briefje geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "les:end"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-309f7e55ad4ca1",
+      "role": "guide",
+      "text": "Lees het eerste woord van elke regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-01:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d12a23ed15d407",
+      "role": "guide",
+      "text": "Begin bovenaan. Lees elke roosterregel nog eens.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-01:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7da8bfa0f706f8",
+      "role": "guide",
+      "text": "In dit voorbeeld staan de dag, de tijd en de zaal op één regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-01:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-602f5893bf98f3",
+      "role": "guide",
+      "text": "Kijk naar het rooster. Lees de twee dagen waarop er les is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-01:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-47cbe1069c68a3",
+      "role": "target",
+      "text": "vrijdag  13.00  lezen  zaal 1",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-01:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-555623e014b0a9",
+      "role": "target",
+      "text": "Lesrooster\nmaandag  09.00  Nederlands  zaal 2\nwoensdag  09.00  Nederlands  zaal 2",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-01:source",
+        "klink-alfa-c-aanvulling-les-02:source",
+        "klink-alfa-c-aanvulling-les-06:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6a74c685b09a20",
+      "role": "guide",
+      "text": "Begin bij maandag. Lees de tijd op dezelfde regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-02:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3c70cd7e31dc8f",
+      "role": "guide",
+      "text": "Deze tijd staat niet bij maandag. Zoek de goede regel. Tik op een andere tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-02:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f087ec55e8220e",
+      "role": "guide",
+      "text": "Zoek maandag in het rooster. Hoe laat begint de les? Tik op de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-02:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3e10d46aa11c02",
+      "role": "target",
+      "text": "maandag  09.00  Nederlands  zaal 2",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c22a9f706aa1cd",
+      "role": "target",
+      "text": "09.00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e2a0ba51ad888d",
+      "role": "guide",
+      "text": "Zoek in het bericht hoe laat de les begint.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-03:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-dd9e262042feee",
+      "role": "guide",
+      "text": "Dit is niet de nieuwe begintijd. Lees de eerste zin van het bericht nog eens. Tik op een andere tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-03:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9f102e2c0d1420",
+      "role": "guide",
+      "text": "Lees het bericht over woensdag. Hoe laat begint de les nu? Tik op de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-03:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5df85378b8c042",
+      "role": "target",
+      "text": "Woensdag begint de les om 10.00.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2259c8db18a8b7",
+      "role": "target",
+      "text": "10.00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-96f5895939f042",
+      "role": "target",
+      "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-03:source",
+        "klink-alfa-c-aanvulling-les-04:source",
+        "klink-alfa-c-aanvulling-les-05:source",
+        "klink-alfa-c-aanvulling-les-06:source",
+        "klink-alfa-c-aanvulling-les-07:source",
+        "klink-alfa-c-aanvulling-les-08:source",
+        "klink-alfa-c-aanvulling-les-09:source",
+        "klink-alfa-c-aanvulling-les-12:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-405fe8c20589aa",
+      "role": "guide",
+      "text": "Zoek in het bericht het woord zaal. Lees wat ernaast staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-04:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ad335d2093d577",
+      "role": "guide",
+      "text": "Deze zaal staat niet in het bericht over woensdag. Zoek zaal nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-04:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f7cc8f3f051145",
+      "role": "guide",
+      "text": "Lees het bericht over woensdag. In welke zaal is de les? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-04:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7fcec40a3c4070",
+      "role": "target",
+      "text": "De les is in zaal 4.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-04:model",
+        "klink-alfa-c-aanvulling-les-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-82ff741d65a044",
+      "role": "target",
+      "text": "zaal 4",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-04:model",
+        "klink-alfa-c-aanvulling-les-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f07bae0661d8cb",
+      "role": "guide",
+      "text": "Zoek de zin die begint met Neem. Lees die zin helemaal.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-05:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-704f6e6621bdcd",
+      "role": "guide",
+      "text": "Dit wordt niet gevraagd voor woensdag. Lees de zin met Neem nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-05:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0f5e1cbc671d27",
+      "role": "guide",
+      "text": "Lees het bericht. Wat neem je woensdag mee? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-05:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-170f48d313cd54",
+      "role": "target",
+      "text": "Neem je map mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-55e5e0898cda92",
+      "role": "target",
+      "text": "een map",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8836fc808d1c82",
+      "role": "guide",
+      "text": "Gebruik het nieuwe bericht. Zoek daarin de plek van de les.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-06:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-28652543548bc9",
+      "role": "guide",
+      "text": "Het oude rooster geldt hier niet meer. Lees de zaal in het nieuwe bericht. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-06:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-91245413d572e1",
+      "role": "guide",
+      "text": "Het bericht verandert de les op woensdag. Lees het nieuwe bericht. In welke zaal is de les nu? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-06:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1ab6c036f0be20",
+      "role": "guide",
+      "text": "Zoek eerst de dag. Zoek daarna de tijd en de zaal. Je mag korte regels schrijven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-07:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-119b0827f0588a",
+      "role": "guide",
+      "text": "Lees jouw briefje terug. Kun je zien op welke dag, hoe laat en in welke zaal de les is? Schrijf erbij wat ontbreekt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-07:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d12963e0984102",
+      "role": "guide",
+      "text": "Het voorbeeldbriefje bevat een dag, een tijd en een zaal. Schrijf jouw briefje over woensdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-07:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0ba3c1b07ec5a7",
+      "role": "guide",
+      "text": "Schrijf bij opdracht 7 op het antwoordblad de dag, de tijd en de zaal van de les. Gebruik het bericht over woensdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-07:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5a1da5bd73a807",
+      "role": "target",
+      "text": "Vrijdag begint de les om 11.00 in zaal 3.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nzaal 3",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-484e9499152978",
+      "role": "guide",
+      "text": "Schrijf wat je wilt laten weten. Noem ook de dag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-08:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d6eb101fba3248",
+      "role": "guide",
+      "text": "Lees jouw antwoord terug. Is duidelijk dat je woensdag komt? Verander je antwoord als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-08:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-4e464b8158d0c3",
+      "role": "guide",
+      "text": "Dit is een antwoord over vrijdag. Schrijf bij jouw opdracht een antwoord over woensdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-08:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-75efd85a6ffa2d",
+      "role": "guide",
+      "text": "Schrijf bij opdracht 8 een antwoord op het bericht. Laat weten dat je woensdag komt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-08:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c3296151be0bec",
+      "role": "target",
+      "text": "Kom je vrijdag?\n\nVoorbeeldantwoord\nIk kom vrijdag.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-08:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-13df3ccceaa735",
+      "role": "guide",
+      "text": "Vergelijk de tijd op het briefje met de tijd in het nieuwe bericht. Vergelijk daarna de zaal.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-09:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-39e1c26de859b1",
+      "role": "guide",
+      "text": "Lees het nieuwe bericht nog eens. Kijk daarna of jouw nieuwe briefje de goede tijd en zaal heeft.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-09:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0ca9265e92639c",
+      "role": "guide",
+      "text": "In het voorbeeld veranderen de tijd en de zaal. Bij jouw briefje gebruik je het bericht over woensdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-09:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-325b28858599d4",
+      "role": "guide",
+      "text": "Lees het nieuwe bericht over woensdag. Kijk naar het oude briefje bij opdracht 9 op het antwoordblad. Schrijf het goede briefje eronder.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-09:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-dfef7dd9f533ad",
+      "role": "target",
+      "text": "De les is vrijdag om 14.00 in zaal 5.\n\nOud briefje\nvrijdag 13.00 zaal 1\n\nGoed briefje\nvrijdag 14.00 zaal 5",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e4eea663f3f087",
+      "role": "guide",
+      "text": "Lees de zin die zegt wat je moet meenemen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-10:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5d56485eb57d37",
+      "role": "guide",
+      "text": "Dit hoort niet bij het bericht over vrijdag. Lees het bericht nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-10:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d8612d71efd2d9",
+      "role": "guide",
+      "text": "Lees het bericht over vrijdag. Wat neem je mee? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-10:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c274f34b485df6",
+      "role": "target",
+      "text": "Neem je boek mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5e4a976052913c",
+      "role": "target",
+      "text": "een boek",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-46fd4608e5425a",
+      "role": "target",
+      "text": "Vrijdag begint de les om 11.00.\nDe les is in zaal 3.\nNeem je boek mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-10:source",
+        "klink-alfa-c-aanvulling-les-11:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-70573ba1b87246",
+      "role": "guide",
+      "text": "Zoek de begintijd van de les. Gebruik die tijd in jouw antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-11:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ac450c04072361",
+      "role": "guide",
+      "text": "Lees het bericht en jouw antwoord terug. Staat de goede tijd in jouw antwoord? Verander die als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-11:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6bbd6087c4476c",
+      "role": "guide",
+      "text": "In het voorbeeld staat hoe laat iemand komt. Gebruik in jouw antwoord de tijd van vrijdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-11:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-46b401a92c480b",
+      "role": "guide",
+      "text": "Lees het bericht over vrijdag. Schrijf bij opdracht 11 een antwoord. Laat weten hoe laat je komt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-11:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-82bee994027994",
+      "role": "target",
+      "text": "De les begint om 13.00.\n\nVoorbeeldantwoord\nIk kom om 13.00.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8864548f7b96e2",
+      "role": "guide",
+      "text": "Lees je briefje regel voor regel. Vergelijk het met het bericht over woensdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-12:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0e3d9cfc414938",
+      "role": "guide",
+      "text": "Kijk of jouw briefje genoeg zegt om naar de goede les te gaan. Vul aan wat je mist.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-12:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6aab9178b64052",
+      "role": "guide",
+      "text": "Kijk naar jouw briefje bij opdracht 7. Lees het hardop. Zeg of de dag, de tijd en de zaal erop staan.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-les-12:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-21978a70600a6f",
+      "role": "guide",
+      "text": "Je leest uitnodigingen en een afspraakkaart. Je schrijft ook korte antwoorden. Leg het antwoordblad en een pen klaar.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "post:start"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-453934c264177a",
+      "role": "guide",
+      "text": "Je hebt uitnodigingen en een afspraakkaart gelezen. Je hebt ook antwoorden geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "post:end"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3279dd9683b59d",
+      "role": "guide",
+      "text": "Zoek de zin die zegt wat je samen doet.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-01:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b70e124e523ee3",
+      "role": "guide",
+      "text": "Lees de uitnodiging nog eens. Begin bovenaan.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-01:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c480a583a13a49",
+      "role": "guide",
+      "text": "In deze uitnodiging staat wat mensen samen gaan doen en hoe laat het begint.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-01:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-78c45a357cc3b8",
+      "role": "guide",
+      "text": "Lees de uitnodiging. Kijk wat je samen gaat doen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-01:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7ba415a8c237b5",
+      "role": "target",
+      "text": "Kom vrijdag koffie drinken.\nWe beginnen om 11.00.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-01:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a404dfa1cdab3c",
+      "role": "target",
+      "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-01:source",
+        "klink-alfa-c-aanvulling-post-03:source",
+        "klink-alfa-c-aanvulling-post-04:source",
+        "klink-alfa-c-aanvulling-post-07:source",
+        "klink-alfa-c-aanvulling-post-08:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5f2538c6468382",
+      "role": "guide",
+      "text": "Kijk wat je kunt kopen. Kijk ook of er een prijs bij staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-02:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c241d460035c77",
+      "role": "guide",
+      "text": "Dit antwoord past niet bij de marktactie. Lees de tekst nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-02:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-31d85dbcf991c6",
+      "role": "guide",
+      "text": "Lees de tekst met Marktactie erboven. Waar gaat de tekst over? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-02:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-677aae9eea2c31",
+      "role": "target",
+      "text": "2 broden voor € 3,00.\nAlleen vrijdag.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0bd1ce72a979f8",
+      "role": "target",
+      "text": "Een aanbieding voor brood.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b700fd3e80367b",
+      "role": "target",
+      "text": "Marktactie\n2 broden voor € 3,00.\nAlleen vrijdag.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-02:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b3212abf0fa9fa",
+      "role": "guide",
+      "text": "Zoek in de zin met Kom de plek waar je wordt verwacht.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-03:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-89126031ef8221",
+      "role": "guide",
+      "text": "Deze plek staat niet in de uitnodiging voor maandag. Lees die uitnodiging nog eens. Tik op een andere plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-03:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-578d3622ae7085",
+      "role": "guide",
+      "text": "Lees de uitnodiging voor maandag. Waar moet je zijn? Tik op de plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-03:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c8c05f3a25f7b3",
+      "role": "target",
+      "text": "Kom maandag om 14.00 naar het buurthuis.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-03:model",
+        "klink-alfa-c-aanvulling-post-04:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1f4183b6fb7249",
+      "role": "target",
+      "text": "in het buurthuis",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-76191cd7970710",
+      "role": "guide",
+      "text": "Zoek de tijd in de uitnodiging.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-04:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9de710f118679c",
+      "role": "guide",
+      "text": "Deze tijd staat niet in de uitnodiging voor maandag. Zoek de goede tijd. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-04:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d87b35831e6c10",
+      "role": "guide",
+      "text": "Lees de uitnodiging voor maandag. Hoe laat moet je er zijn? Tik op de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-04:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1a6e5deae232f8",
+      "role": "target",
+      "text": "14.00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-04:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e8bc739883936f",
+      "role": "guide",
+      "text": "Zoek de regel met een maand erin. Lees de hele datum.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-05:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-36fa57bfdcfd79",
+      "role": "guide",
+      "text": "Deze datum is niet hetzelfde als op de afspraakkaart. Vergelijk de dag en de maand nog eens. Tik op een andere datum.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-05:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-322710f03657f9",
+      "role": "guide",
+      "text": "Lees de afspraakkaart van het Taalhuis. Op welke datum is de afspraak? Tik op de datum.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-05:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-28b8a9df76f01f",
+      "role": "target",
+      "text": "dinsdag 10 november 2026",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9b6ed6954646fa",
+      "role": "target",
+      "text": "10 november 2026",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0129c0bdaeb8fc",
+      "role": "target",
+      "text": "Afspraak Taalhuis\ndinsdag 10 november 2026\n14.00\nNeem je map mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-05:source",
+        "klink-alfa-c-aanvulling-post-06:source",
+        "klink-alfa-c-aanvulling-post-12:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-24f59d5d89ceb0",
+      "role": "guide",
+      "text": "Zoek eerst de regel met de datum. Zoek daarna de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-06:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-70eb8d9db3d195",
+      "role": "guide",
+      "text": "Vergelijk jouw twee regels met de kaart. Kijk apart naar de datum en naar de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-06:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5c84e98037ce30",
+      "role": "guide",
+      "text": "Op het voorbeeldbriefje staan een datum en een tijd. Schrijf de gegevens van jouw afspraakkaart op.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-06:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7e4ade93c0d6df",
+      "role": "guide",
+      "text": "Lees de afspraakkaart. Schrijf bij opdracht 6 op het antwoordblad de datum en de tijd van de afspraak.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-06:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2ecc866c99ec9e",
+      "role": "target",
+      "text": "12 november 2026\n09.00\n\nVoorbeeldbriefje\n12 november 2026\n09.00",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9bd78a28d452fe",
+      "role": "guide",
+      "text": "Laat in jouw antwoord weten dat je komt. Je mag de dag erbij schrijven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-07:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3497f52a807e1c",
+      "role": "guide",
+      "text": "Lees jouw antwoord terug. Kan de ander begrijpen dat je wilt komen? Vul jouw antwoord aan als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-07:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e7f036eb15cf0d",
+      "role": "guide",
+      "text": "Het voorbeeld laat weten dat iemand komt. Jouw antwoord gaat over maandag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-07:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-82c4d9a52987e9",
+      "role": "guide",
+      "text": "Je wilt maandag naar het buurthuis komen. Schrijf bij opdracht 7 een kort antwoord op de uitnodiging.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-07:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cc67abc8e6fe55",
+      "role": "target",
+      "text": "Kom je donderdag naar de bibliotheek?\n\nVoorbeeldantwoord\nJa, ik kom donderdag.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-bc6aaa16d0d4e7",
+      "role": "guide",
+      "text": "Schrijf eerst op welke dag je niet kunt. Schrijf daarna jouw vraag over de andere dag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-08:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1b55e90005519a",
+      "role": "guide",
+      "text": "Lees jouw twee zinnen terug. Zeg je dat maandag niet lukt? Vraag je naar dinsdag? Verander wat nog niet duidelijk is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-08:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-28fc4a408577a5",
+      "role": "guide",
+      "text": "In het voorbeeld staat eerst wat niet lukt. Daarna volgt een vraag over een andere dag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-08:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-723bcad7a8a2c7",
+      "role": "guide",
+      "text": "Je kunt maandag niet komen. Schrijf dat bij opdracht 8. Vraag daarna of je dinsdag kunt komen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-08:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d2be2489e5ae94",
+      "role": "target",
+      "text": "Donderdag lukt niet. Je wilt vrijdag komen.\n\nVoorbeeldantwoord\nIk kan donderdag niet. Kan ik vrijdag komen?",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-08:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9fdc9a790a5d48",
+      "role": "guide",
+      "text": "Kies iets waardoor je meer over de brief te weten komt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-09:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-400e070ecde009",
+      "role": "guide",
+      "text": "Met die keuze weet je nog niet wat de brief zegt. Kijk naar de antwoorden. Kies een manier om daarachter te komen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-09:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0a91d4338db78c",
+      "role": "guide",
+      "text": "In dit voorbeeld zoekt iemand hulp bij een onduidelijk bericht.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-09:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-200fef9d4cf221",
+      "role": "guide",
+      "text": "Je krijgt een brief. Je begrijpt niet wat erin staat. Wat kun je doen? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-09:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-40072a7665f1eb",
+      "role": "target",
+      "text": "Neem het bericht mee en vraag wat het betekent.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c0160ae0b104d6",
+      "role": "guide",
+      "text": "Zoek in deze uitnodiging waar je wordt verwacht.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-10:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-24e5c711e78b5f",
+      "role": "guide",
+      "text": "Deze plek hoort niet bij de uitnodiging voor donderdag. Lees die uitnodiging opnieuw. Tik op een andere plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-10:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1c5de42c3a2df7",
+      "role": "guide",
+      "text": "Lees de uitnodiging voor donderdag. Waar moet je zijn? Tik op de plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-10:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-de8dafc0b50d11",
+      "role": "target",
+      "text": "Kom donderdag om 15.00 naar de bibliotheek.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-94cce458f487c7",
+      "role": "target",
+      "text": "de bibliotheek",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-525b7dc96ca8bd",
+      "role": "target",
+      "text": "Uitnodiging\nKom donderdag om 15.00 naar de bibliotheek.\nWe bekijken boeken.\nNeem je leesbril mee als je die gebruikt.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-10:source",
+        "klink-alfa-c-aanvulling-post-11:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-abda37c7debe0c",
+      "role": "guide",
+      "text": "Zoek wanneer je komt en waar je moet zijn. Je mag drie korte regels schrijven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-11:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-582c7dc43113db",
+      "role": "guide",
+      "text": "Lees jouw briefje terug. Staan de dag, de tijd en de plek erop? Vergelijk ze met de uitnodiging.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-11:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-db19049d6937da",
+      "role": "guide",
+      "text": "Het voorbeeldbriefje bevat drie gegevens. Schrijf jouw briefje over de uitnodiging voor donderdag.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-11:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cf459eeb1f9d3e",
+      "role": "guide",
+      "text": "Lees de uitnodiging voor donderdag. Schrijf bij opdracht 11 een briefje met de dag, de tijd en de plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-11:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6c368cb8d71568",
+      "role": "target",
+      "text": "Kom vrijdag om 11.00 naar het buurthuis.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nbuurthuis",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-78e47824a07ab5",
+      "role": "guide",
+      "text": "Denk aan iets wat jou kan helpen om de afspraak te begrijpen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-12:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7d2c3376442fc6",
+      "role": "guide",
+      "text": "Kijk nog eens naar de kaart en jouw briefje. Zeg welk deel onduidelijk is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-12:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-435dcc90ea0ee9",
+      "role": "guide",
+      "text": "Lees jouw briefje bij opdracht 6. Zeg hardop wat je doet als je de datum op een afspraakkaart niet begrijpt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-12:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3f8c00f59b4a35",
+      "role": "guide",
+      "text": "Je vult een formulier in met de gegevens van Safa. Leg het antwoordblad en een pen klaar.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "formulier:start"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7500b33d2c32e3",
+      "role": "guide",
+      "text": "Je hebt de gegevens op een formulier gezet en teruggelezen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "formulier:end"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-206d5f73377ccc",
+      "role": "guide",
+      "text": "Lees de woorden boven de lege vakken.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-01:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-45b113958aa072",
+      "role": "guide",
+      "text": "Begin bovenaan het formulier. Lees de eerste regel nog eens.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-01:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-81a001aff91cdb",
+      "role": "guide",
+      "text": "In het voorbeeld vertellen de woorden bovenaan waarvoor het formulier is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-01:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5c8002c6b35594",
+      "role": "guide",
+      "text": "Kijk naar het formulier. Lees bovenaan waarvoor het is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-01:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-014c8b16255848",
+      "role": "target",
+      "text": "Aanmelden voor koken\nVoornaam: __________\nAchternaam: __________",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-01:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b85b6f38fdaa6a",
+      "role": "target",
+      "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-01:source",
+        "klink-alfa-c-aanvulling-formulier-02:source",
+        "klink-alfa-c-aanvulling-formulier-03:source",
+        "klink-alfa-c-aanvulling-formulier-04:source",
+        "klink-alfa-c-aanvulling-formulier-06:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7c5344cdfa7ba7",
+      "role": "guide",
+      "text": "Zoek Safa op de gegevenskaart. Kijk welk woord ervoor staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-02:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-4548a5bf44ff52",
+      "role": "guide",
+      "text": "Deze plek past niet bij Safa. Kijk op de gegevenskaart bij welk woord Safa staat. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-02:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a4b5cbf899d3e5",
+      "role": "guide",
+      "text": "Lees de gegevens van Safa. In welk vak schrijf je Safa? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-02:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-261b1422095af6",
+      "role": "target",
+      "text": "Voornaam: Safa",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-02:model",
+        "klink-alfa-c-aanvulling-formulier-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-17d9ebe424b847",
+      "role": "target",
+      "text": "Voornaam",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c93623387caeb4",
+      "role": "target",
+      "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-02:source",
+        "klink-alfa-c-aanvulling-formulier-03:source",
+        "klink-alfa-c-aanvulling-formulier-04:source",
+        "klink-alfa-c-aanvulling-formulier-05:source",
+        "klink-alfa-c-aanvulling-formulier-06:source",
+        "klink-alfa-c-aanvulling-formulier-07:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b4e5545ecb6b69",
+      "role": "guide",
+      "text": "Zoek Voornaam op de kaart. Schrijf de naam die daarachter staat in hetzelfde vak op formulier A.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-03:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-baaa6cade34286",
+      "role": "guide",
+      "text": "Vergelijk de naam op de kaart met wat jij bij Voornaam schreef. Verander wat niet hetzelfde is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-03:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-4b2d1aa5449988",
+      "role": "guide",
+      "text": "De voornaam staat in het vak Voornaam.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-03:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-12541597ef241a",
+      "role": "guide",
+      "text": "Pak het antwoordblad. Schrijf op formulier A bij Voornaam de voornaam van de kaart.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-03:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-4caaf0aad9adc3",
+      "role": "guide",
+      "text": "Zoek Achternaam op de kaart. Schrijf de naam die daarachter staat in hetzelfde vak op formulier A.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-04:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5ca79619981646",
+      "role": "guide",
+      "text": "Vergelijk de naam op de kaart met wat jij bij Achternaam schreef. Verander wat niet hetzelfde is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-04:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b3621f81392d03",
+      "role": "guide",
+      "text": "De achternaam staat in het vak Achternaam.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-04:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a3697859a6a93e",
+      "role": "guide",
+      "text": "Schrijf op formulier A bij Achternaam de achternaam van de kaart.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-04:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-112a693c3c5808",
+      "role": "target",
+      "text": "Achternaam: Elmi",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-04:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7c7700955875f5",
+      "role": "guide",
+      "text": "Zoek Woonplaats op de kaart. Lees wat erachter staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-05:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-df87315035bbf5",
+      "role": "guide",
+      "text": "Dit hoort bij een ander vak. Zoek Woonplaats op de kaart. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-05:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b5c9b7656504b4",
+      "role": "guide",
+      "text": "Lees de gegevenskaart. Wat is de woonplaats? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-05:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9efd6bc585752c",
+      "role": "target",
+      "text": "Woonplaats: Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1c524d478e6feb",
+      "role": "target",
+      "text": "Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-94444481f71d6b",
+      "role": "guide",
+      "text": "Zoek elk woord van het formulier op de kaart. Schrijf steeds het gegeven dat erachter staat. Werk van boven naar beneden.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-06:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a2d5108fd4a5ee",
+      "role": "guide",
+      "text": "Vergelijk de drie adresvakken met de kaart. Kijk per vak of je hetzelfde hebt geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-06:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0b0c30910f2d8d",
+      "role": "guide",
+      "text": "Elke regel van het voorbeeld heeft een eigen gegeven. Gebruik op jouw formulier steeds het goede vak.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-06:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-86411f931bd72d",
+      "role": "guide",
+      "text": "Vul op formulier A de straat in. Schrijf daarna het huisnummer en de woonplaats. Gebruik de gegevenskaart.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-06:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-04810480aae32c",
+      "role": "target",
+      "text": "Straat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6cef0a59075f67",
+      "role": "guide",
+      "text": "Vergelijk Voornaam op het blad met Voornaam op de kaart. Kijk daarna op dezelfde manier naar Achternaam.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-07:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-4f05bb26a4695d",
+      "role": "guide",
+      "text": "Lees beide regels terug. Staan de namen nu op dezelfde plek als op de kaart? Pas aan wat nog verkeerd staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-07:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-65a5186c95b086",
+      "role": "guide",
+      "text": "In het voorbeeld zijn twee gegevens verwisseld. Na het verbeteren staan ze in het goede vak.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-07:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ac782cee4470dd",
+      "role": "guide",
+      "text": "Kijk bij opdracht 7 op het antwoordblad. De twee namen staan verkeerd. Streep elke verkeerde naam weg. Schrijf de goede naam ernaast.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-07:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-07fb25284a86f2",
+      "role": "target",
+      "text": "Straat: Woerden\nWoonplaats: Lindelaan\n\nNa het verbeteren\nStraat: Lindelaan\nWoonplaats: Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d15d13af02374b",
+      "role": "guide",
+      "text": "Luister opnieuw naar het hele getal. Kijk daarna welke cijfers je hebt geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-08:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d7f1cd9a8258f6",
+      "role": "guide",
+      "text": "Luister nog een keer. Vergelijk wat je hoort met jouw getal. Verander het als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-08:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ccd2d5651c9249",
+      "role": "guide",
+      "text": "In het voorbeeld hoor je een getal. Daarna zie je hoe je dat met cijfers schrijft.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-08:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a8204f713b902b",
+      "role": "guide",
+      "text": "Luister naar het huisnummer. Schrijf het in cijfers bij opdracht 8 op het antwoordblad.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-08:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5dd5e7e931168a",
+      "role": "target",
+      "text": "zestien",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-08:model"
+      ],
+      "existingSrc": "/package-audio/woorden-20261025/TR-A1-K-414.mp3",
+      "existingCandidateSrc": "/package-audio/woorden-20261025/TR-A1-K-414.mp3"
+    },
+    {
+      "id": "alfa-c-f-cdc70d6a8b54cf",
+      "role": "guide",
+      "text": "Zoek op de nieuwe kaart wat er veranderd is. De naam en de woonplaats veranderen niet.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-09:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-886474deb71d4f",
+      "role": "guide",
+      "text": "Vergelijk de twee nieuwe gegevens met de nieuwe adreskaart. Verbeter wat nog niet hetzelfde is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-09:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-541feefbc423e1",
+      "role": "guide",
+      "text": "In dit voorbeeld verandert alleen het huisnummer. In jouw opdracht veranderen twee adresgegevens.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-09:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-448785f5830f83",
+      "role": "guide",
+      "text": "Safa heeft een nieuw adres. Kijk naar de nieuwe adreskaart. Schrijf bij opdracht 9 de nieuwe straat en het nieuwe huisnummer in de lege vakken.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-09:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6712fb73eabbed",
+      "role": "target",
+      "text": "Oud huisnummer: 28\nNieuw huisnummer: 30\n\nIn het nieuwe vak komt\nHuisnummer: 30",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f562abaed82943",
+      "role": "target",
+      "text": "Safa Elmi verhuist.\nNieuwe straat: Parklaan\nNieuw huisnummer: 146\nWoonplaats: Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-09:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-af5a814e427dd7",
+      "role": "guide",
+      "text": "Kies een manier waardoor je het juiste nummer te weten komt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-10:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-09bd8baa4b0267",
+      "role": "guide",
+      "text": "Dan weet je het juiste nummer nog niet. Kies een manier om het nummer te controleren.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-10:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-dd4a2b28aac893",
+      "role": "guide",
+      "text": "In dit voorbeeld zoekt iemand een ontbrekende straatnaam.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-10:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d4467e8479d341",
+      "role": "guide",
+      "text": "Je wilt een formulier invullen. Je weet het huisnummer niet. Wat kun je doen? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-10:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-58e27867e13bc1",
+      "role": "target",
+      "text": "Zoek de straatnaam op of vraag om hulp.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-941c28b3aa5f5a",
+      "role": "guide",
+      "text": "Zoek elk woord van het formulier op de nieuwe kaart. Schrijf in het vak wat erachter staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-11:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1e18a3715a9a45",
+      "role": "guide",
+      "text": "Vergelijk elk vak op formulier C met de nieuwe kaart. Verbeter wat niet hetzelfde is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-11:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-38b046be38132e",
+      "role": "guide",
+      "text": "Het voorbeeld laat zien waar de gegevens staan. Vul daarna zelf de vakken op formulier C in.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-11:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f17f91589cb6ca",
+      "role": "guide",
+      "text": "Lees de kaart met de nieuwe gegevens van Safa. Vul formulier C op het antwoordblad in. Begin bij Voornaam.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-11:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8e0e9acd8b0077",
+      "role": "target",
+      "text": "Voornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-11:model",
+        "klink-alfa-c-aanvulling-formulier-11:source",
+        "klink-alfa-c-aanvulling-formulier-12:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-005fe5a907718c",
+      "role": "guide",
+      "text": "Begin bovenaan. Lees eerst het woord bij het vak. Kijk daarna naar jouw antwoord en de kaart.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-12:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d4672c0292e170",
+      "role": "guide",
+      "text": "Is een vak nog leeg of staat er iets anders dan op de kaart? Vul dat vak aan of verbeter het.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-12:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-44f27a5deda43c",
+      "role": "guide",
+      "text": "Kijk naar formulier C bij opdracht 11. Lees wat je hebt ingevuld. Vergelijk elk vak met de nieuwe gegevenskaart.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-12:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cd397054e8ee33",
+      "role": "guide",
+      "text": "Je leest korte taken en voert ze uit. Je schrijft ook een bericht. Leg het antwoordblad en een pen klaar. Je hebt een tafel, een doek, een bak, een map en een boek nodig.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "werk:start"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c2df74caf0bc54",
+      "role": "guide",
+      "text": "Je hebt taken gelezen en uitgevoerd. Je hebt ook vragen en berichten geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "werk:end"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e95954b4d204d3",
+      "role": "guide",
+      "text": "De cijfers laten zien in welke volgorde je werkt. Lees van boven naar beneden.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-01:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c523abfa24301d",
+      "role": "guide",
+      "text": "Lees de drie regels opnieuw. Begin bij 1.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-01:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-db1e50f7f07f49",
+      "role": "guide",
+      "text": "In het voorbeeld doe je eerst stap 1. Daarna doe je stap 2.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-01:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8359553b5335fe",
+      "role": "guide",
+      "text": "Lees de stappen voor het schoonmaken van de tafel. Begin bij 1.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-01:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0d63547b72575b",
+      "role": "target",
+      "text": "1 Pak een boek.\n2 Leg het boek op de tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-01:model",
+        "klink-alfa-c-aanvulling-werk-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d0e952ea28e6c5",
+      "role": "target",
+      "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-01:source",
+        "klink-alfa-c-aanvulling-werk-02:source",
+        "klink-alfa-c-aanvulling-werk-03:source",
+        "klink-alfa-c-aanvulling-werk-04:source",
+        "klink-alfa-c-aanvulling-werk-05:source",
+        "klink-alfa-c-aanvulling-werk-06:source",
+        "klink-alfa-c-aanvulling-werk-08:source",
+        "klink-alfa-c-aanvulling-werk-12:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-fdee75d8188b00",
+      "role": "guide",
+      "text": "Lees de regel die bovenaan staat bij 1.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-02:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a81c47abdbdc81",
+      "role": "guide",
+      "text": "Dit is niet de eerste stap. Lees de regel bij 1 nog eens. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-02:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-34e5b1d2684829",
+      "role": "guide",
+      "text": "Lees de drie stappen. Wat doe je eerst? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-02:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-78e94ece34f7bf",
+      "role": "target",
+      "text": "1 Pak een doek.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a973e536796b15",
+      "role": "target",
+      "text": "Een doek pakken.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-02:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-74fb119fa0b979",
+      "role": "guide",
+      "text": "Zoek de stap die al klaar is. Lees dan de regel eronder.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-03:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-05af334d268542",
+      "role": "guide",
+      "text": "Deze handeling komt hier niet na het pakken. Lees de volgende regel in de lijst. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-03:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-90d9f77b12ffab-r2",
+      "role": "guide",
+      "text": "Je hebt de doek gepakt. Lees de stappen. Wat doe je daarna? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-03:instruction"
+      ],
+      "existingSrc": null,
+      "replacesCandidate": "alfa-c-f-90d9f77b12ffab",
+      "pronunciationText": "Je hebt dé doek gepakt. Lees de stappen. Wat doe je daarna? Tik op het antwoord."
+    },
+    {
+      "id": "alfa-c-f-1ae36a78f37509",
+      "role": "target",
+      "text": "2 Maak de tafel schoon.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-772276759832c2",
+      "role": "target",
+      "text": "De tafel schoonmaken.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9095fa9a2f379f",
+      "role": "guide",
+      "text": "Lees de laatste regel helemaal. Kijk waar de doek naartoe gaat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-04:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a22d26bf9c248b",
+      "role": "guide",
+      "text": "Die plek staat niet in de laatste stap. Lees die regel nog eens. Tik op een andere plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-04:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7a5cd05deb882b",
+      "role": "guide",
+      "text": "Lees de laatste stap. Waar leg je de doek als je klaar bent? Tik op de plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-04:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-14540348110f04",
+      "role": "target",
+      "text": "3 Leg de doek in de bak.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-04:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-62cf6e5d90c1a7",
+      "role": "target",
+      "text": "in de bak",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-04:model",
+        "klink-alfa-c-aanvulling-werk-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-37e2d118ed25be",
+      "role": "guide",
+      "text": "Kijk welk cijfer je als laatste hebt gedaan. Lees daarna de regel onder dat cijfer.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-05:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-34ee2a37c93bb4",
+      "role": "guide",
+      "text": "Kijk naar de lijst en naar de spullen. Heb je alle stappen gedaan? Doe nog wat ontbreekt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-05:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a3dcf7d358c7d1",
+      "role": "guide",
+      "text": "Lees in het voorbeeld eerst de bovenste regel. Daarna volgt de tweede regel. Bij jouw taak werk je ook regel voor regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-05:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b2892a005ee4db",
+      "role": "guide",
+      "text": "Lees stap 1. Doe die stap. Lees daarna de volgende stap en doe die. Ga zo door tot je klaar bent.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-05:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9183d8c9e6e74d",
+      "role": "guide",
+      "text": "Noem waarover het bericht gaat. Schrijf wat daarmee is gebeurd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-06:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2219960e1d3f53",
+      "role": "guide",
+      "text": "Lees jouw bericht terug. Kan een collega begrijpen wat klaar is? Vul aan wat nog niet duidelijk is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-06:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-16a4d866b64c52",
+      "role": "guide",
+      "text": "Het voorbeeldbericht vertelt wat klaar is. Jouw bericht gaat over de tafel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-06:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ca9c366db3afce",
+      "role": "guide",
+      "text": "De tafel is nu schoon. Schrijf bij opdracht 6 een kort bericht voor een collega. Laat weten dat je klaar bent met de tafel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-06:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-bc744872056f1b",
+      "role": "target",
+      "text": "De map ligt op de tafel.\n\nVoorbeeldbericht\nDe map ligt klaar op tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b3b5c1836c5c9c",
+      "role": "guide",
+      "text": "Zoek de zin met doek. Lees die zin helemaal.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-07:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5cecd6851a1d9c",
+      "role": "guide",
+      "text": "Deze plek staat niet in het bericht. Lees de zin over de doek nog eens. Tik op een andere plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-07:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-51af1b6e7dbda7-r2",
+      "role": "guide",
+      "text": "Lees het bericht. Waar ligt de doek nu? Tik op de plek.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-07:instruction"
+      ],
+      "existingSrc": null,
+      "replacesCandidate": "alfa-c-f-51af1b6e7dbda7",
+      "pronunciationText": "Lees het bericht. Waar ligt dé doek nu? Tik op de plek."
+    },
+    {
+      "id": "alfa-c-f-34d3e4bfd0ec4d",
+      "role": "target",
+      "text": "De doek ligt in de bak.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cd3cd0d5593f5f",
+      "role": "target",
+      "text": "De tafel is schoon.\nDe doek ligt in de bak.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-07:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-247d8d14943905",
+      "role": "guide",
+      "text": "Schrijf waarover je uitleg nodig hebt. Maak er een vraag van.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-08:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f21d8d7ad25301",
+      "role": "guide",
+      "text": "Lees jouw vraag terug. Begrijpt een collega dat jij niet weet welke bak je nodig hebt? Verander de vraag als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-08:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1b17af798af598",
+      "role": "guide",
+      "text": "Het voorbeeld is een vraag over een map. Schrijf jouw vraag over de bak.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-08:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5c87cf3d000adb",
+      "role": "guide",
+      "text": "Je weet niet welke bak je moet gebruiken. Schrijf bij opdracht 8 een vraag voor een collega.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-08:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-602c897cb7a3cf",
+      "role": "target",
+      "text": "Je weet niet welke map je moet pakken.\n\nVoorbeeldvraag\nWelke map moet ik pakken?",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-08:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9e1efd815ae9a0",
+      "role": "guide",
+      "text": "Lees eerst één regel. Doe wat er staat. Lees daarna de volgende regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-09:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7ecd6f6a93ca55",
+      "role": "guide",
+      "text": "Kijk naar de stappen en de spullen. Heb je gedaan wat op elke regel staat? Doe nog wat ontbreekt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-09:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-fa39fbda65e674",
+      "role": "guide",
+      "text": "Het voorbeeld laat de hele volgorde als tekst zien. Lees de regels één voor één.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-09:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1fbe21974b2de8",
+      "role": "guide",
+      "text": "Lees de stappen met de map en het boek. Doe de stappen één voor één.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-09:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-59ee7b97e0e5b1",
+      "role": "target",
+      "text": "1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5e0790f178ee8f",
+      "role": "target",
+      "text": "Voor de les\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-09:source",
+        "klink-alfa-c-aanvulling-werk-10:source",
+        "klink-alfa-c-aanvulling-werk-11:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f428d2e68c58cd",
+      "role": "guide",
+      "text": "Vergelijk de plek in het bericht met de plek in de laatste stap.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-10:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e9cba4189f0629",
+      "role": "guide",
+      "text": "Lees jouw nieuwe bericht terug. Staat de map op de plek uit de laatste stap? Verander wat nog niet klopt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-10:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a879ffed20cd9a",
+      "role": "guide",
+      "text": "In het voorbeeld klopt de plek eerst niet. Het nieuwe bericht noemt de plek uit de opdracht.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-10:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b44772c2bad46d",
+      "role": "guide",
+      "text": "Lees de stappen met de map. Kijk naar het bericht bij opdracht 10 op het antwoordblad. Schrijf het goede bericht eronder.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-10:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-19bbd3495370f1",
+      "role": "target",
+      "text": "Leg het boek op de tafel.\n\nVerkeerd bericht\nHet boek ligt op de stoel.\n\nGoed bericht\nHet boek ligt op de tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-d3600ec81e7f4c",
+      "role": "guide",
+      "text": "Lees elke stap voordat je iets doet. Kijk na de laatste stap waar de map ligt. Schrijf dat op.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-11:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-56ca3e59101811",
+      "role": "guide",
+      "text": "Vergelijk jouw bericht met de plek van de map. Lees ook de laatste stap nog eens. Verbeter je bericht als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-11:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5a13b61ef37f5d",
+      "role": "guide",
+      "text": "Het voorbeeldbericht noemt de plek van de map. Doe bij jouw poging eerst zelf de taak.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-11:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a11820d89cc778",
+      "role": "guide",
+      "text": "Doe de drie stappen met de map en het boek. Schrijf daarna bij opdracht 11 waar de map ligt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-11:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1c57693575cb5b",
+      "role": "target",
+      "text": "De map ligt op de tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f4da7616065039",
+      "role": "guide",
+      "text": "Denk aan een woord of een stap waarbij je moest nadenken.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-12:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-acccbe76622fee",
+      "role": "guide",
+      "text": "Kijk de lijst nog eens door. Zeg wat voor jou duidelijk was en wat je nog wilt vragen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-12:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2f7c4120c89bd9",
+      "role": "guide",
+      "text": "Denk aan het werken met de stappen. Zeg hardop wanneer jij iets wilde vragen. Je mag ook zeggen dat alles duidelijk was.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-werk-12:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c7356a55bca165",
+      "role": "guide",
+      "text": "Je leest woorden en teksten hardop. Je schrijft ook wat je hoort. Leg het antwoordblad en een pen klaar. Voor opdracht 10 heb je het handgeschreven briefje nodig.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "verbinden:start"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cbaab1d6387740",
+      "role": "guide",
+      "text": "Je hebt hardop gelezen en zelf geschreven. Kijk wat je nog wilt oefenen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "verbinden:end"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8671708d8b90ea",
+      "role": "guide",
+      "text": "Is een woord lastig? Lees de letters of een bekend deel. Lees daarna het hele woord nog eens.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-01:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3cbf045a1d3ec2",
+      "role": "guide",
+      "text": "Lees het lastige woord opnieuw. Ga daarna verder met het volgende woord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-01:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5b3c56606406c7",
+      "role": "guide",
+      "text": "Lees het woord in het voorbeeld als één woord. Bij jouw opdracht lees je de bovenste regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-01:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ca0ed35a9f7257",
+      "role": "guide",
+      "text": "Lees de bovenste regel met woorden hardop. Lees één woord tegelijk. Neem de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-01:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e2ef6b2f8eecdc",
+      "role": "target",
+      "text": "pen",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-01:model",
+        "klink-alfa-c-aanvulling-verbinden-04:model"
+      ],
+      "existingSrc": "/package-audio/taalroute/klink-woord-pen.wav",
+      "existingCandidateSrc": "/package-audio/taalroute/klink-woord-pen.wav"
+    },
+    {
+      "id": "alfa-c-f-3ef5eb9b3e4088",
+      "role": "target",
+      "text": "brood  stoel  krant  school  gang  bank\nramen  muren  sokken  koekjes  jasje  gepakt",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-01:source",
+        "klink-alfa-c-aanvulling-verbinden-02:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-275d81101241a3",
+      "role": "guide",
+      "text": "Kijk of je een deel van het woord al kent. Lees dat deel. Lees daarna het hele woord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-02:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f0ee0aee03c962",
+      "role": "guide",
+      "text": "Lees een lastig woord nog eens. Je mag langzaam lezen.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-02:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-91e7149fedfee8",
+      "role": "guide",
+      "text": "Kijk naar de twee woorden in het voorbeeld. Lees het lange woord helemaal.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-02:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c00622f082c513",
+      "role": "guide",
+      "text": "Lees de onderste regel hardop. Probeer elk woord helemaal te lezen. Neem de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-02:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e1dbb878f46b3b",
+      "role": "target",
+      "text": "map",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-02:model"
+      ],
+      "existingSrc": "/package-audio/taalroute/klink-woord-map.mp3",
+      "existingCandidateSrc": "/package-audio/taalroute/klink-woord-map.mp3"
+    },
+    {
+      "id": "alfa-c-f-7d772a342f87f3-r3",
+      "role": "target",
+      "text": "mappen",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-02:model"
+      ],
+      "existingSrc": null,
+      "replacesCandidate": "alfa-c-f-7d772a342f87f3",
+      "pronunciationText": "máppen.",
+      "previousText": "Eén map, twee mappen. Het volgende Nederlandse woord staat in het meervoud."
+    },
+    {
+      "id": "alfa-c-f-16aac5b5966857",
+      "role": "guide",
+      "text": "Luister nog eens naar het getal waar je mee bezig bent. Kijk naar de volgorde van jouw cijfers.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f80aea4bdeb135",
+      "role": "guide",
+      "text": "Luister opnieuw. Lees jouw getal terug. Verander de cijfers als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0f529895060b52",
+      "role": "guide",
+      "text": "In het voorbeeld hoor je een getal. Daarna zie je hoe je het schrijft.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a1331570a61ede",
+      "role": "guide",
+      "text": "Luister naar één getal. Schrijf het in cijfers op het antwoordblad bij opdracht 3. Gebruik voor elk getal een nieuwe regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f4767df0d9b00a",
+      "role": "target",
+      "text": "zevenendertig",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-9e55318a03d5f7",
+      "role": "target",
+      "text": "honderdzesenveertig",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:dictation"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-feef6598cdf9d6",
+      "role": "target",
+      "text": "negenhonderddrie",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-03:dictation"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7efeabfbd07a05",
+      "role": "guide",
+      "text": "Luister nog eens naar het woord waar je mee bezig bent. Lees daarna wat jij hebt geschreven.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cbea4238a0cd9a",
+      "role": "guide",
+      "text": "Luister opnieuw. Vergelijk het woord dat je hoort met jouw geschreven woord. Verbeter het als dat nodig is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-31bcf730c92f5b",
+      "role": "guide",
+      "text": "In het voorbeeld hoor je een woord. Daarna zie je hoe het geschreven is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-93ae24586a6e40",
+      "role": "guide",
+      "text": "Luister naar één woord. Schrijf het op het antwoordblad bij opdracht 4. Schrijf elk woord op een nieuwe regel.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3532a0f9bc0d98",
+      "role": "target",
+      "text": "brood",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:dictation"
+      ],
+      "existingSrc": "/package-audio/woorden-20261025/TL0277.mp3",
+      "existingCandidateSrc": "/package-audio/woorden-20261025/TL0277.mp3"
+    },
+    {
+      "id": "alfa-c-f-aae814fbe39c7f",
+      "role": "target",
+      "text": "ramen",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:dictation"
+      ],
+      "existingSrc": "/package-audio/taalroute/klink-woord-ramen.wav",
+      "existingCandidateSrc": "/package-audio/taalroute/klink-woord-ramen.wav"
+    },
+    {
+      "id": "alfa-c-f-fab03680ccdeb0",
+      "role": "target",
+      "text": "sokken",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:dictation"
+      ],
+      "existingSrc": "/package-audio/taalroute/klink-woord-sokken.wav",
+      "existingCandidateSrc": "/package-audio/taalroute/klink-woord-sokken.wav"
+    },
+    {
+      "id": "alfa-c-f-445e6cd95eed82",
+      "role": "target",
+      "text": "koekjes",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-04:dictation"
+      ],
+      "existingSrc": "/package-audio/taalroute/klink-woord-koekjes.wav",
+      "existingCandidateSrc": "/package-audio/taalroute/klink-woord-koekjes.wav"
+    },
+    {
+      "id": "alfa-c-f-a3a2306f59ef0c",
+      "role": "guide",
+      "text": "Lees jouw zin terug. Staan de woorden los van elkaar? Luister opnieuw als je een woord mist.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-05:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-eeeaf29ee4d697",
+      "role": "guide",
+      "text": "Luister nog een keer naar de hele zin. Vergelijk die met jouw zin. Vul een gemist woord aan of verbeter jouw zin.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-05:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-e9dc34362f60d9",
+      "role": "guide",
+      "text": "In het voorbeeld hoor je een hele zin. Daarna zie je de zin met spaties tussen de woorden.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-05:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-68032ea1d985b3",
+      "role": "guide",
+      "text": "Luister naar de hele zin. Schrijf die bij opdracht 5 op het antwoordblad. Je mag de zin opnieuw beluisteren.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-05:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c73d6d8579be82",
+      "role": "target",
+      "text": "De map is leeg.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-05:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-05af28add8211c",
+      "role": "target",
+      "text": "De fles is leeg.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-05:dictation"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-cb37aeea65821b",
+      "role": "guide",
+      "text": "Kijk naar de beginletter. Lees daarna de rest van het woord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-06:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-54e58369d60575",
+      "role": "guide",
+      "text": "Kijk of je het hele woord hebt gevonden. Lees het woord nog eens.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-06:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-609bb3f84d23e0",
+      "role": "guide",
+      "text": "In het voorbeeld hebben drie woorden dezelfde beginletter. Lees het hele woord om het goede woord te vinden.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-06:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5f54cbd3531b87",
+      "role": "guide",
+      "text": "Zoek het woord brood in de lijst. Wijs het woord op het scherm aan.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-06:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-0b9dda6437014f",
+      "role": "target",
+      "text": "kam\nkop\nkus\n\nGezocht woord\nkop",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-06:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2513d29e31c3f4",
+      "role": "target",
+      "text": "bank\nboek\nbrood\nbus\ndeur\nraam",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-06:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-4bab11b9f5edc2",
+      "role": "guide",
+      "text": "Lees één zin tegelijk. Wat is er eerst? Wat gebeurt er daarna?",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-07:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-b3623505db0365",
+      "role": "guide",
+      "text": "Lees de tekst nog eens. Zeg eerst hoe de fles aan het begin is. Vertel daarna wat Abel doet.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-07:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-fb0e2759c35fb8",
+      "role": "guide",
+      "text": "Lees de korte tekst in het voorbeeld. Kijk hoe je kort kunt vertellen wat er gebeurt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-07:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-ac03516ed78afd",
+      "role": "guide",
+      "text": "Lees de tekst over Abel en de fles. Zeg daarna hardop wat er gebeurt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-07:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-22e83f880537fd",
+      "role": "target",
+      "text": "De map is leeg. Ik stop papier in de map. Nu zit er papier in de map.\n\nVoorbeeld van navertellen\nEerst is de map leeg. Daarna zit er papier in.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-07:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-75c5cb11254fa9",
+      "role": "target",
+      "text": "De fles is leeg. Abel vult de fles met water. Daarna doet hij de dop erop.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-07:source",
+        "klink-alfa-c-aanvulling-verbinden-08:source",
+        "klink-alfa-c-aanvulling-verbinden-09:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c301aa72e419e0",
+      "role": "guide",
+      "text": "Zoek in de tekst de twee dingen die Abel doet. Kijk welke eerst komt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-08:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-fe3b7be3db8491",
+      "role": "guide",
+      "text": "De volgorde of de handeling past niet bij de tekst. Lees wat Abel eerst doet en wat daarna komt. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-08:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-237d45c3be95e0",
+      "role": "guide",
+      "text": "Lees de tekst. Wat doet Abel eerst en wat daarna? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-08:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1289dc115efd03",
+      "role": "target",
+      "text": "Abel vult de fles met water. Daarna doet hij de dop erop.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-08:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8a2dfc684f289f",
+      "role": "target",
+      "text": "Eerst water in de fles. Dan de dop erop.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-08:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f84712a61c0477",
+      "role": "guide",
+      "text": "Denk aan de twee dingen die je doet. Lees terug of de volgorde duidelijk is.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-09:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-07288307ee0430",
+      "role": "guide",
+      "text": "Lees jouw zinnen hardop. Is duidelijk wat je eerst doet en wat daarna? Vul aan wat ontbreekt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-09:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-bcae20130f4f96",
+      "role": "guide",
+      "text": "In het voorbeeld staat één handeling per zin. Schrijf jouw twee zinnen over de fles.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-09:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3e671d08a7bcb7",
+      "role": "guide",
+      "text": "Je wilt een fles vullen en dichtdoen. Schrijf bij opdracht 9 twee korte zinnen. Schrijf eerst wat je met het water doet. Schrijf daarna wat je met de dop doet.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-09:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8f452384d75210",
+      "role": "target",
+      "text": "Een boek in een map doen en de map sluiten.\n\nVoorbeeldzinnen\nIk doe het boek in de map. Daarna doe ik de map dicht.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-09:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-af17d67ab0957a",
+      "role": "guide",
+      "text": "Zoek eerst de tijd op het briefje. Lees daarna de zin over wat je meeneemt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-10:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8fe050378cf154",
+      "role": "guide",
+      "text": "Lees het briefje opnieuw. Kijk apart naar de tijd en naar wat je meeneemt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-10:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-a041531ef9cf4c",
+      "role": "guide",
+      "text": "Lees het handgeschreven voorbeeld. Zoek daarin de dag en de tijd.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-10:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2346beee606715",
+      "role": "guide",
+      "text": "Lees het handgeschreven briefje. Zeg hardop hoe laat de les begint. Zeg daarna wat je meeneemt.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-10:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-57c0158c0b8aef",
+      "role": "target",
+      "text": "Ik kom maandag om 9 uur.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-10:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3e2e7f0744e4e5",
+      "role": "target",
+      "text": "De les begint om 10.00. Neem je map mee.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-10:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3c250e9fbb1005",
+      "role": "guide",
+      "text": "Lees de laatste zin van deze tekst. Gebruik niet het antwoord uit de tekst over de fles.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-11:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6cd682bb95d6e4",
+      "role": "guide",
+      "text": "Dit staat niet als volgende stap in de tekst over de kan. Lees de laatste zin opnieuw. Tik op een ander antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-11:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-3184f7dd9dbaa8",
+      "role": "guide",
+      "text": "Lees de tekst over de kan. Eerst doet de schrijver water in de kan. Wat doet de schrijver daarna? Tik op het antwoord.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-11:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-84bd03469e7c4a",
+      "role": "target",
+      "text": "Daarna zet ik de kan op tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-8f00e89a7d07cd",
+      "role": "target",
+      "text": "De kan op tafel zetten.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-11:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-5cf85f95dbb6c5",
+      "role": "target",
+      "text": "De kan is leeg. Ik vul de kan met water. Daarna zet ik de kan op tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-11:source",
+        "klink-alfa-c-aanvulling-verbinden-12:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-721300f1eacdf9",
+      "role": "guide",
+      "text": "Gaat het bericht over hetzelfde voorwerp als de tekst? Vergelijk het woord voor het voorwerp.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-12:helpVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-6fed77c5b0409d",
+      "role": "guide",
+      "text": "Lees de tekst en jouw nieuwe bericht terug. Kijk of het goede voorwerp in jouw bericht staat.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-12:retryVisible"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-1fc724a697c8f9",
+      "role": "guide",
+      "text": "In het voorbeeld klopt het voorwerp eerst niet. Het nieuwe briefje noemt het voorwerp uit de tekst.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-12:exampleSpoken"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f670227e5c17a4",
+      "role": "guide",
+      "text": "Lees de tekst over de kan. Kijk naar het bericht bij opdracht 12 op het antwoordblad. Schrijf het goede bericht eronder.",
+      "voiceId": "h6uBOiAjLKklte8hdYio",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-12:instruction"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-c3ec917ae92f2d",
+      "role": "target",
+      "text": "Het boek ligt op de stoel.\n\nVerkeerd briefje\nDe map ligt op de stoel.\n\nGoed briefje\nHet boek ligt op de stoel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-verbinden-12:model"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-7b5667f0fe45a1",
+      "role": "target",
+      "text": "Je wilt brood, kaas en water kopen.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-08:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-739dd715fad39e",
+      "role": "target",
+      "text": "Je wilt alleen rijst en melk kopen.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-lijst-10:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-2062afdd33cf2c",
+      "role": "target",
+      "text": "Je krijgt een brief. Je begrijpt niet wat erin staat.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-post-09:source"
+      ],
+      "existingSrc": null
+    },
+    {
+      "id": "alfa-c-f-f92b822d35c98c",
+      "role": "target",
+      "text": "Je vult een formulier in. Je weet het huisnummer niet.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "uses": [
+        "klink-alfa-c-aanvulling-formulier-10:source"
+      ],
+      "existingSrc": null
+    }
+  ]
+}

@@ -38,7 +38,9 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page.getByRole('button', { name: /Zelf oefenen.*Je oefent/ }).click();
     await page.getByRole('button', { name: 'Alfa C', exact: true }).click();
     await page.locator('.pilot-block-cards').waitFor();
-    assert.equal(await page.locator('.pilot-block-cards a').count(), 3);
+    assert.equal(await page.locator('.pilot-block-cards a').count(), 9);
+    assert.equal(await page.locator('.pilot-block-cards [data-pilot-block]').count(), 3);
+    assert.equal(await page.locator('.pilot-block-cards [data-functional-block]').count(), 6);
     assert.equal(await page.locator('[data-chapter]').count(), 12);
     assert(
       await page
