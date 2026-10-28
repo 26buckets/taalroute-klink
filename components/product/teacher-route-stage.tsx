@@ -16,15 +16,22 @@ import {
 export function ClassroomBrand() {
   return (
     <span className="kpd-brand">
-      <span className="sr-only">Klink+Docent</span>
+      <span className="sr-only">Klink+docent</span>
       <Image
         src="/taalroute-menu/klink.svg"
         alt=""
-        width={94}
-        height={32}
+        width={70.48}
+        height={24}
         priority
       />
-      <span aria-hidden="true">+Docent</span>
+      <span aria-hidden="true">+</span>
+      <Image
+        src="/taalroute-menu/klink-docent-suffix.svg"
+        alt=""
+        width={104.76}
+        height={24}
+        priority
+      />
     </span>
   );
 }

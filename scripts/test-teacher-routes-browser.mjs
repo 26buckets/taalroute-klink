@@ -64,7 +64,7 @@ for (const engine of [
           .click();
         await page.locator('[data-classroom="active"]').waitFor();
         assert.equal(
-          await page.locator('h1 .kpd-brand img').getAttribute('src'),
+          await page.locator('h1 .kpd-brand img').first().getAttribute('src'),
           '/taalroute-menu/klink.svg',
         );
         for (let phase = 0; phase < 8; phase++) {
