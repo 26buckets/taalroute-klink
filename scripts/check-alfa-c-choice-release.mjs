@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {verifyDailyRelease, readBeforeDaily} from './check-alfa-c-dagelijks-release.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -11,6 +12,8 @@ export const choiceFiles=[
  'scripts/test-publication-proof.mjs','scripts/check-alfa-c-choice-release.mjs','scripts/test-alfa-c-choice-release.mjs',
 ];
 export function verifyChoiceRelease(read=readFileSync,release=JSON.parse(readFileSync('docs/klink-owner-release-alfa-c-keuze-opdracht-20261028.json'))){
+ const dailyRelease=verifyDailyRelease(read), currentRead=read;
+ read=file=>readBeforeDaily(file,dailyRelease,currentRead);
  assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
  assert.equal(release.userRequest,'Het is mij absoluut niet duidelijk dat ik hier moet kiezen tussen drie antwoorden. Dus deze stijl, dat moet veranderen.');
  assert.equal(release.followupRequest,'Het mist eigenlijk een opdracht. Wat moet... wat moet je doen? Ik moet kiezen, maar wat precies? En waarom? Dus dat is echt niet duidelijk.');
@@ -20,10 +23,10 @@ export function verifyChoiceRelease(read=readFileSync,release=JSON.parse(readFil
  git('merge-base','--is-ancestor',release.baselineSourceCommit,'HEAD');
  assert.equal(release.choiceTasks,28);assert.equal(release.newAudio,0);assert.equal(release.newImages,0);assert.equal(release.humanLearnerTrial,false);
  const roots=['app','components','hooks','data','lib','public','scripts'];
- const changed=git('diff','--name-only',release.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
- const untracked=git('ls-files','--others','--exclude-standard','--',...roots).toString().trim().split('\n').filter(Boolean);
+ const changed=git('diff','--name-only',release.baselineSourceCommit,dailyRelease.baselineSourceCommit,'--',...roots).toString().trim().split('\n').filter(Boolean);
+ const untracked=[]; // The daily successor checks the current working tree.
  assert.deepEqual([...new Set([...changed,...untracked])].sort((a,b)=>a<b?-1:a>b?1:0),[...choiceFiles].sort((a,b)=>a<b?-1:a>b?1:0));
- assert.equal(git('diff',release.baselineSourceCommit,'--','public','data','lib').length,0,'Preserve all content, audio, images and storage');
+ assert.equal(git('diff',release.baselineSourceCommit,dailyRelease.baselineSourceCommit,'--','public','data','lib').length,0,'Preserve all content, audio, images and storage');
  const expected=[...choiceFiles,...['owner-request','live-baseline','review','browser-review','source-manifest','source-drive-verification'].map(n=>`${evidence}/${n}.json`)];
  assert.deepEqual(Object.keys(release.files).sort((a,b)=>a<b?-1:a>b?1:0),expected.sort((a,b)=>a<b?-1:a>b?1:0));
  for(const [path,hash] of Object.entries(release.files))assert.equal(sha(read(path)),hash,path);

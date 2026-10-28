@@ -26,6 +26,8 @@ import {
 } from '@/lib/alfa-c-practice';
 import './alfa-c-practice.css';
 import { functionalBlocks } from '@/lib/alfa-c-functioneel';
+import { dailyBlocks } from '@/lib/alfa-c-dagelijks';
+import { AlfaCDailyPractice, DailyBlockCards } from './alfa-c-dagelijks';
 import { AlfaCFunctionalPractice, FunctionalBlockCards } from './alfa-c-functioneel';
 
 export function AlfaCBlockCards() {
@@ -50,6 +52,7 @@ export function AlfaCBlockCards() {
         </a>
       ))}
       <FunctionalBlockCards />
+      <DailyBlockCards />
     </div>
   );
 }
@@ -127,6 +130,8 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
       </div>
     );
   const functionalBlock = functionalBlocks.find(b => b.id === selected);
+  const dailyBlock = dailyBlocks.find(b => b.id === selected);
+  if (dailyBlock) return <AlfaCDailyPractice key={dailyBlock.id} block={dailyBlock} />;
   if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} />;
   return (
     <div className="learner-page cp-chapters cp-chapter-playing pilot-page">
@@ -172,6 +177,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
               </button>
             ))}
             <FunctionalBlockCards />
+            <DailyBlockCards />
           </div>
         </section>
       ) : !step ? (
