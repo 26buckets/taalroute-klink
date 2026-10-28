@@ -42,6 +42,6 @@ export function verifyChoiceRelease(read=readFileSync,release=JSON.parse(readFil
  assert.deepEqual(manifest.map(r=>r.path).sort((a,b)=>a<b?-1:a>b?1:0),expected.filter(p=>!p.endsWith('/source-manifest.json')&&!p.endsWith('/source-drive-verification.json')).sort((a,b)=>a<b?-1:a>b?1:0));
  for(const row of manifest)assert.equal(row.sha256,release.files[row.path]);
  const backup=JSON.parse(read(`${evidence}/source-drive-verification.json`));assert(backup.parentVerified&&backup.downloadedByteIdentical&&backup.zipCrcVerified);assert.equal(backup.manifestEntriesVerified,manifest.length);
- return release;
+ return {...release,dailyRelease};
 }
-export function readBeforeChoice(file,release,read=readFileSync){return release.files[file]?git('show',release.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeChoice(file,release,read=readFileSync){return release.files[file]?git('show',release.baselineSourceCommit+':'+file):readBeforeDaily(file,release.dailyRelease,read);}
