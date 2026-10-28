@@ -1,0 +1,140 @@
+{
+  "checkedDate": "2026-10-28",
+  "sourceCommit": "a743a83d215f925c4a43496e9ff2a4ee5cc168e6",
+  "live": {
+    "application": "Klink",
+    "builtAt": "2026-10-28T02:18:56.428Z",
+    "sourceCommit": "2b6372862abd57268ecbc959f590f92abfbc9a2c",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b"
+  },
+  "liveMarkerChecks": {
+    "sectionsSha256": true,
+    "sectionPhotosSha256": true,
+    "contentSha256": true
+  },
+  "core": {
+    "wordForms": 337,
+    "meanings": 338,
+    "coreWords": 69,
+    "optionalWords": 262,
+    "supportMeanings": 7,
+    "readingSteps": 37,
+    "recallMoments": 3
+  },
+  "sections": {
+    "sections": 15,
+    "meanings": 338,
+    "spellings": 337,
+    "routes": 302
+  },
+  "runtime": {
+    "packages": 68,
+    "lessons": 786,
+    "uniqueWords": 5127,
+    "uniqueExerciseIds": 15754
+  },
+  "connected": {
+    "total": 1612,
+    "byKind": {
+      "sentence": 1292,
+      "text": 192,
+      "dialogue": 128
+    }
+  },
+  "imported": {
+    "total": 1393,
+    "byLevel": {
+      "Alfa C": 57,
+      "A1": 90,
+      "A2": 105,
+      "B1": 75,
+      "Alfa B": 339,
+      "Alfa A": 727
+    },
+    "byDomain": {
+      "spelling": 32,
+      "grammatica": 108,
+      "teksten": 111,
+      "gesprekken": 10,
+      "schrijven": 72,
+      "woordpakketten": 1060
+    }
+  },
+  "alfaC": {
+    "originalBlocks": 3,
+    "originalSteps": 36,
+    "functionalBlocks": 6,
+    "functionalSteps": 72
+  },
+  "sounds": 46,
+  "media": {
+    "bindings": 5127,
+    "imageBindings": 433,
+    "audioBindings": 5127
+  },
+  "sourceSnapshot": {
+    "data/klink-curriculum.json": "2306c78b2c89bfd3444b679bd416555a4e384fe8ebb8bda7365abbb20ee9c0e5",
+    "data/klink-connected-content.json": "1a5ae14c1ff765a018fd075724cc6dcb068d4349a88fc1e7e3004a238add974b",
+    "data/klink-content-routing.json": "e8eba2c2c9ed330288e4780e544884adea0b67548fd5a0043b9ea1cbe7dae86b",
+    "data/klink-lexicon-wordbuild-20.json": "365d56db5f540f6d69323e54ee92471cedb8227a0d4a187f9b53c62d18e8b51e",
+    "data/klink-lexicon-wordbuild-rest.json": "f234b566b11ff90394122118476bf707267b41a54a30fbdd4faf213d77f23dee",
+    "data/klink-sounds.json": "426e26b36c8c8b4558ffabd0f166f7c0b10ef0ccdab532ba1b075ad4286f8474"
+  },
+  "sourceSnapshotSha256": "7847de8bcd70cc46cde9a29fb7e89af4de74df945a9ddf020a0151b98c134796",
+  "routes": [
+    {
+      "domain": "klanken",
+      "activity": "content-klanken",
+      "chapter": "sounds",
+      "route": "#learner/chapters/sounds"
+    },
+    {
+      "domain": "spelling",
+      "activity": "content-spelling",
+      "chapter": "spelling",
+      "route": "#learner/chapters/spelling"
+    },
+    {
+      "domain": "grammatica",
+      "activity": "content-grammatica",
+      "chapter": "grammar",
+      "route": "#learner/chapters/grammar"
+    },
+    {
+      "domain": "teksten",
+      "activity": "content-teksten",
+      "chapter": "texts",
+      "route": "#learner/chapters/texts"
+    },
+    {
+      "domain": "gesprekken",
+      "activity": "content-gesprekken",
+      "chapter": "speaking",
+      "route": "#learner/chapters/speaking"
+    },
+    {
+      "domain": "schrijven",
+      "activity": "content-schrijven",
+      "chapter": "writing",
+      "route": "#learner/chapters/writing"
+    },
+    {
+      "domain": "herhaling",
+      "activity": "content-herhaling",
+      "chapter": "repeat",
+      "route": "#learner/chapters/repeat"
+    },
+    {
+      "domain": "woordpakketten",
+      "activity": "content-woordpakketten",
+      "chapter": "words",
+      "route": "#learner/chapters/words"
+    }
+  ]
+}

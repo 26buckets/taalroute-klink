@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-28",
+  "scope": "Offline batch tooling; no runtime content changes",
+  "tests": {
+    "newImporter": {
+      "passed": 18,
+      "failed": 0
+    },
+    "existingImportAndCumulative": {
+      "passed": 20,
+      "failed": 0
+    },
+    "curriculum": {
+      "passed": 48,
+      "skipped": 1,
+      "failed": 0
+    },
+    "browser": {
+      "script": "scripts/test-imported-practice-browser.mjs",
+      "browser": "Chrome",
+      "widths": [
+        1366,
+        768,
+        390,
+        320
+      ],
+      "cases": [
+        "exact text answers",
+        "multiple choice",
+        "teacher participation",
+        "initial response before teacher reference",
+        "retry",
+        "keyboard and touch",
+        "feedback",
+        "progress assessment boundary",
+        "single-choice replacement"
+      ],
+      "result": "passed"
+    },
+    "typescript": "passed",
+    "targetedLint": "passed",
+    "diffWhitespace": "passed",
+    "wordMedia": {
+      "paths": 5558,
+      "missingLocal": 0,
+      "decodedOrHumanReviewed": false
+    }
+  },
+  "notPerformed": [
+    "Real production batch import",
+    "Full all-content browser/media suite",
+    "New production build or deployment",
+    "Independent content review (no new learning content)",
+    "Human classroom/audio/rights/print review"
+  ],
+  "githubActions": {
+    "workflowsFound": 0,
+    "newWorkflows": 0,
+    "heavyCloudRuns": 0
+  },
+  "publication": "not-published"
+}
