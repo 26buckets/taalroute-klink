@@ -50,3 +50,9 @@ Migratie eenmaal uitvoeren op een lokale database zonder teaching-tabellen. Het 
 Geen fysieke digibord-/telefoonproef, schermlezerproef, klasproef, externe beveiligingsaudit of productiebelastingstest. Geen nieuwe audio, beelden of drukbestanden. De ontbrekende lokale DigiBord-stijlreferentie is niet vervangen door een nieuw vormgevingssysteem; bestaande Klink-lettertypen, Lucide-iconen en knoppen zijn hergebruikt.
 
 Geen GitHub Actions toegevoegd; zware controles lokaal. Geen remote database gewijzigd, geen merge en geen publicatie. Herstelpakket bevat bron/migratie/tests/bewijzen, geen persoonlijke codes, sessies of lokale gebruikersdatabase.
+
+## Aansluiting op bijgewerkte hoofdtak
+
+Tijdens de eindcontrole is origin/main bijgewerkt naar a743a83 (Alfa C: alle 72 functionele opdrachten en duidelijkere keuzetaken). Deze basis is zonder conflicten samengevoegd. De nieuwe Alfa C-bronnen, gegevens, beelden en audio zijn bytegelijk aan origin/main behouden. Na de samenvoeging: typecheck, productiebouw, twee docentservicetests, drie Alfa C-inhouds-/opslagtests, de volledige nieuwe docent-browserketen en een echte browsercontrole van de zes functionele blokken plus drie bestaande blokken met openen van de nieuwe speler.
+
+De bestaande test test-alfa-c-choice-release blokkeert de publicatie van deze bredere wijziging: de eerdere beperkte Alfa C-vrijgave staat de extra docentbestanden niet toe. Dit is een verwachte publicatiegrens, geen vrijgave om de controle te verruimen. De blokkade is niet gewijzigd. Een volledige nieuwe Alfa C-audio-/browserreeks is niet herhaald; die bronnen zijn hier niet gewijzigd en de bijbehorende eerdere publicatiebewijzen blijven behouden.

@@ -45,6 +45,7 @@ const checks = [],
 const browser = await chromium.launch({ channel: 'chrome' });
 const context = await browser.newContext({
     viewport: { width: 1280, height: 720 },
+    extraHTTPHeaders: { 'cf-connecting-ip': teacherId },
   }),
   page = await context.newPage();
 page.on('pageerror', (e) => errors.push(e.message));
@@ -97,11 +98,9 @@ try {
   await page.reload();
   await page.getByRole('heading', { name: 'Samira', exact: true }).waitFor();
   pass('Group and two learners persist after reload; access codes shown once');
-  const samira = page
-    .locator('.tw-roster article')
-    .filter({
-      has: page.getByRole('heading', { name: 'Samira', exact: true }),
-    });
+  const samira = page.locator('.tw-roster article').filter({
+    has: page.getByRole('heading', { name: 'Samira', exact: true }),
+  });
   await samira.getByRole('button', { name: 'Opdracht klaarzetten' }).click();
   await page.getByRole('checkbox', { name: 'Samira', exact: true }).waitFor();
   assert.equal(
