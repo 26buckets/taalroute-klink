@@ -148,3 +148,9 @@ test('Published exchange schemas match the executable validation schemas', () =>
   assert.deepEqual(JSON.parse(readFileSync(new URL('../docs/content-import/batch.schema.json', import.meta.url))), batchSchema);
   assert.deepEqual(JSON.parse(readFileSync(new URL('../docs/content-import/register.schema.json', import.meta.url))), registrySchema);
 });
+
+test('Nested presentation requirements and duplicated review bytes cannot bypass acceptance', t => {
+  const f = fixture(t);
+  f.addFile('payload', { ...task, feedback: { ...task.feedback, audioRequired: true } }); f.save(); assert(inspectBatch(f.root, f.folder).report.issues.some(x => x.includes('feedback.audioRequired')));
+  f.addFile('payload', task); f.addFile('independent-ai', readFileSync(join(f.folder, 'files/internal.txt'), 'utf8')); f.save(); assert(inspectBatch(f.root, f.folder).report.blockers.some(x => x.includes('inhoudelijk hetzelfde')));
+});

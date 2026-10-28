@@ -81,6 +81,7 @@ export function inspectBatch(root, folder) {
   const independent = manifest.reviews.find(row => row.stage === 'independent-ai');
   if (independent && [manifest.producerProcessId, ...manifest.reviews.filter(row => row.stage !== 'independent-ai').map(row => row.processId)].includes(independent.processId)) blockers.push('Onafhankelijke AI-review heeft geen afzonderlijk proces.');
   if (new Set(manifest.reviews.map(row => row.evidenceFileId)).size !== manifest.reviews.length) blockers.push('Reviewstappen gebruiken hetzelfde bewijsbestand.');
+  if (new Set(manifest.reviews.map(row => file(row.evidenceFileId).sha256)).size !== manifest.reviews.length) blockers.push('Reviewstappen gebruiken inhoudelijk hetzelfde bewijsbestand.');
   const visiting = new Set(), visited = new Set();
   function visit(id) {
     if (visiting.has(id)) throw Error(`Cyclische afhankelijkheid: ${id}`);
@@ -114,6 +115,18 @@ export function inspectBatch(root, folder) {
       issues.push(...importedItemIssues(payload).map(issue => `${row.id}: ${issue}`));
       const allowed = ['id', 'domain', 'level', 'axis', 'title', 'objective', 'sourceIds', 'mode', 'prompt', 'stimulus', 'options', 'correctOptionIds', 'acceptedAnswers', 'feedback', 'teacherGuidance', 'prerequisites', 'teacherReference', 'teacherWorkflow'];
       for (const key of Object.keys(payload)) if (!allowed.includes(key)) issues.push(`${row.id}: niet-ondersteund taakveld ${key}.`);
+      const fields = (value, keys, label) => {
+        if (value && typeof value === 'object' && !Array.isArray(value)) for (const key of Object.keys(value)) if (!keys.includes(key)) issues.push(`${row.id}: niet-ondersteund taakveld ${label}.${key}.`);
+      };
+      fields(payload.feedback, ['correct', 'retry'], 'feedback');
+      if (Array.isArray(payload.options)) for (const option of payload.options) fields(option, ['id', 'text'], 'option');
+      fields(payload.teacherReference, ['correctOptionIds', 'acceptedAnswers', 'evidence', 'requiredSemanticSlots', 'meaningCheck', 'automaticCorrectness', 'showOnlyAfterInitialResponses'], 'teacherReference');
+      if (Array.isArray(payload.teacherReference?.evidence)) for (const proof of payload.teacherReference.evidence) fields(proof, ['quote'], 'evidence');
+      fields(payload.teacherWorkflow, ['kind', 'phases', 'materials', 'criteria', 'expected', 'help', 'targetWordIds', 'sourceLessonIds', 'countCategory', 'sourceHash'], 'teacherWorkflow');
+      if (Array.isArray(payload.teacherWorkflow?.phases)) for (const phase of payload.teacherWorkflow.phases) {
+        fields(phase, ['id', 'label', 'learnerText', 'instruction', 'response', 'fields', 'interlude', 'tiles', 'correction'], 'phase');
+        fields(phase.correction, ['oldValue', 'activeValue'], 'correction');
+      }
       const route = importedRoutes.find(route => route.domain === payload.domain);
       if (row.destination.adapter !== 'imported-practice' || row.destination.role !== 'learner' || row.destination.route !== `#learner/chapters/${route?.chapter}`) blockers.push(`${row.id}: geen ondersteunde oefenbestemming.`);
       if (payload.id !== row.id || payload.level !== row.level || payload.objective !== row.objective || row.assessment.mode !== (payload.mode === 'teacher' ? 'participation' : 'answer')) issues.push(`${row.id}: contentkaart en softwarekaart verschillen.`);
