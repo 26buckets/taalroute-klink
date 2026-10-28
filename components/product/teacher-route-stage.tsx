@@ -56,13 +56,17 @@ export function TeacherRouteStage({
   const [response, setResponse] = useState('');
   const [review, setReview] = useState(false);
   const [selectedWord, setSelectedWord] = useState('');
+  const [selectedSentence, setSelectedSentence] = useState('');
+  const textParts = classroomRoutes.c.example.split('\n');
   const route = classroomRoutes[state.route];
   const shown = state.shown[state.phase];
   const sentence = (
     <p
       className={`kpd-route-text${state.route === 'c' ? ' kpd-message-text' : ''}`}
     >
-      {route.example}
+      {state.route === 'c'
+        ? textParts.map((part) => <span key={part}>{part}</span>)
+        : route.example}
     </p>
   );
   const photo = (
@@ -77,16 +81,15 @@ export function TeacherRouteStage({
   const revealButton = (
     <button className="secondary-button" onClick={reveal}>
       <Eye />
-      {state.route === 'c' && state.phase === 5
+      {state.route === 'c' && state.phase === 6
         ? shown
-          ? 'Voorbeeldantwoord verbergen'
-          : 'Voorbeeldantwoord tonen'
+          ? 'Voorbeeldzin verbergen'
+          : 'Voorbeeldzin tonen'
         : shown
           ? 'Tekst verbergen'
           : 'Tekst tonen'}
     </button>
   );
-  const messageParts = ['De mat is nat.', 'Leg hem buiten.'];
   const sequence = sequenceForRoute(state.route);
   const assistance =
     state.variant === 'support'
@@ -117,6 +120,9 @@ export function TeacherRouteStage({
         <div className="kpd-word-column">
           <div className="kpd-word-space">
             {shown && sentence}
+            {state.route === 'c' && state.phase === 0 && (
+              <p>Kom binnen. Veeg je voeten op de mat.</p>
+            )}
             {state.phase === 1 && (
               <p>De docent leest voor. Luister en vertel.</p>
             )}
@@ -150,23 +156,17 @@ export function TeacherRouteStage({
       </>
     ) : (
       <>
-        <p>
-          {question === 0
-            ? 'Welke zin vertelt wat er is?'
-            : 'Welke zin zegt wat je moet doen?'}
-        </p>
+        <p>{classroomRoutes.c.questions[question].prompt}</p>
         <div className="kpd-message-choices">
-          {messageParts.map((part, i) => (
+          {textParts.map((part, i) => (
             <button
               className="secondary-button"
               key={part}
               onClick={() =>
                 setFeedback(
-                  i === question
-                    ? i === 0
-                      ? 'Ja, de mat is nat.'
-                      : 'Ja, je moet de mat buiten leggen.'
-                    : 'Lees beide zinnen nog eens. Welke past bij de vraag?',
+                  i === classroomRoutes.c.questions[question].answer
+                    ? `Ja. ${part}`
+                    : 'Lees de zinnen nog eens. Welke past bij de vraag?',
                 )
               }
             >
@@ -179,7 +179,7 @@ export function TeacherRouteStage({
           <button
             className="secondary-button"
             onClick={() => {
-              setQuestion(1 - question);
+              setQuestion((question + 1) % classroomRoutes.c.questions.length);
               setFeedback('');
             }}
           >
@@ -249,10 +249,10 @@ export function TeacherRouteStage({
                 isCorrectSequence(state.route, state.order)
                   ? state.route === 'b'
                     ? 'Ja, de zin zegt waar de mat ligt.'
-                    : 'Ja, eerst de situatie en dan de opdracht.'
+                    : 'Ja, de zin vertelt wat je op de mat doet.'
                   : state.route === 'b'
                     ? 'Lees je zin. Begin met De mat en zoek daarna waar de mat ligt.'
-                    : 'Begin met wat er is. Leg daarna wat je moet doen.',
+                    : 'Begin met Ik. Zoek daarna wat ik doe en waarop.',
               )
             }
           >
@@ -300,29 +300,7 @@ export function TeacherRouteStage({
               </span>
             )}
             {shown && state.route === 'c' && (
-              <>
-                <p>
-                  Waarnaar verwijst <strong>hem</strong>?
-                </p>
-                <div className="kpd-word-cards">
-                  {['mat', 'nat', 'buiten'].map((word) => (
-                    <button
-                      className="secondary-button"
-                      key={word}
-                      onClick={() =>
-                        setFeedback(
-                          word === 'mat'
-                            ? 'Ja, hem verwijst naar de mat.'
-                            : 'Lees de eerste zin terug. Over welk voorwerp gaat het?',
-                        )
-                      }
-                    >
-                      {word}
-                    </button>
-                  ))}
-                </div>
-                {status}
-              </>
+              <p>Wat gebeurt er? Vertel hoe de zinnen bij elkaar horen.</p>
             )}
           </div>
           <div className="kpd-actions">
@@ -373,20 +351,41 @@ export function TeacherRouteStage({
     );
   if (state.phase === 5)
     return (
+      <>
+        <p>Eén doet voor. De ander kiest en leest. Wissel daarna.</p>
+        <div className="kpd-message-choices">
+          {textParts.map((part) => (
+            <button
+              className="secondary-button"
+              key={part}
+              aria-pressed={selectedSentence === part}
+              onClick={() => setSelectedSentence(part)}
+            >
+              {part}
+            </button>
+          ))}
+        </div>
+        {selectedSentence && (
+          <output className="kpd-route-feedback" aria-live="polite">
+            Lees de gekozen zin. Past die bij wat je zag?
+          </output>
+        )}
+      </>
+    );
+  if (state.phase === 6 && state.route === 'c')
+    return (
       <div className="kpd-response-layout">
         <div>
-          {sentence}
-          <p>Vertel wat je doet.</p>
+          <p>Vertel over de mat bij jou thuis.</p>
+          <p>Waar ligt hij? Wat doe jij als je binnenkomt?</p>
           {shown && (
-            <p className="kpd-route-model">
-              Een mogelijk antwoord: {route.replyModel}
-            </p>
+            <p className="kpd-route-model">Bijvoorbeeld: {route.replyModel}</p>
           )}
           <div className="kpd-actions">{revealButton}</div>
         </div>
         <div>
           <label className="kpd-response-label">
-            Schrijf een kort antwoord.
+            Schrijf hier je eigen zin.
             <textarea
               value={response}
               onChange={(e) => {
@@ -403,12 +402,12 @@ export function TeacherRouteStage({
               disabled={!response.trim()}
               onClick={() => setReview(!review)}
             >
-              Bespreek het antwoord
+              Bespreek de zin
             </button>
           </div>
           {review && (
             <output>
-              Is duidelijk waar de mat nu ligt? Lees je antwoord terug.
+              Past jouw zin bij de mat? Begrijpt de ander wat je bedoelt?
             </output>
           )}
         </div>
@@ -419,11 +418,7 @@ export function TeacherRouteStage({
     return (
       <>
         <PencilLine className="kpd-paper-icon" aria-hidden="true" />
-        <p>
-          {state.route === 'b'
-            ? 'Lees, maak de zin en wijs de plaats aan.'
-            : 'Lees het bericht en schrijf een kort antwoord.'}
-        </p>
+        <p>Lees, maak de zin en wijs de plaats aan.</p>
         {shown && sentence}
         <div className="kpd-actions">{revealButton}</div>
       </>
@@ -434,7 +429,7 @@ export function TeacherRouteStage({
       <p>
         {state.route === 'b'
           ? 'Lees zonder voorbeeld. Vertel waar de mat ligt.'
-          : 'Vertel wat er moest gebeuren en waarom. Controleer daarna.'}
+          : 'Vertel wat er gebeurt. Lees daarna de tekst nog eens.'}
       </p>
       {shown && sentence}
       <div className="kpd-actions">
@@ -489,16 +484,13 @@ export function RouteWorksheet({
         </>
       ) : (
         <>
-          <p>1. Lees. Zet een streep onder de opdracht.</p>
-          <p>
-            2. Trek een lijn van <strong>hem</strong> naar het bedoelde woord in
-            het bericht.
-          </p>
-          <p>3. De opdracht is klaar. Schrijf kort terug.</p>
-          {variant === 'support' && <p>De mat …</p>}
+          <p>1. Lees. Doe voor wat je leest. Wijs de passende zin aan.</p>
+          <p>2. Bouw de laatste zin met de losse woordkaartjes.</p>
+          <p>3. Zeg of schrijf een eigen zin over de mat bij jou thuis.</p>
+          {variant === 'support' && <p>Bij mij …</p>}
           <div className="kpd-write-line" />
           <div className="kpd-write-line" />
-          <p>Lees terug. Begrijpt de ander jouw antwoord?</p>
+          <p>Lees terug. Begrijpt de ander jouw zin?</p>
         </>
       )}
     </article>
@@ -512,9 +504,7 @@ export function RouteCards({ route }: { route: ClassroomRoute }) {
         <Image src="/klink-wordmark.svg" alt="Klink" width={125} height={41} />
         <h2>DE MAT</h2>
       </header>
-      <div
-        className="kpd-route-cut-cards"
-      >
+      <div className="kpd-route-cut-cards">
         {sequenceForRoute(route).map((text, i) => (
           <div key={i}>{text}</div>
         ))}

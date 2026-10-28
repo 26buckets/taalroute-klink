@@ -1,5 +1,7 @@
 # Direct les openen — correctie Nico, 28 oktober 2026
 
+**Latere correctie, 28 oktober 2026:** de berichtopdracht hieronder is vervangen door Stap 3 · Tekst. De actuele inhoud, bediening en controle staan in [STAP-3-TEKST.md](STAP-3-TEKST.md). De afspraken over direct openen en afzonderlijke docentinformatie blijven gelden.
+
 ## Besluit
 
 De verplichte voorbereiding en vooraf gekozen leerroute vervallen. Open Klink+docent, klik Les openen en begin samen. Het bord toont drie zichtbare stappen: 1 Woord, 2 Zin, 3 Bericht. Voor de docent horen die bij de uitwerking Alfa A/B/C. Die niveauaanduidingen blijven buiten de projectie. Gevorderde cursisten doen ook mee met de eerste woordopbouw; anderen kunnen in latere stappen blijven meedoen. De docent kan de zichtbare stappen rechtstreeks kiezen.

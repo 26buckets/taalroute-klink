@@ -65,10 +65,42 @@ for (const engine of [
           );
           if (route !== 'a' && [0, 1, 3, 4, 6, 7].includes(phase)) {
             const show = page.getByRole('button', {
-              name: 'Tekst tonen',
+              name:
+                route === 'c' && phase === 6
+                  ? 'Voorbeeldzin tonen'
+                  : 'Tekst tonen',
               exact: true,
             });
             if (await show.count()) await show.click();
+          }
+          if (route === 'c' && phase === 2) {
+            const choices = page.locator('.kpd-message-choices button');
+            for (let question = 0; question < 3; question++) {
+              await choices.nth((question + 1) % 3).click();
+              assert(
+                !(
+                  await page.locator('.kpd-route-feedback').innerText()
+                ).startsWith('Ja.'),
+              );
+              await choices.nth(question).click();
+              assert(
+                (
+                  await page.locator('.kpd-route-feedback').innerText()
+                ).startsWith('Ja.'),
+              );
+              await page
+                .getByRole('button', { name: 'Andere vraag', exact: true })
+                .click();
+            }
+          }
+          if (route === 'c' && phase === 5) {
+            const choice = page.locator('.kpd-message-choices button').last();
+            await choice.click();
+            assert.equal(await choice.getAttribute('aria-pressed'), 'true');
+            assert.equal(
+              await page.locator('.kpd-route-feedback').innerText(),
+              'Lees de gekozen zin. Past die bij wat je zag?',
+            );
           }
           assert(
             await page.evaluate(
@@ -121,7 +153,7 @@ for (const engine of [
           const answer =
             route === 'b'
               ? ['De', 'mat', 'ligt', 'bij', 'de', 'deur.']
-              : ['De', 'mat', 'is', 'nat.', 'Leg', 'hem', 'buiten.'];
+              : ['Ik', 'veeg', 'mijn', 'voeten', 'op', 'de', 'mat.'];
           await bank
             .getByRole('button', { name: answer.at(-1), exact: true })
             .click();
@@ -194,22 +226,22 @@ for (const engine of [
             before,
           );
           if (route === 'c') {
-            await page.locator('.kpd-phases button').nth(5).click();
+            await page.locator('.kpd-phases button').nth(6).click();
             await page
               .getByRole('textbox', {
-                name: 'Schrijf een kort antwoord.',
+                name: 'Schrijf hier je eigen zin.',
                 exact: true,
               })
-              .fill('De mat ligt buiten.');
+              .fill('Bij mij ligt de mat in de gang.');
             await page
               .getByRole('button', {
-                name: 'Bespreek het antwoord',
+                name: 'Bespreek de zin',
                 exact: true,
               })
               .click();
             await page
               .getByText(
-                'Is duidelijk waar de mat nu ligt? Lees je antwoord terug.',
+                'Past jouw zin bij de mat? Begrijpt de ander wat je bedoelt?',
                 { exact: true },
               )
               .waitFor();
@@ -220,11 +252,11 @@ for (const engine of [
             assert.equal(
               await page
                 .getByRole('textbox', {
-                  name: 'Schrijf een kort antwoord.',
+                  name: 'Schrijf hier je eigen zin.',
                   exact: true,
                 })
                 .inputValue(),
-              'De mat ligt buiten.',
+              'Bij mij ligt de mat in de gang.',
             );
             assert(
               !(
@@ -234,7 +266,7 @@ for (const engine of [
                     Object.values(localStorage),
                   ]),
                 )
-              ).includes('De mat ligt buiten.'),
+              ).includes('Bij mij ligt de mat in de gang.'),
             );
             checks.push(
               `${engine.name}/${route}/${support}/response memory only and preserved through tool`,

@@ -1099,7 +1099,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                 : state.route === "a"
                   ? "Verder met zin"
                   : state.route === "b"
-                    ? "Verder met bericht"
+                    ? "Verder met tekst"
                     : "Les afronden"}
               <ArrowRight />
             </button>
@@ -1367,8 +1367,8 @@ export function TeacherMaterials({ onExit }: { onExit: () => void }) {
         </ol>
         <p>Vervolg: {route.followUp}</p>
         <p>
-          De foto toont de mat bij een deur; niet dat hij nat is. Het bericht is
-          een denkbeeldige situatie. Zin- en berichtaudio zijn niet gekoppeld:
+          De foto toont de mat bij een deur. Binnenkomen en voeten vegen doen
+          jullie in de klas voor. Zin- en tekstaudio zijn niet gekoppeld:
           doe een benodigde luisterbeurt zelf voor. Bestaande woordaudio is geen
           zinopname. Menselijke mediareview en klasproef blijven open.
         </p>
@@ -1393,7 +1393,7 @@ export function TeacherMaterials({ onExit }: { onExit: () => void }) {
                 ? "Letterkaarten"
                 : state.route === "b"
                   ? "Woordkaartjes"
-                  : "Berichtkaartjes"}
+                  : "Woordkaartjes"}
             </option>
             <option value="observation">Docentobservatie</option>
           </select>

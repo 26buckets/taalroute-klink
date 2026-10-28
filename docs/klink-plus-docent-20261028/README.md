@@ -2,7 +2,7 @@
 
 28 oktober 2026. Status: **GEBOUWD EN LOKAAL GETEST; NIET GEPUBLICEERD**.
 
-De actuele bediening staat in [DIRECT-LESOPENEN.md](DIRECT-LESOPENEN.md). **Les openen** gaat direct naar Stap 1 · Woord. Daarna volgen Stap 2 · Zin en Stap 3 · Bericht; alle drie zijn op het bord zichtbaar. Iedereen kan vanaf dezelfde woordopbouw meedoen. De inhoudelijke uitwerking in DRIE-LEERROUTES.md blijft bron; de vroegere verplichte voorbereiding en routekeuze zijn vervallen.
+De actuele bediening staat in [DIRECT-LESOPENEN.md](DIRECT-LESOPENEN.md). **Les openen** gaat direct naar Stap 1 · Woord. Daarna volgen Stap 2 · Zin en Stap 3 · Tekst; alle drie zijn op het bord zichtbaar. Iedereen kan vanaf dezelfde woordopbouw meedoen. De nieuwste inhoudelijke correctie staat in [STAP-3-TEKST.md](STAP-3-TEKST.md); DRIE-LEERROUTES.md beschrijft de eerdere uitwerking; de vroegere verplichte voorbereiding en routekeuze zijn vervallen.
 
 Docentinformatie en werkbladen staan apart op `/#teacher/materials` en wijzigen de bordles niet. Het bord staat op `/#teacher/plus`. Afsluiten keert terug naar de neutrale start met Les openen. Een nieuwe les begint steeds bij het woord; herladen hervat alleen de actuele stap. Acht fasen en vijf hulpmiddelen blijven op één laptopscherm beschikbaar. De oudere controles hieronder beschrijven eerdere versies.
 

@@ -24,7 +24,7 @@ export const classroomMaterialsHash = '#teacher/materials';
 export const roundLabels = {
   a: 'Stap 1 · Woord',
   b: 'Stap 2 · Zin',
-  c: 'Stap 3 · Bericht',
+  c: 'Stap 3 · Tekst',
 };
 export const classroomKey = 'klink.docent.les.v1';
 export const matPack = lessonPackages.find((pack) =>
@@ -178,6 +178,7 @@ export type ClassroomState = {
   variant: Variant;
   route: ClassroomRoute;
   order: number[];
+  textVersion: 1;
   phase: number;
   tiles: string[];
   shown: boolean[];
@@ -194,12 +195,16 @@ export function freshClassroom(
     variant,
     route,
     order: [],
+    textVersion: 1,
     phase: 0,
     tiles: matUnits.map((unit, i) =>
       variant === 'support' && i === 0 ? unit : '',
     ),
     shown: phases.map(
-      (_, i) => route !== 'a' && variant === 'support' && [1, 3, 5].includes(i),
+      (_, i) =>
+        route !== 'a' &&
+        variant === 'support' &&
+        [1, 3, route === 'c' ? 6 : 5].includes(i),
     ),
     image: true,
     regular: false,
@@ -225,8 +230,8 @@ export function restoreClassroom(raw: string | null): ClassroomState {
             value.order.indexOf(i) === index,
         )
       : [];
-    // Legacy C saved sentence cards; their indexes do not describe the new word cards.
-    if (state.route === 'c' && 'prepared' in value) state.order = [];
+    // Old C card indexes belong to the replaced message, not this sentence.
+    if (state.route === 'c' && value.textVersion !== 1) state.order = [];
     state.active = value.active !== false;
     state.phase =
       Number.isInteger(value.phase) &&

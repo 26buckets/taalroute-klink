@@ -57,7 +57,7 @@ test('three content routes are independent of support and trace prerequisites ho
   assert.equal(prereqs.find((p) => p.token === 'ligt').wordRef, null);
   assert.equal(prereqs.find((p) => p.token === 'de').wordRef, 'klink-woord-de');
   assert.equal(
-    prerequisitesForRoute('c').find((p) => p.token === 'buiten').wordRef,
+    prerequisitesForRoute('c').find((p) => p.token === 'veeg').wordRef,
     null,
   );
   assert.equal(
@@ -65,7 +65,7 @@ test('three content routes are independent of support and trace prerequisites ho
     'a',
   );
 });
-test('sentence and message cards preserve duplicates and reject invalid ordering', () => {
+test('sentence and text cards preserve duplicates and reject invalid ordering', () => {
   assert.equal(sequenceForRoute('b').length, 6);
   assert(isCorrectSequence('b', [0, 1, 2, 3, 4, 5]));
   assert(!isCorrectSequence('b', [5, 4, 3, 2, 1, 0]));
@@ -88,6 +88,28 @@ test('sentence and message cards preserve duplicates and reject invalid ordering
       JSON.stringify({ route: 'c', prepared: true, order: [0, 1] }),
     ).order,
     [],
+  );
+  assert.deepEqual(
+    restoreClassroom(JSON.stringify({ route: 'c', order: [0, 1, 2] })).order,
+    [],
+  );
+  const current = { ...freshClassroom('basic', 'c'), order: [0, 1, 2] };
+  assert.deepEqual(
+    restoreClassroom(JSON.stringify(current)).order,
+    current.order,
+  );
+  assert.deepEqual(sequenceForRoute('c'), [
+    'Ik',
+    'veeg',
+    'mijn',
+    'voeten',
+    'op',
+    'de',
+    'mat.',
+  ]);
+  assert.equal(
+    classroomRoutes.c.example.split('\n')[0],
+    classroomRoutes.b.example,
   );
   assert(!('response' in state));
 });

@@ -64,3 +64,7 @@ Niet als productfout verhuld: de bestaande publicatie-whitelist accepteert de ni
 ## Actuele correctie — direct openen en drie gezamenlijke stappen
 
 De eerdere voorbereidingspoort en voorkennisbevestiging zijn expliciet vervallen. Zie DIRECT-LESOPENEN.md. Starten vereist uitsluitend Les openen; daarna samen Woord, Zin en Bericht, inclusief bouwen in alle drie. Docentinformatie en werkbladen zijn onafhankelijk van de bordles. Zes volledige gebruikersreizen op drie schermmaten/twee browsers, 222 routecontroles, 159 bestaande lescontroles, acht randgevallen, zes logica-/hersteltests, menu, types, lint en bouw geslaagd. Nieuwe les wist bordnotities. Bij herladen wordt alleen de actuele stap hersteld. Geen praktijkreview of livepublicatie.
+
+## Nieuwste correctie — stap 3 Tekst
+
+De eerdere berichtopdracht is vervangen op expliciet verzoek van Nico. De actuele inhoud en alle controles staan in STAP-3-TEKST.md. Zes logica-/hersteltests, 222 routecontroles met nieuwe interactiechecks, zes volledige reizen met alle C-fasen op drie schermmaten en 159 bestaande lescontroles geslaagd. Types, gerichte lintcheck en bouw slagen; vier bestaande repo-brede lintmeldingen buiten de wijziging blijven staan. De drie gewijzigde C-printpagina’s zijn visueel gecontroleerd; de foto is op werkelijk formaat circa 369 ppi. Klas-/bord-/printerproef en menselijke niveaureview blijven open. Geen publicatie.

@@ -68,11 +68,15 @@
   margin: 12px 0;
   white-space: normal;
 }
-.kpd-message-text {
+.kpd .kpd-message-text {
+  font-size: clamp(28px, 2.7vw, 36px);
   text-align: left;
   padding: 16px;
   border-left: 4px solid var(--primary);
   background: var(--canvas);
+}
+.kpd-message-text span {
+  display: block;
 }
 .kpd-phrase-line,
 .kpd-word-cards,
@@ -92,7 +96,8 @@
   font-size: 25px;
   min-height: 52px;
 }
-.kpd-word-cards [aria-pressed='true'] {
+.kpd-word-cards [aria-pressed='true'],
+.kpd-message-choices [aria-pressed='true'] {
   background: var(--primary-soft);
   border-color: var(--primary);
 }
@@ -143,6 +148,7 @@
   font-size: 26px;
 }
 .kpd-paper-message {
+  white-space: pre-line;
   font-size: 28px;
   line-height: 1.4;
   border: 1px solid #66716d;

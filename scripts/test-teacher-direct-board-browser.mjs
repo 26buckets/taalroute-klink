@@ -86,11 +86,48 @@ for (const { name, engine, options } of [
         .click();
       await page.locator('.kpd-phases button').last().click();
       await page
-        .getByRole('button', { name: 'Verder met bericht', exact: true })
+        .getByRole('button', { name: 'Verder met tekst', exact: true })
         .click();
+      assert.equal(
+        await page.locator('.kpd-rounds [aria-current]').innerText(),
+        'Stap 3 · Tekst',
+      );
+      for (let phase = 0; phase < 8; phase++) {
+        await page.locator('.kpd-phases button').nth(phase).click();
+        const reveal = page.getByRole('button', {
+          name: phase === 6 ? 'Voorbeeldzin tonen' : 'Tekst tonen',
+          exact: true,
+        });
+        if (await reveal.count()) await reveal.click();
+        assert(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth,
+          ),
+        );
+        if (viewport.width >= 900) {
+          assert(
+            await page.evaluate(
+              () => document.documentElement.scrollHeight <= innerHeight,
+            ),
+            `C phase ${phase} scrolls at ${viewport.width}`,
+          );
+          assert(
+            await page.locator('.kpd-stage').evaluate((el) => {
+              const stage = el.getBoundingClientRect();
+              return [...el.querySelectorAll('button,textarea,p')]
+                .filter((x) => x.getClientRects().length)
+                .every((x) => {
+                  const r = x.getBoundingClientRect();
+                  return r.top >= stage.top && r.bottom <= stage.bottom + 1;
+                });
+            }),
+            `C phase ${phase} outside stage at ${viewport.width}`,
+          );
+        }
+      }
       await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
       assert.equal(await page.locator('.kpd-word-cards button').count(), 7);
-      for (const word of ['De', 'mat', 'is', 'nat.', 'Leg', 'hem', 'buiten.'])
+      for (const word of ['Ik', 'veeg', 'mijn', 'voeten', 'op', 'de', 'mat.'])
         await page
           .locator('.kpd-word-cards')
           .getByRole('button', { name: word, exact: true })
@@ -130,11 +167,15 @@ for (const { name, engine, options } of [
         );
       await page.waitForTimeout(300);
       await page.screenshot({
-        path: `${out}/${name}-${viewport.width}-bericht.png`,
+        path: `${out}/${name}-${viewport.width}-tekst.png`,
         fullPage: true,
       });
-      await page.getByRole('button', { name: 'Schrijfbord', exact: true }).click();
-      await page.getByRole('textbox', { name: 'Of typ op het bord' }).fill('oude notitie');
+      await page
+        .getByRole('button', { name: 'Schrijfbord', exact: true })
+        .click();
+      await page
+        .getByRole('textbox', { name: 'Of typ op het bord' })
+        .fill('oude notitie');
       await page.keyboard.press('Escape');
       await page.locator('.kpd-phases button').last().click();
       await page
@@ -151,8 +192,15 @@ for (const { name, engine, options } of [
         await page.locator('.kpd-rounds [aria-current]').innerText(),
         'Stap 1 · Woord',
       );
-      await page.getByRole('button', { name: 'Schrijfbord', exact: true }).click();
-      assert.equal(await page.getByRole('textbox', { name: 'Of typ op het bord' }).inputValue(), '');
+      await page
+        .getByRole('button', { name: 'Schrijfbord', exact: true })
+        .click();
+      assert.equal(
+        await page
+          .getByRole('textbox', { name: 'Of typ op het bord' })
+          .inputValue(),
+        '',
+      );
       await page.keyboard.press('Escape');
       await page
         .getByRole('button', { name: 'Les sluiten', exact: true })

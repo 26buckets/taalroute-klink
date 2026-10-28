@@ -1,5 +1,7 @@
 # Drie leerroutes bij mat — inhoud vóór interface
 
+**Latere correctie, 28 oktober 2026:** de berichtopdracht hieronder is vervangen door Stap 3 · Tekst. De actuele inhoud, bediening en controle staan in [STAP-3-TEKST.md](STAP-3-TEKST.md). De afspraken over direct openen en afzonderlijke docentinformatie blijven gelden.
+
 **Latere correctie:** de verplichte voorbereiding, voorkennisbevestiging en voorafgaande routekeuze hieronder zijn vervallen. Zie [DIRECT-LESOPENEN.md](DIRECT-LESOPENEN.md). De inhoud wordt nu gezamenlijk doorlopen in drie zichtbare bordstappen; stap 3 bouwt het bericht uit zeven woordkaartjes.
 
 
