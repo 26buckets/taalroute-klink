@@ -1,0 +1,50 @@
+{
+  "images": [
+    {
+      "src": "/alfa-c/handschrift/lesbriefje.png",
+      "text": "De les begint om 10.00. Neem je map mee.",
+      "source": "built-in imagegen",
+      "sha256": "e548e86c02b7036f8f889dfbf42989b5d95527d16d64aef062ac605b8a632555",
+      "pixels": [
+        1254,
+        1254
+      ],
+      "textVisuallyChecked": true,
+      "spellingAndTimeCorrect": true,
+      "handwrittenLetterforms": true,
+      "notATypedTranscript": true,
+      "peopleOrHandsPresent": false,
+      "completeHandReview": "Geen personen of handen in het volledige beeld of de tekstuitsnede; niet van toepassing.",
+      "functionalImage": "Een schrijfvoorbeeld, geen scène; de functie vereist leesbare tekst gericht op de cursist.",
+      "smallScreenReview": "passed",
+      "humanHandwritingProvenance": false,
+      "humanPilot": "open",
+      "revisionReason": "De telefoonweergave had een te lange eerste regel. Dezelfde tekst staat nu groter op drie regels."
+    },
+    {
+      "src": "/alfa-c/handschrift/voorbeeldbriefje.png",
+      "text": "Ik kom maandag om 9 uur.",
+      "source": "built-in imagegen",
+      "sha256": "71773ddf6ceaab663c102ae0212af84ff7633b3f7c15383cad892696f50c6e06",
+      "pixels": [
+        1884,
+        835
+      ],
+      "textVisuallyChecked": true,
+      "spellingAndTimeCorrect": true,
+      "handwrittenLetterforms": true,
+      "notATypedTranscript": true,
+      "peopleOrHandsPresent": false,
+      "completeHandReview": "Geen personen of handen in het volledige beeld of de tekstuitsnede; niet van toepassing.",
+      "functionalImage": "Een schrijfvoorbeeld, geen scène; de functie vereist leesbare tekst gericht op de cursist.",
+      "smallScreenReview": "passed",
+      "humanHandwritingProvenance": false,
+      "humanPilot": "open"
+    }
+  ],
+  "sourcePromptMain": "Edit with built-in imagegen: preserve words, time and natural blue handwriting; show De les begint / om 10.00. / Neem je map mee. on three very large lines, square paper, minimal whitespace. No extra text, hands, props, logos or scene.",
+  "sourcePromptExample": "Natural blue ballpoint handwriting on white paper. Exact two lines: Ik kom maandag / om 9 uur. No extra text, hands, props, logos or scene.",
+  "userInstruction": "Maak alles.",
+  "printStatus": "Niet opgenomen op de antwoordbladen. Bronresolutie behouden; geen Krea-enhancement uitgevoerd.",
+  "reviewType": "internal visual review, no human expert review"
+}

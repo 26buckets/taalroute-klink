@@ -197,3 +197,20 @@
   line-height: 1.5;
   color: var(--muted);
 }
+.functional-source {
+  min-height: 0 !important;
+  flex: 0 0 auto !important;
+  padding: 20px;
+}
+.functional-source h3 { font-size: 18px; font-weight: 500; margin: 0 0 12px; }
+.functional-source p { white-space: pre-wrap; font-size: 22px; line-height: 1.7; margin: 0; overflow-wrap: anywhere; }
+.functional-choice-grid { display: grid; gap: 12px; }
+.functional-choice-grid button { min-height: 56px; padding: 14px 18px; font-size: 20px; font-weight: 400; text-align: left; }
+.functional-choice-grid button[aria-pressed="true"] { outline: 2px solid currentColor; outline-offset: 2px; }
+.functional-player .pilot-footer { flex-wrap: wrap; }
+.functional-player .pilot-footer > output { max-width: 100%; flex: 1 1 260px; font-size: 18px; }
+.functional-player .pilot-help p { font-size: 18px; line-height: 1.6; }
+.functional-player .secondary-button { white-space: normal; min-height: 48px; }
+.functional-player .primary-button { min-height: 48px; }
+.functional-handwriting { display: block; width: 100%; height: auto; margin: 12px 0; }
+.learner-app .functional-player .cp-task-card > .functional-handwriting { max-height: none; }

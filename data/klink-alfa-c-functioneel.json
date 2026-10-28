@@ -1,0 +1,3023 @@
+{
+  "sourceSha256": "03a86e108c714033bb09abd109af04790282283053919e119965f68bfc04df66",
+  "blocks": [
+    {
+      "id": "lijst",
+      "title": "Een lijst en een bon",
+      "goal": "Een lijst en bon gebruiken en zelf een korte boodschappenlijst schrijven.",
+      "start": "Je leest een boodschappenlijst en een bon. Je schrijft ook een eigen lijst. Leg het antwoordblad en een pen klaar.",
+      "end": "Je hebt gelezen en geschreven met boodschappen. Lees je eigen lijst nog eens terug.",
+      "materialRequirements": [
+        "Het antwoordblad voor dit blok.",
+        "Een pen."
+      ],
+      "steps": [
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-01",
+          "number": 1,
+          "title": "Waarvoor is dit",
+          "kind": "model",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Boodschappenlijst",
+              "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+            }
+          ],
+          "helpVisible": "Lees één regel tegelijk. Onder het woord Boodschappen staan de dingen voor de winkel.",
+          "retryVisible": "Lees de lijst nog eens, van boven naar beneden.",
+          "exampleVisible": "Voorbeeldlijst\nBoodschappen\n1 appel",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees de boodschappenlijst.",
+          "instruction": "Kijk naar de boodschappenlijst. Lees wat je gaat kopen.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de korte lijst in het voorbeeld. Daarop staat wat je gaat kopen.",
+          "exampleTargetTexts": [
+            "Boodschappen\n1 appel"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-02",
+          "number": 2,
+          "title": "De lijst gebruiken",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Brood, melk en kaas."
+            },
+            {
+              "id": "o2",
+              "text": "Brood, water en kaas."
+            },
+            {
+              "id": "o3",
+              "text": "Rijst, melk en kaas."
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Boodschappenlijst",
+              "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+            }
+          ],
+          "helpVisible": "Lees de namen op de lijst. Kijk daarna welk antwoord dezelfde namen heeft.",
+          "retryVisible": "Dit antwoord past niet bij de hele lijst. Lees alle namen nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\n1 brood\n2 pakken melk\n1 stuk kaas\nAntwoord\nBrood, melk en kaas.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat wil je kopen?",
+          "instruction": "Lees de hele lijst. Wat wil je kopen? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "2 pakken melk\n1 stuk kaas",
+            "Brood, melk en kaas."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-03",
+          "number": 3,
+          "title": "De hoeveelheid vinden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "1 pak"
+            },
+            {
+              "id": "o2",
+              "text": "2 pakken"
+            },
+            {
+              "id": "o3",
+              "text": "3 pakken"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Boodschappenlijst",
+              "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+            }
+          ],
+          "helpVisible": "Kijk naar het getal op de regel met melk.",
+          "retryVisible": "Dit aantal past niet bij de regel met melk. Lees die regel nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\n2 pakken melk\nAntwoord\n2 pakken",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Hoeveel pakken melk?",
+          "instruction": "Zoek melk op de lijst. Hoeveel pakken staan er? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "2 pakken melk",
+            "2 pakken"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-04",
+          "number": 4,
+          "title": "De prijs vinden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "€ 2,40"
+            },
+            {
+              "id": "o2",
+              "text": "€ 6,70"
+            },
+            {
+              "id": "o3",
+              "text": "€ 1,20"
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Kassabon",
+              "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+            }
+          ],
+          "helpVisible": "Zoek melk op de bon. Lees het bedrag dat ernaast staat.",
+          "retryVisible": "Dit is niet de prijs van de melk. Zoek melk nog eens. Tik op het bedrag op die regel.",
+          "exampleVisible": "Dit staat in het voorbeeld\nmelk  € 1,20\nAntwoord\n€ 1,20",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat kost de melk?",
+          "instruction": "Lees de bon. Wat kost de melk? Tik op het bedrag.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "melk  € 1,20",
+            "€ 1,20"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-05",
+          "number": 5,
+          "title": "Het totaal vinden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "€ 6,70"
+            },
+            {
+              "id": "o2",
+              "text": "€ 3,10"
+            },
+            {
+              "id": "o3",
+              "text": "€ 2,40"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Kassabon",
+              "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+            }
+          ],
+          "helpVisible": "Kijk onderaan de bon. Welke regel gaat over alles samen?",
+          "retryVisible": "Je hebt een losse prijs gekozen. Zoek het bedrag voor alles samen. Tik op een ander bedrag.",
+          "exampleVisible": "Dit staat in het voorbeeld\nTotaal  € 6,70\nAntwoord\n€ 6,70",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat betaal je voor alles?",
+          "instruction": "Lees de bon. Wat betaal je voor alles samen? Tik op het bedrag.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Totaal  € 6,70",
+            "€ 6,70"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-06",
+          "number": 6,
+          "title": "Lijst en bon vergelijken",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Nee, kaas ontbreekt."
+            },
+            {
+              "id": "o2",
+              "text": "Ja, alle drie staan op de bon."
+            },
+            {
+              "id": "o3",
+              "text": "Nee, melk ontbreekt."
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Boodschappenlijst",
+              "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+            },
+            {
+              "kind": "source",
+              "title": "Kassabon",
+              "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+            }
+          ],
+          "helpVisible": "Zoek één naam van de lijst op de bon. Doe dat daarna met de andere namen. Je hoeft de aantallen niet te vergelijken.",
+          "retryVisible": "Vergelijk de namen nog eens, één voor één. Tik daarna op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nLijst: brood, melk, kaas.\nBon: brood, melk, kaas.\nAntwoord\nJa, alle drie staan op de bon.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Staan alle namen op de bon?",
+          "instruction": "Lees de lijst en de bon. Staan de drie namen van de lijst ook op de bon? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Bon: brood, melk, kaas.",
+            "Ja, alle drie staan op de bon."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-07",
+          "number": 7,
+          "title": "Een lijst overschrijven",
+          "kind": "copy",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Boodschappenlijst",
+              "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+            }
+          ],
+          "helpVisible": "Schrijf alleen de namen. De getallen hoef je niet over te schrijven.",
+          "retryVisible": "Vergelijk jouw drie regels met de lijst. Ontbreekt er een naam? Schrijf die erbij.",
+          "exampleVisible": "Voorbeeldlijst\n1 appel\n1 peer\n\nZo schrijf je de namen\nappel\npeer",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "lijst",
+            "sheetTask": 7,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf de namen onder elkaar.",
+          "instruction": "Pak het antwoordblad. Schrijf bij opdracht 7 de drie namen van de lijst. Schrijf elke naam op een nieuwe regel.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de twee namen. Elke naam staat op een eigen regel.",
+          "exampleTargetTexts": [
+            "1 appel\n1 peer\n\nZo schrijf je de namen\nappel\npeer"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-08",
+          "number": 8,
+          "title": "Zelf een lijst schrijven",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "scenario",
+              "title": "De situatie",
+              "text": "Je wilt brood, kaas en water kopen."
+            }
+          ],
+          "helpVisible": "Denk aan de drie dingen die je nu wilt kopen. Lees daarna jouw lijst terug.",
+          "retryVisible": "Lees de drie dingen in de opdracht nog eens. Kijk of die op jouw lijst staan. Verander je lijst als dat nodig is.",
+          "exampleVisible": "Andere boodschappen\nrijst en melk\n\nVoorbeeldlijst\nrijst\nmelk",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "lijst",
+            "sheetTask": 8,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Maak een nieuwe lijst.",
+          "instruction": "Je wilt brood, kaas en water kopen. Schrijf die drie dingen bij opdracht 8 op het antwoordblad. Schrijf elke naam op een nieuwe regel.",
+          "closed": false,
+          "exampleInstruction": "Dit is een andere boodschappenlijst. Maak bij jouw opdracht een lijst met jouw drie dingen.",
+          "exampleTargetTexts": [
+            "rijst en melk\n\nVoorbeeldlijst\nrijst\nmelk"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-09",
+          "number": 9,
+          "title": "Een andere bon lezen",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "€ 1,20"
+            },
+            {
+              "id": "o2",
+              "text": "€ 1,80"
+            },
+            {
+              "id": "o3",
+              "text": "€ 3,00"
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere kassabon",
+              "text": "Kassabon\nrijst  € 1,80\nmelk  € 1,20\nTotaal  € 3,00"
+            }
+          ],
+          "helpVisible": "Zoek het bedrag onderaan dat over de hele aankoop gaat.",
+          "retryVisible": "Je hebt een losse prijs gekozen. Zoek opnieuw het bedrag voor alles samen. Tik op een ander bedrag.",
+          "exampleVisible": "Dit staat in het voorbeeld\nTotaal  € 3,00\nAntwoord\n€ 3,00",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat betaal je op deze bon?",
+          "instruction": "Lees deze andere bon. Wat betaal je voor alles samen? Tik op het bedrag.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Totaal  € 3,00",
+            "€ 3,00"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-10",
+          "number": 10,
+          "title": "Een lijst herstellen",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "scenario",
+              "title": "De situatie",
+              "text": "Je wilt alleen rijst en melk kopen."
+            }
+          ],
+          "helpVisible": "Lees elke naam op het briefje. Hoort die bij wat je nu wilt kopen?",
+          "retryVisible": "Lees wat je wilt kopen nog eens. Kijk of er nog iets te veel op het briefje staat.",
+          "exampleVisible": "Nodig\nappel en peer\n\nBriefje vóór het verbeteren\nappel\npeer\nsoep\n\nBriefje na het verbeteren\nappel\npeer",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "lijst",
+            "sheetTask": 10,
+            "initialText": "rijst\nmelk\nkaas",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Haal weg wat niet nodig is.",
+          "instruction": "Je wilt alleen rijst en melk kopen. Kijk naar het briefje bij opdracht 10 op het antwoordblad. Streep weg wat je niet wilt kopen.",
+          "closed": false,
+          "exampleInstruction": "Op het voorbeeldbriefje staat één ding te veel. Na het verbeteren staan alleen de twee nodige dingen er nog.",
+          "exampleTargetTexts": [
+            "appel en peer\n\nBriefje vóór het verbeteren\nappel\npeer\nsoep\n\nBriefje na het verbeteren\nappel\npeer"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-11",
+          "number": 11,
+          "title": "De kaasprijs vinden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "€ 3,10"
+            },
+            {
+              "id": "o2",
+              "text": "€ 6,70"
+            },
+            {
+              "id": "o3",
+              "text": "€ 1,20"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Kassabon",
+              "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+            }
+          ],
+          "helpVisible": "Zoek kaas op de bon. Lees het bedrag ernaast.",
+          "retryVisible": "Dit bedrag hoort niet bij de kaas. Zoek de goede regel. Tik op een ander bedrag.",
+          "exampleVisible": "Dit staat in het voorbeeld\nkaas  € 3,10\nAntwoord\n€ 3,10",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat kost de kaas?",
+          "instruction": "Lees de bon. Wat kost de kaas? Tik op het bedrag.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "kaas  € 3,10",
+            "€ 3,10"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-lijst-12",
+          "number": 12,
+          "title": "Terugkijken",
+          "kind": "reflect",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "previousResponse",
+              "title": "Jouw lijst bij opdracht 8",
+              "text": "",
+              "fromTask": "klink-alfa-c-aanvulling-lijst-08"
+            }
+          ],
+          "helpVisible": "Lees één naam tegelijk. Je mag ook zeggen dat je geen woord meer wilt oefenen.",
+          "retryVisible": "Kijk nog eens naar jouw lijst bij opdracht 8. Kies zelf wat je wilt herhalen.",
+          "exampleVisible": null,
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees jouw lijst terug.",
+          "instruction": "Kijk naar jouw lijst bij opdracht 8. Lees de drie dingen hardop. Zeg welk woord je nog wilt oefenen.",
+          "closed": false,
+          "exampleInstruction": null,
+          "exampleTargetTexts": [],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        }
+      ]
+    },
+    {
+      "id": "les",
+      "title": "Een bericht over de les",
+      "goal": "Een wijziging uit een bericht halen en een begrijpelijke reactie schrijven.",
+      "start": "Je leest een rooster en berichten over de les. Je schrijft ook een briefje. Leg het antwoordblad en een pen klaar.",
+      "end": "Je hebt berichten over de les gelezen en zelf een briefje geschreven.",
+      "materialRequirements": [
+        "Het antwoordblad voor dit blok.",
+        "Een pen."
+      ],
+      "steps": [
+        {
+          "id": "klink-alfa-c-aanvulling-les-01",
+          "number": 1,
+          "title": "Twee soorten informatie",
+          "kind": "model",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Lesrooster",
+              "text": "Lesrooster\nmaandag  09.00  Nederlands  zaal 2\nwoensdag  09.00  Nederlands  zaal 2"
+            }
+          ],
+          "helpVisible": "Lees het eerste woord van elke regel.",
+          "retryVisible": "Begin bovenaan. Lees elke roosterregel nog eens.",
+          "exampleVisible": "Voorbeeldrooster\nvrijdag  13.00  lezen  zaal 1",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees het lesrooster.",
+          "instruction": "Kijk naar het rooster. Lees de twee dagen waarop er les is.",
+          "closed": false,
+          "exampleInstruction": "In dit voorbeeld staan de dag, de tijd en de zaal op één regel.",
+          "exampleTargetTexts": [
+            "vrijdag  13.00  lezen  zaal 1"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-02",
+          "number": 2,
+          "title": "Een tijd opzoeken",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "10.00"
+            },
+            {
+              "id": "o2",
+              "text": "09.00"
+            },
+            {
+              "id": "o3",
+              "text": "11.00"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Lesrooster",
+              "text": "Lesrooster\nmaandag  09.00  Nederlands  zaal 2\nwoensdag  09.00  Nederlands  zaal 2"
+            }
+          ],
+          "helpVisible": "Begin bij maandag. Lees de tijd op dezelfde regel.",
+          "retryVisible": "Deze tijd staat niet bij maandag. Zoek de goede regel. Tik op een andere tijd.",
+          "exampleVisible": "Dit staat in het voorbeeld\nmaandag  09.00  Nederlands  zaal 2\nAntwoord\n09.00",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Hoe laat is de les op maandag?",
+          "instruction": "Zoek maandag in het rooster. Hoe laat begint de les? Tik op de tijd.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "maandag  09.00  Nederlands  zaal 2",
+            "09.00"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-03",
+          "number": 3,
+          "title": "Het nieuwe tijdstip",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "09.00"
+            },
+            {
+              "id": "o2",
+              "text": "11.00"
+            },
+            {
+              "id": "o3",
+              "text": "10.00"
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek in het bericht hoe laat de les begint.",
+          "retryVisible": "Dit is niet de nieuwe begintijd. Lees de eerste zin van het bericht nog eens. Tik op een andere tijd.",
+          "exampleVisible": "Dit staat in het voorbeeld\nWoensdag begint de les om 10.00.\nAntwoord\n10.00",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Hoe laat is de les op woensdag?",
+          "instruction": "Lees het bericht over woensdag. Hoe laat begint de les nu? Tik op de tijd.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Woensdag begint de les om 10.00.",
+            "10.00"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-04",
+          "number": 4,
+          "title": "De juiste zaal",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "zaal 4"
+            },
+            {
+              "id": "o2",
+              "text": "zaal 2"
+            },
+            {
+              "id": "o3",
+              "text": "zaal 3"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek in het bericht het woord zaal. Lees wat ernaast staat.",
+          "retryVisible": "Deze zaal staat niet in het bericht over woensdag. Zoek zaal nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nDe les is in zaal 4.\nAntwoord\nzaal 4",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "In welke zaal is de les?",
+          "instruction": "Lees het bericht over woensdag. In welke zaal is de les? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "De les is in zaal 4.",
+            "zaal 4"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-05",
+          "number": 5,
+          "title": "Wat neem je mee",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "een boek"
+            },
+            {
+              "id": "o2",
+              "text": "een map"
+            },
+            {
+              "id": "o3",
+              "text": "een doek"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek de zin die begint met Neem. Lees die zin helemaal.",
+          "retryVisible": "Dit wordt niet gevraagd voor woensdag. Lees de zin met Neem nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nNeem je map mee.\nAntwoord\neen map",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat neem je woensdag mee?",
+          "instruction": "Lees het bericht. Wat neem je woensdag mee? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Neem je map mee.",
+            "een map"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-06",
+          "number": 6,
+          "title": "Een wijziging gebruiken",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "zaal 2"
+            },
+            {
+              "id": "o2",
+              "text": "zaal 3"
+            },
+            {
+              "id": "o3",
+              "text": "zaal 4"
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oud rooster",
+              "text": "Lesrooster\nmaandag  09.00  Nederlands  zaal 2\nwoensdag  09.00  Nederlands  zaal 2"
+            },
+            {
+              "kind": "source",
+              "title": "Nieuw bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Gebruik het nieuwe bericht. Zoek daarin de plek van de les.",
+          "retryVisible": "Het oude rooster geldt hier niet meer. Lees de zaal in het nieuwe bericht. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nNieuw bericht\nDe les is in zaal 4.\nAntwoord\nzaal 4",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Welke zaal gebruik je woensdag?",
+          "instruction": "Het bericht verandert de les op woensdag. Lees het nieuwe bericht. In welke zaal is de les nu? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "De les is in zaal 4.",
+            "zaal 4"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-07",
+          "number": 7,
+          "title": "Een herinnering opschrijven",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek eerst de dag. Zoek daarna de tijd en de zaal. Je mag korte regels schrijven.",
+          "retryVisible": "Lees jouw briefje terug. Kun je zien op welke dag, hoe laat en in welke zaal de les is? Schrijf erbij wat ontbreekt.",
+          "exampleVisible": "Ander bericht\nVrijdag begint de les om 11.00 in zaal 3.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nzaal 3",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "les",
+            "sheetTask": 7,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Maak een briefje voor jezelf.",
+          "instruction": "Schrijf bij opdracht 7 op het antwoordblad de dag, de tijd en de zaal van de les. Gebruik het bericht over woensdag.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeldbriefje bevat een dag, een tijd en een zaal. Schrijf jouw briefje over woensdag.",
+          "exampleTargetTexts": [
+            "Vrijdag begint de les om 11.00 in zaal 3.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nzaal 3"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-08",
+          "number": 8,
+          "title": "Een reactie schrijven",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Schrijf wat je wilt laten weten. Noem ook de dag.",
+          "retryVisible": "Lees jouw antwoord terug. Is duidelijk dat je woensdag komt? Verander je antwoord als dat nodig is.",
+          "exampleVisible": "Ander bericht\nKom je vrijdag?\n\nVoorbeeldantwoord\nIk kom vrijdag.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "les",
+            "sheetTask": 8,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf dat je woensdag komt.",
+          "instruction": "Schrijf bij opdracht 8 een antwoord op het bericht. Laat weten dat je woensdag komt.",
+          "closed": false,
+          "exampleInstruction": "Dit is een antwoord over vrijdag. Schrijf bij jouw opdracht een antwoord over woensdag.",
+          "exampleTargetTexts": [
+            "Kom je vrijdag?\n\nVoorbeeldantwoord\nIk kom vrijdag."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-09",
+          "number": 9,
+          "title": "Een fout in een briefje vinden",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Vergelijk de tijd op het briefje met de tijd in het nieuwe bericht. Vergelijk daarna de zaal.",
+          "retryVisible": "Lees het nieuwe bericht nog eens. Kijk daarna of jouw nieuwe briefje de goede tijd en zaal heeft.",
+          "exampleVisible": "Ander nieuw bericht\nDe les is vrijdag om 14.00 in zaal 5.\n\nOud briefje\nvrijdag 13.00 zaal 1\n\nGoed briefje\nvrijdag 14.00 zaal 5",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "les",
+            "sheetTask": 9,
+            "initialText": "woensdag 09.00 zaal 2",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Verbeter het oude briefje.",
+          "instruction": "Lees het nieuwe bericht over woensdag. Kijk naar het oude briefje bij opdracht 9 op het antwoordblad. Schrijf het goede briefje eronder.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld veranderen de tijd en de zaal. Bij jouw briefje gebruik je het bericht over woensdag.",
+          "exampleTargetTexts": [
+            "De les is vrijdag om 14.00 in zaal 5.\n\nOud briefje\nvrijdag 13.00 zaal 1\n\nGoed briefje\nvrijdag 14.00 zaal 5"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-10",
+          "number": 10,
+          "title": "Een ander bericht gebruiken",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "een boek"
+            },
+            {
+              "id": "o2",
+              "text": "een map"
+            },
+            {
+              "id": "o3",
+              "text": "een doek"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over vrijdag",
+              "text": "Vrijdag begint de les om 11.00.\nDe les is in zaal 3.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Lees de zin die zegt wat je moet meenemen.",
+          "retryVisible": "Dit hoort niet bij het bericht over vrijdag. Lees het bericht nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nNeem je boek mee.\nAntwoord\neen boek",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat neem je vrijdag mee?",
+          "instruction": "Lees het bericht over vrijdag. Wat neem je mee? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Neem je boek mee.",
+            "een boek"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-11",
+          "number": 11,
+          "title": "Terugschrijven over de tijd",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht over vrijdag",
+              "text": "Vrijdag begint de les om 11.00.\nDe les is in zaal 3.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Zoek de begintijd van de les. Gebruik die tijd in jouw antwoord.",
+          "retryVisible": "Lees het bericht en jouw antwoord terug. Staat de goede tijd in jouw antwoord? Verander die als dat nodig is.",
+          "exampleVisible": "Ander bericht\nDe les begint om 13.00.\n\nVoorbeeldantwoord\nIk kom om 13.00.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "les",
+            "sheetTask": 11,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf hoe laat je komt.",
+          "instruction": "Lees het bericht over vrijdag. Schrijf bij opdracht 11 een antwoord. Laat weten hoe laat je komt.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld staat hoe laat iemand komt. Gebruik in jouw antwoord de tijd van vrijdag.",
+          "exampleTargetTexts": [
+            "De les begint om 13.00.\n\nVoorbeeldantwoord\nIk kom om 13.00."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-les-12",
+          "number": 12,
+          "title": "Terugkijken",
+          "kind": "reflect",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "previousResponse",
+              "title": "Jouw briefje bij opdracht 7",
+              "text": "",
+              "fromTask": "klink-alfa-c-aanvulling-les-07"
+            },
+            {
+              "kind": "source",
+              "title": "Bericht over woensdag",
+              "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Lees je briefje regel voor regel. Vergelijk het met het bericht over woensdag.",
+          "retryVisible": "Kijk of jouw briefje genoeg zegt om naar de goede les te gaan. Vul aan wat je mist.",
+          "exampleVisible": null,
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees jouw briefje terug.",
+          "instruction": "Kijk naar jouw briefje bij opdracht 7. Lees het hardop. Zeg of de dag, de tijd en de zaal erop staan.",
+          "closed": false,
+          "exampleInstruction": null,
+          "exampleTargetTexts": [],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        }
+      ]
+    },
+    {
+      "id": "post",
+      "title": "Een uitnodiging en een afspraak",
+      "goal": "Een uitnodiging van reclame onderscheiden en afsprakeninformatie gebruiken.",
+      "start": "Je leest uitnodigingen en een afspraakkaart. Je schrijft ook korte antwoorden. Leg het antwoordblad en een pen klaar.",
+      "end": "Je hebt uitnodigingen en een afspraakkaart gelezen. Je hebt ook antwoorden geschreven.",
+      "materialRequirements": [
+        "Het antwoordblad voor dit blok.",
+        "Een pen."
+      ],
+      "steps": [
+        {
+          "id": "klink-alfa-c-aanvulling-post-01",
+          "number": 1,
+          "title": "Waar gaat de post over",
+          "kind": "model",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Uitnodiging",
+              "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Zoek de zin die zegt wat je samen doet.",
+          "retryVisible": "Lees de uitnodiging nog eens. Begin bovenaan.",
+          "exampleVisible": "Voorbeelduitnodiging\nKom vrijdag koffie drinken.\nWe beginnen om 11.00.",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees de uitnodiging.",
+          "instruction": "Lees de uitnodiging. Kijk wat je samen gaat doen.",
+          "closed": false,
+          "exampleInstruction": "In deze uitnodiging staat wat mensen samen gaan doen en hoe laat het begint.",
+          "exampleTargetTexts": [
+            "Kom vrijdag koffie drinken.\nWe beginnen om 11.00."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-02",
+          "number": 2,
+          "title": "Reclame herkennen",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Een afspraak om te lezen."
+            },
+            {
+              "id": "o2",
+              "text": "Een les die later begint."
+            },
+            {
+              "id": "o3",
+              "text": "Een aanbieding voor brood."
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Reclame",
+              "text": "Marktactie\n2 broden voor € 3,00.\nAlleen vrijdag."
+            }
+          ],
+          "helpVisible": "Kijk wat je kunt kopen. Kijk ook of er een prijs bij staat.",
+          "retryVisible": "Dit antwoord past niet bij de marktactie. Lees de tekst nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nMarktactie\n2 broden voor € 3,00.\nAlleen vrijdag.\nAntwoord\nEen aanbieding voor brood.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Waar gaat deze tekst over?",
+          "instruction": "Lees de tekst met Marktactie erboven. Waar gaat de tekst over? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "2 broden voor € 3,00.\nAlleen vrijdag.",
+            "Een aanbieding voor brood."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-03",
+          "number": 3,
+          "title": "De plek vinden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "in het buurthuis"
+            },
+            {
+              "id": "o2",
+              "text": "in de bibliotheek"
+            },
+            {
+              "id": "o3",
+              "text": "in het Taalhuis"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Uitnodiging",
+              "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Zoek in de zin met Kom de plek waar je wordt verwacht.",
+          "retryVisible": "Deze plek staat niet in de uitnodiging voor maandag. Lees die uitnodiging nog eens. Tik op een andere plek.",
+          "exampleVisible": "Dit staat in het voorbeeld\nKom maandag om 14.00 naar het buurthuis.\nAntwoord\nin het buurthuis",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Waar moet je zijn?",
+          "instruction": "Lees de uitnodiging voor maandag. Waar moet je zijn? Tik op de plek.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Kom maandag om 14.00 naar het buurthuis.",
+            "in het buurthuis"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-04",
+          "number": 4,
+          "title": "De tijd vinden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "15.00"
+            },
+            {
+              "id": "o2",
+              "text": "14.00"
+            },
+            {
+              "id": "o3",
+              "text": "10.00"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Uitnodiging",
+              "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Zoek de tijd in de uitnodiging.",
+          "retryVisible": "Deze tijd staat niet in de uitnodiging voor maandag. Zoek de goede tijd. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nKom maandag om 14.00 naar het buurthuis.\nAntwoord\n14.00",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Hoe laat moet je er zijn?",
+          "instruction": "Lees de uitnodiging voor maandag. Hoe laat moet je er zijn? Tik op de tijd.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Kom maandag om 14.00 naar het buurthuis.",
+            "14.00"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-05",
+          "number": 5,
+          "title": "Wat is de datum",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "14 november 2026"
+            },
+            {
+              "id": "o2",
+              "text": "10 oktober 2026"
+            },
+            {
+              "id": "o3",
+              "text": "10 november 2026"
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Afspraakkaart",
+              "text": "Afspraak Taalhuis\ndinsdag 10 november 2026\n14.00\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek de regel met een maand erin. Lees de hele datum.",
+          "retryVisible": "Deze datum is niet hetzelfde als op de afspraakkaart. Vergelijk de dag en de maand nog eens. Tik op een andere datum.",
+          "exampleVisible": "Dit staat in het voorbeeld\ndinsdag 10 november 2026\nAntwoord\n10 november 2026",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Op welke datum is de afspraak?",
+          "instruction": "Lees de afspraakkaart van het Taalhuis. Op welke datum is de afspraak? Tik op de datum.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "dinsdag 10 november 2026",
+            "10 november 2026"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-06",
+          "number": 6,
+          "title": "Een afspraak noteren",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Afspraakkaart",
+              "text": "Afspraak Taalhuis\ndinsdag 10 november 2026\n14.00\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek eerst de regel met de datum. Zoek daarna de tijd.",
+          "retryVisible": "Vergelijk jouw twee regels met de kaart. Kijk apart naar de datum en naar de tijd.",
+          "exampleVisible": "Andere afspraakkaart\n12 november 2026\n09.00\n\nVoorbeeldbriefje\n12 november 2026\n09.00",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "post",
+            "sheetTask": 6,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf de datum en de tijd op.",
+          "instruction": "Lees de afspraakkaart. Schrijf bij opdracht 6 op het antwoordblad de datum en de tijd van de afspraak.",
+          "closed": false,
+          "exampleInstruction": "Op het voorbeeldbriefje staan een datum en een tijd. Schrijf de gegevens van jouw afspraakkaart op.",
+          "exampleTargetTexts": [
+            "12 november 2026\n09.00\n\nVoorbeeldbriefje\n12 november 2026\n09.00"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-07",
+          "number": 7,
+          "title": "Een uitnodiging beantwoorden",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Uitnodiging",
+              "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Laat in jouw antwoord weten dat je komt. Je mag de dag erbij schrijven.",
+          "retryVisible": "Lees jouw antwoord terug. Kan de ander begrijpen dat je wilt komen? Vul jouw antwoord aan als dat nodig is.",
+          "exampleVisible": "Andere uitnodiging\nKom je donderdag naar de bibliotheek?\n\nVoorbeeldantwoord\nJa, ik kom donderdag.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "post",
+            "sheetTask": 7,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf dat je komt.",
+          "instruction": "Je wilt maandag naar het buurthuis komen. Schrijf bij opdracht 7 een kort antwoord op de uitnodiging.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeld laat weten dat iemand komt. Jouw antwoord gaat over maandag.",
+          "exampleTargetTexts": [
+            "Kom je donderdag naar de bibliotheek?\n\nVoorbeeldantwoord\nJa, ik kom donderdag."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-08",
+          "number": 8,
+          "title": "Een andere dag voorstellen",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Uitnodiging",
+              "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee."
+            }
+          ],
+          "helpVisible": "Schrijf eerst op welke dag je niet kunt. Schrijf daarna jouw vraag over de andere dag.",
+          "retryVisible": "Lees jouw twee zinnen terug. Zeg je dat maandag niet lukt? Vraag je naar dinsdag? Verander wat nog niet duidelijk is.",
+          "exampleVisible": "Andere situatie\nDonderdag lukt niet. Je wilt vrijdag komen.\n\nVoorbeeldantwoord\nIk kan donderdag niet. Kan ik vrijdag komen?",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "post",
+            "sheetTask": 8,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Stel een andere dag voor.",
+          "instruction": "Je kunt maandag niet komen. Schrijf dat bij opdracht 8. Vraag daarna of je dinsdag kunt komen.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld staat eerst wat niet lukt. Daarna volgt een vraag over een andere dag.",
+          "exampleTargetTexts": [
+            "Donderdag lukt niet. Je wilt vrijdag komen.\n\nVoorbeeldantwoord\nIk kan donderdag niet. Kan ik vrijdag komen?"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-09",
+          "number": 9,
+          "title": "Hulp bij moeilijke post",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Het bericht meenemen en uitleg vragen."
+            },
+            {
+              "id": "o2",
+              "text": "Een datum gokken."
+            },
+            {
+              "id": "o3",
+              "text": "Het bericht weggooien."
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "scenario",
+              "title": "De situatie",
+              "text": "Je krijgt een brief. Je begrijpt niet wat erin staat."
+            }
+          ],
+          "helpVisible": "Kies iets waardoor je meer over de brief te weten komt.",
+          "retryVisible": "Met die keuze weet je nog niet wat de brief zegt. Kijk naar de antwoorden. Kies een manier om daarachter te komen.",
+          "exampleVisible": "Voorbeeldsituatie\nEen bericht is niet duidelijk.\n\nMogelijke stap\nNeem het bericht mee en vraag wat het betekent.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Je begrijpt een brief niet.",
+          "instruction": "Je krijgt een brief. Je begrijpt niet wat erin staat. Wat kun je doen? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "In dit voorbeeld zoekt iemand hulp bij een onduidelijk bericht.",
+          "exampleTargetTexts": [
+            "Neem het bericht mee en vraag wat het betekent."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-10",
+          "number": 10,
+          "title": "De andere uitnodiging",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "het buurthuis"
+            },
+            {
+              "id": "o2",
+              "text": "de bibliotheek"
+            },
+            {
+              "id": "o3",
+              "text": "het Taalhuis"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere uitnodiging",
+              "text": "Uitnodiging\nKom donderdag om 15.00 naar de bibliotheek.\nWe bekijken boeken.\nNeem je leesbril mee als je die gebruikt."
+            }
+          ],
+          "helpVisible": "Zoek in deze uitnodiging waar je wordt verwacht.",
+          "retryVisible": "Deze plek hoort niet bij de uitnodiging voor donderdag. Lees die uitnodiging opnieuw. Tik op een andere plek.",
+          "exampleVisible": "Dit staat in het voorbeeld\nKom donderdag om 15.00 naar de bibliotheek.\nAntwoord\nde bibliotheek",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Waar ga je donderdag naartoe?",
+          "instruction": "Lees de uitnodiging voor donderdag. Waar moet je zijn? Tik op de plek.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Kom donderdag om 15.00 naar de bibliotheek.",
+            "de bibliotheek"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-11",
+          "number": 11,
+          "title": "Een briefje maken",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere uitnodiging",
+              "text": "Uitnodiging\nKom donderdag om 15.00 naar de bibliotheek.\nWe bekijken boeken.\nNeem je leesbril mee als je die gebruikt."
+            }
+          ],
+          "helpVisible": "Zoek wanneer je komt en waar je moet zijn. Je mag drie korte regels schrijven.",
+          "retryVisible": "Lees jouw briefje terug. Staan de dag, de tijd en de plek erop? Vergelijk ze met de uitnodiging.",
+          "exampleVisible": "Andere uitnodiging\nKom vrijdag om 11.00 naar het buurthuis.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nbuurthuis",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "post",
+            "sheetTask": 11,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Maak een briefje voor jezelf.",
+          "instruction": "Lees de uitnodiging voor donderdag. Schrijf bij opdracht 11 een briefje met de dag, de tijd en de plek.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeldbriefje bevat drie gegevens. Schrijf jouw briefje over de uitnodiging voor donderdag.",
+          "exampleTargetTexts": [
+            "Kom vrijdag om 11.00 naar het buurthuis.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nbuurthuis"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-post-12",
+          "number": 12,
+          "title": "Terugkijken",
+          "kind": "reflect",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "previousResponse",
+              "title": "Jouw briefje bij opdracht 6",
+              "text": "",
+              "fromTask": "klink-alfa-c-aanvulling-post-06"
+            },
+            {
+              "kind": "source",
+              "title": "Afspraakkaart",
+              "text": "Afspraak Taalhuis\ndinsdag 10 november 2026\n14.00\nNeem je map mee."
+            }
+          ],
+          "helpVisible": "Denk aan iets wat jou kan helpen om de afspraak te begrijpen.",
+          "retryVisible": "Kijk nog eens naar de kaart en jouw briefje. Zeg welk deel onduidelijk is.",
+          "exampleVisible": null,
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees jouw afspraakbriefje terug.",
+          "instruction": "Lees jouw briefje bij opdracht 6. Zeg hardop wat je doet als je de datum op een afspraakkaart niet begrijpt.",
+          "closed": false,
+          "exampleInstruction": null,
+          "exampleTargetTexts": [],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        }
+      ]
+    },
+    {
+      "id": "formulier",
+      "title": "Een formulier invullen",
+      "goal": "Gevraagde gegevens bij het juiste veld zetten en zelf controleren.",
+      "start": "Je vult een formulier in met de gegevens van Safa. Leg het antwoordblad en een pen klaar.",
+      "end": "Je hebt de gegevens op een formulier gezet en teruggelezen.",
+      "materialRequirements": [
+        "Het antwoordblad voor dit blok.",
+        "Een pen."
+      ],
+      "steps": [
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-01",
+          "number": 1,
+          "title": "Het doel van het formulier",
+          "kind": "model",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Aanmeldformulier",
+              "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"
+            }
+          ],
+          "helpVisible": "Lees de woorden boven de lege vakken.",
+          "retryVisible": "Begin bovenaan het formulier. Lees de eerste regel nog eens.",
+          "exampleVisible": "Voorbeeldformulier\nAanmelden voor koken\nVoornaam: __________\nAchternaam: __________",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Waarvoor is dit formulier?",
+          "instruction": "Kijk naar het formulier. Lees bovenaan waarvoor het is.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld vertellen de woorden bovenaan waarvoor het formulier is.",
+          "exampleTargetTexts": [
+            "Aanmelden voor koken\nVoornaam: __________\nAchternaam: __________"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-02",
+          "number": 2,
+          "title": "Het juiste naamveld",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Voornaam"
+            },
+            {
+              "id": "o2",
+              "text": "Achternaam"
+            },
+            {
+              "id": "o3",
+              "text": "Woonplaats"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oefengegevens",
+              "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+            },
+            {
+              "kind": "source",
+              "title": "Aanmeldformulier",
+              "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"
+            }
+          ],
+          "helpVisible": "Zoek Safa op de gegevenskaart. Kijk welk woord ervoor staat.",
+          "retryVisible": "Deze plek past niet bij Safa. Kijk op de gegevenskaart bij welk woord Safa staat. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nVoornaam: Safa\nAntwoord\nVoornaam",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Waar hoort Safa?",
+          "instruction": "Lees de gegevens van Safa. In welk vak schrijf je Safa? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Voornaam: Safa",
+            "Voornaam"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-03",
+          "number": 3,
+          "title": "De voornaam invullen",
+          "kind": "copy",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oefengegevens",
+              "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+            },
+            {
+              "kind": "source",
+              "title": "Aanmeldformulier",
+              "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"
+            }
+          ],
+          "helpVisible": "Zoek Voornaam op de kaart. Schrijf de naam die daarachter staat in hetzelfde vak op formulier A.",
+          "retryVisible": "Vergelijk de naam op de kaart met wat jij bij Voornaam schreef. Verander wat niet hetzelfde is.",
+          "exampleVisible": "Voorbeeld van een ingevuld vak\nVoornaam: Safa",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 3,
+            "initialText": "",
+            "fields": [
+              "Voornaam"
+            ],
+            "responseGroup": "formulier-A",
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Vul de voornaam in.",
+          "instruction": "Pak het antwoordblad. Schrijf op formulier A bij Voornaam de voornaam van de kaart.",
+          "closed": false,
+          "exampleInstruction": "De voornaam staat in het vak Voornaam.",
+          "exampleTargetTexts": [
+            "Voornaam: Safa"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-04",
+          "number": 4,
+          "title": "De achternaam invullen",
+          "kind": "copy",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oefengegevens",
+              "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+            },
+            {
+              "kind": "source",
+              "title": "Aanmeldformulier",
+              "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"
+            }
+          ],
+          "helpVisible": "Zoek Achternaam op de kaart. Schrijf de naam die daarachter staat in hetzelfde vak op formulier A.",
+          "retryVisible": "Vergelijk de naam op de kaart met wat jij bij Achternaam schreef. Verander wat niet hetzelfde is.",
+          "exampleVisible": "Voorbeeld van een ingevuld vak\nAchternaam: Elmi",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 4,
+            "initialText": "",
+            "fields": [
+              "Achternaam"
+            ],
+            "responseGroup": "formulier-A",
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Vul de achternaam in.",
+          "instruction": "Schrijf op formulier A bij Achternaam de achternaam van de kaart.",
+          "closed": false,
+          "exampleInstruction": "De achternaam staat in het vak Achternaam.",
+          "exampleTargetTexts": [
+            "Achternaam: Elmi"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-05",
+          "number": 5,
+          "title": "Straat en plaats onderscheiden",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Lindelaan"
+            },
+            {
+              "id": "o2",
+              "text": "Woerden"
+            },
+            {
+              "id": "o3",
+              "text": "28"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oefengegevens",
+              "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+            }
+          ],
+          "helpVisible": "Zoek Woonplaats op de kaart. Lees wat erachter staat.",
+          "retryVisible": "Dit hoort bij een ander vak. Zoek Woonplaats op de kaart. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nWoonplaats: Woerden\nAntwoord\nWoerden",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat is de woonplaats?",
+          "instruction": "Lees de gegevenskaart. Wat is de woonplaats? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Woonplaats: Woerden",
+            "Woerden"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-06",
+          "number": 6,
+          "title": "Het adres invullen",
+          "kind": "copy",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oefengegevens",
+              "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+            },
+            {
+              "kind": "source",
+              "title": "Aanmeldformulier",
+              "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"
+            }
+          ],
+          "helpVisible": "Zoek elk woord van het formulier op de kaart. Schrijf steeds het gegeven dat erachter staat. Werk van boven naar beneden.",
+          "retryVisible": "Vergelijk de drie adresvakken met de kaart. Kijk per vak of je hetzelfde hebt geschreven.",
+          "exampleVisible": "Voorbeeld van ingevulde vakken\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 6,
+            "initialText": "",
+            "fields": [
+              "Straat",
+              "Huisnummer",
+              "Woonplaats"
+            ],
+            "responseGroup": "formulier-A",
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Vul het adres in.",
+          "instruction": "Vul op formulier A de straat in. Schrijf daarna het huisnummer en de woonplaats. Gebruik de gegevenskaart.",
+          "closed": false,
+          "exampleInstruction": "Elke regel van het voorbeeld heeft een eigen gegeven. Gebruik op jouw formulier steeds het goede vak.",
+          "exampleTargetTexts": [
+            "Straat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-07",
+          "number": 7,
+          "title": "Een verwisseling herstellen",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Oefengegevens",
+              "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+            }
+          ],
+          "helpVisible": "Vergelijk Voornaam op het blad met Voornaam op de kaart. Kijk daarna op dezelfde manier naar Achternaam.",
+          "retryVisible": "Lees beide regels terug. Staan de namen nu op dezelfde plek als op de kaart? Pas aan wat nog verkeerd staat.",
+          "exampleVisible": "Ander voorbeeld vóór het verbeteren\nStraat: Woerden\nWoonplaats: Lindelaan\n\nNa het verbeteren\nStraat: Lindelaan\nWoonplaats: Woerden",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 7,
+            "initialText": "Voornaam: Elmi\nAchternaam: Safa",
+            "fields": [
+              "Voornaam",
+              "Achternaam"
+            ],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Verbeter de twee namen.",
+          "instruction": "Kijk bij opdracht 7 op het antwoordblad. De twee namen staan verkeerd. Streep elke verkeerde naam weg. Schrijf de goede naam ernaast.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld zijn twee gegevens verwisseld. Na het verbeteren staan ze in het goede vak.",
+          "exampleTargetTexts": [
+            "Straat: Woerden\nWoonplaats: Lindelaan\n\nNa het verbeteren\nStraat: Lindelaan\nWoonplaats: Woerden"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-08",
+          "number": 8,
+          "title": "Een huisnummer schrijven",
+          "kind": "dictation",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "audioOnly",
+              "title": "Oefengeluid",
+              "text": "Schrijf je antwoord op het blad."
+            }
+          ],
+          "helpVisible": "Luister opnieuw naar het hele getal. Kijk daarna welke cijfers je hebt geschreven.",
+          "retryVisible": "Luister nog een keer. Vergelijk wat je hoort met jouw getal. Verander het als dat nodig is.",
+          "exampleVisible": "Voorbeeld van een geschreven getal\n16",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 8,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Luister en schrijf het nummer.",
+          "instruction": "Luister naar het huisnummer. Schrijf het in cijfers bij opdracht 8 op het antwoordblad.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld hoor je een getal. Daarna zie je hoe je dat met cijfers schrijft.",
+          "exampleTargetTexts": [
+            "zestien"
+          ],
+          "dictationTexts": [
+            "achtentwintig"
+          ],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-09",
+          "number": 9,
+          "title": "Gegevens wijzigen",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere adresgegevens van dezelfde oefenpersoon",
+              "text": "Safa Elmi verhuist.\nNieuwe straat: Parklaan\nNieuw huisnummer: 146\nWoonplaats: Woerden"
+            }
+          ],
+          "helpVisible": "Zoek op de nieuwe kaart wat er veranderd is. De naam en de woonplaats veranderen niet.",
+          "retryVisible": "Vergelijk de twee nieuwe gegevens met de nieuwe adreskaart. Verbeter wat nog niet hetzelfde is.",
+          "exampleVisible": "Ander voorbeeld\nOud huisnummer: 28\nNieuw huisnummer: 30\n\nIn het nieuwe vak komt\nHuisnummer: 30",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 9,
+            "initialText": "Naam: Safa Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden",
+            "fields": [
+              "Nieuwe straat",
+              "Nieuw huisnummer"
+            ],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Vul het nieuwe adres in.",
+          "instruction": "Safa heeft een nieuw adres. Kijk naar de nieuwe adreskaart. Schrijf bij opdracht 9 de nieuwe straat en het nieuwe huisnummer in de lege vakken.",
+          "closed": false,
+          "exampleInstruction": "In dit voorbeeld verandert alleen het huisnummer. In jouw opdracht veranderen twee adresgegevens.",
+          "exampleTargetTexts": [
+            "Oud huisnummer: 28\nNieuw huisnummer: 30\n\nIn het nieuwe vak komt\nHuisnummer: 30"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-10",
+          "number": 10,
+          "title": "Geen gegevens verzinnen",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Een ander getal invullen."
+            },
+            {
+              "id": "o2",
+              "text": "De hele naam verwijderen."
+            },
+            {
+              "id": "o3",
+              "text": "Het gegeven opzoeken of hulp vragen."
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "scenario",
+              "title": "De situatie",
+              "text": "Je vult een formulier in. Je weet het huisnummer niet."
+            }
+          ],
+          "helpVisible": "Kies een manier waardoor je het juiste nummer te weten komt.",
+          "retryVisible": "Dan weet je het juiste nummer nog niet. Kies een manier om het nummer te controleren.",
+          "exampleVisible": "Voorbeeldsituatie\nEen straatnaam ontbreekt.\n\nMogelijke stap\nZoek de straatnaam op of vraag om hulp.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Je weet het huisnummer niet.",
+          "instruction": "Je wilt een formulier invullen. Je weet het huisnummer niet. Wat kun je doen? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "In dit voorbeeld zoekt iemand een ontbrekende straatnaam.",
+          "exampleTargetTexts": [
+            "Zoek de straatnaam op of vraag om hulp."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-11",
+          "number": 11,
+          "title": "Het formulier opnieuw invullen",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Nieuwe gegevens van Safa",
+              "text": "Voornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden"
+            }
+          ],
+          "helpVisible": "Zoek elk woord van het formulier op de nieuwe kaart. Schrijf in het vak wat erachter staat.",
+          "retryVisible": "Vergelijk elk vak op formulier C met de nieuwe kaart. Verbeter wat niet hetzelfde is.",
+          "exampleVisible": "Voorbeeld van een ingevuld formulier\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "formulier",
+            "sheetTask": 11,
+            "initialText": "",
+            "fields": [
+              "Voornaam",
+              "Achternaam",
+              "Straat",
+              "Huisnummer",
+              "Woonplaats"
+            ],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Vul het formulier opnieuw in.",
+          "instruction": "Lees de kaart met de nieuwe gegevens van Safa. Vul formulier C op het antwoordblad in. Begin bij Voornaam.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeld laat zien waar de gegevens staan. Vul daarna zelf de vakken op formulier C in.",
+          "exampleTargetTexts": [
+            "Voornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-formulier-12",
+          "number": 12,
+          "title": "Terugkijken",
+          "kind": "reflect",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "previousResponse",
+              "title": "Jouw formulier C",
+              "text": "",
+              "fromTask": "klink-alfa-c-aanvulling-formulier-11"
+            },
+            {
+              "kind": "source",
+              "title": "Nieuwe gegevens van Safa",
+              "text": "Voornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden"
+            }
+          ],
+          "helpVisible": "Begin bovenaan. Lees eerst het woord bij het vak. Kijk daarna naar jouw antwoord en de kaart.",
+          "retryVisible": "Is een vak nog leeg of staat er iets anders dan op de kaart? Vul dat vak aan of verbeter het.",
+          "exampleVisible": null,
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Controleer formulier C.",
+          "instruction": "Kijk naar formulier C bij opdracht 11. Lees wat je hebt ingevuld. Vergelijk elk vak met de nieuwe gegevenskaart.",
+          "closed": false,
+          "exampleInstruction": null,
+          "exampleTargetTexts": [],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        }
+      ]
+    },
+    {
+      "id": "werk",
+      "title": "Een korte taak uitvoeren",
+      "goal": "Een veilige korte instructie volgen en begrijpelijk terugmelden wat is gedaan.",
+      "start": "Je leest korte taken en voert ze uit. Je schrijft ook een bericht. Leg het antwoordblad en een pen klaar. Je hebt een tafel, een doek, een bak, een map en een boek nodig.",
+      "end": "Je hebt taken gelezen en uitgevoerd. Je hebt ook vragen en berichten geschreven.",
+      "materialRequirements": [
+        "Het antwoordblad voor dit blok.",
+        "Een pen.",
+        "Een tafel, schone oefendoek, bak, map en boek; geen schoonmaakmiddel nodig."
+      ],
+      "steps": [
+        {
+          "id": "klink-alfa-c-aanvulling-werk-01",
+          "number": 1,
+          "title": "Een stappenlijst lezen",
+          "kind": "model",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "De cijfers laten zien in welke volgorde je werkt. Lees van boven naar beneden.",
+          "retryVisible": "Lees de drie regels opnieuw. Begin bij 1.",
+          "exampleVisible": "Andere korte taak\n1 Pak een boek.\n2 Leg het boek op de tafel.",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees de drie stappen.",
+          "instruction": "Lees de stappen voor het schoonmaken van de tafel. Begin bij 1.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld doe je eerst stap 1. Daarna doe je stap 2.",
+          "exampleTargetTexts": [
+            "1 Pak een boek.\n2 Leg het boek op de tafel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-02",
+          "number": 2,
+          "title": "De eerste stap",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "De doek in de bak leggen."
+            },
+            {
+              "id": "o2",
+              "text": "Een doek pakken."
+            },
+            {
+              "id": "o3",
+              "text": "De tafel schoonmaken."
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Lees de regel die bovenaan staat bij 1.",
+          "retryVisible": "Dit is niet de eerste stap. Lees de regel bij 1 nog eens. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\n1 Pak een doek.\nAntwoord\nEen doek pakken.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat doe je eerst?",
+          "instruction": "Lees de drie stappen. Wat doe je eerst? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "1 Pak een doek.",
+            "Een doek pakken."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-03",
+          "number": 3,
+          "title": "De volgende stap",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "De map pakken."
+            },
+            {
+              "id": "o2",
+              "text": "De doek meteen wegleggen."
+            },
+            {
+              "id": "o3",
+              "text": "De tafel schoonmaken."
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Zoek de stap die al klaar is. Lees dan de regel eronder.",
+          "retryVisible": "Deze handeling komt hier niet na het pakken. Lees de volgende regel in de lijst. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\n1 Pak een doek.\n2 Maak de tafel schoon.\nAntwoord\nDe tafel schoonmaken.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat doe je na het pakken?",
+          "instruction": "Je hebt de doek gepakt. Lees de stappen. Wat doe je daarna? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "2 Maak de tafel schoon.",
+            "De tafel schoonmaken."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-04",
+          "number": 4,
+          "title": "De laatste plek",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "in de bak"
+            },
+            {
+              "id": "o2",
+              "text": "op de tafel"
+            },
+            {
+              "id": "o3",
+              "text": "in de map"
+            }
+          ],
+          "correctOptionId": "o1",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Lees de laatste regel helemaal. Kijk waar de doek naartoe gaat.",
+          "retryVisible": "Die plek staat niet in de laatste stap. Lees die regel nog eens. Tik op een andere plek.",
+          "exampleVisible": "Dit staat in het voorbeeld\n3 Leg de doek in de bak.\nAntwoord\nin de bak",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Waar leg je de doek?",
+          "instruction": "Lees de laatste stap. Waar leg je de doek als je klaar bent? Tik op de plek.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "3 Leg de doek in de bak.",
+            "in de bak"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-05",
+          "number": 5,
+          "title": "Lezen en doen",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Kijk welk cijfer je als laatste hebt gedaan. Lees daarna de regel onder dat cijfer.",
+          "retryVisible": "Kijk naar de lijst en naar de spullen. Heb je alle stappen gedaan? Doe nog wat ontbreekt.",
+          "exampleVisible": "Voorbeeld van een andere taak\n1 Pak een boek.\n2 Leg het boek op de tafel.",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees en doe de stappen.",
+          "instruction": "Lees stap 1. Doe die stap. Lees daarna de volgende stap en doe die. Ga zo door tot je klaar bent.",
+          "closed": false,
+          "exampleInstruction": "Lees in het voorbeeld eerst de bovenste regel. Daarna volgt de tweede regel. Bij jouw taak werk je ook regel voor regel.",
+          "exampleTargetTexts": [
+            "1 Pak een boek.\n2 Leg het boek op de tafel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-06",
+          "number": 6,
+          "title": "Kort terugmelden",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Noem waarover het bericht gaat. Schrijf wat daarmee is gebeurd.",
+          "retryVisible": "Lees jouw bericht terug. Kan een collega begrijpen wat klaar is? Vul aan wat nog niet duidelijk is.",
+          "exampleVisible": "Andere taak is klaar\nDe map ligt op de tafel.\n\nVoorbeeldbericht\nDe map ligt klaar op tafel.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "werk",
+            "sheetTask": 6,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf wat klaar is.",
+          "instruction": "De tafel is nu schoon. Schrijf bij opdracht 6 een kort bericht voor een collega. Laat weten dat je klaar bent met de tafel.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeldbericht vertelt wat klaar is. Jouw bericht gaat over de tafel.",
+          "exampleTargetTexts": [
+            "De map ligt op de tafel.\n\nVoorbeeldbericht\nDe map ligt klaar op tafel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-07",
+          "number": 7,
+          "title": "Een bericht lezen",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "op de tafel"
+            },
+            {
+              "id": "o2",
+              "text": "in de bak"
+            },
+            {
+              "id": "o3",
+              "text": "in de map"
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Bericht na een taak",
+              "text": "De tafel is schoon.\nDe doek ligt in de bak."
+            }
+          ],
+          "helpVisible": "Zoek de zin met doek. Lees die zin helemaal.",
+          "retryVisible": "Deze plek staat niet in het bericht. Lees de zin over de doek nog eens. Tik op een andere plek.",
+          "exampleVisible": "Dit staat in het voorbeeld\nDe doek ligt in de bak.\nAntwoord\nin de bak",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Waar ligt de doek nu?",
+          "instruction": "Lees het bericht. Waar ligt de doek nu? Tik op de plek.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "De doek ligt in de bak.",
+            "in de bak"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-08",
+          "number": 8,
+          "title": "Een vraag stellen",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Schrijf waarover je uitleg nodig hebt. Maak er een vraag van.",
+          "retryVisible": "Lees jouw vraag terug. Begrijpt een collega dat jij niet weet welke bak je nodig hebt? Verander de vraag als dat nodig is.",
+          "exampleVisible": "Andere situatie\nJe weet niet welke map je moet pakken.\n\nVoorbeeldvraag\nWelke map moet ik pakken?",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "werk",
+            "sheetTask": 8,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf een vraag over de bak.",
+          "instruction": "Je weet niet welke bak je moet gebruiken. Schrijf bij opdracht 8 een vraag voor een collega.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeld is een vraag over een map. Schrijf jouw vraag over de bak.",
+          "exampleTargetTexts": [
+            "Je weet niet welke map je moet pakken.\n\nVoorbeeldvraag\nWelke map moet ik pakken?"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-09",
+          "number": 9,
+          "title": "Een andere taak uitvoeren",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere werktaak",
+              "text": "Voor de les\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel."
+            }
+          ],
+          "helpVisible": "Lees eerst één regel. Doe wat er staat. Lees daarna de volgende regel.",
+          "retryVisible": "Kijk naar de stappen en de spullen. Heb je gedaan wat op elke regel staat? Doe nog wat ontbreekt.",
+          "exampleVisible": "Voorbeeld van de volgorde\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel.",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Doe de andere taak.",
+          "instruction": "Lees de stappen met de map en het boek. Doe de stappen één voor één.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeld laat de hele volgorde als tekst zien. Lees de regels één voor één.",
+          "exampleTargetTexts": [
+            "1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-10",
+          "number": 10,
+          "title": "Een onjuiste melding verbeteren",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere werktaak",
+              "text": "Voor de les\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel."
+            }
+          ],
+          "helpVisible": "Vergelijk de plek in het bericht met de plek in de laatste stap.",
+          "retryVisible": "Lees jouw nieuwe bericht terug. Staat de map op de plek uit de laatste stap? Verander wat nog niet klopt.",
+          "exampleVisible": "Andere opdracht\nLeg het boek op de tafel.\n\nVerkeerd bericht\nHet boek ligt op de stoel.\n\nGoed bericht\nHet boek ligt op de tafel.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "werk",
+            "sheetTask": 10,
+            "initialText": "De map ligt in de bak.",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Verbeter het bericht.",
+          "instruction": "Lees de stappen met de map. Kijk naar het bericht bij opdracht 10 op het antwoordblad. Schrijf het goede bericht eronder.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld klopt de plek eerst niet. Het nieuwe bericht noemt de plek uit de opdracht.",
+          "exampleTargetTexts": [
+            "Leg het boek op de tafel.\n\nVerkeerd bericht\nHet boek ligt op de stoel.\n\nGoed bericht\nHet boek ligt op de tafel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-11",
+          "number": 11,
+          "title": "Na de taak een bericht schrijven",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Andere werktaak",
+              "text": "Voor de les\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel."
+            }
+          ],
+          "helpVisible": "Lees elke stap voordat je iets doet. Kijk na de laatste stap waar de map ligt. Schrijf dat op.",
+          "retryVisible": "Vergelijk jouw bericht met de plek van de map. Lees ook de laatste stap nog eens. Verbeter je bericht als dat nodig is.",
+          "exampleVisible": "Voorbeeldbericht na deze taak\nDe map ligt op de tafel.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "werk",
+            "sheetTask": 11,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Doe de taak en schrijf een bericht.",
+          "instruction": "Doe de drie stappen met de map en het boek. Schrijf daarna bij opdracht 11 waar de map ligt.",
+          "closed": false,
+          "exampleInstruction": "Het voorbeeldbericht noemt de plek van de map. Doe bij jouw poging eerst zelf de taak.",
+          "exampleTargetTexts": [
+            "De map ligt op de tafel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-werk-12",
+          "number": 12,
+          "title": "Terugkijken",
+          "kind": "reflect",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Korte werktaak",
+              "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."
+            }
+          ],
+          "helpVisible": "Denk aan een woord of een stap waarbij je moest nadenken.",
+          "retryVisible": "Kijk de lijst nog eens door. Zeg wat voor jou duidelijk was en wat je nog wilt vragen.",
+          "exampleVisible": null,
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Denk terug aan deze taak.",
+          "instruction": "Denk aan het werken met de stappen. Zeg hardop wanneer jij iets wilde vragen. Je mag ook zeggen dat alles duidelijk was.",
+          "closed": false,
+          "exampleInstruction": null,
+          "exampleTargetTexts": [],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        }
+      ]
+    },
+    {
+      "id": "verbinden",
+      "title": "Lezen schrijven en teruglezen",
+      "goal": "Leestechniek, samenhang en zelf schrijven apart zichtbaar maken en later opnieuw toepassen.",
+      "start": "Je leest woorden en teksten hardop. Je schrijft ook wat je hoort. Leg het antwoordblad en een pen klaar. Voor opdracht 10 heb je het handgeschreven briefje nodig.",
+      "end": "Je hebt hardop gelezen en zelf geschreven. Kijk wat je nog wilt oefenen.",
+      "materialRequirements": [
+        "Het antwoordblad voor dit blok.",
+        "Een pen.",
+        "Een werkelijk handgeschreven doelbriefje en parallel voorbeeld; nog niet geproduceerd."
+      ],
+      "steps": [
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-01",
+          "number": 1,
+          "title": "Woorden zonder plaatje lezen",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Leeswoorden",
+              "text": "brood  stoel  krant  school  gang  bank\nramen  muren  sokken  koekjes  jasje  gepakt"
+            }
+          ],
+          "helpVisible": "Is een woord lastig? Lees de letters of een bekend deel. Lees daarna het hele woord nog eens.",
+          "retryVisible": "Lees het lastige woord opnieuw. Ga daarna verder met het volgende woord.",
+          "exampleVisible": "Voorbeeldwoord\npen",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees de bovenste regel hardop.",
+          "instruction": "Lees de bovenste regel met woorden hardop. Lees één woord tegelijk. Neem de tijd.",
+          "closed": false,
+          "exampleInstruction": "Lees het woord in het voorbeeld als één woord. Bij jouw opdracht lees je de bovenste regel.",
+          "exampleTargetTexts": [
+            "pen"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-02",
+          "number": 2,
+          "title": "Woorddelen verbinden",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Leeswoorden",
+              "text": "brood  stoel  krant  school  gang  bank\nramen  muren  sokken  koekjes  jasje  gepakt"
+            }
+          ],
+          "helpVisible": "Kijk of je een deel van het woord al kent. Lees dat deel. Lees daarna het hele woord.",
+          "retryVisible": "Lees een lastig woord nog eens. Je mag langzaam lezen.",
+          "exampleVisible": "Voorbeeld\nmap\nmappen",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees de onderste regel hardop.",
+          "instruction": "Lees de onderste regel hardop. Probeer elk woord helemaal te lezen. Neem de tijd.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de twee woorden in het voorbeeld. Lees het lange woord helemaal.",
+          "exampleTargetTexts": [
+            "map",
+            "mappen"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-03",
+          "number": 3,
+          "title": "Getallen opschrijven",
+          "kind": "dictation",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "audioOnly",
+              "title": "Oefengeluid",
+              "text": "Schrijf je antwoord op het blad."
+            }
+          ],
+          "helpVisible": "Luister nog eens naar het getal waar je mee bezig bent. Kijk naar de volgorde van jouw cijfers.",
+          "retryVisible": "Luister opnieuw. Lees jouw getal terug. Verander de cijfers als dat nodig is.",
+          "exampleVisible": "Voorbeeld van een geschreven getal\n37",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "verbinden",
+            "sheetTask": 3,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Luister en schrijf de getallen.",
+          "instruction": "Luister naar één getal. Schrijf het in cijfers op het antwoordblad bij opdracht 3. Gebruik voor elk getal een nieuwe regel.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld hoor je een getal. Daarna zie je hoe je het schrijft.",
+          "exampleTargetTexts": [
+            "zevenendertig"
+          ],
+          "dictationTexts": [
+            "achtentwintig",
+            "honderdzesenveertig",
+            "negenhonderddrie"
+          ],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-04",
+          "number": 4,
+          "title": "Woorden opschrijven",
+          "kind": "dictation",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "audioOnly",
+              "title": "Oefengeluid",
+              "text": "Schrijf je antwoord op het blad."
+            }
+          ],
+          "helpVisible": "Luister nog eens naar het woord waar je mee bezig bent. Lees daarna wat jij hebt geschreven.",
+          "retryVisible": "Luister opnieuw. Vergelijk het woord dat je hoort met jouw geschreven woord. Verbeter het als dat nodig is.",
+          "exampleVisible": "Voorbeeld van een geschreven woord\npen",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "verbinden",
+            "sheetTask": 4,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Luister en schrijf de woorden.",
+          "instruction": "Luister naar één woord. Schrijf het op het antwoordblad bij opdracht 4. Schrijf elk woord op een nieuwe regel.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld hoor je een woord. Daarna zie je hoe het geschreven is.",
+          "exampleTargetTexts": [
+            "pen"
+          ],
+          "dictationTexts": [
+            "brood",
+            "ramen",
+            "sokken",
+            "koekjes"
+          ],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-05",
+          "number": 5,
+          "title": "Een zin schrijven",
+          "kind": "dictation",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "audioOnly",
+              "title": "Oefengeluid",
+              "text": "Schrijf je antwoord op het blad."
+            }
+          ],
+          "helpVisible": "Lees jouw zin terug. Staan de woorden los van elkaar? Luister opnieuw als je een woord mist.",
+          "retryVisible": "Luister nog een keer naar de hele zin. Vergelijk die met jouw zin. Vul een gemist woord aan of verbeter jouw zin.",
+          "exampleVisible": "Andere voorbeeldzin\nDe map is leeg.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "verbinden",
+            "sheetTask": 5,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Luister en schrijf de zin.",
+          "instruction": "Luister naar de hele zin. Schrijf die bij opdracht 5 op het antwoordblad. Je mag de zin opnieuw beluisteren.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld hoor je een hele zin. Daarna zie je de zin met spaties tussen de woorden.",
+          "exampleTargetTexts": [
+            "De map is leeg."
+          ],
+          "dictationTexts": [
+            "De fles is leeg."
+          ],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-06",
+          "number": 6,
+          "title": "In een lijst zoeken",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "Zoeklijst",
+              "text": "bank\nboek\nbrood\nbus\ndeur\nraam"
+            }
+          ],
+          "helpVisible": "Kijk naar de beginletter. Lees daarna de rest van het woord.",
+          "retryVisible": "Kijk of je het hele woord hebt gevonden. Lees het woord nog eens.",
+          "exampleVisible": "Andere zoeklijst\nkam\nkop\nkus\n\nGezocht woord\nkop",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Zoek brood in de lijst.",
+          "instruction": "Zoek het woord brood in de lijst. Wijs het woord op het scherm aan.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld hebben drie woorden dezelfde beginletter. Lees het hele woord om het goede woord te vinden.",
+          "exampleTargetTexts": [
+            "kam\nkop\nkus\n\nGezocht woord\nkop"
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-07",
+          "number": 7,
+          "title": "Een korte tekst lezen",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "De fles",
+              "text": "De fles is leeg. Abel vult de fles met water. Daarna doet hij de dop erop."
+            }
+          ],
+          "helpVisible": "Lees één zin tegelijk. Wat is er eerst? Wat gebeurt er daarna?",
+          "retryVisible": "Lees de tekst nog eens. Zeg eerst hoe de fles aan het begin is. Vertel daarna wat Abel doet.",
+          "exampleVisible": "Andere voorbeeldtekst\nDe map is leeg. Ik stop papier in de map. Nu zit er papier in de map.\n\nVoorbeeld van navertellen\nEerst is de map leeg. Daarna zit er papier in.",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees wat er met de fles gebeurt.",
+          "instruction": "Lees de tekst over Abel en de fles. Zeg daarna hardop wat er gebeurt.",
+          "closed": false,
+          "exampleInstruction": "Lees de korte tekst in het voorbeeld. Kijk hoe je kort kunt vertellen wat er gebeurt.",
+          "exampleTargetTexts": [
+            "De map is leeg. Ik stop papier in de map. Nu zit er papier in de map.\n\nVoorbeeld van navertellen\nEerst is de map leeg. Daarna zit er papier in."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-08",
+          "number": 8,
+          "title": "Samenhang begrijpen",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Eerst de dop erop. Dan water in de fles."
+            },
+            {
+              "id": "o2",
+              "text": "Eerst water in de fles. Dan de dop erop."
+            },
+            {
+              "id": "o3",
+              "text": "Er gaat geen water in de fles."
+            }
+          ],
+          "correctOptionId": "o2",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "De fles",
+              "text": "De fles is leeg. Abel vult de fles met water. Daarna doet hij de dop erop."
+            }
+          ],
+          "helpVisible": "Zoek in de tekst de twee dingen die Abel doet. Kijk welke eerst komt.",
+          "retryVisible": "De volgorde of de handeling past niet bij de tekst. Lees wat Abel eerst doet en wat daarna komt. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nAbel vult de fles met water. Daarna doet hij de dop erop.\nAntwoord\nEerst water in de fles. Dan de dop erop.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat doet Abel eerst en daarna?",
+          "instruction": "Lees de tekst. Wat doet Abel eerst en wat daarna? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Abel vult de fles met water. Daarna doet hij de dop erop.",
+            "Eerst water in de fles. Dan de dop erop."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-09",
+          "number": 9,
+          "title": "Zelf een korte uitleg schrijven",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "De fles",
+              "text": "De fles is leeg. Abel vult de fles met water. Daarna doet hij de dop erop."
+            }
+          ],
+          "helpVisible": "Denk aan de twee dingen die je doet. Lees terug of de volgorde duidelijk is.",
+          "retryVisible": "Lees jouw zinnen hardop. Is duidelijk wat je eerst doet en wat daarna? Vul aan wat ontbreekt.",
+          "exampleVisible": "Andere taak\nEen boek in een map doen en de map sluiten.\n\nVoorbeeldzinnen\nIk doe het boek in de map. Daarna doe ik de map dicht.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "verbinden",
+            "sheetTask": 9,
+            "initialText": "",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Schrijf hoe je de fles vult.",
+          "instruction": "Je wilt een fles vullen en dichtdoen. Schrijf bij opdracht 9 twee korte zinnen. Schrijf eerst wat je met het water doet. Schrijf daarna wat je met de dop doet.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld staat één handeling per zin. Schrijf jouw twee zinnen over de fles.",
+          "exampleTargetTexts": [
+            "Een boek in een map doen en de map sluiten.\n\nVoorbeeldzinnen\nIk doe het boek in de map. Daarna doe ik de map dicht."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-10",
+          "number": 10,
+          "title": "Een duidelijk handschrift lezen",
+          "kind": "read",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "requiredHandwrittenSource",
+              "title": "Het handgeschreven briefje",
+              "text": "De les begint om 10.00. Neem je map mee."
+            }
+          ],
+          "helpVisible": "Zoek eerst de tijd op het briefje. Lees daarna de zin over wat je meeneemt.",
+          "retryVisible": "Lees het briefje opnieuw. Kijk apart naar de tijd en naar wat je meeneemt.",
+          "exampleVisible": "Tekst van het andere handgeschreven voorbeeld\nIk kom maandag om 9 uur.",
+          "responseSetup": null,
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": null,
+          "screen": "Lees het handgeschreven briefje.",
+          "instruction": "Lees het handgeschreven briefje. Zeg hardop hoe laat de les begint. Zeg daarna wat je meeneemt.",
+          "closed": false,
+          "exampleInstruction": "Lees het handgeschreven voorbeeld. Zoek daarin de dag en de tijd.",
+          "exampleTargetTexts": [
+            "Ik kom maandag om 9 uur."
+          ],
+          "dictationTexts": [],
+          "handwriting": "/alfa-c/handschrift/lesbriefje.png",
+          "exampleHandwriting": "/alfa-c/handschrift/voorbeeldbriefje.png"
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-11",
+          "number": 11,
+          "title": "Een nieuwe tekst begrijpen",
+          "kind": "choice",
+          "options": [
+            {
+              "id": "o1",
+              "text": "De kan weer leegmaken."
+            },
+            {
+              "id": "o2",
+              "text": "De dop op de kan doen."
+            },
+            {
+              "id": "o3",
+              "text": "De kan op tafel zetten."
+            }
+          ],
+          "correctOptionId": "o3",
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "De kan",
+              "text": "De kan is leeg. Ik vul de kan met water. Daarna zet ik de kan op tafel."
+            }
+          ],
+          "helpVisible": "Lees de laatste zin van deze tekst. Gebruik niet het antwoord uit de tekst over de fles.",
+          "retryVisible": "Dit staat niet als volgende stap in de tekst over de kan. Lees de laatste zin opnieuw. Tik op een ander antwoord.",
+          "exampleVisible": "Dit staat in het voorbeeld\nDaarna zet ik de kan op tafel.\nAntwoord\nDe kan op tafel zetten.",
+          "responseSetup": null,
+          "successFeedback": "Dat klopt.",
+          "automaticAcknowledgement": null,
+          "screen": "Wat gebeurt er na het vullen?",
+          "instruction": "Lees de tekst over de kan. Eerst doet de schrijver water in de kan. Wat doet de schrijver daarna? Tik op het antwoord.",
+          "closed": false,
+          "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+          "exampleTargetTexts": [
+            "Daarna zet ik de kan op tafel.",
+            "De kan op tafel zetten."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        },
+        {
+          "id": "klink-alfa-c-aanvulling-verbinden-12",
+          "number": 12,
+          "title": "Teruglezen en verbeteren",
+          "kind": "write",
+          "options": [],
+          "correctOptionId": null,
+          "presentation": [
+            {
+              "kind": "source",
+              "title": "De kan",
+              "text": "De kan is leeg. Ik vul de kan met water. Daarna zet ik de kan op tafel."
+            }
+          ],
+          "helpVisible": "Gaat het bericht over hetzelfde voorwerp als de tekst? Vergelijk het woord voor het voorwerp.",
+          "retryVisible": "Lees de tekst en jouw nieuwe bericht terug. Kijk of het goede voorwerp in jouw bericht staat.",
+          "exampleVisible": "Andere tekst\nHet boek ligt op de stoel.\n\nVerkeerd briefje\nDe map ligt op de stoel.\n\nGoed briefje\nHet boek ligt op de stoel.",
+          "responseSetup": {
+            "medium": "paper",
+            "sheetBlock": "verbinden",
+            "sheetTask": 12,
+            "initialText": "Ik zet de fles op tafel.",
+            "fields": [],
+            "responseGroup": null,
+            "previousResponseFrom": null,
+            "automaticContentAssessment": false
+          },
+          "successFeedback": "Je hebt geoefend met deze opdracht.",
+          "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+          "screen": "Verbeter het woord in het bericht.",
+          "instruction": "Lees de tekst over de kan. Kijk naar het bericht bij opdracht 12 op het antwoordblad. Schrijf het goede bericht eronder.",
+          "closed": false,
+          "exampleInstruction": "In het voorbeeld klopt het voorwerp eerst niet. Het nieuwe briefje noemt het voorwerp uit de tekst.",
+          "exampleTargetTexts": [
+            "Het boek ligt op de stoel.\n\nVerkeerd briefje\nDe map ligt op de stoel.\n\nGoed briefje\nHet boek ligt op de stoel."
+          ],
+          "dictationTexts": [],
+          "handwriting": null,
+          "exampleHandwriting": null
+        }
+      ]
+    }
+  ]
+}
