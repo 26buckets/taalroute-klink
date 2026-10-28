@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Vol
 import { functionalAudio, functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
 import { playMedia, stopMedia } from './shared';
 import Image from 'next/image';
+import { AlfaCWorkspace, DocumentSet, PracticeDocument } from './alfa-c-workspace';
 
 export function FunctionalBlockCards() {
   return <>{functionalBlocks.map(block => <a key={block.id} className="cp-activity-button" data-functional-block={block.id} href={`#learner/alfa-c/${block.id}`}>
@@ -36,7 +37,7 @@ export function AlfaCFunctionalPractice({ block }: { block: FunctionalBlock }) {
   function position(index: number) {
     if (progress) save({ ...progress, positions: { ...progress.positions, [block.id]: index } });
   }
-  return <div className="learner-page cp-chapters cp-chapter-playing pilot-page functional-page">
+  return <div className="learner-page cp-chapters cp-chapter-playing pilot-page functional-page ac-document-page">
     <header className="cp-context-header">
       <a className="text-back" href="#learner/alfa-c" aria-label="Andere oefening"><ArrowLeft /></a>
       <h1 ref={heading} tabIndex={-1}>{block.title}</h1><small className="cp-context-meta">Alfa C</small>
@@ -109,39 +110,39 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
     metrics.current.helpUsed = true;
     if (record) onRecord({ ...record, helpUsed: true });
   }
-  return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player" data-functional-step={step.id}>
+  const documents = step.presentation.filter(view => view.kind !== 'previousResponse' && view.kind !== 'audioOnly').map((view, n) => ({ id: `${step.id}:${n}`, title: view.title, text: view.text }));
+  const action = step.instruction.replace(step.screen, '').replace(/  +/g, ' ').trim();
+  const source = <>
+    {step.presentation.filter(view => view.kind === 'previousResponse').map((view, n) => <PracticeDocument key={n} document={{ title: 'Jouw antwoordblad', text: `Pak jouw antwoordblad.\nKijk naar je antwoord bij opdracht ${block.steps.find(s => s.id === ('fromTask' in view ? view.fromTask : ''))?.number}.` }} />)}
+    {step.handwriting ? <figure className="ac-handwriting"><Image unoptimized width={1254} height={1254} className="functional-handwriting" src={step.handwriting} alt={documents[0]?.text ?? ''} /></figure> : documents.length > 0 && <DocumentSet documents={documents} />}
+    {step.presentation.filter(view => view.kind === 'audioOnly').map((view, n) => <p className="ac-task-context" key={n}>{view.text}</p>)}
+    {step.dictationTexts.length > 0 && <div className="ac-dictation-controls">{step.dictationTexts.map((text, n) => <button key={n} className="secondary-button" disabled={busy} onClick={() => void play([{ role: 'target', text }], n)}><Volume2 />Luister{step.dictationTexts.length > 1 ? ` ${n + 1}` : step.id.endsWith('formulier-08') ? ' naar het nummer' : ' naar de zin'}</button>)}</div>}
+  </>;
+  return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-functional-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head">
         <h2 ref={title} tabIndex={-1}>{step.screen}</h2>
         <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div>
       </header>
+      <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
+        <button className="secondary-button" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }])}><Volume2 />Uitleg</button>
+        {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <button className="secondary-button" disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }}><Volume2 />{model ? 'Voorbeeld horen' : 'Tekst horen'}</button>}
+        {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />Voorbeeld</button>}
+        <button className="secondary-button" aria-expanded={help} onClick={() => { markHelp(); setHelp(!help); setModel(false); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }}><HelpCircle />Help</button>
+        {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
+      </div>
       <div className="cp-exercise-stage">
-        <>
-          <div className="pilot-instruction">
-            {index === 0 && <><p>{block.start}</p><p>{block.materialRequirements.join(' ')}</p><a className="secondary-button" href={`/alfa-c/antwoordbladen.html#${block.id}`} target="_blank" rel="noreferrer"><FileText />Antwoordblad openen</a></>}
-            <p>{step.instruction}</p>
-          </div>
-          <div className="pilot-tools">
-            <button className="secondary-button" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }, ...step.exampleTargetTexts.map(text => ({ role: 'target' as const, text }))] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }])}><Volume2 />{busy ? 'Luisteren…' : 'Luister'}</button>
-            {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />{model ? 'Nu jij' : 'Voorbeeld'}</button>}
-            <button className="secondary-button" aria-expanded={help} onClick={() => { markHelp(); setHelp(!help); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }}><HelpCircle />Help</button>
-            {step.responseSetup && index > 0 && <a className="secondary-button" href={`/alfa-c/antwoordbladen.html#${block.id}`} target="_blank" rel="noreferrer"><FileText />Antwoordblad</a>}
-          </div>
-          {audioError && <p role="alert">Het geluid werkt niet. Tik nog eens op Luister.</p>}
-          {help && <aside className="pilot-help"><p>{retry ? step.retryVisible : step.helpVisible}</p><button className="secondary-button" disabled={busy} onClick={() => void guide(retry ? step.retryVisible : step.helpVisible)}><Volume2 />Luister naar de tip</button></aside>}
-          {model ? <section className="cp-task-card pilot-model functional-source"><h3>Voorbeeld</h3>{step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <p>{step.exampleVisible}</p>}<p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section> : <>
-            {step.presentation.map((view, n) => view.kind === 'previousResponse'
-              ? <p key={n}>Pak jouw antwoordblad. Kijk naar je antwoord bij opdracht {block.steps.find(s => s.id === ('fromTask' in view ? view.fromTask : ''))?.number}.</p>
-              : <section key={n} className="cp-task-card functional-source"><h3>{view.title}</h3>{step.handwriting ? <Image unoptimized width={1254} height={1254} className="functional-handwriting" src={step.handwriting} alt={view.text} /> : <p>{view.text}</p>}{view.kind !== 'audioOnly' && <button className="secondary-button" disabled={busy} onClick={() => { markHelp(); void play([{ role: 'target', text: view.text }]); }}><Volume2 />Luister naar de tekst</button>}</section>)}
-            {step.dictationTexts.map((text, n) => <button key={n} className="secondary-button" disabled={busy} onClick={() => void play([{ role: 'target', text }], n)}><Volume2 />Luister{step.dictationTexts.length > 1 ? ` ${n + 1}` : step.id.endsWith('formulier-08') ? ' naar het nummer' : ' naar de zin'}</button>)}
-            {choice ? <fieldset className="functional-choice">
-              <legend>{step.instruction}</legend>
-              <p>Kies één antwoord.</p>
-              <div className="functional-choice-grid">{functionalOptions(step).map(option => <button className="cp-option" key={option.id} aria-pressed={selected === option.id} disabled={busy || result === 'right'} onClick={() => answer(option.id)}>{option.text}</button>)}</div>
-            </fieldset>
-              : <button className="secondary-button" disabled={busy || result === 'done' || heardItems.length < step.dictationTexts.length} onClick={() => { setResult('done'); onRecord({ ...metrics.current, assessment: 'participation' }); void guide(step.automaticAcknowledgement ?? step.successFeedback); }}><Check />Ik ben klaar</button>}
-          </>}
-        </>
+        <AlfaCWorkspace key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help}>
+          {model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section>
+            : help ? <aside className="pilot-help"><h3>Help</h3><p>{retry ? step.retryVisible : step.helpVisible}</p><button className="secondary-button" disabled={busy} onClick={() => void guide(retry ? step.retryVisible : step.helpVisible)}><Volume2 />Luister naar de tip</button><button className="secondary-button" onClick={() => { stopPlayback(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
+              : <>
+                {action && <p className="ac-task-context">{action}</p>}
+                {index === 0 && <details className="ac-materials"><summary>Dit heb je nodig</summary><p>{block.materialRequirements.map(text => text.includes('nog niet geproduceerd') ? 'Het handgeschreven briefje op het scherm.' : text).join(' ')}</p></details>}
+                {(step.responseSetup || index === 0) && <a className="secondary-button" href={`/alfa-c/antwoordbladen.html#${block.id}`} target="_blank" rel="noreferrer"><FileText />Antwoordblad</a>}
+                {choice ? <fieldset className="functional-choice"><legend className="sr-only">{step.instruction}</legend><p>Kies één antwoord.</p><div className="functional-choice-grid">{functionalOptions(step).map(option => <button className="cp-option" key={option.id} aria-pressed={selected === option.id} disabled={busy || result === 'right'} onClick={() => answer(option.id)}>{option.text}</button>)}</div></fieldset>
+                  : <button className="secondary-button" disabled={busy || result === 'done' || heardItems.length < step.dictationTexts.length} onClick={() => { setResult('done'); onRecord({ ...metrics.current, assessment: 'participation' }); void guide(step.automaticAcknowledgement ?? step.successFeedback); }}><Check />Ik ben klaar</button>}
+              </>}
+        </AlfaCWorkspace>
       </div>
       <footer className="pilot-footer">
         <output aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? 'Dat klopt.' : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>

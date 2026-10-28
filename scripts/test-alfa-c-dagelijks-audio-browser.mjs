@@ -27,20 +27,20 @@ for (const [engine, launcher] of Object.entries({ chromium, webkit })) {
       checks.push(...result.map(r => ({ engine, ...r })));
     }
     await page.goto(base + '/#learner/alfa-c/dagelijks-les');
-    await page.getByRole('button', { name: 'Luister', exact: true }).click();
-    await page.getByRole('button', { name: 'Luister', exact: true }).waitFor({ state: 'visible' });
+    await page.getByRole('button', { name: 'Uitleg', exact: true }).click();
+    await page.getByRole('button', { name: 'Uitleg', exact: true }).waitFor({ state: 'visible' });
     await page.waitForFunction(() => !document.querySelector('[data-daily-step] .pilot-tools button')?.disabled, {}, { timeout: 30000 });
     assert.equal(await page.getByRole('alert').count(), 0);
-    await page.getByRole('button', { name: 'Luister naar de tekst', exact: true }).click();
+    await page.getByRole('button', { name: 'Tekst horen', exact: true }).click();
     await page.waitForFunction(() => !document.querySelector('[data-daily-step] .pilot-tools button')?.disabled, {}, { timeout: 30000 });
     assert.equal(await page.getByRole('alert').count(), 0);
     const step = dailyBlocks[0].steps[0];
     await page.route('**/' + step.audio.I + '.mp3', route => route.abort());
-    await page.reload(); await page.getByRole('button', { name: 'Luister', exact: true }).click();
+    await page.reload(); await page.getByRole('button', { name: 'Uitleg', exact: true }).click();
     await page.getByRole('alert').waitFor({ timeout: 30000 });
     assert(await page.getByRole('button', { name: 'Verder', exact: true }).isDisabled());
     await page.unroute('**/' + step.audio.I + '.mp3');
-    await page.getByRole('button', { name: 'Luister', exact: true }).click();
+    await page.getByRole('button', { name: 'Uitleg', exact: true }).click();
     await page.waitForFunction(() => !document.querySelector('[data-daily-step] .pilot-tools button')?.disabled, {}, { timeout: 30000 });
     assert.equal(await page.getByRole('alert').count(), 0);
   } finally { await browser.close(); }

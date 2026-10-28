@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
+import { verifyWorkspaceRelease, readBeforeWorkspace } from './check-alfa-c-workspace-release.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 64 * 1024 * 1024 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 export function verifyDailyRelease(read = readFileSync) {
+  const workspaceRelease = verifyWorkspaceRelease(read), currentRead = read;
+  read = file => readBeforeWorkspace(file, workspaceRelease, currentRead);
   const release = JSON.parse(read('docs/klink-owner-release-alfa-c-dagelijks-20261028.json'));
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.baselineSourceCommit, 'a743a83d215f925c4a43496e9ff2a4ee5cc168e6');
@@ -15,12 +18,12 @@ export function verifyDailyRelease(read = readFileSync) {
   git('merge-base', '--is-ancestor', release.liveSourceCommit, release.baselineSourceCommit);
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts'];
-  const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
-  const untracked = git('ls-files', '--others', '--exclude-standard', '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const changed = git('diff', '--name-only', release.baselineSourceCommit, workspaceRelease.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const untracked = []; // The workspace successor verifies the current working tree.
   assert.deepEqual([...new Set([...changed, ...untracked])].sort(), [...release.changedFiles].sort());
   for (const [path, hash] of Object.entries(release.files)) assert.equal(sha(read(path)), hash, path);
   assert(release.changedFiles.every(p => release.files[p]));
-  assert.equal(git('diff', release.baselineSourceCommit, '--', 'db', 'drizzle', 'lib/learner-progress.ts', 'data/klink-imported-practice.json', 'data/klink-alfa-c-functioneel.json', 'data/klink-alfa-c-texts.json', 'public/klink-wordmark.svg').length, 0);
+  assert.equal(git('diff', release.baselineSourceCommit, workspaceRelease.baselineSourceCommit, '--', 'db', 'drizzle', 'lib/learner-progress.ts', 'data/klink-imported-practice.json', 'data/klink-alfa-c-functioneel.json', 'data/klink-alfa-c-texts.json', 'public/klink-wordmark.svg').length, 0);
   const source = JSON.parse(read('data/klink-alfa-c-dagelijks.json'));
   assert.equal(source.blocks.length, 6); assert.equal(source.blocks.flatMap(b => b.steps).length, 72);
   const audio = JSON.parse(read('data/klink-alfa-c-dagelijks-audio.json'));
@@ -45,8 +48,8 @@ export function verifyDailyRelease(read = readFileSync) {
   assert.equal(review.humanListeningReview, false);
   const backup = JSON.parse(read(release.backupPath));
   assert(backup.parentVerified && backup.downloadedByteIdentical && backup.zipCrcVerified);
-  return release;
+  return { ...release, workspaceRelease };
 }
 export function readBeforeDaily(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : read(file);
+  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeWorkspace(file, release.workspaceRelease, read);
 }

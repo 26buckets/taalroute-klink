@@ -33,7 +33,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       };
     });
     const idle=()=>page.waitForFunction(()=>!document.querySelector('.functional-player .pilot-tools button')?.disabled);
-    await page.goto(base+'/#learner/alfa-c');await page.locator('[data-functional-block]').first().waitFor();
+    await page.goto(base+'/#learner/alfa-c');await page.getByRole('button',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-functional-block]').first().waitFor();
     assert.equal(await page.locator('[data-functional-block]').count(),6);assert.equal(await page.locator('[data-pilot-block]').count(),3);
     const sentinel='{"version":1,"positions":{"winkel":7},"records":{}}';
     await page.evaluate(v=>{localStorage.setItem('klink.preview.alfa-c.v1',v);localStorage.setItem('klink.taalroute.attempts.v1','[{"sentinel":true}]');},sentinel);
@@ -47,11 +47,19 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
           assert((await player.innerText()).includes('Deze opdracht komt later.'));
           assert.equal(await player.locator('.functional-source').count(),0);assert(await next.isEnabled());
         } else {
-          assert(await next.isDisabled());assert((await player.innerText()).includes(step.instruction));
-          await player.getByRole('button',{name:'Luister',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('guide',step.instruction));
+          assert(await next.isDisabled());
+          for (const view of step.presentation.filter(v => !['previousResponse', 'audioOnly'].includes(v.kind))) {
+            if (step.handwriting) assert.equal(await player.locator('.ac-handwriting img').getAttribute('alt'), view.text);
+            else assert((await player.locator('.ac-source-panel').innerText()).replace(/\s/g,'').includes(view.text.replace(/\s/g,'')), step.id);
+          }
+          assert((await player.innerText()).includes(step.instruction.replace(step.screen,'').replace(/  +/g,' ').trim()));
+          await player.getByRole('button',{name:'Uitleg',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('guide',step.instruction));
+          const visibleDocuments=step.presentation.filter(v=>!['previousResponse','audioOnly'].includes(v.kind));
+          if(visibleDocuments.length){await player.getByRole('button',{name:'Tekst horen',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('target',visibleDocuments.at(-1).text));}
           if(step.exampleVisible){await player.getByRole('button',{name:'Voorbeeld',exact:true}).click();await idle();
-            if(step.exampleHandwriting){assert(await player.locator('.functional-handwriting').isVisible());}else assert((await player.innerText()).includes(step.exampleVisible));
-            assert(await next.isDisabled());await player.locator('.functional-source').getByRole('button',{name:'Nu jij',exact:true}).click();}
+            if(step.exampleHandwriting){assert(await player.locator('.functional-handwriting').isVisible());}else for (const part of step.exampleVisible.split('\n\n')) assert((await player.innerText()).replace(/\s/g,'').includes(part.replace(/\s/g,'')));
+            if(step.exampleTargetTexts.length){await player.getByRole('button',{name:'Voorbeeld horen',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('target',step.exampleTargetTexts.at(-1)));}
+            assert(await next.isDisabled());await player.locator('.pilot-model').getByRole('button',{name:'Nu jij',exact:true}).click();}
           await player.getByRole('button',{name:'Help',exact:true}).click();await idle();assert.equal(await player.locator('.pilot-help p').innerText(),step.helpVisible);assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('guide',step.helpVisible));await player.getByRole('button',{name:'Help',exact:true}).click();
           if(step.kind==='choice') {
             await checkChoices(page,player,step,name,'desktop');
@@ -70,7 +78,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
             }
             await player.getByRole('button',{name:'Ik ben klaar',exact:true}).click();await idle();assert(!(await player.locator('output').innerText()).includes('Dat klopt.'));
             await player.getByRole('button',{name:'Nog eens',exact:true}).click();await idle();assert.equal(await player.locator('.pilot-help p').innerText(),step.retryVisible);assert(await next.isDisabled());
-            await player.getByRole('button',{name:'Ik ben klaar',exact:true}).click();await idle();
+            await player.getByRole('button',{name:'Terug naar de opdracht',exact:true}).click();await player.getByRole('button',{name:'Ik ben klaar',exact:true}).click();await idle();
           }
         }
         assert(await next.isEnabled());await next.click();
@@ -83,7 +91,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
         if(step.number===6){await page.reload();await page.locator(`[data-functional-step="${block.steps[6].id}"]`).waitFor();}
       }
       await page.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();
-      await page.getByRole('link',{name:'Kies een ander blok'}).click();await page.locator('[data-functional-block]').first().waitFor();
+      await page.getByRole('link',{name:'Kies een ander blok'}).click();await page.getByRole('button',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-functional-block]').first().waitFor();
     }
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.preview.alfa-c.v1')),sentinel);
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.taalroute.attempts.v1')),'[{"sentinel":true}]');
@@ -95,6 +103,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal overflow: '+step.id);
       const sizes=await page.locator('.functional-player button').evaluateAll(a=>a.filter(x=>x.getBoundingClientRect().height).map(x=>({label:x.textContent,h:x.getBoundingClientRect().height})));
       assert(sizes.every(x=>x.h>=44),'Touch targets: '+JSON.stringify(sizes));
+      await page.getByRole('button',{name:'Opdracht',exact:true}).click();
       if(step.kind==='choice')await checkChoices(page,page.locator('[data-functional-step]'),step,name,'mobile');
       if(step.number===1)await page.screenshot({path:`${out}/${name}-${block.id}-mobile.png`,fullPage:true});
     }

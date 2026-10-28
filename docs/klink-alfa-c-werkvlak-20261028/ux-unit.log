@@ -1,0 +1,19 @@
+✔ 72 source-bound tasks have unique IDs, complete audio and unambiguous responses (1.386917ms)
+✔ first response and support survive correction and storage roundtrip (1.6225ms)
+✔ latest Drive corrections and context survive adaptation (0.088958ms)
+✔ all instructions, examples, source texts, tips, retries and isolated dictation items have exact audio bindings (0.664834ms)
+✔ all 72 revised tasks available with 27 actual paper response places (1.140792ms)
+✔ progress rejects corrupt or invented success and never changes the older storage contract (0.236166ms)
+✔ Three bounded pilots reuse real source media without modifying source levels (1.566333ms)
+✔ Preview progress rejects malformed records and stays in a separate namespace (0.567125ms)
+✔ Repeat uses help and actual attempts, never merely seeing a model (0.174917ms)
+✔ The reviewed preview address opens the normal learner route (0.401292ms)
+✔ Correct choices use all three positions and retries stay stable (0.150625ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 240.089667

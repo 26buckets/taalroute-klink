@@ -17,7 +17,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
         pause() { clearTimeout(this.timer); }
       };
     });
-    await page.goto(base + '/#learner/alfa-c'); await page.locator('[data-daily-block]').first().waitFor();
+    await page.goto(base + '/#learner/alfa-c'); await page.getByRole('button', { name: 'Berichten lezen', exact: true }).click(); await page.locator('[data-daily-block]').first().waitFor();
     assert.equal(await page.locator('[data-daily-block]').count(), 6);
     assert.equal(await page.locator('[data-functional-block]').count(), 6);
     assert.equal(await page.locator('[data-pilot-block]').count(), 3);
@@ -30,9 +30,10 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
         const next = player.getByRole('button', { name: 'Verder', exact: true });
         assert(await next.isDisabled());
         assert.equal(await player.getByRole('heading', { level: 2 }).innerText(), step.instruction);
-        for (const doc of step.documents) assert((await player.innerText()).includes(doc.text));
+        const rendered = await player.locator('.ac-document-paper').evaluateAll(papers => papers.map(p => { const c = p.cloneNode(true); c.querySelectorAll('img').forEach(img => img.replaceWith(img.alt)); return c.textContent.replace(/\s+/g, ' ').trim(); }));
+        for (const [n, doc] of step.documents.entries()) assert.equal(rendered[n].replace(/\s/g, ''), doc.text.replace(/\s/g, ''), step.id);
         for (const context of step.context) assert((await player.innerText()).includes(context));
-        await player.getByRole('button', { name: 'Luister', exact: true }).click(); await idle();
+        await player.getByRole('button', { name: 'Uitleg', exact: true }).click(); await idle();
         assert((await page.evaluate(() => window.playedAudio.at(-1))).endsWith(step.audio.I + '.mp3'));
         if (step.interaction === 'keuze') {
           const wrong = step.options.find(o => !o.correct);
@@ -68,6 +69,16 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       await page.goto(base + `/#learner/alfa-c/${block.id}`); await page.reload();
       await page.locator(`[data-daily-step="${step.id}"]`).waitFor();
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), step.id + ' narrow screen');
+      const mobilePlayer = page.locator(`[data-daily-step="${step.id}"]`);
+      for (const [n, doc] of step.documents.entries()) {
+        if (step.documents.length > 1) await mobilePlayer.locator('.ac-document-switch button').nth(n).click();
+        const paper = mobilePlayer.locator('.ac-document-slot[data-current="true"] .ac-document-paper');
+        assert(await paper.isVisible());
+        assert.equal(await paper.evaluate(p => { const c = p.cloneNode(true); c.querySelectorAll('img').forEach(img => img.replaceWith(img.alt)); return c.textContent.replace(/\s/g, ''); }), doc.text.replace(/\s/g, ''));
+      }
+      await mobilePlayer.getByRole('button', { name: 'Opdracht', exact: true }).click();
+      assert(await mobilePlayer.locator('.ac-answer-panel').isVisible());
+      assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
       const r = await page.evaluate(({ k, id }) => JSON.parse(localStorage.getItem(k)).records[id], { k: dailyStorageKey, id: step.id });
       assert.equal(r.first.correct, false); assert.equal(r.attempts, 2);
       if (index === 0) await page.screenshot({ path: `${out}/${name}-${block.id}-mobile.png`, fullPage: true });

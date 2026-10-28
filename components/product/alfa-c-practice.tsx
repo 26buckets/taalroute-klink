@@ -30,31 +30,17 @@ import { dailyBlocks } from '@/lib/alfa-c-dagelijks';
 import { AlfaCDailyPractice, DailyBlockCards } from './alfa-c-dagelijks';
 import { AlfaCFunctionalPractice, FunctionalBlockCards } from './alfa-c-functioneel';
 
-export function AlfaCBlockCards() {
-  return (
-    <div
-      className="cp-chapter-grid pilot-block-cards"
-      aria-label="Alfa C oefenblokken"
-    >
-      {pilotBlocks.map((block) => (
-        <a
-          key={block.id}
-          className="cp-activity-button"
-          data-pilot-block={block.id}
-          href={`#learner/alfa-c/${block.id}`}
-        >
-          <Eye aria-hidden="true" />
-          <span>
-            {block.title}
-            <small>{block.words.join(' · ')}</small>
-          </span>
-          <ArrowRight aria-hidden="true" />
-        </a>
-      ))}
-      <FunctionalBlockCards />
-      <DailyBlockCards />
-    </div>
-  );
+export function AlfaCBlockCards({ progress }: { progress?: PilotProgress }) {
+  const [group, setGroup] = useState('words');
+  return <div className="pilot-block-cards ac-practice-library" aria-label="Alfa C praktijksituaties">
+    <p className="ac-library-description">Kies wat je wilt oefenen.</p>
+    <nav className="ac-library-groups" aria-label="Soort praktijksituatie">{[['words', 'Woorden en zinnen'], ['paper', 'Lezen en schrijven'], ['messages', 'Berichten lezen']].map(([id, label]) => <button key={id} className="secondary-button" aria-pressed={group === id} aria-controls={`alfa-c-group-${id}`} onClick={() => setGroup(id)}>{label}</button>)}</nav>
+    <section id="alfa-c-group-words" className="ac-library-panel" hidden={group !== 'words'} aria-label="Woorden en zinnen"><div className="cp-chapter-grid">
+      {pilotBlocks.map(block => <a key={block.id} className="cp-activity-button" data-pilot-block={block.id} href={`#learner/alfa-c/${block.id}`}><Eye aria-hidden="true" /><span>{block.title}<small>{block.words.join(' · ')}{progress && ` · ${Math.min(progress.positions[block.id] ?? 0, block.steps.length)} / ${block.steps.length}`}</small></span><ArrowRight aria-hidden="true" /></a>)}
+    </div></section>
+    <section id="alfa-c-group-paper" className="ac-library-panel" hidden={group !== 'paper'} aria-label="Lezen en schrijven"><div className="cp-chapter-grid"><FunctionalBlockCards /></div></section>
+    <section id="alfa-c-group-messages" className="ac-library-panel" hidden={group !== 'messages'} aria-label="Berichten lezen"><div className="cp-chapter-grid"><DailyBlockCards /></div></section>
+  </div>;
 }
 export function AlfaCPractice({ onBack }: { onBack: () => void }) {
   const [selected, setSelected] = useState<string | undefined>(() =>
@@ -144,7 +130,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
           <ArrowLeft />
         </button>
         <h1 ref={heading} tabIndex={-1}>
-          {block?.title ?? 'Zelf oefenen'}
+          {block?.title ?? 'In de praktijk'}
         </h1>
         <small className="cp-context-meta">Alfa C</small>
       </header>
@@ -155,30 +141,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
       )}
       {!block ? (
         <section className="cp-panel pilot-library">
-          <p>Kies een blok. {alfaCCommonTexts['Later verdergaan'].text}</p>
-          <div className="cp-chapter-grid">
-            {pilotBlocks.map((b) => (
-              <button
-                key={b.id}
-                className="cp-activity-button"
-                data-pilot-block={b.id}
-                onClick={() => choose(b.id)}
-              >
-                <Eye />
-                <span>
-                  {b.title}
-                  <small>
-                    {b.words.join(' · ')} ·{' '}
-                    {Math.min(progress.positions[b.id] ?? 0, b.steps.length)} /{' '}
-                    {b.steps.length}
-                  </small>
-                </span>
-                <ArrowRight />
-              </button>
-            ))}
-            <FunctionalBlockCards />
-            <DailyBlockCards />
-          </div>
+          <AlfaCBlockCards progress={progress} />
         </section>
       ) : !step ? (
         <section className="honest-empty pilot-complete">

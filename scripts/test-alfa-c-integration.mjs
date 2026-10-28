@@ -42,7 +42,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     assert.equal(await page.locator('.pilot-block-cards [data-daily-block]').count(), 6);
     assert.equal(await page.locator('.pilot-block-cards [data-pilot-block]').count(), 3);
     assert.equal(await page.locator('.pilot-block-cards [data-functional-block]').count(), 6);
-    assert.equal(await page.locator('[data-chapter]').count(), 12);
+    assert.equal(await page.locator('[data-chapter]').count(), 0);
     assert(
       await page
         .getByRole('button', { name: 'Alfa C', exact: true })
@@ -119,6 +119,8 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       .getByRole('button', { name: 'Met je docent', exact: true })
       .click();
     assert.equal(await page.locator('.pilot-block-cards').count(), 0);
+    assert.equal(await page.locator('[data-chapter]').count(), 8);
+    assert.equal(await page.locator('[data-chapter][disabled]').count(), 0);
     await page.goto(base + '/docenten/hoofdstuk-2');
     await page
       .getByRole('heading', { name: 'Drie korte Alfa C-blokken' })
@@ -135,7 +137,8 @@ fs.writeFileSync(
       oldProgressPreserved: true,
       keyboard: true,
       teacherManual: true,
-      existingChapters: 12,
+      emptySelfChaptersHidden: true,
+      availableGuidedChapters: 8,
     },
     null,
     2,

@@ -1,0 +1,35 @@
+{
+  "status": "passed-local",
+  "sourceTextPreserved": true,
+  "all144TaskLayouts": true,
+  "desktopNoScroll": true,
+  "desktopViewport": [
+    1366,
+    768
+  ],
+  "additionalFeedbackViewport": [
+    1280,
+    800
+  ],
+  "mobileReflow": true,
+  "all180ResponseRegression": true,
+  "firstAttemptAndHelp": true,
+  "overviewGroups": true,
+  "guidedAvailability": true,
+  "nativeAudio": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "curriculum": true,
+  "humanLearnerTrial": false,
+  "humanListeningReview": false,
+  "physicalPhoneTrial": false,
+  "screenReaderTrial": false,
+  "notes": [
+    "Source catalogues, existing media, progress, global app layout and database are unchanged; only the existing Rivaro vector is added.",
+    "36 original pilot steps, 72 functional and 72 daily steps exercised. Functional and daily sets run in Chromium and WebKit; original pilot runs in Chrome plus shared two-engine integration.",
+    "Full response/audio regression preceded removal of one redundant card-order instruction. All daily tasks and all 854 document/support layouts rerun on the final build; no response, audio or source logic changed.",
+    "Small/short displays use readable Text/Task views with normal outer-page reflow; no claim that every phone needs no scrolling.",
+    "Technical checks and automated transcript review are not human listening or learner approval."
+  ]
+}
