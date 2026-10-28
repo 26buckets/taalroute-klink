@@ -190,7 +190,7 @@ for (const { engine, type, options } of [
         .click();
       for (let i = 0; i < 3; i++) {
         await page
-          .getByRole('button', { name: 'Ander aanbod', exact: true })
+          .getByRole('button', { name: 'Andere hulp', exact: true })
           .click();
         await safe(page, `${engine}/${variant}/neutral switch ${i}`);
       }

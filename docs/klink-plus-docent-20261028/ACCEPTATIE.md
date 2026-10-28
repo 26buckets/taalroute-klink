@@ -50,3 +50,13 @@ Eigen implementatiereview en lokale controles; geen onafhankelijke review of men
 7. Oplossing tonen vulde aanvankelijk alleen het woordvoorbeeld. De drie vakken tonen nu eveneens m-a-t, terwijl het eigen werk bewaard blijft tot de oplossing weer wordt verborgen.
 
 Niet als productfout verhuld: de bestaande publicatie-whitelist accepteert de nieuwe feature nog niet. Die beveiliging wordt in deze opdracht niet aangepast. Onafhankelijke tegenreview en praktijkvalidatie zijn open, ook als de lokale tests slagen.
+
+## Aanvulling: drie routes en compact woordmerk — 28 oktober 2026
+
+- Naam: officieel ongewijzigd Klink D-vectorlogo + compacte bewerkbare tekst +Docent; menu en schermnaam gelijk.
+- Lesinhoud: Alfa A woord/klanken, B zin/plaatsbegrip/woordkaartjes, C praktisch bericht/verwijzing/handeling/korte reactie. Doel, boekkoppeling, voorkennis en eigen faseplannen in data/klink-docent-routes.json. Geen niveauclaim op basis van één mat-les.
+- Voorkennis: echte curriculumverwijzingen; ontbrekende woorden niet als bestaande leesstap gepresenteerd. B/C vragen een docentbevestiging vóór de start.
+- Projectie: route en ondersteuning alleen in voorbereiding; opdrachten veranderen werkelijk. Op 1280×720 en 1024×768 zonder scrollen; mobiel behoudt leesbaarheid met verticale scrolling.
+- Papier: negen A4-pagina's, één werkblad, kaartvel en observatieblad per route, alle visueel bekeken. Alleen docentobservaties dragen alfalabels. Originele foto 800×800, effectief circa 369 ppi in de werkbladen, geen Krea-bewerking; geen personen of handen in dit beeld.
+- Lokale controle: zes gerichte logica-/hersteltests, 222 routecontroles in Chrome en WebKit, 159 bestaande lescontroles, 33 extra scherm-/herstelcontroles, acht randgevallen en bestaande menu-/logocontroles geslaagd. Productiebouw, typecontrole en gerichte lintcontrole geslaagd. Geen GitHub Actions uitgevoerd.
+- Open: onafhankelijke didactische tegenreview, echte klasproef, fysiek bord en printer. Losse klankopnamen ontbreken; geen nieuwe zin-/berichtaudio gemaakt. Docent spreekt waar nodig zelf voor. Geen livepublicatie.

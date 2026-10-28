@@ -1,0 +1,262 @@
+{
+  "source": "Nico, opdracht 28 oktober 2026; aanvulling op KPD 00–04",
+  "framework": "https://cito.nl/media/t4lphd2r/cito_ve_raamwerk_alfabetisering.pdf",
+  "review": "designed-human-review-and-pilot-open",
+  "routes": {
+    "a": {
+      "label": "Alfa A",
+      "goal": "Betekenis verbinden aan mat; m-a-t samenvoegen en het woord in een afzonderlijke leesbeurt lezen.",
+      "example": "mat",
+      "prerequisites": [
+        "De betekenis van een mat is mondeling bekend of wordt eerst met het beeld en een echte mat voorbereid.",
+        "De letters m, a en t worden eerst gekoppeld aan hun klanken. Een zelfstandige leesbeurt volgt pas na deze voorbereiding."
+      ],
+      "tokens": [
+        "mat"
+      ],
+      "materials": "Een echte mat, de bestaande foto, letters m/a/t, woordkaart en het passende werkblad.",
+      "bookGoal": "Bestaande Klink-leesstap 01: mat. De hoeveelheid hulp verandert het leerdoel niet.",
+      "followUp": "Plan een nieuwe leesbeurt met mat in de volgende bijeenkomst. Gebruik daarna de drie bestaande mat-oefeningen in Klink.",
+      "phases": [],
+      "cards": [],
+      "replyModel": ""
+    },
+    "b": {
+      "label": "Alfa B",
+      "goal": "Een voorbereide korte zin lezen, de plaatsrelatie begrijpen en de zin met woordkaartjes opbouwen.",
+      "example": "De mat ligt bij de deur.",
+      "prerequisites": [
+        "De cursist kent de betekenis én het woordbeeld van de, mat, ligt, bij en deur; controleer dit vooraf zonder de voorbeeldzin.",
+        "De onbeklemtoonde e in de, de ij in bij, de eu voor r in deur en het cluster gt in ligt zijn voorbereid.",
+        "De cursist begrijpt bij de deur, herkent woordgrenzen en heeft hoofdletter en punt als zinsmarkering voorbereid."
+      ],
+      "tokens": [
+        "de",
+        "mat",
+        "ligt",
+        "bij",
+        "deur"
+      ],
+      "materials": "De bestaande matfoto, een echte mat bij de deur, zes woordkaartjes en het zinswerkblad.",
+      "bookGoal": "Aanvullend doel bij mat: bekende woorden in een korte zin lezen en een plaatsrelatie begrijpen. Geen automatische vervolgles na leesstap 01.",
+      "followUp": "Lees de zin in een volgende bijeenkomst opnieuw zonder voorafgaand model. De bestaande Klink-oefening herhaalt alleen het woord mat; zij dekt dit zinsdoel niet.",
+      "phases": [
+        {
+          "title": "Kijken",
+          "prompt": "Wat ligt bij de deur?",
+          "minutes": 2,
+          "action": "Toon de foto zonder schrift. Laat de cursist de mat én de deur aanwijzen en de plaats mondeling beschrijven.",
+          "expected": "De cursist wijst de mat en de deur aan en zegt bijvoorbeeld: bij de deur.",
+          "hint": "Wijs eerst de deur aan en vraag waar de mat ligt.",
+          "feedback": "Ja, de mat ligt bij de deur.",
+          "observe": "Begrijpt de cursist bij de deur als plaatsrelatie, los van het lezen?",
+          "framework": "15.3, 15.7"
+        },
+        {
+          "title": "Luisteren",
+          "prompt": "Luister naar de docent.",
+          "minutes": 2,
+          "action": "Zeg de voorbereide zin natuurlijk. Laat eerst luisteren en daarna in een aparte beurt nazeggen. Toon het schrift alleen als modelhulp. Er is geen zinopname gekoppeld.",
+          "expected": "De cursist zegt de zin na of wijst bij het horen van de zin de plaats aan.",
+          "hint": "Zeg De mat ligt / bij de deur in twee betekenisvolle delen.",
+          "feedback": "Je zegt waar de mat ligt. Dit was een luister- en spreekbeurt.",
+          "observe": "Houd nazeggen apart van zelfstandig zinslezen.",
+          "framework": "5.1–5.5, 5.8"
+        },
+        {
+          "title": "Woorden",
+          "prompt": "Lees de woorden.",
+          "minutes": 3,
+          "action": "Laat de vijf verschillende woorden herkennen. Bespreek alleen waar nodig de onbeklemtoonde e, ij, eu en gt. Laat daarna De mat / ligt / bij de deur als zinsdelen lezen.",
+          "expected": "De cursist herkent bekende woordbeelden en leest bij de deur als een betekenisvol deel.",
+          "hint": "Dek andere woorden af; wijs het voorbereide cluster of de tweetekenklank aan zonder de hele zin voor te zeggen.",
+          "feedback": "Lees het woord nog eens en zet het terug in de zin.",
+          "observe": "Welke woorden worden direct herkend, waar zijn klankhulp of clusters nodig?",
+          "framework": "5.1–5.5, 15.7"
+        },
+        {
+          "title": "Bouwen",
+          "prompt": "Maak de zin.",
+          "minutes": 4,
+          "action": "Laat de zes woordkaartjes in zinsvolgorde leggen. Lees pas daarna samen. Bespreek de hoofdletter en de punt. Toon het model alleen op verzoek.",
+          "expected": "De mat ligt bij de deur.",
+          "hint": "Begin met wie of wat. Zoek daarna het woord dat zegt waar het ligt.",
+          "feedback": "Ja, de zin zegt waar de mat ligt. Laat de cursist de hele zin lezen.",
+          "observe": "Bouwt de cursist op betekenis of alleen door het model na te leggen?",
+          "framework": "4.8–4.9, 10.5–10.8"
+        },
+        {
+          "title": "Lezen",
+          "prompt": "Lees de zin.",
+          "minutes": 4,
+          "action": "Onderbreek het nazeggen. Toon de zin zonder foto en zonder vooraf voorlezen. Laat lezen en vraag mondeling waar de mat ligt. Toon de foto pas ter controle.",
+          "expected": "De cursist leest de zin en wijst of zegt: bij de deur.",
+          "hint": "Geef denktijd. Laat een moeilijk woord apart lezen en vervolgens de zin opnieuw.",
+          "feedback": "Je las de zin. Laat zien waar de mat ligt. Met hulp gelezen wordt apart genoteerd.",
+          "observe": "Leest en begrijpt de cursist de zin zonder onmiddellijk voorbeeld?",
+          "framework": "15.6, 15.7"
+        },
+        {
+          "title": "Gebruiken",
+          "prompt": "Waar ligt de mat?",
+          "minutes": 4,
+          "action": "Laat het passende zinsdeel kiezen en de plek aanwijzen. In tweetallen leest één cursist en wijst de ander aan; wissel de rollen. Verplaats de echte mat en bespreek mondeling of de zin nog klopt.",
+          "expected": "De cursist kiest bij de deur en merkt een verschil met de verplaatste mat op.",
+          "hint": "Vraag: welk deel van de zin zegt waar?",
+          "feedback": "Ja, bij de deur vertelt de plaats.",
+          "observe": "Gebruikt de cursist de geschreven informatie om te handelen en te controleren?",
+          "framework": "6.3, 6.9, 7.2, 7.5, 15.8"
+        },
+        {
+          "title": "Op papier",
+          "prompt": "Werk met de zin.",
+          "minutes": 5,
+          "action": "Laat de zin lezen, zes woordkaartjes leggen en de plaatswoorden markeren. Laat pas na afdekken één voorbereide zin schrijven als dat een passend doel is.",
+          "expected": "Een geordende zin; bij de deur is gemarkeerd. Een eigen geschreven zin kan hulp nodig hebben.",
+          "hint": "Doe één kaart voor; gebruik zo nodig de modelstrook. Houd overschrijven apart van schrijven uit het hoofd.",
+          "feedback": "Lees je zin terug en controleer of de plaats duidelijk is.",
+          "observe": "Leesbegrip, zinsbouw en schrijven afzonderlijk observeren; geen totaalscore.",
+          "framework": "4.8–4.9, 10.5–10.8"
+        },
+        {
+          "title": "Nog een keer",
+          "prompt": "Lees nog een keer.",
+          "minutes": 2,
+          "action": "Begin na een korte andere handeling een nieuwe leesbeurt zonder foto. Laat de cursist daarna de zin aan een ander uitleggen. Plan herhaling in de volgende bijeenkomst.",
+          "expected": "Een nieuwe leespoging en een passende plaatsaanduiding.",
+          "hint": "Bied uitsluitend de hulp die bij deze poging nodig blijkt.",
+          "feedback": "Vertel wat de zin je laat weten.",
+          "observe": "Is minder hulp nodig dan bij de eerdere poging? Eén zin bewijst geen volledig Alfa B.",
+          "framework": "23.1, 23.3–23.5, 23.7"
+        }
+      ],
+      "cards": [
+        "De",
+        "mat",
+        "ligt",
+        "bij",
+        "de",
+        "deur."
+      ],
+      "replyModel": ""
+    },
+    "c": {
+      "label": "Alfa C",
+      "goal": "Een kort praktisch bericht zelfstandig lezen, de toestand en opdracht onderscheiden en een begrijpelijke korte reactie schrijven.",
+      "example": "De mat is nat. Leg hem buiten.",
+      "prerequisites": [
+        "Controleer vooraf de woorden de, mat, is, nat, leg, hem, buiten en ligt op betekenis en herkenning; bereid onbekende woorden eerst apart voor.",
+        "De cursist kent het verschil tussen een mededeling en een opdracht, en kan een verwijzing zoals hem met het bedoelde voorwerp verbinden.",
+        "Een korte reactie schrijven is voorbereid; beoordeel begrijpelijkheid afzonderlijk van spelling. Er worden geen namen of leerlinggegevens op het bord ingevuld."
+      ],
+      "tokens": [
+        "de",
+        "mat",
+        "is",
+        "nat",
+        "leg",
+        "hem",
+        "buiten",
+        "ligt"
+      ],
+      "materials": "De bestaande foto als herkenning van het voorwerp, het bericht, berichtkaartjes, reactieblad en pen. De foto toont niet dat de mat nat is.",
+      "bookGoal": "Functionele uitbreiding bij mat: een bekend alledaags voorwerp in een nieuwe berichtsituatie. Geen volledige niveau- of toetsdekking.",
+      "followUp": "Gebruik in een volgende bijeenkomst een ander vooraf voorbereid kort bericht; laat boodschap en handeling zelfstandig afleiden. De bestaande Klink-mat-oefening is alleen woordherhaling.",
+      "phases": [
+        {
+          "title": "Kijken",
+          "prompt": "Er komt een bericht.",
+          "minutes": 2,
+          "action": "Toon de mat bij de ingang. Schets mondeling: stel je voor dat iemand je een bericht over deze mat stuurt. De foto identificeert het voorwerp; zij bewijst geen natheid.",
+          "expected": "De cursist herkent het voorwerp en begrijpt dat er straks een bericht gelezen moet worden.",
+          "hint": "Vraag waar een mat ligt en wanneer je daarover een bericht zou sturen.",
+          "feedback": "We gaan lezen wat er met de mat is en wat je moet doen.",
+          "observe": "Oriënteert de cursist zich op de situatie zonder de boodschap uit de foto te raden?",
+          "framework": "15.3, 15.7"
+        },
+        {
+          "title": "Luisteren",
+          "prompt": "Luister naar het bericht.",
+          "minutes": 1,
+          "action": "Alleen indien nodig: lees het bericht één keer natuurlijk voor en laat in eigen woorden navertellen. Sla deze modelbeurt over voor een zuivere zelfstandige eerste leespoging.",
+          "expected": "De cursist vertelt dat de mat nat is en naar buiten moet.",
+          "hint": "Lees één zin per keer en laat het verschil tussen toestand en opdracht benoemen.",
+          "feedback": "Je vertelt de boodschap. Later controleren we wat je zelfstandig leest.",
+          "observe": "Een vooraf voorgelezen bericht telt niet als onafhankelijk leesbewijs.",
+          "framework": "5.1–5.5, 5.8"
+        },
+        {
+          "title": "Begrijpen",
+          "prompt": "Wat is er? Wat moet je doen?",
+          "minutes": 2,
+          "action": "Laat beide zinnen lezen. Gebruik de knoppen om de mededeling en de opdracht aan te wijzen. Besteed alleen bij vastlopen aandacht aan een moeilijk woord; geen volledige m-a-t-ronde.",
+          "expected": "De eerste zin vertelt de toestand. De tweede zegt wat er moet gebeuren.",
+          "hint": "Zoek het werkwoord waarmee de tweede zin begint.",
+          "feedback": "De mat is nat vertelt wat er is. Leg hem buiten geeft de opdracht.",
+          "observe": "Onderscheidt de cursist de functies van de twee zinnen?",
+          "framework": "5.1–5.5, 15.7"
+        },
+        {
+          "title": "Ordenen",
+          "prompt": "Zet het bericht op volgorde.",
+          "minutes": 3,
+          "action": "Laat de twee berichtkaartjes ordenen: eerst de situatie, daarna de handeling. Vraag waarom die volgorde helpt. Laat het bericht vervolgens als geheel lezen.",
+          "expected": "De mat is nat. / Leg hem buiten.",
+          "hint": "Vraag: wat lees je eerst over de mat? Wat moet daarna gebeuren?",
+          "feedback": "Je bericht maakt duidelijk wat er is en wat je moet doen.",
+          "observe": "Beredeneert de cursist de relatie tussen de zinnen?",
+          "framework": "4.8–4.9, 10.5–10.8"
+        },
+        {
+          "title": "Lezen",
+          "prompt": "Lees het bericht.",
+          "minutes": 4,
+          "action": "Toon het bericht zonder foto of voorafgaand model. Laat zelfstandig lezen. Vraag daarna waarnaar hem verwijst en waar het voorwerp heen moet.",
+          "expected": "Hem verwijst naar de mat; de mat moet buiten worden gelegd.",
+          "hint": "Laat teruglezen naar het genoemde voorwerp. Zeg het antwoord niet direct voor.",
+          "feedback": "Je hebt de verwijzing en de opdracht uit het bericht gehaald.",
+          "observe": "Leidt de cursist de boodschap uit het schrift af, met welke hulp en in welk tempo?",
+          "framework": "15.6, 15.7"
+        },
+        {
+          "title": "Gebruiken",
+          "prompt": "Wat doe je? Schrijf terug.",
+          "minutes": 5,
+          "action": "Laat de cursist mondeling uitleggen of met een voorwerp voordoen wat de opdracht vraagt. Vraag daarna een kort antwoord alsof de handeling klaar is. Bespreek of de ontvanger weet wat er is gedaan.",
+          "expected": "Een passende handeling en bijvoorbeeld De mat ligt buiten. Een andere begrijpelijke reactie is ook goed.",
+          "hint": "Vraag wat de ander na jouw bericht moet weten. Geef pas daarna een beginzin als modelhulp.",
+          "feedback": "Is voor de ontvanger duidelijk waar de mat nu ligt? Bespreek de betekenis vóór de spelling.",
+          "observe": "Kan de cursist de opdracht uitvoeren en zelfstandig begrijpelijk reageren? Leg geen automatische goed/foutscore op.",
+          "framework": "6.3, 6.9, 7.2, 7.5, 15.8"
+        },
+        {
+          "title": "Op papier",
+          "prompt": "Lees en schrijf terug.",
+          "minutes": 5,
+          "action": "Laat de mededeling en opdracht op papier onderscheiden, hem verbinden met mat en een korte reactie schrijven. Het model blijft afgedekt bij een zelfstandige poging.",
+          "expected": "Een betekenisvolle koppeling en een begrijpelijk kort antwoord.",
+          "hint": "Bied één vraag of één beginwoord; noteer welke hulp werkelijk nodig was.",
+          "feedback": "Lees terug: weet de ander wat je hebt gedaan?",
+          "observe": "Leesbegrip, verwijzing, taakuitvoering en schrijven blijven afzonderlijke observaties.",
+          "framework": "4.8–4.9, 10.5–10.8"
+        },
+        {
+          "title": "Nog een keer",
+          "prompt": "Geef de boodschap door.",
+          "minutes": 3,
+          "action": "Dek het bericht af en laat in eigen woorden doorgeven wat er moest gebeuren en waarom. Toon het daarna voor zelfcontrole. Plan een ander voorbereid bericht in een volgende les.",
+          "expected": "De cursist noemt de natte mat, het buiten leggen en een begrijpelijke terugmelding.",
+          "hint": "Laat alleen het noodzakelijke deel teruglezen.",
+          "feedback": "Controleer zelf of jouw boodschap overeenkomt met het bericht.",
+          "observe": "Transfer naar een nieuwe tekst is nog een volgende lesstap; deze ene taak bewijst geen volledig Alfa C.",
+          "framework": "23.1, 23.3–23.5, 23.7"
+        }
+      ],
+      "cards": [
+        "De mat is nat.",
+        "Leg hem buiten."
+      ],
+      "replyModel": "De mat ligt buiten."
+    }
+  }
+}

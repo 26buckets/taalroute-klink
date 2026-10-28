@@ -1,8 +1,10 @@
-# Klink + Docent — les mat
+# Klink+Docent — les mat
 
 28 oktober 2026. Status: **GEBOUWD EN LOKAAL GETEST; NIET GEPUBLICEERD**.
 
-De les staat in de bestaande docentenomgeving bij **Klink + Docent**, route `/#teacher/plus`. De docent bevestigt eerst dat het scherm niet wordt gedeeld, kiest het aanbod en start de les. Alle acht fasen en vijf hulpmiddelen werken binnen hetzelfde scherm. Voorbereiding, variantnamen en observaties worden tijdens de les niet gemount. Afsluiten toont eerst een neutraal gordijn; de voorbereiding verschijnt pas na de expliciete handeling dat delen is gestopt.
+De actuele uitbreiding met drie inhoudelijke leerroutes staat in [DRIE-LEERROUTES.md](DRIE-LEERROUTES.md). Alfa A/B/C bepalen doel en opdracht; Voordoen/Samen doen/Zelfstandig bepalen de ondersteuning binnen elke route. Het officiële logo vormt samen met +Docent één compact woordmerk. De oudere controles hieronder blijven historische bewijsstukken van de basisles.
+
+De les staat in de bestaande docentenomgeving bij **Klink+Docent**, route `/#teacher/plus`. De docent bevestigt eerst dat het scherm niet wordt gedeeld, kiest leerroute en ondersteuning en start de les. Alle acht fasen en vijf hulpmiddelen werken binnen hetzelfde scherm. Voorbereiding, variantnamen en observaties worden tijdens de les niet gemount. Afsluiten toont eerst een neutraal gordijn; de voorbereiding verschijnt pas na de expliciete handeling dat delen is gestopt.
 
 ## Bron en begrenzing
 

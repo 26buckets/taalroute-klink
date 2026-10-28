@@ -5,6 +5,187 @@
   font-size: 20px;
   line-height: 1.5;
 }
+.kpd-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  color: #482c46;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+.kpd-brand img {
+  width: 94px;
+  height: 32px;
+}
+.kpd-route-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.kpd-route-options label {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+  align-content: start;
+}
+.kpd-route-options :is(span, em) {
+  grid-column: 2;
+  font-size: 18px;
+}
+.kpd-route-options input,
+.kpd-ready input {
+  width: 20px;
+  height: 20px;
+}
+.kpd-prerequisites {
+  padding: 20px;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+.kpd-prerequisites li {
+  margin: 12px 0;
+}
+.kpd-ready {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.kpd-ready input {
+  flex-shrink: 0;
+}
+.kpd .kpd-route-text {
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1.45;
+  margin: 12px 0;
+  white-space: normal;
+}
+.kpd-message-text {
+  text-align: left;
+  padding: 16px;
+  border-left: 4px solid var(--primary);
+  background: var(--canvas);
+}
+.kpd-phrase-line,
+.kpd-word-cards,
+.kpd-sentence-slots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.kpd-phrase-line span {
+  padding: 0 12px;
+  border-bottom: 1px solid var(--line-strong);
+}
+.kpd-word-cards button,
+.kpd-sentence-slots button {
+  font-size: 25px;
+  min-height: 52px;
+}
+.kpd-word-cards [aria-pressed='true'] {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+}
+.kpd-sentence-slots {
+  padding: 12px;
+  min-height: 76px;
+  margin: 8px 0;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius);
+}
+.kpd-message-choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.kpd-message-choices button {
+  font-size: 23px;
+}
+.kpd-route-feedback {
+  min-height: 30px;
+  display: block;
+  margin-top: 8px;
+}
+.kpd .kpd-route-model {
+  margin: 6px 0;
+  font-size: 24px;
+}
+.kpd .kpd-assistance {
+  margin: 6px 0;
+  font-size: 18px;
+}
+.kpd-covered {
+  font-size: 80px;
+}
+.kpd-response-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+.kpd-response-label {
+  display: block;
+  text-align: left;
+}
+.kpd-response-label textarea {
+  margin-top: 8px;
+  font-size: 26px;
+}
+.kpd-paper-message {
+  font-size: 28px;
+  line-height: 1.4;
+  border: 1px solid #66716d;
+  padding: 4mm;
+}
+.kpd-paper-wordcards,
+.kpd-route-cut-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4mm;
+}
+.kpd-paper-wordcards span {
+  border: 1px dashed #66716d;
+  padding: 3mm;
+  font-size: 24px;
+}
+.kpd-route-cut-cards > div {
+  border: 1px dashed #66716d;
+  padding: 8mm;
+  font-size: 32px;
+  margin: 4mm 0;
+}
+.kpd-message-cards > div {
+  width: 100%;
+}
+@media (max-width: 750px) {
+  .kpd-route-options,
+  .kpd-response-layout {
+    grid-template-columns: 1fr;
+  }
+}
+@media print {
+  .kpd-route-worksheet .kpd-paper-image {
+    width: 40mm;
+    height: 40mm;
+  }
+  .kpd-route-worksheet p {
+    font-size: 18px;
+    margin: 4mm 0;
+  }
+  .kpd-route-worksheet .kpd-paper-message {
+    font-size: 26px;
+  }
+  .kpd-route-worksheet .kpd-write-line {
+    height: 12mm;
+    margin-bottom: 5mm;
+  }
+}
 .kpd [hidden],
 .kpd-tool-dialog [hidden] {
   display: none !important;

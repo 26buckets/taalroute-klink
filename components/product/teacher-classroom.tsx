@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   useEffect,
@@ -6,7 +6,7 @@ import {
   useRef,
   useState,
   type PointerEvent as ReactPointerEvent,
-} from 'react';
+} from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -22,22 +22,25 @@ import {
   X,
   Camera,
   PencilLine,
-} from 'lucide-react';
-import Image from 'next/image';
-import { PackageExerciseBrowser } from './package-exercise-browser';
-import { playMedia, stopMedia } from '@/lib/media-player';
-import { isWithdrawnAudio } from '@/lib/audio-policy';
+} from "lucide-react";
+import Image from "next/image";
+import { PackageExerciseBrowser } from "./package-exercise-browser";
+import { playMedia, stopMedia } from "@/lib/media-player";
+import { isWithdrawnAudio } from "@/lib/audio-policy";
 import {
   classroomContent,
+  classroomRoutes,
+  routeIds,
+  phasesForRoute,
+  prerequisitesForRoute,
+  type ClassroomRoute,
   classroomHash,
   freshClassroom,
   matExercises,
-  matLesson,
   matPack,
   matUnits,
   matWord,
   parseSoundRegistry,
-  phases,
   placeTile,
   readClassroom,
   saveClassroom,
@@ -46,25 +49,31 @@ import {
   type BoardTool,
   type ClassroomState,
   type Variant,
-} from '@/lib/teacher-classroom';
-import './teacher-classroom.css';
+} from "@/lib/teacher-classroom";
+import {
+  ClassroomBrand,
+  TeacherRouteStage,
+  RouteWorksheet,
+  RouteCards,
+} from "./teacher-route-stage";
+import "./teacher-classroom.css";
 
-type ClipStatus = 'loading' | 'ready' | 'missing';
+type ClipStatus = "loading" | "ready" | "missing";
 type Point = [number, number];
 type Stroke = Point[];
 
 function useClassroomAudio() {
   const [sources, setSources] = useState<Record<string, string>>({
-    word: matWord.audio ?? '',
+    word: matWord.audio ?? "",
   });
   const [status, setStatus] = useState<Record<string, ClipStatus>>({});
   const [revision, setRevision] = useState(0);
-  const [playing, setPlaying] = useState('');
+  const [playing, setPlaying] = useState("");
   const run = useRef(0);
   useEffect(() => {
     const controller = new AbortController();
-    fetch('/content/klink-docent-audio.json', {
-      cache: 'no-store',
+    fetch("/content/klink-docent-audio.json", {
+      cache: "no-store",
       signal: controller.signal,
     })
       .then((r) => {
@@ -72,38 +81,38 @@ function useClassroomAudio() {
         return r.json();
       })
       .then((value) =>
-        setSources({ word: matWord.audio ?? '', ...parseSoundRegistry(value) }),
+        setSources({ word: matWord.audio ?? "", ...parseSoundRegistry(value) }),
       )
       .catch(() => {
         if (!controller.signal.aborted)
-          setSources({ word: matWord.audio ?? '' });
+          setSources({ word: matWord.audio ?? "" });
       });
     return () => controller.abort();
   }, [revision]);
   useEffect(() => {
-    const disposers = ['word', ...matUnits].map((id) => {
+    const disposers = ["word", ...matUnits].map((id) => {
       const source = sources[id];
       if (!source || isWithdrawnAudio(source)) {
-        setStatus((s) => ({ ...s, [id]: 'missing' }));
+        setStatus((s) => ({ ...s, [id]: "missing" }));
         return () => {};
       }
       const audio = new Audio();
-      setStatus((s) => ({ ...s, [id]: 'loading' }));
+      setStatus((s) => ({ ...s, [id]: "loading" }));
       const finish = (value: ClipStatus) => {
         clearTimeout(timer);
         setStatus((s) => ({ ...s, [id]: value }));
       };
-      const timer = setTimeout(() => finish('missing'), 5000);
-      audio.onloadedmetadata = () => finish('ready');
-      audio.onerror = () => finish('missing');
-      audio.preload = 'metadata';
+      const timer = setTimeout(() => finish("missing"), 5000);
+      audio.onloadedmetadata = () => finish("ready");
+      audio.onerror = () => finish("missing");
+      audio.preload = "metadata";
       audio.src = source;
       audio.load();
       return () => {
         clearTimeout(timer);
         audio.onloadedmetadata = null;
         audio.onerror = null;
-        audio.removeAttribute('src');
+        audio.removeAttribute("src");
         audio.load();
       };
     });
@@ -119,22 +128,22 @@ function useClassroomAudio() {
   function stop() {
     run.current++;
     stopMedia();
-    setPlaying('');
+    setPlaying("");
   }
   async function listen(id: string) {
-    if (status[id] !== 'ready') return;
+    if (status[id] !== "ready") return;
     const current = ++run.current;
     setPlaying(id);
     try {
       await playMedia(sources[id], {
         waitUntilEnd: true,
-        playbackRate: id === 'word' ? undefined : 1,
+        playbackRate: id === "word" ? undefined : 1,
       });
     } catch {
       if (current === run.current)
-        setStatus((s) => ({ ...s, [id]: 'missing' }));
+        setStatus((s) => ({ ...s, [id]: "missing" }));
     } finally {
-      if (current === run.current) setPlaying('');
+      if (current === run.current) setPlaying("");
     }
   }
   return {
@@ -152,42 +161,42 @@ function SoundButtons({
   audio: ReturnType<typeof useClassroomAudio>;
 }) {
   const prefix = useId();
-  const [pointed, setPointed] = useState('');
+  const [pointed, setPointed] = useState("");
   return (
     <div className="kpd-sounds">
       {matUnits.map((id) => {
-        const name = id === 'a' ? 'korte a' : id;
-        const status = audio.status[id] ?? 'loading';
+        const name = id === "a" ? "korte a" : id;
+        const status = audio.status[id] ?? "loading";
         return (
           <div key={id} className="kpd-sound">
             <button
               className="secondary-button kpd-sound-select"
               aria-label={`Wijs ${id} aan`}
               aria-pressed={pointed === id}
-              onClick={() => setPointed(pointed === id ? '' : id)}
+              onClick={() => setPointed(pointed === id ? "" : id)}
             >
               {id}
             </button>
             <button
               className="secondary-button kpd-sound-audio"
               type="button"
-              disabled={status !== 'ready'}
+              disabled={status !== "ready"}
               aria-label={`Luister naar de klank ${name}`}
               aria-describedby={`${prefix}-${id}`}
               aria-pressed={audio.playing === id}
               onClick={() => void audio.listen(id)}
             >
               <Volume2 aria-hidden="true" />
-              {status === 'missing' && (
+              {status === "missing" && (
                 <X className="kpd-missing" aria-hidden="true" />
               )}
             </button>
             <output id={`${prefix}-${id}`} className="sr-only">
-              {status === 'missing'
+              {status === "missing"
                 ? `Opname van ${name} ontbreekt of kan niet afspelen.`
-                : status === 'loading'
-                  ? 'Geluid wordt gecontroleerd.'
-                  : 'Geluid beschikbaar.'}
+                : status === "loading"
+                  ? "Geluid wordt gecontroleerd."
+                  : "Geluid beschikbaar."}
             </output>
           </div>
         );
@@ -210,9 +219,9 @@ function Worksheet({ variant }: { variant: Variant }) {
         src={matWord.image!}
         alt="Een mat bij een deur"
       />
-      {variant !== 'extend' && (
+      {variant !== "extend" && (
         <div className="kpd-cut-letters">
-          {(variant === 'support'
+          {(variant === "support"
             ? matUnits
             : [matUnits[2], matUnits[0], matUnits[1]]
           ).map((unit) => (
@@ -220,7 +229,7 @@ function Worksheet({ variant }: { variant: Variant }) {
           ))}
         </div>
       )}
-      {variant === 'support' && (
+      {variant === "support" && (
         <div
           className="kpd-trace-letters"
           aria-label="Letters om over te trekken"
@@ -230,7 +239,7 @@ function Worksheet({ variant }: { variant: Variant }) {
           ))}
         </div>
       )}
-      {variant !== 'extend' && (
+      {variant !== "extend" && (
         <div className="kpd-paper-slots" aria-label="Drie lege lettervakken">
           {matUnits.map((unit) => (
             <span key={unit}>&nbsp;</span>
@@ -243,7 +252,7 @@ function Worksheet({ variant }: { variant: Variant }) {
       <div className="kpd-direction" aria-label="Werk van links naar rechts">
         <ArrowRight aria-hidden="true" />
       </div>
-      {variant === 'support' ? (
+      {variant === "support" ? (
         <div className="kpd-write-line" />
       ) : (
         <>
@@ -284,38 +293,51 @@ function LetterCards() {
   );
 }
 
-function ObservationSheet() {
-  const rows = [
-    [
-      'Betekenis mat',
-      'Zonder directe hulp / met hulp of model / nog niet waargenomen',
-    ],
-    [
-      'Woord nazeggen',
-      'Na mondelinge vraag / alleen na voorbeeld / nog niet waargenomen',
-    ],
-    [
-      'Klanken m, korte a, t aanwijzen',
-      'Zelfstandig / met hulp / nog niet waargenomen',
-    ],
-    ['Letters m-a-t leggen', 'Zelfstandig / met hulp / nog niet waargenomen'],
-    [
-      'Mat lezen zonder directe foto of audio',
-      'Zelfstandig / met klankhulp / nog niet waargenomen',
-    ],
-    [
-      'Mondeling gebruiken',
-      'Eigen voorbeeld / reactie op vraag / nog niet waargenomen',
-    ],
-    ['Volgende Klink-oefening getoond', 'Ja / later tonen'],
-  ];
+function ObservationSheet({ route }: { route: ClassroomRoute }) {
+  const rows =
+    route !== "a"
+      ? phasesForRoute(route)
+          .filter((_, i) => [0, 3, 4, 5, 6, 7].includes(i))
+          .map((p) => [
+            p.title + " — " + p.observe,
+            "Zelfstandig / met aanwijzing / met model / nog niet waargenomen",
+          ])
+      : [
+          [
+            "Betekenis mat",
+            "Zonder directe hulp / met hulp of model / nog niet waargenomen",
+          ],
+          [
+            "Woord nazeggen",
+            "Na mondelinge vraag / alleen na voorbeeld / nog niet waargenomen",
+          ],
+          [
+            "Klanken m, korte a, t aanwijzen",
+            "Zelfstandig / met hulp / nog niet waargenomen",
+          ],
+          [
+            "Letters m-a-t leggen",
+            "Zelfstandig / met hulp / nog niet waargenomen",
+          ],
+          [
+            "Mat lezen zonder directe foto of audio",
+            "Zelfstandig / met klankhulp / nog niet waargenomen",
+          ],
+          [
+            "Mondeling gebruiken",
+            "Eigen voorbeeld / reactie op vraag / nog niet waargenomen",
+          ],
+          ["Volgende Klink-oefening getoond", "Ja / later tonen"],
+        ];
   return (
     <article
       className="kpd-worksheet kpd-print-page kpd-observation"
       aria-label="Docentobservatie"
     >
-      <h2>Klink + Docent</h2>
-      <h3>Observatie mat</h3>
+      <h2>
+        <ClassroomBrand />
+      </h2>
+      <h3>Observatie mat · {classroomRoutes[route].label}</h3>
       <p>Datum: _________________ Groep: _________________</p>
       <p>Cursistcode (alleen op papier): _____________________</p>
       <dl>
@@ -393,7 +415,7 @@ function WritingBoard({
         {strokes.map((stroke, i) => (
           <polyline
             key={i}
-            points={stroke.map((p) => p.join(',')).join(' ')}
+            points={stroke.map((p) => p.join(",")).join(" ")}
             fill="none"
             stroke="currentColor"
             strokeWidth="5"
@@ -415,7 +437,7 @@ function WritingBoard({
           className="secondary-button"
           onClick={() => {
             onChange([]);
-            onText('');
+            onText("");
           }}
         >
           <RotateCcw />
@@ -439,7 +461,7 @@ function MirrorBoard() {
   const stream = useRef<MediaStream | null>(null);
   const request = useRef(0);
   const [enabled, setEnabled] = useState(false),
-    [message, setMessage] = useState('');
+    [message, setMessage] = useState("");
   function stop() {
     request.current++;
     stream.current?.getTracks().forEach((track) => track.stop());
@@ -457,7 +479,7 @@ function MirrorBoard() {
     const current = ++request.current;
     try {
       const result = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: 'user' },
+        video: { facingMode: "user" },
         audio: false,
       });
       if (request.current !== current) {
@@ -470,12 +492,12 @@ function MirrorBoard() {
         await video.current.play();
       }
       setEnabled(true);
-      setMessage('');
+      setMessage("");
     } catch {
       stream.current?.getTracks().forEach((track) => track.stop());
       stream.current = null;
       setMessage(
-        'Camera niet beschikbaar. Kijk naar het voorbeeld van de docent.',
+        "Camera niet beschikbaar. Kijk naar het voorbeeld van de docent.",
       );
     }
   }
@@ -498,7 +520,7 @@ function MirrorBoard() {
         onClick={() => (enabled ? stop() : void start())}
       >
         <Camera />
-        {enabled ? 'Camera uit' : 'Camera aan'}
+        {enabled ? "Camera uit" : "Camera aan"}
       </button>
       {message && <output>{message}</output>}
     </>
@@ -507,20 +529,20 @@ function MirrorBoard() {
 
 export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   const [state, setState] = useState<ClassroomState>(() => readClassroom());
-  const [screen, setScreen] = useState<'gate' | 'prepare' | 'lesson'>(() =>
-    readClassroom().active ? 'lesson' : 'gate',
+  const [screen, setScreen] = useState<"gate" | "prepare" | "lesson">(() =>
+    readClassroom().active && readClassroom().prepared ? "lesson" : "gate",
   );
   const [pause, setPause] = useState(false),
     [ending, setEnding] = useState(false),
-    [feedback, setFeedback] = useState('');
+    [feedback, setFeedback] = useState("");
   const [tool, setTool] = useState<BoardTool | null>(null);
   const [strokes, setStrokes] = useState<Stroke[]>([]),
-    [boardText, setBoardText] = useState('');
+    [boardText, setBoardText] = useState("");
   const [toolWord, setToolWord] = useState(false),
     [toolImage, setToolImage] = useState(false);
   const [storageError, setStorageError] = useState(false);
-  const [preparation, setPreparation] = useState('');
-  const [printKind, setPrintKind] = useState('worksheet');
+  const [preparation, setPreparation] = useState("");
+  const [printKind, setPrintKind] = useState("worksheet");
   const [saySelf, setSaySelf] = useState(false);
   const [readCheck, setReadCheck] = useState(false);
   const [photoError, setPhotoError] = useState(false);
@@ -530,6 +552,8 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     opener = useRef<HTMLElement | null>(null);
   const dragged = useRef(false);
   const audio = useClassroomAudio();
+  const phases = phasesForRoute(state.route);
+  const route = classroomRoutes[state.route];
   const phase = phases[state.phase];
   const shown = state.shown[state.phase];
   function commit(next: ClassroomState) {
@@ -555,7 +579,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   }
   function go(index: number) {
     audio.stop();
-    setFeedback('');
+    setFeedback("");
     update({ phase: index });
   }
   function chooseVariant() {
@@ -564,8 +588,15 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
         (variants.findIndex((v) => v.id === state.variant) + 1) %
           variants.length
       ].id;
-    update({ variant: next });
-    setFeedback('');
+    update({
+      variant: next,
+      shown: state.shown.map((value, i) =>
+        state.route !== "a" && i === state.phase && [1, 3, 5].includes(i)
+          ? next === "support"
+          : value,
+      ),
+    });
+    setFeedback("");
   }
   function closeTool() {
     audio.stop();
@@ -574,35 +605,36 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     opener.current?.focus();
   }
   function start() {
+    if (!state.prepared) return;
     const next = { ...state, active: true };
     commit(next);
-    setScreen('lesson');
+    setScreen("lesson");
     window.scrollTo({ top: 0 });
-    window.history.replaceState(null, '', classroomHash);
+    window.history.replaceState(null, "", classroomHash);
   }
   function leave() {
     audio.stop();
     const next = { ...state, active: false };
     commit(next);
     setEnding(false);
-    setScreen('prepare');
+    setScreen("prepare");
   }
   function reset() {
     audio.stop();
     update({
-      tiles: freshClassroom(state.variant).tiles,
+      tiles: freshClassroom(state.variant, state.route).tiles,
       shown: state.shown.map((value, i) => (i === state.phase ? false : value)),
     });
-    setFeedback('');
+    setFeedback("");
   }
   function printMaterial() {
     const previous = document.title;
     document.title =
-      printKind === 'observation' && screen === 'prepare'
-        ? 'Klink docentobservatie'
-        : 'DE MAT';
+      printKind === "observation" && screen === "prepare"
+        ? "Klink docentobservatie"
+        : "DE MAT";
     window.addEventListener(
-      'afterprint',
+      "afterprint",
       () => {
         document.title = previous;
       },
@@ -616,7 +648,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
     <Image
       width={800}
       height={800}
-      className={`kpd-photo${largePhoto ? ' kpd-photo-large' : ''}`}
+      className={`kpd-photo${largePhoto ? " kpd-photo-large" : ""}`}
       onError={() => setPhotoError(true)}
       src={matWord.image!}
       alt="Een mat bij een deur"
@@ -625,22 +657,24 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   const wordAudio = (
     <button
       className="primary-button"
-      disabled={audio.status.word !== 'ready'}
-      onClick={() => void audio.listen('word')}
-      aria-pressed={audio.playing === 'word'}
+      disabled={audio.status.word !== "ready"}
+      onClick={() => void audio.listen("word")}
+      aria-pressed={audio.playing === "word"}
     >
       <Volume2 />
       Luister
-      {audio.status.word === 'missing' && (
+      {audio.status.word === "missing" && (
         <X className="kpd-missing" aria-label="Woordopname niet beschikbaar" />
       )}
     </button>
   );
 
-  if (screen === 'gate')
+  if (screen === "gate")
     return (
       <main className="kpd kpd-gate">
-        <h1>Klink + Docent</h1>
+        <h1>
+          <ClassroomBrand />
+        </h1>
         <p>
           De cursist oefent thuis. De docent brengt het in de klas tot leven.
         </p>
@@ -649,7 +683,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           Stop eerst het delen of projecteren van je scherm. De voorbereiding is
           alleen voor jou.
         </p>
-        <button className="primary-button" onClick={() => setScreen('prepare')}>
+        <button className="primary-button" onClick={() => setScreen("prepare")}>
           Mijn scherm wordt niet gedeeld
         </button>
         <button className="secondary-button" onClick={onExit}>
@@ -657,11 +691,13 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
         </button>
       </main>
     );
-  if (screen === 'prepare')
+  if (screen === "prepare")
     return (
       <main className="kpd kpd-prepare">
         <header>
-          <h1>Klink + Docent</h1>
+          <h1>
+            <ClassroomBrand />
+          </h1>
           <button className="secondary-button" onClick={onExit}>
             Sluiten
           </button>
@@ -671,14 +707,72 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
         </p>
         <h2>Les: {matWord.word}</h2>
         <p>
-          Doel: de cursist koppelt het woord aan de betekenis, bereidt de losse
-          klanken voor en krijgt een afzonderlijke leesbeurt.
+          <strong>Doel:</strong> {route.goal}
         </p>
-        <p>
-          {matLesson.scope} Houd begrip, nazeggen, nabouwen en zelf lezen apart.
-        </p>
+        <p>{route.bookGoal}</p>
         <fieldset>
-          <legend>Kies voor deze les</legend>
+          <legend>Leerroute</legend>
+          <div className="kpd-route-options">
+            {routeIds.map((id) => (
+              <label key={id}>
+                <input
+                  type="radio"
+                  name="route"
+                  value={id}
+                  checked={state.route === id}
+                  onChange={() => {
+                    commit(freshClassroom(state.variant, id));
+                    setPrintKind("worksheet");
+                  }}
+                />
+                <strong>{classroomRoutes[id].label}</strong>
+                <span>{classroomRoutes[id].goal}</span>
+                <em>{classroomRoutes[id].example}</em>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+        <section
+          className="kpd-prerequisites"
+          aria-label="Voorkennis voor deze route"
+        >
+          <h3>Voorkennis controleren</h3>
+          <ul>
+            {route.prerequisites.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          {state.route !== "a" && (
+            <>
+              <p>
+                Deze route volgt niet automatisch na de eerste mat-les. De
+                aanwezigheid van een woord in Klink bewijst nog geen beheersing
+                door de cursist.
+              </p>
+              <ul>
+                {prerequisitesForRoute(state.route).map((item) => (
+                  <li key={item.token}>
+                    <strong>{item.token}</strong> —{" "}
+                    {item.wordRef
+                      ? `aanwezig in Klink; voorbereide klanken: ${item.units.join(", ")}`
+                      : "nieuw contextwoord in deze les; geen eigen Klink-leesstap gevonden. Eerst betekenis en lezen voorbereiden."}
+                  </li>
+                ))}
+              </ul>
+              <label className="kpd-ready">
+                <input
+                  type="checkbox"
+                  checked={state.prepared}
+                  onChange={(e) => update({ prepared: e.target.checked })}
+                />
+                Ik heb deze woorden, zinsvormen en handelingen vooraf voorbereid
+                en gecontroleerd.
+              </label>
+            </>
+          )}
+        </section>
+        <fieldset>
+          <legend>Ondersteuning binnen deze leerroute</legend>
           <div className="kpd-variants">
             {variants.map((variant) => (
               <label key={variant.id}>
@@ -690,7 +784,8 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                   onChange={() => {
                     update({
                       variant: variant.id,
-                      tiles: freshClassroom(variant.id).tiles,
+                      tiles: freshClassroom(variant.id, state.route).tiles,
+                      shown: freshClassroom(variant.id, state.route).shown,
                     });
                   }}
                 />
@@ -700,10 +795,11 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             ))}
           </div>
         </fieldset>
+        <p>Leg klaar: {route.materials}</p>
         <p>
-          Leg klaar: een echte mat, een woordkaart, losse letters m, a en t, en
-          zo nodig papier en pen. Bij Ander aanbod wisselt de les neutraal
-          tussen deze drie voorbereide aanpakken.
+          Andere hulp wisselt tijdens de les alleen de ondersteuning. De
+          leerroute blijft gelijk. Een leesbeurt na een model telt niet als
+          zelfstandig leesbewijs.
         </p>
         <details>
           <summary>Lesplan en observatie</summary>
@@ -729,36 +825,42 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                   {p.title} · {p.minutes} min.
                 </strong>
                 <p>{p.action}</p>
+                {p.expected && <p>Verwacht: {p.expected}</p>}
+                {p.hint && <p>Hulp: {p.hint}</p>}
+                {p.feedback && <p>Feedback: {p.feedback}</p>}
                 <p>Observeer: {p.observe}</p>
                 <small>Lesbezoekkader: {p.framework}</small>
-                <details>
-                  <summary>Docentscript, hulp en feedback</summary>
-                  {classroomContent.screens
-                    .filter((screen) => screen.phase === phases.indexOf(p))
-                    .map((screen) => (
-                      <p className="kpd-script" key={screen.id}>
-                        {screen.text}
-                      </p>
-                    ))}
-                </details>
+                {state.route === "a" && (
+                  <details>
+                    <summary>Docentscript, hulp en feedback</summary>
+                    {classroomContent.screens
+                      .filter((screen) => screen.phase === phases.indexOf(p))
+                      .map((screen) => (
+                        <p className="kpd-script" key={screen.id}>
+                          {screen.text}
+                        </p>
+                      ))}
+                  </details>
+                )}
               </li>
             ))}
           </ol>
+          <p>Vervolg: {route.followUp}</p>
           <p>
-            Deze les volgt KPD 01–04 en de bestaande leesstap. De tweede
-            contextfoto is nog niet beschikbaar. Bespreek die situatie
-            mondeling; de twee-beeldenopdracht is niet compleet voor print. Voor
-            het lezen: dek de foto af. Voor schrijven uit het hoofd: dek ook de
-            woordstrook af. Mediarechten, menselijke uitspraakreview en
-            praktijkproef staan nog open.
+            De foto toont de mat bij een deur; niet dat hij nat is. Het bericht
+            is een denkbeeldige situatie. Zin- en berichtaudio zijn niet
+            gekoppeld: doe een benodigde luisterbeurt zelf voor. Bestaande
+            woordaudio is geen zinopname. Menselijke mediareview en klasproef
+            blijven open.
           </p>
         </details>
         <details>
           <summary>Werkbladen voorbereiden</summary>
           <p>
             Laat de papierhandeling eerst zien. Gebruik schrijven alleen als
-            voorbereid doel; anders legt de cursist de losse letters. Een
-            nabouwtaak is geen zelfstandige leestoets.
+            voorbereid doel; anders legt de cursist de{" "}
+            {state.route === "a" ? "losse letters" : "kaartjes"}. Een nabouwtaak
+            is geen zelfstandige leestoets.
           </p>
           <label>
             Materiaal
@@ -767,16 +869,30 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
               onChange={(e) => setPrintKind(e.target.value)}
             >
               <option value="worksheet">Cursistenblad</option>
-              <option value="letters">Letterkaarten</option>
+              <option value="letters">
+                {state.route === "a"
+                  ? "Letterkaarten"
+                  : state.route === "b"
+                    ? "Woordkaartjes"
+                    : "Berichtkaartjes"}
+              </option>
               <option value="observation">Docentobservatie</option>
             </select>
           </label>
-          {printKind === 'worksheet' ? (
-            <Worksheet variant={state.variant} />
-          ) : printKind === 'letters' ? (
-            <LetterCards />
+          {printKind === "worksheet" ? (
+            state.route === "a" ? (
+              <Worksheet variant={state.variant} />
+            ) : (
+              <RouteWorksheet route={state.route} variant={state.variant} />
+            )
+          ) : printKind === "letters" ? (
+            state.route === "a" ? (
+              <LetterCards />
+            ) : (
+              <RouteCards route={state.route} />
+            )
           ) : (
-            <ObservationSheet />
+            <ObservationSheet route={state.route} />
           )}
           <button className="secondary-button" onClick={printMaterial}>
             <Printer />
@@ -802,15 +918,19 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           </p>
         </details>
         <div className="kpd-actions">
-          <button className="primary-button" onClick={start}>
+          <button
+            className="primary-button"
+            onClick={start}
+            disabled={!state.prepared}
+          >
             <Play />
             {state.phase || state.tiles.some(Boolean)
-              ? 'Les openen'
-              : 'Start de les'}
+              ? "Les openen"
+              : "Start de les"}
           </button>
           <button
             className="secondary-button"
-            onClick={() => commit(freshClassroom(state.variant))}
+            onClick={() => commit(freshClassroom(state.variant, state.route))}
           >
             <RotateCcw />
             Nieuwe les klaarzetten
@@ -828,7 +948,9 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
   return (
     <main className="kpd kpd-live" data-classroom="active">
       <header className="kpd-top">
-        <h1>Klink + Docent</h1>
+        <h1>
+          <ClassroomBrand />
+        </h1>
         <div className="kpd-actions">
           <button
             className="secondary-button"
@@ -838,7 +960,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             }}
           >
             <Pause />
-            {pause ? 'Hervatten' : 'Pauze'}
+            {pause ? "Hervatten" : "Pauze"}
           </button>
           <button
             className="secondary-button"
@@ -868,7 +990,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
               <button
                 className="secondary-button"
                 key={p.title}
-                aria-current={state.phase === i ? 'step' : undefined}
+                aria-current={state.phase === i ? "step" : undefined}
                 onClick={() => go(i)}
               >
                 <span>{i + 1}</span>
@@ -878,9 +1000,20 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
           </nav>
           <section className="kpd-stage" aria-label={phase.title}>
             <h2>
-              {state.phase === 1 && saySelf ? 'Wat is dit?' : phase.prompt}
+              {state.route === "a" && state.phase === 1 && saySelf
+                ? "Wat is dit?"
+                : phase.prompt}
             </h2>
-            {[0, 1].includes(state.phase) && (
+            {state.route !== "a" && (
+              <TeacherRouteStage
+                key={state.route}
+                state={state}
+                update={update}
+                reveal={reveal}
+                onPractice={() => update({ regular: !state.regular })}
+              />
+            )}
+            {state.route === "a" && [0, 1].includes(state.phase) && (
               <div className="kpd-picture-lesson">
                 <div className="kpd-picture-column">
                   <div className="kpd-picture-space">
@@ -892,14 +1025,14 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                       onClick={() => update({ image: !state.image })}
                     >
                       {state.image ? <EyeOff /> : <Eye />}
-                      {state.image ? 'Beeld verbergen' : 'Beeld tonen'}
+                      {state.image ? "Beeld verbergen" : "Beeld tonen"}
                     </button>
                     {state.image && (
                       <button
                         className="secondary-button"
                         onClick={() => setLargePhoto(!largePhoto)}
                       >
-                        {largePhoto ? 'Foto kleiner' : 'Foto groter'}
+                        {largePhoto ? "Foto kleiner" : "Foto groter"}
                       </button>
                     )}
                   </div>
@@ -916,7 +1049,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                   <div className="kpd-actions">
                     {state.phase === 1 && wordAudio}
                     <button className="secondary-button" onClick={reveal}>
-                      {shown ? 'Woord verbergen' : 'Toon woord'}
+                      {shown ? "Woord verbergen" : "Toon woord"}
                     </button>
                     {state.phase === 1 && (
                       <button
@@ -926,20 +1059,20 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                           setSaySelf(!saySelf);
                         }}
                       >
-                        {saySelf ? 'Luister en zeg na' : 'Zeg zelf'}
+                        {saySelf ? "Luister en zeg na" : "Zeg zelf"}
                       </button>
                     )}
                   </div>
                 </div>
               </div>
             )}
-            {state.phase === 2 && (
+            {state.route === "a" && state.phase === 2 && (
               <>
                 <SoundButtons audio={audio} />
                 <div className="kpd-actions">
                   <button className="secondary-button" onClick={reveal}>
                     <Eye />
-                    {shown ? 'Woord verbergen' : 'Voeg samen'}
+                    {shown ? "Woord verbergen" : "Voeg samen"}
                   </button>
                   {wordAudio}
                   <button className="secondary-button" onClick={audio.retry}>
@@ -949,7 +1082,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                 {shown && <p className="kpd-big-word">{matWord.word}</p>}
               </>
             )}
-            {state.phase === 3 && (
+            {state.route === "a" && state.phase === 3 && (
               <>
                 {shown && <p className="kpd-big-word">{matWord.word}</p>}
                 <div className="kpd-slots" aria-label="Het gelegde woord">
@@ -962,18 +1095,18 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                       aria-label={
                         shown
                           ? `Voorbeeld ${i + 1}: ${unit}`
-                          : `Plaats ${i + 1}${state.tiles[i] ? `: ${state.tiles[i]}, weghalen` : ': leeg'}`
+                          : `Plaats ${i + 1}${state.tiles[i] ? `: ${state.tiles[i]}, weghalen` : ": leeg"}`
                       }
                       onClick={() => {
                         update({
                           tiles: state.tiles.map((value, index) =>
-                            index === i ? '' : value,
+                            index === i ? "" : value,
                           ),
                         });
-                        setFeedback('');
+                        setFeedback("");
                       }}
                     >
-                      {shown ? unit : state.tiles[i] || '\u00a0'}
+                      {shown ? unit : state.tiles[i] || "\u00a0"}
                     </button>
                   ))}
                 </div>
@@ -992,7 +1125,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                       onPointerUp={(e) => {
                         const slot = document
                           .elementFromPoint(e.clientX, e.clientY)
-                          ?.closest<HTMLElement>('[data-tile-slot]');
+                          ?.closest<HTMLElement>("[data-tile-slot]");
                         if (slot) {
                           dragged.current = true;
                           update({
@@ -1002,7 +1135,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                               Number(slot.dataset.tileSlot),
                             ),
                           });
-                          setFeedback('');
+                          setFeedback("");
                         }
                       }}
                       onClick={(event) => {
@@ -1010,7 +1143,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                         dragged.current = false;
                         if (dropped && event.detail !== 0) return;
                         update({ tiles: placeTile(state.tiles, unit) });
-                        setFeedback('');
+                        setFeedback("");
                       }}
                     >
                       {unit}
@@ -1024,7 +1157,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                       update({
                         tiles: state.tiles.map((value, index) =>
                           index === state.tiles.findLastIndex(Boolean)
-                            ? ''
+                            ? ""
                             : value,
                         ),
                       })
@@ -1035,15 +1168,15 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                   </button>
                   <button className="secondary-button" onClick={reveal}>
                     <Eye />
-                    {shown ? 'Oplossing verbergen' : 'Toon oplossing'}
+                    {shown ? "Oplossing verbergen" : "Toon oplossing"}
                   </button>
                   <button
                     className="primary-button"
                     onClick={() =>
                       setFeedback(
-                        state.tiles.join('') === matWord.word
-                          ? 'Ja, dit is mat.'
-                          : 'Kijk naar de eerste klank. Probeer de letters opnieuw.',
+                        state.tiles.join("") === matWord.word
+                          ? "Ja, dit is mat."
+                          : "Kijk naar de eerste klank. Probeer de letters opnieuw.",
                       )
                     }
                   >
@@ -1058,10 +1191,10 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                 <output aria-live="polite">{feedback}</output>
               </>
             )}
-            {state.phase === 4 && (
+            {state.route === "a" && state.phase === 4 && (
               <div
                 className={
-                  readCheck && shown ? 'kpd-picture-lesson' : 'kpd-read-lesson'
+                  readCheck && shown ? "kpd-picture-lesson" : "kpd-read-lesson"
                 }
               >
                 {readCheck && shown && (
@@ -1087,7 +1220,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                       }}
                     >
                       <Eye />
-                      {shown ? 'Woord verbergen' : 'Woord tonen'}
+                      {shown ? "Woord verbergen" : "Woord tonen"}
                     </button>
                     {shown && (
                       <button
@@ -1095,54 +1228,54 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                         onClick={() => setReadCheck(!readCheck)}
                       >
                         {readCheck
-                          ? 'Foto verbergen'
-                          : 'Controleer met de foto'}
+                          ? "Foto verbergen"
+                          : "Controleer met de foto"}
                       </button>
                     )}
                   </div>
                 </div>
               </div>
             )}
-            {state.phase === 5 && (
+            {state.route === "a" && state.phase === 5 && (
               <>
                 {photo}
                 <p>
-                  {state.variant === 'extend'
-                    ? 'Waar ligt nog een mat? Vertel of laat zien.'
-                    : state.variant === 'support'
-                      ? 'Wijs de mat aan. Zeg het woord.'
-                      : 'Zeg het woord. De ander wijst aan. Wissel.'}
+                  {state.variant === "extend"
+                    ? "Waar ligt nog een mat? Vertel of laat zien."
+                    : state.variant === "support"
+                      ? "Wijs de mat aan. Zeg het woord."
+                      : "Zeg het woord. De ander wijst aan. Wissel."}
                 </p>
               </>
             )}
-            {state.phase === 6 && (
+            {state.route === "a" && state.phase === 6 && (
               <>
                 <PencilLine className="kpd-paper-icon" aria-hidden="true" />
                 <p>Nu zelfstandig op papier.</p>
                 <p>Klaar? Kijk nog eens naar jouw woord.</p>
                 <button className="secondary-button" onClick={reveal}>
-                  {shown ? 'Voorbeeld verbergen' : 'Voorbeeld tonen'}
+                  {shown ? "Voorbeeld verbergen" : "Voorbeeld tonen"}
                 </button>
                 {shown && <p className="kpd-big-word">{matWord.word}</p>}
               </>
             )}
-            {state.phase === 7 && (
+            {state.route === "a" && state.phase === 7 && (
               <>
                 <p>
-                  {finished ? 'Les afgerond' : 'Oefen straks verder in Klink.'}
+                  {finished ? "Les afgerond" : "Oefen straks verder in Klink."}
                 </p>
                 <button
                   className="primary-button"
                   onClick={() => update({ regular: !state.regular })}
                 >
-                  {state.regular ? 'Oefening verbergen' : 'Open Klink-oefening'}
+                  {state.regular ? "Oefening verbergen" : "Open Klink-oefening"}
                   <ArrowRight />
                 </button>
                 <button
                   className="secondary-button"
                   onClick={() => setFinished(!finished)}
                 >
-                  {finished ? 'Opnieuw oefenen' : 'Les afronden'}
+                  {finished ? "Opnieuw oefenen" : "Les afronden"}
                 </button>
               </>
             )}
@@ -1185,7 +1318,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                   setTool(name);
                 }}
               >
-                {name === 'Schrijfbord' && <PencilLine />}
+                {name === "Schrijfbord" && <PencilLine />}
                 {name}
               </button>
             ))}
@@ -1200,7 +1333,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
               Vorige
             </button>
             <button className="secondary-button" onClick={chooseVariant}>
-              Ander aanbod
+              Andere hulp
             </button>
             <button
               className="primary-button"
@@ -1240,7 +1373,7 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             Terug naar de les
           </button>
         </header>
-        {tool === 'Klankbord' && (
+        {tool === "Klankbord" && (
           <>
             <SoundButtons audio={audio} />
             <button className="secondary-button" onClick={audio.retry}>
@@ -1248,9 +1381,9 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
             </button>
           </>
         )}
-        {(tool === 'Woordbord' || tool === 'Leesplank') && (
+        {(tool === "Woordbord" || tool === "Leesplank") && (
           <>
-            {toolImage && tool === 'Woordbord' && photo}
+            {toolImage && tool === "Woordbord" && photo}
             <div className="kpd-reading-card">
               {toolWord ? (
                 <p className="kpd-big-word">{matWord.word}</p>
@@ -1263,22 +1396,22 @@ export function TeacherClassroom({ onExit }: { onExit: () => void }) {
                 className="secondary-button"
                 onClick={() => setToolWord(!toolWord)}
               >
-                {toolWord ? 'Woord verbergen' : 'Woord tonen'}
+                {toolWord ? "Woord verbergen" : "Woord tonen"}
               </button>
-              {tool === 'Woordbord' && (
+              {tool === "Woordbord" && (
                 <button
                   className="secondary-button"
                   onClick={() => setToolImage(!toolImage)}
                 >
-                  {toolImage ? 'Beeld verbergen' : 'Beeld tonen'}
+                  {toolImage ? "Beeld verbergen" : "Beeld tonen"}
                 </button>
               )}
             </div>
-            {tool === 'Leesplank' && <SoundButtons audio={audio} />}
+            {tool === "Leesplank" && <SoundButtons audio={audio} />}
           </>
         )}
-        {tool === 'Spiegelbord' && <MirrorBoard />}
-        {tool === 'Schrijfbord' && (
+        {tool === "Spiegelbord" && <MirrorBoard />}
+        {tool === "Schrijfbord" && (
           <WritingBoard
             strokes={strokes}
             onChange={setStrokes}

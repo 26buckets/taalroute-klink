@@ -1,5 +1,21 @@
 import classroomContent from '../data/klink-docent-mat.json' with { type: 'json' };
+import routeContent from '../data/klink-docent-routes.json' with { type: 'json' };
+import { wordById } from './klink-curriculum.ts';
 export { classroomContent };
+export const classroomRoutes = routeContent.routes;
+export type ClassroomRoute = keyof typeof classroomRoutes;
+export const routeIds: ClassroomRoute[] = ['a', 'b', 'c'];
+export function prerequisitesForRoute(route: ClassroomRoute) {
+  return classroomRoutes[route].tokens.map((token) => {
+    const word = [...wordById.values()].find((word) => word.word === token);
+    return {
+      token,
+      wordRef: word?.id ?? null,
+      firstReading: word?.firstReading ?? null,
+      units: word?.preparation.unitIds ?? [],
+    };
+  });
+}
 import { lessonPackages } from './package-content.ts';
 import { exercisesForLesson } from './taalroute-packages.ts';
 
@@ -22,24 +38,35 @@ export type Variant = 'support' | 'basic' | 'extend';
 export const variants: { id: Variant; label: string; description: string }[] = [
   {
     id: 'support',
-    label: 'Steun',
+    label: 'Voordoen',
     description:
-      'Doe voor, houd het beeld beschikbaar en leg de eerste letter klaar.',
+      'Laat eerst een model zien. Benoem wat je doet en laat daarna nadoen.',
   },
   {
     id: 'basic',
-    label: 'Basis',
+    label: 'Samen doen',
     description:
-      'Laat het woord leggen en plan daarna een leesbeurt zonder voorbeeld.',
+      'Laat eerst proberen. Geef één aanwijzing en laat de cursist verdergaan.',
   },
   {
     id: 'extend',
-    label: 'Plus',
+    label: 'Zelfstandig',
     description:
-      'Laat zonder voorbeeld bouwen en de betekenis mondeling in een andere situatie gebruiken.',
+      'Begin zonder voorbeeld. Laat lezen, handelen en zelf controleren.',
   },
 ];
-export const phases = [
+export type LessonPhase = {
+  title: string;
+  prompt: string;
+  action: string;
+  observe: string;
+  minutes: number;
+  framework: string;
+  expected?: string;
+  hint?: string;
+  feedback?: string;
+};
+export const phases: LessonPhase[] = [
   {
     title: 'Kijken',
     prompt: 'Wat zie je?',
@@ -117,6 +144,21 @@ export const phases = [
     framework: '23.1, 23.3–23.5, 23.7',
   },
 ];
+export function phasesForRoute(route: ClassroomRoute): LessonPhase[] {
+  return route === 'a' ? phases : classroomRoutes[route].phases;
+}
+export function sequenceForRoute(route: ClassroomRoute) {
+  return route === 'a' ? matUnits : classroomRoutes[route].cards;
+}
+export function isCorrectSequence(route: ClassroomRoute, order: number[]) {
+  const sequence = sequenceForRoute(route);
+  return (
+    order.length === sequence.length &&
+    new Set(order).size === order.length &&
+    order.every((i) => Number.isInteger(i) && i >= 0 && i < sequence.length) &&
+    order.map((i) => sequence[i]).join(' ') === sequence.join(' ')
+  );
+}
 export const tools = [
   'Klankbord',
   'Leesplank',
@@ -128,6 +170,9 @@ export type BoardTool = (typeof tools)[number];
 export type ClassroomState = {
   active: boolean;
   variant: Variant;
+  route: ClassroomRoute;
+  prepared: boolean;
+  order: number[];
   phase: number;
   tiles: string[];
   shown: boolean[];
@@ -135,15 +180,23 @@ export type ClassroomState = {
   regular: boolean;
   exerciseId?: string;
 };
-export function freshClassroom(variant: Variant = 'basic'): ClassroomState {
+export function freshClassroom(
+  variant: Variant = 'basic',
+  route: ClassroomRoute = 'a',
+): ClassroomState {
   return {
     active: false,
     variant,
+    route,
+    prepared: route === 'a',
+    order: [],
     phase: 0,
     tiles: matUnits.map((unit, i) =>
       variant === 'support' && i === 0 ? unit : '',
     ),
-    shown: phases.map(() => false),
+    shown: phases.map(
+      (_, i) => route !== 'a' && variant === 'support' && [1, 3, 5].includes(i),
+    ),
     image: true,
     regular: false,
   };
@@ -157,7 +210,18 @@ export function restoreClassroom(raw: string | null): ClassroomState {
     if (!value || typeof value !== 'object') return fallback;
     const state = freshClassroom(
       variants.some((v) => v.id === value.variant) ? value.variant : 'basic',
+      routeIds.includes(value.route) ? value.route : 'a',
     );
+    state.prepared = state.route === 'a' || value.prepared === true;
+    state.order = Array.isArray(value.order)
+      ? value.order.filter(
+          (i: unknown, index: number) =>
+            Number.isInteger(i) &&
+            Number(i) >= 0 &&
+            Number(i) < sequenceForRoute(state.route).length &&
+            value.order.indexOf(i) === index,
+        )
+      : [];
     state.active = value.active !== false;
     state.phase =
       Number.isInteger(value.phase) &&

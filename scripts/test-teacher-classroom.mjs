@@ -11,6 +11,12 @@ import {
   matExercises,
   phases,
   variants,
+  classroomRoutes,
+  routeIds,
+  phasesForRoute,
+  prerequisitesForRoute,
+  sequenceForRoute,
+  isCorrectSequence,
 } from '../lib/teacher-classroom.ts';
 
 test('mat uses the canonical lesson, word, media and existing practice', () => {
@@ -26,6 +32,58 @@ test('mat uses the canonical lesson, word, media and existing practice', () => {
   assert(
     phases.every((p) => p.action && p.observe && p.framework && p.minutes > 0),
   );
+});
+test('three content routes are independent of support and trace prerequisites honestly', () => {
+  assert.deepEqual(routeIds, ['a', 'b', 'c']);
+  assert.equal(new Set(routeIds.map((r) => classroomRoutes[r].goal)).size, 3);
+  for (const route of routeIds)
+    for (const variant of variants) {
+      const state = freshClassroom(variant.id, route);
+      assert.equal(state.route, route);
+      assert.equal(state.variant, variant.id);
+      assert.equal(state.prepared, route === 'a');
+      assert.equal(phasesForRoute(route).length, 8);
+      assert(
+        phasesForRoute(route).every(
+          (p) => p.action && p.observe && p.minutes > 0 && p.framework,
+        ),
+      );
+      assert.deepEqual(restoreClassroom(JSON.stringify(state)), {
+        ...state,
+        exerciseId: undefined,
+      });
+    }
+  const prereqs = prerequisitesForRoute('b');
+  assert.equal(prereqs.find((p) => p.token === 'ligt').wordRef, null);
+  assert.equal(prereqs.find((p) => p.token === 'de').wordRef, 'klink-woord-de');
+  assert.equal(
+    prerequisitesForRoute('c').find((p) => p.token === 'buiten').wordRef,
+    null,
+  );
+  assert.equal(
+    restoreClassroom('{"active":true,"variant":"extend"}').route,
+    'a',
+  );
+});
+test('sentence and message cards preserve duplicates and reject invalid ordering', () => {
+  assert.equal(sequenceForRoute('b').length, 6);
+  assert(isCorrectSequence('b', [0, 1, 2, 3, 4, 5]));
+  assert(!isCorrectSequence('b', [5, 4, 3, 2, 1, 0]));
+  assert(!isCorrectSequence('b', [0, 1, 2, 3, 0, 5]));
+  assert(!isCorrectSequence('b', [0, 1, 2, 3, 4]));
+  assert(isCorrectSequence('c', [0, 1]));
+  assert(!isCorrectSequence('c', [1, 0]));
+  const state = restoreClassroom(
+    JSON.stringify({
+      ...freshClassroom('basic', 'b'),
+      active: true,
+      prepared: true,
+      order: [2, 2, -1, 999, 0, '1'],
+    }),
+  );
+  assert.deepEqual(state.order, [2, 0]);
+  assert.equal(state.prepared, true);
+  assert(!('response' in state));
 });
 test('tile actions preserve unique known letters and allow reordering', () => {
   assert.deepEqual(placeTile(['m'], 'a'), ['m', 'a', '']);
