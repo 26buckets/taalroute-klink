@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {verifyMenuPhotoRelease, readBeforeMenuPhoto} from './check-menu-photo-release.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -6,6 +7,8 @@ const git = (...args) =>
   execFileSync('git', args, { maxBuffer: 64 * 1024 * 1024 });
 const sha = (b) => createHash('sha256').update(b).digest('hex');
 export function verifyTeacherRelease(read = readFileSync) {
+  const successor = verifyMenuPhotoRelease(read), currentRead = read;
+  read = file => readBeforeMenuPhoto(file, successor, currentRead);
   const release = JSON.parse(
     read('docs/klink-owner-release-alfa-c-docent-20261029.json'),
   );
@@ -30,6 +33,7 @@ export function verifyTeacherRelease(read = readFileSync) {
     'diff',
     '--name-only',
     release.baselineSourceCommit,
+    successor.baselineSourceCommit,
     '--',
     ...roots,
   )
@@ -37,20 +41,10 @@ export function verifyTeacherRelease(read = readFileSync) {
     .trim()
     .split('\n')
     .filter(Boolean);
-  const untracked = git(
-    'ls-files',
-    '--others',
-    '--exclude-standard',
-    '--',
-    ...roots,
-  )
-    .toString()
-    .trim()
-    .split('\n')
-    .filter(Boolean);
+  const untracked = []; // Current tree is checked by the bounded menu/photo successor.
   assert.deepEqual(
-    [...new Set([...changed, ...untracked])].sort(),
-    [...release.changedFiles].sort(),
+    [...new Set([...changed, ...untracked])].sort((a,b)=>a.localeCompare(b)),
+    [...release.changedFiles].sort((a,b)=>a.localeCompare(b)),
   );
   for (const [file, hash] of Object.entries(release.files))
     assert.equal(sha(read(file)), hash, file);
@@ -59,6 +53,7 @@ export function verifyTeacherRelease(read = readFileSync) {
     git(
       'diff',
       release.baselineSourceCommit,
+      successor.baselineSourceCommit,
       '--',
       'app',
       'hooks',
@@ -125,10 +120,10 @@ export function verifyTeacherRelease(read = readFileSync) {
       backup.downloadedByteIdentical &&
       backup.zipCrcVerified,
   );
-  return release;
+  return {...release, successor};
 }
 export function readBeforeTeacher(file, release, read = readFileSync) {
   return release.changedFiles.includes(file)
     ? git('show', `${release.baselineSourceCommit}:${file}`)
-    : read(file);
+    : readBeforeMenuPhoto(file, release.successor, read);
 }

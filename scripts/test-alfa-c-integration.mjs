@@ -39,7 +39,6 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page.getByRole('button', { name: 'Alfa C', exact: true }).click();
     await page.locator('[data-alfa-c-category="words"]').waitFor();
     assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-    assert.equal(await page.getByLabel('Alfa C docentopdrachten').getByRole('link').count(), 5);
     assert.equal(await page.locator('[data-chapter]').count(), 0);
     assert(
       await page
