@@ -1,0 +1,18 @@
+[
+  {
+    "command": "node scripts/test-standard-integration-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "npm run test:content-import",
+    "status": 0
+  },
+  {
+    "command": "node --test scripts/test-unified-practice-navigation.mjs scripts/test-official-logo.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-alfa-c-menu-browser.mjs",
+    "status": 1
+  }
+]

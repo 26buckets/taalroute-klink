@@ -1,3 +1,4 @@
+import { productionIndex, productionPack } from './production-practice.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -28,7 +29,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; image?: string };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; help?: ContentHelp; image?: string };
 export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -46,13 +47,13 @@ export function chapterForLevel(level: ChapterLevel, preferred: string) {
   return ordered.find(chapter => chapter.activities.some(activity => chapterCollections(activity).some(item => level === 'all' || (item.levels ?? [item.level]).includes(level))))?.id ?? preferred;
 }
 
-export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => (selection.level === 'all' || (item.levels ?? [item.level]).includes(selection.level)) && matchesContent(item.level, exerciseSetHelp(item.exercises), { ...selection, level: 'all' });
+export const matchesChapterSelection = (item: ChapterCollection, selection: ChapterLocation) => (selection.level === 'all' || (item.levels ?? [item.level]).includes(selection.level)) && matchesContent(item.level, (item.help ?? exerciseSetHelp(item.exercises)), { ...selection, level: 'all' });
 
 // Use the same filtered tasks for entrance buttons and the collection list.
 export function availableChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}, now = Date.now()): ChapterCollection[] {
   return chapterCollections(activity).filter(item => matchesChapterSelection(item, selection))
     .map(item => activity === 'learning-review' ? { ...item, exercises: item.exercises.filter(exercise => review[exercise.exerciseId]?.due <= now) } : item)
-    .filter(item => item.exercises.length);
+    .filter(item => item.exerciseCount || item.exercises.length);
 }
 
 export function availableChapterActivities(chapter: string, selection: ChapterLocation, review: LearningReview = {}) {
@@ -106,12 +107,15 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
       for (const [key, selected] of groups) result.push({ id: `${pack.id}.${key}`, title: learnerListName(pack), level: exerciseContentLevel(selected[0]), levels: exerciseVocabularyLevels(selected[0]), pack, exercises: selected, image: pack.cover?.image });
     } else {
       for (const level of chapterLevels.filter(item => item.id !== 'all')) {
-        const selected = exercises.filter(exercise => chapterExerciseLevel(exercise) === level.id);
+        // LWN 001: this Alfa B section recalls its earlier Alfa A words too. Keep old IDs and links.
+        const sectionRecall = activity === 'build-model' && pack.id === 'groep-9' && level.id === 'alfa-b';
+        const selected = sectionRecall ? exercises : exercises.filter(exercise => chapterExerciseLevel(exercise) === level.id);
         if (!selected.length) continue;
         result.push({ id: `${pack.id}.${level.id}`, title: learnerListName(pack), level: level.id, pack, exercises: selected, image: pack.cover?.image });
       }
     }
   }
+  result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, image: row.image || undefined })));
   cache.set(activity, result);
   return result;
 }
@@ -156,9 +160,9 @@ export function parseChapterHash(hash: string): ChapterLocation {
     const activity = chapter.activities.find(id => id === activityId);
     const candidate = activity && chapterCollections(activity).find(item => item.id === collection);
     // Old direct links keep their exercise, with its existing support requirement visible.
-    if (!selection.help && candidate) selection.help = exerciseSetHelp(candidate.exercises);
+    if (!selection.help && candidate) selection.help = candidate.help ?? exerciseSetHelp(candidate.exercises);
     if (!selection.help && activity) {
-      const modes = new Set(chapterCollections(activity).map(item => exerciseSetHelp(item.exercises)));
+      const modes = new Set(chapterCollections(activity).map(item => item.help ?? exerciseSetHelp(item.exercises)));
       if (modes.size === 1) selection.help = [...modes][0];
     }
     // Historical learning-path links used support as a catch-all level. Keep them playable.

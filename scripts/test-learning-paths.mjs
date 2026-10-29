@@ -20,7 +20,8 @@ test('Every new rule is reachable; intact short paths retain source references a
   const before = JSON.stringify(packs),
     usedRules = new Set();
   for (const activity of learningActivities) {
-    const collections = chapterCollections(activity.id);
+    // This legacy contract checks the original rule paths; deferred source banks have their own production-content contract.
+    const collections = chapterCollections(activity.id).filter(collection => !collection.contentUrl);
     assert(collections.length > 0, activity.id);
     for (const collection of collections) {
       const steps = collection.exercises;

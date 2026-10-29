@@ -17,6 +17,12 @@ test('Twelve independent chapters cover all forty existing activities without ch
     assert(collections.length, activity.id);
     assert.equal(new Set(collections.map(item => item.id)).size, collections.length, `${activity.id}: unique collections`);
     for (const collection of collections) {
+      if (collection.contentUrl) {
+        assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
+        assert(collection.exerciseCount > 0);
+        assert(collection.contentUrl.startsWith('/practice-content/klink-20261029/'));
+        continue;
+      }
       assert(collection.exercises.length);
       const source = new Map(groupExercises(collection.pack, activity.id).map(item => [item.exerciseId, item]));
       for (const item of collection.exercises) assert.deepEqual(item, source.get(item.exerciseId), 'Keep source IDs, answers, media, reading conditions and assessment unchanged');

@@ -92,6 +92,7 @@ try {
     for (const exercise of collection.exercises) {
       assert.equal(await page.locator('.is-mixed-round').getAttribute('data-exercise-id'), exercise.exerciseId);
       if (exercise.mode.startsWith('connected-')) {
+        if (exercise.mode === 'connected-dialogue') await page.getByRole('button', { name: 'Luister naar het gesprek', exact: true }).click();
         await page.waitForFunction(() => !document.querySelector('.cp-exercise-feedback > button')?.disabled);
       } else if (exercise.mode === 'dialogue-role') {
         await page.locator('.cp-recorder').getByRole('button', { name: 'Klaar', exact: true }).click();

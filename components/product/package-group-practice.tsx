@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, RefreshCw, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, RefreshCw, Search, Volume2 } from 'lucide-react';
 import { BuildSurface, ExerciseSurface, findAudioSource, PackageExerciseBrowser } from './package-exercise-browser';
 import { stopMedia } from './shared';
+import { isInstructionAudioEnabled } from '@/lib/audio-policy';
 import { groupActivities, groupExercises, groupSessionKey, restoreGroupSession, type GroupActivity } from '@/lib/group-practice';
 import { allPackageWords, type AudioPlayer, type PackageDefinition, type PackageExercise, type PackageLesson, type PracticeAttempt } from '@/lib/package-content';
 import { selectExerciseSet, levelLabel, type ContentSelection } from '@/lib/content-levels';
@@ -140,8 +141,12 @@ function BuildWorksheet({ showTitle, exercises, onAudio, onAttempt, initialId, o
   useEffect(scrollToStart, [page]);
   const rows = exercises.slice(page * 4, page * 4 + 4);
   const ready = rows.every(item => done.includes(item.exerciseId));
+  const instruction = rows[0]?.instructionAudio?.src;
+  const [instructionError, setInstructionError] = useState(false);
   return <section className="cp-word-worksheet cp-page-workspace" aria-label="Meer woorden maken">
     {showTitle && <h2>Meer woorden maken</h2>}
+    {isInstructionAudioEnabled(instruction) && <button className="secondary-button" onClick={async () => { try { setInstructionError(await onAudio(instruction!) === false); } catch { setInstructionError(true); } }}><Volume2 />Luister naar de opdracht</button>}
+    {instructionError && <p role="alert">Het geluid lukt niet. Probeer opnieuw.</p>}
     <div className="cp-worksheet-grid">{rows.map(exercise => <WorksheetRow key={exercise.exerciseId} exercise={exercise} onAudio={onAudio} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
     <button className="primary-button" disabled={!ready} onClick={() => { stopMedia(); if ((page + 1) * 4 >= exercises.length) onDone(); else { const nextPage = page + 1; setPage(nextPage); onPosition(exercises[nextPage * 4].exerciseId); } }}>Verder<ArrowRight /></button>
   </section>;
@@ -155,7 +160,7 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone }: { exercise: Pack
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
-  return <article className={`cp-worksheet-row ${result}`}>
+  return <article className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
     <BuildSurface exercise={exercise} answeredCorrectly={result === 'right'} onAudio={async source => {
       playback.current?.abort(); const controller = new AbortController(); playback.current = controller;
       try { const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal }); if (controller.signal.aborted) return false; setAudioError(ok === false); if (ok !== false) setHeard(true); return ok !== false; }

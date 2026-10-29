@@ -19,7 +19,7 @@ import type {
 } from '@/lib/package-content';
 import { exerciseHelp, hasFirstLetterGuide, isBeginnerLesson, beginnerExerciseDemo } from '@/lib/lesson-plan';
 import { applyDefaultAudioRate } from '@/lib/media-player';
-import { instructionAudioEnabled, isWithdrawnAudio } from '@/lib/audio-policy';
+import { isInstructionAudioEnabled, isWithdrawnAudio } from '@/lib/audio-policy';
 import { learnerExerciseNames, learnerPhaseNames } from '@/lib/learner-copy';
 import {
   ArrowLeft,
@@ -206,7 +206,7 @@ export function PackageExerciseBrowser({
     setSpeakingOptionId('');
     if (sentenceQuestion && source === stimulus) setHeard(false);
     try {
-      if (instructionAudioEnabled && exercise.instructionAudio?.src && !explainedModes.current.has(exercise.instructionAudio.src)) {
+      if (isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src && !explainedModes.current.has(exercise.instructionAudio.src)) {
         setInstructionFailed(true);
         const explained = await onAudio(exercise.instructionAudio.src, { waitUntilEnd: true, signal: controller.signal });
         if (!isCurrent()) return false;
@@ -257,7 +257,7 @@ export function PackageExerciseBrowser({
 
   const beginAudio = useEffectEvent(() => {
     if (exercise?.mode === 'connected-dialogue') return;
-    if (needsListen || exercise?.mode === 'model' || (instructionAudioEnabled && exercise?.instructionAudio)) {
+    if (needsListen || exercise?.mode === 'model' || (isInstructionAudioEnabled(exercise?.instructionAudio?.src) && exercise?.instructionAudio)) {
       void listen(needsListen || exercise?.mode === 'model' ? stimulus : undefined, true);
     }
   });
@@ -408,7 +408,7 @@ export function PackageExerciseBrowser({
   } : undefined);
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
-              <h3 ref={taskHeading} tabIndex={-1}>{instructionAudioEnabled && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
+              <h3 ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button onClick={() => guided ? openGuidedAt(guidedIndex - 1) : openAt(recordIndex - 1)} disabled={guided ? guidedIndex <= 0 : recordIndex === 0} aria-label="Vorige oefening"><ArrowLeft /></button>
@@ -543,7 +543,7 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
 
 function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht' }: { image?: ExerciseImage; alt?: string }) {
   if (!image?.src) return null;
-  return <Image src={image.src} alt={image.altText || alt} width={760} height={760} />;
+  return <Image src={image.src} alt={image.altText || alt} width={760} height={760} unoptimized={image.src.startsWith('/package-media/klink-productie-20261029/')} />;
 }
 
 function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
@@ -705,7 +705,7 @@ function WordHint({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () 
   const hint = useRef<HTMLDivElement>(null);
   useEffect(() => { if (shown) hint.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' }); }, [shown]);
   if (typeof exercise.helpWord !== 'string') return null;
-  return <div className="cp-word-hint" ref={hint}>{shown && <strong>{exercise.helpWord}</strong>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
+  return <div className="cp-word-hint" ref={hint}>{shown && <><strong>{exercise.helpWord}</strong>{typeof exercise.meaning === 'string' && <p>{exercise.meaning}</p>}</>}<button className="secondary-button" aria-expanded={shown} onClick={() => { if (!shown) onHelp(); setShown(!shown); }}>{shown ? 'Verberg voorbeeld' : 'Help'}</button></div>;
 }
 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {

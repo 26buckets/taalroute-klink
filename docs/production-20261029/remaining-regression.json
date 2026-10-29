@@ -1,0 +1,42 @@
+[
+  {
+    "command": "node scripts/test-continuous-flow-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-sentence-comprehension-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-connected-content-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-learner-language-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "npm run test:ux",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-sections-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-landing-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-mixed-practice-browser.mjs",
+    "status": 0
+  },
+  {
+    "command": "node scripts/test-mixed-practice-audio.mjs",
+    "status": 0
+  },
+  {
+    "command": "npm run posttest:review",
+    "status": 1
+  }
+]

@@ -32,9 +32,10 @@ export default defineConfig(async () => {
 
   return {
     css: { postcss: { plugins: [tailwindcss()] } },
-    server: isCodexSeatbeltSandbox
-      ? { watch: { useFsEvents: false, usePolling: true } }
-      : undefined,
+    server: { watch: {
+      ignored: ['**/outputs/**', '**/docs/**'],
+      ...(isCodexSeatbeltSandbox ? { useFsEvents: false, usePolling: true } : {}),
+    } },
     plugins: [
       vinext(),
       cloudflare({

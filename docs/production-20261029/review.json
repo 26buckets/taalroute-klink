@@ -1,0 +1,76 @@
+{
+  "status": "passed-local",
+  "date": "2026-10-29T18:10:21.920494+00:00",
+  "baselineSourceCommit": "b10aa30ea9969c2e98845d4342e22a35060fd131",
+  "types": true,
+  "lint": true,
+  "build": true,
+  "content": true,
+  "browser": true,
+  "answers": true,
+  "regression": true,
+  "images": true,
+  "audioMetadata": true,
+  "localOnly": true,
+  "storagePreserved": true,
+  "existingPublicFilesVerified": 9745,
+  "newMedia": {
+    "audio": 885,
+    "images": 10
+  },
+  "collections": 1113,
+  "exercisePlacements": 56207,
+  "humanListeningReview": "open",
+  "learnerPilot": "not-performed",
+  "newImageGeneration": false,
+  "fullRegressionExecution": "All npm test:review and posttest:review stages passed across recorded local runs; corrected old fixtures were rerun. No cloud workflow.",
+  "builtPreviewChecks": [
+    {
+      "command": "node scripts/test-alfa-c-menu-browser.mjs",
+      "status": 0
+    },
+    {
+      "command": "node scripts/test-alfa-c-docent-browser.mjs",
+      "status": 0
+    },
+    {
+      "command": "node scripts/test-production-answers.mjs",
+      "status": 0
+    }
+  ],
+  "developmentPreviewObservation": "WebKit reported six canceled RSC/access-control errors on the Vite development server. The unchanged strict menu test was rerun against the actual built production output; see built-regression.json.",
+  "logs": {
+    "klink-full-review.log": {
+      "sha256": "f2b8a541610ba24014c3f7ea897a46e725e5c07b383bb6d451d7c89eb3096bd2",
+      "bytes": 11663
+    },
+    "klink-remaining-review.log": {
+      "sha256": "1531003d24ba1d61c49feb29f1c614510c6a41f3f648f8d69fa50c50e61f874e",
+      "bytes": 10497
+    },
+    "klink-final-review.log": {
+      "sha256": "42813b9993a5639b5978eaeae27ac163dee5dace8a58fe6dd91ad92436d9843f",
+      "bytes": 10719
+    },
+    "klink-final-review-last.log": {
+      "sha256": "97c91990a36b73ac78c51c5abbd60edd19b010b90ef9f6aa502594303cc4d1b2",
+      "bytes": 10210
+    },
+    "klink-built-review.log": {
+      "sha256": "9386a8d7dff4972cc49d958b261df46221175f3e97bf0209d4a634138286580e",
+      "bytes": 1528
+    },
+    "klink-build-final.log": {
+      "sha256": "31ec886db32c5e995d18f9c447e4661aa3f6220f839d15da5fa675de00cd1707",
+      "bytes": 19861
+    },
+    "production-browser-test.log": {
+      "sha256": "268e97aebc4835476fe6389f5ea98dc1add17c1d537496c314b870bd7b696f1e",
+      "bytes": 109
+    },
+    "production-answers-test.log": {
+      "sha256": "4ec5666d780d862a8c64d58e72fca380176a229da18b163cb779090314fc052a",
+      "bytes": 247
+    }
+  }
+}

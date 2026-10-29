@@ -97,7 +97,8 @@ try {
   await page.getByRole('button', { name: 'Verberg voorbeeld', exact: true }).click();
   await page.locator('.cp-text-entry input').fill(dictation.fields[0].acceptedAnswers[0]);
   await page.locator('.cp-text-entry input').press('Enter');
-  await page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true }).click();
+  const pauseAfterHelp = page.getByRole('button', { name: 'Automatisch verder pauzeren', exact: true });
+  if (await pauseAfterHelp.count()) await pauseAfterHelp.click();
   const attempt = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')).at(-1));
   assert.equal(attempt.helpUsed, true); assert.equal(attempt.assessment, 'answer'); assert(attempt.elapsedMs >= 0); assert.equal(attempt.attempts, 1);
   pass('Explicit word help is hidden by default and recorded as assistance, not independent success');

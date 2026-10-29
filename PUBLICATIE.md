@@ -1,3 +1,7 @@
+## Aanvullende productie — 29 oktober 2026
+
+De brongebonden aanvulling van de elf KLINK-onderdelen volgt uitsluitend de bestaande main en npm run deploy. Zie docs/production-20261029/RELEASE.md, de nieuwe brongebonden vrijgave en PUBLICATIE-ACTUEEL.md voor de feitelijke live-status. De oorspronkelijke inhoudsakkoorden en audiopauzes blijven behouden buiten deze exact gecontroleerde aanvulling. Geen alternatieve publicatieconfiguratie.
+
 # Klink — canonieke publicatie
 
 Publiceer alleen `main` uit 26buckets/taalroute-klink op klink.taalroute.nl.

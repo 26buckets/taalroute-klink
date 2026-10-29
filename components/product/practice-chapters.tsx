@@ -7,6 +7,7 @@ import { alfaCChapters } from '@/lib/alfa-c-navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, BookOpen, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, Search, UserRound, UsersRound } from 'lucide-react';
 import Image from 'next/image';
+import { ProductionRound } from './production-round';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
@@ -88,11 +89,12 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
   const modeAvailable = (help: ContentHelp) => Boolean(sequenceChapter) || alfaCSelected || (chapter ? [chapter] : practiceChapters).some(item => availableChapterActivities(item.id, { ...chapterSelection(item.id), help }, review).length);
   const openMode = (help: ContentHelp) => open({ ...location, help, collection: undefined });
   const collection = visible.find(item => item.id === location.collection);
+  const Round = collection?.contentUrl ? ProductionRound : GroupRound;
   const exerciseChoices = collection ? chapterExerciseChoices(location) : [];
   const sequenceBlock = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.find(block => block.id === location.collection) : undefined;
   const choosing = !location.help && !collection && !sequenceBlock;
   const activitySelected = Boolean(activity || location.sequence);
-  const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${exerciseSetHelp(item.exercises) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` }));
+  const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${(item.help ?? exerciseSetHelp(item.exercises)) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` }));
   const modeLabel = location.help === 'guided' ? 'Met je docent' : 'Zelf oefenen';
   // Example words identify a collection, but must not reveal a listening/spelling answer during play.
   const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' ? activity?.label : collection?.title) ?? activity?.label ?? (location.sequence ? 'Stap voor stap oefenen' : undefined) ?? chapter?.title ?? (choosing ? 'Oefenen' : modeLabel);
@@ -134,7 +136,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     </>}
     </>}
     </div>}
-    {collection && activity && <GroupRound exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+    {collection && activity && <Round contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);
       if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection });
     } }} key={`${activity.id}:${collection.id}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}

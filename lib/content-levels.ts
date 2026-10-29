@@ -51,7 +51,7 @@ export const availableContentLevels = new Set<ContentLevel>([
 export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
   if (Array.isArray(exercise.vocabularyLevels)) {
     const levels = exercise.vocabularyLevels;
-    return levels.includes('a1') ? 'a1' : levels.includes('a2') ? 'a2' : levels.includes('b1') ? 'b1' : 'support';
+    return contentLevels.find(level => level.id !== 'all' && levels.includes(level.id))?.id ?? 'support';
   }
   if (exercise.componentId === 'KLINK-CONTENT' && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
   // A known word inside a sentence does not establish the level of that sentence.

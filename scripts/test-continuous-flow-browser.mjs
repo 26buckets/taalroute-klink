@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { isBeginnerLesson } from '../lib/lesson-plan.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
@@ -28,8 +29,9 @@ async function openExercise(exercise) {
 }
 const ready = () => page.waitForFunction(() => !/Je hoort het geluid vanzelf|Probeer Luister opnieuw|Tik op Luister/.test(document.querySelector('.cp-exercise-feedback output')?.textContent ?? ''), undefined, { timeout: 20000 });
 // Automatic pace remains available after the guided beginner lessons.
-const automaticPack = packs.find(pack => pack.lessons.some(lesson => lesson.id === 'klink-leesstap-09'));
-const route = exercisesForLesson(automaticPack, automaticPack.lessons.find(lesson => lesson.id === 'klink-leesstap-09'));
+const automaticPack = packs.find(pack => pack.lessons.some(lesson => exercisesForLesson(pack, lesson).some(item => item.mode === 'heard-word' && !isBeginnerLesson(item, true))));
+const automaticLesson = automaticPack.lessons.find(lesson => exercisesForLesson(automaticPack, lesson).some(item => item.mode === 'heard-word' && !isBeginnerLesson(item, true)));
+const route = exercisesForLesson(automaticPack, automaticLesson);
 const heard = route.find(item => item.mode === 'heard-word');
 try {
   await openExercise(heard);

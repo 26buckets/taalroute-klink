@@ -12,7 +12,8 @@ const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18830', errors=[], chec
 page.on('pageerror',e=>errors.push(e.message));
 try {
 for(const mode of ['word-sort','text-evidence','verb-choice','context-order','situation-point','practice-branch']){
- const collections=chapterCollections(mode), collection=collections.at(-1);
+ // Retain the original expanded collection fixture; deferred banks are exercised by test-production-browser.
+ const collections=chapterCollections(mode).filter(c=>!c.contentUrl), collection=collections.at(-1);
  const chapter=practiceChapters.find(c=>c.activities.includes(mode));
  await page.goto(base+'/'+chapterHash({chapter:chapter.id,activity:mode,collection:collection.id,level:collection.level}));await page.reload();
  await page.locator('.is-mixed-round').waitFor();
