@@ -721,3 +721,14 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
 .cp-practice-explanation-heading button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 12px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); color: var(--ink); font-size: 16px; font-weight: 400; }
 .cp-practice-explanation-heading svg { width: 20px; height: 20px; }
 .cp-practice-explanation iframe { flex: 1; min-height: 0; width: 100%; border: 0; }
+
+/* Sentences need reading text size; the large model size is for single words. */
+.learner-app .cp-model-content.cp-model-sentence > strong {
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.4;
+}
+/* Let longer text and zoom enlarge the existing card instead of hiding its end. */
+.learner-app .is-mixed-round .cp-exercise-stage:has(.cp-model-sentence) {
+  height: auto;
+  min-height: 320px;
+}

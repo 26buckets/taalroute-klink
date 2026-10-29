@@ -549,10 +549,11 @@ function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht' }: { imag
 function ModelSurface({ exercise, onAudio, onFinish, guided }: SurfaceProps & { guided: boolean }) {
   const text = asRecord(exercise.text);
   const source = findAudioSource(exercise);
+  const modelClass = `cp-model-content${/\s/.test(asString(text.primary).trim()) ? ' cp-model-sentence' : ''}`;
   const articleId = useId();
   const phrase = wordWithArticle({ id: asString(exercise.wordId), word: asString(text.primary) });
   const content = <><ExerciseImageView image={exerciseImage(exercise)} /><strong>{asString(text.primary)}{source && <Volume2 aria-hidden="true" />}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></>;
-  return <section className="cp-task-card">{source ? <button className="cp-model-content" onClick={() => onAudio(source)} aria-describedby={phrase ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className="cp-model-content">{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
+  return <section className="cp-task-card">{source ? <button className={modelClass} onClick={() => onAudio(source)} aria-describedby={phrase ? articleId : undefined} aria-label={`Luister naar ${asString(text.primary)}`}>{content}</button> : <div className={modelClass}>{content}<span>Lees samen met je docent.</span></div>}<WordSounds key={exercise.exerciseId} wordId={asString(exercise.wordId)} />{!guided && <button className="primary-button" onClick={() => onFinish('bekeken', true)}>Ik heb gekeken<Check /></button>}</section>;
 }
 
 function scrollDemoIntoView(anchor: HTMLElement | null) {
