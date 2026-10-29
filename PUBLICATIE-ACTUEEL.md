@@ -1,3 +1,23 @@
+# Actuele Klink-publicatie — vaste menuopbouw en 18 woordfoto’s, 29 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/home
+Broncommit: `548fd736208b3e99262c6ae7ec9a0b306a425d35`, schone canonieke branch `main`.
+Worker: `ba6a40d3-b5cb-4f41-b260-9ff1f570458a`. Build: `2026-10-29T09:42:18.343Z`.
+
+Alfa A, Alfa B, Alfa C, A1, A2 en B1 volgen dezelfde opbouw: categorie → oefenvorm → lijst → oefening. Het bruine menurandje is verwijderd. Achttien woordfoto’s zijn vervangen door vierkante beelden met een natuurlijke achtergrond; alle vorige foto’s, inclusief vijf broodjes, blijven bewaard. De 180 bestaande opdrachten en de 27 brongebonden docentopdrachten uit de vorige liveversie zijn behouden.
+
+Lokaal: typen, lint, productiebuild, curriculum, 70 publicatiebewijstests, alle 180 bestaande opdrachten, alle 27 docentopdrachten, 96 menugevallen en 36 fotokaarten gecontroleerd. Online: dezelfde menuopbouw in Chromium en WebKit, alle 27 docentopdrachten, 50 integratiegevallen en 36 fotokaarten. Alle 18 nieuwe en 18 oorspronkelijke foto’s, 33 docentopnamen en 29 clientbundels zijn bytegelijk aan de gecontroleerde bron teruggelezen. Geen GitHub-workflows; zware controles lokaal.
+
+Geen echte cursistenpilot, fysieke telefoonproef of schermlezerproef geclaimd. De bestaande inhoudelijke beperkingen van Alfa C blijven gelden; dit is geen volledige niveauvrijgave. Database, audio, logo en voortgang zijn behouden.
+
+Register: `docs/klink-publication-menu-photos-20261029.json`. Vrijgave: `docs/klink-owner-release-menu-photos-20261029.json`. Bewijs: `docs/klink-menu-photo-publication-20261029/`. Fotobronnen: https://drive.google.com/file/d/1rD_gJuc2HZtzr7pX9iY6xDK70PH5xe6B/view.
+
+Controleer vóór iedere volgende publicatie https://klink.taalroute.nl/release.json. Onderstaande publicaties zijn historie. Latere registratiewijzigingen veranderen de runtime niet.
+
+Bron- en controleback-up gecontroleerd: https://drive.google.com/file/d/1K0J-Ddff1yEEP8TO7Awtl6IqSD3DQCUt/view.
+
+## Eerdere publicaties
+
 # Actuele Klink-publicatie — 27 docentopdrachten, 29 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/chapters?level=alfa-c&help=guided
