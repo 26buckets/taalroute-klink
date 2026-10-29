@@ -1,3 +1,19 @@
+# Actuele KLINK-publicatie — leesbare zinnen en docentkaarten, 29 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `3be0062a2ddf42f9758a6dc15473f28cfb076591`, schone canonieke main. Build `2026-10-29T20:17:21.699Z`. Worker `e6698b16-f3ad-41e3-8a49-351704d7d85e`.
+
+Alle gedeelde modelkaarten met meerdere woorden gebruiken leesbare zinsgrootte (24–36 px); het oefenvlak groeit mee in plaats van het einde te verbergen. Losse woorden behouden hun grote letters. De vijf bestaande docentgroepen staan onder het zichtbare kopje 'Opdrachten met je docent', met dezelfde kaartstijl en titel/aantal op aparte regels. Geen wijziging aan inhoud, beelden, audio, routes of voortgangsopslag.
+
+Lokaal: typen, lint, build, gerichte vrijgavecontroles, route-/voortgangstests, 96 menugevallen met 180 blokopeningen/terugwegen, 50 integratiegevallen, 80 zinweergaven en acht docentkaartweergaven. Online: alle tien productie-modelopdrachten in beide reeksen over vier schermmaten en twee browsers, alle vijf docentlinks en browserterug, plus 29 werkelijk aangeboden JS/CSS-bestanden bytegelijk gecontroleerd. Geen fysieke telefoon- of cursistenproef geclaimd. Alle zware controles lokaal; geen GitHub-workflows.
+
+Register: `docs/klink-publication-layout-fixes-20261029.json`. Vrijgave: `docs/klink-owner-release-layout-fixes-20261029.json`. Bewijs: `docs/layout-fixes-20261029/`. Bronback-up teruggelezen en bytegelijk: https://drive.google.com/file/d/1sOOdtoV-hJYaCPopvvIpL9ISTZuTZmWC/view . Historische inhoudelijke grenzen blijven gelden.
+
+Controleer vóór volgende publicatie https://klink.taalroute.nl/release.json. De registratiecommit na deze bron verandert de runtime niet.
+
+Online controlebewijs en bronkopie teruggelezen: https://drive.google.com/file/d/17x8ikfkbBLlefIjpvisFJ3k0GBdTY_cK/view .
+
+## Historie
+
 # Actuele KLINK-publicatie — voortgang op rondekaartjes, 29 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `4970049f7831d020f52218e39c192368bb371f23`, canonieke branch `main`, schone bron. Build `2026-10-29T19:38:30.177Z`. Worker `6a32df39-a845-43e7-9ea9-4fa200a3b4ac`.
