@@ -23,12 +23,13 @@ export function PracticeDocument({ document, label }: { document: Document; labe
       {lines.map((line, index) => {
         const price = kind === 'receipt' && line.match(/^(.*?)(€\s*\d+,\d{2})$/);
         const time = kind === 'schedule' && line.match(/^(\d{2}\.\d{2}(?: uur)?)\s+(.+)$/);
+        const field = line.match(/^(Voor:|Afhaalplek:|Ophalen:)\s*(.*)$/);
         const heading = /^(Bericht(?: van school)?|Afspraakkaart|Rivaro Parcel|Afhaalbericht|Buurtmarkt|Kassabon|Programma.*|Boodschappen|Lesrooster|Uitnodiging|Marktactie|Aanmelden.*|Oefengegevens|Tafel schoonmaken)$/.test(line);
         return <div key={index} className={`ac-document-line${heading ? ' is-heading' : ''}${line.startsWith('Totaal') ? ' is-total' : ''}${price || time ? ' is-row' : ''}`}>
           {line === 'Rivaro Parcel' ? <Image unoptimized src="/alfa-c/rivaro-parcel.svg" width={190} height={50} alt="Rivaro Parcel" />
             : price ? <><span>{price[1]}</span><span>{price[2]}</span></>
               : time ? <><span>{time[1]}</span><span>{time[2]}</span></>
-                : line || <br />}
+                : field ? <><strong>{field[1]}</strong>{' '}{field[2]}</> : line || <br />}
         </div>;
       })}
     </div>

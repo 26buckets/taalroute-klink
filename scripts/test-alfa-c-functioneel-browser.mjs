@@ -53,7 +53,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
             else assert((await player.locator('.ac-source-panel').innerText()).replace(/\s/g,'').includes(view.text.replace(/\s/g,'')), step.id);
           }
           assert((await player.innerText()).includes(step.instruction.replace(step.screen,'').replace(/  +/g,' ').trim()));
-          await player.getByRole('button',{name:'Uitleg',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('guide',step.instruction));
+          await player.getByRole('button',{name:'Uitleg',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('guide',step.instruction));assert.equal(await player.locator('.ac-explanation p').getAttribute('aria-label'),step.instruction);await player.getByRole('button',{name:'Naar de opdracht',exact:true}).click();
           const visibleDocuments=step.presentation.filter(v=>!['previousResponse','audioOnly'].includes(v.kind));
           if(visibleDocuments.length){await player.getByRole('button',{name:'Tekst horen',exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('target',visibleDocuments.at(-1).text));}
           if(step.exampleVisible){await player.getByRole('button',{name:'Voorbeeld',exact:true}).click();await idle();
@@ -65,7 +65,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
             await checkChoices(page,player,step,name,'desktop');
             const wrong=step.options.find(o=>o.id!==step.correctOptionId),right=step.options.find(o=>o.id===step.correctOptionId);
             await player.getByRole('button',{name:wrong.text,exact:true}).focus();await page.keyboard.press('Enter');await idle();assert.equal(await player.getByRole('button',{name:wrong.text,exact:true}).getAttribute('aria-pressed'),'true');assert.equal(await player.locator('output').innerText(),step.retryVisible);assert(await next.isDisabled());
-            await player.getByRole('button',{name:right.text,exact:true}).click();await idle();assert.equal(await player.locator('output').innerText(),'Dat klopt.');
+            await player.getByRole('button',{name:right.text,exact:true}).click();await idle();assert.equal(await player.locator('output').innerText(),step.successFeedback);
           } else {
             assert.equal(await player.getByRole('textbox').count(),0);
             if(step.dictationTexts.length){

@@ -30,6 +30,7 @@ for (const [engineName, engine] of Object.entries({ chromium, webkit })) {
     const listen = async () => {
       await page.getByRole('button', { name: 'Luister', exact: true }).click();
       await idle();
+      if (await page.getByRole('button', {name: 'Naar de opdracht', exact: true}).count()) await page.getByRole('button', {name: 'Naar de opdracht', exact: true}).click();
     };
     for (const block of pilotBlocks) {
       await page.locator(`[data-pilot-block="${block.id}"]`).click();

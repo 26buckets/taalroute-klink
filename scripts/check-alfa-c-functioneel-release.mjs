@@ -6,17 +6,17 @@ import {createHash} from 'node:crypto';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:64*1024*1024});
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const evidence='docs/klink-alfa-c-functioneel-20261028';
-export const functionalFiles=[
+const functionalCodeFiles=[
  'components/product/alfa-c-practice.tsx','components/product/alfa-c-practice.css','components/product/alfa-c-functioneel.tsx',
  'lib/alfa-c-functioneel.ts','data/klink-alfa-c-functioneel.json','data/klink-alfa-c-functioneel-audio.json','data/klink-teacher-manual.json',
  'public/alfa-c/antwoordbladen.html','public/alfa-c/handschrift/lesbriefje.png','public/alfa-c/handschrift/voorbeeldbriefje.png',
  'scripts/check-alfa-c-audio-release.mjs','scripts/check-alfa-c-functioneel-release.mjs',
  'scripts/test-alfa-c-functioneel.mjs','scripts/test-alfa-c-functioneel-browser.mjs','scripts/test-alfa-c-functioneel-audio-browser.mjs','scripts/test-alfa-c-functioneel-release.mjs','scripts/test-alfa-c-integration.mjs','scripts/test-publication-proof.mjs',
- ...JSON.parse(readFileSync('data/klink-alfa-c-functioneel-audio.json')).clips.filter(c=>!c.reused).map(c=>'public'+c.src),
 ];
 export function verifyFunctionalRelease(read=readFileSync,release=JSON.parse(readFileSync('docs/klink-owner-release-alfa-c-functioneel-20261028.json'))){
  const choiceRelease=verifyChoiceRelease(read);
  const currentReader=read;read=file=>readBeforeChoice(file,choiceRelease,currentReader);
+ const functionalFiles=[...functionalCodeFiles,...JSON.parse(read('data/klink-alfa-c-functioneel-audio.json')).clips.filter(c=>!c.reused).map(c=>'public'+c.src)];
  assert.equal(release.approvedBy,'Nico');assert.equal(release.publicationApproved,true);
  assert.equal(release.userRequest,'Oké, dan mogen ze online gezet worden.');
  assert.equal(release.completionRequest,'Maak alles.');

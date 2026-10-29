@@ -222,3 +222,26 @@
 .functional-player .primary-button { min-height: 48px; }
 .functional-handwriting { display: block; width: 100%; height: auto; margin: 12px 0; }
 .learner-app .functional-player .cp-task-card > .functional-handwriting { max-height: none; }
+
+/* On desktop, word instructions and the response share the available screen. */
+@media (min-width: 1101px) and (min-height: 700px) {
+  .product-root .consistent-layout .pilot-page:has([data-pilot-step]) { height: var(--klink-app-height); display: flex; flex-direction: column; align-items: stretch; padding-top: 0; padding-bottom: 12px; }
+  .pilot-page:has([data-pilot-step]) > .cp-context-header { min-height: 54px; flex: 0 0 auto; }
+  .pilot-page > [data-pilot-step] { flex: 1; min-height: 0; }
+  .product-root .learner-app [data-pilot-step] .cp-exercise-workspace, .product-root .learner-app [data-pilot-step] .cp-exercise-main { height: 100%; min-height: 0; }
+  .product-root .learner-app [data-pilot-step] .cp-exercise-main { display: grid; grid-template-rows: min-content min-content minmax(0, 1fr) min-content; }
+  [data-pilot-step] .ac-support-tools { align-items: center; }
+  [data-pilot-step] .pilot-head, [data-pilot-step] .pilot-footer { padding: 10px 16px; }
+  [data-pilot-step] .pilot-head h2:focus { outline: none; }
+  .learner-app [data-pilot-step] .cp-exercise-stage { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(0, 2fr); align-items: center; min-height: 0; height: auto; padding: 16px; }
+  .learner-app [data-pilot-step] .cp-task-card { min-height: 0; height: auto; grid-column: 2; }
+  .learner-app [data-pilot-step] .pilot-model { grid-column: 1 / -1; gap: 12px; }
+  .product-root .learner-app [data-pilot-step] .cp-model-content { grid-template-columns: minmax(0, 230px) minmax(0, 1fr); grid-template-rows: auto; align-items: center; gap: 24px; }
+  .learner-app [data-pilot-step] .cp-model-content img { width: 230px; height: 230px; flex: 0 1 230px; }
+  [data-pilot-step] .pilot-help { grid-column: 1; }
+  .product-root .learner-app [data-pilot-step] .cp-choice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  [data-pilot-step] .pilot-footer output { font-size: 17px; }
+  .learner-app [data-pilot-step] .cp-task-card:has(.cp-tile-bank) { gap: 8px; }
+  .learner-app [data-pilot-step] .cp-task-card:has(.cp-tile-bank) .cp-picture-help { height: 120px; min-height: 0; }
+  .learner-app [data-pilot-step] .cp-task-card:has(.cp-tile-bank) .cp-picture-help img { height: 120px; max-height: 120px; object-fit: contain; }
+}

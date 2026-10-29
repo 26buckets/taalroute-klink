@@ -10,6 +10,7 @@ import {
   Volume2,
 } from 'lucide-react';
 import { ExerciseSurface } from '@/components/product/package-exercise-browser';
+import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 import { isWithdrawnAudio } from '@/lib/audio-policy';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import {
@@ -275,6 +276,7 @@ function PilotPlayer({
   onRecord: (r: PilotRecord) => void;
   onNext: (participationRecord?: PilotRecord) => void;
 }) {
+  const readAlong = useAlfaCReadAlong();
   const [model, setModel] = useState(firstExample),
     [help, setHelp] = useState(false),
     [heard, setHeard] = useState(false),
@@ -293,7 +295,7 @@ function PilotPlayer({
       stopMedia();
     };
   }, []);
-  async function play(source?: string, guide?: 'instruction' | 'example' | 'help' | 'error' | 'good') {
+  async function play(source?: string, guide?: 'instruction' | 'example' | 'help' | 'error' | 'good', explanation = false) {
     playback.current?.abort();
     stopMedia();
     const controller = new AbortController();
@@ -316,11 +318,11 @@ function PilotPlayer({
         ...(source && guide === 'instruction' && participation ? [alfaCGuideAudio(step.afterListening)] : []),
       ].filter((s): s is string => Boolean(s) && !isWithdrawnAudio(s));
       for (const src of sources) {
-        const ok = await playMedia(src, {
+        const ok = await readAlong.play(src, {
           signal: controller.signal,
           waitUntilEnd: true,
-          playbackRate: src.startsWith('/package-audio/alfa-c-uitleg-20261027/') ? 1 : undefined,
-        });
+          playbackRate: src.startsWith('/package-audio/alfa-c-') ? 1 : undefined,
+        }, explanation);
         if (controller.signal.aborted) return false;
         if (ok === false) return false;
         if (src === step.exercise.prompt?.audio?.src) setHeard(true);
@@ -378,12 +380,11 @@ function PilotPlayer({
               </span>
             </div>
           </header>
-          <div className="cp-exercise-stage">
-            <div className="pilot-tools">
+            <div className="pilot-tools ac-support-tools">
               <button
                 className="secondary-button"
                 onClick={() =>
-                  void play(step.exercise.prompt?.audio?.src, model ? 'example' : 'instruction')
+                  void play(step.exercise.prompt?.audio?.src, model ? 'example' : 'instruction', true)
                 }
                 disabled={busy}
               >
@@ -424,17 +425,19 @@ function PilotPlayer({
                 </>
               )}
             </div>
+          <div className="cp-exercise-stage">
             {audioError && (
               <p role="alert">{alfaCCommonTexts['Geluidsbestand werkt niet'].text}</p>
             )}
-            {!model && (
+            {readAlong.reading && <AlfaCExplanation reading={readAlong.reading} onClose={() => { stopPlayback(); readAlong.clear(); }} />}
+            {!readAlong.reading && !model && !help && (
               <div className="pilot-instruction">
                 {startText && <p>{startText}</p>}
                 {reviewText && <p>{reviewText}</p>}
                 <p>{step.spokenInstruction}</p>
               </div>
             )}
-            {help && (
+            {!readAlong.reading && help && (
               <div className="pilot-help">
                 <p>{step.help}</p>
                 <button
@@ -517,7 +520,7 @@ function PilotPlayer({
             <button
               className="primary-button"
               disabled={
-                model || busy || !(participation ? heard : result === 'right')
+                model || busy || Boolean(readAlong.reading) || !(participation ? heard : result === 'right')
               }
               onClick={() => {
                 onNext(participation ? {

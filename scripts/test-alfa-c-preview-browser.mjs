@@ -56,6 +56,7 @@ try {
         .getByRole('button', { name: 'Luister', exact: true })
         .waitFor();
       await page.waitForFunction(() => !document.querySelector('.pilot-tools button')?.disabled);
+      if (await page.getByRole('button', {name: 'Naar de opdracht', exact: true}).count()) await page.getByRole('button', {name: 'Naar de opdracht', exact: true}).click();
       if (s.exercise.options) {
         const opts = s.exercise.options;
         const right = opts.findIndex((o) =>

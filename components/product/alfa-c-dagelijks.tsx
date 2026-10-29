@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, Eye, FileText, HelpCircle, Volume2 } from 'lucid
 import { dailyAudio, dailyBlocks, dailyStorageKey, emptyDailyRecord, readDailyProgress, recordDailyAnswer, type DailyBlock, type DailyProgress, type DailyRecord, type DailyStep, type Support } from '@/lib/alfa-c-dagelijks';
 import { playMedia, stopMedia } from './shared';
 import { AlfaCWorkspace, DocumentSet } from './alfa-c-workspace';
+import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 
 export function DailyBlockCards() {
   return <>{dailyBlocks.map(b => <a key={b.id} className="cp-activity-button" data-daily-block={b.id} href={`#learner/alfa-c/${b.id}`}><FileText aria-hidden="true" /><span>{b.title}<small>12 opdrachten · berichten en documenten</small></span><ArrowRight aria-hidden="true" /></a>)}</>;
@@ -37,6 +38,7 @@ export function AlfaCDailyPractice({ block }: { block: DailyBlock }) {
 }
 
 function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext }: { block: DailyBlock; step: DailyStep; index: number; record: DailyRecord; onRecord: (r: DailyRecord) => void; onPrevious?: () => void; onNext: () => void }) {
+  const readAlong = useAlfaCReadAlong();
   const [model, setModel] = useState(false), [help, setHelp] = useState(false);
   const [chosen, setChosen] = useState<string[]>([]), [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
   const [busy, setBusy] = useState(false), [audioError, setAudioError] = useState(false);
@@ -46,10 +48,10 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
     current.current = { ...current.current, support: { ...current.current.support, [kind]: current.current.support[kind] + 1 } };
     onRecord(current.current);
   }
-  async function play(ids: string[]) {
+  async function play(ids: string[], explanation = false) {
     playback.current.abort(); stopMedia(); const controller = new AbortController(); playback.current = controller;
     setBusy(true); setAudioError(false);
-    try { for (const id of ids) { if (controller.signal.aborted) return; await playMedia(dailyAudio(id), { waitUntilEnd: true, playbackRate: 1 }); } }
+    try { for (const id of ids) { if (controller.signal.aborted) return; const ok = await readAlong.play(dailyAudio(id), { signal: controller.signal, waitUntilEnd: true, playbackRate: 1 }, explanation); if (!ok) return; } }
     catch { if (!controller.signal.aborted) setAudioError(true); }
     finally { if (!controller.signal.aborted) setBusy(false); }
   }
@@ -63,15 +65,15 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div></header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
-        <button className="secondary-button" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I]); }}><Volume2 />Uitleg</button>
+        <button className="secondary-button" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I], true); }}><Volume2 />Uitleg</button>
         {step.audio.O && <button className="secondary-button" disabled={busy} onClick={() => { support('content'); void play([step.audio.O!]); }}><Volume2 />Tekst horen</button>}
         <button className="secondary-button" aria-expanded={model} onClick={() => { if (!model) { support('example'); void play([step.audio.V]); } else stop(); setHelp(false); setModel(!model); }}><Eye />Voorbeeld</button>
         <button className="secondary-button" aria-expanded={help} onClick={() => { if (!help) { support('help'); void play([step.audio.H]); } else stop(); setModel(false); setHelp(!help); }}><HelpCircle />Help</button>
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
-        <AlfaCWorkspace source={<DocumentSet documents={step.documents} />} supportOpen={model || help}>
-          {model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.example}</p><button className="primary-button" onClick={() => { stop(); setModel(false); setChosen([]); setResult('idle'); }}>Nu jij<ArrowRight /></button></section>
+        <AlfaCWorkspace source={<DocumentSet documents={step.documents} />} supportOpen={model || help || Boolean(readAlong.reading)}>
+          {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stop(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.example}</p><button className="primary-button" onClick={() => { stop(); setModel(false); setChosen([]); setResult('idle'); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{step.speech.H}</p><button className="secondary-button" onClick={() => { stop(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
               : <>
                 {step.context.map(text => <p className="ac-task-context" key={text}>{text}</p>)}
@@ -80,7 +82,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
               </>}
         </AlfaCWorkspace>
       </div>
-      <footer className="pilot-footer"><output aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output><button className="primary-button" disabled={busy || model || result !== 'right'} onClick={onNext}>Verder<ArrowRight /></button></footer>
+      <footer className="pilot-footer"><output aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output><button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || result !== 'right'} onClick={onNext}>Verder<ArrowRight /></button></footer>
     </div></div>
   </section>;
 }

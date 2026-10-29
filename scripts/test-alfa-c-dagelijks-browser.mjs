@@ -34,6 +34,8 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
         for (const [n, doc] of step.documents.entries()) assert.equal(rendered[n].replace(/\s/g, ''), doc.text.replace(/\s/g, ''), step.id);
         for (const context of step.context) assert((await player.innerText()).includes(context));
         await player.getByRole('button', { name: 'Uitleg', exact: true }).click(); await idle();
+        assert.equal(await player.locator('.ac-explanation p').getAttribute('aria-label'), step.speech.I);
+        await player.getByRole('button', { name: 'Naar de opdracht', exact: true }).click();
         assert((await page.evaluate(() => window.playedAudio.at(-1))).endsWith(step.audio.I + '.mp3'));
         if (step.interaction === 'keuze') {
           const wrong = step.options.find(o => !o.correct);

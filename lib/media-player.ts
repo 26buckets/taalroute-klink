@@ -60,8 +60,14 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
   applyDefaultAudioRate(audio, options.playbackRate);
   return new Promise((resolve, reject) => {
     let settled = false;
+    let frame: number | undefined;
+    const progress = () => {
+      options.onProgress?.(audio.currentTime);
+      if (!settled && options.onProgress) frame = requestAnimationFrame(progress);
+    };
     const cleanup = () => {
       clearTimeout(timeout);
+      if (frame !== undefined) cancelAnimationFrame(frame);
       audio.removeEventListener('ended', ended);
       audio.removeEventListener('error', failed);
       options.signal?.removeEventListener('abort', cancel);
@@ -85,6 +91,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
     audio.play().then(() => {
       if (settled) return;
       options.onStarted?.();
+      if (options.onProgress) progress();
       if (!options.waitUntilEnd) finish(true);
     }, error => finish(false, error));
   });

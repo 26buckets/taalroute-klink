@@ -1,4 +1,5 @@
 'use client';
+import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Volume2 } from 'lucide-react';
 import { functionalAudio, functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
@@ -67,6 +68,7 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
 }) {
   const [model, setModel] = useState(false);
   const [help, setHelp] = useState(false);
+  const readAlong = useAlfaCReadAlong();
   const [result, setResult] = useState<'idle' | 'wrong' | 'right' | 'done'>('idle');
   const [selected, setSelected] = useState('');
   const [retry, setRetry] = useState(false);
@@ -82,7 +84,7 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
     return () => { playback.current?.abort(); stopMedia(); };
   }, []);
   const choice = step.kind === 'choice';
-  async function play(texts: { role: 'guide' | 'target'; text: string | null }[], item?: number) {
+  async function play(texts: { role: 'guide' | 'target'; text: string | null }[], item?: number, explanation = false) {
     playback.current?.abort(); stopMedia();
     const controller = new AbortController(); playback.current = controller;
     setBusy(true); setAudioError(false);
@@ -91,7 +93,7 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
         if (!part.text) continue;
         const src = functionalAudio(part.role, part.text);
         if (!src) throw Error('Audio unavailable');
-        const ok = await playMedia(src, { signal: controller.signal, waitUntilEnd: true, playbackRate: src.startsWith('/package-audio/alfa-c-functioneel-20261028/') ? 1 : undefined });
+        const ok = await readAlong.play(src, { signal: controller.signal, waitUntilEnd: true, playbackRate: src.startsWith('/package-audio/alfa-c-') ? 1 : undefined }, explanation);
         if (controller.signal.aborted || ok === false) return;
       }
       if (item !== undefined) setHeardItems(previous => [...new Set([...previous, item])]);
@@ -125,15 +127,15 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
         <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div>
       </header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
-        <button className="secondary-button" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }])}><Volume2 />Uitleg</button>
+        <button className="secondary-button" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)}><Volume2 />Uitleg</button>
         {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <button className="secondary-button" disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }}><Volume2 />{model ? 'Voorbeeld horen' : 'Tekst horen'}</button>}
         {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />Voorbeeld</button>}
         <button className="secondary-button" aria-expanded={help} onClick={() => { markHelp(); setHelp(!help); setModel(false); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }}><HelpCircle />Help</button>
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
-        <AlfaCWorkspace key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help}>
-          {model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section>
+        <AlfaCWorkspace key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help || Boolean(readAlong.reading)}>
+          {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stopPlayback(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{retry ? step.retryVisible : step.helpVisible}</p><button className="secondary-button" disabled={busy} onClick={() => void guide(retry ? step.retryVisible : step.helpVisible)}><Volume2 />Luister naar de tip</button><button className="secondary-button" onClick={() => { stopPlayback(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
               : <>
                 {action && <p className="ac-task-context">{action}</p>}
@@ -145,9 +147,9 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
         </AlfaCWorkspace>
       </div>
       <footer className="pilot-footer">
-        <output aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? 'Dat klopt.' : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>
+        <output aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? step.successFeedback : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>
         {result === 'done' && <button className="secondary-button" onClick={() => { setResult('idle'); setHelp(true); setRetry(true); markHelp(); void guide(step.retryVisible); }}><RefreshCw />Nog eens</button>}
-        <button className="primary-button" disabled={busy || model || !['right', 'done'].includes(result)} onClick={onNext}>Verder<ArrowRight /></button>
+        <button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || !['right', 'done'].includes(result)} onClick={onNext}>Verder<ArrowRight /></button>
       </footer>
     </div></div>
   </section>;

@@ -120,3 +120,11 @@
   .product-root .consistent-layout .ac-document-page { height: auto; }
   .ac-document-player .cp-exercise-stage { min-height: 460px !important; }
 }
+
+.ac-explanation { min-width: 0; }
+.ac-explanation h3 { margin: 0 0 12px; font-size: 22px; font-weight: 500; }
+.ac-explanation p { margin: 0 0 20px; font-size: 20px; line-height: 1.65; }
+.ac-explanation .is-spoken { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 5px; }
+@media (min-width: 1101px) and (min-height: 700px) {
+  .learner-app [data-pilot-step]:has(.ac-explanation) .pilot-model { grid-column: 2; }
+}

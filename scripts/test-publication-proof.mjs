@@ -61,6 +61,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     copyFileSync('scripts/check-alfa-c-functioneel-release.mjs', join(dir, 'scripts/check-alfa-c-functioneel-release.mjs'));
     copyFileSync('scripts/check-alfa-c-choice-release.mjs', join(dir, 'scripts/check-alfa-c-choice-release.mjs'));
     copyFileSync('scripts/check-alfa-c-workspace-release.mjs', join(dir, 'scripts/check-alfa-c-workspace-release.mjs'));
+    copyFileSync('scripts/check-alfa-c-photo-repair-release.mjs', join(dir, 'scripts/check-alfa-c-photo-repair-release.mjs'));
     copyFileSync('scripts/check-alfa-c-dagelijks-release.mjs', join(dir, 'scripts/check-alfa-c-dagelijks-release.mjs'));
     copyFileSync('scripts/check-alfa-c-texts-release.mjs', join(dir, 'scripts/check-alfa-c-texts-release.mjs'));
     copyFileSync('scripts/check-demo-mobile-release.mjs', join(dir, 'scripts/check-demo-mobile-release.mjs'));
