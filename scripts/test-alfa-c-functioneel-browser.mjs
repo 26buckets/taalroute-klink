@@ -33,8 +33,8 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       };
     });
     const idle=()=>page.waitForFunction(()=>!document.querySelector('.functional-player .pilot-tools button')?.disabled);
-    await page.goto(base+'/#learner/alfa-c');await page.getByRole('button',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-functional-block]').first().waitFor();
-    assert.equal(await page.locator('[data-functional-block]').count(),6);assert.equal(await page.locator('[data-pilot-block]').count(),3);
+    await page.goto(base+'/#learner/alfa-c');await page.getByRole('link',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-functional-block]').first().waitFor();
+    assert.equal(await page.locator('[data-functional-block]').count(),6);assert.equal(await page.locator('[data-pilot-block]').count(),0);
     const sentinel='{"version":1,"positions":{"winkel":7},"records":{}}';
     await page.evaluate(v=>{localStorage.setItem('klink.preview.alfa-c.v1',v);localStorage.setItem('klink.taalroute.attempts.v1','[{"sentinel":true}]');},sentinel);
     for(const block of functionalBlocks) {
@@ -91,7 +91,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
         if(step.number===6){await page.reload();await page.locator(`[data-functional-step="${block.steps[6].id}"]`).waitFor();}
       }
       await page.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();
-      await page.getByRole('link',{name:'Kies een ander blok'}).click();await page.getByRole('button',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-functional-block]').first().waitFor();
+      await page.getByRole('link',{name:'Kies een ander blok'}).click();await page.locator('[data-functional-block]').first().waitFor();
     }
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.preview.alfa-c.v1')),sentinel);
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.taalroute.attempts.v1')),'[{"sentinel":true}]');

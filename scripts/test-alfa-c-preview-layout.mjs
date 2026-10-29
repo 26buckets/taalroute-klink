@@ -8,7 +8,7 @@ try {
   const p = await browser.newPage({ viewport: { width: 320, height: 900 } });
   p.setDefaultTimeout(10000);
   await p.goto(
-    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c',
+    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c/words',
   );
   await p.locator('[data-pilot-block]').first().waitFor();
   for (const block of pilotBlocks)
@@ -23,7 +23,7 @@ try {
       );
       await p.goto(
         (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') +
-          '/#learner/alfa-c',
+          '/#learner/alfa-c/words',
       );
       await p.reload();
       await p.locator(`[data-pilot-block="${block.id}"]`).click();

@@ -1,7 +1,7 @@
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { pilotBlocks, pilotStorageKey } from '../lib/alfa-c-practice.ts';
+import { pilotStorageKey } from '../lib/alfa-c-practice.ts';
 import { progressKey } from '../lib/learner-progress.ts';
 import { taalroutePackages } from '../lib/taalroute-packages.ts';
 const base = process.env.KLINK_URL ?? 'http://127.0.0.1:18856',
@@ -37,18 +37,16 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page.goto(base + '/#learner/chapters');
     await page.getByRole('button', { name: /Zelf oefenen.*Je oefent/ }).click();
     await page.getByRole('button', { name: 'Alfa C', exact: true }).click();
-    await page.locator('.pilot-block-cards').waitFor();
-    assert.equal(await page.locator('.pilot-block-cards a').count(), 15);
-    assert.equal(await page.locator('.pilot-block-cards [data-daily-block]').count(), 6);
-    assert.equal(await page.locator('.pilot-block-cards [data-pilot-block]').count(), 3);
-    assert.equal(await page.locator('.pilot-block-cards [data-functional-block]').count(), 6);
+    await page.locator('[data-alfa-c-category="words"]').waitFor();
+    assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
     assert.equal(await page.locator('[data-chapter]').count(), 0);
     assert(
       await page
         .getByRole('button', { name: 'Alfa C', exact: true })
         .isEnabled(),
     );
-    await page.locator('.pilot-block-cards a').first().focus();
+    await page.locator('[data-alfa-c-category="words"]').click();
+    await page.locator('[data-pilot-block]').first().focus();
     await page.keyboard.press('Enter');
     await page.locator('[data-pilot-step="pilot-alfa-c:winkel:1"]').waitFor();
     assert.equal(
@@ -111,7 +109,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page
       .getByRole('button', { name: 'Andere oefening', exact: true })
       .click();
-    await page.locator('.pilot-block-cards').waitFor();
+    await page.locator('[data-alfa-c-category]').first().waitFor();
     assert(page.url().includes('level=alfa-c'));
     assert(page.url().includes('help=practice'));
     await page.screenshot({ path: out + `/online-ingang-${name}.png` });
@@ -119,8 +117,9 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       .getByRole('button', { name: 'Met je docent', exact: true })
       .click();
     assert.equal(await page.locator('.pilot-block-cards').count(), 0);
+    assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
     assert.equal(await page.locator('[data-chapter]').count(), 8);
-    assert.equal(await page.locator('[data-chapter][disabled]').count(), 0);
+    assert.equal(await page.locator('[data-chapter]:not([disabled])').count(), 8);
     await page.goto(base + '/docenten/hoofdstuk-2');
     await page
       .getByRole('heading', { name: 'Drie korte Alfa C-blokken' })
@@ -137,7 +136,7 @@ fs.writeFileSync(
       oldProgressPreserved: true,
       keyboard: true,
       teacherManual: true,
-      emptySelfChaptersHidden: true,
+      consistentCategoryMenu: true,
       availableGuidedChapters: 8,
     },
     null,

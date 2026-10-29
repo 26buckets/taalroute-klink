@@ -5,6 +5,9 @@ import {
   ArrowRight,
   Check,
   Eye,
+  BookOpen,
+  PencilLine,
+  MessageCircle,
   HelpCircle,
   RefreshCw,
   Volume2,
@@ -31,24 +34,31 @@ import { dailyBlocks } from '@/lib/alfa-c-dagelijks';
 import { AlfaCDailyPractice, DailyBlockCards } from './alfa-c-dagelijks';
 import { AlfaCFunctionalPractice, FunctionalBlockCards } from './alfa-c-functioneel';
 
-export function AlfaCBlockCards({ progress }: { progress?: PilotProgress }) {
-  const [group, setGroup] = useState('words');
-  return <div className="pilot-block-cards ac-practice-library" aria-label="Alfa C praktijksituaties">
-    <p className="ac-library-description">Kies wat je wilt oefenen.</p>
-    <nav className="ac-library-groups" aria-label="Soort praktijksituatie">{[['words', 'Woorden en zinnen'], ['paper', 'Lezen en schrijven'], ['messages', 'Berichten lezen']].map(([id, label]) => <button key={id} className="secondary-button" aria-pressed={group === id} aria-controls={`alfa-c-group-${id}`} onClick={() => setGroup(id)}>{label}</button>)}</nav>
-    <section id="alfa-c-group-words" className="ac-library-panel" hidden={group !== 'words'} aria-label="Woorden en zinnen"><div className="cp-chapter-grid">
-      {pilotBlocks.map(block => <a key={block.id} className="cp-activity-button" data-pilot-block={block.id} href={`#learner/alfa-c/${block.id}`}><Eye aria-hidden="true" /><span>{block.title}<small>{block.words.join(' · ')}{progress && ` · ${Math.min(progress.positions[block.id] ?? 0, block.steps.length)} / ${block.steps.length}`}</small></span><ArrowRight aria-hidden="true" /></a>)}
-    </div></section>
-    <section id="alfa-c-group-paper" className="ac-library-panel" hidden={group !== 'paper'} aria-label="Lezen en schrijven"><div className="cp-chapter-grid"><FunctionalBlockCards /></div></section>
-    <section id="alfa-c-group-messages" className="ac-library-panel" hidden={group !== 'messages'} aria-label="Berichten lezen"><div className="cp-chapter-grid"><DailyBlockCards /></div></section>
+const alfaCGroups = [
+  { id: 'words', title: 'Woorden en zinnen', icon: BookOpen },
+  { id: 'paper', title: 'Lezen en schrijven', icon: PencilLine },
+  { id: 'messages', title: 'Berichten lezen', icon: MessageCircle },
+];
+export function AlfaCCategoryCards({ help = 'practice' }: { help?: string }) {
+  return <>{alfaCGroups.map(({ id, title, icon: Icon }) => <a key={id} className="cp-activity-button" data-alfa-c-category={id} href={`#learner/alfa-c/${id}?help=${help}`}><Icon aria-hidden="true" /><span>{title}</span><ArrowRight aria-hidden="true" /></a>)}</>;
+}
+export function AlfaCBlockCards({ progress, group, help = 'practice' }: { progress?: PilotProgress; group?: string; help?: string }) {
+  return <div className="cp-chapter-grid pilot-block-cards" aria-label="Alfa C onderdelen">
+    {!group && <AlfaCCategoryCards help={help} />}
+    {group === 'words' && pilotBlocks.map(block => <a key={block.id} className="cp-activity-button" data-pilot-block={block.id} href={`#learner/alfa-c/${block.id}?help=${help}`}><Eye aria-hidden="true" /><span>{block.title}<small>{block.words.join(' · ')}{progress && ` · ${Math.min(progress.positions[block.id] ?? 0, block.steps.length)} / ${block.steps.length}`}</small></span><ArrowRight aria-hidden="true" /></a>)}
+    {group === 'paper' && <FunctionalBlockCards help={help} />}
+    {group === 'messages' && <DailyBlockCards help={help} />}
   </div>;
 }
-export function AlfaCPractice({ onBack }: { onBack: () => void }) {
+export function AlfaCPractice() {
   const [selected, setSelected] = useState<string | undefined>(() =>
     typeof window === 'undefined'
       ? undefined
-      : window.location.hash.split('/')[2],
+      : window.location.hash.split('?')[0].split('/')[2],
   );
+  const help = typeof window !== 'undefined' && new URLSearchParams(window.location.hash.split('?')[1]).get('help') === 'guided' ? 'guided' : 'practice';
+  const category = alfaCGroups.find(group => group.id === selected);
+  const overview = `#learner/chapters?level=alfa-c&help=${help}`;
   const [progress, setProgress] = useState<PilotProgress>({
     version: 1,
     positions: {},
@@ -64,7 +74,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     const restore = () => {
       stopMedia();
-      setSelected(window.location.hash.split('/')[2]);
+      setSelected(window.location.hash.split('?')[0].split('/')[2]);
       setReview(undefined);
       setReviewAt(0);
       setCompletionBusy(false);
@@ -100,7 +110,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
   }
   function choose(id?: string) {
     stopMedia();
-    window.location.hash = id ? `#learner/alfa-c/${id}` : '#learner/alfa-c';
+    window.location.hash = `#learner/alfa-c/${id ?? 'words'}?help=${help}`;
     document.querySelector('.learner-main')?.scrollTo({ top: 0 });
   }
   const block = pilotBlocks.find((b) => b.id === selected),
@@ -118,20 +128,20 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
     );
   const functionalBlock = functionalBlocks.find(b => b.id === selected);
   const dailyBlock = dailyBlocks.find(b => b.id === selected);
-  if (dailyBlock) return <AlfaCDailyPractice key={dailyBlock.id} block={dailyBlock} />;
-  if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} />;
+  if (dailyBlock) return <AlfaCDailyPractice key={dailyBlock.id} block={dailyBlock} backHref={`#learner/alfa-c/messages?help=${help}`} />;
+  if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} backHref={`#learner/alfa-c/paper?help=${help}`} />;
   return (
     <div className="learner-page cp-chapters cp-chapter-playing pilot-page">
       <header className="cp-context-header">
         <button
           className="text-back"
           aria-label="Andere oefening"
-          onClick={block ? () => choose() : onBack}
+          onClick={block ? () => choose() : () => { window.location.hash = overview; }}
         >
           <ArrowLeft />
         </button>
         <h1 ref={heading} tabIndex={-1}>
-          {block?.title ?? 'In de praktijk'}
+          {block?.title ?? category?.title ?? 'Alfa C'}
         </h1>
         <small className="cp-context-meta">Alfa C</small>
       </header>
@@ -142,7 +152,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
       )}
       {!block ? (
         <section className="cp-panel pilot-library">
-          <AlfaCBlockCards progress={progress} />
+          <AlfaCBlockCards progress={progress} group={category?.id} help={help} />
         </section>
       ) : !step ? (
         <section className="honest-empty pilot-complete">

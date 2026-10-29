@@ -5,7 +5,7 @@ import audio from '../data/klink-alfa-c-audio.json' with {type:'json'};
 const base=process.env.KLINK_URL??'http://127.0.0.1:18862',out=process.env.KLINK_ALFAC_OUTPUT??'outputs/alfa-c-guide-audio';fs.mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome'});
 try{
- const page=await browser.newPage();await page.goto(base+'/#learner/alfa-c');await page.locator('[data-pilot-block]').first().waitFor();
+ const page=await browser.newPage();await page.goto(base+'/#learner/alfa-c/words');await page.locator('[data-pilot-block]').first().waitFor();
  await page.evaluate(clips=>{
   window.codecClips=clips;window.codecChecks=[];
   const button=document.createElement('button');button.textContent='Controleer audiobestanden';button.style.cssText='position:fixed;top:100px;left:300px;z-index:99999';document.body.appendChild(button);
@@ -22,7 +22,7 @@ try{
    pause(){clearTimeout(this.timer);if(this.playing){this.playing=false;window.activeCount--;}}
   };
  });
- await fail.goto(base+'/#learner/alfa-c');await fail.locator('[data-pilot-block="winkel"]').click();
+ await fail.goto(base+'/#learner/alfa-c/words');await fail.locator('[data-pilot-block="winkel"]').click();
  await fail.getByRole('button',{name:'Luister',exact:true}).click();await fail.getByRole('alert').waitFor();assert(await fail.getByRole('button',{name:'Verder',exact:true}).isDisabled(),'Instruction alone must not unlock target completion');
  await fail.evaluate(()=>window.failTarget=false);await fail.getByRole('button',{name:'Luister',exact:true}).click();await fail.waitForFunction(()=>!document.querySelector('.pilot-footer button').disabled);
  assert.equal(await fail.evaluate(()=>window.maxActive),1);

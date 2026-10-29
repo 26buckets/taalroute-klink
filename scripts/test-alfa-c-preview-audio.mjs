@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import { pilotBlocks } from '../lib/alfa-c-practice.ts';
 const out = 'outputs/alfa-c-proefblokken-20261026',
   url =
-    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c';
+    (process.env.KLINK_URL ?? 'http://127.0.0.1:18856') + '/#learner/alfa-c/words';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 try {
   const p = await browser.newPage({ viewport: { width: 1366, height: 900 } });

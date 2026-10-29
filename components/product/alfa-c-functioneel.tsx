@@ -7,13 +7,13 @@ import { playMedia, stopMedia } from './shared';
 import Image from 'next/image';
 import { AlfaCWorkspace, DocumentSet, PracticeDocument } from './alfa-c-workspace';
 
-export function FunctionalBlockCards() {
-  return <>{functionalBlocks.map(block => <a key={block.id} className="cp-activity-button" data-functional-block={block.id} href={`#learner/alfa-c/${block.id}`}>
+export function FunctionalBlockCards({ help = 'practice' }: { help?: string }) {
+  return <>{functionalBlocks.map(block => <a key={block.id} className="cp-activity-button" data-functional-block={block.id} href={`#learner/alfa-c/${block.id}?help=${help}`}>
     <FileText aria-hidden="true" /><span>{block.title}<small>12 opdrachten · lezen en schrijven</small></span><ArrowRight aria-hidden="true" />
   </a>)}</>;
 }
 
-export function AlfaCFunctionalPractice({ block }: { block: FunctionalBlock }) {
+export function AlfaCFunctionalPractice({ block, backHref = '#learner/alfa-c/paper?help=practice' }: { backHref?: string; block: FunctionalBlock }) {
   const [progress, setProgress] = useState<FunctionalProgress>();
   const [storageError, setStorageError] = useState(false);
   const [round, setRound] = useState(0);
@@ -40,7 +40,7 @@ export function AlfaCFunctionalPractice({ block }: { block: FunctionalBlock }) {
   }
   return <div className="learner-page cp-chapters cp-chapter-playing pilot-page functional-page ac-document-page">
     <header className="cp-context-header">
-      <a className="text-back" href="#learner/alfa-c" aria-label="Andere oefening"><ArrowLeft /></a>
+      <a className="text-back" href={backHref} aria-label="Andere oefening"><ArrowLeft /></a>
       <h1 ref={heading} tabIndex={-1}>{block.title}</h1><small className="cp-context-meta">Alfa C</small>
     </header>
     {storageError && <p role="alert">Bewaren lukt niet op dit apparaat. Je kunt wel verder oefenen.</p>}
@@ -54,7 +54,7 @@ export function AlfaCFunctionalPractice({ block }: { block: FunctionalBlock }) {
       }}><Volume2 />{completionBusy ? 'Luisteren…' : 'Luister'}</button>
       {completionError && <p role="alert">Het geluid werkt niet. Tik nog eens op Luister.</p>}
       <button className="secondary-button" onClick={() => { position(0); setRound(n => n + 1); }}><RefreshCw />Het hele blok opnieuw</button>
-      <a className="secondary-button" href="#learner/alfa-c">Kies een ander blok<ArrowRight /></a>
+      <a className="secondary-button" href={backHref}>Kies een ander blok<ArrowRight /></a>
     </section> : <FunctionalPlayer key={`${step.id}:${round}`} block={block} step={step} index={at} record={progress.records[step.id]}
       onPrevious={at ? () => position(at - 1) : undefined}
       onRecord={record => save({ ...progress, records: { ...progress.records, [step.id]: record } })}

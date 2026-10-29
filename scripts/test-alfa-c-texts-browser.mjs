@@ -19,7 +19,7 @@ for (const [engineName, engine] of Object.entries({ chromium, webkit })) {
         pause() { clearTimeout(this.timer); }
       };
     });
-    await page.goto(base + '/#learner/alfa-c');
+    await page.goto(base + '/#learner/alfa-c/words');
     await page.locator('[data-pilot-block]').first().waitFor();
     await page.evaluate(() => localStorage.setItem('klink.taalroute.attempts.v1', '[{"sentinel":true}]'));
     const idle = async () => {

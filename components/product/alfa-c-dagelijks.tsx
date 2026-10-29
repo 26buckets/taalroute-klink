@@ -6,11 +6,11 @@ import { playMedia, stopMedia } from './shared';
 import { AlfaCWorkspace, DocumentSet } from './alfa-c-workspace';
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 
-export function DailyBlockCards() {
-  return <>{dailyBlocks.map(b => <a key={b.id} className="cp-activity-button" data-daily-block={b.id} href={`#learner/alfa-c/${b.id}`}><FileText aria-hidden="true" /><span>{b.title}<small>12 opdrachten · berichten en documenten</small></span><ArrowRight aria-hidden="true" /></a>)}</>;
+export function DailyBlockCards({ help = 'practice' }: { help?: string }) {
+  return <>{dailyBlocks.map(b => <a key={b.id} className="cp-activity-button" data-daily-block={b.id} href={`#learner/alfa-c/${b.id}?help=${help}`}><FileText aria-hidden="true" /><span>{b.title}<small>12 opdrachten · berichten en documenten</small></span><ArrowRight aria-hidden="true" /></a>)}</>;
 }
 
-export function AlfaCDailyPractice({ block }: { block: DailyBlock }) {
+export function AlfaCDailyPractice({ block, backHref = '#learner/alfa-c/messages?help=practice' }: { backHref?: string; block: DailyBlock }) {
   const [progress, setProgress] = useState<DailyProgress>();
   const [storageError, setStorageError] = useState(false);
   const [completionError, setCompletionError] = useState(false);
@@ -30,9 +30,9 @@ export function AlfaCDailyPractice({ block }: { block: DailyBlock }) {
   const step = block.steps[at];
   const position = (index: number) => progress && save({ ...progress, positions: { ...progress.positions, [block.id]: index } });
   return <div className="learner-page cp-chapters cp-chapter-playing pilot-page functional-page ac-document-page">
-    <header className="cp-context-header"><a className="text-back" href="#learner/alfa-c" aria-label="Andere oefening"><ArrowLeft /></a><h1>{block.title}</h1><small className="cp-context-meta">Alfa C</small></header>
+    <header className="cp-context-header"><a className="text-back" href={backHref} aria-label="Andere oefening"><ArrowLeft /></a><h1>{block.title}</h1><small className="cp-context-meta">Alfa C</small></header>
     {storageError && <p role="alert">Bewaren lukt niet op dit apparaat. Je kunt wel verder oefenen.</p>}
-    {!progress ? <p>Even laden…</p> : !step ? <section className="honest-empty pilot-complete"><h2>Goed geoefend</h2><p>{block.end}</p><button className="secondary-button" onClick={async () => { setCompletionError(false); try { await playMedia(dailyAudio(block.endAudio), { waitUntilEnd: true, playbackRate: 1 }); } catch { setCompletionError(true); } }}><Volume2 />Luister</button>{completionError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}<a className="secondary-button" href="#learner/alfa-c">Kies een ander blok<ArrowRight /></a></section>
+    {!progress ? <p>Even laden…</p> : !step ? <section className="honest-empty pilot-complete"><h2>Goed geoefend</h2><p>{block.end}</p><button className="secondary-button" onClick={async () => { setCompletionError(false); try { await playMedia(dailyAudio(block.endAudio), { waitUntilEnd: true, playbackRate: 1 }); } catch { setCompletionError(true); } }}><Volume2 />Luister</button>{completionError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}<a className="secondary-button" href={backHref}>Kies een ander blok<ArrowRight /></a></section>
       : <DailyPlayer key={step.id} block={block} step={step} index={at} record={progress.records[step.id] ?? emptyDailyRecord()} onRecord={record => save({ ...progress, records: { ...progress.records, [step.id]: record } })} onPrevious={at ? () => position(at - 1) : undefined} onNext={() => position(at + 1)} />}
   </div>;
 }
