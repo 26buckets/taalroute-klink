@@ -1,0 +1,155 @@
+.ac-docent h1,
+.ac-docent h2,
+.ac-docent h3 {
+  font-weight: 500;
+}
+.ac-docent-setup,
+.ac-docent-private {
+  padding: 24px;
+  max-width: 1000px;
+  margin: auto;
+}
+.ac-docent-setup > p,
+.ac-docent-private > p {
+  max-width: 75ch;
+  line-height: 1.5;
+}
+.ac-docent label {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  font-weight: 400;
+}
+.ac-docent input:not([type='checkbox']),
+.ac-docent textarea,
+.ac-docent select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px;
+  border: 1px solid #748481;
+  border-radius: 4px;
+  background: #fff;
+  color: #192b2b;
+  font: inherit;
+}
+.ac-docent textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.ac-docent .ac-docent-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+}
+.ac-docent input[type='checkbox'] {
+  width: 24px;
+  height: 24px;
+  flex: none;
+}
+.ac-docent-fields,
+.ac-docent-observation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.ac-docent-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid #d1dbd8;
+  flex-wrap: wrap;
+}
+.ac-docent-toolbar > span {
+  margin-left: auto;
+}
+.ac-docent-learner {
+  padding: 24px;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  min-height: 320px;
+}
+.ac-docent-learner h2 {
+  font-size: clamp(20px, 2vw, 28px);
+  text-align: center;
+  margin: 0;
+}
+.ac-docent-card {
+  background: #fffdf5;
+  border: 1px solid #c9c6b8;
+  border-radius: 4px;
+  padding: 24px 32px;
+  box-shadow: 0 3px 12px #20332b0b;
+  max-width: 100%;
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+.ac-docent-card p {
+  margin: 4px 0;
+}
+.ac-docent-listen,
+.ac-docent-model,
+.ac-docent-answer,
+.ac-docent-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+}
+.ac-docent-model > .ac-docent-card {
+  flex-basis: 100%;
+  text-align: center;
+}
+.ac-docent-answer {
+  min-height: 64px;
+  padding: 8px;
+  border-bottom: 2px solid #9caaa7;
+  width: 100%;
+}
+.ac-docent-tiles button,
+.ac-docent-answer button {
+  font-size: 24px;
+  min-width: 64px;
+}
+.ac-docent button {
+  min-height: 48px;
+}
+.ac-docent button:focus-visible,
+.ac-docent input:focus-visible,
+.ac-docent textarea:focus-visible,
+.ac-docent select:focus-visible {
+  outline: 3px solid #176575;
+  outline-offset: 3px;
+}
+.ac-docent-response {
+  white-space: pre-wrap;
+  padding: 16px;
+  background: #f2f6f4;
+}
+@media (max-width: 700px) {
+  .ac-docent-fields,
+  .ac-docent-observation {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .ac-docent-setup,
+  .ac-docent-private,
+  .ac-docent-learner {
+    padding: 16px;
+  }
+  .ac-docent-toolbar {
+    padding: 12px;
+    gap: 8px;
+  }
+  .ac-docent-card {
+    padding: 20px;
+  }
+  .ac-docent-tiles button,
+  .ac-docent-answer button {
+    font-size: 22px;
+  }
+}

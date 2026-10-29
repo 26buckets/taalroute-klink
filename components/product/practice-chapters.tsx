@@ -1,4 +1,5 @@
 'use client';
+import { TeacherBlockCards } from './alfa-c-docent';
 import { AlfaCBlockCards } from './alfa-c-practice';
 
 import { useEffect, useRef, useState } from 'react';
@@ -110,7 +111,8 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     </div> : <>
     <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" disabled={!modeAvailable(id)} aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>
     <MyRoute showPracticeChoice={false} availableLevels={availableLevels} axis={chapter && !chapterHasBothAxes(chapter.id) ? chapterRouteAxis(chapter.id) : undefined} selection={chapter || location.level !== 'all' ? location : undefined} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
-    {alfaCSelected && location.help === 'practice' && <section aria-label="Alfa C"><h2>In de praktijk</h2><AlfaCBlockCards /></section>}
+    {alfaCSelected && location.help === 'practice' && <section aria-label="Alfa C"><h2>In de praktijk</h2><AlfaCBlockCards includeTeacher={false} /></section>}
+    {alfaCSelected && location.help === 'guided' && <section aria-label="Alfa C docentopdrachten"><h2>Samen oefenen</h2><div className="cp-chapter-grid"><TeacherBlockCards /></div></section>}
     {!chapter && <PracticeChapterCards hideUnavailable={location.level === 'alfa-c' || (location.level === 'all' && settings.literacy === 'alfa-c')} isAvailable={id => availableChapterActivities(id, chapterSelection(id), review).length > 0} onOpen={openChapter} />}
     {chapter && !activity && <div className="cp-chapter-grid" aria-label={chapter.title}>{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
       const Icon = icons[item.icon], available = availableActivities.includes(item.id);

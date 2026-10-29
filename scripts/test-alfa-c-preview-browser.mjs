@@ -138,9 +138,9 @@ try {
   await page.getByRole('button', { name: 'Het hele blok opnieuw' }).click();
   await page.locator('[data-pilot-step="pilot-alfa-c:bus:1"]').waitFor();
   await page.getByRole('button', { name: 'Luister', exact: true }).click();
-  await page.waitForFunction(
-    () => !document.querySelector('.pilot-footer button').disabled,
-  );
+  await page.waitForFunction(() => !document.querySelector('.pilot-tools button')?.disabled);
+  await page.getByRole('button', {name: 'Naar de opdracht', exact: true}).click();
+  await page.waitForFunction(() => !document.querySelector('.pilot-footer button').disabled);
   await page.getByRole('button', { name: 'Verder', exact: true }).click();
   await page.reload();
   await page.locator('[data-pilot-step="pilot-alfa-c:bus:2"]').waitFor();

@@ -1,3 +1,13 @@
+# Klink — goedgekeurde opvolger met 27 docentopdrachten, 29 oktober 2026
+
+Publicatiebasis vóór deze wijziging: `b3d4af2f941a11c3d5d75f20e8eec1bbce801051`, main, livebuild 2026-10-29T00:14:21.190Z. De verderop bewaarde publicatie van 28 oktober is historie en geen actuele terugvalbasis.
+
+Nico: “prima, zet online”, bij de 27 beoordelingskaarten. Scope, technische controles en grenzen staan in `docs/klink-alfa-c-docent-20261029/RELEASE.md`; bestandgebonden vrijgave in `docs/klink-owner-release-alfa-c-docent-20261029.json`. Publiceer uitsluitend deze afstammeling via `npm run deploy`. De 72 ontbrekende brontaken en de afgekeurde losse naamopnamen blijven uitgesloten. Echte cursistenpilot is niet geclaimd.
+
+Controleer de werkelijk actieve bron steeds op https://klink.taalroute.nl/release.json. Het definitieve publicatieregister wordt na de onlinecontrole toegevoegd.
+
+## Historie
+
 # Actuele Klink-publicatie — herkenbare Alfa C-documenten en oefenindeling, 28 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/chapters?level=alfa-c&help=practice

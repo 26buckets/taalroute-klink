@@ -119,6 +119,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       .getByRole('button', { name: 'Met je docent', exact: true })
       .click();
     assert.equal(await page.locator('.pilot-block-cards').count(), 0);
+    assert.equal(await page.getByLabel('Alfa C docentopdrachten').getByRole('link').count(), 5);
     assert.equal(await page.locator('[data-chapter]').count(), 8);
     assert.equal(await page.locator('[data-chapter][disabled]').count(), 0);
     await page.goto(base + '/docenten/hoofdstuk-2');

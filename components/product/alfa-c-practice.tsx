@@ -26,21 +26,23 @@ import {
   type PilotStep,
 } from '@/lib/alfa-c-practice';
 import './alfa-c-practice.css';
+import { AlfaCTeacherPractice, TeacherBlockCards } from './alfa-c-docent';
 import { functionalBlocks } from '@/lib/alfa-c-functioneel';
 import { dailyBlocks } from '@/lib/alfa-c-dagelijks';
 import { AlfaCDailyPractice, DailyBlockCards } from './alfa-c-dagelijks';
 import { AlfaCFunctionalPractice, FunctionalBlockCards } from './alfa-c-functioneel';
 
-export function AlfaCBlockCards({ progress }: { progress?: PilotProgress }) {
+export function AlfaCBlockCards({ progress, includeTeacher = true }: { progress?: PilotProgress; includeTeacher?: boolean }) {
   const [group, setGroup] = useState('words');
   return <div className="pilot-block-cards ac-practice-library" aria-label="Alfa C praktijksituaties">
     <p className="ac-library-description">Kies wat je wilt oefenen.</p>
-    <nav className="ac-library-groups" aria-label="Soort praktijksituatie">{[['words', 'Woorden en zinnen'], ['paper', 'Lezen en schrijven'], ['messages', 'Berichten lezen']].map(([id, label]) => <button key={id} className="secondary-button" aria-pressed={group === id} aria-controls={`alfa-c-group-${id}`} onClick={() => setGroup(id)}>{label}</button>)}</nav>
+    <nav className="ac-library-groups" aria-label="Soort praktijksituatie">{[['words', 'Woorden en zinnen'], ['paper', 'Lezen en schrijven'], ['messages', 'Berichten lezen'], ...(includeTeacher ? [['teacher', 'Met je docent']] : [])].map(([id, label]) => <button key={id} className="secondary-button" aria-pressed={group === id} aria-controls={`alfa-c-group-${id}`} onClick={() => setGroup(id)}>{label}</button>)}</nav>
     <section id="alfa-c-group-words" className="ac-library-panel" hidden={group !== 'words'} aria-label="Woorden en zinnen"><div className="cp-chapter-grid">
       {pilotBlocks.map(block => <a key={block.id} className="cp-activity-button" data-pilot-block={block.id} href={`#learner/alfa-c/${block.id}`}><Eye aria-hidden="true" /><span>{block.title}<small>{block.words.join(' · ')}{progress && ` · ${Math.min(progress.positions[block.id] ?? 0, block.steps.length)} / ${block.steps.length}`}</small></span><ArrowRight aria-hidden="true" /></a>)}
     </div></section>
     <section id="alfa-c-group-paper" className="ac-library-panel" hidden={group !== 'paper'} aria-label="Lezen en schrijven"><div className="cp-chapter-grid"><FunctionalBlockCards /></div></section>
     <section id="alfa-c-group-messages" className="ac-library-panel" hidden={group !== 'messages'} aria-label="Berichten lezen"><div className="cp-chapter-grid"><DailyBlockCards /></div></section>
+    {includeTeacher && <section id="alfa-c-group-teacher" className="ac-library-panel" hidden={group !== 'teacher'} aria-label="Met je docent"><div className="cp-chapter-grid"><TeacherBlockCards /></div></section>}
   </div>;
 }
 export function AlfaCPractice({ onBack }: { onBack: () => void }) {
@@ -118,6 +120,7 @@ export function AlfaCPractice({ onBack }: { onBack: () => void }) {
     );
   const functionalBlock = functionalBlocks.find(b => b.id === selected);
   const dailyBlock = dailyBlocks.find(b => b.id === selected);
+  if (selected?.startsWith('docent-')) return <AlfaCTeacherPractice key={selected} group={selected.slice(7)} />;
   if (dailyBlock) return <AlfaCDailyPractice key={dailyBlock.id} block={dailyBlock} />;
   if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} />;
   return (
