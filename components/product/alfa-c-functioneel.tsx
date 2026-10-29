@@ -1,30 +1,22 @@
 'use client';
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Volume2 } from 'lucide-react';
-import { functionalAudio, functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
+import { functionalAudio, functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
 import { playMedia, stopMedia } from './shared';
 import Image from 'next/image';
 import { AlfaCWorkspace, DocumentSet, PracticeDocument } from './alfa-c-workspace';
 
-export function FunctionalBlockCards({ help = 'practice' }: { help?: string }) {
-  return <>{functionalBlocks.map(block => <a key={block.id} className="cp-activity-button" data-functional-block={block.id} href={`#learner/alfa-c/${block.id}?help=${help}`}>
-    <FileText aria-hidden="true" /><span>{block.title}<small>12 opdrachten · lezen en schrijven</small></span><ArrowRight aria-hidden="true" />
-  </a>)}</>;
-}
-
-export function AlfaCFunctionalPractice({ block, backHref = '#learner/alfa-c/paper?help=practice' }: { backHref?: string; block: FunctionalBlock }) {
+export function AlfaCFunctionalPractice({ block, backHref, header }: { backHref: string; header: ReactNode; block: FunctionalBlock }) {
   const [progress, setProgress] = useState<FunctionalProgress>();
   const [storageError, setStorageError] = useState(false);
   const [round, setRound] = useState(0);
   const [completionBusy, setCompletionBusy] = useState(false);
   const [completionError, setCompletionError] = useState(false);
-  const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       try { setProgress(readFunctionalProgress(localStorage.getItem(functionalStorageKey))); }
       catch { setProgress(readFunctionalProgress(null)); setStorageError(true); }
-      heading.current?.focus({ preventScroll: true });
     });
     return () => { cancelAnimationFrame(frame); stopMedia(); };
   }, []);
@@ -39,10 +31,7 @@ export function AlfaCFunctionalPractice({ block, backHref = '#learner/alfa-c/pap
     if (progress) save({ ...progress, positions: { ...progress.positions, [block.id]: index } });
   }
   return <div className="learner-page cp-chapters cp-chapter-playing pilot-page functional-page ac-document-page">
-    <header className="cp-context-header">
-      <a className="text-back" href={backHref} aria-label="Andere oefening"><ArrowLeft /></a>
-      <h1 ref={heading} tabIndex={-1}>{block.title}</h1><small className="cp-context-meta">Alfa C</small>
-    </header>
+    {header}
     {storageError && <p role="alert">Bewaren lukt niet op dit apparaat. Je kunt wel verder oefenen.</p>}
     {!progress ? <p>Even laden…</p> : !step ? <section className="honest-empty pilot-complete">
       <Check aria-hidden="true" /><h2>Goed geoefend</h2><p>{block.end}</p>

@@ -1,5 +1,5 @@
 'use client';
-import { AlfaCPractice } from './alfa-c-practice';
+import { legacyAlfaCHash } from '@/lib/alfa-c-navigation';
 
 import { wordWithArticle } from '@/lib/word-articles';
 import { libraryWords, wordLengths, type WordLibrarySource } from '@/lib/word-library';
@@ -50,7 +50,7 @@ import {
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 
-type LearnerView = 'alfa-c' | 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds';
+type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds';
 
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
   const { settings } = useRouteSettings();
@@ -92,7 +92,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
           setPlayerVisit(value => value + 1);
           setView('package');
         } else setView('packages');
-      } else if (route === 'alfa-c') setView('alfa-c');
+      } else if (route === 'alfa-c') { window.location.replace(legacyAlfaCHash(window.location.hash)); setView('chapters'); }
       else if (route === 'chapters') setView('chapters');
       else if (route === 'sounds') setView('sounds');
       else if (route === 'packages' || route === 'words' || route === 'review') setView(route);
@@ -156,7 +156,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         <nav id="klink-learner-navigation" aria-label="Cursistnavigatie">
           <button title="Start" aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
           <button title="Lessen" aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button title="Oefenen" aria-current={view === 'chapters' || view === 'sounds' || view === 'alfa-c' ? 'page' : undefined} className={view === 'chapters' || view === 'sounds' || view === 'alfa-c' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
+          <button title="Oefenen" aria-current={view === 'chapters' || view === 'sounds' ? 'page' : undefined} className={view === 'chapters' || view === 'sounds' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
           <button title="Woorden" aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
           <button title="Herhalen" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
         </nav>
@@ -169,7 +169,6 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
         {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={recordAttempt} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
-        {view === 'alfa-c' && <AlfaCPractice />}
         {view === 'chapters' && <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />}
         {view === 'sounds' && <SoundReference onBack={() => openChapter('sounds')} onLesson={openLesson} />}
       </main>

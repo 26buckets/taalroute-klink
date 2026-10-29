@@ -1,3 +1,4 @@
+import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
 import { groupActivities, groupExercises, type GroupActivity } from './group-practice.ts';
@@ -28,7 +29,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
 export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; image?: string };
-export type ChapterLocation = { chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
+export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
 
@@ -116,7 +117,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
 }
 
 export function chapterHash(location: ChapterLocation = { level: 'all' }) {
-  const path = [location.chapter, location.activity, location.collection].filter(Boolean).map(value => encodeURIComponent(value!)).join('/');
+  const path = [location.chapter, location.sequence ? 'sequence' : location.activity, location.collection].filter(Boolean).map(value => encodeURIComponent(value!)).join('/');
   const query = new URLSearchParams();
   if (location.level !== 'all') query.set('level', location.level);
   if (location.help && location.help !== 'all') query.set('help', location.help);
@@ -145,6 +146,12 @@ export function parseChapterHash(hash: string): ChapterLocation {
     const level = chapterLevels.find(item => item.id === params.get('level'))?.id ?? 'all';
     const help = contentHelp.find(item => item.id !== 'all' && item.id === params.get('help'))?.id;
     const selection: ChapterLocation = { level, ...(help ? { help } : {}) };
+    const sequenceChapter = alfaCChapters.find(item => item.id === chapterId);
+    if (sequenceChapter) {
+      const sequence = activityId === 'sequence';
+      return { ...selection, chapter: sequenceChapter.id, sequence,
+        collection: sequence && (level === 'all' || level === 'alfa-c') && sequenceChapter.blocks.some(block => block.id === collection) ? collection : undefined };
+    }
     if (!chapter) return chapterId ? fallback : selection;
     const activity = chapter.activities.find(id => id === activityId);
     const candidate = activity && chapterCollections(activity).find(item => item.id === collection);

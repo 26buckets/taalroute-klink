@@ -17,7 +17,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
         pause() { clearTimeout(this.timer); }
       };
     });
-    await page.goto(base + '/#learner/alfa-c'); await page.getByRole('link', { name: 'Berichten lezen', exact: true }).click(); await page.locator('[data-daily-block]').first().waitFor();
+    await page.goto(base + '/#learner/alfa-c'); await page.getByRole('button', { name: 'Berichten lezen', exact: true }).click(); await page.locator('[data-chapter-activity="sequence"]').click(); await page.locator('[data-daily-block]').first().waitFor();
     assert.equal(await page.locator('[data-daily-block]').count(), 6);
     assert.equal(await page.locator('[data-functional-block]').count(), 0);
     assert.equal(await page.locator('[data-pilot-block]').count(), 0);

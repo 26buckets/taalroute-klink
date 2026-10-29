@@ -1,13 +1,10 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
   Check,
   Eye,
-  BookOpen,
-  PencilLine,
-  MessageCircle,
   HelpCircle,
   RefreshCw,
   Volume2,
@@ -31,34 +28,10 @@ import {
 import './alfa-c-practice.css';
 import { functionalBlocks } from '@/lib/alfa-c-functioneel';
 import { dailyBlocks } from '@/lib/alfa-c-dagelijks';
-import { AlfaCDailyPractice, DailyBlockCards } from './alfa-c-dagelijks';
-import { AlfaCFunctionalPractice, FunctionalBlockCards } from './alfa-c-functioneel';
+import { AlfaCDailyPractice } from './alfa-c-dagelijks';
+import { AlfaCFunctionalPractice } from './alfa-c-functioneel';
 
-const alfaCGroups = [
-  { id: 'words', title: 'Woorden en zinnen', icon: BookOpen },
-  { id: 'paper', title: 'Lezen en schrijven', icon: PencilLine },
-  { id: 'messages', title: 'Berichten lezen', icon: MessageCircle },
-];
-export function AlfaCCategoryCards({ help = 'practice' }: { help?: string }) {
-  return <>{alfaCGroups.map(({ id, title, icon: Icon }) => <a key={id} className="cp-activity-button" data-alfa-c-category={id} href={`#learner/alfa-c/${id}?help=${help}`}><Icon aria-hidden="true" /><span>{title}</span><ArrowRight aria-hidden="true" /></a>)}</>;
-}
-export function AlfaCBlockCards({ progress, group, help = 'practice' }: { progress?: PilotProgress; group?: string; help?: string }) {
-  return <div className="cp-chapter-grid pilot-block-cards" aria-label="Alfa C onderdelen">
-    {!group && <AlfaCCategoryCards help={help} />}
-    {group === 'words' && pilotBlocks.map(block => <a key={block.id} className="cp-activity-button" data-pilot-block={block.id} href={`#learner/alfa-c/${block.id}?help=${help}`}><Eye aria-hidden="true" /><span>{block.title}<small>{block.words.join(' · ')}{progress && ` · ${Math.min(progress.positions[block.id] ?? 0, block.steps.length)} / ${block.steps.length}`}</small></span><ArrowRight aria-hidden="true" /></a>)}
-    {group === 'paper' && <FunctionalBlockCards help={help} />}
-    {group === 'messages' && <DailyBlockCards help={help} />}
-  </div>;
-}
-export function AlfaCPractice() {
-  const [selected, setSelected] = useState<string | undefined>(() =>
-    typeof window === 'undefined'
-      ? undefined
-      : window.location.hash.split('?')[0].split('/')[2],
-  );
-  const help = typeof window !== 'undefined' && new URLSearchParams(window.location.hash.split('?')[1]).get('help') === 'guided' ? 'guided' : 'practice';
-  const category = alfaCGroups.find(group => group.id === selected);
-  const overview = `#learner/chapters?level=alfa-c&help=${help}`;
+export function AlfaCPractice({ selected, backHref, header }: { selected: string; backHref: string; header: ReactNode }) {
   const [progress, setProgress] = useState<PilotProgress>({
     version: 1,
     positions: {},
@@ -71,20 +44,6 @@ export function AlfaCPractice() {
   const [visit, setVisit] = useState(0);
   const [completionBusy, setCompletionBusy] = useState(false);
   const [completionAudioError, setCompletionAudioError] = useState(false);
-  useEffect(() => {
-    const restore = () => {
-      stopMedia();
-      setSelected(window.location.hash.split('?')[0].split('/')[2]);
-      setReview(undefined);
-      setReviewAt(0);
-      setCompletionBusy(false);
-      setCompletionAudioError(false);
-      setVisit((v) => v + 1);
-    };
-    window.addEventListener('hashchange', restore);
-    return () => window.removeEventListener('hashchange', restore);
-  }, []);
-  const heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     const frame = requestAnimationFrame(() => {
       try {
@@ -108,18 +67,11 @@ export function AlfaCPractice() {
       setStorageError(true);
     }
   }
-  function choose(id?: string) {
-    stopMedia();
-    window.location.hash = `#learner/alfa-c/${id ?? 'words'}?help=${help}`;
-    document.querySelector('.learner-main')?.scrollTo({ top: 0 });
-  }
+  function choose() { stopMedia(); window.location.hash = backHref; }
   const block = pilotBlocks.find((b) => b.id === selected),
     steps = review ?? block?.steps ?? [],
     at = review ? reviewAt : (progress.positions[selected ?? ''] ?? 0),
     step = steps[at];
-  useEffect(() => {
-    heading.current?.focus({ preventScroll: true });
-  }, [selected]);
   if (!loaded)
     return (
       <div className="learner-page">
@@ -128,33 +80,17 @@ export function AlfaCPractice() {
     );
   const functionalBlock = functionalBlocks.find(b => b.id === selected);
   const dailyBlock = dailyBlocks.find(b => b.id === selected);
-  if (dailyBlock) return <AlfaCDailyPractice key={dailyBlock.id} block={dailyBlock} backHref={`#learner/alfa-c/messages?help=${help}`} />;
-  if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} backHref={`#learner/alfa-c/paper?help=${help}`} />;
+  if (dailyBlock) return <AlfaCDailyPractice key={dailyBlock.id} block={dailyBlock} backHref={backHref} header={header} />;
+  if (functionalBlock) return <AlfaCFunctionalPractice key={functionalBlock.id} block={functionalBlock} backHref={backHref} header={header} />;
   return (
     <div className="learner-page cp-chapters cp-chapter-playing pilot-page">
-      <header className="cp-context-header">
-        <button
-          className="text-back"
-          aria-label="Andere oefening"
-          onClick={block ? () => choose() : () => { window.location.hash = overview; }}
-        >
-          <ArrowLeft />
-        </button>
-        <h1 ref={heading} tabIndex={-1}>
-          {block?.title ?? category?.title ?? 'Alfa C'}
-        </h1>
-        <small className="cp-context-meta">Alfa C</small>
-      </header>
+      {header}
       {storageError && (
         <output>
           Bewaren lukt niet op dit apparaat. Je kunt wel verder oefenen.
         </output>
       )}
-      {!block ? (
-        <section className="cp-panel pilot-library">
-          <AlfaCBlockCards progress={progress} group={category?.id} help={help} />
-        </section>
-      ) : !step ? (
+      {!block ? <p>Deze opdracht is niet beschikbaar.</p> : !step ? (
         <section className="honest-empty pilot-complete">
           <Check />
           <h2>Goed geoefend</h2>

@@ -33,7 +33,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       };
     });
     const idle=()=>page.waitForFunction(()=>!document.querySelector('.functional-player .pilot-tools button')?.disabled);
-    await page.goto(base+'/#learner/alfa-c');await page.getByRole('link',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-functional-block]').first().waitFor();
+    await page.goto(base+'/#learner/alfa-c');await page.getByRole('button',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-chapter-activity="sequence"]').click();await page.locator('[data-functional-block]').first().waitFor();
     assert.equal(await page.locator('[data-functional-block]').count(),6);assert.equal(await page.locator('[data-pilot-block]').count(),0);
     const sentinel='{"version":1,"positions":{"winkel":7},"records":{}}';
     await page.evaluate(v=>{localStorage.setItem('klink.preview.alfa-c.v1',v);localStorage.setItem('klink.taalroute.attempts.v1','[{"sentinel":true}]');},sentinel);

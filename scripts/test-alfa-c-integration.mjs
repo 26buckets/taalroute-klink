@@ -46,6 +46,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
         .isEnabled(),
     );
     await page.locator('[data-alfa-c-category="words"]').click();
+    await page.locator('[data-chapter-activity="sequence"]').click();
     await page.locator('[data-pilot-block]').first().focus();
     await page.keyboard.press('Enter');
     await page.locator('[data-pilot-step="pilot-alfa-c:winkel:1"]').waitFor();
@@ -103,12 +104,12 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     );
     await page.setViewportSize({ width: 1366, height: 900 });
     await page
-      .getByRole('button', { name: 'Andere oefening', exact: true })
+      .getByRole('button', { name: 'Andere opdracht', exact: true })
       .click();
     await page.locator('[data-pilot-block]').first().waitFor();
-    await page
-      .getByRole('button', { name: 'Andere oefening', exact: true })
-      .click();
+    await page.locator('.cp-context-header .text-back').click();
+    await page.locator('[data-chapter-activity="sequence"]').waitFor();
+    await page.locator('.cp-context-header .text-back').click();
     await page.locator('[data-alfa-c-category]').first().waitFor();
     assert(page.url().includes('level=alfa-c'));
     assert(page.url().includes('help=practice'));
