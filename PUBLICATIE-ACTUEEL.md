@@ -1,3 +1,17 @@
+# Actuele KLINK-publicatie — voortgang op rondekaartjes, 29 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `4970049f7831d020f52218e39c192368bb371f23`, canonieke branch `main`, schone bron. Build `2026-10-29T19:38:30.177Z`. Worker `6a32df39-a845-43e7-9ea9-4fa200a3b4ac`.
+
+Bestaande rondekaartjes tonen het aantal afgeronde opdrachten. Na een complete ronde wordt het kaartje zachtgroen met een vinkje en bijvoorbeeld “Afgerond · 12 van 12”. Herhalen wist de eerdere afronding niet. Alleen daadwerkelijke afrondingen tellen: geen alleen geopende opdrachten, foute keuzes of onbevestigde schrijfversies. Bestaande betrouwbare Alfa C-registraties worden meegenomen. Dit is deelnamevoortgang, geen beheersingsclaim, en blijft op deze browser/apparaat opgeslagen.
+
+Alle bestaande inhoud, media, routes, antwoorden, eerste versies, hulp en opslagformaten blijven behouden. De bron is een afstammeling van de vorige livepublicatie c2dedeb2. Toegevoegd is alleen aparte voortgangsopslag en de kleine kaartstatus; geen nieuwe afhankelijkheden, audio of beelden.
+
+Lokaal gecontroleerd: typen, lint, bouw, opslag-/herhaaltests, 144 functionele en 144 dagelijkse Alfa C-stapgevallen, 36 pilotstappen, 96 menugevallen, 20 gerichte regressietests en 10 voortgangsgevallen in Chromium en WebKit. De functionele en dagelijkse reeksen zijn ook op smalle schermen gecontroleerd. Online: 10 voortgangsgevallen plus 2 Alfa C-schrijf/herhaalgevallen in beide engines en 15 werkelijk aangeboden JS/CSS-bestanden bytegelijk aan de publicatiebuild. De oorspronkelijke schrijfantwoorden en hulp blijven bewaard. Geen menselijke leerlingpilot of fysieke apparaatproef geclaimd.
+
+Vrijgave en bewijs: `docs/klink-owner-release-round-progress-20261029.json` en `docs/round-progress-20261029/`. Bronbackup teruggelezen: https://drive.google.com/file/d/14UVG4lFN19o9h08MMgVxp1EAwhknf6CP/view . De definitieve aanvullende bewijsbackup staat in het bijbehorende backupregister. Alle zware controles lokaal; geen GitHub Actions-workflows toegevoegd of aanwezig. Publicatie via de normale `npm run deploy`, met behouden historische controles.
+
+## Historie — eerdere publicatie
+
 # Actuele KLINK-publicatie — online antwoorden en afgeronde oefenbanken, 29 oktober 2026
 
 Live: https://klink.taalroute.nl/
