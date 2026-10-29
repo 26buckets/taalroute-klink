@@ -832,11 +832,12 @@ function TraceSurface({ exercise, onAudio, onFinish, onReset, canAnswer }: Surfa
   const [value, setValue] = useState('');
   const [revealed, setRevealed] = useState(false);
   const target = asString(exercise.target);
-  if (exercise.hideWritingModel) return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><PencilLine aria-hidden="true" />
-    {revealed ? <><strong className="cp-paper-model">{target}</strong><p>Vergelijk met jouw woord.</p><button className="primary-button" onClick={() => onFinish('op papier, zelf vergeleken', true, 'Bespreek jouw schrijfwerk met je docent.')}>Klaar<Check /></button></>
-      : <button className="primary-button" disabled={!canAnswer} onClick={() => setRevealed(true)}>Vergelijk<Check /></button>}
+  const input = <label className="cp-text-entry"><span>Jouw antwoord</span><input value={value} autoComplete="off" spellCheck={false} onChange={event => { setValue(event.target.value); setRevealed(false); onReset(); }} /></label>;
+  if (exercise.hideWritingModel) return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} />{input}
+    {revealed ? <><strong className="cp-paper-model">{target}</strong><p>Vergelijk met jouw woord.</p><button className="primary-button" onClick={() => onFinish(value, normalize(value) === normalize(target), 'Bespreek jouw schrijfwerk met je docent.')}>Klaar<Check /></button></>
+      : <button className="primary-button" disabled={!canAnswer || !value.trim()} onClick={() => setRevealed(true)}>Vergelijk<Check /></button>}
   </section>;
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Schrijf de letter op papier.' : 'Schrijf dit woord op papier of typ het hieronder.'}</span></div>{!exercise.letterModelOnly && <label className="cp-text-entry"><span>Typen is ook mogelijk</span><input value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} /></label>}<button className="primary-button" onClick={() => onFinish(value || 'op papier', !value || normalize(value) === normalize(target), 'Vergelijk jouw schrijfwerk met het model.')}>Ik heb geschreven<Check /></button></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-trace-model"><PencilLine /><strong>{target}</strong><span>{exercise.letterModelOnly ? 'Typ de letter hieronder.' : 'Typ dit woord hieronder.'} Papier is een extra.</span></div>{input}<button className="primary-button" disabled={!value.trim() || !canAnswer} onClick={() => onFinish(value, normalize(value) === normalize(target), 'Vergelijk jouw antwoord met het model.')}>Ik heb geschreven<Check /></button></section>;
 }
 
 function SequenceSurface({ exercise, onFinish, onReset, canAnswer, onHelp, answeredCorrectly }: Pick<SurfaceProps, 'exercise' | 'onFinish'> & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly: boolean }) {

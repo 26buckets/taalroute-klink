@@ -1,0 +1,16 @@
+'use client';
+import { useState } from 'react';
+import { Check } from 'lucide-react';
+import { functionalActions, isStrikeResponse, responseLines, type FunctionalResponse } from '@/lib/alfa-c-response';
+import type { FunctionalStep } from '@/lib/alfa-c-functioneel';
+
+export function FunctionalResponseFields({ step, response, onChange, disabled }: { step: FunctionalStep; response: FunctionalResponse; onChange: (response: FunctionalResponse) => void; disabled: boolean }) {
+  const setup = step.responseSetup, actions = functionalActions(step), lines = responseLines(step), strike = isStrikeResponse(step);
+  const [actionError, setActionError] = useState(false);
+  const status = step.id.endsWith('-werk-05') ? ['De doek ligt klaar. De tafel is nog vuil.', 'Je hebt de doek vast.', 'De tafel is schoon.', 'De tafel is schoon. De doek ligt in de bak.'] : ['De map en het boek liggen klaar.', 'Je hebt de map vast.', 'Het boek zit in de map.', 'De map ligt op de tafel. Het boek zit in de map.'];
+  return <div className="ac-online-response" data-online-response={step.id}>
+    {actions.length > 0 && <fieldset><legend>Doe de stappen op het scherm</legend><output aria-live="polite">{status[response.actions.length]}</output><div className="functional-choice-grid">{actions.map((label, n) => <button key={n} type="button" className="secondary-button" disabled={disabled || response.actions.includes(n)} onClick={() => { if (n !== response.actions.length) { setActionError(true); return; } setActionError(false); onChange({ ...response, actions: [...response.actions, n] }); }}>{label}{response.actions.includes(n) && <Check aria-hidden="true" />}</button>)}</div>{actionError && <p role="alert">Lees de stappen. Welke stap doe je nu?</p>}</fieldset>}
+    {lines.length > 0 && (strike ? <fieldset><legend>Tik om door te strepen. Tik nog eens om te herstellen.</legend><div className="functional-choice-grid">{lines.map((line, n) => <button key={n} className="secondary-button" type="button" aria-pressed={response.crossed.includes(n)} disabled={disabled} onClick={() => onChange({ ...response, crossed: response.crossed.includes(n) ? response.crossed.filter(i => i !== n) : [...response.crossed, n] })}>{response.crossed.includes(n) ? <s>{line}</s> : line}</button>)}</div></fieldset> : <div className="ac-original-response"><p>{setup?.fields.length ? 'De oude gegevens' : 'Het oude briefje'}</p><p>{lines.join('\n')}</p></div>)}
+    {setup && (setup.fields.length ? <fieldset><legend>{lines.length ? 'Vul de goede gegevens in' : 'Vul het formulier in'}</legend>{setup.fields.map(field => <label key={field}>{field}<input type="text" inputMode={/nummer/i.test(field) ? 'numeric' : 'text'} autoComplete="off" spellCheck={false} disabled={disabled} value={response.fields[field] ?? ''} onChange={e => onChange({ ...response, fields: { ...response.fields, [field]: e.target.value } })} /></label>)}</fieldset> : !strike && <label>{lines.length ? 'Jouw verbeterde briefje' : 'Jouw antwoord'}<textarea rows={step.dictationTexts.length > 1 ? Math.min(step.dictationTexts.length + 1, 5) : 3} autoComplete="off" spellCheck={false} disabled={disabled} value={response.text} onChange={e => onChange({ ...response, text: e.target.value })} /></label>)}
+  </div>;
+}

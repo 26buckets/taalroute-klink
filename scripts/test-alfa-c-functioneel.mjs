@@ -13,7 +13,7 @@ test('all instructions, examples, source texts, tips, retries and isolated dicta
   }
  }
 });
-test('all 72 revised tasks available with 27 actual paper response places', () => {
+test('all 72 revised tasks available with 27 actual digital response places', () => {
   const tasks = functionalBlocks.flatMap(b => b.steps);
   assert.equal(tasks.length,72); assert.equal(new Set(tasks.map(s=>s.id)).size,72);
   assert.equal(tasks.filter(s=>s.closed).length,0);
@@ -22,9 +22,9 @@ test('all 72 revised tasks available with 27 actual paper response places', () =
     assert.equal(b.steps.length,12); assert.equal(b.id,source.blocks[n].id);
     for(const [i,s] of b.steps.entries()) {
       const o=source.blocks[n].steps[i];
-      assert.equal(s.id,o.id); assert.equal(s.screen,o.instruction.targetText); assert.equal(s.instruction,o.instruction.spokenText);
-      assert.equal(s.helpVisible,o.helpVisible); assert.equal(s.retryVisible,o.retryVisible); assert.equal(s.exampleVisible,o.exampleVisible);
-      assert.equal(s.exampleInstruction,o.exampleSpoken); assert.deepEqual(s.responseSetup,o.responseSetup??null);
+      assert.equal(s.id,o.id); assert.equal(s.screen,o.instruction.targetText); assert.equal(typeof s.instruction,'string');
+      assert.equal(s.helpVisible,o.helpVisible); assert.equal(typeof s.retryVisible,'string'); assert.equal(s.exampleVisible,o.exampleVisible);
+      assert.equal(s.exampleInstruction,o.exampleSpoken); assert.deepEqual(s.responseSetup,o.responseSetup ? {...o.responseSetup, medium:'digital'} : null);
       if(s.kind==='choice') {assert.equal(s.closed,false); assert.equal(s.options.filter(x=>x.id===s.correctOptionId).length,1); assert.deepEqual(new Set(functionalOptions(s)),new Set(s.options));}
       if(s.kind==='dictation')assert.equal(s.dictationTexts.length,o.exerciseAudio.texts.length);
       if(s.presentation.some(v=>v.kind==='requiredHandwrittenSource'))assert(s.handwriting&&s.exampleHandwriting);

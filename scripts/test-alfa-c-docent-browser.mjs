@@ -140,12 +140,10 @@ for (const [engine, launcher] of Object.entries({ chromium, webkit })) {
             .getByRole('button', { name: 'Docentregistratie', exact: true })
             .click();
           await page
-            .getByLabel(
-              'Eerste reactie (letterlijke docenttranscriptie of geobserveerde handeling)',
-              { exact: true },
-            )
+            .getByRole('textbox', { name: 'Eerste reactie (letterlijke docenttranscriptie of geobserveerde handeling)', exact: true })
             .fill('Synthetic first response');
           if (['correct', 'word', 'dictation', 'check'].includes(t.kind)) {
+            await page.getByLabel('Op papier gewerkt (extra)').check();
             await page
               .getByLabel('Verwijzing naar het bewaarde papier')
               .fill('Synthetic paper');

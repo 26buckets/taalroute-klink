@@ -2,6 +2,7 @@ import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { functionalAudio, functionalBlocks, functionalStorageKey } from '../lib/alfa-c-functioneel.ts';
+import { functionalActions, isStrikeResponse, responseLines } from '../lib/alfa-c-response.ts';
 const base=process.env.KLINK_URL??'http://127.0.0.1:18868';
 const out=process.env.KLINK_FUNCTIONEEL_OUTPUT??'outputs/alfa-c-functioneel';fs.mkdirSync(out,{recursive:true});
 const checks=[],errors=[],choiceChecks=[];
@@ -64,21 +65,33 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
           if(step.kind==='choice') {
             await checkChoices(page,player,step,name,'desktop');
             const wrong=step.options.find(o=>o.id!==step.correctOptionId),right=step.options.find(o=>o.id===step.correctOptionId);
-            await player.getByRole('button',{name:wrong.text,exact:true}).focus();await page.keyboard.press('Enter');await idle();assert.equal(await player.getByRole('button',{name:wrong.text,exact:true}).getAttribute('aria-pressed'),'true');assert.equal(await player.locator('output').innerText(),step.retryVisible);assert(await next.isDisabled());
-            await player.getByRole('button',{name:right.text,exact:true}).click();await idle();assert.equal(await player.locator('output').innerText(),step.successFeedback);
+            await player.getByRole('button',{name:wrong.text,exact:true}).focus();await page.keyboard.press('Enter');await idle();assert.equal(await player.getByRole('button',{name:wrong.text,exact:true}).getAttribute('aria-pressed'),'true');assert.equal(await player.locator('.pilot-footer output').innerText(),step.retryVisible);assert(await next.isDisabled());
+            await player.getByRole('button',{name:right.text,exact:true}).click();await idle();assert.equal(await player.locator('.pilot-footer output').innerText(),step.successFeedback);
           } else {
-            assert.equal(await player.getByRole('textbox').count(),0);
+            const interactive=Boolean(step.responseSetup)||functionalActions(step).length>0;
+            const save=player.getByRole('button',{name:interactive?'Bewaar antwoord':'Ik ben klaar',exact:true});
+            if(interactive) {
+              assert(await save.isDisabled(),'An empty response cannot complete');
+              for(const label of functionalActions(step))await player.locator('[data-online-response]').getByRole('button',{name:label,exact:true}).click();
+              if(isStrikeResponse(step)) {
+                const lines=responseLines(step),chosen=step.responseSetup.fields.length?lines:[lines[0]];
+                for(const line of chosen){const b=player.locator('[data-online-response]').getByRole('button',{name:line,exact:true});await b.click();assert.equal(await b.getAttribute('aria-pressed'),'true');await b.click();assert.equal(await b.getAttribute('aria-pressed'),'false');await b.click();}
+              }
+              const boxes=player.locator('[data-online-response]').getByRole('textbox');
+              for(let n=0;n<await boxes.count();n++)await boxes.nth(n).fill('Eigen antwoord '+step.number+' '+n);
+              if(step.presentation.some(v=>v.kind==='previousResponse'))assert(!(await player.innerText()).includes('nog geen digitaal antwoord'),'Own earlier answer appears');
+            }
             if(step.dictationTexts.length){
-              assert(await player.getByRole('button',{name:'Ik ben klaar',exact:true}).isDisabled());
+              assert(await save.isDisabled());
               for(const [n,text] of step.dictationTexts.entries()){
                 assert(!(await player.innerText()).includes(text),'Dictation target remains hidden');
                 const label=step.dictationTexts.length>1?`Luister ${n+1}`:(step.id.endsWith('formulier-08')?'Luister naar het nummer':'Luister naar de zin');
                 await player.getByRole('button',{name:label,exact:true}).click();await idle();assert.equal(await page.evaluate(()=>window.playedAudio.at(-1)),functionalAudio('target',text));
               }
             }
-            await player.getByRole('button',{name:'Ik ben klaar',exact:true}).click();await idle();assert(!(await player.locator('output').innerText()).includes('Dat klopt.'));
+            await save.click();await idle();assert(!(await player.locator('.pilot-footer output').innerText()).includes('Dat klopt.'));
             await player.getByRole('button',{name:'Nog eens',exact:true}).click();await idle();assert.equal(await player.locator('.pilot-help p').innerText(),step.retryVisible);assert(await next.isDisabled());
-            await player.getByRole('button',{name:'Terug naar de opdracht',exact:true}).click();await player.getByRole('button',{name:'Ik ben klaar',exact:true}).click();await idle();
+            await player.getByRole('button',{name:'Terug naar de opdracht',exact:true}).click();await save.click();await idle();
           }
         }
         assert(await next.isEnabled());await next.click();
@@ -86,7 +99,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
         const data=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),functionalStorageKey);
         assert.equal(data.positions[block.id],step.number);
         if(step.closed)assert(!data.records[step.id]);
-        else {assert(data.records[step.id]?.helpUsed);assert.equal(data.records[step.id].assessment,step.kind==='choice'?'answer':'participation');if(step.kind!=='choice')assert.equal(data.records[step.id].correct,undefined);}
+        else {if(step.responseSetup||functionalActions(step).length){assert(data.records[step.id].completed);assert.deepEqual(data.records[step.id].firstResponse,data.records[step.id].response);}assert(data.records[step.id]?.helpUsed);assert.equal(data.records[step.id].assessment,step.kind==='choice'?'answer':'participation');if(step.kind!=='choice')assert.equal(data.records[step.id].correct,undefined);}
         checks.push({engine:name,task:step.id,closed:step.closed});
         if(step.number===6){await page.reload();await page.locator(`[data-functional-step="${block.steps[6].id}"]`).waitFor();}
       }

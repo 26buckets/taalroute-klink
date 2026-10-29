@@ -1,6 +1,6 @@
 {
   "status": "passed-local",
-  "date": "2026-10-29T18:10:21.920494+00:00",
+  "date": "2026-10-29T18:56:20.520201+00:00",
   "baselineSourceCommit": "b10aa30ea9969c2e98845d4342e22a35060fd131",
   "types": true,
   "lint": true,
@@ -15,7 +15,7 @@
   "storagePreserved": true,
   "existingPublicFilesVerified": 9745,
   "newMedia": {
-    "audio": 885,
+    "audio": 914,
     "images": 10
   },
   "collections": 1113,
@@ -23,6 +23,9 @@
   "humanListeningReview": "open",
   "learnerPilot": "not-performed",
   "newImageGeneration": false,
+  "onlineResponses": true,
+  "optionalPrint": true,
+  "onlineInstructionAudio": 29,
   "fullRegressionExecution": "All npm test:review and posttest:review stages passed across recorded local runs; corrected old fixtures were rerun. No cloud workflow.",
   "builtPreviewChecks": [
     {

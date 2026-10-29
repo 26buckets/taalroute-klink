@@ -1,3 +1,4 @@
+import { responseForStep, type FunctionalResponse } from './alfa-c-response.ts';
 import source from '../data/klink-alfa-c-functioneel.json' with { type: 'json' };
 import audio from '../data/klink-alfa-c-functioneel-audio.json' with { type: 'json' };
 
@@ -14,6 +15,9 @@ export type FunctionalRecord = {
   correct?: boolean;
   tries: number;
   helpUsed: boolean;
+  response?: FunctionalResponse;
+  firstResponse?: FunctionalResponse;
+  completed?: boolean;
 };
 export type FunctionalProgress = {
   version: 1;
@@ -33,7 +37,7 @@ export function readFunctionalProgress(raw: string | null): FunctionalProgress {
         const row = data.records?.[step.id];
         if (step.closed || !row || !Number.isInteger(row.tries) || row.tries < 0 || typeof row.helpUsed !== 'boolean') continue;
         if (step.kind === 'choice' ? row.assessment === 'answer' && typeof row.correct === 'boolean' : row.assessment === 'participation' && row.correct === undefined)
-          empty.records[step.id] = { assessment: row.assessment, ...(step.kind === 'choice' ? { correct: row.correct } : {}), tries: row.tries, helpUsed: row.helpUsed };
+          empty.records[step.id] = { assessment: row.assessment, ...(step.kind === 'choice' ? { correct: row.correct } : {}), tries: row.tries, helpUsed: row.helpUsed, ...(responseForStep(step, row.response) ? { response: responseForStep(step, row.response) } : {}), ...(responseForStep(step, row.firstResponse) ? { firstResponse: responseForStep(step, row.firstResponse) } : {}), ...(typeof row.completed === 'boolean' ? { completed: row.completed } : {}) };
       }
     }
     return empty;

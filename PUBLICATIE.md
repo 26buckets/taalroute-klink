@@ -375,3 +375,7 @@ niet een unieke uitbeelding van alle 128 gesprekken.
 Publiceer alleen via npm run deploy op main. De opvolgende publicatiepoort controleert
 deze begrensde wijziging en toetst eerdere vrijgaven tegen hun eigen bewaarde bron.
 Vermeld de werkelijke controles en beperkingen in docs/klink-gesprekken-release-20261025/.
+
+
+## Online antwoorden — Nico, 29 oktober 2026
+Alle schrijf-, invul-, verbeter- en wegstreepopdrachten moeten op het scherm uitvoerbaar zijn. Een afdruk is uitsluitend een extra. Bewaar eigen antwoorden, eerste versies en noodzakelijke koppelingen met vervolgstappen; een docentmodel is nooit een cursistantwoord. Een getypt antwoord bewijst geen handschrift of schrijfmotoriek. Behoud de bestaande lokale opslag en papieren bewijsroute voor wie die optioneel gebruikt. De publicatieopdracht voor dit herstel is onderdeel van de lopende opdracht om KLINK af te maken en online te zetten.

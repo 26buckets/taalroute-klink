@@ -118,3 +118,22 @@
 @media (min-width: 1101px) and (min-height: 700px) {
   .learner-app [data-pilot-step]:has(.ac-explanation) .pilot-model { grid-column: 2; }
 }
+
+/* Online responses keep the existing source/action layout and inherited typography. */
+.ac-online-response { display: grid; gap: 12px; min-width: 0; width: 100%; }
+.ac-online-response fieldset { display: grid; gap: 10px; min-width: 0; border: 0; padding: 0; margin: 0; }
+.ac-online-response legend { padding: 0; margin-bottom: 8px; font-weight: 500; }
+.ac-online-response label { display: grid; gap: 6px; min-width: 0; }
+.ac-online-response input, .ac-online-response textarea { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; border: 1px solid var(--border, #d6d3db); border-radius: 10px; background: white; color: inherit; font: inherit; line-height: 1.5; }
+.ac-online-response textarea { resize: vertical; }
+.ac-online-response input:focus-visible, .ac-online-response textarea:focus-visible { outline: 2px solid var(--primary, #473064); outline-offset: 2px; }
+.ac-original-response { white-space: pre-wrap; border-left: 2px solid var(--border, #d6d3db); padding-left: 12px; }
+.ac-online-response s { text-decoration-thickness: 2px; }
+
+.ac-functional-source { display: grid; gap: 16px; width: 100%; min-width: 0; }
+.ac-online-response { font-size: 20px; line-height: 1.45; }
+@media (min-width: 1101px) and (min-height: 700px) {
+  .functional-player .ac-source-panel, .functional-player .ac-answer-panel { overflow-y: auto; min-height: 0; }
+  .functional-player .ac-source-panel { align-items: safe center; }
+  .functional-player .ac-answer-panel { justify-content: safe center; }
+}

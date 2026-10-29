@@ -6,23 +6,165 @@
   "status": "candidate",
   "humanReview": "approved",
   "items": [
-    { "modes": ["model"], "id": "kijken", "text": "Kijk naar de foto. Luister naar het woord.", "src": "/package-audio/instructions/kijken.wav" },
-    { "modes": ["same-word"], "id": "zelfde-woord", "text": "Kijk naar het voorbeeld. Tik op hetzelfde woord.", "src": "/package-audio/instructions/zelfde-woord.wav" },
-    { "modes": ["heard-word"], "id": "hoor-woord", "text": "Luister. Tik op het woord dat je hoort.", "src": "/package-audio/instructions/hoor-woord.wav" },
-    { "modes": ["heard-image"], "id": "hoor-foto", "text": "Luister. Tik op de foto die erbij hoort.", "src": "/package-audio/instructions/hoor-foto.wav" },
-    { "modes": ["word-image"], "id": "woord-foto", "text": "Kijk naar het woord. Tik op de foto die erbij hoort.", "src": "/package-audio/instructions/woord-foto.wav" },
-    { "modes": ["word-build"], "id": "bouwen", "text": "Kijk naar het woord. Tik de letters in de goede volgorde.", "src": "/package-audio/instructions/bouwen.wav" },
-    { "modes": ["copy-word"], "id": "natypen", "text": "Typ het woord na. Tik daarna op Controleer.", "src": "/package-audio/instructions/natypen.wav" },
-    { "modes": ["word-dictation"], "id": "dictee", "text": "Luister. Typ het woord. Tik daarna op Controleer.", "src": "/package-audio/instructions/dictee.wav" },
-    { "modes": ["repeat-word"], "id": "nazeggen", "text": "Luister en zeg het woord na. Met Neem op kun je jezelf terughoren.", "src": "/package-audio/instructions/nazeggen.wav" },
-    { "modes": ["recall-word"], "id": "terughalen", "text": "Luister. Tik de letters in de goede volgorde.", "src": "/package-audio/instructions/terughalen.wav" },
-    { "modes": ["missing-grapheme"], "id": "aanvullen", "text": "Luister naar het woord. Tik op de letters die ontbreken.", "src": "/package-audio/instructions/aanvullen.wav" },
-    { "modes": ["recall-together"], "id": "samen-lezen", "text": "Lees het woord samen met je docent.", "src": "/package-audio/instructions/samen-lezen.wav" },
-    { "modes": ["write-word"], "id": "schrijven", "text": "Schrijf het woord op papier. Tik daarna op Ik heb geschreven.", "src": "/package-audio/instructions/schrijven.wav" },
-    { "modes": ["word-card"], "id": "woordkaart", "text": "Kijk naar de foto. Draai de kaart om om het woord te zien.", "src": "/package-audio/instructions/woordkaart.wav" },
-    { "modes": ["word-image-match"], "id": "koppelen", "text": "Tik op een woord. Tik daarna op de foto die erbij hoort.", "src": "/package-audio/instructions/koppelen.wav" },
-    { "modes": ["memory"], "id": "paren", "text": "Zoek het woord en de foto die bij elkaar horen.", "src": "/package-audio/instructions/paren.wav" },
-    { "modes": ["listen-sentence", "listen-situation", "connected-sentence", "connected-text", "connected-dialogue"], "id": "meeluisteren", "text": "Luister en kijk. Je hoeft de tekst nog niet zelf te lezen.", "src": "/package-audio/instructions/meeluisteren.wav" },
-    { "modes": ["sentence-question"], "id": "zinnen-begrijpen", "text": "Luister naar de zin. Luister naar de vraag. Kies het antwoord.", "src": "/package-audio/instructions/zinnen-begrijpen.wav" }
+    {
+      "modes": [
+        "model"
+      ],
+      "id": "kijken",
+      "text": "Kijk naar de foto. Luister naar het woord.",
+      "src": "/package-audio/instructions/kijken.wav"
+    },
+    {
+      "modes": [
+        "same-word"
+      ],
+      "id": "zelfde-woord",
+      "text": "Kijk naar het voorbeeld. Tik op hetzelfde woord.",
+      "src": "/package-audio/instructions/zelfde-woord.wav"
+    },
+    {
+      "modes": [
+        "heard-word"
+      ],
+      "id": "hoor-woord",
+      "text": "Luister. Tik op het woord dat je hoort.",
+      "src": "/package-audio/instructions/hoor-woord.wav"
+    },
+    {
+      "modes": [
+        "heard-image"
+      ],
+      "id": "hoor-foto",
+      "text": "Luister. Tik op de foto die erbij hoort.",
+      "src": "/package-audio/instructions/hoor-foto.wav"
+    },
+    {
+      "modes": [
+        "word-image"
+      ],
+      "id": "woord-foto",
+      "text": "Kijk naar het woord. Tik op de foto die erbij hoort.",
+      "src": "/package-audio/instructions/woord-foto.wav"
+    },
+    {
+      "modes": [
+        "word-build"
+      ],
+      "id": "bouwen",
+      "text": "Kijk naar het woord. Tik de letters in de goede volgorde.",
+      "src": "/package-audio/instructions/bouwen.wav"
+    },
+    {
+      "modes": [
+        "copy-word"
+      ],
+      "id": "natypen",
+      "text": "Typ het woord na. Tik daarna op Controleer.",
+      "src": "/package-audio/instructions/natypen.wav"
+    },
+    {
+      "modes": [
+        "word-dictation"
+      ],
+      "id": "dictee",
+      "text": "Luister. Typ het woord. Tik daarna op Controleer.",
+      "src": "/package-audio/instructions/dictee.wav"
+    },
+    {
+      "modes": [
+        "repeat-word"
+      ],
+      "id": "nazeggen",
+      "text": "Luister en zeg het woord na. Met Neem op kun je jezelf terughoren.",
+      "src": "/package-audio/instructions/nazeggen.wav"
+    },
+    {
+      "modes": [
+        "recall-word"
+      ],
+      "id": "terughalen",
+      "text": "Luister. Tik de letters in de goede volgorde.",
+      "src": "/package-audio/instructions/terughalen.wav"
+    },
+    {
+      "modes": [
+        "missing-grapheme"
+      ],
+      "id": "aanvullen",
+      "text": "Luister naar het woord. Tik op de letters die ontbreken.",
+      "src": "/package-audio/instructions/aanvullen.wav"
+    },
+    {
+      "modes": [
+        "recall-together"
+      ],
+      "id": "samen-lezen",
+      "text": "Lees het woord samen met je docent.",
+      "src": "/package-audio/instructions/samen-lezen.wav"
+    },
+    {
+      "modes": [
+        "word-card"
+      ],
+      "id": "woordkaart",
+      "text": "Kijk naar de foto. Draai de kaart om om het woord te zien.",
+      "src": "/package-audio/instructions/woordkaart.wav"
+    },
+    {
+      "modes": [
+        "word-image-match"
+      ],
+      "id": "koppelen",
+      "text": "Tik op een woord. Tik daarna op de foto die erbij hoort.",
+      "src": "/package-audio/instructions/koppelen.wav"
+    },
+    {
+      "modes": [
+        "memory"
+      ],
+      "id": "paren",
+      "text": "Zoek het woord en de foto die bij elkaar horen.",
+      "src": "/package-audio/instructions/paren.wav"
+    },
+    {
+      "modes": [
+        "listen-sentence",
+        "listen-situation",
+        "connected-sentence",
+        "connected-text",
+        "connected-dialogue"
+      ],
+      "id": "meeluisteren",
+      "text": "Luister en kijk. Je hoeft de tekst nog niet zelf te lezen.",
+      "src": "/package-audio/instructions/meeluisteren.wav"
+    },
+    {
+      "modes": [
+        "sentence-question"
+      ],
+      "id": "zinnen-begrijpen",
+      "text": "Luister naar de zin. Luister naar de vraag. Kies het antwoord.",
+      "src": "/package-audio/instructions/zinnen-begrijpen.wav"
+    },
+    {
+      "modes": [],
+      "id": "groep-papierdictee",
+      "text": "Luister. Typ het woord in het invulvak. Tik daarna op Vergelijk.",
+      "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3"
+    },
+    {
+      "modes": [],
+      "id": "groep-letter-schrijven",
+      "text": "Kijk naar de letter. Typ de letter in het invulvak. Vergelijk met het voorbeeld.",
+      "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3"
+    },
+    {
+      "modes": [
+        "write-word"
+      ],
+      "id": "schrijven",
+      "text": "Typ het woord in het invulvak. Tik daarna op Ik heb geschreven.",
+      "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-db5e68a65d07.mp3"
+    }
   ]
 }

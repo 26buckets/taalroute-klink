@@ -14,7 +14,7 @@ export function TeacherPreparation({task,locked,onBegin}:{task:ContentTask;locke
   <h3>Voor de docent</h3>
   <div className="cp-guided-steps">
    <section><h4>1. Ga erbij zitten</h4><p>Gebruik samen de laptop. Controleer of de cursist de woorden en de opdracht begrijpt.</p></section>
-   <section><h4>2. Laat zelf proberen</h4><p>{phase?.response==='paper'?'De cursist werkt op papier.':phase?.response==='oral'?'De cursist antwoordt of wijst aan.':'De cursist bedient de laptop en maakt de opdracht.'} Geef het antwoord nog niet.</p></section>
+   <section><h4>2. Laat zelf proberen</h4><p>{phase?.response==='paper'?'De cursist vult het antwoord op het scherm in. Papier is een extra.':phase?.response==='oral'?'De cursist antwoordt of wijst aan.':'De cursist bedient de laptop en maakt de opdracht.'} Geef het antwoord nog niet.</p></section>
    <section><h4>3. Bekijk het samen</h4><p>Bespreek het gemaakte werk. Geef hulp waar nodig en noteer daarna wat je hebt gezien.</p></section>
   </div>
   <details className="cp-guided-details"><summary>Opdracht en voorbereiding</summary>
@@ -73,15 +73,15 @@ export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
     </>
    </>}
   </div>:!state.prepared?<p>Bereid de opdracht eerst samen met je docent voor.</p>:reviewing?<p>Bespreek je antwoorden samen met je docent.</p>:<>
-   {flow.kind==='spelling'&&<ol className="cp-guided-instructions">{phase.instruction.split(/(?<=[.!?])\s+/).map((instruction,index)=><li key={index}>{instruction}</li>)}</ol>}
+   {flow.kind==='spelling'&&<ol className="cp-guided-instructions">{phase.instruction.replaceAll('op papier', 'in het invulvak').split(/(?<=[.!?])\s+/).map((instruction,index)=><li key={index}>{instruction}</li>)}</ol>}
    {phase.learnerText.length>0&&<div className="cp-workflow-source">{phase.learnerText.map((text,index)=><p className="cp-content-stimulus" key={index}>{phase.correction?.oldValue===text?<del aria-label={`Oud, niet geldig: ${text}`}>{text}</del>:text}</p>)}</div>}
    {phase.interlude&&<>{([['interlude','Welke andere voorbereide activiteit is tussendoor gedaan?'],['interval','Hoeveel tijd zat er werkelijk tussen?'],['exposure','Welke woorden, voorbeelden of hints zijn tussendoor opnieuw aangeboden? Noteer ook als er geen waren.']] as const).map(([key,label])=><label className="cp-text-entry" key={key}><span>{label} Laat je docent dit invullen.</span><input disabled={locked} value={state[key]??''} onChange={event=>setState(current=>({...current,[key]:event.target.value}))}/></label>)}</>}
    {phase.response==='fields'&&phase.fields.map(label=><label className="cp-text-entry" key={label}><span>{label}</span><input disabled={locked} autoComplete="off" value={state.fields[label]??''} onChange={event=>setState(current=>({...current,fields:{...current.fields,[label]:event.target.value}}))}/></label>)}
-   {phase.response==='text'&&<label className="cp-text-entry"><span>Je antwoord</span><textarea rows={5} disabled={locked} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} value={state.note} onChange={event=>setState(current=>({...current,note:event.target.value}))}/></label>}
+   {['text','paper'].includes(phase.response)&&<label className="cp-text-entry"><span>Je antwoord</span><textarea rows={5} disabled={locked} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} value={state.note} onChange={event=>setState(current=>({...current,note:event.target.value}))}/></label>}
    {phase.response==='tiles'&&<><div className="cp-choice-grid">{phase.tiles!.map((tile,index)=><button key={index} className="secondary-button" disabled={locked||state.tiles.includes(index)} onClick={()=>setState(current=>({...current,tiles:[...current.tiles,index]}))}>{tile}</button>)}</div><p className="cp-content-stimulus" aria-live="polite">{state.tiles.map(index=>phase.tiles![index]).join(' ')}</p><button className="secondary-button" disabled={locked||!state.tiles.length} onClick={()=>setState(current=>({...current,tiles:current.tiles.slice(0,-1)}))}>Eén terug</button></>}
-   {phase.response==='paper'&&<p>Voer de opdracht op papier uit. Bewaar je werk voor de bespreking; leg eerdere voorbeelden weg wanneer de docent dat aangeeft.</p>}
+   {phase.response==='paper'&&<p>Vul je antwoord hierboven in. Papier is een extra. Je antwoord blijft bewaard voor de bespreking.</p>}
    {phase.response==='oral'&&<p>Voer de opdracht samen met je docent uit. Je mag antwoorden of aanwijzen zoals afgesproken.</p>}
-   {needsNote&&phase.response!=='text'&&<label className="cp-text-entry"><span>Docentnotitie: wat was het eerste antwoord of resultaat?</span><textarea rows={2} disabled={locked} value={state.note} onChange={event=>setState(current=>({...current,note:event.target.value}))}/></label>}
+   {needsNote&&!['text','paper'].includes(phase.response)&&<label className="cp-text-entry"><span>Docentnotitie: wat was het eerste antwoord of resultaat?</span><textarea rows={2} disabled={locked} value={state.note} onChange={event=>setState(current=>({...current,note:event.target.value}))}/></label>}
    <button className="secondary-button" aria-pressed={state.performed} disabled={locked} onClick={()=>setState(current=>({...current,performed:!current.performed}))}>{state.performed?'Deze stap is uitgevoerd':'Ik heb deze stap uitgevoerd'}</button>
    <button className="primary-button" disabled={locked||!responseReady} onClick={advance}>{state.index+1===flow.phases.length?'Samen bekijken':'Volgende stap'}<ArrowRight/></button>
   </>}

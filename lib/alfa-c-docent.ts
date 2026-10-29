@@ -56,6 +56,7 @@ export type TeacherEvent = {
   src?: string;
   tokens?: number[];
   paperRef?: string;
+  responseMedium?: 'digital' | 'paper';
   observations?: Record<string, Observation>;
   nextMeeting?: string;
 };
@@ -135,6 +136,7 @@ export function readTeacherStore(raw: string | null): TeacherStore {
         !Number.isInteger(e.stage) ||
         !task.stages[e.stage] ||
         (e.text !== undefined && typeof e.text !== 'string') ||
+        (e.responseMedium !== undefined && !['digital', 'paper'].includes(e.responseMedium)) ||
         (e.tokens !== undefined &&
           (!Array.isArray(e.tokens) ||
             !e.tokens.every((n: unknown) => Number.isInteger(n))))
@@ -197,7 +199,7 @@ export function paperSource(store: TeacherStore, p: Preparation) {
       s.taskId === 'klink-offline-schrijf-05' &&
       s.preparation.learner === p.learner.trim() &&
       s.preparation.meeting === p.meeting.trim() &&
-      firstResponse(s, 0)?.paperRef,
+      (firstResponse(s, 0)?.paperRef || firstResponse(s, 0)?.responseMedium === 'digital'),
   );
 }
 export function startProblem(
@@ -241,8 +243,11 @@ export function startProblem(
     )
       return 'Vier herhaaltaken in deze bijeenkomst zijn genoeg. Plan de volgende voor een andere echte bijeenkomst.';
   }
-  if (task.kind === 'check' && (!p.paperPresent || !paperSource(store, p)))
-    return 'Eerst het eigen dicteepapier uit dezelfde cursist- en afnamesessie vastleggen en beschikbaar houden.';
+  if (task.kind === 'check') {
+    const source = paperSource(store, p);
+    if (!source || (firstResponse(source, 0)?.responseMedium !== 'digital' && !p.paperPresent))
+      return 'Bewaar eerst het eigen dictee uit dezelfde cursist- en afnamesessie. Bij een papieren dictee moet ook het origineel klaar liggen.';
+  }
 }
 export function startSession(
   store: TeacherStore,
@@ -273,7 +278,7 @@ export function startSession(
                   type: 'model',
                   at: now,
                   stage: 0,
-                  text: 'Modelondersteund nakijken van eigen oorspronkelijke papier',
+                  text: 'Modelondersteund nakijken van eigen oorspronkelijke antwoord',
                 },
               ]
             : [],
@@ -321,7 +326,7 @@ export function appendEvent(
       throw Error('Luister eerst naar de volledige opname.');
     if (
       ['correct', 'word', 'dictation', 'check'].includes(task.kind) &&
-      !present(e.paperRef)
+      e.responseMedium !== 'digital' && !present(e.paperRef)
     )
       throw Error(
         'Bewaar het oorspronkelijke papier en leg de verwijzing vast.',

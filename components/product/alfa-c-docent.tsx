@@ -20,6 +20,7 @@ import {
   startSession,
   sessionFor,
   firstResponse,
+  paperSource,
   reviewed,
   appendEvent,
   assistance,
@@ -168,6 +169,7 @@ export function AlfaCTeacherPractice({ group }: { group: string }) {
           key={session.id}
           task={task}
           session={session}
+          original={store.sessions.find(s => s.id === session.linkedSessionId)}
           event={event}
           leave={() => {
             stopMedia();
@@ -360,7 +362,7 @@ export function AlfaCTeacherPractice({ group }: { group: string }) {
                       />
                     </label>
                   )}
-                  {task.kind === 'check' && (
+                  {task.kind === 'check' && paperSource(store, preparation)?.events.find(e => e.stage === 0 && e.type === 'first')?.responseMedium !== 'digital' && (
                     <label className="ac-docent-check">
                       <input
                         type="checkbox"
@@ -398,11 +400,13 @@ type Session = TeacherStore['sessions'][number];
 function TeacherPlayer({
   task,
   session,
+  original,
   event,
   leave,
 }: {
   task: TeacherTask;
   session: Session;
+  original?: Session;
   event: (e: Omit<TeacherEvent, 'at'>) => boolean;
   leave: () => void;
 }) {
@@ -416,6 +420,8 @@ function TeacherPlayer({
     [text, setText] = useState(''),
     [paperRef, setPaperRef] = useState(''),
     [paperSaved, setPaperSaved] = useState(false),
+    [usePaper, setUsePaper] = useState(false),
+    [draftError, setDraftError] = useState(false),
     [help, setHelp] = useState(''),
     [observations, setObservations] = useState<Record<string, Observation>>({}),
     [nextMeeting, setNextMeeting] = useState(''),
@@ -430,6 +436,19 @@ function TeacherPlayer({
   const audioDone = stage.audio.every((src) =>
     events.some((e) => e.type === 'audio' && e.src === src),
   );
+  const draftKey = `klink.alfa-c.docent.draft:${session.id}:${at}`;
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+    try { setText(localStorage.getItem(draftKey) ?? (task.kind === 'check' && original ? firstResponse(original, 0)?.text ?? '' : '')); }
+    catch { setDraftError(true); }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [draftKey, task.kind, original]);
+  function changeText(value: string) {
+    setText(value);
+    try { localStorage.setItem(draftKey, value); setDraftError(false); }
+    catch { setDraftError(true); }
+  }
   const alive = useRef(true),
     heading = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
@@ -444,9 +463,9 @@ function TeacherPlayer({
   }, [at, teacher]);
   function record(type: 'first' | 'retry') {
     if (
-      event({ type, stage: at, text, paperRef: isPaper ? paperRef : undefined })
+      event({ type, stage: at, text, ...(isPaper ? { responseMedium: usePaper ? 'paper' : 'digital', paperRef: usePaper ? paperRef : undefined } : {}) })
     ) {
-      setText('');
+      changeText('');
       setTeacher(false);
     }
   }
@@ -563,10 +582,11 @@ function TeacherPlayer({
                   : 'Eerste reactie (letterlijke docenttranscriptie of geobserveerde handeling)'}
                 <textarea
                   value={text}
-                  onChange={(e) => setText(e.target.value)}
+                  onChange={(e) => changeText(e.target.value)}
                 />
               </label>
-              {isPaper && (
+              {isPaper && <label className="ac-docent-check"><input type="checkbox" checked={usePaper} onChange={e => setUsePaper(e.target.checked)} />Op papier gewerkt (extra)</label>}
+              {isPaper && usePaper && (
                 <>
                   <label>
                     Verwijzing naar het bewaarde papier
@@ -591,7 +611,7 @@ function TeacherPlayer({
                 disabled={
                   busy ||
                   !text.trim() ||
-                  (isPaper && (!paperSaved || !paperRef.trim())) ||
+                  (isPaper && usePaper && (!paperSaved || !paperRef.trim())) ||
                   (!first && stage.audioRequired && !audioDone)
                 }
                 onClick={() => record(first ? 'retry' : 'first')}
@@ -610,7 +630,7 @@ function TeacherPlayer({
                   normalizeWord(stage.model)
                     ? 'de ingevoerde letters komen overeen'
                     : 'de ingevoerde letters verschillen'}
-                  . Beoordeel leesbaarheid en het echte papier zelf.
+                  . {first.responseMedium === 'digital' ? 'Getypt op het scherm; handschrift en schrijfmotoriek zijn niet beoordeelbaar.' : 'Beoordeel leesbaarheid en het echte papier zelf.'}
                 </p>
               )}
               {task.kind === 'recall' && (
@@ -754,6 +774,16 @@ function TeacherPlayer({
               ))}
           </div>
           {audioError && <p role="alert">{audioError}</p>}
+          {isPaper && !model && (!first || retrying) && <div className="ac-docent-digital">
+            {original && <div><h3>Jouw oorspronkelijke zin</h3><p className="ac-docent-response">{firstResponse(original, 0)?.text}</p></div>}
+            {first && <div><h3>Jouw eerste antwoord</h3><p className="ac-docent-response">{first.text}</p></div>}
+            <label>{first ? 'Jouw verbeterde antwoord' : 'Jouw antwoord'}<textarea autoComplete="off" spellCheck={false} value={text} onChange={e => changeText(e.target.value)} /></label>
+            {draftError && <p role="alert">Bewaren van je klad lukt niet op dit apparaat. Houd dit scherm open.</p>}
+            <button className="primary-button" disabled={busy || !text.trim() || (!first && stage.audioRequired && !audioDone)} onClick={() => {
+              if (event({ type: first ? 'retry' : 'first', stage: at, text, responseMedium: 'digital' })) { changeText(''); setRetrying(false); }
+            }}>{first ? 'Bewaar verbeterd antwoord' : 'Bewaar antwoord'}</button>
+          </div>}
+
           {task.kind === 'recall' && audioDone && !model && (
             <>
               <div className="ac-docent-answer" aria-label="Jouw zin">
@@ -816,6 +846,7 @@ function TeacherPlayer({
               )}
             </>
           )}
+          {isPaper && first && !model && !retrying && <details className="ac-docent-digital"><summary>Jouw antwoord bekijken of verbeteren</summary><p className="ac-docent-response">{[...events].reverse().find(e => e.type === 'first' || e.type === 'retry')?.text}</p><button className="secondary-button" onClick={() => { changeText([...events].reverse().find(e => e.type === 'first' || e.type === 'retry')?.text ?? ''); setRetrying(true); }}>Verbeter mijn antwoord</button></details>}
           {first && (
             <output className="ac-docent-saved">Je antwoord is bewaard.</output>
           )}

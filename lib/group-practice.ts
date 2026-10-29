@@ -57,9 +57,9 @@ export const groupInstructionNeeds = [
   { id: 'groep-zinsdictee', text: 'Luister naar de zin. Typ de zin. Tik daarna op Controleer.', activities: ['sentence-dictation'] },
   { id: 'groep-zin-nazeggen', text: 'Luister en zeg de zin na. Met Neem op kun je jezelf terughoren.', activities: ['sentence-speak'] },
   { id: 'groep-geluid-woord', text: 'Tik op een luidspreker. Luister. Tik op het woord dat erbij hoort.', activities: ['hear-match'] },
-  { id: 'groep-papierdictee', text: 'Luister. Schrijf het woord op papier. Tik daarna op Vergelijk.', activities: ['paper-dictation'] },
+  { id: 'groep-papierdictee', text: 'Luister. Typ het woord in het invulvak. Tik daarna op Vergelijk.', activities: ['paper-dictation'] },
   { id: 'groep-leesreeks', text: 'Lees het woord hardop. Neem je tijd. Tik daarna op Verder.', activities: ['read-series'] },
-  { id: 'groep-letter-schrijven', text: 'Kijk naar de letter. Schrijf de letter op papier. Vergelijk met het voorbeeld.', activities: ['write-letter'] },
+  { id: 'groep-letter-schrijven', text: 'Kijk naar de letter. Typ de letter in het invulvak. Vergelijk met het voorbeeld.', activities: ['write-letter'] },
 ] as const;
 
 function instruction(id: string) {

@@ -17,6 +17,8 @@ const originalImages = JSON.parse(readFileSync('scripts/fixtures/klink-images-be
 const imageChanges = new Map(Object.entries(originalImages).filter(([id, path]) => media[id].image !== path).map(([id, path]) => [media[id].image, path]));
 const originalMedia = JSON.parse(readFileSync('docs/klink-wordaudio-publication-20261025/media-before.json'));
 const audioChanges = new Map([['/package-audio/woorden-20261025/klink-woord-man.mp3', originalMedia['klink-woord-man'].audio]]);
+// Nico's online-writing request changes only this instruction recording in the preserved lesson payloads.
+audioChanges.set('/package-audio/alfa-c-online-20261029/KAC-ONLINE-db5e68a65d07.mp3', '/package-audio/instructions/schrijven.wav');
 function beforeDialogueRepair(exercise) {
   if (exercise.mode !== 'connected-dialogue') return exercise;
   const source = sourceDialogs.items.find(item => item.id === exercise.contextId);

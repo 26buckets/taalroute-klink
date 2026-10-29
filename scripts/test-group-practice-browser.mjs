@@ -131,6 +131,7 @@ try {
   await back(); await page.locator('[data-activity="paper-dictation"]').click(); await pause();
   item = await current('paper-dictation');
   assert.equal(await page.locator('.cp-paper-model').count(), 0);
+  await page.getByRole('textbox',{name:'Jouw antwoord',exact:true}).fill(item.target);
   await ready('.cp-task-card > button');
   await page.getByRole('button', { name: 'Vergelijk', exact: true }).click();
   assert.equal(await page.locator('.cp-paper-model').innerText(), item.target);

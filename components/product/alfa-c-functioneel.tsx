@@ -1,4 +1,6 @@
 'use client';
+import { FunctionalResponseFields } from './alfa-c-response';
+import { emptyFunctionalResponse, functionalActions, functionalResponseReady, functionalResponseText, type FunctionalResponse } from '@/lib/alfa-c-response';
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Volume2 } from 'lucide-react';
@@ -44,17 +46,20 @@ export function AlfaCFunctionalPractice({ block, backHref, header }: { backHref:
       {completionError && <p role="alert">Het geluid werkt niet. Tik nog eens op Luister.</p>}
       <button className="secondary-button" onClick={() => { position(0); setRound(n => n + 1); }}><RefreshCw />Het hele blok opnieuw</button>
       <a className="secondary-button" href={backHref}>Kies een ander blok<ArrowRight /></a>
-    </section> : <FunctionalPlayer key={`${step.id}:${round}`} block={block} step={step} index={at} record={progress.records[step.id]}
+    </section> : <FunctionalPlayer key={`${step.id}:${round}`} block={block} step={step} index={at} record={progress.records[step.id]} records={progress.records} onOpenTask={position}
       onPrevious={at ? () => position(at - 1) : undefined}
       onRecord={record => save({ ...progress, records: { ...progress.records, [step.id]: record } })}
       onNext={() => position(at + 1)} />}
   </div>;
 }
 
-function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, onNext }: {
-  block: FunctionalBlock; step: FunctionalStep; index: number; record?: FunctionalRecord;
+function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onPrevious, onRecord, onNext }: {
+  block: FunctionalBlock; step: FunctionalStep; index: number; record?: FunctionalRecord; records: Record<string, FunctionalRecord>; onOpenTask: (index: number) => void;
   onPrevious?: () => void; onRecord: (record: FunctionalRecord) => void; onNext: () => void;
 }) {
+  const [response, setResponse] = useState<FunctionalResponse>(() => record?.response ?? emptyFunctionalResponse());
+  const currentRecord = useRef(record);
+  const hasResponse = Boolean(step.responseSetup) || functionalActions(step).length > 0;
   const [model, setModel] = useState(false);
   const [help, setHelp] = useState(false);
   const readAlong = useAlfaCReadAlong();
@@ -97,18 +102,34 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
     void guide(correct ? step.successFeedback : step.retryVisible);
     onRecord({ ...metrics.current, assessment: 'answer', correct });
   }
+  function changeResponse(value: FunctionalResponse) {
+    setResponse(value); setResult('idle');
+    const next: FunctionalRecord = { ...currentRecord.current, ...metrics.current, assessment: 'participation', response: value, completed: false };
+    currentRecord.current = next; onRecord(next);
+  }
+  function complete() {
+    const next: FunctionalRecord = { ...currentRecord.current, ...metrics.current, assessment: 'participation', ...(hasResponse ? { response, firstResponse: currentRecord.current?.firstResponse ?? structuredClone(response), completed: true } : {}) };
+    currentRecord.current = next; onRecord(next); setResult('done');
+    void guide(step.automaticAcknowledgement ?? step.successFeedback);
+  }
   function markHelp() {
     metrics.current.helpUsed = true;
-    if (record) onRecord({ ...record, helpUsed: true });
+    if (currentRecord.current) { currentRecord.current = { ...currentRecord.current, helpUsed: true }; onRecord(currentRecord.current); }
   }
   const documents = step.presentation.filter(view => view.kind !== 'previousResponse' && view.kind !== 'audioOnly').map((view, n) => ({ id: `${step.id}:${n}`, title: view.title, text: view.text }));
   const action = step.instruction.replace(step.screen, '').replace(/  +/g, ' ').trim();
-  const source = <>
-    {step.presentation.filter(view => view.kind === 'previousResponse').map((view, n) => <PracticeDocument key={n} document={{ title: 'Jouw antwoordblad', text: `Pak jouw antwoordblad.\nKijk naar je antwoord bij opdracht ${block.steps.find(s => s.id === ('fromTask' in view ? view.fromTask : ''))?.number}.` }} />)}
+  const source = <div className="ac-functional-source">
+    {step.presentation.filter(view => view.kind === 'previousResponse').map((view, n) => {
+      const previous = block.steps.find(s => s.id === ('fromTask' in view ? view.fromTask : ''));
+      const text = previous ? functionalResponseText(previous, records[previous.id]) : '';
+      return text ? <PracticeDocument key={n} document={{ title: view.title, text }} /> : <div key={n}><p>Je hebt hier nog geen digitaal antwoord bewaard.</p>{previous && <button className="secondary-button" onClick={() => onOpenTask(block.steps.findIndex(s => s.id === previous.id))}>Ga naar opdracht {previous.number}</button>}</div>;
+    })}
+    {step.responseSetup?.responseGroup && <PracticeDocument document={{ title: 'Jouw formulier', text: block.steps.filter(s => s.responseSetup?.responseGroup === step.responseSetup?.responseGroup).map(s => functionalResponseText(s, records[s.id])).filter(Boolean).join('\n') || 'Vul de gegevens hieronder in.' }} />}
+
     {step.handwriting ? <figure className="ac-handwriting"><Image unoptimized width={1254} height={1254} className="functional-handwriting" src={step.handwriting} alt={documents[0]?.text ?? ''} /></figure> : documents.length > 0 && <DocumentSet documents={documents} />}
     {step.presentation.filter(view => view.kind === 'audioOnly').map((view, n) => <p className="ac-task-context" key={n}>{view.text}</p>)}
     {step.dictationTexts.length > 0 && <div className="ac-dictation-controls">{step.dictationTexts.map((text, n) => <button key={n} className="secondary-button" disabled={busy} onClick={() => void play([{ role: 'target', text }], n)}><Volume2 />Luister{step.dictationTexts.length > 1 ? ` ${n + 1}` : step.id.endsWith('formulier-08') ? ' naar het nummer' : ' naar de zin'}</button>)}</div>}
-  </>;
+  </div>;
   return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-functional-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head">
@@ -129,9 +150,9 @@ function FunctionalPlayer({ block, step, index, record, onPrevious, onRecord, on
               : <>
                 {action && <p className="ac-task-context">{action}</p>}
                 {index === 0 && <details className="ac-materials"><summary>Dit heb je nodig</summary><p>{block.materialRequirements.map(text => text.includes('nog niet geproduceerd') ? 'Het handgeschreven briefje op het scherm.' : text).join(' ')}</p></details>}
-                {(step.responseSetup || index === 0) && <a className="secondary-button" href={`/alfa-c/antwoordbladen.html#${block.id}`} target="_blank" rel="noreferrer"><FileText />Antwoordblad</a>}
+                {(step.responseSetup || index === 0) && <a className="secondary-button" href={`/alfa-c/antwoordbladen.html#${block.id}`} target="_blank" rel="noreferrer"><FileText />Antwoordblad (extra)</a>}
                 {choice ? <fieldset className="functional-choice"><legend className="sr-only">{step.instruction}</legend><p>Kies één antwoord.</p><div className="functional-choice-grid">{functionalOptions(step).map(option => <button className="cp-option" key={option.id} aria-pressed={selected === option.id} disabled={busy || result === 'right'} onClick={() => answer(option.id)}>{option.text}</button>)}</div></fieldset>
-                  : <button className="secondary-button" disabled={busy || result === 'done' || heardItems.length < step.dictationTexts.length} onClick={() => { setResult('done'); onRecord({ ...metrics.current, assessment: 'participation' }); void guide(step.automaticAcknowledgement ?? step.successFeedback); }}><Check />Ik ben klaar</button>}
+                  : <>{hasResponse && <FunctionalResponseFields step={step} response={response} onChange={changeResponse} disabled={busy} />}<button className="secondary-button" disabled={busy || result === 'done' || heardItems.length < step.dictationTexts.length || !functionalResponseReady(step, response)} onClick={complete}><Check />{hasResponse ? 'Bewaar antwoord' : 'Ik ben klaar'}</button>{hasResponse && result === 'done' && <p>Je antwoord is bewaard. {step.retryVisible}</p>}</>}
               </>}
         </AlfaCWorkspace>
       </div>
