@@ -43,6 +43,7 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
                 <h1 className="landing-title">Oefen klanken, letters en woorden</h1>
                 <p className="landing-intro">Luister, kijk en oefen. Werk stap voor stap aan lezen en uitspraak, in je eigen tempo. Samen met je docent of begeleider, of zelf.</p>
                 <button className="landing-start" onClick={chooseLearner}><BookOpen aria-hidden="true" /><span>Start met oefenen</span><ArrowRight aria-hidden="true" /></button>
+                <Link className="secondary-button" href="/opdrachten">Mijn opdrachten<ArrowRight aria-hidden="true" /></Link>
                 <span className="landing-start-note">Voor cursisten · de oefencodes staan al klaar</span>
                 <p className="landing-method-note">Onderdeel van Alfabeta+, de alfabetiseringsmethode van Taalroute.</p>
               </>

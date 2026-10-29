@@ -19,7 +19,7 @@ await page.addInitScript(() => {
   };
 });
 const menu = () => page.getByRole('navigation', { name: 'Cursistnavigatie' });
-async function teacher() { await page.goto(`${base}/#teacher/overview`); await page.locator('.cp-menu-guide').waitFor(); }
+async function teacher() { await page.goto(`${base}/#teacher/reference/overview`); await page.locator('.cp-menu-guide').waitFor(); }
 try {
   await page.goto(`${base}/#learner/home`);
   await page.getByRole('heading', { name: 'Begin hier', exact: true }).waitFor();
@@ -60,12 +60,12 @@ try {
   const saved = JSON.stringify({ completed: [], position });
   await page.evaluate(value => localStorage.setItem('klink.taalroute.route.v1', value), saved);
   await teacher();
-  assert.deepEqual(await page.locator('.staff-nav button span').allTextContents(), ['Overzicht', 'Lessen', 'Oefenen', 'Media']);
+  assert.deepEqual(await page.locator('.staff-nav button span').allTextContents(), ['Overzicht', 'Klink+Docent', 'Docentinformatie', 'Lessen', 'Oefenen', 'Media']);
   assert.equal(await page.getByRole('button', { name: 'Zoeken', exact: true }).count(), 0);
   assert.equal(await page.getByRole('button', { name: 'Meer', exact: true }).count(), 0);
   for (const [label, path] of [['Lessen', 'packages'], ['Oefenen', 'activities'], ['Media', 'media'], ['Overzicht', 'overview']]) {
     await page.getByRole('navigation', { name: 'Docentnavigatie' }).getByRole('button', { name: label, exact: true }).click();
-    assert(page.url().endsWith(`#teacher/${path}`));
+    assert(page.url().endsWith(`#teacher/reference/${path}`));
     await page.reload();
     await page.locator('.staff-nav button[aria-current="page"]').waitFor();
     assert.equal(await page.locator('.staff-nav button[aria-current="page"] span').innerText(), label);

@@ -1,5 +1,6 @@
 'use client';
 
+import { TeachingWorkspace } from './teaching-workspace';
 import { PackagePlayer } from '@/components/product/package-experience';
 import { LessonCoverage } from '@/components/product/lesson-coverage';
 import { TeacherPictureGuide } from './teacher-picture-guide';
@@ -42,13 +43,13 @@ function summarize(packs: typeof contentPackages) {
 
 type TeacherView = 'overview' | 'packages' | 'activities' | 'media' | 'package';
 
-export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
+function TeacherContentReference({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
   const [view, setView] = useState<TeacherView>('overview');
   const [selectedPackage, setSelectedPackage] = useState<PackageId>(contentPackages[0].id);
 
   useEffect(() => {
     const restore = () => {
-      const [, route, packageId] = window.location.hash.split('?')[0].split('/');
+      const [, , route, packageId] = window.location.hash.split('?')[0].split('/');
       if (route === 'package') {
         const pack = contentPackages.find(item => item.id === packageId);
         if (pack) { setSelectedPackage(pack.id); setView('package'); }
@@ -62,7 +63,7 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
     window.scrollTo({ top: 0 });
     document.querySelector('.staff-main')?.scrollTo({ top: 0 });
     setView(next);
-    const hash = next === 'package' ? `#teacher/package/${packageId}` : `#teacher/${next}`;
+    const hash = next === 'package' ? `#teacher/reference/package/${packageId}` : `#teacher/reference/${next}`;
     if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
 
@@ -78,6 +79,8 @@ export function TeacherApp({ onExit, onToast }: { onExit: () => void; onToast: (
   return (
     <StaffShell area="Docent" name="Docent" initials="TR" onExit={onExit} nav={<>
       <NavButton active={view === 'overview'} icon={<LayoutDashboard />} label="Overzicht" onClick={() => openView('overview')} />
+      <NavButton icon={<Shapes />} label="Klink+Docent" onClick={() => { window.location.hash = 'teacher/plus'; }} />
+      <NavButton icon={<PackageOpen />} label="Docentinformatie" onClick={() => { window.location.hash = 'teacher/materials'; }} />
       <NavButton active={view === 'packages'} icon={<PackageOpen />} label="Lessen" onClick={() => openView('packages')} />
       <NavButton active={view === 'activities'} icon={<Shapes />} label="Oefenen" onClick={() => openView('activities')} />
       <NavButton active={view === 'media'} icon={<Images />} label="Media" onClick={() => openView('media')} />
@@ -138,4 +141,14 @@ function TeacherActivities() {
 
 function TeacherMedia() {
   return <><StaffTopbar title="Beeld en geluid" subtitle="Controleren voor gebruik" /><div className="staff-content cp-teacher-content"><div className="page-heading"><div><span className="eyebrow">Controle</span><h2>Wat is aanwezig en wat staat nog open?</h2><p>Controleer of de uitspraak klopt en elk beeld de bedoelde betekenis laat zien. Sommige woorden hebben nog geen beeld of opname.</p></div></div><section className="cp-teacher-media-grid">{contentPackages.map((pack) => <article key={pack.id}><header><strong>{pack.title}</strong></header><div><Images /><span><b>{pack.media.imageAvailable} / {pack.media.imageExpected}</b><small>woordbeelden aanwezig</small></span></div><div><FileAudio /><span><b>{pack.media.audioAvailable}</b><small>woordopnamen aanwezig</small></span></div><ul><li><Check />Woorden beschikbaar</li><li className="open"><CircleAlert />{pack.media.imageReview}</li><li className="open"><CircleAlert />{pack.media.audioReview}</li>{pack.media.missing.length > 0 && <li className="open"><CircleAlert />{pack.media.missing.length} {pack.practiceActivities ? 'doelwoordopnamen' : 'woordbeelden'} ontbreken</li>}</ul></article>)}</section></div></>;
+}
+
+export function TeacherApp(props: { onExit: () => void; onToast: (message: string) => void }) {
+  const [reference, setReference] = useState(false);
+  useEffect(() => {
+    const restore = () => setReference(window.location.hash.startsWith('#teacher/reference'));
+    restore(); window.addEventListener('hashchange', restore);
+    return () => window.removeEventListener('hashchange', restore);
+  }, []);
+  return reference ? <TeacherContentReference {...props} /> : <TeachingWorkspace onExit={props.onExit} />;
 }
