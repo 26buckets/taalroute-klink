@@ -1,3 +1,29 @@
+# Actuele Klink-publicatie — 27 docentopdrachten, 29 oktober 2026
+
+Live: https://klink.taalroute.nl/#learner/chapters?level=alfa-c&help=guided
+Broncommit: `430beb7346d1436f85cf4de081773189e0c6d85d`, schone canonieke branch `main`.
+Worker: `cb62568c-b553-4558-a9e3-7e19390e54d0`. Build: `2026-10-29T08:42:19.639Z`.
+
+27 brongebonden docentopdrachten toegevoegd, 180 bestaande opdrachten behouden. Alle 27 online doorlopen; 66 browsercontroles en 50 integratiegevallen in twee engines slagen. 33 aangeboden audiobestanden zijn bytegelijk en hebben ingebedde Taalroute-metadata; 21 aangeboden clientbundels zijn bytegelijk aan de gepubliceerde build. Vooraf lokaal alle 180 oude opdrachten, voorbereiding, eerste poging, hulp, opslagfouten, herpogingen en 63 publicatiebewijstests gecontroleerd. Geen GitHub-workflows.
+
+De 72 ontbrekende brontaken, twee afgekeurde losse naamopnamen en spontane spreekfase F blijven uitgesloten. Geen echte cursistenpilot of individueel beheersingsbewijs geclaimd. Docentregistraties zijn lokaal, met export; geen cloudsync.
+
+Actief register: `docs/klink-publication-alfa-c-docent-20261029.json`. Brongebonden vrijgave: `docs/klink-owner-release-alfa-c-docent-20261029.json`. Controlebewijs: `docs/klink-alfa-c-docent-20261029/`. Back-up: https://drive.google.com/file/d/1s9UvcEjlfpudVIXAUtZ0wZ2xM-U6raZ0/view.
+
+Controleer vóór iedere volgende publicatie de werkelijk actieve bron via https://klink.taalroute.nl/release.json. De registratiewijziging na deze livecommit verandert de runtime niet.
+
+## Eerdere besluiten en publicaties
+
+# Klink — goedgekeurde opvolger met 27 docentopdrachten, 29 oktober 2026
+
+Publicatiebasis vóór deze wijziging: `b3d4af2f941a11c3d5d75f20e8eec1bbce801051`, main, livebuild 2026-10-29T00:14:21.190Z. De verderop bewaarde publicatie van 28 oktober is historie en geen actuele terugvalbasis.
+
+Nico: “prima, zet online”, bij de 27 beoordelingskaarten. Scope, technische controles en grenzen staan in `docs/klink-alfa-c-docent-20261029/RELEASE.md`; bestandgebonden vrijgave in `docs/klink-owner-release-alfa-c-docent-20261029.json`. Publiceer uitsluitend deze afstammeling via `npm run deploy`. De 72 ontbrekende brontaken en de afgekeurde losse naamopnamen blijven uitgesloten. Echte cursistenpilot is niet geclaimd.
+
+Controleer de werkelijk actieve bron steeds op https://klink.taalroute.nl/release.json. Het definitieve publicatieregister wordt na de onlinecontrole toegevoegd.
+
+## Historie
+
 # Actuele Klink-publicatie — herkenbare Alfa C-documenten en oefenindeling, 28 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/chapters?level=alfa-c&help=practice

@@ -1,3 +1,4 @@
+import { verifyTeacherRelease, readBeforeTeacher } from './check-alfa-c-docent-release.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -5,6 +6,8 @@ import { createHash } from 'node:crypto';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 64 * 1024 * 1024 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 export function verifyPhotoRepairRelease(read = readFileSync) {
+  const teacher = verifyTeacherRelease(read), currentRead = read;
+  read = file => readBeforeTeacher(file, teacher, currentRead);
   const release = JSON.parse(read('docs/klink-owner-release-alfa-c-photo-repair-20261029.json'));
   assert.equal(release.baselineSourceCommit, 'aee3cb7fda97a97e8ce1866e74b09d66615197ea');
   assert.equal(release.liveSourceCommit, '25704b43de178d62baa81a1eb1aa5cd2eab883dc');
@@ -13,12 +16,12 @@ export function verifyPhotoRepairRelease(read = readFileSync) {
   git('merge-base', '--is-ancestor', release.liveSourceCommit, release.baselineSourceCommit);
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts'];
-  const changed = git('diff', '--name-only', release.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
-  const untracked = git('ls-files', '--others', '--exclude-standard', '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const changed = git('diff', '--name-only', release.baselineSourceCommit, teacher.baselineSourceCommit, '--', ...roots).toString().trim().split('\n').filter(Boolean);
+  const untracked = []; // Current tree verified by the teacher release successor.
   assert.deepEqual([...new Set([...changed, ...untracked])].sort((a, b) => a.localeCompare(b)), [...release.changedFiles].sort((a, b) => a.localeCompare(b)));
   for (const [file, hash] of Object.entries(release.files)) assert.equal(sha(read(file)), hash, file);
   assert(release.changedFiles.every(file => release.files[file]));
-  assert.equal(git('diff', release.baselineSourceCommit, '--', 'db', 'drizzle', 'hooks', 'lib/learner-progress.ts', 'lib/alfa-c-functioneel.ts', 'public/klink-wordmark.svg').length, 0, 'Preserve all tasks, audio, progress, logo and database');
+  assert.equal(git('diff', release.baselineSourceCommit, teacher.baselineSourceCommit, '--', 'db', 'drizzle', 'hooks', 'lib/learner-progress.ts', 'lib/alfa-c-functioneel.ts', 'public/klink-wordmark.svg').length, 0, 'Preserve all tasks, audio, progress, logo and database');
   const audio = JSON.parse(read('data/klink-alfa-c-dagelijks-audio.json'));
   const before = JSON.parse(git('show', `${release.baselineSourceCommit}:data/klink-alfa-c-dagelijks-audio.json`));
   assert.deepEqual(audio.clips.slice(0, before.clips.length), before.clips);
@@ -52,8 +55,8 @@ export function verifyPhotoRepairRelease(read = readFileSync) {
   const backup = JSON.parse(read(release.backupPath));
   assert(backup.parentVerified && backup.downloadedByteIdentical && backup.zipCrcVerified);
   assert.equal(backup.parentId, '1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR');
-  return release;
+  return { ...release, teacher };
 }
 export function readBeforePhotoRepair(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : read(file);
+  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeTeacher(file, release.teacher, read);
 }
