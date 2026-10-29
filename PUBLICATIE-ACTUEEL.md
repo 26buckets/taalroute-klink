@@ -1,3 +1,23 @@
+# Actuele KLINK-publicatie — online antwoorden en afgeronde oefenbanken, 29 oktober 2026
+
+Live: https://klink.taalroute.nl/
+Broncommit: `c2dedeb2167b630a124d7ecb59f9e99953383969`, schone canonieke branch `main`.
+Worker: `5680657a-d49e-4b3c-92cf-fae27049c55f`. Build: `2026-10-29T19:01:37.553Z`.
+
+Schrijven, invullen, wegstrepen en verbeteren kan op het scherm. De 27 functionele Alfa C-antwoordplaatsen bewaren eigen invoer, eerste versies en koppelingen met vervolgstappen. De schrijfopdrachten bij de docent en de oudere schrijfspelers bieden eveneens digitale invoer. Een antwoordblad of papier is een extra; handschrift en motoriek worden niet uit getypte antwoorden afgeleid. De oorspronkelijke papieren docentroute blijft beschikbaar.
+
+De 15 bronchats zijn verwerkt tot 11 oefenonderdelen, 1.113 opvraagbare collecties en 56.207 oefenplaatsen (inclusief hergebruik). Toegevoegd: 914 audiobestanden en 10 gecontroleerde WebP-foto’s, samen 502.070 bytes. Rolstoelbed is met Nico’s akkoord rolstoel geworden. Nog ontbrekende beelden blijven in de afzonderlijke beeldchat: 534 Kijk en luister-scènes, 91 Zoek de paren-rondes en 341 Fotobingokaarten. Geen nieuwe afbeeldingen in deze chat gegenereerd.
+
+Lokale controle: 144 functionele stappen en 144 smalle schermen, 66 docentcontroles, 96 menugevallen, eerdere volledige regressiereeksen plus gerichte groeps-, formulier-, herstel- en opslagcontroles. Alle 9.745 bestaande publieke bestanden zijn ongewijzigd gebleven. De behouden lesinhoud telt 302 lessen; alleen de expliciet gewijzigde algemene schrijfinstructie is bij de historische vergelijking genormaliseerd.
+
+Live teruggelezen: 2.037 nieuwe bestanden met exacte hashes, de ingebedde Taalroute-merkvelden van alle 914 nieuwe opnamen, en 69 bestaande media uit de vorige versie. De digitale invoer, herladen, eerste versies en eigen dicteecorrectie zijn online in twee browserengines en drie schermformaten gecontroleerd. Menselijke luisterreview, fysieke apparaatproef en cursistenpilot zijn niet geclaimd.
+
+Herstelbestanden: bestaande Drive-projectmap https://drive.google.com/drive/folders/1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR . De exacte herstelvolgorde en teruggelezen hashes staan in `docs/production-20261029/backup.json` en het definitieve publicatiedossier. Een back-up is geen livepublicatie; die is afzonderlijk aangetoond in `live-check.json` en `live-online-browser-check.json`.
+
+Publicatie via de normale `npm run deploy` met geslaagde publicatieblokkades. Geen GitHub Actions-workflows aanwezig of toegevoegd. Alle uitgebreide controles lokaal uitgevoerd. Geen extra betaalde cloudcontroles.
+
+## Historie — geen actuele publicatiebasis
+
 # Actuele Klink-publicatie — vaste menuopbouw en 18 woordfoto’s, 29 oktober 2026
 
 Live: https://klink.taalroute.nl/#learner/home
