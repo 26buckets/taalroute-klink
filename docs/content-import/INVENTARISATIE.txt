@@ -1,0 +1,81 @@
+TAALROUTE KLINK — INVENTARISATIE EN INTEGRATIEBASIS
+28 oktober 2026. Geen livecontent gewijzigd.
+
+BRON EN LIVEVERSIE
+Repository: https://github.com/26buckets/taalroute-klink
+Canonieke branch main: a743a83d215f925c4a43496e9ff2a4ee5cc168e6.
+De echte https://klink.taalroute.nl/release.json verwijst naar broncommit 2b6372862abd57268ecbc959f590f92abfbc9a2c, gebouwd op 28 oktober.
+Main bevat tegenover die livebron uitsluitend drie documentatie-/bewijsbestanden. Afstamming en de drie livehashes voor onderdelen, onderdeelfoto's en samenhangende content zijn opnieuw gecontroleerd. Geen volledige nieuwe bytecontrole van alle media of volledige livebrowserregressie geclaimd.
+
+React/TypeScript, Vinext/Vite, Cloudflare Worker taalroute-klink en bestaande D1-binding. Configuratie ontstaat vanuit vite.config.ts. De normale route is npm run deploy: publicatiepoort, build en Wrangler met dist/server/wrangler.json. PUBLICATIE-ACTUEEL.md en de historische vrijgaven blijven leidend. De importbasis staat op codex/klink-contentimport-20261028, vanaf de actuele main; geen runtimecomponent, media, bank of gebruikersopslag gewijzigd.
+
+DRIVE
+Hoofdarchief volgens actuele publicatiedocumentatie:
+https://drive.google.com/drive/folders/1K-Pe0j_U0-gMF1GQxiWWl47buS7KKEar
+Naam: Alfabeta+ Klink. De vastgelegde discovery omvat 1000 directe rootrecords plus twee oudere zoekresultaten; dit is een bronneninventaris, geen inhoudelijke herbeoordeling van ieder historisch beeld-/audiopakket. De connector begrenst een folderlisting op 1000; volledige historische recursie wordt niet geclaimd.
+Gewone productiechats, 208 directe records vastgelegd:
+https://drive.google.com/drive/folders/1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR
+Taalroute Klink, andere bestaande map met basisassets en docentmap:
+https://drive.google.com/drive/folders/1bAN5ri8qVeMXrFq5qZhxsisT8nFciro_
+Klink Plus Docent, 34 directe records vastgelegd:
+https://drive.google.com/drive/folders/1BonW2_yUQW8TAu_mWB1RVfM8iaxq9C7O
+De derde map 'taalroute-klink' onder een herstelarchief bevat een herstelmanifest en een levering; dit is geen bewijs van actuele appbron. Geen bestaande map verplaatst of hernoemd.
+
+Centrale integratie-opslag binnen het bestaande hoofdarchief:
+https://drive.google.com/drive/folders/1fQBzwKYX6wTPtKRNtHuifQfNR4ZLrQUf
+01 Productieregister en batches: https://drive.google.com/drive/folders/1kmbB2OYE3Kht_XCPppFyplkBCV8MBDsd
+02 Canonieke bronnen: https://drive.google.com/drive/folders/1ai8XLezOwsTOZYRL7mQ-Cc1hSV7NuR1x
+03 Aangeleverde content: https://drive.google.com/drive/folders/1kfvsmk3mIkg9YgBTf0Y6V7mXouQwGCep
+04 Reviews en herstel: https://drive.google.com/drive/folders/1wsIWhPUsYaLn3yvOvfOF2_OCGGxxTUTh
+05 Vrijgegeven pakketten: https://drive.google.com/drive/folders/1ANeFGStsM7OEtXWchTIflk0hFUIVrJIQ
+06 Importcontract en validatie: https://drive.google.com/drive/folders/1gVCUDkh-_VncSe8fkD4zaHgKlfZa1nFO
+07 Publicatieverslagen: https://drive.google.com/drive/folders/1zlmwpu0u3fn1XfmTGVEkHeiS9EJFYJAS
+
+Regievoorbereiding van 28 oktober: eerste batch nog niet toegewezen. Het centrale production-register.json is daarom leeg. Historische productie-indexen zijn niet automatisch als nieuwe, gereviewde of geïmporteerde batches geregistreerd. De volledige gelezen teksten en metadata zijn in het dossier bewaard.
+
+WOORDEN EN CONTENT
+data/klink-curriculum.json: 338 betekenis-ID's, 337 woordvormen, 69 kernwoorden, 262 keuzewoorden en 7 steunbetekenissen. 37 leesstappen plus drie terughaalmomenten in 40 basisonderdelen, daarnaast 23 uitbreidingsrecords. De onderdelenexport bevat 15 onderdelen en 302 oorspronkelijke routes.
+Aanvullende Lexicon-pakketten: samen 4.789 woorden. Samengestelde runtime: 68 pakketten, 786 lesrecords, 5.127 unieke woord-ID's en 15.754 unieke gegenereerde exerciseId's. Oefenvarianten en hergebruik zijn geen evenzoveel zelfstandig geschreven lessen. Tel deze tel-eenheden niet bij elkaar op.
+
+Samenhangende bronbank: 1.612 objecten, verdeeld over 1.292 zinnen, 192 teksten en 128 gesprekken. Plaatsing in klink-content-routing.json; verbinding met canonieke woorden en stappen via connected-content.ts.
+Generieke importbank: 1.393 syntactisch geldige taken. Alfa A: 727; Alfa B: 339; Alfa C: 57; A1: 90; A2: 105; B1: 75. Gevulde domeinen: spelling 32, grammatica 108, teksten 111, gesprekken 10, schrijven 72, woordpakketten 1.060. Het contract kent ook klanken en herhaling, maar die hebben geen toegelaten records in deze generieke bank. Geen bewijs van volledige niveaudekking of zelfstandig lezen.
+Eigen Alfa C-speler: drie oorspronkelijke blokken met 36 stappen en zes functionele blokken met 72 stappen; samen 108. De 72 functionele stappen staan in main en zijn opgenomen in de laatste publicatie. De historische 84 doelcellen-opdracht-ID's, de 72 woord-/spellingtaken uit productieplanning en deze 108 stappen mogen zonder overlapcontrole niet worden opgeteld.
+
+Het Drive-dossier KLINK_WOORDBANK_LEXICON1000_20261019 bestaat, met een dekkings-CSV en tien productie-submappen. De CSV bevat historische exacte-ID-matches. 'Geen exacte match' bewijst niet dat een woord nergens in de huidige app voorkomt. De voorlopige tekst uit 15 oktober is geen vastgestelde canon. De actuele app- en Lexicon-ID's zijn gebruikt; geen tweede lexicon aangelegd.
+
+SCHERMEN EN CONTRACTEN
+Leerlingroutes: #learner/home, #learner/package/<id>, #learner/words, #learner/chapters, #learner/sounds en #learner/alfa-c. lib/practice-chapters.ts maakt de hoofdstuk-/activiteit-/collectieroutes. De vijf cursistknoppen, zes startstappen met video's en logo D zijn ongewijzigd.
+Kerncontracten in lib/package-content.ts: PackageDefinition, PackageWord, PackageLesson, PackageText, PackageDialogue, PackageExercise en PracticeAttempt. Opbouw via taalroute-packages.ts, connected-content.ts en imported-practice.ts; weergave via bestaande oefeningen/groepsspeler.
+De generieke import kent choice, text en teacher. Teacher blijft deelname, geen automatische beheersing. De besloten docentbeoordeling en eigen eerste respons blijven behouden. Deze speler heeft geen nieuwe audio-/beeldrenderer.
+
+De bestaande importscripts blijven intact. import-release-candidates.mjs verwacht het historische finalizationId en lokale productiemappen uit oktober; import-klink-curriculum.mjs schrijft een canonieke export. De nieuwe batchbasis gebruikt hetzelfde taakcontract, met expliciete hashes, versies, referenties, bestemmingen en vervanging.
+Docentschermen staan in components/product/staff-apps.tsx; /docenten bevat de twaalf hoofdstukken van de bestaande handleiding. Dit is niet hetzelfde als de operationele docentwerkplek uit PR #5.
+
+KLINK+DOCENT EN DIGIBORD
+https://github.com/26buckets/taalroute-klink/pull/5
+Gecontroleerde head: e88781b115d5de09210166832e06dff53df828b5.
+Open concept-PR, niet samengevoegd en niet live. Actuele main is al in deze branch meegenomen.
+KPD 05 op Drive is een oudere momentopname. De latere STAP-3-TEKST.md bepaalt Woord → Zin → Tekst, waarbij stap 3 over binnenkomen en voeten vegen gaat. Het eerdere Bericht met de natte mat is vervangen. Acht fasen, vijf hulpmiddelen, directe lesstart en apart docentmateriaal blijven bestaan. De negen werkbladen zijn in de aparte docenttaak gemaakt; hier niet opnieuw gerenderd of vrijgegeven.
+
+De PR bevat groepen, cursisten, persoonlijke oefencodes en toewijzing van canonieke leesstappen. Zes teaching-tabellen staan naast de historische attempts/mastery/review_items. Niet alle aanvullende oefeningen zijn individueel toewijsbaar. Lokale inrichting en docenttoegang zijn niet naar productie gemigreerd. Deze importtaak voegt de docentbranch niet samen.
+Klink+docent is onderdeel van Klink voor een gespiegeld lesbord. In de gecontroleerde runtime is geen rechtstreekse service-/importkoppeling naar de zelfstandige taalroute-digibord-app gevonden. DigiBord V01.25 blijft ongewijzigd en bevroren.
+Gerelateerde repositories zijn daadwerkelijk aangetroffen: lexicon, taalroute-klankstudio, taalroute-studio-v2, taalroute-digibord. Klankstudio is de bronverwijzing bij de huidige klanklijst; Studio levert het officiële D-logo. Geen brede audit of wijziging van die andere apps uitgevoerd.
+
+MEDIA EN VOORTGANG
+Klankregister: 46 sleutels. Woordmedia: 5.127 bindingsrecords, waarvan 5.127 met audioverwijzing en 433 met beeldverwijzing. Dit zijn verwijzingen; geen nieuwe menselijke kwaliteits-/rechtenverklaring of telling van unieke mediabestanden. Meer audio staat in afzonderlijke content-, gesprekken- en Alfa C-registers. Bestaande stemrollen, pauzes en vrijgaven blijven behouden.
+Werkbladen komen uit bestaande spelers en afzonderlijke exports. Nieuwe media en werkbladen worden door het batchcontract bewaard, maar hun runtimeimport blijft geblokkeerd totdat de juiste adapter en alle reviewpoorten bestaan. Werkelijke audiometadata, volledige handencontrole en drukresolutie blijven verplicht bij toekomstige betreffende opleveringen. Deze taak levert geen nieuwe media of drukuitgave.
+
+Voortgang gebruikt onder meer lokale sleutels klink.taalroute.route.v1, klink.taalroute.attempts.v1, klink.learning-review.v1, klink.preview.alfa-c.v1 en klink.alfa-c.functioneel.v1. De oude gedeelde /api/attempts-API geeft 410. Een aanwezig D1-schema bewijst geen actieve persoonlijke synchronisatie. Nieuwe docenttoewijzingen staan alleen in de conceptbranch. Geen leerlingdata gelezen of gemigreerd.
+
+HIATEN EN VERVOLG
+1. Alfa C-index: bestandsnaam v018, binnenkop v017. Exacte bytes/hash bewaren; niet op naam vrijgeven.
+2. Historische Alfa B-index: 44 audiodictees, 41 toen aangetroffen WAV-bronnen en drie ontbrekende zelfstandige opnamen. Niet opnieuw tot itemniveau geaudit. De generieke importspeler kan deze niet veilig afspelen; alleen flags veranderen is onvoldoende.
+3. KPD Drive-status loopt achter op de Tekst-correctie en operationele docentwerkplek. Verschil vastgelegd; bestaande bronnen niet stilzwijgend herschreven.
+4. Nog geen generieke adapter voor functionele Alfa C-blokken, nieuwe media, bordlessen, printbestanden of rapportagevelden. Hun volledige dossiers kunnen worden ontvangen en gecontroleerd; runtimeimport meldt een concrete blokkade.
+5. Eerste echte batch, onafhankelijke inhoudsreview, menselijke acceptatie waar vereist en publicatiebesluit ontbreken nog. Geen fictieve batch of goedkeuring aangemaakt.
+
+De veilige technische basis is geïmplementeerd: batchcode-opzoeking, schema's, volledige bestandscontrole, reviewbinding, referentiële integriteit, betekenis-ID's, routecontrole, dubbele-takencontrole, expliciete vervanging, lokale atomische import en herstelbewijs. README.md beschrijft het exacte contract en de integratievolgorde.
+Begin met één echte door Regie toegewezen batch die past bij een bestaande speler. Bouw aanvullende adapters pas voor concrete aangeleverde inhoud. Verricht gerichte en vereiste volledige tests lokaal; behoud de publicatiepoort en afzonderlijke vrijgave.
+
+Het archief bevat de importbronnen, schema's, register, meetgegevens, gelezen Drive-bronnen, metadata, testlogs, browserbewijs, versiegegevens en herstelmateriaal. Uploadcontrole staat afzonderlijk; opslag is geen livepublicatie.
+

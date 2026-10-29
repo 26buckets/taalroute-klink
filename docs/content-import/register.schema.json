@@ -1,0 +1,135 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "batches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "batchCode": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "manifestDriveFileId": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "driveFolderId": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "manifestSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "production": {
+            "enum": [
+              "pending",
+              "ready",
+              "blocked"
+            ]
+          },
+          "review": {
+            "enum": [
+              "pending",
+              "accepted",
+              "changes-requested"
+            ]
+          },
+          "repair": {
+            "enum": [
+              "not-required",
+              "open",
+              "rechecked"
+            ]
+          },
+          "import": {
+            "enum": [
+              "not-imported",
+              "blocked",
+              "locally-imported"
+            ]
+          },
+          "tests": {
+            "enum": [
+              "not-run",
+              "failed",
+              "passed"
+            ]
+          },
+          "release": {
+            "enum": [
+              "not-approved",
+              "approved"
+            ]
+          },
+          "publication": {
+            "enum": [
+              "not-published",
+              "published"
+            ]
+          },
+          "evidenceDriveFileIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "publishedCommit": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{40}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "batchCode",
+          "version",
+          "active",
+          "manifestDriveFileId",
+          "driveFolderId",
+          "manifestSha256",
+          "production",
+          "review",
+          "repair",
+          "import",
+          "tests",
+          "release",
+          "publication",
+          "evidenceDriveFileIds",
+          "publishedCommit"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "batches"
+  ],
+  "additionalProperties": false
+}

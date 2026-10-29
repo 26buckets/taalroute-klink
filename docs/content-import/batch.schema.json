@@ -1,0 +1,382 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "batchCode": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "producerProcessId": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "driveFolderId": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]+$"
+    },
+    "baseCommit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "baseBankSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sourceSnapshotSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "productionStatus": {
+      "enum": [
+        "draft",
+        "ready"
+      ]
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^files/"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "mimeType": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "driveFileId": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "sha256",
+          "mimeType",
+          "driveFileId"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "kind": {
+            "enum": [
+              "word",
+              "sound",
+              "letter",
+              "sentence",
+              "text",
+              "document",
+              "exercise",
+              "teacher-guide",
+              "board",
+              "worksheet",
+              "media",
+              "objective",
+              "reporting"
+            ]
+          },
+          "payloadFileId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+          },
+          "wordRefs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+                },
+                "meaningId": {
+                  "type": "string",
+                  "minLength": 1,
+                  "pattern": "\\S"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "sourceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "dependsOn": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "mediaRefs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+          },
+          "level": {
+            "enum": [
+              "Alfa A",
+              "Alfa B",
+              "Alfa C",
+              "A1",
+              "A2",
+              "B1"
+            ]
+          },
+          "objective": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "destination": {
+            "type": "object",
+            "properties": {
+              "adapter": {
+                "enum": [
+                  "imported-practice",
+                  "shared-source",
+                  "canonical-reference",
+                  "media-register",
+                  "teacher-plus",
+                  "worksheet",
+                  "reporting"
+                ]
+              },
+              "role": {
+                "enum": [
+                  "learner",
+                  "teacher",
+                  "shared"
+                ]
+              },
+              "route": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "adapter",
+              "role",
+              "route"
+            ],
+            "additionalProperties": false
+          },
+          "lessonContext": {
+            "type": "object",
+            "properties": {
+              "bookGoal": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "lessonPlan": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "observationEvidenceFileId": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+              }
+            },
+            "required": [
+              "bookGoal",
+              "lessonPlan",
+              "observationEvidenceFileId"
+            ],
+            "additionalProperties": false
+          },
+          "assessment": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "enum": [
+                  "answer",
+                  "participation",
+                  "none"
+                ]
+              },
+              "masteryClaim": {
+                "const": false
+              },
+              "reportingGoal": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "mode",
+              "masteryClaim",
+              "reportingGoal"
+            ],
+            "additionalProperties": false
+          },
+          "publicationStatus": {
+            "const": "unpublished"
+          },
+          "expectedPreviousSha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "kind",
+          "payloadFileId",
+          "wordRefs",
+          "sourceRefs",
+          "dependsOn",
+          "mediaRefs",
+          "level",
+          "objective",
+          "destination",
+          "lessonContext",
+          "assessment",
+          "publicationStatus",
+          "expectedPreviousSha256"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stage": {
+            "enum": [
+              "internal",
+              "independent-ai",
+              "technical"
+            ]
+          },
+          "processId": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "reviewer": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "evidenceFileId": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,159}$"
+          },
+          "scopeSha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "status": {
+            "enum": [
+              "accepted",
+              "changes-requested",
+              "pending"
+            ]
+          },
+          "openCritical": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "stage",
+          "processId",
+          "reviewer",
+          "evidenceFileId",
+          "scopeSha256",
+          "status",
+          "openCritical"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "batchCode",
+    "version",
+    "producerProcessId",
+    "owner",
+    "driveFolderId",
+    "baseCommit",
+    "baseBankSha256",
+    "sourceSnapshotSha256",
+    "productionStatus",
+    "files",
+    "objects",
+    "reviews"
+  ],
+  "additionalProperties": false
+}

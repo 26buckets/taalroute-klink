@@ -31,7 +31,9 @@
     "format": "oxfmt",
     "db:generate": "drizzle-kit generate",
     "test:standard-players": "node --test scripts/test-standard-players.mjs && node scripts/test-standard-players-browser.mjs && node scripts/test-standard-player-variants-browser.mjs && node scripts/test-standard-integration-browser.mjs",
-    "test:content-import": "node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs"
+    "test:content-import": "node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs",
+    "import:batch": "node scripts/import-content-batch.mjs",
+    "test:batch-import": "node --test scripts/test-content-batch.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
@@ -62,6 +64,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.37",
+    "ajv": "8.20.0",
     "drizzle-kit": "^0.31.10",
     "oxfmt": "0.61.0",
     "oxlint": "1.76.0",
