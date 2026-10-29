@@ -732,3 +732,9 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
   height: auto;
   min-height: 320px;
 }
+
+.cp-teacher-activities { margin-top: 28px; }
+.cp-teacher-activities > h2 { margin: 0 0 12px; font-size: 20px; font-weight: 500; line-height: 1.4; }
+.cp-teacher-activities .cp-activity-button > span { display: grid; gap: 4px; min-width: 0; overflow-wrap: anywhere; }
+.cp-teacher-activities .cp-activity-button strong { font: inherit; }
+.cp-teacher-activities .cp-activity-button small { font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--muted); }

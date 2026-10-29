@@ -39,7 +39,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page.getByRole('button', { name: 'Alfa C', exact: true }).click();
     await page.locator('[data-alfa-c-category="words"]').waitFor();
     assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-    assert.equal(await page.locator('[data-chapter]').count(), 0);
+    assert.equal(await page.locator('[data-chapter]').count(), 2); // Approved production word banks also appear here.
     assert(
       await page
         .getByRole('button', { name: 'Alfa C', exact: true })
@@ -119,7 +119,7 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       .click();
     assert.equal(await page.locator('.pilot-block-cards').count(), 0);
     assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-    assert.equal(await page.getByLabel('Alfa C docentopdrachten').getByRole('link').count(), 5);
+    assert.equal(await page.getByRole('region', { name: 'Opdrachten met je docent' }).getByRole('link').count(), 5);
     assert.equal(await page.locator('[data-chapter]').count(), 8);
     assert.equal(await page.locator('[data-chapter]:not([disabled])').count(), 8);
     await page.goto(base + '/docenten/hoofdstuk-2');

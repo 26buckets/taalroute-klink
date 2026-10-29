@@ -5,13 +5,14 @@ import {productionIndex} from '../lib/production-practice.ts';
 import {chapterHash} from '../lib/practice-chapters.ts';
 const base=process.env.KLINK_TEST_URL||'http://localhost:18929';
 const out='outputs/look-listen-text-20261029';mkdirSync(out,{recursive:true});
-const row=productionIndex.find(r=>r.id==='production:meet:alfa-c:KEL_C01');
-const exercises=JSON.parse(readFileSync('public'+row.url)).exercises;
-const url=base+'/'+chapterHash({chapter:'words',activity:'meet',collection:row.id,level:'alfa-c',help:'practice'});
+const rows=productionIndex.filter(r=>r.activity==='meet');
 const checks=[];
 for(const [name,engine] of Object.entries({chromium,webkit})){
  const browser=await engine.launch();
  try{
+  for(const row of rows){
+   const exercises=JSON.parse(readFileSync('public'+row.url)).exercises;
+   const url=base+'/'+chapterHash({chapter:'words',activity:'meet',collection:row.id,level:row.level,help:row.help});
   for(const [width,height] of [[1366,768],[768,1024],[390,844],[320,568]]){
    const page=await browser.newPage({viewport:{width,height}});const errors=[];
    page.on('pageerror',e=>errors.push(e.message));
@@ -31,10 +32,11 @@ for(const [name,engine] of Object.entries({chromium,webkit})){
     await page.locator('.cp-model-sentence').click();
     await page.waitForFunction(src=>window.__played.includes(src),ex.prompt.audio.src);
     checks.push({browser:name,width,height,id:ex.exerciseId,...bounds});
-    if(i===0)await page.screenshot({path:`${out}/after-${name}-${width}.png`,fullPage:true});
+    if(i===0)await page.screenshot({path:`${out}/after-${row.id.split(':').at(-1)}-${name}-${width}.png`,fullPage:true});
     if(i<exercises.length-1)await page.locator('.cp-exercise-feedback > button').click();
    }
    assert.deepEqual(errors,[]);await page.close();
+  }
   }
   // The same renderer keeps individual word models large.
   const page=await browser.newPage({viewport:{width:1366,height:768}});

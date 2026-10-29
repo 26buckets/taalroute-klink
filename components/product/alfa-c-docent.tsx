@@ -35,7 +35,9 @@ import './alfa-c-docent.css';
 export function TeacherBlockCards() {
   return (
     <>
-      {teacherGroups.map((g) => (
+      {teacherGroups.map((g) => {
+        const count = teacherTasks.filter((t) => t.group === g.id).length;
+        return (
         <a
           className="cp-activity-button"
           key={g.id}
@@ -43,15 +45,12 @@ export function TeacherBlockCards() {
         >
           <Users aria-hidden="true" />
           <span>
-            {g.title}
-            <small>
-              Samen met je docent ·{' '}
-              {teacherTasks.filter((t) => t.group === g.id).length} opdrachten
-            </small>
+            <strong>{g.title}</strong>
+            <small>{count} {count === 1 ? 'opdracht' : 'opdrachten'}</small>
           </span>
           <ArrowRight aria-hidden="true" />
         </a>
-      ))}
+      );})}
     </>
   );
 }
