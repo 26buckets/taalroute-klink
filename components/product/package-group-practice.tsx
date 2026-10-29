@@ -1,4 +1,6 @@
 'use client';
+import { recordRoundSteps } from '@/lib/round-progress';
+import { RoundProgressNotice } from './round-progress';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, RefreshCw, Search, Volume2 } from 'lucide-react';
@@ -60,7 +62,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
   </section>;
 }
 
-export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: { pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps }) {
+export function GroupRound({ progressId, pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: { progressId?: string; pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps }) {
   const exercises = useMemo(() => exerciseSet ?? groupExercises(pack, activity), [pack, activity, exerciseSet]);
   const storageKey = groupSessionKey(sessionId ?? pack.id, activity);
   const [session, setSession] = useState(() => {
@@ -72,20 +74,24 @@ export function GroupRound({ pack, activity, onAudio, onAttempt, onBack, onAgain
   useEffect(scrollToStart, [sheet]);
   useEffect(() => { try { localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...session })); } catch { /* Optional storage. */ } }, [session, storageKey]);
   const title = groupActivities.find(item => item.id === activity)!.label;
+  function recordAttempt(attempt: PracticeAttempt) {
+    if (progressId && attempt.correct) recordRoundSteps(progressId, exercises.map(e => e.exerciseId), [attempt.exerciseId]);
+    onAttempt?.(attempt);
+  }
   function restart() { try { localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
-  if (session.done) return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
-  if (activity === 'worksheet' || activity === 'worksheet-heard') return <>{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={onAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
+  if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
+  if (activity === 'worksheet' || activity === 'worksheet-heard') return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={recordAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
-  return <>
+  return <><RoundProgressNotice />
     {canUseSheet && <fieldset className="cp-practice-display" aria-label="Hoe wil je oefenen?">
       <button className="secondary-button" aria-pressed={!sheet} onClick={() => { stopMedia(); setSheet(false); }}><Eye aria-hidden="true" />Eén voor één</button>
       <button className="secondary-button" aria-pressed={sheet} onClick={() => { stopMedia(); setSheetOpened(true); setSheet(true); }}><Grid2X2 aria-hidden="true" />Op één blad</button>
     </fieldset>}
     {sheet && exerciseMenu && <ExerciseMenu {...exerciseMenu} />}
-    {sheetOpened && <div hidden={!sheet}><PracticeSheet pack={pack} exercises={exercises} title={title} showTitle={!exerciseMenu} active={sheet} onAudio={onAudio} onAttempt={onAttempt} onBack={onBack} /></div>}
+    {sheetOpened && <div hidden={!sheet}><PracticeSheet pack={pack} exercises={exercises} title={title} showTitle={!exerciseMenu} active={sheet} onAudio={onAudio} onAttempt={recordAttempt} onBack={onBack} /></div>}
     {!sheet && <PackageExerciseBrowser exerciseMenu={exerciseMenu} pack={pack} exercises={exercises.map(exercise=>exercise.componentId==='KLINK-CONTENT'?{...exercise,contentSessionId:storageKey}:exercise)} onAudio={onAudio} guided practiceRound title={title} description="" initialExerciseId={session.exerciseId}
     onPosition={exerciseId => setSession(current => current.exerciseId === exerciseId ? current : { ...current, exerciseId })}
-    onAttempt={onAttempt} onLessonDone={() => setSession(current => ({ ...current, done: true }))} onComplete={onBack} />}
+    onAttempt={recordAttempt} onLessonDone={() => setSession(current => ({ ...current, done: true }))} onComplete={onBack} />}
   </>;
 }
 

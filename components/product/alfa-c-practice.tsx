@@ -1,4 +1,5 @@
 'use client';
+import { recordPilotRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
   ArrowLeft,
@@ -59,6 +60,7 @@ export function AlfaCPractice({ selected, backHref, header }: { selected: string
     };
   }, []);
   function save(next: PilotProgress) {
+    recordPilotRounds(next);
     setProgress(next);
     try {
       localStorage.setItem(pilotStorageKey, JSON.stringify(next));

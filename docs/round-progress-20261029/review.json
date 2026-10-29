@@ -1,0 +1,37 @@
+{
+  "types": true,
+  "lint": true,
+  "build": true,
+  "unit": true,
+  "browser": true,
+  "functional": true,
+  "menu": true,
+  "regression": true,
+  "storagePreserved": true,
+  "localOnly": true,
+  "functionalStepChecks": 144,
+  "functionalNarrowChecks": 144,
+  "dailyStepChecks": 144,
+  "dailyNarrowChecks": 144,
+  "pilotSteps": 36,
+  "menuJourneys": 96,
+  "targetedBrowserChecks": 10,
+  "regressionTests": 20,
+  "browserEngines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "widths": [
+    1366,
+    768,
+    390,
+    320
+  ],
+  "storage": "Separate additive store; old stores and first responses unchanged; repeat, reload, wrong answers, sheet/worksheet, production collections, failure and recovery tested.",
+  "runtimeChangesAfterFullSuite": "Only storage warning recovery event was corrected, then unit tests and all 10 focused browser checks reran on rebuilt source.",
+  "limitations": [
+    "Browser-local progress; no account sync",
+    "No physical-device or learner pilot",
+    "Historical open image/audio reviews unchanged"
+  ]
+}

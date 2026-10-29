@@ -1,4 +1,5 @@
 'use client';
+import { recordDailyRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Eye, HelpCircle, Volume2 } from 'lucide-react';
 import { dailyAudio, dailyStorageKey, emptyDailyRecord, readDailyProgress, recordDailyAnswer, type DailyBlock, type DailyProgress, type DailyRecord, type DailyStep, type Support } from '@/lib/alfa-c-dagelijks';
@@ -18,6 +19,7 @@ export function AlfaCDailyPractice({ block, backHref, header }: { backHref: stri
     return () => { cancelAnimationFrame(frame); stopMedia(); };
   }, []);
   function save(next: DailyProgress) {
+    recordDailyRounds(next);
     setProgress(next);
     try { localStorage.setItem(dailyStorageKey, JSON.stringify(next)); setStorageError(false); }
     catch { setStorageError(true); }

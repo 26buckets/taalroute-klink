@@ -105,6 +105,8 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       }
       await page.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();
       await page.getByRole('link',{name:'Kies een ander blok'}).click();await page.locator('[data-functional-block]').first().waitFor();
+      const card=page.locator(`[data-functional-block="${block.id}"]`);assert((await card.getAttribute('class')).includes('is-complete'));assert((await card.innerText()).includes('Afgerond · 12 van 12'));
+      if(block.id==='lijst'){await card.click();await page.getByRole('button',{name:'Het hele blok opnieuw',exact:true}).click();await page.locator('[data-functional-step]').waitFor();await page.getByRole('button',{name:'Andere opdracht',exact:true}).click();await page.reload();await card.waitFor();assert((await card.getAttribute('class')).includes('is-complete'),'Completion survives repeat and reload');}
     }
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.preview.alfa-c.v1')),sentinel);
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.taalroute.attempts.v1')),'[{"sentinel":true}]');

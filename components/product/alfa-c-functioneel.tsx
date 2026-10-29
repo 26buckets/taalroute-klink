@@ -1,4 +1,5 @@
 'use client';
+import { recordFunctionalRounds } from '@/lib/alfa-c-round-progress';
 import { FunctionalResponseFields } from './alfa-c-response';
 import { emptyFunctionalResponse, functionalActions, functionalResponseReady, functionalResponseText, type FunctionalResponse } from '@/lib/alfa-c-response';
 import { AlfaCExplanation, useAlfaCReadAlong } from './alfa-c-readalong';
@@ -23,6 +24,7 @@ export function AlfaCFunctionalPractice({ block, backHref, header }: { backHref:
     return () => { cancelAnimationFrame(frame); stopMedia(); };
   }, []);
   function save(next: FunctionalProgress) {
+    recordFunctionalRounds(next);
     setProgress(next);
     try { localStorage.setItem(functionalStorageKey, JSON.stringify(next)); setStorageError(false); }
     catch { setStorageError(true); }
