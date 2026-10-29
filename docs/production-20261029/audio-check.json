@@ -11741,34 +11741,37 @@
     },
     {
       "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3",
-      "sha256": "b99f8cd4cec3c329270bc053a58d574f3e31da864734b9a5acb60247914602ca",
-      "bytes": 77952,
+      "sha256": "a7c97e87c75e1827624ce05e284132221e68a852e5839cd31c74a71ecc51cfd1",
+      "bytes": 78101,
       "metadataVerified": true,
       "hashVerified": true,
       "audioReencoded": false,
-      "audioPacketHash": "SHA256=d687dfe537df3ad9cfe27f45a78f1850459da3896d0a4dc41fb806e655a4f42d"
+      "audioPacketHash": "SHA256=d687dfe537df3ad9cfe27f45a78f1850459da3896d0a4dc41fb806e655a4f42d",
+      "previousSha256": "b99f8cd4cec3c329270bc053a58d574f3e31da864734b9a5acb60247914602ca"
     },
     {
       "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3",
-      "sha256": "7cea9ffca24ef5c8695c1435d6724815970da991af9a52316ea5a6e654d05548",
-      "bytes": 82983,
+      "sha256": "11410b60e4e0fb2bbe191b205007879925261c533fa679c89fc610617b6b0a5a",
+      "bytes": 83132,
       "metadataVerified": true,
       "hashVerified": true,
       "audioReencoded": false,
-      "audioPacketHash": "SHA256=1b1de6bada8f401c116c109bfc63c5f2efad183d8c7825c7909ec630d9cdc9fb"
+      "audioPacketHash": "SHA256=1b1de6bada8f401c116c109bfc63c5f2efad183d8c7825c7909ec630d9cdc9fb",
+      "previousSha256": "7cea9ffca24ef5c8695c1435d6724815970da991af9a52316ea5a6e654d05548"
     },
     {
       "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-db5e68a65d07.mp3",
-      "sha256": "9cd55832c73d82d009f5c5df6eeee257915d16ea38277384ef7653b8de739a25",
-      "bytes": 72935,
+      "sha256": "fc1552eb325cad7bb2290cafa0dafbe909611260363e5be9d3406cb830e915b0",
+      "bytes": 73084,
       "metadataVerified": true,
       "hashVerified": true,
       "audioReencoded": false,
-      "audioPacketHash": "SHA256=49b44edd2bb7b4b7ca4ff24b1e25c50aee3afdf9d23ba021aa2f11c9382eabe3"
+      "audioPacketHash": "SHA256=49b44edd2bb7b4b7ca4ff24b1e25c50aee3afdf9d23ba021aa2f11c9382eabe3",
+      "previousSha256": "9cd55832c73d82d009f5c5df6eeee257915d16ea38277384ef7653b8de739a25"
     }
   ],
   "count": 914,
-  "bytes": 36493883,
+  "bytes": 36494330,
   "embeddedBrand": "Taalroute",
   "roles": {
     "instruction": "h6uBOiAjLKklte8hdYio",
@@ -11852,5 +11855,32 @@
   ],
   "humanListeningReview": "open",
   "existingLiveFilesPreviouslyVerified": 5127,
-  "onlineInstructions": 29
+  "onlineInstructions": 29,
+  "genericInstructionAlbumRepair": {
+    "album": "Klink - Taalroute",
+    "audioReencoded": false,
+    "files": [
+      {
+        "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3",
+        "sha256": "a7c97e87c75e1827624ce05e284132221e68a852e5839cd31c74a71ecc51cfd1",
+        "bytes": 78101,
+        "previousSha256": "b99f8cd4cec3c329270bc053a58d574f3e31da864734b9a5acb60247914602ca",
+        "audioPacketHash": "SHA256=d687dfe537df3ad9cfe27f45a78f1850459da3896d0a4dc41fb806e655a4f42d"
+      },
+      {
+        "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-f2eda6738ed4.mp3",
+        "sha256": "11410b60e4e0fb2bbe191b205007879925261c533fa679c89fc610617b6b0a5a",
+        "bytes": 83132,
+        "previousSha256": "7cea9ffca24ef5c8695c1435d6724815970da991af9a52316ea5a6e654d05548",
+        "audioPacketHash": "SHA256=1b1de6bada8f401c116c109bfc63c5f2efad183d8c7825c7909ec630d9cdc9fb"
+      },
+      {
+        "src": "/package-audio/alfa-c-online-20261029/KAC-ONLINE-db5e68a65d07.mp3",
+        "sha256": "fc1552eb325cad7bb2290cafa0dafbe909611260363e5be9d3406cb830e915b0",
+        "bytes": 73084,
+        "previousSha256": "9cd55832c73d82d009f5c5df6eeee257915d16ea38277384ef7653b8de739a25",
+        "audioPacketHash": "SHA256=49b44edd2bb7b4b7ca4ff24b1e25c50aee3afdf9d23ba021aa2f11c9382eabe3"
+      }
+    ]
+  }
 }
