@@ -1,5 +1,6 @@
 /* Learner layout trial. Restore ui-before-broad-review-20261017 for the prior UI. */
 .learner-app { --radius: 4px; }
+.learner-nav nav button.active { box-shadow: none; }
 .learner-app :is(button, select, input) { border-radius: var(--radius); }
 .learner-app :is(button, select, input):focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .learner-app button > svg { flex-shrink: 0; }

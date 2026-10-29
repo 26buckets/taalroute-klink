@@ -5,7 +5,7 @@ import audio from '../data/klink-alfa-c-audio.json' with {type:'json'};
 const base=process.env.KLINK_URL??'http://127.0.0.1:18862',out=process.env.KLINK_ALFAC_OUTPUT??'outputs/alfa-c-guide-audio';fs.mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome'});
 try{
- const page=await browser.newPage();await page.goto(base+'/#learner/alfa-c');await page.locator('[data-pilot-block]').first().waitFor();
+ const page=await browser.newPage();await page.goto(base+'/#learner/chapters/alfa-c-words/sequence?level=alfa-c&help=practice');await page.locator('[data-pilot-block]').first().waitFor();
  await page.evaluate(clips=>{
   window.codecClips=clips;window.codecChecks=[];
   const button=document.createElement('button');button.textContent='Controleer audiobestanden';button.style.cssText='position:fixed;top:100px;left:300px;z-index:99999';document.body.appendChild(button);
@@ -22,11 +22,11 @@ try{
    pause(){clearTimeout(this.timer);if(this.playing){this.playing=false;window.activeCount--;}}
   };
  });
- await fail.goto(base+'/#learner/alfa-c');await fail.locator('[data-pilot-block="winkel"]').click();
+ await fail.goto(base+'/#learner/chapters/alfa-c-words/sequence?level=alfa-c&help=practice');await fail.locator('[data-pilot-block="winkel"]').click();
  await fail.getByRole('button',{name:'Luister',exact:true}).click();await fail.getByRole('alert').waitFor();assert(await fail.getByRole('button',{name:'Verder',exact:true}).isDisabled(),'Instruction alone must not unlock target completion');
  await fail.evaluate(()=>window.failTarget=false);await fail.getByRole('button',{name:'Luister',exact:true}).click();await fail.waitForFunction(()=>!document.querySelector('.pilot-footer button').disabled);
  assert.equal(await fail.evaluate(()=>window.maxActive),1);
- await fail.getByRole('button',{name:'Andere oefening',exact:true}).click();assert.equal(await fail.evaluate(()=>window.activeCount),0);
+ await fail.getByRole('button',{name:'Andere opdracht',exact:true}).click();assert.equal(await fail.evaluate(()=>window.activeCount),0);
  fs.writeFileSync(out+'/native-audio-checks.json',JSON.stringify({nativeDecodedFiles:codec,batchDecoderPlaybackRate:4,instructionCannotReplaceTarget:true,errorRetry:true,singleActiveAudio:true,humanListeningReview:false},null,2)+'\n');
  await page.getByRole('button',{name:'Controleer audiobestanden',exact:true}).evaluate(el=>el.remove());
  await page.screenshot({path:out+'/audio-overzicht.png'});console.log('PASS 36 native audio files, correct instruction/target separation, failed target stays locked, retry and navigation cancellation.');
