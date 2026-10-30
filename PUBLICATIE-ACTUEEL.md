@@ -1,3 +1,19 @@
+# Actuele KLINK-publicatie — noot en mappen, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `361c1d9da0f7a12514c326650d6660c3b8084cb8`, schone canonieke main. Worker `6bf0d7a7-af26-46bf-b89b-dcfc543b8431`.
+
+Op Nico’s concrete opdracht zijn alleen de twee woordopnamen hersteld: noot circa 4 dB luider, mappen opnieuw Nederlands ingesproken. Remko blijft oefenstem; instructies en overige audio blijven behouden. Nieuwe unieke URLs voorkomen oude browserkopieën. Beide audioregisters volgen de twee nieuwe koppelingen; historische bestanden blijven bytegelijk bewaard.
+
+Lokaal: typen, gerichte lint, build, exact twee woorden, 302 behouden lessen, logo, navigatie, integratie en de bestaande publicatiepoort geslaagd. De poort controleerde 338 woordopnamen en 1.979 aangesloten audiobestanden. Twee bestaande algemene registertests falen ook op de ongewijzigde basis (Alfa C-instructieslot en dubbele papierdictee-instructie); baselinevergelijking vastgelegd, geen algemene foutloze testclaim.
+
+Online: de echte afspeelknoppen werken in Chromium en WebKit op desktop en mobiel; twee nieuwe en twee oorspronkelijke opnamen, beide registers en alle gebouwde JS/CSS-bestanden bytegelijk teruggelezen. Ingebedde artiest, albumartiest en uitgever zijn Taalroute; album Klink - Taalroute. Menselijke luistergoedkeuring, fysieke telefoonproef en cursistenpilot zijn niet geclaimd.
+
+Vrijgave: `docs/klink-owner-release-word-repairs-20261030.json`. Bewijs: `docs/word-repairs-20261030/`. Herstel en bron: https://drive.google.com/file/d/1HMWcNmw_D-XcR5CaGxwJ88x80qRcc6Bj/view . 29 TTS-credits inclusief verworpen eerste pogingen; totale herstelreserve maximaal 100 credits. Geen GitHub Actions-workflows of betaalde cloudcontroles.
+
+Controleer vóór een volgende publicatie release.json; uitsluitend een afstammeling van deze livecommit via npm run deploy. De registratiecommit verandert de runtime niet.
+
+## Historie
+
 # Actuele KLINK-publicatie — compacte, gecontroleerde beelden, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `89fe121338c1c08ed7238dceaba794a953c7fec2`, schone canonieke main. Build `2026-10-30T12:23:26.924Z`. Worker `2d984bfd-9824-4792-b187-c0bca86104af`.
