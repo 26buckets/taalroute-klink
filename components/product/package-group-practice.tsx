@@ -62,11 +62,11 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
   </section>;
 }
 
-export function GroupRound({ progressId, pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: { progressId?: string; pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps }) {
+export function GroupRound({ progressId, progressExerciseIds, legacySessionId, pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: { progressId?: string; progressExerciseIds?: string[]; legacySessionId?: string; pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps }) {
   const exercises = useMemo(() => exerciseSet ?? groupExercises(pack, activity), [pack, activity, exerciseSet]);
   const storageKey = groupSessionKey(sessionId ?? pack.id, activity);
   const [session, setSession] = useState(() => {
-    try { return restoreGroupSession(localStorage.getItem(storageKey), exercises); } catch { return { done: false }; }
+    try { return restoreGroupSession(localStorage.getItem(storageKey) ?? (legacySessionId ? localStorage.getItem(groupSessionKey(legacySessionId, activity)) : null), exercises); } catch { return { done: false }; }
   });
   const [initialId] = useState(session.exerciseId);
   const [sheet, setSheet] = useState(false);
@@ -75,10 +75,10 @@ export function GroupRound({ progressId, pack, activity, onAudio, onAttempt, onB
   useEffect(() => { try { localStorage.setItem(storageKey, JSON.stringify({ version: 1, ...session })); } catch { /* Optional storage. */ } }, [session, storageKey]);
   const title = groupActivities.find(item => item.id === activity)!.label;
   function recordAttempt(attempt: PracticeAttempt) {
-    if (progressId && attempt.correct) recordRoundSteps(progressId, exercises.map(e => e.exerciseId), [attempt.exerciseId]);
+    if (progressId && attempt.correct) recordRoundSteps(progressId, progressExerciseIds ?? exercises.map(e => e.exerciseId), [attempt.exerciseId]);
     onAttempt?.(attempt);
   }
-  function restart() { try { localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
+  function restart() { try { if (legacySessionId) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
   if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={recordAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;

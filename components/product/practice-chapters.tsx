@@ -14,7 +14,7 @@ import { ProductionRound } from './production-round';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
-import { availableChapterActivities, availableChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterCollections, chapterExerciseChoices, chapterHash, matchesChapterSelection, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
+import { availableChapterActivities, availableChapterCollections, displayedChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterExerciseChoices, chapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel, type ContentHelp } from '@/lib/content-levels';
 import { MyRoute, PictureHelp, useRouteSettings } from './route-settings';
 import { practiceLocation } from '@/lib/practice-navigation';
@@ -25,16 +25,16 @@ const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzl
 const pageSize = 12;
 // Temporary orientation during beta; remove all counters with this switch.
 const showBetaCounts = true;
-function ExerciseCount({ count }: { count: number }) {
-  return showBetaCounts ? <small className="cp-beta-count">{count} {count === 1 ? 'oefening' : 'oefeningen'}</small> : null;
+function ExerciseCount({ count, words = false }: { count: number; words?: boolean }) {
+  return showBetaCounts ? <small className="cp-beta-count">{count} {words ? count === 1 ? 'woord' : 'woorden' : count === 1 ? 'oefening' : 'oefeningen'}</small> : null;
 }
 const collectionCount = (items: ReturnType<typeof availableChapterCollections>) => items.reduce((total, item) => total + (item.exerciseCount ?? item.exercises.length), 0);
 const readReview = () => { try { return parseLearningReview(localStorage.getItem(learningReviewKey)); } catch { return {}; } };
 function revealCollection(limits: Record<string, number>, location: ChapterLocation) {
   if (!location.activity || !location.collection) return limits;
   const key = `${location.chapter}/${location.activity}/${location.level}/${location.help ?? 'all'}`;
-  const items = chapterCollections(location.activity).filter(item => matchesChapterSelection(item, location));
-  const needed = Math.ceil((items.findIndex(item => item.id === location.collection) + 1) / pageSize) * pageSize;
+  const items = displayedChapterCollections(location.activity, location);
+  const needed = Math.ceil((items.findIndex(item => item.id === location.collection || item.wordRound?.sourceId === location.collection) + 1) / pageSize) * pageSize;
   return (limits[key] ?? pageSize) >= needed ? limits : { ...limits, [key]: needed };
 }
 
@@ -84,7 +84,7 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
   const activities = chapter?.activities.map(id => groupActivities.find(item => item.id === id)!) ?? [];
   const activity = activities.find(item => item.id === location.activity);
   const reviewMode = activity?.id === 'learning-review';
-  const visible = location.activity ? availableChapterCollections(location.activity, location, review) : [];
+  const visible = location.activity ? displayedChapterCollections(location.activity, location, review) : [];
   const availableActivities = chapter ? availableChapterActivities(chapter.id, location, review) : [];
   const availableLevels = new Set(chapterLevels.filter(({ id: level }) =>
     (location.activity ? [location.activity] : chapter?.activities ?? groupActivities.map(item => item.id))
@@ -98,12 +98,12 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
   const openChapter = (id: string) => open({ chapter: id, ...chapterSelection(id) });
   const modeAvailable = (help: ContentHelp) => countMode(help) > 0;
   const openMode = (help: ContentHelp) => open({ ...location, help, collection: undefined });
-  const collection = visible.find(item => item.id === location.collection);
+  const collection = visible.find(item => item.id === location.collection) ?? (location.activity && location.collection ? availableChapterCollections(location.activity, location, review).find(item => item.id === location.collection) : undefined);
   const Round = collection?.contentUrl ? ProductionRound : GroupRound;
   const exerciseChoices = collection ? chapterExerciseChoices(location) : [];
   const sequenceBlock = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.find(block => block.id === location.collection) : undefined;
   const activitySelected = Boolean(activity || location.sequence);
-  const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, progressId: sequenceProgressId(sequenceChapter.kind, block.id), total: block.steps.length, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, progressId: collectionProgressId(location.activity!, item.id, item.contentUrl), total: item.exerciseCount ?? item.exercises.length, image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${(item.help ?? exerciseSetHelp(item.exercises)) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}${item.placeholderCount ? ` · ${item.placeholderCount} afbeeldingen volgen` : ''}` }));
+  const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, progressId: sequenceProgressId(sequenceChapter.kind, block.id), total: block.steps.length, progressTotal: block.steps.length, exerciseIds: undefined as string[] | undefined, words: false, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, progressId: collectionProgressId(location.activity!, item.wordRound?.sourceId ?? item.id, item.contentUrl), total: item.wordRound?.exerciseIds.length ?? item.exerciseCount ?? item.exercises.length, progressTotal: item.wordRound?.allExerciseIds.length ?? item.exerciseCount ?? item.exercises.length, exerciseIds: item.wordRound?.exerciseIds, words: Boolean(item.wordRound), image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${(item.help ?? exerciseSetHelp(item.exercises)) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}${item.placeholderCount ? ` · ${item.placeholderCount} afbeeldingen volgen` : ''}` }));
   // Example words identify a collection, but must not reveal a listening/spelling answer during play.
   const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' ? activity?.label : collection?.title) ?? activity?.label ?? (location.sequence ? sequenceChapter?.title : undefined) ?? chapter?.title ?? 'Start';
   const toCollections = () => open({ ...location, collection: undefined });
@@ -123,11 +123,11 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
     {activitySelected && !collection && <>
       <RoundProgressNotice />
       <div className="cp-chapter-collections">{items.slice(0, limit).map(item => {
-        const done = progressReady ? roundProgressCount(item.progressId, item.total) : 0;
+        const done = progressReady ? roundProgressCount(item.progressId, item.progressTotal, item.exerciseIds) : 0;
         const complete = item.total > 0 && done === item.total;
         return <button key={item.id} className={`cp-chapter-collection${complete ? ' is-complete' : ''}`} data-collection={item.id} {...(sequenceChapter ? { [`data-${sequenceChapter.kind}-block`]: item.id } : {})} onClick={() => open({ ...location, collection: item.id })}>
         {item.image ? <Image src={item.image} width={96} height={96} alt="" /> : <BookOpen aria-hidden="true" />}
-        <span><strong>{item.title}</strong><small>{item.summary}</small><ExerciseCount count={item.total} />{done > 0 && <small className="cp-round-status">{complete && <Check aria-hidden="true" />}{complete ? `Afgerond · ${done} van ${item.total}` : `${done} van ${item.total} gedaan`}</small>}</span><ArrowRight aria-hidden="true" />
+        <span><strong>{item.title}</strong><small>{item.summary}</small><ExerciseCount count={item.total} words={item.words} />{done > 0 && <small className="cp-round-status">{complete && <Check aria-hidden="true" />}{complete ? `Afgerond · ${done} van ${item.total}` : `${done} van ${item.total} gedaan`}</small>}</span><ArrowRight aria-hidden="true" />
       </button>; })}</div>
       {!items.length && <div className="cp-unavailable">
         <output>{reviewMode ? 'Je hebt nu niets om te herhalen.' : `Deze oefening is niet beschikbaar voor ${levelLabel(location.level)}.`}</output>
@@ -141,7 +141,7 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
     </>}
     <div className="cp-direct-help"><PictureHelp showPracticeChoice={false} selection={location} availableLevels={availableLevels} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} /></div>
     </div>}
-    {collection && activity && <Round progressId={collectionProgressId(activity.id, collection.id, collection.contentUrl)} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+    {collection && activity && <Round progressId={collectionProgressId(activity.id, collection.wordRound?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={collection.wordRound?.allExerciseIds} legacySessionId={collection.wordRound && collection.wordRound.sourceId !== collection.id ? `chapter:${activity.id}:${collection.wordRound.sourceId}` : undefined} exerciseIds={collection.wordRound?.exerciseIds} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);
       if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection });
     } }} key={`${activity.id}:${collection.id}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}

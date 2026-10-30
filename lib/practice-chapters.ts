@@ -1,4 +1,5 @@
 import { productionIndex, productionPack } from './production-practice.ts';
+import { chapterWordRounds, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
@@ -30,7 +31,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string; wordRound?: WordRound & { sourceId: string; allExerciseIds: string[] } };
 export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -55,6 +56,15 @@ export function availableChapterCollections(activity: GroupActivity, selection: 
   return chapterCollections(activity).filter(item => matchesChapterSelection(item, selection))
     .map(item => activity === 'learning-review' ? { ...item, exercises: item.exercises.filter(exercise => review[exercise.exerciseId]?.due <= now) } : item)
     .filter(item => item.exerciseCount || item.exercises.length);
+}
+
+export function displayedChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}) {
+  const collections = availableChapterCollections(activity, selection, review);
+  return activity === 'meet' ? collections.flatMap(chapterWordRounds) : collections;
+}
+
+function findChapterCollection(activity: GroupActivity, id?: string) {
+  return chapterCollections(activity).flatMap(item => activity === 'meet' ? [item, ...chapterWordRounds(item)] : [item]).find(item => item.id === id);
 }
 
 export function availableChapterActivities(chapter: string, selection: ChapterLocation, review: LearningReview = {}) {
@@ -147,8 +157,9 @@ export function chapterHash(location: ChapterLocation = { level: 'all' }) {
 export function chapterExerciseChoices(location: ChapterLocation) {
   if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
   // Only switch within the exact existing collection and its selected level/help filters.
+  const sourceId = findChapterCollection(location.activity, location.collection)?.wordRound?.sourceId ?? location.collection;
   return groupActivities.filter(activity => activity.id !== 'learning-review').flatMap(activity => {
-    const collection = chapterCollections(activity.id).find(item => item.id === location.collection && matchesChapterSelection(item, location));
+    const collection = chapterCollections(activity.id).find(item => item.id === sourceId && matchesChapterSelection(item, location));
     const chapters = practiceChapters.filter(chapter => chapter.activities.includes(activity.id));
     const chapter = chapters.find(chapter => chapter.id === location.chapter) ?? chapters[0];
     return collection && chapter ? [{ ...activity, chapter: chapter.id, collection: collection.id }] : [];
@@ -174,7 +185,7 @@ export function parseChapterHash(hash: string): ChapterLocation {
     }
     if (!chapter) return chapterId ? fallback : selection;
     const activity = chapter.activities.find(id => id === activityId);
-    const candidate = activity && chapterCollections(activity).find(item => item.id === collection);
+    const candidate = activity && findChapterCollection(activity, collection);
     // Old direct links keep their exercise, with its existing support requirement visible.
     if (!selection.help && candidate) selection.help = candidate.help ?? exerciseSetHelp(candidate.exercises);
     if (!selection.help && activity) {
