@@ -1,0 +1,24 @@
+{
+  "approvedBy": "Nico",
+  "publicationApproved": true,
+  "approvedAt": "2026-10-31",
+  "userRequest": "synoniemen moeten niet terugkomen op de woorden bekijken pagina. alleen maar onder A1, A2 en B1 zoals die nu al staat, dus hij hoeft niet op een andere pagina terug te komen.",
+  "baselineSourceCommit": "02f16c1fdcb540550de91510c1a11c7ca29c4bbd",
+  "changedFiles": [
+    "components/product/learner-app.tsx",
+    "scripts/check-synonym-placement-release.mjs",
+    "scripts/check-word-round-continuity-release.mjs",
+    "scripts/test-synonyms-browser.mjs",
+    "scripts/test-synonyms.mjs"
+  ],
+  "files": {
+    "components/product/learner-app.tsx": "28424fddb5913f210746e0222895673bedc175c90c8ebc506951a322078a5e59",
+    "scripts/check-word-round-continuity-release.mjs": "e8c37dee784d8981638144532c7a12eb460fd39dbd112eabf7da8d8d532eb930",
+    "scripts/check-synonym-placement-release.mjs": "fdadd7d31eb74c059b68f14d02b240babe2ad2eaa27cd819308d1b5c03e88677",
+    "scripts/test-synonyms.mjs": "b2dcc6a88b84308704585ab20a8da1ec55a6654552541c99caad329ac5e125d0",
+    "scripts/test-synonyms-browser.mjs": "d40e0d994a2d93f1263ae09b619fc9656fa6a9610301e575d8e7de37eb2c53e4"
+  },
+  "scope": "Remove only duplicate Synoniemen link from WordLibrary. Retain A1/A2/B1 entrance, every synonym form, audio, content and storage. Keyboard is advice only, no input behavior changed.",
+  "publicationContext": "Gerichte vervolgcorrectie in de echte, reeds gepubliceerde app binnen de bestaande publicatieopdracht.",
+  "workflows": "All heavy checks local; no GitHub workflows added."
+}

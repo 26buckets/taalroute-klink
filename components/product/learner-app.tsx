@@ -202,7 +202,6 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
     <div className="learner-page word-library-page">
       <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Woorden bekijken</h1><small className="cp-context-meta">{visibleWords.length} woorden</small></header>
       <div className="cp-page-workspace">
-      <a className="secondary-button" href={chapterHash({ chapter: 'words', activity: 'synonyms', level: 'all', help: 'practice' })}>Synoniemen<ArrowRight aria-hidden="true" /></a>
       <p>Tik en luister.</p>
       <div className="word-filters" aria-label="Filter woorden">
         <label>Welke woorden?<select aria-label="Welke woorden?" value={source} onChange={event => setSource(event.target.value as WordLibrarySource)}><option value="lessons">Woorden uit de lessen</option><option value="extra">Meer woorden</option><option value="saved">Bewaard ({savedWordIds.length})</option></select></label>
