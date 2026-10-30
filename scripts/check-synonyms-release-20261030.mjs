@@ -14,6 +14,7 @@ export const synonymScopeFiles = [
   'scripts/check-hidden-b2-release.mjs', 'scripts/check-synonyms-release-20261030.mjs', 'scripts/test-synonyms-release-20261030.mjs',
   'scripts/test-practice-chapters.mjs', 'scripts/test-synonyms.mjs', 'scripts/test-synonyms-browser.mjs', 'scripts/test-synonym-modes-browser.mjs',
   'scripts/test-synonym-audio-browser.mjs',
+  'scripts/test-publication-proof.mjs',
 ];
 
 export function assertSynonymAudio(clips, bindings) {

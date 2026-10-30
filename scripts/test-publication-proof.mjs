@@ -2,7 +2,7 @@ import { verifyDialogueRelease, readBeforeDialogueRelease } from './check-dialog
 import { verifySoundAudioRelease, readBeforeSoundAudioRelease } from './check-sound-audio-release.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -26,6 +26,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     cpSync('lib', join(dir, 'lib'), { recursive: true });
     cpSync('data', join(dir, 'data'), { recursive: true });
+    for (const name of readdirSync('scripts').filter(name => /^check-.*\.mjs$/.test(name))) copyFileSync(join('scripts', name), join(dir, 'scripts', name));
     if (changeWordbuild) {
       const path = join(dir, 'data/klink-lexicon-wordbuild-rest.json');
       const catalog = JSON.parse(readFileSync(path));
