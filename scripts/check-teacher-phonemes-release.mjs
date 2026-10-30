@@ -9,11 +9,11 @@ export function verifyTeacherPhonemesRelease(read=readFileSync){
  const r=JSON.parse(read('docs/klink-owner-release-teacher-phonemes-20261030.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert(r.userRequest.includes('Pak ook die drie klanken mee.'));
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const expected=['components/product/teacher-classroom.tsx','public/content/klink-docent-audio.json','public/klank-audio/docent/m-20261030.mp3','public/klank-audio/docent/a-20261030.mp3','public/klank-audio/docent/t-20261030.mp3','scripts/test-teacher-classroom.mjs','scripts/test-teacher-phonemes-browser-20261030.mjs','scripts/check-teacher-phonemes-release.mjs',r.previousGate].sort();
+ const expected=['components/product/teacher-classroom.tsx','public/content/klink-docent-audio.json','public/klank-audio/docent/m-20261030.mp3','public/klank-audio/docent/a-20261030.mp3','public/klank-audio/docent/t-20261030.mp3','scripts/test-teacher-classroom.mjs','scripts/test-teacher-phonemes-browser-20261030.mjs','scripts/check-teacher-phonemes-release.mjs',r.previousGate].sort((a,b)=>a.localeCompare(b));
  assert(/^scripts\/check-[a-z0-9-]+\.mjs$/.test(r.previousGate));
  const roots=['docs/KLINK-DOCENTHANDLEIDING.md','app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort();
- assert.deepEqual(changed,expected);assert.deepEqual([...r.changedFiles].sort(),expected);
+ const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ assert.deepEqual(changed,expected);assert.deepEqual([...r.changedFiles].sort((a,b)=>a.localeCompare(b)),expected);
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')),['public/content/klink-docent-audio.json']);
  const original=JSON.parse(git('show',`${r.baselineSourceCommit}:public/content/klink-docent-audio.json`));assert.deepEqual(original,{m:null,a:null,t:null});
