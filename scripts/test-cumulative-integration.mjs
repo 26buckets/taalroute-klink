@@ -1,3 +1,5 @@
+import {verifyContentAmendments,repairBaseline} from './check-content-repair-release.mjs';
+import {execFileSync} from 'node:child_process';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -11,11 +13,13 @@ import {taalroutePackages} from '../lib/taalroute-packages.ts';
 import {selectUsageExercises,defaultRouteSettings} from '../lib/learner-route.ts';
 const registry=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-18/klink-productieregie/registry.json'));
 const candidates=Object.fromEntries(registry.threads.map(row=>[row.domain,JSON.parse(readFileSync(row.workdir+'/release-candidate.json'))]));
+verifyContentAmendments();
+const originalItems=JSON.parse(execFileSync('git',['show',repairBaseline+':data/klink-imported-practice.json'],{maxBuffer:20e6})).items;
 const admissions=JSON.parse(readFileSync('outputs/cumulative-integration-20261018/admissions.json'));
 test('All admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery',()=>{
  assert(importedItems.length>1300,'Real content must be integrated, not only an empty importer');
  for(const row of registry.threads)assert.equal(contentHash(readFileSync(row.workdir+'/release-candidate.json')),admissions[row.domain].candidateSha256,'Producer changed; repeat source review');
- for(const item of importedItems){const raw=candidates[item.domain].items.find(row=>row.id===item.id);assert(raw);const proof=admissions[item.domain].items.find(row=>row.id===item.id);assert.equal(proof.itemSha256,contentHash(raw));assert.equal(proof.renderedItemSha256,contentHash(item));assert.equal(raw.audioRequired,false);assert.equal(raw.blockers.length,0);assert.deepEqual(contentTaskIssues(item),[]);const exercise=importedExercise(item);assert.equal(exercise.reviewEligible,false);assert.equal(exercise.independentReading,false);assert.equal(exercise.requiresAudio,false);assert.equal(exercise.access,'teacher-supported');}
+ for(const item of importedItems){const raw=candidates[item.domain].items.find(row=>row.id===item.id);assert(raw);const proof=admissions[item.domain].items.find(row=>row.id===item.id);assert.equal(proof.itemSha256,contentHash(raw));assert.equal(proof.renderedItemSha256,contentHash(originalItems.find(x=>x.id===item.id)));assert.equal(raw.audioRequired,false);assert.equal(raw.blockers.length,0);assert.deepEqual(contentTaskIssues(item),[]);const exercise=importedExercise(item);assert.equal(exercise.reviewEligible,false);assert.equal(exercise.independentReading,false);assert.equal(exercise.requiresAudio,false);assert.equal(exercise.access,'teacher-supported');}
 });
 test('Every admitted item is reachable once in its chapter and in every source-linked canonical list',()=>{
  for(const route of importedRoutes){const expected=importedItems.filter(item=>item.domain===route.domain).map(item=>`content:${item.id}`).sort((a,b)=>a.localeCompare(b));const collections=chapterCollections(route.id);const actual=collections.flatMap(c=>c.exercises.map(e=>e.exerciseId));assert.deepEqual(actual.sort((a,b)=>a.localeCompare(b)),expected);}

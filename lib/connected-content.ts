@@ -24,14 +24,16 @@ export function contentForStep(step: Step) {
 export function contentReadingConditions(item: ConnectedContent, step: Step) {
   const prepared = new Set([...(step.known ?? []), ...(step.newWords ?? []), ...(step.returning ?? [])]);
   const words = item.readingWordIds.map(id => wordsById.get(id)!);
+  const meanings: Record<string, string | undefined> = item.reading.meaningOverrides ?? {};
   const preparedUnits = new Set([...prepared].flatMap(id => wordsById.get(id)?.reading.requirements ?? []));
   return {
     wordIds: words.map(word => word.id),
-    otherWords: words.filter(word => !prepared.has(word.id)).map(word => ({ id: word.id, word: word.word, meaning: word.meaning, firstReading: word.firstReading })),
+    // Knowing the spelling or another sense does not prepare this contextual meaning.
+    otherWords: words.filter(word => !prepared.has(word.id) || meanings[word.id]).map(word => ({ id: word.id, word: word.word, meaning: meanings[word.id] ?? word.meaning, firstReading: word.firstReading })),
     outsideWordBank: item.reading.outsideWordBank,
     requiredUnits: unique(words.flatMap(word => word.reading.requirements)),
     unitsOutsideStep: unique(words.flatMap(word => word.reading.requirements)).filter(unit => !preparedUnits.has(unit)),
-    wordConditions: unique(words.flatMap(word => [...word.reading.conditions, ...('additionalConditions' in word.firstReading && word.firstReading.additionalConditions ? [word.firstReading.additionalConditions] : [])])),
+    wordConditions: unique(words.flatMap(word => [...word.reading.conditions, ...('additionalConditions' in word.firstReading && word.firstReading.additionalConditions ? [word.firstReading.additionalConditions] : []), ...(meanings[word.id] ? [`Betekenis van ${word.word} in deze bron: ${meanings[word.id]}`] : [])])),
     access: 'supported-listening' as const,
     independentReading: false,
     note: 'Bereid betekenis, verwijswoorden en zinsverband mondeling voor. Controleer ook namen en overige woordvormen buiten de woordenbank. Een woordverband of klankoverlap is geen bewijs dat de hele tekst zelfstandig leesbaar is.',

@@ -34,10 +34,10 @@ export function verifyDialogueRelease(release = read('docs/klink-owner-release-g
  git('merge-base', '--is-ancestor', release.liveSourceCommit, release.baselineSourceCommit);
  git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
  assert.equal(hash(readFileSync(release.previousAuthorization)), hash(git('show', `${release.baselineSourceCommit}:${release.previousAuthorization}`)));
- const repair = read('data/klink-dialogue-repair.json');
+ const repair = JSON.parse(beforePlayback('data/klink-dialogue-repair.json'));
  assert.equal(repair.dialogues.length, 128);
- const original = read('data/klink-connected-content.json');
- assert.equal(hash(readFileSync('data/klink-connected-content.json')), hash(git('show', `${release.baselineSourceCommit}:data/klink-connected-content.json`)));
+ const original = JSON.parse(beforePlayback('data/klink-connected-content.json'));
+ assert.equal(hash(beforePlayback('data/klink-connected-content.json')), hash(git('show', `${release.baselineSourceCommit}:data/klink-connected-content.json`)));
  const cast = new Map(repair.cast.map(c => [c.personId, c]));
  const media = new Set();
  for (const d of repair.dialogues) {

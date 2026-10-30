@@ -1,0 +1,64 @@
+✔ Stable script IDs preserve exact language and separate instruction from target (0.552458ms)
+✔ Later binding is exact, reviewed, branded and never silently replaces current audio (0.093042ms)
+✖ All active word, context, instruction and comprehension audio IDs have a register slot (6.73725ms)
+✔ Prepared scripts remain unplaced, deduplicated by role, with honest archive status (58.151209ms)
+✖ Inventory generation is deterministic, and does not mutate the learner curriculum (137.782166ms)
+✔ Broader domains do not claim a full method from renderers or exercise counts (0.091791ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 4
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 928.2415
+
+✖ failing tests:
+
+test at scripts/test-audio-register.mjs:62:1
+✖ All active word, context, instruction and comprehension audio IDs have a register slot (6.73725ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-release-20261030/scripts/test-audio-register.mjs:74:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/test-audio-register.mjs:115:1
+✖ Inventory generation is deterministic, and does not mutate the learner curriculum (137.782166ms)
+  AssertionError [ERR_ASSERTION]: Conflicting file: groep-papierdictee
+  + actual - expected
+  
+  + undefined
+  - '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3'
+  
+      at add (file:///private/tmp/klink-release-20261030/scripts/build-audio-register.mjs:44:14)
+      at buildAudioRegister (file:///private/tmp/klink-release-20261030/scripts/build-audio-register.mjs:127:5)
+      at TestContext.<anonymous> (file:///private/tmp/klink-release-20261030/scripts/test-audio-register.mjs:144:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

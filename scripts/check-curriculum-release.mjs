@@ -955,7 +955,7 @@ try {
     for (const item of review.records.filter(row => row.decision === 'excluded')) { requireProof(!excluded.has(item.id) && item.reasons.length > 0); excluded.add(item.id); }
     requireProof(review.records.length === admission.items.length + review.records.filter(row => row.decision === 'excluded').length);
   }
-  const imported = read('../data/klink-imported-practice.json').items;
+  const imported = JSON.parse(readBeforeDialogues('data/klink-imported-practice.json')).items;
   requireProof(admitted.size === scope.included && imported.length === scope.included && excluded.size === scope.excluded && pending === scope.pendingClassification && new Set(imported.map(item => item.id)).size === imported.length);
   for (const item of imported) requireProof(!excluded.has(item.id) && admitted.get(item.id)?.domain === item.domain && admitted.get(item.id)?.renderedItemSha256 === digest(item) && importedItemIssues(item).length === 0);
   ownerAuthorized = true;

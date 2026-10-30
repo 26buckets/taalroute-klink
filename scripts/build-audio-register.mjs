@@ -33,6 +33,9 @@ export function buildAudioRegister(inventory) {
   const active = new Map();
   const references = new Map();
   const add = (row) => {
+    const canonical = [...instructions.items, ...comprehension.items].find(item => item.id === row.id && normalized(item.text) === normalized(row.text));
+    const src = resolveRegisteredAudio(row.id, row.text, row.role, row.src ?? canonical?.src);
+    const fileExists = src && existsSync(join(root, 'public', src));
     const prior = active.get(row.id);
     if (prior) {
       assert.equal(
@@ -41,13 +44,11 @@ export function buildAudioRegister(inventory) {
         `Conflicting transcript: ${row.id}`,
       );
       assert.equal(prior.role, row.role, `Conflicting voice role: ${row.id}`);
-      assert.equal(prior.src, row.src, `Conflicting file: ${row.id}`);
+      assert.equal(prior.src, fileExists ? src : undefined, `Conflicting file: ${row.id}`);
       for (const key of ['wordIds', 'lessonIds', 'sectionIds'])
         prior[key] = unique([...prior[key], ...(row[key] ?? [])]);
       return;
     }
-    const src = resolveRegisteredAudio(row.id, row.text, row.role, row.src);
-    const fileExists = src && existsSync(join(root, 'public', src));
     active.set(row.id, {
       wordIds: [],
       lessonIds: [],
