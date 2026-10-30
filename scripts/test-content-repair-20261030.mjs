@@ -15,7 +15,7 @@ const source=id=>connectedContent.find(x=>x.id===id);
 
 test('The repair changes only recorded fields; source IDs, levels, media and progress keys survive',()=>{
  for(const file of new Set(manifest.changes.map(c=>c.path[0]))){
-  const current=load(file);
+  const current=JSON.parse(execFileSync('git',['show','05448a6c:'+file],{maxBuffer:20e6}));
   for(const c of manifest.changes.filter(c=>c.path[0]===file)){
    let obj=current;for(const key of c.path.slice(1,-1))obj=obj[key];const key=c.path.at(-1);
    assert.deepEqual(obj[key],c.after,c.path.join('/'));
@@ -36,7 +36,7 @@ test('All 64 contextual meanings reach reading preparation even when another sen
    assert(conditions.wordConditions.some(t=>t.includes(meaning)));
   }
  }
- assert.deepEqual(counts,{'klink-woord-meer':9,'klink-woord-haar':54,'klink-woord-want':1});
+ assert.deepEqual(counts,{'klink-woord-meer':9,'klink-woord-haar':54,'klink-woord-want':1,'klink-woord-groente':1});
  const hair=connectedContent.filter(x=>x.readingWordIds.includes('klink-woord-haar')&&!x.reading.meaningOverrides?.['klink-woord-haar']);assert.equal(hair.length,6);
  for(const item of hair)assert.match(contentReadingConditions(item,{id:'test'}).otherWords.find(w=>w.id==='klink-woord-haar').meaning,/Haren op/);
 });

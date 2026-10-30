@@ -32,13 +32,18 @@ function beforeDialogueRepair(exercise) {
   delete prompt.image;
   return {...exercise, prompt, textBlocks: source.blocks};
 }
+const contentAmendments = new Map(JSON.parse(readFileSync('docs/content-audio-repair-20261030/package-amendments.json')).map(row => [row.id,row]));
+function beforeContentRepair(exercise) {
+ const change=contentAmendments.get(exercise.exerciseId);if(!change)return exercise;
+ assert.equal(createHash('sha256').update(JSON.stringify(exercise)).digest('hex'),change.afterSha256,exercise.exerciseId);return change.before;
+}
 const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)), (_key, value) => imageChanges.get(value) ?? audioChanges.get(value) ?? value)).digest('hex');
 test('15 authoritative entrances preserve all 302 exact lessons and exercise payloads',()=>{
   assert.equal(packs.length,15);
   assert.equal(sections.release.curriculumInputHash,curriculum.release.inputHash);
   assert.deepEqual(sections.sections.flatMap(s=>s.wordIds).sort(),curriculum.words.map(w=>w.id).sort());
   assert.equal(hash(packs.flatMap(p=>p.lessons)),before.lessons);
-  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeDialogueRepair)),before.exercises);
+  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeDialogueRepair).map(beforeContentRepair)),before.exercises);
   assert.equal(packs.flatMap(p=>p.lessons).length,302);
   for(const [i,p] of packs.entries()) {
     const s=sections.sections[i];

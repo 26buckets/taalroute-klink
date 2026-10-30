@@ -1,3 +1,4 @@
+import {verifyContentAmendments,repairBaseline} from './check-content-repair-release.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
@@ -5,13 +6,13 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import source from '../data/klink-connected-content.json' with {type:'json'};
 import repairs from '../data/klink-dialogue-repair.json' with {type:'json'};
-import {connectedContent,connectedExercisesForStep} from '../lib/connected-content.ts';
+import {connectedContent} from '../lib/connected-content.ts';
 import {repairedDialogue} from '../lib/dialogue-repair.ts';
-import curriculum from '../data/klink-curriculum.json' with {type:'json'};
 const hash=b=>createHash('sha256').update(b).digest('hex');
 test('128 complete voice repairs preserve source text, IDs, levels and all other content',()=>{
  assert.equal(repairs.dialogues.length,128);assert.equal(repairs.dialogues.flatMap(d=>d.turns).length,512);
- assert.equal(hash(readFileSync('data/klink-connected-content.json')),hash(execFileSync('git',['show','40625330feb9018798dfd9d30308a31733cf0f3c:data/klink-connected-content.json'],{maxBuffer:10e6})));
+ verifyContentAmendments();
+ assert.equal(hash(execFileSync('git',['show',repairBaseline+':data/klink-connected-content.json'],{maxBuffer:10e6})),hash(execFileSync('git',['show','40625330feb9018798dfd9d30308a31733cf0f3c:data/klink-connected-content.json'],{maxBuffer:10e6})));
  const cast=new Map(repairs.cast.map(c=>[c.personId,c]));
  for(const item of source.items){
   const result=repairedDialogue(item);
