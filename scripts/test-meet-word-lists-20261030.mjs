@@ -4,7 +4,9 @@ import {execFileSync} from 'node:child_process';
 import {chapterCollections} from '../lib/practice-chapters.ts';
 const index=JSON.parse(readFileSync('data/klink-production-index.json')),added=index.filter(r=>r.id.startsWith('word-meet:'));
 const baseline=JSON.parse(execFileSync('git',['show','66ec3578ca1df93cf50c8578d137ddb6ade1ec97:data/klink-production-index.json']));
-assert.deepEqual(index.filter(r=>!r.id.startsWith('word-meet:')),baseline);
+const imageChanges=new Map(JSON.parse(readFileSync('docs/archive-images-20261030/media.json')).collections.map(c=>[c.id,c]));
+assert.deepEqual(index.filter(r=>!r.id.startsWith('word-meet:')).map(r=>imageChanges.has(r.id)?baseline.find(b=>b.id===r.id):r),baseline);
+await import('./test-archive-images-20261030.mjs');
 const summary={},audio=new Set(),images=new Set();let placeholders=0;
 for(const row of added){
  const source=index.find(s=>s.id===row.id.replace('word-meet:','beta-images:cards:'));assert(source);assert.equal(row.level,source.level);assert.equal(row.count,12);
@@ -21,4 +23,4 @@ assert.deepEqual(Object.values(summary).map(s=>s.words),[192,144,96,144]);
 for(const src of audio){const probe=JSON.parse(execFileSync('ffprobe',['-v','quiet','-show_format','-of','json','public'+src]));const tags=probe.format.tags;assert(Number(probe.format.duration)>0);assert.equal(tags.artist,'Taalroute',src);assert.equal(tags.album_artist,'Taalroute',src);assert(/Taalroute|Klink/.test(tags.album),src);assert(!/suno|openai|elevenlabs/i.test(JSON.stringify(tags)),src);}
 for(const level of Object.keys(summary))summary[level].total=chapterCollections('meet').filter(r=>r.level===level&&r.help==='practice').reduce((n,r)=>n+(r.exerciseCount??r.exercises.length),0);
 const report={summary,collections:added.length,wordPlacements:576,placeholderPlacements:placeholders,audio:[...audio],images:[...images],baselinePreserved:true,audioMetadata:true};
-writeFileSync('docs/meet-words-20261030/content.json',JSON.stringify(report,null,2));console.log(JSON.stringify({...report,audio:audio.size,images:images.size}));
+writeFileSync('docs/archive-images-20261030/meet-content.json',JSON.stringify(report,null,2));console.log(JSON.stringify({...report,audio:audio.size,images:images.size}));
