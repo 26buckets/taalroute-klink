@@ -17,7 +17,7 @@ async function finish(e,scope=page){
  }else if(e.mode==='word-build'){
   if(e.requiresAudio)if(e.requiresAudio)await scope.getByRole('button',{name:'Luister naar het woord',exact:true}).click();
   for(const id of e.answer.targetTileIds)await scope.locator('.cp-tile-bank button').nth(e.tiles.findIndex(t=>t.id===id)).click();
- }else if(e.mode==='word-bingo'){
+ }else if(['word-bingo','image-bingo'].includes(e.mode)){
   const at=e.cells.findIndex(c=>c.cellId===e.answer.correctCellId);await scope.locator('.cp-board-grid button').nth(at).click();
  }else if(e.mode==='word-sort'){
   for(const item of e.standardTask.items)await scope.locator(`[data-sort-category="${item.categoryId}"]`).click();
@@ -46,7 +46,7 @@ try{
    for(const e of ex.slice(0,4))await finish(e,page.locator(`[data-worksheet-exercise="${e.exerciseId}"]`));
    assert(await page.locator('.cp-word-worksheet').getByRole('button',{name:'Verder',exact:true}).isEnabled());
   }else{
-   const count=row.activity==='spelling-path'?4:row.activity==='word-bingo'?3:1;
+   const count=row.activity==='spelling-path'?4:['word-bingo','image-bingo'].includes(row.activity)?3:1;
    for(const e of ex.slice(0,count)){
     await page.locator(`[data-exercise-id="${e.exerciseId}"]`).waitFor();await finish(e);await next().click();
    }
@@ -69,6 +69,6 @@ try{
   const img=page.locator('.cp-model-content img');await img.waitFor();await img.evaluate(el=>el.decode());const actual=new URL(await img.getAttribute('src'),base);assert.equal(actual.searchParams.get('url')||actual.pathname,e.prompt.image.src);
   await page.screenshot({path:out+'/'+e.exerciseId+'-desktop.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:out+'/'+e.exerciseId+'-mobile.png'});await page.setViewportSize({width:1366,height:950});images.push(e.exerciseId);
  }
- assert.equal(images.length,44);assert.deepEqual(errors,[]);
- writeFileSync('docs/placeholders-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
+ assert.equal(images.length,65);assert.deepEqual(errors,[]);
+ writeFileSync('docs/remaining-links-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
 }finally{await browser.close();}

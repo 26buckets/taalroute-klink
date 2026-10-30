@@ -1,0 +1,5 @@
+import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';import {verifyRemainingImageLinks} from './check-remaining-image-links-20261030.mjs';
+const path='docs/klink-owner-release-remaining-images-20261030.json',r=JSON.parse(readFileSync(path));verifyRemainingImageLinks();
+for(const patch of [{approvedBy:'other'},{publicationApproved:false},{userRequest:'not approved'},{changedFiles:[]},{liveSourceCommit:'0'.repeat(40)}])assert.throws(()=>verifyRemainingImageLinks(f=>f===path?Buffer.from(JSON.stringify({...r,...patch})):readFileSync(f)));
+for(const path of ['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','components/product/taalroute-header.tsx','docs/placeholders-20261030/registry.json','docs/remaining-links-20261030/media.json','docs/remaining-links-20261030/review.json','docs/remaining-links-20261030/backup.json'])assert.throws(()=>verifyRemainingImageLinks(f=>f===path?Buffer.from('{}'):readFileSync(f)));
+console.log('PASS owner scope, current live ancestry, exact assets, preservation evidence and tamper rejection');

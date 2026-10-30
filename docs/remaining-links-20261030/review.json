@@ -1,0 +1,41 @@
+{
+  "images": true,
+  "hands": true,
+  "sourceLinks": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "content": true,
+  "answers": true,
+  "browser": true,
+  "menu": true,
+  "progressPreserved": true,
+  "audioMetadata": true,
+  "localOnly": true,
+  "baselineSourceCommit": "12a22748b38c1b1e437f02677bf88721847d0145",
+  "evidence": [
+    "media.json",
+    "preservation.json",
+    "content-check.json",
+    "answer-check.json",
+    "audio-check.json",
+    "screens/browser.json",
+    "screens/bingo-browser.json",
+    "word-browser-check.json"
+  ],
+  "browserChecks": {
+    "imagesAndBingo": 220,
+    "finalTwoBingoCards": 8,
+    "wordImages": 65,
+    "betaCollectionsOpened": 192,
+    "menuJourneys": 96,
+    "alfaCEntriesAndReturns": 180,
+    "integrationLayouts": 50
+  },
+  "lintScope": "All changed code passes targeted oxlint. Whole-repository lint has pre-existing errors in unchanged historical scripts; these are outside this release.",
+  "limits": [
+    "No physical classroom monitor or learner pilot.",
+    "No external reference photo available for ambulance comparison; Dutch visual characteristics reviewed.",
+    "Remaining rejected or unverified images are not released."
+  ]
+}

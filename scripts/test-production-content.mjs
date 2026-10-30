@@ -33,13 +33,13 @@ for(const row of productionIndex){
   if(e.mode==='word-sort')assert(e.standardTask.items.every(item=>e.standardTask.categories.some(c=>c.id===item.categoryId)));
  }
 }
-assert.equal(productionIndex.length,1411);assert.equal(sizes.length,1411);assert.equal(ids.size,1411);
+assert.equal(productionIndex.length,1414);assert.equal(sizes.length,1414);assert.equal(ids.size,1414);
 const counts=Object.fromEntries(Object.entries(activity).map(([k,v])=>[k,v.size]));
-assert.deepEqual(counts,{'build-model':816,copy:8386,meet:44,memory:5,'read-series':8386,'spelling-path':698,'word-bingo':1344,'word-sort':192,worksheet:816,'worksheet-heard':840,listen:1152,'hear-match':192,read:576,match:192,cards:576});
+assert.deepEqual(counts,{'build-model':816,copy:8386,meet:65,memory:5,'read-series':8386,'spelling-path':698,'word-bingo':1344,'word-sort':192,worksheet:816,'worksheet-heard':840,listen:1152,'hear-match':192,read:576,match:192,cards:576,'image-bingo':2});
 const old=chapterCollections('build-model').find(c=>c.id==='groep-9.alfa-a'),recall=chapterCollections('build-model').find(c=>c.id==='groep-9.alfa-b');
 assert.equal(old.exercises.length,44);assert.equal(recall.exercises.length,45);assert(old.exercises.every(e=>recall.exercises.some(r=>r.exerciseId===e.exerciseId)));
 assert(!isInstructionAudioEnabled('/package-audio/instructions/unknown.mp3'));
 assert.throws(()=>validateProductionCollection({id:'x',exercises:[]},'x',1));
 assert.throws(()=>validateProductionCollection({id:'wrong',exercises:[{}]},'x',1));
 const report={collections:ids.size,exercisePlacements:productionIndex.reduce((n,r)=>n+r.count,0),uniqueSourceRecords:counts,referencedMedia:assets.size,indexBytes:readFileSync('data/klink-production-index.json').length,indexGzipBytes:gzipSync(readFileSync('data/klink-production-index.json')).length,largestCollectionBytes:Math.max(...sizes),oldAlfaAIdsPreserved:true,all45AlfaBRecallTasks:true,sourceAnswers:true,pathsExist:true,localOnly:true};
-mkdirSync('docs/production-20261029',{recursive:true});writeFileSync('docs/placeholders-20261030/content-check.json',JSON.stringify(report,null,2));console.log(report);
+mkdirSync('docs/production-20261029',{recursive:true});writeFileSync('docs/remaining-links-20261030/content-check.json',JSON.stringify(report,null,2));console.log(report);
