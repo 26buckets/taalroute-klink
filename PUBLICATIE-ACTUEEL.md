@@ -1,3 +1,9 @@
+## 30 oktober 2026 — zeven woordbeelden online
+
+Livebron `beff2e25e378a9fa723bc64831d1e96853d11113`, canonieke main; Worker `e0ede8d8-2997-441d-8d69-33ed6fd0ce21`. Zeven door Nico vrijgegeven woordbeelden op 122 plaatsen in 65 reeksen, samen 187.930 bytes. Tandarts-v1 expliciet uitgesloten wegens Nico’s afwijzing van de handen; werkgever blijft afgekeurd. 232 oorspronkelijke woordvakken blijven open.
+
+Alle 59.532 oefenplaatsen, antwoorden, audio, navigatie, voortgang en bestaande mediabestanden behouden. 36 lokale en 36 live browsercontroles in Chromium/WebKit desktop/mobiel geslaagd; 65 bestaande scènes en alle antwoordvormen gecontroleerd. 72 nieuwe bestanden online bytegelijk teruggelezen. Normale npm run deploy-route, geen GitHub-workflows. Bronback-up volledig teruggelezen: `1vWS6k24zj4Jm_s3YP-OWIxBUWtlzH1s6`. Zie `docs/word-images-batch-20261030/`.
+
 ## 30 oktober 2026 — Direct kiezen online
 
 Live: https://klink.taalroute.nl/ . Schone canonieke main, broncommit `5bf3d39071dcd21d4203507adb4d2d1922e17d6a`, Worker `65aebbc7-07db-4176-bd83-3491569b358c`. Gepubliceerd via `npm run deploy`, afstammeling van de nieuwste goedgekeurde livebron `2e0563b2fb358cae6e680033953f8cd5081f032e`. De zeven herstelde opnamen en alle eerdere archieffoto’s, woordrondes, inhoud en opslag zijn behouden.
