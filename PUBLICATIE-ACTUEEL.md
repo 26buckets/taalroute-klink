@@ -1,3 +1,15 @@
+## 30 oktober 2026 — zinsniveaus en 14 herstelde opnamen gepubliceerd
+
+Livebron `16151ddeb6f3e01787111ebf11184a29c77db10a`, canonieke main; Worker `6e263de4-75ab-41fb-8131-a15bda215e37`. Gepubliceerd via `npm run deploy`, als afstammeling van livebron `b96c60d46bbb7609de7f1612e5d9ecfa391ea776`. De volledige historische publicatiepoort en de begrensde nieuwe zinnenvrijgave zijn geslaagd.
+
+Alle 1.292 losse zinnen hebben exacte tekstgebonden niveaukoppelingen: 1.225 A1 en 67 A2, geen B1. De 62 eerdere twijfelgevallen zijn redactioneel afgehandeld; 14 zinnen, bijbehorende opdrachten, antwoordmodellen en opnamen zijn hersteld. Eén van die opnamen, met weegschaal, is opnieuw gemaakt wegens een mogelijk afgekapt einde. Alle 46.143 eerdere unieke oefenidentiteiten blijven behouden; één verduidelijkte zin levert twee extra bestaande-reeksplaatsingen op. Taalniveau heft leesvoorbereiding of begeleiding niet op.
+
+Nico heeft expliciet gekozen: ‘Publiceer na automatische controles’. Uitspraak, klemtoon, intonatie en natuurlijkheid zijn NIET beluisterd; menselijke luisterreview en onafhankelijke NT2-/praktijktoetsing blijven open. De 14 definitieve bestanden zijn automatisch getranscribeerd, volledig gedecodeerd, op pieken/einden gecontroleerd en verliesloos van Taalroute-metagegevens voorzien. Na publicatie zijn alle 14 aangeboden bestanden teruggelezen: hashes, merkvelden en actieve koppelingen kloppen.
+
+Lokaal: gerichte tests, types/lint, build, volledige vrijgaveketen, 96 menureizen met 180 Alfa C-blokterugwegen, antwoord-/hervatcontrole, 65 beeldopdrachten, alle bestaande bron- en oefenidentiteiten. Online: 56 echte afspeelcontroles en 48 niveau-/oefenvormroutes op Chromium/WebKit, desktop/mobiel; nieuwe startnavigatie op vier maten. Geen fysieke toestellen. Direct kiezen, de zeven woordbeelden, verborgen B2 met gereserveerde ruimte, originele lessen en opgeslagen voortgang behouden. Geen GitHub Actions-workflows of runs toegevoegd.
+
+Het definitieve liveoverzicht en publicatiebewijs staan in Drive-pakket `1OLFYqaVVkS3dvRVC33BImmicd5MS8j_p` (120 bestanden, na downloaden gecontroleerd). Bron-/audioherstelpakket `1GNFGVol1UPJQSkWd_OrEBWj3MmwlCpyG` is van Drive teruggelezen; ZIP-hash en alle 230 leden gecontroleerd. Alle controles, expliciete toestemming en open punten staan in `docs/sentence-publication-20261030/`. Deze registratieregel wijzigt de livecode niet. Volgende publicaties moeten afstammen van deze actuele livebron en dezelfde canonieke publicatieroute behouden.
+
 ## 30 oktober 2026 — B2 verborgen, ruimte behouden
 
 Livebron `b96c60d46bbb7609de7f1612e5d9ecfa391ea776`, canonieke main; Worker `650e0ecb-98c0-4d4c-bd8c-52f61502ca0d`. Op Nico’s expliciete opdracht is uitsluitend de B2-niveauknop onzichtbaar gemaakt. Het volledige vak na B1 blijft in de indeling staan; de overige niveauknoppen verschuiven niet. B2 is ook uit de toegankelijke bediening verdwenen.
