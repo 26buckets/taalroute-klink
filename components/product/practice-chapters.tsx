@@ -14,7 +14,7 @@ import { ProductionRound } from './production-round';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
-import { availableChapterActivities, availableChapterCollections, displayedChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterExerciseChoices, chapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
+import { availableChapterActivities, availableChapterCollections, selectedChapterCollection, displayedChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterExerciseChoices, chapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel, type ContentHelp } from '@/lib/content-levels';
 import { MyRoute, PictureHelp, useRouteSettings } from './route-settings';
 import { practiceLocation } from '@/lib/practice-navigation';
@@ -69,7 +69,7 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
     stopMedia();
     if (previous.chapter === location.chapter && previous.activity === location.activity && previous.sequence === location.sequence && previous.help === location.help && !previous.collection && !location.collection) return;
     if (!location.collection && previous.collection && previous.chapter === location.chapter && previous.activity === location.activity && previous.level === location.level) {
-      const card = document.querySelector<HTMLButtonElement>(`[data-collection="${CSS.escape(previous.collection)}"]`);
+      const card = document.querySelector<HTMLButtonElement>(`[data-collection="${CSS.escape(previous.collection)}"]`) ?? document.querySelector<HTMLButtonElement>(`[data-source-collection="${CSS.escape(previous.collection)}"]`);
       if (card) {
         const frame = requestAnimationFrame(() => { card.focus({ preventScroll: true }); card.scrollIntoView({ block: 'center', behavior: 'instant' }); });
         return () => cancelAnimationFrame(frame);
@@ -97,16 +97,16 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
   const countMode = (help: ContentHelp) => chapter ? countChapter(chapter.id, help) : practiceChapters.reduce((total, item) => total + countChapter(item.id, help), 0);
   const openChapter = (id: string) => open({ chapter: id, ...chapterSelection(id) });
   const modeAvailable = (help: ContentHelp) => countMode(help) > 0;
-  const openMode = (help: ContentHelp) => open({ ...location, help, collection: undefined });
-  const collection = visible.find(item => item.id === location.collection) ?? (location.activity && location.collection ? availableChapterCollections(location.activity, location, review).find(item => item.id === location.collection) : undefined);
+  const openMode = (help: ContentHelp) => open({ ...location, help, collection: undefined, words: undefined });
+  const collection = reviewMode ? visible.find(item => item.id === location.collection) : selectedChapterCollection(location);
   const Round = collection?.contentUrl ? ProductionRound : GroupRound;
   const exerciseChoices = collection ? chapterExerciseChoices(location) : [];
   const sequenceBlock = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.find(block => block.id === location.collection) : undefined;
   const activitySelected = Boolean(activity || location.sequence);
-  const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, progressId: sequenceProgressId(sequenceChapter.kind, block.id), total: block.steps.length, progressTotal: block.steps.length, exerciseIds: undefined as string[] | undefined, words: false, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, progressId: collectionProgressId(location.activity!, item.wordRound?.sourceId ?? item.id, item.contentUrl), total: item.wordRound?.exerciseIds.length ?? item.exerciseCount ?? item.exercises.length, progressTotal: item.wordRound?.allExerciseIds.length ?? item.exerciseCount ?? item.exercises.length, exerciseIds: item.wordRound?.exerciseIds, words: Boolean(item.wordRound), image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${(item.help ?? exerciseSetHelp(item.exercises)) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}${item.placeholderCount ? ` · ${item.placeholderCount} afbeeldingen volgen` : ''}` }));
+  const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, progressId: sequenceProgressId(sequenceChapter.kind, block.id), total: block.steps.length, progressTotal: block.steps.length, exerciseIds: undefined as string[] | undefined, words: false, wordCount: undefined as number | undefined, sourceId: undefined as string | undefined, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, progressId: collectionProgressId(location.activity!, item.wordRound?.sourceId ?? item.id, item.contentUrl), total: item.wordRound?.exerciseIds.length ?? item.exerciseCount ?? item.exercises.length, progressTotal: item.wordRound?.allExerciseIds.length ?? item.exerciseCount ?? item.exercises.length, exerciseIds: item.wordRound?.exerciseIds, words: Boolean(item.wordRound), wordCount: item.wordRound?.wordIds.length, sourceId: item.wordRound?.sourceId, image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${(item.help ?? exerciseSetHelp(item.exercises)) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}${item.placeholderCount ? ` · ${item.placeholderCount} afbeeldingen volgen` : ''}` }));
   // Example words identify a collection, but must not reveal a listening/spelling answer during play.
   const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' || collection?.exercises[0]?.synonymPairId ? activity?.label : collection?.title) ?? activity?.label ?? (location.sequence ? sequenceChapter?.title : undefined) ?? chapter?.title ?? 'Start';
-  const toCollections = () => open({ ...location, collection: undefined });
+  const toCollections = () => open({ ...location, collection: undefined, words: undefined });
   const selection = { level: location.level, help: location.help };
   const back = collection ? toCollections : activitySelected ? () => open({ chapter: chapter!.id, ...selection }) : chapter ? () => open(selection) : location.help ? () => open({ level: location.level }) : onBack;
   if (sequenceBlock) return <AlfaCPractice key={sequenceBlock.id} selected={sequenceBlock.id} backHref={chapterHash({ ...location, collection: undefined })} header={<PracticeHeader title={sequenceBlock.title} backLabel="Andere opdracht" onBack={toCollections} headingRef={heading} meta={`Oefenen · ${chapter!.title}`} />} />;
@@ -125,9 +125,9 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
       <div className="cp-chapter-collections">{items.slice(0, limit).map(item => {
         const done = progressReady ? roundProgressCount(item.progressId, item.progressTotal, item.exerciseIds) : 0;
         const complete = item.total > 0 && done === item.total;
-        return <button key={item.id} className={`cp-chapter-collection${complete ? ' is-complete' : ''}`} data-collection={item.id} {...(sequenceChapter ? { [`data-${sequenceChapter.kind}-block`]: item.id } : {})} onClick={() => open({ ...location, collection: item.id })}>
+        return <button key={item.id} className={`cp-chapter-collection${complete ? ' is-complete' : ''}`} data-collection={item.id} data-source-collection={item.sourceId} {...(sequenceChapter ? { [`data-${sequenceChapter.kind}-block`]: item.id } : {})} onClick={() => open({ ...location, collection: item.id, words: undefined })}>
         {item.image ? <Image src={item.image} width={96} height={96} alt="" /> : <BookOpen aria-hidden="true" />}
-        <span><strong>{item.title}</strong><small>{item.summary}</small><ExerciseCount count={item.total} words={item.words} />{done > 0 && <small className="cp-round-status">{complete && <Check aria-hidden="true" />}{complete ? `Afgerond · ${done} van ${item.total}` : `${done} van ${item.total} gedaan`}</small>}</span><ArrowRight aria-hidden="true" />
+        <span><strong>{item.title}</strong><small>{item.summary}</small><ExerciseCount count={item.wordCount ?? item.total} words={item.words} />{done > 0 && <small className="cp-round-status">{complete && <Check aria-hidden="true" />}{complete ? `Afgerond · ${done} van ${item.total}` : `${done} van ${item.total} gedaan`}</small>}</span><ArrowRight aria-hidden="true" />
       </button>; })}</div>
       {!items.length && <div className="cp-unavailable">
         <output>{reviewMode ? 'Je hebt nu niets om te herhalen.' : `Deze oefening is niet beschikbaar voor ${levelLabel(location.level)}.`}</output>
@@ -141,9 +141,9 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
     </>}
     <div className="cp-direct-help"><PictureHelp showPracticeChoice={false} selection={location} availableLevels={availableLevels} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} /></div>
     </div>}
-    {collection && activity && <Round progressId={collectionProgressId(activity.id, collection.wordRound?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={collection.wordRound?.allExerciseIds} legacySessionId={collection.wordRound && collection.wordRound.sourceId !== collection.id ? `chapter:${activity.id}:${collection.wordRound.sourceId}` : undefined} exerciseIds={collection.wordRound?.exerciseIds} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
+    {collection && activity && <Round progressId={collectionProgressId(activity.id, collection.wordRound?.sourceId ?? collection.id, collection.contentUrl)} progressExerciseIds={collection.wordRound?.allExerciseIds} legacySessionId={collection.wordRound && (collection.wordRound.sourceId !== collection.id || location.words) ? `chapter:${activity.id}:${collection.wordRound.sourceId}` : undefined} exerciseIds={collection.wordRound?.exerciseIds} contentUrl={collection.contentUrl!} count={collection.exerciseCount!} exerciseMenu={{ scopeLabel: collection.wordRound ? 'Met dezelfde woorden' : undefined, value: activity.id, options: exerciseChoices.map(item => ({ id: item.id, label: item.label, icon: icons[item.icon] })), onSelect: id => {
       const next = exerciseChoices.find(item => item.id === id);
-      if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection });
-    } }} key={`${activity.id}:${collection.id}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
+      if (next) open({ ...location, chapter: next.chapter, activity: next.id, collection: next.collection, words: next.words });
+    } }} key={`${activity.id}:${collection.id}:${location.words?.join(',') ?? ''}:${round}`} pack={collection.pack} activity={activity.id} exerciseSet={collection.exercises} sessionId={`chapter:${activity.id}:${collection.id}${location.words ? `:words:${location.words.join(',')}` : ''}${reviewMode ? ':' + Math.max(...collection.exercises.map(exercise => review[exercise.exerciseId]?.last ?? 0)) : ''}`} onAudio={(source, options) => source ? playMedia(source, options) : false} onAttempt={onAttempt} onBack={toCollections} onAgain={() => setRound(value => value + 1)} backLabel="Andere opdracht" />}
   </div>;
 }

@@ -1,0 +1,48 @@
+{
+  "base": "http://127.0.0.1:18971",
+  "checks": [
+    {
+      "engine": "chromium",
+      "source": "word-meet:b1:HMM_B1_01~words-1",
+      "modes": 5,
+      "keyboardEscape": true,
+      "touch320": true
+    },
+    {
+      "engine": "chromium",
+      "source": "groep-8.alfa-a",
+      "modes": 17,
+      "keyboardEscape": true,
+      "touch320": true
+    },
+    {
+      "engine": "chromium",
+      "source": "groep-8.alfa-a",
+      "modes": 1,
+      "keyboardEscape": true,
+      "touch320": true
+    },
+    {
+      "engine": "webkit",
+      "source": "word-meet:b1:HMM_B1_01~words-1",
+      "modes": 5,
+      "keyboardEscape": true,
+      "touch320": true
+    },
+    {
+      "engine": "webkit",
+      "source": "groep-8.alfa-a",
+      "modes": 17,
+      "keyboardEscape": true,
+      "touch320": true
+    },
+    {
+      "engine": "webkit",
+      "source": "groep-8.alfa-a",
+      "modes": 1,
+      "keyboardEscape": true,
+      "touch320": true
+    }
+  ],
+  "errors": []
+}

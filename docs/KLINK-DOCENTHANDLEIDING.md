@@ -606,3 +606,8 @@ Via Start → Zelf oefenen → Alfa C → Schrijven → Lezen en schrijven zijn 
 ## Vaste twaalf oefenonderdelen — 30 oktober 2026
 Alle niveaus gebruiken dezelfde twaalf kaarten, bij Zelf oefenen en Met je docent. Lege onderdelen blijven zichtbaar met nul oefeningen. Voor Alfa C staan Woorden en zinnen onder Zinnen, Lezen en schrijven onder Schrijven en Berichten lezen onder Teksten. Kies daar de betreffende oefenvorm en daarna een blok. De oorspronkelijke 3/6/6 blokken blijven compleet.
 De begeleide opdrachten staan bij Alfa C onder Woorden oefenen (Woorden verbinden), Spelling (Spelling oefenen), Grammatica (Lezen en doen), Schrijven (Schrijven op papier) en Samen herhalen (Later herhalen). Deze opdrachten blijven alleen bij Met je docent beschikbaar.
+
+### Korte woordrondes en dezelfde woorden
+De losse woordoefeningen tonen kleine rondes van maximaal acht doelwoorden, waar de bestaande opdracht dat toelaat. Met **Andere oefening** blijf je bij dezelfde doelwoorden, hetzelfde niveau en dezelfde manier van oefenen. Alleen bestaande vormen die al deze doelwoorden aanbieden staan in dit menu. Een vorm met ontbrekende woorden of een bord dat andere woorden nodig heeft verschijnt hier niet. Via **Andere opdracht** kun je een nieuwe ronde kiezen.
+
+Vaste sorteeropdrachten, complete leerroutes en situatieopdrachten blijven als geheel beschikbaar. Koppel- en bingoborden worden niet gedeeltelijk afgerond. Alle bestaande oefeningen, audio en oude links blijven behouden. De afronding blijft bij de oorspronkelijke oefening bewaard; de positie binnen een nieuwe ronde staat apart. Een gedeelde link bewaart ook de gekozen woorden bij het wisselen van vorm.
