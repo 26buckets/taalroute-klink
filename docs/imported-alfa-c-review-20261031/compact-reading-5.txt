@@ -1,0 +1,143 @@
+SOURCE 41 | A2
+Karim heeft planken over na een klus. Een deel is nog recht en stevig. Hij bewaart die planken voor een kleine kast. De beschadigde stukken legt hij apart om op de juiste plek in te leveren.
+ID klink-teksten-b09-03 | teacher
+Q Leg het verband uit tussen een deel, die planken en de beschadigde stukken. Beschrijft de tekst één bestemming voor alle planken?
+OPTIONS Die planken betekent alle stukken, dus ook de beschadigde stukken gaan in de kast. / *Die planken verwijst naar het rechte, stevige deel dat Karim bewaart. De beschadigde stukken legt hij apart om in te leveren; er zijn dus verschillende bestemmingen.
+MODEL ['Die planken verwijst naar het rechte, stevige deel dat Karim bewaart. De beschadigde stukken legt hij apart om in te leveren; er zijn dus verschillende bestemmingen.']
+CHECK Waarom mag je een deel hier niet vervangen door alles?
+SLOTS ['right-sturdy-subset', 'damaged-separate-destination']
+
+SOURCE 42 | A2
+In de les leest Pavel het woord meer. In de eerste zin wil iemand meer water. In de tweede zin vaart een boot op een meer. De docent laat zien dat hetzelfde geschreven woord verschillende betekenissen kan hebben.
+ID klink-teksten-b09-04 | teacher
+Q Leg uit wat meer in de twee voorbeeldzinnen betekent. Welke woorden uit elke zin helpen je kiezen?
+OPTIONS *Bij meer water gaat het om een grotere hoeveelheid water. Bij een boot op een meer gaat het om een watergebied; de boot vaart daarop. / In beide zinnen betekent meer alleen een grotere hoeveelheid.
+MODEL ['Bij meer water gaat het om een grotere hoeveelheid water. Bij een boot op een meer gaat het om een watergebied; de boot vaart daarop.']
+CHECK Kun je de juiste betekenis kiezen uit de spelling meer alleen?
+SLOTS ['quantity-water', 'lake-boat', 'context-selects-meaning']
+
+SOURCE 43 | A2
+De buren van Koen zijn een week weg. Zij vragen of hij hun planten water wil geven. Koen zegt ja en schrijft op welke dagen hij komt. Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden.
+ID klink-teksten-b09-05 | teacher
+Q Vervang Zij, hij en hun in de vraag van de buren door de bedoelde personen. Van wie zijn de planten en wie gaat ze verzorgen?
+OPTIONS Koen vraagt of de buren de planten van Koen verzorgen. / *De buren vragen of Koen de planten van de buren water wil geven. De planten zijn van de buren; Koen verzorgt ze volgens de afspraak.
+MODEL ['De buren vragen of Koen de planten van de buren water wil geven. De planten zijn van de buren; Koen verzorgt ze volgens de afspraak.']
+CHECK Waarom hoort hun bij de buren en niet bij Koen?
+SLOTS ['zij-neighbours', 'hij-koen', 'hun-neighbours-plants']
+ID klink-teksten-b09-06 | teacher
+Q Wat betekent alles in zodat hij straks alles kan vinden binnen deze situatie? Bewijst dat woord dat Koen ieder voorwerp in het huis weet te vinden?
+OPTIONS *Het gaat om wat hij nodig heeft voor het planten water geven, zoals de gieter. De tekst zegt niet dat hij ieder voorwerp in huis kan vinden. / Alles betekent hier ieder voorwerp in het hele huis, zonder beperking.
+MODEL ['Het gaat om wat hij nodig heeft voor het planten water geven, zoals de gieter. De tekst zegt niet dat hij ieder voorwerp in huis kan vinden.']
+CHECK Welke concrete vindvraag noemt de tekst wel?
+SLOTS ['task-relevant-materials', 'no-whole-house-claim']
+
+SOURCE 44 | A2
+Fenna leest de brief over de lunch nog eens. Aanmelden kan tot vrijdag. Zij belt op donderdag en geeft door dat zij samen met Rosa komt. Ze vraagt ook of er eten zonder vlees is. De medewerker noteert haar vraag en zal terugbellen.
+ID klink-teksten-b10-01 | teacher
+Q Past het telefoontje van Fenna binnen de genoemde aanmeldtermijn? Gebruik de twee dagen uit de tekst.
+OPTIONS Nee, want donderdag komt na vrijdag. / *Ja. Aanmelden kan tot vrijdag en Fenna belt op donderdag, dus vóór die grens.
+MODEL ['Ja. Aanmelden kan tot vrijdag en Fenna belt op donderdag, dus vóór die grens.']
+CHECK Moet je voor deze vraag weten of aanmelden op vrijdag zelf nog mag?
+SLOTS ['deadline-friday', 'call-thursday-before']
+ID klink-teksten-b10-02 | teacher
+Q Welke informatie over wie komt kan de medewerker noteren, en welke maaltijdinformatie blijft nog open?
+OPTIONS *Fenna komt samen met Rosa: twee personen. Of er eten zonder vlees is, is nog niet bevestigd; de medewerker zal terugbellen. / Alleen Fenna komt en de maaltijd zonder vlees is al bevestigd.
+MODEL ['Fenna komt samen met Rosa: twee personen. Of er eten zonder vlees is, is nog niet bevestigd; de medewerker zal terugbellen.']
+CHECK Is een vraag noteren hetzelfde als daarop ja antwoorden?
+SLOTS ['fenna-and-rosa-two', 'meal-answer-pending']
+
+SOURCE 45 | A2
+Mina ziet een paard bij het hek. Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren. Mina bewaart de appel in haar tas. Zij kijkt van een afstand naar het paard.
+ID klink-teksten-b10-03 | teacher
+Q Voor wie geldt de regel op het bord, en valt Mina in deze situatie daaronder?
+OPTIONS De regel geldt alleen voor de eigenaar van het paard, niet voor Mina. / *De regel geldt voor bezoekers. Mina is hier een bezoeker en mag het paard dus geen appel voeren.
+MODEL ['De regel geldt voor bezoekers. Mina is hier een bezoeker en mag het paard dus geen appel voeren.']
+CHECK Welk woord bepaalt voor wie de regel geldt?
+SLOTS ['visitors-rule', 'mina-within-scope']
+ID klink-teksten-b10-04 | teacher
+Q Welke twee handelingen laten zien wat Mina uiteindelijk doet in plaats van haar eerste plan?
+OPTIONS *Ze houdt de appel in haar tas en kijkt op afstand naar het paard; zij geeft het paard de appel niet in het verhaal. / Ze voert de appel en loopt daarna dichterbij.
+MODEL ['Ze houdt de appel in haar tas en kijkt op afstand naar het paard; zij geeft het paard de appel niet in het verhaal.']
+CHECK Waarom beschrijft zij wil nog geen uitgevoerde handeling?
+SLOTS ['apple-kept', 'observes-at-distance']
+
+SOURCE 46 | A2
+Voor het gebouw ziet Boris een losse trede. Hij gebruikt een andere ingang en meldt het probleem bij de beheerder. Hij noemt de precieze plek. De beheerder zet de trap af en regelt herstel.
+ID klink-teksten-b10-05 | teacher
+Q Wie geeft de plaatsinformatie en wie sluit de trap af? Leg uit hoe die handelingen samenhangen.
+OPTIONS De beheerder geeft Boris een plek en Boris zet de trap af. / *Boris meldt de precieze plek. De beheerder zet de trap af en regelt herstel; zo kan die gericht reageren op de melding.
+MODEL ['Boris meldt de precieze plek. De beheerder zet de trap af en regelt herstel; zo kan die gericht reageren op de melding.']
+CHECK Waarom helpt precieze plek meer dan alleen er is ergens een probleem?
+SLOTS ['boris-location-report', 'manager-barrier-response']
+ID klink-teksten-b10-06 | teacher
+Q Mag je na deze tekst zeggen dat de trede weer gemaakt is? Noem wat de beheerder wel heeft gedaan.
+OPTIONS *Nee, dat is niet bevestigd. De beheerder heeft de trap afgezet en herstel geregeld; een voltooide reparatie staat er niet. / Ja, herstel regelen betekent dat de reparatie al klaar is.
+MODEL ['Nee, dat is niet bevestigd. De beheerder heeft de trap afgezet en herstel geregeld; een voltooide reparatie staat er niet.']
+CHECK Is niet bevestigd hetzelfde als zeker niet gerepareerd?
+SLOTS ['barrier-and-arrangement', 'completion-unknown']
+
+SOURCE 47 | A2
+In de les vergelijkt Erik camera met citroen. De letter c klinkt niet hetzelfde in deze woorden. Daarna luistert hij naar de eerste klank van circus en de tweede c in dat woord. Hij merkt dat ook binnen één woord dezelfde letter verschillend kan klinken.
+ID klink-teksten-b10-07 | teacher
+Q Leert deze tekst je precies welke klanken je bij de c in camera en citroen moet zeggen? Leg uit wat hij wel vertelt en wat ontbreekt.
+OPTIONS Ja, de tekst schrijft voor beide woorden de precieze klank uit. / *De tekst zegt dat de c daar verschillend klinkt, maar geeft de klanken niet weer. Voor de precieze uitspraak is nog een uitspraakmodel nodig.
+MODEL ['De tekst zegt dat de c daar verschillend klinkt, maar geeft de klanken niet weer. Voor de precieze uitspraak is nog een uitspraakmodel nodig.']
+CHECK Beoordeelt deze vraag jouw uitspraak, of of de tekst genoeg informatie geeft?
+SLOTS ['difference-stated', 'exact-sounds-not-given']
+
+SOURCE 48 | B1
+Het buurthuis was op woensdag alleen overdag open. Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken. Daarom bleef het gebouw vier woensdagen tot negen uur open.
+
+Tijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag. De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken. Twee bezoekers boden aan voortaan bij het opruimen te helpen.
+
+Het bestuur wil de avondopening nog niet voor altijd invoeren. Eerst probeert het twee avonden met een vaste opruimgroep. Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden.
+ID klink-teksten-b11-01 | teacher
+Q Wat is de hoofdgedachte van het hele bericht? Verbind de aanleiding, de ervaring en de volgende stap.
+OPTIONS Het buurthuis blijft voortaan iedere avond tot negen uur open. / *Het buurthuis probeert avondopening voor werkende bewoners. Er is belangstelling, maar opruimen vraagt extra hulp; daarom volgt eerst een nieuwe proef met een opruimgroep.
+MODEL ['Het buurthuis probeert avondopening voor werkende bewoners. Er is belangstelling, maar opruimen vraagt extra hulp; daarom volgt eerst een nieuwe proef met een opruimgroep.']
+CHECK Waarom is alleen er komen meer bezoekers te beperkt als kern?
+SLOTS ['need-evening', 'interest-cleaning-limit', 'further-trial']
+ID klink-teksten-b11-02 | teacher
+Q Waarom is de tweede alinea nodig om de beslissing in de derde te begrijpen?
+OPTIONS *Zij laat zowel belangstelling als een opruimprobleem zien. Daardoor is verder proberen met hulp logisch, terwijl direct blijvend openen nog niet is besloten. / De tweede alinea bewijst dat niemand avondopening wil.
+MODEL ['Zij laat zowel belangstelling als een opruimprobleem zien. Daardoor is verder proberen met hulp logisch, terwijl direct blijvend openen nog niet is besloten.']
+CHECK Welke informatie zou ontbreken als alleen de eerste en derde alinea bleven staan?
+SLOTS ['positive-and-problem', 'explains-conditional-next-step']
+
+SOURCE 49 | B1
+In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten. De bewonersgroep stelde daarom een kleine gereedschapskast voor. Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen.
+
+Tijdens een eerste bijeenkomst wilden veel mensen meedoen. Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht. De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd.
+
+De kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen. Na twee maanden bespreekt de groep of de afspraken werken. Pas daarna beslist zij of er meer spullen bij komen.
+ID klink-teksten-b11-03 | teacher
+Q Vat het voorstel en de voorzichtige start van de gereedschapskast samen.
+OPTIONS Iedere bewoner moet meteen een nieuwe boormachine kopen voor de kast. / *Bewoners willen weinig gebruikt gereedschap delen. Zij beginnen klein met leenafspraken en beoordelen na twee maanden of uitbreiding kan.
+MODEL ['Bewoners willen weinig gebruikt gereedschap delen. Zij beginnen klein met leenafspraken en beoordelen na twee maanden of uitbreiding kan.']
+CHECK Waarom horen de afspraken bij de kern en niet alleen de kast zelf?
+SLOTS ['sharing-rather-than-each-buying', 'small-start-rules', 'evaluate-before-expand']
+ID klink-teksten-b11-04 | teacher
+Q Hoe sluiten de zorgen in de tweede alinea aan op de beperkte start in de derde?
+OPTIONS *Er zijn zorgen over schade en terugbrengen. Een kleine start met registratie geeft de groep gelegenheid om de afspraken te beoordelen voordat zij uitbreidt. / Omdat er zorgen zijn, wordt het plan definitief gestopt.
+MODEL ['Er zijn zorgen over schade en terugbrengen. Een kleine start met registratie geeft de groep gelegenheid om de afspraken te beoordelen voordat zij uitbreidt.']
+CHECK Welke woorden laten zien dat het plan doorgaat, maar nog niet volledig is uitgebreid?
+SLOTS ['damage-return-concerns', 'trial-not-cancellation']
+
+SOURCE 50 | B1
+Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine. Een deel van hen vindt het lastig om daar rustig te praten. Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden.
+
+Die ruimte is groot genoeg, maar direct na de pauze begint er een les. Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan. De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt.
+
+Volgende week mogen cursisten drie dagen in beide ruimtes lunchen. De medewerker noteert of de les daarna op tijd kan beginnen. Het team beslist pas na deze proef of de extra lunchruimte vaker open kan.
+ID klink-teksten-b11-05 | teacher
+Q Wat is de kern van dit bericht, inclusief de voorwaarde voor de extra ruimte?
+OPTIONS De lesruimte wordt definitief een kantine en de les vervalt. / *Het team probeert een extra lunchruimte om meer rust te bieden. Opruimen moet de volgende les op tijd mogelijk maken; de proef bepaalt of dit vaker kan.
+MODEL ['Het team probeert een extra lunchruimte om meer rust te bieden. Opruimen moet de volgende les op tijd mogelijk maken; de proef bepaalt of dit vaker kan.']
+CHECK Waarom is extra ruimte beschikbaar geen volledige samenvatting?
+SLOTS ['quieter-lunch-need', 'classroom-restored-in-time', 'temporary-trial-decision']
+ID klink-teksten-b11-06 | teacher
+Q Welke functie heeft de informatie over schoonmaken en tafels terugzetten voor de hoofdgedachte?
+OPTIONS *Die informatie legt de voorwaarde uit waaronder de extra lunchruimte kan werken: de volgende les moet op tijd beginnen. / Die informatie laat zien dat cursisten voortaan in de les moeten lunchen.
+MODEL ['Die informatie legt de voorwaarde uit waaronder de extra lunchruimte kan werken: de volgende les moet op tijd beginnen.']
+CHECK Is opruimen hier een los onderwerp of een voorwaarde voor het plan?
+SLOTS ['cleaning-reset-condition', 'protects-next-class']

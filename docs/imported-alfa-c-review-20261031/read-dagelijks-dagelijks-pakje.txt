@@ -1,0 +1,82 @@
+dagelijks-pakje Een pakje ophalen
+
+PAKJE-01 Wat ligt klaar?
+instruction: "Wat ligt klaar voor Mei?"
+speech: {"I": "Mei krijgt een afhaalbericht. Wat ligt er voor haar klaar? Tik het goede antwoord.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "V": "Er ligt een pakje klaar.", "H": "Lees de zin met 'ligt klaar'. Wat ligt klaar?", "F": "Dat staat niet in het bericht. Lees wat er klaar ligt.", "G": "Uitstekend. Het pakje ligt klaar."}
+documents: [{"id": "KLI-DOC-PAKJE-A", "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "title": ""}]
+options: [{"code": "A", "text": "een brief", "correct": false}, {"code": "B", "text": "een pakje", "correct": true}, {"code": "C", "text": "een fiets", "correct": false}]
+example: "Er ligt een pakje klaar."
+phase: "oefenen"
+interaction: "keuze"
+
+PAKJE-02 Voor wie is het pakje?
+instruction: "Voor wie is dit pakje?"
+speech: {"I": "Op het afhaalbericht staat voor wie het pakje is. Kijk naar 'Voor'. Tik de goede naam.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "V": "Voor: Mei de Vries.", "H": "Zoek 'Voor'. Achter dat woord staat een naam.", "F": "Dat is niet de naam van de ontvanger. Kijk bij 'Voor'.", "G": "Goed. Het pakje is voor Mei de Vries."}
+options: [{"code": "A", "text": "Mei de Vries", "correct": true}, {"code": "B", "text": "Rivaro Parcel", "correct": false}, {"code": "C", "text": "Punt Molen", "correct": false}]
+example: "Voor: Mei de Vries."
+
+PAKJE-03 Voordoen: de afhaalplek
+instruction: "Waar ligt het pakje?"
+speech: {"I": "Ik zoek waar Mei het pakje kan ophalen. Ik lees 'Afhaalplek'. Daarachter staat 'Punt Molen'. Daar ligt het pakje. Tik op Voorbeeld. Daarna tik je op Nu jij en kies je het goede antwoord.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "V": "Het pakje ligt bij Punt Molen.", "H": "Zoek het woord 'Afhaalplek'. Lees de naam erachter.", "F": "Kijk nog eens naar Voorbeeld. Tik daarna op Nu jij en kies opnieuw.", "G": "Goed. Je hebt met het voorbeeld geoefend. Je kunt verder."}
+options: [{"code": "A", "text": "Punt Haven", "correct": false}, {"code": "B", "text": "Punt Molen", "correct": true}]
+example: "Het pakje ligt bij Punt Molen."
+phase: "voordoen_met_begeleide_keuze"
+
+PAKJE-04 Wat betekent vanaf?
+instruction: "Wat betekent vanaf 12.00 uur?"
+speech: {"I": "Lees de regel met ophalen. Wat betekent vanaf twaalf uur? Tik de goede uitleg.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "V": "Vanaf betekent: om twaalf uur of later.", "H": "Vanaf is het begin. Je kunt dan beginnen met ophalen.", "F": "Dat klopt niet met 'vanaf'. Denk aan het eerste moment dat ophalen kan.", "G": "Ga zo door. Vanaf twaalf uur betekent twaalf uur of later."}
+options: [{"code": "A", "text": "Om 12.00 uur of later.", "correct": true}, {"code": "B", "text": "Voor 12.00 uur.", "correct": false}, {"code": "C", "text": "Alleen om 12.00 uur.", "correct": false}]
+example: "Vanaf betekent: om 12.00 uur of later."
+
+PAKJE-05 De dag vinden
+instruction: "Vanaf welke dag kan Mei ophalen?"
+speech: {"I": "Lees het afhaalbericht. Vanaf welke dag kan Mei haar pakje ophalen? Tik de goede dag.", "V": "In het bericht staat dinsdag één december.", "H": "Kijk bij 'Ophalen'. Lees de dag en de datum samen.", "F": "Die dag klopt niet. Kijk nog eens naar de hele datum.", "G": "Prima. In dit bericht staat dinsdag één december als afhaaldag.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee."}
+options: [{"code": "A", "text": "donderdag 3 december", "correct": false}, {"code": "B", "text": "maandag 1 december", "correct": false}, {"code": "C", "text": "dinsdag 1 december", "correct": true}]
+example: "In het bericht staat dinsdag 1 december."
+
+PAKJE-06 De afhaalplek zelfstandig vinden
+instruction: "Waar kan Mei het pakje ophalen?"
+speech: {"I": "Lees waar het pakje ligt. Bij welk punt moet Mei zijn? Tik de goede plek.", "V": "Het pakje ligt bij Punt Molen.", "H": "Zoek 'Afhaalplek'. Daarachter staat de naam van het punt.", "F": "Dat is niet de afhaalplek van Mei. Lees de naam nog eens.", "G": "Prima. Het pakje ligt bij Punt Molen.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee."}
+options: [{"code": "A", "text": "Punt Molen", "correct": true}, {"code": "B", "text": "Punt Haven", "correct": false}, {"code": "C", "text": "het station", "correct": false}]
+
+PAKJE-07 Wat moet Mei meenemen?
+instruction: "Wat moet Mei meenemen?"
+speech: {"I": "Mei gaat haar pakje ophalen. Onderaan staat wat ze moet meenemen. Tik het goede antwoord.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "V": "Mei neemt dit afhaalbericht mee.", "H": "Lees de laatste regel. Wat zegt het bericht dat Mei moet meenemen?", "F": "Dat staat niet onderaan het afhaalbericht. Lees de laatste zin opnieuw.", "G": "Je hebt goed gekozen. Mei neemt het afhaalbericht mee."}
+options: [{"code": "A", "text": "een kassabon", "correct": false}, {"code": "B", "text": "een lesrooster", "correct": false}, {"code": "C", "text": "dit afhaalbericht", "correct": true}]
+example: "Mei neemt dit afhaalbericht mee."
+
+PAKJE-08 Een passende zin bouwen
+instruction: "Bouw de zin met de kaartjes."
+speech: {"I": "Luister naar de zin. Tik de kaartjes in de goede volgorde.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.", "V": "Ik ga het pakje ophalen.", "H": "Kijk naar het begin van de zin in Voorbeeld. Welk kaartje past vooraan?", "F": "De volgorde klopt nog niet. Tik op Eén terug tot de rij leeg is. Bouw de zin opnieuw.", "G": "Dat klopt. Je zin klopt."}
+cards: ["ophalen.", "het pakje", "Ik ga"]
+answerOrder: ["Ik ga", "het pakje", "ophalen."]
+example: "Ik ga het pakje ophalen."
+phase: "begeleid_ordenen"
+interaction: "bouwen"
+
+PAKJE-09 Een andere ophaaltijd
+instruction: "Welke tijd staat na vanaf?"
+speech: {"I": "Lees het nieuwe bericht. Welke tijd staat achter vanaf? Tik de goede tijd.", "V": "In het bericht staat vanaf vijftien uur.", "H": "Zoek 'Ophalen'. Lees de tijd achter 'vanaf'.", "F": "Dit is niet de tijd van het nieuwe bericht. Kijk opnieuw achter 'vanaf'.", "G": "Uitstekend. Vanaf vijftien uur kan Mei ophalen.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee."}
+documents: [{"id": "KLI-DOC-PAKJE-B", "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.", "title": ""}]
+options: [{"code": "A", "text": "12.00 uur", "correct": false}, {"code": "B", "text": "13.00 uur", "correct": false}, {"code": "C", "text": "15.00 uur", "correct": true}]
+example: "In het bericht staat vanaf 15.00 uur."
+
+PAKJE-10 De nieuwe afhaalplek
+instruction: "Waar ligt het pakje nu?"
+speech: {"I": "De afhaalplek is veranderd. Waar ligt het pakje in dit bericht? Tik de goede naam.", "V": "Het pakje ligt bij Punt Haven.", "H": "Lees de regel met 'Afhaalplek' in dit nieuwe bericht.", "F": "Dit is niet de nieuwe plek. Lees de naam na 'Afhaalplek' opnieuw.", "G": "Het pakje ligt bij Punt Haven. Goed gedaan.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee."}
+options: [{"code": "A", "text": "Punt Molen", "correct": false}, {"code": "B", "text": "Buurthuis De Linde", "correct": false}, {"code": "C", "text": "Punt Haven", "correct": true}]
+example: "Het pakje ligt bij Punt Haven."
+
+PAKJE-11 Kan Mei al ophalen?
+instruction: "Kan Mei nu het pakje ophalen?"
+speech: {"I": "Het is donderdag, veertien uur. Lees vanaf hoe laat Mei het pakje kan ophalen. Kan ze nu al ophalen? Tik het goede antwoord.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.", "V": "Nee, nog niet.", "H": "Vergelijk de tijd van nu met de tijd na 'vanaf'.", "F": "Dat klopt nog niet. Lees de tijd na 'vanaf'. Vergelijk die met de tijd van nu.", "G": "Goed. Mei kan nog niet ophalen."}
+context: ["Het is donderdag 3 december, 14.00 uur."]
+options: [{"code": "A", "text": "Ja, Mei kan nu ophalen.", "correct": false}, {"code": "B", "text": "Nee, nog niet.", "correct": true}, {"code": "C", "text": "Het pakje is al opgehaald.", "correct": false}]
+example: "Nee, nog niet."
+
+PAKJE-12 Korte controle
+instruction: "Welke zin klopt helemaal?"
+speech: {"I": "Lees het afhaalbericht. Kijk naar de dag, de tijd en de afhaalplek. Welke zin klopt helemaal? Tik één antwoord.", "V": "Het bericht noemt donderdag drie december, vanaf vijftien uur, bij Punt Haven.", "H": "Controleer de dag, de tijd en de afhaalplek.", "F": "Niet alle gegevens kloppen. Lees de dag, de tijd en de afhaalplek opnieuw.", "G": "Ga zo door. Je hebt het juiste afhaalbericht gelezen.", "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee."}
+options: [{"code": "A", "text": "Dinsdag 1 december, vanaf 15.00 uur, bij Punt Molen.", "correct": false}, {"code": "B", "text": "Donderdag 3 december, vanaf 12.00 uur, bij Punt Haven.", "correct": false}, {"code": "C", "text": "Donderdag 3 december, vanaf 15.00 uur, bij Punt Haven.", "correct": true}]
+example: "Het bericht noemt donderdag 3 december, vanaf 15.00 uur, bij Punt Haven."
+phase: "controle_op_geoefende_bron"

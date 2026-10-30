@@ -1,0 +1,1811 @@
+{
+ "id": "kb-tb-20261018-04",
+ "domain": "teksten",
+ "level": "A1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.main-idea",
+ "sourceIds": [
+  "klink-text-c75936c53e6f82b1"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke samenvatting past het best bij de hele tekst?",
+ "stimulus": "Morgen gaat Mo naar een feest. Zijn blauwe pak hangt in de kast. Zijn bruine riem hangt ernaast. Mo trekt het pak aan. De riem is te klein. Hij zoekt een andere riem.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-04-d1",
+   "text": "Mo heeft een blauw pak in de kast."
+  },
+  {
+   "id": "kb-tb-20261018-04-d2",
+   "text": "Mo koopt een ander pak omdat het te klein is."
+  },
+  {
+   "id": "kb-tb-20261018-04-correct",
+   "text": "Mo maakt zich klaar voor een feest en zoekt een riem die past."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Mo maakt zich klaar voor een feest en zoekt een riem die past. Bewijs: Morgen gaat Mo naar een feest. Mo trekt het pak aan. De riem is te klein. Hij zoekt een andere riem.",
+  "retry": "Zoek het doel van Mo en wat er niet goed past. Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Mo maakt zich klaar voor een feest en zoekt een riem die past.. Bewijs: zin 1: Morgen gaat Mo naar een feest. | zin 4: Mo trekt het pak aan. | zin 5: De riem is te klein. | zin 6: Hij zoekt een andere riem.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Hij, Mo, Morgen, Zijn, aan, andere, blauwe, bruine, de, een, ernaast, feest, gaat, hangt, het, in, is, kast, klein, naar, pak, riem, te, trekt, zoekt.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, De, Geef, Hij, Laat, Leg, Mo, Morgen, Welke, Zijn, Zoek, aan, aanwijzen, alleen, ander, andere, antwoord, best, bij, blauw, blauwe, bron, bronzinnen, bruine, cursist, de, die, doel, door, een, eigen, en, er, ernaast, feest, gaat, goed, hangt, heeft, hele, het, hoe, horen, hulp, in, is, kast, keuze, klaar, klein, koopt, lezen, maakt, met, na, naar, niet, nieuwe, of, omdat, onvoldoende, opnieuw, pak, pas, past, poging, probeer, registreer, relevante, riem, samenvatting, te, tekst, toelichten, trekt, uit, uitleg, van, voor, wat, woorden, zich, zoekt.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, M, Z, a, b, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-04-correct"
+  ],
+  "acceptedAnswers": [
+   "Mo maakt zich klaar voor een feest en zoekt een riem die past."
+  ],
+  "evidence": [
+   {
+    "quote": "Morgen gaat Mo naar een feest."
+   },
+   {
+    "quote": "Mo trekt het pak aan."
+   },
+   {
+    "quote": "De riem is te klein."
+   },
+   {
+    "quote": "Hij zoekt een andere riem."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-05",
+ "domain": "teksten",
+ "level": "A1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.sequence",
+ "sourceIds": [
+  "klink-text-596eb7514b4cb8ca"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke volgorde klopt voor Sara?",
+ "stimulus": "Sara is in de les. Haar boek ligt op tafel. Ze heeft geen pen. Ze vraagt aan Mo: Mag ik jouw pen lenen? Mo geeft haar een pen. Na de les geeft Sara de pen terug.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-05-d2",
+   "text": "Sara geeft de pen terug → Sara vraagt om een pen → Mo geeft een pen."
+  },
+  {
+   "id": "kb-tb-20261018-05-correct",
+   "text": "Sara vraagt om een pen → Mo geeft een pen → Sara geeft de pen terug."
+  },
+  {
+   "id": "kb-tb-20261018-05-d1",
+   "text": "Mo geeft een pen → Sara geeft de pen terug → Sara vraagt om een pen."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Sara vraagt om een pen → Mo geeft een pen → Sara geeft de pen terug. Bewijs: Ze vraagt aan Mo: Mag ik jouw pen lenen? Mo geeft haar een pen. Na de les geeft Sara de pen terug.",
+  "retry": "Lees vanaf de vraag aan Mo. Let daarna op de woorden ‘Na de les’. Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Sara vraagt om een pen → Mo geeft een pen → Sara geeft de pen terug.. Bewijs: zin 4: Ze vraagt aan Mo: Mag ik jouw pen lenen? | zin 5: Mo geeft haar een pen. | zin 6: Na de les geeft Sara de pen terug.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Haar, Mag, Mo, Na, Sara, Ze, aan, boek, de, een, geeft, geen, haar, heeft, ik, in, is, jouw, lenen, les, ligt, op, pen, tafel, terug, vraagt.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, Geef, Haar, Laat, Lees, Leg, Let, Mag, Mo, Na, Sara, Welke, Ze, aan, aanwijzen, alleen, antwoord, bij, boek, bron, bronzinnen, cursist, daarna, de, door, een, eigen, en, geeft, geen, haar, heeft, het, hoe, horen, hulp, ik, in, is, jouw, keuze, klopt, lenen, les, lezen, ligt, met, na, nieuwe, of, om, onvoldoende, op, opnieuw, pas, past, pen, poging, probeer, registreer, relevante, tafel, terug, toelichten, uit, uitleg, vanaf, volgorde, voor, vraag, vraagt, woorden.",
+  "Controleer de geschreven letters en hun positie in de bron: H, M, N, S, Z, a, b, d, e, f, g, h, i, j, k, l, n, o, p, r, s, t, u, v, w. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-05-correct"
+  ],
+  "acceptedAnswers": [
+   "Sara vraagt om een pen → Mo geeft een pen → Sara geeft de pen terug."
+  ],
+  "evidence": [
+   {
+    "quote": "Ze vraagt aan Mo: Mag ik jouw pen lenen?"
+   },
+   {
+    "quote": "Mo geeft haar een pen."
+   },
+   {
+    "quote": "Na de les geeft Sara de pen terug."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-06",
+ "domain": "teksten",
+ "level": "A1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.sequence",
+ "sourceIds": [
+  "klink-text-330820b6d60434f1"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat doet Ali voordat hij de groente in de pan doet?",
+ "stimulus": "Vandaag kookt Ali voor vier mensen. Hij heeft een kool en een biet. Op tafel staat een grote pan. Ali wast de biet en snijdt de kool. Dan doet hij de groente in de pan.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-06-correct",
+   "text": "Hij wast de biet en snijdt de kool."
+  },
+  {
+   "id": "kb-tb-20261018-06-d1",
+   "text": "Hij doet de groente eerst in de pan en wast die daarna."
+  },
+  {
+   "id": "kb-tb-20261018-06-d2",
+   "text": "Hij wast de kool en snijdt de biet."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Hij wast de biet en snijdt de kool. Bewijs: Ali wast de biet en snijdt de kool. Dan doet hij de groente in de pan.",
+  "retry": "Lees de zin vóór ‘Dan’. Welke handelingen horen bij de biet en de kool? Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Hij wast de biet en snijdt de kool.. Bewijs: zin 4: Ali wast de biet en snijdt de kool. | zin 5: Dan doet hij de groente in de pan.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Ali, Dan, Hij, Op, Vandaag, biet, de, doet, een, en, groente, grote, heeft, hij, in, kookt, kool, mensen, pan, snijdt, staat, tafel, vier, voor, wast.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Ali, Bewijs, Dan, Geef, Hij, Laat, Lees, Leg, Op, Vandaag, Wat, Welke, aanwijzen, alleen, antwoord, biet, bij, bron, bronzinnen, cursist, daarna, de, die, doet, door, een, eerst, eigen, en, groente, grote, handelingen, heeft, het, hij, hoe, horen, hulp, in, is, keuze, kookt, kool, lezen, mensen, met, na, nieuwe, of, onvoldoende, opnieuw, pan, pas, past, poging, probeer, registreer, relevante, snijdt, staat, tafel, toelichten, uit, uitleg, vier, voor, voordat, vóór, wast, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: A, D, H, O, V, a, b, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, v, w. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-06-correct"
+  ],
+  "acceptedAnswers": [
+   "Hij wast de biet en snijdt de kool."
+  ],
+  "evidence": [
+   {
+    "quote": "Ali wast de biet en snijdt de kool."
+   },
+   {
+    "quote": "Dan doet hij de groente in de pan."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-07",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.sequence",
+ "sourceIds": [
+  "klink-text-b31a7d8975c8b492"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke volgorde staat in het laatste deel van de tekst?",
+ "stimulus": "Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groente. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-07-d1",
+   "text": "De pan schoonmaken → koken → de groente wassen."
+  },
+  {
+   "id": "kb-tb-20261018-07-d2",
+   "text": "De groente wassen → koken → de pan schoonmaken."
+  },
+  {
+   "id": "kb-tb-20261018-07-correct",
+   "text": "De groente wassen → de pan schoonmaken → beginnen met koken."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De groente wassen → de pan schoonmaken → beginnen met koken. Bewijs: Thuis wassen ze de groente. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken.",
+  "retry": "Lees de laatste drie zinnen. Let op ‘eerst’ en ‘Daarna’. Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: De groente wassen → de pan schoonmaken → beginnen met koken.. Bewijs: zin 6: Thuis wassen ze de groente. | zin 7: De grote pan is nog vies, dus die maken ze eerst schoon. | zin 8: Daarna beginnen ze met koken.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Ali, Daarna, De, In, Sara, Thuis, Ze, beginnen, belt, biet, dat, de, die, dus, een, eerst, en, er, gaan, geen, goed, groente, grote, is, koken, kool, kopen, maken, meenemen, meer, mensen, met, nog, om, pan, schoon, stelt, te, vier, vies, vindt, voor, wassen, winkel, wortels, ze, ziet, zou.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Ali, Bewijs, Daarna, De, Geef, In, Laat, Lees, Leg, Let, Sara, Thuis, Welke, Ze, aanwijzen, alleen, antwoord, beginnen, belt, biet, bij, bron, bronzinnen, cursist, dat, de, deel, die, door, drie, dus, een, eerst, eigen, en, er, gaan, geen, goed, groente, grote, het, hoe, horen, hulp, in, is, keuze, koken, kool, kopen, laatste, lezen, maken, meenemen, meer, mensen, met, na, nieuwe, nog, of, om, onvoldoende, op, opnieuw, pan, pas, past, poging, probeer, registreer, relevante, schoon, schoonmaken, staat, stelt, te, tekst, toelichten, uit, uitleg, van, vier, vies, vindt, volgorde, voor, wassen, winkel, woorden, wortels, ze, ziet, zinnen, zou.",
+  "Controleer de geschreven letters en hun positie in de bron: A, D, I, S, T, Z, a, b, c, d, e, g, h, i, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-07-correct"
+  ],
+  "acceptedAnswers": [
+   "De groente wassen → de pan schoonmaken → beginnen met koken."
+  ],
+  "evidence": [
+   {
+    "quote": "Thuis wassen ze de groente."
+   },
+   {
+    "quote": "De grote pan is nog vies, dus die maken ze eerst schoon."
+   },
+   {
+    "quote": "Daarna beginnen ze met koken."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-08",
+ "domain": "teksten",
+ "level": "A1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.sequence",
+ "sourceIds": [
+  "klink-text-fa334c7a982c0bfd"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat doet Celine direct voordat zij naar de ingang loopt?",
+ "stimulus": "Celine komt bij school aan. Zij zet haar fiets in het rek en doet hem op slot. Daarna loopt ze naar de ingang naast het grote raam.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-08-d2",
+   "text": "Zij zet de fiets bij het grote raam en doet hem op slot."
+  },
+  {
+   "id": "kb-tb-20261018-08-correct",
+   "text": "Zij zet haar fiets in het rek en doet hem op slot."
+  },
+  {
+   "id": "kb-tb-20261018-08-d1",
+   "text": "Zij loopt eerst naar de ingang en doet daarna de fiets op slot."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Zij zet haar fiets in het rek en doet hem op slot. Bewijs: Zij zet haar fiets in het rek en doet hem op slot. Daarna loopt ze naar de ingang naast het grote raam.",
+  "retry": "Zoek ‘Daarna’. Lees de hele zin die ervoor staat. Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Zij zet haar fiets in het rek en doet hem op slot.. Bewijs: zin 2: Zij zet haar fiets in het rek en doet hem op slot. | zin 3: Daarna loopt ze naar de ingang naast het grote raam.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Celine, Daarna, Zij, aan, bij, de, doet, en, fiets, grote, haar, hem, het, in, ingang, komt, loopt, naar, naast, op, raam, rek, school, slot, ze, zet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, Celine, Daarna, Geef, Laat, Lees, Leg, Wat, Zij, Zoek, aan, aanwijzen, alleen, antwoord, bij, bron, bronzinnen, cursist, daarna, de, die, direct, doet, door, een, eerst, eigen, en, ervoor, fiets, grote, haar, hele, hem, het, hoe, horen, hulp, in, ingang, is, keuze, komt, lezen, loopt, met, na, naar, naast, nieuwe, of, onvoldoende, op, opnieuw, pas, past, poging, probeer, raam, registreer, rek, relevante, school, slot, staat, toelichten, uit, uitleg, voordat, woorden, ze, zet, zij, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: C, D, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-08-correct"
+  ],
+  "acceptedAnswers": [
+   "Zij zet haar fiets in het rek en doet hem op slot."
+  ],
+  "evidence": [
+   {
+    "quote": "Zij zet haar fiets in het rek en doet hem op slot."
+   },
+   {
+    "quote": "Daarna loopt ze naar de ingang naast het grote raam."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-09",
+ "domain": "teksten",
+ "level": "A1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.reference",
+ "sourceIds": [
+  "klink-text-c08dd97f48c5c623"
+ ],
+ "mode": "teacher",
+ "prompt": "Waar verwijst ‘Daar’ in ‘Daar gaan ze zitten’ naar?",
+ "stimulus": "Mo en Sara lopen in het park. Onder een boom staat een bank. Er zit een kat op de bank. Naast de bank groeit een roos. Mo en Sara lopen naar een andere bank. Daar gaan ze zitten.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-09-correct",
+   "text": "Naar de andere bank waar Mo en Sara naartoe lopen."
+  },
+  {
+   "id": "kb-tb-20261018-09-d1",
+   "text": "Naar de bank waar de kat op zit."
+  },
+  {
+   "id": "kb-tb-20261018-09-d2",
+   "text": "Naar de plek naast de bank waar de roos groeit."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Naar de andere bank waar Mo en Sara naartoe lopen. Bewijs: Mo en Sara lopen naar een andere bank. Daar gaan ze zitten.",
+  "retry": "Lees de zin direct vóór ‘Daar’. Naar welke bank lopen Mo en Sara? Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Naar de andere bank waar Mo en Sara naartoe lopen.. Bewijs: zin 5: Mo en Sara lopen naar een andere bank. | zin 6: Daar gaan ze zitten.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daar, Er, Mo, Naast, Onder, Sara, andere, bank, boom, de, een, en, gaan, groeit, het, in, kat, lopen, naar, op, park, roos, staat, ze, zit, zitten.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, Daar, Er, Geef, Laat, Lees, Leg, Mo, Naar, Naast, Onder, Sara, Waar, aanwijzen, alleen, andere, antwoord, bank, bij, boom, bron, bronzinnen, cursist, de, direct, door, een, eigen, en, gaan, groeit, het, hoe, horen, hulp, in, is, kat, keuze, lezen, lopen, met, na, naar, naartoe, naast, nieuwe, of, onvoldoende, op, opnieuw, park, pas, past, plek, poging, probeer, registreer, relevante, roos, staat, toelichten, uit, uitleg, verwijst, vóór, waar, welke, woorden, ze, zin, zit, zitten.",
+  "Controleer de geschreven letters en hun positie in de bron: D, E, M, N, O, S, a, b, d, e, g, h, i, k, l, m, n, o, p, r, s, t, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-09-correct"
+  ],
+  "acceptedAnswers": [
+   "Naar de andere bank waar Mo en Sara naartoe lopen."
+  ],
+  "evidence": [
+   {
+    "quote": "Mo en Sara lopen naar een andere bank."
+   },
+   {
+    "quote": "Daar gaan ze zitten."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-10",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.reference",
+ "sourceIds": [
+  "klink-text-54ba0651dd3d6eda"
+ ],
+ "mode": "teacher",
+ "prompt": "Wie wordt bedoeld met ‘Hij’ in de laatste zin?",
+ "stimulus": "Sara heeft een boek van Mo geleend. Ze zou het vandaag terugbrengen, maar ze heeft het thuis laten liggen. Voor de les stuurt ze Mo een bericht: Sorry, je boek ligt nog op mijn tafel. Ik neem het morgen mee. Mo antwoordt dat dat goed is. Hij heeft het boek pas volgende week nodig.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-10-d1",
+   "text": "Sara."
+  },
+  {
+   "id": "kb-tb-20261018-10-d2",
+   "text": "De docent."
+  },
+  {
+   "id": "kb-tb-20261018-10-correct",
+   "text": "Mo."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Mo. Bewijs: Mo antwoordt dat dat goed is. Hij heeft het boek pas volgende week nodig.",
+  "retry": "Lees wie antwoord geeft. Over wie gaat de volgende zin verder? Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Mo.. Bewijs: zin 5: Mo antwoordt dat dat goed is. | zin 6: Hij heeft het boek pas volgende week nodig.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Hij, Ik, Mo, Sara, Sorry, Voor, Ze, antwoordt, bericht, boek, dat, de, een, geleend, goed, heeft, het, is, je, laten, les, liggen, ligt, maar, mee, mijn, morgen, neem, nodig, nog, op, pas, stuurt, tafel, terugbrengen, thuis, van, vandaag, volgende, week, ze, zou.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, De, Geef, Hij, Ik, Laat, Lees, Leg, Mo, Over, Sara, Sorry, Voor, Wie, Ze, aanwijzen, alleen, antwoord, antwoordt, bedoeld, bericht, bij, boek, bron, bronzinnen, cursist, dat, de, docent, door, een, eigen, en, gaat, geeft, geleend, goed, heeft, het, hoe, horen, hulp, in, is, je, keuze, laatste, laten, les, lezen, liggen, ligt, maar, mee, met, mijn, morgen, na, neem, nieuwe, nodig, nog, of, onvoldoende, op, opnieuw, pas, past, poging, probeer, registreer, relevante, stuurt, tafel, terugbrengen, thuis, toelichten, uit, uitleg, van, vandaag, verder, volgende, week, wie, woorden, wordt, ze, zin, zou.",
+  "Controleer de geschreven letters en hun positie in de bron: H, I, M, S, V, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, y, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-10-correct"
+  ],
+  "acceptedAnswers": [
+   "Mo."
+  ],
+  "evidence": [
+   {
+    "quote": "Mo antwoordt dat dat goed is."
+   },
+   {
+    "quote": "Hij heeft het boek pas volgende week nodig."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-11",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.reference",
+ "sourceIds": [
+  "klink-text-c5032096c3acee08"
+ ],
+ "mode": "teacher",
+ "prompt": "Welk hek wordt bedoeld met ‘Dat’ in ‘Dat staat open’?",
+ "stimulus": "Fatima wil met haar kind de tuin in. Het hek aan de straatkant is dicht. De buur wijst naar een tweede hek aan de zijkant. Dat staat open. Fatima loopt met haar kind om en gaat daar naar binnen.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-11-d2",
+   "text": "Beide hekken."
+  },
+  {
+   "id": "kb-tb-20261018-11-correct",
+   "text": "Het tweede hek aan de zijkant."
+  },
+  {
+   "id": "kb-tb-20261018-11-d1",
+   "text": "Het hek aan de straatkant."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Het tweede hek aan de zijkant. Bewijs: De buur wijst naar een tweede hek aan de zijkant. Dat staat open.",
+  "retry": "Lees de zin vóór ‘Dat’. Welk hek wijst de buur aan? Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Het tweede hek aan de zijkant.. Bewijs: zin 3: De buur wijst naar een tweede hek aan de zijkant. | zin 4: Dat staat open.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Dat, De, Fatima, Het, aan, binnen, buur, daar, de, dicht, een, en, gaat, haar, hek, in, is, kind, loopt, met, naar, om, open, staat, straatkant, tuin, tweede, wijst, wil, zijkant.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beide, Bewijs, Dat, De, Fatima, Geef, Het, Laat, Lees, Leg, Welk, aan, aanwijzen, alleen, antwoord, bedoeld, bij, binnen, bron, bronzinnen, buur, cursist, daar, de, dicht, door, een, eigen, en, gaat, haar, hek, hekken, het, hoe, horen, hulp, in, is, keuze, kind, lezen, loopt, met, na, naar, nieuwe, of, om, onvoldoende, open, opnieuw, pas, past, poging, probeer, registreer, relevante, staat, straatkant, toelichten, tuin, tweede, uit, uitleg, vóór, wijst, wil, woorden, wordt, zijkant, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, F, H, a, b, c, d, e, g, h, i, j, k, l, m, n, o, p, r, s, t, u, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-11-correct"
+  ],
+  "acceptedAnswers": [
+   "Het tweede hek aan de zijkant."
+  ],
+  "evidence": [
+   {
+    "quote": "De buur wijst naar een tweede hek aan de zijkant."
+   },
+   {
+    "quote": "Dat staat open."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-12",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.reference",
+ "sourceIds": [
+  "klink-text-4330b24533efd23a"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke kop bedoelt de tekst met ‘die’ in ‘kiest hij die’?",
+ "stimulus": "Rachid zoekt een kop voor zijn werk. Hij ziet een grote en een kleine kop. De grote is veel duurder. Omdat hij genoeg heeft aan de kleine, kiest hij die. Hij vraagt wel om een bon.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-12-correct",
+   "text": "De kleine kop."
+  },
+  {
+   "id": "kb-tb-20261018-12-d1",
+   "text": "De grote kop."
+  },
+  {
+   "id": "kb-tb-20261018-12-d2",
+   "text": "Beide koppen."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De kleine kop. Bewijs: Hij ziet een grote en een kleine kop. De grote is veel duurder. Omdat hij genoeg heeft aan de kleine, kiest hij die.",
+  "retry": "Lees waar Rachid genoeg aan heeft. Welke kop kiest hij daarom? Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: De kleine kop.. Bewijs: zin 2: Hij ziet een grote en een kleine kop. | zin 3: De grote is veel duurder. | zin 4: Omdat hij genoeg heeft aan de kleine, kiest hij die.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Hij, Omdat, Rachid, aan, bon, de, die, duurder, een, en, genoeg, grote, heeft, hij, is, kiest, kleine, kop, om, veel, voor, vraagt, wel, werk, ziet, zijn, zoekt.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beide, Bewijs, De, Geef, Hij, Laat, Lees, Leg, Omdat, Rachid, Welke, aan, aanwijzen, alleen, antwoord, bedoelt, bij, bon, bron, bronzinnen, cursist, daarom, de, die, door, duurder, een, eigen, en, genoeg, grote, heeft, het, hij, hoe, horen, hulp, in, is, keuze, kiest, kleine, kop, koppen, lezen, met, na, nieuwe, of, om, onvoldoende, opnieuw, pas, past, poging, probeer, registreer, relevante, tekst, toelichten, uit, uitleg, veel, voor, vraagt, waar, wel, werk, woorden, ziet, zijn, zoekt.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, O, R, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-12-correct"
+  ],
+  "acceptedAnswers": [
+   "De kleine kop."
+  ],
+  "evidence": [
+   {
+    "quote": "Hij ziet een grote en een kleine kop."
+   },
+   {
+    "quote": "De grote is veel duurder."
+   },
+   {
+    "quote": "Omdat hij genoeg heeft aan de kleine, kiest hij die."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-14",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.functional-information",
+ "sourceIds": [
+  "klink-text-ab2a885bacc5e11f"
+ ],
+ "mode": "teacher",
+ "prompt": "Hoe laat vertrekken Ali en Sara volgens hun nieuwe afspraak?",
+ "stimulus": "Ali en Sara willen zaterdag met de boot naar een dorp aan het water. Ze hebben afgesproken om tien uur te vertrekken. Vrijdag krijgt Ali een bericht: de boot van tien uur vaart niet. Er gaat wel een boot om elf uur. Ali belt Sara. Ze besluiten de boot van elf uur te nemen en iets later te gaan eten.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-14-d2",
+   "text": "Om twaalf uur."
+  },
+  {
+   "id": "kb-tb-20261018-14-correct",
+   "text": "Om elf uur."
+  },
+  {
+   "id": "kb-tb-20261018-14-d1",
+   "text": "Om tien uur."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Om elf uur. Bewijs: Ze besluiten de boot van elf uur te nemen en iets later te gaan eten.",
+  "retry": "Lees wat ze besluiten nadat Ali Sara heeft gebeld. Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Om elf uur.. Bewijs: zin 6: Ze besluiten de boot van elf uur te nemen en iets later te gaan eten.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Ali, Er, Sara, Vrijdag, Ze, aan, afgesproken, belt, bericht, besluiten, boot, de, dorp, een, elf, en, eten, gaan, gaat, hebben, het, iets, krijgt, later, met, naar, nemen, niet, om, te, tien, uur, vaart, van, vertrekken, water, wel, willen, zaterdag.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Ali, Bewijs, Er, Geef, Hoe, Laat, Lees, Leg, Om, Sara, Vrijdag, Ze, aan, aanwijzen, afgesproken, afspraak, alleen, antwoord, belt, bericht, besluiten, bij, boot, bron, bronzinnen, cursist, de, door, dorp, een, eigen, elf, en, eten, gaan, gaat, gebeld, hebben, heeft, het, hoe, horen, hulp, hun, iets, in, is, keuze, krijgt, laat, later, lezen, met, na, naar, nadat, nemen, niet, nieuwe, of, om, onvoldoende, opnieuw, pas, past, poging, probeer, registreer, relevante, te, tien, toelichten, twaalf, uit, uitleg, uur, vaart, van, vertrekken, volgens, wat, water, wel, willen, woorden, zaterdag, ze.",
+  "Controleer de geschreven letters en hun positie in de bron: A, E, S, V, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-14-correct"
+  ],
+  "acceptedAnswers": [
+   "Om elf uur."
+  ],
+  "evidence": [
+   {
+    "quote": "Ze besluiten de boot van elf uur te nemen en iets later te gaan eten."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-15",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.functional-information",
+ "sourceIds": [
+  "klink-text-5bff832cdc08c5dd"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke afspraak moet Mo nu in zijn agenda zetten?",
+ "stimulus": "Mo heeft woensdag om vier uur een afspraak bij de tandarts voor zijn kies. Hij moet die middag werken en belt om de afspraak te verzetten. De assistent biedt donderdag om tien uur aan. Dan kan Mo wel komen. Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-15-correct",
+   "text": "Donderdag om tien uur."
+  },
+  {
+   "id": "kb-tb-20261018-15-d1",
+   "text": "Woensdag om vier uur."
+  },
+  {
+   "id": "kb-tb-20261018-15-d2",
+   "text": "Donderdag om vier uur."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Donderdag om tien uur. Bewijs: De assistent biedt donderdag om tien uur aan. Dan kan Mo wel komen. Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda.",
+  "retry": "Vergelijk de oude afspraak met wat de assistent aanbiedt en Mo kan aannemen. Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Donderdag om tien uur.. Bewijs: zin 3: De assistent biedt donderdag om tien uur aan. | zin 4: Dan kan Mo wel komen. | zin 5: Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Dan, De, Hij, Mo, aan, afspraak, agenda, assistent, belt, biedt, bij, dag, de, die, donderdag, een, en, heeft, herhaalt, in, kan, kies, komen, middag, moet, nieuwe, om, schrijft, tandarts, te, tien, tijd, uur, verzetten, vier, voor, wel, werken, woensdag, ze, zijn.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, Dan, De, Donderdag, Geef, Hij, Laat, Leg, Mo, Vergelijk, Welke, Woensdag, aan, aanbiedt, aannemen, aanwijzen, afspraak, agenda, alleen, antwoord, assistent, belt, biedt, bij, bron, bronzinnen, cursist, dag, de, die, donderdag, door, een, eigen, en, heeft, herhaalt, het, hoe, horen, hulp, in, is, kan, keuze, kies, komen, lezen, met, middag, moet, na, nieuwe, nu, of, om, onvoldoende, opnieuw, oude, pas, past, poging, probeer, registreer, relevante, schrijft, tandarts, te, tien, tijd, toelichten, uit, uitleg, uur, verzetten, vier, voor, wat, wel, werken, woensdag, woorden, ze, zetten, zijn.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, M, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-15-correct"
+  ],
+  "acceptedAnswers": [
+   "Donderdag om tien uur."
+  ],
+  "evidence": [
+   {
+    "quote": "De assistent biedt donderdag om tien uur aan."
+   },
+   {
+    "quote": "Dan kan Mo wel komen."
+   },
+   {
+    "quote": "Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "kb-tb-20261018-16",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "reading.functional-information",
+ "sourceIds": [
+  "klink-text-a2036a0e16d53441"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat controleren Victor en Eline voordat ze naar de nieuwe gate lopen?",
+ "stimulus": "Victor en Eline zitten te wachten op hun vlucht. Op het scherm zien ze dat de gate is veranderd. Ze controleren het vluchtnummer en lopen daarna naar de nieuwe gate. Daar vragen ze een medewerker of ze goed staan.",
+ "options": [
+  {
+   "id": "kb-tb-20261018-16-d1",
+   "text": "De prijs van het ticket."
+  },
+  {
+   "id": "kb-tb-20261018-16-d2",
+   "text": "Of ze bij de nieuwe gate goed staan."
+  },
+  {
+   "id": "kb-tb-20261018-16-correct",
+   "text": "Het vluchtnummer."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Het vluchtnummer. Bewijs: Ze controleren het vluchtnummer en lopen daarna naar de nieuwe gate.",
+  "retry": "Lees de zin met ‘daarna’. Wat controleren ze vóór het lopen? Laat alleen de relevante bronzinnen opnieuw lezen of horen. Laat de cursist de keuze in eigen woorden toelichten, probeer opnieuw en registreer de hulp. Geef het antwoord pas na de nieuwe poging."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: Het vluchtnummer.. Bewijs: zin 3: Ze controleren het vluchtnummer en lopen daarna naar de nieuwe gate.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daar, Eline, Op, Victor, Ze, controleren, daarna, dat, de, een, en, gate, goed, het, hun, is, lopen, medewerker, naar, nieuwe, of, op, scherm, staan, te, veranderd, vlucht, vluchtnummer, vragen, wachten, ze, zien, zitten.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bewijs, Daar, De, Eline, Geef, Het, Laat, Lees, Leg, Of, Op, Victor, Wat, Ze, aanwijzen, alleen, antwoord, bij, bron, bronzinnen, controleren, cursist, daarna, dat, de, door, een, eigen, en, gate, goed, het, hoe, horen, hulp, hun, in, is, keuze, lezen, lopen, medewerker, met, na, naar, nieuwe, of, onvoldoende, op, opnieuw, pas, past, poging, prijs, probeer, registreer, relevante, scherm, staan, te, ticket, toelichten, uit, uitleg, van, veranderd, vlucht, vluchtnummer, voordat, vragen, vóór, wachten, woorden, ze, zien, zin, zitten.",
+  "Controleer de geschreven letters en hun positie in de bron: D, E, O, V, Z, a, c, d, e, f, g, h, i, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "kb-tb-20261018-16-correct"
+  ],
+  "acceptedAnswers": [
+   "Het vluchtnummer."
+  ],
+  "evidence": [
+   {
+    "quote": "Ze controleren het vluchtnummer en lopen daarna naar de nieuwe gate."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-01",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Een expliciet genoemde toestand herkennen.",
+ "sourceIds": [
+  "klink-text-4d694ba6236b95a5"
+ ],
+ "mode": "teacher",
+ "prompt": "Hoe is de pan aan het begin?",
+ "stimulus": "De pan is vies. Ik pak de pan. Ik maak de pan schoon.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-01-b",
+   "text": "schoon"
+  },
+  {
+   "id": "klink-teksten-b02-01-a",
+   "text": "vies"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "vies",
+  "retry": "Lees de eerste zin. Zoek hoe de pan dan is. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: vies. Bewijs: zin 1: De pan is vies.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, is, maak, pak, pan, schoon, vies.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Hoe, Ik, Laat, Lees, Leg, Luister, Noteer, Zoek, aan, aanwijzen, aanwijzing, alleen, antwoord, begin, begrip, bewijsplek, bij, bron, bronstuk, dan, de, door, een, eerste, eigen, elke, en, genoemde, het, hoe, in, is, keuze, kiezen, laat, lezen, maak, met, naar, of, om, ondersteund, onvoldoende, opnieuw, pak, pan, past, registreren, relevante, schoon, staat, tekst, uit, uitleg, van, verwarring, vies, voorlezen, vraag, waar, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, c, d, e, h, i, k, m, n, o, p, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-01-a"
+  ],
+  "acceptedAnswers": [
+   "vies"
+  ],
+  "evidence": [
+   {
+    "quote": "De pan is vies."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-02",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Een expliciete handeling verbinden met het voorwerp.",
+ "sourceIds": [
+  "klink-text-4d694ba6236b95a5"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat doe ik in de laatste zin met de pan?",
+ "stimulus": "De pan is vies. Ik pak de pan. Ik maak de pan schoon.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-02-a",
+   "text": "Ik maak de pan schoon."
+  },
+  {
+   "id": "klink-teksten-b02-02-b",
+   "text": "Ik koop de pan."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "schoonmaken",
+  "retry": "Lees de laatste zin. Welke handeling staat daar? Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: schoonmaken / ik maak de pan schoon / de pan schoonmaken. Bewijs: zin 3: Ik maak de pan schoon.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, is, maak, pak, pan, schoon, vies.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Wat, Welke, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, bewijsplek, bij, bron, bronstuk, daar, de, doe, door, een, eigen, elke, en, genoemde, handeling, het, hoe, ik, in, is, keuze, kiezen, koop, laat, laatste, lezen, maak, met, naar, of, om, ondersteund, onvoldoende, opnieuw, pak, pan, past, registreren, relevante, schoon, schoonmaken, staat, tekst, uit, uitleg, van, verwarring, vies, voorlezen, vraag, waar, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, c, d, e, h, i, k, m, n, o, p, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-02-a"
+  ],
+  "acceptedAnswers": [
+   "schoonmaken",
+   "ik maak de pan schoon",
+   "de pan schoonmaken"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik maak de pan schoon."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-03",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Begin en latere handeling in het juiste verband zetten.",
+ "sourceIds": [
+  "klink-text-4d694ba6236b95a5"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke volgorde past bij de tekst?",
+ "stimulus": "De pan is vies. Ik pak de pan. Ik maak de pan schoon.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-03-b",
+   "text": "Eerst is de pan schoon. Daarna wordt de pan vies."
+  },
+  {
+   "id": "klink-teksten-b02-03-a",
+   "text": "Eerst is de pan vies. Daarna wordt de pan schoongemaakt."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "eerst vies dan schoon",
+  "retry": "Vergelijk de eerste en de laatste zin. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: eerst vies dan schoon / eerst vies daarna schoonmaken. Bewijs: zin 1: De pan is vies. | zin 3: Ik maak de pan schoon.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, is, maak, pak, pan, schoon, vies.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, Daarna, De, Eerst, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Vergelijk, Welke, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, bewijsplek, bij, bron, bronstuk, dan, de, door, een, eerst, eerste, eigen, elke, en, genoemde, het, hoe, in, is, keuze, kiezen, laat, laatste, lezen, maak, met, naar, of, om, ondersteund, onvoldoende, opnieuw, pak, pan, past, registreren, relevante, schoon, schoongemaakt, staat, tekst, uit, uitleg, van, verwarring, vies, volgorde, voorlezen, vraag, waar, wijs, woorden, wordt, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, c, d, e, h, i, k, m, n, o, p, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-03-a"
+  ],
+  "acceptedAnswers": [
+   "eerst vies dan schoon",
+   "eerst vies daarna schoonmaken"
+  ],
+  "evidence": [
+   {
+    "quote": "De pan is vies."
+   },
+   {
+    "quote": "Ik maak de pan schoon."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-04",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Het genoemde gebruiksdoel onderscheiden van een plaats of een ander doel.",
+ "sourceIds": [
+  "klink-text-7dbbf3d7a252b131"
+ ],
+ "mode": "teacher",
+ "prompt": "Waarvoor is de map?",
+ "stimulus": "Ik pak een map. De map is voor de les. Ik neem de map mee.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-04-a",
+   "text": "voor de les"
+  },
+  {
+   "id": "klink-teksten-b02-04-b",
+   "text": "voor een feest"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "voor de les",
+  "retry": "Lees de zin waarin staat waarvoor de map is. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: voor de les / de les / les. Bewijs: zin 2: De map is voor de les.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, een, is, les, map, mee, neem, pak, voor.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Waarvoor, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, bewijsplek, bij, bron, bronstuk, de, door, een, eigen, elke, en, feest, genoemde, het, hoe, in, is, keuze, kiezen, laat, les, lezen, map, mee, met, naar, neem, of, om, ondersteund, onvoldoende, opnieuw, pak, past, registreren, relevante, staat, tekst, uit, uitleg, van, verwarring, voor, voorlezen, vraag, waar, waarin, waarvoor, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, d, e, i, k, l, m, n, o, p, r, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-04-a"
+  ],
+  "acceptedAnswers": [
+   "voor de les",
+   "de les",
+   "les"
+  ],
+  "evidence": [
+   {
+    "quote": "De map is voor de les."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-05",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Het voorwerp bij een expliciete handeling vinden.",
+ "sourceIds": [
+  "klink-text-7dbbf3d7a252b131"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat neem ik mee?",
+ "stimulus": "Ik pak een map. De map is voor de les. Ik neem de map mee.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-05-b",
+   "text": "een boek"
+  },
+  {
+   "id": "klink-teksten-b02-05-a",
+   "text": "de map"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "map",
+  "retry": "Zoek wat in de laatste zin wordt meegenomen. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: map / de map. Bewijs: zin 3: Ik neem de map mee.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, een, is, les, map, mee, neem, pak, voor.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Wat, Zoek, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, bewijsplek, bij, boek, bron, bronstuk, de, door, een, eigen, elke, en, genoemde, het, hoe, ik, in, is, keuze, kiezen, laat, laatste, les, lezen, map, mee, meegenomen, met, naar, neem, of, om, ondersteund, onvoldoende, opnieuw, pak, past, registreren, relevante, staat, tekst, uit, uitleg, van, verwarring, voor, voorlezen, vraag, waar, wat, wijs, woorden, wordt, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, d, e, i, k, l, m, n, o, p, r, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-05-a"
+  ],
+  "acceptedAnswers": [
+   "map",
+   "de map"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik neem de map mee."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-06",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Een met een geïntroduceerd voorwerp herkennen bij de volgende vermelding met de.",
+ "sourceIds": [
+  "klink-text-7dbbf3d7a252b131"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke map bedoelt ‘de map’ in de tweede zin?",
+ "stimulus": "Ik pak een map. De map is voor de les. Ik neem de map mee.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-06-a",
+   "text": "de map die ik in de eerste zin pak"
+  },
+  {
+   "id": "klink-teksten-b02-06-b",
+   "text": "een andere map"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "dezelfde map",
+  "retry": "Lees de eerste twee zinnen samen. Wordt een tweede map genoemd? Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: dezelfde map / de map die ik pak / de map uit de eerste zin. Bewijs: zin 1: Ik pak een map. | zin 2: De map is voor de les.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, een, is, les, map, mee, neem, pak, voor.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Welke, Wordt, aan, aanwijzen, aanwijzing, alleen, andere, antwoord, bedoelt, begrip, bewijsplek, bij, bron, bronstuk, de, dezelfde, die, door, een, eerste, eigen, elke, en, genoemd, genoemde, het, hoe, ik, in, is, keuze, kiezen, laat, les, lezen, map, mee, met, naar, neem, of, om, ondersteund, onvoldoende, opnieuw, pak, past, registreren, relevante, samen, staat, tekst, twee, tweede, uit, uitleg, van, verwarring, voor, voorlezen, vraag, waar, wijs, woorden, zin, zinnen.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, d, e, i, k, l, m, n, o, p, r, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-06-a"
+  ],
+  "acceptedAnswers": [
+   "dezelfde map",
+   "de map die ik pak",
+   "de map uit de eerste zin"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik pak een map."
+   },
+   {
+    "quote": "De map is voor de les."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-07",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Het voorwerp bij een expliciete handeling vinden.",
+ "sourceIds": [
+  "klink-text-1e470bb532684eb2"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat zie ik volgens de eerste zin?",
+ "stimulus": "Ik zie een boom. Bij de boom staat een bank. Ik zit op de bank.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-07-b",
+   "text": "een bank"
+  },
+  {
+   "id": "klink-teksten-b02-07-a",
+   "text": "een boom"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "boom",
+  "retry": "Lees alleen de eerste zin opnieuw. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: boom / een boom. Bewijs: zin 1: Ik zie een boom.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bij, Ik, bank, boom, de, een, op, staat, zie, zit.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Wat, aan, aanwijzen, aanwijzing, alleen, antwoord, bank, begrip, bewijsplek, bij, boom, bron, bronstuk, de, door, een, eerste, eigen, elke, en, genoemde, het, hoe, ik, in, is, keuze, kiezen, laat, lezen, met, naar, of, om, ondersteund, onvoldoende, op, opnieuw, past, registreren, relevante, staat, tekst, uit, uitleg, van, verwarring, volgens, voorlezen, vraag, waar, wijs, woorden, zie, zin, zit.",
+  "Controleer de geschreven letters en hun positie in de bron: B, I, a, b, d, e, i, j, k, m, n, o, p, s, t, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-07-a"
+  ],
+  "acceptedAnswers": [
+   "boom",
+   "een boom"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik zie een boom."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-08",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "De zitplek in een concrete plaatsrelatie vinden.",
+ "sourceIds": [
+  "klink-text-1e470bb532684eb2"
+ ],
+ "mode": "teacher",
+ "prompt": "Waarop zit ik?",
+ "stimulus": "Ik zie een boom. Bij de boom staat een bank. Ik zit op de bank.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-08-a",
+   "text": "op de bank"
+  },
+  {
+   "id": "klink-teksten-b02-08-b",
+   "text": "op een mat"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "bank",
+  "retry": "Lees de laatste zin. Zoek de zitplek. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: bank / op de bank / de bank. Bewijs: zin 3: Ik zit op de bank.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bij, Ik, bank, boom, de, een, op, staat, zie, zit.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Waarop, Zoek, aan, aanwijzen, aanwijzing, alleen, antwoord, bank, begrip, bewijsplek, bij, boom, bron, bronstuk, de, door, een, eigen, elke, en, genoemde, het, hoe, ik, in, is, keuze, kiezen, laat, laatste, lezen, mat, met, naar, of, om, ondersteund, onvoldoende, op, opnieuw, past, registreren, relevante, staat, tekst, uit, uitleg, van, verwarring, voorlezen, vraag, waar, wijs, woorden, zie, zin, zit, zitplek.",
+  "Controleer de geschreven letters en hun positie in de bron: B, I, a, b, d, e, i, j, k, m, n, o, p, s, t, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-08-a"
+  ],
+  "acceptedAnswers": [
+   "bank",
+   "op de bank",
+   "de bank"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik zit op de bank."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-09",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Een met een geïntroduceerd voorwerp herkennen bij de volgende vermelding met de.",
+ "sourceIds": [
+  "klink-text-1e470bb532684eb2"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke bank bedoelt ‘de bank’ in de laatste zin?",
+ "stimulus": "Ik zie een boom. Bij de boom staat een bank. Ik zit op de bank.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-09-b",
+   "text": "een andere bank"
+  },
+  {
+   "id": "klink-teksten-b02-09-a",
+   "text": "de bank bij de boom"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "de bank bij de boom",
+  "retry": "Lees de twee zinnen over de bank achter elkaar. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: de bank bij de boom / dezelfde bank / de bank uit de tweede zin. Bewijs: zin 2: Bij de boom staat een bank. | zin 3: Ik zit op de bank.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bij, Ik, bank, boom, de, een, op, staat, zie, zit.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Welke, aan, aanwijzen, aanwijzing, achter, alleen, andere, antwoord, bank, bedoelt, begrip, bewijsplek, bij, boom, bron, bronstuk, de, door, een, eigen, elkaar, elke, en, genoemde, het, hoe, in, is, keuze, kiezen, laat, laatste, lezen, met, naar, of, om, ondersteund, onvoldoende, op, opnieuw, over, past, registreren, relevante, staat, tekst, twee, uit, uitleg, van, verwarring, voorlezen, vraag, waar, wijs, woorden, zie, zin, zinnen, zit.",
+  "Controleer de geschreven letters en hun positie in de bron: B, I, a, b, d, e, i, j, k, m, n, o, p, s, t, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-09-a"
+  ],
+  "acceptedAnswers": [
+   "de bank bij de boom",
+   "dezelfde bank",
+   "de bank uit de tweede zin"
+  ],
+  "evidence": [
+   {
+    "quote": "Bij de boom staat een bank."
+   },
+   {
+    "quote": "Ik zit op de bank."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-10",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Beide expliciet genoemde producten vinden.",
+ "sourceIds": [
+  "klink-text-22bbb207b0a8b319"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat koop ik volgens de eerste zin?",
+ "stimulus": "Ik koop kool en een biet. Ik pak een pan. De kool en de biet gaan in de pan.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-10-a",
+   "text": "kool en een biet"
+  },
+  {
+   "id": "klink-teksten-b02-10-b",
+   "text": "kool en een pan"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "kool en biet",
+  "retry": "Lees welke twee dingen in de eerste zin staan. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: kool en biet / kool en een biet / een biet en kool. Bewijs: zin 1: Ik koop kool en een biet.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, biet, de, een, en, gaan, in, kool, koop, pak, pan.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Wat, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, bewijsplek, biet, bij, bron, bronstuk, de, dingen, door, een, eerste, eigen, elke, en, gaan, genoemde, het, hoe, ik, in, is, keuze, kiezen, kool, koop, laat, lezen, met, naar, of, om, ondersteund, onvoldoende, opnieuw, pak, pan, past, registreren, relevante, staan, staat, tekst, twee, uit, uitleg, van, verwarring, volgens, voorlezen, vraag, waar, welke, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, g, i, k, l, n, o, p, t. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-10-a"
+  ],
+  "acceptedAnswers": [
+   "kool en biet",
+   "kool en een biet",
+   "een biet en kool"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik koop kool en een biet."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-11",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "De bestemming van voorwerpen vinden.",
+ "sourceIds": [
+  "klink-text-22bbb207b0a8b319"
+ ],
+ "mode": "teacher",
+ "prompt": "Waar gaan de kool en de biet in?",
+ "stimulus": "Ik koop kool en een biet. Ik pak een pan. De kool en de biet gaan in de pan.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-11-b",
+   "text": "in een tas"
+  },
+  {
+   "id": "klink-teksten-b02-11-a",
+   "text": "in de pan"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "pan",
+  "retry": "Lees de laatste zin. Zoek waar beide groenten in gaan. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: pan / de pan / in de pan. Bewijs: zin 3: De kool en de biet gaan in de pan.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, biet, de, een, en, gaan, in, kool, koop, pak, pan.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Luister, Noteer, Waar, Zoek, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, beide, bewijsplek, biet, bij, bron, bronstuk, de, door, een, eigen, elke, en, gaan, genoemde, groenten, het, hoe, in, is, keuze, kiezen, kool, koop, laat, laatste, lezen, met, naar, of, om, ondersteund, onvoldoende, opnieuw, pak, pan, past, registreren, relevante, staat, tas, tekst, uit, uitleg, van, verwarring, voorlezen, vraag, waar, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, g, i, k, l, n, o, p, t. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-11-a"
+  ],
+  "acceptedAnswers": [
+   "pan",
+   "de pan",
+   "in de pan"
+  ],
+  "evidence": [
+   {
+    "quote": "De kool en de biet gaan in de pan."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b02-12",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Pakken onderscheiden van kopen in de tekst.",
+ "sourceIds": [
+  "klink-text-22bbb207b0a8b319"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat doe ik in de tweede zin met de pan?",
+ "stimulus": "Ik koop kool en een biet. Ik pak een pan. De kool en de biet gaan in de pan.",
+ "options": [
+  {
+   "id": "klink-teksten-b02-12-a",
+   "text": "Ik pak een pan."
+  },
+  {
+   "id": "klink-teksten-b02-12-b",
+   "text": "Ik koop een pan."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "ik pak een pan",
+  "retry": "Lees de zin over de pan. Let op het woord vóór ‘een pan’. Laat het relevante bronstuk opnieuw lezen. Bespreek de genoemde verwarring, laat opnieuw kiezen en vraag om de bewijsplek. Noteer elke aanwijzing. Bij voorlezen van de bron: alleen ondersteund begrip registreren."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: ik pak een pan / pak / pakken. Bewijs: zin 2: Ik pak een pan.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, biet, de, een, en, gaan, in, kool, koop, pak, pan.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Geef, Ik, Laat, Lees, Leg, Let, Luister, Noteer, Wat, aan, aanwijzen, aanwijzing, alleen, antwoord, begrip, bewijsplek, biet, bij, bron, bronstuk, de, doe, door, een, eigen, elke, en, gaan, genoemde, het, hoe, ik, in, is, keuze, kiezen, kool, koop, laat, lezen, met, naar, of, om, ondersteund, onvoldoende, op, opnieuw, over, pak, pan, past, registreren, relevante, staat, tekst, tweede, uit, uitleg, van, verwarring, voorlezen, vraag, vóór, waar, wijs, woord, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, g, i, k, l, n, o, p, t. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b02-12-a"
+  ],
+  "acceptedAnswers": [
+   "ik pak een pan",
+   "pak",
+   "pakken"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik pak een pan."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b03-01",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.",
+ "sourceIds": [
+  "klink-concept-text-b03-01"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat zie ik in de eerste zin?",
+ "stimulus": "Ik zie de bus. De map is in de tas. Ik neem de tas mee.",
+ "options": [
+  {
+   "id": "klink-teksten-b03-01-d1",
+   "text": "de tas"
+  },
+  {
+   "id": "klink-teksten-b03-01-correct",
+   "text": "de bus"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "bus",
+  "retry": "Lees de eerste zin. Zoek wat ik zie. Bespreek na beide eerste pogingen de bewijszin en de verwarring in de afleider. Geef gerichte hulp en laat opnieuw proberen. Deze herstelpoging telt als oefenen, niet als ongeziene transfer."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: bus / de bus. Bewijs: zin 1: Ik zie de bus.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, bus, de, in, is, map, mee, neem, tas, zie.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Deze, Geef, Ik, Lees, Leg, Luister, Wat, Zoek, aan, aanwijzen, afleider, alleen, als, antwoord, beide, bewijszin, bij, bron, bus, de, door, een, eerste, eigen, en, gerichte, herstelpoging, het, hoe, hulp, ik, in, is, keuze, laat, map, mee, met, na, naar, neem, niet, oefenen, of, ongeziene, onvoldoende, opnieuw, past, pogingen, proberen, staat, tas, tekst, telt, transfer, uit, uitleg, verwarring, vraag, waar, wat, wijs, woorden, zie, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, i, k, m, n, p, s, t, u, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b03-01-correct"
+  ],
+  "acceptedAnswers": [
+   "bus",
+   "de bus"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik zie de bus."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b03-02",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.",
+ "sourceIds": [
+  "klink-concept-text-b03-01"
+ ],
+ "mode": "teacher",
+ "prompt": "Waar is de map?",
+ "stimulus": "Ik zie de bus. De map is in de tas. Ik neem de tas mee.",
+ "options": [
+  {
+   "id": "klink-teksten-b03-02-correct",
+   "text": "in de tas"
+  },
+  {
+   "id": "klink-teksten-b03-02-d1",
+   "text": "op de bank"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "in de tas",
+  "retry": "Zoek de zin over de map. Bespreek na beide eerste pogingen de bewijszin en de verwarring in de afleider. Geef gerichte hulp en laat opnieuw proberen. Deze herstelpoging telt als oefenen, niet als ongeziene transfer."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: in de tas / de tas / tas. Bewijs: zin 2: De map is in de tas.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, bus, de, in, is, map, mee, neem, tas, zie.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Deze, Geef, Ik, Lees, Leg, Luister, Waar, Zoek, aan, aanwijzen, afleider, alleen, als, antwoord, bank, beide, bewijszin, bij, bron, bus, de, door, een, eerste, eigen, en, gerichte, herstelpoging, het, hoe, hulp, in, is, keuze, laat, map, mee, met, na, naar, neem, niet, oefenen, of, ongeziene, onvoldoende, op, opnieuw, over, past, pogingen, proberen, staat, tas, tekst, telt, transfer, uit, uitleg, verwarring, vraag, waar, wijs, woorden, zie, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, i, k, m, n, p, s, t, u, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b03-02-correct"
+  ],
+  "acceptedAnswers": [
+   "in de tas",
+   "de tas",
+   "tas"
+  ],
+  "evidence": [
+   {
+    "quote": "De map is in de tas."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b03-03",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.",
+ "sourceIds": [
+  "klink-concept-text-b03-02"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat is in de tweede zin schoon?",
+ "stimulus": "De kop is vies. De pan is schoon. Ik maak de kop schoon.",
+ "options": [
+  {
+   "id": "klink-teksten-b03-03-d1",
+   "text": "de kop"
+  },
+  {
+   "id": "klink-teksten-b03-03-correct",
+   "text": "de pan"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "de pan",
+  "retry": "Lees de tweede zin. Welk voorwerp staat daar? Bespreek na beide eerste pogingen de bewijszin en de verwarring in de afleider. Geef gerichte hulp en laat opnieuw proberen. Deze herstelpoging telt als oefenen, niet als ongeziene transfer."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: de pan / pan. Bewijs: zin 2: De pan is schoon.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, is, kop, maak, pan, schoon, vies.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Deze, Geef, Ik, Lees, Leg, Luister, Wat, Welk, aan, aanwijzen, afleider, alleen, als, antwoord, beide, bewijszin, bij, bron, daar, de, door, een, eerste, eigen, en, gerichte, herstelpoging, het, hoe, hulp, in, is, keuze, kop, laat, maak, met, na, naar, niet, oefenen, of, ongeziene, onvoldoende, opnieuw, pan, past, pogingen, proberen, schoon, staat, tekst, telt, transfer, tweede, uit, uitleg, verwarring, vies, voorwerp, vraag, waar, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, c, d, e, h, i, k, m, n, o, p, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b03-03-correct"
+  ],
+  "acceptedAnswers": [
+   "de pan",
+   "pan"
+  ],
+  "evidence": [
+   {
+    "quote": "De pan is schoon."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b03-04",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.",
+ "sourceIds": [
+  "klink-concept-text-b03-02"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat maak ik in de laatste zin schoon?",
+ "stimulus": "De kop is vies. De pan is schoon. Ik maak de kop schoon.",
+ "options": [
+  {
+   "id": "klink-teksten-b03-04-correct",
+   "text": "de kop"
+  },
+  {
+   "id": "klink-teksten-b03-04-d1",
+   "text": "de pan"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "de kop",
+  "retry": "Lees de laatste zin. Zoek welk voorwerp ik schoonmaak. Bespreek na beide eerste pogingen de bewijszin en de verwarring in de afleider. Geef gerichte hulp en laat opnieuw proberen. Deze herstelpoging telt als oefenen, niet als ongeziene transfer."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: de kop / kop. Bewijs: zin 3: Ik maak de kop schoon.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, de, is, kop, maak, pan, schoon, vies.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Deze, Geef, Ik, Lees, Leg, Luister, Wat, Zoek, aan, aanwijzen, afleider, alleen, als, antwoord, beide, bewijszin, bij, bron, de, door, een, eerste, eigen, en, gerichte, herstelpoging, het, hoe, hulp, ik, in, is, keuze, kop, laat, laatste, maak, met, na, naar, niet, oefenen, of, ongeziene, onvoldoende, opnieuw, pan, past, pogingen, proberen, schoon, schoonmaak, staat, tekst, telt, transfer, uit, uitleg, verwarring, vies, voorwerp, vraag, waar, welk, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, c, d, e, h, i, k, m, n, o, p, s, v. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b03-04-correct"
+  ],
+  "acceptedAnswers": [
+   "de kop",
+   "kop"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik maak de kop schoon."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b03-05",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.",
+ "sourceIds": [
+  "klink-concept-text-b03-03"
+ ],
+ "mode": "teacher",
+ "prompt": "Waar is de kool?",
+ "stimulus": "De kool is in de pan. De biet is in een tas. Ik neem de biet.",
+ "options": [
+  {
+   "id": "klink-teksten-b03-05-d1",
+   "text": "in de tas"
+  },
+  {
+   "id": "klink-teksten-b03-05-correct",
+   "text": "in de pan"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "in de pan",
+  "retry": "Lees de zin over de kool. Bespreek na beide eerste pogingen de bewijszin en de verwarring in de afleider. Geef gerichte hulp en laat opnieuw proberen. Deze herstelpoging telt als oefenen, niet als ongeziene transfer."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: in de pan / pan / de pan. Bewijs: zin 1: De kool is in de pan.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, biet, de, een, in, is, kool, neem, pan, tas.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Deze, Geef, Ik, Lees, Leg, Luister, Waar, aan, aanwijzen, afleider, alleen, als, antwoord, beide, bewijszin, biet, bij, bron, de, door, een, eerste, eigen, en, gerichte, herstelpoging, het, hoe, hulp, in, is, keuze, kool, laat, met, na, naar, neem, niet, oefenen, of, ongeziene, onvoldoende, opnieuw, over, pan, past, pogingen, proberen, staat, tas, tekst, telt, transfer, uit, uitleg, verwarring, vraag, waar, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, i, k, l, m, n, o, p, s, t. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b03-05-correct"
+  ],
+  "acceptedAnswers": [
+   "in de pan",
+   "pan",
+   "de pan"
+  ],
+  "evidence": [
+   {
+    "quote": "De kool is in de pan."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b03-06",
+ "domain": "teksten",
+ "level": "Alfa A",
+ "axis": "literacy",
+ "title": "Lees en leg uit",
+ "objective": "Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.",
+ "sourceIds": [
+  "klink-concept-text-b03-03"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat neem ik volgens de laatste zin?",
+ "stimulus": "De kool is in de pan. De biet is in een tas. Ik neem de biet.",
+ "options": [
+  {
+   "id": "klink-teksten-b03-06-correct",
+   "text": "de biet"
+  },
+  {
+   "id": "klink-teksten-b03-06-d1",
+   "text": "de kool"
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "de biet",
+  "retry": "Lees de laatste zin. Wat staat achter neem? Bespreek na beide eerste pogingen de bewijszin en de verwarring in de afleider. Geef gerichte hulp en laat opnieuw proberen. Deze herstelpoging telt als oefenen, niet als ongeziene transfer."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende. Beoordelingsreferentie: de biet / biet. Bewijs: zin 3: Ik neem de biet.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Ik, biet, de, een, in, is, kool, neem, pan, tas.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Deze, Geef, Ik, Lees, Leg, Luister, Wat, aan, aanwijzen, achter, afleider, alleen, als, antwoord, beide, bewijszin, biet, bij, bron, de, door, een, eerste, eigen, en, gerichte, herstelpoging, het, hoe, hulp, ik, in, is, keuze, kool, laat, laatste, met, na, naar, neem, niet, oefenen, of, ongeziene, onvoldoende, opnieuw, pan, past, pogingen, proberen, staat, tas, tekst, telt, transfer, uit, uitleg, verwarring, volgens, vraag, waar, wijs, woorden, zin.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, a, b, d, e, i, k, l, m, n, o, p, s, t. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b03-06-correct"
+  ],
+  "acceptedAnswers": [
+   "de biet",
+   "biet"
+  ],
+  "evidence": [
+   {
+    "quote": "Ik neem de biet."
+   }
+  ],
+  "requiredSemanticSlots": [],
+  "meaningCheck": "Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}

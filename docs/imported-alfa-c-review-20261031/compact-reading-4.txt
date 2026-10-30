@@ -1,0 +1,131 @@
+SOURCE 31 | A1
+Eline verwacht bezoek. Er komen negen mensen aan tafel. Zij heeft acht stoelen. Victor neemt een stoel mee, zodat iedereen kan zitten.
+ID klink-teksten-b06-05 | teacher
+Q Hoeveel stoelen komen ze tekort voordat Victor een stoel meeneemt? Leg uit met de aantallen uit de tekst.
+OPTIONS Drie stoelen: Eline en Victor moeten ook nog bij de negen mensen worden geteld. / *Eén stoel: er zijn negen mensen en acht stoelen.
+MODEL ['Eén, want negen mensen hebben maar acht stoelen.']
+CHECK Laat met woorden of tellen zien waarom het tekort één is.
+SLOTS ['nine-people', 'eight-initial-chairs', 'shortfall-one']
+ID klink-teksten-b06-06 | teacher
+Q Hoeveel stoelen zijn er nadat Victor een stoel heeft meegenomen? Kan ieder van de negen mensen dan zitten?
+OPTIONS *Negen stoelen; er is dan voor iedereen een stoel. / Acht stoelen; er blijft één stoel te weinig.
+MODEL ['Acht plus één is negen. Iedereen kan zitten.']
+CHECK Wat verandert door de stoel van Victor? Leg het nieuwe totaal uit.
+SLOTS ['eight-plus-one', 'nine-final-chairs', 'enough-for-nine']
+
+SOURCE 32 | A2
+Youssef is in de apotheek. De verpakking van zijn pil ziet er anders uit dan de vorige keer. Hij weet niet waarom en vraagt het aan de medewerker. Hij wil eerst uitleg; hij raadt niet zelf wat de verandering betekent.
+ID klink-teksten-b07-01 | teacher
+Q Wat is de hoofdgedachte van dit verhaal? Verbind de verandering met de reactie van Youssef.
+OPTIONS Youssef is in de apotheek. / *Youssef vraagt uitleg over de andere verpakking omdat hij niet weet wat de verandering betekent; hij gaat niet zelf raden.
+MODEL ['De verpakking is anders. Youssef vraagt uitleg in plaats van zelf te raden.']
+CHECK Waarom is alleen Youssef is in de apotheek geen hoofdgedachte van het hele verhaal?
+SLOTS ['changed-packaging-uncertainty', 'asks-rather-than-guesses']
+
+SOURCE 33 | A2
+Celine wil na de les het raam sluiten. Het blijft vastzitten. Ze gaat er niet hard aan trekken, maar meldt het aan de medewerker van het gebouw. Ze vertelt om welk lokaal het gaat, zodat de medewerker de juiste plek kan vinden.
+ID klink-teksten-b07-02 | teacher
+Q Vertel in één of twee zinnen de hoofdgedachte: welk probleem heeft Celine en hoe gaat ze ermee om?
+OPTIONS *Het raam zit vast. Celine trekt er niet hard aan, maar meldt het probleem en noemt het lokaal, zodat de medewerker de plek kan vinden. / Celine vertelt welk lokaal het is.
+MODEL ['Celine kan het raam niet sluiten. Ze meldt het probleem en vertelt waar het is in plaats van hard te trekken.']
+CHECK Waarom hoort het probleem bij je samenvatting, en niet alleen de informatie over het lokaal?
+SLOTS ['stuck-window-problem', 'reports-not-forces', 'location-enables-finding']
+ID klink-teksten-b07-03 | teacher
+Q Wat wil Celine bereiken door het probleem te melden én het lokaal te noemen? Is dat resultaat al bereikt volgens de tekst?
+OPTIONS Ze heeft het raam al gerepareerd en vertelt waar dat is gebeurd. / *Ze wil dat de medewerker de juiste plek van het raamprobleem kan vinden. Of de medewerker die plek al heeft gevonden, staat niet in de tekst. Ook een reparatie is niet bevestigd.
+MODEL ['Ze vertelt waar het raam vastzit, zodat de medewerker de plek kan vinden. We weten niet of de medewerker die plek al heeft gevonden.']
+CHECK Gaat dit over het doel van Celine, het doel van de schrijver of een resultaat dat al vaststaat? Leg uit.
+SLOTS ['problem-locating-purpose', 'goal-achievement-unknown']
+
+SOURCE 34 | A2
+Lina heeft een gesprek met de chirurg. Zij schrijft vooraf op wat zij wil vragen. Tijdens het gesprek vraagt ze om uitleg bij een moeilijk woord. Aan het einde vat ze in haar eigen woorden samen wat is afgesproken, zodat ze kan controleren of ze het goed begrijpt.
+ID klink-teksten-b07-04 | teacher
+Q Wat laat het hele verhaal zien over hoe Lina het gesprek aanpakt? Verbind wat zij vooraf, tijdens en aan het einde doet.
+OPTIONS *Lina bereidt vragen voor, vraagt tijdens het gesprek om verduidelijking en vat de afspraken samen om haar begrip te controleren. / Lina schrijft vóór haar gesprek een paar vragen op.
+MODEL ['Ze bereidt zich voor, vraagt uitleg als iets moeilijk is en controleert de afspraken door ze samen te vatten.']
+CHECK Waarom is alleen vragen voorbereiden te beperkt voor dit verhaal?
+SLOTS ['prepares-and-seeks-clarification', 'summarises-to-check-understanding']
+
+SOURCE 35 | A2
+De groep wil een ruimte huren voor een bijeenkomst. Er kunnen maximaal tien personen in. Er zijn twaalf aanmeldingen. Said vraagt daarom aan de beheerder of er een grotere ruimte beschikbaar is.
+ID klink-teksten-b07-05 | teacher
+Q Wat is de kern van dit verhaal? Leg het verband tussen het maximum, de aanmeldingen en de vraag van Said.
+OPTIONS De groep wil een ruimte huren voor een bijeenkomst. / *Er zijn meer aanmeldingen dan de ruimte toelaat. Daarom vraagt Said of er een grotere ruimte beschikbaar is voor de bijeenkomst.
+MODEL ['De ruimte is te klein voor het aantal aanmeldingen, dus Said vraagt naar een grotere.']
+CHECK Waarom is alleen het getal tien of twaalf geen hoofdgedachte?
+SLOTS ['capacity-registration-mismatch', 'asks-about-larger-space']
+
+SOURCE 36 | A2
+Daan zou zijn kleuter zelf ophalen. Zijn afspraak loopt uit. Hij belt zijn moeder en vraagt of zij vandaag kan gaan. Zij zegt ja. Daan laat ook aan de opvang weten wie zijn kind ophaalt.
+ID klink-teksten-b08-01 | teacher
+Q Leg uit hoe het oorspronkelijke ophaalplan verandert en welke twee contacten Daan daarvoor legt.
+OPTIONS Daan haalt zelf op en vraagt daarna zijn moeder om de opvang te bellen. / *Eerst zou Daan zelf ophalen. Omdat zijn afspraak langer duurt, vraagt hij zijn moeder; zij zegt ja. Hij vertelt de opvang wie komt.
+MODEL ['Eerst zou Daan zelf ophalen. Omdat zijn afspraak langer duurt, vraagt hij zijn moeder; zij zegt ja. Hij vertelt de opvang wie komt.']
+CHECK Waarom moet de opvang ook iets weten als de moeder al ja heeft gezegd?
+SLOTS ['original-plan', 'delay-and-mother-agrees', 'daan-informs-care']
+ID klink-teksten-b08-02 | teacher
+Q Is het kind aan het einde van de tekst al opgehaald? Leg uit wat wel en niet vaststaat.
+OPTIONS *De vervanging is afgesproken en de opvang is geïnformeerd. De tekst vertelt niet dat het kind al is opgehaald. / Ja, want de moeder heeft ja gezegd.
+MODEL ['De vervanging is afgesproken en de opvang is geïnformeerd. De tekst vertelt niet dat het kind al is opgehaald.']
+CHECK Betekent onbekend of het gebeurd is hetzelfde als zeker niet gebeurd?
+SLOTS ['agreement-made', 'pickup-not-confirmed']
+
+SOURCE 37 | A2
+Hugo wil stoppen met het kaartspel, omdat hij naar huis moet. De andere spelers vragen of hij de huidige ronde nog afmaakt. Dat lukt nog. Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt.
+ID klink-teksten-b08-03 | teacher
+Q Beschrijf de afgesproken volgorde vanaf de ronde die nu bezig is. Wat begint Hugo niet meer?
+OPTIONS Hij vertrekt eerst en maakt daarna nog een nieuwe ronde af. / *Hij maakt de huidige ronde af en vertrekt daarna. Hij krijgt geen nieuwe kaarten en begint geen nieuwe ronde.
+MODEL ['Hij maakt de huidige ronde af en vertrekt daarna. Hij krijgt geen nieuwe kaarten en begint geen nieuwe ronde.']
+CHECK Waarom is alleen na de ronde een onvolledige beschrijving van deze hele afspraak?
+SLOTS ['finish-current', 'leave-after', 'no-new-round']
+ID klink-teksten-b08-04 | teacher
+Q Welk verschil is er tussen wat Hugo eerst wil en de afspraak met de andere spelers? Waarom past de afspraak bij zijn reden?
+OPTIONS *Hij wil stoppen omdat hij naar huis moet. Hij kan nog de lopende ronde afmaken, maar doet geen volgende ronde mee. / Hij hoeft niet meer naar huis en blijft onbeperkt doorspelen.
+MODEL ['Hij wil stoppen omdat hij naar huis moet. Hij kan nog de lopende ronde afmaken, maar doet geen volgende ronde mee.']
+CHECK Bewijst dat lukt nog dat Hugo tijd heeft voor meerdere rondes?
+SLOTS ['must-go-home', 'limited-finish-compromise']
+
+SOURCE 38 | A2
+Rosa maakt tijdens het eten een foto van de familie. Ze wil de foto aan een vriend sturen. Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden. Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto. Rosa kiest een foto waarop hij niet staat.
+ID klink-teksten-b08-05 | teacher
+Q Welke stappen zet Rosa tussen haar plan om de foto te sturen en het kiezen van een foto?
+OPTIONS Ze stuurt eerst de foto met Murat en vraagt daarna toestemming. / *Ze wil een foto sturen, vraagt eerst Fenna en Murat, hoort verschillende wensen en kiest een foto zonder Murat.
+MODEL ['Ze wil een foto sturen, vraagt eerst Fenna en Murat, hoort verschillende wensen en kiest een foto zonder Murat.']
+CHECK Staat er ook dat de gekozen foto al is verstuurd?
+SLOTS ['asks-before-choice', 'different-wishes', 'choice-excludes-murat']
+ID klink-teksten-b08-06 | teacher
+Q Fenna vindt delen goed. Waarom kan Rosa daarmee nog niet beslissen om de foto met iedereen te sturen?
+OPTIONS *Ze vraagt ook Murat en hij wil niet op een gedeelde foto. Fenna geeft geen toestemming namens hem; Rosa kiest zonder Murat. / Als Fenna ja zegt, geldt dat ook voor Murat.
+MODEL ['Ze vraagt ook Murat en hij wil niet op een gedeelde foto. Fenna geeft geen toestemming namens hem; Rosa kiest zonder Murat.']
+CHECK Welke reactie leidt tot de andere fotokeuze?
+SLOTS ['fenna-only-own-wish', 'murat-different-wish', 'selection-follows']
+
+SOURCE 39 | A2
+In het lokaal spreken de cursisten af wie na de les opruimt. Bao verzamelt de pennen en Samira zet de mappen terug. Koen controleert de ramen. Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt.
+ID klink-teksten-b08-07 | teacher
+Q Moet Bao volgens de tekst klaar zijn vóór Samira begint? Welk tijdsverband staat wel uitdrukkelijk in de tekst?
+OPTIONS Bao moet eerst klaar zijn, daarna Samira, en pas dan mag Koen beginnen. / *De tekst geeft geen vaste volgorde voor Bao en Samira. De ramen gaan wel dicht voordat de groep vertrekt.
+MODEL ['De tekst geeft geen vaste volgorde voor Bao en Samira. De ramen gaan wel dicht voordat de groep vertrekt.']
+CHECK Mag je van de zinsvolgorde zomaar een werkinstructie eerst-dan maken?
+SLOTS ['no-bao-samira-order', 'windows-before-departure']
+ID klink-teksten-b08-08 | teacher
+Q Wat doet Koen behalve controleren, en vóór welke gebeurtenis doet hij dat?
+OPTIONS *Hij doet alle ramen dicht voordat de groep vertrekt. Controleren alleen is niet het hele beschreven handelen. / Hij kijkt alleen naar de ramen en sluit ze pas na het vertrek.
+MODEL ['Hij doet alle ramen dicht voordat de groep vertrekt. Controleren alleen is niet het hele beschreven handelen.']
+CHECK Wat is het verschil tussen controleren en dichtdoen?
+SLOTS ['closes-all-windows', 'before-group-leaves']
+
+SOURCE 40 | A2
+Sofia ziet een munt op de toonbank van een winkel. Ze weet niet van wie die is. Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond. Ze zegt niet dat de munt van haar is.
+ID klink-teksten-b09-01 | teacher
+Q Waarnaar verwijzen die in zin twee en hem in zin drie? Leg met beide zinnen uit dat het om hetzelfde voorwerp gaat.
+OPTIONS Die is de munt, maar hem is de medewerker die Sofia vond. / *Die en hem verwijzen naar de munt die Sofia op de toonbank ziet; ze weet de eigenaar niet en vertelt waar ze die munt vond.
+MODEL ['Die en hem verwijzen naar de munt die Sofia op de toonbank ziet; ze weet de eigenaar niet en vertelt waar ze die munt vond.']
+CHECK Blijft de betekenis kloppen als je beide woorden door de munt vervangt?
+SLOTS ['die-munt', 'hem-same-munt']
+ID klink-teksten-b09-02 | teacher
+Q Van wie zou de munt zijn als Sofia zei van haar? Wat weten we werkelijk over de eigenaar?
+OPTIONS *Haar zou naar Sofia verwijzen. Zij zegt niet dat de munt van haar is; de eigenaar blijft onbekend in de tekst. / Haar verwijst naar de medewerker, dus de munt is van de medewerker.
+MODEL ['Haar zou naar Sofia verwijzen. Zij zegt niet dat de munt van haar is; de eigenaar blijft onbekend in de tekst.']
+CHECK Bewijst afgeven aan een medewerker dat die medewerker de eigenaar is?
+SLOTS ['haar-sofia', 'owner-unknown']

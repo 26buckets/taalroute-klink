@@ -1,0 +1,85 @@
+dagelijks-les Waar is de les?
+
+LES-01 Een bericht herkennen
+instruction: "Wat lees je?"
+speech: {"I": "Noor schrijft aan Samira. Wat lees je? Tik het goede antwoord.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor.", "V": "Dit is een bericht.", "H": "Kijk bovenaan de tekst. Wat voor tekst is dit?", "F": "Nog niet. Kijk naar de eerste woorden bovenaan de tekst. Tik opnieuw.", "G": "Prima. Dit is een bericht."}
+documents: [{"id": "KLI-DOC-LES-A", "text": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor.", "title": ""}]
+options: [{"code": "A", "text": "een bon", "correct": false}, {"code": "B", "text": "een programma", "correct": false}, {"code": "C", "text": "een bericht", "correct": true}]
+example: "Dit is een bericht."
+phase: "oefenen"
+interaction: "keuze"
+
+LES-02 Wat begint er?
+instruction: "Wat begint om 09.30 uur?"
+speech: {"I": "In het bericht staat wat om negen uur dertig begint. Tik het goede antwoord.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor.", "V": "De les begint.", "H": "Zoek de regel met 'begint'. Wat staat ervoor?", "F": "Dat klopt nog niet. Lees de regel met 'begint' opnieuw.", "G": "Goed gedaan. De les begint."}
+options: [{"code": "A", "text": "het lokaal", "correct": false}, {"code": "B", "text": "de les", "correct": true}, {"code": "C", "text": "het bericht", "correct": false}]
+example: "De les begint."
+
+LES-03 Voordoen: de dag vinden
+instruction: "Welke dag staat in het bericht?"
+speech: {"I": "Ik zoek de dag. Ik lees: de les is op woensdag. Woensdag is de dag van de les. Tik op Voorbeeld. Daarna tik je op Nu jij en kies je het goede antwoord.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor.", "V": "De les is op woensdag.", "H": "Lees de eerste zin over de les. Daar staat de dag.", "F": "Kijk nog eens naar Voorbeeld. Tik daarna op Nu jij en kies opnieuw.", "G": "Je hebt goed gekozen. Je hebt met het voorbeeld geoefend. Je kunt verder."}
+options: [{"code": "A", "text": "woensdag", "correct": true}, {"code": "B", "text": "vrijdag", "correct": false}]
+example: "De les is op woensdag."
+phase: "voordoen_met_begeleide_keuze"
+
+LES-04 De begintijd vinden
+instruction: "Hoe laat begint de les?"
+speech: {"I": "Lees het bericht. Hoe laat begint de les? Tik de goede tijd.", "V": "De les begint om negen uur dertig.", "H": "Zoek 'begint om'. Achter deze woorden staat de tijd.", "F": "Dat is niet de begintijd. Zoek de tijd na 'begint om'. Tik opnieuw.", "G": "Dat klopt. Je hebt de begintijd gevonden.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor."}
+options: [{"code": "A", "text": "13.00 uur", "correct": false}, {"code": "B", "text": "10.30 uur", "correct": false}, {"code": "C", "text": "09.30 uur", "correct": true}]
+example: "De les begint om 09.30 uur."
+
+LES-05 Het lokaal vinden
+instruction: "In welk lokaal is de les?"
+speech: {"I": "Lees het bericht. Zoek het lokaal van de les. Tik het goede lokaal.", "V": "De les is in lokaal twee punt veertien.", "H": "Zoek het woord 'lokaal'. Lees het nummer erachter.", "F": "Dit is niet het goede lokaal. Lees het hele nummer nog een keer.", "G": "Uitstekend. Je weet waar de les is.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor."}
+options: [{"code": "A", "text": "lokaal 2.14", "correct": true}, {"code": "B", "text": "lokaal 1.06", "correct": false}, {"code": "C", "text": "lokaal 2.41", "correct": false}]
+example: "De les is in lokaal 2.14."
+
+LES-06 Wat betekent begint?
+instruction: "Wat gebeurt er om 09.30 uur?"
+speech: {"I": "Lees de zin met 'begint'. Wat gebeurt er om negen uur dertig? Tik de goede zin.", "V": "Om negen uur dertig start de les.", "H": "Lees de zin met 'begint' nog eens. Wat gebeurt er met de les?", "F": "Lees 'begint' nog een keer. Gaat de les dan starten of stoppen?", "G": "Je hebt gelijk. De les start om negen uur dertig.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor."}
+options: [{"code": "A", "text": "Om 09.30 uur start de les.", "correct": true}, {"code": "B", "text": "Om 09.30 uur stopt de les.", "correct": false}, {"code": "C", "text": "Om 09.30 uur is er pauze.", "correct": false}]
+example: "Om 09.30 uur start de les."
+
+LES-07 Een passende vraag kiezen
+instruction: "Welke vraag kan Samira stellen?"
+speech: {"I": "Samira is op school. Ze zoekt haar lokaal. Welke vraag past bij het bericht? Tik de goede vraag.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor.", "V": "Waar is lokaal twee punt veertien?", "H": "Samira zoekt een ruimte op school. Welke vraag helpt haar daarbij?", "F": "Deze vraag helpt Samira niet naar het goede lokaal. Kijk opnieuw naar het lokaalnummer.", "G": "Goed. Dat is een passende vraag."}
+context: ["Samira is op school. Ze zoekt haar lokaal."]
+options: [{"code": "A", "text": "Waar is lokaal 1.06?", "correct": false}, {"code": "B", "text": "Waar is lokaal 2.14?", "correct": true}, {"code": "C", "text": "Waar is de bus?", "correct": false}]
+example: "Waar is lokaal 2.14?"
+
+LES-08 Een korte zin bouwen
+instruction: "Bouw de zin met de kaartjes."
+speech: {"I": "Luister naar de zin. Tik de kaartjes in de goede volgorde.", "O": "Bericht van school\nAan: Samira\nDe les is op woensdag.\nDe les begint om 09.30 uur.\nDe les is in lokaal 2.14.\nGroet,\nNoor.", "V": "Ik ga naar lokaal twee punt veertien.", "H": "Kijk naar het begin van de zin in Voorbeeld. Welk kaartje past vooraan?", "F": "De volgorde klopt nog niet. Tik op Eén terug tot de rij leeg is. Bouw de zin opnieuw.", "G": "Ga zo door. Je zin klopt."}
+cards: ["2.14.", "naar lokaal", "Ik ga"]
+answerOrder: ["Ik ga", "naar lokaal", "2.14."]
+example: "Ik ga naar lokaal 2.14."
+phase: "begeleid_ordenen"
+interaction: "bouwen"
+
+LES-09 Een nieuwe begintijd
+instruction: "Hoe laat begint deze les?"
+speech: {"I": "Dit is een ander bericht. Lees de nieuwe tijd. Hoe laat begint deze les? Tik de goede tijd.", "V": "De les begint om dertien uur.", "H": "Dit bericht heeft een andere tijd. Kijk naar de regel met 'begint'.", "F": "Dat is niet de tijd in dit bericht. Lees de tijd bij 'begint' opnieuw.", "G": "Prima. Je hebt de nieuwe tijd gevonden.", "O": "Bericht van school\nAan: Samira\nDe les is op vrijdag.\nDe les begint om 13.00 uur.\nDe les is in lokaal 1.06.\nGroet,\nNoor."}
+documents: [{"id": "KLI-DOC-LES-B", "text": "Bericht van school\nAan: Samira\nDe les is op vrijdag.\nDe les begint om 13.00 uur.\nDe les is in lokaal 1.06.\nGroet,\nNoor.", "title": ""}]
+options: [{"code": "A", "text": "09.30 uur", "correct": false}, {"code": "B", "text": "13.00 uur", "correct": true}, {"code": "C", "text": "15.00 uur", "correct": false}]
+example: "De les begint om 13.00 uur."
+
+LES-10 Naar het nieuwe lokaal
+instruction: "Welke zin klopt?"
+speech: {"I": "Samira gaat naar de les uit dit bericht. Welk lokaal zoekt ze? Tik de goede zin.", "V": "Ik ga naar lokaal één punt nul zes.", "H": "Zoek de laatste zin met 'lokaal'. Lees het nummer rustig.", "F": "Dit is niet het lokaal uit het nieuwe bericht. Lees het nummer opnieuw.", "G": "Goed gedaan. Samira gaat naar het goede lokaal.", "O": "Bericht van school\nAan: Samira\nDe les is op vrijdag.\nDe les begint om 13.00 uur.\nDe les is in lokaal 1.06.\nGroet,\nNoor."}
+context: ["Samira gaat naar haar les."]
+options: [{"code": "A", "text": "Ik ga naar lokaal 2.14.", "correct": false}, {"code": "B", "text": "Ik ga naar lokaal 1.06.", "correct": true}, {"code": "C", "text": "Ik ga naar lokaal 1.60.", "correct": false}]
+example: "Ik ga naar lokaal 1.06."
+
+LES-11 Welk bericht is voor vrijdag?
+instruction: "In welk bericht staat vrijdag?"
+speech: {"I": "Je leest twee korte stukken uit berichten. In welk bericht staat vrijdag? Tik het goede bericht.", "V": "Bericht bee noemt vrijdag.", "H": "Lees de dag in beide stukjes tekst. Vergelijk de dagen.", "F": "Kijk nog eens naar de dag in elk bericht. Kies het bericht met vrijdag.", "G": "Je hebt goed gekozen. Je hebt het juiste bericht gekozen.", "O": "De les is op woensdag.\n\nDe les is op vrijdag."}
+documents: [{"id": "KLI-DOC-LES-A", "title": "Bericht A", "text": "De les is op woensdag."}, {"id": "KLI-DOC-LES-B", "title": "Bericht B", "text": "De les is op vrijdag."}]
+options: [{"code": "A", "text": "Bericht A", "correct": false}, {"code": "B", "text": "Bericht B", "correct": true}]
+example: "Bericht B noemt vrijdag."
+
+LES-12 Korte controle
+instruction: "Welke zin klopt helemaal?"
+speech: {"I": "Lees het bericht. Kijk naar de dag, de tijd en het lokaal. Welke zin klopt helemaal? Tik één antwoord.", "V": "De les is vrijdag om dertien uur in lokaal één punt nul zes.", "H": "Controleer drie dingen: de dag, de tijd en het lokaal. Alles moet kloppen.", "F": "Niet alle gegevens kloppen. Lees de dag, de tijd en het lokaal nog eens. Tik opnieuw.", "G": "Dat klopt. Alle gegevens kloppen.", "O": "Bericht van school\nAan: Samira\nDe les is op vrijdag.\nDe les begint om 13.00 uur.\nDe les is in lokaal 1.06.\nGroet,\nNoor."}
+options: [{"code": "A", "text": "De les is vrijdag om 09.30 uur in lokaal 1.06.", "correct": false}, {"code": "B", "text": "De les is vrijdag om 13.00 uur in lokaal 1.06.", "correct": true}, {"code": "C", "text": "De les is woensdag om 13.00 uur in lokaal 2.14.", "correct": false}]
+example: "De les is vrijdag om 13.00 uur in lokaal 1.06."
+phase: "controle_op_geoefende_bron"

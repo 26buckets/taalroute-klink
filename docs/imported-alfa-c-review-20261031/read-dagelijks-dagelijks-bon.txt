@@ -1,0 +1,87 @@
+dagelijks-bon De bon bewaren
+
+BON-01 Een kassabon herkennen
+instruction: "Wat heeft Nina gekregen?"
+speech: {"I": "Nina heeft boodschappen gekocht. Ze krijgt dit papier. Wat is dit? Tik het goede antwoord.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "V": "Dit is een kassabon.", "H": "Kijk bovenaan. Wat staat er boven de producten?", "F": "Nog niet. Lees de titel boven de producten. Tik opnieuw.", "G": "Prima. Dit is een kassabon."}
+documents: [{"id": "KLI-DOC-BON-A", "text": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "title": ""}]
+options: [{"code": "A", "text": "een afspraakkaart", "correct": false}, {"code": "B", "text": "een kassabon", "correct": true}, {"code": "C", "text": "een lesbericht", "correct": false}]
+example: "Dit is een kassabon."
+phase: "oefenen"
+interaction: "keuze"
+
+BON-02 Product en prijs onderscheiden
+instruction: "Wat is de prijs van brood?"
+speech: {"I": "Brood is een product. Bij brood staat een prijs. Wat is die prijs? Tik het goede antwoord.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "V": "Brood kost twee euro veertig.", "H": "Zoek 'Brood'. Kijk welk bedrag ernaast staat.", "F": "Dat is niet de prijs. Zoek de euro's naast 'Brood'.", "G": "Goed gedaan. Dat is de prijs van brood."}
+options: [{"code": "A", "text": "€ 2,40", "correct": true}, {"code": "B", "text": "Brood", "correct": false}, {"code": "C", "text": "dinsdag 8 december", "correct": false}]
+example: "Brood kost € 2,40."
+
+BON-03 Voordoen: een product vinden
+instruction: "Welk product zie je in het voorbeeld?"
+speech: {"I": "Ik wil weten of Nina melk heeft gekocht. Ik lees de producten op de bon. Daar staat 'Melk'. Ernaast staat de prijs. Nina heeft melk gekocht. Tik op Voorbeeld. Daarna tik je op Nu jij en kies je het goede antwoord.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "V": "Melk staat op de bon.", "H": "Lees de producten één voor één. Elk product staat op een eigen regel.", "F": "Kijk nog eens naar Voorbeeld. Tik daarna op Nu jij en kies opnieuw.", "G": "Je hebt goed gekozen. Je hebt met het voorbeeld geoefend. Je kunt verder."}
+options: [{"code": "A", "text": "thee", "correct": false}, {"code": "B", "text": "melk", "correct": true}]
+example: "Melk staat op de bon."
+phase: "voordoen_met_begeleide_keuze"
+
+BON-04 Een gekocht product vinden
+instruction: "Welk product staat op de bon?"
+speech: {"I": "Lees de producten op de bon. Welk product zie je? Tik het goede woord.", "V": "appels", "H": "Kijk naar de woorden links van de bedragen. Dat zijn de producten.", "F": "Dat product staat niet op deze bon. Lees de drie productnamen opnieuw.", "G": "Dat klopt. Er staan appels op de bon.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon."}
+options: [{"code": "A", "text": "bananen", "correct": false}, {"code": "B", "text": "rijst", "correct": false}, {"code": "C", "text": "appels", "correct": true}]
+example: "appels"
+
+BON-05 De prijs van melk vinden
+instruction: "Wat kost de melk?"
+speech: {"I": "Zoek melk op de bon. Kijk naar de prijs op dezelfde regel. Wat kost de melk? Tik het goede bedrag.", "V": "Melk kost één euro dertig.", "H": "Zoek eerst 'Melk'. Kijk dan naar het bedrag op die regel.", "F": "Dat bedrag hoort bij een ander product. Zoek het bedrag naast 'Melk'.", "G": "Uitstekend. De melk kost één euro dertig.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon."}
+options: [{"code": "A", "text": "€ 1,30", "correct": true}, {"code": "B", "text": "€ 2,10", "correct": false}, {"code": "C", "text": "€ 2,40", "correct": false}]
+example: "Melk kost € 1,30."
+
+BON-06 Wat is totaal?
+instruction: "Wat betekent 'totaal'?"
+speech: {"I": "Onderaan de bon staat 'Totaal'. Wat betekent dit woord? Tik de goede zin. Je hoeft niet te rekenen.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "V": "Het totaal is het bedrag voor alles samen.", "H": "Zoek 'Totaal'. Kijk waar die regel op de bon staat.", "F": "Dat is niet wat totaal betekent. Denk aan alle producten samen.", "G": "Je hebt gelijk. Totaal is het bedrag voor alles samen."}
+options: [{"code": "A", "text": "Alleen de prijs van melk.", "correct": false}, {"code": "B", "text": "Het bedrag voor alles samen.", "correct": true}, {"code": "C", "text": "De naam van de winkel.", "correct": false}]
+example: "Het totaal is het bedrag voor alles samen."
+
+BON-07 Wat doet Nina met de bon?
+instruction: "Wat moet Nina met de bon doen?"
+speech: {"I": "Nina wil later kunnen zien wat ze heeft gekocht. Onderaan de bon staat een aanwijzing. Wat moet ze met de bon doen? Tik het goede antwoord.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "V": "Ze bewaart de bon.", "H": "Lees de laatste zin van de bon. Wat moet Nina doen?", "F": "Dat past niet bij de aanwijzing. Lees de onderste regel opnieuw.", "G": "Goed. Om de aankoop later terug te vinden, moet Nina de bon bewaren."}
+context: ["Nina wil later nog kunnen zien wat ze heeft gekocht."]
+options: [{"code": "A", "text": "Ze gooit de bon meteen weg.", "correct": false}, {"code": "B", "text": "Ze bewaart de bon.", "correct": true}, {"code": "C", "text": "Ze schrijft een afspraak op de bon.", "correct": false}]
+example: "Ze bewaart de bon."
+
+BON-08 Een zin over bewaren bouwen
+instruction: "Bouw de zin met de kaartjes."
+speech: {"I": "Luister naar de zin. Tik de kaartjes in de goede volgorde.", "O": "Buurtmarkt\nKassabon\nDatum: dinsdag 8 december\nBrood € 2,40\nMelk € 1,30\nAppels € 2,10\nTotaal € 5,80\nBewaar deze bon.", "V": "Ik bewaar de bon.", "H": "Kijk naar het begin van de zin in Voorbeeld. Welk kaartje past vooraan?", "F": "De volgorde klopt nog niet. Tik op Eén terug tot de rij leeg is. Bouw de zin opnieuw.", "G": "Ga zo door. Je zin klopt."}
+context: ["Nina wil de bon bewaren."]
+cards: ["de bon.", "Ik", "bewaar"]
+answerOrder: ["Ik", "bewaar", "de bon."]
+example: "Ik bewaar de bon."
+phase: "begeleid_ordenen"
+interaction: "bouwen"
+
+BON-09 Andere producten op een nieuwe bon
+instruction: "Welk product staat op deze bon?"
+speech: {"I": "Nina heeft een nieuwe bon. Lees de producten. Welk product staat op deze bon? Tik het goede woord.", "V": "thee", "H": "Lees de productnamen op deze bon. Vergelijk ze met de keuzes.", "F": "Dat product staat op de andere bon. Lees deze nieuwe bon nog eens.", "G": "Prima. Nina heeft thee gekocht.", "O": "Buurtmarkt\nKassabon\nDatum: donderdag 10 december\nBrood € 2,70\nThee € 1,50\nBananen € 1,80\nTotaal € 6,00\nBewaar deze bon."}
+documents: [{"id": "KLI-DOC-BON-B", "text": "Buurtmarkt\nKassabon\nDatum: donderdag 10 december\nBrood € 2,70\nThee € 1,50\nBananen € 1,80\nTotaal € 6,00\nBewaar deze bon.", "title": ""}]
+options: [{"code": "A", "text": "thee", "correct": true}, {"code": "B", "text": "melk", "correct": false}, {"code": "C", "text": "appels", "correct": false}]
+example: "thee"
+
+BON-10 Hetzelfde product, een andere prijs
+instruction: "Wat kost het brood op deze bon?"
+speech: {"I": "Ook op deze bon staat brood. Maar de prijs is anders. Wat kost het brood nu? Tik de goede prijs.", "V": "Brood kost twee euro zeventig.", "H": "Zoek 'Brood' op deze bon. Kijk alleen naar het bedrag op dezelfde regel.", "F": "Dat is niet de prijs van brood op deze bon. Kijk goed naar de cijfers.", "G": "Goed gedaan. Op deze bon kost brood twee euro zeventig.", "O": "Buurtmarkt\nKassabon\nDatum: donderdag 10 december\nBrood € 2,70\nThee € 1,50\nBananen € 1,80\nTotaal € 6,00\nBewaar deze bon."}
+options: [{"code": "A", "text": "€ 2,70", "correct": true}, {"code": "B", "text": "€ 2,40", "correct": false}, {"code": "C", "text": "€ 1,50", "correct": false}]
+example: "Brood kost € 2,70."
+
+BON-11 Welke bon past bij de aankoop?
+instruction: "Welke bon zoekt Nina?"
+speech: {"I": "Nina heeft thee en bananen gekocht. Lees de producten op beide bonnen. Tik de goede bon.", "O": "Brood € 2,40\nMelk € 1,30\nAppels € 2,10\n\nBrood € 2,70\nThee € 1,50\nBananen € 1,80", "V": "Bon bee past bij de aankoop.", "H": "Zoek 'thee' en 'bananen'. Beide woorden moeten op dezelfde bon staan.", "F": "Dat klopt nog niet. Vergelijk de producten op beide bonnen met wat Nina zoekt.", "G": "Goed gedaan. Bij deze aankoop past bon B."}
+documents: [{"id": "KLI-DOC-BON-A", "title": "Bon A", "text": "Brood € 2,40\nMelk € 1,30\nAppels € 2,10"}, {"id": "KLI-DOC-BON-B", "title": "Bon B", "text": "Brood € 2,70\nThee € 1,50\nBananen € 1,80"}]
+context: ["Nina zoekt de bon van haar aankoop met thee en bananen."]
+options: [{"code": "A", "text": "Bon B", "correct": true}, {"code": "B", "text": "Bon A", "correct": false}]
+example: "Bon B past bij de aankoop."
+
+BON-12 Korte controle: de juiste bon terugvinden
+instruction: "Welke bon is de goede?"
+speech: {"I": "Nina zoekt de bon met brood van twee euro veertig. Lees beide bonnen. Tik de goede bon.", "V": "Bon aa past bij de aankoop.", "H": "Zoek 'Brood' op beide bonnen. Vergelijk de bedragen.", "F": "Op die bon staat niet het gevraagde product met die prijs. Lees de productregels opnieuw.", "G": "Dat klopt. Je hebt de goede bon gevonden.", "O": "Brood € 2,40\nMelk € 1,30\nAppels € 2,10\n\nBrood € 2,70\nThee € 1,50\nBananen € 1,80"}
+context: ["Nina zoekt de bon waarop brood van € 2,40 staat."]
+options: [{"code": "A", "text": "Bon A", "correct": true}, {"code": "B", "text": "Bon B", "correct": false}]
+example: "Bon A past bij de aankoop."
+phase: "controle_op_geoefende_bron"

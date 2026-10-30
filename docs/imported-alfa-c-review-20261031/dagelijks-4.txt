@@ -1,0 +1,612 @@
+{
+ "id": "dagelijks-pakje",
+ "sourceId": "PAKJE",
+ "title": "Een pakje ophalen",
+ "start": "Mei heeft een pakje. Ze krijgt een afhaalbericht. Waar kan ze het ophalen?",
+ "end": "Goed gewerkt. Je hebt geoefend met het afhaalbericht.",
+ "startAudio": "KAC-AUD-F9DD96799B97",
+ "endAudio": "KAC-AUD-344CAB5B1511",
+ "steps": [
+  {
+   "id": "PAKJE-01",
+   "title": "Wat ligt klaar?",
+   "instruction": "Wat ligt klaar voor Mei?",
+   "speech": {
+    "I": "Mei krijgt een afhaalbericht. Wat ligt er voor haar klaar? Tik het goede antwoord.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+    "V": "Er ligt een pakje klaar.",
+    "H": "Lees de zin met 'ligt klaar'. Wat ligt klaar?",
+    "F": "Dat staat niet in het bericht. Lees wat er klaar ligt.",
+    "G": "Uitstekend. Het pakje ligt klaar."
+   },
+   "audio": {
+    "I": "KAC-AUD-536842065A14",
+    "O": "KAC-SUP-C806A864CE10",
+    "V": "KAC-AUD-A554033C6F1F",
+    "H": "KAC-AUD-2DF72D31FA8C",
+    "F": "KAC-AUD-08ED89B6A2BA",
+    "G": "KAC-SUP-33421EA0E3B4"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "een brief",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "een pakje",
+     "correct": true
+    },
+    {
+     "code": "C",
+     "text": "een fiets",
+     "correct": false
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Er ligt een pakje klaar.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-02",
+   "title": "Voor wie is het pakje?",
+   "instruction": "Voor wie is dit pakje?",
+   "speech": {
+    "I": "Op het afhaalbericht staat voor wie het pakje is. Kijk naar 'Voor'. Tik de goede naam.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+    "V": "Voor: Mei de Vries.",
+    "H": "Zoek 'Voor'. Achter dat woord staat een naam.",
+    "F": "Dat is niet de naam van de ontvanger. Kijk bij 'Voor'.",
+    "G": "Goed. Het pakje is voor Mei de Vries."
+   },
+   "audio": {
+    "I": "KAC-AUD-D99616D0CAA4",
+    "O": "KAC-SUP-C806A864CE10",
+    "V": "KAC-HER-9B6A7675A4A1",
+    "H": "KAC-AUD-7A683BE46784",
+    "F": "KAC-AUD-E9FC40B985B8",
+    "G": "KAC-HER-7CD1889A6F26"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "Mei de Vries",
+     "correct": true
+    },
+    {
+     "code": "B",
+     "text": "Rivaro Parcel",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "Punt Molen",
+     "correct": false
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Voor: Mei de Vries.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-03",
+   "title": "Voordoen: de afhaalplek",
+   "instruction": "Waar ligt het pakje?",
+   "speech": {
+    "I": "Ik zoek waar Mei het pakje kan ophalen. Ik lees 'Afhaalplek'. Daarachter staat 'Punt Molen'. Daar ligt het pakje. Tik op Voorbeeld. Daarna tik je op Nu jij en kies je het goede antwoord.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+    "V": "Het pakje ligt bij Punt Molen.",
+    "H": "Zoek het woord 'Afhaalplek'. Lees de naam erachter.",
+    "F": "Kijk nog eens naar Voorbeeld. Tik daarna op Nu jij en kies opnieuw.",
+    "G": "Goed. Je hebt met het voorbeeld geoefend. Je kunt verder."
+   },
+   "audio": {
+    "I": "KAC-AUD-1E1F1D041940",
+    "O": "KAC-SUP-C806A864CE10",
+    "V": "KAC-AUD-D1E670982D7A",
+    "H": "KAC-AUD-8DACA46A923D",
+    "F": "KAC-AUD-5A3C7C2621B7",
+    "G": "KAC-SUP-DCAE3D0104A7"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "Punt Haven",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "Punt Molen",
+     "correct": true
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Het pakje ligt bij Punt Molen.",
+   "phase": "voordoen_met_begeleide_keuze",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-04",
+   "title": "Wat betekent vanaf?",
+   "instruction": "Wat betekent vanaf 12.00 uur?",
+   "speech": {
+    "I": "Lees de regel met ophalen. Wat betekent vanaf twaalf uur? Tik de goede uitleg.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+    "V": "Vanaf betekent: om twaalf uur of later.",
+    "H": "Vanaf is het begin. Je kunt dan beginnen met ophalen.",
+    "F": "Dat klopt niet met 'vanaf'. Denk aan het eerste moment dat ophalen kan.",
+    "G": "Ga zo door. Vanaf twaalf uur betekent twaalf uur of later."
+   },
+   "audio": {
+    "I": "KAC-AUD-CF4D2C038877",
+    "O": "KAC-SUP-C806A864CE10",
+    "V": "KAC-AUD-022D00CD98E0",
+    "H": "KAC-AUD-E6FE93FB3815",
+    "F": "KAC-AUD-CA693A90DF28",
+    "G": "KAC-SUP-2E2A3BF19087"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "Om 12.00 uur of later.",
+     "correct": true
+    },
+    {
+     "code": "B",
+     "text": "Voor 12.00 uur.",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "Alleen om 12.00 uur.",
+     "correct": false
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Vanaf betekent: om 12.00 uur of later.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-05",
+   "title": "De dag vinden",
+   "instruction": "Vanaf welke dag kan Mei ophalen?",
+   "speech": {
+    "I": "Lees het afhaalbericht. Vanaf welke dag kan Mei haar pakje ophalen? Tik de goede dag.",
+    "V": "In het bericht staat dinsdag één december.",
+    "H": "Kijk bij 'Ophalen'. Lees de dag en de datum samen.",
+    "F": "Die dag klopt niet. Kijk nog eens naar de hele datum.",
+    "G": "Prima. In dit bericht staat dinsdag één december als afhaaldag.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee."
+   },
+   "audio": {
+    "I": "KAC-AUD-7C3D486C9130",
+    "V": "KAC-AUD-E5AC1A636669",
+    "H": "KAC-AUD-284E78F34541",
+    "F": "KAC-AUD-DCE76AEC1A9A",
+    "G": "KAC-SUP-E91657A7D394",
+    "O": "KAC-SUP-C806A864CE10"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "donderdag 3 december",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "maandag 1 december",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "dinsdag 1 december",
+     "correct": true
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "In het bericht staat dinsdag 1 december.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-06",
+   "title": "De afhaalplek zelfstandig vinden",
+   "instruction": "Waar kan Mei het pakje ophalen?",
+   "speech": {
+    "I": "Lees waar het pakje ligt. Bij welk punt moet Mei zijn? Tik de goede plek.",
+    "V": "Het pakje ligt bij Punt Molen.",
+    "H": "Zoek 'Afhaalplek'. Daarachter staat de naam van het punt.",
+    "F": "Dat is niet de afhaalplek van Mei. Lees de naam nog eens.",
+    "G": "Prima. Het pakje ligt bij Punt Molen.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee."
+   },
+   "audio": {
+    "I": "KAC-AUD-01EBF087D01B",
+    "V": "KAC-AUD-D1E670982D7A",
+    "H": "KAC-AUD-0C5FC2EF4460",
+    "F": "KAC-AUD-04BEA9A1D3E3",
+    "G": "KAC-SUP-C425BE8804D1",
+    "O": "KAC-SUP-C806A864CE10"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "Punt Molen",
+     "correct": true
+    },
+    {
+     "code": "B",
+     "text": "Punt Haven",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "het station",
+     "correct": false
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Het pakje ligt bij Punt Molen.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-07",
+   "title": "Wat moet Mei meenemen?",
+   "instruction": "Wat moet Mei meenemen?",
+   "speech": {
+    "I": "Mei gaat haar pakje ophalen. Onderaan staat wat ze moet meenemen. Tik het goede antwoord.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+    "V": "Mei neemt dit afhaalbericht mee.",
+    "H": "Lees de laatste regel. Wat zegt het bericht dat Mei moet meenemen?",
+    "F": "Dat staat niet onderaan het afhaalbericht. Lees de laatste zin opnieuw.",
+    "G": "Je hebt goed gekozen. Mei neemt het afhaalbericht mee."
+   },
+   "audio": {
+    "I": "KAC-AUD-300CD44DA145",
+    "O": "KAC-SUP-C806A864CE10",
+    "V": "KAC-AUD-7EAA7BB9BD5D",
+    "H": "KAC-AUD-A418D1EC1F6A",
+    "F": "KAC-AUD-94D4F0AAD53D",
+    "G": "KAC-SUP-1808A34402F4"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "een kassabon",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "een lesrooster",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "dit afhaalbericht",
+     "correct": true
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Mei neemt dit afhaalbericht mee.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-08",
+   "title": "Een passende zin bouwen",
+   "instruction": "Bouw de zin met de kaartjes.",
+   "speech": {
+    "I": "Luister naar de zin. Tik de kaartjes in de goede volgorde.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+    "V": "Ik ga het pakje ophalen.",
+    "H": "Kijk naar het begin van de zin in Voorbeeld. Welk kaartje past vooraan?",
+    "F": "De volgorde klopt nog niet. Tik op Eén terug tot de rij leeg is. Bouw de zin opnieuw.",
+    "G": "Dat klopt. Je zin klopt."
+   },
+   "audio": {
+    "I": "KAC-AUD-7D2781B7AA5E",
+    "O": "KAC-SUP-C806A864CE10",
+    "V": "KAC-AUD-E31B269DAA25",
+    "H": "KAC-AUD-47A2C57F617E",
+    "F": "KAC-AUD-B5D7939B89A7",
+    "G": "KAC-SUP-A42569B5D8FA"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-A",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Molen\nOphalen: dinsdag 1 december, vanaf 12.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [],
+   "cards": [
+    "ophalen.",
+    "het pakje",
+    "Ik ga"
+   ],
+   "answerOrder": [
+    "Ik ga",
+    "het pakje",
+    "ophalen."
+   ],
+   "example": "Ik ga het pakje ophalen.",
+   "phase": "begeleid_ordenen",
+   "interaction": "bouwen"
+  },
+  {
+   "id": "PAKJE-09",
+   "title": "Een andere ophaaltijd",
+   "instruction": "Welke tijd staat na vanaf?",
+   "speech": {
+    "I": "Lees het nieuwe bericht. Welke tijd staat achter vanaf? Tik de goede tijd.",
+    "V": "In het bericht staat vanaf vijftien uur.",
+    "H": "Zoek 'Ophalen'. Lees de tijd achter 'vanaf'.",
+    "F": "Dit is niet de tijd van het nieuwe bericht. Kijk opnieuw achter 'vanaf'.",
+    "G": "Uitstekend. Vanaf vijftien uur kan Mei ophalen.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee."
+   },
+   "audio": {
+    "I": "KAC-AUD-42CA3B0EB3EF",
+    "V": "KAC-AUD-88243CC8BD1E",
+    "H": "KAC-AUD-1D08A8BBBFA6",
+    "F": "KAC-AUD-0E2B24E64129",
+    "G": "KAC-SUP-1511E11F124F",
+    "O": "KAC-SUP-E5D219558D1C"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-B",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "12.00 uur",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "13.00 uur",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "15.00 uur",
+     "correct": true
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "In het bericht staat vanaf 15.00 uur.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-10",
+   "title": "De nieuwe afhaalplek",
+   "instruction": "Waar ligt het pakje nu?",
+   "speech": {
+    "I": "De afhaalplek is veranderd. Waar ligt het pakje in dit bericht? Tik de goede naam.",
+    "V": "Het pakje ligt bij Punt Haven.",
+    "H": "Lees de regel met 'Afhaalplek' in dit nieuwe bericht.",
+    "F": "Dit is niet de nieuwe plek. Lees de naam na 'Afhaalplek' opnieuw.",
+    "G": "Het pakje ligt bij Punt Haven. Goed gedaan.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee."
+   },
+   "audio": {
+    "I": "KAC-AUD-7AEBACA6DCFD",
+    "V": "KAC-AUD-BE509610A5C7",
+    "H": "KAC-AUD-E60317EC210E",
+    "F": "KAC-AUD-26E3AB861060",
+    "G": "KAC-SUP-D359ED0D0B47",
+    "O": "KAC-SUP-E5D219558D1C"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-B",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "Punt Molen",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "Buurthuis De Linde",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "Punt Haven",
+     "correct": true
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Het pakje ligt bij Punt Haven.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-11",
+   "title": "Kan Mei al ophalen?",
+   "instruction": "Kan Mei nu het pakje ophalen?",
+   "speech": {
+    "I": "Het is donderdag, veertien uur. Lees vanaf hoe laat Mei het pakje kan ophalen. Kan ze nu al ophalen? Tik het goede antwoord.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.",
+    "V": "Nee, nog niet.",
+    "H": "Vergelijk de tijd van nu met de tijd na 'vanaf'.",
+    "F": "Dat klopt nog niet. Lees de tijd na 'vanaf'. Vergelijk die met de tijd van nu.",
+    "G": "Goed. Mei kan nog niet ophalen."
+   },
+   "audio": {
+    "I": "KAC-AUD-D76A25369EC1",
+    "O": "KAC-SUP-E5D219558D1C",
+    "V": "KAC-AUD-E78207422131",
+    "H": "KAC-AUD-C78C2D6D4A9D",
+    "F": "KAC-AUD-A5B07B52EBFA",
+    "G": "KAC-SUP-BF4FAE6531CA"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-B",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [
+    "Het is donderdag 3 december, 14.00 uur."
+   ],
+   "options": [
+    {
+     "code": "A",
+     "text": "Ja, Mei kan nu ophalen.",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "Nee, nog niet.",
+     "correct": true
+    },
+    {
+     "code": "C",
+     "text": "Het pakje is al opgehaald.",
+     "correct": false
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Nee, nog niet.",
+   "phase": "oefenen",
+   "interaction": "keuze"
+  },
+  {
+   "id": "PAKJE-12",
+   "title": "Korte controle",
+   "instruction": "Welke zin klopt helemaal?",
+   "speech": {
+    "I": "Lees het afhaalbericht. Kijk naar de dag, de tijd en de afhaalplek. Welke zin klopt helemaal? Tik één antwoord.",
+    "V": "Het bericht noemt donderdag drie december, vanaf vijftien uur, bij Punt Haven.",
+    "H": "Controleer de dag, de tijd en de afhaalplek.",
+    "F": "Niet alle gegevens kloppen. Lees de dag, de tijd en de afhaalplek opnieuw.",
+    "G": "Ga zo door. Je hebt het juiste afhaalbericht gelezen.",
+    "O": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee."
+   },
+   "audio": {
+    "I": "KAC-AUD-B01D9DF1A622",
+    "V": "KAC-AUD-DF8BD9045BDE",
+    "H": "KAC-AUD-5AB92CDE22DC",
+    "F": "KAC-AUD-A476DEE1B612",
+    "G": "KAC-SUP-8421FD3FAF6A",
+    "O": "KAC-SUP-E5D219558D1C"
+   },
+   "documents": [
+    {
+     "id": "KLI-DOC-PAKJE-B",
+     "text": "Rivaro Parcel\nAfhaalbericht\nVoor: Mei de Vries\nJe pakje ligt klaar.\nAfhaalplek: Punt Haven\nOphalen: donderdag 3 december, vanaf 15.00 uur.\nNeem dit bericht mee.",
+     "title": ""
+    }
+   ],
+   "context": [],
+   "options": [
+    {
+     "code": "A",
+     "text": "Dinsdag 1 december, vanaf 15.00 uur, bij Punt Molen.",
+     "correct": false
+    },
+    {
+     "code": "B",
+     "text": "Donderdag 3 december, vanaf 12.00 uur, bij Punt Haven.",
+     "correct": false
+    },
+    {
+     "code": "C",
+     "text": "Donderdag 3 december, vanaf 15.00 uur, bij Punt Haven.",
+     "correct": true
+    }
+   ],
+   "cards": [],
+   "answerOrder": [],
+   "example": "Het bericht noemt donderdag 3 december, vanaf 15.00 uur, bij Punt Haven.",
+   "phase": "controle_op_geoefende_bron",
+   "interaction": "keuze"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+dagelijks-afspraak Mijn afspraak
+
+AFSPRAAK-01 Een afspraakkaart herkennen
+instruction: "Wat heeft Idris?"
+speech: {"I": "Idris heeft een kaartje met een dag, een tijd en een plaats. Wat voor kaartje is dit? Tik het goede antwoord.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie.", "V": "Dit is een afspraakkaart.", "H": "Kijk bovenaan het kaartje. Lees het eerste woord.", "F": "Nog niet. Kijk naar de titel van het kaartje.", "G": "Uitstekend. Dit is een afspraakkaart."}
+documents: [{"id": "KLI-DOC-AFSPRAAK-A", "text": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie.", "title": ""}]
+options: [{"code": "A", "text": "een afspraakkaart", "correct": true}, {"code": "B", "text": "een kassabon", "correct": false}, {"code": "C", "text": "een boodschappenlijst", "correct": false}]
+example: "Dit is een afspraakkaart."
+phase: "oefenen"
+interaction: "keuze"
+
+AFSPRAAK-02 Dag en tijd onderscheiden
+instruction: "Wat is de tijd?"
+speech: {"I": "Op het kaartje staat een dag, een tijd en een plaats. Wat is de tijd? Tik het goede antwoord.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie.", "V": "De tijd is tien uur vijftien.", "H": "Zoek het woord 'Tijd'. Lees wat daarachter staat.", "F": "Dat is geen tijd. Kijk naar de regel met 'Tijd'.", "G": "Je hebt gelijk. Je hebt de tijd gevonden."}
+options: [{"code": "A", "text": "maandag 23 november", "correct": false}, {"code": "B", "text": "10.15 uur", "correct": true}, {"code": "C", "text": "Buurthuis De Linde", "correct": false}]
+example: "De tijd is 10.15 uur."
+
+AFSPRAAK-03 Voordoen: een plaats vinden
+instruction: "Waar is de afspraak?"
+speech: {"I": "Ik zoek waar de afspraak is. Op het kaartje staat 'Plaats'. Daarachter staat 'Buurthuis De Linde'. Dat is de plaats van de afspraak. Tik op Voorbeeld. Daarna tik je op Nu jij en kies je het goede antwoord.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie.", "V": "De afspraak is bij Buurthuis De Linde.", "H": "Zoek het woord 'Plaats'. Daar staat waar je moet zijn.", "F": "Kijk nog eens naar Voorbeeld. Tik daarna op Nu jij en kies opnieuw.", "G": "Goed. Je hebt met het voorbeeld geoefend. Je kunt verder."}
+options: [{"code": "A", "text": "Buurthuis De Ster", "correct": false}, {"code": "B", "text": "Buurthuis De Linde", "correct": true}]
+example: "De afspraak is bij Buurthuis De Linde."
+phase: "voordoen_met_begeleide_keuze"
+
+AFSPRAAK-04 De dag vinden
+instruction: "Welke dag heeft Idris een afspraak?"
+speech: {"I": "Lees het kaartje. Welke dag heeft Idris een afspraak? Tik de goede dag.", "V": "De afspraak is maandag.", "H": "Zoek de regel met 'Dag'. Lees het eerste woord erachter.", "F": "Nog niet goed. Lees de regel met 'Dag' opnieuw.", "G": "Ga zo door. De afspraak is op maandag.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie."}
+options: [{"code": "A", "text": "maandag", "correct": true}, {"code": "B", "text": "donderdag", "correct": false}, {"code": "C", "text": "dinsdag", "correct": false}]
+example: "De afspraak is maandag."
+
+AFSPRAAK-05 De afspraaktijd lezen
+instruction: "Hoe laat is de afspraak?"
+speech: {"I": "Lees de tijd op het kaartje. Hoe laat moet Idris er zijn? Tik de goede tijd.", "V": "De afspraak is om tien uur vijftien.", "H": "Zoek het woord 'Tijd'. Lees de tijd erachter.", "F": "Die tijd staat niet bij deze afspraak. Kijk nog eens naar de tijd op het kaartje.", "G": "Prima. Je hebt de afspraaktijd gelezen.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie."}
+options: [{"code": "A", "text": "14.30 uur", "correct": false}, {"code": "B", "text": "11.15 uur", "correct": false}, {"code": "C", "text": "10.15 uur", "correct": true}]
+example: "De afspraak is om 10.15 uur."
+
+AFSPRAAK-06 De plaats van de afspraak
+instruction: "Waar moet Idris zijn?"
+speech: {"I": "Idris gaat naar zijn afspraak. Waar moet hij zijn? Lees het kaartje en tik de goede plaats.", "V": "De afspraak is bij Buurthuis De Linde.", "H": "Lees de hele naam achter 'Plaats'.", "F": "Dat is niet de plaats op dit kaartje. Kijk opnieuw bij 'Plaats'.", "G": "Goed gedaan. Idris gaat naar Buurthuis De Linde.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie."}
+options: [{"code": "A", "text": "Buurthuis De Ster", "correct": false}, {"code": "B", "text": "Buurthuis De Linde", "correct": true}, {"code": "C", "text": "het station", "correct": false}]
+
+AFSPRAAK-07 Wat doet Idris bij aankomst?
+instruction: "Wat moet Idris eerst doen?"
+speech: {"I": "Idris komt aan bij zijn afspraak. Op het kaartje staat wat hij moet doen. Wat moet hij eerst doen? Tik het goede antwoord.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie.", "V": "Hij meldt zich bij de balie.", "H": "Lees de laatste regel van het kaartje. Daar staat wat Idris moet doen.", "F": "Dat past niet bij dit kaartje. Lees de aanwijzing onderaan nog een keer.", "G": "Je hebt goed gekozen. Volgens de kaart moet Idris zich bij de balie melden."}
+context: ["Idris komt binnen in het buurthuis."]
+options: [{"code": "A", "text": "Hij meldt zich bij de balie.", "correct": true}, {"code": "B", "text": "Hij wacht bij de ingang.", "correct": false}, {"code": "C", "text": "Hij gaat direct naar buiten.", "correct": false}]
+example: "Hij meldt zich bij de balie."
+
+AFSPRAAK-08 Een zin over aanmelden ordenen
+instruction: "Bouw de zin met de kaartjes."
+speech: {"I": "Luister naar de zin. Tik de kaartjes in de goede volgorde.", "O": "Afspraakkaart\nVoor: Idris\nDag: maandag 23 november\nTijd: 10.15 uur\nPlaats: Buurthuis De Linde\nMeld je bij de balie.", "V": "Ik meld me bij de balie.", "H": "Kijk naar het begin van de zin in Voorbeeld. Welk kaartje past vooraan?", "F": "De volgorde klopt nog niet. Tik op Eén terug tot de rij leeg is. Bouw de zin opnieuw.", "G": "Dat klopt. Je hebt een goede zin gemaakt."}
+cards: ["balie.", "Ik meld me", "bij de"]
+answerOrder: ["Ik meld me", "bij de", "balie."]
+example: "Ik meld me bij de balie."
+phase: "begeleid_ordenen"
+interaction: "bouwen"
+
+AFSPRAAK-09 Een andere afspraaktijd
+instruction: "Hoe laat is deze afspraak?"
+speech: {"I": "Idris heeft een ander kaartje. De gegevens zijn veranderd. Hoe laat is deze afspraak? Tik de goede tijd.", "V": "De afspraak is om veertien uur dertig.", "H": "Kijk bij 'Tijd' op het nieuwe kaartje.", "F": "Dit is niet de nieuwe tijd. Lees de cijfers achter 'Tijd' opnieuw.", "G": "Uitstekend. De nieuwe afspraak is om veertien uur dertig.", "O": "Afspraakkaart\nVoor: Idris\nDag: donderdag 26 november\nTijd: 14.30 uur\nPlaats: Buurthuis De Ster\nWacht bij de ingang."}
+documents: [{"id": "KLI-DOC-AFSPRAAK-B", "text": "Afspraakkaart\nVoor: Idris\nDag: donderdag 26 november\nTijd: 14.30 uur\nPlaats: Buurthuis De Ster\nWacht bij de ingang.", "title": ""}]
+options: [{"code": "A", "text": "10.15 uur", "correct": false}, {"code": "B", "text": "14.30 uur", "correct": true}, {"code": "C", "text": "14.00 uur", "correct": false}]
+example: "De afspraak is om 14.30 uur."
+
+AFSPRAAK-10 De aanwijzing verandert
+instruction: "Wat moet Idris nu doen?"
+speech: {"I": "Lees de laatste regel van het nieuwe kaartje. Wat moet Idris nu doen? Tik de goede zin.", "V": "Idris wacht bij de ingang.", "H": "De laatste regel is veranderd. Lees die regel helemaal.", "F": "Die handeling staat niet op het nieuwe kaartje. Kijk onderaan de tekst.", "G": "Je hebt gelijk. Idris wacht bij de ingang.", "O": "Afspraakkaart\nVoor: Idris\nDag: donderdag 26 november\nTijd: 14.30 uur\nPlaats: Buurthuis De Ster\nWacht bij de ingang."}
+options: [{"code": "A", "text": "Idris wacht bij de ingang.", "correct": true}, {"code": "B", "text": "Idris meldt zich bij de balie.", "correct": false}, {"code": "C", "text": "Idris gaat naar de les.", "correct": false}]
+example: "Idris wacht bij de ingang."
+
+AFSPRAAK-11 Een vraag bouwen
+instruction: "Bouw de vraag met de kaartjes."
+speech: {"I": "Luister naar de vraag. Tik de kaartjes in de goede volgorde.", "O": "Afspraakkaart\nVoor: Idris\nDag: donderdag 26 november\nTijd: 14.30 uur\nPlaats: Buurthuis De Ster\nWacht bij de ingang.", "V": "Waar is de ingang?", "H": "Kijk naar het begin van de vraag in Voorbeeld. Welk kaartje past vooraan?", "F": "De volgorde klopt nog niet. Tik op Eén terug tot de rij leeg is. Bouw de vraag opnieuw.", "G": "Goed. Dit is een duidelijke vraag."}
+context: ["Idris is bij Buurthuis De Ster. Hij zoekt de ingang."]
+cards: ["ingang?", "de", "Waar is"]
+answerOrder: ["Waar is", "de", "ingang?"]
+example: "Waar is de ingang?"
+
+AFSPRAAK-12 Korte controle
+instruction: "Welke gegevens kloppen?"
+speech: {"I": "Lees het nieuwe afspraakkaartje. Welke zin heeft de goede dag, tijd en plaats? Tik één antwoord.", "V": "De afspraak is donderdag om veertien uur dertig bij Buurthuis De Ster.", "H": "Lees drie regels: 'Dag', 'Tijd' en 'Plaats'. Controleer alle drie.", "F": "Niet alle gegevens zijn goed. Kijk naar de dag, de tijd en de plaats. Kies opnieuw.", "G": "Ga zo door. Je hebt de juiste afspraak gevonden.", "O": "Afspraakkaart\nVoor: Idris\nDag: donderdag 26 november\nTijd: 14.30 uur\nPlaats: Buurthuis De Ster\nWacht bij de ingang."}
+options: [{"code": "A", "text": "Maandag om 14.30 uur bij Buurthuis De Linde.", "correct": false}, {"code": "B", "text": "Donderdag om 10.15 uur bij Buurthuis De Ster.", "correct": false}, {"code": "C", "text": "Donderdag om 14.30 uur bij Buurthuis De Ster.", "correct": true}]
+example: "De afspraak is donderdag om 14.30 uur bij Buurthuis De Ster."
+phase: "controle_op_geoefende_bron"

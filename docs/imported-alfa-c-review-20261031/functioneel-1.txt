@@ -1,0 +1,513 @@
+{
+ "id": "lijst",
+ "title": "Een lijst en een bon",
+ "goal": "Een lijst en bon gebruiken en zelf een korte boodschappenlijst schrijven.",
+ "start": "Je leest een boodschappenlijst en een bon. Je schrijft ook een eigen lijst. Je maakt de opdrachten op het scherm. Het antwoordblad is een extra.",
+ "end": "Je hebt gelezen en geschreven met boodschappen. Lees je eigen lijst nog eens terug.",
+ "materialRequirements": [
+  "Je kunt alles op het scherm doen. Het antwoordblad is een extra."
+ ],
+ "steps": [
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-01",
+   "number": 1,
+   "title": "Waarvoor is dit",
+   "kind": "model",
+   "options": [],
+   "correctOptionId": null,
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Boodschappenlijst",
+     "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+    }
+   ],
+   "helpVisible": "Lees één regel tegelijk. Onder het woord Boodschappen staan de dingen voor de winkel.",
+   "retryVisible": "Lees de lijst nog eens, van boven naar beneden.",
+   "exampleVisible": "Voorbeeldlijst\nBoodschappen\n1 appel",
+   "responseSetup": null,
+   "successFeedback": "Je hebt geoefend met deze opdracht.",
+   "automaticAcknowledgement": null,
+   "screen": "Lees de boodschappenlijst.",
+   "instruction": "Kijk naar de boodschappenlijst. Lees wat je gaat kopen.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de korte lijst in het voorbeeld. Daarop staat wat je gaat kopen.",
+   "exampleTargetTexts": [
+    "Boodschappen\n1 appel"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-02",
+   "number": 2,
+   "title": "De lijst gebruiken",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "Brood, melk en kaas."
+    },
+    {
+     "id": "o2",
+     "text": "Brood, water en kaas."
+    },
+    {
+     "id": "o3",
+     "text": "Rijst, melk en kaas."
+    }
+   ],
+   "correctOptionId": "o1",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Boodschappenlijst",
+     "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+    }
+   ],
+   "helpVisible": "Lees de namen op de lijst. Kijk daarna welk antwoord dezelfde namen heeft.",
+   "retryVisible": "Dit antwoord past niet bij de hele lijst. Lees alle namen nog eens. Tik op een ander antwoord.",
+   "exampleVisible": "Dit staat in het voorbeeld\n1 brood\n2 pakken melk\n1 stuk kaas\nAntwoord\nBrood, melk en kaas.",
+   "responseSetup": null,
+   "successFeedback": "Goed gedaan.",
+   "automaticAcknowledgement": null,
+   "screen": "Wat wil je kopen?",
+   "instruction": "Lees de hele lijst. Wat wil je kopen? Tik op het antwoord.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "2 pakken melk\n1 stuk kaas",
+    "Brood, melk en kaas."
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-03",
+   "number": 3,
+   "title": "De hoeveelheid vinden",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "1 pak"
+    },
+    {
+     "id": "o2",
+     "text": "2 pakken"
+    },
+    {
+     "id": "o3",
+     "text": "3 pakken"
+    }
+   ],
+   "correctOptionId": "o2",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Boodschappenlijst",
+     "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+    }
+   ],
+   "helpVisible": "Kijk naar het getal op de regel met melk.",
+   "retryVisible": "Dit aantal past niet bij de regel met melk. Lees die regel nog eens. Tik op een ander antwoord.",
+   "exampleVisible": "Dit staat in het voorbeeld\n2 pakken melk\nAntwoord\n2 pakken",
+   "responseSetup": null,
+   "successFeedback": "Je hebt goed gekozen.",
+   "automaticAcknowledgement": null,
+   "screen": "Hoeveel pakken melk?",
+   "instruction": "Zoek melk op de lijst. Hoeveel pakken staan er? Tik op het antwoord.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "2 pakken melk",
+    "2 pakken"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-04",
+   "number": 4,
+   "title": "De prijs vinden",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "€ 2,40"
+    },
+    {
+     "id": "o2",
+     "text": "€ 6,70"
+    },
+    {
+     "id": "o3",
+     "text": "€ 1,20"
+    }
+   ],
+   "correctOptionId": "o3",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Kassabon",
+     "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+    }
+   ],
+   "helpVisible": "Zoek melk op de bon. Lees het bedrag dat ernaast staat.",
+   "retryVisible": "Dit is niet de prijs van de melk. Zoek melk nog eens. Tik op het bedrag op die regel.",
+   "exampleVisible": "Dit staat in het voorbeeld\nmelk  € 1,20\nAntwoord\n€ 1,20",
+   "responseSetup": null,
+   "successFeedback": "Dat klopt.",
+   "automaticAcknowledgement": null,
+   "screen": "Wat kost de melk?",
+   "instruction": "Lees de bon. Wat kost de melk? Tik op het bedrag.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "melk  € 1,20",
+    "€ 1,20"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-05",
+   "number": 5,
+   "title": "Het totaal vinden",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "€ 6,70"
+    },
+    {
+     "id": "o2",
+     "text": "€ 3,10"
+    },
+    {
+     "id": "o3",
+     "text": "€ 2,40"
+    }
+   ],
+   "correctOptionId": "o1",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Kassabon",
+     "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+    }
+   ],
+   "helpVisible": "Kijk onderaan de bon. Welke regel gaat over alles samen?",
+   "retryVisible": "Je hebt een losse prijs gekozen. Zoek het bedrag voor alles samen. Tik op een ander bedrag.",
+   "exampleVisible": "Dit staat in het voorbeeld\nTotaal  € 6,70\nAntwoord\n€ 6,70",
+   "responseSetup": null,
+   "successFeedback": "Uitstekend.",
+   "automaticAcknowledgement": null,
+   "screen": "Wat betaal je voor alles?",
+   "instruction": "Lees de bon. Wat betaal je voor alles samen? Tik op het bedrag.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "Totaal  € 6,70",
+    "€ 6,70"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-06",
+   "number": 6,
+   "title": "Lijst en bon vergelijken",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "Nee, kaas ontbreekt."
+    },
+    {
+     "id": "o2",
+     "text": "Ja, alle drie staan op de bon."
+    },
+    {
+     "id": "o3",
+     "text": "Nee, melk ontbreekt."
+    }
+   ],
+   "correctOptionId": "o2",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Boodschappenlijst",
+     "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+    },
+    {
+     "kind": "source",
+     "title": "Kassabon",
+     "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+    }
+   ],
+   "helpVisible": "Zoek één naam van de lijst op de bon. Doe dat daarna met de andere namen. Je hoeft de aantallen niet te vergelijken.",
+   "retryVisible": "Vergelijk de namen nog eens, één voor één. Tik daarna op een ander antwoord.",
+   "exampleVisible": "Dit staat in het voorbeeld\nLijst: brood, melk, kaas.\nBon: brood, melk, kaas.\nAntwoord\nJa, alle drie staan op de bon.",
+   "responseSetup": null,
+   "successFeedback": "Je hebt gelijk.",
+   "automaticAcknowledgement": null,
+   "screen": "Staan alle namen op de bon?",
+   "instruction": "Lees de lijst en de bon. Staan de drie namen van de lijst ook op de bon? Tik op het antwoord.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "Bon: brood, melk, kaas.",
+    "Ja, alle drie staan op de bon."
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-07",
+   "number": 7,
+   "title": "Een lijst overschrijven",
+   "kind": "copy",
+   "options": [],
+   "correctOptionId": null,
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Boodschappenlijst",
+     "text": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas"
+    }
+   ],
+   "helpVisible": "Schrijf alleen de namen. De getallen hoef je niet over te schrijven.",
+   "retryVisible": "Vergelijk jouw drie regels met de lijst. Ontbreekt er een naam? Schrijf die erbij.",
+   "exampleVisible": "Voorbeeldlijst\n1 appel\n1 peer\n\nZo schrijf je de namen\nappel\npeer",
+   "responseSetup": {
+    "medium": "digital",
+    "sheetBlock": "lijst",
+    "sheetTask": 7,
+    "initialText": "",
+    "fields": [],
+    "responseGroup": null,
+    "previousResponseFrom": null,
+    "automaticContentAssessment": false
+   },
+   "successFeedback": "Je hebt geoefend met deze opdracht.",
+   "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+   "screen": "Schrijf de namen onder elkaar.",
+   "instruction": "Schrijf de drie namen van de lijst. Schrijf elke naam op een nieuwe regel.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de twee namen. Elke naam staat op een eigen regel.",
+   "exampleTargetTexts": [
+    "1 appel\n1 peer\n\nZo schrijf je de namen\nappel\npeer"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-08",
+   "number": 8,
+   "title": "Zelf een lijst schrijven",
+   "kind": "write",
+   "options": [],
+   "correctOptionId": null,
+   "presentation": [
+    {
+     "kind": "scenario",
+     "title": "De situatie",
+     "text": "Je wilt brood, kaas en water kopen."
+    }
+   ],
+   "helpVisible": "Denk aan de drie dingen die je nu wilt kopen. Lees daarna jouw lijst terug.",
+   "retryVisible": "Lees de drie dingen in de opdracht nog eens. Kijk of die op jouw lijst staan. Verander je lijst als dat nodig is.",
+   "exampleVisible": "Andere boodschappen\nrijst en melk\n\nVoorbeeldlijst\nrijst\nmelk",
+   "responseSetup": {
+    "medium": "digital",
+    "sheetBlock": "lijst",
+    "sheetTask": 8,
+    "initialText": "",
+    "fields": [],
+    "responseGroup": null,
+    "previousResponseFrom": null,
+    "automaticContentAssessment": false
+   },
+   "successFeedback": "Je hebt geoefend met deze opdracht.",
+   "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+   "screen": "Maak een nieuwe lijst.",
+   "instruction": "Je wilt brood, kaas en water kopen. Schrijf die drie dingen in het invulvak. Schrijf elke naam op een nieuwe regel.",
+   "closed": false,
+   "exampleInstruction": "Dit is een andere boodschappenlijst. Maak bij jouw opdracht een lijst met jouw drie dingen.",
+   "exampleTargetTexts": [
+    "rijst en melk\n\nVoorbeeldlijst\nrijst\nmelk"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-09",
+   "number": 9,
+   "title": "Een andere bon lezen",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "€ 1,20"
+    },
+    {
+     "id": "o2",
+     "text": "€ 1,80"
+    },
+    {
+     "id": "o3",
+     "text": "€ 3,00"
+    }
+   ],
+   "correctOptionId": "o3",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Andere kassabon",
+     "text": "Kassabon\nrijst  € 1,80\nmelk  € 1,20\nTotaal  € 3,00"
+    }
+   ],
+   "helpVisible": "Zoek het bedrag onderaan dat over de hele aankoop gaat.",
+   "retryVisible": "Je hebt een losse prijs gekozen. Zoek opnieuw het bedrag voor alles samen. Tik op een ander bedrag.",
+   "exampleVisible": "Dit staat in het voorbeeld\nTotaal  € 3,00\nAntwoord\n€ 3,00",
+   "responseSetup": null,
+   "successFeedback": "Prima.",
+   "automaticAcknowledgement": null,
+   "screen": "Wat betaal je op deze bon?",
+   "instruction": "Lees deze andere bon. Wat betaal je voor alles samen? Tik op het bedrag.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "Totaal  € 3,00",
+    "€ 3,00"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-10",
+   "number": 10,
+   "title": "Een lijst herstellen",
+   "kind": "write",
+   "options": [],
+   "correctOptionId": null,
+   "presentation": [
+    {
+     "kind": "scenario",
+     "title": "De situatie",
+     "text": "Je wilt alleen rijst en melk kopen."
+    }
+   ],
+   "helpVisible": "Lees elke naam op het briefje. Hoort die bij wat je nu wilt kopen?",
+   "retryVisible": "Lees wat je wilt kopen nog eens. Kijk of er nog iets te veel op het briefje staat.",
+   "exampleVisible": "Nodig\nappel en peer\n\nBriefje vóór het verbeteren\nappel\npeer\nsoep\n\nBriefje na het verbeteren\nappel\npeer",
+   "responseSetup": {
+    "medium": "digital",
+    "sheetBlock": "lijst",
+    "sheetTask": 10,
+    "initialText": "rijst\nmelk\nkaas",
+    "fields": [],
+    "responseGroup": null,
+    "previousResponseFrom": null,
+    "automaticContentAssessment": false
+   },
+   "successFeedback": "Je hebt geoefend met deze opdracht.",
+   "automaticAcknowledgement": "Je hebt geschreven. Lees je antwoord nog eens.",
+   "screen": "Haal weg wat niet nodig is.",
+   "instruction": "Je wilt alleen rijst en melk kopen. Kijk naar het briefje. Tik op wat je niet wilt kopen om het door te strepen.",
+   "closed": false,
+   "exampleInstruction": "Op het voorbeeldbriefje staat één ding te veel. Na het verbeteren staan alleen de twee nodige dingen er nog.",
+   "exampleTargetTexts": [
+    "appel en peer\n\nBriefje vóór het verbeteren\nappel\npeer\nsoep\n\nBriefje na het verbeteren\nappel\npeer"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-11",
+   "number": 11,
+   "title": "De kaasprijs vinden",
+   "kind": "choice",
+   "options": [
+    {
+     "id": "o1",
+     "text": "€ 3,10"
+    },
+    {
+     "id": "o2",
+     "text": "€ 6,70"
+    },
+    {
+     "id": "o3",
+     "text": "€ 1,20"
+    }
+   ],
+   "correctOptionId": "o1",
+   "presentation": [
+    {
+     "kind": "source",
+     "title": "Kassabon",
+     "text": "Kassabon\nbrood  € 2,40\nmelk  € 1,20\nkaas  € 3,10\nTotaal  € 6,70"
+    }
+   ],
+   "helpVisible": "Zoek kaas op de bon. Lees het bedrag ernaast.",
+   "retryVisible": "Dit bedrag hoort niet bij de kaas. Zoek de goede regel. Tik op een ander bedrag.",
+   "exampleVisible": "Dit staat in het voorbeeld\nkaas  € 3,10\nAntwoord\n€ 3,10",
+   "responseSetup": null,
+   "successFeedback": "Je hebt goed gekozen.",
+   "automaticAcknowledgement": null,
+   "screen": "Wat kost de kaas?",
+   "instruction": "Lees de bon. Wat kost de kaas? Tik op het bedrag.",
+   "closed": false,
+   "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
+   "exampleTargetTexts": [
+    "kaas  € 3,10",
+    "€ 3,10"
+   ],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  },
+  {
+   "id": "klink-alfa-c-aanvulling-lijst-12",
+   "number": 12,
+   "title": "Terugkijken",
+   "kind": "reflect",
+   "options": [],
+   "correctOptionId": null,
+   "presentation": [
+    {
+     "kind": "previousResponse",
+     "title": "Jouw lijst bij opdracht 8",
+     "text": "",
+     "fromTask": "klink-alfa-c-aanvulling-lijst-08"
+    }
+   ],
+   "helpVisible": "Lees één naam tegelijk. Je mag ook zeggen dat je geen woord meer wilt oefenen.",
+   "retryVisible": "Kijk nog eens naar jouw lijst bij opdracht 8. Kies zelf wat je wilt herhalen.",
+   "exampleVisible": null,
+   "responseSetup": null,
+   "successFeedback": "Je hebt geoefend met deze opdracht.",
+   "automaticAcknowledgement": null,
+   "screen": "Lees jouw lijst terug.",
+   "instruction": "Kijk naar jouw lijst bij opdracht 8. Lees de drie dingen hardop. Zeg welk woord je nog wilt oefenen.",
+   "closed": false,
+   "exampleInstruction": null,
+   "exampleTargetTexts": [],
+   "dictationTexts": [],
+   "handwriting": null,
+   "exampleHandwriting": null
+  }
+ ]
+}

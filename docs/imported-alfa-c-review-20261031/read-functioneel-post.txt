@@ -1,0 +1,103 @@
+post Een uitnodiging en een afspraak
+
+klink-alfa-c-aanvulling-post-01 Waar gaat de post over
+screen: "Lees de uitnodiging."
+instruction: "Lees de uitnodiging. Kijk wat je samen gaat doen."
+presentation: [{"kind": "source", "title": "Uitnodiging", "text": "Uitnodiging\nKom maandag om 14.00 naar het buurthuis.\nWe lezen samen.\nNeem je boek mee."}]
+helpVisible: "Zoek de zin die zegt wat je samen doet."
+retryVisible: "Lees de uitnodiging nog eens. Begin bovenaan."
+exampleVisible: "Voorbeelduitnodiging\nKom vrijdag koffie drinken.\nWe beginnen om 11.00."
+
+klink-alfa-c-aanvulling-post-02 Reclame herkennen
+screen: "Waar gaat deze tekst over?"
+instruction: "Lees de tekst met Marktactie erboven. Waar gaat de tekst over? Tik op het antwoord."
+presentation: [{"kind": "source", "title": "Reclame", "text": "Marktactie\n2 broden voor € 3,00.\nAlleen vrijdag."}]
+options: [{"id": "o1", "text": "Een afspraak om te lezen."}, {"id": "o2", "text": "Een les die later begint."}, {"id": "o3", "text": "Een aanbieding voor brood."}]
+correctOptionId: "o3"
+helpVisible: "Kijk wat je kunt kopen. Kijk ook of er een prijs bij staat."
+retryVisible: "Dit antwoord past niet bij de marktactie. Lees de tekst nog eens. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nMarktactie\n2 broden voor € 3,00.\nAlleen vrijdag.\nAntwoord\nEen aanbieding voor brood."
+
+klink-alfa-c-aanvulling-post-03 De plek vinden
+screen: "Waar moet je zijn?"
+instruction: "Lees de uitnodiging voor maandag. Waar moet je zijn? Tik op de plek."
+options: [{"id": "o1", "text": "in het buurthuis"}, {"id": "o2", "text": "in de bibliotheek"}, {"id": "o3", "text": "in het Taalhuis"}]
+correctOptionId: "o1"
+helpVisible: "Zoek in de zin met Kom de plek waar je wordt verwacht."
+retryVisible: "Deze plek staat niet in de uitnodiging voor maandag. Lees die uitnodiging nog eens. Tik op een andere plek."
+exampleVisible: "Dit staat in het voorbeeld\nKom maandag om 14.00 naar het buurthuis.\nAntwoord\nin het buurthuis"
+
+klink-alfa-c-aanvulling-post-04 De tijd vinden
+screen: "Hoe laat moet je er zijn?"
+instruction: "Lees de uitnodiging voor maandag. Hoe laat moet je er zijn? Tik op de tijd."
+options: [{"id": "o1", "text": "15.00"}, {"id": "o2", "text": "14.00"}, {"id": "o3", "text": "10.00"}]
+correctOptionId: "o2"
+helpVisible: "Zoek de tijd in de uitnodiging."
+retryVisible: "Deze tijd staat niet in de uitnodiging voor maandag. Zoek de goede tijd. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nKom maandag om 14.00 naar het buurthuis.\nAntwoord\n14.00"
+
+klink-alfa-c-aanvulling-post-05 Wat is de datum
+screen: "Op welke datum is de afspraak?"
+instruction: "Lees de afspraakkaart van het Taalhuis. Op welke datum is de afspraak? Tik op de datum."
+presentation: [{"kind": "source", "title": "Afspraakkaart", "text": "Afspraak Taalhuis\ndinsdag 10 november 2026\n14.00\nNeem je map mee."}]
+options: [{"id": "o1", "text": "14 november 2026"}, {"id": "o2", "text": "10 oktober 2026"}, {"id": "o3", "text": "10 november 2026"}]
+helpVisible: "Zoek de regel met een maand erin. Lees de hele datum."
+retryVisible: "Deze datum is niet hetzelfde als op de afspraakkaart. Vergelijk de dag en de maand nog eens. Tik op een andere datum."
+exampleVisible: "Dit staat in het voorbeeld\ndinsdag 10 november 2026\nAntwoord\n10 november 2026"
+
+klink-alfa-c-aanvulling-post-06 Een afspraak noteren
+screen: "Schrijf de datum en de tijd op."
+instruction: "Lees de afspraakkaart. Schrijf de datum en de tijd van de afspraak in het invulvak."
+helpVisible: "Zoek eerst de regel met de datum. Zoek daarna de tijd."
+retryVisible: "Vergelijk jouw twee regels met de kaart. Kijk apart naar de datum en naar de tijd."
+exampleVisible: "Andere afspraakkaart\n12 november 2026\n09.00\n\nVoorbeeldbriefje\n12 november 2026\n09.00"
+responseSetup: {"medium": "digital", "sheetBlock": "post", "sheetTask": 6, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-post-07 Een uitnodiging beantwoorden
+screen: "Schrijf dat je komt."
+instruction: "Je wilt maandag naar het buurthuis komen. Schrijf bij opdracht 7 een kort antwoord op de uitnodiging."
+helpVisible: "Laat in jouw antwoord weten dat je komt. Je mag de dag erbij schrijven."
+retryVisible: "Lees jouw antwoord terug. Kan de ander begrijpen dat je wilt komen? Vul jouw antwoord aan als dat nodig is."
+exampleVisible: "Andere uitnodiging\nKom je donderdag naar de bibliotheek?\n\nVoorbeeldantwoord\nJa, ik kom donderdag."
+responseSetup: {"medium": "digital", "sheetBlock": "post", "sheetTask": 7, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-post-08 Een andere dag voorstellen
+screen: "Stel een andere dag voor."
+instruction: "Je kunt maandag niet komen. Schrijf dat bij opdracht 8. Vraag daarna of je dinsdag kunt komen."
+helpVisible: "Schrijf eerst op welke dag je niet kunt. Schrijf daarna jouw vraag over de andere dag."
+retryVisible: "Lees jouw twee zinnen terug. Zeg je dat maandag niet lukt? Vraag je naar dinsdag? Verander wat nog niet duidelijk is."
+exampleVisible: "Andere situatie\nDonderdag lukt niet. Je wilt vrijdag komen.\n\nVoorbeeldantwoord\nIk kan donderdag niet. Kan ik vrijdag komen?"
+responseSetup: {"medium": "digital", "sheetBlock": "post", "sheetTask": 8, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-post-09 Hulp bij moeilijke post
+screen: "Je begrijpt een brief niet."
+instruction: "Je krijgt een brief. Je begrijpt niet wat erin staat. Wat kun je doen? Tik op het antwoord."
+presentation: [{"kind": "scenario", "title": "De situatie", "text": "Je krijgt een brief. Je begrijpt niet wat erin staat."}]
+options: [{"id": "o1", "text": "Het bericht meenemen en uitleg vragen."}, {"id": "o2", "text": "Een datum gokken."}, {"id": "o3", "text": "Het bericht weggooien."}]
+helpVisible: "Kies iets waardoor je meer over de brief te weten komt."
+retryVisible: "Met die keuze weet je nog niet wat de brief zegt. Kijk naar de antwoorden. Kies een manier om daarachter te komen."
+exampleVisible: "Voorbeeldsituatie\nEen bericht is niet duidelijk.\n\nMogelijke stap\nNeem het bericht mee en vraag wat het betekent."
+
+klink-alfa-c-aanvulling-post-10 De andere uitnodiging
+screen: "Waar ga je donderdag naartoe?"
+instruction: "Lees de uitnodiging voor donderdag. Waar moet je zijn? Tik op de plek."
+presentation: [{"kind": "source", "title": "Andere uitnodiging", "text": "Uitnodiging\nKom donderdag om 15.00 naar de bibliotheek.\nWe bekijken boeken.\nNeem je leesbril mee als je die gebruikt."}]
+options: [{"id": "o1", "text": "het buurthuis"}, {"id": "o2", "text": "de bibliotheek"}, {"id": "o3", "text": "het Taalhuis"}]
+helpVisible: "Zoek in deze uitnodiging waar je wordt verwacht."
+retryVisible: "Deze plek hoort niet bij de uitnodiging voor donderdag. Lees die uitnodiging opnieuw. Tik op een andere plek."
+exampleVisible: "Dit staat in het voorbeeld\nKom donderdag om 15.00 naar de bibliotheek.\nAntwoord\nde bibliotheek"
+
+klink-alfa-c-aanvulling-post-11 Een briefje maken
+screen: "Maak een briefje voor jezelf."
+instruction: "Lees de uitnodiging voor donderdag. Schrijf bij opdracht 11 een briefje met de dag, de tijd en de plek."
+helpVisible: "Zoek wanneer je komt en waar je moet zijn. Je mag drie korte regels schrijven."
+retryVisible: "Lees jouw briefje terug. Staan de dag, de tijd en de plek erop? Vergelijk ze met de uitnodiging."
+exampleVisible: "Andere uitnodiging\nKom vrijdag om 11.00 naar het buurthuis.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nbuurthuis"
+responseSetup: {"medium": "digital", "sheetBlock": "post", "sheetTask": 11, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-post-12 Terugkijken
+screen: "Lees jouw afspraakbriefje terug."
+instruction: "Lees jouw briefje bij opdracht 6. Zeg hardop wat je doet als je de datum op een afspraakkaart niet begrijpt."
+presentation: [{"kind": "previousResponse", "title": "Jouw briefje bij opdracht 6", "text": "", "fromTask": "klink-alfa-c-aanvulling-post-06"}, {"kind": "source", "title": "Afspraakkaart", "text": "Afspraak Taalhuis\ndinsdag 10 november 2026\n14.00\nNeem je map mee."}]
+helpVisible: "Denk aan iets wat jou kan helpen om de afspraak te begrijpen."
+retryVisible: "Kijk nog eens naar de kaart en jouw briefje. Zeg welk deel onduidelijk is."

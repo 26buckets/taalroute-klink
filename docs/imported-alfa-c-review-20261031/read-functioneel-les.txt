@@ -1,0 +1,101 @@
+les Een bericht over de les
+
+klink-alfa-c-aanvulling-les-01 Twee soorten informatie
+screen: "Lees het lesrooster."
+instruction: "Kijk naar het rooster. Lees de twee dagen waarop er les is."
+presentation: [{"kind": "source", "title": "Lesrooster", "text": "Lesrooster\nmaandag  09.00  Nederlands  zaal 2\nwoensdag  09.00  Nederlands  zaal 2"}]
+helpVisible: "Lees het eerste woord van elke regel."
+retryVisible: "Begin bovenaan. Lees elke roosterregel nog eens."
+exampleVisible: "Voorbeeldrooster\nvrijdag  13.00  lezen  zaal 1"
+
+klink-alfa-c-aanvulling-les-02 Een tijd opzoeken
+screen: "Hoe laat is de les op maandag?"
+instruction: "Zoek maandag in het rooster. Hoe laat begint de les? Tik op de tijd."
+options: [{"id": "o1", "text": "10.00"}, {"id": "o2", "text": "09.00"}, {"id": "o3", "text": "11.00"}]
+correctOptionId: "o2"
+helpVisible: "Begin bij maandag. Lees de tijd op dezelfde regel."
+retryVisible: "Deze tijd staat niet bij maandag. Zoek de goede regel. Tik op een andere tijd."
+exampleVisible: "Dit staat in het voorbeeld\nmaandag  09.00  Nederlands  zaal 2\nAntwoord\n09.00"
+
+klink-alfa-c-aanvulling-les-03 Het nieuwe tijdstip
+screen: "Hoe laat is de les op woensdag?"
+instruction: "Lees het bericht over woensdag. Hoe laat begint de les nu? Tik op de tijd."
+presentation: [{"kind": "source", "title": "Bericht over woensdag", "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."}]
+options: [{"id": "o1", "text": "09.00"}, {"id": "o2", "text": "11.00"}, {"id": "o3", "text": "10.00"}]
+correctOptionId: "o3"
+helpVisible: "Zoek in het bericht hoe laat de les begint."
+retryVisible: "Dit is niet de nieuwe begintijd. Lees de eerste zin van het bericht nog eens. Tik op een andere tijd."
+exampleVisible: "Dit staat in het voorbeeld\nWoensdag begint de les om 10.00.\nAntwoord\n10.00"
+
+klink-alfa-c-aanvulling-les-04 De juiste zaal
+screen: "In welke zaal is de les?"
+instruction: "Lees het bericht over woensdag. In welke zaal is de les? Tik op het antwoord."
+options: [{"id": "o1", "text": "zaal 4"}, {"id": "o2", "text": "zaal 2"}, {"id": "o3", "text": "zaal 3"}]
+correctOptionId: "o1"
+helpVisible: "Zoek in het bericht het woord zaal. Lees wat ernaast staat."
+retryVisible: "Deze zaal staat niet in het bericht over woensdag. Zoek zaal nog eens. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nDe les is in zaal 4.\nAntwoord\nzaal 4"
+
+klink-alfa-c-aanvulling-les-05 Wat neem je mee
+screen: "Wat neem je woensdag mee?"
+instruction: "Lees het bericht. Wat neem je woensdag mee? Tik op het antwoord."
+options: [{"id": "o1", "text": "een boek"}, {"id": "o2", "text": "een map"}, {"id": "o3", "text": "een doek"}]
+helpVisible: "Zoek de zin die begint met Neem. Lees die zin helemaal."
+retryVisible: "Dit wordt niet gevraagd voor woensdag. Lees de zin met Neem nog eens. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nNeem je map mee.\nAntwoord\neen map"
+
+klink-alfa-c-aanvulling-les-06 Een wijziging gebruiken
+screen: "Welke zaal gebruik je woensdag?"
+instruction: "Het bericht verandert de les op woensdag. Lees het nieuwe bericht. In welke zaal is de les nu? Tik op het antwoord."
+presentation: [{"kind": "source", "title": "Oud rooster", "text": "Lesrooster\nmaandag  09.00  Nederlands  zaal 2\nwoensdag  09.00  Nederlands  zaal 2"}, {"kind": "source", "title": "Nieuw bericht over woensdag", "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."}]
+options: [{"id": "o1", "text": "zaal 2"}, {"id": "o2", "text": "zaal 3"}, {"id": "o3", "text": "zaal 4"}]
+helpVisible: "Gebruik het nieuwe bericht. Zoek daarin de plek van de les."
+retryVisible: "Het oude rooster geldt hier niet meer. Lees de zaal in het nieuwe bericht. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nNieuw bericht\nDe les is in zaal 4.\nAntwoord\nzaal 4"
+
+klink-alfa-c-aanvulling-les-07 Een herinnering opschrijven
+screen: "Maak een briefje voor jezelf."
+instruction: "Schrijf de dag, de tijd en de zaal van de les in het invulvak. Gebruik het bericht over woensdag."
+helpVisible: "Zoek eerst de dag. Zoek daarna de tijd en de zaal. Je mag korte regels schrijven."
+retryVisible: "Lees jouw briefje terug. Kun je zien op welke dag, hoe laat en in welke zaal de les is? Schrijf erbij wat ontbreekt."
+exampleVisible: "Ander bericht\nVrijdag begint de les om 11.00 in zaal 3.\n\nVoorbeeldbriefje\nvrijdag\n11.00\nzaal 3"
+responseSetup: {"medium": "digital", "sheetBlock": "les", "sheetTask": 7, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-les-08 Een reactie schrijven
+screen: "Schrijf dat je woensdag komt."
+instruction: "Schrijf bij opdracht 8 een antwoord op het bericht. Laat weten dat je woensdag komt."
+helpVisible: "Schrijf wat je wilt laten weten. Noem ook de dag."
+retryVisible: "Lees jouw antwoord terug. Is duidelijk dat je woensdag komt? Verander je antwoord als dat nodig is."
+exampleVisible: "Ander bericht\nKom je vrijdag?\n\nVoorbeeldantwoord\nIk kom vrijdag."
+responseSetup: {"medium": "digital", "sheetBlock": "les", "sheetTask": 8, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-les-09 Een fout in een briefje vinden
+screen: "Verbeter het oude briefje."
+instruction: "Lees het nieuwe bericht over woensdag. Kijk naar het oude briefje. Schrijf het goede briefje in het invulvak."
+helpVisible: "Vergelijk de tijd op het briefje met de tijd in het nieuwe bericht. Vergelijk daarna de zaal."
+retryVisible: "Lees het nieuwe bericht nog eens. Kijk daarna of jouw nieuwe briefje de goede tijd en zaal heeft."
+exampleVisible: "Ander nieuw bericht\nDe les is vrijdag om 14.00 in zaal 5.\n\nOud briefje\nvrijdag 13.00 zaal 1\n\nGoed briefje\nvrijdag 14.00 zaal 5"
+responseSetup: {"medium": "digital", "sheetBlock": "les", "sheetTask": 9, "initialText": "woensdag 09.00 zaal 2", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-les-10 Een ander bericht gebruiken
+screen: "Wat neem je vrijdag mee?"
+instruction: "Lees het bericht over vrijdag. Wat neem je mee? Tik op het antwoord."
+presentation: [{"kind": "source", "title": "Bericht over vrijdag", "text": "Vrijdag begint de les om 11.00.\nDe les is in zaal 3.\nNeem je boek mee."}]
+helpVisible: "Lees de zin die zegt wat je moet meenemen."
+retryVisible: "Dit hoort niet bij het bericht over vrijdag. Lees het bericht nog eens. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nNeem je boek mee.\nAntwoord\neen boek"
+
+klink-alfa-c-aanvulling-les-11 Terugschrijven over de tijd
+screen: "Schrijf hoe laat je komt."
+instruction: "Lees het bericht over vrijdag. Schrijf bij opdracht 11 een antwoord. Laat weten hoe laat je komt."
+helpVisible: "Zoek de begintijd van de les. Gebruik die tijd in jouw antwoord."
+retryVisible: "Lees het bericht en jouw antwoord terug. Staat de goede tijd in jouw antwoord? Verander die als dat nodig is."
+exampleVisible: "Ander bericht\nDe les begint om 13.00.\n\nVoorbeeldantwoord\nIk kom om 13.00."
+responseSetup: {"medium": "digital", "sheetBlock": "les", "sheetTask": 11, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-les-12 Terugkijken
+screen: "Lees jouw briefje terug."
+instruction: "Kijk naar jouw briefje bij opdracht 7. Lees het hardop. Zeg of de dag, de tijd en de zaal erop staan."
+presentation: [{"kind": "previousResponse", "title": "Jouw briefje bij opdracht 7", "text": "", "fromTask": "klink-alfa-c-aanvulling-les-07"}, {"kind": "source", "title": "Bericht over woensdag", "text": "Woensdag begint de les om 10.00.\nDe les is in zaal 4.\nNeem je map mee."}]
+helpVisible: "Lees je briefje regel voor regel. Vergelijk het met het bericht over woensdag."
+retryVisible: "Kijk of jouw briefje genoeg zegt om naar de goede les te gaan. Vul aan wat je mist."

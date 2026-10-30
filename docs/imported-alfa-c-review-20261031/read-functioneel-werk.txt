@@ -1,0 +1,98 @@
+werk Een korte taak uitvoeren
+
+klink-alfa-c-aanvulling-werk-01 Een stappenlijst lezen
+screen: "Lees de drie stappen."
+instruction: "Lees de stappen voor het schoonmaken van de tafel. Begin bij 1."
+presentation: [{"kind": "source", "title": "Korte werktaak", "text": "Tafel schoonmaken\n1 Pak een doek.\n2 Maak de tafel schoon.\n3 Leg de doek in de bak."}]
+helpVisible: "De cijfers laten zien in welke volgorde je werkt. Lees van boven naar beneden."
+retryVisible: "Lees de drie regels opnieuw. Begin bij 1."
+exampleVisible: "Andere korte taak\n1 Pak een boek.\n2 Leg het boek op de tafel."
+
+klink-alfa-c-aanvulling-werk-02 De eerste stap
+screen: "Wat doe je eerst?"
+instruction: "Lees de drie stappen. Wat doe je eerst? Tik op het antwoord."
+options: [{"id": "o1", "text": "De doek in de bak leggen."}, {"id": "o2", "text": "Een doek pakken."}, {"id": "o3", "text": "De tafel schoonmaken."}]
+correctOptionId: "o2"
+helpVisible: "Lees de regel die bovenaan staat bij 1."
+retryVisible: "Dit is niet de eerste stap. Lees de regel bij 1 nog eens. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\n1 Pak een doek.\nAntwoord\nEen doek pakken."
+
+klink-alfa-c-aanvulling-werk-03 De volgende stap
+screen: "Wat doe je na het pakken?"
+instruction: "Je hebt de doek gepakt. Lees de stappen. Wat doe je daarna? Tik op het antwoord."
+options: [{"id": "o1", "text": "De map pakken."}, {"id": "o2", "text": "De doek meteen wegleggen."}, {"id": "o3", "text": "De tafel schoonmaken."}]
+correctOptionId: "o3"
+helpVisible: "Zoek de stap die al klaar is. Lees dan de regel eronder."
+retryVisible: "Deze handeling komt hier niet na het pakken. Lees de volgende regel in de lijst. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\n1 Pak een doek.\n2 Maak de tafel schoon.\nAntwoord\nDe tafel schoonmaken."
+
+klink-alfa-c-aanvulling-werk-04 De laatste plek
+screen: "Waar leg je de doek?"
+instruction: "Lees de laatste stap. Waar leg je de doek als je klaar bent? Tik op de plek."
+options: [{"id": "o1", "text": "in de bak"}, {"id": "o2", "text": "op de tafel"}, {"id": "o3", "text": "in de map"}]
+correctOptionId: "o1"
+helpVisible: "Lees de laatste regel helemaal. Kijk waar de doek naartoe gaat."
+retryVisible: "Die plek staat niet in de laatste stap. Lees die regel nog eens. Tik op een andere plek."
+exampleVisible: "Dit staat in het voorbeeld\n3 Leg de doek in de bak.\nAntwoord\nin de bak"
+
+klink-alfa-c-aanvulling-werk-05 Lezen en doen
+screen: "Lees en doe de stappen."
+instruction: "Lees de stappen. Voer ze op het scherm uit. Tik op de handelingen in de goede volgorde."
+helpVisible: "Kijk welk cijfer je als laatste hebt gedaan. Lees daarna de regel onder dat cijfer."
+retryVisible: "Kijk naar de stappen en het scherm. Heb je alle stappen gedaan? Doe nog wat ontbreekt."
+exampleVisible: "Voorbeeld van een andere taak\n1 Pak een boek.\n2 Leg het boek op de tafel."
+
+klink-alfa-c-aanvulling-werk-06 Kort terugmelden
+screen: "Schrijf wat klaar is."
+instruction: "De tafel is nu schoon. Schrijf bij opdracht 6 een kort bericht voor een collega. Laat weten dat je klaar bent met de tafel."
+helpVisible: "Noem waarover het bericht gaat. Schrijf wat daarmee is gebeurd."
+retryVisible: "Lees jouw bericht terug. Kan een collega begrijpen wat klaar is? Vul aan wat nog niet duidelijk is."
+exampleVisible: "Andere taak is klaar\nDe map ligt op de tafel.\n\nVoorbeeldbericht\nDe map ligt klaar op tafel."
+responseSetup: {"medium": "digital", "sheetBlock": "werk", "sheetTask": 6, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-werk-07 Een bericht lezen
+screen: "Waar ligt de doek nu?"
+instruction: "Lees het bericht. Waar ligt de doek nu? Tik op de plek."
+presentation: [{"kind": "source", "title": "Bericht na een taak", "text": "De tafel is schoon.\nDe doek ligt in de bak."}]
+options: [{"id": "o1", "text": "op de tafel"}, {"id": "o2", "text": "in de bak"}, {"id": "o3", "text": "in de map"}]
+helpVisible: "Zoek de zin met doek. Lees die zin helemaal."
+retryVisible: "Deze plek staat niet in het bericht. Lees de zin over de doek nog eens. Tik op een andere plek."
+exampleVisible: "Dit staat in het voorbeeld\nDe doek ligt in de bak.\nAntwoord\nin de bak"
+
+klink-alfa-c-aanvulling-werk-08 Een vraag stellen
+screen: "Schrijf een vraag over de bak."
+instruction: "Je weet niet welke bak je moet gebruiken. Schrijf bij opdracht 8 een vraag voor een collega."
+helpVisible: "Schrijf waarover je uitleg nodig hebt. Maak er een vraag van."
+retryVisible: "Lees jouw vraag terug. Begrijpt een collega dat jij niet weet welke bak je nodig hebt? Verander de vraag als dat nodig is."
+exampleVisible: "Andere situatie\nJe weet niet welke map je moet pakken.\n\nVoorbeeldvraag\nWelke map moet ik pakken?"
+responseSetup: {"medium": "digital", "sheetBlock": "werk", "sheetTask": 8, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-werk-09 Een andere taak uitvoeren
+screen: "Doe de andere taak."
+instruction: "Lees de stappen met de map en het boek. Voer ze op het scherm uit. Tik op de handelingen in de goede volgorde."
+presentation: [{"kind": "source", "title": "Andere werktaak", "text": "Voor de les\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel."}]
+helpVisible: "Lees eerst één regel. Doe wat er staat. Lees daarna de volgende regel."
+retryVisible: "Kijk naar de stappen en het scherm. Heb je gedaan wat op elke regel staat? Doe nog wat ontbreekt."
+exampleVisible: "Voorbeeld van de volgorde\n1 Pak een map.\n2 Leg het boek in de map.\n3 Leg de map op de tafel."
+
+klink-alfa-c-aanvulling-werk-10 Een onjuiste melding verbeteren
+screen: "Verbeter het bericht."
+instruction: "Lees de stappen met de map. Kijk naar het oude bericht. Schrijf het goede bericht in het invulvak."
+helpVisible: "Vergelijk de plek in het bericht met de plek in de laatste stap."
+retryVisible: "Lees jouw nieuwe bericht terug. Staat de map op de plek uit de laatste stap? Verander wat nog niet klopt."
+exampleVisible: "Andere opdracht\nLeg het boek op de tafel.\n\nVerkeerd bericht\nHet boek ligt op de stoel.\n\nGoed bericht\nHet boek ligt op de tafel."
+responseSetup: {"medium": "digital", "sheetBlock": "werk", "sheetTask": 10, "initialText": "De map ligt in de bak.", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-werk-11 Na de taak een bericht schrijven
+screen: "Doe de taak en schrijf een bericht."
+instruction: "Doe de drie stappen met de map en het boek op het scherm. Schrijf daarna waar de map ligt."
+helpVisible: "Lees elke stap voordat je iets doet. Kijk na de laatste stap waar de map ligt. Schrijf dat op."
+retryVisible: "Vergelijk jouw bericht met de plek van de map. Lees ook de laatste stap nog eens. Verbeter je bericht als dat nodig is."
+exampleVisible: "Voorbeeldbericht na deze taak\nDe map ligt op de tafel."
+responseSetup: {"medium": "digital", "sheetBlock": "werk", "sheetTask": 11, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-werk-12 Terugkijken
+screen: "Denk terug aan deze taak."
+instruction: "Denk aan het werken met de stappen. Zeg hardop wanneer jij iets wilde vragen. Je mag ook zeggen dat alles duidelijk was."
+helpVisible: "Denk aan een woord of een stap waarbij je moest nadenken."
+retryVisible: "Kijk de lijst nog eens door. Zeg wat voor jou duidelijk was en wat je nog wilt vragen."

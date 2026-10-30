@@ -71,7 +71,7 @@
           ],
           "helpVisible": "Lees de namen op de lijst. Kijk daarna welk antwoord dezelfde namen heeft.",
           "retryVisible": "Dit antwoord past niet bij de hele lijst. Lees alle namen nog eens. Tik op een ander antwoord.",
-          "exampleVisible": "Dit staat in het voorbeeld\n1 brood\n2 pakken melk\n1 stuk kaas\nAntwoord\nBrood, melk en kaas.",
+          "exampleVisible": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas\n\nAntwoord\nBrood, melk en kaas.",
           "responseSetup": null,
           "successFeedback": "Goed gedaan.",
           "automaticAcknowledgement": null,
@@ -80,7 +80,7 @@
           "closed": false,
           "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
           "exampleTargetTexts": [
-            "2 pakken melk\n1 stuk kaas",
+            "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas",
             "Brood, melk en kaas."
           ],
           "dictationTexts": [],
@@ -256,7 +256,7 @@
           ],
           "helpVisible": "Zoek één naam van de lijst op de bon. Doe dat daarna met de andere namen. Je hoeft de aantallen niet te vergelijken.",
           "retryVisible": "Vergelijk de namen nog eens, één voor één. Tik daarna op een ander antwoord.",
-          "exampleVisible": "Dit staat in het voorbeeld\nLijst: brood, melk, kaas.\nBon: brood, melk, kaas.\nAntwoord\nJa, alle drie staan op de bon.",
+          "exampleVisible": "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas\n\nBon: brood, melk, kaas.\n\nAntwoord\nJa, alle drie staan op de bon.",
           "responseSetup": null,
           "successFeedback": "Je hebt gelijk.",
           "automaticAcknowledgement": null,
@@ -265,6 +265,7 @@
           "closed": false,
           "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
           "exampleTargetTexts": [
+            "Boodschappen\n1 brood\n2 pakken melk\n1 stuk kaas",
             "Bon: brood, melk, kaas.",
             "Ja, alle drie staan op de bon."
           ],
@@ -2192,6 +2193,7 @@
           "closed": false,
           "exampleInstruction": "Kijk naar de tekst in het voorbeeld. Kijk daarna naar het antwoord.",
           "exampleTargetTexts": [
+            "1 Pak een doek.",
             "2 Maak de tafel schoon.",
             "De tafel schoonmaken."
           ],

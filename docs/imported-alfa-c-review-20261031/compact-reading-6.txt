@@ -1,0 +1,189 @@
+SOURCE 51 | B1
+Vorige maand ontving iedereen een roosterwijziging per e-mail. Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd. Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen.
+
+Het team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen. Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang. Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken.
+
+Deze aanpak geldt eerst voor de komende cursusmaand. Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden. Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is.
+ID klink-teksten-b11-07 | teacher
+Q Vat samen welk probleem het team aanpakt en hoe het controleert of de aanpak werkt.
+OPTIONS Het team verplicht iedereen om in een groepsapp te gaan en stopt met e-mail. / *Sommige cursisten misten een roosterwijziging. Het team gebruikt naast e-mail een bord en zo nodig een afgesproken telefoontje, en vraagt na een maand of de informatie op tijd aankwam.
+MODEL ['Sommige cursisten misten een roosterwijziging. Het team gebruikt naast e-mail een bord en zo nodig een afgesproken telefoontje, en vraagt na een maand of de informatie op tijd aankwam.']
+CHECK Waarom hoort de controle na een maand bij de samenvatting?
+SLOTS ['missed-change', 'multiple-access-with-email', 'review-after-month']
+ID klink-teksten-b11-08 | teacher
+Q Waarom noemt de mail de bezwaren tegen een groepsapp?
+OPTIONS *Ze verklaren waarom het team andere extra middelen kiest terwijl e-mail blijft. Niet iedereen wil een telefoonnummer met de groep delen. / Ze bewijzen dat niemand een telefoon heeft.
+MODEL ['Ze verklaren waarom het team andere extra middelen kiest terwijl e-mail blijft. Niet iedereen wil een telefoonnummer met de groep delen.']
+CHECK Welke conclusie over telefoonbezit mag je niet trekken?
+SLOTS ['privacy-choice', 'explains-alternative-channels']
+
+SOURCE 52 | B1
+Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden. Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten. Het team sprak af om lege dozen meteen op een aparte kar te zetten.
+
+In de eerste week stond de kar dicht bij de werktafels. Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken. Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur.
+
+Daarna konden medewerkers de dozen zonder die omweg wegbrengen. In dezelfde week werden ook minder bestellingen verwerkt. Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam.
+ID klink-teksten-b12-01 | teacher
+Q Waarom wordt de plek van de kar na de eerste week aangepast en welk gevolg noemt de tekst?
+OPTIONS De kar verhuisde omdat er minder bestellingen waren en daardoor verdween alle werkdruk. / *De medewerkers moesten met de volle kar om de werktafels heen naar de deur. De verzamelplek kwam bij die deur; daarna konden de dozen zonder die omweg worden weggebracht.
+MODEL ['De medewerkers moesten met de volle kar om de werktafels heen naar de deur. De verzamelplek kwam bij die deur; daarna konden de dozen zonder die omweg worden weggebracht.']
+CHECK Gaat het genoemde gevolg over alle werk of over het wegbrengen van dozen?
+SLOTS ['detour-around-worktables', 'move-near-door', 'no-that-detour']
+ID klink-teksten-b12-02 | teacher
+Q Kun je uit dit verslag concluderen dat de nieuwe karplek ervoor zorgde dat er minder bestellingen waren?
+OPTIONS *Nee. Beide veranderingen worden in dezelfde week genoemd, maar er is geen onderzoek of ander bewijs voor dat oorzakelijke verband. / Ja, alles wat later gebeurt is een gevolg van de karplek.
+MODEL ['Nee. Beide veranderingen worden in dezelfde week genoemd, maar er is geen onderzoek of ander bewijs voor dat oorzakelijke verband.']
+CHECK Is geen bewijs voor een verband hetzelfde als bewezen dat er geen verband is?
+SLOTS ['same-week-not-cause', 'causal-evidence-absent']
+
+SOURCE 53 | B1
+Bewoners reserveren de gezamenlijke wasmachine voor een afgesproken tijdvak. Op een avond stopte de machine terwijl een wasprogramma nog bezig was. De bewoner meldde dit aan de beheerder in plaats van zelf een nieuw programma te starten.
+
+De beheerder herstelde de storing en liet het lopende programma verdergaan. Daardoor eindigde de was later dan gepland. De volgende bewoner kon niet op de gereserveerde begintijd starten en kreeg daarover een bericht.
+
+De commissie vraagt bewoners om bij een storing eerst contact op te nemen met de beheerder. Een extra programma kan het probleem verbergen en de wachttijd verder verlengen. De commissie zegt niet dat iedere vertraging door verkeerd gebruik ontstaat.
+ID klink-teksten-b12-03 | teacher
+Q Beschrijf de keten van storing tot de latere start van de volgende bewoner.
+OPTIONS De volgende bewoner begon te vroeg en veroorzaakte zo de storing. / *De machine stopte, de beheerder herstelde de storing en zette het lopende programma voort. Dat was later klaar, waardoor de volgende bewoner later kon beginnen.
+MODEL ['De machine stopte, de beheerder herstelde de storing en zette het lopende programma voort. Dat was later klaar, waardoor de volgende bewoner later kon beginnen.']
+CHECK Welke gebeurtenis verbindt herstel met het wachten van de volgende bewoner?
+SLOTS ['stops-repaired-resumed', 'ends-late', 'next-start-delayed']
+ID klink-teksten-b12-04 | teacher
+Q Waarom adviseert de commissie eerst contact op te nemen, en welke algemene beschuldiging doet zij juist niet?
+OPTIONS *Zelf een extra programma starten kan het probleem verbergen en wachten verlengen. De commissie zegt niet dat elke vertraging door verkeerd gebruik komt. / Iedere vertraging is de schuld van een bewoner die een extra programma start.
+MODEL ['Zelf een extra programma starten kan het probleem verbergen en wachten verlengen. De commissie zegt niet dat elke vertraging door verkeerd gebruik komt.']
+CHECK Wat verandert er als je kan vervangt door gebeurt altijd?
+SLOTS ['extra-program-risk', 'no-universal-blame']
+
+SOURCE 54 | B1
+Een reiziger zag op het scherm bij de halte dat de bus tien minuten later zou komen. Hij bleef daarom bij de halte wachten. Na enkele minuten verscheen een nieuwe melding: deze rit reed niet en de volgende bus vertrok vanaf een andere halte.
+
+De reiziger las eerst het nummer van de vervangende halte en zocht die op de plattegrond. Daarna liep hij erheen. Hij kwam er voordat de volgende bus aankwam en kon daarmee verder reizen.
+
+De eerste melding verklaart waarom hij aanvankelijk bleef staan. De tweede melding verklaart waarom hij later toch naar een andere halte ging. Alleen de eerste melding bewaren zou dus een onvolledig beeld van zijn keuze geven.
+ID klink-teksten-b12-05 | teacher
+Q Waarom is eerst wachten en later weglopen hier niet tegenstrijdig?
+OPTIONS Hij liep weg omdat hij de eerste melding niet had gelezen. / *De eerste melding gaf vertraging, dus wachten paste daarbij. De tweede meldde uitval en een andere halte; nieuwe informatie veranderde zijn keuze.
+MODEL ['De eerste melding gaf vertraging, dus wachten paste daarbij. De tweede meldde uitval en een andere halte; nieuwe informatie veranderde zijn keuze.']
+CHECK Welke informatie had hij nog niet toen hij besloot te wachten?
+SLOTS ['delay-wait', 'new-cancellation-other-stop', 'updated-choice']
+ID klink-teksten-b12-06 | teacher
+Q Welke twee voorbereidende handelingen doet de reiziger vóór hij naar de andere halte loopt, en waarom zijn die relevant?
+OPTIONS *Hij leest het haltenummer en zoekt die halte op de plattegrond. Zo weet hij welke plek hij moet vinden voordat hij gaat lopen. / Hij stapt eerst in de bus en zoekt pas onderweg de halte op.
+MODEL ['Hij leest het haltenummer en zoekt die halte op de plattegrond. Zo weet hij welke plek hij moet vinden voordat hij gaat lopen.']
+CHECK Bewijst opzoeken op een kaart op zichzelf dat de volgende bus al is aangekomen?
+SLOTS ['read-stop-number', 'locate-map-before-walk']
+
+SOURCE 55 | B1
+Bij het klaarmaken van een lesruimte bleek dat de verwarming niet werkte. De conciërge kon het probleem niet vóór de eerste les oplossen. Daarom koos de coördinator een vrije ruimte op de eerste verdieping.
+
+Eerst controleerde de docent of daar genoeg stoelen en een bruikbaar bord waren. Daarna zette de administratie bij de oude deur een verwijzing naar de nieuwe ruimte. De cursisten die binnenkwamen, werden ook mondeling op de verandering gewezen.
+
+De les begon tien minuten later dan gewoonlijk. In de mail staat niet welk deel van die vertraging door het controleren, het verplaatsen of het informeren kwam. De volgende dag zou het team bespreken hoe een verhuizing sneller kon worden geregeld.
+ID klink-teksten-b12-07 | teacher
+Q Waarom koos de coördinator een andere ruimte, en wat werd gecontroleerd voordat de administratie verwees?
+OPTIONS De docent verhuisde omdat er geen cursisten waren en controleerde niets. / *De verwarming werkte niet en kon niet op tijd worden hersteld. De docent controleerde eerst stoelen en bord in de nieuwe ruimte.
+MODEL ['De verwarming werkte niet en kon niet op tijd worden hersteld. De docent controleerde eerst stoelen en bord in de nieuwe ruimte.']
+CHECK Waarom is een vrije ruimte niet automatisch al geschikt voor de les?
+SLOTS ['heating-not-fixed-in-time', 'chairs-board-before-sign']
+ID klink-teksten-b12-08 | teacher
+Q Kun je zeggen dat alleen het bord controleren de hele vertraging veroorzaakte? Welke informatie ontbreekt?
+OPTIONS *Nee. De les begon tien minuten later, maar de mail verdeelt die tijd niet over controleren, verplaatsen en informeren. / Ja, de eerste genoemde handeling moet alle tien minuten hebben gekost.
+MODEL ['Nee. De les begon tien minuten later, maar de mail verdeelt die tijd niet over controleren, verplaatsen en informeren.']
+CHECK Betekent een totaalduur dat de duur van elke stap ook bekend is?
+SLOTS ['ten-minute-total', 'no-allocation-single-cause']
+
+SOURCE 56 | B1
+De bewoners bespraken twee voorstellen voor de binnentuin. Het eerste was om meer bloemen te planten; het tweede was om een extra bank neer te zetten. Voor beide voorstellen waren voorstanders, maar er was dit jaar niet genoeg geld om ze allebei uit te voeren.
+
+De tuinploeg bood aan de bloemen zelf te verzorgen. Daardoor zouden de vaste onderhoudskosten beperkt blijven. De extra bank moest door een bedrijf worden geplaatst, wat de aanschaf duurder maakte.
+
+Na het overleg kozen de bewoners voor het eerste voorstel. Dat besluit betekende niet dat zij het tweede onnodig vonden. Zij wilden het volgend jaar opnieuw bespreken, wanneer er weer geld beschikbaar zou zijn.
+ID klink-teksten-b13-01 | teacher
+Q Welke voorstellen zijn het eerste en het tweede in de laatste alinea? Wat is gekozen en wat blijft voor later?
+OPTIONS De bank is het eerste voorstel en is al geplaatst; bloemen zijn afgewezen. / *Het eerste is meer bloemen planten en dat is gekozen. Het tweede is de extra bank; dat voorstel willen de bewoners volgend jaar opnieuw bespreken.
+MODEL ['Het eerste is meer bloemen planten en dat is gekozen. Het tweede is de extra bank; dat voorstel willen de bewoners volgend jaar opnieuw bespreken.']
+CHECK Is later opnieuw bespreken hetzelfde als volgend jaar zeker uitvoeren?
+SLOTS ['first-flowers-chosen', 'second-bench-later']
+ID klink-teksten-b13-02 | teacher
+Q Waarnaar verwijzen Daardoor en wat in de tweede alinea? Leg uit welk gevolg elk verwijswoord verbindt.
+OPTIONS *Daardoor verwijst naar zelf verzorgen door de tuinploeg en beperkt onderhoudskosten. Wat verwijst naar plaatsing van de bank door een bedrijf en maakt de aanschaf duurder. / Beide woorden verwijzen naar bloemen kopen bij een bedrijf.
+MODEL ['Daardoor verwijst naar zelf verzorgen door de tuinploeg en beperkt onderhoudskosten. Wat verwijst naar plaatsing van de bank door een bedrijf en maakt de aanschaf duurder.']
+CHECK Gaat wat alleen over het woord bedrijf of over de beschreven plaatsing door een bedrijf?
+SLOTS ['self-care-lower-maintenance', 'company-placement-higher-purchase']
+
+SOURCE 57 | B1
+Een cursusgroep leende een camera en een statief van het buurthuis. De camera moest op vrijdag terug, maar het statief mocht tot maandag blijven. De docent schreef beide afspraken op het uitleenformulier.
+
+Op donderdag merkte een cursist dat de tas van de camera kapot was. Zij meldde dit aan de docent, die het buurthuis belde. Een medewerker zei dat de camera ook in een andere stevige tas teruggebracht kon worden.
+
+De groep bracht hem vrijdag terug in zo’n tas. Het statief bleef tijdens het weekend in de afgesloten lesruimte. Dat werd maandag door de docent ingeleverd, zoals oorspronkelijk was afgesproken.
+ID klink-teksten-b13-03 | teacher
+Q Waarnaar verwijzen hem, zo’n tas en Dat in de laatste alinea? Koppel ook de juiste terugbrengdagen.
+OPTIONS Hem en Dat zijn allebei de camera, die zowel vrijdag als maandag teruggaat. / *Hem is de camera, vrijdag terug in een andere stevige tas. Dat is het statief, dat maandag wordt ingeleverd.
+MODEL ['Hem is de camera, vrijdag terug in een andere stevige tas. Dat is het statief, dat maandag wordt ingeleverd.']
+CHECK Welke oorspronkelijke afspraak helpt je Dat te begrijpen?
+SLOTS ['hem-camera-friday', 'such-other-sturdy-bag', 'dat-tripod-monday']
+ID klink-teksten-b13-04 | teacher
+Q Wat meldt de cursist met dit en wie wordt bedoeld met die in dezelfde zin?
+OPTIONS *Dit is de kapotte cameratas. Die verwijst naar de docent; de docent belt het buurthuis na de melding. / Dit betekent dat de camera kapot is en die verwijst naar de cursist die belt.
+MODEL ['Dit is de kapotte cameratas. Die verwijst naar de docent; de docent belt het buurthuis na de melding.']
+CHECK Waarom mag je uit een kapotte tas geen kapotte camera afleiden?
+SLOTS ['dit-broken-bag-not-camera', 'die-teacher-calls']
+
+SOURCE 58 | B1
+De sportgroep gebruikte eerst een papieren lijst voor de trainingen. Die hing in de hal, zodat leden hun naam konden invullen wanneer zij langskwamen. Leden die weinig in het gebouw waren, misten daardoor soms een vrije plaats.
+
+Nu kunnen zij zich ook via een kort online formulier aanmelden. De papieren lijst blijft beschikbaar voor mensen die liever op papier schrijven. Een vrijwilliger voegt de aanmeldingen uit beide bronnen dagelijks samen.
+
+Deze werkwijze moet voorkomen dat één persoon per ongeluk twee plaatsen inneemt. Dat gebeurt bijvoorbeeld als iemand zich eerst op papier en later ook online aanmeldt. Of iedereen de nieuwe werkwijze begrijpt, wordt volgende maand besproken.
+ID klink-teksten-b13-05 | teacher
+Q Wie worden bedoeld met ‘zij’ in ‘Nu kunnen zij zich ook via een kort online formulier aanmelden’? Welke twee bronnen worden bedoeld met ‘beide bronnen’?
+OPTIONS Zij zijn alleen de vrijwilligers; beide bronnen zijn twee online formulieren. / *Zij verwijst naar de leden die weinig in het gebouw waren. Beide bronnen zijn de papieren lijst en het online formulier; de papieren mogelijkheid blijft.
+MODEL ['Zij verwijst naar de leden die weinig in het gebouw waren. Beide bronnen zijn de papieren lijst en het online formulier; de papieren mogelijkheid blijft.']
+CHECK Waarom betekent ook niet dat papier is afgeschaft?
+SLOTS ['zij-less-present-members', 'paper-and-online']
+ID klink-teksten-b13-06 | teacher
+Q Waarnaar verwijzen Deze werkwijze en Dat in de laatste alinea? Waarom verwijzen ze niet naar precies hetzelfde?
+OPTIONS *Deze werkwijze is het dagelijks samenvoegen van de aanmeldingen. Dat is het risico dat één persoon twee plaatsen inneemt; het voorbeeld legt uit hoe dat risico ontstaat. / Beide verwijzen naar het verwijderen van alle papieren inschrijvingen.
+MODEL ['Deze werkwijze is het dagelijks samenvoegen van de aanmeldingen. Dat is het risico dat één persoon twee plaatsen inneemt; het voorbeeld legt uit hoe dat risico ontstaat.']
+CHECK Is een maatregel om iets te voorkomen bewijs dat het nooit meer gebeurt?
+SLOTS ['method-merge', 'dat-double-place-risk', 'method-not-problem']
+
+SOURCE 59 | B1
+Een bezoeker nam een brief en een nog leeg formulier mee naar het spreekuur. In de brief stond waarom het formulier nodig was en vóór welke dag het moest worden teruggestuurd. De vrijwilliger las die eerst samen met de bezoeker.
+
+Daarna bekeken zij het formulier. Sommige vragen kon de bezoeker meteen beantwoorden, maar voor andere waren gegevens nodig die thuis lagen. De vrijwilliger zette bij die vragen een klein potloodteken.
+
+Thuis zocht de bezoeker de ontbrekende gegevens op en vulde de gemarkeerde vakken in. Daarna controleerde zij de datum uit de brief voordat zij het formulier verstuurde. De vrijwilliger had haar dus geholpen bij het begrijpen, maar het invullen en versturen deed de bezoeker zelf.
+ID klink-teksten-b13-07 | teacher
+Q Welke tekst leest de vrijwilliger met die eerst, en wie zijn zij bij het bekijken van het formulier?
+OPTIONS Die is het al ingevulde formulier en zij zijn twee vrijwilligers. / *Die is de brief met reden en uiterste dag. Zij zijn de vrijwilliger en de bezoeker, die daarna samen het formulier bekijken.
+MODEL ['Die is de brief met reden en uiterste dag. Zij zijn de vrijwilliger en de bezoeker, die daarna samen het formulier bekijken.']
+CHECK Welke informatie in de brief maakt duidelijk waarom eerst lezen zinvol is?
+SLOTS ['die-letter', 'zij-volunteer-visitor']
+ID klink-teksten-b13-08 | teacher
+Q Welke vragen bedoelen andere, die vragen en gemarkeerde vakken? Welke vragen hoefden dus niet door dit ontbrekende-gegevensprobleem te wachten?
+OPTIONS *Het gaat om de vragen waarvoor gegevens thuis lagen; die werden gemarkeerd en later ingevuld. Vragen die de bezoeker meteen kon beantwoorden vallen niet onder dat probleem. / Alle vragen waren onbegrijpelijk en de vrijwilliger vulde ze later thuis in.
+MODEL ['Het gaat om de vragen waarvoor gegevens thuis lagen; die werden gemarkeerd en later ingevuld. Vragen die de bezoeker meteen kon beantwoorden vallen niet onder dat probleem.']
+CHECK Waarom is sommige hier belangrijk om niet over alle vragen te generaliseren?
+SLOTS ['missing-home-data-subset', 'marks-same-subset', 'immediate-answers-distinct']
+
+SOURCE 60 | B1
+De buurtwerkplaats organiseert zaterdag een ochtend voor kleine reparaties. Bezoekers brengen zelf hun kapotte voorwerp mee; vrijwilligers helpen bij het onderzoeken van het probleem. Er wordt niet beloofd dat ieder voorwerp die ochtend gerepareerd kan worden.
+
+Voor apparaten die op stroom werken is vooraf aanmelden nodig. Stuur uiterlijk donderdag een beschrijving van het probleem en een foto van het apparaat. U ontvangt vrijdag bericht of er een vrijwilliger met de juiste ervaring beschikbaar is.
+
+Voor het vastzetten van een losse knoop hoeft u zich niet aan te melden. Losse onderdelen betaalt u zelf als die nodig zijn en u akkoord gaat met de kosten. Het doel van deze ochtend is samen onderzoeken en leren repareren, niet een gegarandeerde reparatieservice aanbieden. Met dit bericht willen we duidelijk maken wat u kunt verwachten en hoe u zich voorbereidt.
+ID klink-teksten-b14-01 | teacher
+Q U wilt met een kapotte elektrische lamp komen. Welke informatie moet u wanneer sturen, en waarop wacht u daarna?
+OPTIONS U komt zaterdag zonder bericht; aanmelden is alleen voor een losse knoop nodig. / *U meldt zich vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is.
+MODEL ['U meldt zich vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is.']
+CHECK Is de boodschap van vrijdag al een garantie dat uw lamp wordt gerepareerd?
+SLOTS ['lamp-electric-registration', 'description-photo-thursday', 'availability-friday']
+ID klink-teksten-b14-02 | teacher
+Q Wat wil de aankondiging bij de lezer bereiken? Leg uit welke verwachtingen en grenzen zij duidelijk maakt.
+OPTIONS *De aankondiging wil bezoekers informeren over de voorbereiding en wat zij kunnen verwachten: samen onderzoeken en leren repareren, zonder reparatiegarantie. Benodigde onderdelen betaalt de bezoeker alleen na akkoord. / De werkplaats belooft iedereen gratis een volledig gerepareerd voorwerp.
+MODEL ['De aankondiging wil bezoekers informeren over de voorbereiding en wat zij kunnen verwachten: samen onderzoeken en leren repareren, zonder reparatiegarantie. Benodigde onderdelen betaalt de bezoeker alleen na akkoord.']
+CHECK Welke zin zegt wat het bericht wil bereiken, en welke zin gaat over het doel van de ochtend zelf?
+SLOTS ['inform-preparation-expectations', 'joint-learning-not-guaranteed-repair', 'conditional-parts-cost']
