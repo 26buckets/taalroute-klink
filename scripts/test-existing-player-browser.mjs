@@ -15,12 +15,12 @@ const out = new URL('../outputs/existing-player-integration/', import.meta.url);
 mkdirSync(out, { recursive: true });
 const pass = name => { checks.push(name); console.log('PASS', name); };
 async function home() { await page.goto(`${base}/#learner/home`); await page.evaluate(() => localStorage.removeItem('klink.taalroute.route.v1')); await page.reload(); await page.locator('.cp-home').waitFor(); }
-async function library() { await page.getByRole('button', { name: 'Lessen', exact: true }).click(); await page.locator('.cp-package-grid').waitFor(); }
+async function library() { await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Start', exact: true }).click(); await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click(); await page.locator('.cp-package-grid').waitFor(); }
 async function screenshot(name) { await page.screenshot({ path: new URL(`${name}.png`, out).pathname }); }
 try {
   await home();
   assert.equal(await page.locator('.tr-app').count(), 0);
-  assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Start', 'Lessen', 'Oefenen', 'Woorden', 'Herhalen']);
+  assert.deepEqual(await page.getByRole('navigation', { name: 'Cursistnavigatie' }).locator('button span').allTextContents(), ['Start', 'Woorden bekijken', 'Nog een keer']);
   await screenshot('bestaande-home');
   await library();
   assert.equal(await page.locator('.cp-package-grid > button').count(), packs.length);
@@ -58,7 +58,7 @@ try {
     await page.getByRole('button', { name: 'Alle oefeningen', exact: true }).first().click();
   }
   pass('All eligible group activities render in the existing exercise players');
-  await page.getByRole('button', { name: 'Woorden', exact: true }).first().click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
   assert.equal(await page.locator('.cp-global-word-grid article').count(), libraryWords('lessons', 'all', []).length);
   for (const meaning of ['pak (kleding)', 'pak (verpakking)']) {
     assert.equal(await page.locator('.cp-global-word-grid strong').filter({ hasText: new RegExp(`^${meaning.replace(/[()]/g, '\\$&')}$`) }).count(), 1);
@@ -66,7 +66,7 @@ try {
   }
   await page.getByRole('button', { name: 'sap bewaren', exact: true }).click();
   await page.getByRole('button', { name: 'mat bewaren', exact: true }).click();
-  await page.getByRole('button', { name: 'Herhalen', exact: true }).click();
+  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Nog een keer', exact: true }).click();
   assert((await page.locator('.review-word-list').innerText()).includes('mat'));
   const sap = page.locator('.review-word-list button').filter({ has: page.locator('strong', { hasText: /^sap$/ }) });
   assert(await sap.isEnabled());
@@ -95,7 +95,10 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width > 700 ? 900 : 844 });
     await home();
-    await page.getByRole('button', { name: 'Begin hier', exact: true }).click();
+    await library();
+    await page.locator('.cp-package-grid > button').first().click();
+    await page.locator('.cp-tabs').getByRole('button', { name: 'Stap voor stap', exact: true }).click();
+    await page.locator('.cp-start-lesson').first().click();
     await page.waitForFunction(() => document.querySelector('.cp-model-content img')?.naturalWidth > 0);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
     await page.locator('.cp-exercise-feedback').scrollIntoViewIfNeeded();
