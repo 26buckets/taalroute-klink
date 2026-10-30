@@ -1,3 +1,4 @@
+import {beforeSentenceRevisionExercise} from './check-sentence-revision.mjs';
 import sourceDialogs from '../data/klink-connected-content.json' with {type:'json'};
 import {repairedDialogue,dialogueScene} from '../lib/dialogue-repair.ts';
 import test from 'node:test';
@@ -38,12 +39,12 @@ function beforeContentRepair(exercise) {
  assert.equal(createHash('sha256').update(JSON.stringify(exercise)).digest('hex'),change.afterSha256,exercise.exerciseId);return change.before;
 }
 const hash=rows=>createHash('sha256').update(JSON.stringify(rows.sort((a,b)=>(a.id??a.exerciseId).localeCompare(b.id??b.exerciseId)), (_key, value) => imageChanges.get(value) ?? audioChanges.get(value) ?? value)).digest('hex');
-test('15 authoritative entrances preserve all 302 exact lessons and exercise payloads',()=>{
+void test('15 authoritative entrances preserve all 302 exact lessons and exercise payloads',()=>{
   assert.equal(packs.length,15);
   assert.equal(sections.release.curriculumInputHash,curriculum.release.inputHash);
   assert.deepEqual(sections.sections.flatMap(s=>s.wordIds).sort(),curriculum.words.map(w=>w.id).sort());
   assert.equal(hash(packs.flatMap(p=>p.lessons)),before.lessons);
-  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeDialogueRepair).map(beforeContentRepair)),before.exercises);
+  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeSentenceRevisionExercise).map(beforeDialogueRepair).map(beforeContentRepair)),before.exercises);
   assert.equal(packs.flatMap(p=>p.lessons).length,302);
   for(const [i,p] of packs.entries()) {
     const s=sections.sections[i];
@@ -55,7 +56,7 @@ test('15 authoritative entrances preserve all 302 exact lessons and exercise pay
     assert(s.wordIds.includes(p.cover.wordId));assert(readFileSync('public'+p.cover.image).length);
   }
 });
-test('Former group 2 resumes at its actual exercise; first a steps remain small and consecutive',()=>{
+void test('Former group 2 resumes at its actual exercise; first a steps remain small and consecutive',()=>{
   const pack=getPackage('groep-2');assert.equal(pack.id,'groep-1');
   assert.equal(pack.counts.coreWords,6);
   assert.deepEqual(pack.lessons.map(l=>l.newWords),[['klink-woord-mat'],['klink-woord-tas'],['klink-woord-map'],['klink-woord-man','klink-woord-pan'],['klink-woord-jas']]);
@@ -69,7 +70,7 @@ test('Former group 2 resumes at its actual exercise; first a steps remain small 
     assert.deepEqual([...item.lessonIds].sort((a,b)=>a.localeCompare(b)),linked.sort((a,b)=>a.localeCompare(b)));
   }
 });
-test('Approved navigation photos remain separate from every preserved word cover',()=>{
+void test('Approved navigation photos remain separate from every preserved word cover',()=>{
   assert.equal(photoApproval.approvedBy,'Nico');
   assert.equal(photoApproval.approvedVariant,'Foto bovenaan');
   assert(photoApproval.userAnswer);

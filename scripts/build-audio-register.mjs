@@ -26,6 +26,7 @@ export const plannedAudioId = (role, text) =>
     .slice(0, 24)}`;
 
 export function buildAudioRegister(inventory) {
+  const revisedSentences = new Map(json('docs/sentence-second-review-20261030/audio.json').map(item => [item.contentId, item]));
   const curriculum = json('data/klink-curriculum.json');
   const instructions = json('data/klink-instructions.json');
   const comprehension = json('data/klink-comprehension-audio.json');
@@ -171,6 +172,7 @@ export function buildAudioRegister(inventory) {
         role: 'target',
         text: block.text,
         src: block.audio.src,
+        ...(revisedSentences.has(item.id) ? { voiceId: revisedSentences.get(item.id).voiceId, review: 'Herziene zin; automatische transcript- en metadatacontrole geslaagd. Menselijke luisterreview staat open.' } : {}),
         wordIds: item.wordIds,
         ...(block.voiceId ? { voiceId: block.voiceId, personId: block.personId, originalSrc: block.originalAudio.src, review: 'Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.' } : {}),
         lessonIds: unique(linked.map((item) => item.lesson).filter(Boolean)),

@@ -55,7 +55,13 @@ export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
   }
   if (exercise.componentId === 'KLINK-CONTENT' && contentLevels.some(level => level.id === exercise.contentLevel)) return exercise.contentLevel as ContentLevel;
   // A known word inside a sentence does not establish the level of that sentence.
-  if (exercise.contextId) return sourceContentLevel(typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId)?.sourceLevel : undefined);
+  if (exercise.contextId) {
+    const source = typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId) : undefined;
+    const ids = source?.kind === 'sentence' && Array.isArray(exercise.sourceContentIds) ? exercise.sourceContentIds : [];
+    const levels = [sourceContentLevel(source?.sourceLevel), ...ids.map(id => sourceContentLevel(contentById.get(String(id))?.sourceLevel))];
+    // The alternatives in a listening choice are part of its language demand too.
+    return levels.includes('support') ? 'support' : levels.includes('b1') ? 'b1' : levels.includes('a2') ? 'a2' : 'a1';
+  }
   const targets = [...(Array.isArray(exercise.targetWordIds) ? exercise.targetWordIds as string[] : []), ...(typeof exercise.wordId === 'string' ? [exercise.wordId] : [])];
   const conditions = Array.isArray(exercise.readingConditions) ? exercise.readingConditions as { wordId?: string }[] : [];
   const cells = Array.isArray(exercise.cells) ? exercise.cells as { cellId?: string }[] : [];
@@ -72,7 +78,8 @@ export function exerciseVocabularyLevels(exercise: PackageExercise): ContentLeve
 }
 
 export function exerciseSetLevel(exercises: PackageExercise[]): ContentLevel {
-  const levels = exercises.map(exerciseContentLevel);
+  const contextual = exercises.length && exercises.every(item => item.groupActivity === 'word-sentence') ? exercises.filter(item => item.contextId) : exercises;
+  const levels = contextual.map(exerciseContentLevel);
   if (!levels.length || levels.includes('support')) return 'support';
   if (levels.every(level => level === levels[0])) return levels[0];
   if (levels.every(level => ['alfa-a', 'alfa-b'].includes(level))) return 'alfa-b';
@@ -95,7 +102,7 @@ export function selectExerciseSet(exercises: PackageExercise[], selection: Conte
   // Keep boards and example → practice → use → recall paths intact and in source order.
   const groups = new Map<string, PackageExercise[]>();
   for (const item of exercises) {
-    const key = typeof item.learningPathId === 'string' ? `path:${item.learningPathId}` : typeof item.boardId === 'string' ? `board:${item.boardId}` : item.exerciseId;
+    const key = typeof item.learningPathId === 'string' ? `path:${item.learningPathId}` : typeof item.boardId === 'string' ? `board:${item.boardId}` : item.groupActivity === 'word-sentence' ? 'word-sentence' : item.exerciseId;
     const group = groups.get(key) ?? [];
     group.push(item); groups.set(key, group);
   }

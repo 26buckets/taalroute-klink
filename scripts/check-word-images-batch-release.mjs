@@ -24,7 +24,7 @@ export function verifyWordImagePreservation(read=readFileSync){
  assert.deepEqual(reg.words,prior.words.map(w=>mapping.has(w.image)?{...w,image:mapping.get(w.image),status:'bestaande-afbeelding'}:w));
  assert.equal(reg.words.filter(w=>w.status==='placeholder').length,232);assert.deepEqual(reg.collections,index.filter(r=>r.id.startsWith('beta-images:')));
  for(const a of media.assets){assert.equal(sha(read('public'+a.url)),a.sha256);assert(a.bytes<50000);assert(a.handsReviewed&&a.meaningReviewed&&a.observerReviewed);assert(!media.excluded.some(e=>e.sourceSha256===a.sourceSha256||e.word===a.word));}
- assert.equal(git('diff','--name-only','--diff-filter=MD',media.baselineSourceCommit,'--','public').length,0,'Existing public assets remain immutable');
+ assert.equal(git('diff','--name-only','--diff-filter=MD',media.baselineSourceCommit,'beff2e25e378a9fa723bc64831d1e96853d11113','--','public').length,0,'Existing public assets remain immutable within this image release');
  return media;
 }
 export function verifyWordImagesBatchRelease(read=readFileSync){
@@ -33,7 +33,7 @@ export function verifyWordImagesBatchRelease(read=readFileSync){
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.generateImages,false);assert(r.userRequest.includes('online'));assert.equal(r.ownerExcludedWord,'tandarts');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)).sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
  const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-direct-navigation-release.mjs','scripts/check-word-images-batch-release.mjs','scripts/test-word-images-batch-20261030.mjs','scripts/test-word-images-batch-browser-20261030.mjs'];
  assert(changed.every(f=>allowed.includes(f)||/^public\/package-media\/klink-beeldchat-20261030\/[a-z]+-[a-f0-9]{10}\.webp$/.test(f)||/^public\/practice-content\/klink-20261029\/beeldchat-[A-Za-z0-9_-]+\.json$/.test(f)));

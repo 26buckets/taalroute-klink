@@ -122,7 +122,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
       }
     } else if (activity === 'word-sentence') {
       // Keep complete word + sentence chains together, including their harder reading conditions.
-      if (exercises.length) result.push({ id: pack.id, title: learnerListName(pack), level: 'support', pack, exercises, image: pack.cover?.image });
+      if (exercises.length) result.push({ id: pack.id, title: learnerListName(pack), level: exerciseSetLevel(exercises), pack, exercises, image: pack.cover?.image });
     } else if (exercises.some(exercise => Array.isArray(exercise.vocabularyLevels))) {
       // One collection per shared membership, not one copied task per level.
       const groups = new Map<string, PackageExercise[]>();
@@ -193,7 +193,11 @@ export function parseChapterHash(hash: string): ChapterLocation {
       if (modes.size === 1) selection.help = [...modes][0];
     }
     // Historical learning-path links used support as a catch-all level. Keep them playable.
-    if (candidate && level === 'support' && candidate.level !== 'support' && candidate.exercises.some(item => item.learningPathId)) selection.level = candidate.level;
+    if (candidate && level === 'support' && candidate.level !== 'support' && candidate.exercises.some(item => item.learningPathId || item.groupActivity === 'word-sentence')) selection.level = candidate.level;
+    // A former mixed support list now has separate language lists: show both, not an empty level.
+    if (!candidate && level === 'support' && activity && ['sentences', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'].includes(activity) && contentPackages.some(pack => `${pack.id}.support` === collection)) {
+      selection.level = 'all'; selection.help = 'guided';
+    }
     return { chapter: chapter.id, activity, ...selection, collection: candidate && matchesChapterSelection(candidate, selection) ? collection : undefined };
   } catch { return fallback; }
 }

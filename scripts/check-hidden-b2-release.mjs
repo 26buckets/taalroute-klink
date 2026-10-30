@@ -1,5 +1,5 @@
+import { verifySentenceRelease, readBeforeSentenceRelease } from './check-sentence-release.mjs';
 import assert from 'node:assert/strict';
-import { verifySmallWordRoundsRelease, readBeforeSmallWordRounds } from './check-small-word-rounds-release.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -7,8 +7,8 @@ const git = (...args) => execFileSync('git', args, { maxBuffer: 128 * 1024 * 102
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean).sort((a, b) => a.localeCompare(b));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 export function verifyHiddenB2Release(read = readFileSync) {
-  const successor = verifySmallWordRoundsRelease(read), currentRead = read;
-  read = file => readBeforeSmallWordRounds(file, successor, currentRead);
+  const successor=verifySentenceRelease(read), currentRead=read;
+  read=file=>readBeforeSentenceRelease(file,successor,currentRead);
   const r = JSON.parse(read('docs/klink-owner-release-hidden-b2-20261030.json'));
   assert.equal(r.approvedBy, 'Nico');
   assert.equal(r.publicationApproved, true);
@@ -28,8 +28,8 @@ export function verifyHiddenB2Release(read = readFileSync) {
   assert.equal(backup.verified, true);
   assert(backup.driveId && backup.sha256);
   for (const file of changed) assert.equal(backup.files[file], r.files[file], file);
-  return { ...r, successor };
+  return {...r,successor};
 }
 export function readBeforeHiddenB2(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeSmallWordRounds(file, release.successor, read);
+  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeSentenceRelease(file,release.successor,read);
 }

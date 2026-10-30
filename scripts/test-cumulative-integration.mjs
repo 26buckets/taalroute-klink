@@ -1,3 +1,4 @@
+import {readBeforeSentenceRevision} from './check-sentence-revision.mjs';
 import {verifyContentAmendments,repairBaseline} from './check-content-repair-release.mjs';
 import {execFileSync} from 'node:child_process';
 import test from 'node:test';
@@ -13,7 +14,7 @@ import {taalroutePackages} from '../lib/taalroute-packages.ts';
 import {selectUsageExercises,defaultRouteSettings} from '../lib/learner-route.ts';
 const registry=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-18/klink-productieregie/registry.json'));
 const candidates=Object.fromEntries(registry.threads.map(row=>[row.domain,JSON.parse(readFileSync(row.workdir+'/release-candidate.json'))]));
-verifyContentAmendments();
+verifyContentAmendments(readBeforeSentenceRevision);
 const originalItems=JSON.parse(execFileSync('git',['show',repairBaseline+':data/klink-imported-practice.json'],{maxBuffer:20e6})).items;
 const admissions=JSON.parse(readFileSync('outputs/cumulative-integration-20261018/admissions.json'));
 test('All admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery',()=>{

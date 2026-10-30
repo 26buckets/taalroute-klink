@@ -13,7 +13,7 @@ const manifest=load('docs/content-repair-20261030/source-changes.json');
 const get=id=>importedItems.find(x=>x.id===id);
 const source=id=>connectedContent.find(x=>x.id===id);
 
-test('The repair changes only recorded fields; source IDs, levels, media and progress keys survive',()=>{
+void test('The repair changes only recorded fields; source IDs, levels, media and progress keys survive',()=>{
  for(const file of new Set(manifest.changes.map(c=>c.path[0]))){
   const current=JSON.parse(execFileSync('git',['show','05448a6c:'+file],{maxBuffer:20e6}));
   for(const c of manifest.changes.filter(c=>c.path[0]===file)){
@@ -24,8 +24,8 @@ test('The repair changes only recorded fields; source IDs, levels, media and pro
   assert.deepEqual(current,JSON.parse(execFileSync('git',['show',manifest.baseline+':'+file],{maxBuffer:20e6})),file);
  }
 });
-test('All 64 contextual meanings reach reading preparation even when another sense is already known',()=>{
- const changed=connectedContent.filter(x=>x.reading.meaningOverrides);assert.equal(changed.length,64);
+void test('All 65 contextual meanings reach reading preparation even when another sense is already known',()=>{
+ const changed=connectedContent.filter(x=>x.reading.meaningOverrides);assert.equal(changed.length,65);
  const counts={};
  for(const item of changed){
   const conditions=contentReadingConditions(item,{id:'test',known:item.readingWordIds});
@@ -36,11 +36,11 @@ test('All 64 contextual meanings reach reading preparation even when another sen
    assert(conditions.wordConditions.some(t=>t.includes(meaning)));
   }
  }
- assert.deepEqual(counts,{'klink-woord-meer':9,'klink-woord-haar':54,'klink-woord-want':1,'klink-woord-groente':1});
+ assert.deepEqual(counts,{'klink-woord-meer':9,'klink-woord-haar':55,'klink-woord-want':1,'klink-woord-groente':1});
  const hair=connectedContent.filter(x=>x.readingWordIds.includes('klink-woord-haar')&&!x.reading.meaningOverrides?.['klink-woord-haar']);assert.equal(hair.length,6);
  for(const item of hair)assert.match(contentReadingConditions(item,{id:'test'}).otherWords.find(w=>w.id==='klink-woord-haar').meaning,/Haren op/);
 });
-test('Every imported repair is admitted and its full teacher task is passed through',()=>{
+void test('Every imported repair is admitted and its full teacher task is passed through',()=>{
  assert.equal(importedItems.length,1393);
  for(const item of importedItems){assert.deepEqual(importedItemIssues(item),[],item.id);assert.equal(importedExercise(item).contentTask.prompt,item.prompt);}
  assert.match(get('kg-a1-f02-001').prompt,/heb, hebt, heeft of hebben/);
@@ -50,7 +50,7 @@ test('Every imported repair is admitted and its full teacher task is passed thro
  assert.match(bij.teacherWorkflow.expected,/Ik sta bij de deur/);
  const spoon=get('klink-wp-final-text-a2ac929f69bfdd4f-contextual-model-fade');assert.equal(spoon.teacherWorkflow.phases[0].learnerText[0],'We hebben nog één lepel nodig.');assert.match(spoon.teacherWorkflow.phases.at(-1).instruction,/vier mensen/);assert.match(spoon.teacherWorkflow.expected,/drie lepels voor vier/);
 });
-test('All derived comprehension and writing tasks use the corrected source and preserve answers',()=>{
+void test('All derived comprehension and writing tasks use the corrected source and preserve answers',()=>{
  let questions=0,writes=0;
  for(const pack of packs){
   for(const activity of ['text-question','text-evidence'])for(const exercise of extendedExercises(pack,activity))if(exercise.contextId==='klink-text-8013db18a19b2c10'){assert.equal(exercise.question,'Op welke vraag heeft Fenna nog geen antwoord?');assert(!exercise.questionAudio);questions++;}
@@ -63,7 +63,7 @@ test('All derived comprehension and writing tasks use the corrected source and p
  assert(questions>0&&writes>0);
  const answer=get('klink-teksten-b14-01');assert.equal(answer.options.find(x=>x.id.endsWith('-correct')).text,answer.teacherReference.acceptedAnswers[0]);assert.match(answer.teacherReference.acceptedAnswers[0],/U meldt zich/);
 });
-test('Orthographic fixes retain the exact recordings, aligned dialogue guards and audio inventory',()=>{
+void test('Orthographic fixes retain the exact recordings, aligned dialogue guards and audio inventory',()=>{
  assert.match(source('klink-dialogue-375e6e6e06b7d86d').blocks[3].text,/hiernaast/);
  assert.equal(source('klink-sentence-f24117313d232d59').text,'Mag het licht aanblijven?');
  const register=load('public/content-register/active.json');
