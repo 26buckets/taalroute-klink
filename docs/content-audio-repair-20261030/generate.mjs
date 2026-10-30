@@ -18,7 +18,7 @@ for(const c of plan.clips){
  save(record,{...c,status:'request-started'});
  const res=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${c.voiceId}?output_format=mp3_44100_128`,{method:'POST',headers,body:JSON.stringify({text:c.text,model_id:c.model??plan.model,language_code:'nl',apply_text_normalization:'off',voice_settings:plan.settings,...(c.id==='groente-lang'?{seed:29}: {})}),signal:AbortSignal.timeout(60000)});
  assert(res.ok,'Speech request failed '+res.status+'; inspect before retry');const bytes=Buffer.from(await res.arrayBuffer());assert(bytes.length>1000);write(original,bytes);
- const meta={artist:'Taalroute',album_artist:'Taalroute',publisher:'Taalroute',album:c.personId?'Klink - Gesprekken':'Klink - Woorden en teksten',title:c.text,copyright:'Taalroute'};
+ const meta={artist:'Taalroute',album_artist:'Taalroute',publisher:'Taalroute',album:'Klink - Taalroute',title:c.text,copyright:'Taalroute'};
  exec('ffmpeg',['-v','error','-n','-i',original,'-map_metadata','-1','-c:a','copy',...Object.entries(meta).flatMap(([k,v])=>['-metadata',k+'='+v]),'-metadata','encoder=','public'+src]);
  assert.equal(packets(original),packets('public'+src));const probe=JSON.parse(exec('ffprobe',['-v','error','-show_format','-of','json','public'+src]));
  for(const [k,v]of Object.entries(meta))assert.equal(probe.format.tags[k],v);

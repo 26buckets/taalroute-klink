@@ -45,16 +45,6 @@
         "data/klink-connected-content.json",
         "items",
         113,
-        "text"
-      ],
-      "before": "De sjaal zit om mijn keel.",
-      "after": "Mijn keel doet pijn."
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
-        113,
         "blocks",
         0,
         "text"
@@ -80,18 +70,20 @@
         "data/klink-connected-content.json",
         "items",
         113,
-        "readingWordIds"
+        "title"
       ],
-      "before": [
-        "klink-woord-de",
-        "klink-woord-sjaal",
-        "klink-woord-zit",
-        "klink-woord-keel"
+      "before": "De sjaal zit om mijn keel.",
+      "after": "Mijn keel doet pijn."
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        113,
+        "text"
       ],
-      "after": [
-        "klink-woord-keel",
-        "klink-woord-pijn"
-      ]
+      "before": "De sjaal zit om mijn keel.",
+      "after": "Mijn keel doet pijn."
     },
     {
       "path": [
@@ -122,10 +114,18 @@
         "data/klink-connected-content.json",
         "items",
         113,
-        "title"
+        "readingWordIds"
       ],
-      "before": "De sjaal zit om mijn keel.",
-      "after": "Mijn keel doet pijn."
+      "before": [
+        "klink-woord-de",
+        "klink-woord-sjaal",
+        "klink-woord-zit",
+        "klink-woord-keel"
+      ],
+      "after": [
+        "klink-woord-keel",
+        "klink-woord-pijn"
+      ]
     },
     {
       "path": [
@@ -171,16 +171,6 @@
         "data/klink-connected-content.json",
         "items",
         199,
-        "text"
-      ],
-      "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.",
-      "after": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hiernaast."
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
-        199,
         "blocks",
         3,
         "text"
@@ -195,6 +185,16 @@
         199,
         "discussion",
         "evidence"
+      ],
+      "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.",
+      "after": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hiernaast."
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        199,
+        "text"
       ],
       "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.",
       "after": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hiernaast."
@@ -334,16 +334,6 @@
         "data/klink-connected-content.json",
         "items",
         459,
-        "text"
-      ],
-      "before": "Mag het licht aan blijven?",
-      "after": "Mag het licht aanblijven?"
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
-        459,
         "blocks",
         0,
         "text"
@@ -357,6 +347,16 @@
         "items",
         459,
         "title"
+      ],
+      "before": "Mag het licht aan blijven?",
+      "after": "Mag het licht aanblijven?"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        459,
+        "text"
       ],
       "before": "Mag het licht aan blijven?",
       "after": "Mag het licht aanblijven?"
@@ -782,6 +782,17 @@
         "data/klink-connected-content.json",
         "items",
         1087,
+        "discussion",
+        "question"
+      ],
+      "before": "Waarop wacht Fenna nog een antwoord?",
+      "after": "Op welke vraag heeft Fenna nog geen antwoord?"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1087,
         "reading",
         "meaningOverrides"
       ],
@@ -789,17 +800,6 @@
       "after": {
         "klink-woord-haar": "Verwijst naar een eerder genoemde vrouw of meisje, of geeft aan dat iets bij die persoon hoort. Bespreek naar wie haar in deze zin verwijst; hier gaat het niet om hoofdhaar."
       }
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
-        1087,
-        "discussion",
-        "question"
-      ],
-      "before": "Waarop wacht Fenna nog een antwoord?",
-      "after": "Op welke vraag heeft Fenna nog geen antwoord?"
     },
     {
       "path": [
@@ -988,16 +988,6 @@
         "data/klink-connected-content.json",
         "items",
         1491,
-        "text"
-      ],
-      "before": "Ik begrijp één woord uit uw uitleg nog niet. Welk woord bedoelt u? Kunt u die medische term nog eens in gewone woorden uitleggen? Natuurlijk, ik leg het rustig uit en daarna kunt u vragen stellen.",
-      "after": "Ik begrijp één woord uit uw uitleg nog niet. Welk woord bedoelt u? Kunt u het woord diagnose in gewone woorden uitleggen? Natuurlijk, ik leg het rustig uit en daarna kunt u vragen stellen."
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
-        1491,
         "blocks",
         2,
         "text"
@@ -1017,6 +1007,27 @@
       ],
       "before": "/package-audio/connected/96ab5d3085d88e4949d6.wav",
       "after": "/package-audio/inhoudherstel-20261030/medische-vraag.mp3"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1491,
+        "discussion",
+        "evidence"
+      ],
+      "before": "Ik begrijp één woord uit uw uitleg nog niet. Welk woord bedoelt u? Kunt u die medische term nog eens in gewone woorden uitleggen? Natuurlijk, ik leg het rustig uit en daarna kunt u vragen stellen.",
+      "after": "Kunt u het woord diagnose in gewone woorden uitleggen?"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1491,
+        "text"
+      ],
+      "before": "Ik begrijp één woord uit uw uitleg nog niet. Welk woord bedoelt u? Kunt u die medische term nog eens in gewone woorden uitleggen? Natuurlijk, ik leg het rustig uit en daarna kunt u vragen stellen.",
+      "after": "Ik begrijp één woord uit uw uitleg nog niet. Welk woord bedoelt u? Kunt u het woord diagnose in gewone woorden uitleggen? Natuurlijk, ik leg het rustig uit en daarna kunt u vragen stellen."
     },
     {
       "path": [
@@ -1082,17 +1093,6 @@
       "path": [
         "data/klink-connected-content.json",
         "items",
-        1491,
-        "discussion",
-        "evidence"
-      ],
-      "before": "Ik begrijp één woord uit uw uitleg nog niet. Welk woord bedoelt u? Kunt u die medische term nog eens in gewone woorden uitleggen? Natuurlijk, ik leg het rustig uit en daarna kunt u vragen stellen.",
-      "after": "Kunt u het woord diagnose in gewone woorden uitleggen?"
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
         1499,
         "reading",
         "meaningOverrides"
@@ -1101,16 +1101,6 @@
       "after": {
         "klink-woord-haar": "Verwijst naar een eerder genoemde vrouw of meisje, of geeft aan dat iets bij die persoon hoort. Bespreek naar wie haar in deze zin verwijst; hier gaat het niet om hoofdhaar."
       }
-    },
-    {
-      "path": [
-        "data/klink-connected-content.json",
-        "items",
-        1506,
-        "text"
-      ],
-      "before": "Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groente. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken.",
-      "after": "Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groenten. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken."
     },
     {
       "path": [
@@ -1136,6 +1126,16 @@
       ],
       "before": "/package-audio/connected/40a1735ef1a2fda063fc.mp3",
       "after": "/package-audio/inhoudherstel-20261030/groente-lang.mp3"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1506,
+        "text"
+      ],
+      "before": "Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groente. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken.",
+      "after": "Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groenten. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken."
     },
     {
       "path": [
@@ -1246,11 +1246,10 @@
         117,
         "turns",
         2,
-        "metadata",
-        "encoder"
+        "historyItemId"
       ],
-      "added": true,
-      "after": "Lavf62.12.102"
+      "before": "vZibPBjoUkmbTFbL7Ui2",
+      "after": "YrsfTcAoLsiRUk8Mmwkd"
     },
     {
       "path": [
@@ -1272,10 +1271,24 @@
         117,
         "turns",
         2,
-        "originalSrc"
+        "metadata",
+        "encoder"
       ],
-      "before": "/package-audio/connected/96ab5d3085d88e4949d6.wav",
-      "after": "/package-audio/inhoudherstel-20261030/medische-vraag.mp3"
+      "added": true,
+      "after": "Lavf62.12.102"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        117,
+        "turns",
+        2,
+        "metadata",
+        "album"
+      ],
+      "before": "Klink - Gesprekken",
+      "after": "Klink - Taalroute"
     },
     {
       "path": [
@@ -1288,30 +1301,6 @@
       ],
       "before": "46febf3d10cdbc2507a074f6377d353fd89b2d4172e68df6a41199d2a43472e0",
       "after": "2dbb6efd99f5ad62507228683c4d9170fbc020c7273c8c97a7bd9c97e099f73d"
-    },
-    {
-      "path": [
-        "data/klink-dialogue-repair.json",
-        "dialogues",
-        117,
-        "turns",
-        2,
-        "text"
-      ],
-      "before": "Kunt u die medische term nog eens in gewone woorden uitleggen?",
-      "after": "Kunt u het woord diagnose in gewone woorden uitleggen?"
-    },
-    {
-      "path": [
-        "data/klink-dialogue-repair.json",
-        "dialogues",
-        117,
-        "turns",
-        2,
-        "historyItemId"
-      ],
-      "before": "vZibPBjoUkmbTFbL7Ui2",
-      "after": "YrsfTcAoLsiRUk8Mmwkd"
     },
     {
       "path": [
@@ -1356,10 +1345,34 @@
         117,
         "turns",
         2,
+        "originalSrc"
+      ],
+      "before": "/package-audio/connected/96ab5d3085d88e4949d6.wav",
+      "after": "/package-audio/inhoudherstel-20261030/medische-vraag.mp3"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        117,
+        "turns",
+        2,
+        "text"
+      ],
+      "before": "Kunt u die medische term nog eens in gewone woorden uitleggen?",
+      "after": "Kunt u het woord diagnose in gewone woorden uitleggen?"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        117,
+        "turns",
+        2,
         "sha256"
       ],
       "before": "61dc7ac0e554debe52c5278007beefb69e23449345b64acccf3790937d563eb3",
-      "after": "210c398a5f4066f21e9e19442871607954dfd8ea2bb92bd94e1855521104ff15"
+      "after": "1bda29ee8841d306653daae7576ce8f88f4099dbcdfe5450e3d3c6fe21f0e4a9"
     },
     {
       "path": [
@@ -1408,22 +1421,7 @@
         "data/klink-imported-practice.json",
         "items",
         52,
-        "teacherWorkflow",
-        "sourceHash"
-      ],
-      "before": "512042c771445a7a2b0b22e45228726b1e29158dc7a34d9730417eef30a233a9",
-      "after": "f27397f7959e2b9e7f4b5d489e11ee506af751f17c1cb57a2ec6974cee66df88"
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        52,
-        "teacherWorkflow",
-        "phases",
-        0,
-        "learnerText",
-        2
+        "prompt"
       ],
       "before": "1. Vul heb, hebt of hebben in: Ik … een telefoon. Jij … een telefoon. Wij … twee telefoons. Vul ook in: U … een telefoon. Hij … een telefoon. Zij … een telefoon.\n2. Schrijf bij A: Dit is … nummer. Vraag je partner informeel naar B: Is dit … nummer? Vraag hetzelfde aan de docent met u.\nToepassing: Schrijf aan je partner welk voorwerp je hebt. Vraag naar het nummer op diens oefenkaart en schrijf van wie dat nummer is.",
       "after": "1. Vul heb, hebt, heeft of hebben in: Ik … een telefoon. Jij … een telefoon. Wij … twee telefoons. Vul ook in: U … een telefoon. Hij … een telefoon. Zij … een telefoon.\n2. Schrijf bij A: Dit is … nummer. Vraag je partner informeel naar B: Is dit … nummer? Vraag hetzelfde aan de docent met u.\nToepassing: Schrijf aan je partner welk voorwerp je hebt. Vraag naar het nummer op diens oefenkaart en schrijf van wie dat nummer is."
@@ -1446,10 +1444,35 @@
         "data/klink-imported-practice.json",
         "items",
         52,
-        "prompt"
+        "teacherWorkflow",
+        "phases",
+        0,
+        "learnerText",
+        2
       ],
       "before": "1. Vul heb, hebt of hebben in: Ik … een telefoon. Jij … een telefoon. Wij … twee telefoons. Vul ook in: U … een telefoon. Hij … een telefoon. Zij … een telefoon.\n2. Schrijf bij A: Dit is … nummer. Vraag je partner informeel naar B: Is dit … nummer? Vraag hetzelfde aan de docent met u.\nToepassing: Schrijf aan je partner welk voorwerp je hebt. Vraag naar het nummer op diens oefenkaart en schrijf van wie dat nummer is.",
       "after": "1. Vul heb, hebt, heeft of hebben in: Ik … een telefoon. Jij … een telefoon. Wij … twee telefoons. Vul ook in: U … een telefoon. Hij … een telefoon. Zij … een telefoon.\n2. Schrijf bij A: Dit is … nummer. Vraag je partner informeel naar B: Is dit … nummer? Vraag hetzelfde aan de docent met u.\nToepassing: Schrijf aan je partner welk voorwerp je hebt. Vraag naar het nummer op diens oefenkaart en schrijf van wie dat nummer is."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        52,
+        "teacherWorkflow",
+        "sourceHash"
+      ],
+      "before": "512042c771445a7a2b0b22e45228726b1e29158dc7a34d9730417eef30a233a9",
+      "after": "f27397f7959e2b9e7f4b5d489e11ee506af751f17c1cb57a2ec6974cee66df88"
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        63,
+        "prompt"
+      ],
+      "before": "1. Schrijf de aantallen in woorden. Welke kleur heeft weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen.",
+      "after": "1. Schrijf de aantallen in woorden. Van welke kleur zijn er te weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen."
     },
     {
       "path": [
@@ -1460,6 +1483,33 @@
       ],
       "before": "1. twee rode pennen; tien blauwe pennen; rood heeft er weinig ten opzichte van zes.\n2. rode; blauwe. Alleen deze bekende modellen, geen uitzonderingslijst.\nBeoordeling toepassing: Aantal past bij de groep; veel/weinig krijgt een vergelijking in context; rode/blauwe als voorbereide woordgroepen.\nTegencontrole: Tien is niet in elke context veel. Niet een los getal als universele grens voor veel aanleren.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen.",
       "after": "1. twee rode pennen; tien blauwe pennen; er zijn twee rode pennen; dat zijn er te weinig voor zes mensen.\n2. rode; blauwe. Alleen deze bekende modellen, geen uitzonderingslijst.\nBeoordeling toepassing: Aantal past bij de groep; veel/weinig krijgt een vergelijking in context; rode/blauwe als voorbereide woordgroepen.\nTegencontrole: Tien is niet in elke context veel. Niet een los getal als universele grens voor veel aanleren.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        63,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "1. Schrijf de aantallen in woorden. Welke kleur heeft weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen.",
+      "after": "1. Schrijf de aantallen in woorden. Van welke kleur zijn er te weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        63,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "learnerText",
+        2
+      ],
+      "before": "1. Schrijf de aantallen in woorden. Welke kleur heeft weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen.",
+      "after": "1. Schrijf de aantallen in woorden. Van welke kleur zijn er te weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen."
     },
     {
       "path": [
@@ -1478,33 +1528,6 @@
         "items",
         63,
         "teacherWorkflow",
-        "phases",
-        0,
-        "learnerText",
-        2
-      ],
-      "before": "1. Schrijf de aantallen in woorden. Welke kleur heeft weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen.",
-      "after": "1. Schrijf de aantallen in woorden. Van welke kleur zijn er te weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        63,
-        "teacherWorkflow",
-        "phases",
-        0,
-        "instruction"
-      ],
-      "before": "1. Schrijf de aantallen in woorden. Welke kleur heeft weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen.",
-      "after": "1. Schrijf de aantallen in woorden. Van welke kleur zijn er te weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        63,
-        "teacherWorkflow",
         "expected"
       ],
       "before": "1. twee rode pennen; tien blauwe pennen; rood heeft er weinig ten opzichte van zes.\n2. rode; blauwe. Alleen deze bekende modellen, geen uitzonderingslijst.\nBeoordeling toepassing: Aantal past bij de groep; veel/weinig krijgt een vergelijking in context; rode/blauwe als voorbereide woordgroepen.\nTegencontrole: Tien is niet in elke context veel. Niet een los getal als universele grens voor veel aanleren.\nGeen automatische score. Woordkeuzevarianten en andere grammaticale formuleringen accepteren als betekenis en doel kloppen.",
@@ -1514,11 +1537,38 @@
       "path": [
         "data/klink-imported-practice.json",
         "items",
-        63,
+        73,
         "prompt"
       ],
-      "before": "1. Schrijf de aantallen in woorden. Welke kleur heeft weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen.",
-      "after": "1. Schrijf de aantallen in woorden. Van welke kleur zijn er te weinig pennen voor zes mensen?\n2. Vul naar het model rode pen aan: twee … pennen (rood), tien … pennen (blauw).\nToepassing: Schrijf hoeveel pennen je voor zes mensen kiest en welke kleur. Laat de partner controleren of iedereen een pen kan krijgen."
+      "before": "1. Schrijf een bericht waarin je dag, tijd en lokaal corrigeert en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt.",
+      "after": "1. Schrijf een bericht waarin je de dag en tijd corrigeert, het lokaal noemt en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        73,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "1. Schrijf een bericht waarin je dag, tijd en lokaal corrigeert en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt.",
+      "after": "1. Schrijf een bericht waarin je de dag en tijd corrigeert, het lokaal noemt en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        73,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "learnerText",
+        2
+      ],
+      "before": "1. Schrijf een bericht waarin je dag, tijd en lokaal corrigeert en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt.",
+      "after": "1. Schrijf een bericht waarin je de dag en tijd corrigeert, het lokaal noemt en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt."
     },
     {
       "path": [
@@ -1530,43 +1580,6 @@
       ],
       "before": "56537be56ee686e949595fe2c7571f5b57cfe8c480a2d762f93daa8e22cebae7",
       "after": "09db03e35bbc35c104a0538552752e962a435e91b655047a0ecc901aeb0c2cf2"
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        73,
-        "teacherWorkflow",
-        "phases",
-        0,
-        "learnerText",
-        2
-      ],
-      "before": "1. Schrijf een bericht waarin je dag, tijd en lokaal corrigeert en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt.",
-      "after": "1. Schrijf een bericht waarin je de dag en tijd corrigeert, het lokaal noemt en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        73,
-        "teacherWorkflow",
-        "phases",
-        0,
-        "instruction"
-      ],
-      "before": "1. Schrijf een bericht waarin je dag, tijd en lokaal corrigeert en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt.",
-      "after": "1. Schrijf een bericht waarin je de dag en tijd corrigeert, het lokaal noemt en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        73,
-        "prompt"
-      ],
-      "before": "1. Schrijf een bericht waarin je dag, tijd en lokaal corrigeert en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt.",
-      "after": "1. Schrijf een bericht waarin je de dag en tijd corrigeert, het lokaal noemt en vraagt of je partner kan komen.\n2. De partner schrijft: Ik heb geen pen. Schrijf een passende reactie en noteer wat jullie meenemen.\nToepassing: Gebruik een andere afspraak uit je eigen fictieve agenda. Regel die schriftelijk zonder het voorbeeld over te nemen. Vraag om uitleg als een gegeven ontbreekt."
     },
     {
       "path": [
@@ -1595,10 +1608,11 @@
         "items",
         86,
         "teacherWorkflow",
-        "sourceHash"
+        "criteria",
+        0
       ],
-      "before": "33178bb472f46e2f297316e6fb6af6ab9177699ceb7f89c8c32013bbd424c2ab",
-      "after": "d217b3585e10e9f666b93ced67f0223d5a96841a8c6ca2d7b44b0228872f8a8e"
+      "before": "Bijvoeglijk naamwoord na is onverbogen; de brede/een breed bureau; een smalle kast; boodschap laat selectie toe.",
+      "after": "Bijvoeglijk naamwoord na is onverbogen; het brede/een breed bureau; een smalle kast; boodschap laat selectie toe."
     },
     {
       "path": [
@@ -1606,11 +1620,10 @@
         "items",
         86,
         "teacherWorkflow",
-        "criteria",
-        0
+        "sourceHash"
       ],
-      "before": "Bijvoeglijk naamwoord na is onverbogen; de brede/een breed bureau; een smalle kast; boodschap laat selectie toe.",
-      "after": "Bijvoeglijk naamwoord na is onverbogen; het brede/een breed bureau; een smalle kast; boodschap laat selectie toe."
+      "before": "33178bb472f46e2f297316e6fb6af6ab9177699ceb7f89c8c32013bbd424c2ab",
+      "after": "d217b3585e10e9f666b93ced67f0223d5a96841a8c6ca2d7b44b0228872f8a8e"
     },
     {
       "path": [
@@ -1650,10 +1663,11 @@
         "items",
         89,
         "teacherWorkflow",
-        "sourceHash"
+        "criteria",
+        0
       ],
-      "before": "82530afe9f360d622c09854dba384c7fb0d02505f11bdcb857f8c1ae61a3fb48",
-      "after": "1400b33c7578b94ee74adadf20c1bed11a6ec898e8680ecd07529ee57be81854"
+      "before": "Bij vier aanwezige appels nog vier kopen; er verwijst naar telbare appels, niet automatisch naar kilo; genoeg gekoppeld aan behoefte.",
+      "after": "Eerste situatie: zes deelnemers en vier appels, dus nog twee kopen. Toepassing: acht deelnemers en vier appels, dus nog vier kopen; er verwijst naar telbare appels, niet automatisch naar kilo; genoeg gekoppeld aan behoefte."
     },
     {
       "path": [
@@ -1661,11 +1675,10 @@
         "items",
         89,
         "teacherWorkflow",
-        "criteria",
-        0
+        "sourceHash"
       ],
-      "before": "Bij vier aanwezige appels nog vier kopen; er verwijst naar telbare appels, niet automatisch naar kilo; genoeg gekoppeld aan behoefte.",
-      "after": "Eerste situatie: zes deelnemers en vier appels, dus nog twee kopen. Toepassing: acht deelnemers en vier appels, dus nog vier kopen; er verwijst naar telbare appels, niet automatisch naar kilo; genoeg gekoppeld aan behoefte."
+      "before": "82530afe9f360d622c09854dba384c7fb0d02505f11bdcb857f8c1ae61a3fb48",
+      "after": "1400b33c7578b94ee74adadf20c1bed11a6ec898e8680ecd07529ee57be81854"
     },
     {
       "path": [
@@ -1683,11 +1696,23 @@
         "data/klink-imported-practice.json",
         "items",
         100,
-        "teacherWorkflow",
-        "sourceHash"
+        "prompt"
       ],
-      "before": "bc0ea57d727343f77a2fab236ffdc3af109b804820738e302d41a82ccd40f4c1",
-      "after": "d95c01808b0f9f6b1f127f5ca907026fdfbca231952f303c4617ffd4f8c53abf"
+      "before": "1. Schrijf voor elk van deze vier woorden naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is.",
+      "after": "1. Bekijk de woorden hij, zij, het en ze. Schrijf voor elk woord op naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        100,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "1. Schrijf voor elk van deze vier woorden naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is.",
+      "after": "1. Schrijf voor elk van deze vier woorden: hij, zij, het en ze. Schrijf op naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is."
     },
     {
       "path": [
@@ -1709,22 +1734,10 @@
         "items",
         100,
         "teacherWorkflow",
-        "phases",
-        0,
-        "instruction"
+        "sourceHash"
       ],
-      "before": "1. Schrijf voor elk van deze vier woorden naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is.",
-      "after": "1. Schrijf voor elk van deze vier woorden: hij, zij, het en ze. Schrijf op naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        100,
-        "prompt"
-      ],
-      "before": "1. Schrijf voor elk van deze vier woorden naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is.",
-      "after": "1. Bekijk de woorden hij, zij, het en ze. Schrijf voor elk woord op naar wie of wat het verwijst.\n2. Herschrijf met een zelfstandig aanwijzend woord: De fiets is nieuw. Het boek is oud. Geef twee mogelijkheden per zin.\nToepassing: Schrijf een bericht met twee personen en twee voorwerpen. Laat een partner de verwijzingen verbinden. Herhaal een naamwoord als de verwijzing dubbelzinnig is."
+      "before": "bc0ea57d727343f77a2fab236ffdc3af109b804820738e302d41a82ccd40f4c1",
+      "after": "d95c01808b0f9f6b1f127f5ca907026fdfbca231952f303c4617ffd4f8c53abf"
     },
     {
       "path": [
@@ -1753,10 +1766,11 @@
         "items",
         126,
         "teacherWorkflow",
-        "sourceHash"
+        "criteria",
+        0
       ],
-      "before": "2eecff7b19676dffdf7adc257f6aea202ec1b97585235a70eb363f47f277b0d0",
-      "after": "1dbd7bf6c4dc27970b5bdfecd3ce4063b5e6fdb32d087aee31627dac9bd43f76"
+      "before": "Referenten en hoeveelheden kloppen; geen enkele = nul; niet alle = deel; dezelfde/hetzelfde sluit aan bij woord en betekenis.",
+      "after": "Referenten en hoeveelheden kloppen; geen enkele = nul; niet alle = minder dan alle; hier zijn drie kopjes kapot en zeven heel; dezelfde/hetzelfde sluit aan bij woord en betekenis."
     },
     {
       "path": [
@@ -1764,11 +1778,10 @@
         "items",
         126,
         "teacherWorkflow",
-        "criteria",
-        0
+        "sourceHash"
       ],
-      "before": "Referenten en hoeveelheden kloppen; geen enkele = nul; niet alle = deel; dezelfde/hetzelfde sluit aan bij woord en betekenis.",
-      "after": "Referenten en hoeveelheden kloppen; geen enkele = nul; niet alle = minder dan alle; hier zijn drie kopjes kapot en zeven heel; dezelfde/hetzelfde sluit aan bij woord en betekenis."
+      "before": "2eecff7b19676dffdf7adc257f6aea202ec1b97585235a70eb363f47f277b0d0",
+      "after": "1dbd7bf6c4dc27970b5bdfecd3ce4063b5e6fdb32d087aee31627dac9bd43f76"
     },
     {
       "path": [
@@ -1807,6 +1820,18 @@
         "data/klink-imported-practice.json",
         "items",
         243,
+        "options",
+        1,
+        "text"
+      ],
+      "before": "U meldt vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is.",
+      "after": "U meldt zich vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        243,
         "teacherGuidance"
       ],
       "before": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Is de boodschap van vrijdag al een garantie dat uw lamp wordt gerepareerd? Beoordelingsreferentie: U meldt vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is.. Bewijs: zin 1: De buurtwerkplaats organiseert zaterdag een ochtend voor kleine reparaties. | zin 2: Bezoekers brengen zelf hun kapotte voorwerp mee; vrijwilligers helpen bij het onderzoeken van het probleem. | zin 3: Er wordt niet beloofd dat ieder voorwerp die ochtend gerepareerd kan worden. | zin 4: Voor apparaten die op stroom werken is vooraf aanmelden nodig. | zin 5: Stuur uiterlijk donderdag een beschrijving van het probleem en een foto van het apparaat. | zin 6: U ontvangt vrijdag bericht of er een vrijwilliger met de juiste ervaring beschikbaar is. | zin 7: Voor het vastzetten van een losse knoop hoeft u zich niet aan te melden. | zin 8: Losse onderdelen betaalt u zelf als die nodig zijn en u akkoord gaat met de kosten. | zin 9: Het doel van deze ochtend is samen onderzoeken en leren repareren, niet een gegarandeerde reparatieservice aanbieden. | zin 10: Met dit bericht willen we duidelijk maken wat u kunt verwachten en hoe u zich voorbereidt.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
@@ -1823,42 +1848,6 @@
       ],
       "before": "U meldt vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is.",
       "after": "U meldt zich vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        243,
-        "options",
-        1,
-        "text"
-      ],
-      "before": "U meldt vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is.",
-      "after": "U meldt zich vooraf aan en stuurt uiterlijk donderdag een probleembeschrijving en foto. Vrijdag hoort u of er een vrijwilliger met passende ervaring beschikbaar is."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        706,
-        "teacherWorkflow",
-        "sourceHash"
-      ],
-      "before": "275f4ff8da48b99846295cfac95fd2cb865ca1f7a12de0c17bf2def4b2d641f6",
-      "after": "be40dab3deac0b14bca983200bf76186020445ff1378d13245159511e4cb04a4"
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        706,
-        "teacherWorkflow",
-        "phases",
-        0,
-        "instruction"
-      ],
-      "before": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe kiest tussen rood en blauw. Wat kies je van het voorwerp?",
-      "after": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe mag bepalen of de stoel rood of blauw wordt. Wat mag je kiezen?"
     },
     {
       "path": [
@@ -1895,58 +1884,25 @@
       "path": [
         "data/klink-imported-practice.json",
         "items",
-        832,
-        "teacherGuidance"
-      ],
-      "before": "Docent beoordeelt de eerste respons; geen automatische correctheid of beheersing. Noteer respons, gebruikte hulp, hernieuwde blootstelling, correctie en niet-beoordeelbaar apart. Een communicatief passend ander woord kan goed zijn terwijl het doelwoord niet is gebruikt. Een mondelinge situatie of goed gekozen voorwerp bewijst geen zelfstandig lezen. Bij als insect, niet het voorzetsel. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen.",
-      "after": "Docent beoordeelt de eerste respons; geen automatische correctheid of beheersing. Noteer respons, gebruikte hulp, hernieuwde blootstelling, correctie en niet-beoordeelbaar apart. Een communicatief passend ander woord kan goed zijn terwijl het doelwoord niet is gebruikt. Een mondelinge situatie of goed gekozen voorwerp bewijst geen zelfstandig lezen. Bij als plaatswoord: bijvoorbeeld Ik sta bij de deur. Laat aanwijzen dat dit in de buurt van de deur betekent; niet het insect. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        832,
-        "teacherWorkflow",
-        "sourceHash"
-      ],
-      "before": "5b1603f0aa5453399b659acfdc28554f1a1a966f608f45666b37762fb9a2cc44",
-      "after": "a53086cfc255e0849b3ab146cf33a01e4917378580862ec06955729324f60118"
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        832,
+        706,
         "teacherWorkflow",
         "phases",
         0,
         "instruction"
       ],
-      "before": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe ziet een insect dat nectar verzamelt bij een bloem. Welk dier staat op je kaart?",
-      "after": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe staat naast de deur. Gebruik het woord op je kaart om te vertellen waar je staat."
+      "before": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe kiest tussen rood en blauw. Wat kies je van het voorwerp?",
+      "after": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe mag bepalen of de stoel rood of blauw wordt. Wat mag je kiezen?"
     },
     {
       "path": [
         "data/klink-imported-practice.json",
         "items",
-        832,
+        706,
         "teacherWorkflow",
-        "criteria",
-        0
+        "sourceHash"
       ],
-      "before": "Bij als insect, niet het voorzetsel. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen.",
-      "after": "Bij als plaatswoord: bijvoorbeeld Ik sta bij de deur. Laat aanwijzen dat dit in de buurt van de deur betekent; niet het insect. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        832,
-        "teacherWorkflow",
-        "expected"
-      ],
-      "before": "Bij als insect, niet het voorzetsel. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen.",
-      "after": "Bij als plaatswoord: bijvoorbeeld Ik sta bij de deur. Laat aanwijzen dat dit in de buurt van de deur betekent; niet het insect. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen."
+      "before": "275f4ff8da48b99846295cfac95fd2cb865ca1f7a12de0c17bf2def4b2d641f6",
+      "after": "be40dab3deac0b14bca983200bf76186020445ff1378d13245159511e4cb04a4"
     },
     {
       "path": [
@@ -1973,11 +1929,78 @@
         "data/klink-imported-practice.json",
         "items",
         832,
+        "teacherGuidance"
+      ],
+      "before": "Docent beoordeelt de eerste respons; geen automatische correctheid of beheersing. Noteer respons, gebruikte hulp, hernieuwde blootstelling, correctie en niet-beoordeelbaar apart. Een communicatief passend ander woord kan goed zijn terwijl het doelwoord niet is gebruikt. Een mondelinge situatie of goed gekozen voorwerp bewijst geen zelfstandig lezen. Bij als insect, niet het voorzetsel. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen.",
+      "after": "Docent beoordeelt de eerste respons; geen automatische correctheid of beheersing. Noteer respons, gebruikte hulp, hernieuwde blootstelling, correctie en niet-beoordeelbaar apart. Een communicatief passend ander woord kan goed zijn terwijl het doelwoord niet is gebruikt. Een mondelinge situatie of goed gekozen voorwerp bewijst geen zelfstandig lezen. Bij als plaatswoord: bijvoorbeeld Ik sta bij de deur. Laat aanwijzen dat dit in de buurt van de deur betekent; niet het insect. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        832,
         "prerequisites",
         3
       ],
       "before": "Context mondeling voorbereiden: Je ziet een insect dat nectar verzamelt bij een bloem. Welk dier staat op je kaart? Controleer met navertellen of aanwijzen dat de situatie en de gevraagde handeling begrepen zijn. De cursist hoeft deze docenttekst niet te lezen.",
       "after": "Context mondeling voorbereiden: Je staat naast de deur. Gebruik het woord op je kaart om te vertellen waar je staat. Controleer met navertellen of aanwijzen dat de situatie en de gevraagde handeling begrepen zijn. De cursist hoeft deze docenttekst niet te lezen."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        832,
+        "teacherWorkflow",
+        "criteria",
+        0
+      ],
+      "before": "Bij als insect, niet het voorzetsel. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen.",
+      "after": "Bij als plaatswoord: bijvoorbeeld Ik sta bij de deur. Laat aanwijzen dat dit in de buurt van de deur betekent; niet het insect. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        832,
+        "teacherWorkflow",
+        "phases",
+        0,
+        "instruction"
+      ],
+      "before": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe ziet een insect dat nectar verzamelt bij een bloem. Welk dier staat op je kaart?",
+      "after": "Gebruik het geschreven woord in de mondeling gegeven situatie. Doelwoordsteun blijft zichtbaar en wordt genoteerd. Daarna verplicht semanticFollowup afnemen; louter nazeggen of voorlezen is onvoldoende.\nJe staat naast de deur. Gebruik het woord op je kaart om te vertellen waar je staat."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        832,
+        "teacherWorkflow",
+        "sourceHash"
+      ],
+      "before": "5b1603f0aa5453399b659acfdc28554f1a1a966f608f45666b37762fb9a2cc44",
+      "after": "a53086cfc255e0849b3ab146cf33a01e4917378580862ec06955729324f60118"
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        832,
+        "teacherWorkflow",
+        "expected"
+      ],
+      "before": "Bij als insect, niet het voorzetsel. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen.",
+      "after": "Bij als plaatswoord: bijvoorbeeld Ik sta bij de deur. Laat aanwijzen dat dit in de buurt van de deur betekent; niet het insect. Alleen het zichtbare doelwoord voorlezen is onvoldoende. Vraag de semanticFollowup en beoordeel daarnaast de bronbetekenis: In de buurt van of samen met iemand of iets; niet het insect. Een passend gebaar, handeling of eenvoudige omschrijving volstaat. Noteer woordgebruik en betekenisbewijs apart; bij onduidelijke respons geen betekenisbeheersing vaststellen."
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        1347,
+        "stimulus"
+      ],
+      "before": "Er komen zeven mensen eten. Murat zet zeven stoelen bij de tafel. Rosa telt de lepels. Er liggen er zes. Zij haalt nog één lepel uit de la.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Er ligt nog één lepel in de la.\n\nNieuwe situatie: Er komen vier mensen. Er liggen drie lepels. Vraag wat ontbreekt.",
+      "after": "Er komen zeven mensen eten. Murat zet zeven stoelen bij de tafel. Rosa telt de lepels. Er liggen er zes. Zij haalt nog één lepel uit de la.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): We hebben nog één lepel nodig.\n\nNieuwe situatie: Er komen vier mensen. Er liggen drie lepels. Vraag wat ontbreekt."
     },
     {
       "path": [
@@ -1995,10 +2018,11 @@
         "items",
         1347,
         "teacherWorkflow",
-        "sourceHash"
+        "criteria",
+        0
       ],
-      "before": "7560b9bddd6e0bffc632454bc2534d003fdb7c384c8a1e3822df0e711bd59cd0",
-      "after": "7896672d3960ae97f3399479c0606e2ec20b3aa1c7dba15df2692a9eb5b113d2"
+      "before": "Eén extra lepel naast de zes die er al liggen, zodat er zeven zijn. Vorm uit het model: Er ligt nog één lepel in de la. Een eigen formulering met dezelfde betekenis is toegestaan; louter nazeggen met zichtbaar model telt als geholpen.",
+      "after": "Bron en oefenfase: zes lepels voor zeven mensen, dus één extra nodig. Nieuwe situatie: drie lepels voor vier mensen, dus ook één extra nodig. Vorm uit het model: We hebben nog één lepel nodig. Een eigen formulering met dezelfde betekenis is toegestaan; louter nazeggen met zichtbaar model telt als geholpen."
     },
     {
       "path": [
@@ -2033,11 +2057,10 @@
         "items",
         1347,
         "teacherWorkflow",
-        "criteria",
-        0
+        "sourceHash"
       ],
-      "before": "Eén extra lepel naast de zes die er al liggen, zodat er zeven zijn. Vorm uit het model: Er ligt nog één lepel in de la. Een eigen formulering met dezelfde betekenis is toegestaan; louter nazeggen met zichtbaar model telt als geholpen.",
-      "after": "Bron en oefenfase: zes lepels voor zeven mensen, dus één extra nodig. Nieuwe situatie: drie lepels voor vier mensen, dus ook één extra nodig. Vorm uit het model: We hebben nog één lepel nodig. Een eigen formulering met dezelfde betekenis is toegestaan; louter nazeggen met zichtbaar model telt als geholpen."
+      "before": "7560b9bddd6e0bffc632454bc2534d003fdb7c384c8a1e3822df0e711bd59cd0",
+      "after": "7896672d3960ae97f3399479c0606e2ec20b3aa1c7dba15df2692a9eb5b113d2"
     },
     {
       "path": [
@@ -2054,22 +2077,11 @@
       "path": [
         "data/klink-imported-practice.json",
         "items",
-        1347,
+        1360,
         "stimulus"
       ],
-      "before": "Er komen zeven mensen eten. Murat zet zeven stoelen bij de tafel. Rosa telt de lepels. Er liggen er zes. Zij haalt nog één lepel uit de la.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Er ligt nog één lepel in de la.\n\nNieuwe situatie: Er komen vier mensen. Er liggen drie lepels. Vraag wat ontbreekt.",
-      "after": "Er komen zeven mensen eten. Murat zet zeven stoelen bij de tafel. Rosa telt de lepels. Er liggen er zes. Zij haalt nog één lepel uit de la.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): We hebben nog één lepel nodig.\n\nNieuwe situatie: Er komen vier mensen. Er liggen drie lepels. Vraag wat ontbreekt."
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        1360,
-        "teacherWorkflow",
-        "sourceHash"
-      ],
-      "before": "0155d8b5e2f97cc65f0e65f73938e46060f356e2bf8db252b1d28571daff9d1e",
-      "after": "9f91a2a0e31db2dc3970b0eb0635624c320d891e6903b4485752974ae783801c"
+      "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Deze andere rok kost minder dan de eerste.\n\nNieuwe situatie: Twee tassen kosten 30 en 45 euro. Je wilt de goedkoopste bekijken. Vraag erom en leg kort uit waarom.",
+      "after": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hiernaast.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Deze andere rok kost minder dan de eerste.\n\nNieuwe situatie: Twee tassen kosten 30 en 45 euro. Je wilt de goedkoopste bekijken. Vraag erom en leg kort uit waarom."
     },
     {
       "path": [
@@ -2090,6 +2102,17 @@
         "data/klink-imported-practice.json",
         "items",
         1360,
+        "teacherWorkflow",
+        "sourceHash"
+      ],
+      "before": "0155d8b5e2f97cc65f0e65f73938e46060f356e2bf8db252b1d28571daff9d1e",
+      "after": "9f91a2a0e31db2dc3970b0eb0635624c320d891e6903b4485752974ae783801c"
+    },
+    {
+      "path": [
+        "data/klink-imported-practice.json",
+        "items",
+        1368,
         "stimulus"
       ],
       "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Deze andere rok kost minder dan de eerste.\n\nNieuwe situatie: Twee tassen kosten 30 en 45 euro. Je wilt de goedkoopste bekijken. Vraag erom en leg kort uit waarom.",
@@ -2110,7 +2133,7 @@
       "path": [
         "data/klink-imported-practice.json",
         "items",
-        1368,
+        1376,
         "stimulus"
       ],
       "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Deze andere rok kost minder dan de eerste.\n\nNieuwe situatie: Twee tassen kosten 30 en 45 euro. Je wilt de goedkoopste bekijken. Vraag erom en leg kort uit waarom.",
@@ -2126,16 +2149,6 @@
       ],
       "before": "98874cef31a193a22a4d406d475c1731351ddd47b5c68e45231f433cd809f668",
       "after": "598cb2ff672135a0b6f78741bfb476650d037c34caf88ec2ec749eb11e27288a"
-    },
-    {
-      "path": [
-        "data/klink-imported-practice.json",
-        "items",
-        1376,
-        "stimulus"
-      ],
-      "before": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hier naast.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Deze andere rok kost minder dan de eerste.\n\nNieuwe situatie: Twee tassen kosten 30 en 45 euro. Je wilt de goedkoopste bekijken. Vraag erom en leg kort uit waarom.",
-      "after": "Ik vind deze rok mooi, maar hij is te duur. Deze andere rok kost minder. Mag ik die even bekijken? Zeker. Hij hangt hiernaast.\n\nVoorbeeld voor de oefenfase (niet bij de eindrespons tonen): Deze andere rok kost minder dan de eerste.\n\nNieuwe situatie: Twee tassen kosten 30 en 45 euro. Je wilt de goedkoopste bekijken. Vraag erom en leg kort uit waarom."
     },
     {
       "path": [
@@ -2170,10 +2183,10 @@
       "path": [
         "public/content-register/active.json",
         2860,
-        "text"
+        "status"
       ],
-      "before": "Kijk naar de letter. Schrijf de letter op papier. Vergelijk met het voorbeeld.",
-      "after": "Kijk naar de letter. Typ de letter in het invulvak. Vergelijk met het voorbeeld."
+      "before": "parked",
+      "after": "connected"
     },
     {
       "path": [
@@ -2188,10 +2201,10 @@
       "path": [
         "public/content-register/active.json",
         2860,
-        "status"
+        "text"
       ],
-      "before": "parked",
-      "after": "connected"
+      "before": "Kijk naar de letter. Schrijf de letter op papier. Vergelijk met het voorbeeld.",
+      "after": "Kijk naar de letter. Typ de letter in het invulvak. Vergelijk met het voorbeeld."
     },
     {
       "path": [
@@ -2215,10 +2228,10 @@
       "path": [
         "public/content-register/active.json",
         2861,
-        "text"
+        "status"
       ],
-      "before": "Luister. Schrijf het woord op papier. Tik daarna op Vergelijk.",
-      "after": "Luister. Typ het woord in het invulvak. Tik daarna op Vergelijk."
+      "before": "parked",
+      "after": "connected"
     },
     {
       "path": [
@@ -2233,10 +2246,10 @@
       "path": [
         "public/content-register/active.json",
         2861,
-        "status"
+        "text"
       ],
-      "before": "parked",
-      "after": "connected"
+      "before": "Luister. Schrijf het woord op papier. Tik daarna op Vergelijk.",
+      "after": "Luister. Typ het woord in het invulvak. Tik daarna op Vergelijk."
     },
     {
       "path": [
@@ -2269,6 +2282,15 @@
       "path": [
         "public/content-register/active.json",
         3286,
+        "originalSrc"
+      ],
+      "before": "/package-audio/connected/96ab5d3085d88e4949d6.wav",
+      "after": "/package-audio/inhoudherstel-20261030/medische-vraag.mp3"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3286,
         "text"
       ],
       "before": "Kunt u die medische term nog eens in gewone woorden uitleggen?",
@@ -2281,15 +2303,6 @@
         "src"
       ],
       "before": "/package-audio/dialogue-repair/klink-dialogue-579b29dc10de977f-3.mp3",
-      "after": "/package-audio/inhoudherstel-20261030/medische-vraag.mp3"
-    },
-    {
-      "path": [
-        "public/content-register/active.json",
-        3286,
-        "originalSrc"
-      ],
-      "before": "/package-audio/connected/96ab5d3085d88e4949d6.wav",
       "after": "/package-audio/inhoudherstel-20261030/medische-vraag.mp3"
     },
     {
@@ -2386,10 +2399,10 @@
       "path": [
         "public/content-register/active.json",
         6589,
-        "text"
+        "status"
       ],
-      "before": "Schrijf het woord op papier. Tik daarna op Ik heb geschreven.",
-      "after": "Typ het woord in het invulvak. Tik daarna op Ik heb geschreven."
+      "before": "parked",
+      "after": "connected"
     },
     {
       "path": [
@@ -2404,10 +2417,10 @@
       "path": [
         "public/content-register/active.json",
         6589,
-        "status"
+        "text"
       ],
-      "before": "parked",
-      "after": "connected"
+      "before": "Schrijf het woord op papier. Tik daarna op Ik heb geschreven.",
+      "after": "Typ het woord in het invulvak. Tik daarna op Ik heb geschreven."
     },
     {
       "path": [
