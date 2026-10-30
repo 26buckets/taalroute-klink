@@ -3,7 +3,7 @@ import { recordRoundSteps } from '@/lib/round-progress';
 import { RoundProgressNotice } from './round-progress';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, RefreshCw, Search, Volume2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowRightLeft, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, RefreshCw, Search, Shuffle, Volume2 } from 'lucide-react';
 import { BuildSurface, ExerciseSurface, findAudioSource, PackageExerciseBrowser } from './package-exercise-browser';
 import { stopMedia } from './shared';
 import { isInstructionAudioEnabled } from '@/lib/audio-policy';
@@ -14,6 +14,7 @@ import { practiceStages, scopeWordExercises, selectUsageExercises, type RouteSet
 import { useRouteSettings } from './route-settings';
 import { PracticeLine } from './practice-line';
 import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
+import { isSynonymPack, parseSynonymSettings, synonymActivities, synonymExercises } from '@/lib/synonyms';
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const sheetActivities: GroupActivity[] = ['meet', 'same-word', 'listen', 'hear-word', 'read', 'build-model', 'build', 'missing', 'copy', 'dictation'];
@@ -62,7 +63,36 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
   </section>;
 }
 
-export function GroupRound({ progressId, progressExerciseIds, legacySessionId, pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: { progressId?: string; progressExerciseIds?: string[]; legacySessionId?: string; pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps }) {
+type GroupRoundProps = { progressId?: string; progressExerciseIds?: string[]; legacySessionId?: string; pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps };
+
+export function GroupRound(props: GroupRoundProps) {
+  return isSynonymPack(props.pack) && synonymActivities.some(id => id === props.activity) ? <SynonymRound {...props} /> : <GroupRoundPlayer {...props} />;
+}
+
+function SynonymRound(props: GroupRoundProps) {
+  const settingsKey = `klink.synonym-settings.v1:${props.pack.id}`;
+  const [settings, setSettings] = useState(() => {
+    try { return parseSynonymSettings(localStorage.getItem(settingsKey)); } catch { return parseSynonymSettings(null); }
+  });
+  useEffect(() => { try { localStorage.setItem(settingsKey, JSON.stringify(settings)); } catch { /* Optional storage. */ } }, [settingsKey, settings]);
+  const exercises = useMemo(() => synonymExercises(props.pack, props.activity, settings.seed, settings.reverse), [props.pack, props.activity, settings]);
+  const sessionId = `${props.sessionId ?? props.pack.id}${settings.reverse ? ':reverse' : ''}`;
+  function mix() {
+    stopMedia();
+    try { localStorage.removeItem(groupSessionKey(sessionId, props.activity)); } catch { /* Optional storage. */ }
+    setSettings(current => ({ ...current, seed: current.seed === 0xffffffff ? 2 : current.seed + 1 }));
+  }
+  return <div className="cp-synonym-round">
+    <nav className="cp-synonym-controls" aria-label="Synoniemen wisselen">
+      <button className="secondary-button" aria-pressed={settings.reverse} onClick={() => { stopMedia(); setSettings(current => ({ ...current, reverse: !current.reverse })); }}><ArrowRightLeft aria-hidden="true" />Wissel woord en synoniem</button>
+      <button className="secondary-button" onClick={mix}><Shuffle aria-hidden="true" />Mix de kaarten</button>
+      <output>{settings.reverse ? 'Synoniem → woord' : 'Woord → synoniem'}{props.activity === 'hear-match' ? ` · Met geluid: ${exercises.length} van ${props.pack.exercises.length} woordparen` : ''}</output>
+    </nav>
+    {exercises.length ? <GroupRoundPlayer {...props} key={`${settings.reverse}:${settings.seed}`} exerciseSet={exercises} sessionId={sessionId} progressId={props.progressId ? `${props.progressId}${settings.reverse ? ':reverse' : ''}` : undefined} onAgain={mix} /> : <p>Voor deze richting is nog geen geluid beschikbaar. Wissel woord en synoniem of kies een andere oefening.</p>}
+  </div>;
+}
+
+function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: GroupRoundProps) {
   const exercises = useMemo(() => exerciseSet ?? groupExercises(pack, activity), [pack, activity, exerciseSet]);
   const storageKey = groupSessionKey(sessionId ?? pack.id, activity);
   const [session, setSession] = useState(() => {

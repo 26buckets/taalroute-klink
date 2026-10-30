@@ -2,7 +2,7 @@ import { verifyDialogueRelease, readBeforeDialogueRelease } from './check-dialog
 import { verifySoundAudioRelease, readBeforeSoundAudioRelease } from './check-sound-audio-release.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -26,6 +26,7 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     mkdirSync(join(dir, 'scripts')); mkdirSync(join(dir, 'data')); mkdirSync(join(dir, 'lib'));
     cpSync('lib', join(dir, 'lib'), { recursive: true });
     cpSync('data', join(dir, 'data'), { recursive: true });
+    for (const name of readdirSync('scripts').filter(name => /^check-.*\.mjs$/.test(name))) copyFileSync(join('scripts', name), join(dir, 'scripts', name));
     if (changeWordbuild) {
       const path = join(dir, 'data/klink-lexicon-wordbuild-rest.json');
       const catalog = JSON.parse(readFileSync(path));
@@ -34,11 +35,15 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     if (changeImported) {
       const path = join(dir, 'data/klink-imported-practice.json');
-      const catalog = JSON.parse(readFileSync(path));
+      const catalog = JSON.parse(readBeforeDialogues('data/klink-imported-practice.json'));
       changeImported(catalog);
       writeFileSync(path, JSON.stringify(catalog));
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
+    if (changeImported) {
+      const gate = join(dir, 'scripts/check-curriculum-release.mjs');
+      writeFileSync(gate, readFileSync(gate, 'utf8').replace("readBeforeDialogues('data/klink-imported-practice.json')", `readFileSync(${JSON.stringify(join(dir, 'data/klink-imported-practice.json'))})`));
+    }
     copyFileSync('scripts/check-article-review-release.mjs', join(dir, 'scripts/check-article-review-release.mjs'));
     const reviewGate = join(dir, 'scripts/check-article-review-release.mjs');
     writeFileSync(reviewGate, readFileSync(reviewGate, 'utf8').replace('export function verifyArticleReviewRelease(release =', 'export function verifyArticleReviewReleaseUnused(release =') + `\nexport const verifyArticleReviewRelease = () => (${JSON.stringify(reviewedArticles)});`);
@@ -87,9 +92,9 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     }
     if (changeHeaderCss) {
       const cssFixture = join(dir, 'header.css');
-      writeFileSync(cssFixture, changeHeaderCss(readFileSync('app/taalroute-header.css', 'utf8')));
+      writeFileSync(cssFixture, changeHeaderCss(readBeforeArticleReview('app/taalroute-header.css', reviewedArticles, readPrevious).toString()));
       const gate = join(dir, 'scripts/check-curriculum-release.mjs');
-      writeFileSync(gate, readFileSync(gate, 'utf8').replace("readFileSync('app/taalroute-header.css', 'utf8')", `readFileSync(${JSON.stringify(cssFixture)}, 'utf8')`));
+      writeFileSync(gate, readFileSync(gate, 'utf8').replace("readApprovedFile('app/taalroute-header.css')", `readFileSync(${JSON.stringify(cssFixture)}, 'utf8')`));
     }
     copyFileSync('lib/klink-context.ts', join(dir, 'lib/klink-context.ts'));
     for (const name of ['klink-media.json', 'klink-curriculum.json', 'klink-instructions.json', 'klink-comprehension-audio.json', 'klink-connected-content.json', 'klink-sections.json']) copyFileSync(`data/${name}`, join(dir, `data/${name}`));

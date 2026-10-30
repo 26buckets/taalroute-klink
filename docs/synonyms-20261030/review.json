@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-30",
+  "feature": "Woorden → Synoniemen",
+  "repository": "26buckets/taalroute-klink",
+  "branch": "codex/synoniemen-20261030",
+  "baseCommit": "60525ae784e46f66756ed4fbca415032bfb71b8c",
+  "recordedLiveSource": "6d19f7f5f262abcdf38c788ce7a0c5ab62df3244",
+  "liveAncestorVerified": true,
+  "publicationAllowed": false,
+  "publication": "Development only. Existing publication gate and owner releases preserved. Live release endpoint was not verified; direct HTTP access returned 403.",
+  "content": {
+    "questions": 210,
+    "cumulativeLevels": {
+      "A1": 30,
+      "A2": 85,
+      "B1": 210
+    },
+    "b1Extension": 125,
+    "existingLexiconPairs": 32,
+    "editorialPairsUsingLexiconWords": 171,
+    "editorialAdditions": 7,
+    "allExistingLexiconPairsReviewed": 43,
+    "sourceFilesUnchanged": true,
+    "images": 0,
+    "audio": 0,
+    "audioNote": "No newly generated recordings; the added listening mode reuses 186 forward and 164 reverse existing word recordings. See modes-review.json."
+  },
+  "editorialReview": {
+    "meaning": "All 210 pairs and the three authored distractors were editorially reviewed by the assistant. The authored synonym network was checked for alternative valid options.",
+    "individualCefrValidated": false,
+    "independentHumanReview": false,
+    "learnerPilot": false,
+    "levelPolicy": "Editorial practice selections, cumulative. No official complete CEFR synonym list or exam-frequency claim."
+  },
+  "validation": {
+    "unitAndRegressionTests": 50,
+    "unitFailures": 0,
+    "typescript": "passed",
+    "targetedLint": "passed",
+    "productionBuild": "passed",
+    "chromium": "All 210 questions: word, four options, wrong and right feedback, manual continuation, no images/audio; level selection, word-library entry, saved-word retention, partial-round resume, spaced review; 390px and 320px long-word/long-option layout and instruction visibility below the fixed header after advancing.",
+    "webkit": "A1, A2 and B1: each one real wrong/right interaction at 390px.",
+    "physicalDevices": false,
+    "spreadsheet": "Both sheets rendered and inspected. Saved XLSX reopened: 210 questions, 43 source decisions, 32 reused pairs, correct cached counts, frozen headers/columns and no cell errors."
+  },
+  "preserved": [
+    "Original 302 lessons and content packages",
+    "Existing images, audio and metadata",
+    "Learner navigation, lesson progression and saved words",
+    "Publication controls and historical owner releases"
+  ],
+  "githubActions": "No workflows added or enabled; no push; all checks local.",
+  "extension": "Three practice forms, reverse direction and mixing; see modes-review.json for current validation and audio coverage."
+}

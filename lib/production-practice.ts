@@ -2,7 +2,7 @@ import index from '../data/klink-production-index.json' with { type: 'json' };
 import type { PackageDefinition, PackageExercise } from './package-content';
 
 export const productionIndex = index;
-export function productionPack(row: typeof index[number], exercises: PackageExercise[] = []): PackageDefinition {
+export function productionPack(row: Pick<typeof index[number], 'id' | 'title' | 'level' | 'activity' | 'count'>, exercises: PackageExercise[] = []): PackageDefinition {
   return { id: row.id, title: row.title, subtitle: '', description: '', level: row.level, status: 'available', statusNote: '',
     practiceActivities: [row.activity], words: [], lessons: [], texts: [], dialogues: [], games: [], scenes: [], exercises, exerciseTypes: [],
     counts: { lessons: 0, coreWords: 0, exercises: row.count, exerciseTypes: 1, texts: 0, dialogues: 0, games: 0, images: 0, audio: 0 },

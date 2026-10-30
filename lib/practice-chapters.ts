@@ -1,6 +1,7 @@
 import { productionIndex, productionPack } from './production-practice.ts';
 import { chapterWordRounds, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
+import { synonymCollections, synonymActivities } from './synonyms.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -13,7 +14,7 @@ import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
 export const practiceChapters: { id: string; title: string; icon: typeof groupActivities[number]['icon']; activities: GroupActivity[] }[] = [
-  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards'] },
+  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards', 'synonyms'] },
   { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-path', 'sound-compare'] },
   { id: 'sentences', title: 'Zinnen', icon: 'book', activities: ['sentences', 'word-sentence', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'] },
   { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence', 'context-order'] },
@@ -87,6 +88,7 @@ export function chapterExerciseCount(chapter: string, selection: ChapterLocation
 }
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
+  if (activity === 'synonyms') return synonymCollections;
   if (activity.startsWith('content-')) {
     const existing = cache.get(activity);
     if (existing) return existing;
@@ -142,6 +144,10 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     }
   }
   result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined })));
+  if (activity === 'learning-review' || synonymActivities.some(id => id === activity)) result.push(...synonymCollections.flatMap(collection => {
+    const exercises = groupExercises(collection.pack, activity);
+    return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
+  }));
   cache.set(activity, result);
   return result;
 }
