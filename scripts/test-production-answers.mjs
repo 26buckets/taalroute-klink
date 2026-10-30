@@ -63,12 +63,12 @@ try{
  for(const f of decode){const duration=await page.evaluate(async src=>{const context=new AudioContext();try{const r=await fetch(src);if(!r.ok)throw Error('Audio unavailable');const b=await context.decodeAudioData(await r.arrayBuffer());return b.duration;}finally{await context.close();}},f.src);assert(duration>.2);}
  checks.push({nativeDecoded:decode.length});
  const out='outputs/production-20261029';mkdirSync(out,{recursive:true});const images=[];
- for(const row of productionIndex.filter(r=>r.activity==='meet'))for(const e of data(row)){
+ for(const row of productionIndex.filter(r=>r.activity==='meet'&&!r.id.startsWith('word-meet:')))for(const e of data(row)){
   const key=groupSessionKey('chapter:meet:'+row.id,'meet');await page.evaluate(({key,id})=>localStorage.setItem(key,JSON.stringify({version:1,exerciseId:id,done:false})),{key,id:e.exerciseId});
   await page.goto(url(row));await page.reload();await page.locator(`[data-exercise-id="${e.exerciseId}"]`).waitFor();
   const img=page.locator('.cp-model-content img');await img.waitFor();await img.evaluate(el=>el.decode());const actual=new URL(await img.getAttribute('src'),base);assert.equal(actual.searchParams.get('url')||actual.pathname,e.prompt.image.src);
   await page.screenshot({path:out+'/'+e.exerciseId+'-desktop.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:out+'/'+e.exerciseId+'-mobile.png'});await page.setViewportSize({width:1366,height:950});images.push(e.exerciseId);
  }
  assert.equal(images.length,65);assert.deepEqual(errors,[]);
- writeFileSync('docs/remaining-links-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
+ writeFileSync('docs/meet-words-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
 }finally{await browser.close();}
