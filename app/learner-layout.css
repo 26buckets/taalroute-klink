@@ -162,7 +162,7 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 @media (max-height: 740px) {
   .product-root .consistent-layout .cp-exercise-feedback { height: 80px; min-height: 80px; padding-block: 8px; }
 }
-.learner-app .cp-exercise-stage .cp-model-content > img { width: min(330px, 100%, max(72px, calc(100cqh - 140px))); height: auto; max-height: max(72px, calc(100cqh - 140px)); }
+.learner-app .cp-exercise-stage .cp-model-content > :is(img, .cp-word-placeholder) { width: min(330px, 100%, max(72px, calc(100cqh - 140px))); height: auto; max-height: max(72px, calc(100cqh - 140px)); }
 .learner-app .cp-exercise-stage { position: relative; }
 .learner-app .cp-exercise-stage .cp-task-card:has(> .cp-corner-prompt, > .cp-corner-listen) { position: static; }
 .learner-app .cp-exercise-stage :is(.cp-corner-prompt > button, .cp-task-card > .cp-corner-listen) { top: 12px; left: 12px; }
@@ -175,10 +175,10 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-exercise-stage .cp-task-card:has(> .cp-model-content) { gap: 12px; }
 .learner-app .cp-exercise-stage .cp-model-content { gap: 8px; }
 .learner-app .cp-exercise-stage .cp-model-content:not(.cp-model-sentence) > strong { font-size: clamp(32px, 5vw, 56px); line-height: 1.2; }
-.learner-app .cp-exercise-stage .cp-model-content > img { width: min(330px, 100%, max(72px, calc(100cqh - 240px))); max-height: max(72px, calc(100cqh - 240px)); }
+.learner-app .cp-exercise-stage .cp-model-content > :is(img, .cp-word-placeholder) { width: min(330px, 100%, max(72px, calc(100cqh - 240px))); max-height: max(72px, calc(100cqh - 240px)); }
 @media (max-height: 740px) and (min-width: 600px) {
   .learner-app .cp-exercise-stage .cp-model-content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
-  .learner-app .cp-exercise-stage .cp-model-content > img { width: min(180px, 100%, max(72px, calc(100cqh - 100px))); max-height: max(72px, calc(100cqh - 100px)); }
+  .learner-app .cp-exercise-stage .cp-model-content > :is(img, .cp-word-placeholder) { width: min(180px, 100%, max(72px, calc(100cqh - 100px))); max-height: max(72px, calc(100cqh - 100px)); }
 }
 @media (max-width: 1100px) {
   /* Keep the display-choice row reserved when an activity has no sheet view. */
@@ -194,3 +194,5 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-choice-grid .cp-word-placeholder { width: min(100%, 240px, calc((100cqh - 52px) / 2)); max-height: 100%; }
 .learner-app .cp-match-board .cp-word-placeholder { width: min(100%, max(48px, calc((100cqh - 70px) / 3))); max-height: 100%; }
 .learner-app .cp-flash-card .cp-word-placeholder { width: 100%; height: 100%; font-size: clamp(18px, 3vw, 28px); }
+
+.learner-app .cp-sheet-item .cp-model-content > .cp-word-placeholder { width: min(180px, 100%); height: 180px; }
