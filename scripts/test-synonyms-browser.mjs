@@ -40,25 +40,25 @@ try {
   await page.locator('[data-chapter-page="words"]').waitFor();
   assert((await page.locator('.cp-chapter-collection').count()) > 0);
   checks.push('Woorden → Synoniemen opens the existing collection screen.');
-  for (const [level, expected] of [['a1', 30], ['a2', 85], ['b1', 210]]) {
+  for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 185]]) {
     await page.goto(base + '/' + chapterHash({ chapter: 'words', activity: 'synonyms', level, help: 'practice' }));
     await page.locator('.cp-chapter-collection').first().waitFor();
     assert.equal(await page.getByRole('button', { name: level.toUpperCase(), exact: true }).getAttribute('aria-pressed'), 'true');
     const ids = synonymCollections.filter(collection => collection.levels.includes(level)).map(collection => collection.id);
     while (await page.getByRole('button', { name: 'Meer opdrachten', exact: true }).count()) await page.getByRole('button', { name: 'Meer opdrachten', exact: true }).click();
     assert.deepEqual((await page.locator('[data-collection]').evaluateAll(nodes => nodes.map(node => node.dataset.collection))).sort(), ids.sort());
-    assert.equal(synonymBank.entries.filter(entry => entry.levels.includes(level)).length, expected);
+    assert.equal(synonymBank.entries.filter(entry => entry.active && entry.levels.includes(level)).length, expected);
   }
-  checks.push('A1/A2/B1 show the correct cumulative collections and counts: 30/85/210.');
+  checks.push('A1/A2/B1 show the correct cumulative collections and counts: 16/59/185.');
   for (const collection of synonymCollections) {
     await page.goto(base + '/' + location(collection));
     for (const [at, exercise] of collection.exercises.entries()) await answer(page, exercise, at === 0);
   }
-  checks.push('All 210 real questions: target word, four text choices, wrong/right feedback, manual next step, no media.');
+  checks.push('All 185 real questions: target word, four text choices, wrong/right feedback, manual next step, no media.');
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.savedWords.v1')));
   assert.deepEqual(saved, ['klink-woord-map']);
   const review = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.learning-review.v1')));
-  assert.equal(Object.keys(review).filter(id => id.startsWith('synonyms:recall:')).length, 210);
+  assert.equal(Object.keys(review).filter(id => id.startsWith('synonyms:recall:')).length, 185);
   const first = synonymCollections[0], firstExercise = first.exercises[0];
   await page.goto(base + '/' + chapterHash({ chapter: 'repeat', activity: 'learning-review', collection: first.id, level: 'a1', help: 'practice' }));
   await page.locator('.cp-synonym-word').waitFor();
@@ -79,7 +79,7 @@ try {
   for (const width of [390, 320]) {
     const small = await browser.newPage({ viewport: { width, height: 844 } });
     const length = entry => width === 390 ? entry.word.length : Math.max(...entry.options.map(option => option.length));
-    const longest = synonymBank.entries.toSorted((a, b) => length(b) - length(a))[0];
+    const longest = synonymBank.entries.filter(entry => entry.active).toSorted((a, b) => length(b) - length(a))[0];
     const collection = synonymCollections.find(collection => collection.exercises.some(exercise => exercise.exerciseId === question(longest)));
     await small.goto(base + '/' + location(collection));
     await small.locator('.cp-synonym-word').waitFor();
@@ -115,4 +115,4 @@ try {
   assert.deepEqual(errors, []);
 } finally { await second.close(); }
 await fs.writeFile(new URL('synonyms-browser-checks.json', out), JSON.stringify({ checks, errors }, null, 2));
-console.log(JSON.stringify({ passed: checks.length, questions: 210, engines: ['Chromium', 'WebKit'], checks }));
+console.log(JSON.stringify({ passed: checks.length, questions: 185, engines: ['Chromium', 'WebKit'], checks }));

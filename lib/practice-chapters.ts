@@ -1,7 +1,7 @@
 import { productionIndex, productionPack } from './production-practice.ts';
 import { chapterWordRounds, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
-import { synonymCollections, synonymActivities } from './synonyms.ts';
+import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -194,6 +194,7 @@ export function parseChapterHash(hash: string): ChapterLocation {
     const candidate = activity && findChapterCollection(activity, collection);
     // A level correction must not strand a bookmarked text, dialogue or linked task.
     if (candidate && activity && singleSourceActivities.has(activity) && level !== 'all') selection.level = candidate.level;
+    if (candidate && isSynonymPack(candidate.pack) && level !== 'all' && !candidate.levels?.includes(level)) selection.level = candidate.level;
     // Old direct links keep their exercise, with its existing support requirement visible.
     if (!selection.help && candidate) selection.help = candidate.help ?? exerciseSetHelp(candidate.exercises);
     if (!selection.help && activity) {

@@ -6,13 +6,13 @@ import { availableChapterCollections, chapterCollections, chapterExerciseChoices
 import { groupExercises } from '../lib/group-practice.ts';
 import { parseLearningReview, updateLearningReview } from '../lib/learning-review.ts';
 
-test('210 unique word-only questions have exactly one correct answer and traceable editorial sources', () => {
+test('210 archived source pairs and 185 active word-only questions have exactly one correct answer and traceable editorial sources', () => {
   assert.equal(synonymBank.entries.length, 210);
   assert.equal(new Set(synonymBank.entries.map(entry => entry.id)).size, 210);
   assert.equal(synonymBank.sourceReview.length, 43);
   assert.equal(synonymBank.entries.filter(entry => entry.source.kind === 'lexicon-pair').length, 32);
   const exercises = synonymCollections.flatMap(collection => collection.exercises);
-  assert.equal(exercises.length, 210);
+  assert.equal(exercises.length, 185);
   for (const entry of synonymBank.entries) {
     assert.equal(entry.options.length, 4);
     assert.equal(new Set(entry.options).size, 4);
@@ -40,7 +40,7 @@ test('210 unique word-only questions have exactly one correct answer and traceab
 
 test('A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes', () => {
   assert(practiceChapters.find(chapter => chapter.id === 'words').activities.includes('synonyms'));
-  for (const [level, expected] of [['a1', 30], ['a2', 85], ['b1', 210]]) {
+  for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 185]]) {
     const selected = availableChapterCollections('synonyms', { level, help: 'practice' });
     assert.equal(selected.flatMap(collection => collection.exercises).length, expected);
     for (const collection of selected) {
@@ -74,7 +74,7 @@ test('all pairs reverse, mix and turn without changing sources or counting a rev
   for (const entry of synonymBank.entries) for (const [a, b] of [[entry.word, entry.synonym], [entry.synonym, entry.word]]) alternatives.set(a, new Set([...(alternatives.get(a) ?? []), b]));
   for (const collection of synonymCollections) {
     const mixed = synonymExercises(collection.pack, 'synonyms', 2);
-    assert.notDeepEqual(mixed, collection.exercises);
+    if (mixed.length > 1) assert.notDeepEqual(mixed, collection.exercises);
     assert.deepEqual(mixed, synonymExercises(collection.pack, 'synonyms', 2), 'A restored seed preserves the exact order');
     assert.deepEqual(new Set(mixed.map(item => item.exerciseId)), new Set(collection.exercises.map(item => item.exerciseId)));
     for (const reverse of [false, true]) for (const activity of ['synonyms', 'cards', 'hear-match']) {
@@ -110,8 +110,8 @@ test('all pairs reverse, mix and turn without changing sources or counting a rev
     for (const choice of choices) assert.equal(choice.collection, collection.id, 'Switch mode in the same list');
   }
   assert.equal(JSON.stringify(synonymBank), before);
-  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match')).length, 210);
-  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match', 1, true)).length, 210);
+  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match')).length, 185);
+  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match', 1, true)).length, 185);
 });
 
 test('reverse and heard answers retain their exact repetition task; cards never enter the queue', () => {
@@ -129,4 +129,28 @@ test('reverse and heard answers retain their exact repetition task; cards never 
 test('corrupt saved mixing preferences fall back safely', () => {
   for (const raw of [null, '{', 'null', '[]', '{"seed":0,"reverse":false}', '{"seed":1.5,"reverse":true}', '{"seed":1,"reverse":"yes"}', '{"seed":4294967296,"reverse":false}']) assert.deepEqual(parseSynonymSettings(raw), { seed: 1, reverse: false });
   assert.deepEqual(parseSynonymSettings('{"seed":92,"reverse":true}'), { seed: 92, reverse: true });
+});
+
+test('meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels', () => {
+  const review = JSON.parse(readFileSync(new URL('../docs/synonyms-review-20261031/word-review.json', import.meta.url)));
+  assert.equal(review.rows.length, 210);
+  assert.equal(review.rows.filter(row => row.active).length, 185);
+  assert.equal(review.rows.filter(row => !row.active).length, 25);
+  assert.equal(review.rows.filter(row => row.originalLevel !== row.minimumLevel).length, 35);
+  for (const row of review.rows) {
+    const entry = synonymBank.entries.find(entry => entry.id === row.id);
+    assert(entry);
+    assert.equal(entry.active, row.active);
+    assert(row.sharedSense && row.reason && row.bothDirectionsReviewed && row.allFourOptionsReviewed);
+    assert.equal(synonymCollections.flatMap(collection => collection.exercises).filter(item => item.exerciseId === row.id).length, row.active ? 1 : 0);
+    if (!row.active) assert.deepEqual(synonymExercises({ exercises: [{ exerciseId: row.id }] }, 'synonyms'), []);
+  }
+  for (const word of ['gereed', 'dikwijls', 'angstig', 'vermoeid', 'geschenk', 'voltooien', 'riskant']) {
+    assert(!availableChapterCollections('synonyms', { level: 'a1', help: 'practice' }).flatMap(item => item.exercises).some(item => item.options.some(option => option.label === word)));
+  }
+  for (const collection of synonymCollections) {
+    assert.equal(new Set(collection.exercises.map(item => item.vocabularyLevels.join(','))).size, 1);
+    const oldLink = { chapter: 'words', activity: 'synonyms', collection: collection.id, level: 'a1', help: 'practice' };
+    assert.equal(parseChapterHash(chapterHash(oldLink)).collection, collection.id);
+  }
 });

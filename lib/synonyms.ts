@@ -10,7 +10,8 @@ import type { ContentLevel } from './content-levels';
 
 export const synonymBank = bank;
 export const synonymActivities = ['synonyms', 'cards', 'hear-match'] as const;
-const entriesById = new Map(bank.entries.map(entry => [entry.id, entry]));
+const activeEntries = bank.entries.filter(entry => entry.active);
+const entriesById = new Map(activeEntries.map(entry => [entry.id, entry]));
 const wordAudio = new Map(allPackageWords.filter(word => word.audio && word.audioStatus !== 'rejected' && !isWithdrawnAudio(word.audio)).map(word => [word.word.toLocaleLowerCase('nl'), word.audio!]));
 for (const entry of bank.entries) for (const word of [entry.word, entry.synonym]) {
   const key = word.toLocaleLowerCase('nl');
@@ -55,8 +56,8 @@ export function synonymExercises(pack: { exercises: PackageExercise[] }, activit
   return seed === 1 ? exercises : orderedChoices(exercises, seed);
 }
 const grouped = new Map<string, typeof bank.entries>();
-for (const entry of bank.entries) {
-  const key = `${entry.minimumLevel}:${entry.theme}`;
+for (const entry of activeEntries) {
+  const key = `${entry.collectionId}:${entry.minimumLevel}`;
   grouped.set(key, [...(grouped.get(key) ?? []), entry]);
 }
 
@@ -64,8 +65,10 @@ export const synonymCollections = [...grouped.values()].flatMap(entries => {
   const result = [];
   for (let start = 0; start < entries.length; start += 15) {
     const selected = entries.slice(start, start + 15), first = selected[0];
-    const id = `synonyms-${first.minimumLevel}-${first.theme.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${start / 15 + 1}`;
-    const title = entries.length > 15 ? `${first.theme} ${start / 15 + 1}` : first.theme;
+    // Keep published list IDs; split only the words that now require a higher level.
+    const firstLevel = ['a1', 'a2', 'b1'].find(level => activeEntries.some(entry => entry.collectionId === first.collectionId && entry.minimumLevel === level));
+    const id = first.collectionId + (first.minimumLevel === firstLevel ? '' : `-${first.minimumLevel}`);
+    const title = first.collectionTitle;
     const exercises: PackageExercise[] = selected.map(entry => ({
       exerciseId: entry.id, synonymPairId: entry.id, componentId: 'KLINK-EXTENDED', contractVersion: '1.0',
       mode: 'synonyms', groupActivity: 'synonyms', title: bank.instruction,
