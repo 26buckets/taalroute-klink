@@ -169,16 +169,29 @@ export function chapterHash(location: ChapterLocation = { level: 'all' }) {
   return `#learner/chapters${path ? `/${path}` : ''}${query.size ? `?${query}` : ''}`;
 }
 
+function collectionWordIds(collection: ChapterCollection) {
+  const rounds = chapterWordRounds(collection);
+  if (rounds[0]?.wordRound) return new Set(rounds.flatMap(item => item.wordRound!.wordIds));
+  const targets = collection.exercises.map(item => Array.isArray(item.targetWordIds) && item.targetWordIds.length ? item.targetWordIds as string[] : typeof item.wordId === 'string' ? [item.wordId] : []);
+  return targets.length && targets.every(ids => ids.length) ? new Set(targets.flat()) : undefined;
+}
+
 export function chapterExerciseChoices(location: ChapterLocation) {
   if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
   const source = selectedChapterCollection(location);
   const words = source?.wordRound?.wordIds;
   const sourceId = source?.wordRound?.sourceId ?? location.collection;
+  const wholeWords = source && !words && wordRoundActivities.has(location.activity) ? collectionWordIds(source) : undefined;
   return groupActivities.filter(activity => activity.id !== 'learning-review' && (!words || wordRoundActivities.has(activity.id))).flatMap(activity => {
     const candidates = chapterCollections(activity.id).filter(item => matchesChapterSelection(item, location));
     const collection = words
       ? [...candidates.filter(item => item.id === sourceId), ...candidates.filter(item => item.id !== sourceId)].find(item => selectChapterWords(item, words))
-      : candidates.find(item => item.id === sourceId);
+      : candidates.find(item => {
+        if (item.id !== sourceId) return false;
+        if (!wordRoundActivities.has(location.activity!) || activity.id === location.activity) return true;
+        const targetWords = collectionWordIds(item);
+        return wholeWords && targetWords && wholeWords.size === targetWords.size && [...wholeWords].every(id => targetWords.has(id));
+      });
     const chapters = practiceChapters.filter(chapter => chapter.activities.includes(activity.id));
     const chapter = chapters.find(chapter => chapter.id === location.chapter) ?? chapters[0];
     return collection && chapter ? [{ ...activity, chapter: chapter.id, collection: collection.id, ...(words ? { words } : {}) }] : [];

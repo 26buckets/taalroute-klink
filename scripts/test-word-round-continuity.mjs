@@ -51,6 +51,17 @@ for (const activity of wordRoundActivities) {
     }
   }
 }
+// Full historical links and large fixed word boards also never switch to a different pool.
+for (const activity of ['meet', 'word-sort', 'match']) for (const source of chapterCollections(activity).filter(c => c.exercises.length && !c.exercises.some(e => e.contextId || e.learningPathId))) {
+  const original = sorted(source.exercises.flatMap(e => e.targetWordIds?.length ? e.targetWordIds : e.wordId ? [e.wordId] : []));
+  const location = { chapter: practiceChapters.find(c => c.activities.includes(activity)).id, activity, collection: source.id, level: source.level, help: source.help };
+  const current = selectedChapterCollection(location);
+  if (current?.wordRound || !original.length) continue;
+  for (const choice of chapterExerciseChoices(location)) {
+    const destination = selectedChapterCollection({ ...location, chapter: choice.chapter, activity: choice.id, collection: choice.collection });
+    assert.deepEqual(sorted(destination.exercises.flatMap(e => e.targetWordIds?.length ? e.targetWordIds : [e.wordId])), original, 'Historical full links and fixed boards retain their entire original word set');
+  }
+}
 const base = { chapter: 'words', activity: 'meet', level: 'b1', help: 'practice' };
 const round = displayedChapterCollections('meet',base).find(c => c.wordRound);
 for (const invalid of [['unknown-word'], [''], Array(9).fill(round.wordRound.wordIds[0]), [round.wordRound.wordIds[0],round.wordRound.wordIds[0]]]) {
