@@ -58,3 +58,6 @@ Bewaar de bestaande opslag, oorspronkelijke antwoorden, voortgang en media. De a
 
 ## Publicatie Direct kiezen — Nico, 30 oktober 2026
 Nico vraagt expliciet: “Rond de volledige publicatiecontrole af en zet deze versie online in de echte Klink-app. Behoud alle inhoud, audio en voortgang en controleer daarna ook de bediening op mobiel.” Dit geeft de concrete Direct kiezen-versie vrij na de normale lokale controles, vanaf actuele canonieke main. Behoud ook de inmiddels gepubliceerde woordrondes, archieffoto’s en docentklanken. De vraag over een witte achtergrondkaart is een vergelijking en advies; behoud het huidige rustige lichtgroen in de publicatie. Geen nieuwe media of opslagomzetting.
+
+## B2 verbergen — Nico, 30 oktober 2026
+Nico vraagt: “De B2 knop mag je weghalen en verbergen. Behoud de ruimte ervoor wel.” Verberg uitsluitend deze knop, inclusief de toegankelijke naam, en reserveer dezelfde breedte en hoogte op desktop en mobiel. Laat de overige niveaus op hun plaats; geen B2-vrijgave of inhoudswijziging. Deze concrete correctie vervangt de eerdere zichtbare B2-aanduiding.

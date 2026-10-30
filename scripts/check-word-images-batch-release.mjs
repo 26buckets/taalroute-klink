@@ -1,3 +1,4 @@
+import {verifyHiddenB2Release,readBeforeHiddenB2} from './check-hidden-b2-release.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -27,11 +28,12 @@ export function verifyWordImagePreservation(read=readFileSync){
  return media;
 }
 export function verifyWordImagesBatchRelease(read=readFileSync){
+ const successor=verifyHiddenB2Release(read),currentRead=read;read=file=>readBeforeHiddenB2(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-word-images-batch-20261030.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.generateImages,false);assert(r.userRequest.includes('online'));assert.equal(r.ownerExcludedWord,'tandarts');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots))])].sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
  const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-direct-navigation-release.mjs','scripts/check-word-images-batch-release.mjs','scripts/test-word-images-batch-20261030.mjs','scripts/test-word-images-batch-browser-20261030.mjs'];
  assert(changed.every(f=>allowed.includes(f)||/^public\/package-media\/klink-beeldchat-20261030\/[a-z]+-[a-f0-9]{10}\.webp$/.test(f)||/^public\/practice-content\/klink-20261029\/beeldchat-[A-Za-z0-9_-]+\.json$/.test(f)));
@@ -39,6 +41,6 @@ export function verifyWordImagesBatchRelease(read=readFileSync){
  const media=verifyWordImagePreservation(read);assert.equal(media.baselineSourceCommit,r.baselineSourceCommit);assert.equal(sha(read(root+'media.json')),r.mediaSha256);
  const review=JSON.parse(read(root+'review.json'));for(const k of ['images','hands','content','answers','progress','browser','build','localOnly'])assert.equal(review[k],true,k);
  const backup=JSON.parse(read(root+'backup.json'));assert.equal(backup.verified,true);assert(backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
-export function readBeforeWordImagesBatch(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeWordImagesBatch(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeHiddenB2(file,r.successor,read);}

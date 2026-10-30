@@ -43,12 +43,17 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       assert.equal(await page.locator('[data-chapter]').count(), 12);
       assert.equal(await page.locator('.cp-direct-levels button:not(:disabled)').count(), 6);
       assert.equal(await page.locator('.cp-direct-levels select, .cp-direct-levels details').count(), 0);
-      assert(await page.getByRole('button', { name: 'B2 — nog niet beschikbaar', exact: true }).isDisabled());
+      assert.equal(await page.getByRole('button', { name: 'B2 — nog niet beschikbaar', exact: true }).count(), 0);
+      const reserved = page.locator('.cp-direct-levels button[aria-label="B2 — nog niet beschikbaar"]');
+      assert(await reserved.isHidden(), 'B2 is absent from the visible and accessible controls');
+      const space = await reserved.evaluate(el => { const r = el.getBoundingClientRect(); return { x: r.x, y: r.y, width: r.width, height: r.height }; });
+      const b1 = await page.getByRole('button', { name: 'B1', exact: true }).boundingBox();
+      assert(Math.abs(space.width - b1.width) < 1 && space.height === b1.height && space.y === b1.y && space.x >= b1.x + b1.width, 'B2 keeps its complete empty slot after B1');
       assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
       const first = await page.locator('[data-chapter]').first().boundingBox();
       const bottomNav = await nav.boundingBox();
       assert(first.y < bottomNav.y || width > 820, `First exercise is visible at ${width}x${height}`);
-      for (const button of await page.locator('.cp-direct-levels button, .cp-practice-modes button').all()) {
+      for (const button of await page.locator('.cp-direct-levels button:visible, .cp-practice-modes button').all()) {
         const box = await button.boundingBox();
         assert(box.height >= 47.5 && box.width >= 47.5, 'Level and mode targets are at least 48px');
       }
