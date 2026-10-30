@@ -1,3 +1,7 @@
+## 30 oktober 2026 — 29 bestaande archieffoto’s aanvullend online
+
+Canonieke main, livebron `3d72be4d35cf1c8a2ac9ed386a0198e3094d2ca9`, afstammeling van de vorige livebron `bd2f7f41d4329eb8e9c1bf876a7258cf935c8cc3`. Worker `20d8b454-749f-41e2-9007-09a1a8e6f050`. 29 bestaande beelden gekoppeld op 525 beeldplaatsen in 150 reeksen; 239 woordvakken blijven open met concrete zoek-/afkeurreden. Geen nieuwe generatie. Alle 59.532 oefenplaatsen, antwoorden, bestaande media, navigatie en voortgang behouden. 124 lokale én live plaatsings-/Fotobingocontroles in Chromium/WebKit desktop/mobiel geslaagd; 65 eerdere scènes en alle oefenvormen lokaal behouden. Alle 29 beelden, 150 oefenbestanden en overzicht online bytegelijk teruggelezen. Volledige Drive-back-up teruggedownload en SHA256-gecontroleerd: `1EoJ81dgGv38jgCFalNbdJoKa4yDZjY3N`. Zie `docs/archive-continuation-20261030/publication.json`, `live-check.json`, `live-browser.json`, `backup.json` en `decisions-per-word.json`. Deze bewijsregistratie is geen extra runtimepublicatie.
+
 ## Kijk en luister uitgebreid — 30 oktober 2026
 
 Actuele livebron: `d35aa052c97fd80a2c37e5ae11fc172db392db97`, branch `main`, Worker `6cb07fb2-2fc8-4600-9798-9b1c13af3b7b`. Publicatie via `npm run deploy`.
