@@ -1,3 +1,21 @@
+# Actuele KLINK-publicatie — compacte, gecontroleerde beelden, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `89fe121338c1c08ed7238dceaba794a953c7fec2`, schone canonieke main. Build `2026-10-30T12:23:26.924Z`. Worker `2d984bfd-9824-4792-b187-c0bca86104af`.
+
+32 nieuwe A2-scènes voor Kijk en luister en 20 door Nico goedgekeurde woordbeelden zijn gekoppeld. De woordbeelden horen bij 52 exacte typoefeningen en 100 plaatsingen. De extra Kijk en luister-reeks telt nu 42 beschikbare scènes van 544 uitgewerkte scènes. De overige beeldopdrachten blijven open. Vijf onderzochte scènes en twee woordbeelden zijn niet meegenomen wegens beeldfouten; zie het beeldcontroleprotocol.
+
+De 52 webbeelden zijn samen 1.553.432 bytes, maximaal 67.016 bytes per bestand. Proportioneel verkleind naar maximaal 768 px (scènes) of 512 px (woordbeelden), WebP kwaliteit 76. Originele beelden apart behouden. De bestaande interface, routes, inhoud, audio, antwoorden en voortgang zijn behouden. Bij gewijzigde beeldkoppelingen blijft de bestaande rondevoortgang gekoppeld aan de oorspronkelijke inhouds-URL. De al compacte nieuwe beelden worden rechtstreeks aangeboden, zonder onnodige extra beeldbewerking op de server.
+
+Lokaal: typen, gerichte lintcontrole, build, bron-/beeld- en opslagtests; alle 1.122 reeksen geopend; 336 beeldplaatsingen en 336 zinweergaven; 96 menugevallen; 50 integratiegevallen; tien bestaande voortgangsgevallen. Chromium en WebKit, desktop en mobiel. Volledige beelden, alle zichtbare handen en detailuitsneden beoordeeld, plus het werkelijk geplaatste formaat. De algemene lintcontrole meldt 299 bestaande fouten in 83 ongewijzigde historische scripts; de gewijzigde bestanden slagen voor lint. Geen fysieke telefoon- of cursistenpilot geclaimd.
+
+Online: 165 bestanden bytegelijk aan de gecontroleerde build, waaronder alle 52 beelden, 59 oefenbestanden, 32 opnamen en 21 JS/CSS-bestanden plus de release-marker. Alle 52 beelden in beide browsers geopend (104 plaatsingen); eerder afgeronde kaartjes blijven groen. De 32 werkelijke audiobestanden hebben ongewijzigde Taalroute-merkgegevens; de teruggelezen bestanden zijn opnieuw gecontroleerd.
+
+Register: `docs/klink-publication-images-20261030.json`. Vrijgave: `docs/klink-owner-release-images-20261030.json`. Bewijs: `docs/images-20261030/`. Bronback-up teruggelezen en bytegelijk: https://drive.google.com/file/d/1NAcvSyDYi-kWoQpIBl_WkAS6kK3nCRSd/view . Originele beelden en herstelgegevens: https://drive.google.com/file/d/1hpuav3TNOey-luj6b__yWtFRGxHTkNmh/view . Alle zware controles lokaal; geen GitHub-workflows of betaalde Actions-runs toegevoegd.
+
+Controleer vóór volgende publicatie https://klink.taalroute.nl/release.json. De registratiecommit na deze bron verandert de runtime niet. Publiceer uitsluitend een afstammeling van deze versie via de canonieke route.
+
+## Historie
+
 # Actuele KLINK-publicatie — leesbare zinnen en docentkaarten, 29 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `3be0062a2ddf42f9758a6dc15473f28cfb076591`, schone canonieke main. Build `2026-10-29T20:17:21.699Z`. Worker `e6698b16-f3ad-41e3-8a49-351704d7d85e`.
