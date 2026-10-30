@@ -1,0 +1,60 @@
+
+> taalroute-klink@0.1.0 check:publication
+> node scripts/check-curriculum-release.mjs
+
+✖ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (79.284833ms)
+✔ Former group 2 resumes at its actual exercise; first a steps remain small and consecutive (0.4955ms)
+✔ Approved navigation photos remain separate from every preserved word cover (3.302792ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 295.542459
+
+✖ failing tests:
+
+test at scripts/test-sections.mjs:42:6
+✖ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (79.284833ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '1db061b756d363ba705571d496f81fb7e77152c07bc1a5634ad9722ab65420e8'
+  - 'fff05ea209ea0bea59a413df8e6af074fba3e2cc3a0f4aa11cdbccc3b9dba1e9'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-long-content-20261030/scripts/test-sections.mjs:47:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '1db061b756d363ba705571d496f81fb7e77152c07bc1a5634ad9722ab65420e8',
+    expected: 'fff05ea209ea0bea59a413df8e6af074fba3e2cc3a0f4aa11cdbccc3b9dba1e9',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+node:internal/errors:998
+  const err = new Error(message);
+              ^
+
+Error: Command failed: /opt/homebrew/Cellar/node/26.4.0/bin/node --test scripts/test-sections.mjs
+    at genericNodeError (node:internal/errors:998:15)
+    at wrappedFn (node:internal/errors:543:14)
+    at checkExecSyncError (node:child_process:926:11)
+    at execFileSync (node:child_process:962:15)
+    at file:///private/tmp/klink-long-content-20261030/scripts/check-curriculum-release.mjs:991:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  status: 1,
+  signal: null,
+  output: [ null, null, null ],
+  pid: 42975,
+  stdout: null,
+  stderr: null
+}
+
+Node.js v26.4.0

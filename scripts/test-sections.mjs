@@ -1,3 +1,4 @@
+import {beforeLongReviewPackageExercise} from './check-long-review.mjs';
 import {beforeSentenceRevisionExercise} from './check-sentence-revision.mjs';
 import sourceDialogs from '../data/klink-connected-content.json' with {type:'json'};
 import {repairedDialogue,dialogueScene} from '../lib/dialogue-repair.ts';
@@ -44,7 +45,7 @@ void test('15 authoritative entrances preserve all 302 exact lessons and exercis
   assert.equal(sections.release.curriculumInputHash,curriculum.release.inputHash);
   assert.deepEqual(sections.sections.flatMap(s=>s.wordIds).sort(),curriculum.words.map(w=>w.id).sort());
   assert.equal(hash(packs.flatMap(p=>p.lessons)),before.lessons);
-  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeSentenceRevisionExercise).map(beforeDialogueRepair).map(beforeContentRepair)),before.exercises);
+  assert.equal(hash(packs.flatMap(p=>p.exercises).map(beforeDialogueRepair).map(beforeLongReviewPackageExercise).map(beforeSentenceRevisionExercise).map(beforeContentRepair)),before.exercises);
   assert.equal(packs.flatMap(p=>p.lessons).length,302);
   for(const [i,p] of packs.entries()) {
     const s=sections.sections[i];

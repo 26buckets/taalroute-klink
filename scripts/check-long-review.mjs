@@ -41,3 +41,10 @@ export function rowsBeforeLongReview(rows) {
  assert.equal(createHash('sha256').update(JSON.stringify(stable([...distinct.keys()].sort((a,b)=>a<b?-1:a>b?1:0).map(k=>distinct.get(k))))).digest('hex'),proof.beforeDistinctSha256);
  return restored;
 }
+
+const packageChanges=new Map(JSON.parse(gunzipSync(readFileSync('docs/long-content-review-20261030/package-amendments.json.gz'))).map(c=>[c.id,c]));
+export function beforeLongReviewPackageExercise(exercise){
+ const c=packageChanges.get(exercise.exerciseId);if(!c)return exercise;
+ assert.equal(createHash('sha256').update(JSON.stringify(exercise)).digest('hex'),c.afterSha256,exercise.exerciseId);
+ return c.before;
+}
