@@ -155,7 +155,8 @@ test('runtime sound manifest has isolated slots and rejects unsafe sources and f
     readFileSync('public/content/klink-docent-audio.json'),
   );
   assert.deepEqual(Object.keys(registry), ['m', 'a', 't']);
-  assert.deepEqual(parseSoundRegistry(registry), {});
+  assert.deepEqual(parseSoundRegistry(registry), registry);
+  for (const src of Object.values(registry)) assert(readFileSync('public' + src).length > 500);
   assert.deepEqual(
     parseSoundRegistry({
       m: '/klank-audio/docent/m.wav',

@@ -1416,10 +1416,8 @@ export function TeacherMaterials() {
       <details>
         <summary>Geluid controleren</summary>
         <p>
-          De losse klankopnamen worden later aangeleverd. Een kruisje betekent
-          dat deze opname ontbreekt of niet afspeelt. Doe de klank dan zelf
-          voor. De bestaande algemene klankopnamen worden niet stilzwijgend als
-          vervanging gekoppeld.
+          De losse klanken m, korte a en t zijn gekoppeld. Een kruisje betekent
+          dat een opname niet afspeelt. Probeer opnieuw of doe de klank zelf voor.
         </p>
         <SoundButtons audio={audio} />
         {wordAudio}
