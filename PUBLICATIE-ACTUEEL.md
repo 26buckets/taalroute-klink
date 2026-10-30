@@ -1,3 +1,17 @@
+# Actuele KLINK-publicatie — docentklanken en behouden beelden, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `407823f6f96fe51aac6534f6d5832a74d4b0874c`, schone canonieke main. Build `2026-10-30T18:07:26.752Z`. Worker `378093b5-af59-4802-af92-b3d1045f7cc3`.
+
+De docentles heeft nu m, korte a en t: bytegelijke kopieën van de al gepubliceerde losse klanken, samen 37.443 bytes. Remko is doeltaalstem; Roland blijft instructiestem. Geen nieuwe synthese. De geïsoleerde docentpaden, normale afspeelsnelheid, foutafhandeling en bestaande opslag blijven behouden. De nieuwe 56 beeldbestanden op 745 oefenplaatsen, 65 Kijk-en-luister-scènes, beide complete Fotobingo-kaarten en twaalf vaste categorieën zijn behouden.
+
+Lokaal: zes docenttests, typecontrole, gerichte lint, native afspelen en foutafhandeling in Chromium/WebKit op desktop/mobiel, build en volledige publicatiepoort geslaagd. Manipulatie van drie runtimebestanden wordt afgewezen. Online: register plus drie echte opnamen exact teruggelezen, Taalroute als artiest/albumartiest/uitgever bevestigd; 14 echte afspeel-/voortgangs-/herstelcontroles en acht complete Fotobingo-routes in beide browsers en schermmaten geslaagd. Geen extra GitHub Actions-workflows of betaalde cloudcontroles.
+
+Menselijke luistergoedkeuring voor t blijft open; m en korte a gebruiken goedgekeurde bronnen. Geen fysieke klasmonitor- of cursistenpilot. De overige beeldvoorraad blijft afzonderlijk open; 290 tijdelijke woordbeelden zijn geen vrijgegeven foto's. De leesbare resterende lijst bewaart bronbetekenissen en prompts en onderscheidt terughalen/controleren van nieuwe generatie.
+
+Bron, audio en controles op Drive, bytegelijk teruggelezen: https://drive.google.com/file/d/1eQXx37yT5BwK3WwJSm65GA4XSkBdQEvD/view . Beeld- en restvoorraadback-ups staan in de vorige registratie hieronder. Bewijs: docs/teacher-phonemes-20261030 en docs/klink-publication-teacher-phonemes-20261030.json. Uitsluitend actuele main en npm run deploy met behoud van de volledige publicatieketen.
+
+## Historie
+
 # Actuele KLINK-publicatie — gecontroleerde beeldkoppelingen, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `66ec3578ca1df93cf50c8578d137ddb6ade1ec97`, schone canonieke main, voortbouwend op live `12a22748`. Build `2026-10-30T18:01:25.749Z`. Worker `c355f579-b140-46c8-80c2-ab51e03fb162`.
