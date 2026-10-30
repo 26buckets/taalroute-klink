@@ -1,0 +1,18 @@
+
+> taalroute-klink@0.1.0 test:navigation
+> node --test scripts/test-practice-navigation.mjs && node scripts/test-unified-practice-navigation.mjs && node scripts/test-direct-navigation-browser.mjs && node scripts/test-alfa-c-menu-browser.mjs
+
+✔ navigation preferences validate input and retain both old route axes (0.616709ms)
+✔ Start restores the last selection while inner bookmarks keep their original scope (4.93375ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 2
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 222.283708
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+PASS Direct kiezen, visible level buttons, real sound card, original steps and preserved storage in both browsers and four sizes
+PASS 96 journeys: all levels share category/activity/list frame; 180 C block entries/returns; two browsers, three sizes, reload/history and legacy URLs.
