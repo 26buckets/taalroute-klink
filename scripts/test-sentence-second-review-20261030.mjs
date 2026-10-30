@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {readBeforeLongReview,rowsBeforeLongReview} from './check-long-review.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -11,7 +12,7 @@ const dir='docs/sentence-second-review-20261030/';
 const read=p=>JSON.parse(readFileSync(p));
 const decisions=read(dir+'decisions.json').decisions,clips=read(dir+'audio.json');
 const previous=JSON.parse(execFileSync('git',['show','152acc92:data/klink-connected-content.json'],{maxBuffer:128e6}));
-const bank=read('data/klink-connected-content.json');
+const bank=JSON.parse(readBeforeLongReview('data/klink-connected-content.json'));
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const stable=x=>Array.isArray(x)?x.map(stable):x&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,stable(x[k])])):x;
 const digest=x=>sha(JSON.stringify(stable(x)));
@@ -69,7 +70,7 @@ void test('All linked answer models and audio use the revised source; no previou
  assert(checked>80);
 });
 void test('Every previous exercise key survives; only the recorded linked fields and two new rich-person order tasks differ',()=>{
- const proof=read(dir+'runtime-amendments.json'),map=new Map(rows.map(r=>[key(r),structuredClone(r)]));
+ const proof=read(dir+'runtime-amendments.json'),map=new Map(rowsBeforeLongReview(rows).map(r=>[key(r),structuredClone(r)]));
  assert.equal(rows.length,proof.afterPlacements);assert.equal(map.size,proof.afterDistinct);assert.deepEqual(proof.removed,[]);assert.equal(proof.added.length,2);
  for(const a of proof.added){assert(a.key.includes('sentence-build:klink-sentence-ad0f734e2f5137d1'));assert.equal(digest(map.get(a.key)),a.sha256);map.delete(a.key);}
  for(const change of proof.changes){const e=map.get(change.key).exercise;for(const f of change.fields){if(!f.removed)assert.deepEqual(e[f.field],f.after,change.key+'/'+f.field);if(f.added)delete e[f.field];else e[f.field]=f.before;}}

@@ -175,6 +175,8 @@ export function parseChapterHash(hash: string): ChapterLocation {
     if (!chapter) return chapterId ? fallback : selection;
     const activity = chapter.activities.find(id => id === activityId);
     const candidate = activity && chapterCollections(activity).find(item => item.id === collection);
+    // A level correction must not strand a bookmarked text, dialogue or linked task.
+    if (candidate && activity && singleSourceActivities.has(activity) && level !== 'all') selection.level = candidate.level;
     // Old direct links keep their exercise, with its existing support requirement visible.
     if (!selection.help && candidate) selection.help = candidate.help ?? exerciseSetHelp(candidate.exercises);
     if (!selection.help && activity) {

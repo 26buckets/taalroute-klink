@@ -58,7 +58,8 @@ export function exerciseContentLevel(exercise: PackageExercise): ContentLevel {
   if (exercise.contextId) {
     const source = typeof exercise.contextId === 'string' ? contentById.get(exercise.contextId) : undefined;
     const ids = source?.kind === 'sentence' && Array.isArray(exercise.sourceContentIds) ? exercise.sourceContentIds : [];
-    const levels = [sourceContentLevel(source?.sourceLevel), ...ids.map(id => sourceContentLevel(contentById.get(String(id))?.sourceLevel))];
+    const levels = [sourceContentLevel(source?.sourceLevel), ...ids.map(id => sourceContentLevel(contentById.get(String(id))?.sourceLevel)),
+      ...(typeof exercise.activityLevel === 'string' ? [sourceContentLevel(exercise.activityLevel)] : [])];
     // The alternatives in a listening choice are part of its language demand too.
     return levels.includes('support') ? 'support' : levels.includes('b1') ? 'b1' : levels.includes('a2') ? 'a2' : 'a1';
   }

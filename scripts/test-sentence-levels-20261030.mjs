@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import bank from '../data/klink-connected-content.json' with { type: 'json' };
 import review from '../data/klink-sentence-levels.json' with { type: 'json' };
+import longReview from '../data/klink-long-content-levels.json' with { type: 'json' };
 import { contentById, contentReadingConditions } from '../lib/connected-content.ts';
 import { contentPackages } from '../lib/package-content.ts';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
@@ -25,7 +26,7 @@ void test('Every one of the 1292 source sentences has an exact-text editorial de
  assert.equal(review.items.filter(x=>x.status==='provisional').length,0);
  assert.equal(review.items.filter(x=>x.level==='A1').length,1225);
  assert.equal(review.items.filter(x=>x.level==='A2').length,67);
- for(const source of bank.items.filter(x=>x.kind!=='sentence'))assert.equal(contentById.get(source.id).sourceLevel,source.sourceLevel);
+ for(const source of bank.items.filter(x=>x.kind!=='sentence'))assert.equal(contentById.get(source.id).sourceLevel,longReview.items.find(r=>r.contentId===source.id).level);
 });
 
 void test('All linked sentence activities and distractors use the most demanding reviewed source level',()=>{

@@ -108,6 +108,7 @@ export function extendedExercises(pack: PackageDefinition, activity: ExtendedAct
       const task = writingByContent.get(item.id);
       if (!task) return [];
       return [{ ...common, assessment: 'participation', requiresExplicitCompletion: true, activityTypeId: activity === 'functional-form' ? 'PR-02' : 'SC-02',
+        activityLevel: task.level,
         writingTask: task, questionAudioNeedId: `${task.id}:prompt`, questionAudio: registered(`${task.id}:prompt`, task.prompt),
         formFields: activity === 'functional-form' ? [{ id: 'from', label: 'Van', options: task.speakers }, { id: 'message', label: 'Bericht' }] : undefined,
         objective: `${activity}:${item.id}:zelf-of-docentcontrole`,

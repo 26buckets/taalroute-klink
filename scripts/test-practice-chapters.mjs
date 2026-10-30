@@ -49,7 +49,8 @@ test('Source levels are honest, never inferred from matching words or a complete
       assert.equal(exercise.independentReading, false);
       const source = contentById.get(exercise.contextId);
       assert(source);
-      assert.equal(collection.level, /^a2(?:_|$)/i.test(source.sourceLevel) ? 'a2' : /^a1(?:_|$)/i.test(source.sourceLevel) ? 'a1' : 'support');
+      const levels = [source.sourceLevel, exercise.activityLevel].filter(Boolean);
+      assert.equal(collection.level, levels.some(level => /^a2(?:_|$)/i.test(level)) ? 'a2' : /^a1(?:_|$)/i.test(source.sourceLevel) ? 'a1' : 'support');
     }
   }
   assert.equal(chapterExerciseLevel({ exerciseId: 'unknown', componentId: '', contractVersion: '', mode: '' }), 'support');

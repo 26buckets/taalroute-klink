@@ -1,5 +1,6 @@
 // Test-only historical comparison; publication guards remain unchanged.
 import assert from 'node:assert/strict';
+import {readBeforeLongReview} from './check-long-review.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 const manifest=JSON.parse(readFileSync('docs/sentence-second-review-20261030/source-amendments.json'));
@@ -8,7 +9,7 @@ function original(file){
  if(!baseline.has(file))baseline.set(file,JSON.parse(execFileSync('git',['show',manifest.baseline+':'+file],{maxBuffer:128e6})));
  return baseline.get(file);
 }
-export function readBeforeSentenceRevision(file,read=readFileSync){
+export function readBeforeSentenceRevision(file,read=readBeforeLongReview){
  const changes=manifest.changes.filter(c=>c.path[0]===file);
  if(!changes.length)return read(file);
  const current=JSON.parse(read(file));

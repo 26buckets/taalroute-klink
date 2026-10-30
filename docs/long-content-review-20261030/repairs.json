@@ -1,0 +1,141 @@
+[
+  {
+    "ref": "T047",
+    "contentId": "klink-text-6ff3f843f74b03fb",
+    "field": "title",
+    "before": "Een andere ophaaltijd",
+    "after": "Wie haalt het kind op?",
+    "reason": "De oude titel suggereerde een verandering of gebeurtenis die niet in de bron staat."
+  },
+  {
+    "ref": "T095",
+    "contentId": "klink-text-a8b9597b8f47c58e",
+    "field": "title",
+    "before": "Rust voor het paard",
+    "after": "Het paard niet voeren",
+    "reason": "De oude titel suggereerde een verandering of gebeurtenis die niet in de bron staat."
+  },
+  {
+    "ref": "T103",
+    "contentId": "klink-text-57c78e5c980242e8",
+    "field": "title",
+    "before": "Dezelfde kleur",
+    "after": "Een kleur kiezen",
+    "reason": "De oude titel suggereerde een verandering of gebeurtenis die niet in de bron staat."
+  },
+  {
+    "ref": "D061",
+    "contentId": "klink-dialogue-70978655dc003faa",
+    "field": "title",
+    "before": "Te laat bij de start",
+    "after": "Naar de juiste startplek",
+    "reason": "De oude titel suggereerde een verandering of gebeurtenis die niet in de bron staat."
+  },
+  {
+    "ref": "D070",
+    "contentId": "klink-dialogue-75f2785869bbc8fe",
+    "field": "title",
+    "before": "De verkeerde kleur",
+    "after": "Verf voor de voordeur",
+    "reason": "De oude titel suggereerde een verandering of gebeurtenis die niet in de bron staat."
+  },
+  {
+    "ref": "T171",
+    "contentId": "klink-text-5141db4751ef9a9e",
+    "field": "discussion.question",
+    "before": "Wat zit er in het cadeau?",
+    "after": "Wat krijgt Said cadeau?",
+    "reason": "Het cadeau is een boek; de bron beschrijft geen verpakking met een inhoud."
+  },
+  {
+    "ref": "D116",
+    "contentId": "klink-dialogue-a66e29ad2ac03a25",
+    "field": "discussion.question",
+    "before": "Waar wacht Erik?",
+    "after": "Waar wil Erik opgehaald worden?",
+    "reason": "De bron noemt een gewenste ophaalplek; er staat niet dat Erik daar al wacht."
+  },
+  {
+    "ref": "D077",
+    "contentId": "klink-dialogue-1245d5918cafbdec",
+    "field": "discussion.distractors.0",
+    "before": "Vanavond om drie uur.",
+    "after": "Vanmiddag om drie uur.",
+    "reason": "Drie uur is geen tijdstip in de avond; ook een fout antwoord moet logisch Nederlands zijn."
+  },
+  {
+    "ref": "D056",
+    "contentId": "klink-dialogue-280b19696348dc34",
+    "field": "writingTask",
+    "before": {
+      "prompt": "Schrijf je afspraakgenoot dat het bezoek aan het schip ongeveer een half uur later begint.",
+      "example": "We kunnen het schip ongeveer een half uur later bekijken. Ik wacht bij de ingang.",
+      "criteria": [
+        "Je noemt het bezoek.",
+        "Je noemt ongeveer een half uur vertraging."
+      ]
+    },
+    "after": {
+      "prompt": "Schrijf je afspraakgenoot wanneer jullie het schip kunnen bekijken en waar je wacht.",
+      "example": "We kunnen het schip over ongeveer een half uur bekijken. Ik wacht bij de ingang.",
+      "criteria": [
+        "Je noemt over ongeveer een half uur.",
+        "Je noemt waar je wacht."
+      ]
+    },
+    "reason": "De bron noemt een wachttijd, maar geen vertraging ten opzichte van een geplande begintijd."
+  },
+  {
+    "ref": "D070",
+    "contentId": "klink-dialogue-75f2785869bbc8fe",
+    "field": "writingTask.example",
+    "before": "Ik zoek blauwe verf voor een voordeur buiten.",
+    "after": "Ik zoek blauwe buitenverf voor mijn voordeur.",
+    "reason": "Buitenverf benoemt het bedoelde product natuurlijker dan een voordeur buiten."
+  },
+  {
+    "ref": "T020",
+    "contentId": "klink-text-29e95a5e465eb800",
+    "field": "text",
+    "before": "Eerst houdt hij de foto op twee plekken.",
+    "after": "Eerst houdt hij de foto op de ene plek en daarna op de andere.",
+    "reason": "Maak duidelijk dat Minh twee plekken na elkaar probeert, niet tegelijk.",
+    "audio": "/package-audio/tekstherstel-20261030/t020.mp3"
+  },
+  {
+    "ref": "T042",
+    "contentId": "klink-text-35d05f3334c4670e",
+    "field": "text",
+    "before": "Zij wil er een plank in de kast van maken.",
+    "after": "Zij wil de plank in haar kast gebruiken.",
+    "reason": "Vervang de omslachtige, dubbelzinnige omschrijving door het bedoelde gebruik.",
+    "audio": "/package-audio/tekstherstel-20261030/t042.mp3"
+  },
+  {
+    "ref": "T121",
+    "contentId": "klink-text-7268d94ecaca4b04",
+    "field": "text",
+    "before": "Murat is haar vader.",
+    "after": "Murat is de vader van Rosa.",
+    "reason": "De bronvraag en de doorlopende familiegeschiedenis bevestigen dat Rosa wordt bedoeld.",
+    "audio": "/package-audio/tekstherstel-20261030/t121.mp3"
+  },
+  {
+    "ref": "T164",
+    "contentId": "klink-text-95015fe8cae423d0",
+    "field": "text",
+    "before": "Beide tassen zet ze bij de deur.",
+    "after": "De koffer en de rugzak zet ze bij de deur.",
+    "reason": "Noem de twee verschillende voorwerpen precies.",
+    "audio": "/package-audio/tekstherstel-20261030/t164.mp3"
+  },
+  {
+    "ref": "D119",
+    "contentId": "klink-dialogue-6478c1bf377fea9b",
+    "field": "text",
+    "before": "Dat ik om negen uur in lokaal drie moet zijn en mijn identiteitsbewijs meeneem.",
+    "after": "Dat ik om negen uur in lokaal drie moet zijn en mijn identiteitsbewijs moet meenemen.",
+    "reason": "Maak beide verplichtingen grammaticaal gelijkwaardig en expliciet.",
+    "audio": "/package-audio/tekstherstel-20261030/d119.mp3"
+  }
+]

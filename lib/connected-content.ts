@@ -3,16 +3,22 @@ import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
 import routing from '../data/klink-content-routing.json' with { type: 'json' };
 import sentenceLevels from '../data/klink-sentence-levels.json' with { type: 'json' };
+import longContentLevels from '../data/klink-long-content-levels.json' with { type: 'json' };
 import { repairedDialogue, dialogueScene } from './dialogue-repair.ts';
 import type { PackageExercise, PackageLesson } from './package-content';
 
 export type ConnectedContent = typeof bank.items[number];
 const canonicalItems = new Map(routing.items.map(item => [item.id, item]));
 export const sentenceLevelReviews = new Map(sentenceLevels.items.map(item => [item.contentId, item]));
+const reviewedLongContent = longContentLevels.items.filter(review => {
+  const source = bank.items.find(item => item.id === review.contentId);
+  return source?.text === review.text && JSON.stringify(source.discussion ?? null) === JSON.stringify(review.discussion);
+});
+const contentLevelReviews = new Map([...sentenceLevels.items, ...reviewedLongContent].map(item => [item.contentId, item]));
 export const connectedContent = bank.items.map(item => {
-  const review = sentenceLevelReviews.get(item.id);
+  const review = contentLevelReviews.get(item.id);
   return { ...repairedDialogue(item), wordIds: canonicalItems.get(item.id)!.wordIds,
-    // A revised sentence needs a new review before it can inherit this level.
+    // Changed language or comprehension questions require a fresh level review.
     sourceLevel: review?.text === item.text ? review.level : item.sourceLevel };
 });
 export const contentById = new Map(connectedContent.map(item => [item.id, item]));
@@ -29,7 +35,7 @@ export function contentForStep(step: Step) {
 }
 
 export function contentReadingConditions(item: ConnectedContent, step: Step) {
-  const review = sentenceLevelReviews.get(item.id);
+  const review = contentLevelReviews.get(item.id);
   const prepared = new Set([...(step.known ?? []), ...(step.newWords ?? []), ...(step.returning ?? [])]);
   const words = item.readingWordIds.map(id => wordsById.get(id)!);
   const meanings: Record<string, string | undefined> = item.reading.meaningOverrides ?? {};

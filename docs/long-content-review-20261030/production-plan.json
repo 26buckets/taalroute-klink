@@ -1,0 +1,82 @@
+{
+  "authorization": "Nico, 30 oktober 2026: Maak de vijf vervangende opnamen. Alleen deze vijf herstelopnamen; geen publicatieopdracht.",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "model": "eleven_v4",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "speed": 0.9
+  },
+  "clips": [
+    {
+      "id": "t020",
+      "contentId": "klink-text-29e95a5e465eb800",
+      "blockId": "klink-text-29e95a5e465eb800-1",
+      "title": "Een foto ophangen",
+      "before": "Eerst houdt hij de foto op twee plekken.",
+      "after": "Eerst houdt hij de foto op de ene plek en daarna op de andere.",
+      "reason": "Maak duidelijk dat Minh twee plekken na elkaar probeert, niet tegelijk.",
+      "text": "Minh hangt een foto aan de muur. Eerst houdt hij de foto op de ene plek en daarna op de andere. Hij kiest de plek boven de tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "target",
+      "originalSrc": "/package-audio/connected/974fa04866907a37cfc6.wav",
+      "audioId": "klink-opname-974fa04866907a37cfc6"
+    },
+    {
+      "id": "t042",
+      "contentId": "klink-text-35d05f3334c4670e",
+      "blockId": "klink-text-35d05f3334c4670e-1",
+      "title": "Een te korte plank",
+      "before": "Zij wil er een plank in de kast van maken.",
+      "after": "Zij wil de plank in haar kast gebruiken.",
+      "reason": "Vervang de omslachtige, dubbelzinnige omschrijving door het bedoelde gebruik.",
+      "text": "Amina meet een plank. Zij wil de plank in haar kast gebruiken. Deze plank is te kort. Ze zoekt een langere.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "target",
+      "originalSrc": "/package-audio/connected/600126dd9adc75253810.wav",
+      "audioId": "klink-opname-600126dd9adc75253810"
+    },
+    {
+      "id": "t121",
+      "contentId": "klink-text-7268d94ecaca4b04",
+      "blockId": "klink-text-7268d94ecaca4b04-1",
+      "title": "Aan tafel",
+      "before": "Murat is haar vader.",
+      "after": "Murat is de vader van Rosa.",
+      "reason": "De bronvraag en de doorlopende familiegeschiedenis bevestigen dat Rosa wordt bedoeld.",
+      "text": "Fenna is de oma van Rosa. Murat is de vader van Rosa. Zij zitten samen aan tafel.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "target",
+      "originalSrc": "/package-audio/connected/5df660a76cfda4fd87bf.wav",
+      "audioId": "klink-opname-5df660a76cfda4fd87bf"
+    },
+    {
+      "id": "t164",
+      "contentId": "klink-text-95015fe8cae423d0",
+      "blockId": "klink-text-95015fe8cae423d0-1",
+      "title": "De koffer klaarzetten",
+      "before": "Beide tassen zet ze bij de deur.",
+      "after": "De koffer en de rugzak zet ze bij de deur.",
+      "reason": "Noem de twee verschillende voorwerpen precies.",
+      "text": "Aisha vertrekt morgen vroeg. Zij pakt haar koffer vanavond in. Haar paspoort doet zij in haar rugzak. De koffer en de rugzak zet ze bij de deur.",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "target",
+      "originalSrc": "/package-audio/connected/d509149d61ce8d577ec1.wav",
+      "audioId": "klink-opname-d509149d61ce8d577ec1"
+    },
+    {
+      "id": "d119",
+      "contentId": "klink-dialogue-6478c1bf377fea9b",
+      "blockId": "klink-dialogue-6478c1bf377fea9b-3",
+      "title": "Het examen voorbereiden",
+      "before": "Dat ik om negen uur in lokaal drie moet zijn en mijn identiteitsbewijs meeneem.",
+      "after": "Dat ik om negen uur in lokaal drie moet zijn en mijn identiteitsbewijs moet meenemen.",
+      "reason": "Maak beide verplichtingen grammaticaal gelijkwaardig en expliciet.",
+      "text": "Dat ik om negen uur in lokaal drie moet zijn en mijn identiteitsbewijs moet meenemen.",
+      "voiceId": "jfwdd64Nlhnj6vcFqRHZ",
+      "role": "target",
+      "originalSrc": "/package-audio/dialogue-repair/klink-dialogue-6478c1bf377fea9b-3.mp3",
+      "audioId": "klink-dialogue-6478c1bf377fea9b-3:cast-v1"
+    }
+  ]
+}
