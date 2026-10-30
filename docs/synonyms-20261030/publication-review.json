@@ -30,6 +30,11 @@
   "alfaCEntriesReturns": 180,
   "productionCollections": 1462,
   "reactReview": "Existing helpers, stable keys, validated versioned storage, media cleanup/error handling, semantic buttons, aria-pressed, no new dependency; targeted checks pass.",
-  "historicalProofFixtureRepair": "Include transitive check modules in isolated fixtures; existing stubs and all original negative assertions retained.",
-  "publicationProofTests": "pending"
+  "historicalProofFixtureRepair": "Copy transitive check modules; apply the two conditional catalog/CSS mutations to the approved historical snapshots. All original negative assertions retained.",
+  "publicationProofTests": {
+    "unaffectedPassed": 48,
+    "repairedPassed": 2,
+    "repairedRerun": "Only the exact admitted catalog; Header sizing rejects extra CSS",
+    "fullSuiteRepeated": false
+  }
 }

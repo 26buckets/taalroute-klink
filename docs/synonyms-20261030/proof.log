@@ -1,0 +1,102 @@
+✔ Valid publication proof resolves provenance, not outstanding media approval (2531.474917ms)
+✔ New route approval rejects changed hashes and cannot drop the previous approval scope (3902.94625ms)
+✔ Cumulative approval requires every new source, review and verified backup binding (6293.894ms)
+✔ Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity (12934.60325ms)
+✖ Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected (2500.003708ms)
+✔ Proof for a different live version cannot satisfy the publication gate (2375.282542ms)
+✔ A boolean without its underlying publication record is rejected (2605.060583ms)
+✔ Missing fresh public client evidence is rejected (2637.396292ms)
+✔ A mismatching or dirty live release marker is rejected (7172.800875ms)
+✔ Incomplete media evidence or a missing source archive is rejected (10239.929709ms)
+✔ Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval (7493.374083ms)
+✔ Smaller header successor retains historical approval and permits only the exact approved dimensions (12619.791833ms)
+✖ Header sizing rejects extra CSS changes even when approval hashes match the source files (2072.579584ms)
+✔ Wordbuild publication requires exact consent, reviewed selection and verified source backup (11698.886583ms)
+✔ Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval (8677.604917ms)
+✔ Maintenance approval rejects an expanded scope, missing consent and altered source hashes (5866.659042ms)
+✔ Landing footer approval remains limited to the explicit request (5361.705667ms)
+✔ Sharing release cannot extend runtime scope or erase the previous maintenance approval (4120.310792ms)
+✔ Header repair retains the published sharing and content approval (4649.1435ms)
+✔ Compact exercise release requires exact consent, scope, source and verified backup (6520.448291ms)
+✔ KLINK menu addition cannot widen content scope or discard the approved header repair (3631.891292ms)
+✔ Collapsible exercise menu binds consent, unchanged content scope and verified backup (6990.743875ms)
+✔ Beginner release binds current live ancestry, exact scope and owner publication request (11034.1925ms)
+✔ In release preserves beginner scope and binds its publication and backup (7361.199125ms)
+✔ Consistent layout keeps the current beginners release, owner consent and exact source scope (6830.7325ms)
+✔ En release binds its scope, live ancestry and verified backup without weakening earlier approvals (8062.271959ms)
+✔ White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence (5643.11975ms)
+✔ Is release binds its scope, live ancestry and verified backup without weakening earlier approvals (8340.639792ms)
+✔ Kan release binds its scope, live ancestry and verified backup without weakening earlier approvals (8807.910125ms)
+✔ Kast release binds its scope, live ancestry and verified backup without weakening earlier approvals (8346.493667ms)
+✔ Mens release binds its scope, live ancestry and verified backup without weakening earlier approvals (7863.297167ms)
+✔ Nek release binds its scope, live ancestry and verified backup without weakening earlier approvals (8201.691208ms)
+✔ Overview workspace release binds the three exceptions to the latest lessons and verified backup (8154.51075ms)
+✔ Nek continuation requires scoped owner authorization, current ancestry and verified backup (7700.909541ms)
+✔ Kop/sok binds exact scope and preserves the full checked baseline with targeted regression (7003.785375ms)
+✔ Landing audiences release requires exact scope, owner request and verified backup (7864.331333ms)
+✔ Session stability requires current source, scoped authorization, stress proof and verified backup (6454.436042ms)
+✔ Grouped lesson guidance requires scoped counts, review and verified source backup (9472.821959ms)
+✔ Group five letter combinations requires scoped counts, review and verified source backup (9970.490916ms)
+✔ Matching card layout requires scoped approval and verified review/backup (7421.841458ms)
+✔ Group six letter combinations requires scoped counts, review and verified source backup (8990.381416ms)
+✔ Landing review preserves exact approved baseline, scope and review evidence (8564.765708ms)
+✔ Group seven letter combinations requires scoped counts, review and verified source backup (11648.555791ms)
+✔ Exercise frame changes require exact scope, review, predecessor and verified backup (7527.642708ms)
+✔ Klankenkaart publication requires exact live ancestry, owner instruction, scope and verified backup (10868.189167ms)
+✔ Group eight letter combinations requires scoped counts, review and verified source backup (11539.582458ms)
+✔ Article release requires meaning review, preserved previous scope and verified source backup (11050.841167ms)
+✔ Group nine letter combinations requires scoped counts, review and verified source backup (10951.245625ms)
+✔ Group ten letter combinations requires scoped counts, review and verified source backup (11247.303709ms)
+✔ Five follow-up groups requires scoped counts, review and verified source backup (12588.117583ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 48
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 397958.929625
+
+✖ failing tests:
+
+test at scripts/test-publication-proof.mjs:156:1
+✖ Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected (2500.003708ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(check(proof, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'))
+  
+      at TestContext.<anonymous> (file:///Users/nicoknoester/.cache/klink-synonyms-live-20261030/work/klink-publicatie/scripts/test-publication-proof.mjs:163:6)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/test-publication-proof.mjs:213:1
+✖ Header sizing rejects extra CSS changes even when approval hashes match the source files (2072.579584ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(check(proof, undefined, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'))
+  
+      at TestContext.<anonymous> (file:///Users/nicoknoester/.cache/klink-synonyms-live-20261030/work/klink-publicatie/scripts/test-publication-proof.mjs:218:6)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
