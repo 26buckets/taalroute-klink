@@ -19,6 +19,8 @@ const originalMedia = JSON.parse(readFileSync('docs/klink-wordaudio-publication-
 const audioChanges = new Map([['/package-audio/woorden-20261025/klink-woord-man.mp3', originalMedia['klink-woord-man'].audio]]);
 // Nico's online-writing request changes only this instruction recording in the preserved lesson payloads.
 audioChanges.set('/package-audio/alfa-c-online-20261029/KAC-ONLINE-db5e68a65d07.mp3', '/package-audio/instructions/schrijven.wav');
+// Nico's two word repairs retain all other exercise payloads.
+for (const clip of JSON.parse(readFileSync('docs/klink-owner-release-word-repairs-20261030.json')).clips) audioChanges.set(clip.src, clip.originalSrc);
 function beforeDialogueRepair(exercise) {
   if (exercise.mode !== 'connected-dialogue') return exercise;
   const source = sourceDialogs.items.find(item => item.id === exercise.contextId);

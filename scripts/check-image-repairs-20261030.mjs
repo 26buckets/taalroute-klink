@@ -10,13 +10,13 @@ export function verifyImageRepairs(read=readFileSync){
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);
  assert.equal(r.userRequest,'Zorg dat het online komt te staan. Blijft veel te lang offline staan. Direct publiceren.');
  assert.equal(r.sourceLocationCorrection,'Staat op de Google Drive.');
- assert.equal(r.baselineSourceCommit,'a3826557ca3af7c4935c0fd2969d9f8bbb2a8096');
+ assert.equal(r.baselineSourceCommit,'361c1d9da0f7a12514c326650d6660c3b8084cb8');
  assert.equal(r.liveSourceCommit,'89fe121338c1c08ed7238dceaba794a953c7fec2');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
  const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
- const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-image-release-20261030.mjs','scripts/check-image-repairs-20261030.mjs','scripts/test-image-repairs-20261030.mjs','scripts/test-image-repairs-browser-20261030.mjs','scripts/test-production-content.mjs','scripts/test-production-answers.mjs'];
+ const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-word-repairs-20261030.mjs','scripts/check-image-repairs-20261030.mjs','scripts/test-image-repairs-20261030.mjs','scripts/test-image-repairs-browser-20261030.mjs','scripts/test-production-content.mjs','scripts/test-production-answers.mjs'];
  assert(changed.every(f=>allowed.includes(f)||/^public\/package-media\/klink-beelden-20261030\/[a-z0-9_]+_nl\.webp$/.test(f)||/^public\/practice-content\/klink-20261029\/[a-zA-Z0-9_-]+\.json$/.test(f)));
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public').length,0,'Existing public files are immutable');
