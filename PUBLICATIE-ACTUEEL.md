@@ -1,3 +1,17 @@
+# Actuele KLINK-publicatie — herstelbeelden en woordaudio, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `6d19f7f5f262abcdf38c788ce7a0c5ab62df3244`, schone canonieke main. Build `2026-10-30T15:04:19.441Z`. Worker `ee026ac3-0789-46ac-ac5e-7af5ee8702a7`.
+
+Acht bestaande herstelbeelden zijn compact gekoppeld aan 22 oefenplaatsen, samen 276.046 bytes. Twee aanvullende scènes voor Kijk en luister; één bestaande scène en vijf woordbeelden vervangen. Er zijn nu 44 beschikbare Kijk-en-luister-scènes. De gelijktijdige audioherstellingen voor noot en mappen zijn behouden door samenvoeging met broncommit 361c1d9da0f7a12514c326650d6660c3b8084cb8. Geen nieuwe beelden gegenereerd.
+
+Volledige beelden en alle zichtbare handen met detailuitsneden gecontroleerd. Bestaande publieke bestanden, audio, antwoorden, routes en rondevoortgang behouden. Lokaal: typen, gerichte lintcontrole, build, behoud- en beveiligingscontroles, 1.123 reeksen, antwoordcontroles met 44 Kijk-en-luister-beelden, 96 menugevallen, 50 integratiegevallen, tien voortgangsgevallen en 52 gerichte beeldplaatsingen. Online: 52 bestanden bytegelijk, waaronder de acht beelden en beide audioherstellingen; 52 beeldplaatsingen in Chromium en WebKit op desktop en mobiel, met behoud van groene afgeronde kaarten.
+
+Niet meegenomen: KEL_A209_07, omdat de werkbladen naar de kijker gericht zijn; FBG-B1-12 wacht op een complete oefening. Dit is geen volledige publicatie van alle varianten uit keuzesbestand 9. Geen fysieke apparaat- of cursistenproef geclaimd.
+
+Beeldbronnen en herstelgegevens bytegelijk teruggelezen: https://drive.google.com/file/d/17vux2d22tCv0fCA0unGW1mgJN86c75xr/view . Register: `docs/klink-publication-image-repairs-20261030.json`; bewijs: `docs/image-repairs-20261030/`. Alle zware controles lokaal; geen GitHub Actions-workflows aanwezig of toegevoegd.
+
+## Historie
+
 # Actuele KLINK-publicatie — noot en mappen, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `361c1d9da0f7a12514c326650d6660c3b8084cb8`, schone canonieke main. Worker `6bf0d7a7-af26-46bf-b89b-dcfc543b8431`.
