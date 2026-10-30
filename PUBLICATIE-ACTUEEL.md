@@ -1,3 +1,17 @@
+# Actuele KLINK-publicatie — twaalf vaste oefenonderdelen, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `12a22748b38c1b1e437f02677bf88721847d0145`, schone canonieke main. Build `2026-10-30T17:33:48.217Z`. Worker `7cfa9d8f-0725-4f75-896a-471948b3472f`.
+
+Alle zes niveaus gebruiken dezelfde twaalf hoofdkaarten, in dezelfde volgorde, bij Zelf oefenen en Met je docent. Lege kaarten blijven zichtbaar. Alfa C: Woorden en zinnen onder Zinnen (3 blokken), Lezen en schrijven onder Schrijven (6), Berichten lezen onder Teksten (6). De 27 docentopdrachten blijven begeleid en staan onder de vijf passende bestaande categorieën. Alle 180 stappen, bestaande oefeningen, woordplaceholders, audio, routes en voortgang zijn behouden. Oefenaantallen en oefenoverzicht tellen de verplaatste inhoud mee. De handleiding volgt de nieuwe klikroutes.
+
+Lokaal geslaagd: types, gerichte lint, build, bron- en routechecks, 96 browserreizen met alle niveaus/standen in Chromium en WebKit op desktop/tablet/mobiel, 180 Alfa C-blokopeningen en terugwegen, alle docentgroepen, 50 integratielay-outs met oude voortgang, de twaalf gewone hoofdstukken en 18 bèta-oefenvlak/tellingchecks. Extra controle op 1920px en terugkeer met niveau Alles. De volledige publicatiepoort en gerichte manipulatiecontrole slagen. Geen nieuwe media, leerinhoud, opslagwijzigingen of zware cloudworkflows.
+
+Online: 48 menu-/tellingchecks (6 niveaus × 2 standen × 2 schermmaten × 2 browsers), bestaande Alfa C-lijsten en docentterugwegen, herladen en geen horizontale overflow. Alle 23 gebouwde JS/CSS-, overzicht- en releasebestanden bytegelijk teruggelezen. Een eerste online testrun bereikte een timeout tijdens het wachten op de volledige load-gebeurtenis; de herhaalde controle wacht expliciet op het zichtbare niveau en de oefenstand. Geen fysieke klasmonitor, cursistenpilot of nieuwe menselijke luisterreview.
+
+De bron-/herstelset is bytegelijk teruggelezen op Drive: https://drive.google.com/file/d/1c6v27c5ZJ7j3foRy_pEq3lWTnkuB99_e/view . Bewijs: docs/twelve-categories-20261030. De registratiecommit na deze bron verandert de runtime niet. Gebruik uitsluitend actuele main en npm run deploy; behoud de volledige opvolgerketen van publicatiecontroles.
+
+## Historie
+
 # Actuele KLINK-publicatie — woordafbeeldingen en oefenoverzicht, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `5c43d45f04bbe5bfa5fbffaa158a3e776e6ffd43`, schone canonieke main. Build `2026-10-30T17:03:06.311Z`. Worker `902a7fc3-ca30-4082-ad87-bca150fdd0e8`.

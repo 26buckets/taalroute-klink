@@ -1,0 +1,16 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.goto: Timeout 30000ms exceeded.
+Call log:
+[2m  - navigating to "https://klink.taalroute.nl/?menu-check=1793381792231#learner/chapters?level=alfa-b&help=guided", waiting until "load"[22m
+
+    at /private/tmp/klink-release-20261030/docs/twelve-categories-20261030/live-check.mjs:14:15 {
+  log: [
+    '  - navigating to "https://klink.taalroute.nl/?menu-check=1793381792231#learner/chapters?level=alfa-b&help=guided", waiting until "load"'
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0
