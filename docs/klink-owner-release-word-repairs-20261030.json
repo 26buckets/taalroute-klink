@@ -1,0 +1,88 @@
+{
+  "approvedBy": "Nico",
+  "publicationApproved": true,
+  "userRequest": "Voor de klinker up is het woordje 'noot' niet hard genoeg, niet luid genoeg. En 'mappen' is het Engelse woord van mappen. Dus die moeten aangepast worden in Eleven Labs.",
+  "baselineSourceCommit": "a3826557ca3af7c4935c0fd2969d9f8bbb2a8096",
+  "liveSourceCommit": "89fe121338c1c08ed7238dceaba794a953c7fec2",
+  "changedFiles": [
+    "data/klink-media.json",
+    "public/content-register/active.json",
+    "public/package-audio/woordherstel-20261030/noot.mp3",
+    "public/package-audio/woordherstel-20261030/mappen.mp3",
+    "scripts/check-image-release-20261030.mjs",
+    "scripts/check-word-repairs-20261030.mjs",
+    "scripts/test-word-repairs-20261030.mjs",
+    "public/content-register/planned.json",
+    "scripts/test-sections.mjs"
+  ],
+  "files": {
+    "data/klink-media.json": "9bdd7ad1a2091a2d765af895dbf12dafc84515a09ffd32898eb02783a7ce412f",
+    "public/content-register/active.json": "da36a2ece5a3d0e77394ad5a9635418ac5139cccd58cafcfa52231cd730a67a0",
+    "public/package-audio/woordherstel-20261030/noot.mp3": "1ba16daf215c5a8e3b05ffc558fa3bea5c9f8fcce605525823e4cf3043057b9c",
+    "public/package-audio/woordherstel-20261030/mappen.mp3": "e6af7bee7dbe1c684fa39b17bf379083cf52bbcc1715b8a554dc5102d6bac6fb",
+    "scripts/check-image-release-20261030.mjs": "8bcf2bdd258767eb72818b68ad8887c5d2c394cac3705db715f62df57ac2b6a7",
+    "scripts/check-word-repairs-20261030.mjs": "6f3f5d2cfbe0e6010c3db78a39d8528ac8e7049cb559a3fe942db5382c0a46ce",
+    "scripts/test-word-repairs-20261030.mjs": "7ecbe0bab8de8be695be29396be11acd312813ea66c6d66838bd17c39ebaf263",
+    "public/content-register/planned.json": "181198cda4e02d5afc8e72c7d368fd27752f2acd473ea6f349c5ecc84ac88e2d",
+    "scripts/test-sections.mjs": "334f3aa832e4e400c0c0ded8eca477f0d1cb4a5e89a569375e76e739b332f18e"
+  },
+  "clips": [
+    {
+      "word": "noot",
+      "src": "/package-audio/woordherstel-20261030/noot.mp3",
+      "originalSrc": "/package-audio/taalroute/klink-woord-noot.mp3",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "target",
+      "sha256": "1ba16daf215c5a8e3b05ffc558fa3bea5c9f8fcce605525823e4cf3043057b9c",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden",
+        "title": "noot",
+        "encoder": "Lavf62.12.102"
+      },
+      "transcript": "noot",
+      "transcriptEvidence": "Scribe v2 full Dutch source, last occurrence isolated using verified word timestamps plus margins",
+      "crop": {
+        "start": 1.6,
+        "end": 2.3
+      },
+      "gainDb": 3.545842171458915,
+      "activeRmsDb": -20.874674146819736,
+      "peak": 20700,
+      "metadataRemuxLossless": true,
+      "humanListening": false
+    },
+    {
+      "word": "mappen",
+      "src": "/package-audio/woordherstel-20261030/mappen.mp3",
+      "originalSrc": "/package-audio/taalroute/klink-woord-mappen.wav",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "role": "target",
+      "sha256": "e6af7bee7dbe1c684fa39b17bf379083cf52bbcc1715b8a554dc5102d6bac6fb",
+      "metadata": {
+        "artist": "Taalroute",
+        "album_artist": "Taalroute",
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden",
+        "title": "mappen",
+        "encoder": "Lavf62.12.102"
+      },
+      "transcript": "mappen",
+      "transcriptEvidence": "Scribe v2 full Dutch source, last occurrence isolated using verified word timestamps plus margins",
+      "crop": {
+        "start": 4.98,
+        "end": 5.66
+      },
+      "gainDb": 2.8119812895596965,
+      "activeRmsDb": -20.636279826176597,
+      "peak": 23264,
+      "metadataRemuxLossless": true,
+      "humanListening": false
+    }
+  ],
+  "ttsCredits": 29,
+  "ttsLimit": 100,
+  "humanListening": false
+}
