@@ -82,12 +82,13 @@ export function selectChapterWords(collection: ChapterCollection, wordIds: strin
   const selections = selectionCache.get(collection) ?? new Map<string, ChapterCollection | undefined>();
   if (selections.has(key)) return selections.get(key);
   const rounds = definitions(collection), wanted = new Set(wordIds);
+  if (!wanted.size || wanted.size > 8 || wanted.size !== wordIds.length || !wordIds.every(id => rounds.some(round => round.wordIds.includes(id)))) return undefined;
   const labels = new Map(rounds.flatMap(round => round.wordIds.map((id, i) => [id, round.wordLabels[i]] as const)));
   const tasks = rounds.flatMap(round => round.exerciseIds.map((id, i) => ({ id, words: round.targets?.[i] ?? [round.wordIds[i]] })));
   const selected = tasks.filter(task => task.words.every(id => wanted.has(id)));
   const covered = new Set(selected.flatMap(task => task.words));
   // Never replace missing words or split authored boards merely to offer another mode.
   const result = wanted.size && wanted.size <= 8 && covered.size === wanted.size ? selectedCollection(collection, { title: wordIds.slice(0, 2).map(id => labels.get(id)).join(' · '), wordIds, wordLabels: wordIds.map(id => labels.get(id)!), exerciseIds: selected.map(task => task.id), placeholderCount: 0 }, collection.id, tasks.map(task => task.id)) : undefined;
-  selections.set(key, result); selectionCache.set(collection, selections);
+  if (result) { selections.set(key, result); selectionCache.set(collection, selections); }
   return result;
 }
