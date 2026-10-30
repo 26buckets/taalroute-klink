@@ -449,7 +449,7 @@ export function PackageExerciseBrowser({
       <div className="cp-exercise-workspace">
         <div className="cp-exercise-main">
           <header className="cp-exercise-record-head">
-            {menu ? <ExerciseMenu value={menu.value} options={menu.options} onSelect={id => { if (exerciseMenu) exerciseMenu.onSelect(id); else if (guided) openPhase(id); else chooseFamily(id); }} onOpenChange={setExerciseMenuOpen} heading={exerciseHeading} controls={exerciseControls} /> : <>{exerciseHeading}{exerciseControls}</>}
+            {menu ? <ExerciseMenu scopeLabel={exerciseMenu?.scopeLabel} value={menu.value} options={menu.options} onSelect={id => { if (exerciseMenu) exerciseMenu.onSelect(id); else if (guided) openPhase(id); else chooseFamily(id); }} onOpenChange={setExerciseMenuOpen} heading={exerciseHeading} controls={exerciseControls} /> : <>{exerciseHeading}{exerciseControls}</>}
           </header>
 
           <div className="cp-exercise-stage" ref={exerciseStage}>

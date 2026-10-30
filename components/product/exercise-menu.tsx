@@ -5,11 +5,12 @@ import { Check, ChevronDown, type LucideIcon } from 'lucide-react';
 
 export type ExerciseMenuProps = {
   value: string;
+  scopeLabel?: string;
   options: { id: string; label: string; icon: LucideIcon }[];
   onSelect: (id: string) => void;
 };
 
-export function ExerciseMenu({ value, options, onSelect, heading, controls, onOpenChange }: ExerciseMenuProps & { heading?: ReactNode; controls?: ReactNode; onOpenChange?: (open: boolean) => void }) {
+export function ExerciseMenu({ value, options, onSelect, scopeLabel, heading, controls, onOpenChange }: ExerciseMenuProps & { heading?: ReactNode; controls?: ReactNode; onOpenChange?: (open: boolean) => void }) {
   const [open, updateOpen] = useState(false);
   function setOpen(next: boolean) { updateOpen(next); onOpenChange?.(next); }
   const id = useId();
@@ -27,7 +28,7 @@ export function ExerciseMenu({ value, options, onSelect, heading, controls, onOp
       <button onKeyDown={closeOnEscape} ref={trigger} type="button" className="secondary-button" aria-expanded={open} aria-controls={id} onClick={() => setOpen(!open)}>Andere oefening<ChevronDown aria-hidden="true" /></button>
       {controls}
     </div>
-    <fieldset id={id} className="cp-exercise-menu-options" hidden={!open}><legend className="sr-only">Beschikbare oefeningen</legend>
+    <fieldset id={id} className="cp-exercise-menu-options" hidden={!open}><legend className={scopeLabel ? undefined : "sr-only"}>{scopeLabel ?? 'Beschikbare oefeningen'}</legend>
       {options.map(option => {
         const OptionIcon = option.icon;
         return <button onKeyDown={closeOnEscape} key={option.id} type="button" data-exercise-choice={option.id} aria-pressed={option.id === value} onClick={() => {
