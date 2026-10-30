@@ -1,0 +1,1606 @@
+
+> taalroute-klink@0.1.0 dev
+> vinext dev --host 127.0.0.1 --port 18949
+
+[vinext] Tip: migrate from `vinext dev` to `vite dev`.
+(node:31579) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Default inspector port 9229 not available, using 9232 instead
+
+
+  VITE v8.3.4  ready in 2217 ms
+
+  ➜  Local:   http://127.0.0.1:18949/
+  ➜  Debug:   http://127.0.0.1:18949/__debug
+ GET / 200 in 3.9s (compile: 1793400419.1s, render: 3.9s)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:15 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 23ms (compile: 1793400419.1s, render: 12ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:20 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 21ms (compile: 1793400419.1s, render: 9ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:21 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+11:47:21 PM [vite] (rsc) hmr update /app/globals.css
+11:47:21 PM [vite] (client) hmr update /app/globals.css?direct
+ GET / 200 in 20ms (compile: 1793400419.1s, render: 8ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:23 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 15ms (compile: 1793400419.1s, render: 8ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:25 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 13ms (compile: 1793400419.1s, render: 7ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:27 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 18ms (compile: 1793400419.1s, render: 8ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:30 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 30ms (compile: 1793400419.1s, render: 13ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:32 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 27ms (compile: 1793400419.1s, render: 14ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:33 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 29ms (compile: 1793400419.1s, render: 15ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:35 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 21ms (compile: 1793400419.1s, render: 11ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:37 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 18ms (compile: 1793400419.1s, render: 11ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:41 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 17ms (compile: 1793400419.1s, render: 8ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+11:47:46 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 14ms (compile: 1793400419.1s, render: 7ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:48 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 14ms (compile: 1793400419.1s, render: 7ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+11:47:50 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 28ms (compile: 1793400419.1s, render: 16ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:52 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 14ms (compile: 1793400419.1s, render: 7ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:55 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 21ms (compile: 1793400419.1s, render: 12ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:57 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+11:47:58 PM [vite] (rsc) hmr update /app/globals.css
+11:47:58 PM [vite] (client) hmr update /app/globals.css?direct
+ GET / 200 in 171ms (compile: 1793400419.2s, render: 8ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:47:59 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 13ms (compile: 1793400419.1s, render: 7ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:48:01 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 13ms (compile: 1793400419.1s, render: 6ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:48:03 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+ GET / 200 in 15ms (compile: 1793400419.1s, render: 8ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+11:48:06 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+11:48:24 PM [vite] (rsc) hmr update /app/globals.css
+11:48:24 PM [vite] (client) hmr update /app/globals.css?direct
+11:48:24 PM [vite] (rsc) hmr update /app/globals.css
+11:48:24 PM [vite] (client) hmr update /app/globals.css?direct

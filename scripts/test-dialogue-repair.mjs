@@ -25,7 +25,7 @@ void test('128 complete voice repairs preserve source text, IDs, levels and all 
    const before=item.blocks[i],after=result.blocks[i],t=edited.turns[i];assert.equal(after.id,before.id);assert.equal(after.text,before.text);assert.deepEqual(after.originalAudio,before.audio);assert.equal(after.speaker,t.speaker);assert.equal(t.voiceId,cast.get(t.personId).voiceId);assert.notEqual(t.voiceId,'h6uBOiAjLKklte8hdYio');assert.equal(hash(readFileSync('public'+after.audio.src)),t.sha256);assert(t.metadataVerified&&t.audioPacketsUnchanged);assert.equal(t.metadata.artist,'Taalroute');
   }
  }
- const pilot=connectedContent.find(d=>d.id==='klink-dialogue-32f962399de8f4c3');assert.deepEqual(pilot.blocks.map(b=>b.speaker),['Sara','Daan','Sara','Daan']);
+ const pilot=connectedContent.find(d=>d.id==='klink-dialogue-32f962399de8f4c3');assert.deepEqual(pilot.blocks.map(b=>b.speaker),['Sara','Ali','Sara','Ali']);
 });
 void test('A changed source or a partially edited source fails before wrong audio can be shown',()=>{
  const pilot=structuredClone(source.items.find(d=>d.id==='klink-dialogue-32f962399de8f4c3'));pilot.blocks[0].text+=' changed';assert.throws(()=>repairedDialogue(pilot),/source mismatch/);

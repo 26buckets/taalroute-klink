@@ -27,7 +27,7 @@ void test('All 320 texts and dialogues have exact full-text and question reviews
   if(x.discussion){assert(x.text.includes(x.discussion.evidence));assert.equal(new Set([x.discussion.answer,...x.discussion.distractors]).size,3);}
  }
  assert.deepEqual(['text','dialogue'].map(k=>['A1','A2'].map(l=>review.items.filter(r=>r.kind===k&&r.level===l).length)),[[124,68],[74,54]]);
- assert.deepEqual(review.items.filter(r=>r.status==='provisional').map(r=>r.ref),['T153','T179']);
+ assert.deepEqual(review.items.filter(r=>r.status==='provisional').map(r=>r.ref),[]);
  assert.equal(writing.items.length,120);
 });
 void test('Every linked exercise uses the reviewed source and respects a harder writing task',()=>{

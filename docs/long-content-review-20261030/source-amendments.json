@@ -594,6 +594,106 @@
     },
     {
       "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1514,
+        "text"
+      ],
+      "before": "Er is geen kool meer in de winkel. Zal ik wortels meenemen? Ja, dat is goed. Neem ook een biet mee. Een biet en wortels. Hebben we verder alles? Ja, ik heb thuis al een grote pan.",
+      "after": "Er is geen kool meer in de winkel. Zal ik wortels meenemen? Ja, dat is goed. Ik neem een biet mee. Een biet en wortels. Hebben we verder alles? Ja, ik heb thuis al een grote pan."
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1514,
+        "blocks",
+        1,
+        "text"
+      ],
+      "before": "Ja, dat is goed. Neem ook een biet mee.",
+      "after": "Ja, dat is goed. Ik neem een biet mee."
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1514,
+        "blocks",
+        1,
+        "audio",
+        "src"
+      ],
+      "before": "/package-audio/connected/0945006b289d763a8084.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-2.mp3"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1514,
+        "blocks",
+        3,
+        "audio",
+        "src"
+      ],
+      "before": "/package-audio/connected/2d1c54987ea1dde8f32c.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-4.mp3"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1514,
+        "humanReview"
+      ],
+      "before": "approved",
+      "after": "open"
+    },
+    {
+      "path": [
+        "data/klink-connected-content.json",
+        "items",
+        1514,
+        "reading",
+        "outsideWordBank"
+      ],
+      "before": [
+        "er",
+        "geen",
+        "zal",
+        "wortels",
+        "meenemen",
+        "ja",
+        "dat",
+        "ook",
+        "hebben",
+        "we",
+        "verder",
+        "alles",
+        "thuis",
+        "al",
+        "grote"
+      ],
+      "after": [
+        "er",
+        "geen",
+        "zal",
+        "wortels",
+        "meenemen",
+        "ja",
+        "dat",
+        "hebben",
+        "we",
+        "verder",
+        "alles",
+        "thuis",
+        "al",
+        "grote"
+      ]
+    },
+    {
+      "path": [
         "data/klink-content-routing.json",
         "items",
         187,
@@ -641,6 +741,357 @@
       ],
       "before": "42db0e57eddc2ed7b17f49a756239cf4c440c36bb4d6b222e4a695c44b22e9da",
       "after": "19aea7c0dff1aa896c3e7a10cd96b4809c88611375d1b16ad952c0bf0a68d8af"
+    },
+    {
+      "path": [
+        "data/klink-content-routing.json",
+        "items",
+        1514,
+        "textHash"
+      ],
+      "before": "45cfdf85db0d64e6d828c7152c65a4d4be6486ca3e77a8689336cf1c01fe3c03",
+      "after": "0370dd16143282061beca44ba30a5e7574dd780e89c31419fbb37dd9a351558b"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "people",
+        1
+      ],
+      "before": "klink-persoon-daan",
+      "after": "klink-persoon-ali"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "text"
+      ],
+      "before": "Ja, dat is goed. Neem ook een biet mee.",
+      "after": "Ja, dat is goed. Ik neem een biet mee."
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "speaker"
+      ],
+      "before": "Daan",
+      "after": "Ali"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "personId"
+      ],
+      "before": "klink-persoon-daan",
+      "after": "klink-persoon-ali"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "voiceId"
+      ],
+      "before": "60CwgZt94Yf7yYIXMDDe",
+      "after": "Pk1wM1jtot5sJaptlRWQ"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "originalSrc"
+      ],
+      "before": "/package-audio/connected/0945006b289d763a8084.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-2.mp3"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "src"
+      ],
+      "before": "/package-audio/dialogue-repair/klink-dialogue-32f962399de8f4c3-2.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-2.mp3"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "requestId"
+      ],
+      "before": "QyVLOgUiJGiSfS0yXRtZ",
+      "after": "LORdJAAAEpCoem5NcDNV"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "historyItemId"
+      ],
+      "before": "t30fwA03fp3WFaK9EOhY",
+      "after": "6AInbFdUOVcYJJYj99tp"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "characterCost"
+      ],
+      "removed": true,
+      "before": "19"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "sha256"
+      ],
+      "before": "d93b59b0a5608f1878c3c4086de1897c561c4aa9372cf2cf475225fccbcc3c64",
+      "after": "95f0f1cce2b6018373422763c0a61964a52f3b710aa19d7237a5ec9539cfab83"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "originalSha256"
+      ],
+      "before": "8deb3babc5a2ba21ac6fef150ab67f29f0a0b6a95b871c3fb7ea8dd54a5a0ec0",
+      "after": "b20dbbac2d02c513ab7963bcc0f2deb4c569e16bbd03b458802347c44ada4856"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "metadata",
+        "album"
+      ],
+      "before": "Klink - Gesprekken",
+      "after": "Klink - Taalroute"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "metadata",
+        "title"
+      ],
+      "before": "Een ander ingrediënt - Daan - 2",
+      "after": "Ja, dat is goed. Ik neem een biet mee."
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        1,
+        "metadata",
+        "encoder"
+      ],
+      "added": true,
+      "after": "Lavf62.12.102"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "speaker"
+      ],
+      "before": "Daan",
+      "after": "Ali"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "personId"
+      ],
+      "before": "klink-persoon-daan",
+      "after": "klink-persoon-ali"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "voiceId"
+      ],
+      "before": "60CwgZt94Yf7yYIXMDDe",
+      "after": "Pk1wM1jtot5sJaptlRWQ"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "originalSrc"
+      ],
+      "before": "/package-audio/connected/2d1c54987ea1dde8f32c.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-4.mp3"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "src"
+      ],
+      "before": "/package-audio/dialogue-repair/klink-dialogue-32f962399de8f4c3-4.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-4.mp3"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "requestId"
+      ],
+      "before": "DXQW3IMUiTmZ1vckezm2",
+      "after": "OIESSPmWmYwplcTFBxYF"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "historyItemId"
+      ],
+      "before": "j9KzSSq782eaCEPBH4Nv",
+      "after": "0dsTR34lsfZB58V2AgkX"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "characterCost"
+      ],
+      "removed": true,
+      "before": "16"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "sha256"
+      ],
+      "before": "f1da7f41d2fb7f6b53c8361ecf914439f0d88c77322ce3435a665771e2b04d2b",
+      "after": "6a891ebc1289786618f3090334cac1418317b3d46db66685400fbfbb77f47150"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "originalSha256"
+      ],
+      "before": "2c0dca1cb7f3519139bc1844d1f98aea46ffa9a607fe576f40d3c6477524317a",
+      "after": "34c78744a88e38c2a527e2cddff33c2cedc637db3f0c3eebda9f8d59ddad6cb9"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "metadata",
+        "album"
+      ],
+      "before": "Klink - Gesprekken",
+      "after": "Klink - Taalroute"
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "metadata",
+        "title"
+      ],
+      "before": "Een ander ingrediënt - Daan - 4",
+      "after": "Ja, ik heb thuis al een grote pan."
+    },
+    {
+      "path": [
+        "data/klink-dialogue-repair.json",
+        "dialogues",
+        0,
+        "turns",
+        3,
+        "metadata",
+        "encoder"
+      ],
+      "added": true,
+      "after": "Lavf62.12.102"
     },
     {
       "path": [
@@ -1054,6 +1505,123 @@
       ],
       "before": "Schrijf je afspraakgenoot dat het bezoek aan het schip ongeveer een half uur later begint.",
       "after": "Schrijf je afspraakgenoot wanneer jullie het schip kunnen bekijken en waar je wacht."
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "review"
+      ],
+      "before": "Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.",
+      "after": "Goedgekeurde kookherstelkeuze; technische audiocontrole uitgevoerd, menselijke luisterreview open."
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "text"
+      ],
+      "before": "Ja, dat is goed. Neem ook een biet mee.",
+      "after": "Ja, dat is goed. Ik neem een biet mee."
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "src"
+      ],
+      "before": "/package-audio/dialogue-repair/klink-dialogue-32f962399de8f4c3-2.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-2.mp3"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "voiceId"
+      ],
+      "before": "60CwgZt94Yf7yYIXMDDe",
+      "after": "Pk1wM1jtot5sJaptlRWQ"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "personId"
+      ],
+      "before": "klink-persoon-daan",
+      "after": "klink-persoon-ali"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "originalSrc"
+      ],
+      "before": "/package-audio/connected/0945006b289d763a8084.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-2.mp3"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3074,
+        "note"
+      ],
+      "before": "Spreker: Daan. Vaste stemkoppeling.",
+      "after": "Spreker: Ali. Vaste stemkoppeling."
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3076,
+        "review"
+      ],
+      "before": "Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.",
+      "after": "Goedgekeurde kookherstelkeuze; technische audiocontrole uitgevoerd, menselijke luisterreview open."
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3076,
+        "src"
+      ],
+      "before": "/package-audio/dialogue-repair/klink-dialogue-32f962399de8f4c3-4.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-4.mp3"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3076,
+        "voiceId"
+      ],
+      "before": "60CwgZt94Yf7yYIXMDDe",
+      "after": "Pk1wM1jtot5sJaptlRWQ"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3076,
+        "personId"
+      ],
+      "before": "klink-persoon-daan",
+      "after": "klink-persoon-ali"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3076,
+        "originalSrc"
+      ],
+      "before": "/package-audio/connected/2d1c54987ea1dde8f32c.mp3",
+      "after": "/package-audio/kookherstel-20261030/d128-4.mp3"
+    },
+    {
+      "path": [
+        "public/content-register/active.json",
+        3076,
+        "note"
+      ],
+      "before": "Spreker: Daan. Vaste stemkoppeling.",
+      "after": "Spreker: Ali. Vaste stemkoppeling."
     },
     {
       "path": [

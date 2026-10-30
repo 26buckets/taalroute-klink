@@ -4,7 +4,7 @@ import {chromium,webkit} from 'playwright';
 import review from '../data/klink-long-content-levels.json' with {type:'json'};
 import {chapterCollections} from '../lib/practice-chapters.ts';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18949',dir='docs/long-content-review-20261030';
-const clips=JSON.parse(read(dir+'/audio.json')),checks=[],errors=[];
+const clips=[...JSON.parse(read(dir+'/audio.json')),...JSON.parse(read('docs/cooking-release-20261030/audio.json'))],checks=[],errors=[];
 const row=ref=>review.items.find(r=>r.ref===ref);
 const url=(chapter,activity,r,level=r.level.toLowerCase(),help='guided')=>`${base}/#learner/chapters/${chapter}/${activity}/${r.contentId}?level=${level}&help=${help}`;
 for(const [engine,type]of Object.entries({chromium,webkit})){
@@ -41,6 +41,18 @@ for(const [engine,type]of Object.entries({chromium,webkit})){
    assert.equal(await page.locator('.cp-dialogue-current p').innerText(),clips.find(c=>c.id==='d119').text);
    await page.getByRole('button',{name:'Luister naar deze beurt',exact:true}).click();await page.waitForFunction(()=>window.reviewPlayed.some(s=>s.endsWith('/tekstherstel-20261030/d119.mp3')));
    checks.push({engine,width:viewport.width,id:'D119',thirdTurnAndAudio:true});
+   await page.goto(url('speaking','dialogues',row('D128'),'a2','practice'));await page.locator('.cp-dialogue').waitFor();
+   await page.getByRole('button',{name:'Oefen per beurt',exact:true}).click();
+   while(await page.getByRole('button',{name:'Vorige spreekbeurt',exact:true}).isEnabled())await page.getByRole('button',{name:'Vorige spreekbeurt',exact:true}).click();
+   if(await page.getByRole('button',{name:'Meelezen',exact:true}).count())await page.getByRole('button',{name:'Meelezen',exact:true}).click();
+   for(let turn=1;turn<=4;turn++){
+    const panel=page.locator('.cp-dialogue-current');assert((await panel.innerText()).includes(turn%2?'Sara':'Ali'));
+    await page.getByRole('button',{name:'Luister naar deze beurt',exact:true}).click();
+    if(turn%2===0){const clip=clips.find(c=>c.id==='d128-'+turn);assert((await panel.innerText()).includes(clip.text));await page.waitForFunction(src=>window.reviewPlayed.some(p=>p.endsWith(src)),clip.src);}
+    checks.push({engine,width:viewport.width,id:'D128',turn,speakerAndNativeAudio:true});
+    if(turn<4)await page.getByRole('button',{name:'Volgende spreekbeurt',exact:true}).click();
+   }
+   for(const ref of ['T153','T179','T192']){await page.goto(url('texts','texts',row(ref),'a2','guided'));await page.locator('.cp-reading-blocks').waitFor();assert.equal(await page.locator('.cp-reading-blocks').innerText(),row(ref).text);checks.push({engine,width:viewport.width,ref,guidedA2:true});}
    for(const ref of ['T171','D116','D077']){
     const r=row(ref),isText=ref[0]==='T';await page.goto(url(isText?'texts':'practical',isText?'text-question':'dialogue-question',r));
     await page.getByText(r.discussion.question,{exact:true}).waitFor();
