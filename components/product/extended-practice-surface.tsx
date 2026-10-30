@@ -16,15 +16,19 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   if (exercise.standardTask) return <StandardPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
   if (exercise.mode === 'functional-message' || exercise.mode === 'functional-form') return <FunctionalWriting exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onAudio={onAudio} canAnswer={canAnswer} />;
   const correct = answer.correctOptionIds?.includes(selected);
-  return <section className="cp-task-card cp-extended-task">
+  const synonyms = exercise.mode === 'synonyms';
+  return <section className={`cp-task-card cp-extended-task${synonyms ? ' cp-synonyms-task' : ''}`}>
     {exercise.mode === 'sound-compare' ? <button className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar beide woorden</button> :
-      <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
+      synonyms ? exercise.prompt?.audio?.src ? <button className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar het woord</button> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
     {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
       setSelected(option.id);
-      onFinish(option.id, answer.correctOptionIds?.includes(option.id) === true,
-        answer.correctOptionIds?.includes(option.id) ? typeof exercise.evidence === 'string' ? `In de tekst: ${exercise.evidence}` : 'Goed. Kijk ook naar het voorbeeld.' : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.');
+      const isCorrect = answer.correctOptionIds?.includes(option.id) === true;
+      const feedback = synonyms ? String(isCorrect ? exercise.correctFeedback : exercise.feedback)
+        : isCorrect ? typeof exercise.evidence === 'string' ? `In de tekst: ${exercise.evidence}` : 'Goed. Kijk ook naar het voorbeeld.'
+        : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.';
+      onFinish(option.id, isCorrect, feedback);
     }}>{option.label}</button>{option.audio?.src && <button className="secondary-button" aria-label={`Luister: ${option.label}`} onClick={() => onAudio(option.audio?.src)}><Volume2 /></button>}</div>)}</div>
     {exercise.mode === 'verb-choice' && <><button className="secondary-button" onClick={() => { setHelp(!help); onHelp(); }}>Help</button>{help && <div className="cp-source-text"><p>{String(exercise.rule)}</p><p>{String(exercise.sourceModel)}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.modelAudio as ExerciseAudio).src)}><Volume2 />Luister</button>}</div>}</>}
     {typeof exercise.evidence === 'string' && <p className="cp-source-proof" aria-hidden={!correct} style={{ visibility: correct ? 'visible' : 'hidden' }}>{exercise.evidence}</p>}

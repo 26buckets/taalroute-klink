@@ -1,3 +1,13 @@
+## 30 oktober 2026 — Synoniemen met volledige woordaudio online
+
+Livebron `f5ec38d8be465ff8a4f56423f2bc54794ae7682a`, schone canonieke main; Worker `68a9dba8-b01e-4e99-a3b3-6ae0872633c4`. Gepubliceerd via `npm run deploy`, afstammeling van de nieuwste goedgekeurde zinnenpublicatie `16151ddeb6f3e01787111ebf11184a29c77db10a`. De 1.292 niveaugebonden zinnen, veertien herstelde opnamen, actuele navigatie, woordbeelden, verborgen B2 met gereserveerde ruimte en bestaande opslag zijn behouden.
+
+Woorden bekijken → Synoniemen: 210 woordparen, cumulatief A1 30 / A2 85 / B1 210. Vier tekstkaarten, draaikaart en Geluid en woord; omwisselen, mixen, fout/goede feedback en hervatten. Geen foto's in deze oefeningen. 68 ontbrekende woorden met de vaste Remko-stem opgenomen; alle 210 paren hebben geluid in beide richtingen. Geen nieuwe instructie-opnamen; Roland blijft instructiestem.
+
+Lokaal: types, gerichte lint, build, volledige publicatieketen, woordbank/oefenvormen, actuele zinnen en navigatie gecontroleerd. De historische negatieve proeven hebben 48 ongewijzigde geslaagde gevallen plus twee gericht herstelde en geslaagde fixtureproeven; afkeurasserties blijven behouden. Online: 136 echte afspeelcontroles, zeven oefenvormscenario's, actuele navigatie in twee browsers/vier maten en 189 bytegelijke bestanden, inclusief alle 68 nieuwe opnamen met ingebedde Taalroute-metagegevens. Alle 13.289 publieke bronbestanden in de uiteindelijke bouw bytegelijk; uitsluitingen van ingetrokken audio behouden. Menselijke luisterreview, onafhankelijke niveaucontrole en fysieke toestel-/klasproef blijven open.
+
+Bron en audio volledig van Drive teruggelezen en SHA256/ZIP-gecontroleerd: `16-6Z37u5IVibWoqD85rThHSBWeU8h_5e`. Online bewijs en het definitieve herstelpakket staan bij `docs/synonyms-20261030/`. Alle zware controles lokaal; geen GitHub Actions-workflows toegevoegd of uitgevoerd. De volgende publicatie moet deze actuele Synoniemen-bron behouden.
+
 ## 30 oktober 2026 — zinsniveaus en 14 herstelde opnamen gepubliceerd
 
 Livebron `16151ddeb6f3e01787111ebf11184a29c77db10a`, canonieke main; Worker `6e263de4-75ab-41fb-8131-a15bda215e37`. Gepubliceerd via `npm run deploy`, als afstammeling van livebron `b96c60d46bbb7609de7f1612e5d9ecfa391ea776`. De volledige historische publicatiepoort en de begrensde nieuwe zinnenvrijgave zijn geslaagd.

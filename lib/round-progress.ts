@@ -32,8 +32,9 @@ function read(id: string) {
   } catch { return fallback.get(id) ?? null; }
 }
 
-export function roundProgressCount(id: string, total: number) {
-  return parseRoundProgress(read(id), total).done.length;
+export function roundProgressCount(id: string, total: number, exerciseIds?: string[]) {
+  const done = parseRoundProgress(read(id), total).done;
+  return exerciseIds ? done.filter(item => exerciseIds.includes(item)).length : done.length;
 }
 
 // Keep completion separate from the current attempt, so practising again never erases it.

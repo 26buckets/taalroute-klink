@@ -543,6 +543,25 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 .cp-extended-option > button.selected { background: var(--primary-soft); border-color: var(--primary); box-shadow: 0 0 0 2px var(--primary); }
 .cp-source-text { background: var(--surface-soft, #f3f6f5); padding: 1rem; border-radius: 12px; text-align: left; line-height: 1.65; }
 .cp-source-text p { margin: .4rem 0; }
+.learner-app .cp-synonym-word {
+  padding: 24px 16px;
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 400;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.learner-app .cp-synonyms-task .cp-extended-option > button:first-child {
+  min-height: 80px;
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+.learner-app .cp-synonym-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-block: 12px; }
+.learner-app .cp-synonym-controls > output { flex-basis: 100%; font-size: 14px; }
 .cp-source-proof { border-left: 3px solid #48776c; padding: .75rem; text-align: left; }
 .cp-evidence-options { display: grid; gap: .75rem; width: 100%; }
 .cp-evidence-options button { min-height: 48px; padding: 1rem; text-align: left; border: 1px solid #cbd6d2; border-radius: 12px; background: white; line-height: 1.55; }

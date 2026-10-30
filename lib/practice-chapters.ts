@@ -1,5 +1,7 @@
 import { productionIndex, productionPack } from './production-practice.ts';
+import { chapterWordRounds, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
+import { synonymCollections, synonymActivities } from './synonyms.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -12,7 +14,7 @@ import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
 export const practiceChapters: { id: string; title: string; icon: typeof groupActivities[number]['icon']; activities: GroupActivity[] }[] = [
-  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards'] },
+  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards', 'synonyms'] },
   { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-path', 'sound-compare'] },
   { id: 'sentences', title: 'Zinnen', icon: 'book', activities: ['sentences', 'word-sentence', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'] },
   { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence', 'context-order'] },
@@ -30,7 +32,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string; wordRound?: WordRound & { sourceId: string; allExerciseIds: string[] } };
 export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -57,6 +59,15 @@ export function availableChapterCollections(activity: GroupActivity, selection: 
     .filter(item => item.exerciseCount || item.exercises.length);
 }
 
+export function displayedChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}) {
+  const collections = availableChapterCollections(activity, selection, review);
+  return activity === 'meet' ? collections.flatMap(chapterWordRounds) : collections;
+}
+
+function findChapterCollection(activity: GroupActivity, id?: string) {
+  return chapterCollections(activity).flatMap(item => activity === 'meet' ? [item, ...chapterWordRounds(item)] : [item]).find(item => item.id === id);
+}
+
 export function availableChapterActivities(chapter: string, selection: ChapterLocation, review: LearningReview = {}) {
   return practiceChapters.find(item => item.id === chapter)?.activities.filter(id => availableChapterCollections(id, selection, review).length) ?? [];
 }
@@ -77,6 +88,7 @@ export function chapterExerciseCount(chapter: string, selection: ChapterLocation
 }
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
+  if (activity === 'synonyms') return synonymCollections;
   if (activity.startsWith('content-')) {
     const existing = cache.get(activity);
     if (existing) return existing;
@@ -132,6 +144,10 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     }
   }
   result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined })));
+  if (activity === 'learning-review' || synonymActivities.some(id => id === activity)) result.push(...synonymCollections.flatMap(collection => {
+    const exercises = groupExercises(collection.pack, activity);
+    return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
+  }));
   cache.set(activity, result);
   return result;
 }
@@ -147,8 +163,9 @@ export function chapterHash(location: ChapterLocation = { level: 'all' }) {
 export function chapterExerciseChoices(location: ChapterLocation) {
   if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
   // Only switch within the exact existing collection and its selected level/help filters.
+  const sourceId = findChapterCollection(location.activity, location.collection)?.wordRound?.sourceId ?? location.collection;
   return groupActivities.filter(activity => activity.id !== 'learning-review').flatMap(activity => {
-    const collection = chapterCollections(activity.id).find(item => item.id === location.collection && matchesChapterSelection(item, location));
+    const collection = chapterCollections(activity.id).find(item => item.id === sourceId && matchesChapterSelection(item, location));
     const chapters = practiceChapters.filter(chapter => chapter.activities.includes(activity.id));
     const chapter = chapters.find(chapter => chapter.id === location.chapter) ?? chapters[0];
     return collection && chapter ? [{ ...activity, chapter: chapter.id, collection: collection.id }] : [];
@@ -174,7 +191,7 @@ export function parseChapterHash(hash: string): ChapterLocation {
     }
     if (!chapter) return chapterId ? fallback : selection;
     const activity = chapter.activities.find(id => id === activityId);
-    const candidate = activity && chapterCollections(activity).find(item => item.id === collection);
+    const candidate = activity && findChapterCollection(activity, collection);
     // A level correction must not strand a bookmarked text, dialogue or linked task.
     if (candidate && activity && singleSourceActivities.has(activity) && level !== 'all') selection.level = candidate.level;
     // Old direct links keep their exercise, with its existing support requirement visible.

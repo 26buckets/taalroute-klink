@@ -43,6 +43,8 @@ Op Start kies je direct een van de twaalf oefenonderdelen. Kies bovenaan Zelf oe
 
 Open op Start Zo oefen je voor de zes oorspronkelijke stappen: Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Tik op een stap om de uitlegvideo te bekijken. Binnen Oefenen met deze woorden zijn de stappen knoppen; het witte cijfer in het donkere rondje laat de gekozen stap zien, niet een behaald resultaat. Grijs betekent dat er bij deze keuze nog geen passend aanbod is.
 
+Bij Kijk en luister zijn de woordgroepen verdeeld in rondes van maximaal acht woorden. De kaart noemt de eerste woorden van die ronde en gebruikt de bijbehorende woordfoto als die beschikbaar is. De teller vermeldt woorden. Een niveaukeuze kan minder woorden opleveren; de titel volgt dan de werkelijke selectie. Situatieopdrachten blijven als complete oefeningen staan. Eerder afgeronde woorden blijven afgerond, ook over meerdere korte rondes. Oude deellinks en oefenposities blijven bruikbaar.
+
 In de docentomgeving bij Overzicht staat Van woordbeeld naar situatie. De vijf blokken Woordbeeld, Beelden kiezen, Situatie, Beeldvraag en Praktijkbeeld openen elk hun voorbeeld eronder. Je ziet de bestaande mapfoto, twee bekende beelden, het leslokaal en een gemaakt meeneemlijstje. Per voorbeeld staat wat je doet, waarop je let en wat je eerst voorbereidt. Het is docentuitleg, geen nieuwe cursistreeks of niveauladder. Een beeldvraag is niet hetzelfde als een beeldverhaal.
 
 ### Eén kleine leesstap

@@ -212,7 +212,7 @@ export function PackageExerciseBrowser({
   const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;
   const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);
   async function listen(source?: string, automaticStart = false, singleTurn?: number) {
-    if ((exercise?.readingTask || exercise?.componentId === 'KLINK-EXTENDED' || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
+    if ((exercise?.readingTask || (exercise?.componentId === 'KLINK-EXTENDED' && !(exercise.synonymPairId && source === stimulus)) || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;
     if (!automaticStart && result === 'right') setHoldFeedback(true);
     const id = exercise?.exerciseId;
     playback.current?.abort();
@@ -291,13 +291,14 @@ export function PackageExerciseBrowser({
     metrics.current = { started: Date.now(), attempts: 0, helpUsed: false, plays: 0 };
     taskHeading.current?.focus({ preventScroll: true });
     exerciseStage.current?.scrollTo({ top: 0 });
+    if (exercise?.synonymPairId) document.querySelector('.learner-main')?.scrollTo({ top: 0 });
     const tiles = exerciseStage.current?.querySelector<HTMLElement>('.cp-tile-bank');
     if (guided && tiles && exerciseStage.current && tiles.getBoundingClientRect().bottom > exerciseStage.current.getBoundingClientRect().bottom) {
       tiles.scrollIntoView({ block: 'nearest', inline: 'nearest' });
     }
     const timer = window.setTimeout(() => { setActiveTurn(0); setCompletedDialoguePlays(0); beginAudio(); }, 0);
     return () => { window.clearTimeout(timer); currentId.current = ''; playback.current?.abort(); stopMedia(); };
-  }, [exerciseId, guided]);
+  }, [exerciseId, guided, exercise?.synonymPairId]);
 
   function chooseFamily(nextFamilyId: string) {
     if (guided) return;
@@ -362,6 +363,7 @@ export function PackageExerciseBrowser({
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
+      ...(exercise.synonymPairId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
       ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
@@ -993,7 +995,7 @@ function ListenGameSurface({ exercise, onAudio, onFinish }: SurfaceProps) {
 }
 
 function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {
-  const cards = asArray<{ cardId: string; front?: { image?: ExerciseImage }; back?: { text?: string }; audio?: unknown }>(exercise.cards);
+  const cards = asArray<{ cardId: string; front?: { image?: ExerciseImage; text?: string }; back?: { text?: string }; audio?: unknown }>(exercise.cards);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const card = cards[index];
@@ -1003,7 +1005,7 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
   const phrase = wordWithArticle(pack.words.find(word => word.id === card?.cardId && word.word === backText) ?? pack.words.find(word => word.image && word.image === card?.front?.image?.src && word.word === backText));
   return <section className="cp-task-card">
     {source && <button className="secondary-button cp-corner-listen" aria-label="Luister naar het woord" onClick={() => onAudio(source)}><Volume2 />Luister</button>}
-    {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}>{flipped ? <strong>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong> : <ExerciseImageView image={card.front?.image} />}</button>}
+    {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={card.front?.text ? flipped ? 'Toon het eerste woord' : 'Toon het synoniem' : flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}>{flipped ? <strong>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong> : card.front?.text ? <strong>{card.front.text}</strong> : <ExerciseImageView image={card.front?.image} />}</button>}
     <span className="cp-card-hint">Tik op de kaart.</span>
     <div className="cp-task-actions">
       {cards.length > 1 && <><button className="secondary-button" disabled={index === 0} onClick={() => { setIndex(index - 1); setFlipped(false); }}><ArrowLeft />Vorige</button><button className="primary-button" onClick={() => { if (index >= cards.length - 1) onFinish('kaartenset afgerond', true); else { setIndex(index + 1); setFlipped(false); } }}>{index >= cards.length - 1 ? 'Klaar' : 'Verder'}<ArrowRight /></button></>}
