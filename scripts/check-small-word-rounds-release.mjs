@@ -10,11 +10,11 @@ export function verifySmallWordRoundsRelease(read = readFileSync) {
   assert.equal(r.approvedBy, 'Nico');
   assert.equal(r.userRequest, 'ik volg je advies');
   assert.equal(r.publicationApproved, true);
-  assert.equal(r.baselineSourceCommit, 'b96c60d46bbb7609de7f1612e5d9ecfa391ea776');
+  assert.equal(r.baselineSourceCommit, '16151ddeb6f3e01787111ebf11184a29c77db10a');
   git('merge-base', '--is-ancestor', r.baselineSourceCommit, 'HEAD');
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts', 'db', 'drizzle', '.github', 'AGENTS.md', 'PUBLICATIE.md', 'docs/KLINK-DOCENTHANDLEIDING.md', 'vite.config.ts', 'package.json', 'package-lock.json', 'wrangler.jsonc'];
   const changed = [...new Set([...lines(git('diff', '--name-only', r.baselineSourceCommit, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort((a, b) => a.localeCompare(b));
-  const expected = ['AGENTS.md', 'components/product/package-group-practice.tsx', 'components/product/practice-chapters.tsx', 'components/product/production-round.tsx', 'data/klink-word-round-index.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/practice-chapters.ts', 'lib/round-progress.ts', 'lib/word-rounds.ts', 'scripts/build-word-round-index.mjs', 'scripts/check-hidden-b2-release.mjs', 'scripts/check-small-word-rounds-release.mjs', 'scripts/test-word-rounds.mjs', 'scripts/test-word-rounds-browser.mjs'].sort((a, b) => a.localeCompare(b));
+  const expected = ['AGENTS.md', 'components/product/package-group-practice.tsx', 'components/product/practice-chapters.tsx', 'components/product/production-round.tsx', 'data/klink-word-round-index.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/practice-chapters.ts', 'lib/round-progress.ts', 'lib/word-rounds.ts', 'scripts/build-word-round-index.mjs', 'scripts/check-sentence-release.mjs', 'scripts/check-small-word-rounds-release.mjs', 'scripts/test-word-rounds.mjs', 'scripts/test-word-rounds-browser.mjs'].sort((a, b) => a.localeCompare(b));
   assert.deepEqual(changed, expected);
   assert.deepEqual([...r.changedFiles].sort((a, b) => a.localeCompare(b)), expected);
   for (const file of changed) assert.equal(sha(read(file)), r.files[file], file);
