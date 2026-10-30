@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-10-30T22:07:30.609030+00:00",
+  "sourceCommit": "5a328deadc58b416ef7167c44dbb93f836d51d1a",
+  "buildSourceCommit": "1ad9b68c9f62e74fb8c33af85d23a0af32e21ca0",
+  "baselineSourceCommit": "16151ddeb6f3e01787111ebf11184a29c77db10a",
+  "wordContent": true,
+  "progress": true,
+  "legacyLinks": true,
+  "audio": true,
+  "navigation": true,
+  "mobile": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "wordSources": 68,
+  "wordRounds": 161,
+  "originalWordTasks": 1019,
+  "browser": {
+    "base": "http://127.0.0.1:18971",
+    "checks": [
+      {
+        "engine": "chromium",
+        "opened": 161,
+        "widths": 4,
+        "levels": 6,
+        "metadata": true,
+        "lazyOverview": true,
+        "backAndFocus": true
+      },
+      {
+        "engine": "chromium",
+        "nativeWordAudio": true,
+        "legacyPosition": true,
+        "legacyLink": true,
+        "sharedCompletion": true,
+        "reload": true,
+        "replay": true,
+        "oldStorageRetained": true
+      },
+      {
+        "engine": "webkit",
+        "opened": 161,
+        "widths": 4,
+        "levels": 6,
+        "metadata": true,
+        "lazyOverview": true,
+        "backAndFocus": true
+      },
+      {
+        "engine": "webkit",
+        "nativeWordAudio": true,
+        "legacyPosition": true,
+        "legacyLink": true,
+        "sharedCompletion": true,
+        "reload": true,
+        "replay": true,
+        "oldStorageRetained": true
+      }
+    ],
+    "errors": [],
+    "physicalDevice": false
+  },
+  "menuJourneys": 96,
+  "alfaCBlockEntriesAndReturns": 180,
+  "integrationCases": 50,
+  "preservation": "All original tasks and order, published sentence repairs, images, audio and levels retained. No old storage migration; short rounds use the original full completion record and preserve the original resume key.",
+  "reactReview": "Stable cached collection references, existing validated lazy loader and cancellation/error handling retained, no new dependencies, keyboard focus and responsive cards checked.",
+  "limitations": [
+    "No physical device or learner pilot.",
+    "Local built-worker preview exited before becoming ready; final local browsers used the development server. Production build passed; live checks are required after the normal deployment."
+  ]
+}
