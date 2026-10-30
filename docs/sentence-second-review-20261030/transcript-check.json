@@ -1,0 +1,132 @@
+{
+  "method": "Automatic speech recognition, punctuation/case ignored; explicit currency normalization only",
+  "humanListeningReview": "open",
+  "clips": [
+    {
+      "id": "zin-01",
+      "start": 0,
+      "end": 1.92,
+      "expected": "Voel je de schoen tegen je teen?",
+      "recognized": "Voel je de schoen tegen je teen?",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-04",
+      "start": 2.92,
+      "end": 6.279999999999999,
+      "expected": "De grote kop is duur en de kleine kop is goedkoop.",
+      "recognized": "De grote kop is duur en de kleine kop is goedkoop.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-09",
+      "start": 7.279999999999999,
+      "end": 9.6,
+      "expected": "Fatima geeft haar kind een kus op de wang.",
+      "recognized": "Fatima geeft haar kind een kus op de wang.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-19",
+      "start": 10.6,
+      "end": 13.16,
+      "expected": "Eva ziet de lach van Jun en lacht terug.",
+      "recognized": "Eva ziet de lach van Jun en lacht terug.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-22",
+      "start": 14.16,
+      "end": 16.48,
+      "expected": "Ik weeg de rijst op deze weegschaal.",
+      "recognized": "Ik weeg de rijst op deze weegschaal.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-33",
+      "start": 17.48,
+      "end": 19.8,
+      "expected": "Een rijk persoon heeft veel geld.",
+      "recognized": "Een rijk persoon heeft veel geld.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-35",
+      "start": 20.8,
+      "end": 22.880000000000003,
+      "expected": "Door de storm buigen de takken.",
+      "recognized": "Door de storm buigen de takken.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-36",
+      "start": 23.880000000000003,
+      "end": 26.76,
+      "expected": "De prijs is twee euro en vijftig cent.",
+      "recognized": "De prijs is € 2,50.",
+      "comparison": "currency notation € 2,50 equals spoken twee euro en vijftig cent",
+      "passed": true
+    },
+    {
+      "id": "zin-39",
+      "start": 27.76,
+      "end": 29.840000000000003,
+      "expected": "De kapotte trap is een gevaar.",
+      "recognized": "De kapotte trap is een gevaar.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-50",
+      "start": 30.840000000000003,
+      "end": 34.92,
+      "expected": "Op het kaartje staat: een maximum van twee tassen per persoon.",
+      "recognized": "Op het kaartje staat een maximum van twee tassen per persoon.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-51",
+      "start": 35.92,
+      "end": 38.88,
+      "expected": "Het maximum voor deze ruimte is tien personen.",
+      "recognized": "Het maximum voor deze ruimte is tien personen.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-52",
+      "start": 39.88,
+      "end": 42.120000000000005,
+      "expected": "Is het maximum hier tien personen?",
+      "recognized": "Is het maximum hier tien personen?",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-59",
+      "start": 43.120000000000005,
+      "end": 45.040000000000006,
+      "expected": "Dit is een noot zonder dop.",
+      "recognized": "Dit is een noot zonder dop.",
+      "comparison": "exact normalized words",
+      "passed": true
+    },
+    {
+      "id": "zin-60",
+      "start": 46.040000000000006,
+      "end": 48.120000000000005,
+      "expected": "Er komt rook van het brandende hout.",
+      "recognized": "Er komt rook van het brandende hout.",
+      "comparison": "exact normalized words",
+      "passed": true
+    }
+  ]
+}

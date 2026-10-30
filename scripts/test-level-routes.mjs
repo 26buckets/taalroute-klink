@@ -3,7 +3,7 @@ import { importedItems } from '../lib/imported-practice.ts';
 import { importedLevels } from '../lib/imported-practice-contract.ts';
 import assert from 'node:assert/strict';
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
-import { contentById } from '../lib/connected-content.ts';
+import { contentById, contentReadingConditions } from '../lib/connected-content.ts';
 import { availableContentLevels, contentLevels, exerciseContentLevel, exerciseSetLevel, exerciseSetHelp, selectExerciseSet } from '../lib/content-levels.ts';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { chapterCollections, chapterHash, parseChapterHash } from '../lib/practice-chapters.ts';
@@ -68,7 +68,10 @@ test('Readiness retains higher and unprepared sources for later; no invented ind
     if (placement.level === 'a2') {
       assert.equal(placement.status, 'later');
       assert.equal(contextReadiness(item.id, pack, undefined, { ...defaultRouteSettings, language: 'a1' }).status, 'later');
-      assert.equal(contextReadiness(item.id, pack, undefined, { ...defaultRouteSettings, language: 'a2' }).status, 'guided');
+      const source = contentById.get(item.id);
+      const conditions = contentReadingConditions(source, { id: pack.id, known: pack.words.map(word => word.id) });
+      const unpreparedSentence = source.kind === 'sentence' && (conditions.otherWords.length || conditions.outsideWordBank.length || conditions.unitsOutsideStep.length);
+      assert.equal(contextReadiness(item.id, pack, undefined, { ...defaultRouteSettings, language: 'a2' }).status, unpreparedSentence ? 'later' : 'guided');
     }
   }
 });

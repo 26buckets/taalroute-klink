@@ -1,0 +1,25 @@
+{
+  "types": true,
+  "targetedLint": true,
+  "build": true,
+  "unit": true,
+  "browser": true,
+  "audioMetadata": true,
+  "preservation": true,
+  "localOnly": true,
+  "sentenceUnit": "10 passed, included in 47 targeted passes; 1 historical source-ledger skip covered by exact Git and runtime proof",
+  "curriculum": "48 passed, 1 same historical source-ledger skip; audio register precheck passed",
+  "audioBrowserCases": 56,
+  "levelBrowserCases": 48,
+  "navigation": "Chromium and WebKit, four sizes, storage and real sound retained",
+  "automaticAudio": "14 exact text transcripts, file hashes, metadata and native playback; no clipped PCM samples; replaced zin-22 due to possible truncated ending",
+  "humanListeningReview": "open",
+  "independentNT2AndPracticeReview": "open",
+  "generalLint": "Prior baseline contains existing errors; targeted changed files pass",
+  "supplementary": {
+    "allLevelMenu": "96 journeys and 180 Alfa C block entries/returns passed, two browsers, three sizes",
+    "productionAnswersAnd65Images": "answers, resume, audio decoding and 65 original images passed"
+  },
+  "githubActions": "No workflows present; all checks local",
+  "liveWorkerBefore": "650e0ecb-98c0-4d4c-bd8c-52f61502ca0d"
+}

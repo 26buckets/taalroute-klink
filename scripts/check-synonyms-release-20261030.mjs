@@ -6,12 +6,12 @@ import { createHash } from 'node:crypto';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
-export const synonymsBaseline = '8b2978dec51ee1ecb3a045144a82fcaa93308ac8';
+export const synonymsBaseline = '52acd5b5b3e1c544f027b507366c6bbbdbb07e71';
 export const synonymScopeFiles = [
   'app/learner-ui.css', 'components/product/extended-practice-surface.tsx', 'components/product/learner-app.tsx',
   'components/product/package-exercise-browser.tsx', 'components/product/package-group-practice.tsx', 'components/product/practice-chapters.tsx',
   'data/klink-synonyms.json', 'data/klink-synonym-audio.json', 'lib/group-practice.ts', 'lib/practice-chapters.ts', 'lib/production-practice.ts', 'lib/synonyms.ts',
-  'scripts/check-hidden-b2-release.mjs', 'scripts/check-synonyms-release-20261030.mjs', 'scripts/test-synonyms-release-20261030.mjs',
+  'scripts/check-sentence-release.mjs', 'scripts/check-synonyms-release-20261030.mjs', 'scripts/test-synonyms-release-20261030.mjs',
   'scripts/test-practice-chapters.mjs', 'scripts/test-synonyms.mjs', 'scripts/test-synonyms-browser.mjs', 'scripts/test-synonym-modes-browser.mjs',
   'scripts/test-synonym-audio-browser.mjs',
   'scripts/test-publication-proof.mjs',
@@ -42,7 +42,7 @@ export function verifySynonymsRelease(read = readFileSync) {
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, 'Ja, maak ook de ontbrekende audio en zet Synoniemen daarna online in Klink.');
   assert.equal(release.baselineSourceCommit, synonymsBaseline);
-  assert.equal(release.liveSourceCommit, 'b96c60d46bbb7609de7f1612e5d9ecfa391ea776');
+  assert.equal(release.liveSourceCommit, '16151ddeb6f3e01787111ebf11184a29c77db10a');
   assert.equal(release.newInstructionAudio, false); assert.equal(release.newImages, 0); assert.equal(release.newAudio, 68);
   git('merge-base', '--is-ancestor', release.liveSourceCommit, release.baselineSourceCommit);
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');

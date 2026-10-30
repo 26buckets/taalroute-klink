@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-30",
+  "publication": "development branch only; not deployed",
+  "sentences": 1292,
+  "levels": {
+    "A1": 1218,
+    "A2": 74,
+    "B1": 0
+  },
+  "provisional": 62,
+  "editorialReview": "Codex; no human or standardized CEFR validation",
+  "automatedTests": {
+    "passed": 63,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "Historical source-fidelity ledger is absent; exact current source and exercise preservation checked separately."
+  },
+  "browsers": {
+    "checks": 52,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "viewports": [
+      "1366x768",
+      "390x844"
+    ]
+  },
+  "typescript": "passed",
+  "lint": "passed",
+  "productionBuild": "passed",
+  "reportFilters": "passed:62/1292/74/throat",
+  "preservation": {
+    "exerciseInstances": 46143,
+    "changedLevelFields": 2722,
+    "allOtherExerciseFieldsUnchanged": true,
+    "publicFilesModified": 0,
+    "rawSourceBanksModified": 0
+  },
+  "open": [
+    "62 provisional editorial decisions need NT2 teacher review",
+    "Real learner trial and independent expert validation not performed",
+    "Wording/context issues flagged, not rewritten; existing audio unchanged",
+    "No new publication approval or publication-contract amendment prepared in this review task"
+  ]
+}

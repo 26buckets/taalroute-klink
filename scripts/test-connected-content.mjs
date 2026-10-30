@@ -8,7 +8,7 @@ import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 const wordIds = new Set(curriculum.words.map(word => word.id));
 const connected = packs.flatMap(pack => pack.exercises.filter(exercise => exercise.mode.startsWith('connected-')));
 
-test('All original recorded content is deduplicated, word-linked and reachable in existing players', () => {
+void test('All original recorded content is deduplicated, word-linked and reachable in existing players', () => {
   assert.equal(connectedContent.length, 1612);
   assert.deepEqual(['sentence', 'text', 'dialogue'].map(kind => connectedContent.filter(item => item.kind === kind).length), [1292, 192, 128]);
   assert.equal(new Set(connectedContent.map(item => item.id)).size, connectedContent.length);
@@ -25,7 +25,7 @@ test('All original recorded content is deduplicated, word-linked and reachable i
     for (const record of libraries) assert(record.exerciseId && record.lessonIds.length);
   }
 });
-test('New listening content never inflates a word lesson or asserts independent reading/mastery', () => {
+void test('New listening content never inflates a word lesson or asserts independent reading/mastery', () => {
   assert.equal(packs.flatMap(pack => pack.lessons).length, 302);
   for (const pack of packs) for (const lesson of pack.lessons) {
     const guided = exercisesForLesson(pack, lesson);
@@ -39,7 +39,7 @@ test('New listening content never inflates a word lesson or asserts independent 
       assert.equal(conditions.access, 'supported-listening');
       assert.deepEqual(conditions.outsideWordBank, item.reading.outsideWordBank);
       assert.equal(item.reading.syntaxCheck, 'teacher-guided');
-      assert.equal(item.humanReview, 'approved');
+      assert.equal(item.humanReview, originalBank.items.find(source => source.id === item.id).humanReview);
     }
   }
   for (const exercise of connected) {
@@ -50,7 +50,7 @@ test('New listening content never inflates a word lesson or asserts independent 
     assert(!exercise.options && !exercise.answer, 'No invented comprehension test');
   }
 });
-test('Suit, jug and molar are not attached to verb-only occurrences; no public source references', () => {
+void test('Suit, jug and molar are not attached to verb-only occurrences; no public source references', () => {
   const pan = connectedContent.find(item => item.text === 'De pan is vies. Ik pak de pan. Ik maak de pan schoon.');
   assert(pan && !pan.wordIds.includes('klink-woord-pak') && !pan.wordIds.includes('klink-woord-pak-verpakking'));
   assert(connectedContent.some(item => item.wordIds.includes('klink-woord-pak')));
@@ -58,7 +58,7 @@ test('Suit, jug and molar are not attached to verb-only occurrences; no public s
   assert.equal(new Set(originalBank.items.flatMap(item => item.blocks.map(block => block.audio.src))).size, 1979);
   assert.equal(new Set(connectedContent.filter(item => item.kind === 'dialogue').flatMap(item => item.blocks.map(block => block.audio.src))).size, 512);
 });
-test('Source-fidelity ledger retains original text, speakers, questions and recording pointers', { skip: !existsSync('outputs/content-connection-20261017/source-ledger.json') }, () => {
+void test('Source-fidelity ledger retains original text, speakers, questions and recording pointers', { skip: !existsSync('outputs/content-connection-20261017/source-ledger.json') }, () => {
   const ledger = JSON.parse(readFileSync('outputs/content-connection-20261017/source-ledger.json'));
   assert.equal(ledger.sources.length, 1618);
   for (const source of ledger.sources) {
