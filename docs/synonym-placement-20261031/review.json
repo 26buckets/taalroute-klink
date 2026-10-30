@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-10-30T23:57:30.203703+00:00",
+  "sourceCommit": "62934132ea29fff94e28dc6076dbb114029f56ff",
+  "buildSourceCommit": "62934132ea29fff94e28dc6076dbb114029f56ff",
+  "library": true,
+  "levels": true,
+  "words": true,
+  "audio": true,
+  "progress": true,
+  "navigation": true,
+  "mobile": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "scope": "Only the duplicate WordLibrary link removed; full learner component otherwise byte-identical. No keyboard changes.",
+  "files": {
+    "components/product/learner-app.tsx": "28424fddb5913f210746e0222895673bedc175c90c8ebc506951a322078a5e59",
+    "scripts/check-word-round-continuity-release.mjs": "e8c37dee784d8981638144532c7a12eb460fd39dbd112eabf7da8d8d532eb930",
+    "scripts/check-synonym-placement-release.mjs": "fdadd7d31eb74c059b68f14d02b240babe2ad2eaa27cd819308d1b5c03e88677",
+    "scripts/test-synonyms.mjs": "b2dcc6a88b84308704585ab20a8da1ec55a6654552541c99caad329ac5e125d0",
+    "scripts/test-synonyms-browser.mjs": "d40e0d994a2d93f1263ae09b619fc9656fa6a9610301e575d8e7de37eb2c53e4"
+  },
+  "synonymQuestions": 210,
+  "levelCounts": {
+    "a1": 30,
+    "a2": 85,
+    "b1": 210
+  },
+  "wordLibraryChecks": 7,
+  "browserScenarios": 7,
+  "menuJourneys": 96,
+  "alfaCBlockReturns": 180,
+  "publicAndDataChanges": [],
+  "physicalDevices": false,
+  "workflows": "No GitHub workflows added or run; all heavy checks local."
+}
