@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-30T20:27:27.874463+00:00",
+  "sourceCommit": "5e16a95091a302d703de96dd956f6d6e0dd8dcaa",
+  "baselineSourceCommit": "d623481917243931dd5df781f13236c8200c0639",
+  "liveSourceCommit": "2e0563b2fb358cae6e680033953f8cd5081f032e",
+  "types": true,
+  "lint": true,
+  "build": true,
+  "navigation": true,
+  "content": true,
+  "answers": true,
+  "progress": true,
+  "nativeAudio": true,
+  "mobile": true,
+  "localOnly": true,
+  "publicFilesCopiedExactly": 13135,
+  "publicBytes": 1050112807,
+  "checks": {
+    "curriculum": "95 passed, one historical-source skip",
+    "supplementalUnit": "29 passed",
+    "latestRepairUnit": "18 passed",
+    "navigation": "96 journeys and 180 block entries/returns; Direct kiezen in two browsers/four sizes plus three cold-collection reloads per browser",
+    "integration": "50 imported route/geometry cases",
+    "roundProgress": "10 cases, two browsers",
+    "production": "1462 lazy collections; 16 answered modes and 65 scene placements",
+    "wordRounds": "112 openings, 24 complete rounds, reload retention",
+    "archive": "124 image/Fotobingo flows",
+    "onlineAnswers": "first answers, drafts and corrections in two browsers/three sizes",
+    "nativeAudio": "46 sounds and examples; 14 teacher cases; seven repairs and medical dialogue",
+    "mobileTouch": "8 touch journeys including 320px and landscape, native audio, saved words after reload",
+    "register": "current audio register and source preservation passed"
+  },
+  "loadingRepair": "WebKit could stay on loading when a shared collection became cached between render and effect. Both cached and fetched content now resolve, retaining validation, cancellation and error handling. The regression fails before and passes after this repair.",
+  "background": "Existing light green; white card is a separate comparison.",
+  "limitations": [
+    "No physical phones, classroom monitor or learner pilot.",
+    "Global historical lint has existing failures; changed application and browser files pass targeted lint.",
+    "Historical five-tab layout assertions are superseded for this release by current navigation and retained player/content/answer/progress checks.",
+    "Existing content/media review points and 239 word placeholders remain open; no new media or level release."
+  ]
+}
