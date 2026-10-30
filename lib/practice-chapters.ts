@@ -29,7 +29,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; help?: ContentHelp; image?: string };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string };
 export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -115,7 +115,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
       }
     }
   }
-  result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, image: row.image || undefined })));
+  result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined })));
   cache.set(activity, result);
   return result;
 }

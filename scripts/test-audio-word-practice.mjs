@@ -5,7 +5,7 @@ import { productionIndex, validateProductionCollection } from '../lib/production
 import { availableChapterCollections, availableChapterActivities, chapterHash, parseChapterHash } from '../lib/practice-chapters.ts';
 import { isInstructionAudioEnabled, isWithdrawnAudio } from '../lib/audio-policy.ts';
 
-const original = productionIndex.filter(row => !row.id.startsWith('audio-words:'));
+const original = productionIndex.filter(row => !row.id.startsWith('audio-words:') && !row.id.startsWith('beta-images:'));
 // Baseline 60525ae: preserve the entire existing index without requiring Git history in a source archive.
 assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'), '625ace9d105065cd78af82dc5a5a1208b669c920a076cc698f19d4343545de9a', 'Existing routes, titles, files and progress IDs remain unchanged');
 const lists = JSON.parse(readFileSync('docs/audio-words-20261030/lists.json')).lists;

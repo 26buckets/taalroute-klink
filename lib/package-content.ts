@@ -61,6 +61,7 @@ export type PackageDialogue = {
 };
 
 export type ExerciseImage = {
+  placeholderWord?: string;
   assetId?: string;
   src?: string;
   altText?: string;

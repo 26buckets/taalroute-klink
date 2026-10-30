@@ -6,7 +6,7 @@ import {collectionProgressId,recordRoundSteps,roundProgressCount} from '../lib/r
 const read=p=>JSON.parse(readFileSync(p));
 const r=read('docs/image-repairs-20261030/media.json');
 const before=JSON.parse(execFileSync('git',['show',`${r.baselineSourceCommit}:data/klink-production-index.json`],{maxBuffer:20*1024*1024}));
-const index=read('data/klink-production-index.json').filter(row=>!row.id.startsWith('audio-words:'));
+const index=read('data/klink-production-index.json').filter(row=>!row.id.startsWith('audio-words:') && !row.id.startsWith('beta-images:'));
 const memory=new Map();globalThis.window=new EventTarget();globalThis.localStorage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)};
 let edits=0;
 for(const old of before){

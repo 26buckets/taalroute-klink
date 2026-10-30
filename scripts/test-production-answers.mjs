@@ -15,7 +15,7 @@ async function finish(e,scope=page){
   const input=scope.locator('.cp-text-entry input');await input.fill('zzzfout');await input.press('Enter');assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Probeer opnieuw'));
   await input.fill(e.fields[0].acceptedAnswers[0]);await input.press('Enter');
  }else if(e.mode==='word-build'){
-  if(e.requiresAudio)await scope.getByRole('button',{name:'Luister naar het woord',exact:true}).click();
+  if(e.requiresAudio)if(e.requiresAudio)await scope.getByRole('button',{name:'Luister naar het woord',exact:true}).click();
   for(const id of e.answer.targetTileIds)await scope.locator('.cp-tile-bank button').nth(e.tiles.findIndex(t=>t.id===id)).click();
  }else if(e.mode==='word-bingo'){
   const at=e.cells.findIndex(c=>c.cellId===e.answer.correctCellId);await scope.locator('.cp-board-grid button').nth(at).click();
@@ -25,14 +25,15 @@ async function finish(e,scope=page){
   for(const key of new Set(e.items.map(i=>i.pairKey))){for(let n=0;n<e.items.length;n++)if(e.items[n].pairKey===key)await scope.locator('.cp-memory-grid button').nth(n).click();await page.waitForTimeout(600);}
  }else if(e.mode==='learning-choice'){
   await scope.getByRole('button',{name:e.options.find(o=>o.id===e.answer.correctOptionIds[0]).label,exact:true}).click();
- }else if(e.mode==='heard-word'){
-  await scope.getByRole('button',{name:'Luister naar het woord',exact:true}).click();
+ }else if(['heard-word','heard-image','word-image'].includes(e.mode)){
+  if(e.requiresAudio)await scope.getByRole('button',{name:'Luister naar het woord',exact:true}).click();
   await scope.locator('.cp-choice-grid button').nth(e.options.findIndex(o=>o.id===e.answer.correctOptionIds[0])).click();
- }else if(e.mode==='hear-match'){
+ }else if(['hear-match','word-image-match'].includes(e.mode)){
   for(const [i,source] of e.sources.entries()){
    await scope.locator('.cp-match-board > div').nth(0).locator('button').nth(i).click();
    await scope.locator('.cp-match-board > div').nth(1).locator('button').nth(e.targets.findIndex(t=>t.id===e.answer.mapping[source.id])).click();
   }
+ }else if(e.mode==='word-card'){await scope.locator('.cp-flash-card').click();
  }else if(!['read-series','model','learning-example'].includes(e.mode))throw Error(e.mode);
 }
 try{
@@ -69,5 +70,5 @@ try{
   await page.screenshot({path:out+'/'+e.exerciseId+'-desktop.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:out+'/'+e.exerciseId+'-mobile.png'});await page.setViewportSize({width:1366,height:950});images.push(e.exerciseId);
  }
  assert.equal(images.length,44);assert.deepEqual(errors,[]);
- writeFileSync('docs/image-repairs-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
+ writeFileSync('docs/placeholders-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
 }finally{await browser.close();}

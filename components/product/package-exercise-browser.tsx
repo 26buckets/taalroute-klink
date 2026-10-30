@@ -561,6 +561,7 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
 
 function ExerciseImageView({ image, alt = 'Afbeelding bij de opdracht' }: { image?: ExerciseImage; alt?: string }) {
   if (!image?.src) return null;
+  if (image.placeholderWord && image.src.startsWith('/package-media/klink-placeholders-20261030/')) return <span className="cp-word-placeholder" title="Afbeelding volgt"><span>{image.placeholderWord}<span className="sr-only"> — afbeelding volgt</span></span></span>;
   return <Image src={image.src} alt={image.altText || alt} width={760} height={760} unoptimized={image.src.startsWith('/package-media/klink-productie-20261029/') || image.src.startsWith('/package-media/klink-beelden-20261030/')} />;
 }
 

@@ -11,7 +11,7 @@ export const mixedModes = [
 ] as const;
 export type MixedMode = typeof mixedModes[number]['id'];
 const media = bindings as Record<string, { imageUse?: string }>;
-const pictured = (word: PackageWord) => Boolean(word.image && media[word.id]?.imageUse !== 'context');
+const pictured = (word: PackageWord) => Boolean(word.image && (word.image.startsWith('/package-media/klink-placeholders-20261030/') || media[word.id]?.imageUse !== 'context'));
 const image = (word: PackageWord) => ({ src: word.image, altText: word.meaning ?? word.word });
 const audio = (word: PackageWord) => ({ src: word.audio, audioId: word.id });
 const segmenter = new Intl.Segmenter('nl', { granularity: 'grapheme' });

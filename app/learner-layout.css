@@ -149,8 +149,8 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-corner-prompt > div:empty { display: none; }
 .learner-app .cp-task-card:has(> .cp-choice-grid):not(:has(> img, > .cp-missing-word, > .cp-letter-cue, > .primary-button, > .secondary-button)) { height: 100%; max-height: 100%; align-content: stretch; margin-block: 0; }
 .learner-app .cp-task-card > .cp-choice-grid { min-height: 0; align-self: center; width: 100%; max-height: 100%; }
-.learner-app .cp-choice-grid:has(img) { height: 100%; grid-auto-rows: minmax(0, 1fr); }
-.learner-app .cp-choice-grid:has(img) > button { height: 100%; min-height: 0; padding: 8px; overflow: hidden; }
+.learner-app .cp-choice-grid:has(img, .cp-word-placeholder) { height: 100%; grid-auto-rows: minmax(0, 1fr); }
+.learner-app .cp-choice-grid:has(img, .cp-word-placeholder) > button { height: 100%; min-height: 0; padding: 8px; overflow: hidden; }
 .learner-app .cp-choice-grid img { width: 100%; height: 100%; max-height: min(240px, calc((100cqh - 52px) / 2)); min-height: 0; object-fit: contain; }
 .learner-app .cp-exercise-stage .cp-task-card:has(> .cp-flash-card) { height: 100%; gap: 8px; align-content: center; }
 .product-root .consistent-layout .cp-exercise-stage .cp-flash-card { width: min(240px, 100%, calc(100cqh - 104px)); max-height: calc(100cqh - 104px); padding: 8px; }
@@ -187,3 +187,10 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 }
 .product-root .consistent-layout .cp-exercise-feedback { grid-template-rows: minmax(0, 1fr); }
 .product-root .consistent-layout .cp-exercise-feedback output { min-height: 0; max-height: 100%; overflow: auto; }
+
+/* Keep beta word labels readable instead of scaling text inside a tiny image. */
+.learner-app .cp-word-placeholder { display: grid; place-items: center; aspect-ratio: 1; background: #f1f3f2; border: 1px solid #dce2df; border-radius: 5px; padding: 4px; margin: auto; box-sizing: border-box; color: #344e53; font-weight: 400; line-height: 1.1; text-align: center; overflow-wrap: anywhere; hyphens: auto; font-size: clamp(12px, calc(100cqh / 20), 24px); }
+.learner-app .cp-word-placeholder > span { min-width: 0; max-width: 100%; }
+.learner-app .cp-choice-grid .cp-word-placeholder { width: min(100%, 240px, calc((100cqh - 52px) / 2)); max-height: 100%; }
+.learner-app .cp-match-board .cp-word-placeholder { width: min(100%, max(48px, calc((100cqh - 70px) / 3))); max-height: 100%; }
+.learner-app .cp-flash-card .cp-word-placeholder { width: 100%; height: 100%; font-size: clamp(18px, 3vw, 28px); }

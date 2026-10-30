@@ -1,3 +1,17 @@
+# Actuele KLINK-publicatie — bèta, docent en luisteren, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `dd51763f9d123a6a74c5fbe9cc2249df64a75d99`, schone canonieke main. Build `2026-10-30T16:33:59.699Z`. Worker `1427e3d7-cdd5-45c8-b261-8d1df0bc4e2b`.
+
+Klink Plus docent in het menu met de bestaande les mat (woord, zin, tekst); tijdelijke oefenaantallen; zichtbare bèta-aanduiding; stabiel oefenvlak en losse luisterknop linksboven. 48 complete woordenlijsten voor Alfa C/A1/A2/B1: 96 reeksen en 768 luisteroefeningen. Bestaande herstelbeelden, noot/mappen-audio, routes en voortgang behouden.
+
+Lokaal: typen, gerichte lint, build, 1.219 productiecollecties, antwoorden, menu, integratie, bestaande beelden, stabiele schermen, docentles en luisterreeksen gecontroleerd. Publicatiepoort geslaagd via npm run deploy. Eén historische headercontrole leest nu de al goedgekeurde historische bytes via de bestaande opvolgerketen; de actuele header blijft exact gehasht in het nieuwe akkoord.
+
+Online: 18 scherm-/tellingcontroles in Chromium en WebKit, zes docentlesroutes, 51 luistercontroles; 470 bestanden bytegelijk teruggelezen, waaronder alle 96 nieuwe reeksen en 374 opnamen met opnieuw gecontroleerde Taalroute-metadata. Een te vroege toetsenbordfocus in de eerste online testrun gaf een testtimeout; de volledige online reeks is met expliciete selectie opnieuw geslaagd. Lokale toetsenbordcontroles blijven geslaagd.
+
+Bronback-up bytegelijk teruggelezen: https://drive.google.com/file/d/1mG973AdvOSE03G2Rv7JsKUa8U4iTVfzF/view . Bewijs in docs/beta-publication-20261030. Geen fysieke klasmonitor- of cursistenproef. Losse m/a/t-klankopnamen voor de docentles blijven open. Alle zware controles lokaal; geen GitHub Actions-workflows aanwezig.
+
+## Historie
+
 # Actuele KLINK-publicatie — herstelbeelden en woordaudio, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `6d19f7f5f262abcdf38c788ce7a0c5ab62df3244`, schone canonieke main. Build `2026-10-30T15:04:19.441Z`. Worker `ee026ac3-0789-46ac-ac5e-7af5ee8702a7`.
