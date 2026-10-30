@@ -1,3 +1,4 @@
+import {readBeforeSentenceRevision} from './check-sentence-revision.mjs';
 import {verifyContentAmendments,repairBaseline} from './check-content-repair-release.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -9,9 +10,9 @@ import repairs from '../data/klink-dialogue-repair.json' with {type:'json'};
 import {connectedContent} from '../lib/connected-content.ts';
 import {repairedDialogue} from '../lib/dialogue-repair.ts';
 const hash=b=>createHash('sha256').update(b).digest('hex');
-test('128 complete voice repairs preserve source text, IDs, levels and all other content',()=>{
+void test('128 complete voice repairs preserve source text, IDs, levels and all other content',()=>{
  assert.equal(repairs.dialogues.length,128);assert.equal(repairs.dialogues.flatMap(d=>d.turns).length,512);
- verifyContentAmendments();
+ verifyContentAmendments(readBeforeSentenceRevision);
  assert.equal(hash(execFileSync('git',['show',repairBaseline+':data/klink-connected-content.json'],{maxBuffer:10e6})),hash(execFileSync('git',['show','40625330feb9018798dfd9d30308a31733cf0f3c:data/klink-connected-content.json'],{maxBuffer:10e6})));
  const cast=new Map(repairs.cast.map(c=>[c.personId,c]));
  for(const item of source.items){
@@ -26,11 +27,11 @@ test('128 complete voice repairs preserve source text, IDs, levels and all other
  }
  const pilot=connectedContent.find(d=>d.id==='klink-dialogue-32f962399de8f4c3');assert.deepEqual(pilot.blocks.map(b=>b.speaker),['Sara','Daan','Sara','Daan']);
 });
-test('A changed source or a partially edited source fails before wrong audio can be shown',()=>{
+void test('A changed source or a partially edited source fails before wrong audio can be shown',()=>{
  const pilot=structuredClone(source.items.find(d=>d.id==='klink-dialogue-32f962399de8f4c3'));pilot.blocks[0].text+=' changed';assert.throws(()=>repairedDialogue(pilot),/source mismatch/);
  pilot.blocks.pop();assert.throws(()=>repairedDialogue(pilot),/Incomplete/);
 });
-test('Women/women, men/men and mixed conversations have distinct recurring cast identities',()=>{
+void test('Women/women, men/men and mixed conversations have distinct recurring cast identities',()=>{
  const cast=new Map(repairs.cast.map(c=>[c.personId,c]));const counts={};
  for(const d of repairs.dialogues){const key=d.people.map(id=>cast.get(id).gender).sort().join('/');counts[key]=(counts[key]||0)+1;}
  assert.deepEqual(counts,{'female/male':77,'female/female':28,'male/male':23});

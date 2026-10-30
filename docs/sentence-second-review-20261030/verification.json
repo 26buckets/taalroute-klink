@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-30",
+  "scope": 62,
+  "rewritten": 14,
+  "unchangedAudio": 48,
+  "levelDecisionsChanged": 13,
+  "ownerDecisions": [],
+  "sentenceLevels": {
+    "A1": 1225,
+    "A2": 67,
+    "B1": 0
+  },
+  "unit": {
+    "passed": 74,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "Historical source ledger is not present in this checkout; current sources are checked against the immutable Git baseline instead."
+  },
+  "finalTextGuard": {
+    "passed": 10,
+    "failed": 0
+  },
+  "browser": {
+    "levelAndLegacyRoutes": 48,
+    "revisedSentenceAudioCases": 56,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "viewports": [
+      [
+        1366,
+        768
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "errors": [],
+    "actualAudioPlayback": true,
+    "servedBytesMatchVerifiedFiles": true
+  },
+  "report": {
+    "widths": [
+      1280,
+      390
+    ],
+    "cases": 62,
+    "audio": 14,
+    "filtersPassed": true
+  },
+  "types": true,
+  "targetedLint": true,
+  "globalLint": "294 pre-existing errors; no new distinct file/rule issues compared with baseline (318 errors).",
+  "humanListeningReview": "open",
+  "humanNT2Validation": "open",
+  "practiceValidation": "open",
+  "localOnly": true,
+  "published": false,
+  "publicationGuardsChanged": false,
+  "githubActionsTriggered": false,
+  "build": true
+}
