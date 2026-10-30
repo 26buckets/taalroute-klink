@@ -1,3 +1,11 @@
+## 30 oktober 2026 — B2 verborgen, ruimte behouden
+
+Livebron `b96c60d46bbb7609de7f1612e5d9ecfa391ea776`, canonieke main; Worker `650e0ecb-98c0-4d4c-bd8c-52f61502ca0d`. Op Nico’s expliciete opdracht is uitsluitend de B2-niveauknop onzichtbaar gemaakt. Het volledige vak na B1 blijft in de indeling staan; de overige niveauknoppen verschuiven niet. B2 is ook uit de toegankelijke bediening verdwenen.
+
+Normale `npm run deploy`-route en publicatiepoort geslaagd. Lokaal: types, gerichte lint, productieopbouw, navigatie, 96 menureizen, 180 blokterugwegen en 50 integratiegevallen gecontroleerd. Online: Chromium/WebKit op vier schermmaten, behoud van de lege B2-plek, zes werkende niveauknoppen, klankenkaart, uitleg en ongewijzigde opgeslagen voortgang gecontroleerd. Alle 26 gebouwde appbestanden en officiële logo’s bytegelijk teruggelezen. Browseremulatie; geen fysieke toestellen.
+
+Inhoud, audio, voortgang, routes, media en de zeven eerder gepubliceerde woordbeelden behouden; geen wijziging aan `data`, `public`, `lib` of spelers. Het bronpakket is volledig van Drive teruggelezen en gecontroleerd: `12ZcBN0F1-PULukqPR368AQ2dxEJ6Izpw`. Bewijs: `docs/b2-hidden-20261030/`. Deze registratie wijzigt de livecode niet. Publiceer alleen een afstammeling van deze actuele livebron via de canonieke main en de bestaande publicatiepoort.
+
 ## 30 oktober 2026 — zeven woordbeelden online
 
 Livebron `beff2e25e378a9fa723bc64831d1e96853d11113`, canonieke main; Worker `e0ede8d8-2997-441d-8d69-33ed6fd0ce21`. Zeven door Nico vrijgegeven woordbeelden op 122 plaatsen in 65 reeksen, samen 187.930 bytes. Tandarts-v1 expliciet uitgesloten wegens Nico’s afwijzing van de handen; werkgever blijft afgekeurd. 232 oorspronkelijke woordvakken blijven open.

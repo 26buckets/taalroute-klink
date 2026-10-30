@@ -1,0 +1,71 @@
+{
+  "publishedAt": "2026-10-30T21:21:19.393658+00:00",
+  "sourceCommit": "b96c60d46bbb7609de7f1612e5d9ecfa391ea776",
+  "branch": "main",
+  "sourceClean": true,
+  "baselineSourceCommit": "beff2e25e378a9fa723bc64831d1e96853d11113",
+  "workerVersion": "650e0ecb-98c0-4d4c-bd8c-52f61502ca0d",
+  "command": "npm run deploy",
+  "request": "De B2 knop mag je weghalen en verbergen. Behoud de ruimte ervoor wel",
+  "result": "B2 hidden with visibility:hidden; original box retained after B1. No other level buttons move. B2 absent from keyboard and accessibility controls.",
+  "checks": {
+    "normalPublicationGate": true,
+    "types": true,
+    "targetedLint": true,
+    "productionBuild": true,
+    "localMenuJourneys": 96,
+    "localBlockEntriesAndReturns": 180,
+    "localIntegrationCases": 50,
+    "localNavigation": true,
+    "liveNavigation": {
+      "checks": [
+        {
+          "engine": "chromium",
+          "sizes": 4,
+          "persistedLevels": true,
+          "retainedStorage": [
+            "klink.taalroute.route.v1",
+            "klink.taalroute.savedWords.v1",
+            "klink.taalroute.attempts.v1",
+            "klink.round-progress.v1:sequence:functional:lijst"
+          ],
+          "originalSteps": 6,
+          "sounds": 46
+        },
+        {
+          "engine": "webkit",
+          "sizes": 4,
+          "persistedLevels": true,
+          "retainedStorage": [
+            "klink.taalroute.route.v1",
+            "klink.taalroute.savedWords.v1",
+            "klink.taalroute.attempts.v1",
+            "klink.round-progress.v1:sequence:functional:lijst"
+          ],
+          "originalSteps": 6,
+          "sounds": 46
+        }
+      ],
+      "errors": []
+    },
+    "liveExactAssets": 26,
+    "unchangedContentAudioMediaPlayersStorage": true
+  },
+  "sourceBackup": {
+    "sourceCommit": "7cb636f8bccf4c44e7af4453a5e12ae96d69cda6",
+    "bytes": 1218063,
+    "sha256": "7b5448554ad5f55ae9db9fde32e635b63a24e921e25fa73bcf57174eaa9ef272",
+    "files": {
+      "AGENTS.md": "0625643384e4f91315d1b665f745f86997643467952d6e210b9077a07b338afe",
+      "components/product/route-settings.tsx": "f7cf1234dcd3210a52abf35e35b38cdeae5715da58d35fec971f32c7ffce1b21",
+      "scripts/check-hidden-b2-release.mjs": "6bad4e16a6b1b41e9083d7befdfa9deccbc2f7f504e6bcdaa8d21ca30e53283e",
+      "scripts/check-word-images-batch-release.mjs": "d3d56f560c97cc558863c59e6c74c1f30c24b8274e4265d4f4e24d92989f63df",
+      "scripts/test-direct-navigation-browser.mjs": "1baf7dbf88f0e705933bea38a18ceccce9d88329421340ee88bee92d42cd6d62"
+    },
+    "verified": true,
+    "driveId": "12ZcBN0F1-PULukqPR368AQ2dxEJ6Izpw"
+  },
+  "limitations": [
+    "Browser emulation, no physical device test."
+  ]
+}
