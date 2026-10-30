@@ -584,7 +584,7 @@ Dat is het idee achter Klink: een rustige plek om te beginnen, genoeg variatie o
 
 ## Drie Alfa C-oefenblokken — 26 oktober 2026
 
-Oefenen → Zelf oefenen → Alfa C → Woorden en zinnen → Stap voor stap oefenen: In de winkel, Met de bus en Thuis. Elk blok telt twaalf stappen met bestaande woordbeelden, woord- en zinsaudio. Voorbeeld, Help, antwoordcontrole, Verder, positiebehoud en gerichte herhaling horen bij dezelfde rustige speler.
+Oefenen → Zelf oefenen → Alfa C → Zinnen → Woorden en zinnen: In de winkel, Met de bus en Thuis. Elk blok telt twaalf stappen met bestaande woordbeelden, woord- en zinsaudio. Voorbeeld, Help, antwoordcontrole, Verder, positiebehoud en gerichte herhaling horen bij dezelfde rustige speler.
 
 De fotokeuze bij een zin is herkenning, geen volledige praktijktaak of bewijs van zelfstandig lezen. Gesproken instructies blijven uitgeschakeld. Observeer of de cursist na het voorbeeld gericht hulp gebruikt, een fout verbetert en zelfstandig verdergaat. Koppel aan boekdoel en ingeplande bijeenkomst; gebruiksproef en menselijke luistercontrole blijven open. Bronkoppelingen en inhoudscontrole: docs/klink-alfa-c-release-20261026/.
 
@@ -598,4 +598,9 @@ De 36 nieuwe uitleg- en hulpbestanden zijn technisch en met automatische transcr
 
 ## Zes Alfa C-blokken met lezen en schrijven
 
-Via Oefenen → Zelf oefenen → Alfa C → Lezen en schrijven → Stap voor stap oefenen zijn zes aanvullende blokken bereikbaar, ieder met twaalf opdrachten. Gebruik het antwoordblad via de knop in het blok; dit bevat 27 genummerde schrijfplekken. Alle 72 opdrachten zijn aangesloten. Uitleg en hulp gebruiken Roland; nieuw ingesproken oefentaal gebruikt Remko, met behoud van bestaande goede woordopnamen. Vier dictees hebben losse herhaalbare fragmenten zonder zichtbaar schrijfmodel. De handschriftopdracht heeft twee gecontroleerde handschriftbeelden. De taken gebruiken de genoemde papieren bladen en materialen. Een open opdracht bevestigen is deelname, geen automatisch juist antwoord. Voorbeelden en hulp apart registreren. Koppeling aan concrete boekpagina en werkelijk ingeroosterde bijeenkomst, cursistenproef, menselijke eindcontrole, fysieke telefoons en schermlezerproef blijven open.
+Via Oefenen → Zelf oefenen → Alfa C → Schrijven → Lezen en schrijven zijn zes aanvullende blokken bereikbaar, ieder met twaalf opdrachten. Gebruik het antwoordblad via de knop in het blok; dit bevat 27 genummerde schrijfplekken. Alle 72 opdrachten zijn aangesloten. Uitleg en hulp gebruiken Roland; nieuw ingesproken oefentaal gebruikt Remko, met behoud van bestaande goede woordopnamen. Vier dictees hebben losse herhaalbare fragmenten zonder zichtbaar schrijfmodel. De handschriftopdracht heeft twee gecontroleerde handschriftbeelden. De taken gebruiken de genoemde papieren bladen en materialen. Een open opdracht bevestigen is deelname, geen automatisch juist antwoord. Voorbeelden en hulp apart registreren. Koppeling aan concrete boekpagina en werkelijk ingeroosterde bijeenkomst, cursistenproef, menselijke eindcontrole, fysieke telefoons en schermlezerproef blijven open.
+
+
+## Vaste twaalf oefenonderdelen — 30 oktober 2026
+Alle niveaus gebruiken dezelfde twaalf kaarten, bij Zelf oefenen en Met je docent. Lege onderdelen blijven zichtbaar met nul oefeningen. Voor Alfa C staan Woorden en zinnen onder Zinnen, Lezen en schrijven onder Schrijven en Berichten lezen onder Teksten. Kies daar de betreffende oefenvorm en daarna een blok. De oorspronkelijke 3/6/6 blokken blijven compleet.
+De begeleide opdrachten staan bij Alfa C onder Woorden oefenen (Woorden verbinden), Spelling (Spelling oefenen), Grammatica (Lezen en doen), Schrijven (Schrijven op papier) en Samen herhalen (Later herhalen). Deze opdrachten blijven alleen bij Met je docent beschikbaar.

@@ -14,7 +14,7 @@ import { ProductionRound } from './production-round';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';
 import { groupActivities } from '@/lib/group-practice';
-import { availableChapterActivities, availableChapterCollections, chapterLevels, chapterCollections, chapterExerciseChoices, chapterHash, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
+import { availableChapterActivities, availableChapterCollections, availableChapterSequences, availableChapterTeacherGroups, chapterExerciseCount, chapterLevels, chapterCollections, chapterExerciseChoices, chapterHash, matchesChapterSelection, parseChapterHash, practiceChapters, type ChapterLocation } from '@/lib/practice-chapters';
 import { exerciseSetHelp, levelLabel, type ContentHelp } from '@/lib/content-levels';
 import { MyRoute, useRouteSettings } from './route-settings';
 import { chapterRouteAxis } from '@/lib/learner-route';
@@ -38,10 +38,9 @@ function revealCollection(limits: Record<string, number>, location: ChapterLocat
   return (limits[key] ?? pageSize) >= needed ? limits : { ...limits, [key]: needed };
 }
 
-export function PracticeChapterCards({ onOpen, isAvailable, hideUnavailable = false, count, children }: { onOpen: (chapter: string) => void; isAvailable?: (chapter: string) => boolean; hideUnavailable?: boolean; count?: (chapter: string) => number; children?: import('react').ReactNode }) {
-  return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken">{children}{practiceChapters.map(chapter => {
+export function PracticeChapterCards({ onOpen, isAvailable, count }: { onOpen: (chapter: string) => void; isAvailable?: (chapter: string) => boolean; count?: (chapter: string) => number; children?: import('react').ReactNode }) {
+  return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken">{practiceChapters.map(chapter => {
     const Icon = icons[chapter.icon], available = isAvailable?.(chapter.id) ?? true;
-    if (hideUnavailable && !available) return null;
     return <button key={chapter.id} className="cp-activity-button" data-chapter={chapter.id} disabled={!available} onClick={() => onOpen(chapter.id)}><Icon aria-hidden="true" /><span>{chapter.title}{count && <ExerciseCount count={count(chapter.id)} />}{!available && <small>Niet beschikbaar</small>}</span>{available && <ArrowRight aria-hidden="true" />}</button>;
   })}</div>;
 }
@@ -80,7 +79,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
   }, [location]);
   function open(next: ChapterLocation) { stopMedia(); setLocation(next); setLimits(current => revealCollection(current, next)); setReview(readReview()); window.location.assign(chapterHash(next)); }
   const sequenceChapter = alfaCChapters.find(item => item.id === location.chapter);
-  const chapter = practiceChapters.find(item => item.id === location.chapter) ?? sequenceChapter;
+  const chapter = practiceChapters.find(item => item.id === (sequenceChapter?.parent ?? location.chapter));
   const activities = chapter?.activities.map(id => groupActivities.find(item => item.id === id)!) ?? [];
   const activity = activities.find(item => item.id === location.activity);
   const reviewMode = activity?.id === 'learning-review';
@@ -90,20 +89,13 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     (location.activity ? [location.activity] : chapter?.activities ?? groupActivities.map(item => item.id))
       .some(id => availableChapterCollections(id, { level, help: location.help }, review).length)
   ).map(item => item.id));
-  if (sequenceChapter) availableLevels.add('alfa-c');
+  if (sequenceChapter || (chapter && (availableChapterSequences(chapter.id, { ...location, level: 'alfa-c' }).length || availableChapterTeacherGroups(chapter.id, { ...location, level: 'alfa-c' }).length))) availableLevels.add('alfa-c');
   if (!chapter) availableLevels.add('alfa-c');
-  const alfaCSelected = !chapter && (location.level === 'alfa-c' || (location.level === 'all' && ['all','alfa-c'].includes(settings.literacy)));
   const chapterSelection = (id: string) => ({ level: location.level === 'all' && !chapter ? settings[chapterRouteAxis(id)] : location.level, help: location.help });
-  const countChapter = (id: string, help = location.help) => {
-    const sequence = alfaCChapters.find(item => item.id === id);
-    if (sequence) return sequence.blocks.reduce((total, block) => total + block.steps.length, 0);
-    return (practiceChapters.find(item => item.id === id)?.activities ?? []).reduce((total, activity) => total + collectionCount(availableChapterCollections(activity, { ...chapterSelection(id), help }, review)), 0);
-  };
-  const countMode = (help: ContentHelp) => chapter ? countChapter(chapter.id, help) : [...practiceChapters, ...(alfaCSelected ? alfaCChapters : [])].reduce((total, item) => total + countChapter(item.id, help), 0);
-  const openChapter = (id: string) => {
-    open({ chapter: id, ...chapterSelection(id) });
-  };
-  const modeAvailable = (help: ContentHelp) => Boolean(sequenceChapter) || alfaCSelected || (chapter ? [chapter] : practiceChapters).some(item => availableChapterActivities(item.id, { ...chapterSelection(item.id), help }, review).length);
+  const countChapter = (id: string, help = location.help) => chapterExerciseCount(id, { ...chapterSelection(id), help }, review);
+  const countMode = (help: ContentHelp) => chapter ? countChapter(chapter.id, help) : practiceChapters.reduce((total, item) => total + countChapter(item.id, help), 0);
+  const openChapter = (id: string) => open({ chapter: id, ...chapterSelection(id) });
+  const modeAvailable = (help: ContentHelp) => countMode(help) > 0;
   const openMode = (help: ContentHelp) => open({ ...location, help, collection: undefined });
   const collection = visible.find(item => item.id === location.collection);
   const Round = collection?.contentUrl ? ProductionRound : GroupRound;
@@ -114,7 +106,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
   const items = sequenceChapter && location.sequence && ['all', 'alfa-c'].includes(location.level) ? sequenceChapter.blocks.map(block => ({ id: block.id, title: block.title, progressId: sequenceProgressId(sequenceChapter.kind, block.id), total: block.steps.length, image: undefined as string | undefined, summary: `Alfa C · ${location.help === 'guided' ? 'Met de docent' : 'Zelf oefenen'}` })) : visible.map(item => ({ id: item.id, title: item.title, progressId: collectionProgressId(location.activity!, item.id, item.contentUrl), total: item.exerciseCount ?? item.exercises.length, image: item.image, summary: `${item.levels ? `Woordenschat: ${item.levels.map(levelLabel).join(' / ')}` : levelLabel(item.level)} · ${(item.help ?? exerciseSetHelp(item.exercises)) === 'guided' ? 'Met de docent' : 'Zelf oefenen'}${item.placeholderCount ? ` · ${item.placeholderCount} afbeeldingen volgen` : ''}` }));
   const modeLabel = location.help === 'guided' ? 'Met je docent' : 'Zelf oefenen';
   // Example words identify a collection, but must not reveal a listening/spelling answer during play.
-  const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' ? activity?.label : collection?.title) ?? activity?.label ?? (location.sequence ? 'Stap voor stap oefenen' : undefined) ?? chapter?.title ?? (choosing ? 'Oefenen' : modeLabel);
+  const title = (collection?.exercises[0]?.learningPathId || collection?.exercises[0]?.componentId === 'KLINK-CONTENT' ? activity?.label : collection?.title) ?? activity?.label ?? (location.sequence ? sequenceChapter?.title : undefined) ?? chapter?.title ?? (choosing ? 'Oefenen' : modeLabel);
   const toCollections = () => open({ ...location, collection: undefined });
   const selection = { level: location.level, help: location.help };
   const back = collection ? toCollections : activitySelected ? () => open({ chapter: chapter!.id, ...selection }) : chapter ? () => open(selection) : location.help ? () => open({ level: location.level }) : onBack;
@@ -130,9 +122,8 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     </div> : <>
     <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" disabled={!modeAvailable(id)} aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>
     <MyRoute showPracticeChoice={false} availableLevels={availableLevels} selection={chapter || location.level !== 'all' ? location : undefined} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
-    {!chapter && <PracticeChapterCards count={countChapter} hideUnavailable={location.level === 'alfa-c' || (location.level === 'all' && settings.literacy === 'alfa-c')} isAvailable={id => availableChapterActivities(id, chapterSelection(id), review).length > 0} onOpen={openChapter}>{alfaCSelected && alfaCChapters.map(item => { const Icon = icons[item.icon]; return <button key={item.id} className="cp-activity-button" data-alfa-c-category={item.legacy} onClick={() => open({ chapter: item.id, level: 'alfa-c', help: location.help })}><Icon aria-hidden="true" /><span>{item.title}<ExerciseCount count={countChapter(item.id)} /></span><ArrowRight aria-hidden="true" /></button>; })}</PracticeChapterCards>}
-    {!chapter && alfaCSelected && location.help === 'guided' && <section className="cp-teacher-activities" aria-labelledby="cp-teacher-activities-title"><h2 id="cp-teacher-activities-title">Opdrachten met je docent</h2><div className="cp-chapter-grid"><TeacherBlockCards /></div></section>}
-    {chapter && !activitySelected && <div className="cp-chapter-grid" aria-label={chapter.title}>{sequenceChapter && <button className="cp-activity-button" data-chapter-activity="sequence" onClick={() => open({ chapter: chapter.id, sequence: true, ...selection })}><BookOpen aria-hidden="true" /><span>Stap voor stap oefenen<ExerciseCount count={countChapter(chapter.id)} /></span><ArrowRight aria-hidden="true" /></button>}{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
+    {!chapter && <PracticeChapterCards count={countChapter} isAvailable={id => countChapter(id) > 0} onOpen={openChapter} />}
+    {chapter && !activitySelected && <div className="cp-chapter-grid" aria-label={chapter.title}>{availableChapterSequences(chapter.id, location).map(item => { const Icon = icons[item.icon]; return <button key={item.id} className="cp-activity-button" data-alfa-c-category={item.legacy} data-chapter-activity={item.id} onClick={() => open({ chapter: item.id, sequence: true, ...selection })}><Icon aria-hidden="true" /><span>{item.title}<small>Stap voor stap oefenen</small><ExerciseCount count={item.blocks.reduce((n, block) => n + block.steps.length, 0)} /></span><ArrowRight aria-hidden="true" /></button>; })}<TeacherBlockCards level={location.level} groups={availableChapterTeacherGroups(chapter.id, location)} />{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
       const Icon = icons[item.icon], available = availableActivities.includes(item.id);
       return <button className="cp-activity-button" key={item.id} data-chapter-activity={item.id} disabled={!available} onClick={() => open({ chapter: chapter.id, activity: item.id, ...selection })}><Icon aria-hidden="true" /><span>{item.label}<ExerciseCount count={collectionCount(availableChapterCollections(item.id, location, review))} />{!available && <small>Niet beschikbaar</small>}</span>{available && <ArrowRight aria-hidden="true" />}</button>;
     })}</div>}
@@ -149,7 +140,7 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
         <output>{reviewMode ? 'Je hebt nu niets om te herhalen.' : `Deze oefening is niet beschikbaar voor ${levelLabel(location.level)}.`}</output>
         {practiceChapters.some(item => availableChapterActivities(item.id, location, review).length) ? <>
           <p>Kies een andere oefening:</p>
-          <PracticeChapterCards count={countChapter} isAvailable={id => availableChapterActivities(id, location, review).length > 0} onOpen={openChapter} />
+          <PracticeChapterCards count={countChapter} isAvailable={id => chapterExerciseCount(id, location, review) > 0} onOpen={openChapter} />
         </> : modeAvailable('guided') ? <button className="secondary-button" onClick={() => openMode('guided')}><UsersRound aria-hidden="true" />Oefen met je docent<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" onClick={() => open({ level: location.level })}>Andere oefeningen<ArrowRight aria-hidden="true" /></button>}
       </div>}
 

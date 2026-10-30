@@ -13,6 +13,7 @@ import { playMedia, stopMedia } from './shared';
 import {
   teacherTasks,
   teacherGroups,
+  teacherChapter,
   teacherStorageKey,
   emptyTeacherStore,
   readTeacherStore,
@@ -32,16 +33,17 @@ import {
   type Observation,
 } from '@/lib/alfa-c-docent';
 import './alfa-c-docent.css';
-export function TeacherBlockCards() {
+export function TeacherBlockCards({ groups = teacherGroups, level = 'alfa-c' }: { groups?: typeof teacherGroups; level?: string }) {
   return (
     <>
-      {teacherGroups.map((g) => {
+      {groups.map((g) => {
         const count = teacherTasks.filter((t) => t.group === g.id).length;
         return (
         <a
           className="cp-activity-button"
           key={g.id}
-          href={`#learner/alfa-c/docent-${g.id}`}
+          data-teacher-group={g.id}
+          href={`#learner/alfa-c/docent-${g.id}?level=${level}&help=guided`}
         >
           <Users aria-hidden="true" />
           <span>
@@ -78,6 +80,7 @@ function download(text: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export function AlfaCTeacherPractice({ group }: { group: string }) {
+  const returnLevel = typeof window !== 'undefined' && new URLSearchParams(window.location.hash.split('?')[1]).get('level') === 'all' ? 'all' : 'alfa-c';
   const tasks = teacherTasks.filter((t) => t.group === group),
     [taskId, setTaskId] = useState(''),
     [store, setStore] = useState<TeacherStore>(emptyTeacherStore),
@@ -150,7 +153,7 @@ export function AlfaCTeacherPractice({ group }: { group: string }) {
       <header className="cp-context-header">
         <a
           className="text-back"
-          href="#learner/alfa-c"
+          href={`#learner/chapters/${teacherChapter[group] ?? 'words'}?level=${returnLevel}&help=guided`}
           aria-label="Andere oefening"
         >
           <ArrowLeft />

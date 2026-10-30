@@ -1,3 +1,5 @@
+import { practiceChapters, chapterExerciseCount } from '../lib/practice-chapters.ts';
+import { teacherChapter, teacherGroups } from '../lib/alfa-c-docent.ts';
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -30,14 +32,22 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         await page.locator('.cp-page-workspace').waitFor();
         await sameFrame(`${level}/${help}/categories`);
         assert.equal(await page.locator('.learner-nav [aria-current="page"]').evaluate(e => getComputedStyle(e).boxShadow), 'none');
+        assert.deepEqual(await page.locator('[data-chapter]').evaluateAll(es => es.map(e => e.dataset.chapter)), practiceChapters.map(c => c.id));
+        for (const chapter of practiceChapters) {
+          const card = page.locator(`[data-chapter="${chapter.id}"]`);
+          const count = chapterExerciseCount(chapter.id, { level, help });
+          assert.equal(await card.isEnabled(), count > 0);
+          assert.equal(await card.locator('.cp-beta-count').innerText(), `${count} ${count === 1 ? 'oefening' : 'oefeningen'}`);
+        }
+        if (engine === 'chromium' && level === 'alfa-c') await page.screenshot({path: `${out}/twelve-${help}-${width}.png`});
         if (level === 'alfa-c') {
-          assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-          for (const [group, kind, count] of [['words', 'pilot', 3], ['paper', 'functional', 6], ['messages', 'daily', 6]]) {
-            await page.locator(`[data-alfa-c-category="${group}"]`).click();
-            await page.locator('[data-chapter-activity="sequence"]').waitFor();
+          assert.equal(await page.locator('[data-alfa-c-category]').count(), 0);
+          for (const [group, kind, count, parent] of [['words', 'pilot', 3, 'sentences'], ['paper', 'functional', 6, 'writing'], ['messages', 'daily', 6, 'texts']]) {
+            await page.locator(`[data-chapter="${parent}"]`).click();
+            await page.locator(`[data-alfa-c-category="${group}"]`).waitFor();
             await sameFrame(`${group}/activities`);
             assert.equal(await page.locator('[data-collection]').count(), 0);
-            await page.locator('[data-chapter-activity="sequence"]').click();
+            await page.locator(`[data-alfa-c-category="${group}"]`).click();
             await page.locator('[data-collection]').first().waitFor();
             await sameFrame(`${group}/list`);
             assert.equal(await page.locator('.cp-chapter-collections > .cp-chapter-collection').count(), count);
@@ -57,12 +67,23 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
               assert(page.url().endsWith(`/alfa-c-${group}/sequence?level=alfa-c&help=${help}`));
             }
             await page.locator('.cp-context-header .text-back').click();
-            await page.locator('[data-chapter-activity="sequence"]').waitFor();
-            await page.locator('.cp-context-header .text-back').click();
             await page.locator(`[data-alfa-c-category="${group}"]`).waitFor();
-            await page.goBack(); await page.locator('[data-chapter-activity="sequence"]').waitFor();
-            await page.goForward(); await page.locator(`[data-alfa-c-category="${group}"]`).waitFor();
+            await page.locator('.cp-context-header .text-back').click();
+            await page.locator(`[data-chapter="${parent}"]`).waitFor();
+            await page.goBack(); await page.locator(`[data-alfa-c-category="${group}"]`).waitFor();
+            await page.goForward(); await page.locator(`[data-chapter="${parent}"]`).waitFor();
             checks.push({ engine, width, level, help, group, blocks: count });
+          }
+          if (help === 'guided') for (const group of teacherGroups) {
+            await page.locator(`[data-chapter="${teacherChapter[group.id]}"]`).click();
+            await page.locator(`[data-teacher-group="${group.id}"]`).click();
+            await page.locator('.ac-docent').waitFor();
+            await page.reload(); await page.locator('.ac-docent').waitFor();
+            await page.getByRole('link', { name: 'Andere oefening', exact: true }).click();
+            await page.locator(`[data-teacher-group="${group.id}"]`).waitFor();
+            assert(page.url().includes('level=alfa-c&help=guided'));
+            await page.locator('.cp-context-header .text-back').click();
+            await page.locator('[data-chapter]').first().waitFor();
           }
         } else {
           assert.equal(await page.locator('[data-alfa-c-category]').count(), 0);
@@ -90,7 +111,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     }
     for (const [legacy, target] of [['words', 'alfa-c-words'], ['paper', 'alfa-c-paper'], ['messages', 'alfa-c-messages']]) {
       await page.goto(`${base}/#learner/alfa-c/${legacy}?help=guided`);
-      await page.locator('[data-chapter-activity="sequence"]').waitFor();
+      await page.locator(`[data-alfa-c-category="${legacy}"]`).waitFor();
       assert(page.url().endsWith(`/${target}?level=alfa-c&help=guided`));
     }
   } finally { await browser.close(); }

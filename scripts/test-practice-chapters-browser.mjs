@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { exerciseSetHelp } from '../lib/content-levels.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { practiceChapters, chapterCollections, chapterHash } from '../lib/practice-chapters.ts';
+import { practiceChapters, chapterCollections, chapterHash, availableChapterSequences } from '../lib/practice-chapters.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830';
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -39,7 +39,7 @@ try {
     const mode = exerciseSetHelp(chapterCollections(activity)[0].exercises);
     await page.locator('.cp-practice-entry').getByRole('button', { name: mode === 'guided' ? /Met je docent/ : /Zelf oefenen/ }).click();
     if (await page.locator('[data-chapter-activity]').count()) {
-      assert.equal(await page.locator('[data-chapter-activity]').count(), chapter.activities.length);
+      assert.equal(await page.locator('[data-chapter-activity]').count(), chapter.activities.length + availableChapterSequences(chapter.id, {level:'all',help:mode}).length);
       await page.locator(`[data-chapter-activity="${activity}"]`).click();
     }
     await page.locator('[data-collection]').first().click();

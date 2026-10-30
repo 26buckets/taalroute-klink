@@ -1,4 +1,5 @@
 import { productionIndex, productionPack } from './production-practice.ts';
+import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -58,6 +59,21 @@ export function availableChapterCollections(activity: GroupActivity, selection: 
 
 export function availableChapterActivities(chapter: string, selection: ChapterLocation, review: LearningReview = {}) {
   return practiceChapters.find(item => item.id === chapter)?.activities.filter(id => availableChapterCollections(id, selection, review).length) ?? [];
+}
+
+export function availableChapterSequences(chapter: string, selection: ChapterLocation) {
+  return ['all', 'alfa-c'].includes(selection.level) ? alfaCChapters.filter(item => item.parent === chapter) : [];
+}
+
+export function availableChapterTeacherGroups(chapter: string, selection: ChapterLocation) {
+  return ['all', 'alfa-c'].includes(selection.level) && selection.help === 'guided' ? teacherGroups.filter(item => teacherChapter[item.id] === chapter) : [];
+}
+
+export function chapterExerciseCount(chapter: string, selection: ChapterLocation, review: LearningReview = {}) {
+  const ordinary = (practiceChapters.find(item => item.id === chapter)?.activities ?? []).reduce((total, activity) => total + availableChapterCollections(activity, selection, review).reduce((n, item) => n + (item.exerciseCount ?? item.exercises.length), 0), 0);
+  const sequences = availableChapterSequences(chapter, selection).reduce((total, item) => total + item.blocks.reduce((n, block) => n + block.steps.length, 0), 0);
+  const guided = availableChapterTeacherGroups(chapter, selection).reduce((total, item) => total + teacherTasks.filter(task => task.group === item.id).length, 0);
+  return ordinary + sequences + guided;
 }
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {

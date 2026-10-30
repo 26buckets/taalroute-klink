@@ -37,17 +37,17 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page.goto(base + '/#learner/chapters');
     await page.getByRole('button', { name: /Zelf oefenen.*Je oefent/ }).click();
     await page.getByRole('button', { name: 'Alfa C', exact: true }).click();
-    await page.locator('[data-alfa-c-category="words"]').waitFor();
-    assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-    assert.equal(await page.locator('[data-chapter]').count(), 3); // Existing word/spelling banks plus the approved listening collections.
+    await page.locator('[data-chapter="sentences"]').waitFor();
+    assert.equal(await page.locator('[data-alfa-c-category]').count(), 0);
+    assert.equal(await page.locator('[data-chapter]').count(), 12);
     assert(await page.locator('[data-chapter="listening"]').isEnabled());
     assert(
       await page
         .getByRole('button', { name: 'Alfa C', exact: true })
         .isEnabled(),
     );
+    await page.locator('[data-chapter="sentences"]').click();
     await page.locator('[data-alfa-c-category="words"]').click();
-    await page.locator('[data-chapter-activity="sequence"]').click();
     await page.locator('[data-pilot-block]').first().focus();
     await page.keyboard.press('Enter');
     await page.locator('[data-pilot-step="pilot-alfa-c:winkel:1"]').waitFor();
@@ -109,9 +109,9 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       .click();
     await page.locator('[data-pilot-block]').first().waitFor();
     await page.locator('.cp-context-header .text-back').click();
-    await page.locator('[data-chapter-activity="sequence"]').waitFor();
+    await page.locator('[data-alfa-c-category="words"]').waitFor();
     await page.locator('.cp-context-header .text-back').click();
-    await page.locator('[data-alfa-c-category]').first().waitFor();
+    await page.locator('[data-chapter]').first().waitFor();
     assert(page.url().includes('level=alfa-c'));
     assert(page.url().includes('help=practice'));
     await page.screenshot({ path: out + `/online-ingang-${name}.png` });
@@ -119,10 +119,11 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
       .getByRole('button', { name: 'Met je docent', exact: true })
       .click();
     assert.equal(await page.locator('.pilot-block-cards').count(), 0);
-    assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-    assert.equal(await page.getByRole('region', { name: 'Opdrachten met je docent' }).getByRole('link').count(), 5);
-    assert.equal(await page.locator('[data-chapter]').count(), 8);
-    assert.equal(await page.locator('[data-chapter]:not([disabled])').count(), 8);
+    assert.equal(await page.locator('[data-alfa-c-category]').count(), 0);
+    assert.equal(await page.locator('[data-teacher-group]').count(), 0);
+    assert.equal(await page.locator('[data-chapter]').count(), 12);
+    await page.locator('[data-chapter="spelling"]').click();
+    assert.equal(await page.locator('[data-teacher-group="spelling"]').count(), 1);
     await page.goto(base + '/docenten/hoofdstuk-2');
     await page
       .getByRole('heading', { name: 'Drie korte Alfa C-blokken' })

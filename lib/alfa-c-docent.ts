@@ -25,6 +25,7 @@ export type TeacherTask = {
   preparationId: string;
 };
 export const teacherTasks = content.tasks as TeacherTask[];
+export const teacherChapter: Record<string, string> = { verbinden: 'words', spelling: 'spelling', grammatica: 'grammar', schrijven: 'writing', herhalen: 'repeat' };
 export const teacherGroups = content.groups;
 export const teacherStorageKey = 'klink.alfa-c.docent.v1';
 export type Preparation = {

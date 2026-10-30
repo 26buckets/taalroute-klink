@@ -5,9 +5,9 @@ import type { GroupActivity } from './group-practice';
 
 // Existing complete sequences stay intact; this only describes their menu location.
 export const alfaCChapters = [
-  { id: 'alfa-c-words', legacy: 'words', title: 'Woorden en zinnen', icon: 'book' as const, blocks: pilotBlocks, kind: 'pilot' },
-  { id: 'alfa-c-paper', legacy: 'paper', title: 'Lezen en schrijven', icon: 'pen' as const, blocks: functionalBlocks, kind: 'functional' },
-  { id: 'alfa-c-messages', legacy: 'messages', title: 'Berichten lezen', icon: 'chat' as const, blocks: dailyBlocks, kind: 'daily' },
+  { id: 'alfa-c-words', parent: 'sentences', legacy: 'words', title: 'Woorden en zinnen', icon: 'book' as const, blocks: pilotBlocks, kind: 'pilot' },
+  { id: 'alfa-c-paper', parent: 'writing', legacy: 'paper', title: 'Lezen en schrijven', icon: 'pen' as const, blocks: functionalBlocks, kind: 'functional' },
+  { id: 'alfa-c-messages', parent: 'texts', legacy: 'messages', title: 'Berichten lezen', icon: 'chat' as const, blocks: dailyBlocks, kind: 'daily' },
 ].map(chapter => ({ ...chapter, activities: [] as GroupActivity[] }));
 
 export function legacyAlfaCHash(hash: string) {
