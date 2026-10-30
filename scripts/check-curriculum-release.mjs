@@ -912,7 +912,7 @@ try {
   const baselineCss = execFileSync('git', ['show', `${sizing.baselineSourceCommit}:app/taalroute-header.css`], { encoding: 'utf8' });
   requireProof(createHash('sha256').update(baselineCss).digest('hex') === inherited.files['app/taalroute-header.css']);
   const resizedCss = baselineCss.replace('.header-klink-logo { width: 78px; }', '.header-klink-logo { width: 66px; }').replace('.header-klink-logo { width: 65px; }', '.header-klink-logo { width: 55px; }');
-  const currentHeaderCss = readFileSync('app/taalroute-header.css', 'utf8');
+  const currentHeaderCss = readApprovedFile('app/taalroute-header.css').toString();
   // Historical sizing evidence stays bound to its published source; the successor binds the new scroll rule.
   const compactBaselineHeaderCss = execFileSync('git', ['show', `${compact.baselineSourceCommit}:app/taalroute-header.css`], { encoding: 'utf8' });
   requireProof(compactBaselineHeaderCss.startsWith(resizedCss) && createHash('sha256').update(currentHeaderCss).digest('hex') === approval.files['app/taalroute-header.css']);

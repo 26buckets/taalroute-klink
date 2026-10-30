@@ -123,6 +123,7 @@
     "public/taalroute-menu/klink-docent-suffix.svg",
     "scripts/build-audio-word-practice.mjs",
     "scripts/check-beta-release-20261030.mjs",
+    "scripts/check-curriculum-release.mjs",
     "scripts/check-image-repairs-20261030.mjs",
     "scripts/test-alfa-c-integration.mjs",
     "scripts/test-audio-word-practice-browser.mjs",
@@ -264,7 +265,9 @@
     "scripts/test-production-content.mjs": "33b84d66494509829d3c53f4a5f77e112f8a8b2751a59004e335715ac2e68b06",
     "scripts/test-teacher-classroom-edges.mjs": "467605e2bc5243dba712f825e7a0d6cf48adb39bf024e8c4ff844677e12b704a",
     "scripts/test-teacher-classroom.mjs": "f83689c922ea8d04e32ded95efaf3148c8a39dfa0847c3341c9fcfd33f87e6c2",
-    "scripts/test-teacher-direct-board-browser.mjs": "09249b1f2db549936b7df3970bc5237cf6a8fdc266bdb3bf66347ccb3852f792"
+    "scripts/test-teacher-direct-board-browser.mjs": "09249b1f2db549936b7df3970bc5237cf6a8fdc266bdb3bf66347ccb3852f792",
+    "scripts/check-curriculum-release.mjs": "cce50acb43bbe44e00f6f6d54f3717b8d12a672fd11eda75de22374b3a6df4d8"
   },
-  "scope": "Previously reviewed beta counts, stable word canvas, teacher mat lesson and 96 audio collections; latest published media and routes preserved. No new audio generation."
+  "scope": "Previously reviewed beta counts, stable word canvas, teacher mat lesson and 96 audio collections; latest published media and routes preserved. No new audio generation.",
+  "publicationGuardRepair": "Historical header sizing is checked against its approved historical bytes via the existing successor reader. Current header remains bound by the beta file hash."
 }
