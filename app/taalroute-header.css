@@ -20,10 +20,7 @@ body > .product-root, .product-root .entry-screen, .product-root .entry-window, 
   .product-root .learner-main, .product-root .staff-main { min-height: var(--klink-app-height); }
 }
 /* Short windows keep the original immersive lesson space; leaving the lesson restores the header. */
-@media (max-height: 600px) {
-  body:has(.cp-exercise-browser.is-guided) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }
-  body:has(.cp-exercise-browser.is-guided) > .taalroute-header { display: none; }
-}
+
 @media (max-width: 440px) {
   .taalroute-header { padding: 0 12px; gap: 8px; }
   .taalroute-header-brand { gap: 8px; }

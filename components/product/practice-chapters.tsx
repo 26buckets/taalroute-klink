@@ -23,6 +23,12 @@ import { learningReviewKey, parseLearningReview } from '@/lib/learning-review';
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const pageSize = 12;
+// Temporary orientation during beta; remove all counters with this switch.
+const showBetaCounts = true;
+function ExerciseCount({ count }: { count: number }) {
+  return showBetaCounts ? <small className="cp-beta-count">{count} {count === 1 ? 'oefening' : 'oefeningen'}</small> : null;
+}
+const collectionCount = (items: ReturnType<typeof availableChapterCollections>) => items.reduce((total, item) => total + (item.exerciseCount ?? item.exercises.length), 0);
 const readReview = () => { try { return parseLearningReview(localStorage.getItem(learningReviewKey)); } catch { return {}; } };
 function revealCollection(limits: Record<string, number>, location: ChapterLocation) {
   if (!location.activity || !location.collection) return limits;
@@ -32,11 +38,11 @@ function revealCollection(limits: Record<string, number>, location: ChapterLocat
   return (limits[key] ?? pageSize) >= needed ? limits : { ...limits, [key]: needed };
 }
 
-export function PracticeChapterCards({ onOpen, isAvailable, hideUnavailable = false, children }: { onOpen: (chapter: string) => void; isAvailable?: (chapter: string) => boolean; hideUnavailable?: boolean; children?: import('react').ReactNode }) {
+export function PracticeChapterCards({ onOpen, isAvailable, hideUnavailable = false, count, children }: { onOpen: (chapter: string) => void; isAvailable?: (chapter: string) => boolean; hideUnavailable?: boolean; count?: (chapter: string) => number; children?: import('react').ReactNode }) {
   return <div className="cp-chapter-grid" aria-label="Oefenhoofdstukken">{children}{practiceChapters.map(chapter => {
     const Icon = icons[chapter.icon], available = isAvailable?.(chapter.id) ?? true;
     if (hideUnavailable && !available) return null;
-    return <button key={chapter.id} className="cp-activity-button" data-chapter={chapter.id} disabled={!available} onClick={() => onOpen(chapter.id)}><Icon aria-hidden="true" /><span>{chapter.title}{!available && <small>Niet beschikbaar</small>}</span>{available && <ArrowRight aria-hidden="true" />}</button>;
+    return <button key={chapter.id} className="cp-activity-button" data-chapter={chapter.id} disabled={!available} onClick={() => onOpen(chapter.id)}><Icon aria-hidden="true" /><span>{chapter.title}{count && <ExerciseCount count={count(chapter.id)} />}{!available && <small>Niet beschikbaar</small>}</span>{available && <ArrowRight aria-hidden="true" />}</button>;
   })}</div>;
 }
 
@@ -88,6 +94,12 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
   if (!chapter) availableLevels.add('alfa-c');
   const alfaCSelected = !chapter && (location.level === 'alfa-c' || (location.level === 'all' && ['all','alfa-c'].includes(settings.literacy)));
   const chapterSelection = (id: string) => ({ level: location.level === 'all' && !chapter ? settings[chapterRouteAxis(id)] : location.level, help: location.help });
+  const countChapter = (id: string, help = location.help) => {
+    const sequence = alfaCChapters.find(item => item.id === id);
+    if (sequence) return sequence.blocks.reduce((total, block) => total + block.steps.length, 0);
+    return (practiceChapters.find(item => item.id === id)?.activities ?? []).reduce((total, activity) => total + collectionCount(availableChapterCollections(activity, { ...chapterSelection(id), help }, review)), 0);
+  };
+  const countMode = (help: ContentHelp) => chapter ? countChapter(chapter.id, help) : [...practiceChapters, ...(alfaCSelected ? alfaCChapters : [])].reduce((total, item) => total + countChapter(item.id, help), 0);
   const openChapter = (id: string) => {
     open({ chapter: id, ...chapterSelection(id) });
   };
@@ -112,17 +124,17 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
     {collection && chapter && <p className="sr-only" aria-label="Je bent hier">Oefenen · {chapter.title}</p>}
     {!collection && <div className="cp-page-workspace">
     {choosing ? <div className="cp-practice-entry" aria-label="Hoe wil je oefenen?">
-      <button className="cp-activity-button" disabled={!modeAvailable('practice')} onClick={() => openMode('practice')}><UserRound aria-hidden="true" /><span><strong>Zelf oefenen</strong><small>{modeAvailable('practice') ? 'Je oefent op de laptop.' : 'Niet beschikbaar voor deze keuze.'}</small></span><ArrowRight aria-hidden="true" /></button>
-      <button className="cp-activity-button" disabled={!modeAvailable('guided')} onClick={() => openMode('guided')}><UsersRound aria-hidden="true" /><span><strong>Met je docent</strong><small>{modeAvailable('guided') ? 'Je docent zit bij je.' : 'Niet beschikbaar voor deze keuze.'}</small></span><ArrowRight aria-hidden="true" /></button>
+      <button className="cp-activity-button" disabled={!modeAvailable('practice')} onClick={() => openMode('practice')}><UserRound aria-hidden="true" /><span><strong>Zelf oefenen</strong><ExerciseCount count={countMode('practice')} /><small>{modeAvailable('practice') ? 'Je oefent op de laptop.' : 'Niet beschikbaar voor deze keuze.'}</small></span><ArrowRight aria-hidden="true" /></button>
+      <button className="cp-activity-button" disabled={!modeAvailable('guided')} onClick={() => openMode('guided')}><UsersRound aria-hidden="true" /><span><strong>Met je docent</strong><ExerciseCount count={countMode('guided')} /><small>{modeAvailable('guided') ? 'Je docent zit bij je.' : 'Niet beschikbaar voor deze keuze.'}</small></span><ArrowRight aria-hidden="true" /></button>
       {!modeAvailable('practice') && !modeAvailable('guided') && <button className="secondary-button" onClick={() => open({ level: location.level })}>Andere oefeningen<ArrowRight aria-hidden="true" /></button>}
     </div> : <>
     <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" disabled={!modeAvailable(id)} aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>
     <MyRoute showPracticeChoice={false} availableLevels={availableLevels} selection={chapter || location.level !== 'all' ? location : undefined} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />
-    {!chapter && <PracticeChapterCards hideUnavailable={location.level === 'alfa-c' || (location.level === 'all' && settings.literacy === 'alfa-c')} isAvailable={id => availableChapterActivities(id, chapterSelection(id), review).length > 0} onOpen={openChapter}>{alfaCSelected && alfaCChapters.map(item => { const Icon = icons[item.icon]; return <button key={item.id} className="cp-activity-button" data-alfa-c-category={item.legacy} onClick={() => open({ chapter: item.id, level: 'alfa-c', help: location.help })}><Icon aria-hidden="true" /><span>{item.title}</span><ArrowRight aria-hidden="true" /></button>; })}</PracticeChapterCards>}
+    {!chapter && <PracticeChapterCards count={countChapter} hideUnavailable={location.level === 'alfa-c' || (location.level === 'all' && settings.literacy === 'alfa-c')} isAvailable={id => availableChapterActivities(id, chapterSelection(id), review).length > 0} onOpen={openChapter}>{alfaCSelected && alfaCChapters.map(item => { const Icon = icons[item.icon]; return <button key={item.id} className="cp-activity-button" data-alfa-c-category={item.legacy} onClick={() => open({ chapter: item.id, level: 'alfa-c', help: location.help })}><Icon aria-hidden="true" /><span>{item.title}<ExerciseCount count={countChapter(item.id)} /></span><ArrowRight aria-hidden="true" /></button>; })}</PracticeChapterCards>}
     {!chapter && alfaCSelected && location.help === 'guided' && <section className="cp-teacher-activities" aria-labelledby="cp-teacher-activities-title"><h2 id="cp-teacher-activities-title">Opdrachten met je docent</h2><div className="cp-chapter-grid"><TeacherBlockCards /></div></section>}
-    {chapter && !activitySelected && <div className="cp-chapter-grid" aria-label={chapter.title}>{sequenceChapter && <button className="cp-activity-button" data-chapter-activity="sequence" onClick={() => open({ chapter: chapter.id, sequence: true, ...selection })}><BookOpen aria-hidden="true" /><span>Stap voor stap oefenen</span><ArrowRight aria-hidden="true" /></button>}{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
+    {chapter && !activitySelected && <div className="cp-chapter-grid" aria-label={chapter.title}>{sequenceChapter && <button className="cp-activity-button" data-chapter-activity="sequence" onClick={() => open({ chapter: chapter.id, sequence: true, ...selection })}><BookOpen aria-hidden="true" /><span>Stap voor stap oefenen<ExerciseCount count={countChapter(chapter.id)} /></span><ArrowRight aria-hidden="true" /></button>}{chapter.id === 'sounds' && <a className="cp-activity-button" href="#learner/sounds"><Ear aria-hidden="true" /><span>Klankenkaart</span><ArrowRight aria-hidden="true" /></a>}{activities.map(item => {
       const Icon = icons[item.icon], available = availableActivities.includes(item.id);
-      return <button className="cp-activity-button" key={item.id} data-chapter-activity={item.id} disabled={!available} onClick={() => open({ chapter: chapter.id, activity: item.id, ...selection })}><Icon aria-hidden="true" /><span>{item.label}{!available && <small>Niet beschikbaar</small>}</span>{available && <ArrowRight aria-hidden="true" />}</button>;
+      return <button className="cp-activity-button" key={item.id} data-chapter-activity={item.id} disabled={!available} onClick={() => open({ chapter: chapter.id, activity: item.id, ...selection })}><Icon aria-hidden="true" /><span>{item.label}<ExerciseCount count={collectionCount(availableChapterCollections(item.id, location, review))} />{!available && <small>Niet beschikbaar</small>}</span>{available && <ArrowRight aria-hidden="true" />}</button>;
     })}</div>}
     {activitySelected && !collection && <>
       <RoundProgressNotice />
@@ -131,13 +143,13 @@ export function PracticeChapters({ onBack, onAttempt }: { onBack: () => void; on
         const complete = item.total > 0 && done === item.total;
         return <button key={item.id} className={`cp-chapter-collection${complete ? ' is-complete' : ''}`} data-collection={item.id} {...(sequenceChapter ? { [`data-${sequenceChapter.kind}-block`]: item.id } : {})} onClick={() => open({ ...location, collection: item.id })}>
         {item.image ? <Image src={item.image} width={96} height={96} alt="" /> : <BookOpen aria-hidden="true" />}
-        <span><strong>{item.title}</strong><small>{item.summary}</small>{done > 0 && <small className="cp-round-status">{complete && <Check aria-hidden="true" />}{complete ? `Afgerond · ${done} van ${item.total}` : `${done} van ${item.total} gedaan`}</small>}</span><ArrowRight aria-hidden="true" />
+        <span><strong>{item.title}</strong><small>{item.summary}</small><ExerciseCount count={item.total} />{done > 0 && <small className="cp-round-status">{complete && <Check aria-hidden="true" />}{complete ? `Afgerond · ${done} van ${item.total}` : `${done} van ${item.total} gedaan`}</small>}</span><ArrowRight aria-hidden="true" />
       </button>; })}</div>
       {!items.length && <div className="cp-unavailable">
         <output>{reviewMode ? 'Je hebt nu niets om te herhalen.' : `Deze oefening is niet beschikbaar voor ${levelLabel(location.level)}.`}</output>
         {practiceChapters.some(item => availableChapterActivities(item.id, location, review).length) ? <>
           <p>Kies een andere oefening:</p>
-          <PracticeChapterCards isAvailable={id => availableChapterActivities(id, location, review).length > 0} onOpen={openChapter} />
+          <PracticeChapterCards count={countChapter} isAvailable={id => availableChapterActivities(id, location, review).length > 0} onOpen={openChapter} />
         </> : modeAvailable('guided') ? <button className="secondary-button" onClick={() => openMode('guided')}><UsersRound aria-hidden="true" />Oefen met je docent<ArrowRight aria-hidden="true" /></button> : <button className="secondary-button" onClick={() => open({ level: location.level })}>Andere oefeningen<ArrowRight aria-hidden="true" /></button>}
       </div>}
 

@@ -180,6 +180,24 @@ export function PackageExerciseBrowser({
   const currentId = useRef('');
   const taskHeading = useRef<HTMLHeadingElement>(null);
   const exerciseStage = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    const stage = exerciseStage.current;
+    const main = stage?.closest<HTMLElement>('.learner-main');
+    if (!stage || !main) return;
+    const resize = () => {
+      const nav = document.querySelector<HTMLElement>('.learner-nav');
+      const bottom = nav && getComputedStyle(nav).position === 'fixed' ? nav.getBoundingClientRect().top : window.innerHeight;
+      const feedback = stage.parentElement?.querySelector<HTMLElement>('.cp-exercise-feedback');
+      const top = stage.getBoundingClientRect().top + main.scrollTop;
+      stage.style.setProperty('--practice-stage-height', `${Math.max(180, bottom - top - (feedback?.offsetHeight ?? 112) - 12)}px`);
+    };
+    const observer = new ResizeObserver(resize);
+    observer.observe(main);
+    for (const el of main.querySelectorAll('.cp-context-header, .cp-practice-display, .cp-exercise-record-head, .cp-exercise-feedback')) observer.observe(el);
+    window.addEventListener('resize', resize);
+    resize();
+    return () => { observer.disconnect(); window.removeEventListener('resize', resize); };
+  }, [guided, practiceRound, completed]);
   const completionHeading = useRef<HTMLHeadingElement>(null);
   const records = exercises.filter((exercise) => exercise.componentId === familyId);
   const exercise = records[Math.min(recordIndex, Math.max(0, records.length - 1))] ?? exercises[0];
@@ -534,7 +552,7 @@ function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; on
   const visibleWord = typeof exercise.displayWord === 'string' ? exercise.displayWord : exercise.exampleWord;
   if (!source && typeof visibleWord !== 'string' && !children) return null;
   return (
-    <div className="cp-task-prompt">
+    <div className={`cp-task-prompt${source && onAudio && typeof visibleWord !== 'string' ? ' cp-corner-prompt' : ''}`}>
       {typeof visibleWord !== 'string' && (source && onAudio ? <button onClick={() => onAudio(source)} aria-label={exercise.contextId ? 'Luister opnieuw' : exercise.wordId ? 'Luister naar het woord' : 'Luister naar de opdracht'}><Volume2 /><span>Luister</span></button> : <span><FileText /></span>)}
       <div>{typeof visibleWord === 'string' && (source && onAudio ? <button className="cp-example-listen" onClick={() => onAudio(source)} aria-label={`Luister naar ${visibleWord}`}>{visibleWord}<Volume2 aria-hidden="true" /></button> : <strong>{visibleWord}</strong>)}{children}</div>
     </div>
@@ -983,10 +1001,10 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
   const articleId = useId();
   const phrase = wordWithArticle(pack.words.find(word => word.id === card?.cardId && word.word === backText) ?? pack.words.find(word => word.image && word.image === card?.front?.image?.src && word.word === backText));
   return <section className="cp-task-card">
+    {source && <button className="secondary-button cp-corner-listen" aria-label="Luister naar het woord" onClick={() => onAudio(source)}><Volume2 />Luister</button>}
     {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}>{flipped ? <strong>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong> : <ExerciseImageView image={card.front?.image} />}</button>}
     <span className="cp-card-hint">Tik op de kaart.</span>
     <div className="cp-task-actions">
-      {source && <button className="secondary-button" aria-label="Luister naar het woord" onClick={() => onAudio(source)}><Volume2 />Luister</button>}
       {cards.length > 1 && <><button className="secondary-button" disabled={index === 0} onClick={() => { setIndex(index - 1); setFlipped(false); }}><ArrowLeft />Vorige</button><button className="primary-button" onClick={() => { if (index >= cards.length - 1) onFinish('kaartenset afgerond', true); else { setIndex(index + 1); setFlipped(false); } }}>{index >= cards.length - 1 ? 'Klaar' : 'Verder'}<ArrowRight /></button></>}
     </div>
   </section>;

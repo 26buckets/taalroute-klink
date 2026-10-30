@@ -96,6 +96,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         assert.equal(progress.done.length, exercises.length);
         await page.goto(base + '/' + chapterHash({ ...location(row), collection: undefined }));
         // This chosen final list is revealed by the shared list navigation.
+        await page.locator('.cp-chapter-collections').waitFor();
         const card = page.locator(`[data-collection="${row.id}"]`);
         while (!await card.count()) { const more = page.getByRole('button', { name: /Meer/ }); assert(await more.count()); await more.click(); }
         assert((await card.getAttribute('class')).includes('is-complete'));
