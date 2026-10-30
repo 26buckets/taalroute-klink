@@ -1,3 +1,29 @@
+## 30 oktober 2026 — B2 verborgen, ruimte behouden
+
+Livebron `b96c60d46bbb7609de7f1612e5d9ecfa391ea776`, canonieke main; Worker `650e0ecb-98c0-4d4c-bd8c-52f61502ca0d`. Op Nico’s expliciete opdracht is uitsluitend de B2-niveauknop onzichtbaar gemaakt. Het volledige vak na B1 blijft in de indeling staan; de overige niveauknoppen verschuiven niet. B2 is ook uit de toegankelijke bediening verdwenen.
+
+Normale `npm run deploy`-route en publicatiepoort geslaagd. Lokaal: types, gerichte lint, productieopbouw, navigatie, 96 menureizen, 180 blokterugwegen en 50 integratiegevallen gecontroleerd. Online: Chromium/WebKit op vier schermmaten, behoud van de lege B2-plek, zes werkende niveauknoppen, klankenkaart, uitleg en ongewijzigde opgeslagen voortgang gecontroleerd. Alle 26 gebouwde appbestanden en officiële logo’s bytegelijk teruggelezen. Browseremulatie; geen fysieke toestellen.
+
+Inhoud, audio, voortgang, routes, media en de zeven eerder gepubliceerde woordbeelden behouden; geen wijziging aan `data`, `public`, `lib` of spelers. Het bronpakket is volledig van Drive teruggelezen en gecontroleerd: `12ZcBN0F1-PULukqPR368AQ2dxEJ6Izpw`. Bewijs: `docs/b2-hidden-20261030/`. Deze registratie wijzigt de livecode niet. Publiceer alleen een afstammeling van deze actuele livebron via de canonieke main en de bestaande publicatiepoort.
+
+## 30 oktober 2026 — zeven woordbeelden online
+
+Livebron `beff2e25e378a9fa723bc64831d1e96853d11113`, canonieke main; Worker `e0ede8d8-2997-441d-8d69-33ed6fd0ce21`. Zeven door Nico vrijgegeven woordbeelden op 122 plaatsen in 65 reeksen, samen 187.930 bytes. Tandarts-v1 expliciet uitgesloten wegens Nico’s afwijzing van de handen; werkgever blijft afgekeurd. 232 oorspronkelijke woordvakken blijven open.
+
+Alle 59.532 oefenplaatsen, antwoorden, audio, navigatie, voortgang en bestaande mediabestanden behouden. 36 lokale en 36 live browsercontroles in Chromium/WebKit desktop/mobiel geslaagd; 65 bestaande scènes en alle antwoordvormen gecontroleerd. 72 nieuwe bestanden online bytegelijk teruggelezen. Normale npm run deploy-route, geen GitHub-workflows. Bronback-up volledig teruggelezen: `1vWS6k24zj4Jm_s3YP-OWIxBUWtlzH1s6`. Zie `docs/word-images-batch-20261030/`.
+
+## 30 oktober 2026 — Direct kiezen online
+
+Live: https://klink.taalroute.nl/ . Schone canonieke main, broncommit `5bf3d39071dcd21d4203507adb4d2d1922e17d6a`, Worker `65aebbc7-07db-4176-bd83-3491569b358c`. Gepubliceerd via `npm run deploy`, afstammeling van de nieuwste goedgekeurde livebron `2e0563b2fb358cae6e680033953f8cd5081f032e`. De zeven herstelde opnamen en alle eerdere archieffoto’s, woordrondes, inhoud en opslag zijn behouden.
+
+Cursistnavigatie: Start, Woorden bekijken, Nog een keer. Start toont dezelfde twaalf categorieën, zichtbare niveauknoppen Alfa A–B1 en B2 als niet beschikbaar, Zelf oefenen/Met je docent en de bestaande compacte klankenkaart. Alle lessen blijven via Stap voor stap bereikbaar; de zes oorspronkelijke stappen en video’s staan onder Zo oefen je. Alleen een echte opgeslagen positie geeft Verder met. Bestaande lokale gegevens zijn niet gewist of omgezet. De docenthandleiding volgt de nieuwe routes. Een tijdens de controle gevonden WebKit-herlaadrace in de collectielader is gericht hersteld, met behoud van validatie, annulering, foutafhandeling en opgeslagen positie.
+
+Volledige publicatiepoort en manipulatiecontrole geslaagd; 1.979 audiobestanden metadata-gecontroleerd. Alle 13.135 publieke bronbestanden zijn bytegelijk in de uiteindelijke bouw, met behoud van de ingetrokken-audio-uitsluitingen. Lokaal: inhoud, antwoorden, voortgang, alle 302 lessen, 1.462 productiecollecties, 96 menureizen, 180 Alfa C-terugwegen, 50 integratiegevallen, 112 woordronde-openingen/24 complete rondes, 124 beeld-/Fotobingocontroles, de echte klanken en nieuwste herstelopnamen gecontroleerd. Gewijzigde code en browsercontroles slagen voor lint; de algemene historische lintverzameling heeft bestaande fouten. De oude vijfdelige vormgevingsasserties zijn voor deze publicatie vervangen door de actuele navigatie- en behouden inhouds-/spelercontroles.
+
+Online: 115 app-/audio-/beeld-/oefenbestanden bytegelijk teruggelezen; actuele navigatie in twee browsers/vier schermmaten, koude collectieherlaadcontroles en acht aanraakreizen op 320×480, 390×844, 844×390 en 768×1024 in Chromium/WebKit. Niveaukeuze, oefenstand, teruggaan, echte klankaudio en bewaarde woorden na herladen slagen. Geen fysieke telefoons, klasmonitor of cursistenpilot. Bestaande inhoudelijke reviewpunten en 239 woordvakken blijven open. Het bestaande lichtgroen is behouden; het witte-kaartvoorbeeld is uitsluitend een vergelijking.
+
+Bronpakket volledig teruggedownload en SHA256/ZIP-gecontroleerd: https://drive.google.com/file/d/1d9oIL-NBjdRLRA79iM1OdikV-QEHVkue/view . Online bewijs en afbeeldingen eveneens volledig teruggelezen: https://drive.google.com/file/d/1vOVfyMbANdAqLoOhhLLSerjcA0AA37EZ/view . Bewijs: docs/direct-kiezen-publicatie-20261030. Alle zware controles lokaal; geen GitHub Actions-workflows aanwezig of toegevoegd. De registratiecommit na de livebron wijzigt de runtime niet. Volgende publicatie uitsluitend vanaf actuele main met behoud van Direct kiezen, deze herlaadcorrectie en de volledige publicatieketen.
+
 ## 30 oktober 2026 — inhoud en zeven opnamen hersteld
 
 Livebron `2e0563b2fb358cae6e680033953f8cd5081f032e`, canonieke main, schone bron; Worker `d42d65dd-6126-46fb-a6b8-83ae7287d529`. Gepubliceerd via `npm run deploy`, afstammeling van `3d72be4d35cf1c8a2ac9ed386a0198e3094d2ca9`; de 29 extra archieffoto’s en alle bestaande routes, media en opslag zijn behouden.

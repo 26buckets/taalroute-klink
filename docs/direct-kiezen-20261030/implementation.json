@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-30",
+  "request": "Bouw Direct kiezen in de echte Klink-app, met de klankenkaart en zichtbare niveauknoppen. Behoud inhoud, audio en voortgang en laat de werkende versie zien.",
+  "branch": "codex/klink-direct-kiezen-20261030",
+  "initialLiveBase": "12a22748b38c1b1e437f02677bf88721847d0145",
+  "verifiedLiveBase": "407823f6f96fe51aac6534f6d5832a74d4b0874c",
+  "liveBaseBuiltAt": "2026-10-30T18:07:26.752Z",
+  "publication": "Niet gepubliceerd; lokale werkende versie op http://127.0.0.1:18971/#learner/home.",
+  "navigation": ["Start", "Woorden bekijken", "Nog een keer"],
+  "levels": ["Alfa A", "Alfa B", "Alfa C", "A1", "A2", "B1"],
+  "b2": "Zichtbaar als niet beschikbaar; geen nieuwe inhoud of niveauvrijgave.",
+  "practiceModes": ["Zelf oefenen", "Met je docent"],
+  "sharedStructure": "De bestaande twaalf categorieën op ieder niveau, met behoud van categorie → oefenvorm → lijst → opdracht en de nieuwste Alfa C-indeling.",
+  "soundCard": "Direct bereikbaar op Start. Bestaande 46 klanken, opnamen, woordvoorbeelden en leskoppelingen; compacter kaartformaat.",
+  "lessons": "Alle bestaande lijsten en lesroutes via Stap voor stap. Hervatten verwijst uitsluitend naar een werkelijk opgeslagen positie.",
+  "explanation": "De zes oorspronkelijke stappen met hun bestaande uitlegvideo’s blijven op Start onder Zo oefen je.",
+  "storage": {
+    "newPreferenceKey": "klink.taalroute.practice-navigation.v1",
+    "existingData": "Geen opslagverwijdering of omzetting van voortgang, antwoorden, eerste versies, bewaarde woorden, oefenrondes of media.",
+    "legacyPreferences": "Bestaande lees-/taalkeuzes worden als beginwaarde gelezen. Beide oude assen blijven bestaan.",
+    "legacyLinks": "Bestaande binnenlinks zonder filters behouden hun volledige oorspronkelijke inhoud. Expliciete niveau-/oefenfilters blijven geldig.",
+    "localPreview": "Een andere website-oorsprong heeft eigen browseropslag. De voortgang op klink.taalroute.nl wordt door deze lokale versie niet aangeraakt."
+  },
+  "preservation": "Geen wijzigingen aan data/, public/, de bestaande spelers of de opslag- en audiomodules ten opzichte van de geverifieerde livebasis. De nieuwste beelden en docentklanken zijn meegenomen.",
+  "checks": "Zie de meegeleverde lokale controleverslagen en schermafbeeldingen. Alleen korte gerichte lokale controles en de relevante volledige browserreeksen; geen GitHub Actions, push of publicatie.",
+  "limitations": [
+    "Geen praktijktest met cursisten of fysieke telefoons.",
+    "De algemene historische browserverzameling bevat nog controles op de vervangen vijfdelige startnavigatie; deze is niet als volledige suite uitgevoerd. De actuele directe navigatie heeft een eigen test:navigation-opdracht naast de behouden inhoudscontroles.",
+    "De volledige bestaande lintverzameling rapporteert al fouten in oudere tests. De gewijzigde toepassing en nieuwe navigatiebestanden worden apart gecontroleerd.",
+    "Het vaste DigiBord-stijlreferentiepad was lokaal niet beschikbaar; de bestaande Klink-typografie, Lucide-iconen, knoppen en stijltokens zijn hergebruikt."
+  ]
+}

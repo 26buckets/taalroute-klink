@@ -25,6 +25,7 @@
     "test:learning-paths": "node --test scripts/test-learning-paths.mjs && node scripts/test-learning-paths-browser.mjs",
     "test:chapters": "node --test scripts/test-practice-chapters.mjs && node scripts/test-practice-chapters-browser.mjs && node scripts/test-player-stability-browser.mjs && node scripts/test-practice-sheet-browser.mjs",
     "test:audio-register": "node --test scripts/test-audio-register.mjs && node scripts/test-audio-register-browser.mjs",
+    "test:navigation": "node --test scripts/test-practice-navigation.mjs && node scripts/test-unified-practice-navigation.mjs && node scripts/test-direct-navigation-browser.mjs && node scripts/test-alfa-c-menu-browser.mjs",
     "test:group-practice": "node --test scripts/test-group-practice.mjs scripts/test-extended-practice.mjs && node scripts/test-group-practice-browser.mjs && node scripts/test-extended-practice-browser.mjs",
     "check:publication": "node scripts/check-curriculum-release.mjs",
     "deploy": "npm run check:publication && npm run build && wrangler deploy --config dist/server/wrangler.json",

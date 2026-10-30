@@ -3,7 +3,7 @@ import { teacherChapter, teacherGroups } from '../lib/alfa-c-docent.ts';
 import { chromium, webkit } from 'playwright';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
-const base = process.env.KLINK_URL ?? 'http://127.0.0.1:18929';
+const base = process.env.KLINK_TEST_URL ?? process.env.KLINK_URL ?? 'http://127.0.0.1:18929';
 const out = process.env.KLINK_ALFAC_OUTPUT ?? 'outputs/unified-practice-20261029';
 mkdirSync(out, { recursive: true });
 const checks = [], errors = [];
@@ -37,7 +37,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           const card = page.locator(`[data-chapter="${chapter.id}"]`);
           const count = chapterExerciseCount(chapter.id, { level, help });
           assert.equal(await card.isEnabled(), count > 0);
-          assert.equal(await card.locator('.cp-beta-count').innerText(), `${count} ${count === 1 ? 'oefening' : 'oefeningen'}`);
+          assert.equal(await card.locator('.cp-beta-count').count(), 0, 'Start has no beta counters');
         }
         if (engine === 'chromium' && level === 'alfa-c') await page.screenshot({path: `${out}/twelve-${help}-${width}.png`});
         if (level === 'alfa-c') {

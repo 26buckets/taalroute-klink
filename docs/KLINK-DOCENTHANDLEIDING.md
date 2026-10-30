@@ -21,7 +21,7 @@ Begin met één woord en één duidelijk doel. In dit voorbeeld oefen je met *ma
 
 1. **Kies je doel.** Bijvoorbeeld: de cursist leest *mat* en wijst de mat aan. Zoek daarbij het doel uit je boek en lesplan. Vul je voorbereiding in bij hoofdstuk 10.
 2. **Kijk wat al lukt.** Kent de cursist het woord *mat*? Herkent de cursist de letters m, a en t en de klanken die erbij horen? Oefen wat nog niet bekend is. Je hoeft niet alles in één keer te doen.
-3. **Open de les.** Kies bij een nieuwe start in de cursistomgeving **Start → Begin hier**. Je komt direct bij **Kijk en luister** met *mat*. Wil je bewust terug naar deze les? Kies **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**.
+3. **Open de les.** Kies in de cursistomgeving **Start → Stap voor stap → tas · map → tabblad Stap voor stap → Start les 1: mat**.
 4. **Doe het voor.** Open **Kijk en luister**. Laat het woord horen en wijs de mat aan. Kies daarna **Andere oefening → Maak**. Laat zien hoe je één letter kiest. Haal die met **Eén terug** weg voor de cursist begint.
 5. **Laat de cursist proberen.** Zeg: “Nu jij.” Wacht rustig. Loopt de cursist vast? Geef één aanwijzing. Laat daarna opnieuw proberen.
 6. **Kijk wat zelfstandig lukt.** Toon de woordkaart zonder het woord eerst te zeggen. Vraag: “Lees.” Vraag daarna: “Waar is de mat?” Noteer het lezen en het aanwijzen apart.
@@ -39,19 +39,19 @@ Kies eerst wat je wilt oefenen. Gebruik daarna de route die daarbij past. De kno
 
 ### Je oefenroute kiezen
 
-Op Start opent Begin hier direct de eerstvolgende kleine les. Zonder bewaarde les of niveaukeuze begin je met mat: Kijk en luister. De cursist hoeft geen niveau te kiezen. Open Samen met je docent om de oefenroute of fotohulp aan te passen. Kies daar bij Lezen samen Alfa A of Alfa B en zo nodig bij Taal A1 of A2. Deze keuzes staan los van elkaar. Ze bepalen het aanbod, niet het behaalde niveau. Nogmaals op de gekozen knop tikken zet die keuze uit; Alles toont alle niveaus van die rij. Heeft een keuze nog geen kleine leesroute, dan verwijst Bekijk aanbod naar de beschikbare oefeningen. Met Bekijk mijn oefeningen open je het passende aanbod. Bij Oefenen blijven beide rijen Lezen en Taal op dezelfde plek staan. Niet beschikbare niveaus zijn herkenbaar uitgeschakeld. Je volgt steeds dezelfde stappen: categorie → oefenvorm → lijst → opdracht. De keuze blijft op dit apparaat staan. Een geopende deellink kan een eigen niveaukeuze tonen.
+Op Start kies je direct een van de twaalf oefenonderdelen. Kies bovenaan Zelf oefenen of Met je docent en tik op Alfa A, Alfa B, Alfa C, A1, A2 of B1. De gekozen knop blijft actief; B2 is nog niet beschikbaar. De keuze bepaalt het aanbod, niet het behaalde niveau. Je volgt steeds dezelfde stappen: categorie → oefenvorm → lijst → opdracht. De keuze blijft op dit apparaat staan. Een geopende deellink kan een eigen niveaukeuze tonen. Met Hulp kies je wanneer de woordfoto helpt; voorbeelden en situatiebeelden blijven zichtbaar.
 
-Onder de startknop staat de rustige uitleg Zo oefen je: Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Elke stap heeft een eigen kadertje; de cijfers blijven in rondjes staan. Op Start is geen stap actief en kun je deze uitleg niet aanklikken. Binnen Samen oefenen zijn de stappen knoppen; het witte cijfer in het donkere rondje laat de gekozen stap zien, niet een behaald resultaat. Grijs betekent dat er bij deze keuze nog geen passend aanbod is. Bij Hulp kies je wanneer de woordfoto helpt; voorbeelden en situatiebeelden blijven zichtbaar.
+Open op Start Zo oefen je voor de zes oorspronkelijke stappen: Kijken → Herkennen → Namaken → Zelf maken → Gebruiken → Herhalen. Tik op een stap om de uitlegvideo te bekijken. Binnen Oefenen met deze woorden zijn de stappen knoppen; het witte cijfer in het donkere rondje laat de gekozen stap zien, niet een behaald resultaat. Grijs betekent dat er bij deze keuze nog geen passend aanbod is.
 
 In de docentomgeving bij Overzicht staat Van woordbeeld naar situatie. De vijf blokken Woordbeeld, Beelden kiezen, Situatie, Beeldvraag en Praktijkbeeld openen elk hun voorbeeld eronder. Je ziet de bestaande mapfoto, twee bekende beelden, het leslokaal en een gemaakt meeneemlijstje. Per voorbeeld staat wat je doet, waarop je let en wat je eerst voorbereidt. Het is docentuitleg, geen nieuwe cursistreeks of niveauladder. Een beeldvraag is niet hetzelfde als een beeldverhaal.
 
 ### Eén kleine leesstap
 
-Kies **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**.
+Kies **Start → Stap voor stap → tas · map → tabblad Stap voor stap → Start les 1: mat**.
 
 Deze les heeft drie delen: **Kijk en luister → Maak → Nog een keer**. Bij **Maak** staat **Leg het woord**. In de eerste vijf lessen en de aansluitende lessen pen · pet, kam, ik · kip, pak · kat, ‘in’, ‘en’, ‘is’, ‘kan’, ‘kast’, ‘mens’, ‘nek’ en alle lessen van de onderdelen kop · sok (tot en met tand), raam · boot (tot en met traan), boek · muur (tot en met vork), neus · buik (tot en met vloer), zeep · hek (tot en met zoon), tong · bank (tot en met weg), sjaal · taxi (tot en met visje), huiskamer · rugzak, keuken · moeder, jassen · sokken, foto · ramen en pakje · tomaten laat Klink eerst zien hoe de eerste letter in het eerste vak komt. Kies **Nu jij** en laat de cursist dezelfde letter aantikken. Daarna wijst Klink telkens de volgende letter en het bijbehorende lege vak aan. Een verkeerde tik vult het vak niet. Lettercombinaties zoals aa, oo, ee, ie, oe, uu, eu, ui, ei, ij, au, ou, ch, ng, nk, sj, eau, eeuw, ieuw en dubbele letters zoals pp en ss blijven samen op één knop en gaan samen in één vak. Met **Kijk nog eens** verschijnt een voorbeeld van de huidige letter; al gekozen letters blijven bewaard. Met **Eén terug** haal je de laatst gekozen letter weg.
 
-Binnen **tas · map** is de lesvolgorde: **mat → tas → map → man · pan → jas**. Bereid bij een volgend woord de nieuwe letters en de betekenis voor. Na de laatste beginnersles jas kies je op het rustige afrondscherm Verder met pen · pet. Deze volgende les begint met Kijk en luister en herhaalt eerst jas. Je hoeft geen nieuw onderdeel of niveau te kiezen. Ook Ga verder op Start bewaart deze vervolgplek. De nieuwe les is daarmee nog niet afgerond. Na nek kies je Verder met kop · sok. De volgende les begint met Kijk en luister en herhaalt eerst ik, kip en kin. Ook deze vervolgplek wordt bewaard; kop · sok telt pas als afgerond nadat de opdrachten zijn gedaan. Bij de eerste keuze- of koppeloefening van elke beginnersles, inclusief pen · pet, kam, ik · kip, pak · kat, ‘in’, ‘en’, ‘is’, ‘kan’, ‘kast’, ‘mens’, ‘nek’ en alle lessen van de onderdelen kop · sok (tot en met tand), raam · boot (tot en met traan), boek · muur (tot en met vork), neus · buik (tot en met vloer), zeep · hek (tot en met zoon), tong · bank (tot en met weg), sjaal · taxi (tot en met visje), huiskamer · rugzak, keuken · moeder, jassen · sokken, foto · ramen en pakje · tomaten, verschijnt een kort voorbeeld. Kies Nu jij om zelf te oefenen. Bij koppelen wordt één woord-fotopaar voorgedaan: eerst het woord, daarna de foto. Het voorbeeld telt niet als antwoord. Met Kijk nog eens kun je het herhalen; al gemaakte koppelingen blijven staan. Een tik op een foto zonder gekozen woord geeft de aanwijzing om eerst een woord te kiezen. Beoordeel een voorgedaan antwoord als oefenen met hulp, niet als zelfstandig lezen. Bij Wat ontbreekt? laat een voorbeeld zien hoe de e de lege plek in p…n vult, in kam hoe de k de lege plek in …am vult, en in ik · kip hoe de i de lege plek in …k vult. Het handje wijst de juiste keuze aan. Na Nu jij kiest de cursist zelf; Kijk nog eens herhaalt het voorbeeld. Het voorbeeld telt niet als een gemaakte opdracht.
+Binnen **tas · map** is de lesvolgorde: **mat → tas → map → man · pan → jas**. Bereid bij een volgend woord de nieuwe letters en de betekenis voor. Na de laatste beginnersles jas kies je op het rustige afrondscherm Verder met pen · pet. Deze volgende les begint met Kijk en luister en herhaalt eerst jas. Je hoeft geen nieuw onderdeel of niveau te kiezen. Ook Verder met op Start bewaart deze vervolgplek. De nieuwe les is daarmee nog niet afgerond. Na nek kies je Verder met kop · sok. De volgende les begint met Kijk en luister en herhaalt eerst ik, kip en kin. Ook deze vervolgplek wordt bewaard; kop · sok telt pas als afgerond nadat de opdrachten zijn gedaan. Bij de eerste keuze- of koppeloefening van elke beginnersles, inclusief pen · pet, kam, ik · kip, pak · kat, ‘in’, ‘en’, ‘is’, ‘kan’, ‘kast’, ‘mens’, ‘nek’ en alle lessen van de onderdelen kop · sok (tot en met tand), raam · boot (tot en met traan), boek · muur (tot en met vork), neus · buik (tot en met vloer), zeep · hek (tot en met zoon), tong · bank (tot en met weg), sjaal · taxi (tot en met visje), huiskamer · rugzak, keuken · moeder, jassen · sokken, foto · ramen en pakje · tomaten, verschijnt een kort voorbeeld. Kies Nu jij om zelf te oefenen. Bij koppelen wordt één woord-fotopaar voorgedaan: eerst het woord, daarna de foto. Het voorbeeld telt niet als antwoord. Met Kijk nog eens kun je het herhalen; al gemaakte koppelingen blijven staan. Een tik op een foto zonder gekozen woord geeft de aanwijzing om eerst een woord te kiezen. Beoordeel een voorgedaan antwoord als oefenen met hulp, niet als zelfstandig lezen. Bij Wat ontbreekt? laat een voorbeeld zien hoe de e de lege plek in p…n vult, in kam hoe de k de lege plek in …am vult, en in ik · kip hoe de i de lege plek in …k vult. Het handje wijst de juiste keuze aan. Na Nu jij kiest de cursist zelf; Kijk nog eens herhaalt het voorbeeld. Het voorbeeld telt niet als een gemaakte opdracht.
 
 In de eerste vijf lessen en de aansluitende lessen pen · pet, kam, ik · kip, pak · kat, ‘in’, ‘en’, ‘is’, ‘kan’, ‘kast’, ‘mens’, ‘nek’ en alle lessen van de onderdelen kop · sok (tot en met tand), raam · boot (tot en met traan), boek · muur (tot en met vork), neus · buik (tot en met vloer), zeep · hek (tot en met zoon), tong · bank (tot en met weg), sjaal · taxi (tot en met visje), huiskamer · rugzak, keuken · moeder, jassen · sokken, foto · ramen en pakje · tomaten kiest de cursist na iedere opdracht zelf **Verder**. Een goed antwoord blijft staan totdat de cursist doorgaat. Aan het einde kiest de cursist **Les afronden**. Bij andere lessen en vrije oefenronden kan Klink vanzelf doorgaan. Gebruik daar het pauzeteken als je zelf het tempo wilt bepalen.
 
@@ -59,7 +59,7 @@ Open Andere oefening om naar een ander deel te gaan. Deze keuze staat standaard 
 
 ### Een oefenvorm met meerdere woorden
 
-Kies **Lessen → tas · map → Samen oefenen → Alle woorden van dit onderdeel → Namaken → Leg het woord na**. Kies daarna **Eén voor één** of **Op één blad**.
+Kies **Start → Stap voor stap → tas · map → Samen oefenen → Alle woorden van dit onderdeel → Namaken → Leg het woord na**. Kies daarna **Eén voor één** of **Op één blad**.
 
 - **Eén voor één:** één opdracht tegelijk in beeld.
 - **Op één blad:** meerdere opdrachten onder elkaar. Je scrolt naar beneden. Dit is geen printknop.
@@ -70,7 +70,7 @@ Deze oefening bevat zes woorden: *mat, tas, jas, man, map, pan*. De volgorde kan
 
 ### De klankenkaart gebruiken
 
-Kies **Oefenen → Klanken → Klankenkaart**. Klik op een letter om de losse klank te horen. Je blijft op de kaart. Dezelfde 46 schrijfwijzen, kleuren en ankerwoorden staan op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
+Kies **Start → Klankenkaart**. Klik op een letter om de losse klank te horen. Je blijft op de kaart. Dezelfde 46 schrijfwijzen, kleuren en ankerwoorden staan op de Klankstudio-poster en in Alfabeta+. **a** hoort bij *kat*; **aa** bij *maan*. Ook **ei / ij**, **au / ou** en de onbeklemtoonde **e** behouden hun eigen plek.
 
 Kies **Woorden** bij een klank voor de bijbehorende woorden. Klik op een woord om het te horen; **Oefen** opent de bestaande leesles. De letter boven de woorden speelt dezelfde losse klank. **Klankstudio** opent de gekozen klank in een nieuw tabblad.
 
@@ -80,9 +80,9 @@ Koppel dit aan het bestaande boekdoel en docentlesplan: wijs de klank op de klas
 
 ### Oefenen via een onderwerp
 
-De knop **Oefenen** opent twaalf hoofdstukken. Binnen **Klanken** staat ook **Klankenkaart**, naast de bestaande klankoefeningen. Een voorbeeld van een route is:
+Start toont twaalf vaste oefenonderdelen. Binnen **Klanken** staat ook **Klankenkaart**, naast de bestaande klankoefeningen. Een voorbeeld van een route is:
 
-**Oefenen → Rustig beginnen → Leg het woord na → tas · map Alfa A → Op één blad**.
+**Start → Rustig beginnen → Leg het woord na → tas · map Alfa A → Op één blad**.
 
 Kies het onderwerp dat bij je lesdoel past. Je hoeft niet bij Klanken te beginnen. Met **Andere opdracht** ga je terug naar de keuze.
 
@@ -99,7 +99,7 @@ Open vanaf de startpagina:
 
 Met **Open deze lessen** ga je naar het onderdeel voor de cursist. Kies daar nog het tabblad **Stap voor stap** en de gewenste les.
 
-Let op het verschil: **Oefenen** in de docentomgeving toont andere keuzes dan **Oefenen** in de cursistomgeving. Noem daarom bij je uitleg steeds de omgeving én de knop.
+De docentomgeving heeft eigen oefenkeuzes; de cursist kiest op **Start**. Noem daarom bij je uitleg steeds de omgeving én de knop.
 
 ### Verdergaan met eerder werk
 
@@ -193,7 +193,7 @@ Controleer of de cursist de betekenis van *mat* kent. Controleer ook de letters 
 
 Zet Klink klaar met de les **mat** en werkend geluid. Leg een mat of beeld en een woordkaart **mat** klaar. Leg ook de losse letters m, a en t klaar. Gebruik papier en pen alleen als schrijven ook je doel is.
 
-Open **Lessen → tas · map → tabblad Stap voor stap → Start les 1: mat**. De cursist bepaalt het tempo met **Verder**; deze les gaat niet vanzelf door.
+Open **Start → Stap voor stap → tas · map → tabblad Stap voor stap → Start les 1: mat**. De cursist bepaalt het tempo met **Verder**; deze les gaat niet vanzelf door.
 
 ### Minuut 0 tot 2: betekenis en doel
 
@@ -352,7 +352,7 @@ Gebruik een tas die er echt is. De cursist hoeft de hele voorbeeldzin nog niet t
 
 ### Een gesprek beluisteren
 
-Bij Oefenen staan de luistergesprekken onder Zelf oefenen. De cursist kan zelfstandig luisteren, vertragen en meelezen. Afronden registreert alleen dat er is geoefend; het bewijst geen begrip of zelfstandig lezen. Samen bespreken en begrip beoordelen blijven docentactiviteiten.
+Op Start staan de luistergesprekken onder Zelf oefenen. De cursist kan zelfstandig luisteren, vertragen en meelezen. Afronden registreert alleen dat er is geoefend; het bewijst geen begrip of zelfstandig lezen. Samen bespreken en begrip beoordelen blijven docentactiviteiten.
 
 Kies **Luister naar het gesprek** om alle beurten achter elkaar te horen. Het geluid begint pas als je op deze knop drukt. De spreker wisselt zichtbaar mee. Kies daarna zo nodig **Oefen per beurt** en **Luister naar deze beurt** om een losse beurt te herhalen. Met de pijlen kies je de vorige of volgende beurt. **Meelezen** staat bij elk nieuw gesprek aan. Bij het voor de tweede keer volledig afspelen gaat de tekst automatisch uit. Een afgebroken poging of losse beurt telt niet als een volledige ronde. Met **Meelezen** en **Tekst verbergen** kun je de tekst altijd zelf aan- of uitzetten. **Pauze** stopt het afspelen. Bij een volgend gesprek staat **Hele gesprek** weer geselecteerd. Deze oefenvormen zijn geen Alfa B/C-niveaus.
 
@@ -420,7 +420,7 @@ Kijk ook naar eerdere pogingen. Eén goed antwoord is niet genoeg om een heel ni
 
 ### Herhalen in Klink
 
-Via **Herhalen** vind je de herhaalopdrachten die de app klaarzet. Klink gebruikt daarbij onder voorwaarden momenten na 1, 3 en 7 dagen. Kies daarnaast zelf wat jouw cursist nodig heeft en wat in het rooster past.
+Via **Nog een keer** vind je de herhaalopdrachten die de app klaarzet. Klink gebruikt daarbij onder voorwaarden momenten na 1, 3 en 7 dagen. Kies daarnaast zelf wat jouw cursist nodig heeft en wat in het rooster past.
 
 **Nog een keer** binnen dezelfde les is oefenen op dat moment. Oefenen op een latere dag blijft nodig. De achtergrond bij herhalen staat in hoofdstuk 12.
 
@@ -584,7 +584,7 @@ Dat is het idee achter Klink: een rustige plek om te beginnen, genoeg variatie o
 
 ## Drie Alfa C-oefenblokken — 26 oktober 2026
 
-Oefenen → Zelf oefenen → Alfa C → Zinnen → Woorden en zinnen: In de winkel, Met de bus en Thuis. Elk blok telt twaalf stappen met bestaande woordbeelden, woord- en zinsaudio. Voorbeeld, Help, antwoordcontrole, Verder, positiebehoud en gerichte herhaling horen bij dezelfde rustige speler.
+Start → Zelf oefenen → Alfa C → Zinnen → Woorden en zinnen: In de winkel, Met de bus en Thuis. Elk blok telt twaalf stappen met bestaande woordbeelden, woord- en zinsaudio. Voorbeeld, Help, antwoordcontrole, Verder, positiebehoud en gerichte herhaling horen bij dezelfde rustige speler.
 
 De fotokeuze bij een zin is herkenning, geen volledige praktijktaak of bewijs van zelfstandig lezen. Gesproken instructies blijven uitgeschakeld. Observeer of de cursist na het voorbeeld gericht hulp gebruikt, een fout verbetert en zelfstandig verdergaat. Koppel aan boekdoel en ingeplande bijeenkomst; gebruiksproef en menselijke luistercontrole blijven open. Bronkoppelingen en inhoudscontrole: docs/klink-alfa-c-release-20261026/.
 
@@ -598,7 +598,7 @@ De 36 nieuwe uitleg- en hulpbestanden zijn technisch en met automatische transcr
 
 ## Zes Alfa C-blokken met lezen en schrijven
 
-Via Oefenen → Zelf oefenen → Alfa C → Schrijven → Lezen en schrijven zijn zes aanvullende blokken bereikbaar, ieder met twaalf opdrachten. Gebruik het antwoordblad via de knop in het blok; dit bevat 27 genummerde schrijfplekken. Alle 72 opdrachten zijn aangesloten. Uitleg en hulp gebruiken Roland; nieuw ingesproken oefentaal gebruikt Remko, met behoud van bestaande goede woordopnamen. Vier dictees hebben losse herhaalbare fragmenten zonder zichtbaar schrijfmodel. De handschriftopdracht heeft twee gecontroleerde handschriftbeelden. De taken gebruiken de genoemde papieren bladen en materialen. Een open opdracht bevestigen is deelname, geen automatisch juist antwoord. Voorbeelden en hulp apart registreren. Koppeling aan concrete boekpagina en werkelijk ingeroosterde bijeenkomst, cursistenproef, menselijke eindcontrole, fysieke telefoons en schermlezerproef blijven open.
+Via Start → Zelf oefenen → Alfa C → Schrijven → Lezen en schrijven zijn zes aanvullende blokken bereikbaar, ieder met twaalf opdrachten. Gebruik het antwoordblad via de knop in het blok; dit bevat 27 genummerde schrijfplekken. Alle 72 opdrachten zijn aangesloten. Uitleg en hulp gebruiken Roland; nieuw ingesproken oefentaal gebruikt Remko, met behoud van bestaande goede woordopnamen. Vier dictees hebben losse herhaalbare fragmenten zonder zichtbaar schrijfmodel. De handschriftopdracht heeft twee gecontroleerde handschriftbeelden. De taken gebruiken de genoemde papieren bladen en materialen. Een open opdracht bevestigen is deelname, geen automatisch juist antwoord. Voorbeelden en hulp apart registreren. Koppeling aan concrete boekpagina en werkelijk ingeroosterde bijeenkomst, cursistenproef, menselijke eindcontrole, fysieke telefoons en schermlezerproef blijven open.
 
 
 ## Vaste twaalf oefenonderdelen — 30 oktober 2026

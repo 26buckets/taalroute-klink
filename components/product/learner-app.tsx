@@ -7,11 +7,11 @@ import { libraryWords, wordLengths, type WordLibrarySource } from '@/lib/word-li
 
 import { setSlowAudio } from '@/lib/media-player';
 import { playMedia, stopMedia } from '@/components/product/shared';
-import { PackageGrid, PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
+import { PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
-import { PracticeChapters, PracticeChapterCards } from '@/components/product/practice-chapters';
+import { PracticeChapters } from '@/components/product/practice-chapters';
 import type { ContentLevel } from '@/lib/content-levels';
-import { chapterCollections, chapterHash, chapterForLevel } from '@/lib/practice-chapters';
+import { chapterCollections, chapterHash } from '@/lib/practice-chapters';
 import { learningReviewKey, parseLearningReview, updateLearningReview } from '@/lib/learning-review';
 import { mixedReviewPack } from '@/lib/mixed-practice';
 import {
@@ -27,19 +27,16 @@ import {
 import { homeLessonPosition, nextLessonPosition, parseProgress, progressKey, type RouteProgress } from '@/lib/learner-progress';
 import { lessonPreviewWords } from '@/lib/taalroute-packages';
 import { learnerListName } from '@/lib/learner-copy';
-import { MyRoute, useRouteSettings } from './route-settings';
+import { useRouteSettings } from './route-settings';
 import { PracticeLine } from './practice-line';
 import { SoundReference } from './sound-reference';
-import { chapterRouteAxis } from '@/lib/learner-route';
-import { levelLabel } from '@/lib/content-levels';
 import {
   ArrowLeft,
   ArrowRight,
   Bookmark,
   BookmarkCheck,
   Home,
-  Grid2X2,
-  Layers3,
+  Ear,
   LogOut,
   PackageOpen,
   PanelLeftClose,
@@ -54,7 +51,7 @@ import { useEffect, useMemo, useState } from 'react';
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds' | 'alfa-c-teacher';
 
 export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (message: string) => void }) {
-  const { settings } = useRouteSettings();
+  const { practice } = useRouteSettings();
   const [view, setView] = useState<LearnerView>('home');
   const [teacherGroup, setTeacherGroup] = useState('');
   const [navCollapsed, setNavCollapsed] = useState(() => {
@@ -112,7 +109,7 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     const hash = next === 'package' ? `#learner/package/${packageId}` : `#learner/${next}`;
     if (window.location.hash !== hash) window.history.pushState(null, '', hash);
   }
-  function openChapter(chapter?: string, level: ContentLevel = settings[chapterRouteAxis(chapter)]) { setView('chapters'); window.location.hash = chapterHash({ chapter, level }); }
+  function openChapter(chapter?: string, level: ContentLevel = practice.level) { setView('chapters'); window.location.hash = chapterHash({ chapter, level, help: practice.help }); }
 
   function saveProgress(next: RouteProgress) {
     setProgress(next);
@@ -157,22 +154,19 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
     <div className={`learner-app consistent-layout${navCollapsed ? ' is-collapsed' : ''}`}>
       <aside className="learner-nav">
         <nav id="klink-learner-navigation" aria-label="Cursistnavigatie">
-          <button title="Start" aria-current={view === 'home' ? 'page' : undefined} className={view === 'home' ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
-          <button title="Lessen" aria-current={view === 'packages' || view === 'package' ? 'page' : undefined} className={view === 'packages' || view === 'package' ? 'active' : ''} onClick={() => openView('packages')}><PackageOpen /><span>Lessen</span></button>
-          <button title="Oefenen" aria-current={view === 'chapters' || view === 'sounds' || view === 'alfa-c-teacher' ? 'page' : undefined} className={view === 'chapters' || view === 'sounds' || view === 'alfa-c-teacher' ? 'active' : ''} onClick={() => openChapter()}><Grid2X2 /><span>Oefenen</span></button>
-          <button title="Woorden" aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden</span></button>
-          <button title="Herhalen" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Herhalen</span></button>
+          <button title="Start" aria-current={!['words', 'review'].includes(view) ? 'page' : undefined} className={!['words', 'review'].includes(view) ? 'active' : ''} onClick={() => openView('home')}><Home /><span>Start</span></button>
+          <button title="Woorden bekijken" aria-current={view === 'words' ? 'page' : undefined} className={view === 'words' ? 'active' : ''} onClick={() => openView('words')}><WholeWord /><span>Woorden bekijken</span></button>
+          <button title="Nog een keer" aria-current={view === 'review' ? 'page' : undefined} className={view === 'review' ? 'active' : ''} onClick={() => openView('review')}><RefreshCw /><span>Nog een keer</span></button>
         </nav>
         <button className="secondary-button cp-nav-toggle" type="button" onClick={toggleNavigation} aria-expanded={!navCollapsed} aria-controls="klink-learner-navigation" aria-label={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'} title={navCollapsed ? 'Menu uitklappen' : 'Menu inklappen'}>{navCollapsed ? <PanelLeftOpen /> : <PanelLeftClose />}</button>
         <button className="learner-profile" onClick={() => { try { sessionStorage.removeItem('klink.instructies.v1'); } catch { /* Ending a session never requires storage. */ } setSlowAudio(false); onExit(); }}><small>Afsluiten</small><LogOut /></button>
       </aside>
       <main className="learner-main">
-        {view === 'home' && <LearnerHome onPackage={openPackage} onPackages={() => openView('packages')} onWords={() => openView('words')} onReview={() => openView('review')} onChapter={openChapter} savedCount={savedWordIds.length} progress={progress} onLesson={openLesson} />}
+        {(view === 'home' || view === 'chapters') && <LearnerHome key={view} onPackages={() => openView('packages')} onSounds={() => openView('sounds')} onBack={() => openView('home')} progress={progress} onLesson={openLesson} onAttempt={recordAttempt} />}
         {view === 'packages' && <PackageLibrary onBack={() => openView('home')} onOpen={openPackage} />}
         {view === 'package' && <PackagePlayer key={playerVisit} packageId={selectedPackage} onClose={() => openView('packages')} savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onToast={onToast} initialPosition={resumePosition} onPosition={position => saveProgress({ ...progress, position })} onLessonDone={lessonId => saveProgress({ completed: [...new Set([...progress.completed, lessonId])], position: nextLessonPosition(contentPackages, selectedPackage, lessonId) })} onOpenLesson={openLesson} onAttempt={recordAttempt} />}
         {view === 'words' && <WordLibrary savedWordIds={savedWordIds} onToggleWord={toggleSavedWord} onBack={() => openView('home')} onToast={onToast} />}
         {view === 'review' && <ReviewQueue savedWordIds={savedWordIds} completed={progress.completed} onAttempt={recordAttempt} onWords={() => openView('words')} onBack={() => openView('home')} onToast={onToast} />}
-        {view === 'chapters' && <PracticeChapters onBack={() => openView('home')} onAttempt={recordAttempt} />}
         {view === 'alfa-c-teacher' && <AlfaCTeacherPractice key={teacherGroup} group={teacherGroup} />}
         {view === 'sounds' && <SoundReference onBack={() => openChapter('sounds')} onLesson={openLesson} />}
       </main>
@@ -180,51 +174,23 @@ export function LearnerApp({ onExit, onToast }: { onExit: () => void; onToast: (
   );
 }
 
-function LearnerHome({ onPackage, onPackages, onWords, onReview, onChapter, savedCount, progress, onLesson }: { onPackage: (packageId: PackageId) => void; onPackages: () => void; onWords: () => void; onReview: () => void; onChapter: (chapter: string, level?: ContentLevel) => void; savedCount: number; progress: RouteProgress; onLesson: (position: LessonPosition) => void }) {
-  const { settings } = useRouteSettings();
-  const position = homeLessonPosition(lessonPackages, progress, settings.literacy);
-  const first = lessonPackages.find(pack => pack.id === position?.packageId) ?? contentPackages[0];
-  const activeLesson = first.lessons.find(lesson => lesson.id === position?.lessonId);
-  const selectedLevel = settings.literacy !== 'all' ? settings.literacy : settings.language;
-  const browseChapter = chapterForLevel(selectedLevel, selectedLevel.startsWith('alfa-') ? 'words' : 'texts');
-  const languageRoute = settings.literacy === 'all' && settings.language !== 'all';
-  const canResume = Boolean(position && position === progress.position && !languageRoute);
-  const preview = activeLesson ? lessonPreviewWords(first, activeLesson).find(word => word.image) : undefined;
-  const previewImage = preview?.image ?? first.cover?.image;
-  return (
-    <div className="learner-page cp-home">
-      <header className="learner-page-head cp-context-header">
-        <span className="cp-context-icon"><Layers3 /></span><h1>{languageRoute || !position ? 'Jouw route' : canResume ? 'Ga verder' : 'Begin hier'}</h1>
-      </header>
-
-      <details className="cp-level-picker cp-home-route">
-        <summary>Samen met je docent</summary>
-        <MyRoute onBrowse={() => onChapter(browseChapter, selectedLevel)} />
-      </details>
-
-      {languageRoute || !position ? <section className="cp-home-hero"><div><h2>{languageRoute ? `Nederlands gebruiken · ${levelLabel(settings.language)}` : levelLabel(settings.literacy)}</h2><p>{languageRoute ? 'Bekijk het aanbod bij jouw route. Een niveaukeuze is geen behaald niveau.' : 'Voor deze keuze is nog geen leesroute ingedeeld.'}</p><button className="accent-button" onClick={() => onChapter(browseChapter, selectedLevel)}>Bekijk aanbod<ArrowRight /></button></div></section> : <section className="cp-home-hero">
-        <div>
-          <span className="eyebrow light">{canResume && activeLesson ? `Les ${first.lessons.indexOf(activeLesson) + 1}` : 'Kijk en luister'}</span>
-          <h2>{activeLesson ? lessonPreviewWords(first, activeLesson).map(wordLabel).join(' · ') : learnerListName(first)}</h2>
-          <button className="accent-button" onClick={() => onLesson(position)}>{canResume ? 'Ga verder' : 'Begin hier'}<ArrowRight /></button>
-        </div>
-        <div className="cp-home-preview">
-          {previewImage && <Image src={previewImage} alt={preview ? wordLabel(preview) : first.cover?.label ?? ''} width={240} height={240} />}
-          <div className="cp-home-facts"><span><strong>{first.counts.lessons}</strong><small>lessen</small></span><span><strong>{first.counts.coreWords}</strong><small>woorden</small></span></div>
-        </div>
-      </section>}
-
-      <PracticeLine />
-
-      <div className="cp-home-shortcuts">
-        <button className="secondary-button" onClick={onWords}><WholeWord />Alle woorden</button>
-        <button className="secondary-button" onClick={onReview}><BookmarkCheck />Nog een keer{savedCount > 0 && ` (${savedCount})`}</button>
-      </div>
-      <header className="cp-all-lists-heading"><h2>Oefenen met woorden</h2><button className="text-back" onClick={onPackages}>Alle lessen<ArrowRight /></button></header>
-      <PackageGrid onOpen={onPackage} />
-      <section className="cp-home-chapters"><h2>Oefenen met vaardigheden</h2><PracticeChapterCards onOpen={onChapter} /></section>
+function LearnerHome({ onPackages, onSounds, onBack, progress, onLesson, onAttempt }: { onPackages: () => void; onSounds: () => void; onBack: () => void; progress: RouteProgress; onLesson: (position: LessonPosition) => void; onAttempt: (attempt: PracticeAttempt) => void }) {
+  const { practice } = useRouteSettings();
+  const literacy = practice.level === 'alfa-a' || practice.level === 'alfa-b' || practice.level === 'alfa-c' ? practice.level : undefined;
+  const position = literacy ? homeLessonPosition(lessonPackages, progress, literacy) : undefined;
+  const pack = lessonPackages.find(item => item.id === position?.packageId);
+  const lesson = pack?.lessons.find(item => item.id === position?.lessonId);
+  const resumeWord = pack && lesson ? lessonPreviewWords(pack, lesson)[0] : undefined;
+  return <PracticeChapters onBack={onBack} onAttempt={onAttempt} startActions={<>
+    <div className="cp-direct-actions">
+      {position && position === progress.position && resumeWord && <button className="secondary-button cp-direct-resume" onClick={() => onLesson(position)}>Verder met {wordLabel(resumeWord)}<ArrowRight aria-hidden="true" /></button>}
+      <button className="secondary-button" onClick={onSounds}><Ear aria-hidden="true" />Klankenkaart<ArrowRight aria-hidden="true" /></button>
     </div>
-  );
+    <h2 className="cp-direct-heading">Kies een oefening</h2>
+  </>} startFooter={<div className="cp-direct-footer">
+    <button className="secondary-button" onClick={onPackages}><PackageOpen aria-hidden="true" />Stap voor stap<ArrowRight aria-hidden="true" /></button>
+    <details className="cp-direct-explanation"><summary>Zo oefen je</summary><PracticeLine /></details>
+  </div>} />;
 }
 
 function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWordIds: string[]; onToggleWord: (wordId: string) => void; onBack: () => void; onToast: (message: string) => void }) {
@@ -234,7 +200,7 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
   const visibleWords = useMemo(() => libraryWords(source, source === 'lessons' ? lessonFilter : extraFilter, savedWordIds), [source, lessonFilter, extraFilter, savedWordIds]);
   return (
     <div className="learner-page word-library-page">
-      <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Alle woorden</h1><small className="cp-context-meta">{visibleWords.length} woorden</small></header>
+      <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Woorden bekijken</h1><small className="cp-context-meta">{visibleWords.length} woorden</small></header>
       <div className="cp-page-workspace">
       <p>Tik en luister.</p>
       <div className="word-filters" aria-label="Filter woorden">
@@ -243,7 +209,7 @@ function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWor
         {source === 'extra' && <label>Kies woorden<select aria-label="Kies woorden" value={extraFilter} onChange={event => setExtraFilter(event.target.value)}><option value="all">Alle extra woorden</option><optgroup label="Aantal letters">{wordLengths.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</optgroup><optgroup label="Met een teken"><option value="signs">Met &apos; of -</option></optgroup></select></label>}
       </div>
       {source === 'extra' && extraFilter === 'signs' && <p>Bijvoorbeeld: zo&apos;n en e-mail.</p>}
-      {source === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Herhalen.</p><button className="primary-button" onClick={() => setSource('lessons')}>Bekijk woorden uit de lessen</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-describedby={wordWithArticle(word) ? `article-global-${word.id}` : undefined} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong>{wordWithArticle(word) && <small id={`article-global-${word.id}`} className="cp-word-article">{wordWithArticle(word)}</small>}<span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
+      {source === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Nog een keer.</p><button className="primary-button" onClick={() => setSource('lessons')}>Bekijk woorden uit de lessen</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-describedby={wordWithArticle(word) ? `article-global-${word.id}` : undefined} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong>{wordWithArticle(word) && <small id={`article-global-${word.id}`} className="cp-word-article">{wordWithArticle(word)}</small>}<span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
       </div>
     </div>
   );
