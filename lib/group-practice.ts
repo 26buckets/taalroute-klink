@@ -8,9 +8,11 @@ import { resolveRegisteredAudio } from './audio-register.ts';
 import { extendedActivities, extendedExercises, type ExtendedActivity } from './extended-practice.ts';
 
 import { standardActivities, standardExercises, type StandardActivity } from './standard-practice.ts';
+import { isSynonymPack, synonymExercises } from './synonyms.ts';
 
 // These are activities on the existing word groups, not a second curriculum.
 export const groupActivities = [
+  { id: 'synonyms', label: 'Synoniemen', category: 'Kiezen', icon: 'link' },
   { id: 'meet', label: 'Kijk en luister', category: 'Ontdekken', icon: 'eye', mode: 'model' },
   { id: 'same-word', label: 'Zoek hetzelfde woord', category: 'Kiezen', icon: 'search' },
   { id: 'listen', label: 'Hoor en kies', category: 'Kiezen', icon: 'ear' },
@@ -111,9 +113,13 @@ const learningCache = new WeakMap<PackageDefinition, Map<string, PackageExercise
 export function groupExercises(pack: PackageDefinition, activity: GroupActivity, seed = 1): PackageExercise[] {
   // Supplemental packs offer only their authored activities; other generators require the core curriculum.
   if (pack.practiceActivities && !pack.practiceActivities.includes(activity)) return [];
+  if (isSynonymPack(pack)) return activity === 'learning-review'
+    ? [false, true].flatMap(reverse => ['synonyms', 'hear-match'].flatMap(mode => synonymExercises(pack, mode, 1, reverse)))
+    : synonymExercises(pack, activity, seed);
+  if (activity === 'synonyms') return pack.exercises.filter(item => item.mode === 'synonyms');
   if (activity.startsWith('content-')) return unique([...pack.exercises.filter(item => item.groupActivity === activity), ...importedExercisesForPack(pack, activity as ImportedActivity)], item => item.exerciseId);
   if (standardActivities.some(item => item.id === activity)) return standardExercises(pack, activity as StandardActivity, seed);
-  if (activity === 'learning-review') return learningActivities.flatMap(item => groupExercises(pack, item.id, seed).filter(exercise => exercise.reviewEligible));
+  if (activity === 'learning-review') return [...learningActivities.flatMap(item => groupExercises(pack, item.id, seed).filter(exercise => exercise.reviewEligible)), ...pack.exercises.filter(exercise => exercise.mode === 'synonyms' && exercise.reviewEligible)];
   if (learningActivities.some(item => item.id === activity)) {
     if (!learningCache.has(pack)) learningCache.set(pack, new Map());
     const cache = learningCache.get(pack)!, key = `${activity}:${seed}`;

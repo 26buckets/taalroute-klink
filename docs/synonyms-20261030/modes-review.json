@@ -1,0 +1,1523 @@
+{
+  "date": "2026-10-30",
+  "feature": "Synoniemen: vier antwoordkaarten, Draai de kaart, Geluid en woord",
+  "modes": {
+    "choicePairs": 210,
+    "turnCardPairs": 210,
+    "forwardAudio": 186,
+    "reverseAudio": 164,
+    "newAudioFiles": 0,
+    "bothAudioDirections": 148,
+    "noAudioEitherDirection": 8
+  },
+  "behaviour": [
+    "Shared list and level retained when switching exercise mode",
+    "Word and synonym reversible, each direction has its own resume position and assessment IDs",
+    "Mix changes question and answer order; saved seed restores the same order after reload",
+    "Existing forward question IDs and local progress preserved",
+    "Revealing a card is participation, never measured synonym mastery",
+    "Listening prompts hide the spoken word; failed playback blocks answers until retry succeeds",
+    "Incorrect assessed tasks retain their exact mode and direction in spaced review"
+  ],
+  "validation": {
+    "unitAndRegressionTests": 60,
+    "finalTargetedTests": 6,
+    "chromiumAndWebkitModeScenarios": 7,
+    "realBankQuestionsInChromium": 210,
+    "sharedMenuJourneys": 96,
+    "alfaCBlockEntriesAndReturns": 180,
+    "menuWidths": [
+      1366,
+      768,
+      390
+    ],
+    "bankMobileWidths": [
+      390,
+      320
+    ],
+    "typescript": "passed",
+    "targetedLint": "passed",
+    "productionBuild": "passed",
+    "mediaChanges": 0,
+    "browserRuntime": "All seven mode scenarios also passed against the full local Cloudflare Vite runtime with the unchanged application configuration; only its temporary cache directory was isolated. Full bank and menu regressions passed against the local Node Vite runtime.",
+    "localMediaHydration": "2182 pre-existing local placeholders restored from SHA-1 verified identical Git blobs; seven generated font cache files recovered byte-identically from two existing Klink build caches. No tracked media changed."
+  },
+  "limitations": {
+    "livePublished": false,
+    "physicalDevicesTested": false,
+    "independentHumanCefrReview": false,
+    "humanPronunciationReview": "Open, inherited from the released word recordings. No new audio was generated."
+  },
+  "pairs": [
+    {
+      "id": "synonyms:recall:d04de24e4453",
+      "word": "begin",
+      "synonym": "start",
+      "wordAudio": "/package-audio/taalroute/klink-woord-begin.wav",
+      "synonymAudio": "/package-audio/taalroute/klink-woord-start.wav"
+    },
+    {
+      "id": "synonyms:recall:0cdb5d76ac66",
+      "word": "einde",
+      "synonym": "slot",
+      "wordAudio": "/package-audio/woorden-20261025/TL0434.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1410.mp3"
+    },
+    {
+      "id": "synonyms:recall:8479080e10a3",
+      "word": "gauw",
+      "synonym": "snel",
+      "wordAudio": "/package-audio/woorden-20261025/TL0502.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1416.mp3"
+    },
+    {
+      "id": "synonyms:recall:0a8d1905aabd",
+      "word": "klaar",
+      "synonym": "gereed",
+      "wordAudio": "/package-audio/woorden-20261025/TL0776.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-335f000fdcdf.mp3"
+    },
+    {
+      "id": "synonyms:recall:660f6cbbbf57",
+      "word": "niks",
+      "synonym": "niets",
+      "wordAudio": "/package-audio/woorden-20261025/TL1032.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1027.mp3"
+    },
+    {
+      "id": "synonyms:recall:1eaf53d9b31b",
+      "word": "soms",
+      "synonym": "weleens",
+      "wordAudio": "/package-audio/woorden-20261025/TL1425.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:08b446c6c5d2",
+      "word": "stuk",
+      "synonym": "kapot",
+      "wordAudio": "/package-audio/woorden-20261025/TL1488.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0753.mp3"
+    },
+    {
+      "id": "synonyms:recall:c5e2515d06f4",
+      "word": "vaak",
+      "synonym": "dikwijls",
+      "wordAudio": "/package-audio/woorden-20261025/TL1635.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:7a5512aa799f",
+      "word": "vlug",
+      "synonym": "snel",
+      "wordAudio": "/package-audio/woorden-20261025/TL1774.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1416.mp3"
+    },
+    {
+      "id": "synonyms:recall:c7da3aa980d6",
+      "word": "weer",
+      "synonym": "opnieuw",
+      "wordAudio": "/package-audio/woorden-20261025/TL1865.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1153.mp3"
+    },
+    {
+      "id": "synonyms:recall:9dcc9c091c12",
+      "word": "beginnen",
+      "synonym": "starten",
+      "wordAudio": "/package-audio/woorden-20261025/TL0145.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1450.mp3"
+    },
+    {
+      "id": "synonyms:recall:cce7f2744b19",
+      "word": "pakken",
+      "synonym": "grijpen",
+      "wordAudio": "/package-audio/taalroute/klink-woord-pakken.wav",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0592.mp3"
+    },
+    {
+      "id": "synonyms:recall:f1775bbb5348",
+      "word": "praten",
+      "synonym": "spreken",
+      "wordAudio": "/package-audio/woorden-20261025/TL1255.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1438.mp3"
+    },
+    {
+      "id": "synonyms:recall:f989f92a0be3",
+      "word": "roepen",
+      "synonym": "schreeuwen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1330.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1378.mp3"
+    },
+    {
+      "id": "synonyms:recall:6477c5a068c7",
+      "word": "stoppen",
+      "synonym": "ophouden",
+      "wordAudio": "/package-audio/woorden-20261025/TL1472.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1141.mp3"
+    },
+    {
+      "id": "synonyms:recall:1b3fdc4b32fc",
+      "word": "zoenen",
+      "synonym": "kussen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-d12e325c1f32.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0822.mp3"
+    },
+    {
+      "id": "synonyms:recall:781da7292776",
+      "word": "aardig",
+      "synonym": "vriendelijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL0027.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1823.mp3"
+    },
+    {
+      "id": "synonyms:recall:4d1efde60b59",
+      "word": "bang",
+      "synonym": "angstig",
+      "wordAudio": "/package-audio/woorden-20261025/TL0119.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0091.mp3"
+    },
+    {
+      "id": "synonyms:recall:f1bea30bf2b2",
+      "word": "blij",
+      "synonym": "vrolijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL0239.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1832.mp3"
+    },
+    {
+      "id": "synonyms:recall:176792e693ef",
+      "word": "boos",
+      "synonym": "kwaad",
+      "wordAudio": "/package-audio/woorden-20261025/TL0256.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0823.mp3"
+    },
+    {
+      "id": "synonyms:recall:8e2c9f953f09",
+      "word": "fijn",
+      "synonym": "prettig",
+      "wordAudio": "/package-audio/woorden-20261025/TL0478.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:fbb2d92d95d8",
+      "word": "moe",
+      "synonym": "vermoeid",
+      "wordAudio": "/package-audio/woorden-20261025/TL0979.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:bc8df2ec194f",
+      "word": "mooi",
+      "synonym": "prachtig",
+      "wordAudio": "/package-audio/woorden-20261025/TL0990.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1252.mp3"
+    },
+    {
+      "id": "synonyms:recall:dc67b80b5a10",
+      "word": "verdrietig",
+      "synonym": "droevig",
+      "wordAudio": "/package-audio/woorden-20261025/TL1679.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-808fd9d23c52.mp3"
+    },
+    {
+      "id": "synonyms:recall:bf5e70726713",
+      "word": "auto",
+      "synonym": "wagen",
+      "wordAudio": "/package-audio/taalroute/klink-woord-auto.wav",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:8a27b07d520f",
+      "word": "cadeau",
+      "synonym": "geschenk",
+      "wordAudio": "/package-audio/taalroute/klink-woord-cadeau.wav",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-594af0843ae8.mp3"
+    },
+    {
+      "id": "synonyms:recall:b5c26ac79792",
+      "word": "dokter",
+      "synonym": "arts",
+      "wordAudio": "/package-audio/woorden-20261025/TL0376.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0106.mp3"
+    },
+    {
+      "id": "synonyms:recall:d6fcac5e1ccd",
+      "word": "huis",
+      "synonym": "woning",
+      "wordAudio": "/package-audio/taalroute/klink-woord-huis.wav",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1927.mp3"
+    },
+    {
+      "id": "synonyms:recall:a64f1aa8ab02",
+      "word": "mama",
+      "synonym": "moeder",
+      "wordAudio": "/package-audio/woorden-20261025/TL0916.mp3",
+      "synonymAudio": "/package-audio/taalroute/klink-woord-moeder.wav"
+    },
+    {
+      "id": "synonyms:recall:235ada935f9a",
+      "word": "papa",
+      "synonym": "vader",
+      "wordAudio": "/package-audio/woorden-20261025/TL1196.mp3",
+      "synonymAudio": "/package-audio/taalroute/klink-woord-vader.wav"
+    },
+    {
+      "id": "synonyms:recall:f46e142c5471",
+      "word": "afmaken",
+      "synonym": "voltooien",
+      "wordAudio": "/package-audio/woorden-20261025/TL0051.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-0881e2188d77.mp3"
+    },
+    {
+      "id": "synonyms:recall:902e7fd36bef",
+      "word": "begrijpen",
+      "synonym": "snappen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0147.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1415.mp3"
+    },
+    {
+      "id": "synonyms:recall:108b114c0330",
+      "word": "bellen",
+      "synonym": "telefoneren",
+      "wordAudio": "/package-audio/woorden-20261025/TL0165.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1519.mp3"
+    },
+    {
+      "id": "synonyms:recall:7b0a40b63f62",
+      "word": "bewaren",
+      "synonym": "behouden",
+      "wordAudio": "/package-audio/woorden-20261025/TL0207.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0153.mp3"
+    },
+    {
+      "id": "synonyms:recall:0f562ce06853",
+      "word": "controleren",
+      "synonym": "nakijken",
+      "wordAudio": "/package-audio/woorden-20261025/TL0316.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1003.mp3"
+    },
+    {
+      "id": "synonyms:recall:ae3af3668267",
+      "word": "gebeuren",
+      "synonym": "plaatsvinden",
+      "wordAudio": "/package-audio/woorden-20261025/TL0504.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1232.mp3"
+    },
+    {
+      "id": "synonyms:recall:a44fc95e007c",
+      "word": "ontdekken",
+      "synonym": "vinden",
+      "wordAudio": "/package-audio/woorden-20261025/TL1101.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1765.mp3"
+    },
+    {
+      "id": "synonyms:recall:6bf853df859c",
+      "word": "ontvangen",
+      "synonym": "krijgen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1107.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0816.mp3"
+    },
+    {
+      "id": "synonyms:recall:4e43bd2c9568",
+      "word": "repareren",
+      "synonym": "herstellen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1314.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0641.mp3"
+    },
+    {
+      "id": "synonyms:recall:08c473346c02",
+      "word": "schoonmaken",
+      "synonym": "reinigen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1375.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-29cfdff64a37.mp3"
+    },
+    {
+      "id": "synonyms:recall:b153c143f933",
+      "word": "uitkiezen",
+      "synonym": "selecteren",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-728298e575a6.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-0a1a1dd6c1f6.mp3"
+    },
+    {
+      "id": "synonyms:recall:20d0e2ff5da7",
+      "word": "uitleggen",
+      "synonym": "verklaren",
+      "wordAudio": "/package-audio/woorden-20261025/TL1609.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1698.mp3"
+    },
+    {
+      "id": "synonyms:recall:02da17eee088",
+      "word": "veranderen",
+      "synonym": "wijzigen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1663.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1914.mp3"
+    },
+    {
+      "id": "synonyms:recall:59d75378bf8e",
+      "word": "zenden",
+      "synonym": "sturen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL1489.mp3"
+    },
+    {
+      "id": "synonyms:recall:3ae898e9b8b8",
+      "word": "correct",
+      "synonym": "juist",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-15a596e3c98c.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0741.mp3"
+    },
+    {
+      "id": "synonyms:recall:de832b516e8d",
+      "word": "duidelijk",
+      "synonym": "helder",
+      "wordAudio": "/package-audio/woorden-20261025/TL0409.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0627.mp3"
+    },
+    {
+      "id": "synonyms:recall:28497eee6a12",
+      "word": "eenvoudig",
+      "synonym": "simpel",
+      "wordAudio": "/package-audio/woorden-20261025/TL0423.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:1ef7ab8202c2",
+      "word": "enorm",
+      "synonym": "gigantisch",
+      "wordAudio": "/package-audio/woorden-20261025/TL0451.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-73a30e40748c.mp3"
+    },
+    {
+      "id": "synonyms:recall:f242024b1e53",
+      "word": "gek",
+      "synonym": "vreemd",
+      "wordAudio": "/package-audio/woorden-20261025/TL0526.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1820.mp3"
+    },
+    {
+      "id": "synonyms:recall:bf6999f72d17",
+      "word": "gemakkelijk",
+      "synonym": "makkelijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL0538.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0915.mp3"
+    },
+    {
+      "id": "synonyms:recall:dcf9ea34fda9",
+      "word": "gevaarlijk",
+      "synonym": "riskant",
+      "wordAudio": "/package-audio/woorden-20261025/TL0554.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:caea3389a2e0",
+      "word": "helemaal",
+      "synonym": "volledig",
+      "wordAudio": "/package-audio/woorden-20261025/TL0629.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1788.mp3"
+    },
+    {
+      "id": "synonyms:recall:ddb840962e51",
+      "word": "moeilijk",
+      "synonym": "lastig",
+      "wordAudio": "/package-audio/woorden-20261025/TL0981.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-0fc8a4916164.mp3"
+    },
+    {
+      "id": "synonyms:recall:51b6bf5c5fa1",
+      "word": "verschrikkelijk",
+      "synonym": "vreselijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL1727.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1821.mp3"
+    },
+    {
+      "id": "synonyms:recall:2268feae4493",
+      "word": "vies",
+      "synonym": "vuil",
+      "wordAudio": "/package-audio/taalroute/klink-woord-vies.wav",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1834.mp3"
+    },
+    {
+      "id": "synonyms:recall:c4804f1e5293",
+      "word": "voldoende",
+      "synonym": "genoeg",
+      "wordAudio": "/package-audio/woorden-20261025/TL1783.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0542.mp3"
+    },
+    {
+      "id": "synonyms:recall:cde976e035a6",
+      "word": "apart",
+      "synonym": "afzonderlijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL0094.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:8a245792e2b8",
+      "word": "dadelijk",
+      "synonym": "straks",
+      "wordAudio": "/package-audio/woorden-20261025/TL0323.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1477.mp3"
+    },
+    {
+      "id": "synonyms:recall:0c055833a418",
+      "word": "direct",
+      "synonym": "meteen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0367.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0954.mp3"
+    },
+    {
+      "id": "synonyms:recall:787723b674d9",
+      "word": "gewoonlijk",
+      "synonym": "meestal",
+      "wordAudio": "/package-audio/woorden-20261025/TL0563.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0938.mp3"
+    },
+    {
+      "id": "synonyms:recall:c255238c798a",
+      "word": "meteen",
+      "synonym": "onmiddellijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL0954.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1096.mp3"
+    },
+    {
+      "id": "synonyms:recall:11902ce38000",
+      "word": "nu",
+      "synonym": "momenteel",
+      "wordAudio": "/package-audio/woorden-20261025/TL1054.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-da0157329359.mp3"
+    },
+    {
+      "id": "synonyms:recall:d92acb43015f",
+      "word": "ongeveer",
+      "synonym": "circa",
+      "wordAudio": "/package-audio/woorden-20261025/TL1093.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:1c66d4c858f3",
+      "word": "regelmatig",
+      "synonym": "geregeld",
+      "wordAudio": "/package-audio/woorden-20261025/TL1896.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0544.mp3"
+    },
+    {
+      "id": "synonyms:recall:c79d7317b8c4",
+      "word": "samen",
+      "synonym": "gezamenlijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL1350.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-91e0677755af.mp3"
+    },
+    {
+      "id": "synonyms:recall:4829949a3342",
+      "word": "vlakbij",
+      "synonym": "dichtbij",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-27ef5bb3ecc2.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0354.mp3"
+    },
+    {
+      "id": "synonyms:recall:c8aee8035c48",
+      "word": "baas",
+      "synonym": "chef",
+      "wordAudio": "/package-audio/woorden-20261025/TL0111.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0298.mp3"
+    },
+    {
+      "id": "synonyms:recall:00945d5d0ede",
+      "word": "bericht",
+      "synonym": "mededeling",
+      "wordAudio": "/package-audio/woorden-20261025/TL0178.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0925.mp3"
+    },
+    {
+      "id": "synonyms:recall:8131c8d14928",
+      "word": "beroep",
+      "synonym": "vak",
+      "wordAudio": "/package-audio/woorden-20261025/TL0179.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1638.mp3"
+    },
+    {
+      "id": "synonyms:recall:bf727a3d0df1",
+      "word": "deel",
+      "synonym": "onderdeel",
+      "wordAudio": "/package-audio/woorden-20261025/TL0340.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1077.mp3"
+    },
+    {
+      "id": "synonyms:recall:1c91eb92867c",
+      "word": "friet",
+      "synonym": "patat",
+      "wordAudio": "/package-audio/woorden-20261025/TL0490.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:1bbe071ee8e6",
+      "word": "haast",
+      "synonym": "spoed",
+      "wordAudio": "/package-audio/woorden-20261025/TL0603.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TR-A1-K-659.mp3"
+    },
+    {
+      "id": "synonyms:recall:9b01113db7e8",
+      "word": "hulp",
+      "synonym": "steun",
+      "wordAudio": "/package-audio/woorden-20261025/TL0672.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1461.mp3"
+    },
+    {
+      "id": "synonyms:recall:4d569a1df074",
+      "word": "idee",
+      "synonym": "gedachte",
+      "wordAudio": "/package-audio/woorden-20261025/TL0679.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0515.mp3"
+    },
+    {
+      "id": "synonyms:recall:63c97abfff2a",
+      "word": "kaartje",
+      "synonym": "ticket",
+      "wordAudio": "/package-audio/woorden-20261025/TL1554.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:19d5f8c4adf6",
+      "word": "kans",
+      "synonym": "mogelijkheid",
+      "wordAudio": "/package-audio/woorden-20261025/TL0750.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0986.mp3"
+    },
+    {
+      "id": "synonyms:recall:28b81550c6f7",
+      "word": "opsturen",
+      "synonym": "verzenden",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-2f65c4e7b329.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:5cb022a92131",
+      "word": "plan",
+      "synonym": "voornemen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1233.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-fd3349fe5eba.mp3"
+    },
+    {
+      "id": "synonyms:recall:deb3386cd9d7",
+      "word": "reden",
+      "synonym": "motief",
+      "wordAudio": "/package-audio/woorden-20261025/TL1296.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:90c056327d0f",
+      "word": "rij",
+      "synonym": "reeks",
+      "wordAudio": "/package-audio/woorden-20261025/TL1323.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:a229137d3bd3",
+      "word": "rommel",
+      "synonym": "troep",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-ca37b0afd9f3.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:dea114e705a4",
+      "word": "ruzie",
+      "synonym": "onenigheid",
+      "wordAudio": "/package-audio/woorden-20261025/TL1348.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:9820a2b59c34",
+      "word": "salaris",
+      "synonym": "loon",
+      "wordAudio": "/package-audio/woorden-20261025/TL1349.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0891.mp3"
+    },
+    {
+      "id": "synonyms:recall:ba2b0a0a818d",
+      "word": "vakantie",
+      "synonym": "verlof",
+      "wordAudio": "/package-audio/woorden-20261025/TL1639.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1709.mp3"
+    },
+    {
+      "id": "synonyms:recall:8ea45d39f114",
+      "word": "vergissing",
+      "synonym": "fout",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-33a1cc903c26.mp3",
+      "synonymAudio": "/package-audio/taalroute/klink-woord-fout.wav"
+    },
+    {
+      "id": "synonyms:recall:e327ac2fe25a",
+      "word": "aanschaffen",
+      "synonym": "kopen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0807.mp3"
+    },
+    {
+      "id": "synonyms:recall:d889b4cbcb2b",
+      "word": "afronden",
+      "synonym": "voltooien",
+      "wordAudio": "/package-audio/woorden-20261025/TL0055.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-0881e2188d77.mp3"
+    },
+    {
+      "id": "synonyms:recall:020bc53b98de",
+      "word": "benutten",
+      "synonym": "gebruiken",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-d2d52ef4ff66.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0512.mp3"
+    },
+    {
+      "id": "synonyms:recall:af15ed394a81",
+      "word": "beperken",
+      "synonym": "begrenzen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0172.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:e49aa6caf331",
+      "word": "beschadigen",
+      "synonym": "aantasten",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-b90c83fd0056.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-4f8240de71a6.mp3"
+    },
+    {
+      "id": "synonyms:recall:0f4a187d0d49",
+      "word": "beschermen",
+      "synonym": "beveiligen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0181.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-f6cca4de9d95.mp3"
+    },
+    {
+      "id": "synonyms:recall:ae76581e81bc",
+      "word": "ondersteunen",
+      "synonym": "helpen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1082.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0632.mp3"
+    },
+    {
+      "id": "synonyms:recall:88693278dbb2",
+      "word": "ontsnappen",
+      "synonym": "ontkomen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-4eab6fc00bf7.mp3"
+    },
+    {
+      "id": "synonyms:recall:ec08317c6949",
+      "word": "toepassen",
+      "synonym": "gebruiken",
+      "wordAudio": "/package-audio/woorden-20261025/TL1559.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0512.mp3"
+    },
+    {
+      "id": "synonyms:recall:46a5380d505d",
+      "word": "uitbreiden",
+      "synonym": "vergroten",
+      "wordAudio": "/package-audio/woorden-20261025/TL1596.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-c2d7c56bbe91.mp3"
+    },
+    {
+      "id": "synonyms:recall:e57f1b0c06f8",
+      "word": "verhogen",
+      "synonym": "vermeerderen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1691.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:0d3f098af453",
+      "word": "verkrijgen",
+      "synonym": "krijgen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0816.mp3"
+    },
+    {
+      "id": "synonyms:recall:7824e9e44324",
+      "word": "vermijden",
+      "synonym": "ontwijken",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-06bb88a6d123.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-bd5e2f4247b8.mp3"
+    },
+    {
+      "id": "synonyms:recall:5e85f1b573c9",
+      "word": "verminderen",
+      "synonym": "verkleinen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-fa1eb9858b7d.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:08b31ffd01e8",
+      "word": "vernietigen",
+      "synonym": "vernielen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-b7c79588d5e5.mp3"
+    },
+    {
+      "id": "synonyms:recall:a809bfbe371b",
+      "word": "versnellen",
+      "synonym": "bespoedigen",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:8836f344cd6c",
+      "word": "vertragen",
+      "synonym": "afremmen",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:e0e51aebf06e",
+      "word": "vervangen",
+      "synonym": "verwisselen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1740.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-f99f92b4c409.mp3"
+    },
+    {
+      "id": "synonyms:recall:6b28bd2b4cfe",
+      "word": "voorkomen",
+      "synonym": "verhinderen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1796.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-3439760dd5fe.mp3"
+    },
+    {
+      "id": "synonyms:recall:133e39bbfc4c",
+      "word": "voortzetten",
+      "synonym": "vervolgen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1805.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:1fc98a6e8867",
+      "word": "aanzienlijk",
+      "synonym": "behoorlijk",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-f6fd4bafd18c.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-75b587cb569a.mp3"
+    },
+    {
+      "id": "synonyms:recall:32a42732548d",
+      "word": "beperkt",
+      "synonym": "gering",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-d0aaa9bb5b7f.mp3"
+    },
+    {
+      "id": "synonyms:recall:581e13c40ae2",
+      "word": "bijzonder",
+      "synonym": "speciaal",
+      "wordAudio": "/package-audio/woorden-20261025/TL0231.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1429.mp3"
+    },
+    {
+      "id": "synonyms:recall:ff62f1cf6d61",
+      "word": "bruikbaar",
+      "synonym": "toepasbaar",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-fbdb0d2a65a1.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:e91d3c73e8dd",
+      "word": "concreet",
+      "synonym": "specifiek",
+      "wordAudio": "/package-audio/woorden-20261025/TR-B1-TP-20261007-006.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-5c0f07b8b9e8.mp3"
+    },
+    {
+      "id": "synonyms:recall:3f212b1458d5",
+      "word": "eventueel",
+      "synonym": "mogelijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL0465.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0985.mp3"
+    },
+    {
+      "id": "synonyms:recall:a7e96d816114",
+      "word": "gebruikelijk",
+      "synonym": "gewoon",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-a453ff78d1ed.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0562.mp3"
+    },
+    {
+      "id": "synonyms:recall:ea19030f6963",
+      "word": "gering",
+      "synonym": "klein",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-d0aaa9bb5b7f.mp3",
+      "synonymAudio": "/package-audio/taalroute/klink-woord-klein.wav"
+    },
+    {
+      "id": "synonyms:recall:69644ee086c4",
+      "word": "geschikt",
+      "synonym": "passend",
+      "wordAudio": "/package-audio/woorden-20261025/TL0547.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-2576acef4312.mp3"
+    },
+    {
+      "id": "synonyms:recall:6ba318cfc4c5",
+      "word": "globaal",
+      "synonym": "algemeen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-0b56bcd8b310.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1482.mp3"
+    },
+    {
+      "id": "synonyms:recall:83a34ac2627c",
+      "word": "nauwkeurig",
+      "synonym": "precies",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-bb40961e8ab9.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1256.mp3"
+    },
+    {
+      "id": "synonyms:recall:838f75185950",
+      "word": "noodzakelijk",
+      "synonym": "nodig",
+      "wordAudio": "/package-audio/woorden-20261025/TL1045.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1034.mp3"
+    },
+    {
+      "id": "synonyms:recall:f70f568cb6d0",
+      "word": "onmisbaar",
+      "synonym": "noodzakelijk",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-3ea00c97b9eb.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1045.mp3"
+    },
+    {
+      "id": "synonyms:recall:b99404387711",
+      "word": "opmerkelijk",
+      "synonym": "opvallend",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-1b8f9b66c5d4.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:e2269a00c2cc",
+      "word": "overbodig",
+      "synonym": "onnodig",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-975ad0f66f7b.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-382b7c4d5d85.mp3"
+    },
+    {
+      "id": "synonyms:recall:f7db1ec3a4aa",
+      "word": "permanent",
+      "synonym": "blijvend",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-0dd1b6d5c52e.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-d275181efa51.mp3"
+    },
+    {
+      "id": "synonyms:recall:be77c9bf1d65",
+      "word": "vereist",
+      "synonym": "nodig",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL1034.mp3"
+    },
+    {
+      "id": "synonyms:recall:8050d280dc3e",
+      "word": "voorlopig",
+      "synonym": "tijdelijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL1798.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1546.mp3"
+    },
+    {
+      "id": "synonyms:recall:f39171dd896b",
+      "word": "waarschijnlijk",
+      "synonym": "vermoedelijk",
+      "wordAudio": "/package-audio/woorden-20261025/TL1844.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1711.mp3"
+    },
+    {
+      "id": "synonyms:recall:d781ac22a984",
+      "word": "aankondigen",
+      "synonym": "bekendmaken",
+      "wordAudio": "/package-audio/woorden-20261025/TL0011.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0156.mp3"
+    },
+    {
+      "id": "synonyms:recall:5a02564e5b1b",
+      "word": "aantonen",
+      "synonym": "bewijzen",
+      "wordAudio": "/package-audio/woorden-20261025/TR-B1-20261007-002.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-e374e5fdba8d.mp3"
+    },
+    {
+      "id": "synonyms:recall:7aa76f8d941b",
+      "word": "benadrukken",
+      "synonym": "beklemtonen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-48a0eecd8935.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:b394e4af5137",
+      "word": "beoordelen",
+      "synonym": "evalueren",
+      "wordAudio": "/package-audio/woorden-20261025/TL0169.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-e19a2dfbed10.mp3"
+    },
+    {
+      "id": "synonyms:recall:ccf115cee752",
+      "word": "beweren",
+      "synonym": "stellen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL1456.mp3"
+    },
+    {
+      "id": "synonyms:recall:ff33658b3b59",
+      "word": "doel",
+      "synonym": "bedoeling",
+      "wordAudio": "/package-audio/woorden-20261025/TL0374.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0130.mp3"
+    },
+    {
+      "id": "synonyms:recall:4791ed247f62",
+      "word": "effect",
+      "synonym": "uitwerking",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-dcb576426a17.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-eafe4047bb31.mp3"
+    },
+    {
+      "id": "synonyms:recall:4c5d847ea37e",
+      "word": "herhalen",
+      "synonym": "repeteren",
+      "wordAudio": "/package-audio/woorden-20261025/TL0636.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:5a02b98a39b3",
+      "word": "herkennen",
+      "synonym": "identificeren",
+      "wordAudio": "/package-audio/woorden-20261025/TL0639.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-7e5f179576fa.mp3"
+    },
+    {
+      "id": "synonyms:recall:3329e8c04c14",
+      "word": "informatie",
+      "synonym": "inlichtingen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0698.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:6c72dfed4601",
+      "word": "informeren",
+      "synonym": "inlichten",
+      "wordAudio": "/package-audio/woorden-20261025/TL0699.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-710219d837e6.mp3"
+    },
+    {
+      "id": "synonyms:recall:fd859a3a5be7",
+      "word": "meedelen",
+      "synonym": "melden",
+      "wordAudio": "/package-audio/woorden-20261025/TL0930.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0942.mp3"
+    },
+    {
+      "id": "synonyms:recall:2778f63c8880",
+      "word": "methode",
+      "synonym": "manier",
+      "wordAudio": "/package-audio/woorden-20261025/TL0957.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0919.mp3"
+    },
+    {
+      "id": "synonyms:recall:2ffa6f1ab999",
+      "word": "motiveren",
+      "synonym": "stimuleren",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-8e68fb9e710c.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TR-B1-20261007-013.mp3"
+    },
+    {
+      "id": "synonyms:recall:36e5d7e16e0e",
+      "word": "onderzoeken",
+      "synonym": "bestuderen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1089.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-b619cf62c39c.mp3"
+    },
+    {
+      "id": "synonyms:recall:d7a4b811b9f4",
+      "word": "ontkennen",
+      "synonym": "tegenspreken",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:1fc19ae66e46",
+      "word": "raadplegen",
+      "synonym": "consulteren",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-0c970dddcf76.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:16ffbf9debf4",
+      "word": "toelichten",
+      "synonym": "uitleggen",
+      "wordAudio": "/package-audio/woorden-20261025/TR-B1-TP-20261007-003.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1609.mp3"
+    },
+    {
+      "id": "synonyms:recall:a3186e94b544",
+      "word": "verduidelijken",
+      "synonym": "verhelderen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-cfdb53f91058.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:60af79c34a09",
+      "word": "vermoeden",
+      "synonym": "veronderstellen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1712.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:92b4ea2d2312",
+      "word": "veronderstellen",
+      "synonym": "aannemen",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0015.mp3"
+    },
+    {
+      "id": "synonyms:recall:c8376f4a3693",
+      "word": "verschil",
+      "synonym": "onderscheid",
+      "wordAudio": "/package-audio/woorden-20261025/TL1724.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-420a2b810709.mp3"
+    },
+    {
+      "id": "synonyms:recall:d2d9828ff856",
+      "word": "waarnemen",
+      "synonym": "observeren",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-379a450534ac.mp3"
+    },
+    {
+      "id": "synonyms:recall:c57f3b71b987",
+      "word": "waarschuwen",
+      "synonym": "alarmeren",
+      "wordAudio": "/package-audio/woorden-20261025/TL1845.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:a95a3da1ea69",
+      "word": "aanbevelen",
+      "synonym": "aanraden",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-fa772a852955.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-4b15da280442.mp3"
+    },
+    {
+      "id": "synonyms:recall:34d0bdaeb1f0",
+      "word": "aanmelden",
+      "synonym": "inschrijven",
+      "wordAudio": "/package-audio/woorden-20261025/TL0014.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0712.mp3"
+    },
+    {
+      "id": "synonyms:recall:36beee3a5352",
+      "word": "aanraden",
+      "synonym": "adviseren",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-4b15da280442.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-92484a986753.mp3"
+    },
+    {
+      "id": "synonyms:recall:8f11d949cae4",
+      "word": "accepteren",
+      "synonym": "aanvaarden",
+      "wordAudio": "/package-audio/woorden-20261025/TL0030.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:7d93db8752ce",
+      "word": "afschaffen",
+      "synonym": "opheffen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-1e5c0844be2c.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1140.mp3"
+    },
+    {
+      "id": "synonyms:recall:57015658849e",
+      "word": "annuleren",
+      "synonym": "afzeggen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-3e81c0991b7b.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1718.mp3"
+    },
+    {
+      "id": "synonyms:recall:bf97cf161601",
+      "word": "beboeten",
+      "synonym": "bekeuren",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:99779bba62b7",
+      "word": "beletten",
+      "synonym": "verhinderen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-51c9fd968452.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-3439760dd5fe.mp3"
+    },
+    {
+      "id": "synonyms:recall:a6ad35a9d2d0",
+      "word": "beslissen",
+      "synonym": "besluiten",
+      "wordAudio": "/package-audio/woorden-20261025/TL1746.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:f5bafe41adf5",
+      "word": "bevestigen",
+      "synonym": "bekrachtigen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0203.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:d5c07773c43d",
+      "word": "deelnemen",
+      "synonym": "meedoen",
+      "wordAudio": "/package-audio/woorden-20261025/TL0341.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0931.mp3"
+    },
+    {
+      "id": "synonyms:recall:95f6c956a046",
+      "word": "goedkeuren",
+      "synonym": "goedvinden",
+      "wordAudio": "/package-audio/woorden-20261025/TL0581.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:2b954656f002",
+      "word": "instemmen",
+      "synonym": "toestemmen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-fc77780ea35d.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:7ccb7d3f4274",
+      "word": "kiezen",
+      "synonym": "selecteren",
+      "wordAudio": "/package-audio/woorden-20261025/TL0770.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-0a1a1dd6c1f6.mp3"
+    },
+    {
+      "id": "synonyms:recall:0e1cdb884910",
+      "word": "overeenkomen",
+      "synonym": "afspreken",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-d73b6ed34db4.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0059.mp3"
+    },
+    {
+      "id": "synonyms:recall:aebbc1498ee5",
+      "word": "regelen",
+      "synonym": "organiseren",
+      "wordAudio": "/package-audio/woorden-20261025/TL1298.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1172.mp3"
+    },
+    {
+      "id": "synonyms:recall:f3dde1c68395",
+      "word": "toestaan",
+      "synonym": "toelaten",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-d9067316f7fd.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1557.mp3"
+    },
+    {
+      "id": "synonyms:recall:6dd9df6a823d",
+      "word": "twijfelen",
+      "synonym": "aarzelen",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-321aece83969.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0028.mp3"
+    },
+    {
+      "id": "synonyms:recall:7f670d82f589",
+      "word": "verplichten",
+      "synonym": "dwingen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1720.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0416.mp3"
+    },
+    {
+      "id": "synonyms:recall:b7508e419438",
+      "word": "weigeren",
+      "synonym": "afwijzen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1869.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-82229f2aa967.mp3"
+    },
+    {
+      "id": "synonyms:recall:a9546f34cd45",
+      "word": "aangezien",
+      "synonym": "omdat",
+      "wordAudio": "/package-audio/woorden-20261025/TL0006.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1065.mp3"
+    },
+    {
+      "id": "synonyms:recall:7390c7575d14",
+      "word": "bovendien",
+      "synonym": "daarnaast",
+      "wordAudio": "/package-audio/woorden-20261025/TL0265.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-1fd26f568d98.mp3"
+    },
+    {
+      "id": "synonyms:recall:ccf47b0388ed",
+      "word": "daarentegen",
+      "synonym": "daartegenover",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:b6356835d06b",
+      "word": "daarom",
+      "synonym": "dus",
+      "wordAudio": "/package-audio/woorden-20261025/TL0322.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0414.mp3"
+    },
+    {
+      "id": "synonyms:recall:c055d6f5c952",
+      "word": "desondanks",
+      "synonym": "toch",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-987cc23c7094.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1550.mp3"
+    },
+    {
+      "id": "synonyms:recall:28d20c686b3f",
+      "word": "doorgaans",
+      "synonym": "meestal",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-1c8f1444c5b9.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0938.mp3"
+    },
+    {
+      "id": "synonyms:recall:6378ceb75284",
+      "word": "echter",
+      "synonym": "maar",
+      "wordAudio": "/package-audio/woorden-20261025/TL0418.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0904.mp3"
+    },
+    {
+      "id": "synonyms:recall:e186eccc512b",
+      "word": "gedeeltelijk",
+      "synonym": "deels",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-80da1f1747ca.mp3"
+    },
+    {
+      "id": "synonyms:recall:83dd4727adef",
+      "word": "geheel",
+      "synonym": "helemaal",
+      "wordAudio": "/package-audio/woorden-20261025/TL0524.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0629.mp3"
+    },
+    {
+      "id": "synonyms:recall:f311e9a0dd5e",
+      "word": "hoofdzakelijk",
+      "synonym": "voornamelijk",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-fa15844ae806.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-1d3781afcc85.mp3"
+    },
+    {
+      "id": "synonyms:recall:27a646f53fe3",
+      "word": "indien",
+      "synonym": "als",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-143301433db0.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0079.mp3"
+    },
+    {
+      "id": "synonyms:recall:147af58e89f0",
+      "word": "kortom",
+      "synonym": "samengevat",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-25c1220af6e6.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:9ec2dfe4eb7e",
+      "word": "maximaal",
+      "synonym": "hoogstens",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-266a9cb65f8d.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-27926e9f76fc.mp3"
+    },
+    {
+      "id": "synonyms:recall:3eba49499685",
+      "word": "minimaal",
+      "synonym": "minstens",
+      "wordAudio": "/package-audio/woorden-20261025/TL0968.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-24eff95507ad.mp3"
+    },
+    {
+      "id": "synonyms:recall:955f6a595ab3",
+      "word": "nagenoeg",
+      "synonym": "bijna",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-0d334e4663eb.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0716.mp3"
+    },
+    {
+      "id": "synonyms:recall:d144fed0e01c",
+      "word": "tegelijkertijd",
+      "synonym": "gelijktijdig",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-3dbd5e1dbf59.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-e69fc32d6af0.mp3"
+    },
+    {
+      "id": "synonyms:recall:1244e780782f",
+      "word": "tevens",
+      "synonym": "ook",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL1116.mp3"
+    },
+    {
+      "id": "synonyms:recall:a57b8df5a7ec",
+      "word": "uitsluitend",
+      "synonym": "alleen",
+      "wordAudio": "/package-audio/woorden-20261025/TL1614.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0075.mp3"
+    },
+    {
+      "id": "synonyms:recall:4f9f015d5c5e",
+      "word": "vervolgens",
+      "synonym": "daarna",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-66d414e76b0f.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0321.mp3"
+    },
+    {
+      "id": "synonyms:recall:18d4dbfd5127",
+      "word": "voornamelijk",
+      "synonym": "vooral",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-1d3781afcc85.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1790.mp3"
+    },
+    {
+      "id": "synonyms:recall:fbd7bd8192f3",
+      "word": "wegens",
+      "synonym": "vanwege",
+      "wordAudio": "/package-audio/woorden-20261025/TL1867.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL1651.mp3"
+    },
+    {
+      "id": "synonyms:recall:8c5f5c5bcd12",
+      "word": "wellicht",
+      "synonym": "misschien",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0974.mp3"
+    },
+    {
+      "id": "synonyms:recall:c028554dae99",
+      "word": "betrekking",
+      "synonym": "baan",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0110.mp3"
+    },
+    {
+      "id": "synonyms:recall:3ccd092c978a",
+      "word": "bezwaar",
+      "synonym": "tegenwerping",
+      "wordAudio": "/package-audio/woorden-20261025/TL0218.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:f15bdd10cd70",
+      "word": "collectief",
+      "synonym": "gezamenlijk",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-8a9c00e0e3f0.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-91e0677755af.mp3"
+    },
+    {
+      "id": "synonyms:recall:0d686d8d6863",
+      "word": "gezamenlijk",
+      "synonym": "gemeenschappelijk",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-91e0677755af.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:d81c8e281418",
+      "word": "individueel",
+      "synonym": "afzonderlijk",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:14a4ca281090",
+      "word": "inkomsten",
+      "synonym": "verdiensten",
+      "wordAudio": null,
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:1d99b606ae2d",
+      "word": "onderneming",
+      "synonym": "bedrijf",
+      "wordAudio": "/package-audio/woorden-20261025/TL1081.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0133.mp3"
+    },
+    {
+      "id": "synonyms:recall:ed4e9775de46",
+      "word": "overeenkomst",
+      "synonym": "contract",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0315.mp3"
+    },
+    {
+      "id": "synonyms:recall:5ecbd10f6184",
+      "word": "rechtvaardig",
+      "synonym": "eerlijk",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-df765a5d125d.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0426.mp3"
+    },
+    {
+      "id": "synonyms:recall:71602d484705",
+      "word": "resultaat",
+      "synonym": "uitkomst",
+      "wordAudio": "/package-audio/woorden-20261025/TL1320.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-f6bbfa4eeebb.mp3"
+    },
+    {
+      "id": "synonyms:recall:d1821dbd0c3f",
+      "word": "tekort",
+      "synonym": "gebrek",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-2ed34081f6a2.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0510.mp3"
+    },
+    {
+      "id": "synonyms:recall:14c0bbda8580",
+      "word": "toestemming",
+      "synonym": "goedkeuring",
+      "wordAudio": "/package-audio/woorden-20261025/TL1564.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-b84492a76a44.mp3"
+    },
+    {
+      "id": "synonyms:recall:9822f690f9f6",
+      "word": "uitgaven",
+      "synonym": "kosten",
+      "wordAudio": null,
+      "synonymAudio": "/package-audio/woorden-20261025/TL0810.mp3"
+    },
+    {
+      "id": "synonyms:recall:154867ba076b",
+      "word": "vergoeding",
+      "synonym": "compensatie",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-849c17477095.mp3",
+      "synonymAudio": null
+    },
+    {
+      "id": "synonyms:recall:941dfe01f1c0",
+      "word": "verplichting",
+      "synonym": "plicht",
+      "wordAudio": "/package-audio/woorden-20261025/B5R-ca48ec23bcc0.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-5bc9132ba83f.mp3"
+    },
+    {
+      "id": "synonyms:recall:81eeee983091",
+      "word": "verzoek",
+      "synonym": "aanvraag",
+      "wordAudio": "/package-audio/woorden-20261025/TL1756.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0021.mp3"
+    },
+    {
+      "id": "synonyms:recall:0738f36896da",
+      "word": "voorraad",
+      "synonym": "reserve",
+      "wordAudio": "/package-audio/woorden-20261025/TL1800.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/B5R-6df24c372c04.mp3"
+    },
+    {
+      "id": "synonyms:recall:49f6914b46bc",
+      "word": "voorwaarde",
+      "synonym": "eis",
+      "wordAudio": "/package-audio/woorden-20261025/TL1807.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0437.mp3"
+    },
+    {
+      "id": "synonyms:recall:d22c45dec7f6",
+      "word": "werknemer",
+      "synonym": "medewerker",
+      "wordAudio": "/package-audio/woorden-20261025/TL1891.mp3",
+      "synonymAudio": "/package-audio/woorden-20261025/TL0926.mp3"
+    },
+    {
+      "id": "synonyms:recall:b00d218824c0",
+      "word": "wettig",
+      "synonym": "legaal",
+      "wordAudio": null,
+      "synonymAudio": null
+    }
+  ]
+}

@@ -6,8 +6,9 @@ import { practiceChapters, chapterCollections, chapterExerciseLevel, chapterHash
 import { contentPackages as packs } from '../lib/package-content.ts';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { contentById } from '../lib/connected-content.ts';
+import { synonymCollections, synonymActivities } from '../lib/synonyms.ts';
 
-test('Twelve independent chapters cover all forty existing activities without changing Lexicon', () => {
+test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
   const before = JSON.stringify(packs);
   assert.equal(practiceChapters.length, 12);
   assert.equal(new Set(practiceChapters.map(item => item.id)).size, 12);
@@ -27,7 +28,7 @@ test('Twelve independent chapters cover all forty existing activities without ch
       const source = new Map(groupExercises(collection.pack, activity.id).map(item => [item.exerciseId, item]));
       for (const item of collection.exercises) assert.deepEqual(item, source.get(item.exerciseId), 'Keep source IDs, answers, media, reading conditions and assessment unchanged');
     }
-    const original = activity.id.startsWith('content-') ? importedItems.filter(item=>item.domain===importedRoutes.find(route=>route.id===activity.id).domain).map(importedExercise) : packs.flatMap(pack => groupExercises(pack, activity.id));
+    const original = activity.id.startsWith('content-') ? importedItems.filter(item=>item.domain===importedRoutes.find(route=>route.id===activity.id).domain).map(importedExercise) : [...packs, ...([...synonymActivities, 'learning-review'].includes(activity.id) ? synonymCollections.map(collection => collection.pack) : [])].flatMap(pack => groupExercises(pack, activity.id));
     const connected = collections.flatMap(item => item.exercises);
     const key = item => item.contextId && activity.id !== 'word-sentence' ? `${item.mode}:${item.contextId}` : item.exerciseId;
     assert.deepEqual(new Set(connected.map(key)), new Set(original.map(key)), `${activity.id}: no lost content`);
