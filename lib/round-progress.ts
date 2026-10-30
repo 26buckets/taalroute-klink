@@ -1,3 +1,4 @@
+import imageAliases from '../data/klink-progress-image-aliases-20261030.json' with { type: 'json' };
 export const roundProgressPrefix = 'klink.round-progress.v1:';
 export const roundProgressEvent = 'klink-round-progress';
 type RoundProgress = { version: 1; total: number; done: string[] };
@@ -5,7 +6,7 @@ const fallback = new Map<string, string>();
 let storageFailed = false;
 export const roundStorageFailed = () => storageFailed;
 export const sequenceProgressId = (kind: string, block: string) => `sequence:${kind}:${block}`;
-export const collectionProgressId = (activity: string, collection: string, contentUrl?: string) => `collection:${activity}:${collection}${contentUrl ? ':' + contentUrl : ''}`;
+export const collectionProgressId = (activity: string, collection: string, contentUrl?: string) => `collection:${activity}:${collection}${contentUrl ? ':' + ((imageAliases as Record<string, string>)[contentUrl] ?? contentUrl) : ''}`;
 
 export function parseRoundProgress(raw: string | null, total: number): RoundProgress {
   const empty: RoundProgress = { version: 1, total, done: [] };

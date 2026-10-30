@@ -1,0 +1,49 @@
+✔ Every Klink route takes its exact content placement from the same Lexicon edition (3.533583ms)
+✔ Recorded texts remain exact and every repeat remains an optional supported-listening proposal (27.049375ms)
+✔ Six levels and support are distinct; malformed preferences cannot change curriculum or grant a level (0.790042ms)
+✔ All existing activities have exactly one place in the growth sequence (0.189708ms)
+✔ A difficult context never inherits Alfa A from a matching target word (0.135291ms)
+✔ Filtering preserves whole boards and learning sequences, order, IDs and source bytes (2140.633459ms)
+✔ The first mat step cannot invent a choice set or split a mixed board (0.461791ms)
+✔ Readiness retains higher and unprepared sources for later; no invented independent reading (6.98725ms)
+✔ All contextual exercises remain reachable across readiness buckets without splitting chains (1329.369083ms)
+✔ Chapter navigation retains level, help and old supported path links (1136.994792ms)
+✔ Twelve independent chapters cover all forty existing activities without changing Lexicon (9489.357167ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.436875ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (1.192417ms)
+{
+  collections: 1122,
+  exercisePlacements: 56239,
+  uniqueSourceRecords: {
+    'build-model': 816,
+    copy: 8386,
+    meet: 42,
+    memory: 5,
+    'read-series': 8386,
+    'spelling-path': 698,
+    'word-bingo': 1344,
+    'word-sort': 192,
+    worksheet: 816,
+    'worksheet-heard': 840
+  },
+  referencedMedia: 5555,
+  indexBytes: 286068,
+  indexGzipBytes: 27903,
+  largestCollectionBytes: 129192,
+  oldAlfaAIdsPreserved: true,
+  all45AlfaBRecallTasks: true,
+  sourceAnswers: true,
+  pathsExist: true,
+  localOnly: true
+}
+✔ scripts/test-production-content.mjs (1111.703208ms)
+PASS round progress: validation, deduplication, replay, separate rounds, multi-tab merge, three legacy stores, confirmed answers and storage recovery
+✔ scripts/test-round-progress.mjs (356.873167ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9890.903958

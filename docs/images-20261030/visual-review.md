@@ -1,0 +1,11 @@
+# Beeldcontrole — 30 oktober 2026
+
+Selectie: 32 nieuwe Kijk en luister-scènes uit de teruggelezen productiechats, plus 20 door Nico goedgekeurde woordbeelden. De bestaande afkeuring van KEL_A209_06 en open beoordeling van KEL_A202_01 blijven behouden; beide zijn uitgesloten.
+
+Alle geselecteerde scènes zijn volledig beoordeeld en de zichtbare handen opnieuw bekeken in vergrotingen: vingers, duimzijde, polsen, contact en ondersteuning, grepen en natuurlijke afdekking. De kijker blijft buitenstaander; personen richten zich op elkaar of hun taak. Papieren en schermen zijn gericht op hun natuurlijke gebruiker. Alle gebruikte woordbeelden zijn volledig bekeken; het aankomstbeeld is ook op alle handen in detail bekeken. De overige negentien geselecteerde woordbeelden bevatten geen zichtbare handen. Geen generatieve beeldwijziging uitgevoerd.
+
+Vijf onderzochte scènes zijn uitgesloten: KEL_A204_01 en KEL_A207_02 tonen papieren naar de kijker terwijl de gebruikers de achterzijde zien; KEL_A206_06 en KEL_A207_08 gebruiken een eerstepersoonsbeeld; KEL_A209_02 markeert een grammaticaal correcte zin ten onrechte als fout. Woordbeeld K058 heeft een onjuiste datumweergave en een eerstepersoonsbeeld; K395 heeft vervormde tekens en onvoldoende zekere Nederlandse situering. Geen van deze zeven bestanden is toegevoegd aan het online aanbod.
+
+Plaatsing gecontroleerd op de echte oefenkaarten: scènes maximaal 330 px, woordbeelden 200 px hoog, volledige inhoud met object-fit contain. De niet-vierkante foto voor ‘acht’ behoudt alle acht broodjes; een eerste contactuitsnede was te smal, waarna het volledige schermbeeld opnieuw is bekeken. Zinnen, handen en objecten blijven herkenbaar op het geplaatste formaat. De fotobestanden zijn alleen proportioneel verkleind en als WebP opgeslagen; geen gewijzigde compositie of generatieve verscherping. Elke nieuwe foto is 3,7–67,0 kB. De oorspronkelijke bestanden blijven apart bewaard.
+
+Bron-/bestandskoppelingen, hashes en uitsluitingen staan in media.json; originele bestanden en detail-/overzichtscontroles staan in de bytegelijk teruggelezen Drive-back-up (media-backup.json). Browserproeven gebruiken Chromium en WebKit; geen fysieke telefoon- of cursistenpilot geclaimd. Overige beeldproductie en menselijke luisterreview van eerdere audio vallen buiten deze beeldpublicatie.
