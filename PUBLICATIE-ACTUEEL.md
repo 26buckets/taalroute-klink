@@ -1,3 +1,13 @@
+## 30 oktober 2026 — korte woordrondes online
+
+Livebron `fcffb481512bccb393439aac67eac39b9d56d5b5`, canonieke main; Worker `97dd406d-f7c3-4813-bf74-03111b82bbd8`. Nico aanvaardde het concrete advies voor korte woordrondes met passende kaarttitels, afbeeldingen en woordentelling. Kijk en luister toont 161 korte rondes voor dezelfde 1.019 bestaande woordtaken uit 68 bronnen: maximaal acht woorden, evenwichtig verdeeld binnen dezelfde bron en niveaukeuze. Kleine bestaande selecties blijven klein. Situatieopdrachten en complete leerroutes blijven ongewijzigd. De oude lange deellinks blijven hun oorspronkelijke inhoud en oefenpositie openen.
+
+Oorspronkelijke afronding blijft per woord onder dezelfde bronregistratie bewaard; korte rondes lezen en schrijven de complete oorspronkelijke registratie. Nieuwe oefenposities overschrijven de oude positie niet. Alle media en oorspronkelijke inhoud blijven bytegelijk; ook het nieuwste zinsherstel en Synoniemen met 68 opnamen blijven behouden. B2 blijft verborgen met behoud van ruimte.
+
+Lokaal: inhouds- en voortgangscontroles, types, gerichte lint, productieopbouw, 322 ronde-ingangen, native audio, oude/nieuwe links, herladen, opnieuw oefenen, 96 menureizen, 180 Alfa C-blokterugwegen en 50 integratiegevallen geslaagd. De volledige gewone publicatiepoort en manipulatiecontrole zijn geslaagd; geen GitHub Actions. Online: 322 ronde-ingangen in Chromium/WebKit, vier schermmaten, acht aanraakreizen, native woordaudio, opgeslagen afronding en hervatten van later geladen woordrondes, zeven synoniemscenario’s en alle 26 appbestanden/logo’s bytegelijk gecontroleerd. Browseremulatie; geen fysieke toestellen of cursistenpilot.
+
+Bronback-up volledig teruggelezen en SHA256/ZIP-gecontroleerd: `1tNbju0BZyQVDTEudoebMxegiOR0rryo4`. Dossier: `docs/word-rounds-20261030/`. Gebruik uitsluitend een afstammeling van deze livebron op canonieke main via de bestaande publicatiepoort. Deze registratie wijzigt de livecode niet.
+
 ## 30 oktober 2026 — Synoniemen met volledige woordaudio online
 
 Livebron `f5ec38d8be465ff8a4f56423f2bc54794ae7682a`, schone canonieke main; Worker `68a9dba8-b01e-4e99-a3b3-6ae0872633c4`. Gepubliceerd via `npm run deploy`, afstammeling van de nieuwste goedgekeurde zinnenpublicatie `16151ddeb6f3e01787111ebf11184a29c77db10a`. De 1.292 niveaugebonden zinnen, veertien herstelde opnamen, actuele navigatie, woordbeelden, verborgen B2 met gereserveerde ruimte en bestaande opslag zijn behouden.
