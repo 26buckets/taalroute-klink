@@ -1,3 +1,21 @@
+# Actuele KLINK-publicatie — woordafbeeldingen en oefenoverzicht, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `5c43d45f04bbe5bfa5fbffaa158a3e776e6ffd43`, schone canonieke main. Build `2026-10-30T17:03:06.311Z`. Worker `902a7fc3-ca30-4082-ad87-bca150fdd0e8`.
+
+48 complete woordenlijsten kregen vier aanvullende beeldvormen: Hoor en kies, Kies de foto, Woord en foto en Draai de kaart. 192 reeksen / 1.920 oefenplaatsen, op de bestaande niveaus Alfa C (16 lijsten), A1 (12), A2 (8) en B1 (12). Van 372 verschillende woorden hebben 73 een bestaande afbeelding en 299 een tijdelijk lichtgrijs vierkant met leesbare woordtekst. De eerder afgewezen bonfoto is voor deze nieuwe plaatsingen ook vervangen door een woordvak. Het register houdt ontbrekende beelden en alle bron-/niveaukoppelingen bij.
+
+Via het hamburgermenu: Oefenoverzicht · bèta. De tellingen volgen de daadwerkelijke filters van de app, met lege onderdelen en ontbrekende beeldproductie apart. Woordvakken worden niet als afgeronde foto of als zelfstandige beeldherkenning gepresenteerd. De bestaande Klink Plus-docentles, luisterlijsten, historische inhoud, media en voortgang zijn behouden. Alle eerdere publieke bestanden blijven bytegelijk beschikbaar.
+
+Lokaal: typen, gerichte lint, build, bron-/voortgangsbehoud, 1.411 productiecollecties en 58.929 oefenplaatsen gecontroleerd; antwoorden in alle 15 productie-oefenvormen, 44 bestaande scènes, 192 nieuwe collecties geopend, 65 beeld-/antwoord-/schermchecks, 18 bestaande UI-/tellingchecks, 96 menugevallen en 50 integratielay-outs. 74 aangetroffen woordbeelden beoordeeld, bon uitgesloten, 23 volledige beelden met handen plus detailuitsneden gecontroleerd. Geen nieuwe audio gegenereerd.
+
+Online: 962 bestanden bytegelijk teruggelezen, inclusief alle 192 nieuwe collecties, 299 woordvakken, 73 gebruikte bestaande beelden, de HTML en gebouwde JS/CSS. De ingebedde Taalroute-merkgegevens van 375 daadwerkelijk aangeboden audiobestanden opnieuw gecontroleerd. 64 antwoord-, heropen- en schermchecks plus acht menu-/tellinggevallen in Chromium en WebKit. De online fixture isoleert iedere schermmaat in zijn eigen lege testvoortgang; zonder die isolatie hervatte de app terecht bij een volgende oefening. De HTML volgt de normale extensieloze omleiding.
+
+Bron, gebruikte media, register en controles zijn bytegelijk teruggelezen op Google Drive: https://drive.google.com/file/d/1qAuopXGaExLEY-Yr9KvF3DQvkbdUy250/view . Aanvullend online bewijs: docs/placeholders-20261030/live-*. Alleen lokale zware controles, geen GitHub Actions-workflows. Geen fysieke klasmonitor of cursistenpilot. De overige 500 scènes, 91 parenrondes en 341 voorbereide fotobingoborden blijven afzonderlijke productievoorraden. Losse m/a/t-klankopnamen voor Klink Plus docent blijven open.
+
+Gebruik uitsluitend actuele main, controleer release.json en publiceer via npm run deploy. De registratiecommit na deze bron wijzigt de runtime niet.
+
+## Historie
+
 # Actuele KLINK-publicatie — bèta, docent en luisteren, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `dd51763f9d123a6a74c5fbe9cc2249df64a75d99`, schone canonieke main. Build `2026-10-30T16:33:59.699Z`. Worker `1427e3d7-cdd5-45c8-b261-8d1df0bc4e2b`.
