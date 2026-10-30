@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {assertWordRepairs,verifyWordRepairs} from './check-word-repairs-20261030.mjs';
+const r=verifyWordRepairs();
+const after=JSON.parse(readFileSync('data/klink-media.json')),before=structuredClone(after);
+for(const c of r.clips)before[`klink-woord-${c.word}`].audio=c.originalSrc;
+assertWordRepairs(before,after,r.clips);
+const wrong=structuredClone(after);wrong['klink-woord-man'].audio=r.clips[0].src;assert.throws(()=>assertWordRepairs(before,wrong,r.clips));
+for(const target of ['data/klink-media.json','public/content-register/active.json',...r.clips.map(c=>'public'+c.src)])assert.throws(()=>verifyWordRepairs(f=>f===target?Buffer.from('{}'):readFileSync(f)));
+console.log('PASS exact two-word scope, original media preservation, branding, transcripts and tamper detection');

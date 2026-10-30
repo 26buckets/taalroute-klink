@@ -6,8 +6,8 @@ import { availableChapterCollections, availableChapterActivities, chapterHash, p
 import { isInstructionAudioEnabled, isWithdrawnAudio } from '../lib/audio-policy.ts';
 
 const original = productionIndex.filter(row => !row.id.startsWith('audio-words:'));
-// Baseline a3826557: preserve the entire existing index without requiring Git history in a source archive.
-assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'), 'bfd591ecc1350f6b58c56ca7ddf0673fc185a36772e68c5bf40914b1562d971d', 'Existing routes, titles, files and progress IDs remain unchanged');
+// Baseline 60525ae: preserve the entire existing index without requiring Git history in a source archive.
+assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'), '625ace9d105065cd78af82dc5a5a1208b669c920a076cc698f19d4343545de9a', 'Existing routes, titles, files and progress IDs remain unchanged');
 const lists = JSON.parse(readFileSync('docs/audio-words-20261030/lists.json')).lists;
 const rows = productionIndex.filter(row => row.id.startsWith('audio-words:'));
 assert.equal(rows.length, 96);

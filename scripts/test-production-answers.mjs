@@ -60,6 +60,6 @@ try{
   const img=page.locator('.cp-model-content img');await img.waitFor();await img.evaluate(el=>el.decode());const actual=new URL(await img.getAttribute('src'),base);assert.equal(actual.searchParams.get('url')||actual.pathname,e.prompt.image.src);
   await page.screenshot({path:out+'/'+e.exerciseId+'-desktop.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:out+'/'+e.exerciseId+'-mobile.png'});await page.setViewportSize({width:1366,height:950});images.push(e.exerciseId);
  }
- assert.equal(images.length,10);assert.deepEqual(errors,[]);
- writeFileSync('docs/production-20261029/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
+ assert.equal(images.length,44);assert.deepEqual(errors,[]);
+ writeFileSync('docs/image-repairs-20261030/answer-check.json',JSON.stringify({checks,images,errors,localOnly:true},null,2));console.log('PASS images',images.length);
 }finally{await browser.close();}

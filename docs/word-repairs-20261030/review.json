@@ -1,0 +1,23 @@
+{
+  "status": "passed-targeted-local",
+  "types": true,
+  "build": true,
+  "lintChangedFiles": true,
+  "exactTwoWordScope": true,
+  "all302LessonsPreserved": true,
+  "originalMediaUnchanged": true,
+  "historicalPublicationChecksPreserved": true,
+  "humanListening": false,
+  "existingTestFailures": {
+    "file": "scripts/test-audio-register.mjs",
+    "baselineAndCurrentFailures": [
+      "missing register slot for existing Alfa C online instruction",
+      "conflicting groep-papierdictee instruction source when rebuilding inventory"
+    ],
+    "introducedByThisChange": false
+  },
+  "credits": {
+    "tts": 29,
+    "automaticTranscription": "Two requests, combined account delta 0 at measurement; not claimed free. Reserve total 100 credits."
+  }
+}
