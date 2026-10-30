@@ -85,6 +85,10 @@ export function contextReadiness(id: string, pack: PackageDefinition, lesson: Pa
   if (level !== 'support') {
     if (settings.language === 'all') return { status: 'later', level, reason: 'Kies met de docent eerst het passende taalniveau bij Taal bovenaan. Het bronlabel is geen leesvrijgave.' };
     if (level !== settings.language) return { status: 'later', level, reason: 'Ander taalniveau dan de gekozen route. De docent kan dit bewust voor herhaling of later kiezen.' };
+    if (source.kind === 'sentence') {
+      const conditions = contentReadingConditions(source, lesson ?? { id: pack.id, known: pack.words.map(word => word.id) });
+      if (conditions.otherWords.length || conditions.outsideWordBank.length || conditions.unitsOutsideStep.length) return { status: 'later', level, reason: 'Het taalniveau past, maar woorden of leesvoorwaarden zijn nog niet voorbereid. Selecteer en bereid deze zin eerst samen voor.' };
+    }
     return { status: 'guided', level, reason: 'Het taalbronlabel past bij de gekozen route. Betekenis en lezen blijven begeleid; dit is geen zelfstandige leesvrijgave.' };
   }
   const conditions = contentReadingConditions(source, lesson ?? { id: pack.id, known: pack.words.map(word => word.id) });

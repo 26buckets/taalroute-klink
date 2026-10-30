@@ -25,7 +25,7 @@ test('The medical response identifies the term and the throat source uses its ph
  assert.equal(medical.discussion.evidence,medical.blocks[2].text);assert.equal(medical.sourceLevel,'A2');
  const writing=read('data/klink-functional-writing.json').items.find(x=>x.contentId===medical.id);assert.match(writing.example,/woord diagnose/);
  const throat=connectedContent.find(x=>x.id==='klink-sentence-790dabeb9573eae5');assert.equal(throat.text,'Mijn keel doet pijn.');assert.deepEqual(throat.wordIds,['klink-woord-keel']);assert.deepEqual(throat.readingWordIds,['klink-woord-keel','klink-woord-pijn']);assert.deepEqual(throat.reading.outsideWordBank,['mijn','doet']);
- assert.equal(throat.sourceLevel,'with-support');assert.equal(throat.independentReading,false);
+ assert.equal(throat.sourceLevel,'A1');assert.equal(throat.independentReading,false);
 });
 test('Amendment proof rejects an unapproved change to a linked answer',()=>{
  assert.throws(()=>verifyContentAmendments(file=>{const bytes=readFileSync(file);if(file!=='data/klink-connected-content.json')return bytes;const value=JSON.parse(bytes);value.items[0].text+=' ongevraagd';return Buffer.from(JSON.stringify(value));}));

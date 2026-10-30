@@ -2,12 +2,19 @@ import bank from '../data/klink-connected-content.json' with { type: 'json' };
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 import instructions from '../data/klink-instructions.json' with { type: 'json' };
 import routing from '../data/klink-content-routing.json' with { type: 'json' };
+import sentenceLevels from '../data/klink-sentence-levels.json' with { type: 'json' };
 import { repairedDialogue, dialogueScene } from './dialogue-repair.ts';
 import type { PackageExercise, PackageLesson } from './package-content';
 
 export type ConnectedContent = typeof bank.items[number];
 const canonicalItems = new Map(routing.items.map(item => [item.id, item]));
-export const connectedContent = bank.items.map(item => ({ ...repairedDialogue(item), wordIds: canonicalItems.get(item.id)!.wordIds }));
+export const sentenceLevelReviews = new Map(sentenceLevels.items.map(item => [item.contentId, item]));
+export const connectedContent = bank.items.map(item => {
+  const review = sentenceLevelReviews.get(item.id);
+  return { ...repairedDialogue(item), wordIds: canonicalItems.get(item.id)!.wordIds,
+    // A revised sentence needs a new review before it can inherit this level.
+    sourceLevel: review?.text === item.text ? review.level : item.sourceLevel };
+});
 export const contentById = new Map(connectedContent.map(item => [item.id, item]));
 const wordsById = new Map(curriculum.words.map(word => [word.id, word]));
 const unique = (ids: string[]) => [...new Set(ids)];
