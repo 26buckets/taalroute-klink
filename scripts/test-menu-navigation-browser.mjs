@@ -118,7 +118,7 @@ try {
   }
   pass('Compact title and screen-reader orientation avoid answer leakage; desktop, tablet and phone fit with reachable continuation');
   await teacher();
-  const link = page.locator('.cp-menu-guide').getByRole('link', { name: 'Woorden', exact: true });
+  const link = page.locator('.cp-menu-guide').getByRole('link', { name: 'Woorden bekijken', exact: true });
   await link.focus(); await page.keyboard.press('Enter'); await page.locator('.word-library-page').waitFor();
   assert.equal(await page.locator('.cp-menu-guide').count(), 0);
   assert.deepEqual(errors, []);

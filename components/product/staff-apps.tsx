@@ -102,7 +102,7 @@ function TeacherOverview({ onOpen, onActivities }: { onOpen: (packageId: Package
 }
 
 function TeacherPackages({ onOpen }: { onOpen: (packageId: PackageId) => void }) {
-  return <><StaffTopbar title="Lessen" subtitle="15 onderdelen · 302 lesroutes" /><div className="staff-content cp-teacher-content"><div className="page-heading"><div><span className="eyebrow">Taalroute</span><h2>Wat zit waar?</h2><p>Dezelfde onderdelen als onder Lessen bij de cursist, met extra informatie voor de docent.</p></div></div><section className="cp-teacher-package-list">{lessonPackages.map((pack) => <button key={pack.id} onClick={() => onOpen(pack.id)}><span><PackageOpen /></span><div><small>{pack.level}</small><strong>{learnerListName(pack)}</strong><p>{pack.subtitle}</p></div><div><b>{pack.counts.lessons}</b><small>lessen</small></div><div><b>{pack.counts.coreWords}</b><small>woorden</small></div><div><b>{pack.counts.exercises}</b><small>oefeningen</small></div><ArrowRight /></button>)}</section></div></>;
+  return <><StaffTopbar title="Lessen" subtitle="15 onderdelen · 302 lesroutes" /><div className="staff-content cp-teacher-content"><div className="page-heading"><div><span className="eyebrow">Taalroute</span><h2>Wat zit waar?</h2><p>Dezelfde onderdelen als onder Stap voor stap bij de cursist, met extra informatie voor de docent.</p></div></div><section className="cp-teacher-package-list">{lessonPackages.map((pack) => <button key={pack.id} onClick={() => onOpen(pack.id)}><span><PackageOpen /></span><div><small>{pack.level}</small><strong>{learnerListName(pack)}</strong><p>{pack.subtitle}</p></div><div><b>{pack.counts.lessons}</b><small>lessen</small></div><div><b>{pack.counts.coreWords}</b><small>woorden</small></div><div><b>{pack.counts.exercises}</b><small>oefeningen</small></div><ArrowRight /></button>)}</section></div></>;
 }
 
 function TeacherMenuGuide() {
@@ -110,17 +110,16 @@ function TeacherMenuGuide() {
     <h2 id="menu-guide-title">Waar moet ik zijn?</h2>
     <p>Gebruik dezelfde namen als op het scherm van de cursist. De knoppen hieronder openen die omgeving; ze zetten geen les klaar en veranderen geen voortgang.</p>
     <dl>
-      <div><dt>Start</dt><dd>Het beginscherm met de knoppen Lezen en Taal bovenaan. Verder opent de opgeslagen les; een nieuwe cursist kiest Begin hier.</dd></div>
-      <div><dt><a href="#learner/packages">Lessen<ArrowRight aria-hidden="true" /></a></dt><dd>Kies een fotokaart. Woorden toont het gezamenlijke overzicht. Stap voor stap opent de kleine leeslessen. Oefenen met deze woorden ordent de oefenvormen van kennismaken naar herhalen. Gebruiken bevat zinnen, teksten, gesprekken, situaties en hun oefeningen, met afzonderlijke leesvoorwaarden.</dd></div>
-      <div><dt><a href="#learner/chapters">Oefenen<ArrowRight aria-hidden="true" /></a></dt><dd>Een vaardigheid kiezen, daarna een oefenvorm en woorden of een tekst. Geen verplichte start bij klanken.</dd></div>
-      <div><dt><a href="#learner/words">Woorden<ArrowRight aria-hidden="true" /></a></dt><dd>Woorden terugvinden, bekijken en bewaren. Voor opdrachten kies je Oefenen → Woorden oefenen.</dd></div>
-      <div><dt><a href="#learner/review">Herhalen<ArrowRight aria-hidden="true" /></a></dt><dd>Bewaarde woorden en eerder geoefende inhoud. Woordenmix biedt passende luister-, lees-, koppel- en bouwrondes met beschikbare woorden; niet alle oefenvormen. De opslag hoort bij dit apparaat, niet bij een persoonlijk account.</dd></div>
+      <div><dt><a href="#learner/home">Start<ArrowRight aria-hidden="true" /></a></dt><dd>Kies direct een niveau en Zelf oefenen of Met je docent. Dezelfde twaalf onderdelen staan op ieder niveau. Niet beschikbare oefeningen blijven herkenbaar. Verder met opent een werkelijk opgeslagen les. De Klankenkaart opent de klanken en hun woordvoorbeelden.</dd></div>
+      <div><dt><a href="#learner/words">Woorden bekijken<ArrowRight aria-hidden="true" /></a></dt><dd>Woorden terugvinden, bekijken en bewaren. Voor opdrachten kies je Start → Woorden oefenen.</dd></div>
+      <div><dt><a href="#learner/review">Nog een keer<ArrowRight aria-hidden="true" /></a></dt><dd>Bewaarde woorden en eerder geoefende inhoud. Woordenmix biedt passende luister-, lees-, koppel- en bouwrondes met beschikbare woorden; niet alle oefenvormen. De opslag hoort bij dit apparaat, niet bij een persoonlijk account.</dd></div>
     </dl>
+    <p><a href="#learner/packages">Stap voor stap</a> staat op Start en opent alle bestaande fotokaarten en leeslessen. Binnen een kaart blijven Woorden, Stap voor stap, Oefenen met deze woorden en Gebruiken beschikbaar. Zo oefen je geeft op Start uitleg over de zes oefenstappen.</p>
     <details><summary>Een oefenhoofdstuk openen voor de cursist</summary>
       <div className="cp-menu-guide-links">{practiceChapters.map(chapter => <a className="secondary-button" key={chapter.id} href={chapterHash({ chapter: chapter.id, level: 'all' })}>{chapter.title}<ArrowRight aria-hidden="true" /></a>)}</div>
-      <p>Een hoofdstuk is een ingang, geen behaald niveau. Kies passende leesvoorwaarden. Samen herhalen biedt onder meer bingo en gemengde oefenvormen; de knop Herhalen gaat naar eerder geoefende en bewaarde inhoud.</p>
+      <p>Een hoofdstuk is een ingang, geen behaald niveau. Kies passende leesvoorwaarden. Samen herhalen biedt onder meer bingo en gemengde oefenvormen; de knop Nog een keer gaat naar eerder geoefende en bewaarde inhoud.</p>
     </details>
-    <p>Terug naar dit overzicht: gebruik de terugknop van de browser. Bij een gedeeld apparaat is Begin hier geen instaptoets; kies samen een passend onderdeel bij Lessen.</p>
+    <p>Terug naar dit overzicht: gebruik de terugknop van de browser. Kies samen een passend niveau en onderdeel. Een oefenkeuze is geen instaptoets of behaald niveau.</p>
   </section>;
 }
 

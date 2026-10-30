@@ -35,3 +35,10 @@
   .cp-sound-detail { padding: 12px; }
   .cp-word-sounds summary { font-size: 18px; }
 }
+
+/* Keep the complete sound reference, with smaller cards and readable targets. */
+.learner-app .cp-sounds .cp-sound-tiles { grid-template-columns:repeat(auto-fit,minmax(104px,1fr)); gap:8px; }
+.learner-app .cp-sounds .cp-sound-play { min-height:92px; padding:18px 8px 10px; }
+.learner-app .cp-sounds .cp-sound-glyph { font-size:32px; }
+.learner-app .cp-sounds .cp-sound-example { font-size:18px; }
+.learner-app .cp-sounds .cp-sound-open { min-height:48px; }

@@ -27,12 +27,12 @@ try {
   for (const width of [1366, 768, 390, 320]) {
     await page.setViewportSize({ width, height: width === 320 ? 568 : 900 });
     await page.goto(`${base}/#learner/chapters`);
-    await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
+    await page.locator('.cp-practice-modes').getByRole('button', { name: 'Met je docent', exact: true }).click();
     await page.getByRole('button', { name: 'Klanken', exact: true }).click();
     await page.getByRole('link', { name: 'Klankenkaart', exact: true }).click();
     await page.getByRole('heading', { name: 'Klankenkaart', exact: true }).waitFor();
     assert.equal(await page.locator('[data-sound]').count(), 46);
-    assert.equal(await page.locator('.learner-nav nav > button').count(), 5);
+    assert.equal(await page.locator('.learner-nav nav > button').count(), 3);
     assert(await noOverflow(), `Overview overflow at ${width}`);
     assert.equal(await page.locator('.cp-sounds').getByText(/Kijk op de poster|Kies een klank|Open de klankenkaart/).count(), 0);
     await page.screenshot({ path: `${out}/klanken-${width}.png` });
@@ -55,7 +55,7 @@ try {
     await page.getByRole('button', { name: 'Alle klanken', exact: true }).click();
     await page.getByRole('button', { name: 'Terug naar Klanken', exact: true }).click();
     await page.getByRole('heading', { name: 'Klanken', exact: true }).waitFor();
-    if (await page.locator('.cp-practice-entry').count()) await page.locator('.cp-practice-entry').getByRole('button', { name: /Met je docent/ }).click();
+    if (await page.locator('.cp-practice-entry').count()) await page.locator('.cp-practice-modes').getByRole('button', { name: 'Met je docent', exact: true }).click();
     assert.equal(await page.locator('[data-chapter-activity]').count(), 2);
     pass(`Direct letter playback, separate words, keyboard, quiet text and original chapter at ${width}px`);
   }
