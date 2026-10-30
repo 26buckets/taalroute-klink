@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { verifySmallWordRoundsRelease, readBeforeSmallWordRounds } from './check-small-word-rounds-release.mjs';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -38,6 +39,8 @@ export function assertSynonymAudio(clips, bindings) {
 }
 
 export function verifySynonymsRelease(read = readFileSync) {
+  const successor = verifySmallWordRoundsRelease(read), currentRead = read;
+  read = file => readBeforeSmallWordRounds(file, successor, currentRead);
   const release = JSON.parse(read('docs/klink-owner-release-synonyms-20261030.json'));
   assert.equal(release.approvedBy, 'Nico'); assert.equal(release.publicationApproved, true);
   assert.equal(release.userRequest, 'Ja, maak ook de ontbrekende audio en zet Synoniemen daarna online in Klink.');
@@ -47,11 +50,11 @@ export function verifySynonymsRelease(read = readFileSync) {
   git('merge-base', '--is-ancestor', release.liveSourceCommit, release.baselineSourceCommit);
   git('merge-base', '--is-ancestor', release.baselineSourceCommit, 'HEAD');
   const roots = ['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
-  const changed = [...new Set([...lines(git('diff','--name-only',release.baselineSourceCommit,'--',...roots)), ...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b) => a.localeCompare(b));
+  const changed = lines(git('diff','--name-only',release.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)).sort((a,b) => a.localeCompare(b));
   assert.deepEqual(changed, [...release.changedFiles].sort((a,b) => a.localeCompare(b)));
   assert(changed.every(file => synonymScopeFiles.includes(file) || /^public\/package-audio\/synoniemen-20261030\/SW\d{3}\.mp3$/.test(file)));
   for (const file of changed) assert.equal(sha(read(file)), release.files[file], file);
-  assert.equal(git('diff','--name-only','--diff-filter=MD',release.baselineSourceCommit,'--','public').length, 0, 'Existing public files remain byte-identical');
+  assert.equal(git('diff','--name-only','--diff-filter=MD',release.baselineSourceCommit,successor.baselineSourceCommit,'--','public').length, 0, 'Existing public files remain byte-identical');
   const clips = JSON.parse(read('docs/synonyms-20261030/audio.json'));
   assertSynonymAudio(clips, JSON.parse(read('data/klink-synonym-audio.json')));
   for (const clip of clips) {
@@ -65,9 +68,9 @@ export function verifySynonymsRelease(read = readFileSync) {
   const backup = JSON.parse(read('docs/synonyms-20261030/backup.json'));
   assert.equal(backup.verified, true); assert(backup.driveId && backup.sha256);
   for (const file of changed) assert.equal(backup.files[file], release.files[file], file);
-  return release;
+  return { ...release, successor };
 }
 
 export function readBeforeSynonyms(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : read(file);
+  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeSmallWordRounds(file, release.successor, read);
 }
