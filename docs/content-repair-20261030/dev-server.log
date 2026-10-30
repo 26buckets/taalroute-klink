@@ -1,0 +1,342 @@
+[vinext] Tip: migrate from `vinext dev` to `vite dev`.
+(node:99135) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+8:10:31 PM [vite] (ssr) Re-optimizing dependencies because vite config has changed
+8:10:31 PM [vite] (rsc) Re-optimizing dependencies because vite config has changed
+Default inspector port 9229 not available, using 9232 instead
+
+8:10:34 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+
+  VITE v8.3.4  ready in 3473 ms
+
+  ➜  Local:   http://localhost:18945/
+  ➜  Debug:   http://localhost:18945/__debug
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+8:11:48 PM [vite] (rsc) hmr update /app/globals.css
+ GET / 200 in 4.4s (compile: 1793387431.2s, render: 4.0s)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+8:12:34 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+8:13:03 PM [vite] (rsc) hmr update /app/globals.css
+8:13:03 PM [vite] (ssr) page reload components/product/imported-teacher-workflow.tsx
+8:13:03 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/imported-teacher-workflow.tsx
+[vite] program reload
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (ssr) page reload data/klink-connected-content.json
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/classroom-boundary.tsx, /components/product/teacher-classroom.tsx, /components/product/teacher-route-stage.tsx, /components/product/package-exercise-browser.tsx, /components/product/learner-app.tsx, /components/product/staff-apps.tsx, /components/product/practice-chapters.tsx, /components/product/lesson-coverage.tsx, /components/product/content-audio-register.tsx, /components/product/teacher-picture-guide.tsx, /components/product/sound-reference.tsx and 7 more
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (ssr) page reload data/klink-content-routing.json
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/classroom-boundary.tsx, /components/product/teacher-classroom.tsx, /components/product/teacher-route-stage.tsx, /components/product/package-exercise-browser.tsx, /components/product/learner-app.tsx, /components/product/staff-apps.tsx, /components/product/practice-chapters.tsx, /components/product/lesson-coverage.tsx, /components/product/content-audio-register.tsx, /components/product/teacher-picture-guide.tsx, /components/product/sound-reference.tsx and 7 more
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (ssr) page reload data/klink-dialogue-repair.json
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/classroom-boundary.tsx, /components/product/teacher-classroom.tsx, /components/product/teacher-route-stage.tsx, /components/product/package-exercise-browser.tsx, /components/product/learner-app.tsx, /components/product/staff-apps.tsx, /components/product/practice-chapters.tsx, /components/product/lesson-coverage.tsx, /components/product/content-audio-register.tsx, /components/product/teacher-picture-guide.tsx, /components/product/sound-reference.tsx and 7 more
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (ssr) page reload data/klink-imported-practice.json
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/learner-app.tsx, /components/product/staff-apps.tsx, /components/product/practice-chapters.tsx, /components/product/lesson-coverage.tsx, /components/product/content-audio-register.tsx, /components/product/route-settings.tsx, /components/product/package-experience.tsx, /components/product/practice-line.tsx, /components/product/package-group-practice.tsx
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (ssr) page reload data/klink-functional-writing.json
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/learner-app.tsx, /components/product/staff-apps.tsx, /components/product/practice-chapters.tsx, /components/product/lesson-coverage.tsx, /components/product/content-audio-register.tsx, /components/product/package-group-practice.tsx
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct
+8:13:04 PM [vite] (rsc) hmr update /app/globals.css
+8:13:04 PM [vite] (ssr) page reload data/klink-docent-mat.json
+8:13:04 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/classroom-boundary.tsx, /components/product/teacher-classroom.tsx, /components/product/teacher-route-stage.tsx
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+ GET / 200 in 1.7s (compile: 1793387430.9s, render: 1.5s)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+8:13:51 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+8:14:42 PM [vite] (rsc) hmr update /app/globals.css
+8:14:42 PM [vite] (client) hmr update /app/globals.css?direct
+ GET / 200 in 193ms (compile: 1793387430.9s, render: 10ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+[vite] program reload
+8:14:45 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+ GET / 200 in 24ms (compile: 1793387430.8s, render: 15ms)
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/header-controls.css, use /taalroute-menu/header-controls.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/app-chooser.css, use /taalroute-menu/app-chooser.css.
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/menu-controls.css, use /taalroute-menu/menu-controls.css.
+8:14:51 PM [vite] (client) [console.error] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <meta>
+    <title>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <link>
+    <link>
+    <link>
+    <link>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <meta>
+    <GlobalErrorBoundary fallback={function DefaultGlobalError}>
+      <ErrorBoundaryInner pathname="/" fallback={function DefaultGlobalError} isImplicitRootErrorBoundary={true}>
+        <ErrorBoundary fallback={function DefaultGlobalError}>
+          <ErrorBoundaryInner pathname="/" resetKey={undefined} fallback={function DefaultGlobalError}>
+            <LayoutSegmentProvider providerId="layout:/" segmentMap={{children:[...]}}>
+              <Slot id="layout:/">
+                <BfcacheSlotBoundary id="layout:/" content={<Context>}>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <link>
+                  <RemoveDuplicateServerCss>
+                  <AppComponentDependencyBarrier>
+                    <RootLayout>
+                      <html
+                        lang="nl"
+-                       data-theme="light"
+-                       data-appearance="system"
+-                       style={{color-scheme:"light"}}
+                      >
+
+Files in the public directory are served at the root path.
+Instead of /public/taalroute-menu/klink.svg, use /taalroute-menu/klink.svg.
+8:17:31 PM [vite] (rsc) hmr update /app/globals.css
+8:17:31 PM [vite] (ssr) page reload components/product/imported-teacher-workflow.tsx
+8:17:31 PM [vite] (client) hmr update /app/globals.css?direct, /components/product/imported-teacher-workflow.tsx
+[vite] program reload

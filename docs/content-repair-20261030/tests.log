@@ -1,0 +1,139 @@
+✔ Stable script IDs preserve exact language and separate instruction from target (0.555375ms)
+✔ Later binding is exact, reviewed, branded and never silently replaces current audio (0.101042ms)
+✖ All active word, context, instruction and comprehension audio IDs have a register slot (5.007625ms)
+✔ Prepared scripts remain unplaced, deduplicated by role, with honest archive status (59.268292ms)
+✖ Inventory generation is deterministic, and does not mutate the learner curriculum (145.171583ms)
+✔ Broader domains do not claim a full method from renderers or exercise counts (0.102959ms)
+✔ All original recorded content is deduplicated, word-linked and reachable in existing players (108.05825ms)
+✔ New listening content never inflates a word lesson or asserts independent reading/mastery (26.224584ms)
+✔ Suit, jug and molar are not attached to verb-only occurrences; no public source references (6.138542ms)
+﹣ Source-fidelity ledger retains original text, speakers, questions and recording pointers (0.050875ms) # SKIP
+✔ The repair changes only recorded fields; source IDs, levels, media and progress keys survive (129.0905ms)
+✔ All 64 contextual meanings reach reading preparation even when another sense is already known (1.391875ms)
+✔ Every imported repair is admitted and its full teacher task is passed through (4.292708ms)
+✔ All derived comprehension and writing tasks use the corrected source and preserve answers (264.981292ms)
+✔ Orthographic fixes retain the exact recordings, aligned dialogue guards and audio inventory (911.874334ms)
+✔ Every Klink route takes its exact content placement from the same Lexicon edition (1.856625ms)
+✔ Recorded texts remain exact and every repeat remains an optional supported-listening proposal (22.92425ms)
+✖ All admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery (17.158375ms)
+✔ Every admitted item is reachable once in its chapter and in every source-linked canonical list (377.344834ms)
+✔ Word surfaces exactly preserve all producer phases; semantic follow-up and delayed transitions cannot disappear (50.169333ms)
+✔ Writing retains four real forms, tiles, hidden models, numeric models and legible invalid old number (5.809667ms)
+✔ Ambiguous spelling, unrepaired chauffeur and all four unclassified texts remain excluded (0.526792ms)
+✔ Broken phase, response and correction contracts are rejected (0.201ms)
+✔ All questions for the same text are collected before any answer choices (2.011292ms)
+✔ Every new activity has stable scoped source references, preparation and honest release status (1148.871542ms)
+✔ All source questions retained with exact answer and source evidence, no random distractors (309.020875ms)
+✔ Klankvergelijking uses actual wholeword recordings, balanced equal/different trials and no answer leaks (0.511791ms)
+✔ Sentence construction preserves exact word boundaries; grammar targets only the stated ik-form (216.057709ms)
+✔ Writing and role work use source tasks and participation, never fabricated mastery (149.461333ms)
+✔ Sixteen branded instructions are connected by owner authorization, without inventing a listening review (1.275834ms)
+✔ Typed responses never discard capitalization, accents, punctuation or whitespace (0.987416ms)
+✔ Choice grading requires every authorized ID and rejects extras, duplicate IDs and incomplete answers (0.208708ms)
+✔ Teacher completion has no automatic correctness judgment and never enters mastery/review (0.307958ms)
+✔ Missing audio, blockers, missing preparation, wrong axis and unrenderable sources are excluded (0.203917ms)
+✔ An exact candidate and item review is required; source changes invalidate earlier admission (3.428625ms)
+✔ Missing or escaped evidence cannot be substituted by a filename or a release claim (1.913375ms)
+✔ Producer-specific delivery and dependency rules are never silently flattened (2.873083ms)
+✔ One blocked item does not suppress independently reviewed items; source patches stay separate (1.378375ms)
+✔ Duplicate item identities are rejected within and across domains (4.045459ms)
+✔ Public items retain response and preparation, but never private dossier paths or automatic reading release (0.67ms)
+✔ Additional presentation and media contracts cannot be silently dropped (0.145042ms)
+✔ Teacher choices retain their reference without becoming automatic correctness (0.140834ms)
+✔ The same complete choice task is rejected even with renamed and reordered options (2.826584ms)
+✔ Eight authored questions cover the existing sentences with real evidence, feedback and stable bindings (1.207583ms)
+✔ Guided questions use prepared options; oral contrasts stay explicit and optional (8.526791ms)
+✔ Condition and conjunction items cannot be solved by spotting only the subject word (0.107667ms)
+✔ Teacher checklist reports connected, optional and absent comprehension without claiming independent reading (1.679167ms)
+✔ Released audio retains separate roles, embedded Taalroute branding and explicit user approval (226.494834ms)
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.564042ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.225291ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.346458ms)
+✔ Every attached precise mark task refers literally to its existing source and question (118.5745ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (82.803625ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (31.817584ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.314292ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.2465ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (4547.889209ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (1.831125ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (307.052709ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.819833ms)
+ℹ tests 60
+ℹ suites 0
+ℹ pass 56
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 10078.350916
+
+✖ failing tests:
+
+test at scripts/test-audio-register.mjs:62:1
+✖ All active word, context, instruction and comprehension audio IDs have a register slot (5.007625ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-content-fix-20261030/scripts/test-audio-register.mjs:74:12)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/test-audio-register.mjs:115:1
+✖ Inventory generation is deterministic, and does not mutate the learner curriculum (145.171583ms)
+  AssertionError [ERR_ASSERTION]: Conflicting file: groep-papierdictee
+  + actual - expected
+  
+  + undefined
+  - '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3'
+  
+      at add (file:///private/tmp/klink-content-fix-20261030/scripts/build-audio-register.mjs:44:14)
+      at buildAudioRegister (file:///private/tmp/klink-content-fix-20261030/scripts/build-audio-register.mjs:127:5)
+      at TestContext.<anonymous> (file:///private/tmp/klink-content-fix-20261030/scripts/test-audio-register.mjs:144:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: '/package-audio/alfa-c-online-20261029/KAC-ONLINE-3bceb40fcefd.mp3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/test-cumulative-integration.mjs:15:1
+✖ All admitted content matches exact final candidate and renderer hashes, with no audio or automatic teacher mastery (17.158375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'a30946e6a6bea9e1cd284b801da94af1c03604d9149103aecdf7d096388e5921'
+  - 'ee064b5490c48e71d6b4f677353e4c4fb0a4c512a146a0568630ccaa6aa23024'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-content-fix-20261030/scripts/test-cumulative-integration.mjs:18:240)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'a30946e6a6bea9e1cd284b801da94af1c03604d9149103aecdf7d096388e5921',
+    expected: 'ee064b5490c48e71d6b4f677353e4c4fb0a4c512a146a0568630ccaa6aa23024',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

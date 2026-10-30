@@ -1,0 +1,18 @@
+node:fs:539
+    return binding.readFileUtf8(path, stringToFlags(options.flag));
+                   ^
+
+Error: ENOENT: no such file or directory, open '/private/tmp/klink-content-fix-20261030/outputs/content-inventory-20261017/inventory.json'
+    at readFileSync (node:fs:539:20)
+    at json (file:///private/tmp/klink-content-fix-20261030/scripts/build-audio-register.mjs:18:35)
+    at file:///private/tmp/klink-content-fix-20261030/scripts/build-audio-register.mjs:328:5
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: '/private/tmp/klink-content-fix-20261030/outputs/content-inventory-20261017/inventory.json'
+}
+
+Node.js v26.4.0
