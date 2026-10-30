@@ -1,3 +1,17 @@
+# Actuele KLINK-publicatie — gecontroleerde beeldkoppelingen, 30 oktober 2026
+
+Live: https://klink.taalroute.nl/ . Broncommit `66ec3578ca1df93cf50c8578d137ddb6ade1ec97`, schone canonieke main, voortbouwend op live `12a22748`. Build `2026-10-30T18:01:25.749Z`. Worker `c355f579-b140-46c8-80c2-ab51e03fb162`.
+
+56 compacte nieuwe webbeelden, 21 aanvullende Kijk-en-luister-scènes en 25 bijgewerkte registerwoorden. 745 beeldplaatsingen gekoppeld of vervangen op basis van Nico’s keuzes en bronbetekenis. Twee complete Fotobingo-kaarten: FBG-B1-12-B06 (politie, Nederlandse ambulance, brandweer) en FBG-A1-02-B02 (sap, fles, glas), ieder drie beurten. Ambulance gemaakt in aparte gewone beeldchat; origineel op Drive. Alle 58.929 bestaande oefenplaatsen, antwoorden, publieke bestanden en voortgang behouden; nu 1.414 collecties / 58.956 oefenplaatsen. De twaalf vaste categorieën, docentomgeving en bestaande media blijven behouden.
+
+Lokaal geslaagd: types, lint op gewijzigde code, build, bron-/antwoord-/voortgangsbehoud, 65 scènes, 192 bèta-collecties, beeld- en handenreview, audio-metadata, 96 menureizen, 180 Alfa C-terugwegen, 50 integratielay-outs en volledige publicatiepoort met manipulatiecontrole. Volledige repo-lint heeft bestaande fouten in ongewijzigde historische scripts; niet als geslaagd opgevoerd. Online: 333 bestanden exact teruggelezen, 224 beeld-/Fotobingo-schermcontroles in Chromium en WebKit op mobiel en desktop, drie goede antwoorden en behouden voortgang na herladen; oefenoverzicht opent en toont filters. Geen fysieke klasmonitor of cursistenpilot.
+
+290 woordplaceholders blijven expliciet open; onbekende of afgewezen beelden zijn geen vrijgegeven afbeeldingen. KEL_A202_06 en KEL_A204_06 blijven buiten deze vrijgave wegens het gezichtspunt van de kijker. De resterende lijst onderscheidt ontbrekende publicatie van ontbrekende generatie: bestaande beelden eerst terughalen/controleren, niet automatisch namaken. Alle opdrachten en betekenisgegevens zijn per oefening bewaard; FBG-IMG-0438 volgt Nico’s rolstoelcorrectie.
+
+Herstel-/bronpakket, bytegelijk teruggelezen op Drive: https://drive.google.com/file/d/1tv7uRU3OVW_3zFRnxOH7VejShHZTx8Mc/view . Resterende lijst per oefening: https://drive.google.com/file/d/1GqJRzgYpzP1--qFx9RU5PNwszHj-eCiI/view . Ambulance-origineel: https://drive.google.com/file/d/169VK4qvOcEPZze3xq9MQaIFBMd5yU4vi/view . Bewijs: docs/remaining-links-20261030. Gebruik actuele main, behoud de volledige opvolgerketen en publiceer via npm run deploy.
+
+## Historie
+
 # Actuele KLINK-publicatie — twaalf vaste oefenonderdelen, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `12a22748b38c1b1e437f02677bf88721847d0145`, schone canonieke main. Build `2026-10-30T17:33:48.217Z`. Worker `7cfa9d8f-0725-4f75-896a-471948b3472f`.
