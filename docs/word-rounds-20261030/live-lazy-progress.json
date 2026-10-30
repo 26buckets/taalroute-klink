@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "lazySubset": true,
+      "nativeAudio": true,
+      "sharedProgress": true,
+      "oldPositionRetained": true,
+      "resumeAfterReload": true
+    },
+    {
+      "engine": "webkit",
+      "lazySubset": true,
+      "nativeAudio": true,
+      "sharedProgress": true,
+      "oldPositionRetained": true,
+      "resumeAfterReload": true
+    }
+  ]
+}
