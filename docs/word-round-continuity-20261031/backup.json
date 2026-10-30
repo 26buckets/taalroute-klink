@@ -1,12 +1,12 @@
 {
   "verified": true,
-  "driveId": "1YzVRPC7Bz4mvX3PVqeNrHKiAF1lNrWXy",
-  "sha256": "9539a7fdbf0b7df6facbcefb81237b5084fc308355cd6bcd9a73dd29ac747430",
-  "bytes": 3646772,
-  "sourceCommit": "5df8127b89c896c20897a41b7757d6f5a1b0c52e",
-  "verifiedMembers": 89,
-  "reviewSha256": "1c815b5f4809796f575fecaf08ad78cacf6fb4c5edc94ac2a2bccdb6fd023be2",
-  "checkedAt": "2026-10-30T23:30:27.861979+00:00",
+  "driveId": "1VfuItU4U9O31OgPio0pxRJkuDuN-dGIE",
+  "sha256": "7522a15fb67056fd6bd3e90bb5aae7242520667e9a06eb785f8b006625d11662",
+  "bytes": 3653455,
+  "sourceCommit": "6306980ef37537acbb43494cca3ca5358aa72103",
+  "verifiedMembers": 91,
+  "reviewSha256": "a2d4e385c2714959d0e34d5ed4131b6d202515162a41e44ec83a2957d93e1888",
+  "checkedAt": "2026-10-30T23:38:48.197766+00:00",
   "files": {
     "AGENTS.md": "789cfee320e6696d77f11f9fa9a87970a7fdb8fb1111bdfbdd663a50e31c4155",
     "components/product/exercise-menu.tsx": "f222f74f71ba67d2ec2ca38b5e434ad412c5b80deade48b44f3b99c80d6cfb38",
@@ -15,7 +15,7 @@
     "data/klink-word-round-index.json": "29ae4e284dbfe43e03fb12a57ef6b7ab6e054baa88abc9209c134e1ffee6bd44",
     "docs/KLINK-DOCENTHANDLEIDING.md": "d59b7af8cd0901c407d4021c204e71fb63546831cd22a482849310a571d77873",
     "lib/practice-chapters.ts": "858c48ba66aea766068e49b1dc063b4ef39a345e71578b98951b7ba2cc92fc0e",
-    "lib/word-rounds.ts": "435ca60ce3d31e83734eb6a583fc6aeaa2f9f8a21a724b78feac57666ab127a4",
+    "lib/word-rounds.ts": "f611c45a6ea6dee66f8936a6e87131bdca209640b2677eaf95386e74d125ee4b",
     "scripts/build-word-round-index.mjs": "6e5634f348ea7078f88d8e7a21485cbfb6bdd9d3e3890d80321ec310c82f67e7",
     "scripts/check-long-content-release-20261030.mjs": "a7a91ab3857800b235d80857ccb6073787dd2152517f95a89b59d1e201d46e74",
     "scripts/check-word-round-continuity-release.mjs": "31724b9479ff7c5eb2b226e917a32cc45f513c8d730f54a9500d096a10851b81",
@@ -24,5 +24,8 @@
     "scripts/test-word-round-continuity.mjs": "e14861ae54e6316ceee129fd4e5a25c6b3d2a62dc037beb6d7029f6a38857d4f",
     "scripts/test-word-rounds.mjs": "38b4ed5aa0730243499521294e6c9ad0332ca8c4c6ce05c606678796ae5cc955"
   },
-  "supersedes": "12_JZ0CzYxt_FVOsNcHymQOFSejD9h7-M"
+  "supersedes": [
+    "12_JZ0CzYxt_FVOsNcHymQOFSejD9h7-M",
+    "1YzVRPC7Bz4mvX3PVqeNrHKiAF1lNrWXy"
+  ]
 }
