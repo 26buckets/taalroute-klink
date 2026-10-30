@@ -13,13 +13,14 @@ export function ProductionRound({ contentUrl, count, ...props }: Props) {
   const [retry, setRetry] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    if (!cache.has(contentUrl)) fetch(contentUrl, { signal: controller.signal }).then(response => {
+    const cached = cache.get(contentUrl);
+    const loading = cached ? Promise.resolve(cached) : fetch(contentUrl, { signal: controller.signal }).then(response => {
       if (!response.ok) throw new Error('Unavailable');
       return response.json();
-    }).then(value => {
-      const loaded = validateProductionCollection(value, props.pack.id, count);
+    }).then(value => validateProductionCollection(value, props.pack.id, count));
+    loading.then(loaded => {
       if (controller.signal.aborted) return;
-      if (cache.size >= 8) cache.delete(cache.keys().next().value!);
+      if (!cached && cache.size >= 8) cache.delete(cache.keys().next().value!);
       cache.set(contentUrl, loaded); setExercises(loaded);
     }).catch(() => { if (!controller.signal.aborted) setError(true); });
     return () => controller.abort();

@@ -10,13 +10,13 @@ export function verifyDirectNavigationRelease(read = readFileSync) {
   assert.equal(r.approvedBy, 'Nico');
   assert.equal(r.publicationApproved, true);
   assert(r.userRequest.includes('zet deze versie online in de echte Klink-app'));
-  assert.equal(r.liveSourceCommit, '3d72be4d35cf1c8a2ac9ed386a0198e3094d2ca9');
-  assert.equal(r.baselineSourceCommit, '624f5a02e4131ede58b07397e49a5a3934232132');
+  assert.equal(r.liveSourceCommit, '2e0563b2fb358cae6e680033953f8cd5081f032e');
+  assert.equal(r.baselineSourceCommit, 'd623481917243931dd5df781f13236c8200c0639');
   git('merge-base', '--is-ancestor', r.liveSourceCommit, r.baselineSourceCommit);
   git('merge-base', '--is-ancestor', r.baselineSourceCommit, 'HEAD');
   const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts', 'db', 'drizzle', '.github', 'AGENTS.md', 'PUBLICATIE.md', 'docs/KLINK-DOCENTHANDLEIDING.md', 'vite.config.ts', 'package.json', 'package-lock.json', 'wrangler.jsonc'];
   const changed = [...new Set([...lines(git('diff', '--name-only', r.baselineSourceCommit, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort((a, b) => a.localeCompare(b));
-  const allowed = ['AGENTS.md', 'app/learner-layout.css', 'app/sounds.css', 'components/product/learner-app.tsx', 'components/product/practice-chapters.tsx', 'components/product/practice-header.tsx', 'components/product/route-settings.tsx', 'components/product/staff-apps.tsx', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/practice-navigation.ts', 'package.json', 'scripts/check-archive-continuation-release.mjs', 'scripts/check-direct-navigation-release.mjs', 'scripts/test-direct-navigation-release.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-alfa-c-menu-browser.mjs', 'scripts/test-cumulative-routes-browser.mjs', 'scripts/test-direct-navigation-browser.mjs', 'scripts/test-learner-language-browser.mjs', 'scripts/test-menu-navigation-browser.mjs', 'scripts/test-practice-navigation.mjs', 'scripts/test-round-progress-browser.mjs', 'scripts/test-sounds-browser.mjs'];
+  const allowed = ['AGENTS.md', 'app/learner-layout.css', 'app/sounds.css', 'components/product/learner-app.tsx', 'components/product/practice-chapters.tsx', 'components/product/practice-header.tsx', 'components/product/production-round.tsx', 'components/product/route-settings.tsx', 'components/product/staff-apps.tsx', 'data/klink-teacher-manual.json', 'docs/KLINK-DOCENTHANDLEIDING.md', 'lib/practice-navigation.ts', 'package.json', 'scripts/check-content-repair-release.mjs', 'scripts/check-direct-navigation-release.mjs', 'scripts/test-direct-navigation-release.mjs', 'scripts/test-existing-player-browser.mjs', 'scripts/test-meet-words-browser-20261030.mjs', 'scripts/test-alfa-c-menu-browser.mjs', 'scripts/test-cumulative-routes-browser.mjs', 'scripts/test-direct-navigation-browser.mjs', 'scripts/test-learner-language-browser.mjs', 'scripts/test-menu-navigation-browser.mjs', 'scripts/test-practice-navigation.mjs', 'scripts/test-round-progress-browser.mjs', 'scripts/test-sounds-browser.mjs'];
   assert.deepEqual(changed, allowed.sort((a, b) => a.localeCompare(b)));
   assert.deepEqual(changed, [...r.changedFiles].sort((a, b) => a.localeCompare(b)));
   for (const file of changed) assert.equal(sha(read(file)), r.files[file], file);

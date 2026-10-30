@@ -1,5 +1,7 @@
+import { productionIndex } from '../lib/production-practice.ts';
+import { chapterHash } from '../lib/practice-chapters.ts';
 import assert from 'node:assert/strict';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { chromium, webkit } from 'playwright';
 import { lessonPackages, allPackageWords, wordLabel } from '../lib/package-content.ts';
 import { lessonPreviewWords } from '../lib/taalroute-packages.ts';
@@ -76,8 +78,17 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     await page.locator('.cp-practice-line button').first().click();
     await page.locator('.cp-practice-explanation iframe').waitFor();
     await page.getByRole('button', { name: 'Uitleg sluiten', exact: true }).click();
+    const row = productionIndex.find(item => item.id.startsWith('word-meet:alfa-c:'));
+    const firstWord = JSON.parse(readFileSync('public' + row.url)).exercises[0];
+    await page.goto(base + '/' + chapterHash({ chapter: 'words', activity: 'meet', collection: row.id, level: row.level, help: 'practice' }));
+    await page.locator(`[data-exercise-id="${firstWord.exerciseId}"]`).waitFor();
+    for (let reload = 0; reload < 3; reload++) {
+      await page.reload();
+      await page.locator(`[data-exercise-id="${firstWord.exerciseId}"]`).waitFor();
+    }
     const retained = await page.evaluate(keys => Object.fromEntries(keys.map(key => [key, localStorage.getItem(key)])), Object.keys(saved));
     assert.deepEqual(retained, saved, 'Navigation preserves existing progress, saved words, attempts and rounds byte for byte');
+    await nav.getByRole('button', { name: 'Start', exact: true }).click();
     await page.getByRole('button', { name: 'Alfa A', exact: true }).click();
     await page.locator('.cp-practice-modes').getByRole('button', { name: 'Zelf oefenen', exact: true }).click();
     await page.locator('.cp-direct-resume').click();
