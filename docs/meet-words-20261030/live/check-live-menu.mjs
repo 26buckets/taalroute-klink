@@ -1,0 +1,8 @@
+import {chromium} from 'playwright';import assert from 'node:assert/strict';import{readFileSync,writeFileSync}from'node:fs';import{chapterHash}from'../lib/practice-chapters.ts';
+const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18859',data=JSON.parse(readFileSync('docs/meet-words-20261030/content.json')),browser=await chromium.launch(),page=await browser.newPage({viewport:{width:1366,height:950}}),checks=[];
+try{for(const [level,s]of Object.entries(data.summary)){
+ await page.goto(base+'/'+chapterHash({chapter:'words',level,help:'practice'}));const card=page.locator('[data-chapter-activity="meet"]');await card.waitFor();assert((await card.innerText()).includes(`${s.total} oefeningen`));await card.click();
+ const more=page.getByRole('button',{name:/Meer/});while(await more.count()&&await more.first().isVisible())await more.first().click();const rows=page.locator('[data-collection^="word-meet:"]');await rows.first().waitFor();assert.equal(await rows.count(),s.rounds);for(const row of await rows.all())assert((await row.innerText()).includes('12 oefeningen'));checks.push({level,...s,visibleNewRounds:await rows.count()});
+ await page.screenshot({path:`work/live/menu-${level}.png`});
+}
+await page.goto(base+'/klink-oefenoverzicht-luisteren-20261030.html');await page.locator('#level').selectOption('b1');assert((await page.locator('#counts').innerText()).includes('Woorden oefenen'));assert((await page.locator('body').innerText()).includes('576 oefenplaatsen'));writeFileSync('work/live/menu.json',JSON.stringify(checks,null,2));console.log('PASS four levels, menu counts, 48 visible rounds and overview');}finally{await browser.close();}

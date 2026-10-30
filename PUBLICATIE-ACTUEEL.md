@@ -1,3 +1,11 @@
+## Kijk en luister uitgebreid — 30 oktober 2026
+
+Actuele livebron: `d35aa052c97fd80a2c37e5ae11fc172db392db97`, branch `main`, Worker `6cb07fb2-2fc8-4600-9798-9b1c13af3b7b`. Publicatie via `npm run deploy`.
+
+48 rondes van twaalf woorden toegevoegd: Alfa C 16/192, A1 12/144, A2 8/96, B1 12/144. Bestaande audio en beelden/placeholders worden hergebruikt. Bestaande inhoud, voortgang, twaalf hoofdcategorieën, docentklanken en Fotobingo behouden. Actueel oefenoverzicht: `/klink-oefenoverzicht-luisteren-20261030.html`.
+
+Vrijgave: `docs/klink-owner-release-meet-words-20261030.json`; controles en teruggelezen Drive-herstelkopie in `docs/meet-words-20261030/`. Publiceer alleen een afstammeling van deze livebron.
+
 # Actuele KLINK-publicatie — docentklanken en behouden beelden, 30 oktober 2026
 
 Live: https://klink.taalroute.nl/ . Broncommit `407823f6f96fe51aac6534f6d5832a74d4b0874c`, schone canonieke main. Build `2026-10-30T18:07:26.752Z`. Worker `378093b5-af59-4802-af92-b3d1045f7cc3`.
