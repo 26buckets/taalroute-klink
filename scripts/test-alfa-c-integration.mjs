@@ -39,7 +39,8 @@ for (const [name, engine] of Object.entries({ chromium, webkit })) {
     await page.getByRole('button', { name: 'Alfa C', exact: true }).click();
     await page.locator('[data-alfa-c-category="words"]').waitFor();
     assert.equal(await page.locator('[data-alfa-c-category]').count(), 3);
-    assert.equal(await page.locator('[data-chapter]').count(), 2); // Approved production word banks also appear here.
+    assert.equal(await page.locator('[data-chapter]').count(), 3); // Existing word/spelling banks plus the approved listening collections.
+    assert(await page.locator('[data-chapter="listening"]').isEnabled());
     assert(
       await page
         .getByRole('button', { name: 'Alfa C', exact: true })

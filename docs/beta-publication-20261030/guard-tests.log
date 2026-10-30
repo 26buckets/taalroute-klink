@@ -1,0 +1,43 @@
+PASS explicit release scope, latest live ancestry, preservation and tamper rejection
+fatal: Not a valid commit name 89fe121338c1c08ed7238dceaba794a953c7fec2
+node:internal/errors:998
+  const err = new Error(message);
+              ^
+
+Error: Command failed: git merge-base --is-ancestor 89fe121338c1c08ed7238dceaba794a953c7fec2 361c1d9da0f7a12514c326650d6660c3b8084cb8
+fatal: Not a valid commit name 89fe121338c1c08ed7238dceaba794a953c7fec2
+
+    at genericNodeError (node:internal/errors:998:15)
+    at wrappedFn (node:internal/errors:543:14)
+    at checkExecSyncError (node:child_process:926:11)
+    at execFileSync (node:child_process:962:15)
+    at git (file:///private/tmp/klink-ui-20261030/scripts/check-image-repairs-20261030.mjs:6:22)
+    at verifyImageRepairs (file:///private/tmp/klink-ui-20261030/scripts/check-image-repairs-20261030.mjs:17:2)
+    at file:///private/tmp/klink-ui-20261030/scripts/test-image-repairs-20261030.mjs:31:80 {
+  status: 128,
+  signal: null,
+  output: [
+    null,
+    Buffer(0) [Uint8Array] [],
+    Buffer(72) [Uint8Array] [
+      102,  97, 116,  97, 108,  58,  32,  78, 111, 116,  32,  97,
+       32, 118,  97, 108, 105, 100,  32,  99, 111, 109, 109, 105,
+      116,  32, 110,  97, 109, 101,  32,  56,  57, 102, 101,  49,
+       50,  49,  51,  51,  56,  99,  49,  99,  48,  56, 101, 100,
+       55,  50,  51,  56, 100,  99, 101,  97,  98,  97,  55,  57,
+       52,  97,  57,  53,  51,  99,  55, 102, 101,  99,  50,  10
+    ]
+  ],
+  pid: 46729,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(72) [Uint8Array] [
+    102,  97, 116,  97, 108,  58,  32,  78, 111, 116,  32,  97,
+     32, 118,  97, 108, 105, 100,  32,  99, 111, 109, 109, 105,
+    116,  32, 110,  97, 109, 101,  32,  56,  57, 102, 101,  49,
+     50,  49,  51,  51,  56,  99,  49,  99,  48,  56, 101, 100,
+     55,  50,  51,  56, 100,  99, 101,  97,  98,  97,  55,  57,
+     52,  97,  57,  53,  51,  99,  55, 102, 101,  99,  50,  10
+  ]
+}
+
+Node.js v26.4.0

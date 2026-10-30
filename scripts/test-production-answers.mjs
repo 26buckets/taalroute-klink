@@ -25,6 +25,14 @@ async function finish(e,scope=page){
   for(const key of new Set(e.items.map(i=>i.pairKey))){for(let n=0;n<e.items.length;n++)if(e.items[n].pairKey===key)await scope.locator('.cp-memory-grid button').nth(n).click();await page.waitForTimeout(600);}
  }else if(e.mode==='learning-choice'){
   await scope.getByRole('button',{name:e.options.find(o=>o.id===e.answer.correctOptionIds[0]).label,exact:true}).click();
+ }else if(e.mode==='heard-word'){
+  await scope.getByRole('button',{name:'Luister naar het woord',exact:true}).click();
+  await scope.locator('.cp-choice-grid button').nth(e.options.findIndex(o=>o.id===e.answer.correctOptionIds[0])).click();
+ }else if(e.mode==='hear-match'){
+  for(const [i,source] of e.sources.entries()){
+   await scope.locator('.cp-match-board > div').nth(0).locator('button').nth(i).click();
+   await scope.locator('.cp-match-board > div').nth(1).locator('button').nth(e.targets.findIndex(t=>t.id===e.answer.mapping[source.id])).click();
+  }
  }else if(!['read-series','model','learning-example'].includes(e.mode))throw Error(e.mode);
 }
 try{

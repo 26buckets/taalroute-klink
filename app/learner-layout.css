@@ -174,7 +174,7 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-exercise-stage .cp-match-board button > svg[aria-label="Gekoppeld"] { right: 3px; left: auto; bottom: 8px; transform: none; width: 18px; }
 .learner-app .cp-exercise-stage .cp-task-card:has(> .cp-model-content) { gap: 12px; }
 .learner-app .cp-exercise-stage .cp-model-content { gap: 8px; }
-.learner-app .cp-exercise-stage .cp-model-content > strong { font-size: clamp(32px, 5vw, 56px); line-height: 1.2; }
+.learner-app .cp-exercise-stage .cp-model-content:not(.cp-model-sentence) > strong { font-size: clamp(32px, 5vw, 56px); line-height: 1.2; }
 .learner-app .cp-exercise-stage .cp-model-content > img { width: min(330px, 100%, max(72px, calc(100cqh - 240px))); max-height: max(72px, calc(100cqh - 240px)); }
 @media (max-height: 740px) and (min-width: 600px) {
   .learner-app .cp-exercise-stage .cp-model-content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
