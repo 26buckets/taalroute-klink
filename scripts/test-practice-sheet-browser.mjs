@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { chapterCollections, chapterHash, practiceChapters } from '../lib/practice-chapters.ts';
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830';
-const out = 'outputs/practice-sheet-20261018';
+const out = process.env.KLINK_SHEET_OUTPUT || 'outputs/practice-sheet-20261018';
 mkdirSync(out, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome', headless: true });
 const page = await browser.newPage({ viewport: { width: 1366, height: 950 } });
@@ -125,7 +125,7 @@ try {
   assert(!(await page.evaluate(() => window.__played)).some(src => /instructions|instructie|hulp/.test(src)));
   pass(`Desktop/tablet/phone/landscape fit; all ${largest.exercises.length} eligible words in the largest collection appear on one scrollable page`);
   await page.goto(`${base}/#learner/home`);
-  await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Lessen', exact: true }).click();
+  await page.getByRole('button', { name: 'Stap voor stap', exact: true }).click();
   await page.locator('.cp-package-grid > button').first().click();
   await page.locator('.cp-tabs').getByRole('button', { name: 'Oefenen met deze woorden', exact: true }).click(); await page.locator('.cp-step-scope select').selectOption('');
   await page.locator('[data-activity="meet"]').click();
