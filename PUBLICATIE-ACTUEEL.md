@@ -10,6 +10,16 @@ Online: alle 96 rastergevallen opnieuw geslaagd, broncommit en 36 aangeboden JS/
 
 Direct resultaat: https://klink.taalroute.nl/#learner/chapters/words/word-sort?level=alfa-c&help=practice
 
+## 31 oktober 2026 — Blinddruk bij ontbrekende woordbeelden
+
+Livebron `a441bf351c8c8b6b7f5332d4fcd212dde227e952`, schone canonieke main; Worker `86e3f939-ba08-4d57-a8e7-75a72e40fc1e`. Gepubliceerd via `npm run deploy`, bovenop de actuele compacte Start-versie f302ecb5. Nico heeft Blinddruk, volledige woorden, een veel lichter logo en online publicatie expliciet gevraagd.
+
+Ontbrekende woordbeelden gebruiken nu dezelfde lichte Blinddruk met volledig woord en het ongewijzigde officiële KLINK-logo op 3,5% dekking (2% bij lange woorden). Geldt voor Woorden bekijken, bewaarde woorden, pakketwoorden en de bestaande woordbeeldvakken in oefeningen. Bekende woordbeelden die niet laden krijgen dezelfde terugval; een succesvolle herlaadactie toont de oorspronkelijke foto weer. Opzettelijk beeldloze opdrachten en navigatie-iconen behouden hun functie. Geen nieuwe rasterbeelden of afhankelijkheden. Alle bestaande openbare media, audio, inhoud, routes en opslag behouden.
+
+Lokaal: 78 placeholdergevallen in Chromium/WebKit, alle 4.694 woorden zonder eigen beeld op twee kleine kaartformaten, zoeken/bewaren/audio, 12 overige schermvergelijkingen, 16 Start-gevallen, 15 pakketkaarten, 124 woordronde-overzichten en 366 wisselingen met behoud van voortgang; types, gerichte lint, build, vijf afkeurproeven en 50 historische behoudtests geslaagd. De publicatiepoort controleerde ook 1.979 bestaande audiobestanden. De oude exacte Alfa C-schermpositietest faalt identiek op de voorafgaande liveversie en lokaal; vastgelegd in baseline-test-limit.json. Geen fysieke telefoontest, geen nieuwe inhoudelijke beeld- of luistergoedkeuring. Alle zware controles lokaal; geen GitHub-workflows.
+
+Online controle en teruggelezen Drive-herstelkopieën: `docs/word-placeholder-20261031/`. Brongebonden vrijgave: `docs/klink-owner-release-word-placeholder-20261031.json`; uiterlijkakkoord toegevoegd aan de bestaande vloer, overige referenties behouden.
+
 ## 31 oktober 2026 — compact Start en hervatten in de kop
 
 Livebron `f302ecb5ef17517eb373f7fb692a80d6cc0938a7`, schone canonieke main; Worker `b19fed3f-87b9-4dac-ae53-4f4c28be714c`. Normaal gepubliceerd met `npm run deploy` als afstammeling van de nieuwste goedgekeurde woordkaartbreedte `ec0fb8f1` en dossiercommit `6248d38e`. Geen oude app teruggezet.
