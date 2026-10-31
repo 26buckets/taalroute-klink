@@ -1,5 +1,7 @@
 # Klink — vaste vormgevingsbasis
 
+Gericht aanvullend akkoord van Nico, 31 oktober 2026: uitsluitend het woord **maand** wordt in Klink+docent op schermen smaller dan 361 pixels met 80px weergegeven. Nico zag het concrete voorbeeld en antwoordde: “Ja, voer dit gerichte herstel uit”. Zie `docs/lespakketten-10-15-20261031/month-appearance-approval.json` en het bijbehorende voorstelbeeld. Alle overige woorden, breedtes, schermen en vormgeving behouden de vaste vloer. De oorspronkelijke `docs/appearance-floor-20261031/floor.json` blijft ongewijzigd.
+
 Nico, 31 oktober 2026: “zorg dat deze versie de nieuwe vloer wordt en dat we die even vastzetten en dat er niet zomaar meer veranderingen plaatsvinden zonder duidelijke toestemming bedoel ik. En dit bedoel ik hier bedoel ik alleen maar mee hoe het eruitziet. De content is een ander verhaal, dat moeten we blijven updaten, blijven toevoegen, enzovoort.”
 
 Deze afspraak betreft uitsluitend het uiterlijk van de echte Klink-app. Lees dit bestand vóór ontwerp, onderhoud, review en publicatie, samen met PUBLICATIE-ACTUEEL.md. Een inhoudelijke opdracht, opschoonverzoek, nieuwe afbeelding of algemene verbetering geeft geen toestemming voor een nieuw ontwerp.
