@@ -13,7 +13,7 @@ const browser = await chromium.launch({
 });
 async function start(page) {
   await page.goto(base + '/#teacher/plus');
-  await page.getByRole('button', { name: 'Les openen', exact: true }).click();
+  await page.getByRole('button', { name: 'Les openen: mat', exact: true }).click();
   await page.locator('[data-classroom="active"]').waitFor();
 }
 async function safe(page) {
@@ -175,7 +175,7 @@ try {
   await bp.reload();
   await bp
     .getByRole('button', {
-      name: 'Les openen',
+      name: 'Les openen: mat',
       exact: true,
     })
     .waitFor();

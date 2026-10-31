@@ -27,11 +27,11 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         .getByRole('link', { name: 'Klink+docent', exact: true })
         .click();
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .waitFor();
       assert.equal(await page.locator('.staff-account').count(), 0);
       assert.equal(await page.locator('.kpd-brand').count(), 1);
-      await page.locator('.kpd-gate img').evaluate(async (e) => {
+      await page.locator('.kpd-lesson-choice img').first().evaluate(async (e) => {
         await e.decode();
       });
       await page.screenshot({
@@ -43,19 +43,18 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       await page.locator('label:has(input[name="route"][value="c"])').click();
       assert.equal(
         await page
-          .getByRole('button', { name: 'Les openen', exact: true })
+          .getByRole('button', { name: 'Les openen: mat', exact: true })
           .count(),
         0,
       );
       await page.getByRole('button', { name: 'Lessen', exact: true }).click();
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .click();
       await page.locator('[data-classroom="active"]').waitFor();
       assert.equal(await page.locator('.kpd-phases').isVisible(), false);
-      await page
-        .getByRole('button', { name: 'Toon woord', exact: true })
-        .click();
+      assert(await page.locator('.kpd-big-word').isVisible());
+      assert.equal(await page.getByRole('button', { name: 'Foto groter', exact: true }).count(), 0);
       await page.screenshot({
         path: `${out}/${engine}-${size.width}-board.png`,
         fullPage: true,
@@ -137,7 +136,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         .getByRole('button', { name: 'Lesoverzicht', exact: true })
         .click();
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .waitFor();
       checks.push({
         engine,

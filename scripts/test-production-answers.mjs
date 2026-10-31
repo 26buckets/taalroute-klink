@@ -1,3 +1,4 @@
+import {compactImageSrc} from '../lib/compact-images.ts';
 import assert from 'node:assert/strict';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {productionIndex} from '../lib/production-practice.ts';
@@ -66,7 +67,7 @@ try{
  for(const row of productionIndex.filter(r=>r.activity==='meet'&&!r.id.startsWith('word-meet:')))for(const e of data(row)){
   const key=groupSessionKey('chapter:meet:'+row.id,'meet');await page.evaluate(({key,id})=>localStorage.setItem(key,JSON.stringify({version:1,exerciseId:id,done:false})),{key,id:e.exerciseId});
   await page.goto(url(row));await page.reload();await page.locator(`[data-exercise-id="${e.exerciseId}"]`).waitFor();
-  const img=page.locator('.cp-model-content img');await img.waitFor();await img.evaluate(el=>el.decode());const actual=new URL(await img.getAttribute('src'),base);assert.equal(actual.searchParams.get('url')||actual.pathname,e.prompt.image.src);
+  const img=page.locator('.cp-model-content img');await img.waitFor();await img.evaluate(el=>el.decode());const actual=new URL(await img.getAttribute('src'),base);assert.equal(actual.searchParams.get('url')||actual.pathname,compactImageSrc(e.prompt.image.src));
   await page.screenshot({path:out+'/'+e.exerciseId+'-desktop.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await page.screenshot({path:out+'/'+e.exerciseId+'-mobile.png'});await page.setViewportSize({width:1366,height:950});images.push(e.exerciseId);
  }
  assert.equal(images.length,65);assert.deepEqual(errors,[]);

@@ -1,3 +1,4 @@
+import lessonContent from '../data/klink-docent-lessons.json' with { type: 'json' };
 import classroomContent from '../data/klink-docent-mat.json' with { type: 'json' };
 import routeContent from '../data/klink-docent-routes.json' with { type: 'json' };
 import { wordById } from './klink-curriculum.ts';
@@ -7,8 +8,8 @@ export { classroomContent };
 export const classroomRoutes = routeContent.routes;
 export type ClassroomRoute = keyof typeof classroomRoutes;
 export const routeIds: ClassroomRoute[] = ['a', 'b', 'c'];
-export function prerequisitesForRoute(route: ClassroomRoute) {
-  return classroomRoutes[route].tokens.map((token) => {
+export function prerequisitesForRoute(route: ClassroomRoute, lessonId = 'mat') {
+  return getClassroomLesson(lessonId).routes[route].tokens.map((token) => {
     const word = [...wordById.values()].find((word) => word.word === token);
     return {
       token,
@@ -149,20 +150,32 @@ export const phases: LessonPhase[] = [
     framework: '23.1, 23.3–23.5, 23.7',
   },
 ];
-export function phasesForRoute(route: ClassroomRoute): LessonPhase[] {
-  return route === 'a' ? phases : classroomRoutes[route].phases;
+export const classroomLessons = [
+  { id: 'mat', wordRef: classroomContent.wordRef, display: 'de mat', phases, routes: classroomRoutes,
+    presentation: { imageAlt: 'Een mat bij een deur', phrases: ['De mat', 'ligt', 'bij de deur.'], entryAction: 'Kom binnen. Veeg je voeten op de mat.', ownPrompt: 'Vertel over de mat bij jou thuis.', ownHint: 'Waar ligt hij? Wat doe jij als je binnenkomt?', wordUse: 'Waar ligt nog een mat? Vertel of laat zien.' } },
+  ...lessonContent,
+].map(content => {
+  const pack = lessonPackages.find(pack => pack.lessons.some(lesson => lesson.newWords?.includes(content.wordRef)))!;
+  const lesson = pack.lessons.find(lesson => lesson.newWords?.includes(content.wordRef))!;
+  const word = pack.words.find(word => word.id === content.wordRef)!;
+  return { ...content, pack, lesson, word, units: word.segmentation.split('|'), exercises: exercisesForLesson(pack, lesson) };
+});
+export function getClassroomLesson(lessonId = 'mat') {
+  return classroomLessons.find(lesson => lesson.id === lessonId) ?? classroomLessons[0];
 }
-export function sequenceForRoute(route: ClassroomRoute) {
-  return route === 'a' ? matUnits : classroomRoutes[route].cards;
+export function phasesForRoute(route: ClassroomRoute, lessonId = 'mat'): LessonPhase[] {
+  const lesson = getClassroomLesson(lessonId);
+  return route === 'a' ? lesson.phases : lesson.routes[route].phases;
 }
-export function isCorrectSequence(route: ClassroomRoute, order: number[]) {
-  const sequence = sequenceForRoute(route);
-  return (
-    order.length === sequence.length &&
-    new Set(order).size === order.length &&
-    order.every((i) => Number.isInteger(i) && i >= 0 && i < sequence.length) &&
-    order.map((i) => sequence[i]).join(' ') === sequence.join(' ')
-  );
+export function sequenceForRoute(route: ClassroomRoute, lessonId = 'mat') {
+  const lesson = getClassroomLesson(lessonId);
+  return route === 'a' ? lesson.units : lesson.routes[route].cards;
+}
+export function isCorrectSequence(route: ClassroomRoute, order: number[], lessonId = 'mat') {
+  const sequence = sequenceForRoute(route, lessonId);
+  return order.length === sequence.length && new Set(order).size === order.length &&
+    order.every(i => Number.isInteger(i) && i >= 0 && i < sequence.length) &&
+    order.map(i => sequence[i]).join(' ') === sequence.join(' ');
 }
 export const tools = [
   'Klankbord',
@@ -173,6 +186,8 @@ export const tools = [
 ] as const;
 export type BoardTool = (typeof tools)[number];
 export type ClassroomState = {
+  lessonId: string;
+  ownSentence: string;
   active: boolean;
   variant: Variant;
   route: ClassroomRoute;
@@ -188,22 +203,25 @@ export type ClassroomState = {
 export function freshClassroom(
   variant: Variant = 'basic',
   route: ClassroomRoute = 'a',
+  lessonId = 'mat',
 ): ClassroomState {
+  const lesson = getClassroomLesson(lessonId);
   return {
+    lessonId: lesson.id,
+    ownSentence: '',
     active: false,
     variant,
     route,
     order: [],
     textVersion: 1,
     phase: 0,
-    tiles: matUnits.map((unit, i) =>
+    tiles: lesson.units.map((unit, i) =>
       variant === 'support' && i === 0 ? unit : '',
     ),
     shown: phases.map(
       (_, i) =>
-        route !== 'a' &&
-        variant === 'support' &&
-        [1, 3, route === 'c' ? 6 : 5].includes(i),
+        i <= 1 || (route !== 'a' && variant === 'support' &&
+        [3, route === 'c' ? 6 : 5].includes(i)),
     ),
     image: true,
     regular: false,
@@ -219,18 +237,21 @@ export function restoreClassroom(raw: string | null): ClassroomState {
     const state = freshClassroom(
       variants.some((v) => v.id === value.variant) ? value.variant : 'basic',
       routeIds.includes(value.route) ? value.route : 'a',
+      typeof value.lessonId === 'string' ? value.lessonId : 'mat',
     );
+    const lesson = getClassroomLesson(state.lessonId);
     state.order = Array.isArray(value.order)
       ? value.order.filter(
           (i: unknown, index: number) =>
             Number.isInteger(i) &&
             Number(i) >= 0 &&
-            Number(i) < sequenceForRoute(state.route).length &&
+            Number(i) < sequenceForRoute(state.route, state.lessonId).length &&
             value.order.indexOf(i) === index,
         )
       : [];
     // Old C card indexes belong to the replaced message, not this sentence.
     if (state.route === 'c' && value.textVersion !== 1) state.order = [];
+    state.ownSentence = typeof value.ownSentence === 'string' ? value.ownSentence.slice(0, 160) : '';
     state.active = value.active !== false;
     state.phase =
       Number.isInteger(value.phase) &&
@@ -238,10 +259,10 @@ export function restoreClassroom(raw: string | null): ClassroomState {
       value.phase < phases.length
         ? value.phase
         : 0;
-    state.tiles = matUnits.map((_, i) => {
+    state.tiles = lesson.units.map((_, i) => {
       const t = value.tiles?.[i];
       return typeof t === 'string' &&
-        matUnits.includes(t) &&
+        lesson.units.includes(t) &&
         value.tiles.indexOf(t) === i
         ? t
         : '';
@@ -249,7 +270,7 @@ export function restoreClassroom(raw: string | null): ClassroomState {
     state.shown = phases.map((_, i) => value.shown?.[i] === true);
     state.image = value.image !== false;
     state.regular = value.regular === true;
-    state.exerciseId = matExercises.find(
+    state.exerciseId = lesson.exercises.find(
       (e) => e.exerciseId === value.exerciseId,
     )?.exerciseId;
     return state;
@@ -274,25 +295,30 @@ export function saveClassroom(state: ClassroomState) {
   rememberClassroomActive(state.active);
   try {
     sessionStorage.setItem(classroomKey, JSON.stringify(state));
+    sessionStorage.setItem(`${classroomKey}.${state.lessonId}`, JSON.stringify(state));
     return true;
   } catch {
     return false;
   }
 }
-export function placeTile(
-  tiles: string[],
-  letter: string,
-  position = matUnits.findIndex((_, i) => !tiles[i]),
-) {
-  if (!matUnits.includes(letter) || position < 0 || position >= matUnits.length)
-    return tiles;
-  const next = matUnits.map((_, i) =>
-    tiles[i] === letter ? '' : (tiles[i] ?? ''),
-  );
+export function readLessonClassroom(lessonId: string) {
+  try {
+    const raw = sessionStorage.getItem(`${classroomKey}.${lessonId}`);
+    if (raw) {
+      const state = restoreClassroom(raw);
+      if (state.lessonId === lessonId) return state;
+    }
+  } catch { /* Opening another lesson also works without storage. */ }
+  return freshClassroom('basic', 'a', lessonId);
+}
+export function placeTile(tiles: string[], letter: string, position?: number, lessonId = 'mat') {
+  const units = getClassroomLesson(lessonId).units;
+  const target = position ?? units.findIndex((_, i) => !tiles[i]);
+  if (!units.includes(letter) || target < 0 || target >= units.length) return tiles;
+  const next = units.map((_, i) => tiles[i] === letter ? '' : (tiles[i] ?? ''));
   const previous = tiles.indexOf(letter);
-  next[position] = letter;
-  if (previous >= 0 && previous !== position)
-    next[previous] = tiles[position] ?? '';
+  next[target] = letter;
+  if (previous >= 0 && previous !== target) next[previous] = tiles[target] ?? '';
   return next;
 }
 export function parseSoundRegistry(value: unknown): Record<string, string> {

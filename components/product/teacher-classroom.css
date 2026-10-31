@@ -758,10 +758,6 @@
   width: 18px;
   height: 18px;
 }
-.kpd-photo.kpd-photo-large {
-  width: min(90%, 650px);
-  max-height: 55vh;
-}
 @media screen and (min-width: 900px) and (min-height: 650px) {
   .kpd-live {
     height: var(--klink-app-height);
@@ -839,9 +835,6 @@
     max-height: none;
     margin: 0;
     padding: 12px;
-  }
-  .kpd-live .kpd-picture-space .kpd-photo-large {
-    padding: 0;
   }
   .kpd-live .kpd-word-space {
     min-height: 0;
@@ -1190,3 +1183,24 @@
   .kpd-home-header,
   .kpd-home > h2 { display: none !important; }
 }
+
+/* Compact teacher identity and direct lesson choices share the learner card rhythm. */
+@media screen {
+  .kpd-brand { font-size: 20px; }
+  .kpd-brand img { height: 20px; }
+  .kpd-lesson-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .kpd-lesson-choice { display: flex; align-items: center; gap: 16px; padding: 16px; min-height: 112px; text-align: left; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 24px; font-weight: 500; }
+  .kpd-lesson-choice img { width: 80px; height: 80px; object-fit: contain; border-radius: 4px; }
+  .kpd-lesson-choice span { flex: 1; }
+  .kpd-lesson-choice > svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .kpd-lesson-choice:hover { border-color: var(--primary); background: var(--primary-soft); }
+}
+@media screen and (max-width: 600px) {
+  .kpd-lesson-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .kpd-lesson-choice { display: grid; grid-template-columns: 40px minmax(0, 1fr) 16px; gap: 6px; padding: 10px; min-height: 84px; font-size: 20px; }
+  .kpd-lesson-choice img { width: 40px; height: 48px; }
+  .kpd-lesson-choice > svg { width: 16px; height: 16px; }
+}
+
+.kpd-live .kpd-visibility-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; flex: none; }
+.kpd-live .kpd-visibility-controls button { min-width: 0; width: 100%; min-height: 64px; justify-content: center; }

@@ -1,7 +1,7 @@
 'use client';
 
 import type { ReactNode } from 'react';
-import { ArrowLeft, ArrowRight, BookOpen, Presentation } from 'lucide-react';
+import { ArrowLeft, BookOpen, Presentation } from 'lucide-react';
 import { ClassroomBrand } from './teacher-route-stage';
 
 export function TeacherWorkspaceFrame({
@@ -52,15 +52,7 @@ export function TeacherWorkspaceFrame({
               <h1>
                 <ClassroomBrand />
               </h1>
-              <a
-                className="secondary-button"
-                href="https://studio.taalroute.nl/#/apps/klink/handleiding"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Handleiding
-                <ArrowRight />
-              </a>
+
             </header>
             <h2>{view === 'plus' ? 'Kies een les' : 'Werkbladen'}</h2>
             {children}

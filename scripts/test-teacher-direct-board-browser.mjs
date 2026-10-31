@@ -27,7 +27,7 @@ for (const { name, engine, options } of [
       await page.locator('label:has(input[name="variant"][value="extend"])').click();
       assert.equal(
         await page
-          .getByRole('button', { name: 'Les openen', exact: true })
+          .getByRole('button', { name: 'Les openen: mat', exact: true })
           .count(),
         0,
       );
@@ -38,7 +38,7 @@ for (const { name, engine, options } of [
         saved,
       );
       await page.goto(base + '/#teacher/plus');
-      await page.getByRole('button', { name: 'Les openen', exact: true }).waitFor();
+      await page.getByRole('button', { name: 'Les openen: mat', exact: true }).waitFor();
       assert.equal(await page.locator('input,textarea,select').count(), 0);
       assert(
         !/voorbereid|Alfa|lesplan/i.test(
@@ -46,7 +46,7 @@ for (const { name, engine, options } of [
         ),
       );
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .click();
       assert.equal(
         await page.locator('.kpd-rounds [aria-current]').innerText(),
@@ -188,11 +188,11 @@ for (const { name, engine, options } of [
         .getByRole('button', { name: 'Les afronden', exact: true })
         .click();
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .waitFor();
       assert.equal(await page.locator('input,textarea,select').count(), 0);
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .click();
       assert.equal(
         await page.locator('.kpd-rounds [aria-current]').innerText(),
@@ -213,12 +213,12 @@ for (const { name, engine, options } of [
         .getByRole('button', { name: 'Lesoverzicht', exact: true })
         .click();
       await page
-        .getByRole('button', { name: 'Les openen', exact: true })
+        .getByRole('button', { name: 'Les openen: mat', exact: true })
         .waitFor();
       await page.getByRole('button', { name: 'Terug naar Klink', exact: true }).click();
       await page.locator('.hdr001-menu-trigger').click();
       await page.getByRole('link', { name: 'Klink+docent', exact: true }).click();
-      await page.getByRole('button', { name: 'Les openen', exact: true }).click();
+      await page.getByRole('button', { name: 'Les openen: mat', exact: true }).click();
       await page.getByRole('button', { name: 'Lesoverzicht', exact: true }).click();
       await page.locator('.klink-header-beta').waitFor();
       assert.equal(await page.locator('[data-classroom="active"]').count(), 0);
