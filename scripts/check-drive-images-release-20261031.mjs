@@ -1,3 +1,4 @@
+import {verifySynonymReviewRelease,readBeforeSynonymReview} from './check-synonym-review-release-20261031.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -32,17 +33,19 @@ export function verifyDriveImagePreservation(read=readFileSync){
  return m;
 }
 export function verifyDriveImagesRelease(read=readFileSync){
+ const successor=verifySynonymReviewRelease(read),currentRead=read;
+ read=file=>readBeforeSynonymReview(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-drive-images-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.generateImages,false);assert.equal(r.userRequest,'Controleer die 84 beelden op Google Drive, koppel de goede aan de juiste KLINK-oefeningen en zet ze online. Werk daarna de lijst bij. Geen nieuwe afbeeldingen maken.');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
+ const changed=lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots));assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
  const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','data/klink-word-round-index.json','scripts/check-synonym-placement-release.mjs','scripts/check-drive-images-release-20261031.mjs','scripts/test-drive-images-20261031.mjs','scripts/test-drive-images-browser-20261031.mjs'];
  assert(changed.every(f=>allowed.includes(f)||/^public\/package-media\/klink-drive-20261031\/[a-z]+-[a-f0-9]{10}\.webp$/.test(f)||/^public\/practice-content\/klink-20261029\/[A-Za-z0-9_-]+\.json$/.test(f)));
  for(const [f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);for(const f of changed)assert(r.files[f]);
  const m=verifyDriveImagePreservation(read);assert.equal(m.baselineSourceCommit,r.baselineSourceCommit);
  const review=JSON.parse(read('docs/drive-images-20261031/review.json'));for(const k of ['images','hands','compact','content','answers','progress','browser','build','localOnly'])assert.equal(review[k],true,k);
  const backup=JSON.parse(read('docs/drive-images-20261031/backup.json'));assert(backup.verified&&backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
-export function readBeforeDriveImages(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeDriveImages(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeSynonymReview(file,r.successor,read);}

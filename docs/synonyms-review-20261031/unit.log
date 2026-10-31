@@ -1,25 +1,32 @@
-✔ Twelve independent chapters cover all registered activities without changing Lexicon (9667.924833ms)
-✔ Source levels are honest, never inferred from matching words or a completed activity (0.542666ms)
-✔ Deep links validate chapter, activity, collection and level; stale links fail safely (29.0155ms)
-✔ navigation preferences validate input and retain both old route axes (0.905833ms)
-✔ Start restores the last selection while inner bookmarks keep their original scope (7.588334ms)
-✔ 210 archived source pairs and 185 active word-only questions have exactly one correct answer and traceable editorial sources (3.46175ms)
-✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (1.456584ms)
-✔ wrong answers become due for repetition, survive reload and retain the exact question (451.994041ms)
-✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (1218.250334ms)
-✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.535917ms)
-✔ corrupt saved mixing preferences fall back safely (0.157834ms)
-✔ meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels (2.192208ms)
-✔ publication rejects reactivated unsafe pairs, missing reviews and false listening claims (415.3295ms)
+{
+  images: 71,
+  remainingWords: 161,
+  placements: 1354,
+  collections: 200,
+  contentAndAnswersPreserved: true,
+  progressPreserved: true,
+  existingAssetsUnchanged: true,
+  newImageGeneration: false
+}
+✔ scripts/test-drive-images-20261031.mjs (2043.936125ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (9525.553708ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.482417ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (26.491458ms)
+✔ 210 archived source pairs and 185 active word-only questions have exactly one correct answer and traceable editorial sources (2.404666ms)
+✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (1.08575ms)
+✔ wrong answers become due for repetition, survive reload and retain the exact question (406.913583ms)
+✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (974.727125ms)
+✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.509333ms)
+✔ corrupt saved mixing preferences fall back safely (0.169875ms)
+✔ meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels (1.715542ms)
+✔ publication rejects reactivated unsafe pairs, missing reviews and false listening claims (419.5665ms)
 PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
-✔ scripts/test-word-round-continuity.mjs (4994.707584ms)
-PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
-✔ scripts/test-word-rounds.mjs (928.069209ms)
-ℹ tests 15
+✔ scripts/test-word-round-continuity.mjs (4557.242542ms)
+ℹ tests 13
 ℹ suites 0
-ℹ pass 15
+ℹ pass 13
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 10027.543083
+ℹ duration_ms 9827.372708
