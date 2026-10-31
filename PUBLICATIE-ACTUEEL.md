@@ -1,3 +1,13 @@
+## 31 oktober 2026 — compacte beelden en uitgesteld laden
+
+Livebron `e611ccae44d777f6d36db6aa100785fdfdf2363e`, schone canonieke main; Worker `7a405f0a-0c3b-4510-9693-1b8040886c00`. Via de normale `npm run deploy`-poort gepubliceerd als afstammeling van b368996c en de livebron dd2a0773.
+
+Alle 1.353 beeldbestanden gecontroleerd; 506 zware/grote bronnen gebruiken nu 503 compacte webbestanden. Maximaal 92.690 bytes per aangeboden beeld; de beeldverzameling daalt van 274.600.874 naar 32.923.922 bytes. Originele bronnen, inhoud, antwoorden, audio, routes en voortgangskoppelingen behouden. De actuele app gebruikt compacte versies; oude bronpaden blijven voor herstel en oude verwijzingen bestaan. Geen beeldgeneratie.
+
+Startpagina downloadt mediaan 3,528,796 versus 425,575 bytes (87.9% minder, drie lokale browsermetingen). Cursist-/docentwerkplek en lesgegevens laden pas bij openen. Projectiebescherming blijft intact bij beschadigde of geblokkeerde browseropslag. Alle beeldbytes en compacte cacheheaders online gecontroleerd; desktop/mobiel in Chromium en WebKit, docentmodus en voortgang geslaagd. Lokaal 112 menureizen, 312 vormwisselingen, toetsen/audio/opslag en vijf schermbreedtes gecontroleerd; 50 historische behoudtests en vijf nieuwe afkeurproeven geslaagd. Geen fysieke telefoontest; lokale productiepreview startte niet door, build/dev-controles en echte productiecontroles slagen.
+
+Dossier: `docs/image-size-audit-20261031/`, met `LAADCONTROLE.md`, `publication.json`, bron-back-up `backup.json` en definitieve onlineback-up `final-backup.json`. Geen GitHub Actions aanwezig/toegevoegd; zware controles lokaal.
+
 ## 31 oktober 2026 — 107 aanvullende Drivebeelden
 
 Livebron `dd2a077394916483daece15659ffbc15c3e988a9`, schone canonieke main; Worker `a5f9d7ff-a993-4e29-84dc-f4969261c6d1`. Via de normale `npm run deploy`-route gepubliceerd als afstammeling van de actuele toetsenbordrelease `9ad8af333dd25d38087b6f1e2fecdd31301c8d96`, met behoud van diens definitieve publicatieregistratie `ab20539102578e9b48013dac4527894150116d58`.
