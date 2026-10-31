@@ -13,3 +13,5 @@ Alle 1.110 gekoppelde bestaande opnamen volledig gedecodeerd en op ingebedde Taa
 De oude cumulatieve importtest veronderstelt de 18-oktober-bank en verouderde tekstamendementen. De nieuwe exacte bron-/antwoordcontroles, oorspronkelijke spelertests en normale historische publicatieketen controleren de opvolgende vrijgave. Geen eerdere correctie teruggedraaid om een oude test te laten slagen.
 
 Resultaat: https://klink.taalroute.nl/klink-woorden-aanvulling-20261031.html
+
+Twee historische behoudcontroles (docentlessen en compacte beelden) vergelijken nu, net als de andere opvolgende controles, precies hun eigen vrijgave tot aan de volgende vastgelegde bron. Hun eerdere vergelijking liep onbedoeld door tot de nieuwe inhoud. De nieuwe publicatiecontrole bewaakt daarnaast alle bestaande publieke bestanden, de actuele vormgeving en de exact toegestane bronwijzigingen. Er is geen controle verwijderd of publicatiepad omzeild.
