@@ -36,10 +36,10 @@ try {
   await page.locator('.word-library-page').waitFor();
   await page.evaluate(() => localStorage.setItem('klink.taalroute.savedWords.v1', JSON.stringify(['klink-woord-map'])));
   await page.reload();
-  await page.getByRole('link', { name: 'Synoniemen', exact: true }).click();
-  await page.locator('[data-chapter-page="words"]').waitFor();
-  assert((await page.locator('.cp-chapter-collection').count()) > 0);
-  checks.push('Woorden → Synoniemen opens the existing collection screen.');
+  await page.locator('.word-library-page').waitFor();
+  assert.equal(await page.getByRole('link', { name: 'Synoniemen', exact: true }).count(), 0);
+  assert.equal(await page.getByRole('button', { name: 'Synoniemen', exact: true }).count(), 0);
+  checks.push('Word library has no duplicate synonym entrance; saved word state retained.');
   for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 185]]) {
     await page.goto(base + '/' + chapterHash({ chapter: 'words', activity: 'synonyms', level, help: 'practice' }));
     await page.locator('.cp-chapter-collection').first().waitFor();

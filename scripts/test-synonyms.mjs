@@ -54,7 +54,7 @@ test('A1/A2/B1 selection is cumulative and preserves the existing category/activ
   assert.equal(availableChapterCollections('synonyms', { level: 'b1', help: 'guided' }).length, 0);
   assert.equal(parseChapterHash('#learner/chapters/words/synonyms/unknown?level=b1&help=practice').collection, undefined);
   const app = readFileSync(new URL('../components/product/learner-app.tsx', import.meta.url), 'utf8');
-  assert(app.includes("activity: 'synonyms'"));
+  assert(!app.includes("activity: 'synonyms'"), 'Word library has no duplicate synonym entrance');
 });
 
 test('wrong answers become due for repetition, survive reload and retain the exact question', () => {

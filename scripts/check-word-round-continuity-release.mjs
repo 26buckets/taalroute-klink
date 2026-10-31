@@ -1,4 +1,4 @@
-import {verifySynonymReviewRelease,readBeforeSynonymReview} from './check-synonym-review-release-20261031.mjs';
+import {verifySynonymPlacementRelease,readBeforeSynonymPlacement} from './check-synonym-placement-release.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
@@ -7,8 +7,8 @@ const git = (...args) => execFileSync('git', args, { maxBuffer: 128 * 1024 * 102
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean).sort((a, b) => a.localeCompare(b));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 export function verifyWordRoundContinuityRelease(read = readFileSync) {
-  const successor=verifySynonymReviewRelease(read),currentRead=read;
-  read=file=>readBeforeSynonymReview(file,successor,currentRead);
+  const successor = verifySynonymPlacementRelease(read), currentRead = read;
+  read = file => readBeforeSynonymPlacement(file, successor, currentRead);
   const r = JSON.parse(read('docs/klink-owner-release-word-round-continuity-20261031.json'));
   assert.equal(r.approvedBy, 'Nico');
   assert.equal(r.userRequest, 'Pas dit ook toe op de andere woordoefeningen. Als ik een andere oefenvorm kies, wil ik met dezelfde woorden uit die ronde verdergaan. Behoud alle audio en voortgang.');
@@ -29,8 +29,8 @@ export function verifyWordRoundContinuityRelease(read = readFileSync) {
   assert.equal(backup.verified, true);
   assert(backup.driveId && backup.sha256);
   for (const file of changed) assert.equal(backup.files[file], r.files[file], file);
-  return {...r,successor};
+  return { ...r, successor };
 }
 export function readBeforeWordRoundContinuity(file, release, read = readFileSync) {
-  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeSynonymReview(file,release.successor,read);
+  return release.changedFiles.includes(file) ? git('show', `${release.baselineSourceCommit}:${file}`) : readBeforeSynonymPlacement(file, release.successor, read);
 }
