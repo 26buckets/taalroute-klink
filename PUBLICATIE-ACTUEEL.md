@@ -1,3 +1,13 @@
+## 31 oktober 2026 — Stap voor stap naast Klankenkaart
+
+Livebron `1a36fe5fe228f305069ca50e0a2a3b75c6f35191`, schone canonieke main; Worker `b63ee9c7-5b87-4e6e-88ce-e0234254aeb1`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de vaste vormgevingsvloer `cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2` en de bijbehorende vastzetafspraak `ec613baf`.
+
+Op Nico's concrete nieuwe opdracht staat de bestaande knop **Stap voor stap** op Start direct naast **Klankenkaart**. Dezelfde knop, stijl, icoon, klikhandeling en lessenroute; onderaan verwijderd. Geen overige herindeling of CSS-wijziging. Deze ene toegestane uitzondering staat in `docs/appearance-floor-20261031/approved-updates/start-step-20261031.json`; de oorspronkelijke vloer en tag blijven behouden. Inhoud, media, audio, routes en voortgangsformaten ongewijzigd, alle vijf inhoudskenmerken gelijk.
+
+Lokaal: Chromium/WebKit op 1366, 768, 390 en 320 pixels; naast elkaar, geen dubbele knop, openen met Enter, oorspronkelijke 46 klanken, zes oefenstappen en uitlegvideo's, hervatten en bytegelijk behoud van woorden/voortgang/pogingen/rondes. Types, gerichte lint en build geslaagd; zes gerichte afkeurproeven, alle vijftig historische behoudtests en normale publicatiepoort inclusief 1.979 audiometadatacontroles geslaagd. Alle controles lokaal; geen GitHub-workflows aanwezig of toegevoegd.
+
+Online: dezelfde navigatie-, toetsenbord-, mobiele en opslagcontroles in twee browsers en vier schermgroottes; 38 bestanden bytegelijk. Geen fysieke telefoontest. Gecontroleerde bronherstelkopie: `1MPu-VrYQkTY0dcMVF1lCdSq1bplV9QlR`. Bewijs: `docs/start-step-20261031/`; definitieve online-/herstelkopie volledig teruggelezen: `1hHqDKHdzqAS8_zIf9aVDofToSPykfA6E`, zie `final-backup.json`.
+
 ## Vaste vormgevingsvloer — Nico, 31 oktober 2026
 
 **Uitsluitend het uiterlijk staat vast. Inhoud blijft in ontwikkeling.** Lees vóór ieder werk aan Klink `VORMGEVING-VASTGEZET.md` en `docs/appearance-floor-20261031/floor.json`. Geen wijziging aan indeling, menu-opmaak, kaartposities, typografie, knoppen, kleuren, logo of responsieve compositie zonder duidelijke, concrete toestemming van Nico. Een content- of opschoonopdracht is geen vormgevingsakkoord. Nieuwe inhoud en aantoonbaar niet-visuele reparaties mogen volgens hun eigen afspraken doorgaan; geen algemene app-, content- of branchbevriezing.

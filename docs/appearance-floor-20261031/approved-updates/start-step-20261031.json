@@ -1,0 +1,18 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-10-31",
+  "appearanceChangeApproved": true,
+  "userRequest": "Ik denk dat we de stap-voor-stap-knop bij starts moeten hebben bij klankenkaart. Zet die maar even neer. Ik ben nog niet helemaal tevreden over de opbouw hiervan, maar dat is denk ik een goede eerste stap.",
+  "scope": "Move the existing Stap voor stap button from the Start footer directly after Klankenkaart. Keep its handler, destination, icon and style. No other redesign.",
+  "previousFloorTag": "klink-uiterlijk-vast-20261031",
+  "sourceCommit": "1a36fe5fe228f305069ca50e0a2a3b75c6f35191",
+  "changes": {
+    "components/product/learner-app.tsx": {
+      "beforeSha256": "bf8e6588c6c3b5e8678d652923c58afedc47d5edc2d2863f6692ea7f81a08492",
+      "afterSha256": "f50bce7390baba8e9a8ee502e172f8700f03bedc8407f906b8150b0e00f259a8"
+    }
+  },
+  "otherVisualReferencesUnchanged": true,
+  "sourceRelease": "docs/klink-owner-release-start-step-20261031.json",
+  "checks": "docs/start-step-20261031/review.json"
+}
