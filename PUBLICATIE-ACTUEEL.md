@@ -1,3 +1,5 @@
+Actuele livebasis na het inmiddels gepubliceerde leesherstel: `54e9d39b57f9190523e6903f1e0fad24eda484b3`, een afstammeling van de hieronder beschreven Synoniemen-vrijgave. Synoniemen-woordbank, 68 opnamen en de drie oefenvormen zijn behouden; opnieuw in beide browsers gecontroleerd. Bewijs: `docs/synonyms-review-20261031/current-live-preservation.json`. Definitief Synoniemen-bron-/controlepakket volledig van Drive teruggelezen: `1j68Qom5UcTYkTdIWXlYg2wkDBoukENgB`.
+
 ## 31 oktober 2026 — Synoniemen: betekenis, instapniveaus en gecentreerde woordkaarten
 
 Livebron `bfef2c3d813e00d9dc5fc313c72c8f453e991a1e`, schone canonieke main; Worker `91e1db1e-8fb4-4467-b12d-cfade49f082a`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van actuele goedgekeurde livebron `f86dd0ffb872dbfb3b54c585860d6e9c6bb63054`. De inmiddels gepubliceerde 71 Drive-beelden, woordronde-continuïteit, nieuwe Synoniemen-plaatsing, teksten, dialogen en kookherstel zijn behouden.
