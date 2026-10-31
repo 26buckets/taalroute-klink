@@ -2411,8 +2411,8 @@ h1, h2, h3, h4 { font-family: var(--heading); }
 }
 
 /* Small cards show the whole photograph at its natural proportions, never a crop. */
-.cp-package-grid { grid-template-columns: repeat(auto-fill, 200px); gap: 12px; }
-@media (max-width: 480px) { .cp-package-grid { grid-template-columns: repeat(2, minmax(0, 200px)); } }
+.cp-package-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+@media (max-width: 480px) { .cp-package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .cp-package-grid > .cp-photo-section { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; align-items: stretch; min-height: 0; gap: 0; padding: 0; overflow: hidden; }
 .cp-section-photo { display: grid; place-items: center; align-self: start; min-height: 0; background: #fff; }
 .cp-section-photo img { display: block; width: 100%; height: auto; min-height: 0; object-fit: contain; }

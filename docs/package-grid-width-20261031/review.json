@@ -1,0 +1,21 @@
+{
+  "fullWidth": true,
+  "responsive": true,
+  "lightDark": true,
+  "imagesPreserved": true,
+  "navigation": true,
+  "progress": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "runtimeChange": "Only two CSS grid width declarations; original 15 cards, 302 lessons, media, aspect ratio, typography, controls, route/storage and columns preserved.",
+  "browser": "11 responsive widths plus 16 Chromium/WebKit light/dark before/after comparisons",
+  "lintScope": "Changed scripts pass. Full repository lint still reports existing findings in unchanged scripts/documents.",
+  "integration": "All 15 package/302 lesson routes, guided sequence and exercise variants passed. Broad existing-player suite stops at stale first-page word assumption; confirmed on unchanged live baseline.",
+  "notChecked": [
+    "Physical classroom monitor",
+    "New human media review: no audio or image bytes changed"
+  ],
+  "styleReference": "Canonical local path absent; read README and reference.png from existing Drive Mac-backup Stijlsheet/digibord-settings."
+}

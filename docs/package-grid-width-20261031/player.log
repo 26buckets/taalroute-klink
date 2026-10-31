@@ -1,0 +1,21 @@
+PASS Existing package screens contain every core, recall, extension and additional word route
+PASS Existing guided player runs model, same word, listening, building, error recovery and completion
+PASS All eligible group activities render in the existing exercise players
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+0 !== 1
+
+    at file:///private/tmp/klink-package-grid-20261031/scripts/test-existing-player-browser.mjs:64:12 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 1,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
