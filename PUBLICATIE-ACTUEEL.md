@@ -1,3 +1,15 @@
+## 31 oktober 2026 — Klink+docent, acht lessen en vaste bediening
+
+Livebron `cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2`, schone canonieke main; Worker `96ce6b43-1dea-4a37-b9e5-d7a98170ebba`. Gepubliceerd via `npm run deploy` als afstammeling van de nieuwste beeldoptimalisatie én het herhaalherstel b0191b87. De bijbehorende dossiercommit 19a46d51 is behouden.
+
+Klink+docent gebruikt de goedgekeurde nieuwe vormgeving: kleiner officieel woordmerk, compact lesoverzicht, geen dubbele handleidingknop en geen Oefenoverzicht Beta. Acht bronlessen: mat, tas, map, man, pan, jas, pen en pet; elk met Woord, Zin, Tekst en acht onderdelen. Geen voorbereidingspoort. Foto groter en Andere hulp zijn op Nico's expliciete vervolgopdrachten verwijderd. Het standaardbeeld is groter; de twee compacte knoppen staan vast eronder en zijn samen even breed als de afbeelding. Woord, zin en tekst verschijnen standaard bij Kijken/Luisteren; verbergen bewaart de ruimte. De vijf hulpmiddelen blijven bereikbaar.
+
+Alle bestaande cursisteninhoud, originele media, antwoordbestanden en voortgangskoppelingen behouden; eigen docentantwoorden blijven per les gescheiden en behouden bij wisselen van ronde. Bronmapping, volledige oorspronkelijke lesbestanden en reviewgrenzen staan in `docs/docent-lessen-release-20261031/`. Acht lessen vormen geen volledig alfaniveau; onafhankelijke praktijktoets en menselijke uitspraakgoedkeuring zijn niet afgeleid van technische controles.
+
+Lokaal: 1.152 lesfaseweergaven voor de leslogica, 192 faseweergaven/40 hulpmiddelen in de eindvormgeving, 24 gerichte controles van de nieuwste compacte bediening, 72 werkbladvarianten, alle 24 lettergeluiden, menu-/opslag-/privacy-/camera-/audioherstel en 312 wisselingen met behoud van woorden en voortgang. Types, lint, build, beeldcontrole, normale publicatiepoort, 50 historische publicatiebewijstests en zes nieuwe afkeurproeven geslaagd. Geen zware cloudworkflows of nieuwe Actions-workflows.
+
+Online: release/commit, 32 lesreizen in Chromium en WebKit op desktop/mobiel, alle inhoudshashes, 34 ongewijzigde mediabestanden, één handleidinglink in het hamburgermenu en vier toetsenbordgroepen gecontroleerd. Geen fysieke telefoontest; lokale productiepreview startte niet door, de echte gepubliceerde versie is wel gecontroleerd. Herstelkopie in de bestaande Drive-map teruggelezen en bytegelijk bevonden; zie backup.json en final-backup.json in het dossier.
+
 ## 31 oktober 2026 — bewaarkeuze bij herhaalwerk behouden
 
 Livebron `b0191b87b73e4062f1a9d19a4b60dc067917a938`, schone canonieke main; Worker `de8691c5-db5d-443e-9c02-d6b9382b0dd4`. Via de normale `npm run deploy` gepubliceerd als afstammeling van de nieuwste automatische beeldvoorbereiding `fb4d4cb94b9158c3406a735db91b41d8165980a2` en canonieke bron `ca209e707201e617196983352f3d7541c1be7b2c`.
