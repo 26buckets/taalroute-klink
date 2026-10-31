@@ -43,6 +43,9 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       assert.equal(await page.locator('[data-chapter]').count(), 12);
       assert.equal(await page.locator('.cp-direct-levels button:not(:disabled)').count(), 6);
       assert.equal(await page.locator('.cp-direct-levels select, .cp-direct-levels details').count(), 0);
+      assert.equal(await page.locator('.cp-direct-actions').getByRole('button', { name: 'Klankenkaart', exact: true }).evaluate(button => button.nextElementSibling?.textContent.trim()), 'Stap voor stap', 'Step-by-step is directly next to the sound-card action');
+      assert.equal(await page.locator('.cp-direct-actions').getByRole('button', { name: 'Stap voor stap', exact: true }).count(), 1);
+      assert.equal(await page.locator('.cp-direct-footer > button').count(), 0, 'No duplicate step-by-step action under the categories');
       assert.equal(await page.getByRole('button', { name: 'B2 — nog niet beschikbaar', exact: true }).count(), 0);
       const reserved = page.locator('.cp-direct-levels button[aria-label="B2 — nog niet beschikbaar"]');
       assert(await reserved.isHidden(), 'B2 is absent from the visible and accessible controls');
@@ -70,6 +73,10 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     await page.locator('[data-chapter="words"]').click();
     await nav.getByRole('button', { name: 'Start', exact: true }).click();
     assert.equal(await page.locator('[data-chapter]').count(), 12, 'Start also leaves an inner route');
+    await page.getByRole('button', { name: 'Stap voor stap', exact: true }).focus();
+    await page.keyboard.press('Enter');
+    await page.locator('.cp-package-grid > button').first().waitFor();
+    await nav.getByRole('button', { name: 'Start', exact: true }).click();
     await page.getByRole('button', { name: 'Klankenkaart', exact: true }).click();
     await page.locator('[data-sound="a"]').waitFor();
     assert.equal(await page.locator('[data-sound]').count(), 46);

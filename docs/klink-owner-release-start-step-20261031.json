@@ -1,0 +1,22 @@
+{
+  "approvedBy": "Nico",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "userRequest": "Ik denk dat we de stap-voor-stap-knop bij starts moeten hebben bij klankenkaart. Zet die maar even neer. Ik ben nog niet helemaal tevreden over de opbouw hiervan, maar dat is denk ik een goede eerste stap.",
+  "scope": "Move the existing Stap voor stap button from the Start footer directly after Klankenkaart. Keep its handler, destination, icon and style. No other redesign.",
+  "baselineSourceCommit": "ec613bafcdae4591add4b94a65390773df46738f",
+  "liveSourceCommit": "cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2",
+  "appearanceFloorTag": "klink-uiterlijk-vast-20261031",
+  "changedFiles": [
+    "components/product/learner-app.tsx",
+    "scripts/check-docent-lessons-release-20261031.mjs",
+    "scripts/check-start-step-release-20261031.mjs",
+    "scripts/test-direct-navigation-browser.mjs"
+  ],
+  "files": {
+    "components/product/learner-app.tsx": "f50bce7390baba8e9a8ee502e172f8700f03bedc8407f906b8150b0e00f259a8",
+    "scripts/check-docent-lessons-release-20261031.mjs": "e302edf872a25246852e4fc0d5f7cedd92b209accca03187ee37d001455f080d",
+    "scripts/check-start-step-release-20261031.mjs": "6d67058160130e5639b1ed807770b062867d141cb9d42a227565b68d7ee2816e",
+    "scripts/test-direct-navigation-browser.mjs": "6da1278fd1ea27b225a1ee88cfe5b4bb75287d141226413e5c2df3ec63c3e0d4"
+  }
+}

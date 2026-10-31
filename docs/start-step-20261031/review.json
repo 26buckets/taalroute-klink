@@ -1,0 +1,50 @@
+{
+  "navigation": true,
+  "mobile": true,
+  "keyboard": true,
+  "progress": true,
+  "contentPreserved": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "verifiedAt": "2026-10-31T10:07:55.086300+00:00",
+  "appearanceRequest": "Ik denk dat we de stap-voor-stap-knop bij starts moeten hebben bij klankenkaart. Zet die maar even neer. Ik ben nog niet helemaal tevreden over de opbouw hiervan, maar dat is denk ik een goede eerste stap.",
+  "scope": "Move the existing Stap voor stap button from the Start footer directly after Klankenkaart. Keep its handler, destination, icon and style. No other redesign.",
+  "sourceChanges": "One existing button moved; existing handler, route, icon and classes unchanged. No CSS change.",
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "viewports": [
+    [
+      1366,
+      900
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      320,
+      480
+    ]
+  ],
+  "checks": [
+    "Direct adjacency to Klankenkaart",
+    "No footer duplicate",
+    "Opens existing lesson library with Enter",
+    "Original six learning steps and video remain",
+    "Resume, levels, sound card, existing progress/saved words/attempts/rounds retained"
+  ],
+  "contentFingerprintsUnchanged": 5,
+  "limitations": [
+    "Physical phones not tested; no new pronunciation review."
+  ],
+  "baselineSourceCommit": "ec613bafcdae4591add4b94a65390773df46738f",
+  "liveSourceCommit": "cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2"
+}

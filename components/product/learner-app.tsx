@@ -185,10 +185,10 @@ function LearnerHome({ onPackages, onSounds, onBack, progress, onLesson, onAttem
     <div className="cp-direct-actions">
       {position && position === progress.position && resumeWord && <button className="secondary-button cp-direct-resume" onClick={() => onLesson(position)}>Verder met {wordLabel(resumeWord)}<ArrowRight aria-hidden="true" /></button>}
       <button className="secondary-button" onClick={onSounds}><Ear aria-hidden="true" />Klankenkaart<ArrowRight aria-hidden="true" /></button>
+      <button className="secondary-button" onClick={onPackages}><PackageOpen aria-hidden="true" />Stap voor stap<ArrowRight aria-hidden="true" /></button>
     </div>
     <h2 className="cp-direct-heading">Kies een oefening</h2>
   </>} startFooter={<div className="cp-direct-footer">
-    <button className="secondary-button" onClick={onPackages}><PackageOpen aria-hidden="true" />Stap voor stap<ArrowRight aria-hidden="true" /></button>
     <details className="cp-direct-explanation"><summary>Zo oefen je</summary><PracticeLine /></details>
   </div>} />;
 }

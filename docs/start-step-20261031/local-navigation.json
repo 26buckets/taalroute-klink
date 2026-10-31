@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "sizes": 4,
+      "persistedLevels": true,
+      "retainedStorage": [
+        "klink.taalroute.route.v1",
+        "klink.taalroute.savedWords.v1",
+        "klink.taalroute.attempts.v1",
+        "klink.round-progress.v1:sequence:functional:lijst"
+      ],
+      "originalSteps": 6,
+      "sounds": 46
+    },
+    {
+      "engine": "webkit",
+      "sizes": 4,
+      "persistedLevels": true,
+      "retainedStorage": [
+        "klink.taalroute.route.v1",
+        "klink.taalroute.savedWords.v1",
+        "klink.taalroute.attempts.v1",
+        "klink.round-progress.v1:sequence:functional:lijst"
+      ],
+      "originalSteps": 6,
+      "sounds": 46
+    }
+  ],
+  "errors": []
+}
