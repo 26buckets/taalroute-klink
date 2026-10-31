@@ -98,7 +98,8 @@ test('Both pak meanings remain distinct, missing media is not invented and publi
 });
 test('Only the established learner, teacher and exercise players are mounted; existing CSS remains the shell', () => {
   const page = readFileSync(new URL('../app/page.tsx', import.meta.url), 'utf8');
-  assert(page.includes('<LearnerApp')); assert(page.includes('<TeacherApp')); assert(!page.includes('CurriculumApp'));
+  const workspace = readFileSync(new URL('../components/product/practice-workspace.tsx', import.meta.url), 'utf8');
+  assert(page.includes('<PracticeWorkspace')); assert(workspace.includes('<LearnerApp')); assert(workspace.includes('<TeacherApp')); assert(!`${page}${workspace}`.includes('CurriculumApp'));
   const layout = readFileSync(new URL('../app/layout.tsx', import.meta.url), 'utf8');
   assert(!layout.includes('curriculum.css'));
 });

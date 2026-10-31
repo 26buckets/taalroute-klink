@@ -1,0 +1,1544 @@
+{
+  "edition": "klink-teksten-zelf-a1-a2-r01-review-20261031",
+  "reviewedOn": "2026-10-31",
+  "reviewType": "internal-ai-editorial",
+  "status": "text-reviewed-not-live",
+  "sourceConversationId": "6ae5e0ed-5414-83eb-b867-0500e41af986",
+  "sourceMessageId": "d400ad0b-3d23-4e51-bf2a-5ac3e99fe4fe",
+  "sourcePreserved": true,
+  "learnerInstructions": {
+    "A1": "Lees de tekst. Kies het goede antwoord.",
+    "A2": "Lees de tekst. Kies bij elke vraag één antwoord. Je kunt de tekst opnieuw bekijken."
+  },
+  "texts": [
+    {
+      "id": "A1-T01",
+      "title": "Naar school",
+      "level": "A1",
+      "text": "Sara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.",
+      "questions": [
+        {
+          "id": "A1-Q01",
+          "prompt": "Op welke dag gaat Sara naar school?",
+          "options": [
+            "Maandag",
+            "Dinsdag",
+            "Vrijdag"
+          ],
+          "answer": "A",
+          "answerText": "Maandag",
+          "evidence": "Sara gaat op maandag naar school.",
+          "correctFeedback": "Goed! Sara gaat op maandag naar school.",
+          "retryFeedback": "Lees de zin over Sara en school opnieuw."
+        },
+        {
+          "id": "A1-Q02",
+          "prompt": "Hoe laat begint de les?",
+          "options": [
+            "Acht uur",
+            "Negen uur",
+            "Tien uur"
+          ],
+          "answer": "B",
+          "answerText": "Negen uur",
+          "evidence": "De les begint om negen uur.",
+          "correctFeedback": "Goed! De les begint om negen uur.",
+          "retryFeedback": "Kijk naar de tijd van de les."
+        },
+        {
+          "id": "A1-Q03",
+          "prompt": "Hoe gaat Sara naar school?",
+          "options": [
+            "Met de trein",
+            "Met de bus",
+            "Met de fiets"
+          ],
+          "answer": "B",
+          "answerText": "Met de bus",
+          "evidence": "Sara gaat met de bus.",
+          "correctFeedback": "Goed! Sara gaat met de bus.",
+          "retryFeedback": "Lees hoe Sara naar school gaat."
+        },
+        {
+          "id": "A1-Q04",
+          "prompt": "Wat zit in haar tas?",
+          "options": [
+            "Een appel",
+            "Een telefoon",
+            "Een boek"
+          ],
+          "answer": "C",
+          "answerText": "Een boek",
+          "evidence": "In haar tas zit een boek.",
+          "correctFeedback": "Goed! In haar tas zit een boek.",
+          "retryFeedback": "Lees de zin over de tas."
+        }
+      ]
+    },
+    {
+      "id": "A1-T02",
+      "title": "In de winkel",
+      "level": "A1",
+      "text": "Op zaterdag gaat Omar naar de winkel. Hij koopt brood, melk en twee appels. De melk kost drie euro. Omar betaalt bij de kassa. Daarna gaat hij naar huis.",
+      "questions": [
+        {
+          "id": "A1-Q05",
+          "prompt": "Wanneer gaat Omar naar de winkel?",
+          "options": [
+            "Zondag",
+            "Zaterdag",
+            "Maandag"
+          ],
+          "answer": "B",
+          "answerText": "Zaterdag",
+          "evidence": "Op zaterdag gaat Omar naar de winkel.",
+          "correctFeedback": "Goed! Omar gaat op zaterdag naar de winkel.",
+          "retryFeedback": "Lees de zin over Omar en de winkel."
+        },
+        {
+          "id": "A1-Q06",
+          "prompt": "Hoeveel appels koopt Omar?",
+          "options": [
+            "Twee",
+            "Drie",
+            "Vier"
+          ],
+          "answer": "A",
+          "answerText": "Twee",
+          "evidence": "Hij koopt brood, melk en twee appels.",
+          "correctFeedback": "Goed! Omar koopt twee appels.",
+          "retryFeedback": "Lees wat Omar koopt."
+        },
+        {
+          "id": "A1-Q07",
+          "prompt": "Hoeveel kost de melk?",
+          "options": [
+            "Twee euro",
+            "Vijf euro",
+            "Drie euro"
+          ],
+          "answer": "C",
+          "answerText": "Drie euro",
+          "evidence": "De melk kost drie euro.",
+          "correctFeedback": "Goed! De melk kost drie euro.",
+          "retryFeedback": "Kijk naar de prijs van de melk."
+        },
+        {
+          "id": "A1-Q08",
+          "prompt": "Waar betaalt Omar?",
+          "options": [
+            "Bij de deur",
+            "Bij de kassa",
+            "Bij de melk"
+          ],
+          "answer": "B",
+          "answerText": "Bij de kassa",
+          "evidence": "Omar betaalt bij de kassa.",
+          "correctFeedback": "Goed! Omar betaalt bij de kassa.",
+          "retryFeedback": "Lees de zin over betalen."
+        }
+      ]
+    },
+    {
+      "id": "A1-T03",
+      "title": "Fatima is ziek",
+      "level": "A1",
+      "text": "Fatima is vandaag ziek. Zij gaat niet naar haar werk. Om acht uur belt zij haar baas. Zij zegt: 'Ik ben ziek.' Haar baas zegt: 'Blijf thuis.' Morgen gaat Fatima naar de dokter.",
+      "questions": [
+        {
+          "id": "A1-Q09",
+          "prompt": "Waarom gaat Fatima niet naar haar werk?",
+          "options": [
+            "Zij is vrij.",
+            "Zij is te laat.",
+            "Zij is ziek."
+          ],
+          "answer": "C",
+          "answerText": "Zij is ziek.",
+          "evidence": "Fatima is vandaag ziek.",
+          "correctFeedback": "Goed! Fatima is ziek.",
+          "retryFeedback": "Lees de zin over Fatima en haar werk."
+        },
+        {
+          "id": "A1-Q10",
+          "prompt": "Hoe laat belt Fatima haar baas?",
+          "options": [
+            "Acht uur",
+            "Negen uur",
+            "Tien uur"
+          ],
+          "answer": "A",
+          "answerText": "Acht uur",
+          "evidence": "Om acht uur belt zij haar baas.",
+          "correctFeedback": "Goed! Fatima belt om acht uur.",
+          "retryFeedback": "Kijk naar de tijd bij het bellen."
+        },
+        {
+          "id": "A1-Q11",
+          "prompt": "Met wie praat Fatima aan de telefoon?",
+          "options": [
+            "Met haar dokter",
+            "Met haar baas",
+            "Met haar vriend"
+          ],
+          "answer": "B",
+          "answerText": "Met haar baas",
+          "evidence": "Om acht uur belt zij haar baas.",
+          "correctFeedback": "Goed! Fatima belt haar baas.",
+          "retryFeedback": "Lees wie Fatima belt en wat haar baas zegt."
+        },
+        {
+          "id": "A1-Q12",
+          "prompt": "Wanneer gaat Fatima naar de dokter?",
+          "options": [
+            "Vandaag",
+            "Gisteren",
+            "Morgen"
+          ],
+          "answer": "C",
+          "answerText": "Morgen",
+          "evidence": "Morgen gaat Fatima naar de dokter.",
+          "correctFeedback": "Goed! Fatima gaat morgen naar de dokter.",
+          "retryFeedback": "Lees de zin over de dokter."
+        }
+      ]
+    },
+    {
+      "id": "A2-T01",
+      "title": "Een andere afspraak",
+      "level": "A2",
+      "text": "Farid heeft dinsdag om tien uur een afspraak bij de tandarts. Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts. Daarom belt Farid de tandarts. De medewerker verzet de afspraak naar donderdag om half drie. Farid schrijft de nieuwe tijd in zijn agenda. Daarna krijgt hij een sms met de nieuwe afspraak.",
+      "questions": [
+        {
+          "id": "A2-Q01",
+          "prompt": "Wanneer was de afspraak bij de tandarts eerst?",
+          "options": [
+            "Dinsdag om tien uur",
+            "Dinsdag om negen uur",
+            "Donderdag om half drie"
+          ],
+          "answer": "A",
+          "answerText": "Dinsdag om tien uur",
+          "evidence": "Farid heeft dinsdag om tien uur een afspraak bij de tandarts.",
+          "correctFeedback": "Goed! De eerste afspraak was dinsdag om tien uur.",
+          "retryFeedback": "Lees de eerste zin van de tekst opnieuw."
+        },
+        {
+          "id": "A2-Q02",
+          "prompt": "Waarom belt Farid de tandarts?",
+          "options": [
+            "Hij heeft zijn agenda verloren.",
+            "Hij moet dinsdag om negen uur beginnen met werken.",
+            "Hij wil een andere tandarts."
+          ],
+          "answer": "B",
+          "answerText": "Hij moet dinsdag om negen uur beginnen met werken.",
+          "evidence": "Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.",
+          "correctFeedback": "Goed! Farid moet werken en kan niet naar de afspraak.",
+          "retryFeedback": "Lees het bericht van zijn werkgever opnieuw."
+        },
+        {
+          "id": "A2-Q03",
+          "prompt": "Wanneer is de nieuwe afspraak?",
+          "options": [
+            "Maandag om half drie",
+            "Donderdag om half drie",
+            "Dinsdag om tien uur"
+          ],
+          "answer": "B",
+          "answerText": "Donderdag om half drie",
+          "evidence": "De medewerker verzet de afspraak naar donderdag om half drie.",
+          "correctFeedback": "Goed! De nieuwe afspraak is donderdag om half drie.",
+          "retryFeedback": "Lees de zin over de nieuwe afspraak."
+        },
+        {
+          "id": "A2-Q04",
+          "prompt": "Wat krijgt Farid na het veranderen van de afspraak?",
+          "options": [
+            "Een sms met de nieuwe afspraak",
+            "Een e-mail met de nieuwe afspraak",
+            "Een brief met de nieuwe afspraak"
+          ],
+          "answer": "A",
+          "answerText": "Een sms met de nieuwe afspraak",
+          "evidence": "Daarna krijgt hij een sms met de nieuwe afspraak.",
+          "correctFeedback": "Goed! Farid krijgt een sms met de nieuwe afspraak.",
+          "retryFeedback": "Lees de laatste zin."
+        }
+      ]
+    },
+    {
+      "id": "A2-T02",
+      "title": "Met de bus naar het werk",
+      "level": "A2",
+      "text": "Elif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 uur en komt om 8.05 uur aan. Elif loopt daarna nog vijf minuten naar haar werk. Haar dienst begint om 8.30 uur.",
+      "questions": [
+        {
+          "id": "A2-Q05",
+          "prompt": "Waarom staat de fiets van Elif bij de fietsenmaker?",
+          "options": [
+            "De band is leeg.",
+            "De rem is kapot.",
+            "Het licht doet het niet."
+          ],
+          "answer": "B",
+          "answerText": "De rem is kapot.",
+          "evidence": "Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is.",
+          "correctFeedback": "Goed! De rem van de fiets is kapot.",
+          "retryFeedback": "Lees waarom de fiets bij de fietsenmaker staat."
+        },
+        {
+          "id": "A2-Q06",
+          "prompt": "Welke bus neemt Elif?",
+          "options": [
+            "Bus 20",
+            "Bus 10",
+            "Bus 12"
+          ],
+          "answer": "C",
+          "answerText": "Bus 12",
+          "evidence": "Daarom neemt Elif bus 12.",
+          "correctFeedback": "Goed! Elif neemt bus 12.",
+          "retryFeedback": "Zoek het nummer van de bus in de tekst."
+        },
+        {
+          "id": "A2-Q07",
+          "prompt": "Hoe laat komt de bus aan?",
+          "options": [
+            "7.40 uur",
+            "8.30 uur",
+            "8.05 uur"
+          ],
+          "answer": "C",
+          "answerText": "8.05 uur",
+          "evidence": "De bus vertrekt om 7.40 uur en komt om 8.05 uur aan.",
+          "correctFeedback": "Goed! De bus komt om 8.05 uur aan.",
+          "retryFeedback": "Let op het verschil tussen vertrekken en aankomen."
+        },
+        {
+          "id": "A2-Q08",
+          "prompt": "Wat doet Elif na de busrit?",
+          "options": [
+            "Zij loopt nog vijf minuten naar haar werk.",
+            "Zij wacht nog vijf minuten bij de halte.",
+            "Zij loopt nog vijf minuten naar huis."
+          ],
+          "answer": "A",
+          "answerText": "Zij loopt nog vijf minuten naar haar werk.",
+          "evidence": "Elif loopt daarna nog vijf minuten naar haar werk.",
+          "correctFeedback": "Goed! Elif loopt het laatste stuk naar haar werk.",
+          "retryFeedback": "Lees wat Elif na de busreis doet."
+        }
+      ]
+    },
+    {
+      "id": "A2-T03",
+      "title": "Een boek lenen",
+      "level": "A2",
+      "text": "Yara wil beter Nederlands leren. Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen. Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is. Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.' Yara mag het boek vandaag wel in de bibliotheek lezen. Zij besluit maandag met haar pas terug te komen.",
+      "questions": [
+        {
+          "id": "A2-Q09",
+          "prompt": "Waarom gaat Yara naar de bibliotheek?",
+          "options": [
+            "Om een boek terug te brengen",
+            "Om een makkelijk boek te lenen",
+            "Om een boek te kopen"
+          ],
+          "answer": "B",
+          "answerText": "Om een makkelijk boek te lenen",
+          "evidence": "Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen.",
+          "correctFeedback": "Goed! Yara wil een makkelijk boek lenen.",
+          "retryFeedback": "Lees waarom Yara naar de bibliotheek gaat."
+        },
+        {
+          "id": "A2-Q10",
+          "prompt": "Hoe laat sluit de bibliotheek op zaterdag?",
+          "options": [
+            "Om half vier",
+            "Om vijf uur",
+            "Om vier uur"
+          ],
+          "answer": "C",
+          "answerText": "Om vier uur",
+          "evidence": "Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is.",
+          "correctFeedback": "Goed! De bibliotheek sluit om vier uur.",
+          "retryFeedback": "Lees wat er op de deur staat."
+        },
+        {
+          "id": "A2-Q11",
+          "prompt": "Waarom kan Yara het boek vandaag niet meenemen?",
+          "options": [
+            "Haar bibliotheekpas ligt thuis.",
+            "Het boek is niet te leen.",
+            "Haar pas is niet meer geldig."
+          ],
+          "answer": "A",
+          "answerText": "Haar bibliotheekpas ligt thuis.",
+          "evidence": "Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.'",
+          "correctFeedback": "Goed! Yara heeft haar bibliotheekpas niet bij zich.",
+          "retryFeedback": "Lees wat de medewerker over de pas zegt."
+        },
+        {
+          "id": "A2-Q12",
+          "prompt": "Wanneer wil Yara terugkomen?",
+          "options": [
+            "Zaterdag",
+            "Zondag",
+            "Maandag"
+          ],
+          "answer": "C",
+          "answerText": "Maandag",
+          "evidence": "Zij besluit maandag met haar pas terug te komen.",
+          "correctFeedback": "Goed! Yara wil maandag terugkomen.",
+          "retryFeedback": "Lees de laatste zin."
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "id": "A1-Q01",
+      "field": "prompt",
+      "before": "Welke dag gaat Sara naar school?",
+      "after": "Op welke dag gaat Sara naar school?",
+      "reason": "Natuurlijk Nederlands."
+    },
+    {
+      "id": "A1-Q08",
+      "field": "options",
+      "before": [
+        "Op school",
+        "Bij de kassa",
+        "In de bus"
+      ],
+      "after": [
+        "Bij de deur",
+        "Bij de kassa",
+        "Bij de melk"
+      ],
+      "reason": "Afleiders binnen dezelfde winkelsituatie, zonder een tweede juist antwoord."
+    },
+    {
+      "id": "A1-Q11",
+      "field": "prompt",
+      "before": "Wie belt Fatima?",
+      "after": "Met wie praat Fatima aan de telefoon?",
+      "reason": "Verwijdert de dubbele lezing van ‘Wie belt Fatima?’."
+    },
+    {
+      "id": "A1-Q11",
+      "field": "options",
+      "before": [
+        "Haar dokter",
+        "Haar baas",
+        "Haar vriend"
+      ],
+      "after": [
+        "Met haar dokter",
+        "Met haar baas",
+        "Met haar vriend"
+      ],
+      "reason": "Antwoordvorm sluit aan op de herstelde vraag."
+    },
+    {
+      "id": "A1-Q11",
+      "field": "answerText",
+      "before": "Haar baas",
+      "after": "Met haar baas",
+      "reason": "Antwoordvorm sluit aan op de herstelde vraag."
+    },
+    {
+      "id": "A1-Q11",
+      "field": "retryFeedback",
+      "before": "Lees wie Fatima belt.",
+      "after": "Lees wie Fatima belt en wat haar baas zegt.",
+      "reason": "Verwijst naar de volledige telefoonhandeling."
+    },
+    {
+      "id": "A2-Q02",
+      "field": "evidence",
+      "before": "\"Hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.\"",
+      "after": "\"Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.\"",
+      "reason": "Volledig, letterlijk broncitaat."
+    },
+    {
+      "id": "A2-Q03",
+      "field": "retryFeedback",
+      "before": "Lees wanneer de medewerker de afspraak heeft gezet.",
+      "after": "Lees de zin over de nieuwe afspraak.",
+      "reason": "Natuurlijker en duidelijker leesaanwijzing."
+    },
+    {
+      "id": "A2-Q04",
+      "field": "options",
+      "before": [
+        "Een sms met de nieuwe afspraak",
+        "Een brief over zijn vakantie",
+        "Een e-mail over zijn werk"
+      ],
+      "after": [
+        "Een sms met de nieuwe afspraak",
+        "Een e-mail met de nieuwe afspraak",
+        "Een brief met de nieuwe afspraak"
+      ],
+      "reason": "Alle opties gaan over een geloofwaardige afspraakbevestiging."
+    },
+    {
+      "id": "A2-Q05",
+      "field": "evidence",
+      "before": "\"Haar fiets [staat] bij de fietsenmaker, omdat de rem kapot is.\"",
+      "after": "\"Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is.\"",
+      "reason": "Verwijdert het aangepaste citaat met [staat]."
+    },
+    {
+      "id": "A2-Q08",
+      "field": "options",
+      "before": [
+        "Zij loopt nog vijf minuten naar haar werk.",
+        "Zij fietst verder.",
+        "Zij gaat naar huis."
+      ],
+      "after": [
+        "Zij loopt nog vijf minuten naar haar werk.",
+        "Zij wacht nog vijf minuten bij de halte.",
+        "Zij loopt nog vijf minuten naar huis."
+      ],
+      "reason": "Geloofwaardiger alternatieven voor de handeling na de busrit."
+    },
+    {
+      "id": "A2-Q09",
+      "field": "options",
+      "before": [
+        "Om een vriend te bezoeken",
+        "Om een makkelijk boek te lenen",
+        "Om een computer te kopen"
+      ],
+      "after": [
+        "Om een boek terug te brengen",
+        "Om een makkelijk boek te lenen",
+        "Om een boek te kopen"
+      ],
+      "reason": "Afleiders sluiten aan op het lenen van een boek."
+    },
+    {
+      "id": "A2-Q10",
+      "field": "evidence",
+      "before": "\"De bibliotheek [is] op zaterdag tot vier uur open.\"",
+      "after": "\"Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is.\"",
+      "reason": "Verwijdert het aangepaste citaat met [is]."
+    },
+    {
+      "id": "A2-Q11",
+      "field": "options",
+      "before": [
+        "Haar bibliotheekpas ligt thuis.",
+        "Het boek is kapot.",
+        "De bibliotheek is al dicht."
+      ],
+      "after": [
+        "Haar bibliotheekpas ligt thuis.",
+        "Het boek is niet te leen.",
+        "Haar pas is niet meer geldig."
+      ],
+      "reason": "Afleiders blijven binnen de leensituatie."
+    },
+    {
+      "id": "A2-Q11",
+      "field": "evidence",
+      "before": "\"Haar bibliotheekpas ligt thuis.\" En: \"Zonder pas mag je het boek niet meenemen.\"",
+      "after": "\"Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.'\"",
+      "reason": "Volledig, letterlijk citaat; uitspraak binnen de fictieve situatie."
+    }
+  ],
+  "lexiconAudit": [
+    {
+      "form": "aan",
+      "lemma": "aan",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-041",
+        "lemma": "aan",
+        "meaningId": "TL0001.S01 TL0001.S02 TL0001.S03"
+      }
+    },
+    {
+      "form": "acht",
+      "lemma": "acht",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-193",
+        "lemma": "acht",
+        "meaningId": "TL0032.S01"
+      }
+    },
+    {
+      "form": "antwoord",
+      "lemma": "antwoord",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-145",
+        "lemma": "antwoord",
+        "meaningId": "TL0092.S01"
+      }
+    },
+    {
+      "form": "appel",
+      "lemma": "appel",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-318",
+        "lemma": "appel",
+        "meaningId": "TL0099.S01"
+      }
+    },
+    {
+      "form": "appels",
+      "lemma": "appel",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-318",
+        "lemma": "appel",
+        "meaningId": "TL0099.S01"
+      }
+    },
+    {
+      "form": "baas",
+      "lemma": "baas",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-883",
+        "lemma": "baas",
+        "meaningId": "TL0111.S01; AF-WERK blz. 2"
+      }
+    },
+    {
+      "form": "begint",
+      "lemma": "beginnen",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-067",
+        "lemma": "beginnen",
+        "meaningId": "TL0145.S01"
+      }
+    },
+    {
+      "form": "bellen",
+      "lemma": "bellen",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-064",
+        "lemma": "bellen",
+        "meaningId": "TL0165.S01"
+      }
+    },
+    {
+      "form": "belt",
+      "lemma": "bellen",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-064",
+        "lemma": "bellen",
+        "meaningId": "TL0165.S01"
+      }
+    },
+    {
+      "form": "ben",
+      "lemma": "zijn",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-049",
+        "lemma": "zijn",
+        "meaningId": "TL1965.S01 TL1965.S02 TL1965.S03"
+      }
+    },
+    {
+      "form": "betaalt",
+      "lemma": "betalen",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-096",
+        "lemma": "betalen",
+        "meaningId": "TL0194.S01"
+      }
+    },
+    {
+      "form": "betalen",
+      "lemma": "betalen",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-096",
+        "lemma": "betalen",
+        "meaningId": "TL0194.S01"
+      }
+    },
+    {
+      "form": "bij",
+      "lemma": "bij",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-250",
+        "lemma": "bij",
+        "meaningId": "TL0223.S01"
+      }
+    },
+    {
+      "form": "blijf",
+      "lemma": "blijven",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-696",
+        "lemma": "blijven",
+        "meaningId": "TL0242.S01"
+      }
+    },
+    {
+      "form": "boek",
+      "lemma": "boek",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-147",
+        "lemma": "boek",
+        "meaningId": "TL0250.S01"
+      }
+    },
+    {
+      "form": "brood",
+      "lemma": "brood",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-094",
+        "lemma": "brood",
+        "meaningId": "TL0277.S01"
+      }
+    },
+    {
+      "form": "bus",
+      "lemma": "bus",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-100",
+        "lemma": "bus",
+        "meaningId": "TL0288.S01"
+      }
+    },
+    {
+      "form": "daarna",
+      "lemma": "daarna",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-165",
+        "lemma": "daarna",
+        "meaningId": "TL0321.S01"
+      }
+    },
+    {
+      "form": "dag",
+      "lemma": "dag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-012",
+        "lemma": "dag",
+        "meaningId": "TL0324.S01 TL0324.S03"
+      }
+    },
+    {
+      "form": "de",
+      "lemma": "de",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-028",
+        "lemma": "de",
+        "meaningId": "TL0337.S01"
+      }
+    },
+    {
+      "form": "deur",
+      "lemma": "deur",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-108",
+        "lemma": "deur",
+        "meaningId": "TL1355.S01"
+      }
+    },
+    {
+      "form": "dinsdag",
+      "lemma": "dinsdag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-171",
+        "lemma": "dinsdag",
+        "meaningId": "TL0365.S01"
+      }
+    },
+    {
+      "form": "dokter",
+      "lemma": "dokter",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-089",
+        "lemma": "dokter",
+        "meaningId": "TL0376.S01"
+      }
+    },
+    {
+      "form": "drie",
+      "lemma": "drie",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-188",
+        "lemma": "drie",
+        "meaningId": "TL0399.S01"
+      }
+    },
+    {
+      "form": "een",
+      "lemma": "een",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-030",
+        "lemma": "een",
+        "meaningId": "TL0419.S01"
+      }
+    },
+    {
+      "form": "en",
+      "lemma": "en",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-035",
+        "lemma": "en",
+        "meaningId": "TL0447.S01"
+      }
+    },
+    {
+      "form": "euro",
+      "lemma": "euro",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-179",
+        "lemma": "euro",
+        "meaningId": "TL0864.S01"
+      }
+    },
+    {
+      "form": "fatima",
+      "lemma": "fatima",
+      "kind": "eigennaam",
+      "source": null
+    },
+    {
+      "form": "fiets",
+      "lemma": "fiets",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-101",
+        "lemma": "fiets",
+        "meaningId": "TL0477.S01"
+      }
+    },
+    {
+      "form": "gaat",
+      "lemma": "gaan",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-052",
+        "lemma": "gaan",
+        "meaningId": "TL0496.S01 TL0496.S02 TL0496.S03"
+      }
+    },
+    {
+      "form": "gisteren",
+      "lemma": "gisteren",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-168",
+        "lemma": "gisteren",
+        "meaningId": "TL0571.S01"
+      }
+    },
+    {
+      "form": "goed",
+      "lemma": "goed",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-155",
+        "lemma": "goed",
+        "meaningId": "TL0575.S01 TL0575.S02"
+      }
+    },
+    {
+      "form": "goede",
+      "lemma": "goed",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-155",
+        "lemma": "goed",
+        "meaningId": "TL0575.S01 TL0575.S02"
+      }
+    },
+    {
+      "form": "haar",
+      "lemma": "haar",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-270",
+        "lemma": "haar",
+        "meaningId": "TL0602.S01 TL0602.S02 TL0602.S03"
+      }
+    },
+    {
+      "form": "het",
+      "lemma": "het",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-029",
+        "lemma": "het",
+        "meaningId": "TL0642.S01 TL0642.S02"
+      }
+    },
+    {
+      "form": "hij",
+      "lemma": "hij",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-238",
+        "lemma": "hij",
+        "meaningId": "TL0647.S01"
+      }
+    },
+    {
+      "form": "hoe",
+      "lemma": "hoe",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-047",
+        "lemma": "hoe",
+        "meaningId": "TL0648.S01"
+      }
+    },
+    {
+      "form": "hoeveel",
+      "lemma": "hoeveel",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-048",
+        "lemma": "hoeveel",
+        "meaningId": "TL0650.S01"
+      }
+    },
+    {
+      "form": "huis",
+      "lemma": "huis",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-107",
+        "lemma": "huis",
+        "meaningId": "TL0669.S01"
+      }
+    },
+    {
+      "form": "ik",
+      "lemma": "ik",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-021",
+        "lemma": "ik",
+        "meaningId": "TL0688.S01"
+      }
+    },
+    {
+      "form": "in",
+      "lemma": "in",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-039",
+        "lemma": "in",
+        "meaningId": "TL0689.S01 TL0689.S02"
+      }
+    },
+    {
+      "form": "is",
+      "lemma": "zijn",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-049",
+        "lemma": "zijn",
+        "meaningId": "TL1965.S01 TL1965.S02 TL1965.S03"
+      }
+    },
+    {
+      "form": "kassa",
+      "lemma": "kassa",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-431",
+        "lemma": "kassa",
+        "meaningId": "TL0755.S01"
+      }
+    },
+    {
+      "form": "kies",
+      "lemma": "kiezen",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-160",
+        "lemma": "kiezen",
+        "meaningId": "TL0770.S01"
+      }
+    },
+    {
+      "form": "kijk",
+      "lemma": "kijken",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-226",
+        "lemma": "kijken",
+        "meaningId": "TL0771.S01"
+      }
+    },
+    {
+      "form": "koopt",
+      "lemma": "kopen",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-095",
+        "lemma": "kopen",
+        "meaningId": "TL0807.S01"
+      }
+    },
+    {
+      "form": "kost",
+      "lemma": "kosten",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-439",
+        "lemma": "kosten",
+        "meaningId": "TL0810.S01 TL0810.S02"
+      }
+    },
+    {
+      "form": "laat",
+      "lemma": "laat",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-084",
+        "lemma": "laat",
+        "meaningId": "TL0829.S01"
+      }
+    },
+    {
+      "form": "lees",
+      "lemma": "lezen",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-062",
+        "lemma": "lezen",
+        "meaningId": "TL0867.S01"
+      }
+    },
+    {
+      "form": "les",
+      "lemma": "les",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-151",
+        "lemma": "les",
+        "meaningId": "TL0858.S01"
+      }
+    },
+    {
+      "form": "maandag",
+      "lemma": "maandag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-170",
+        "lemma": "maandag",
+        "meaningId": "TL0903.S01"
+      }
+    },
+    {
+      "form": "melk",
+      "lemma": "melk",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-309",
+        "lemma": "melk",
+        "meaningId": "TL0944.S01"
+      }
+    },
+    {
+      "form": "met",
+      "lemma": "met",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-037",
+        "lemma": "met",
+        "meaningId": "TL0953.S01 TL0953.S02 TL0953.S03"
+      }
+    },
+    {
+      "form": "morgen",
+      "lemma": "morgen",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-081",
+        "lemma": "morgen",
+        "meaningId": "TL0991.S01"
+      }
+    },
+    {
+      "form": "naar",
+      "lemma": "naar",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-038",
+        "lemma": "naar",
+        "meaningId": "TL0996.S01"
+      }
+    },
+    {
+      "form": "negen",
+      "lemma": "negen",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-194",
+        "lemma": "negen",
+        "meaningId": "TL1018.S01"
+      }
+    },
+    {
+      "form": "niet",
+      "lemma": "niet",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-031",
+        "lemma": "niet",
+        "meaningId": "TL1026.S01"
+      }
+    },
+    {
+      "form": "om",
+      "lemma": "om",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-559",
+        "lemma": "om",
+        "meaningId": "TL1063.S01"
+      }
+    },
+    {
+      "form": "omar",
+      "lemma": "omar",
+      "kind": "eigennaam",
+      "source": null
+    },
+    {
+      "form": "op",
+      "lemma": "op",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-040",
+        "lemma": "op",
+        "meaningId": "TL1123.S01 TL1123.S04 TL1123.S02 TL1123.S03 TL1123.S05"
+      }
+    },
+    {
+      "form": "opnieuw",
+      "lemma": "opnieuw",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-157",
+        "lemma": "opnieuw",
+        "meaningId": "TL1153.S01"
+      }
+    },
+    {
+      "form": "over",
+      "lemma": "over",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-609",
+        "lemma": "over",
+        "meaningId": "TL1175.S05 TL1175.S03"
+      }
+    },
+    {
+      "form": "praat",
+      "lemma": "praten",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-013",
+        "lemma": "praten",
+        "meaningId": "TL1255.S01"
+      }
+    },
+    {
+      "form": "prijs",
+      "lemma": "prijs",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-433",
+        "lemma": "prijs",
+        "meaningId": "TL1259.S01"
+      }
+    },
+    {
+      "form": "sara",
+      "lemma": "sara",
+      "kind": "eigennaam",
+      "source": null
+    },
+    {
+      "form": "school",
+      "lemma": "school",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-150",
+        "lemma": "school",
+        "meaningId": "TL1371.S01"
+      }
+    },
+    {
+      "form": "tas",
+      "lemma": "tas",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-444",
+        "lemma": "tas",
+        "meaningId": "TL1502.S01"
+      }
+    },
+    {
+      "form": "te",
+      "lemma": "te",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-558",
+        "lemma": "te",
+        "meaningId": "TL1504.S01 TL1504.S02"
+      }
+    },
+    {
+      "form": "tekst",
+      "lemma": "tekst",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-583",
+        "lemma": "tekst",
+        "meaningId": "TL1518.S01"
+      }
+    },
+    {
+      "form": "telefoon",
+      "lemma": "telefoon",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-127",
+        "lemma": "telefoon",
+        "meaningId": "TL1520.S01"
+      }
+    },
+    {
+      "form": "thuis",
+      "lemma": "thuis",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-556",
+        "lemma": "thuis",
+        "meaningId": "TL1541.S01"
+      }
+    },
+    {
+      "form": "tien",
+      "lemma": "tien",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-195",
+        "lemma": "tien",
+        "meaningId": "TL1543.S01"
+      }
+    },
+    {
+      "form": "tijd",
+      "lemma": "tijd",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-083",
+        "lemma": "tijd",
+        "meaningId": "TL1545.S01"
+      }
+    },
+    {
+      "form": "trein",
+      "lemma": "trein",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-372",
+        "lemma": "trein",
+        "meaningId": "TL1580.S01"
+      }
+    },
+    {
+      "form": "twee",
+      "lemma": "twee",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-187",
+        "lemma": "twee",
+        "meaningId": "TL1589.S01"
+      }
+    },
+    {
+      "form": "uur",
+      "lemma": "uur",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-082",
+        "lemma": "uur",
+        "meaningId": "TL1631.S02 TL1631.S01"
+      }
+    },
+    {
+      "form": "van",
+      "lemma": "van",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-561",
+        "lemma": "van",
+        "meaningId": "TL1641.S01"
+      }
+    },
+    {
+      "form": "vandaag",
+      "lemma": "vandaag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-080",
+        "lemma": "vandaag",
+        "meaningId": "TL1644.S01"
+      }
+    },
+    {
+      "form": "vier",
+      "lemma": "vier",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-189",
+        "lemma": "vier",
+        "meaningId": "TL1760.S01"
+      }
+    },
+    {
+      "form": "vijf",
+      "lemma": "vijf",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-190",
+        "lemma": "vijf",
+        "meaningId": "TL1764.S01"
+      }
+    },
+    {
+      "form": "vriend",
+      "lemma": "vriend",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-077",
+        "lemma": "vriend",
+        "meaningId": "TL1822.S01"
+      }
+    },
+    {
+      "form": "vrij",
+      "lemma": "vrij",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-701",
+        "lemma": "vrij",
+        "meaningId": "TL1825.S01 TL1825.S02"
+      }
+    },
+    {
+      "form": "vrijdag",
+      "lemma": "vrijdag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-174",
+        "lemma": "vrijdag",
+        "meaningId": "TL1826.S01"
+      }
+    },
+    {
+      "form": "waar",
+      "lemma": "waar",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-043",
+        "lemma": "waar",
+        "meaningId": "TL1838.S01 TL1838.S02"
+      }
+    },
+    {
+      "form": "waarom",
+      "lemma": "waarom",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-702",
+        "lemma": "waarom",
+        "meaningId": "TL1843.S01"
+      }
+    },
+    {
+      "form": "wanneer",
+      "lemma": "wanneer",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-046",
+        "lemma": "wanneer",
+        "meaningId": "TL1852.S01"
+      }
+    },
+    {
+      "form": "wat",
+      "lemma": "wat",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-045",
+        "lemma": "wat",
+        "meaningId": "TL1857.S01"
+      }
+    },
+    {
+      "form": "welke",
+      "lemma": "welke",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-521",
+        "lemma": "welke",
+        "meaningId": "GEEN LOS HOOFDLEMMA"
+      }
+    },
+    {
+      "form": "werk",
+      "lemma": "werk",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-113",
+        "lemma": "werk",
+        "meaningId": "TL1879.S01"
+      }
+    },
+    {
+      "form": "wie",
+      "lemma": "wie",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-044",
+        "lemma": "wie",
+        "meaningId": "TL1908.S01"
+      }
+    },
+    {
+      "form": "winkel",
+      "lemma": "winkel",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-428",
+        "lemma": "winkel",
+        "meaningId": "TL1920.S01"
+      }
+    },
+    {
+      "form": "zaterdag",
+      "lemma": "zaterdag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-175",
+        "lemma": "zaterdag",
+        "meaningId": "TL1938.S01"
+      }
+    },
+    {
+      "form": "zegt",
+      "lemma": "zeggen",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-014",
+        "lemma": "zeggen",
+        "meaningId": "TL1943.S01"
+      }
+    },
+    {
+      "form": "ziek",
+      "lemma": "ziek",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-086",
+        "lemma": "ziek",
+        "meaningId": "TL1957.S01"
+      }
+    },
+    {
+      "form": "zij",
+      "lemma": "zij",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-239",
+        "lemma": "zij",
+        "meaningId": "TL1963.S01 TL1963.S02"
+      }
+    },
+    {
+      "form": "zin",
+      "lemma": "zin",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-582",
+        "lemma": "zin",
+        "meaningId": "TL1967.S01"
+      }
+    },
+    {
+      "form": "zit",
+      "lemma": "zitten",
+      "kind": "woordvorm",
+      "source": {
+        "id": "A1-K-518",
+        "lemma": "zitten",
+        "meaningId": "TL1969.S01"
+      }
+    },
+    {
+      "form": "zondag",
+      "lemma": "zondag",
+      "kind": "lemma",
+      "source": {
+        "id": "A1-K-176",
+        "lemma": "zondag",
+        "meaningId": "TL1980.S01"
+      }
+    }
+  ],
+  "names": {
+    "Sara": "klink-persoon-sara",
+    "Omar": "klink-persoon-omar",
+    "Fatima": "klink-persoon-fatima",
+    "Farid": "new-candidate-person-recheck-at-import",
+    "Elif": "new-candidate-person-recheck-at-import",
+    "Yara": "new-candidate-person-recheck-at-import"
+  },
+  "audio": {
+    "status": "not-verified-disabled",
+    "newAudioGenerated": false
+  },
+  "learnerDocument": "Klink | Lezen en vragen\nA1\nLees de tekst. Kies het goede antwoord.\nNaar school\nSara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.\n1. Op welke dag gaat Sara naar school?\nA. Maandag\nB. Dinsdag\nC. Vrijdag\n2. Hoe laat begint de les?\nA. Acht uur\nB. Negen uur\nC. Tien uur\n3. Hoe gaat Sara naar school?\nA. Met de trein\nB. Met de bus\nC. Met de fiets\n4. Wat zit in haar tas?\nA. Een appel\nB. Een telefoon\nC. Een boek\nIn de winkel\nOp zaterdag gaat Omar naar de winkel. Hij koopt brood, melk en twee appels. De melk kost drie euro. Omar betaalt bij de kassa. Daarna gaat hij naar huis.\n5. Wanneer gaat Omar naar de winkel?\nA. Zondag\nB. Zaterdag\nC. Maandag\n6. Hoeveel appels koopt Omar?\nA. Twee\nB. Drie\nC. Vier\n7. Hoeveel kost de melk?\nA. Twee euro\nB. Vijf euro\nC. Drie euro\n8. Waar betaalt Omar?\nA. Bij de deur\nB. Bij de kassa\nC. Bij de melk\nFatima is ziek\nFatima is vandaag ziek. Zij gaat niet naar haar werk. Om acht uur belt zij haar baas. Zij zegt: 'Ik ben ziek.' Haar baas zegt: 'Blijf thuis.' Morgen gaat Fatima naar de dokter.\n9. Waarom gaat Fatima niet naar haar werk?\nA. Zij is vrij.\nB. Zij is te laat.\nC. Zij is ziek.\n10. Hoe laat belt Fatima haar baas?\nA. Acht uur\nB. Negen uur\nC. Tien uur\n11. Met wie praat Fatima aan de telefoon?\nA. Met haar dokter\nB. Met haar baas\nC. Met haar vriend\n12. Wanneer gaat Fatima naar de dokter?\nA. Vandaag\nB. Gisteren\nC. Morgen\nA2\nLees de tekst. Kies bij elke vraag één antwoord. Je kunt de tekst opnieuw bekijken.\nEen andere afspraak\nFarid heeft dinsdag om tien uur een afspraak bij de tandarts. Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts. Daarom belt Farid de tandarts. De medewerker verzet de afspraak naar donderdag om half drie. Farid schrijft de nieuwe tijd in zijn agenda. Daarna krijgt hij een sms met de nieuwe afspraak.\n1. Wanneer was de afspraak bij de tandarts eerst?\nA. Dinsdag om tien uur\nB. Dinsdag om negen uur\nC. Donderdag om half drie\n2. Waarom belt Farid de tandarts?\nA. Hij heeft zijn agenda verloren.\nB. Hij moet dinsdag om negen uur beginnen met werken.\nC. Hij wil een andere tandarts.\n3. Wanneer is de nieuwe afspraak?\nA. Maandag om half drie\nB. Donderdag om half drie\nC. Dinsdag om tien uur\n4. Wat krijgt Farid na het veranderen van de afspraak?\nA. Een sms met de nieuwe afspraak\nB. Een e-mail met de nieuwe afspraak\nC. Een brief met de nieuwe afspraak\nMet de bus naar het werk\nElif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 uur en komt om 8.05 uur aan. Elif loopt daarna nog vijf minuten naar haar werk. Haar dienst begint om 8.30 uur.\n5. Waarom staat de fiets van Elif bij de fietsenmaker?\nA. De band is leeg.\nB. De rem is kapot.\nC. Het licht doet het niet.\n6. Welke bus neemt Elif?\nA. Bus 20\nB. Bus 10\nC. Bus 12\n7. Hoe laat komt de bus aan?\nA. 7.40 uur\nB. 8.30 uur\nC. 8.05 uur\n8. Wat doet Elif na de busrit?\nA. Zij loopt nog vijf minuten naar haar werk.\nB. Zij wacht nog vijf minuten bij de halte.\nC. Zij loopt nog vijf minuten naar huis.\nEen boek lenen\nYara wil beter Nederlands leren. Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen. Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is. Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.' Yara mag het boek vandaag wel in de bibliotheek lezen. Zij besluit maandag met haar pas terug te komen.\n9. Waarom gaat Yara naar de bibliotheek?\nA. Om een boek terug te brengen\nB. Om een makkelijk boek te lenen\nC. Om een boek te kopen\n10. Hoe laat sluit de bibliotheek op zaterdag?\nA. Om half vier\nB. Om vijf uur\nC. Om vier uur\n11. Waarom kan Yara het boek vandaag niet meenemen?\nA. Haar bibliotheekpas ligt thuis.\nB. Het boek is niet te leen.\nC. Haar pas is niet meer geldig.\n12. Wanneer wil Yara terugkomen?\nA. Zaterdag\nB. Zondag\nC. Maandag\n",
+  "reviewDocument": "Klink | Review en antwoordmodellen A1 en A2\n31 oktober 2026\nUitkomst en afbakening\nDe zes bestaande leesteksten en alle 24 vragen zijn inhoudelijk nagekeken, gericht hersteld en opnieuw gecontroleerd. De zes verhalende teksten zijn woordelijk behouden. De vragen blijven verdeeld over twee leesrondes met twaalf vragen per niveau. Dit is een interne AI-redactiereview en een overdracht voor verdere appintegratie; geen onafhankelijke menselijke beoordeling, cursistenpilot of livevrijgave.\nHerkomst en herstel\nBron: de chat ‘Leesrondes bouwen en publiceren’ (6ae5e0ed-5414-83eb-b867-0500e41af986), tekstbijdrage d400ad0b-3d23-4e51-bf2a-5ac3e99fe4fe van 31 oktober 2026. De oorspronkelijke bronopdracht werd gevolgd door Nico’s expliciete toestemming om hier alle teksten te maken. Het oorspronkelijke chatantwoord blijft ongewijzigd als afzonderlijk herstelbestand bewaard. De oude chat is weer geopend; het sturen van de hervattingsopdracht mislukte herhaaldelijk met ‘Too many requests’. Deze review is daarom uitgevoerd in de vervolgchat ‘Hervat publicatie A1- en A2-teksten’.\nHet aparte cursistdocument bevat uitsluitend leesmateriaal en vragen. Antwoorden, feedback, bewijsplaatsen, bronidentificaties en reviewstatus staan in dit redactionele dossier en in het gestructureerde herstelbestand.\nGecontroleerde bronnen\nTaalroute-ontwerpbasis: https://docs.google.com/document/d/1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz\nBeschikbare A1-kern: https://docs.google.com/document/d/11rV2e96XgxOF7CU36BtQXm0ynPGSPRNvLdp630_oMXg (925 bronlemma’s; gebaseerd op het Basis 1000-bronregister). Deze ronde herhaalt de koppeling daadwerkelijk; de historische claim uit de oude chat is niet als bewijs overgenomen.\nCanonieke productregels gelezen in een lokale kopie van 26buckets/taalroute-klink: VORMGEVING-VASTGEZET.md, docs/appearance-floor-20261031/floor.json en PUBLICATIE-ACTUEEL.md. Er is geen appcode gewijzigd of gepubliceerd. De lokale kopie is context voor de review en geen vaststelling van de actuele liveversie.\nNiveaureview\nA1: korte concrete teksten van 30, 29 en 33 woorden, over school, boodschappen en ziekmelden. Eenvoudige tegenwoordige tijd, concrete tijden, personen en handelingen. De vier vragen per tekst vragen naar direct vindbare informatie. Het cijfer twaalf betreft vragen, geen twaalf verschillende teksten.\nA1-woordcontrole: 98 verschillende woordvormen in teksttitels, leesteksten, instructie, vragen, opties en beide feedbacktypen. Daarvan zijn 95 aan de beschikbare 925 lemma’s gekoppeld, inclusief 16 verbogen of vervoegde vormen; Sara, Omar en Fatima zijn drie eigennamen. Er zijn geen onverklaarde vormen in dit materiaal. Dit is een woordkoppeling, geen garantie van individueel A1-leesniveau of volledige Basis 1000-dekking.\nA2: teksten van 68, 58 en 73 woorden, met oorzaak/gevolg, oude en nieuwe afspraken, tijdsvolgorde en een praktische beperking. Passend als eenvoudige eerste A2-oefenronde. Het merendeel van de vragen vraagt expliciete details; de set bewijst geen beheersing van heel A2 en is geen gevalideerd examen. Instructies, opties en feedback zijn handmatig op taalbelasting en aansluiting beoordeeld. Een integrale koppeling aan Basis 2000 is niet uitgevoerd.\nDe bibliotheekuitspraak geldt binnen Yara’s fictieve situatie. Zij wordt niet aangeboden als algemene regel voor alle bibliotheken. De ziektepassage is een fictieve leestekst, geen zorgadvies.\nNamen en doorlopende personen\nSara, Omar en Fatima verwijzen naar de reeds bestaande Klink-personen klink-persoon-sara, klink-persoon-omar en klink-persoon-fatima uit data/klink-dialogue-repair.json. Er worden geen tweede personen met die namen aangemaakt en hun bestaande stem-ID’s blijven onaangeroerd. De tekst voegt geen tegenstrijdige identiteit toe.\nFarid, Elif en Yara komen niet voor in de gecontroleerde lib/- en data/-inhoud van deze lokale Klink-kopie. Binnen deze set heeft iedere persoon één naam en worden namen consequent in tekst, vragen, antwoorden en feedback gebruikt. Bij latere integratie moet de nieuwste import-/caststand opnieuw worden vergeleken; werk in andere tools is geen naamconflict.\nLeerdoelen en samenhang\nA1 Naar school: dag, begintijd, vervoer en voorwerp herkennen; aansluiting bij de bestaande A1-families School, cursus en leswerk (LWD-A1-C09), Tijd, afspraken en roosters (C03) en Onderweg en de weg (C04).\nA1 In de winkel: boodschappen, aantal, prijs en betaalplaats herkennen; aansluiting bij Boodschappen, eten en drinken (LWD-A1-C06). A1 Fatima is ziek: ziekmelding, tijd, gesprekspartner en vervolgdag herkennen; aansluiting bij Gezondheid en ziekmelden (C07) en Bellen en digitale berichten (C10).\nA2 Een andere afspraak: oorspronkelijke en gewijzigde afspraak onderscheiden en reden herkennen. A2 Met de bus naar het werk: reden, busnummer, aankomsttijd en vervolghandeling onderscheiden. A2 Een boek lenen: leesdoel, sluitingstijd, reden voor niet meenemen en vervolgafspraak herkennen.\nDeze losse oefenrondes kunnen aan een bestaand boekdoel en docentlesplan worden gekoppeld. De precieze boekles, werkelijk ingeroosterde bijeenkomst, tijd en toepasselijke observatiepunten zijn niet uit de bron vastgesteld en blijven bij lesintegratie open. Er wordt geen nieuw cursusprogramma verzonnen en geen huiswerk stilzwijgend verplicht.\nHerstelregister\nA1-Q01 — prompt: Natuurlijk Nederlands.\nWas: Welke dag gaat Sara naar school?\nWordt: Op welke dag gaat Sara naar school?\nA1-Q08 — options: Afleiders binnen dezelfde winkelsituatie, zonder een tweede juist antwoord.\nWas: Op school / Bij de kassa / In de bus\nWordt: Bij de deur / Bij de kassa / Bij de melk\nA1-Q11 — prompt: Verwijdert de dubbele lezing van ‘Wie belt Fatima?’.\nWas: Wie belt Fatima?\nWordt: Met wie praat Fatima aan de telefoon?\nA1-Q11 — options: Antwoordvorm sluit aan op de herstelde vraag.\nWas: Haar dokter / Haar baas / Haar vriend\nWordt: Met haar dokter / Met haar baas / Met haar vriend\nA1-Q11 — answerText: Antwoordvorm sluit aan op de herstelde vraag.\nWas: Haar baas\nWordt: Met haar baas\nA1-Q11 — retryFeedback: Verwijst naar de volledige telefoonhandeling.\nWas: Lees wie Fatima belt.\nWordt: Lees wie Fatima belt en wat haar baas zegt.\nA2-Q02 — evidence: Volledig, letterlijk broncitaat.\nWas: \"Hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.\"\nWordt: \"Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.\"\nA2-Q03 — retryFeedback: Natuurlijker en duidelijker leesaanwijzing.\nWas: Lees wanneer de medewerker de afspraak heeft gezet.\nWordt: Lees de zin over de nieuwe afspraak.\nA2-Q04 — options: Alle opties gaan over een geloofwaardige afspraakbevestiging.\nWas: Een sms met de nieuwe afspraak / Een brief over zijn vakantie / Een e-mail over zijn werk\nWordt: Een sms met de nieuwe afspraak / Een e-mail met de nieuwe afspraak / Een brief met de nieuwe afspraak\nA2-Q05 — evidence: Verwijdert het aangepaste citaat met [staat].\nWas: \"Haar fiets [staat] bij de fietsenmaker, omdat de rem kapot is.\"\nWordt: \"Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is.\"\nA2-Q08 — options: Geloofwaardiger alternatieven voor de handeling na de busrit.\nWas: Zij loopt nog vijf minuten naar haar werk. / Zij fietst verder. / Zij gaat naar huis.\nWordt: Zij loopt nog vijf minuten naar haar werk. / Zij wacht nog vijf minuten bij de halte. / Zij loopt nog vijf minuten naar huis.\nA2-Q09 — options: Afleiders sluiten aan op het lenen van een boek.\nWas: Om een vriend te bezoeken / Om een makkelijk boek te lenen / Om een computer te kopen\nWordt: Om een boek terug te brengen / Om een makkelijk boek te lenen / Om een boek te kopen\nA2-Q10 — evidence: Verwijdert het aangepaste citaat met [is].\nWas: \"De bibliotheek [is] op zaterdag tot vier uur open.\"\nWordt: \"Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is.\"\nA2-Q11 — options: Afleiders blijven binnen de leensituatie.\nWas: Haar bibliotheekpas ligt thuis. / Het boek is kapot. / De bibliotheek is al dicht.\nWordt: Haar bibliotheekpas ligt thuis. / Het boek is niet te leen. / Haar pas is niet meer geldig.\nA2-Q11 — evidence: Volledig, letterlijk citaat; uitspraak binnen de fictieve situatie.\nWas: \"Haar bibliotheekpas ligt thuis.\" En: \"Zonder pas mag je het boek niet meenemen.\"\nWordt: \"Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.'\"\nAntwoordmodellen en bewijsplaatsen\nA1-T01 | Naar school\nA1-Q01. Op welke dag gaat Sara naar school?\nJuist: A. Maandag\nLetterlijk tekstbewijs: Sara gaat op maandag naar school.\nFeedback goed: Goed! Sara gaat op maandag naar school.\nHulp bij fout: Lees de zin over Sara en school opnieuw.\nA1-Q02. Hoe laat begint de les?\nJuist: B. Negen uur\nLetterlijk tekstbewijs: De les begint om negen uur.\nFeedback goed: Goed! De les begint om negen uur.\nHulp bij fout: Kijk naar de tijd van de les.\nA1-Q03. Hoe gaat Sara naar school?\nJuist: B. Met de bus\nLetterlijk tekstbewijs: Sara gaat met de bus.\nFeedback goed: Goed! Sara gaat met de bus.\nHulp bij fout: Lees hoe Sara naar school gaat.\nA1-Q04. Wat zit in haar tas?\nJuist: C. Een boek\nLetterlijk tekstbewijs: In haar tas zit een boek.\nFeedback goed: Goed! In haar tas zit een boek.\nHulp bij fout: Lees de zin over de tas.\nA1-T02 | In de winkel\nA1-Q05. Wanneer gaat Omar naar de winkel?\nJuist: B. Zaterdag\nLetterlijk tekstbewijs: Op zaterdag gaat Omar naar de winkel.\nFeedback goed: Goed! Omar gaat op zaterdag naar de winkel.\nHulp bij fout: Lees de zin over Omar en de winkel.\nA1-Q06. Hoeveel appels koopt Omar?\nJuist: A. Twee\nLetterlijk tekstbewijs: Hij koopt brood, melk en twee appels.\nFeedback goed: Goed! Omar koopt twee appels.\nHulp bij fout: Lees wat Omar koopt.\nA1-Q07. Hoeveel kost de melk?\nJuist: C. Drie euro\nLetterlijk tekstbewijs: De melk kost drie euro.\nFeedback goed: Goed! De melk kost drie euro.\nHulp bij fout: Kijk naar de prijs van de melk.\nA1-Q08. Waar betaalt Omar?\nJuist: B. Bij de kassa\nLetterlijk tekstbewijs: Omar betaalt bij de kassa.\nFeedback goed: Goed! Omar betaalt bij de kassa.\nHulp bij fout: Lees de zin over betalen.\nA1-T03 | Fatima is ziek\nA1-Q09. Waarom gaat Fatima niet naar haar werk?\nJuist: C. Zij is ziek.\nLetterlijk tekstbewijs: Fatima is vandaag ziek.\nFeedback goed: Goed! Fatima is ziek.\nHulp bij fout: Lees de zin over Fatima en haar werk.\nA1-Q10. Hoe laat belt Fatima haar baas?\nJuist: A. Acht uur\nLetterlijk tekstbewijs: Om acht uur belt zij haar baas.\nFeedback goed: Goed! Fatima belt om acht uur.\nHulp bij fout: Kijk naar de tijd bij het bellen.\nA1-Q11. Met wie praat Fatima aan de telefoon?\nJuist: B. Met haar baas\nLetterlijk tekstbewijs: Om acht uur belt zij haar baas.\nFeedback goed: Goed! Fatima belt haar baas.\nHulp bij fout: Lees wie Fatima belt en wat haar baas zegt.\nA1-Q12. Wanneer gaat Fatima naar de dokter?\nJuist: C. Morgen\nLetterlijk tekstbewijs: Morgen gaat Fatima naar de dokter.\nFeedback goed: Goed! Fatima gaat morgen naar de dokter.\nHulp bij fout: Lees de zin over de dokter.\nA2-T01 | Een andere afspraak\nA2-Q01. Wanneer was de afspraak bij de tandarts eerst?\nJuist: A. Dinsdag om tien uur\nLetterlijk tekstbewijs: Farid heeft dinsdag om tien uur een afspraak bij de tandarts.\nFeedback goed: Goed! De eerste afspraak was dinsdag om tien uur.\nHulp bij fout: Lees de eerste zin van de tekst opnieuw.\nA2-Q02. Waarom belt Farid de tandarts?\nJuist: B. Hij moet dinsdag om negen uur beginnen met werken.\nLetterlijk tekstbewijs: Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts.\nFeedback goed: Goed! Farid moet werken en kan niet naar de afspraak.\nHulp bij fout: Lees het bericht van zijn werkgever opnieuw.\nA2-Q03. Wanneer is de nieuwe afspraak?\nJuist: B. Donderdag om half drie\nLetterlijk tekstbewijs: De medewerker verzet de afspraak naar donderdag om half drie.\nFeedback goed: Goed! De nieuwe afspraak is donderdag om half drie.\nHulp bij fout: Lees de zin over de nieuwe afspraak.\nA2-Q04. Wat krijgt Farid na het veranderen van de afspraak?\nJuist: A. Een sms met de nieuwe afspraak\nLetterlijk tekstbewijs: Daarna krijgt hij een sms met de nieuwe afspraak.\nFeedback goed: Goed! Farid krijgt een sms met de nieuwe afspraak.\nHulp bij fout: Lees de laatste zin.\nA2-T02 | Met de bus naar het werk\nA2-Q05. Waarom staat de fiets van Elif bij de fietsenmaker?\nJuist: B. De rem is kapot.\nLetterlijk tekstbewijs: Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is.\nFeedback goed: Goed! De rem van de fiets is kapot.\nHulp bij fout: Lees waarom de fiets bij de fietsenmaker staat.\nA2-Q06. Welke bus neemt Elif?\nJuist: C. Bus 12\nLetterlijk tekstbewijs: Daarom neemt Elif bus 12.\nFeedback goed: Goed! Elif neemt bus 12.\nHulp bij fout: Zoek het nummer van de bus in de tekst.\nA2-Q07. Hoe laat komt de bus aan?\nJuist: C. 8.05 uur\nLetterlijk tekstbewijs: De bus vertrekt om 7.40 uur en komt om 8.05 uur aan.\nFeedback goed: Goed! De bus komt om 8.05 uur aan.\nHulp bij fout: Let op het verschil tussen vertrekken en aankomen.\nA2-Q08. Wat doet Elif na de busrit?\nJuist: A. Zij loopt nog vijf minuten naar haar werk.\nLetterlijk tekstbewijs: Elif loopt daarna nog vijf minuten naar haar werk.\nFeedback goed: Goed! Elif loopt het laatste stuk naar haar werk.\nHulp bij fout: Lees wat Elif na de busreis doet.\nA2-T03 | Een boek lenen\nA2-Q09. Waarom gaat Yara naar de bibliotheek?\nJuist: B. Om een makkelijk boek te lenen\nLetterlijk tekstbewijs: Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen.\nFeedback goed: Goed! Yara wil een makkelijk boek lenen.\nHulp bij fout: Lees waarom Yara naar de bibliotheek gaat.\nA2-Q10. Hoe laat sluit de bibliotheek op zaterdag?\nJuist: C. Om vier uur\nLetterlijk tekstbewijs: Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is.\nFeedback goed: Goed! De bibliotheek sluit om vier uur.\nHulp bij fout: Lees wat er op de deur staat.\nA2-Q11. Waarom kan Yara het boek vandaag niet meenemen?\nJuist: A. Haar bibliotheekpas ligt thuis.\nLetterlijk tekstbewijs: Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.'\nFeedback goed: Goed! Yara heeft haar bibliotheekpas niet bij zich.\nHulp bij fout: Lees wat de medewerker over de pas zegt.\nA2-Q12. Wanneer wil Yara terugkomen?\nJuist: C. Maandag\nLetterlijk tekstbewijs: Zij besluit maandag met haar pas terug te komen.\nFeedback goed: Goed! Yara wil maandag terugkomen.\nHulp bij fout: Lees de laatste zin.\nEindcontrole en open integratiepunten\nNa herstel: 6 teksten, 24 unieke vraag-ID’s, precies 12 vragen per niveau en 4 per tekst. Iedere vraag heeft 3 verschillende antwoordopties en 1 juist antwoord. Alle 24 bewijsplaatsen zijn letterlijk als aaneengesloten passage in de bijbehorende tekst teruggevonden. Alle antwoordletters verwijzen naar de vastgelegde juiste optie. De inhoudelijke juistheid is daarnaast per vraag gelezen.\nAntwoordspreiding: A1 A=3, B=5, C=4; A2 A=4, B=4, C=4. Geen vaste beurtelingse antwoordcode toegevoegd.\nAudio: geen nieuwe opname gegenereerd; er is geen exacte bestaande opname voor deze zes teksten vastgesteld of beluisterd. Audio blijft bij integratie uitgeschakeld totdat een exacte match en de verplichte stem-/merkmetadata zijn gecontroleerd. De zes teksten zijn ongewijzigd, maar gewijzigde vragen/opties mogen niet met oude afwijkende vraagaudio worden gekoppeld.\nAppintegratie en publicatie zijn niet uitgevoerd. Actuele livebron, botsingen met productie-ID’s, spelerweergave, afronden/hervatten, behoud van opgeslagen voortgang en desktop/mobiel plus licht/donker moeten bij integratie worden gecontroleerd. Het vastgezette uiterlijk blijft de vloer. Er is niet gepusht en er zijn geen GitHub Actions gestart.\nEr zijn geen nieuwe beelden, print-PDF’s of drukbestanden gemaakt. Dit dossier geeft geen drukgoedkeuring.\nBewaarstatus: de cursisttekst en dit dossier worden samen met het oorspronkelijke chatantwoord en het gestructureerde herstelbestand in de bestaande Klink-projectmap opgeslagen. De upload wordt afzonderlijk teruggelezen; een back-up is geen livepublicatie.\nCODEX WORK %: niet per taak meetbaar.\n",
+  "targetFolderId": "1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR",
+  "learnerDocumentId": "1kJgXEH_h4Jgm8XsjQISLDmaaidOPCXYUWPl8WRFHycA",
+  "reviewDocumentId": "1GphAV0okdXnuJJOPrRM4zo17D4Lns3zW423G2u7JVmA",
+  "codeChanged": false,
+  "published": false
+}
+

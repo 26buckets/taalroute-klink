@@ -21,7 +21,7 @@ test('Twelve independent chapters cover all registered activities without changi
       if (collection.contentUrl) {
         assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
         assert(collection.exerciseCount > 0);
-        assert(/^\/practice-content\/(klink-20261029|word-self-20261031)\//.test(collection.contentUrl));
+        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031)\//.test(collection.contentUrl));
         continue;
       }
       assert(collection.exercises.length);
@@ -57,7 +57,7 @@ test('Source levels are honest, never inferred from matching words or a complete
   assert.equal(chapterExerciseLevel({ exerciseId: 'unknown', componentId: '', contractVersion: '', mode: '' }), 'support');
   assert(chapterCollections('texts').some(item => item.level === 'a2'));
   assert.equal(new Set(chapterCollections('texts').flatMap(item => item.exercises.map(exercise => exercise.contextId))).size, 192);
-  assert.equal(chapterCollections('text-question').length, 180);
+  assert.equal(chapterCollections('text-question').length, 182);
   assert.equal(chapterCollections('dialogues').length, 128);
 });
 

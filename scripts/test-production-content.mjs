@@ -20,7 +20,7 @@ for(const row of productionIndex){
   if(!row.id.startsWith('word-self:'))(activity[row.activity]??=new Set()).add(e.sourceExerciseId||e.exerciseId);
   assert(e.sourceDocumentId&&e.sourceStatus&&e.contentLevel===row.level);
   assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);
-  if(row.id.startsWith('word-self:')&&e.mode==='same-word'){assert.equal(e.instructionAudio,undefined);assert.equal(e.requiresAudio,false);}else if(e.mode==='meaning-register'){assert.equal(e.exerciseId,'TYP-B1-1454');assert.equal(e.instructionAudio,undefined);assert.equal(e.optionalGuided,true);}else{assert(isInstructionAudioEnabled(e.instructionAudio.src));assert(!isWithdrawnAudio(e.instructionAudio.src));}
+  if(e.readingRoundId){assert.equal(e.instructionAudio,undefined);assert.equal(e.requiresAudio,false);assert.equal(e.sourceStatus,'editorial-reviewed-20261031-reading-rounds');}else if(row.id.startsWith('word-self:')&&e.mode==='same-word'){assert.equal(e.instructionAudio,undefined);assert.equal(e.requiresAudio,false);}else if(e.mode==='meaning-register'){assert.equal(e.exerciseId,'TYP-B1-1454');assert.equal(e.instructionAudio,undefined);assert.equal(e.optionalGuided,true);}else{assert(isInstructionAudioEnabled(e.instructionAudio.src));assert(!isWithdrawnAudio(e.instructionAudio.src));}
   if(e.requiresAudio)assert(e.prompt.audio?.src);
   if(e.mode==='copy-word'){assert(e.fields[0].acceptedAnswers.length);if(e.exampleWord)assert(e.fields[0].acceptedAnswers.includes(e.exampleWord));}
   if(e.mode==='word-build'){
@@ -33,9 +33,9 @@ for(const row of productionIndex){
   if(e.mode==='word-sort')assert(e.standardTask.items.every(item=>e.standardTask.categories.some(c=>c.id===item.categoryId)));
  }
 }
-assert.equal(productionIndex.filter(row=>!row.id.startsWith('word-self:')).length,1462);assert.equal(sizes.length,productionIndex.length);assert.equal(ids.size,productionIndex.length);
+assert.equal(productionIndex.filter(row=>!row.id.startsWith('word-self:')&&!row.id.startsWith('klink-teksten-zelf-')).length,1462);assert.equal(sizes.length,productionIndex.length);assert.equal(ids.size,productionIndex.length);
 const counts=Object.fromEntries(Object.entries(activity).map(([k,v])=>[k,v.size]));
-assert.deepEqual(counts,{'build-model':816,copy:8386,meet:641,memory:5,'read-series':8386,'spelling-path':698,'word-bingo':1344,'word-sort':192,worksheet:816,'worksheet-heard':840,listen:1152,'hear-match':192,read:576,match:192,cards:576,'image-bingo':2});
+assert.deepEqual(counts,{'build-model':816,copy:8386,meet:641,memory:5,'read-series':8386,'spelling-path':698,'word-bingo':1344,'word-sort':192,worksheet:816,'worksheet-heard':840,listen:1152,'hear-match':192,read:576,match:192,cards:576,'image-bingo':2,'text-question':24});
 const old=chapterCollections('build-model').find(c=>c.id==='groep-9.alfa-a'),recall=chapterCollections('build-model').find(c=>c.id==='groep-9.alfa-b');
 assert.equal(old.exercises.length,44);assert.equal(recall.exercises.length,45);assert(old.exercises.every(e=>recall.exercises.some(r=>r.exerciseId===e.exerciseId)));
 assert(!isInstructionAudioEnabled('/package-audio/instructions/unknown.mp3'));
