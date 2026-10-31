@@ -1,3 +1,13 @@
+## 31 oktober 2026 — dezelfde woorden bij een andere oefenvorm
+
+Livebron `02f16c1fdcb540550de91510c1a11c7ca29c4bbd`, schone canonieke main; Worker `1f32d9fd-518a-4c0a-a124-c8ea606fb9bc`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de laatst goedgekeurde livebron `ac7d278f37ad8532cdd685e858a23f7cb42c1603`. De bestaande korte woordrondes gelden ook voor de andere losse woordvormen: 7.128 rondes uit 1.675 bronnen, met behoud van alle 47.782 betrokken taken. Via Andere oefening verschijnen uitsluitend bestaande vormen met exact dezelfde doelwoorden, hetzelfde niveau en dezelfde ondersteuning. De gevalideerde woordkeuze blijft in de link en na herladen behouden. Complete koppel-, sorteer- en bingoborden, grote vaste opdrachten en leerroutes blijven heel en bereikbaar.
+
+Alle publieke inhoud, audio, antwoorden, oorspronkelijke taak-ID’s, niveaukoppelingen, afbeeldingen en vijf inhoudskenmerken uit release.json zijn behouden. Nieuwe rondes gebruiken de oorspronkelijke volledige afrondingsregistraties en overschrijven oude oefenposities niet. Ook het recente tekst-, gespreks-, kook- en zinsherstel, Synoniemen met 68 opnamen, de klankenkaart, het officiële logo en de verborgen B2-plek zijn behouden.
+
+Lokaal: 1.727 wisselcontroles, 312 browserwisselingen, 322 bestaande woordronde-ingangen, 96 menureizen, 180 Alfa C-terugwegen, 50 integratiegevallen, types/lint/productieopbouw, native audio en opslagcontroles geslaagd. De volledige publicatiepoort, 50 historische publicatietests en 33 afkeurgevallen zijn geslaagd. Online: 28 bestanden bytegelijk, 48 mobiele wissel-/herlaad-/terugreizen, native audio met behoud van oude voortgang in beide browsers en zes oude-link-/vaste-bordcontroles. Chromium/WebKit, zes niveaus en vier mobiele schermmaten; geen fysieke toestellen of klasproef. Alle zware controles lokaal; geen GitHub-workflows toegevoegd.
+
+Bron- en controlepakket volledig van Drive teruggelezen en met SHA256/ZIP gecontroleerd: `1VfuItU4U9O31OgPio0pxRJkuDuN-dGIE`. Bewijs en herstelgegevens: `docs/word-round-continuity-20261031/`. De volgende publicatie moet deze actuele bron behouden en de nieuwe vrijgave-opvolger gebruiken.
+
 ## 31 oktober 2026 — herstel teksten en dialogen online gecontroleerd
 
 Livebron `ac7d278f37ad8532cdd685e858a23f7cb42c1603`, schone canonieke main; Worker `853eb8e2-d1d0-4f9d-a981-53b79c6c097d`. Gepubliceerd via `npm run deploy`, als afstammeling van actuele livebron `fcffb481512bccb393439aac67eac39b9d56d5b5`. Bronrelease gebouwd op 30 oktober 2026 om 22:58 UTC. Behoud van de recent gepubliceerde Synoniemen en korte woordrondes aangetoond.
