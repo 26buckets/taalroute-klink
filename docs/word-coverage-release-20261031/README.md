@@ -15,3 +15,5 @@ De oude cumulatieve importtest veronderstelt de 18-oktober-bank en verouderde te
 Resultaat: https://klink.taalroute.nl/klink-woorden-aanvulling-20261031.html
 
 Twee historische behoudcontroles (docentlessen en compacte beelden) vergelijken nu, net als de andere opvolgende controles, precies hun eigen vrijgave tot aan de volgende vastgelegde bron. Hun eerdere vergelijking liep onbedoeld door tot de nieuwe inhoud. De nieuwe publicatiecontrole bewaakt daarnaast alle bestaande publieke bestanden, de actuele vormgeving en de exact toegestane bronwijzigingen. Er is geen controle verwijderd of publicatiepad omzeild.
+
+Online nareview: vijf oude contrastwoordverwijzingen verwijderd uit de nieuwe Alfa A-vragen. Alleen het werkelijk geoefende doelwoord blijft als woordkoppeling staan. Bronherkomst, vragen, antwoorden, ID’s en audio blijven identiek. De bibliotheekindex is opnieuw afgeleid en gericht getest. Zie target-refinement.json.
