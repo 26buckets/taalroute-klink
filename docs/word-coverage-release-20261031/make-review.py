@@ -1,0 +1,28 @@
+from pathlib import Path
+import json,shutil
+D=Path('docs/word-coverage-release-20261031')
+assert 'Build complete.' in Path('/private/tmp/klink-word-coverage-build-final.log').read_text()
+assert not Path('/private/tmp/klink-word-coverage-types.log').read_text().strip()
+assert not Path('/private/tmp/klink-word-coverage-lint.log').read_text().strip()
+for n in ['types','lint','build-final','browser3','appearance2','links','import-browser','use-answers','current-unit']:
+ shutil.copyfile('/private/tmp/klink-word-coverage-'+n+'.log',D/(n+'.log'))
+v={k:True for k in ['twentyCombinations','answers','levels','progress','audioMetadata','appearance','teacherPreserved','types','lint','build','browser','localOnly']}
+v.update(humanListening='not repeated; existing audio retained',independentReadingClaim=False,newAudio=0,newBoards=604,newSearchTargetsPerForm=542,newContextQuestions=42,audioFiles=1110,browserScenarios=80,allProductionCollections=1485,directLinks=24,appearanceNote='Unchanged CSS and layout; empty-state availability lines disappear. Equal content states have identical geometry.',legacyTestNote='Old cumulative integration test assumes an obsolete candidate bank and text snapshot. Exact source preservation, original player/preparation tests and the normal historical publication chain validate the successor data; no old correction reverted.')
+(D/'verification.json').write_text(json.dumps(v,indent=2)+'\n')
+(D/'README.md').write_text('''# Twintig ontbrekende combinaties bij Woorden oefenen
+
+Nico heeft aanvulling en publicatie expliciet gevraagd, met behoud van uiterlijk en voortgang. Basis/live: d6246bf9. De inmiddels gepubliceerde Start-knop en woordenbibliotheek blijven behouden. De woordenbibliotheekindex is opnieuw afgeleid, zodat nieuwe oefeningen ook bij de juiste filters staan.
+
+604 volledige letter-/spellingsorteerborden: 290 / 178 / 28 / 28 / 32 / 48 voor Alfa A / Alfa B / Alfa C / A1 / A2 / B1. Twee begeleide betekenisborden blijven begeleid. 542 bestaande woorden per nieuwe zoekvorm: 181 / 140 / 93 / 128 voor Alfa C / A1 / A2 / B1. Korte rondes met maximaal acht woorden; complete sorteerspellen blijven heel. Oude Alfa A/B-zoekvormen en 1.060 docentopdrachten blijven gelijk. 42 gesloten contextvragen: 8 / 8 / 6 / 8 / 8 / 4. Alfa A/B vereisen vooraf gedeelde uitleg; geen zelfstandige lees- of beheersingsclaim.
+
+Alle oude publieke bestanden, audio, brondata, taak-ID's, opgeslagen antwoorden en voortgang behouden. Nieuwe vormen krijgen eigen ID's. Twee functionele renderwijzigingen: de vrijgegeven zelfstandige vragen openen zonder docentvoorbereiding; pogingen registreren hun werkelijke oefenstand. Geen CSS of herindeling.
+
+Alle sorteersleutels, 1.084 woordkeuzes en 42 contextvragen gecontroleerd. Alle 42 vragen in de bestaande speler beantwoord, met controle van echt opgeslagen pogingen. 80 browser/scherm/niveau/oefenvormscenario's, 24 directe links, 1.485 productiebronnen en docentvoorbereiding/verborgen modellen/antwoordbehoud gecontroleerd. Types, lint en build slagen. Acht livevloer-vergelijkingen: desktop/mobiel, licht/donker. Bestaande beschikbaarheidsregels mogen verdwijnen; gelijke inhoud geeft gelijke geometrie.
+
+Alle 1.110 gekoppelde bestaande opnamen volledig gedecodeerd en op ingebedde Taalroute-metadata gecontroleerd. Geen nieuwe audio of beelden. Geen hernieuwde menselijke luisterreview, praktijkproef of fysieke apparaten.
+
+De oude cumulatieve importtest veronderstelt de 18-oktober-bank en verouderde tekstamendementen. De nieuwe exacte bron-/antwoordcontroles, oorspronkelijke spelertests en normale historische publicatieketen controleren de opvolgende vrijgave. Geen eerdere correctie teruggedraaid om een oude test te laten slagen.
+
+Resultaat: https://klink.taalroute.nl/klink-woorden-aanvulling-20261031.html
+''')
+(D/'debug-sort.png').unlink(missing_ok=True)

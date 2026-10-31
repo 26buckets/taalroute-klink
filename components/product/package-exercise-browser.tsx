@@ -378,7 +378,7 @@ export function PackageExerciseBrowser({
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
       ...(exercise.synonymPairId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
-      ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: 'teacher-supported' } : {}),
+      ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: exercise.access === 'self-practice' ? 'self-practice' : 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');
     setMessage(feedback ?? (correct

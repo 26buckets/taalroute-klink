@@ -1,0 +1,29 @@
+✔ Matching help describes the actual source and target controls (22.110792ms)
+✔ Whole word groups feed the exercise library, without changing the curriculum (3804.769792ms)
+✔ Every first-group word is a target in all basic word activities (0.846709ms)
+✔ Bingo has per-word turns, stable boards, no answer model, and audio gating (44.386958ms)
+✔ Sentence recognition reuses real near-contrast sentences and retains reading conditions (103.117875ms)
+✔ Connected instructions do not change participation into proven skill or unpark the short t (1.088167ms)
+✔ Group progress rejects unknown IDs and never uses lesson-progress keys (0.277ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (11866.434583ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.63525ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (55.731208ms)
+✔ Twenty missing combinations populated, source teacher choices and Alfa synonym exclusion retained (213.811541ms)
+✔ 604 complete sorting boards each have exactly one correct category per word (6.610375ms)
+✔ Both new search forms have identical target sets and valid answers/audio, in balanced short rounds (19.54825ms)
+✔ All 42 context questions reject every distractor and have separate IDs and no teacher scoring (1.621917ms)
+✔ All original source data, production rows and published exercise bytes unchanged (269.44ms)
+✔ Short round deep links retain target words between new search forms and reload (154.175959ms)
+✔ Content attempt metadata retains the actual support route without a mastery claim (0.601041ms)
+PASS continuity: 1692 collections, 7461 small rounds, 49226 unchanged tasks, 1982 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (8710.827666ms)
+PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
+✔ scripts/test-word-rounds.mjs (1140.215042ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12263.689542

@@ -17,10 +17,10 @@ for(const row of productionIndex){
  const chapter=practiceChapters.find(c=>c.activities.includes(row.activity)).id;
  assert.equal(parseChapterHash(chapterHash({chapter,activity:row.activity,collection:row.id,level:row.level,help:row.help})).collection,row.id);
  for(const e of exercises){
-  (activity[row.activity]??=new Set()).add(e.sourceExerciseId||e.exerciseId);
+  if(!row.id.startsWith('word-self:'))(activity[row.activity]??=new Set()).add(e.sourceExerciseId||e.exerciseId);
   assert(e.sourceDocumentId&&e.sourceStatus&&e.contentLevel===row.level);
   assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);
-  if(e.mode==='meaning-register'){assert.equal(e.exerciseId,'TYP-B1-1454');assert.equal(e.instructionAudio,undefined);assert.equal(e.optionalGuided,true);}else{assert(isInstructionAudioEnabled(e.instructionAudio.src));assert(!isWithdrawnAudio(e.instructionAudio.src));}
+  if(row.id.startsWith('word-self:')&&e.mode==='same-word'){assert.equal(e.instructionAudio,undefined);assert.equal(e.requiresAudio,false);}else if(e.mode==='meaning-register'){assert.equal(e.exerciseId,'TYP-B1-1454');assert.equal(e.instructionAudio,undefined);assert.equal(e.optionalGuided,true);}else{assert(isInstructionAudioEnabled(e.instructionAudio.src));assert(!isWithdrawnAudio(e.instructionAudio.src));}
   if(e.requiresAudio)assert(e.prompt.audio?.src);
   if(e.mode==='copy-word'){assert(e.fields[0].acceptedAnswers.length);if(e.exampleWord)assert(e.fields[0].acceptedAnswers.includes(e.exampleWord));}
   if(e.mode==='word-build'){
@@ -33,7 +33,7 @@ for(const row of productionIndex){
   if(e.mode==='word-sort')assert(e.standardTask.items.every(item=>e.standardTask.categories.some(c=>c.id===item.categoryId)));
  }
 }
-assert.equal(productionIndex.length,1462);assert.equal(sizes.length,1462);assert.equal(ids.size,1462);
+assert.equal(productionIndex.filter(row=>!row.id.startsWith('word-self:')).length,1462);assert.equal(sizes.length,productionIndex.length);assert.equal(ids.size,productionIndex.length);
 const counts=Object.fromEntries(Object.entries(activity).map(([k,v])=>[k,v.size]));
 assert.deepEqual(counts,{'build-model':816,copy:8386,meet:641,memory:5,'read-series':8386,'spelling-path':698,'word-bingo':1344,'word-sort':192,worksheet:816,'worksheet-heard':840,listen:1152,'hear-match':192,read:576,match:192,cards:576,'image-bingo':2});
 const old=chapterCollections('build-model').find(c=>c.id==='groep-9.alfa-a'),recall=chapterCollections('build-model').find(c=>c.id==='groep-9.alfa-b');

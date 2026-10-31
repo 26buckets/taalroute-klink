@@ -10,7 +10,7 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
   const [answer, setAnswer] = useState('');
   const [selected, setSelected] = useState<string[]>([]);
   const [guidance, setGuidance] = useState(false);
-  const [prepared, setPrepared] = useState(false);
+  const [prepared, setPrepared] = useState(exercise.access === 'self-practice');
   const questions = task.initialQuestions?.length ? task.initialQuestions : [{id: exercise.exerciseId.replace(/^content:/,''), prompt: task.prompt}];
   const sourceVersion = JSON.stringify([task.stimulus, questions]);
   const initialKey = `klink.taalroute.content-initial.v1:${typeof exercise.contentSessionId === 'string' ? exercise.contentSessionId : exercise.exerciseId}:${questions[0].id}`;

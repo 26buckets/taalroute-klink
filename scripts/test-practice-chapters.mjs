@@ -21,7 +21,7 @@ test('Twelve independent chapters cover all registered activities without changi
       if (collection.contentUrl) {
         assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
         assert(collection.exerciseCount > 0);
-        assert(collection.contentUrl.startsWith('/practice-content/klink-20261029/'));
+        assert(/^\/practice-content\/(klink-20261029|word-self-20261031)\//.test(collection.contentUrl));
         continue;
       }
       assert(collection.exercises.length);

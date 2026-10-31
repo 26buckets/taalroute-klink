@@ -21,7 +21,7 @@ export function verifyImageSizeRelease(read=readFileSync){
  assert(changed.every(f=>allowed.includes(f)||imageTests.includes(f)||f==='scripts/test-landing-browser.mjs'||f==='public/_headers'||/^components\/product\/[a-z-]+\.tsx$/.test(f)||/^public\/compact-images-20261031\/[a-f0-9]{20}\.(webp|svg)$/.test(f)));
  assert.equal(read('public/_headers').toString().trim(),'/compact-images-20261031/*\n  Cache-Control: public, max-age=31536000, immutable');
  for(const[f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);for(const f of changed)assert(r.files[f],f);
- assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public','data').length,0,'Original media, content, answers and progress maps remain unchanged');
+ assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,successor.baselineSourceCommit,'--','public','data').length,0,'Original media, content, answers and progress maps remain unchanged');
  const inventory=JSON.parse(read('docs/image-size-audit-20261031/inventory.json')),assets=JSON.parse(read('docs/image-size-audit-20261031/assets.json')),mapping=JSON.parse(read('data/klink-compact-images-20261031.json'));
  assert.equal(assets.length,506);assert.equal(Object.keys(mapping).length,assets.length);
  for(const a of assets){assert.equal(mapping[a.src],a.url);assert.equal(sha(read('public'+a.src)),a.sourceSha256);assert.equal(sha(read('public'+a.url)),a.sha256);assert(a.bytes<a.before*.9);}

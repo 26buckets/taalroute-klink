@@ -1,0 +1,35 @@
+✔ Typed responses never discard capitalization, accents, punctuation or whitespace (1.167875ms)
+✔ Choice grading requires every authorized ID and rejects extras, duplicate IDs and incomplete answers (0.163417ms)
+✔ Teacher completion has no automatic correctness judgment and never enters mastery/review (0.232ms)
+✔ Missing audio, blockers, missing preparation, wrong axis and unrenderable sources are excluded (0.318791ms)
+✔ An exact candidate and item review is required; source changes invalidate earlier admission (2.334875ms)
+✔ Missing or escaped evidence cannot be substituted by a filename or a release claim (2.010334ms)
+✔ Producer-specific delivery and dependency rules are never silently flattened (2.643584ms)
+✔ One blocked item does not suppress independently reviewed items; source patches stay separate (1.383625ms)
+✔ Duplicate item identities are rejected within and across domains (2.736125ms)
+✔ Public items retain response and preparation, but never private dossier paths or automatic reading release (0.631416ms)
+✔ Additional presentation and media contracts cannot be silently dropped (0.147583ms)
+✔ Teacher choices retain their reference without becoming automatic correctness (0.149125ms)
+✔ The same complete choice task is rejected even with renamed and reordered options (1.821625ms)
+✔ navigation preferences validate input and retain both old route axes (1.9085ms)
+✔ Start restores the last selection while inner bookmarks keep their original scope (8.106584ms)
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (2.126583ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.354041ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.595292ms)
+✔ Every attached precise mark task refers literally to its existing source and question (156.672459ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (113.035166ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (41.318166ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.483917ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.368208ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (7019.496875ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (3.539167ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (430.103917ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.8ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8204.706709
