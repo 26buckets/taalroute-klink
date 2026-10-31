@@ -1,6 +1,6 @@
 # Klink+docent — vrijgave 31 oktober 2026
 
-Nico vraagt publicatie van de nieuwe docentvormgeving met behoud van alle bestaande lessen en functies, zonder dubbele handleidingknop, met kleiner woordmerk en compact lesoverzicht. Hij vraagt ook de al uitgewerkte lessen toe te voegen. De vervolgcorrectie verwijdert Foto groter, zet beide zichtbaarheidsknoppen vast onder de afbeelding en toont woord, zin en tekst direct bij Kijken en Luisteren. Verbergen bewaart de ruimte; bouwoplossingen en voorbeeldantwoorden blijven afzonderlijk oproepbaar.
+Nico vraagt publicatie van de nieuwe docentvormgeving met behoud van alle bestaande lessen en functies, zonder dubbele handleidingknop, met kleiner woordmerk en compact lesoverzicht. Hij vraagt ook de al uitgewerkte lessen toe te voegen. De vervolgcorrectie verwijdert Foto groter, zet beide zichtbaarheidsknoppen vast onder de afbeelding en toont woord, zin en tekst direct bij Kijken en Luisteren. De tweede vervolgcorrectie vergroot de standaardafbeelding, maakt beide knoppen compacter en exact samen even breed als de foto, en verwijdert Andere hulp; de vijf hulpmiddelen blijven staan. Verbergen bewaart de ruimte; bouwoplossingen en voorbeeldantwoorden blijven afzonderlijk oproepbaar.
 
 ## Bron en omzetting
 

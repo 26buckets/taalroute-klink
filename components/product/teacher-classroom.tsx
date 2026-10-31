@@ -619,22 +619,6 @@ export function TeacherClassroom({
     setReadCheck(false);
     setFinished(false);
   }
-  function chooseVariant() {
-    const next =
-      variants[
-        (variants.findIndex((v) => v.id === state.variant) + 1) %
-          variants.length
-      ].id;
-    update({
-      variant: next,
-      shown: state.shown.map((value, i) =>
-        state.route !== "a" && i === state.phase && [1, 3, 5].includes(i)
-          ? next === "support"
-          : value,
-      ),
-    });
-    setFeedback("");
-  }
   function closeTool() {
     audio.stop();
     dialog.current?.close();
@@ -817,9 +801,6 @@ export function TeacherClassroom({
                   {name}
                 </button>
               ))}
-              <button className="secondary-button" onClick={chooseVariant}>
-                Andere hulp
-              </button>
             </nav>
           </div>
           <section className="kpd-stage" aria-label={phase.title}>

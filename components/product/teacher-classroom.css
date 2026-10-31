@@ -1203,4 +1203,17 @@
 }
 
 .kpd-live .kpd-visibility-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; flex: none; }
-.kpd-live .kpd-visibility-controls button { min-width: 0; width: 100%; min-height: 64px; justify-content: center; }
+.kpd-live .kpd-visibility-controls button { min-width: 0; width: 100%; min-height: 44px; height: 44px; padding: 6px 8px; font-size: 16px; line-height: 1.2; justify-content: center; gap: 4px; }
+.kpd-live .kpd-visibility-controls button svg { width: 16px; height: 16px; flex-shrink: 0; }
+@media screen and (min-width: 900px) and (min-height: 650px) {
+  .kpd-live .kpd-picture-lesson > .kpd-picture-column { container-type: size; align-items: center; justify-content: center; }
+  .kpd-live .kpd-picture-lesson .kpd-picture-space { flex: none; width: min(100cqw, calc(100cqh - 52px)); height: min(100cqw, calc(100cqh - 52px)); }
+  .kpd-live .kpd-picture-lesson .kpd-picture-space .kpd-photo { padding: 0; }
+  .kpd-live .kpd-visibility-controls { width: min(100cqw, calc(100cqh - 52px)); margin: 8px 0 0; }
+}
+@media screen and (max-width: 899px), screen and (max-height: 649px) {
+  .kpd-live .kpd-picture-lesson .kpd-picture-space { width: 100%; aspect-ratio: 1; min-height: 0; }
+  .kpd-live .kpd-picture-lesson .kpd-photo { width: 100%; height: 100%; max-height: none; margin: 0; }
+  .kpd-live .kpd-visibility-controls { width: 100%; margin: 8px 0 0; }
+  .kpd-live .kpd-visibility-controls button { font-size: 14px; height: 48px; min-height: 48px; }
+}
