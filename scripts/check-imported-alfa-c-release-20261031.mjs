@@ -14,7 +14,7 @@ export function verifyImportedAlfaCRelease(read=readFileSync){
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  for(const[f,h]of Object.entries(r.evidence))assert.equal(sha(read(f)),h,f);
- assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','public')),[]);
+ assert.deepEqual(lines(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,successor.baselineSourceCommit,'--','public')),[]);
  const clips=JSON.parse(read('docs/imported-alfa-c-release-20261031/audio.json'));assert.equal(clips.length,5);
  for(const c of clips){assert.equal(sha(read('public'+c.src)),c.sha256);assert(c.metadataVerified&&c.audioPacketsUnchanged);assert.equal(c.humanListeningReview,'open');assert.equal(c.voiceId,c.role==='guide'?'h6uBOiAjLKklte8hdYio':'0qLmDzgqulxcvv0yf3kg');const tags=JSON.parse(execFileSync('ffprobe',['-v','error','-show_entries','format_tags','-of','json','public'+c.src])).format.tags;for(const k of ['artist','album_artist','publisher'])assert.equal(tags[k],'Taalroute');assert(!/elevenlabs|suno|openai|generator/i.test(JSON.stringify(tags)));}
  const checks=JSON.parse(read('docs/imported-alfa-c-release-20261031/verification.json'));

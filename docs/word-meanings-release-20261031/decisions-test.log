@@ -1,0 +1,57 @@
+✖ B1 partitions retain every original task once, exact old links and shared completion (212.24425ms)
+✔ Five exact replacement recordings cover source, instruction and example; source IDs and models stay meaningful (0.252709ms)
+✔ 44 guided words retain all 28 previous definitions and include the 16 accepted decisions (0.332833ms)
+✖ Every guided selection partitions its source once, retains old links and shares original progress (451.225125ms)
+✔ Homonyms keep spelling answers, explicit contexts and original Alfa senses; register requires recognition only (135.604916ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 3
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 849.085375
+
+✖ failing tests:
+
+test at scripts/test-imported-alfa-c-recovery-20261031.mjs:9:1
+✖ B1 partitions retain every original task once, exact old links and shared completion (212.24425ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  110 !== 100
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-word-meanings-20261031/scripts/test-imported-alfa-c-recovery-20261031.mjs:24:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 110,
+    expected: 100,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/test-word-meaning-decisions-20261031.mjs:10:1
+✖ Every guided selection partitions its source once, retains old links and shares original progress (451.225125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'production:spelling-path:b1:ZSH-B1-C21~core'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-word-meanings-20261031/scripts/test-word-meaning-decisions-20261031.mjs:16:175)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'production:spelling-path:b1:ZSH-B1-C21~core',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

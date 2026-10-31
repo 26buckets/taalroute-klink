@@ -28,6 +28,7 @@ export const plannedAudioId = (role, text) =>
 export function buildAudioRegister(inventory) {
   const revisedSentences = new Map(json('docs/sentence-second-review-20261030/audio.json').map(item => [item.contentId, item]));
   const curriculum = json('data/klink-curriculum.json');
+  const meaningClips = json('docs/word-meanings-release-20261031/audio.json');
   const instructions = json('data/klink-instructions.json');
   const comprehension = json('data/klink-comprehension-audio.json');
   const candidates = existsSync(join(root, 'data/klink-audio-candidates.json')) ? json('data/klink-audio-candidates.json').items : [];
@@ -119,12 +120,13 @@ export function buildAudioRegister(inventory) {
       id: word.id,
       kind: 'word',
       role: 'target',
-      text: word.word,
+      text: meaningClips.find(c => c.src === word.audio)?.text ?? word.word,
       src: word.audio,
       ...(coreWordIds.has(word.id) ? place([word.id]) : { wordIds: [word.id], lessonIds: [], sectionIds: [word.packageId] }),
       placement: coreWordIds.has(word.id) ? 'active' : 'preparation',
-      ...(word.audio?.startsWith('/package-audio/woorden-20261025/') ? { voiceId: '0qLmDzgqulxcvv0yf3kg', review: 'Bestand gekoppeld; menselijke uitspraakreview staat open.' } : {}),
+      ...((word.audio?.startsWith('/package-audio/woorden-20261025/') || word.audio?.startsWith('/package-audio/betekenissen-20261031/')) ? { voiceId: '0qLmDzgqulxcvv0yf3kg', review: 'Bestand gekoppeld; menselijke uitspraakreview staat open.' } : {}),
     });
+  for (const clip of meaningClips) if (![...active.values()].some(row => row.src === clip.src)) add({id: `klink-betekenis:${clip.id}`, kind: 'sentence', role: 'target', text: clip.text, src: clip.src, voiceId: clip.voiceId, review: 'Automatisch gecontroleerd; menselijke luisterreview open.', placement: 'preparation'});
   for (const item of instructions.items)
     add({
       id: item.id,
@@ -301,10 +303,13 @@ export function buildAudioRegister(inventory) {
   const rows = [...active.values()].sort((a, b) => a.id.localeCompare(b.id));
   // The published repair ledger also preserves the original-source and review fields.
   const repaired = [...json('docs/long-content-review-20261030/audio.json'), ...json('docs/cooking-release-20261030/audio.json')];
-  for (const change of json('docs/long-content-review-20261030/source-amendments.json').changes) {
+  const amendments = json('docs/long-content-review-20261030/source-amendments.json').changes;
+  for (const change of amendments) {
     const [file, index, field] = change.path;
     if (file !== 'public/content-register/active.json' || !['voiceId', 'review', 'originalSrc'].includes(field)) continue;
-    const row = rows[index];
+    const sourceChange = amendments.find(item => item.path[0] === file && item.path[1] === index && item.path[2] === 'src');
+    const row = rows.find(item => item.src === sourceChange?.after);
+    assert(row, 'Historical repair must resolve by source, not by its old array position');
     assert(repaired.some(clip => clip.src === row.src && clip.text === row.text), 'Repair ledger must still identify the same recording');
     row[field] = change.after;
   }

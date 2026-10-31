@@ -20,7 +20,7 @@ for(const row of productionIndex){
   (activity[row.activity]??=new Set()).add(e.sourceExerciseId||e.exerciseId);
   assert(e.sourceDocumentId&&e.sourceStatus&&e.contentLevel===row.level);
   assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);
-  assert(isInstructionAudioEnabled(e.instructionAudio.src));assert(!isWithdrawnAudio(e.instructionAudio.src));
+  if(e.mode==='meaning-register'){assert.equal(e.exerciseId,'TYP-B1-1454');assert.equal(e.instructionAudio,undefined);assert.equal(e.optionalGuided,true);}else{assert(isInstructionAudioEnabled(e.instructionAudio.src));assert(!isWithdrawnAudio(e.instructionAudio.src));}
   if(e.requiresAudio)assert(e.prompt.audio?.src);
   if(e.mode==='copy-word'){assert(e.fields[0].acceptedAnswers.length);if(e.exampleWord)assert(e.fields[0].acceptedAnswers.includes(e.exampleWord));}
   if(e.mode==='word-build'){

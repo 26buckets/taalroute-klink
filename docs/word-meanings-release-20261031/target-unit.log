@@ -1,0 +1,19 @@
+✔ Stable script IDs preserve exact language and separate instruction from target (0.701583ms)
+✔ Later binding is exact, reviewed, branded and never silently replaces current audio (0.108042ms)
+✔ All active word, context, instruction and comprehension audio IDs have a register slot (30.996875ms)
+✔ Prepared scripts remain unplaced, deduplicated by role, with honest archive status (58.23625ms)
+✔ Inventory generation is deterministic, and does not mutate the learner curriculum (812.500917ms)
+✔ Broader domains do not claim a full method from renderers or exercise counts (0.105416ms)
+✔ 44 guided words retain all 28 previous definitions and include the 16 accepted decisions (0.412041ms)
+✔ Every guided selection partitions its source once, retains old links and shares original progress (6366.992ms)
+✔ Homonyms keep spelling answers, explicit contexts and original Alfa senses; register requires recognition only (154.388792ms)
+PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (34134.287333ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34140.37325

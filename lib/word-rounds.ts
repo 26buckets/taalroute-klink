@@ -30,7 +30,7 @@ export function wordRoundDefinitions(exercises: PackageExercise[], packWords: Pa
       const text = own ? [(item.text as { primary?: string } | undefined)?.primary, item.exampleWord, item.displayWord, item.target, item.helpWord].find(value => typeof value === 'string' && value) as string | undefined : undefined;
       const label = text ?? source?.label ?? option?.label ?? card?.back?.text ?? (byId.get(id) ?? words.get(id))?.word;
       const image = (own ? item.prompt?.image : undefined) ?? option?.image ?? card?.front?.image ?? (item.targets as { id: string; image?: { src: string; placeholderWord?: string } }[] | undefined)?.find(row => row.id === `image-${id}`)?.image;
-      if (label) labels.set(id, { label: wordLabel({ id, word: label }), image: image?.placeholderWord ? undefined : image?.src ?? (byId.get(id) ?? words.get(id))?.image, placeholder: Boolean(image?.placeholderWord) });
+      if (label) labels.set(id, { label: wordLabel({ id, word: label }), image: image?.placeholderWord || (label === 'want' && typeof item.meaning === 'string' && item.meaning.startsWith('Verbindt') && item.meaning.includes('Voorbeeld:')) ? undefined : image?.src ?? (byId.get(id) ?? words.get(id))?.image, placeholder: Boolean(image?.placeholderWord) });
     }
   });
   if (targets.flat().some(id => !labels.has(id))) return [];
@@ -58,13 +58,24 @@ export function wordRoundDefinitions(exercises: PackageExercise[], packWords: Pa
 function definitions(collection: ChapterCollection): WordRound[] {
   const cached = definitionCache.get(collection);
   if (cached) return cached;
-  const rounds = collection.contentUrl ? (index as Record<string, WordRound[]>)[collection.contentUrl] ?? [] : wordRoundDefinitions(collection.exercises, collection.pack.words);
+  let rounds = collection.contentUrl ? (index as Record<string, WordRound[]>)[collection.contentUrl] ?? [] : wordRoundDefinitions(collection.exercises, collection.pack.words);
+  if (collection.readingSelection) {
+    const selected = new Set(collection.readingSelection.exerciseIds);
+    rounds = rounds.flatMap(round => {
+      const positions = round.exerciseIds.flatMap((id, i) => selected.has(id) ? [i] : []);
+      if (!positions.length) return [];
+      const targets = positions.map(i => round.targets?.[i] ?? [round.wordIds[i]]);
+      const wordIds = unique(targets.flat());
+      const wordLabels = wordIds.map(id => round.wordLabels[round.wordIds.indexOf(id)]);
+      return [{ ...round, title: wordLabels.slice(0, 2).join(' · '), exerciseIds: positions.map(i => round.exerciseIds[i]), targets, wordIds, wordLabels }];
+    });
+  }
   definitionCache.set(collection, rounds);
   return rounds;
 }
 
 function selectedCollection(collection: ChapterCollection, item: WordRound, id: string, allExerciseIds: string[]): ChapterCollection {
-  return { ...collection, id, title: item.title, image: item.image, placeholderCount: item.placeholderCount, exercises: collection.exercises.filter(exercise => item.exerciseIds.includes(exercise.exerciseId)), wordRound: { ...item, sourceId: collection.id, allExerciseIds } };
+  return { ...collection, id, title: `${collection.readingSelection ? (collection.id.endsWith('~extension') ? 'Uitbreiding met je docent · ' : 'Basis · ') : ''}${item.title}`, image: item.image, placeholderCount: item.placeholderCount, exercises: collection.exercises.filter(exercise => item.exerciseIds.includes(exercise.exerciseId)), wordRound: { ...item, sourceId: collection.readingSelection?.sourceId ?? collection.id, allExerciseIds: collection.readingSelection?.allExerciseIds ?? allExerciseIds } };
 }
 
 export function chapterWordRounds(collection: ChapterCollection): ChapterCollection[] {
