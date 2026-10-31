@@ -1,3 +1,9 @@
+## Vaste vormgevingsvloer — Nico, 31 oktober 2026
+
+**Uitsluitend het uiterlijk staat vast. Inhoud blijft in ontwikkeling.** Lees vóór ieder werk aan Klink `VORMGEVING-VASTGEZET.md` en `docs/appearance-floor-20261031/floor.json`. Geen wijziging aan indeling, menu-opmaak, kaartposities, typografie, knoppen, kleuren, logo of responsieve compositie zonder duidelijke, concrete toestemming van Nico. Een content- of opschoonopdracht is geen vormgevingsakkoord. Nieuwe inhoud en aantoonbaar niet-visuele reparaties mogen volgens hun eigen afspraken doorgaan; geen algemene app-, content- of branchbevriezing.
+
+Vaste referentie: de gecontroleerde livebron `cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2`, inclusief het herhaalherstel en de afzonderlijk expliciet goedgekeurde Klink+docent-vormgeving. Git-tag `klink-uiterlijk-vast-20261031`. Het dossier bevat 35 stijl-/UI-bronreferenties, livebewijs, de vaste Codex-afspraak en de gecontroleerde Drive-herstelkopie. Referentiehashes zijn vergelijkingsmateriaal; inhoud, audio, aantallen, beschikbaarheid en voortgang zijn niet bevroren. Dezelfde afspraak staat blijvend in de persoonlijke Codex-instructies. Dit dossier wijzigt de app zelf niet en is geen nieuwe apppublicatie.
+
 ## 31 oktober 2026 — Klink+docent, acht lessen en vaste bediening
 
 Livebron `cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2`, schone canonieke main; Worker `96ce6b43-1dea-4a37-b9e5-d7a98170ebba`. Gepubliceerd via `npm run deploy` als afstammeling van de nieuwste beeldoptimalisatie én het herhaalherstel b0191b87. De bijbehorende dossiercommit 19a46d51 is behouden.
