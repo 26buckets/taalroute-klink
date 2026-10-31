@@ -1,3 +1,15 @@
+## 31 oktober 2026 — vaste kaartbreedte in oefenlijsten
+
+Livebron `bf4eb0cffa0aa0be27cec1df39d1e8126e38e44b`, schone canonieke main; Worker `69278d06-687b-4349-bf84-fa755dd3f159`. Normaal gepubliceerd via `npm run deploy`, bovenop de nieuwste goedgekeurde Blinddruk-versie `a441bf35`. De laatste Start-, woordkaart- en tijdelijke beeldverbeteringen blijven behouden.
+
+Nico vroeg expliciet dezelfde kleine lijstkaarten en tussenruimte voor Alfa A, Alfa B, Alfa C, A1, A2 en B1. Eén gerichte CSS-regel houdt lege kolommen in het bestaande collectieraster vrij. Daardoor rekt één kaart op desktop niet langer over de hele rij. Vier kolommen wanneer de ruimte dat toelaat; bestaande minimummaat, 12px afstand en mobiele indeling blijven behouden. Lange titels mogen natuurlijk doorlopen. Geen nieuwe kaarten, gewijzigde oefeningen, media, routes of opslag.
+
+Lokaal: 96 rastergevallen in Chromium en WebKit, vier breedtes en licht/donker; 24 vergelijkingen met de nieuwste livebasis; twaalf ongewijzigde schermvergelijkingen voor Start, de pakketkaarten en de oefenvormen. Openen, teruggaan, toetsenbord en echte bestaande rondevoortgang gecontroleerd. Types, gerichte lint, build, normale volledige publicatiepoort en tien afkeurproeven van deze en de vorige vrijgave geslaagd. Alle zware controles lokaal; geen GitHub-workflows.
+
+Online: alle 96 rastergevallen opnieuw geslaagd, broncommit en 36 aangeboden JS/CSS-bestanden bytegelijk aan de build, alle vijf inhoudskenmerken ongewijzigd. Fysiek klasscherm niet getest. Akkoord: `docs/appearance-floor-20261031/approved-updates/collection-grid-20261031.json`. Bewijs en geverifieerde Drive-herstelkopieën: `docs/collection-grid-20261031/`.
+
+Direct resultaat: https://klink.taalroute.nl/#learner/chapters/words/word-sort?level=alfa-c&help=practice
+
 ## 31 oktober 2026 — compact Start en hervatten in de kop
 
 Livebron `f302ecb5ef17517eb373f7fb692a80d6cc0938a7`, schone canonieke main; Worker `b19fed3f-87b9-4dac-ae53-4f4c28be714c`. Normaal gepubliceerd met `npm run deploy` als afstammeling van de nieuwste goedgekeurde woordkaartbreedte `ec0fb8f1` en dossiercommit `6248d38e`. Geen oude app teruggezet.
