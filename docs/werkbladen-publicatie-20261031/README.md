@@ -7,3 +7,5 @@ Nico autoriseerde de getoonde werkbladopzet voor alle acht lessen en daarna expl
 Alle lokale resultaten in review.json en de bijbehorende log-/schermbestanden. Geen fysieke telefoon- of drukproef; definitieve beeldkwaliteit blijft open. Bestaande leerlingenschermen, inhoud, audio, opslag en lesdata ongewijzigd. Alle zware controles lokaal; geen GitHub-workflows.
 
 Herstel: bronbestanden en bewijs in de geverifieerde Drive-kopie, gebaseerd op de genoemde canonieke Git-commit. Normaal publiceren via npm run deploy; geen publicatiepoort omzeilen. Nieuwe tien lesprompts zijn uitsluitend kopieerbare inhoudsopdrachten in de chat en geen onderdeel van deze appvrijgave.
+
+Gepubliceerd en online gecontroleerd: zie publication.json, live-checks.json en PUBLICATIE-ACTUEEL.md.

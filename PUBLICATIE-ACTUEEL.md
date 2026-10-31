@@ -1,3 +1,15 @@
+## 31 oktober 2026 — gekoppelde werkbladen voor acht Klink+docent-lessen
+
+Livebron `7b0e0a8862f50b519c70ce6d25acea3f641e8eed`, schone canonieke main; Worker `6c10ecff-a341-4283-949f-b4edde72ba28`. Normaal gepubliceerd via `npm run deploy`, bovenop de werkelijke livebron `feb9d127` en dossiercommit `cee1648f`. Alle nieuwste cursistenverbeteringen behouden.
+
+Nico keurde het werkbladdashboard en de koppeling voor alle acht lessen goed en vroeg expliciet publicatie. Per les: Digibordles en Werkblad; Woord/Alfa A, Zin/Alfa B, Tekst/Alfa C; beide zijden zichtbaar; origineel downloaden/printen. Rechtstreeks vanuit de digibordles met behoud van lespositie en selectie na herladen. 24 ongewijzigde dubbelzijdige KPD08 v0.4-werkbladen, 240 gekoppelde antwoorden uit v0.4.3. Ook Mat gebruikt deze samenhangende uitgave. Bestaande extra afdrukmaterialen blijven beschikbaar.
+
+Lokaal geslaagd: types, lint, build, 96 werkbladweergaven, 48 lesroutes / 1.152 onderdelen, 18 afdrukweergaven, 8 randgevallen, browserterug/vooruit en wisselen van les, 48 cursistenschermtoestanden en 12 exacte vergelijkingen met de vorige liveversie. 50 historische behoudtests plus 17 gerichte afkeurproeven; normale publicatiepoort inclusief 1.979 audiometadatacontroles. Geen zware GitHub-workflows.
+
+Online geslaagd: 24 werkbladweergaven, 8 terugkeercontroles in Chromium/WebKit op desktop/mobiel; 109 aangeboden bestanden bytegelijk, waaronder alle 24 werkblad-PDF's, 48 voorbeelden, het originele docentantwoordbestand en de buildbestanden. Alle vijf bestaande inhoudskenmerken gelijk. Fysieke telefoon-/drukproef en definitieve beeldkwaliteit blijven open; geen nieuwe drukgoedkeuring of Krea-claim. Het nieuwe lesmateriaal voor tien volgende woorden wordt afzonderlijk in chats ontwikkeld en is niet in deze vrijgave opgenomen.
+
+Akkoord, controles en geverifieerde Drive-herstelkopieën: `docs/werkbladen-publicatie-20261031/`, met aanvullend uiterlijkakkoord `docs/appearance-floor-20261031/approved-updates/worksheets-20261031.json`. Direct: https://klink.taalroute.nl/#teacher/materials
+
 ## 31 oktober 2026 — rustige vormgeving van Nog een keer
 
 Livebron `feb9d1276880b571a85506393f4cc6430ddc9b47`, schone canonieke main; Worker `5698fc18-b49f-46bb-87db-6ef203eadddb`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de nieuwste goedgekeurde oefenlijstrasters `bf4eb0cf` en dossiercommit `b1ca75f8`. De nieuwste Start-, woordkaart-, Blinddruk- en oefenlijstwijzigingen zijn behouden.
