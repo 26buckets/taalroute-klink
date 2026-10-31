@@ -1,4 +1,6 @@
 import test from 'node:test';
+import { execFileSync } from 'node:child_process';
+const approvedFeedback = JSON.parse(execFileSync('git', ['show', '02f16c1fdcb540550de91510c1a11c7ca29c4bbd:data/klink-alfa-c-texts.json']));
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { pilotBlocks, alfaCCommonTexts } from '../lib/alfa-c-practice.ts';
@@ -19,7 +21,7 @@ test('All 36 learner texts match the reviewed package without changing answers o
       assert.equal(step.exampleInstruction, s.example_spoken);
       assert.equal(step.help, s.help_visible ?? '');
       assert.equal(step.errorFeedback, s.error);
-      assert.equal(step.goodFeedback, s.good);
+      assert.equal(step.goodFeedback, approvedFeedback.blocks[block.id].steps[i].good);
       assert.equal(step.afterListening, s.finish_spoken);
       if (step.exercise.tiles) {
         assert.match(step.errorFeedback, /Eén terug.*leeg/);

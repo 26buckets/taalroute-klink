@@ -1,0 +1,20 @@
+✔ B1 partitions retain every original task once, exact old links and shared completion (662.811375ms)
+✔ Five exact replacement recordings cover source, instruction and example; source IDs and models stay meaningful (0.305292ms)
+✔ 210 archived source pairs and 185 active word-only questions have exactly one correct answer and traceable editorial sources (3.482625ms)
+✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (1.573875ms)
+✔ wrong answers become due for repetition, survive reload and retain the exact question (503.025833ms)
+✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (1040.874792ms)
+✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.59125ms)
+✔ corrupt saved mixing preferences fall back safely (0.103667ms)
+✔ meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels (1.624625ms)
+✔ publication rejects reactivated unsafe pairs, missing reviews and false listening claims (1209.077042ms)
+PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (5116.475125ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5126.46

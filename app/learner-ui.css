@@ -760,3 +760,10 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
 .cp-teacher-activities .cp-activity-button > span { display: grid; gap: 4px; min-width: 0; overflow-wrap: anywhere; }
 .cp-teacher-activities .cp-activity-button strong { font: inherit; }
 .cp-teacher-activities .cp-activity-button small { font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--muted); }
+
+/* The guided word extension needs the full text column and the learner's own pace. */
+.learner-app .cp-reading-support { grid-column: 1 / -1; }
+.learner-app .cp-reading-support aside { display: grid; gap: 12px; }
+@media (max-width: 760px) {
+  .learner-app .cp-reading-support aside p { font-size: 18px; line-height: 1.5; }
+}

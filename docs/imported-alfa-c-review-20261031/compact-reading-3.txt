@@ -1,0 +1,131 @@
+SOURCE 21 | Alfa B
+Youssef komt thuis. Zijn jas is nat. Hij hangt de jas aan een haak.
+ID klink-teksten-b04-01 | teacher
+Q Van wie is de jas?
+OPTIONS van een buur / *van Youssef
+MODEL ['Youssef', 'van Youssef']
+CHECK Hoe weet je bij wie de jas hoort?
+SLOTS ['answer']
+ID klink-teksten-b04-02 | teacher
+Q Waar is Youssef in dit verhaal?
+OPTIONS *thuis / in een winkel
+MODEL ['thuis', 'bij hem thuis', 'in zijn huis']
+CHECK Wat vertelt komt thuis over de plek van Youssef?
+SLOTS ['answer']
+
+SOURCE 22 | Alfa B
+Het boek ligt op tafel. Elena pakt het boek. Zij leest bij het raam.
+ID klink-teksten-b04-03 | teacher
+Q Wie pakt het boek?
+OPTIONS een buur / *Elena
+MODEL ['Elena']
+CHECK Wat gebeurt er met het boek in de zin die je aanwijst?
+SLOTS ['answer']
+ID klink-teksten-b04-04 | teacher
+Q Waar ligt het boek voordat Elena het pakt?
+OPTIONS *op tafel / bij het raam
+MODEL ['op tafel', 'op de tafel', 'de tafel']
+CHECK Is dat de plek aan het begin of de plek waar Elena later leest? Leg uit.
+SLOTS ['answer']
+
+SOURCE 23 | Alfa B
+Bao schenkt water in. Samira snijdt citroen. Zij doet een stukje in haar glas.
+ID klink-teksten-b04-05 | teacher
+Q Wie schenkt het water in?
+OPTIONS Samira / *Bao
+MODEL ['Bao']
+CHECK Vertel wat de persoon met het water doet.
+SLOTS ['answer']
+ID klink-teksten-b04-06 | teacher
+Q Van wie is het glas in de laatste zin?
+OPTIONS *van Samira / van Bao
+MODEL ['Samira', 'van Samira']
+CHECK Wat betekent haar in deze zin?
+SLOTS ['answer']
+
+SOURCE 24 | Alfa B
+De mand is leeg. Jun legt een zak in de mand. De mand staat bij de deur.
+ID klink-teksten-b04-07 | teacher
+Q Wie legt de zak in de mand?
+OPTIONS een buur / *Jun
+MODEL ['Jun']
+CHECK Wat gebeurt er met de zak in de zin die je aanwijst?
+SLOTS ['answer']
+ID klink-teksten-b04-08 | teacher
+Q Je zoekt de zak. Noem eerst waar de mand staat en dan waar de zak is.
+OPTIONS *bij de deur; in de mand / bij de deur; naast de mand
+MODEL ['De mand staat bij de deur en de zak zit in de mand.', 'Bij de deur, in de mand.', 'De zak zit in de mand bij de deur.']
+CHECK Leg uit hoe de twee plekken bij elkaar horen.
+SLOTS ['basket-by-door', 'sack-in-basket']
+
+SOURCE 25 | Alfa C
+De fles is leeg. Abel vult de fles met water. Daarna doet hij de dop erop.
+ID klink-teksten-b05-01 | teacher
+Q Wat doet Abel eerst met de fles, en wat doet hij daarna?
+OPTIONS Eerst doet hij de dop erop. Daarna vult hij de fles met water. / *Eerst vult hij de fles met water. Daarna doet hij de dop erop.
+MODEL ['Eerst water in de fles, dan de dop erop.', 'Hij vult de fles met water en zet daarna de dop erop.']
+CHECK Welk woord laat de volgorde zien? Leg uit wat dat woord hier betekent.
+SLOTS ['fill-with-water', 'then-cap-on']
+ID klink-teksten-b05-02 | teacher
+Q Hoe is de fles aan het begin? Wat zit erin en wat zit erop aan het einde?
+OPTIONS *Eerst is de fles leeg. Aan het einde zit er water in en zit de dop erop. / Eerst is de fles leeg. Aan het einde is hij nog leeg en zit de dop erop.
+MODEL ['Eerst leeg, daarna water erin en de dop erop.']
+CHECK Leg uit wat er veranderd is. Welke zin helpt bij elk deel van je antwoord?
+SLOTS ['initial-empty', 'final-water-inside', 'final-cap-on']
+
+SOURCE 26 | Alfa C
+Leila maakt een lijst. Ze schrijft rijst en melk op. De lijst ligt naast haar tas.
+ID klink-teksten-b05-03 | teacher
+Q Kun je uit deze tekst weten dat Leila rijst en melk heeft gekocht? Leg uit.
+OPTIONS Ja. Als ze het opschrijft, heeft ze het ook gekocht. / *Dat weten we niet. De tekst vertelt dat ze rijst en melk opschrijft.
+MODEL ['Dat weet je niet. Er staat alleen dat ze het opschrijft.', 'De tekst zegt niets over kopen; ze maakt een lijst.']
+CHECK Waarom is iets opschrijven geen bewijs dat het ook gekocht is?
+SLOTS ['purchase-not-established', 'writing-evidence']
+
+SOURCE 27 | Alfa C
+De tafel is vies. Hugo pakt een doek. Hij veegt de tafel schoon.
+ID klink-teksten-b05-04 | teacher
+Q Hoe is de tafel voordat Hugo begint, en hoe is de tafel na het vegen?
+OPTIONS *Eerst is de tafel vies. Na het vegen is hij schoon. / Eerst is de tafel schoon. Na het vegen is hij vies.
+MODEL ['Eerst vies en daarna schoon.', 'Aan het begin vies; hij veegt de tafel schoon.']
+CHECK Leg uit wat het vegen in dit verhaal verandert.
+SLOTS ['initial-dirty', 'final-clean']
+
+SOURCE 28 | Alfa C
+De schoen is vies. Omar pakt een doek. Hij maakt de schoen schoon.
+ID klink-teksten-b05-05 | teacher
+Q Is alleen de tweede zin genoeg om te weten dat de schoen schoon is? Leg uit wat de laatste zin toevoegt.
+OPTIONS Ja. Doordat Omar de doek pakt, is de schoen al schoon. / *Nee. In de tweede zin pakt Omar alleen een doek. In de laatste zin maakt hij de schoen schoon.
+MODEL ['Nee. Hij pakt eerst alleen een doek. Pas in de laatste zin maakt hij de schoen schoon.']
+CHECK Welke handeling is de voorbereiding, en welke handeling maakt de schoen schoon?
+SLOTS ['second-sentence-insufficient', 'taking-cloth-is-preparation', 'last-sentence-cleaning']
+
+SOURCE 29 | A1
+Koen heeft twee brillen. Eén gebruikt hij om te lezen. Die ligt niet in het doosje. Bao ziet de leesbril naast het boek en geeft hem aan Koen.
+ID klink-teksten-b06-01 | teacher
+Q Hoeveel brillen heeft Koen, en hoeveel gebruikt hij volgens de tekst om te lezen?
+OPTIONS Hij heeft drie brillen: twee gewone brillen en nog een leesbril. / *Hij heeft twee brillen. Eén daarvan gebruikt hij om te lezen.
+MODEL ['Twee in totaal, één om te lezen.']
+CHECK Leg uit hoe Eén bij twee brillen hoort.
+SLOTS ['two-total', 'one-reading-subset']
+ID klink-teksten-b06-02 | teacher
+Q Over welke bril zegt de tekst dat hij niet in het doosje ligt? Wat weten we over de plek van de andere bril?
+OPTIONS *De leesbril ligt niet in het doosje. De plek van de andere bril staat niet in de tekst. / Geen van de twee brillen ligt in het doosje.
+MODEL ['Over de leesbril. Van de andere bril weten we de plek niet.']
+CHECK Waarom mag je niet zeggen dat beide brillen buiten het doosje liggen?
+SLOTS ['negation-reading-only', 'other-place-unknown']
+
+SOURCE 30 | A1
+Samira en Bao lopen langs de haven. Ze zien drie boten aan de kade. Onder de bomen staat een bank. Ze gaan daar zitten om even uit te rusten.
+ID klink-teksten-b06-03 | teacher
+Q Hoeveel boten zien Samira en Bao, en waar zijn die boten?
+OPTIONS Drie boten, onder de bomen. / *Drie boten, aan de kade.
+MODEL ['Drie, aan de kade.']
+CHECK Bij welk woord hoort drie? Waarom hoort onder de bomen niet bij de boten?
+SLOTS ['three-boats', 'at-quay']
+ID klink-teksten-b06-04 | teacher
+Q Weten we het precieze aantal bomen? Waar staat de bank ten opzichte van die bomen?
+OPTIONS *Het precieze aantal weten we niet. De bank staat onder de bomen. / Er zijn precies drie bomen. De bank staat eronder.
+MODEL ['We weten niet precies hoeveel bomen. De bank staat eronder.', 'Er is meer dan één boom, maar het aantal staat er niet. De bank staat onder de bomen.']
+CHECK Wat kun je door het meervoud bomen wel zeggen, en wat niet?
+SLOTS ['exact-tree-count-unknown', 'bench-under-trees']

@@ -1,0 +1,56 @@
+✖ Three bounded pilots reuse real source media without modifying source levels (11.328959ms)
+✔ Preview progress rejects malformed records and stays in a separate namespace (0.506166ms)
+✔ Repeat uses help and actual attempts, never merely seeing a model (0.103417ms)
+✔ The reviewed preview address opens the normal learner route (0.567ms)
+✔ Correct choices use all three positions and retries stay stable (0.199958ms)
+✖ All 36 learner texts match the reviewed package without changing answers or source media (1.464083ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 4
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 229.301
+
+✖ failing tests:
+
+test at scripts/test-alfa-c-preview.mjs:12:1
+✖ Three bounded pilots reuse real source media without modifying source levels (11.328959ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-release-20261030/scripts/test-alfa-c-preview.mjs:60:3)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at scripts/test-alfa-c-texts.mjs:6:1
+✖ All 36 learner texts match the reviewed package without changing answers or source media (1.464083ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'Uitstekend. Tik op Verder.'
+  - 'Dat klopt. Tik op Verder.'
+  
+      at TestContext.<anonymous> (file:///private/tmp/klink-release-20261030/scripts/test-alfa-c-texts.mjs:22:14)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Uitstekend. Tik op Verder.',
+    expected: 'Dat klopt. Tik op Verder.',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

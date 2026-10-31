@@ -1,0 +1,106 @@
+formulier Een formulier invullen
+
+klink-alfa-c-aanvulling-formulier-01 Het doel van het formulier
+screen: "Waarvoor is dit formulier?"
+instruction: "Kijk naar het formulier. Lees bovenaan waarvoor het is."
+presentation: [{"kind": "source", "title": "Aanmeldformulier", "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"}]
+helpVisible: "Lees de woorden boven de lege vakken."
+retryVisible: "Begin bovenaan het formulier. Lees de eerste regel nog eens."
+exampleVisible: "Voorbeeldformulier\nAanmelden voor koken\nVoornaam: __________\nAchternaam: __________"
+
+klink-alfa-c-aanvulling-formulier-02 Het juiste naamveld
+screen: "Waar hoort Safa?"
+instruction: "Lees de gegevens van Safa. In welk vak schrijf je Safa? Tik op het antwoord."
+presentation: [{"kind": "source", "title": "Oefengegevens", "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"}, {"kind": "source", "title": "Aanmeldformulier", "text": "Aanmelden voor lezen\nVoornaam: __________\nAchternaam: __________\nStraat: __________\nHuisnummer: __________\nWoonplaats: __________"}]
+options: [{"id": "o1", "text": "Voornaam"}, {"id": "o2", "text": "Achternaam"}, {"id": "o3", "text": "Woonplaats"}]
+correctOptionId: "o1"
+helpVisible: "Zoek Safa op de gegevenskaart. Kijk welk woord ervoor staat."
+retryVisible: "Deze plek past niet bij Safa. Kijk op de gegevenskaart bij welk woord Safa staat. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nVoornaam: Safa\nAntwoord\nVoornaam"
+
+klink-alfa-c-aanvulling-formulier-03 De voornaam invullen
+screen: "Vul de voornaam in."
+instruction: "Vul bij Voornaam de voornaam van de kaart in."
+helpVisible: "Zoek Voornaam op de kaart. Schrijf de naam die daarachter staat in hetzelfde vak op formulier A."
+retryVisible: "Vergelijk de naam op de kaart met wat jij bij Voornaam schreef. Verander wat niet hetzelfde is."
+exampleVisible: "Voorbeeld van een ingevuld vak\nVoornaam: Safa"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 3, "initialText": "", "fields": ["Voornaam"], "responseGroup": "formulier-A", "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-formulier-04 De achternaam invullen
+screen: "Vul de achternaam in."
+instruction: "Schrijf op formulier A bij Achternaam de achternaam van de kaart."
+helpVisible: "Zoek Achternaam op de kaart. Schrijf de naam die daarachter staat in hetzelfde vak op formulier A."
+retryVisible: "Vergelijk de naam op de kaart met wat jij bij Achternaam schreef. Verander wat niet hetzelfde is."
+exampleVisible: "Voorbeeld van een ingevuld vak\nAchternaam: Elmi"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 4, "initialText": "", "fields": ["Achternaam"], "responseGroup": "formulier-A", "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-formulier-05 Straat en plaats onderscheiden
+screen: "Wat is de woonplaats?"
+instruction: "Lees de gegevenskaart. Wat is de woonplaats? Tik op het antwoord."
+presentation: [{"kind": "source", "title": "Oefengegevens", "text": "Oefengegevens\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"}]
+options: [{"id": "o1", "text": "Lindelaan"}, {"id": "o2", "text": "Woerden"}, {"id": "o3", "text": "28"}]
+correctOptionId: "o2"
+helpVisible: "Zoek Woonplaats op de kaart. Lees wat erachter staat."
+retryVisible: "Dit hoort bij een ander vak. Zoek Woonplaats op de kaart. Tik op een ander antwoord."
+exampleVisible: "Dit staat in het voorbeeld\nWoonplaats: Woerden\nAntwoord\nWoerden"
+
+klink-alfa-c-aanvulling-formulier-06 Het adres invullen
+screen: "Vul het adres in."
+instruction: "Vul op formulier A de straat in. Schrijf daarna het huisnummer en de woonplaats. Gebruik de gegevenskaart."
+helpVisible: "Zoek elk woord van het formulier op de kaart. Schrijf steeds het gegeven dat erachter staat. Werk van boven naar beneden."
+retryVisible: "Vergelijk de drie adresvakken met de kaart. Kijk per vak of je hetzelfde hebt geschreven."
+exampleVisible: "Voorbeeld van ingevulde vakken\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 6, "initialText": "", "fields": ["Straat", "Huisnummer", "Woonplaats"], "responseGroup": "formulier-A", "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-formulier-07 Een verwisseling herstellen
+screen: "Verbeter de twee namen."
+instruction: "De twee namen staan verkeerd. Tik op elke verkeerde naam om die door te strepen. Vul de goede naam eronder in."
+helpVisible: "Vergelijk Voornaam op het blad met Voornaam op de kaart. Kijk daarna op dezelfde manier naar Achternaam."
+retryVisible: "Lees beide regels terug. Staan de namen nu op dezelfde plek als op de kaart? Pas aan wat nog verkeerd staat."
+exampleVisible: "Ander voorbeeld vóór het verbeteren\nStraat: Woerden\nWoonplaats: Lindelaan\n\nNa het verbeteren\nStraat: Lindelaan\nWoonplaats: Woerden"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 7, "initialText": "Voornaam: Elmi\nAchternaam: Safa", "fields": ["Voornaam", "Achternaam"], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-formulier-08 Een huisnummer schrijven
+screen: "Luister en schrijf het nummer."
+instruction: "Luister naar het huisnummer. Vul het in cijfers in."
+presentation: [{"kind": "audioOnly", "title": "Oefengeluid", "text": "Vul je antwoord hier in."}]
+helpVisible: "Luister opnieuw naar het hele getal. Kijk daarna welke cijfers je hebt geschreven."
+retryVisible: "Luister nog een keer. Vergelijk wat je hoort met jouw getal. Verander het als dat nodig is."
+exampleVisible: "Voorbeeld van een geschreven getal\n16"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 8, "initialText": "", "fields": [], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+dictationTexts: ["achtentwintig"]
+
+klink-alfa-c-aanvulling-formulier-09 Gegevens wijzigen
+screen: "Vul het nieuwe adres in."
+instruction: "Safa heeft een nieuw adres. Kijk naar de nieuwe adreskaart. Schrijf bij opdracht 9 de nieuwe straat en het nieuwe huisnummer in de lege vakken."
+presentation: [{"kind": "source", "title": "Andere adresgegevens van dezelfde oefenpersoon", "text": "Safa Elmi verhuist.\nNieuwe straat: Parklaan\nNieuw huisnummer: 146\nWoonplaats: Woerden"}]
+helpVisible: "Zoek op de nieuwe kaart wat er veranderd is. De naam en de woonplaats veranderen niet."
+retryVisible: "Vergelijk de twee nieuwe gegevens met de nieuwe adreskaart. Verbeter wat nog niet hetzelfde is."
+exampleVisible: "Ander voorbeeld\nOud huisnummer: 28\nNieuw huisnummer: 30\n\nIn het nieuwe vak komt\nHuisnummer: 30"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 9, "initialText": "Naam: Safa Elmi\nStraat: Lindelaan\nHuisnummer: 28\nWoonplaats: Woerden", "fields": ["Nieuwe straat", "Nieuw huisnummer"], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-formulier-10 Geen gegevens verzinnen
+screen: "Je weet het huisnummer niet."
+instruction: "Je wilt een formulier invullen. Je weet het huisnummer niet. Wat kun je doen? Tik op het antwoord."
+presentation: [{"kind": "scenario", "title": "De situatie", "text": "Je vult een formulier in. Je weet het huisnummer niet."}]
+options: [{"id": "o1", "text": "Een ander getal invullen."}, {"id": "o2", "text": "De hele naam verwijderen."}, {"id": "o3", "text": "Het gegeven opzoeken of hulp vragen."}]
+correctOptionId: "o3"
+helpVisible: "Kies een manier waardoor je het juiste nummer te weten komt."
+retryVisible: "Dan weet je het juiste nummer nog niet. Kies een manier om het nummer te controleren."
+exampleVisible: "Voorbeeldsituatie\nEen straatnaam ontbreekt.\n\nMogelijke stap\nZoek de straatnaam op of vraag om hulp."
+
+klink-alfa-c-aanvulling-formulier-11 Het formulier opnieuw invullen
+screen: "Vul het formulier opnieuw in."
+instruction: "Lees de kaart met de nieuwe gegevens van Safa. Vul het formulier hier in. Begin bij Voornaam."
+presentation: [{"kind": "source", "title": "Nieuwe gegevens van Safa", "text": "Voornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden"}]
+helpVisible: "Zoek elk woord van het formulier op de nieuwe kaart. Schrijf in het vak wat erachter staat."
+retryVisible: "Vergelijk elk vak op formulier C met de nieuwe kaart. Verbeter wat niet hetzelfde is."
+exampleVisible: "Voorbeeld van een ingevuld formulier\nVoornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden"
+responseSetup: {"medium": "digital", "sheetBlock": "formulier", "sheetTask": 11, "initialText": "", "fields": ["Voornaam", "Achternaam", "Straat", "Huisnummer", "Woonplaats"], "responseGroup": null, "previousResponseFrom": null, "automaticContentAssessment": false}
+
+klink-alfa-c-aanvulling-formulier-12 Terugkijken
+screen: "Controleer formulier C."
+instruction: "Kijk naar formulier C bij opdracht 11. Lees wat je hebt ingevuld. Vergelijk elk vak met de nieuwe gegevenskaart."
+presentation: [{"kind": "previousResponse", "title": "Jouw formulier C", "text": "", "fromTask": "klink-alfa-c-aanvulling-formulier-11"}, {"kind": "source", "title": "Nieuwe gegevens van Safa", "text": "Voornaam: Safa\nAchternaam: Elmi\nStraat: Parklaan\nHuisnummer: 146\nWoonplaats: Woerden"}]
+helpVisible: "Begin bovenaan. Lees eerst het woord bij het vak. Kijk daarna naar jouw antwoord en de kaart."
+retryVisible: "Is een vak nog leeg of staat er iets anders dan op de kaart? Vul dat vak aan of verbeter het."

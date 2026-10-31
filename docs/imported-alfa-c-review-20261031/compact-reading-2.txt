@@ -1,0 +1,161 @@
+SOURCE 11 | A2
+Mo heeft woensdag om vier uur een afspraak bij de tandarts voor zijn kies. Hij moet die middag werken en belt om de afspraak te verzetten. De assistent biedt donderdag om tien uur aan. Dan kan Mo wel komen. Hij herhaalt de nieuwe dag en tijd en schrijft ze in zijn agenda.
+ID kb-tb-20261018-15 | teacher
+Q Welke afspraak moet Mo nu in zijn agenda zetten?
+OPTIONS *Donderdag om tien uur. / Woensdag om vier uur. / Donderdag om vier uur.
+MODEL ['Donderdag om tien uur.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 12 | A2
+Victor en Eline zitten te wachten op hun vlucht. Op het scherm zien ze dat de gate is veranderd. Ze controleren het vluchtnummer en lopen daarna naar de nieuwe gate. Daar vragen ze een medewerker of ze goed staan.
+ID kb-tb-20261018-16 | teacher
+Q Wat controleren Victor en Eline voordat ze naar de nieuwe gate lopen?
+OPTIONS De prijs van het ticket. / Of ze bij de nieuwe gate goed staan. / *Het vluchtnummer.
+MODEL ['Het vluchtnummer.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 13 | Alfa A
+De pan is vies. Ik pak de pan. Ik maak de pan schoon.
+ID klink-teksten-b02-01 | teacher
+Q Hoe is de pan aan het begin?
+OPTIONS schoon / *vies
+MODEL ['vies']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-02 | teacher
+Q Wat doe ik in de laatste zin met de pan?
+OPTIONS *Ik maak de pan schoon. / Ik koop de pan.
+MODEL ['schoonmaken', 'ik maak de pan schoon', 'de pan schoonmaken']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-03 | teacher
+Q Welke volgorde past bij de tekst?
+OPTIONS Eerst is de pan schoon. Daarna wordt de pan vies. / *Eerst is de pan vies. Daarna wordt de pan schoongemaakt.
+MODEL ['eerst vies dan schoon', 'eerst vies daarna schoonmaken']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 14 | Alfa A
+Ik pak een map. De map is voor de les. Ik neem de map mee.
+ID klink-teksten-b02-04 | teacher
+Q Waarvoor is de map?
+OPTIONS *voor de les / voor een feest
+MODEL ['voor de les', 'de les', 'les']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-05 | teacher
+Q Wat neem ik mee?
+OPTIONS een boek / *de map
+MODEL ['map', 'de map']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-06 | teacher
+Q Welke map bedoelt ‘de map’ in de tweede zin?
+OPTIONS *de map die ik in de eerste zin pak / een andere map
+MODEL ['dezelfde map', 'de map die ik pak', 'de map uit de eerste zin']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 15 | Alfa A
+Ik zie een boom. Bij de boom staat een bank. Ik zit op de bank.
+ID klink-teksten-b02-07 | teacher
+Q Wat zie ik volgens de eerste zin?
+OPTIONS een bank / *een boom
+MODEL ['boom', 'een boom']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-08 | teacher
+Q Waarop zit ik?
+OPTIONS *op de bank / op een mat
+MODEL ['bank', 'op de bank', 'de bank']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-09 | teacher
+Q Welke bank bedoelt ‘de bank’ in de laatste zin?
+OPTIONS een andere bank / *de bank bij de boom
+MODEL ['de bank bij de boom', 'dezelfde bank', 'de bank uit de tweede zin']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 16 | Alfa A
+Ik koop kool en een biet. Ik pak een pan. De kool en de biet gaan in de pan.
+ID klink-teksten-b02-10 | teacher
+Q Wat koop ik volgens de eerste zin?
+OPTIONS *kool en een biet / kool en een pan
+MODEL ['kool en biet', 'kool en een biet', 'een biet en kool']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-11 | teacher
+Q Waar gaan de kool en de biet in?
+OPTIONS in een tas / *in de pan
+MODEL ['pan', 'de pan', 'in de pan']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b02-12 | teacher
+Q Wat doe ik in de tweede zin met de pan?
+OPTIONS *Ik pak een pan. / Ik koop een pan.
+MODEL ['ik pak een pan', 'pak', 'pakken']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 17 | Alfa A
+Ik zie de bus. De map is in de tas. Ik neem de tas mee.
+ID klink-teksten-b03-01 | teacher
+Q Wat zie ik in de eerste zin?
+OPTIONS de tas / *de bus
+MODEL ['bus', 'de bus']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b03-02 | teacher
+Q Waar is de map?
+OPTIONS *in de tas / op de bank
+MODEL ['in de tas', 'de tas', 'tas']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 18 | Alfa A
+De kop is vies. De pan is schoon. Ik maak de kop schoon.
+ID klink-teksten-b03-03 | teacher
+Q Wat is in de tweede zin schoon?
+OPTIONS de kop / *de pan
+MODEL ['de pan', 'pan']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b03-04 | teacher
+Q Wat maak ik in de laatste zin schoon?
+OPTIONS *de kop / de pan
+MODEL ['de kop', 'kop']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 19 | Alfa A
+De kool is in de pan. De biet is in een tas. Ik neem de biet.
+ID klink-teksten-b03-05 | teacher
+Q Waar is de kool?
+OPTIONS in de tas / *in de pan
+MODEL ['in de pan', 'pan', 'de pan']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b03-06 | teacher
+Q Wat neem ik volgens de laatste zin?
+OPTIONS *de biet / de kool
+MODEL ['de biet', 'biet']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 20 | Alfa A
+De les is in de tuin. Ik neem een map en een pen mee.
+ID klink-teksten-b03-07 | teacher
+Q Waar is de les?
+OPTIONS in de bus / *in de tuin
+MODEL ['in de tuin', 'de tuin', 'tuin']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b03-08 | teacher
+Q Welke twee dingen neem ik mee?
+OPTIONS *een map en een pen / een map en een boek
+MODEL ['een map en een pen', 'map en pen', 'pen en map', 'een pen en een map']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []

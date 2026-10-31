@@ -611,3 +611,11 @@ De begeleide opdrachten staan bij Alfa C onder Woorden oefenen (Woorden verbinde
 De losse woordoefeningen tonen kleine rondes van maximaal acht doelwoorden, waar de bestaande opdracht dat toelaat. Met **Andere oefening** blijf je bij dezelfde doelwoorden, hetzelfde niveau en dezelfde manier van oefenen. Alleen bestaande vormen die al deze doelwoorden aanbieden staan in dit menu. Een vorm met ontbrekende woorden of een bord dat andere woorden nodig heeft verschijnt hier niet. Via **Andere opdracht** kun je een nieuwe ronde kiezen.
 
 Vaste sorteeropdrachten, complete leerroutes en situatieopdrachten blijven als geheel beschikbaar. Koppel- en bingoborden worden niet gedeeltelijk afgerond. Alle bestaande oefeningen, audio en oude links blijven behouden. De afronding blijft bij de oorspronkelijke oefening bewaard; de positie binnen een nieuwe ronde staat apart. Een gedeelde link bewaart ook de gekozen woorden bij het wisselen van vorm.
+
+## Begeleide leesuitbreiding en Alfa C
+
+Bij B1 → Samen herhalen → Lees de woorden staan de 28 geselecteerde formele en abstracte woorden apart onder Uitbreiding met je docent. Bij zo'n woord staan een korte betekenis en een voorbeeldzin. Lees de zin samen, laat de cursist de betekenis in eigen woorden uitleggen en bespreek wanneer het woord past. De luisterknop speelt het woord; de docent begeleidt de voorbeeldzin. De overige woorden blijven in de basisselectie. Dit is een selectie binnen het begeleide aanbod, geen bewijs van een volledige B1-leerlijn. Oude links blijven werken en dezelfde opdrachten behouden hun afrondingsregistratie.
+
+In Alfa C → Schrijven → Lezen en schrijven → Korte taken gebruikt de opdracht een vel papier in een gewone map. De melding na de taak blijft: De map ligt op de tafel. Bij de voorbeeldopdracht onder Verbinden gaat ook papier in de map. Bronregels, voorbeeld en gesproken instructies horen bij dezelfde handelingen.
+
+De begeleide grammaticales Lezen en doen blijft bij Alfa C. Leer het begrip werkwoord vooraf aan en oefen de afgesproken gebaren voor een wens, mogelijkheid en plan. Laat de cursist daarna zelf de twee werkwoorden aanwijzen, een zin kiezen en de betekenis uitleggen. Noteer de benodigde hulp; gebruik deze oefening niet als zelfstandige niveautoets. De bestaande voorbereiding en registratie van de eerste reactie blijven leidend.

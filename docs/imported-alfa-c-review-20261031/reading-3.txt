@@ -1,0 +1,2227 @@
+{
+ "id": "klink-teksten-b08-03",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "bounded-sequence",
+ "sourceIds": [
+  "klink-text-57f86e3c48f974d2"
+ ],
+ "mode": "teacher",
+ "prompt": "Beschrijf de afgesproken volgorde vanaf de ronde die nu bezig is. Wat begint Hugo niet meer?",
+ "stimulus": "Hugo wil stoppen met het kaartspel, omdat hij naar huis moet. De andere spelers vragen of hij de huidige ronde nog afmaakt. Dat lukt nog. Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt.",
+ "options": [
+  {
+   "id": "klink-teksten-b08-03-d1",
+   "text": "Hij vertrekt eerst en maakt daarna nog een nieuwe ronde af."
+  },
+  {
+   "id": "klink-teksten-b08-03-correct",
+   "text": "Hij maakt de huidige ronde af en vertrekt daarna. Hij krijgt geen nieuwe kaarten en begint geen nieuwe ronde."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Hij maakt de huidige ronde af en vertrekt daarna. Hij krijgt geen nieuwe kaarten en begint geen nieuwe ronde.",
+  "retry": "Let op huidige, na deze ronde en geen nieuwe kaarten. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom is alleen na de ronde een onvolledige beschrijving van deze hele afspraak? Beoordelingsreferentie: Hij maakt de huidige ronde af en vertrekt daarna. Hij krijgt geen nieuwe kaarten en begint geen nieuwe ronde.. Bewijs: zin 1: Hugo wil stoppen met het kaartspel, omdat hij naar huis moet. | zin 2: De andere spelers vragen of hij de huidige ronde nog afmaakt. | zin 3: Dat lukt nog. | zin 4: Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Dat, De, Hugo, Ze, af, afmaakt, andere, dat, de, deze, en, geen, het, hij, huidige, huis, kaarten, kaartspel, krijgt, lukt, met, moet, na, naar, nieuwe, nog, of, omdat, ronde, spelers, spreken, stoppen, vertrekt, vragen, wil.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beschrijf, Bespreek, Dat, De, Geef, Hij, Hugo, Lees, Let, Noteer, Waarom, Wat, Ze, af, afgesproken, afmaakt, afspraak, alleen, andere, antwoord, apart, begint, beschrijving, bezig, daarna, dat, de, deze, die, een, eerst, eigen, en, gebruik, geen, hele, het, hij, hint, huidige, huis, hulp, is, je, kaarten, kaartspel, keuzes, klopt, krijgt, laat, lukt, maakt, meer, met, moet, na, naar, niet, nieuwe, nodig, nog, nu, of, omdat, ondersteunen, ontbreekt, onvolledige, op, opnieuw, poging, relevante, ronde, spelers, spreken, stoppen, tekst, tekstgedeelten, van, vanaf, vertrekt, volgorde, vragen, wat, welke, wil, zien, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, Z, a, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b08-03-correct"
+  ],
+  "acceptedAnswers": [
+   "Hij maakt de huidige ronde af en vertrekt daarna. Hij krijgt geen nieuwe kaarten en begint geen nieuwe ronde."
+  ],
+  "evidence": [
+   {
+    "quote": "Hugo wil stoppen met het kaartspel, omdat hij naar huis moet."
+   },
+   {
+    "quote": "De andere spelers vragen of hij de huidige ronde nog afmaakt."
+   },
+   {
+    "quote": "Dat lukt nog."
+   },
+   {
+    "quote": "Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "finish-current",
+   "leave-after",
+   "no-new-round"
+  ],
+  "meaningCheck": "Waarom is alleen na de ronde een onvolledige beschrijving van deze hele afspraak?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b08-04",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "cause-compromise",
+ "sourceIds": [
+  "klink-text-57f86e3c48f974d2"
+ ],
+ "mode": "teacher",
+ "prompt": "Welk verschil is er tussen wat Hugo eerst wil en de afspraak met de andere spelers? Waarom past de afspraak bij zijn reden?",
+ "stimulus": "Hugo wil stoppen met het kaartspel, omdat hij naar huis moet. De andere spelers vragen of hij de huidige ronde nog afmaakt. Dat lukt nog. Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt.",
+ "options": [
+  {
+   "id": "klink-teksten-b08-04-correct",
+   "text": "Hij wil stoppen omdat hij naar huis moet. Hij kan nog de lopende ronde afmaken, maar doet geen volgende ronde mee."
+  },
+  {
+   "id": "klink-teksten-b08-04-d1",
+   "text": "Hij hoeft niet meer naar huis en blijft onbeperkt doorspelen."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Hij wil stoppen omdat hij naar huis moet. Hij kan nog de lopende ronde afmaken, maar doet geen volgende ronde mee.",
+  "retry": "Zoek de reden in de eerste zin en de grens in de laatste. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Bewijst dat lukt nog dat Hugo tijd heeft voor meerdere rondes? Beoordelingsreferentie: Hij wil stoppen omdat hij naar huis moet. Hij kan nog de lopende ronde afmaken, maar doet geen volgende ronde mee.. Bewijs: zin 1: Hugo wil stoppen met het kaartspel, omdat hij naar huis moet. | zin 2: De andere spelers vragen of hij de huidige ronde nog afmaakt. | zin 3: Dat lukt nog. | zin 4: Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Dat, De, Hugo, Ze, af, afmaakt, andere, dat, de, deze, en, geen, het, hij, huidige, huis, kaarten, kaartspel, krijgt, lukt, met, moet, na, naar, nieuwe, nog, of, omdat, ronde, spelers, spreken, stoppen, vertrekt, vragen, wil.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bewijst, Dat, De, Geef, Hij, Hugo, Lees, Noteer, Waarom, Welk, Ze, Zoek, af, afgesproken, afmaakt, afmaken, afspraak, andere, antwoord, apart, bij, blijft, daarna, dat, de, deze, doet, doorspelen, een, eerst, eerste, eigen, en, er, gebruik, geen, grens, heeft, hele, het, hij, hint, hoeft, huidige, huis, hulp, in, is, je, kaarten, kaartspel, kan, keuzes, klopt, krijgt, laat, laatste, lopende, lukt, maar, mee, meer, meerdere, met, moet, na, naar, niet, nieuwe, nodig, nog, of, omdat, onbeperkt, ondersteunen, ontbreekt, opnieuw, past, poging, reden, relevante, ronde, rondes, spelers, spreken, stoppen, tekst, tekstgedeelten, tijd, tussen, verschil, vertrekt, volgende, voor, vragen, wat, welke, wil, zien, zijn, zin, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, Z, a, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b08-04-correct"
+  ],
+  "acceptedAnswers": [
+   "Hij wil stoppen omdat hij naar huis moet. Hij kan nog de lopende ronde afmaken, maar doet geen volgende ronde mee."
+  ],
+  "evidence": [
+   {
+    "quote": "Hugo wil stoppen met het kaartspel, omdat hij naar huis moet."
+   },
+   {
+    "quote": "De andere spelers vragen of hij de huidige ronde nog afmaakt."
+   },
+   {
+    "quote": "Dat lukt nog."
+   },
+   {
+    "quote": "Ze spreken af dat hij na deze ronde vertrekt en geen nieuwe kaarten krijgt."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "must-go-home",
+   "limited-finish-compromise"
+  ],
+  "meaningCheck": "Bewijst dat lukt nog dat Hugo tijd heeft voor meerdere rondes?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b08-05",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "permission-before-selection",
+ "sourceIds": [
+  "klink-text-cfd2b94860e61465"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke stappen zet Rosa tussen haar plan om de foto te sturen en het kiezen van een foto?",
+ "stimulus": "Rosa maakt tijdens het eten een foto van de familie. Ze wil de foto aan een vriend sturen. Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden. Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto. Rosa kiest een foto waarop hij niet staat.",
+ "options": [
+  {
+   "id": "klink-teksten-b08-05-d1",
+   "text": "Ze stuurt eerst de foto met Murat en vraagt daarna toestemming."
+  },
+  {
+   "id": "klink-teksten-b08-05-correct",
+   "text": "Ze wil een foto sturen, vraagt eerst Fenna en Murat, hoort verschillende wensen en kiest een foto zonder Murat."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Ze wil een foto sturen, vraagt eerst Fenna en Murat, hoort verschillende wensen en kiest een foto zonder Murat.",
+  "retry": "Let op eerst en op de twee verschillende reacties. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Staat er ook dat de gekozen foto al is verstuurd? Beoordelingsreferentie: Ze wil een foto sturen, vraagt eerst Fenna en Murat, hoort verschillende wensen en kiest een foto zonder Murat.. Bewijs: zin 1: Rosa maakt tijdens het eten een foto van de familie. | zin 2: Ze wil de foto aan een vriend sturen. | zin 3: Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden. | zin 4: Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto. | zin 5: Rosa kiest een foto waarop hij niet staat.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Eerst, Fenna, Murat, Rosa, Ze, aan, dat, de, een, en, eten, familie, foto, gedeelde, goed, het, hij, kiest, liever, maakt, maar, niet, of, op, staat, sturen, tijdens, van, vinden, vindt, vraagt, vriend, waarop, wil, ze, zij.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Eerst, Fenna, Geef, Lees, Let, Murat, Noteer, Rosa, Staat, Welke, Ze, aan, afgesproken, al, antwoord, apart, daarna, dat, de, een, eerst, eigen, en, er, eten, familie, foto, gebruik, gedeelde, gekozen, goed, haar, hele, het, hij, hint, hoort, hulp, is, je, keuzes, kiest, kiezen, klopt, laat, liever, maakt, maar, met, niet, nieuwe, nodig, of, om, ondersteunen, ontbreekt, ook, op, opnieuw, plan, poging, reacties, relevante, staat, stappen, sturen, stuurt, te, tekst, tekstgedeelten, tijdens, toestemming, tussen, twee, van, verschillende, verstuurd, vinden, vindt, vraagt, vriend, waarop, wat, welke, wensen, wil, ze, zet, zien, zij, zinnen, zo, zonder.",
+  "Controleer de geschreven letters en hun positie in de bron: E, F, M, R, Z, a, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b08-05-correct"
+  ],
+  "acceptedAnswers": [
+   "Ze wil een foto sturen, vraagt eerst Fenna en Murat, hoort verschillende wensen en kiest een foto zonder Murat."
+  ],
+  "evidence": [
+   {
+    "quote": "Rosa maakt tijdens het eten een foto van de familie."
+   },
+   {
+    "quote": "Ze wil de foto aan een vriend sturen."
+   },
+   {
+    "quote": "Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden."
+   },
+   {
+    "quote": "Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto."
+   },
+   {
+    "quote": "Rosa kiest een foto waarop hij niet staat."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "asks-before-choice",
+   "different-wishes",
+   "choice-excludes-murat"
+  ],
+  "meaningCheck": "Staat er ook dat de gekozen foto al is verstuurd?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b08-06",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "different-causes",
+ "sourceIds": [
+  "klink-text-cfd2b94860e61465"
+ ],
+ "mode": "teacher",
+ "prompt": "Fenna vindt delen goed. Waarom kan Rosa daarmee nog niet beslissen om de foto met iedereen te sturen?",
+ "stimulus": "Rosa maakt tijdens het eten een foto van de familie. Ze wil de foto aan een vriend sturen. Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden. Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto. Rosa kiest een foto waarop hij niet staat.",
+ "options": [
+  {
+   "id": "klink-teksten-b08-06-correct",
+   "text": "Ze vraagt ook Murat en hij wil niet op een gedeelde foto. Fenna geeft geen toestemming namens hem; Rosa kiest zonder Murat."
+  },
+  {
+   "id": "klink-teksten-b08-06-d1",
+   "text": "Als Fenna ja zegt, geldt dat ook voor Murat."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Ze vraagt ook Murat en hij wil niet op een gedeelde foto. Fenna geeft geen toestemming namens hem; Rosa kiest zonder Murat.",
+  "retry": "Vergelijk de twee personen aan weerszijden van maar. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welke reactie leidt tot de andere fotokeuze? Beoordelingsreferentie: Ze vraagt ook Murat en hij wil niet op een gedeelde foto. Fenna geeft geen toestemming namens hem; Rosa kiest zonder Murat.. Bewijs: zin 1: Rosa maakt tijdens het eten een foto van de familie. | zin 2: Ze wil de foto aan een vriend sturen. | zin 3: Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden. | zin 4: Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto. | zin 5: Rosa kiest een foto waarop hij niet staat.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Eerst, Fenna, Murat, Rosa, Ze, aan, dat, de, een, en, eten, familie, foto, gedeelde, goed, het, hij, kiest, liever, maakt, maar, niet, of, op, staat, sturen, tijdens, van, vinden, vindt, vraagt, vriend, waarop, wil, ze, zij.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Als, Bespreek, Eerst, Fenna, Geef, Lees, Murat, Noteer, Rosa, Vergelijk, Waarom, Welke, Ze, aan, afgesproken, andere, antwoord, apart, beslissen, daarmee, daarna, dat, de, delen, een, eerst, eigen, en, eten, familie, foto, fotokeuze, gebruik, gedeelde, geeft, geen, geldt, goed, hele, hem, het, hij, hint, hulp, iedereen, ja, je, kan, keuzes, kiest, klopt, laat, leidt, liever, maakt, maar, met, namens, niet, nieuwe, nodig, nog, of, om, ondersteunen, ontbreekt, ook, op, opnieuw, personen, poging, reactie, relevante, staat, sturen, te, tekst, tekstgedeelten, tijdens, toestemming, tot, twee, van, vinden, vindt, voor, vraagt, vriend, waarop, wat, weerszijden, welke, wil, ze, zegt, zien, zij, zinnen, zo, zonder.",
+  "Controleer de geschreven letters en hun positie in de bron: E, F, M, R, Z, a, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b08-06-correct"
+  ],
+  "acceptedAnswers": [
+   "Ze vraagt ook Murat en hij wil niet op een gedeelde foto. Fenna geeft geen toestemming namens hem; Rosa kiest zonder Murat."
+  ],
+  "evidence": [
+   {
+    "quote": "Rosa maakt tijdens het eten een foto van de familie."
+   },
+   {
+    "quote": "Ze wil de foto aan een vriend sturen."
+   },
+   {
+    "quote": "Eerst vraagt ze aan Fenna en Murat of zij dat goed vinden."
+   },
+   {
+    "quote": "Fenna vindt het goed, maar Murat wil liever niet op een gedeelde foto."
+   },
+   {
+    "quote": "Rosa kiest een foto waarop hij niet staat."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "fenna-only-own-wish",
+   "murat-different-wish",
+   "selection-follows"
+  ],
+  "meaningCheck": "Welke reactie leidt tot de andere fotokeuze?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b08-07",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "explicit-versus-listed-order",
+ "sourceIds": [
+  "klink-text-addafeceedd37add"
+ ],
+ "mode": "teacher",
+ "prompt": "Moet Bao volgens de tekst klaar zijn vóór Samira begint? Welk tijdsverband staat wel uitdrukkelijk in de tekst?",
+ "stimulus": "In het lokaal spreken de cursisten af wie na de les opruimt. Bao verzamelt de pennen en Samira zet de mappen terug. Koen controleert de ramen. Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt.",
+ "options": [
+  {
+   "id": "klink-teksten-b08-07-d1",
+   "text": "Bao moet eerst klaar zijn, daarna Samira, en pas dan mag Koen beginnen."
+  },
+  {
+   "id": "klink-teksten-b08-07-correct",
+   "text": "De tekst geeft geen vaste volgorde voor Bao en Samira. De ramen gaan wel dicht voordat de groep vertrekt."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De tekst geeft geen vaste volgorde voor Bao en Samira. De ramen gaan wel dicht voordat de groep vertrekt.",
+  "retry": "Vergelijk en in de opsomming met voordat bij het vertrek. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Mag je van de zinsvolgorde zomaar een werkinstructie eerst-dan maken? Beoordelingsreferentie: De tekst geeft geen vaste volgorde voor Bao en Samira. De ramen gaan wel dicht voordat de groep vertrekt.. Bewijs: zin 1: In het lokaal spreken de cursisten af wie na de les opruimt. | zin 2: Bao verzamelt de pennen en Samira zet de mappen terug. | zin 3: Koen controleert de ramen. | zin 4: Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bao, In, Koen, Omdat, Samira, af, allemaal, controleert, cursisten, de, dicht, doet, en, groep, hard, het, hij, les, lokaal, mappen, na, opruimt, pennen, ramen, spreken, terug, vertrekt, verzamelt, voordat, waait, wie, ze, zet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bao, Bespreek, De, Geef, In, Koen, Lees, Mag, Moet, Noteer, Omdat, Samira, Vergelijk, Welk, af, afgesproken, allemaal, antwoord, apart, beginnen, begint, bij, controleert, cursisten, daarna, dan, dat, de, dicht, doet, een, eerst, eigen, en, gaan, gebruik, geeft, geen, groep, hard, hele, het, hij, hint, hulp, in, je, keuzes, klaar, klopt, laat, les, lokaal, mag, maken, mappen, met, moet, na, nieuwe, nodig, of, ondersteunen, ontbreekt, opnieuw, opruimt, opsomming, pas, pennen, poging, ramen, relevante, spreken, staat, tekst, tekstgedeelten, terug, tijdsverband, uitdrukkelijk, van, vaste, vertrek, vertrekt, verzamelt, volgens, volgorde, voor, voordat, vóór, waait, wat, wel, welke, werkinstructie, wie, ze, zet, zien, zijn, zinnen, zinsvolgorde, zo, zomaar.",
+  "Controleer de geschreven letters en hun positie in de bron: B, I, K, O, S, a, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b08-07-correct"
+  ],
+  "acceptedAnswers": [
+   "De tekst geeft geen vaste volgorde voor Bao en Samira. De ramen gaan wel dicht voordat de groep vertrekt."
+  ],
+  "evidence": [
+   {
+    "quote": "In het lokaal spreken de cursisten af wie na de les opruimt."
+   },
+   {
+    "quote": "Bao verzamelt de pennen en Samira zet de mappen terug."
+   },
+   {
+    "quote": "Koen controleert de ramen."
+   },
+   {
+    "quote": "Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "no-bao-samira-order",
+   "windows-before-departure"
+  ],
+  "meaningCheck": "Mag je van de zinsvolgorde zomaar een werkinstructie eerst-dan maken?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b08-08",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "check-action-departure",
+ "sourceIds": [
+  "klink-text-addafeceedd37add"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat doet Koen behalve controleren, en vóór welke gebeurtenis doet hij dat?",
+ "stimulus": "In het lokaal spreken de cursisten af wie na de les opruimt. Bao verzamelt de pennen en Samira zet de mappen terug. Koen controleert de ramen. Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt.",
+ "options": [
+  {
+   "id": "klink-teksten-b08-08-correct",
+   "text": "Hij doet alle ramen dicht voordat de groep vertrekt. Controleren alleen is niet het hele beschreven handelen."
+  },
+  {
+   "id": "klink-teksten-b08-08-d1",
+   "text": "Hij kijkt alleen naar de ramen en sluit ze pas na het vertrek."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Hij doet alle ramen dicht voordat de groep vertrekt. Controleren alleen is niet het hele beschreven handelen.",
+  "retry": "Zoek de handeling bij doet en de tijdsgrens bij voordat. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Wat is het verschil tussen controleren en dichtdoen? Beoordelingsreferentie: Hij doet alle ramen dicht voordat de groep vertrekt. Controleren alleen is niet het hele beschreven handelen.. Bewijs: zin 1: In het lokaal spreken de cursisten af wie na de les opruimt. | zin 2: Bao verzamelt de pennen en Samira zet de mappen terug. | zin 3: Koen controleert de ramen. | zin 4: Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bao, In, Koen, Omdat, Samira, af, allemaal, controleert, cursisten, de, dicht, doet, en, groep, hard, het, hij, les, lokaal, mappen, na, opruimt, pennen, ramen, spreken, terug, vertrekt, verzamelt, voordat, waait, wie, ze, zet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bao, Bespreek, Controleren, Geef, Hij, In, Koen, Lees, Noteer, Omdat, Samira, Wat, Zoek, af, afgesproken, alle, alleen, allemaal, antwoord, apart, behalve, beschreven, bij, controleert, controleren, cursisten, daarna, dat, de, dicht, dichtdoen, doet, een, eerst, eigen, en, gebeurtenis, gebruik, groep, handelen, handeling, hard, hele, het, hij, hint, hulp, is, je, keuzes, kijkt, klopt, laat, les, lokaal, mappen, met, na, naar, niet, nieuwe, nodig, of, ondersteunen, ontbreekt, opnieuw, opruimt, pas, pennen, poging, ramen, relevante, sluit, spreken, tekst, tekstgedeelten, terug, tijdsgrens, tussen, verschil, vertrek, vertrekt, verzamelt, voordat, vóór, waait, wat, welke, wie, ze, zet, zien, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: B, I, K, O, S, a, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b08-08-correct"
+  ],
+  "acceptedAnswers": [
+   "Hij doet alle ramen dicht voordat de groep vertrekt. Controleren alleen is niet het hele beschreven handelen."
+  ],
+  "evidence": [
+   {
+    "quote": "In het lokaal spreken de cursisten af wie na de les opruimt."
+   },
+   {
+    "quote": "Bao verzamelt de pennen en Samira zet de mappen terug."
+   },
+   {
+    "quote": "Koen controleert de ramen."
+   },
+   {
+    "quote": "Omdat het hard waait, doet hij ze allemaal dicht voordat de groep vertrekt."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "closes-all-windows",
+   "before-group-leaves"
+  ],
+  "meaningCheck": "Wat is het verschil tussen controleren en dichtdoen?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b09-01",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "same-object-pronouns",
+ "sourceIds": [
+  "klink-text-82e9590d3d784998"
+ ],
+ "mode": "teacher",
+ "prompt": "Waarnaar verwijzen die in zin twee en hem in zin drie? Leg met beide zinnen uit dat het om hetzelfde voorwerp gaat.",
+ "stimulus": "Sofia ziet een munt op de toonbank van een winkel. Ze weet niet van wie die is. Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond. Ze zegt niet dat de munt van haar is.",
+ "options": [
+  {
+   "id": "klink-teksten-b09-01-d1",
+   "text": "Die is de munt, maar hem is de medewerker die Sofia vond."
+  },
+  {
+   "id": "klink-teksten-b09-01-correct",
+   "text": "Die en hem verwijzen naar de munt die Sofia op de toonbank ziet; ze weet de eigenaar niet en vertelt waar ze die munt vond."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Die en hem verwijzen naar de munt die Sofia op de toonbank ziet; ze weet de eigenaar niet en vertelt waar ze die munt vond.",
+  "retry": "Volg de munt vanaf de eerste zin en vervang de verwijswoorden. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Blijft de betekenis kloppen als je beide woorden door de munt vervangt? Beoordelingsreferentie: Die en hem verwijzen naar de munt die Sofia op de toonbank ziet; ze weet de eigenaar niet en vertelt waar ze die munt vond.. Bewijs: zin 1: Sofia ziet een munt op de toonbank van een winkel. | zin 2: Ze weet niet van wie die is. | zin 3: Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond. | zin 4: Ze zegt niet dat de munt van haar is.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daarom, Sofia, Ze, aan, dat, de, die, een, en, geeft, haar, hem, is, medewerker, munt, niet, op, toonbank, van, vertelt, vond, waar, weet, wie, winkel, ze, zegt, ziet, zij.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Blijft, Daarom, Die, Geef, Lees, Leg, Noteer, Sofia, Volg, Waarnaar, Ze, aan, afgesproken, als, antwoord, apart, beide, betekenis, daarna, dat, de, die, door, drie, een, eerst, eerste, eigen, eigenaar, en, gaat, gebruik, geeft, haar, hele, hem, het, hetzelfde, hint, hulp, in, is, je, keuzes, kloppen, klopt, laat, maar, medewerker, met, munt, naar, niet, nieuwe, nodig, of, om, ondersteunen, ontbreekt, op, opnieuw, poging, relevante, tekst, tekstgedeelten, toonbank, twee, uit, van, vanaf, vertelt, vervang, vervangt, verwijswoorden, verwijzen, vond, voorwerp, waar, wat, weet, welke, wie, winkel, woorden, ze, zegt, zien, ziet, zij, zin, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: D, S, Z, a, b, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b09-01-correct"
+  ],
+  "acceptedAnswers": [
+   "Die en hem verwijzen naar de munt die Sofia op de toonbank ziet; ze weet de eigenaar niet en vertelt waar ze die munt vond."
+  ],
+  "evidence": [
+   {
+    "quote": "Sofia ziet een munt op de toonbank van een winkel."
+   },
+   {
+    "quote": "Ze weet niet van wie die is."
+   },
+   {
+    "quote": "Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond."
+   },
+   {
+    "quote": "Ze zegt niet dat de munt van haar is."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "die-munt",
+   "hem-same-munt"
+  ],
+  "meaningCheck": "Blijft de betekenis kloppen als je beide woorden door de munt vervangt?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b09-02",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "negated-ownership-scope",
+ "sourceIds": [
+  "klink-text-82e9590d3d784998"
+ ],
+ "mode": "teacher",
+ "prompt": "Van wie zou de munt zijn als Sofia zei van haar? Wat weten we werkelijk over de eigenaar?",
+ "stimulus": "Sofia ziet een munt op de toonbank van een winkel. Ze weet niet van wie die is. Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond. Ze zegt niet dat de munt van haar is.",
+ "options": [
+  {
+   "id": "klink-teksten-b09-02-correct",
+   "text": "Haar zou naar Sofia verwijzen. Zij zegt niet dat de munt van haar is; de eigenaar blijft onbekend in de tekst."
+  },
+  {
+   "id": "klink-teksten-b09-02-d1",
+   "text": "Haar verwijst naar de medewerker, dus de munt is van de medewerker."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Haar zou naar Sofia verwijzen. Zij zegt niet dat de munt van haar is; de eigenaar blijft onbekend in de tekst.",
+  "retry": "Zoek naar Sofia en naar weet niet en zegt niet. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Bewijst afgeven aan een medewerker dat die medewerker de eigenaar is? Beoordelingsreferentie: Haar zou naar Sofia verwijzen. Zij zegt niet dat de munt van haar is; de eigenaar blijft onbekend in de tekst.. Bewijs: zin 1: Sofia ziet een munt op de toonbank van een winkel. | zin 2: Ze weet niet van wie die is. | zin 3: Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond. | zin 4: Ze zegt niet dat de munt van haar is.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daarom, Sofia, Ze, aan, dat, de, die, een, en, geeft, haar, hem, is, medewerker, munt, niet, op, toonbank, van, vertelt, vond, waar, weet, wie, winkel, ze, zegt, ziet, zij.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bewijst, Daarom, Geef, Haar, Lees, Noteer, Sofia, Van, Wat, Ze, Zij, Zoek, aan, afgesproken, afgeven, als, antwoord, apart, blijft, daarna, dat, de, die, dus, een, eerst, eigen, eigenaar, en, gebruik, geeft, haar, hele, hem, hint, hulp, in, is, je, keuzes, klopt, laat, medewerker, met, munt, naar, niet, nieuwe, nodig, of, onbekend, ondersteunen, ontbreekt, op, opnieuw, over, poging, relevante, tekst, tekstgedeelten, toonbank, van, vertelt, verwijst, verwijzen, vond, waar, wat, we, weet, welke, werkelijk, weten, wie, winkel, ze, zegt, zei, zien, ziet, zij, zijn, zinnen, zo, zou.",
+  "Controleer de geschreven letters en hun positie in de bron: D, S, Z, a, b, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b09-02-correct"
+  ],
+  "acceptedAnswers": [
+   "Haar zou naar Sofia verwijzen. Zij zegt niet dat de munt van haar is; de eigenaar blijft onbekend in de tekst."
+  ],
+  "evidence": [
+   {
+    "quote": "Sofia ziet een munt op de toonbank van een winkel."
+   },
+   {
+    "quote": "Ze weet niet van wie die is."
+   },
+   {
+    "quote": "Daarom geeft ze de munt aan de medewerker en vertelt waar zij hem vond."
+   },
+   {
+    "quote": "Ze zegt niet dat de munt van haar is."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "haar-sofia",
+   "owner-unknown"
+  ],
+  "meaningCheck": "Bewijst afgeven aan een medewerker dat die medewerker de eigenaar is?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b09-03",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "subset-and-contrast",
+ "sourceIds": [
+  "klink-text-cca9a015732f146a"
+ ],
+ "mode": "teacher",
+ "prompt": "Leg het verband uit tussen een deel, die planken en de beschadigde stukken. Beschrijft de tekst één bestemming voor alle planken?",
+ "stimulus": "Karim heeft planken over na een klus. Een deel is nog recht en stevig. Hij bewaart die planken voor een kleine kast. De beschadigde stukken legt hij apart om op de juiste plek in te leveren.",
+ "options": [
+  {
+   "id": "klink-teksten-b09-03-d1",
+   "text": "Die planken betekent alle stukken, dus ook de beschadigde stukken gaan in de kast."
+  },
+  {
+   "id": "klink-teksten-b09-03-correct",
+   "text": "Die planken verwijst naar het rechte, stevige deel dat Karim bewaart. De beschadigde stukken legt hij apart om in te leveren; er zijn dus verschillende bestemmingen."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Die planken verwijst naar het rechte, stevige deel dat Karim bewaart. De beschadigde stukken legt hij apart om in te leveren; er zijn dus verschillende bestemmingen.",
+  "retry": "Vervang die planken en vergelijk bewaren met apart leggen. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom mag je een deel hier niet vervangen door alles? Beoordelingsreferentie: Die planken verwijst naar het rechte, stevige deel dat Karim bewaart. De beschadigde stukken legt hij apart om in te leveren; er zijn dus verschillende bestemmingen.. Bewijs: zin 1: Karim heeft planken over na een klus. | zin 2: Een deel is nog recht en stevig. | zin 3: Hij bewaart die planken voor een kleine kast. | zin 4: De beschadigde stukken legt hij apart om op de juiste plek in te leveren.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Een, Hij, Karim, apart, beschadigde, bewaart, de, deel, die, een, en, heeft, hij, in, is, juiste, kast, kleine, klus, legt, leveren, na, nog, om, op, over, planken, plek, recht, stevig, stukken, te, voor.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beschrijft, Bespreek, De, Die, Een, Geef, Hij, Karim, Lees, Leg, Noteer, Vervang, Waarom, afgesproken, alle, alles, antwoord, apart, beschadigde, bestemming, bestemmingen, betekent, bewaart, bewaren, daarna, dat, de, deel, die, door, dus, een, eerst, eigen, en, er, gaan, gebruik, heeft, hele, het, hier, hij, hint, hulp, in, is, je, juiste, kast, keuzes, kleine, klopt, klus, laat, leggen, legt, leveren, mag, met, na, naar, niet, nieuwe, nodig, nog, of, om, ondersteunen, ontbreekt, ook, op, opnieuw, over, planken, plek, poging, recht, rechte, relevante, stevig, stevige, stukken, te, tekst, tekstgedeelten, tussen, uit, verband, vergelijk, verschillende, vervangen, verwijst, voor, wat, welke, zien, zijn, zinnen, zo, één.",
+  "Controleer de geschreven letters en hun positie in de bron: D, E, H, K, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b09-03-correct"
+  ],
+  "acceptedAnswers": [
+   "Die planken verwijst naar het rechte, stevige deel dat Karim bewaart. De beschadigde stukken legt hij apart om in te leveren; er zijn dus verschillende bestemmingen."
+  ],
+  "evidence": [
+   {
+    "quote": "Karim heeft planken over na een klus."
+   },
+   {
+    "quote": "Een deel is nog recht en stevig."
+   },
+   {
+    "quote": "Hij bewaart die planken voor een kleine kast."
+   },
+   {
+    "quote": "De beschadigde stukken legt hij apart om op de juiste plek in te leveren."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "right-sturdy-subset",
+   "damaged-separate-destination"
+  ],
+  "meaningCheck": "Waarom mag je een deel hier niet vervangen door alles?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b09-04",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "homograph-context",
+ "sourceIds": [
+  "klink-text-2fc7bd8fac1caee1"
+ ],
+ "mode": "teacher",
+ "prompt": "Leg uit wat meer in de twee voorbeeldzinnen betekent. Welke woorden uit elke zin helpen je kiezen?",
+ "stimulus": "In de les leest Pavel het woord meer. In de eerste zin wil iemand meer water. In de tweede zin vaart een boot op een meer. De docent laat zien dat hetzelfde geschreven woord verschillende betekenissen kan hebben.",
+ "options": [
+  {
+   "id": "klink-teksten-b09-04-correct",
+   "text": "Bij meer water gaat het om een grotere hoeveelheid water. Bij een boot op een meer gaat het om een watergebied; de boot vaart daarop."
+  },
+  {
+   "id": "klink-teksten-b09-04-d1",
+   "text": "In beide zinnen betekent meer alleen een grotere hoeveelheid."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Bij meer water gaat het om een grotere hoeveelheid water. Bij een boot op een meer gaat het om een watergebied; de boot vaart daarop.",
+  "retry": "Gebruik water in de eerste voorbeeldzin en een boot op een in de tweede. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Kun je de juiste betekenis kiezen uit de spelling meer alleen? Beoordelingsreferentie: Bij meer water gaat het om een grotere hoeveelheid water. Bij een boot op een meer gaat het om een watergebied; de boot vaart daarop.. Bewijs: zin 1: In de les leest Pavel het woord meer. | zin 2: In de eerste zin wil iemand meer water. | zin 3: In de tweede zin vaart een boot op een meer. | zin 4: De docent laat zien dat hetzelfde geschreven woord verschillende betekenissen kan hebben.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, In, Pavel, betekenissen, boot, dat, de, docent, een, eerste, geschreven, hebben, het, hetzelfde, iemand, kan, laat, leest, les, meer, op, tweede, vaart, verschillende, water, wil, woord, zien, zin.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bij, De, Gebruik, Geef, In, Kun, Lees, Leg, Noteer, Pavel, Welke, afgesproken, alleen, antwoord, apart, beide, betekenis, betekenissen, betekent, boot, daarna, daarop, dat, de, docent, een, eerst, eerste, eigen, elke, en, gaat, gebruik, geschreven, grotere, hebben, hele, helpen, het, hetzelfde, hint, hoeveelheid, hulp, iemand, in, je, juiste, kan, keuzes, kiezen, klopt, laat, leest, les, meer, met, nieuwe, nodig, of, om, ondersteunen, ontbreekt, op, opnieuw, poging, relevante, spelling, tekst, tekstgedeelten, twee, tweede, uit, vaart, verschillende, voorbeeldzin, voorbeeldzinnen, wat, water, watergebied, welke, wil, woord, woorden, zien, zin, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, P, a, b, c, d, e, f, g, h, i, k, l, m, n, o, p, r, s, t, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b09-04-correct"
+  ],
+  "acceptedAnswers": [
+   "Bij meer water gaat het om een grotere hoeveelheid water. Bij een boot op een meer gaat het om een watergebied; de boot vaart daarop."
+  ],
+  "evidence": [
+   {
+    "quote": "In de les leest Pavel het woord meer."
+   },
+   {
+    "quote": "In de eerste zin wil iemand meer water."
+   },
+   {
+    "quote": "In de tweede zin vaart een boot op een meer."
+   },
+   {
+    "quote": "De docent laat zien dat hetzelfde geschreven woord verschillende betekenissen kan hebben."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "quantity-water",
+   "lake-boat",
+   "context-selects-meaning"
+  ],
+  "meaningCheck": "Kun je de juiste betekenis kiezen uit de spelling meer alleen?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b09-05",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "people-and-possession",
+ "sourceIds": [
+  "klink-text-882d6fa63f85c45b"
+ ],
+ "mode": "teacher",
+ "prompt": "Vervang Zij, hij en hun in de vraag van de buren door de bedoelde personen. Van wie zijn de planten en wie gaat ze verzorgen?",
+ "stimulus": "De buren van Koen zijn een week weg. Zij vragen of hij hun planten water wil geven. Koen zegt ja en schrijft op welke dagen hij komt. Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden.",
+ "options": [
+  {
+   "id": "klink-teksten-b09-05-d1",
+   "text": "Koen vraagt of de buren de planten van Koen verzorgen."
+  },
+  {
+   "id": "klink-teksten-b09-05-correct",
+   "text": "De buren vragen of Koen de planten van de buren water wil geven. De planten zijn van de buren; Koen verzorgt ze volgens de afspraak."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De buren vragen of Koen de planten van de buren water wil geven. De planten zijn van de buren; Koen verzorgt ze volgens de afspraak.",
+  "retry": "Lees de eerste twee zinnen samen en vervang één woord per keer. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom hoort hun bij de buren en niet bij Koen? Beoordelingsreferentie: De buren vragen of Koen de planten van de buren water wil geven. De planten zijn van de buren; Koen verzorgt ze volgens de afspraak.. Bewijs: zin 1: De buren van Koen zijn een week weg. | zin 2: Zij vragen of hij hun planten water wil geven. | zin 3: Koen zegt ja en schrijft op welke dagen hij komt. | zin 4: Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Hij, Koen, Zij, alles, buren, dagen, de, een, en, geven, gieter, hij, hun, ja, kan, komt, of, ook, op, planten, schrijft, staat, straks, van, vinden, vraagt, vragen, waar, water, week, weg, welke, wil, zegt, zijn, zodat.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Geef, Hij, Koen, Lees, Noteer, Van, Vervang, Waarom, Zij, afgesproken, afspraak, alles, antwoord, apart, bedoelde, bij, buren, daarna, dagen, dat, de, door, een, eerst, eerste, eigen, en, gaat, gebruik, geven, gieter, hele, hij, hint, hoort, hulp, hun, in, ja, je, kan, keer, keuzes, klopt, komt, laat, met, niet, nieuwe, nodig, of, ondersteunen, ontbreekt, ook, op, opnieuw, per, personen, planten, poging, relevante, samen, schrijft, staat, straks, tekst, tekstgedeelten, twee, van, vervang, verzorgen, verzorgt, vinden, volgens, vraag, vraagt, vragen, waar, wat, water, week, weg, welke, wie, wil, woord, ze, zegt, zien, zijn, zinnen, zo, zodat, één.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, K, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b09-05-correct"
+  ],
+  "acceptedAnswers": [
+   "De buren vragen of Koen de planten van de buren water wil geven. De planten zijn van de buren; Koen verzorgt ze volgens de afspraak."
+  ],
+  "evidence": [
+   {
+    "quote": "De buren van Koen zijn een week weg."
+   },
+   {
+    "quote": "Zij vragen of hij hun planten water wil geven."
+   },
+   {
+    "quote": "Koen zegt ja en schrijft op welke dagen hij komt."
+   },
+   {
+    "quote": "Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "zij-neighbours",
+   "hij-koen",
+   "hun-neighbours-plants"
+  ],
+  "meaningCheck": "Waarom hoort hun bij de buren en niet bij Koen?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b09-06",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "contextual-scope-all",
+ "sourceIds": [
+  "klink-text-882d6fa63f85c45b"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat betekent alles in zodat hij straks alles kan vinden binnen deze situatie? Bewijst dat woord dat Koen ieder voorwerp in het huis weet te vinden?",
+ "stimulus": "De buren van Koen zijn een week weg. Zij vragen of hij hun planten water wil geven. Koen zegt ja en schrijft op welke dagen hij komt. Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden.",
+ "options": [
+  {
+   "id": "klink-teksten-b09-06-correct",
+   "text": "Het gaat om wat hij nodig heeft voor het planten water geven, zoals de gieter. De tekst zegt niet dat hij ieder voorwerp in huis kan vinden."
+  },
+  {
+   "id": "klink-teksten-b09-06-d1",
+   "text": "Alles betekent hier ieder voorwerp in het hele huis, zonder beperking."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Het gaat om wat hij nodig heeft voor het planten water geven, zoals de gieter. De tekst zegt niet dat hij ieder voorwerp in huis kan vinden.",
+  "retry": "Verbind de laatste zin met de vraag over de planten. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welke concrete vindvraag noemt de tekst wel? Beoordelingsreferentie: Het gaat om wat hij nodig heeft voor het planten water geven, zoals de gieter. De tekst zegt niet dat hij ieder voorwerp in huis kan vinden.. Bewijs: zin 1: De buren van Koen zijn een week weg. | zin 2: Zij vragen of hij hun planten water wil geven. | zin 3: Koen zegt ja en schrijft op welke dagen hij komt. | zin 4: Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Hij, Koen, Zij, alles, buren, dagen, de, een, en, geven, gieter, hij, hun, ja, kan, komt, of, ook, op, planten, schrijft, staat, straks, van, vinden, vraagt, vragen, waar, water, week, weg, welke, wil, zegt, zijn, zodat.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Alles, Bespreek, Bewijst, De, Geef, Het, Hij, Koen, Lees, Noteer, Verbind, Wat, Welke, Zij, afgesproken, alles, antwoord, apart, beperking, betekent, binnen, buren, concrete, daarna, dagen, dat, de, deze, een, eerst, eigen, en, gaat, gebruik, geven, gieter, heeft, hele, het, hier, hij, hint, huis, hulp, hun, ieder, in, ja, je, kan, keuzes, klopt, komt, laat, laatste, met, niet, nieuwe, nodig, noemt, of, om, ondersteunen, ontbreekt, ook, op, opnieuw, over, planten, poging, relevante, schrijft, situatie, staat, straks, te, tekst, tekstgedeelten, van, vinden, vindvraag, voor, voorwerp, vraag, vraagt, vragen, waar, wat, water, week, weet, weg, wel, welke, wil, woord, zegt, zien, zijn, zin, zinnen, zo, zoals, zodat, zonder.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, K, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b09-06-correct"
+  ],
+  "acceptedAnswers": [
+   "Het gaat om wat hij nodig heeft voor het planten water geven, zoals de gieter. De tekst zegt niet dat hij ieder voorwerp in huis kan vinden."
+  ],
+  "evidence": [
+   {
+    "quote": "De buren van Koen zijn een week weg."
+   },
+   {
+    "quote": "Zij vragen of hij hun planten water wil geven."
+   },
+   {
+    "quote": "Koen zegt ja en schrijft op welke dagen hij komt."
+   },
+   {
+    "quote": "Hij vraagt ook waar de gieter staat, zodat hij straks alles kan vinden."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "task-relevant-materials",
+   "no-whole-house-claim"
+  ],
+  "meaningCheck": "Welke concrete vindvraag noemt de tekst wel?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-01",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "deadline-action",
+ "sourceIds": [
+  "klink-text-8013db18a19b2c10"
+ ],
+ "mode": "teacher",
+ "prompt": "Past het telefoontje van Fenna binnen de genoemde aanmeldtermijn? Gebruik de twee dagen uit de tekst.",
+ "stimulus": "Fenna leest de brief over de lunch nog eens. Aanmelden kan tot vrijdag. Zij belt op donderdag en geeft door dat zij samen met Rosa komt. Ze vraagt ook of er eten zonder vlees is. De medewerker noteert haar vraag en zal terugbellen.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-01-d1",
+   "text": "Nee, want donderdag komt na vrijdag."
+  },
+  {
+   "id": "klink-teksten-b10-01-correct",
+   "text": "Ja. Aanmelden kan tot vrijdag en Fenna belt op donderdag, dus vóór die grens."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Ja. Aanmelden kan tot vrijdag en Fenna belt op donderdag, dus vóór die grens.",
+  "retry": "Vergelijk donderdag en vrijdag; voeg geen onbekende datum toe. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Moet je voor deze vraag weten of aanmelden op vrijdag zelf nog mag? Beoordelingsreferentie: Ja. Aanmelden kan tot vrijdag en Fenna belt op donderdag, dus vóór die grens.. Bewijs: zin 1: Fenna leest de brief over de lunch nog eens. | zin 2: Aanmelden kan tot vrijdag. | zin 3: Zij belt op donderdag en geeft door dat zij samen met Rosa komt. | zin 4: Ze vraagt ook of er eten zonder vlees is. | zin 5: De medewerker noteert haar vraag en zal terugbellen.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Aanmelden, De, Fenna, Rosa, Ze, Zij, belt, brief, dat, de, donderdag, door, eens, en, er, eten, geeft, haar, is, kan, komt, leest, lunch, medewerker, met, nog, noteert, of, ook, op, over, samen, terugbellen, tot, vlees, vraag, vraagt, vrijdag, zal, zij, zonder.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Aanmelden, Bespreek, De, Fenna, Gebruik, Geef, Ja, Lees, Moet, Nee, Noteer, Past, Rosa, Vergelijk, Ze, Zij, aanmelden, aanmeldtermijn, afgesproken, antwoord, apart, belt, binnen, brief, daarna, dagen, dat, datum, de, deze, die, donderdag, door, dus, een, eens, eerst, eigen, en, er, eten, gebruik, geeft, geen, genoemde, grens, haar, hele, het, hint, hulp, is, je, kan, keuzes, klopt, komt, laat, leest, lunch, mag, medewerker, met, na, nieuwe, nodig, nog, noteert, of, onbekende, ondersteunen, ontbreekt, ook, op, opnieuw, over, poging, relevante, samen, tekst, tekstgedeelten, telefoontje, terugbellen, toe, tot, twee, uit, van, vlees, voeg, voor, vraag, vraagt, vrijdag, vóór, want, wat, welke, weten, zal, zelf, zien, zij, zinnen, zo, zonder.",
+  "Controleer de geschreven letters en hun positie in de bron: A, D, F, R, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-01-correct"
+  ],
+  "acceptedAnswers": [
+   "Ja. Aanmelden kan tot vrijdag en Fenna belt op donderdag, dus vóór die grens."
+  ],
+  "evidence": [
+   {
+    "quote": "Fenna leest de brief over de lunch nog eens."
+   },
+   {
+    "quote": "Aanmelden kan tot vrijdag."
+   },
+   {
+    "quote": "Zij belt op donderdag en geeft door dat zij samen met Rosa komt."
+   },
+   {
+    "quote": "Ze vraagt ook of er eten zonder vlees is."
+   },
+   {
+    "quote": "De medewerker noteert haar vraag en zal terugbellen."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "deadline-friday",
+   "call-thursday-before"
+  ],
+  "meaningCheck": "Moet je voor deze vraag weten of aanmelden op vrijdag zelf nog mag?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-02",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "known-party-pending-meal",
+ "sourceIds": [
+  "klink-text-8013db18a19b2c10"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke informatie over wie komt kan de medewerker noteren, en welke maaltijdinformatie blijft nog open?",
+ "stimulus": "Fenna leest de brief over de lunch nog eens. Aanmelden kan tot vrijdag. Zij belt op donderdag en geeft door dat zij samen met Rosa komt. Ze vraagt ook of er eten zonder vlees is. De medewerker noteert haar vraag en zal terugbellen.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-02-correct",
+   "text": "Fenna komt samen met Rosa: twee personen. Of er eten zonder vlees is, is nog niet bevestigd; de medewerker zal terugbellen."
+  },
+  {
+   "id": "klink-teksten-b10-02-d1",
+   "text": "Alleen Fenna komt en de maaltijd zonder vlees is al bevestigd."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Fenna komt samen met Rosa: twee personen. Of er eten zonder vlees is, is nog niet bevestigd; de medewerker zal terugbellen.",
+  "retry": "Scheid wat Fenna doorgeeft van wat zij vraagt. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Is een vraag noteren hetzelfde als daarop ja antwoorden? Beoordelingsreferentie: Fenna komt samen met Rosa: twee personen. Of er eten zonder vlees is, is nog niet bevestigd; de medewerker zal terugbellen.. Bewijs: zin 1: Fenna leest de brief over de lunch nog eens. | zin 2: Aanmelden kan tot vrijdag. | zin 3: Zij belt op donderdag en geeft door dat zij samen met Rosa komt. | zin 4: Ze vraagt ook of er eten zonder vlees is. | zin 5: De medewerker noteert haar vraag en zal terugbellen.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Aanmelden, De, Fenna, Rosa, Ze, Zij, belt, brief, dat, de, donderdag, door, eens, en, er, eten, geeft, haar, is, kan, komt, leest, lunch, medewerker, met, nog, noteert, of, ook, op, over, samen, terugbellen, tot, vlees, vraag, vraagt, vrijdag, zal, zij, zonder.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Aanmelden, Alleen, Bespreek, De, Fenna, Geef, Is, Lees, Noteer, Of, Rosa, Scheid, Welke, Ze, Zij, afgesproken, al, als, antwoord, antwoorden, apart, belt, bevestigd, blijft, brief, daarna, daarop, dat, de, donderdag, door, doorgeeft, een, eens, eerst, eigen, en, er, eten, gebruik, geeft, haar, hele, hetzelfde, hint, hulp, informatie, is, ja, je, kan, keuzes, klopt, komt, laat, leest, lunch, maaltijd, maaltijdinformatie, medewerker, met, niet, nieuwe, nodig, nog, noteert, noteren, of, ondersteunen, ontbreekt, ook, op, open, opnieuw, over, personen, poging, relevante, samen, tekst, tekstgedeelten, terugbellen, tot, twee, van, vlees, vraag, vraagt, vrijdag, wat, welke, wie, zal, zien, zij, zinnen, zo, zonder.",
+  "Controleer de geschreven letters en hun positie in de bron: A, D, F, R, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-02-correct"
+  ],
+  "acceptedAnswers": [
+   "Fenna komt samen met Rosa: twee personen. Of er eten zonder vlees is, is nog niet bevestigd; de medewerker zal terugbellen."
+  ],
+  "evidence": [
+   {
+    "quote": "Fenna leest de brief over de lunch nog eens."
+   },
+   {
+    "quote": "Aanmelden kan tot vrijdag."
+   },
+   {
+    "quote": "Zij belt op donderdag en geeft door dat zij samen met Rosa komt."
+   },
+   {
+    "quote": "Ze vraagt ook of er eten zonder vlees is."
+   },
+   {
+    "quote": "De medewerker noteert haar vraag en zal terugbellen."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "fenna-and-rosa-two",
+   "meal-answer-pending"
+  ],
+  "meaningCheck": "Is een vraag noteren hetzelfde als daarop ja antwoorden?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-03",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "rule-scope",
+ "sourceIds": [
+  "klink-text-a8b9597b8f47c58e"
+ ],
+ "mode": "teacher",
+ "prompt": "Voor wie geldt de regel op het bord, en valt Mina in deze situatie daaronder?",
+ "stimulus": "Mina ziet een paard bij het hek. Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren. Mina bewaart de appel in haar tas. Zij kijkt van een afstand naar het paard.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-03-d1",
+   "text": "De regel geldt alleen voor de eigenaar van het paard, niet voor Mina."
+  },
+  {
+   "id": "klink-teksten-b10-03-correct",
+   "text": "De regel geldt voor bezoekers. Mina is hier een bezoeker en mag het paard dus geen appel voeren."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De regel geldt voor bezoekers. Mina is hier een bezoeker en mag het paard dus geen appel voeren.",
+  "retry": "Zoek de groep die het bord noemt en pas de regel op Mina toe. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welk woord bepaalt voor wie de regel geldt? Beoordelingsreferentie: De regel geldt voor bezoekers. Mina is hier een bezoeker en mag het paard dus geen appel voeren.. Bewijs: zin 1: Mina ziet een paard bij het hek. | zin 2: Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren. | zin 3: Mina bewaart de appel in haar tas. | zin 4: Zij kijkt van een afstand naar het paard.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Mina, Zij, afstand, appel, bewaart, bezoekers, bij, bord, dat, de, dieren, een, geven, haar, hek, het, in, kijkt, maar, mogen, naar, niet, op, paard, staat, tas, van, voeren, wil, ziet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Geef, Lees, Mina, Noteer, Voor, Welk, Zij, Zoek, afgesproken, afstand, alleen, antwoord, apart, appel, bepaalt, bewaart, bezoeker, bezoekers, bij, bord, daarna, daaronder, dat, de, deze, die, dieren, dus, een, eerst, eigen, eigenaar, en, gebruik, geen, geldt, geven, groep, haar, hek, hele, het, hier, hint, hulp, in, is, je, keuzes, kijkt, klopt, laat, maar, mag, met, mogen, naar, niet, nieuwe, nodig, noemt, of, ondersteunen, ontbreekt, op, opnieuw, paard, pas, poging, regel, relevante, situatie, staat, tas, tekst, tekstgedeelten, toe, valt, van, voeren, voor, wat, welke, wie, wil, woord, zien, ziet, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: M, Z, a, b, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-03-correct"
+  ],
+  "acceptedAnswers": [
+   "De regel geldt voor bezoekers. Mina is hier een bezoeker en mag het paard dus geen appel voeren."
+  ],
+  "evidence": [
+   {
+    "quote": "Mina ziet een paard bij het hek."
+   },
+   {
+    "quote": "Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren."
+   },
+   {
+    "quote": "Mina bewaart de appel in haar tas."
+   },
+   {
+    "quote": "Zij kijkt van een afstand naar het paard."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "visitors-rule",
+   "mina-within-scope"
+  ],
+  "meaningCheck": "Welk woord bepaalt voor wie de regel geldt?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-04",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "plan-versus-observed-action",
+ "sourceIds": [
+  "klink-text-a8b9597b8f47c58e"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke twee handelingen laten zien wat Mina uiteindelijk doet in plaats van haar eerste plan?",
+ "stimulus": "Mina ziet een paard bij het hek. Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren. Mina bewaart de appel in haar tas. Zij kijkt van een afstand naar het paard.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-04-correct",
+   "text": "Ze houdt de appel in haar tas en kijkt op afstand naar het paard; zij geeft het paard de appel niet in het verhaal."
+  },
+  {
+   "id": "klink-teksten-b10-04-d1",
+   "text": "Ze voert de appel en loopt daarna dichterbij."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Ze houdt de appel in haar tas en kijkt op afstand naar het paard; zij geeft het paard de appel niet in het verhaal.",
+  "retry": "Vergelijk wil in het begin met de laatste twee handelingen. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom beschrijft zij wil nog geen uitgevoerde handeling? Beoordelingsreferentie: Ze houdt de appel in haar tas en kijkt op afstand naar het paard; zij geeft het paard de appel niet in het verhaal.. Bewijs: zin 1: Mina ziet een paard bij het hek. | zin 2: Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren. | zin 3: Mina bewaart de appel in haar tas. | zin 4: Zij kijkt van een afstand naar het paard.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Mina, Zij, afstand, appel, bewaart, bezoekers, bij, bord, dat, de, dieren, een, geven, haar, hek, het, in, kijkt, maar, mogen, naar, niet, op, paard, staat, tas, van, voeren, wil, ziet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Geef, Lees, Mina, Noteer, Vergelijk, Waarom, Welke, Ze, Zij, afgesproken, afstand, antwoord, apart, appel, begin, beschrijft, bewaart, bezoekers, bij, bord, daarna, dat, de, dichterbij, dieren, doet, een, eerst, eerste, eigen, en, gebruik, geeft, geen, geven, haar, handeling, handelingen, hek, hele, het, hint, houdt, hulp, in, je, keuzes, kijkt, klopt, laat, laatste, laten, loopt, maar, met, mogen, naar, niet, nieuwe, nodig, nog, of, ondersteunen, ontbreekt, op, opnieuw, paard, plaats, plan, poging, relevante, staat, tas, tekst, tekstgedeelten, twee, uiteindelijk, uitgevoerde, van, verhaal, voeren, voert, wat, welke, wil, zien, ziet, zij, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: M, Z, a, b, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-04-correct"
+  ],
+  "acceptedAnswers": [
+   "Ze houdt de appel in haar tas en kijkt op afstand naar het paard; zij geeft het paard de appel niet in het verhaal."
+  ],
+  "evidence": [
+   {
+    "quote": "Mina ziet een paard bij het hek."
+   },
+   {
+    "quote": "Zij wil het een appel geven, maar op het bord staat dat bezoekers de dieren niet mogen voeren."
+   },
+   {
+    "quote": "Mina bewaart de appel in haar tas."
+   },
+   {
+    "quote": "Zij kijkt van een afstand naar het paard."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "apple-kept",
+   "observes-at-distance"
+  ],
+  "meaningCheck": "Waarom beschrijft zij wil nog geen uitgevoerde handeling?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-05",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "role-information-action",
+ "sourceIds": [
+  "klink-text-97026259a4e85bb7"
+ ],
+ "mode": "teacher",
+ "prompt": "Wie geeft de plaatsinformatie en wie sluit de trap af? Leg uit hoe die handelingen samenhangen.",
+ "stimulus": "Voor het gebouw ziet Boris een losse trede. Hij gebruikt een andere ingang en meldt het probleem bij de beheerder. Hij noemt de precieze plek. De beheerder zet de trap af en regelt herstel.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-05-d1",
+   "text": "De beheerder geeft Boris een plek en Boris zet de trap af."
+  },
+  {
+   "id": "klink-teksten-b10-05-correct",
+   "text": "Boris meldt de precieze plek. De beheerder zet de trap af en regelt herstel; zo kan die gericht reageren op de melding."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Boris meldt de precieze plek. De beheerder zet de trap af en regelt herstel; zo kan die gericht reageren op de melding.",
+  "retry": "Volg Boris tot de derde zin en de beheerder in de laatste. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom helpt precieze plek meer dan alleen er is ergens een probleem? Beoordelingsreferentie: Boris meldt de precieze plek. De beheerder zet de trap af en regelt herstel; zo kan die gericht reageren op de melding.. Bewijs: zin 1: Voor het gebouw ziet Boris een losse trede. | zin 2: Hij gebruikt een andere ingang en meldt het probleem bij de beheerder. | zin 3: Hij noemt de precieze plek. | zin 4: De beheerder zet de trap af en regelt herstel.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Boris, De, Hij, Voor, af, andere, beheerder, bij, de, een, en, gebouw, gebruikt, herstel, het, ingang, losse, meldt, noemt, plek, precieze, probleem, regelt, trap, trede, zet, ziet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Boris, De, Geef, Hij, Lees, Leg, Noteer, Volg, Voor, Waarom, Wie, af, afgesproken, alleen, andere, antwoord, apart, beheerder, bij, daarna, dan, dat, de, derde, die, een, eerst, eigen, en, er, ergens, gebouw, gebruik, gebruikt, geeft, gericht, handelingen, hele, helpt, herstel, het, hint, hoe, hulp, in, ingang, is, je, kan, keuzes, klopt, laat, laatste, losse, meer, melding, meldt, met, nieuwe, nodig, noemt, of, ondersteunen, ontbreekt, op, opnieuw, plaatsinformatie, plek, poging, precieze, probleem, reageren, regelt, relevante, samenhangen, sluit, tekst, tekstgedeelten, tot, trap, trede, uit, wat, welke, wie, zet, zien, ziet, zin, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: B, D, H, V, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-05-correct"
+  ],
+  "acceptedAnswers": [
+   "Boris meldt de precieze plek. De beheerder zet de trap af en regelt herstel; zo kan die gericht reageren op de melding."
+  ],
+  "evidence": [
+   {
+    "quote": "Voor het gebouw ziet Boris een losse trede."
+   },
+   {
+    "quote": "Hij gebruikt een andere ingang en meldt het probleem bij de beheerder."
+   },
+   {
+    "quote": "Hij noemt de precieze plek."
+   },
+   {
+    "quote": "De beheerder zet de trap af en regelt herstel."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "boris-location-report",
+   "manager-barrier-response"
+  ],
+  "meaningCheck": "Waarom helpt precieze plek meer dan alleen er is ergens een probleem?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-06",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "repair-status",
+ "sourceIds": [
+  "klink-text-97026259a4e85bb7"
+ ],
+ "mode": "teacher",
+ "prompt": "Mag je na deze tekst zeggen dat de trede weer gemaakt is? Noem wat de beheerder wel heeft gedaan.",
+ "stimulus": "Voor het gebouw ziet Boris een losse trede. Hij gebruikt een andere ingang en meldt het probleem bij de beheerder. Hij noemt de precieze plek. De beheerder zet de trap af en regelt herstel.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-06-correct",
+   "text": "Nee, dat is niet bevestigd. De beheerder heeft de trap afgezet en herstel geregeld; een voltooide reparatie staat er niet."
+  },
+  {
+   "id": "klink-teksten-b10-06-d1",
+   "text": "Ja, herstel regelen betekent dat de reparatie al klaar is."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Nee, dat is niet bevestigd. De beheerder heeft de trap afgezet en herstel geregeld; een voltooide reparatie staat er niet.",
+  "retry": "Vergelijk regelt herstel met heeft hersteld. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Is niet bevestigd hetzelfde als zeker niet gerepareerd? Beoordelingsreferentie: Nee, dat is niet bevestigd. De beheerder heeft de trap afgezet en herstel geregeld; een voltooide reparatie staat er niet.. Bewijs: zin 1: Voor het gebouw ziet Boris een losse trede. | zin 2: Hij gebruikt een andere ingang en meldt het probleem bij de beheerder. | zin 3: Hij noemt de precieze plek. | zin 4: De beheerder zet de trap af en regelt herstel.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Boris, De, Hij, Voor, af, andere, beheerder, bij, de, een, en, gebouw, gebruikt, herstel, het, ingang, losse, meldt, noemt, plek, precieze, probleem, regelt, trap, trede, zet, ziet.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Boris, De, Geef, Hij, Is, Ja, Lees, Mag, Nee, Noem, Noteer, Vergelijk, Voor, af, afgesproken, afgezet, al, als, andere, antwoord, apart, beheerder, betekent, bevestigd, bij, daarna, dat, de, deze, een, eerst, eigen, en, er, gebouw, gebruik, gebruikt, gedaan, gemaakt, geregeld, gerepareerd, heeft, hele, herstel, hersteld, het, hetzelfde, hint, hulp, ingang, is, je, keuzes, klaar, klopt, laat, losse, meldt, met, na, niet, nieuwe, nodig, noemt, of, ondersteunen, ontbreekt, opnieuw, plek, poging, precieze, probleem, regelen, regelt, relevante, reparatie, staat, tekst, tekstgedeelten, trap, trede, voltooide, wat, weer, wel, welke, zeggen, zeker, zet, zien, ziet, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: B, D, H, V, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-06-correct"
+  ],
+  "acceptedAnswers": [
+   "Nee, dat is niet bevestigd. De beheerder heeft de trap afgezet en herstel geregeld; een voltooide reparatie staat er niet."
+  ],
+  "evidence": [
+   {
+    "quote": "Voor het gebouw ziet Boris een losse trede."
+   },
+   {
+    "quote": "Hij gebruikt een andere ingang en meldt het probleem bij de beheerder."
+   },
+   {
+    "quote": "Hij noemt de precieze plek."
+   },
+   {
+    "quote": "De beheerder zet de trap af en regelt herstel."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "barrier-and-arrangement",
+   "completion-unknown"
+  ],
+  "meaningCheck": "Is niet bevestigd hetzelfde als zeker niet gerepareerd?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b10-07",
+ "domain": "teksten",
+ "level": "A2",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "information-insufficient-for-pronunciation",
+ "sourceIds": [
+  "klink-text-87a3da61ef9c528e"
+ ],
+ "mode": "teacher",
+ "prompt": "Leert deze tekst je precies welke klanken je bij de c in camera en citroen moet zeggen? Leg uit wat hij wel vertelt en wat ontbreekt.",
+ "stimulus": "In de les vergelijkt Erik camera met citroen. De letter c klinkt niet hetzelfde in deze woorden. Daarna luistert hij naar de eerste klank van circus en de tweede c in dat woord. Hij merkt dat ook binnen één woord dezelfde letter verschillend kan klinken.",
+ "options": [
+  {
+   "id": "klink-teksten-b10-07-d1",
+   "text": "Ja, de tekst schrijft voor beide woorden de precieze klank uit."
+  },
+  {
+   "id": "klink-teksten-b10-07-correct",
+   "text": "De tekst zegt dat de c daar verschillend klinkt, maar geeft de klanken niet weer. Voor de precieze uitspraak is nog een uitspraakmodel nodig."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De tekst zegt dat de c daar verschillend klinkt, maar geeft de klanken niet weer. Voor de precieze uitspraak is nog een uitspraakmodel nodig.",
+  "retry": "Zoek naar een werkelijk weergegeven klank, niet alleen naar verschillend. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Beoordeelt deze vraag jouw uitspraak, of of de tekst genoeg informatie geeft? Beoordelingsreferentie: De tekst zegt dat de c daar verschillend klinkt, maar geeft de klanken niet weer. Voor de precieze uitspraak is nog een uitspraakmodel nodig.. Bewijs: zin 1: In de les vergelijkt Erik camera met citroen. | zin 2: De letter c klinkt niet hetzelfde in deze woorden. | zin 3: Daarna luistert hij naar de eerste klank van circus en de tweede c in dat woord. | zin 4: Hij merkt dat ook binnen één woord dezelfde letter verschillend kan klinken.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daarna, De, Erik, Hij, In, binnen, c, camera, circus, citroen, dat, de, deze, dezelfde, eerste, en, hetzelfde, hij, in, kan, klank, klinken, klinkt, les, letter, luistert, merkt, met, naar, niet, ook, tweede, van, vergelijkt, verschillend, woord, woorden, één.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beoordeelt, Bespreek, Daarna, De, Erik, Geef, Hij, In, Ja, Leert, Lees, Leg, Noteer, Voor, Zoek, afgesproken, alleen, antwoord, apart, beide, bij, binnen, c, camera, circus, citroen, daar, daarna, dat, de, deze, dezelfde, een, eerst, eerste, eigen, en, gebruik, geeft, genoeg, hele, hetzelfde, hij, hint, hulp, in, informatie, is, je, jouw, kan, keuzes, klank, klanken, klinken, klinkt, klopt, laat, les, letter, luistert, maar, merkt, met, moet, naar, niet, nieuwe, nodig, nog, of, ondersteunen, ontbreekt, ook, opnieuw, poging, precies, precieze, relevante, schrijft, tekst, tekstgedeelten, tweede, uit, uitspraak, uitspraakmodel, van, vergelijkt, verschillend, vertelt, voor, vraag, wat, weer, weergegeven, wel, welke, werkelijk, woord, woorden, zeggen, zegt, zien, zinnen, zo, één.",
+  "Controleer de geschreven letters en hun positie in de bron: D, E, H, I, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, r, s, t, u, v, w, z, é. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b10-07-correct"
+  ],
+  "acceptedAnswers": [
+   "De tekst zegt dat de c daar verschillend klinkt, maar geeft de klanken niet weer. Voor de precieze uitspraak is nog een uitspraakmodel nodig."
+  ],
+  "evidence": [
+   {
+    "quote": "In de les vergelijkt Erik camera met citroen."
+   },
+   {
+    "quote": "De letter c klinkt niet hetzelfde in deze woorden."
+   },
+   {
+    "quote": "Daarna luistert hij naar de eerste klank van circus en de tweede c in dat woord."
+   },
+   {
+    "quote": "Hij merkt dat ook binnen één woord dezelfde letter verschillend kan klinken."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "difference-stated",
+   "exact-sounds-not-given"
+  ],
+  "meaningCheck": "Beoordeelt deze vraag jouw uitspraak, of of de tekst genoeg informatie geeft?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-01",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "main-across-paragraphs",
+ "sourceIds": [
+  "klink-concept-text-b11-01"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat is de hoofdgedachte van het hele bericht? Verbind de aanleiding, de ervaring en de volgende stap.",
+ "stimulus": "Het buurthuis was op woensdag alleen overdag open. Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken. Daarom bleef het gebouw vier woensdagen tot negen uur open.\n\nTijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag. De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken. Twee bezoekers boden aan voortaan bij het opruimen te helpen.\n\nHet bestuur wil de avondopening nog niet voor altijd invoeren. Eerst probeert het twee avonden met een vaste opruimgroep. Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-01-d1",
+   "text": "Het buurthuis blijft voortaan iedere avond tot negen uur open."
+  },
+  {
+   "id": "klink-teksten-b11-01-correct",
+   "text": "Het buurthuis probeert avondopening voor werkende bewoners. Er is belangstelling, maar opruimen vraagt extra hulp; daarom volgt eerst een nieuwe proef met een opruimgroep."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Het buurthuis probeert avondopening voor werkende bewoners. Er is belangstelling, maar opruimen vraagt extra hulp; daarom volgt eerst een nieuwe proef met een opruimgroep.",
+  "retry": "Gebruik iets uit elk van de drie alinea’s. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom is alleen er komen meer bezoekers te beperkt als kern? Beoordelingsreferentie: Het buurthuis probeert avondopening voor werkende bewoners. Er is belangstelling, maar opruimen vraagt extra hulp; daarom volgt eerst een nieuwe proef met een opruimgroep.. Bewijs: zin 1: Het buurthuis was op woensdag alleen overdag open. | zin 2: Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken. | zin 3: Daarom bleef het gebouw vier woensdagen tot negen uur open. | zin 4: Tijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag. | zin 5: De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken. | zin 6: Twee bezoekers boden aan voortaan bij het opruimen te helpen. | zin 7: Het bestuur wil de avondopening nog niet voor altijd invoeren. | zin 8: Eerst probeert het twee avonden met een vaste opruimgroep. | zin 9: Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bewoners, Daarna, Daarom, De, Eerst, Het, Tijdens, Twee, aan, alleen, alles, altijd, avond, avonden, avondopening, bekijkt, bestuur, bezoekers, bij, bleef, boden, buurthuis, daarna, dan, de, die, druk, een, er, gebouw, gebruikt, genoeg, gewone, helpen, het, houden, hulp, invoeren, is, keuken, koken, konden, kwamen, maar, maken, meer, met, negen, niet, nog, of, om, op, open, opruimen, opruimgroep, overdag, probeert, proef, samen, schoon, te, tot, twee, uur, vaste, vier, vol, voor, voortaan, vrijwilligers, vroegen, waarop, waren, was, weinig, werd, werken, wil, woensdag, woensdagen, woensdagmiddag, zij.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bewoners, Daarna, Daarom, De, Eerst, Er, Gebruik, Geef, Het, Lees, Noteer, Tijdens, Twee, Verbind, Waarom, Wat, aan, aanleiding, afgesproken, alinea, alleen, alles, als, altijd, antwoord, apart, avond, avonden, avondopening, bekijkt, belangstelling, beperkt, bericht, bestuur, bewoners, bezoekers, bij, bleef, blijft, boden, buurthuis, daarna, daarom, dan, dat, de, die, drie, druk, een, eerst, eigen, elk, en, er, ervaring, extra, gebouw, gebruik, gebruikt, genoeg, gewone, hele, helpen, het, hint, hoofdgedachte, houden, hulp, iedere, iets, invoeren, is, je, kern, keuken, keuzes, klopt, koken, komen, konden, kwamen, laat, maar, maken, meer, met, negen, niet, nieuwe, nodig, nog, of, om, ondersteunen, ontbreekt, op, open, opnieuw, opruimen, opruimgroep, overdag, poging, probeert, proef, relevante, s, samen, schoon, stap, te, tekst, tekstgedeelten, tot, twee, uit, uur, van, vaste, vier, vol, volgende, volgt, voor, voortaan, vraagt, vrijwilligers, vroegen, waarop, waren, was, wat, weinig, welke, werd, werken, werkende, wil, woensdag, woensdagen, woensdagmiddag, zien, zij, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: B, D, E, H, T, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-01-correct"
+  ],
+  "acceptedAnswers": [
+   "Het buurthuis probeert avondopening voor werkende bewoners. Er is belangstelling, maar opruimen vraagt extra hulp; daarom volgt eerst een nieuwe proef met een opruimgroep."
+  ],
+  "evidence": [
+   {
+    "quote": "Het buurthuis was op woensdag alleen overdag open."
+   },
+   {
+    "quote": "Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken."
+   },
+   {
+    "quote": "Daarom bleef het gebouw vier woensdagen tot negen uur open."
+   },
+   {
+    "quote": "Tijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag."
+   },
+   {
+    "quote": "De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken."
+   },
+   {
+    "quote": "Twee bezoekers boden aan voortaan bij het opruimen te helpen."
+   },
+   {
+    "quote": "Het bestuur wil de avondopening nog niet voor altijd invoeren."
+   },
+   {
+    "quote": "Eerst probeert het twee avonden met een vaste opruimgroep."
+   },
+   {
+    "quote": "Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "need-evening",
+   "interest-cleaning-limit",
+   "further-trial"
+  ],
+  "meaningCheck": "Waarom is alleen er komen meer bezoekers te beperkt als kern?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-02",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "paragraph-role",
+ "sourceIds": [
+  "klink-concept-text-b11-01"
+ ],
+ "mode": "teacher",
+ "prompt": "Waarom is de tweede alinea nodig om de beslissing in de derde te begrijpen?",
+ "stimulus": "Het buurthuis was op woensdag alleen overdag open. Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken. Daarom bleef het gebouw vier woensdagen tot negen uur open.\n\nTijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag. De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken. Twee bezoekers boden aan voortaan bij het opruimen te helpen.\n\nHet bestuur wil de avondopening nog niet voor altijd invoeren. Eerst probeert het twee avonden met een vaste opruimgroep. Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-02-correct",
+   "text": "Zij laat zowel belangstelling als een opruimprobleem zien. Daardoor is verder proberen met hulp logisch, terwijl direct blijvend openen nog niet is besloten."
+  },
+  {
+   "id": "klink-teksten-b11-02-d1",
+   "text": "De tweede alinea bewijst dat niemand avondopening wil."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Zij laat zowel belangstelling als een opruimprobleem zien. Daardoor is verder proberen met hulp logisch, terwijl direct blijvend openen nog niet is besloten.",
+  "retry": "Verbind het probleem en het aanbod in alinea twee met de nieuwe proef. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welke informatie zou ontbreken als alleen de eerste en derde alinea bleven staan? Beoordelingsreferentie: Zij laat zowel belangstelling als een opruimprobleem zien. Daardoor is verder proberen met hulp logisch, terwijl direct blijvend openen nog niet is besloten.. Bewijs: zin 1: Het buurthuis was op woensdag alleen overdag open. | zin 2: Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken. | zin 3: Daarom bleef het gebouw vier woensdagen tot negen uur open. | zin 4: Tijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag. | zin 5: De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken. | zin 6: Twee bezoekers boden aan voortaan bij het opruimen te helpen. | zin 7: Het bestuur wil de avondopening nog niet voor altijd invoeren. | zin 8: Eerst probeert het twee avonden met een vaste opruimgroep. | zin 9: Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bewoners, Daarna, Daarom, De, Eerst, Het, Tijdens, Twee, aan, alleen, alles, altijd, avond, avonden, avondopening, bekijkt, bestuur, bezoekers, bij, bleef, boden, buurthuis, daarna, dan, de, die, druk, een, er, gebouw, gebruikt, genoeg, gewone, helpen, het, houden, hulp, invoeren, is, keuken, koken, konden, kwamen, maar, maken, meer, met, negen, niet, nog, of, om, op, open, opruimen, opruimgroep, overdag, probeert, proef, samen, schoon, te, tot, twee, uur, vaste, vier, vol, voor, voortaan, vrijwilligers, vroegen, waarop, waren, was, weinig, werd, werken, wil, woensdag, woensdagen, woensdagmiddag, zij.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bewoners, Daardoor, Daarna, Daarom, De, Eerst, Geef, Het, Lees, Noteer, Tijdens, Twee, Verbind, Waarom, Welke, Zij, aan, aanbod, afgesproken, alinea, alleen, alles, als, altijd, antwoord, apart, avond, avonden, avondopening, begrijpen, bekijkt, belangstelling, beslissing, besloten, bestuur, bewijst, bezoekers, bij, bleef, bleven, blijvend, boden, buurthuis, daarna, dan, dat, de, derde, die, direct, druk, een, eerst, eerste, eigen, en, er, gebouw, gebruik, gebruikt, genoeg, gewone, hele, helpen, het, hint, houden, hulp, in, informatie, invoeren, is, je, keuken, keuzes, klopt, koken, konden, kwamen, laat, logisch, maar, maken, meer, met, negen, niemand, niet, nieuwe, nodig, nog, of, om, ondersteunen, ontbreekt, ontbreken, op, open, openen, opnieuw, opruimen, opruimgroep, opruimprobleem, overdag, poging, probeert, proberen, probleem, proef, relevante, samen, schoon, staan, te, tekst, tekstgedeelten, terwijl, tot, twee, tweede, uur, vaste, verder, vier, vol, voor, voortaan, vrijwilligers, vroegen, waarop, waren, was, wat, weinig, welke, werd, werken, wil, woensdag, woensdagen, woensdagmiddag, zien, zij, zinnen, zo, zou, zowel.",
+  "Controleer de geschreven letters en hun positie in de bron: B, D, E, H, T, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-02-correct"
+  ],
+  "acceptedAnswers": [
+   "Zij laat zowel belangstelling als een opruimprobleem zien. Daardoor is verder proberen met hulp logisch, terwijl direct blijvend openen nog niet is besloten."
+  ],
+  "evidence": [
+   {
+    "quote": "Het buurthuis was op woensdag alleen overdag open."
+   },
+   {
+    "quote": "Bewoners die overdag werken, vroegen om een avond waarop zij samen konden koken."
+   },
+   {
+    "quote": "Daarom bleef het gebouw vier woensdagen tot negen uur open."
+   },
+   {
+    "quote": "Tijdens de proef kwamen er meer bezoekers dan op een gewone woensdagmiddag."
+   },
+   {
+    "quote": "De keuken werd druk gebruikt, maar er waren te weinig vrijwilligers om daarna alles schoon te maken."
+   },
+   {
+    "quote": "Twee bezoekers boden aan voortaan bij het opruimen te helpen."
+   },
+   {
+    "quote": "Het bestuur wil de avondopening nog niet voor altijd invoeren."
+   },
+   {
+    "quote": "Eerst probeert het twee avonden met een vaste opruimgroep."
+   },
+   {
+    "quote": "Daarna bekijkt het bestuur of er genoeg hulp is om de avondopening vol te houden."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "positive-and-problem",
+   "explains-conditional-next-step"
+  ],
+  "meaningCheck": "Welke informatie zou ontbreken als alleen de eerste en derde alinea bleven staan?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-03",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "main-across-paragraphs",
+ "sourceIds": [
+  "klink-concept-text-b11-02"
+ ],
+ "mode": "teacher",
+ "prompt": "Vat het voorstel en de voorzichtige start van de gereedschapskast samen.",
+ "stimulus": "In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten. De bewonersgroep stelde daarom een kleine gereedschapskast voor. Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen.\n\nTijdens een eerste bijeenkomst wilden veel mensen meedoen. Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht. De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd.\n\nDe kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen. Na twee maanden bespreekt de groep of de afspraken werken. Pas daarna beslist zij of er meer spullen bij komen.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-03-d1",
+   "text": "Iedere bewoner moet meteen een nieuwe boormachine kopen voor de kast."
+  },
+  {
+   "id": "klink-teksten-b11-03-correct",
+   "text": "Bewoners willen weinig gebruikt gereedschap delen. Zij beginnen klein met leenafspraken en beoordelen na twee maanden of uitbreiding kan."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Bewoners willen weinig gebruikt gereedschap delen. Zij beginnen klein met leenafspraken en beoordelen na twee maanden of uitbreiding kan.",
+  "retry": "Zoek het probleem, de afspraken en het moment van uitbreiden. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom horen de afspraken bij de kern en niet alleen de kast zelf? Beoordelingsreferentie: Bewoners willen weinig gebruikt gereedschap delen. Zij beginnen klein met leenafspraken en beoordelen na twee maanden of uitbreiding kan.. Bewijs: zin 1: In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten. | zin 2: De bewonersgroep stelde daarom een kleine gereedschapskast voor. | zin 3: Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen. | zin 4: Tijdens een eerste bijeenkomst wilden veel mensen meedoen. | zin 5: Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht. | zin 6: De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd. | zin 7: De kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen. | zin 8: Na twee maanden bespreekt de groep of de afspraken werken. | zin 9: Pas daarna beslist zij of er meer spullen bij komen.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Iedere, In, Na, Pas, Sommigen, Tijdens, af, afspraken, alles, beschikbaar, beslist, bespreekt, bewoner, bewoners, bewonersgroep, bij, bijeenkomst, boormachine, daar, daarna, daarom, dat, de, die, een, eenvoudige, eerste, elke, en, er, gebruikten, genoteerd, gereedschap, gereedschappen, gereedschapskast, groep, het, iets, in, kapot, kast, kleine, kochten, komen, kopen, kunnen, lenen, lening, maakten, maanden, maar, meedoen, meer, mensen, met, naam, niet, of, over, paar, plaats, sprak, spullen, start, stelde, stellen, te, terugbrengdag, teruggebracht, twee, van, veel, verschillende, voor, voorwerp, werden, werken, wilden, woongebouw, worden, zelden, zelf, zich, zij, zorgen, zou.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Bewoners, De, Geef, Iedere, In, Lees, Na, Noteer, Pas, Sommigen, Tijdens, Vat, Waarom, Zij, Zoek, af, afgesproken, afspraken, alleen, alles, antwoord, apart, beginnen, beoordelen, beschikbaar, beslist, bespreekt, bewoner, bewoners, bewonersgroep, bij, bijeenkomst, boormachine, daar, daarna, daarom, dat, de, delen, die, een, eenvoudige, eerst, eerste, eigen, elke, en, er, gebruik, gebruikt, gebruikten, genoteerd, gereedschap, gereedschappen, gereedschapskast, groep, hele, het, hint, horen, hulp, iets, in, je, kan, kapot, kast, kern, keuzes, klein, kleine, klopt, kochten, komen, kopen, kunnen, laat, leenafspraken, lenen, lening, maakten, maanden, maar, meedoen, meer, mensen, met, meteen, moet, moment, na, naam, niet, nieuwe, nodig, of, ondersteunen, ontbreekt, opnieuw, over, paar, plaats, poging, probleem, relevante, samen, sprak, spullen, start, stelde, stellen, te, tekst, tekstgedeelten, terugbrengdag, teruggebracht, twee, uitbreiden, uitbreiding, van, veel, verschillende, voor, voorstel, voorwerp, voorzichtige, wat, weinig, welke, werden, werken, wilden, willen, woongebouw, worden, zelden, zelf, zich, zien, zij, zinnen, zo, zorgen, zou.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, N, P, S, T, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-03-correct"
+  ],
+  "acceptedAnswers": [
+   "Bewoners willen weinig gebruikt gereedschap delen. Zij beginnen klein met leenafspraken en beoordelen na twee maanden of uitbreiding kan."
+  ],
+  "evidence": [
+   {
+    "quote": "In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten."
+   },
+   {
+    "quote": "De bewonersgroep stelde daarom een kleine gereedschapskast voor."
+   },
+   {
+    "quote": "Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen."
+   },
+   {
+    "quote": "Tijdens een eerste bijeenkomst wilden veel mensen meedoen."
+   },
+   {
+    "quote": "Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht."
+   },
+   {
+    "quote": "De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd."
+   },
+   {
+    "quote": "De kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen."
+   },
+   {
+    "quote": "Na twee maanden bespreekt de groep of de afspraken werken."
+   },
+   {
+    "quote": "Pas daarna beslist zij of er meer spullen bij komen."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "sharing-rather-than-each-buying",
+   "small-start-rules",
+   "evaluate-before-expand"
+  ],
+  "meaningCheck": "Waarom horen de afspraken bij de kern en niet alleen de kast zelf?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-04",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "paragraph-relation",
+ "sourceIds": [
+  "klink-concept-text-b11-02"
+ ],
+ "mode": "teacher",
+ "prompt": "Hoe sluiten de zorgen in de tweede alinea aan op de beperkte start in de derde?",
+ "stimulus": "In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten. De bewonersgroep stelde daarom een kleine gereedschapskast voor. Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen.\n\nTijdens een eerste bijeenkomst wilden veel mensen meedoen. Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht. De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd.\n\nDe kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen. Na twee maanden bespreekt de groep of de afspraken werken. Pas daarna beslist zij of er meer spullen bij komen.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-04-correct",
+   "text": "Er zijn zorgen over schade en terugbrengen. Een kleine start met registratie geeft de groep gelegenheid om de afspraken te beoordelen voordat zij uitbreidt."
+  },
+  {
+   "id": "klink-teksten-b11-04-d1",
+   "text": "Omdat er zorgen zijn, wordt het plan definitief gestopt."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Er zijn zorgen over schade en terugbrengen. Een kleine start met registratie geeft de groep gelegenheid om de afspraken te beoordelen voordat zij uitbreidt.",
+  "retry": "Vergelijk stoppen met klein beginnen en daarna beoordelen. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welke woorden laten zien dat het plan doorgaat, maar nog niet volledig is uitgebreid? Beoordelingsreferentie: Er zijn zorgen over schade en terugbrengen. Een kleine start met registratie geeft de groep gelegenheid om de afspraken te beoordelen voordat zij uitbreidt.. Bewijs: zin 1: In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten. | zin 2: De bewonersgroep stelde daarom een kleine gereedschapskast voor. | zin 3: Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen. | zin 4: Tijdens een eerste bijeenkomst wilden veel mensen meedoen. | zin 5: Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht. | zin 6: De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd. | zin 7: De kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen. | zin 8: Na twee maanden bespreekt de groep of de afspraken werken. | zin 9: Pas daarna beslist zij of er meer spullen bij komen.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Iedere, In, Na, Pas, Sommigen, Tijdens, af, afspraken, alles, beschikbaar, beslist, bespreekt, bewoner, bewoners, bewonersgroep, bij, bijeenkomst, boormachine, daar, daarna, daarom, dat, de, die, een, eenvoudige, eerste, elke, en, er, gebruikten, genoteerd, gereedschap, gereedschappen, gereedschapskast, groep, het, iets, in, kapot, kast, kleine, kochten, komen, kopen, kunnen, lenen, lening, maakten, maanden, maar, meedoen, meer, mensen, met, naam, niet, of, over, paar, plaats, sprak, spullen, start, stelde, stellen, te, terugbrengdag, teruggebracht, twee, van, veel, verschillende, voor, voorwerp, werden, werken, wilden, woongebouw, worden, zelden, zelf, zich, zij, zorgen, zou.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Een, Er, Geef, Hoe, Iedere, In, Lees, Na, Noteer, Omdat, Pas, Sommigen, Tijdens, Vergelijk, Welke, aan, af, afgesproken, afspraken, alinea, alles, antwoord, apart, beginnen, beoordelen, beperkte, beschikbaar, beslist, bespreekt, bewoner, bewoners, bewonersgroep, bij, bijeenkomst, boormachine, daar, daarna, daarom, dat, de, definitief, derde, die, doorgaat, een, eenvoudige, eerst, eerste, eigen, elke, en, er, gebruik, gebruikten, geeft, gelegenheid, genoteerd, gereedschap, gereedschappen, gereedschapskast, gestopt, groep, hele, het, hint, hulp, iets, in, is, je, kapot, kast, keuzes, klein, kleine, klopt, kochten, komen, kopen, kunnen, laat, laten, lenen, lening, maakten, maanden, maar, meedoen, meer, mensen, met, naam, niet, nieuwe, nodig, nog, of, om, ondersteunen, ontbreekt, op, opnieuw, over, paar, plaats, plan, poging, registratie, relevante, schade, sluiten, sprak, spullen, start, stelde, stellen, stoppen, te, tekst, tekstgedeelten, terugbrengdag, terugbrengen, teruggebracht, twee, tweede, uitbreidt, uitgebreid, van, veel, verschillende, volledig, voor, voordat, voorwerp, wat, welke, werden, werken, wilden, woongebouw, woorden, worden, wordt, zelden, zelf, zich, zien, zij, zijn, zinnen, zo, zorgen, zou.",
+  "Controleer de geschreven letters en hun positie in de bron: D, I, N, P, S, T, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-04-correct"
+  ],
+  "acceptedAnswers": [
+   "Er zijn zorgen over schade en terugbrengen. Een kleine start met registratie geeft de groep gelegenheid om de afspraken te beoordelen voordat zij uitbreidt."
+  ],
+  "evidence": [
+   {
+    "quote": "In een woongebouw kochten verschillende bewoners een boormachine die zij maar zelden gebruikten."
+   },
+   {
+    "quote": "De bewonersgroep stelde daarom een kleine gereedschapskast voor."
+   },
+   {
+    "quote": "Iedere bewoner zou daar iets kunnen lenen in plaats van alles zelf te kopen."
+   },
+   {
+    "quote": "Tijdens een eerste bijeenkomst wilden veel mensen meedoen."
+   },
+   {
+    "quote": "Sommigen maakten zich zorgen over kapot gereedschap en over spullen die niet werden teruggebracht."
+   },
+   {
+    "quote": "De groep sprak af dat bij elke lening de naam, het voorwerp en de terugbrengdag worden genoteerd."
+   },
+   {
+    "quote": "De kast start met een paar eenvoudige gereedschappen die bewoners beschikbaar stellen."
+   },
+   {
+    "quote": "Na twee maanden bespreekt de groep of de afspraken werken."
+   },
+   {
+    "quote": "Pas daarna beslist zij of er meer spullen bij komen."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "damage-return-concerns",
+   "trial-not-cancellation"
+  ],
+  "meaningCheck": "Welke woorden laten zien dat het plan doorgaat, maar nog niet volledig is uitgebreid?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-05",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "main-across-paragraphs",
+ "sourceIds": [
+  "klink-concept-text-b11-03"
+ ],
+ "mode": "teacher",
+ "prompt": "Wat is de kern van dit bericht, inclusief de voorwaarde voor de extra ruimte?",
+ "stimulus": "Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine. Een deel van hen vindt het lastig om daar rustig te praten. Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden.\n\nDie ruimte is groot genoeg, maar direct na de pauze begint er een les. Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan. De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt.\n\nVolgende week mogen cursisten drie dagen in beide ruimtes lunchen. De medewerker noteert of de les daarna op tijd kan beginnen. Het team beslist pas na deze proef of de extra lunchruimte vaker open kan.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-05-d1",
+   "text": "De lesruimte wordt definitief een kantine en de les vervalt."
+  },
+  {
+   "id": "klink-teksten-b11-05-correct",
+   "text": "Het team probeert een extra lunchruimte om meer rust te bieden. Opruimen moet de volgende les op tijd mogelijk maken; de proef bepaalt of dit vaker kan."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Het team probeert een extra lunchruimte om meer rust te bieden. Opruimen moet de volgende les op tijd mogelijk maken; de proef bepaalt of dit vaker kan.",
+  "retry": "Verbind de drukte, de les na de pauze en de evaluatie. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom is extra ruimte beschikbaar geen volledige samenvatting? Beoordelingsreferentie: Het team probeert een extra lunchruimte om meer rust te bieden. Opruimen moet de volgende les op tijd mogelijk maken; de proef bepaalt of dit vaker kan.. Bewijs: zin 1: Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine. | zin 2: Een deel van hen vindt het lastig om daar rustig te praten. | zin 3: Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden. | zin 4: Die ruimte is groot genoeg, maar direct na de pauze begint er een les. | zin 5: Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan. | zin 6: De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt. | zin 7: Volgende week mogen cursisten drie dagen in beide ruimtes lunchen. | zin 8: De medewerker noteert of de les daarna op tijd kan beginnen. | zin 9: Het team beslist pas na deze proef of de extra lunchruimte vaker open kan.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Die, Een, Het, Tafels, Tijdens, Volgende, aan, als, begeleidt, beginnen, begint, beide, beslist, cursisten, daar, daarna, dagen, de, deel, deze, die, direct, docent, drie, dus, een, en, er, extra, gebruikt, genoeg, groot, hen, het, hun, in, is, kan, kantine, kleine, kon, lastig, les, lesruimte, lunch, lunchen, lunchruimte, maar, medewerker, meedoen, moeten, mogen, na, naastgelegen, noteert, of, om, onderzocht, op, open, opruimen, pas, pauze, plek, praten, proef, ruimte, ruimtes, rustig, schoon, staan, te, team, tegelijk, tijd, tijdens, vaker, van, vaste, veel, vindt, week, weer, wil, worden, zijn, zitten.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Die, Een, Geef, Het, Lees, Noteer, Opruimen, Tafels, Tijdens, Verbind, Volgende, Waarom, Wat, aan, afgesproken, als, antwoord, apart, begeleidt, beginnen, begint, beide, bepaalt, bericht, beschikbaar, beslist, bieden, cursisten, daar, daarna, dagen, dat, de, deel, definitief, deze, die, direct, dit, docent, drie, drukte, dus, een, eerst, eigen, en, er, evaluatie, extra, gebruik, gebruikt, geen, genoeg, groot, hele, hen, het, hint, hulp, hun, in, inclusief, is, je, kan, kantine, kern, keuzes, kleine, klopt, kon, laat, lastig, les, lesruimte, lunch, lunchen, lunchruimte, maar, maken, medewerker, meedoen, meer, met, moet, moeten, mogelijk, mogen, na, naastgelegen, nieuwe, nodig, noteert, of, om, ondersteunen, onderzocht, ontbreekt, op, open, opnieuw, opruimen, pas, pauze, plek, poging, praten, probeert, proef, relevante, ruimte, ruimtes, rust, rustig, samenvatting, schoon, staan, te, team, tegelijk, tekst, tekstgedeelten, tijd, tijdens, vaker, van, vaste, veel, vervalt, vindt, volgende, volledige, voor, voorwaarde, wat, week, weer, welke, wil, worden, wordt, zien, zijn, zinnen, zitten, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: D, E, H, T, V, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, x, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-05-correct"
+  ],
+  "acceptedAnswers": [
+   "Het team probeert een extra lunchruimte om meer rust te bieden. Opruimen moet de volgende les op tijd mogelijk maken; de proef bepaalt of dit vaker kan."
+  ],
+  "evidence": [
+   {
+    "quote": "Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine."
+   },
+   {
+    "quote": "Een deel van hen vindt het lastig om daar rustig te praten."
+   },
+   {
+    "quote": "Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden."
+   },
+   {
+    "quote": "Die ruimte is groot genoeg, maar direct na de pauze begint er een les."
+   },
+   {
+    "quote": "Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan."
+   },
+   {
+    "quote": "De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt."
+   },
+   {
+    "quote": "Volgende week mogen cursisten drie dagen in beide ruimtes lunchen."
+   },
+   {
+    "quote": "De medewerker noteert of de les daarna op tijd kan beginnen."
+   },
+   {
+    "quote": "Het team beslist pas na deze proef of de extra lunchruimte vaker open kan."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "quieter-lunch-need",
+   "classroom-restored-in-time",
+   "temporary-trial-decision"
+  ],
+  "meaningCheck": "Waarom is extra ruimte beschikbaar geen volledige samenvatting?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-06",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "supporting-detail-versus-main",
+ "sourceIds": [
+  "klink-concept-text-b11-03"
+ ],
+ "mode": "teacher",
+ "prompt": "Welke functie heeft de informatie over schoonmaken en tafels terugzetten voor de hoofdgedachte?",
+ "stimulus": "Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine. Een deel van hen vindt het lastig om daar rustig te praten. Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden.\n\nDie ruimte is groot genoeg, maar direct na de pauze begint er een les. Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan. De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt.\n\nVolgende week mogen cursisten drie dagen in beide ruimtes lunchen. De medewerker noteert of de les daarna op tijd kan beginnen. Het team beslist pas na deze proef of de extra lunchruimte vaker open kan.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-06-correct",
+   "text": "Die informatie legt de voorwaarde uit waaronder de extra lunchruimte kan werken: de volgende les moet op tijd beginnen."
+  },
+  {
+   "id": "klink-teksten-b11-06-d1",
+   "text": "Die informatie laat zien dat cursisten voortaan in de les moeten lunchen."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Die informatie legt de voorwaarde uit waaronder de extra lunchruimte kan werken: de volgende les moet op tijd beginnen.",
+  "retry": "Koppel de tafels aan wat direct na de pauze gebeurt. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Is opruimen hier een los onderwerp of een voorwaarde voor het plan? Beoordelingsreferentie: Die informatie legt de voorwaarde uit waaronder de extra lunchruimte kan werken: de volgende les moet op tijd beginnen.. Bewijs: zin 1: Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine. | zin 2: Een deel van hen vindt het lastig om daar rustig te praten. | zin 3: Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden. | zin 4: Die ruimte is groot genoeg, maar direct na de pauze begint er een les. | zin 5: Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan. | zin 6: De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt. | zin 7: Volgende week mogen cursisten drie dagen in beide ruimtes lunchen. | zin 8: De medewerker noteert of de les daarna op tijd kan beginnen. | zin 9: Het team beslist pas na deze proef of de extra lunchruimte vaker open kan.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: De, Die, Een, Het, Tafels, Tijdens, Volgende, aan, als, begeleidt, beginnen, begint, beide, beslist, cursisten, daar, daarna, dagen, de, deel, deze, die, direct, docent, drie, dus, een, en, er, extra, gebruikt, genoeg, groot, hen, het, hun, in, is, kan, kantine, kleine, kon, lastig, les, lesruimte, lunch, lunchen, lunchruimte, maar, medewerker, meedoen, moeten, mogen, na, naastgelegen, noteert, of, om, onderzocht, op, open, opruimen, pas, pauze, plek, praten, proef, ruimte, ruimtes, rustig, schoon, staan, te, team, tegelijk, tijd, tijdens, vaker, van, vaste, veel, vindt, week, weer, wil, worden, zijn, zitten.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, De, Die, Een, Geef, Het, Is, Koppel, Lees, Noteer, Tafels, Tijdens, Volgende, Welke, aan, afgesproken, als, antwoord, apart, begeleidt, beginnen, begint, beide, beslist, cursisten, daar, daarna, dagen, dat, de, deel, deze, die, direct, docent, drie, dus, een, eerst, eigen, en, er, extra, functie, gebeurt, gebruik, gebruikt, genoeg, groot, heeft, hele, hen, het, hier, hint, hoofdgedachte, hulp, hun, in, informatie, is, je, kan, kantine, keuzes, kleine, klopt, kon, laat, lastig, legt, les, lesruimte, los, lunch, lunchen, lunchruimte, maar, medewerker, meedoen, met, moet, moeten, mogen, na, naastgelegen, nieuwe, nodig, noteert, of, om, ondersteunen, onderwerp, onderzocht, ontbreekt, op, open, opnieuw, opruimen, over, pas, pauze, plan, plek, poging, praten, proef, relevante, ruimte, ruimtes, rustig, schoon, schoonmaken, staan, tafels, te, team, tegelijk, tekst, tekstgedeelten, terugzetten, tijd, tijdens, uit, vaker, van, vaste, veel, vindt, volgende, voor, voortaan, voorwaarde, waaronder, wat, week, weer, welke, werken, wil, worden, zien, zijn, zinnen, zitten, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: D, E, H, T, V, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, x, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-06-correct"
+  ],
+  "acceptedAnswers": [
+   "Die informatie legt de voorwaarde uit waaronder de extra lunchruimte kan werken: de volgende les moet op tijd beginnen."
+  ],
+  "evidence": [
+   {
+    "quote": "Tijdens de lunch zitten veel cursisten tegelijk in de kleine kantine."
+   },
+   {
+    "quote": "Een deel van hen vindt het lastig om daar rustig te praten."
+   },
+   {
+    "quote": "Het team onderzocht of de naastgelegen lesruimte tijdens de pauze gebruikt kon worden."
+   },
+   {
+    "quote": "Die ruimte is groot genoeg, maar direct na de pauze begint er een les."
+   },
+   {
+    "quote": "Tafels moeten dus op tijd schoon zijn en weer op hun vaste plek staan."
+   },
+   {
+    "quote": "De docent van die les wil meedoen aan een proef als een medewerker het opruimen begeleidt."
+   },
+   {
+    "quote": "Volgende week mogen cursisten drie dagen in beide ruimtes lunchen."
+   },
+   {
+    "quote": "De medewerker noteert of de les daarna op tijd kan beginnen."
+   },
+   {
+    "quote": "Het team beslist pas na deze proef of de extra lunchruimte vaker open kan."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "cleaning-reset-condition",
+   "protects-next-class"
+  ],
+  "meaningCheck": "Is opruimen hier een los onderwerp of een voorwaarde voor het plan?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-07",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "main-across-paragraphs",
+ "sourceIds": [
+  "klink-concept-text-b11-04"
+ ],
+ "mode": "teacher",
+ "prompt": "Vat samen welk probleem het team aanpakt en hoe het controleert of de aanpak werkt.",
+ "stimulus": "Vorige maand ontving iedereen een roosterwijziging per e-mail. Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd. Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen.\n\nHet team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen. Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang. Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken.\n\nDeze aanpak geldt eerst voor de komende cursusmaand. Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden. Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-07-d1",
+   "text": "Het team verplicht iedereen om in een groepsapp te gaan en stopt met e-mail."
+  },
+  {
+   "id": "klink-teksten-b11-07-correct",
+   "text": "Sommige cursisten misten een roosterwijziging. Het team gebruikt naast e-mail een bord en zo nodig een afgesproken telefoontje, en vraagt na een maand of de informatie op tijd aankwam."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Sommige cursisten misten een roosterwijziging. Het team gebruikt naast e-mail een bord en zo nodig een afgesproken telefoontje, en vraagt na een maand of de informatie op tijd aankwam.",
+  "retry": "Verbind het gemiste bericht, de gekozen middelen en de controle. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Waarom hoort de controle na een maand bij de samenvatting? Beoordelingsreferentie: Sommige cursisten misten een roosterwijziging. Het team gebruikt naast e-mail een bord en zo nodig een afgesproken telefoontje, en vraagt na een maand of de informatie op tijd aankwam.. Bewijs: zin 1: Vorige maand ontving iedereen een roosterwijziging per e-mail. | zin 2: Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd. | zin 3: Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen. | zin 4: Het team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen. | zin 5: Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang. | zin 6: Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken. | zin 7: Deze aanpak geldt eerst voor de komende cursusmaand. | zin 8: Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden. | zin 9: Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Aan, Als, Daarom, Deze, Enkele, Het, Vorige, Wie, Zij, aanpak, aanpassing, administratie, afspreken, al, belangrijke, bespreekt, bij, blijft, bord, cursisten, cursusmaand, daarin, de, delen, die, dit, e, een, eerst, einde, en, er, extra, geldt, gereisd, gevonden, groepsapp, heeft, het, iedereen, informatiebron, ingang, is, kan, komende, komt, locatie, maand, maar, mail, manier, met, naar, nadat, niet, nodig, nog, of, om, onderzocht, ontvangen, ontving, ook, op, oude, pas, per, persoonlijk, problemen, roosterwijziging, te, team, telefoonnummer, telefoontje, tijd, van, vaste, voor, vraagt, vroegen, waren, welke, wijziging, wijzigingen, wil, zagen, zij, zijn.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Aan, Als, Bespreek, Daarom, Deze, Enkele, Geef, Het, Lees, Noteer, Sommige, Vat, Verbind, Vorige, Waarom, Wie, Zij, aankwam, aanpak, aanpakt, aanpassing, administratie, afgesproken, afspreken, al, antwoord, apart, belangrijke, bericht, bespreekt, bij, blijft, bord, controle, controleert, cursisten, cursusmaand, daarin, daarna, dat, de, delen, die, dit, e, een, eerst, eigen, einde, en, er, extra, gaan, gebruik, gebruikt, gekozen, geldt, gemiste, gereisd, gevonden, groepsapp, heeft, hele, het, hint, hoe, hoort, hulp, iedereen, in, informatie, informatiebron, ingang, is, je, kan, keuzes, klopt, komende, komt, laat, locatie, maand, maar, mail, manier, met, middelen, misten, na, naar, naast, nadat, niet, nieuwe, nodig, nog, of, om, ondersteunen, onderzocht, ontbreekt, ontvangen, ontving, ook, op, opnieuw, oude, pas, per, persoonlijk, poging, probleem, problemen, relevante, roosterwijziging, samen, samenvatting, stopt, te, team, tekst, tekstgedeelten, telefoonnummer, telefoontje, tijd, van, vaste, verplicht, voor, vraagt, vroegen, waren, wat, welk, welke, werkt, wijziging, wijzigingen, wil, zagen, zien, zij, zijn, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: A, D, E, H, V, W, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, x, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-07-correct"
+  ],
+  "acceptedAnswers": [
+   "Sommige cursisten misten een roosterwijziging. Het team gebruikt naast e-mail een bord en zo nodig een afgesproken telefoontje, en vraagt na een maand of de informatie op tijd aankwam."
+  ],
+  "evidence": [
+   {
+    "quote": "Vorige maand ontving iedereen een roosterwijziging per e-mail."
+   },
+   {
+    "quote": "Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd."
+   },
+   {
+    "quote": "Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen."
+   },
+   {
+    "quote": "Het team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen."
+   },
+   {
+    "quote": "Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang."
+   },
+   {
+    "quote": "Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken."
+   },
+   {
+    "quote": "Deze aanpak geldt eerst voor de komende cursusmaand."
+   },
+   {
+    "quote": "Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden."
+   },
+   {
+    "quote": "Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "missed-change",
+   "multiple-access-with-email",
+   "review-after-month"
+  ],
+  "meaningCheck": "Waarom hoort de controle na een maand bij de samenvatting?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b11-08",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "contrast-supports-main",
+ "sourceIds": [
+  "klink-concept-text-b11-04"
+ ],
+ "mode": "teacher",
+ "prompt": "Waarom noemt de mail de bezwaren tegen een groepsapp?",
+ "stimulus": "Vorige maand ontving iedereen een roosterwijziging per e-mail. Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd. Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen.\n\nHet team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen. Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang. Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken.\n\nDeze aanpak geldt eerst voor de komende cursusmaand. Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden. Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is.",
+ "options": [
+  {
+   "id": "klink-teksten-b11-08-correct",
+   "text": "Ze verklaren waarom het team andere extra middelen kiest terwijl e-mail blijft. Niet iedereen wil een telefoonnummer met de groep delen."
+  },
+  {
+   "id": "klink-teksten-b11-08-d1",
+   "text": "Ze bewijzen dat niemand een telefoon heeft."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Ze verklaren waarom het team andere extra middelen kiest terwijl e-mail blijft. Niet iedereen wil een telefoonnummer met de groep delen.",
+  "retry": "Zoek het verband tussen maar en daarom in de tweede alinea. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welke conclusie over telefoonbezit mag je niet trekken? Beoordelingsreferentie: Ze verklaren waarom het team andere extra middelen kiest terwijl e-mail blijft. Niet iedereen wil een telefoonnummer met de groep delen.. Bewijs: zin 1: Vorige maand ontving iedereen een roosterwijziging per e-mail. | zin 2: Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd. | zin 3: Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen. | zin 4: Het team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen. | zin 5: Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang. | zin 6: Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken. | zin 7: Deze aanpak geldt eerst voor de komende cursusmaand. | zin 8: Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden. | zin 9: Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Aan, Als, Daarom, Deze, Enkele, Het, Vorige, Wie, Zij, aanpak, aanpassing, administratie, afspreken, al, belangrijke, bespreekt, bij, blijft, bord, cursisten, cursusmaand, daarin, de, delen, die, dit, e, een, eerst, einde, en, er, extra, geldt, gereisd, gevonden, groepsapp, heeft, het, iedereen, informatiebron, ingang, is, kan, komende, komt, locatie, maand, maar, mail, manier, met, naar, nadat, niet, nodig, nog, of, om, onderzocht, ontvangen, ontving, ook, op, oude, pas, per, persoonlijk, problemen, roosterwijziging, te, team, telefoonnummer, telefoontje, tijd, van, vaste, voor, vraagt, vroegen, waren, welke, wijziging, wijzigingen, wil, zagen, zij, zijn.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Aan, Als, Bespreek, Daarom, Deze, Enkele, Geef, Het, Lees, Niet, Noteer, Vorige, Waarom, Welke, Wie, Ze, Zij, Zoek, aanpak, aanpassing, administratie, afgesproken, afspreken, al, alinea, andere, antwoord, apart, belangrijke, bespreekt, bewijzen, bezwaren, bij, blijft, bord, conclusie, cursisten, cursusmaand, daarin, daarna, daarom, dat, de, delen, die, dit, e, een, eerst, eigen, einde, en, er, extra, gebruik, geldt, gereisd, gevonden, groep, groepsapp, heeft, hele, het, hint, hulp, iedereen, in, informatiebron, ingang, is, je, kan, keuzes, kiest, klopt, komende, komt, laat, locatie, maand, maar, mag, mail, manier, met, middelen, naar, nadat, niemand, niet, nieuwe, nodig, noemt, nog, of, om, ondersteunen, onderzocht, ontbreekt, ontvangen, ontving, ook, op, opnieuw, oude, over, pas, per, persoonlijk, poging, problemen, relevante, roosterwijziging, te, team, tegen, tekst, tekstgedeelten, telefoon, telefoonbezit, telefoonnummer, telefoontje, terwijl, tijd, trekken, tussen, tweede, van, vaste, verband, verklaren, voor, vraagt, vroegen, waarom, waren, wat, welke, wijziging, wijzigingen, wil, zagen, zien, zij, zijn, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: A, D, E, H, V, W, Z, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, x, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b11-08-correct"
+  ],
+  "acceptedAnswers": [
+   "Ze verklaren waarom het team andere extra middelen kiest terwijl e-mail blijft. Niet iedereen wil een telefoonnummer met de groep delen."
+  ],
+  "evidence": [
+   {
+    "quote": "Vorige maand ontving iedereen een roosterwijziging per e-mail."
+   },
+   {
+    "quote": "Enkele cursisten zagen die mail pas nadat zij al naar de oude locatie waren gereisd."
+   },
+   {
+    "quote": "Zij vroegen om een extra manier om belangrijke wijzigingen te ontvangen."
+   },
+   {
+    "quote": "Het team onderzocht een groepsapp, maar niet iedereen wil daarin een telefoonnummer delen."
+   },
+   {
+    "quote": "Daarom blijft e-mail de vaste informatiebron en komt een wijziging ook op het bord bij de ingang."
+   },
+   {
+    "quote": "Wie een persoonlijk telefoontje nodig heeft, kan dit met de administratie afspreken."
+   },
+   {
+    "quote": "Deze aanpak geldt eerst voor de komende cursusmaand."
+   },
+   {
+    "quote": "Aan het einde van die maand vraagt het team of iedereen de wijzigingen op tijd heeft gevonden."
+   },
+   {
+    "quote": "Als er nog problemen zijn, bespreekt het team welke aanpassing nodig is."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "privacy-choice",
+   "explains-alternative-channels"
+  ],
+  "meaningCheck": "Welke conclusie over telefoonbezit mag je niet trekken?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b12-01",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "cause-adjustment-consequence",
+ "sourceIds": [
+  "klink-concept-text-b12-01"
+ ],
+ "mode": "teacher",
+ "prompt": "Waarom wordt de plek van de kar na de eerste week aangepast en welk gevolg noemt de tekst?",
+ "stimulus": "Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden. Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten. Het team sprak af om lege dozen meteen op een aparte kar te zetten.\n\nIn de eerste week stond de kar dicht bij de werktafels. Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken. Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur.\n\nDaarna konden medewerkers de dozen zonder die omweg wegbrengen. In dezelfde week werden ook minder bestellingen verwerkt. Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam.",
+ "options": [
+  {
+   "id": "klink-teksten-b12-01-d1",
+   "text": "De kar verhuisde omdat er minder bestellingen waren en daardoor verdween alle werkdruk."
+  },
+  {
+   "id": "klink-teksten-b12-01-correct",
+   "text": "De medewerkers moesten met de volle kar om de werktafels heen naar de deur. De verzamelplek kwam bij die deur; daarna konden de dozen zonder die omweg worden weggebracht."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De medewerkers moesten met de volle kar om de werktafels heen naar de deur. De verzamelplek kwam bij die deur; daarna konden de dozen zonder die omweg worden weggebracht.",
+  "retry": "Zoek de omweg langs de werktafels en de verplaatsing naar de deur. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Gaat het genoemde gevolg over alle werk of over het wegbrengen van dozen? Beoordelingsreferentie: De medewerkers moesten met de volle kar om de werktafels heen naar de deur. De verzamelplek kwam bij die deur; daarna konden de dozen zonder die omweg worden weggebracht.. Bewijs: zin 1: Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden. | zin 2: Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten. | zin 3: Het team sprak af om lege dozen meteen op een aparte kar te zetten. | zin 4: In de eerste week stond de kar dicht bij de werktafels. | zin 5: Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken. | zin 6: Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur. | zin 7: Daarna konden medewerkers de dozen zonder die omweg wegbrengen. | zin 8: In dezelfde week werden ook minder bestellingen verwerkt. | zin 9: Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daarna, Daarom, Het, In, Medewerkers, af, aparte, bereiken, bestellingen, bij, bleef, blijkt, brachten, dat, de, deur, dezelfde, dicht, die, door, doordat, dozen, een, eerste, eromheen, gangpad, geen, heen, het, hoek, in, kar, konden, kwam, lagere, lege, maar, magazijnteam, medewerkers, met, meteen, minder, moesten, naar, nieuwe, noemt, om, omweg, onderzoek, ook, op, opslagruimte, plek, rijden, sprak, stond, stonden, te, team, tijd, tweede, uitgang, vaak, van, verhuisde, verloor, verslag, verwerkt, verzamelplek, volle, vrij, waaruit, wanneer, week, wegbrengen, werden, werkdruk, werktafels, zetten, zij, zonder.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Bespreek, Daarna, Daarom, De, Gaat, Geef, Het, In, Lees, Medewerkers, Noteer, Waarom, Zoek, aangepast, af, afgesproken, alle, antwoord, apart, aparte, bereiken, bestellingen, bij, bleef, blijkt, brachten, daardoor, daarna, dat, de, deur, dezelfde, dicht, die, door, doordat, dozen, een, eerst, eerste, eigen, en, er, eromheen, gangpad, gebruik, geen, genoemde, gevolg, heen, hele, het, hint, hoek, hulp, in, je, kar, keuzes, klopt, konden, kwam, laat, lagere, langs, lege, maar, magazijnteam, medewerkers, met, meteen, minder, moesten, na, naar, nieuwe, nodig, noemt, of, om, omdat, omweg, ondersteunen, onderzoek, ontbreekt, ook, op, opnieuw, opslagruimte, over, plek, poging, relevante, rijden, sprak, stond, stonden, te, team, tekst, tekstgedeelten, tijd, tweede, uitgang, vaak, van, verdween, verhuisde, verloor, verplaatsing, verslag, verwerkt, verzamelplek, volle, vrij, waaruit, wanneer, waren, wat, week, wegbrengen, weggebracht, welk, welke, werden, werk, werkdruk, werktafels, worden, wordt, zetten, zien, zij, zinnen, zo, zonder.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, I, M, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b12-01-correct"
+  ],
+  "acceptedAnswers": [
+   "De medewerkers moesten met de volle kar om de werktafels heen naar de deur. De verzamelplek kwam bij die deur; daarna konden de dozen zonder die omweg worden weggebracht."
+  ],
+  "evidence": [
+   {
+    "quote": "Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden."
+   },
+   {
+    "quote": "Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten."
+   },
+   {
+    "quote": "Het team sprak af om lege dozen meteen op een aparte kar te zetten."
+   },
+   {
+    "quote": "In de eerste week stond de kar dicht bij de werktafels."
+   },
+   {
+    "quote": "Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken."
+   },
+   {
+    "quote": "Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur."
+   },
+   {
+    "quote": "Daarna konden medewerkers de dozen zonder die omweg wegbrengen."
+   },
+   {
+    "quote": "In dezelfde week werden ook minder bestellingen verwerkt."
+   },
+   {
+    "quote": "Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "detour-around-worktables",
+   "move-near-door",
+   "no-that-detour"
+  ],
+  "meaningCheck": "Gaat het genoemde gevolg over alle werk of over het wegbrengen van dozen?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b12-02",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "coincidence-versus-cause",
+ "sourceIds": [
+  "klink-concept-text-b12-01"
+ ],
+ "mode": "teacher",
+ "prompt": "Kun je uit dit verslag concluderen dat de nieuwe karplek ervoor zorgde dat er minder bestellingen waren?",
+ "stimulus": "Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden. Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten. Het team sprak af om lege dozen meteen op een aparte kar te zetten.\n\nIn de eerste week stond de kar dicht bij de werktafels. Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken. Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur.\n\nDaarna konden medewerkers de dozen zonder die omweg wegbrengen. In dezelfde week werden ook minder bestellingen verwerkt. Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam.",
+ "options": [
+  {
+   "id": "klink-teksten-b12-02-correct",
+   "text": "Nee. Beide veranderingen worden in dezelfde week genoemd, maar er is geen onderzoek of ander bewijs voor dat oorzakelijke verband."
+  },
+  {
+   "id": "klink-teksten-b12-02-d1",
+   "text": "Ja, alles wat later gebeurt is een gevolg van de karplek."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "Nee. Beide veranderingen worden in dezelfde week genoemd, maar er is geen onderzoek of ander bewijs voor dat oorzakelijke verband.",
+  "retry": "Lees de laatste twee zinnen samen. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Is geen bewijs voor een verband hetzelfde als bewezen dat er geen verband is? Beoordelingsreferentie: Nee. Beide veranderingen worden in dezelfde week genoemd, maar er is geen onderzoek of ander bewijs voor dat oorzakelijke verband.. Bewijs: zin 1: Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden. | zin 2: Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten. | zin 3: Het team sprak af om lege dozen meteen op een aparte kar te zetten. | zin 4: In de eerste week stond de kar dicht bij de werktafels. | zin 5: Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken. | zin 6: Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur. | zin 7: Daarna konden medewerkers de dozen zonder die omweg wegbrengen. | zin 8: In dezelfde week werden ook minder bestellingen verwerkt. | zin 9: Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Daarna, Daarom, Het, In, Medewerkers, af, aparte, bereiken, bestellingen, bij, bleef, blijkt, brachten, dat, de, deur, dezelfde, dicht, die, door, doordat, dozen, een, eerste, eromheen, gangpad, geen, heen, het, hoek, in, kar, konden, kwam, lagere, lege, maar, magazijnteam, medewerkers, met, meteen, minder, moesten, naar, nieuwe, noemt, om, omweg, onderzoek, ook, op, opslagruimte, plek, rijden, sprak, stond, stonden, te, team, tijd, tweede, uitgang, vaak, van, verhuisde, verloor, verslag, verwerkt, verzamelplek, volle, vrij, waaruit, wanneer, week, wegbrengen, werden, werkdruk, werktafels, zetten, zij, zonder.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beide, Bespreek, Daarna, Daarom, Geef, Het, In, Is, Ja, Kun, Lees, Medewerkers, Nee, Noteer, af, afgesproken, alles, als, ander, antwoord, apart, aparte, bereiken, bestellingen, bewezen, bewijs, bij, bleef, blijkt, brachten, concluderen, daarna, dat, de, deur, dezelfde, dicht, die, dit, door, doordat, dozen, een, eerst, eerste, eigen, en, er, eromheen, ervoor, gangpad, gebeurt, gebruik, geen, genoemd, gevolg, heen, hele, het, hetzelfde, hint, hoek, hulp, in, is, je, kar, karplek, keuzes, klopt, konden, kwam, laat, laatste, lagere, later, lege, maar, magazijnteam, medewerkers, met, meteen, minder, moesten, naar, nieuwe, nodig, noemt, of, om, omweg, ondersteunen, onderzoek, ontbreekt, ook, oorzakelijke, op, opnieuw, opslagruimte, plek, poging, relevante, rijden, samen, sprak, stond, stonden, te, team, tekst, tekstgedeelten, tijd, twee, tweede, uit, uitgang, vaak, van, veranderingen, verband, verhuisde, verloor, verslag, verwerkt, verzamelplek, volle, voor, vrij, waaruit, wanneer, waren, wat, week, wegbrengen, welke, werden, werkdruk, werktafels, worden, zetten, zien, zij, zinnen, zo, zonder, zorgde.",
+  "Controleer de geschreven letters en hun positie in de bron: D, H, I, M, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b12-02-correct"
+  ],
+  "acceptedAnswers": [
+   "Nee. Beide veranderingen worden in dezelfde week genoemd, maar er is geen onderzoek of ander bewijs voor dat oorzakelijke verband."
+  ],
+  "evidence": [
+   {
+    "quote": "Het magazijnteam verloor tijd doordat lege dozen vaak in het gangpad stonden."
+   },
+   {
+    "quote": "Medewerkers moesten eromheen rijden wanneer zij bestellingen naar de uitgang brachten."
+   },
+   {
+    "quote": "Het team sprak af om lege dozen meteen op een aparte kar te zetten."
+   },
+   {
+    "quote": "In de eerste week stond de kar dicht bij de werktafels."
+   },
+   {
+    "quote": "Het gangpad bleef vrij, maar medewerkers moesten met de volle kar om de werktafels heen rijden om de deur naar de opslagruimte te bereiken."
+   },
+   {
+    "quote": "Daarom verhuisde de verzamelplek in de tweede week naar een hoek bij die deur."
+   },
+   {
+    "quote": "Daarna konden medewerkers de dozen zonder die omweg wegbrengen."
+   },
+   {
+    "quote": "In dezelfde week werden ook minder bestellingen verwerkt."
+   },
+   {
+    "quote": "Het verslag noemt geen onderzoek waaruit blijkt dat de lagere werkdruk door de nieuwe plek van de kar kwam."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "same-week-not-cause",
+   "causal-evidence-absent"
+  ],
+  "meaningCheck": "Is geen bewijs voor een verband hetzelfde als bewezen dat er geen verband is?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}
+
+{
+ "id": "klink-teksten-b12-03",
+ "domain": "teksten",
+ "level": "B1",
+ "axis": "language",
+ "title": "Lees en leg uit",
+ "objective": "causal-chain",
+ "sourceIds": [
+  "klink-concept-text-b12-02"
+ ],
+ "mode": "teacher",
+ "prompt": "Beschrijf de keten van storing tot de latere start van de volgende bewoner.",
+ "stimulus": "Bewoners reserveren de gezamenlijke wasmachine voor een afgesproken tijdvak. Op een avond stopte de machine terwijl een wasprogramma nog bezig was. De bewoner meldde dit aan de beheerder in plaats van zelf een nieuw programma te starten.\n\nDe beheerder herstelde de storing en liet het lopende programma verdergaan. Daardoor eindigde de was later dan gepland. De volgende bewoner kon niet op de gereserveerde begintijd starten en kreeg daarover een bericht.\n\nDe commissie vraagt bewoners om bij een storing eerst contact op te nemen met de beheerder. Een extra programma kan het probleem verbergen en de wachttijd verder verlengen. De commissie zegt niet dat iedere vertraging door verkeerd gebruik ontstaat.",
+ "options": [
+  {
+   "id": "klink-teksten-b12-03-d1",
+   "text": "De volgende bewoner begon te vroeg en veroorzaakte zo de storing."
+  },
+  {
+   "id": "klink-teksten-b12-03-correct",
+   "text": "De machine stopte, de beheerder herstelde de storing en zette het lopende programma voort. Dat was later klaar, waardoor de volgende bewoner later kon beginnen."
+  }
+ ],
+ "correctOptionIds": [],
+ "acceptedAnswers": [],
+ "feedback": {
+  "correct": "De machine stopte, de beheerder herstelde de storing en zette het lopende programma voort. Dat was later klaar, waardoor de volgende bewoner later kon beginnen.",
+  "retry": "Volg stopte, verdergaan, later eindigen en niet op begintijd. Bespreek eerst wat klopt en wat ontbreekt. Lees de relevante zinnen opnieuw; gebruik daarna zo nodig de hint of keuzes. Noteer de hulp en een nieuwe poging apart."
+ },
+ "teacherGuidance": "Docentondersteunde teksttaak; geen automatische beoordeling. Bewaar eerst het eigen antwoord en bronbewijs. Accepteer natuurlijke, inhoudelijk gelijkwaardige formuleringen. Een waar maar onvolledig antwoord is gedeeltelijk. Welke gebeurtenis verbindt herstel met het wachten van de volgende bewoner? Beoordelingsreferentie: De machine stopte, de beheerder herstelde de storing en zette het lopende programma voort. Dat was later klaar, waardoor de volgende bewoner later kon beginnen.. Bewijs: zin 1: Bewoners reserveren de gezamenlijke wasmachine voor een afgesproken tijdvak. | zin 2: Op een avond stopte de machine terwijl een wasprogramma nog bezig was. | zin 3: De bewoner meldde dit aan de beheerder in plaats van zelf een nieuw programma te starten. | zin 4: De beheerder herstelde de storing en liet het lopende programma verdergaan. | zin 5: Daardoor eindigde de was later dan gepland. | zin 6: De volgende bewoner kon niet op de gereserveerde begintijd starten en kreeg daarover een bericht. | zin 7: De commissie vraagt bewoners om bij een storing eerst contact op te nemen met de beheerder. | zin 8: Een extra programma kan het probleem verbergen en de wachttijd verder verlengen. | zin 9: De commissie zegt niet dat iedere vertraging door verkeerd gebruik ontstaat.. Registreer hulp, eerdere blootstelling, betekeniscontrole en afzonderlijke leesobservatie; afronding bewijst geen beheersing of ongeziene transfer.",
+ "prerequisites": [
+  "Controleer vóór gebruik mondeling begrip van deze exacte bronvormen in hun eigen zinnen: Bewoners, Daardoor, De, Een, Op, aan, afgesproken, avond, begintijd, beheerder, bericht, bewoner, bewoners, bezig, bij, commissie, contact, daarover, dan, dat, de, dit, door, een, eerst, eindigde, en, extra, gebruik, gepland, gereserveerde, gezamenlijke, herstelde, het, iedere, in, kan, kon, kreeg, later, liet, lopende, machine, meldde, met, nemen, niet, nieuw, nog, om, ontstaat, op, plaats, probleem, programma, reserveren, starten, stopte, storing, te, terwijl, tijdvak, van, verbergen, verder, verdergaan, verkeerd, verlengen, vertraging, volgende, voor, vraagt, wachttijd, was, wasmachine, wasprogramma, zegt, zelf.",
+  "Bereid alle exacte vormen in opdracht, keuzes, hulp, feedback en betekeniscontrole voor: Beschrijf, Bespreek, Bewoners, Daardoor, Dat, De, Een, Geef, Lees, Noteer, Op, Volg, Welke, aan, afgesproken, antwoord, apart, avond, beginnen, begintijd, begon, beheerder, bericht, bewoner, bewoners, bezig, bij, commissie, contact, daarna, daarover, dan, dat, de, dit, door, een, eerst, eigen, eindigde, eindigen, en, extra, gebeurtenis, gebruik, gepland, gereserveerde, gezamenlijke, hele, herstel, herstelde, het, hint, hulp, iedere, in, je, kan, keten, keuzes, klaar, klopt, kon, kreeg, laat, later, latere, liet, lopende, machine, meldde, met, nemen, niet, nieuw, nieuwe, nodig, nog, of, om, ondersteunen, ontbreekt, ontstaat, op, opnieuw, plaats, poging, probleem, programma, relevante, reserveren, start, starten, stopte, storing, te, tekst, tekstgedeelten, terwijl, tijdvak, tot, van, verbergen, verbindt, verder, verdergaan, verkeerd, verlengen, veroorzaakte, vertraging, volgende, voor, voort, vraagt, vroeg, waardoor, wachten, wachttijd, was, wasmachine, wasprogramma, wat, welke, zegt, zelf, zette, zien, zinnen, zo.",
+  "Controleer de geschreven letters en hun positie in de bron: B, D, E, O, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, r, s, t, u, v, w, x, z. Deze letterlijst is geen fonetische analyse; bepaal klank-/grafeemvoorwaarden met de docent en geef geen automatische leesvrijgave.",
+  "Controleer de genoemde vormen op hun exacte plek in deze tekst en in de opdracht, keuzes en hulp. Bekende spelling bewijst nog geen begrip van de context.",
+  "Laat de werkwijze eenmaal voordoen en noteer inhoudelijke hulp. Registreer eerste open antwoorden bij dezelfde bron vóór keuzes, feedback en betekenisvragen. Controleer mondeling begrip en lezen afzonderlijk."
+ ],
+ "teacherReference": {
+  "correctOptionIds": [
+   "klink-teksten-b12-03-correct"
+  ],
+  "acceptedAnswers": [
+   "De machine stopte, de beheerder herstelde de storing en zette het lopende programma voort. Dat was later klaar, waardoor de volgende bewoner later kon beginnen."
+  ],
+  "evidence": [
+   {
+    "quote": "Bewoners reserveren de gezamenlijke wasmachine voor een afgesproken tijdvak."
+   },
+   {
+    "quote": "Op een avond stopte de machine terwijl een wasprogramma nog bezig was."
+   },
+   {
+    "quote": "De bewoner meldde dit aan de beheerder in plaats van zelf een nieuw programma te starten."
+   },
+   {
+    "quote": "De beheerder herstelde de storing en liet het lopende programma verdergaan."
+   },
+   {
+    "quote": "Daardoor eindigde de was later dan gepland."
+   },
+   {
+    "quote": "De volgende bewoner kon niet op de gereserveerde begintijd starten en kreeg daarover een bericht."
+   },
+   {
+    "quote": "De commissie vraagt bewoners om bij een storing eerst contact op te nemen met de beheerder."
+   },
+   {
+    "quote": "Een extra programma kan het probleem verbergen en de wachttijd verder verlengen."
+   },
+   {
+    "quote": "De commissie zegt niet dat iedere vertraging door verkeerd gebruik ontstaat."
+   }
+  ],
+  "requiredSemanticSlots": [
+   "stops-repaired-resumed",
+   "ends-late",
+   "next-start-delayed"
+  ],
+  "meaningCheck": "Welke gebeurtenis verbindt herstel met het wachten van de volgende bewoner?",
+  "automaticCorrectness": false,
+  "showOnlyAfterInitialResponses": true
+ }
+}

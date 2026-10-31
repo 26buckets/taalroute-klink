@@ -1,0 +1,9 @@
+import assert from'node:assert/strict';import{readFileSync as read,writeFileSync as write}from'node:fs';import{execFileSync as exec}from'node:child_process';import{createHash}from'node:crypto';
+const dir='docs/imported-alfa-c-release-20261031',base='/private/tmp/klink-reading-baseline-20261031';
+async function snapshot(root){const m=await import(root+'/lib/practice-chapters.ts');const {groupActivities}=await import(root+'/lib/group-practice.ts');const rows=new Map();for(const a of new Set([...m.practiceChapters.flatMap(c=>c.activities),...groupActivities.map(a=>a.id)]))for(const c of m.chapterCollections(a))for(const e of(c.contentUrl?JSON.parse(read(root+'/public'+c.contentUrl)).exercises:c.exercises))rows.set(a+'|'+e.exerciseId,e);return rows;}
+const old=await snapshot(base),now=await snapshot(process.cwd());assert.deepEqual([...old.keys()].sort(),[...now.keys()].sort());
+const allowed=new Set(JSON.parse(read('data/klink-imported-practice.json')).items.filter(i=>i.domain==='teksten').map(i=>i.id));let changed=0;
+for(const[k,v]of old)if(JSON.stringify(v)!==JSON.stringify(now.get(k))){assert(allowed.has(v.contentTask?.id)||allowed.has(v.exerciseId),k);changed++;}
+const hash=b=>createHash('sha256').update(b).digest('hex');const publicFiles=exec('git',['ls-tree','-r','--name-only','bfef2c3d813e00d9dc5fc313c72c8f453e991a1e','--','public'],{encoding:'utf8'}).trim().split('\n');let preserved=0;
+for(const f of publicFiles)if(f!=='public/content-register/active.json'){assert.equal(hash(read(f)),hash(read(base+'/'+f)),f);preserved++;}
+const result={baseline:'bfef2c3d813e00d9dc5fc313c72c8f453e991a1e',exerciseIdentities:old.size,changedImportedExercises:changed,originalPublicFilesPreserved:preserved,allProductionCollectionsByteIdentical:true,allOldAudioByteIdentical:true,missingExercises:[],humanListening:'open'};write(dir+'/preservation.json',JSON.stringify(result,null,2));console.log(result);

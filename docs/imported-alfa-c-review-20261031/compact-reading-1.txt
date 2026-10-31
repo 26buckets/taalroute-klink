@@ -1,0 +1,101 @@
+SOURCE 1 | A1
+Morgen gaat Mo naar een feest. Zijn blauwe pak hangt in de kast. Zijn bruine riem hangt ernaast. Mo trekt het pak aan. De riem is te klein. Hij zoekt een andere riem.
+ID kb-tb-20261018-04 | teacher
+Q Welke samenvatting past het best bij de hele tekst?
+OPTIONS Mo heeft een blauw pak in de kast. / Mo koopt een ander pak omdat het te klein is. / *Mo maakt zich klaar voor een feest en zoekt een riem die past.
+MODEL ['Mo maakt zich klaar voor een feest en zoekt een riem die past.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 2 | A1
+Sara is in de les. Haar boek ligt op tafel. Ze heeft geen pen. Ze vraagt aan Mo: Mag ik jouw pen lenen? Mo geeft haar een pen. Na de les geeft Sara de pen terug.
+ID kb-tb-20261018-05 | teacher
+Q Welke volgorde klopt voor Sara?
+OPTIONS Sara geeft de pen terug → Sara vraagt om een pen → Mo geeft een pen. / *Sara vraagt om een pen → Mo geeft een pen → Sara geeft de pen terug. / Mo geeft een pen → Sara geeft de pen terug → Sara vraagt om een pen.
+MODEL ['Sara vraagt om een pen → Mo geeft een pen → Sara geeft de pen terug.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+ID klink-teksten-b06-07 | teacher
+Q Waar ligt het boek van Sara?
+OPTIONS Bij Mo. / *Op tafel.
+MODEL ['Op tafel', 'op de tafel']
+CHECK Van wie is het boek? Wijs aan hoe je weet welk boek bedoeld wordt.
+SLOTS ['book-belongs-to-sara', 'book-on-table']
+ID klink-teksten-b06-08 | teacher
+Q Bij wie is de geleende pen aan het einde van het verhaal? Leg uit.
+OPTIONS *Bij Mo. Sara geeft de pen na de les terug. / Bij Sara. Zij houdt de geleende pen.
+MODEL ['Bij Mo, want Sara geeft hem na de les terug.']
+CHECK Waarom betekent terug hier terug naar Mo? Gebruik het lenen en geven in je uitleg.
+SLOTS ['mo-lends-to-sara', 'sara-returns-after-lesson', 'holder-mo']
+
+SOURCE 3 | A1
+Vandaag kookt Ali voor vier mensen. Hij heeft een kool en een biet. Op tafel staat een grote pan. Ali wast de biet en snijdt de kool. Dan doet hij de groente in de pan.
+ID kb-tb-20261018-06 | teacher
+Q Wat doet Ali voordat hij de groente in de pan doet?
+OPTIONS *Hij wast de biet en snijdt de kool. / Hij doet de groente eerst in de pan en wast die daarna. / Hij wast de kool en snijdt de biet.
+MODEL ['Hij wast de biet en snijdt de kool.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 4 | A2
+Sara en Ali gaan voor vier mensen koken. Sara zou kool meenemen en Ali een biet. In de winkel ziet Sara dat er geen kool meer is. Ze belt Ali en stelt voor om wortels te kopen. Ali vindt dat goed. Thuis wassen ze de groente. De grote pan is nog vies, dus die maken ze eerst schoon. Daarna beginnen ze met koken.
+ID kb-tb-20261018-07 | teacher
+Q Welke volgorde staat in het laatste deel van de tekst?
+OPTIONS De pan schoonmaken → koken → de groente wassen. / De groente wassen → koken → de pan schoonmaken. / *De groente wassen → de pan schoonmaken → beginnen met koken.
+MODEL ['De groente wassen → de pan schoonmaken → beginnen met koken.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 5 | A1
+Celine komt bij school aan. Zij zet haar fiets in het rek en doet hem op slot. Daarna loopt ze naar de ingang naast het grote raam.
+ID kb-tb-20261018-08 | teacher
+Q Wat doet Celine direct voordat zij naar de ingang loopt?
+OPTIONS Zij zet de fiets bij het grote raam en doet hem op slot. / *Zij zet haar fiets in het rek en doet hem op slot. / Zij loopt eerst naar de ingang en doet daarna de fiets op slot.
+MODEL ['Zij zet haar fiets in het rek en doet hem op slot.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 6 | A1
+Mo en Sara lopen in het park. Onder een boom staat een bank. Er zit een kat op de bank. Naast de bank groeit een roos. Mo en Sara lopen naar een andere bank. Daar gaan ze zitten.
+ID kb-tb-20261018-09 | teacher
+Q Waar verwijst ‘Daar’ in ‘Daar gaan ze zitten’ naar?
+OPTIONS *Naar de andere bank waar Mo en Sara naartoe lopen. / Naar de bank waar de kat op zit. / Naar de plek naast de bank waar de roos groeit.
+MODEL ['Naar de andere bank waar Mo en Sara naartoe lopen.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 7 | A2
+Sara heeft een boek van Mo geleend. Ze zou het vandaag terugbrengen, maar ze heeft het thuis laten liggen. Voor de les stuurt ze Mo een bericht: Sorry, je boek ligt nog op mijn tafel. Ik neem het morgen mee. Mo antwoordt dat dat goed is. Hij heeft het boek pas volgende week nodig.
+ID kb-tb-20261018-10 | teacher
+Q Wie wordt bedoeld met ‘Hij’ in de laatste zin?
+OPTIONS Sara. / De docent. / *Mo.
+MODEL ['Mo.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 8 | A2
+Fatima wil met haar kind de tuin in. Het hek aan de straatkant is dicht. De buur wijst naar een tweede hek aan de zijkant. Dat staat open. Fatima loopt met haar kind om en gaat daar naar binnen.
+ID kb-tb-20261018-11 | teacher
+Q Welk hek wordt bedoeld met ‘Dat’ in ‘Dat staat open’?
+OPTIONS Beide hekken. / *Het tweede hek aan de zijkant. / Het hek aan de straatkant.
+MODEL ['Het tweede hek aan de zijkant.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 9 | A2
+Rachid zoekt een kop voor zijn werk. Hij ziet een grote en een kleine kop. De grote is veel duurder. Omdat hij genoeg heeft aan de kleine, kiest hij die. Hij vraagt wel om een bon.
+ID kb-tb-20261018-12 | teacher
+Q Welke kop bedoelt de tekst met ‘die’ in ‘kiest hij die’?
+OPTIONS *De kleine kop. / De grote kop. / Beide koppen.
+MODEL ['De kleine kop.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []
+
+SOURCE 10 | A2
+Ali en Sara willen zaterdag met de boot naar een dorp aan het water. Ze hebben afgesproken om tien uur te vertrekken. Vrijdag krijgt Ali een bericht: de boot van tien uur vaart niet. Er gaat wel een boot om elf uur. Ali belt Sara. Ze besluiten de boot van elf uur te nemen en iets later te gaan eten.
+ID kb-tb-20261018-14 | teacher
+Q Hoe laat vertrekken Ali en Sara volgens hun nieuwe afspraak?
+OPTIONS Om twaalf uur. / *Om elf uur. / Om tien uur.
+MODEL ['Om elf uur.']
+CHECK Leg in eigen woorden of door aanwijzen met uitleg uit hoe het antwoord bij de bron past; een keuze alleen is onvoldoende.
+SLOTS []

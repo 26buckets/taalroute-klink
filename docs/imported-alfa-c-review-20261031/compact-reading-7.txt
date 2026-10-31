@@ -1,0 +1,56 @@
+SOURCE 61 | B1
+Ik werk overdag en kan de bibliotheek daardoor meestal alleen op zaterdag bezoeken. Ik zou graag zien dat zij één avond per week langer openblijft. Dan kunnen mensen met werktijden zoals die van mij ook op een doordeweekse dag rustig boeken kiezen.
+
+Ik begrijp dat extra openingstijd personeel en geld kost. Daarom stel ik geen dagelijkse avondopening voor, maar een proef van drie maanden op donderdag. De bibliotheek kan in die periode bezoekers tellen en medewerkers naar hun ervaring vragen.
+
+Na de proef kan zij beslissen of de opbrengst opweegt tegen de extra inzet. Ik hoop dat het lukt, maar ik vind een zorgvuldige beoordeling belangrijker dan meteen een blijvende belofte. Deze reactie is een voorstel van een bezoeker en geen aankondiging van nieuwe openingstijden.
+ID klink-teksten-b14-03 | teacher
+Q Welk standpunt neemt de schrijver in, en hoe houdt het voorstel rekening met een bezwaar?
+OPTIONS De schrijver wil zonder onderzoek elke avond open en vindt kosten onbelangrijk. / *De schrijver wil één langere avond voor werkende bezoekers. Vanwege personeel en kosten stelt die een beperkte donderdagproef met evaluatie voor.
+MODEL ['De schrijver wil één langere avond voor werkende bezoekers. Vanwege personeel en kosten stelt die een beperkte donderdagproef met evaluatie voor.']
+CHECK Waarom is kosten worden genoemd nog geen argument tégen elke vorm van avondopening?
+SLOTS ['one-evening-access', 'acknowledges-cost', 'limited-evaluated-trial']
+ID klink-teksten-b14-04 | teacher
+Q Kunt u op basis van deze reactie plannen dat de bibliotheek komende donderdagavond open is? Waarom wel of niet?
+OPTIONS *Nee. Het is een bezoekersvoorstel voor een proef, geen vastgestelde aankondiging van openingstijden; een besluit of rooster ontbreekt. / Ja, donderdag staat in de tekst, dus die openingstijd is vastgesteld.
+MODEL ['Nee. Het is een bezoekersvoorstel voor een proef, geen vastgestelde aankondiging van openingstijden; een besluit of rooster ontbreekt.']
+CHECK Welke soort aanvullende informatie zou uw bezoekplan wél kunnen bevestigen?
+SLOTS ['proposal-status', 'no-confirmed-opening']
+
+SOURCE 62 | B1
+Het ontmoetingscentrum heeft een kleine zaal voor maximaal twintig personen en een grote zaal voor maximaal veertig personen. In beide zalen staan tafels en stoelen. Alleen de grote zaal heeft een vaste geluidsinstallatie.
+
+Een aanvraag is pas definitief wanneer het centrum een schriftelijke bevestiging heeft gestuurd. Bij de aanvraag vermeldt u de dag, begin- en eindtijd, het verwachte aantal deelnemers en of u geluid nodig heeft. De beheerder controleert daarna welke zaal beschikbaar is.
+
+Wilt u iets veranderen na de bevestiging, neem dan opnieuw contact op. Een grotere groep kan niet automatisch in dezelfde zaal blijven. De genoemde aantallen gaan over de totale groep, inclusief mensen die de bijeenkomst begeleiden.
+ID klink-teksten-b14-05 | teacher
+Q U verwacht negentien bezoekers en twee begeleiders en heeft geen geluid nodig. Welke zaal past qua capaciteit, en is die daardoor meteen gereserveerd?
+OPTIONS De kleine zaal past, want begeleiders tellen niet mee; die is meteen geboekt. / *De groep telt eenentwintig personen, dus alleen de grote zaal past qua capaciteit. Beschikbaarheid moet nog worden gecontroleerd en de schriftelijke bevestiging is nodig.
+MODEL ['De groep telt eenentwintig personen, dus alleen de grote zaal past qua capaciteit. Beschikbaarheid moet nog worden gecontroleerd en de schriftelijke bevestiging is nodig.']
+CHECK Waarom zijn capaciteit en beschikbaarheid twee verschillende controles?
+SLOTS ['total-exceeds-twenty-including-hosts', 'large-capacity', 'confirmation-still-needed']
+ID klink-teksten-b14-06 | teacher
+Q Welke gegevens moet een aanvraag bevatten? Welke ervan mag u niet weglaten alleen omdat u geen geluidsinstallatie nodig heeft?
+OPTIONS *Dag, begin- en eindtijd, verwacht deelnemersaantal en of geluid nodig is. Ook geen geluid is informatie; dag, tijden en aantal blijven vereist. / Zonder geluid hoeft alleen een naam te worden gegeven.
+MODEL ['Dag, begin- en eindtijd, verwacht deelnemersaantal en of geluid nodig is. Ook geen geluid is informatie; dag, tijden en aantal blijven vereist.']
+CHECK Staat er dat u alleen bij geluid een volledig verzoek moet doen?
+SLOTS ['day-times', 'expected-count', 'sound-need-yes-or-no']
+
+SOURCE 63 | B1
+De buurtvereniging wil extra fietsenrekken bij de ingang van het wijkgebouw plaatsen. Een bezoeker steunt het voorstel omdat er nu fietsen tegen de muur staan en de looproute daardoor smal wordt. Volgens deze bezoeker maken vaste rekken de ingang overzichtelijker.
+
+Een andere bezoeker is niet tegen extra rekken, maar vindt de voorgestelde plek onhandig. Die ligt vlak voor een deur waar regelmatig spullen worden geladen en gelost. Deze bezoeker stelt voor de rekken een paar meter verder langs dezelfde muur te zetten.
+
+De vereniging heeft nog geen plek gekozen. Zij laat eerst bekijken hoeveel vrije ruimte bij de deur nodig is. Beide reacties worden gebruikt bij die beoordeling; het aantal reacties alleen bepaalt de plek niet.
+ID klink-teksten-b14-07 | teacher
+Q Waarover verschillen de twee bezoekers van mening en waarover zijn ze niet noodzakelijk tegenstanders?
+OPTIONS De eerste wil fietsen toelaten en de tweede wil alle fietsen uit de buurt verbieden. / *De eerste steunt rekken bij de ingang voor een vrije looproute. De tweede is ook niet tegen rekken, maar wil een andere plek vanwege laden en lossen.
+MODEL ['De eerste steunt rekken bij de ingang voor een vrije looproute. De tweede is ook niet tegen rekken, maar wil een andere plek vanwege laden en lossen.']
+CHECK Waarom is niet tegen extra rekken belangrijk voor een eerlijke vergelijking?
+SLOTS ['first-route-reason', 'second-location-objection', 'not-opposed-to-racks']
+ID klink-teksten-b14-08 | teacher
+Q Welke informatie wil de vereniging vóór haar keuze hebben, en waarom is alleen stemmen tellen onvoldoende volgens dit bericht?
+OPTIONS *Zij wil weten hoeveel ruimte bij de deur nodig is. De reacties zijn input, maar het aantal alleen bepaalt de plek niet; de benodigde doorgang moet worden beoordeeld. / De plek met de meeste reacties is al gekozen en meten is niet nodig.
+MODEL ['Zij wil weten hoeveel ruimte bij de deur nodig is. De reacties zijn input, maar het aantal alleen bepaalt de plek niet; de benodigde doorgang moet worden beoordeeld.']
+CHECK Kun je uit dit bericht al aanwijzen waar de rekken zeker komen?
+SLOTS ['required-door-space', 'counts-not-sole-decision']

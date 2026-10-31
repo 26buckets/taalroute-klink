@@ -7,7 +7,7 @@ import {
   practiceAgain,
   pilotStorageKey,
 } from '../lib/alfa-c-practice.ts';
-import { contentById } from '../lib/connected-content.ts';
+import { contentById, sentenceLevelReviews } from '../lib/connected-content.ts';
 import { allPackageWords } from '../lib/package-content.ts';
 test('Three bounded pilots reuse real source media without modifying source levels', () => {
   assert.equal(pilotBlocks.length, 3);
@@ -60,7 +60,7 @@ test('Three bounded pilots reuse real source media without modifying source leve
   assert(
     [...contentById.values()]
       .filter((s) => s.kind === 'sentence')
-      .every((s) => s.sourceLevel === 'with-support'),
+      .every((s) => sentenceLevelReviews.get(s.id)?.text === s.text && s.sourceLevel === sentenceLevelReviews.get(s.id)?.level && s.independentReading === false),
   );
 });
 test('Preview progress rejects malformed records and stays in a separate namespace', () => {

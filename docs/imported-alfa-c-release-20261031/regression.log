@@ -1,0 +1,61 @@
+✔ Cooking story and every linked dialogue variant share Sara, Ali and the shopping agreement (226.421042ms)
+✔ Owner decisions are resolved; borderline texts retain A2 and explicit preparation (2.502084ms)
+✔ All 320 texts and dialogues have exact full-text and question reviews, without reading-level inflation (5.037458ms)
+✔ Every linked exercise uses the reviewed source and respects a harder writing task (673.6955ms)
+✔ All original long-content IDs remain reachable in free listening, under the new levels (6.474041ms)
+✔ Changing only the question invalidates its language review, instead of inheriting a stale level (6.948333ms)
+✔ Five fresh recordings have matching source text, retained originals and verified brand metadata (96.23275ms)
+✔ Every data amendment is bounded and reversible; historical source guards reject extra tampering (169.003209ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (10354.902416ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.487958ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (32.232209ms)
+{
+  collections: 1462,
+  exercisePlacements: 59532,
+  uniqueSourceRecords: {
+    'build-model': 816,
+    copy: 8386,
+    meet: 641,
+    memory: 5,
+    'read-series': 8386,
+    'spelling-path': 698,
+    'word-bingo': 1344,
+    'word-sort': 192,
+    worksheet: 816,
+    'worksheet-heard': 840,
+    listen: 1152,
+    'hear-match': 192,
+    read: 576,
+    match: 192,
+    cards: 576,
+    'image-bingo': 2
+  },
+  referencedMedia: 5913,
+  indexBytes: 454710,
+  indexGzipBytes: 38225,
+  largestCollectionBytes: 129192,
+  oldAlfaAIdsPreserved: true,
+  all45AlfaBRecallTasks: true,
+  sourceAnswers: true,
+  pathsExist: true,
+  localOnly: true
+}
+✔ scripts/test-production-content.mjs (1168.287708ms)
+✔ 210 unique word-only questions have exactly one correct answer and traceable editorial sources (2.984291ms)
+✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (1.515333ms)
+✔ wrong answers become due for repetition, survive reload and retain the exact question (516.2ms)
+✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (1250.637292ms)
+✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.953875ms)
+✔ corrupt saved mixing preferences fall back safely (0.249ms)
+PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (5459.86475ms)
+PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
+✔ scripts/test-word-rounds.mjs (1025.541667ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10736.159958

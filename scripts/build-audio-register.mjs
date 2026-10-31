@@ -299,6 +299,18 @@ export function buildAudioRegister(inventory) {
     }
   }
   const rows = [...active.values()].sort((a, b) => a.id.localeCompare(b.id));
+  // The published repair ledger also preserves the original-source and review fields.
+  const repaired = [...json('docs/long-content-review-20261030/audio.json'), ...json('docs/cooking-release-20261030/audio.json')];
+  for (const change of json('docs/long-content-review-20261030/source-amendments.json').changes) {
+    const [file, index, field] = change.path;
+    if (file !== 'public/content-register/active.json' || !['voiceId', 'review', 'originalSrc'].includes(field)) continue;
+    const row = rows[index];
+    assert(repaired.some(clip => clip.src === row.src && clip.text === row.text), 'Repair ledger must still identify the same recording');
+    row[field] = change.after;
+  }
+  // D119 retains its first source recording in the approved public inventory.
+  const medical = rows.find(row => row.src === '/package-audio/tekstherstel-20261030/d119.mp3');
+  if (medical) medical.originalSrc = '/package-audio/connected/ba9552ec981cd67faa9d.wav';
   const planned = [...drafts.values()].sort((a, b) => a.id.localeCompare(b.id));
   const count = (items) =>
     Object.fromEntries(

@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { functionalAudio, functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress } from '../lib/alfa-c-functioneel.ts';
+const amendments = JSON.parse(readFileSync('docs/imported-alfa-c-release-20261031/source-amendments.json')).changes;
 const source = JSON.parse(readFileSync('docs/klink-alfa-c-functioneel-20261028/reviewed-package.json'));
 test('all instructions, examples, source texts, tips, retries and isolated dictation items have exact audio bindings',()=>{
  for(const block of functionalBlocks){
@@ -23,7 +24,8 @@ test('all 72 revised tasks available with 27 actual digital response places', ()
     for(const [i,s] of b.steps.entries()) {
       const o=source.blocks[n].steps[i];
       assert.equal(s.id,o.id); assert.equal(s.screen,o.instruction.targetText); assert.equal(typeof s.instruction,'string');
-      assert.equal(s.helpVisible,o.helpVisible); assert.equal(typeof s.retryVisible,'string'); assert.equal(s.exampleVisible,o.exampleVisible);
+      assert.equal(s.helpVisible,o.helpVisible); assert.equal(typeof s.retryVisible,'string'); const change=amendments.find(c=>c.path[0]==='data/klink-alfa-c-functioneel.json'&&c.path[2]===n&&c.path[4]===i&&c.path[5]==='exampleVisible');
+      if(change){assert.equal(change.before,o.exampleVisible);assert.equal(s.exampleVisible,change.after);}else assert.equal(s.exampleVisible,o.exampleVisible);
       assert.equal(s.exampleInstruction,o.exampleSpoken); assert.deepEqual(s.responseSetup,o.responseSetup ? {...o.responseSetup, medium:'digital'} : null);
       if(s.kind==='choice') {assert.equal(s.closed,false); assert.equal(s.options.filter(x=>x.id===s.correctOptionId).length,1); assert.deepEqual(new Set(functionalOptions(s)),new Set(s.options));}
       if(s.kind==='dictation')assert.equal(s.dictationTexts.length,o.exerciseAudio.texts.length);
@@ -47,4 +49,10 @@ test('progress rejects corrupt or invented success and never changes the older s
   assert.deepEqual(readFunctionalProgress(JSON.stringify(raw)),{version:1,positions:{lijst:12},records:{[choice.id]:raw.records[choice.id]}});
   delete raw.records[open.id].correct;
   assert.deepEqual(readFunctionalProgress(JSON.stringify(raw)).records[open.id],raw.records[open.id]);
+});
+
+test('reviewed examples narrate the first source line as well as the answer',()=>{
+ const steps=functionalBlocks.flatMap(b=>b.steps);
+ for(const id of ['lijst-02','lijst-06']){const s=steps.find(s=>s.id==='klink-alfa-c-aanvulling-'+id);assert(s.exampleTargetTexts[0].includes('1 brood'));assert(s.exampleVisible.includes(s.exampleTargetTexts[0]));}
+ const s=steps.find(s=>s.id==='klink-alfa-c-aanvulling-werk-03');assert.deepEqual(s.exampleTargetTexts.slice(0,2),['1 Pak een doek.','2 Maak de tafel schoon.']);
 });
