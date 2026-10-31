@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { chromium } from 'playwright';
-import { allPackageWords, lessonPackages } from '../lib/package-content.ts';
+import { allPackageWords } from '../lib/package-content.ts';
 import additional from '../data/klink-lexicon-wordbuild-rest.json' with { type: 'json' };
 assert.equal(allPackageWords.length, 5127);
 assert(allPackageWords.every(word => word.audio), 'Every word shown under Woorden must have audio');
@@ -32,13 +32,13 @@ try {
   await page.locator('.learner-login').waitFor();
   await page.getByRole('button', { name: 'Begin', exact: true }).click();
   await page.locator('.cp-home').waitFor();
-  await page.getByRole('button', { name: 'Woorden', exact: true }).click();
-  await page.getByLabel('Welke woorden?', {exact:true}).selectOption('extra');
-  await page.getByLabel('Kies woorden', {exact:true}).selectOption('all');
+  await page.getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
+  const search = page.getByLabel('Zoek een woord', {exact:true});
   const firstWords = allPackageWords.filter(word => word.packageId === 'klink-lexicon-proefpakket-20-20261019');
   const buttons = page.locator('.cp-global-word-grid .cp-word-listen');
-  assert.equal(await buttons.count(), 4789);
+  assert((await buttons.count()) <= 24);
   for (let i = 0; i < 20; i++) {
+    await search.fill(firstWords[i].word);
     assert.equal(await page.getByRole('button', {name:`Luister naar ${firstWords[i].word}`, exact:true}).isDisabled(), false);
     await page.getByRole('button', {name:`Luister naar ${firstWords[i].word}`, exact:true}).click();
     await page.waitForFunction(index => window.__wordAudio[index]?.ended || window.__wordAudio[index]?.error, i, { timeout: 15000 });
@@ -47,13 +47,14 @@ try {
     assert(event.src.endsWith('.mp3') && event.src.includes('/woorden-20261025/'));
   }
   await page.setViewportSize({ width: 390, height: 844 });
-  assert.equal(await buttons.count(), 4789);
+  assert((await buttons.count()) <= 24);
   const mobileIndex = await page.evaluate(() => window.__wordAudio.length);
   await buttons.nth(0).click();
   await page.waitForFunction(index => window.__wordAudio[index]?.ended, mobileIndex, { timeout: 15000 });
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
   const lastPack = additional.packs.at(-1);
   assert(lastPack.words.every(word => allPackageWords.some(item => item.id === word.id)));
+  await search.fill(lastPack.words.at(-1).word);
   const lastIndex = await page.evaluate(() => window.__wordAudio.length);
   await page.getByRole('button', {name:`Luister naar ${lastPack.words.at(-1).word}`, exact:true}).click();
   await page.waitForFunction(index => window.__wordAudio[index]?.ended, lastIndex, { timeout: 15000 });
@@ -63,9 +64,7 @@ try {
   for (const text of repairedWords) {
     const word = allPackageWords.find(word => word.word === text);
     assert(word);
-    const fromLesson = lessonPackages.some(pack => pack.id === word.packageId);
-    await page.getByLabel('Welke woorden?', {exact:true}).selectOption(fromLesson ? 'lessons' : 'extra');
-    if (fromLesson) await page.getByLabel('Kies een lespakket', {exact:true}).selectOption(word.packageId);
+    await search.fill(word.word);
     const index = await page.evaluate(() => window.__wordAudio.length);
     await page.getByRole('button', { name: `Luister naar ${text}`, exact: true }).click();
     await page.waitForFunction(index => window.__wordAudio[index]?.ended, index, { timeout: 15000 });

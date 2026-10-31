@@ -31,8 +31,8 @@ try{
   checks.push(`${width}: card turns, no answer on photo side`);
  }
  await p.goto(base+'/#learner/package/groep-1');await p.locator('.cp-word-grid').waitFor();await p.locator('.cp-save-button').first().click();
- await p.goto(base+'/#learner/words');await p.getByLabel('Welke woorden?', {exact:true}).selectOption('saved');assert.equal(await p.locator('.cp-global-word-grid .cp-word-article').first().innerText(),'de mat');
- await p.reload();await p.getByLabel('Welke woorden?', {exact:true}).selectOption('saved');assert.equal(await p.locator('.cp-global-word-grid .cp-word-article').first().innerText(),'de mat');
+ await p.goto(base+'/#learner/words');await p.getByLabel('Toon', {exact:true}).selectOption('saved');assert.equal(await p.locator('.cp-global-word-grid .cp-word-article').first().innerText(),'de mat');
+ await p.reload();await p.getByLabel('Toon', {exact:true}).selectOption('saved');assert.equal(await p.locator('.cp-global-word-grid .cp-word-article').first().innerText(),'de mat');
  await p.goto(base+'/#learner/review');await p.locator('.review-word-list .cp-word-article').waitFor();assert.equal(await p.locator('.review-word-list .cp-word-article').first().innerText(),'de mat');checks.push('Saved words, reload and review retain article and storage');
  assert.deepEqual(errors,[]);writeFileSync(`${out}/result.json`,JSON.stringify({passed:true,checks,errors},null,2));console.log('PASS',checks.length,'checks');
 }finally{await b.close();}

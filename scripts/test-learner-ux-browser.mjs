@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { taalroutePackages as packs, exercisesForLesson, primaryWordCards } from '../lib/taalroute-packages.ts';
+import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 const browsers = await import(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const engine = process.env.KLINK_BROWSER || 'chromium';
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18816';
@@ -120,15 +120,13 @@ try {
   const writing = groupActivities.flatMap(activity => groupExercises(packs[2], activity.id)).find(item => item.exerciseId === writingId);
   assert((await page.evaluate(() => window.__played)).includes(writing.prompt.audio.src), 'Writing must expose its existing word recording');
   checks.push('Writing exercise exposes the linked word audio');
-  await home(); await nav().getByRole('button', { name: 'Woorden', exact: true }).click();
-  const filter = page.getByLabel('Kies een lespakket', {exact:true});
-  for (const pack of packs) { await filter.selectOption(pack.id); assert.equal(await page.locator('.cp-global-word-grid article').count(), primaryWordCards.filter(word => word.packageId === pack.id).length); }
-  await filter.selectOption('all');
+  await home(); await nav().getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
+  await page.getByLabel('Zoek een woord', {exact:true}).fill('aardappel');
   const save = page.getByRole('button', { name: 'aardappel bewaren', exact: true }); await save.click();
-  await page.getByLabel('Welke woorden?', {exact:true}).selectOption('saved'); assert.equal(await page.locator('.cp-global-word-grid article').count(), 1);
-  await page.reload(); await nav().getByRole('button', { name: 'Herhalen', exact: true }).click();
+  await page.getByLabel('Toon', {exact:true}).selectOption('saved'); assert.equal(await page.locator('.cp-global-word-grid article').count(), 1);
+  await page.reload(); await nav().getByRole('button', { name: 'Nog een keer', exact: true }).click();
   assert.match(await page.locator('.review-word-list').innerText(), /aardappel/);
-  checks.push('All lesson filters and saved words remain accessible, with saved state surviving reload');
+  checks.push('Word search and saved words remain accessible, with saved state surviving reload');
   assert.deepEqual(errors, []);
 } finally {
   writeFileSync(`${out}/ux-check.json`, JSON.stringify({ base, engine, checks, errors }, null, 2));

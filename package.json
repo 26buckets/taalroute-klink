@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "prebuild": "npm run images:check && node scripts/write-klink-release.mjs",
+    "prebuild": "node scripts/build-word-library-index.mjs --check && npm run images:check && node scripts/write-klink-release.mjs",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",

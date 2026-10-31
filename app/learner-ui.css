@@ -774,3 +774,10 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
 .cp-meaning-example { display: flex; align-items: center; gap: 0.75rem; }
 .cp-meaning-example img { flex: 0 0 80px; object-fit: contain; }
 .cp-meaning-example p { margin: 0.25rem 0; }
+
+/* Approved word library filters; keep the existing card layout. */
+.word-library-page .word-filters .word-search { width: 100%; }
+.word-library-page .word-search input { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; color: var(--ink); background: var(--paper); border: 1px solid var(--line-strong); border-radius: 0; font: inherit; font-size: 16px; }
+.word-library-page .word-library-more { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; }
+
+.word-library-page .word-filters > label:not(.word-search) { flex: 1 1 260px; max-width: 390px; }

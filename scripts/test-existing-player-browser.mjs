@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { libraryWords } from '../lib/word-library.ts';
+import { wordLibraryPageSize } from '../lib/word-library.ts';
 import { learnerListName } from '../lib/learner-copy.ts';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { taalroutePackages as packs, exercisesForLesson, lessonPreviewWords } from '../lib/taalroute-packages.ts';
@@ -59,7 +59,7 @@ try {
   }
   pass('All eligible group activities render in the existing exercise players');
   await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
-  assert.equal(await page.locator('.cp-global-word-grid article').count(), libraryWords('lessons', 'all', []).length);
+  assert.equal(await page.locator('.cp-global-word-grid article').count(), wordLibraryPageSize);
   for (const meaning of ['pak (kleding)', 'pak (verpakking)']) {
     assert.equal(await page.locator('.cp-global-word-grid strong').filter({ hasText: new RegExp(`^${meaning.replace(/[()]/g, '\\$&')}$`) }).count(), 1);
     await page.getByRole('button', { name: `${meaning} bewaren`, exact: true }).click();

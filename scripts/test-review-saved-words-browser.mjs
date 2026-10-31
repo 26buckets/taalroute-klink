@@ -62,7 +62,7 @@ try {
     await page.locator('.review-word-list > div > button').click();
     assert((await audio).ok(), 'Saved word retains accessible original audio');
     await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Woorden bekijken', exact: true }).click();
-    await page.getByLabel('Welke woorden?', { exact: true }).selectOption('saved');
+    await page.getByLabel('Toon', { exact: true }).selectOption('saved');
     await page.locator('.cp-global-word-grid article').first().getByRole('button', { name: / niet meer bewaren$/ }).click();
     await page.getByRole('heading', { name: 'Nog geen woorden bewaard', exact: true }).waitFor();
     await page.getByRole('navigation', { name: 'Cursistnavigatie' }).getByRole('button', { name: 'Nog een keer', exact: true }).click();

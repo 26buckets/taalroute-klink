@@ -3,14 +3,14 @@ import { AlfaCTeacherPractice } from './alfa-c-docent';
 import { legacyAlfaCHash } from '@/lib/alfa-c-navigation';
 
 import { wordWithArticle } from '@/lib/word-articles';
-import { libraryWords, wordLengths, type WordLibrarySource } from '@/lib/word-library';
+import { libraryWords, libraryCollections, defaultWordLibraryFilter, wordLibraryPageSize, type WordLibraryIndex, type WordLibraryFilter, type WordLibrarySource } from '@/lib/word-library';
 
 import { setSlowAudio } from '@/lib/media-player';
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { PackageLibrary, PackagePlayer } from '@/components/product/package-experience';
 import { PackageMixedPractice } from '@/components/product/package-mixed-practice';
 import { PracticeChapters } from '@/components/product/practice-chapters';
-import type { ContentLevel } from '@/lib/content-levels';
+import { contentLevels, type ContentLevel } from '@/lib/content-levels';
 import { chapterCollections, chapterHash } from '@/lib/practice-chapters';
 import { learningReviewKey, parseLearningReview, updateLearningReview } from '@/lib/learning-review';
 import { mixedReviewPack } from '@/lib/mixed-practice';
@@ -194,22 +194,35 @@ function LearnerHome({ onPackages, onSounds, onBack, progress, onLesson, onAttem
 }
 
 function WordLibrary({ savedWordIds, onToggleWord, onBack, onToast }: { savedWordIds: string[]; onToggleWord: (wordId: string) => void; onBack: () => void; onToast: (message: string) => void }) {
-  const [source, setSource] = useState<WordLibrarySource>('lessons');
-  const [lessonFilter, setLessonFilter] = useState('all');
-  const [extraFilter, setExtraFilter] = useState('2-4');
-  const visibleWords = useMemo(() => libraryWords(source, source === 'lessons' ? lessonFilter : extraFilter, savedWordIds), [source, lessonFilter, extraFilter, savedWordIds]);
+  const [filter, setFilter] = useState(defaultWordLibraryFilter);
+  const [index, setIndex] = useState<WordLibraryIndex | null>(null);
+  const [indexError, setIndexError] = useState(false);
+  const [limit, setLimit] = useState(wordLibraryPageSize);
+  useEffect(() => {
+    let active = true;
+    import('@/data/klink-word-library-index.json').then(module => { if (active) setIndex(module.default as WordLibraryIndex); }).catch(() => { if (active) setIndexError(true); });
+    return () => { active = false; };
+  }, []);
+  const changeFilter = (patch: Partial<WordLibraryFilter>) => { setFilter(current => ({ ...current, ...patch })); setLimit(wordLibraryPageSize); };
+  const visibleWords = useMemo(() => libraryWords(filter, savedWordIds, index), [filter, savedWordIds, index]);
+  const collections = useMemo(() => index ? libraryCollections(index, filter) : [], [index, filter]);
+  const chapters = index?.chapters.filter(chapter => libraryCollections(index, { level: filter.level, chapter: chapter.id }).length) ?? [];
+  const noSavedWords = filter.source === 'saved' && !allPackageWords.some(word => savedWordIds.includes(word.id));
   return (
     <div className="learner-page word-library-page">
-      <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Woorden bekijken</h1><small className="cp-context-meta">{visibleWords.length} woorden</small></header>
+      <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Woorden bekijken</h1><small className="cp-context-meta">{visibleWords.length} {visibleWords.length === 1 ? 'woord' : 'woorden'}</small></header>
       <div className="cp-page-workspace">
       <p>Tik en luister.</p>
       <div className="word-filters" aria-label="Filter woorden">
-        <label>Welke woorden?<select aria-label="Welke woorden?" value={source} onChange={event => setSource(event.target.value as WordLibrarySource)}><option value="lessons">Woorden uit de lessen</option><option value="extra">Meer woorden</option><option value="saved">Bewaard ({savedWordIds.length})</option></select></label>
-        {source === 'lessons' && <label>Kies een lespakket<select aria-label="Kies een lespakket" value={lessonFilter} onChange={event => setLessonFilter(event.target.value)}><option value="all">Alle lespakketten</option>{lessonPackages.map((pack, index) => <option key={pack.id} value={pack.id}>{index + 1}. {learnerListName(pack)}</option>)}</select></label>}
-        {source === 'extra' && <label>Kies woorden<select aria-label="Kies woorden" value={extraFilter} onChange={event => setExtraFilter(event.target.value)}><option value="all">Alle extra woorden</option><optgroup label="Aantal letters">{wordLengths.map(item => <option key={item.id} value={item.id}>{item.label}</option>)}</optgroup><optgroup label="Met een teken"><option value="signs">Met &apos; of -</option></optgroup></select></label>}
+        <label className="word-search">Zoek een woord<input type="search" value={filter.query} onChange={event => changeFilter({ query: event.target.value })} /></label>
+        <label>Toon<select aria-label="Toon" value={filter.source} onChange={event => changeFilter({ source: event.target.value as WordLibrarySource })}><option value="all">Alle woorden</option><option value="saved">Bewaarde woorden</option></select></label>
+        <label>Niveau<select aria-label="Niveau" disabled={!index} value={filter.level} onChange={event => changeFilter({ level: event.target.value, chapter: 'all', collection: 'all' })}><option value="all">Alle niveaus</option>{contentLevels.filter(level => level.id !== 'all' && index?.collections.some(item => item.levels[level.id]?.length)).map(level => <option key={level.id} value={level.id}>{level.label}</option>)}</select></label>
+        <label>Onderdeel<select aria-label="Onderdeel" disabled={!index} value={filter.chapter} onChange={event => changeFilter({ chapter: event.target.value, collection: 'all' })}><option value="all">Alle onderdelen</option>{chapters.map(chapter => <option key={chapter.id} value={chapter.id}>{chapter.title}</option>)}</select></label>
+        {filter.chapter !== 'all' && <label>Oefening<select aria-label="Oefening" value={filter.collection} onChange={event => changeFilter({ collection: event.target.value })}><option value="all">Alle oefeningen</option>{index?.activities.filter(activity => collections.some(item => item.activity === activity.id)).map(activity => <optgroup key={activity.id} label={activity.label}>{collections.filter(item => item.activity === activity.id).map(item => <option key={item.id} value={item.id}>{activity.label} · {item.title}</option>)}</optgroup>)}</select></label>}
       </div>
-      {source === 'extra' && extraFilter === 'signs' && <p>Bijvoorbeeld: zo&apos;n en e-mail.</p>}
-      {source === 'saved' && visibleWords.length === 0 ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Nog een keer.</p><button className="primary-button" onClick={() => setSource('lessons')}>Bekijk woorden uit de lessen</button></section> : <section className="cp-global-word-grid">{visibleWords.map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-describedby={wordWithArticle(word) ? `article-global-${word.id}` : undefined} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong>{wordWithArticle(word) && <small id={`article-global-${word.id}`} className="cp-word-article">{wordWithArticle(word)}</small>}<span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
+      {!index && <p><output>{indexError ? <>De oefenfilters konden niet laden. <button className="text-back" onClick={() => window.location.reload()}>Probeer opnieuw</button></> : 'Oefenfilters laden…'}</output></p>}
+      {noSavedWords ? <section className="honest-empty"><Bookmark /><h2>Nog geen woorden bewaard</h2><p>Tik bij een woord op Bewaar. Je vindt het daarna bij Nog een keer.</p><button className="primary-button" onClick={() => changeFilter(defaultWordLibraryFilter)}>Bekijk alle woorden</button></section> : visibleWords.length === 0 ? <section className="honest-empty"><h2>Geen woorden gevonden</h2><p>Probeer een ander woord of kies andere filters.</p><button className="secondary-button" onClick={() => changeFilter({ ...defaultWordLibraryFilter, source: filter.source })}>Wis zoeken en filters</button></section> : <section className="cp-global-word-grid">{visibleWords.slice(0, limit).map((word) => { const saved = savedWordIds.includes(word.id); return <article key={word.id}><button className="cp-word-listen" disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Luisteren lukt niet. Probeer het nog eens.'))} aria-describedby={wordWithArticle(word) ? `article-global-${word.id}` : undefined} aria-label={word.audio ? `Luister naar ${wordLabel(word)}` : `${wordLabel(word)}. Lees samen met je docent.`}>{word.image ? <Image src={word.image} alt="" width={760} height={760} /> : <span className="word-initial" aria-hidden="true">{word.word.slice(0, 1)}</span>}<div><strong>{wordLabel(word)}</strong>{wordWithArticle(word) && <small id={`article-global-${word.id}`} className="cp-word-article">{wordWithArticle(word)}</small>}<span>{word.audio ? <><Volume2 /> Luister</> : 'Lees samen'}</span></div></button><button className={saved ? 'saved' : ''} onClick={() => onToggleWord(word.id)} aria-pressed={saved} aria-label={`${wordLabel(word)} ${saved ? 'niet meer bewaren' : 'bewaren'}`}>{saved ? <BookmarkCheck /> : <Bookmark />}<span>{saved ? 'Bewaard' : 'Bewaar'}</span></button></article>; })}</section>}
+      {visibleWords.length > 0 && <p className="word-library-more"><output>{Math.min(limit, visibleWords.length)} van {visibleWords.length} {visibleWords.length === 1 ? 'woord' : 'woorden'}</output>{limit < visibleWords.length && <button className="secondary-button" onClick={() => setLimit(value => value + wordLibraryPageSize)}>Meer woorden tonen</button>}</p>}
       </div>
     </div>
   );

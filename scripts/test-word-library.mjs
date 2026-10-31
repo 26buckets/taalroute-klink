@@ -1,31 +1,42 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { allPackageWords, lessonPackages } from '../lib/package-content.ts';
-import { libraryWords, wordLengths } from '../lib/word-library.ts';
+import { allPackageWords } from '../lib/package-content.ts';
+import { libraryWords, libraryCollections, defaultWordLibraryFilter as defaults } from '../lib/word-library.ts';
+import index from '../data/klink-word-library-index.json' with { type: 'json' };
+import { buildWordLibraryIndex } from './build-word-library-index.mjs';
 
-test('The fifteen lesson packages and extra words together preserve every word ID', () => {
-  const lessons = libraryWords('lessons', 'all', []);
-  const extra = libraryWords('extra', 'all', []);
-  assert.equal(lessonPackages.length, 15);
-  assert.equal(lessons.length, 338);
-  assert.equal(extra.length, 4789);
-  assert.deepEqual([...lessons, ...extra].map(w => w.id).sort(), allPackageWords.map(w => w.id).sort());
-  for (const pack of lessonPackages) assert.deepEqual(libraryWords('lessons', pack.id, []), lessons.filter(w => w.packageId === pack.id));
+await test('All 5127 existing cards keep exact identity, audio, images and meanings', () => {
+  const cards = libraryWords(defaults, [], index);
+  assert.equal(cards.length, 5127);
+  assert.deepEqual(cards.map(w => w.id).sort(), allPackageWords.map(w => w.id).sort());
+  for (const word of cards) assert.equal(word, allPackageWords.find(w => w.id === word.id));
+  assert.deepEqual(libraryWords(defaults, [], null), cards, 'Cards and saved words work while the optional index loads');
 });
 
-test('Length filters cover all extra words once, including former examples and punctuation', () => {
-  const groups = wordLengths.map(filter => libraryWords('extra', filter.id, []));
-  assert.deepEqual(groups.map(words => words.length), [529, 1154, 2047, 881, 178]);
-  assert.deepEqual(groups.flat().map(w => w.id).sort(), libraryWords('extra', 'all', []).map(w => w.id).sort());
-  for (const words of groups) assert.deepEqual(words.map(w => w.word), words.map(w => w.word).sort((a, b) => a.localeCompare(b, 'nl')));
-  assert(libraryWords('extra', '2-4', []).some(w => w.word === "zo'n"));
-  assert(libraryWords('extra', '5-6', []).some(w => w.word === 'e-mail'));
-  assert.equal(libraryWords('extra', 'signs', []).length, 8);
-  assert.equal(libraryWords('extra', 'unknown', []).length, 0);
+await test('Index is reproducible from real exercises and covers every existing card', () => {
+  assert.deepEqual(buildWordLibraryIndex(), index);
+  assert.equal(new Set(index.collections.flatMap(row => Object.values(row.levels).flat())).size, 5127);
+  assert.equal(index.unmappedTargetIds.length, 18, 'Other task IDs must not be guessed into existing word meanings');
 });
 
-test('Saved words keep their exact cards, media and meanings across both sources', () => {
-  const ids = [allPackageWords[0].id, allPackageWords.at(-1).id];
-  assert.deepEqual(libraryWords('saved', '2-4', ids), allPackageWords.filter(w => ids.includes(w.id)));
-  assert.deepEqual(libraryWords('saved', 'all', []), []);
+await test('Search, saved cards and homonyms stay distinct', () => {
+  const pak = libraryWords({...defaults, query: 'PAK ('}, [], index);
+  assert.deepEqual(pak.map(w => w.id).sort(), ['klink-woord-pak', 'klink-woord-pak-verpakking']);
+  const ids = [allPackageWords[0].id, allPackageWords.at(-1).id, 'older-unknown-id'];
+  assert.equal(libraryWords({...defaults, source:'saved'}, ids, index).length, 2);
+  assert.equal(ids.length, 3, 'Do not rewrite saved storage');
+  assert.equal(libraryWords({...defaults, query:' e-MAIL '}, [], index)[0].word, 'e-mail');
+  assert.deepEqual(libraryWords({...defaults, query:'geen-bestaand-woord'}, [], index), []);
+});
+
+await test('Level, component and exercise must match the SAME membership', () => {
+  const fixture = { chapters:[{id:'one',activities:['x']},{id:'two',activities:['y']}], collections:[
+    {id:'x/1',activity:'x',levels:{a1:[allPackageWords[0].id],b1:[allPackageWords[1].id]}},
+    {id:'y/2',activity:'y',levels:{b1:[allPackageWords[0].id]}}
+  ] };
+  const selected = {...defaults, level:'b1', chapter:'one', collection:'x/1'};
+  assert.deepEqual(libraryWords(selected, [], fixture).map(w => w.id), [allPackageWords[1].id]);
+  assert.deepEqual(libraryWords({...selected,collection:'y/2'}, [], fixture), []);
+  assert.deepEqual(libraryWords(selected, [], null), []);
+  for (const chapter of index.chapters) assert(libraryCollections(index, {...defaults,chapter:chapter.id}).length, chapter.id);
 });
