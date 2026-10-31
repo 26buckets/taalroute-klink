@@ -1,3 +1,15 @@
+## 31 oktober 2026 — Synoniemen: betekenis, instapniveaus en gecentreerde woordkaarten
+
+Livebron `bfef2c3d813e00d9dc5fc313c72c8f453e991a1e`, schone canonieke main; Worker `91e1db1e-8fb4-4467-b12d-cfade49f082a`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van actuele goedgekeurde livebron `f86dd0ffb872dbfb3b54c585860d6e9c6bb63054`. De inmiddels gepubliceerde 71 Drive-beelden, woordronde-continuïteit, nieuwe Synoniemen-plaatsing, teksten, dialogen en kookherstel zijn behouden.
+
+Alle 210 paren met vier antwoordkaarten en omkering redactioneel beoordeeld. 35 niveaucorrecties; 25 contextgebonden of te formele paren blijven als herstelbron bewaard en zijn niet actief. 185 actieve paren: instap A1 16, A2 43, B1 126; cumulatief 16/59/185. Eén te moeilijke afleider vervangen. Geen officiële ERK-classificatie per woord of onafhankelijke docentvalidering. Oorspronkelijke woordpaar-ID's en opgeslagen voortgang blijven bewaard. Woord en antwoordwoorden gebruiken gewicht 500; het woord staat horizontaal en verticaal midden in de kaart. De drie oefenvormen blijven in dezelfde lijst beschikbaar, ook na draaien, omkeren, mixen en herladen. Geen dubbele ingang bij Woorden bekijken.
+
+Alle 68 aangeboden MP3's hebben correcte Taalroute-metadata, nul overstuurde samples en intacte audiogrenzen. Blinde herkenning: Scribe 68/68, Whisper 66/68. Uitspraak/klemtoon zijn niet als beluisterd goedgekeurd: directe audioanalyse leverde geen bruikbaar resultaat; menselijke luisterronde open voor alle 68, met extra aandacht voor circa en reeks. Geen nieuwe synthese en geen wijzigingen aan bestaande media.
+
+Lokaal: 13 gerichte tests inclusief vijf afkeurproeven, types/lint/productieopbouw en volledige historische publicatiepoort geslaagd; alle 185 actieve vragen, zeven oefenvormscenario's, twaalf centrering-/gewicht-/schermmaatgevallen en 136 native audiocontroles. Behoud bestaande woordrondes bewezen met 312 browserwisselingen en 112 overzicht/open/terug-reizen, zes niveaus en vijf schermmaten in Chromium/WebKit. Online opnieuw alle 185 vragen, zeven oefenvormscenario's, twaalf kaartgevallen en alle 68 bestanden in beide browsers bytegelijk teruggelezen en afgespeeld. Metadata zijn door deze bestandsidentiteit aantoonbaar behouden. Geen fysieke toestellen, cursistenpilot of menselijke luistergoedkeuring. Alle zware controles lokaal; geen GitHub Actions-workflows.
+
+Gecontroleerde bronbackup daadwerkelijk van Drive teruggelezen: `1UOfvk4BFWDVtVXj_MBFHZrNrGlZ1ijT9`. Bewijzen en herstelgegevens: `docs/synonyms-review-20261031/`. Het leesbare controleverslag bewaart alle 210 paren, de redenen per besluit en de 68 opnamen voor de open luisterronde.
+
 ## 31 oktober 2026 — 71 gecontroleerde Drive-woordbeelden online
 
 - Werkelijk gepubliceerde bron: `f86dd0ffb872dbfb3b54c585860d6e9c6bb63054`; Worker `6fd1df38-f6f6-4e95-9352-e2320491cbe0`.
