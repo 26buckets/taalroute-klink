@@ -1,3 +1,7 @@
+## Vaste stemafspraak — Nico, 31 oktober 2026
+
+Bij nieuwe Klink-opdrachten en teksten wisselen vrij te kiezen mannen- en vrouwenstemmen voortaan af. Bestaande personages behouden hun vaste stem en exacte voice-ID; die continuïteit gaat vóór de afwisseling. Lees vóór nieuwe audioproductie `docs/KLINK-STEMVERDELING.txt` en leg rollen en voice-ID’s vooraf vast. Dit is een projectafspraak, geen nieuwe app- of audiopublicatie.
+
 ## 31 oktober 2026 — voorleesaudio bij de zes A1- en A2-leesteksten
 
 Livebron `61f8ae7801b832b541149806a4cd897ef81b6b22`, schone canonieke main; Worker `dcb47ce9-fed2-4c89-aa4a-aa3ca158645c`. Normaal gepubliceerd via `npm run deploy` bovenop de werkelijke laatste livebron `f323da366f7f7f0c456831f177d8c4d9a70dbd9f`, met behoud van de negen docentpakketten en alle 38 docentlessen. De nieuwste publicatiedocumentatie van main is vóór publicatie samengevoegd.
