@@ -1,5 +1,5 @@
 {
-  "method": "Alle 68 daadwerkelijk aangeboden MP3-bestanden gedecodeerd. Elk bestand vergeleken met oorspronkelijke vrijgavehash. PCM-samples op clipping, randenergie en stilte onder -50 dBFS beoordeeld. Metadata van werkelijke bestanden gelezen. Stilte/ASR alleen bewijzen geen uitspraak; afzonderlijke audit van de hoorbare klanken volgt.",
+  "method": "Alle 68 daadwerkelijk aangeboden MP3-bestanden op PCM-randen, stilte, clipping, oorspronkelijke hash en ingebedde metadata gecontroleerd. Alle 68 daarna zonder verwachte tekst door Whisper large-v3 en Scribe-v2 herkend; 66 exacte dubbele overeenkomsten, Scribe bevestigt ook circa en reeks. ASR bewijst verstaanbaarheid, niet alle klinkers of klemtoon. Directe multimodale luisterbeoordeling niet beschikbaar: OpenAI-audio-API heeft geen credits; Gemini leverde geen bruikbare beoordeling. Geen uitspraakgoedkeuring op grond van transcriptie alleen. Onafhankelijke menselijke luisterronde blijft open voor alle 68, extra aandacht voor circa en reeks. Geen aantoonbare knip-/clipping-/woordfout; geen nieuwe synthese uitgevoerd.",
   "sampleRate": 44100,
   "rows": [
     {
@@ -27,7 +27,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW001",
+        "heard": "Aanschaffen,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Aanschaffen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW002",
@@ -54,7 +68,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW002",
+        "heard": "aanvaarden,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "aanvaarden",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW003",
@@ -81,7 +109,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW003",
+        "heard": "afremmen,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "afremmen.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW004",
@@ -108,7 +150,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW004",
+        "heard": "afzonderlijk,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Afzonderlijk",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW005",
@@ -135,7 +191,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW005",
+        "heard": "alarmeren,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Alarmeren",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW006",
@@ -162,7 +232,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW006",
+        "heard": "beboeten,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "beboeten",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW007",
@@ -189,7 +273,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW007",
+        "heard": "begrenzen,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Begrenzen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW008",
@@ -216,7 +314,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW008",
+        "heard": "bekeuren,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Bekeuren",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW009",
@@ -243,7 +355,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW009",
+        "heard": "beklemtonen,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Beklemtonen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW010",
@@ -270,7 +396,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW010",
+        "heard": "bekrachtigen,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Bekrachtigen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW011",
@@ -297,7 +437,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW011",
+        "heard": "beperkt,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Beperkt.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW012",
@@ -324,7 +478,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW012",
+        "heard": "besluiten,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Besluiten",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW013",
@@ -351,7 +519,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW013",
+        "heard": "bespoedigen,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "bespoedigen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW014",
@@ -378,7 +560,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW014",
+        "heard": "betrekking,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Betrekking",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW015",
@@ -405,7 +601,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW015",
+        "heard": "beweren,",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Beweren",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW016",
@@ -432,7 +642,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW016",
+        "heard": "circa",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Zirka.",
+        "match": false,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "Scribe bevestigt woord; afwijkende losse-woordherkenning bij Whisper; menselijke klank-/klemtooncontrole open",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW017",
@@ -459,7 +683,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW017",
+        "heard": "compensatie",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Compensatie",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW018",
@@ -486,7 +724,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW018",
+        "heard": "Consulteren.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Consulteren",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW019",
@@ -513,7 +765,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW019",
+        "heard": "Daarentegen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Daarentegen.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW020",
@@ -540,7 +806,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW020",
+        "heard": "Daartegenover.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Daartegenover.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW021",
@@ -567,7 +847,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW021",
+        "heard": "Dikwijls.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Dikwijls.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW022",
@@ -594,7 +888,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW022",
+        "heard": "Gedeeltelijk.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Gedeeltelijk.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW023",
@@ -621,7 +929,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW023",
+        "heard": "Gemeenschappelijk.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Gemeenschappelijk",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW024",
@@ -648,7 +970,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW024",
+        "heard": "Goedvinden.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "goed vinden.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW025",
@@ -675,7 +1011,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW025",
+        "heard": "Individueel.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Individueel",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW026",
@@ -702,7 +1052,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW026",
+        "heard": "Inkomsten.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Inkomsten",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW027",
@@ -729,7 +1093,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW027",
+        "heard": "Inlichtingen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Inlichtingen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW028",
@@ -756,7 +1134,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW028",
+        "heard": "Legaal.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "LEGAAL",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW029",
@@ -783,7 +1175,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW029",
+        "heard": "Motief.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Motief.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW030",
@@ -810,7 +1216,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW030",
+        "heard": "Onenigheid.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Onenigheid",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW031",
@@ -837,7 +1257,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW031",
+        "heard": "Ontkennen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Ontkennen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW032",
@@ -864,7 +1298,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW032",
+        "heard": "Ontsnappen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "ontsnappen.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW033",
@@ -891,7 +1339,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW033",
+        "heard": "Opvallend.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Opvallend!",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW034",
@@ -918,7 +1380,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW034",
+        "heard": "Overeenkomst.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Overeenkomst",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW035",
@@ -945,7 +1421,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW035",
+        "heard": "Patat.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Patat!",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW036",
@@ -972,7 +1462,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW036",
+        "heard": "Prettig.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Prettig!",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW037",
@@ -999,7 +1503,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW037",
+        "heard": "Reeks.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Riks",
+        "match": false,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "Scribe bevestigt woord; afwijkende losse-woordherkenning bij Whisper; menselijke klank-/klemtooncontrole open",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW038",
@@ -1026,7 +1544,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW038",
+        "heard": "Repeteren.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Repeteren",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW039",
@@ -1053,7 +1585,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW039",
+        "heard": "Riskant.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "RISKANT",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW040",
@@ -1080,7 +1626,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW040",
+        "heard": "Samengevat.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Samengevat.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW041",
@@ -1107,7 +1667,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW041",
+        "heard": "Simpel.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Simpel.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW042",
@@ -1134,7 +1708,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW042",
+        "heard": "Tegenspreken.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Tegenspreken",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW043",
@@ -1161,7 +1749,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW043",
+        "heard": "Tegenwerping.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Tegenwerping",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW044",
@@ -1188,7 +1790,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW044",
+        "heard": "Tevens.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Tevens.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW045",
@@ -1215,7 +1831,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW045",
+        "heard": "Ticket.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Ticket.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW046",
@@ -1242,7 +1872,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW046",
+        "heard": "Toepasbaar.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Toepasbaar",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW047",
@@ -1269,7 +1913,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW047",
+        "heard": "Toestemmen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "toestemmen.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW048",
@@ -1296,7 +1954,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW048",
+        "heard": "Troep.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Troep.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW049",
@@ -1323,7 +1995,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW049",
+        "heard": "Uitgaven.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Uitgaven",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW050",
@@ -1350,7 +2036,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW050",
+        "heard": "Verdiensten.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Verdiensten",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW051",
@@ -1377,7 +2077,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW051",
+        "heard": "Vereist.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "vereist.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW052",
@@ -1404,7 +2118,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW052",
+        "heard": "Verhelderen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Verhelderen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW053",
@@ -1431,7 +2159,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW053",
+        "heard": "Verkleinen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Verkleinen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW054",
@@ -1458,7 +2200,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW054",
+        "heard": "Verkrijgen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Verkrijgen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW055",
@@ -1485,7 +2241,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW055",
+        "heard": "Vermeerderen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Vermeerderen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW056",
@@ -1512,7 +2282,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW056",
+        "heard": "Vermoeid.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Vermoeid.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW057",
@@ -1539,7 +2323,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW057",
+        "heard": "Vernietigen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Vernietigen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW058",
@@ -1566,7 +2364,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW058",
+        "heard": "Veronderstellen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "veronderstellen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW059",
@@ -1593,7 +2405,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW059",
+        "heard": "Versnellen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Versnellen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW060",
@@ -1620,7 +2446,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW060",
+        "heard": "Vertragen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Vertragen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW061",
@@ -1647,7 +2487,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW061",
+        "heard": "Vervolgen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Vervolgen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW062",
@@ -1674,7 +2528,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW062",
+        "heard": "Verzenden.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Verzenden",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW063",
@@ -1701,7 +2569,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW063",
+        "heard": "Waarnemen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Waarnemen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW064",
@@ -1728,7 +2610,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW064",
+        "heard": "Wagen.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Wagen",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW065",
@@ -1755,7 +2651,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW065",
+        "heard": "Weleens.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Wel eens.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW066",
@@ -1782,7 +2692,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW066",
+        "heard": "Wellicht.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Wellicht.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW067",
@@ -1809,7 +2733,21 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW067",
+        "heard": "Wettig.",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Wettig.",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     },
     {
       "id": "SW068",
@@ -1836,7 +2774,28 @@
         "encoder": "Lavf62.12.102"
       },
       "humanListeningReview": "open",
-      "technicalPass": true
+      "technicalPass": true,
+      "blindScribe": {
+        "id": "SW068",
+        "heard": "Zenden",
+        "match": true,
+        "expectedWordProvidedToModel": false
+      },
+      "blindWhisper": {
+        "heard": "Zenden",
+        "match": true,
+        "model": "mlx-community/whisper-large-v3-mlx",
+        "expectedWordProvidedToModel": false
+      },
+      "speechRecognitionStatus": "twee herkenners bevestigen het woord",
+      "pronunciationApprovedByListening": false
     }
-  ]
+  ],
+  "directListeningStatus": "niet voltooid",
+  "humanListeningReview": "open",
+  "newRecordings": 0,
+  "speechRecognitionMatches": {
+    "whisper": 66,
+    "scribe": 68
+  }
 }

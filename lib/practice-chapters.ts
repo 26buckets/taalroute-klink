@@ -188,7 +188,7 @@ export function chapterExerciseChoices(location: ChapterLocation) {
       ? [...candidates.filter(item => item.id === sourceId), ...candidates.filter(item => item.id !== sourceId)].find(item => selectChapterWords(item, words))
       : candidates.find(item => {
         if (item.id !== sourceId) return false;
-        if (!wordRoundActivities.has(location.activity!) || activity.id === location.activity) return true;
+        if (isSynonymPack(item.pack) || !wordRoundActivities.has(location.activity!) || activity.id === location.activity) return true;
         const targetWords = collectionWordIds(item);
         return wholeWords && targetWords && wholeWords.size === targetWords.size && [...wholeWords].every(id => targetWords.has(id));
       });

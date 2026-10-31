@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { existsSync, readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { verifySynonymReviewRelease } from './check-synonym-review-release-20261031.mjs';
 import { synonymBank, synonymCollections, synonymExercises, parseSynonymSettings } from '../lib/synonyms.ts';
 import { availableChapterCollections, chapterCollections, chapterExerciseChoices, chapterHash, parseChapterHash, practiceChapters } from '../lib/practice-chapters.ts';
 import { groupExercises } from '../lib/group-practice.ts';
@@ -108,6 +110,9 @@ test('all pairs reverse, mix and turn without changing sources or counting a rev
     const choices = chapterExerciseChoices({ chapter: 'words', activity: 'synonyms', collection: collection.id, level: collection.level, help: 'practice' });
     assert.deepEqual(new Set(choices.map(item => item.id)), new Set(['synonyms', 'cards', 'hear-match']));
     for (const choice of choices) assert.equal(choice.collection, collection.id, 'Switch mode in the same list');
+    for (const activity of ['cards', 'hear-match']) {
+      assert.deepEqual(new Set(chapterExerciseChoices({ chapter: 'words', activity, collection: collection.id, level: collection.level, help: 'practice' }).map(item => item.id)), new Set(['synonyms', 'cards', 'hear-match']));
+    }
   }
   assert.equal(JSON.stringify(synonymBank), before);
   assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match')).length, 185);
@@ -152,5 +157,25 @@ test('meaning audit excludes unsafe pairs, keeps every original record and corre
     assert.equal(new Set(collection.exercises.map(item => item.vocabularyLevels.join(','))).size, 1);
     const oldLink = { chapter: 'words', activity: 'synonyms', collection: collection.id, level: 'a1', help: 'practice' };
     assert.equal(parseChapterHash(chapterHash(oldLink)).collection, collection.id);
+  }
+});
+
+test('publication rejects reactivated unsafe pairs, missing reviews and false listening claims', () => {
+  assert(verifySynonymReviewRelease());
+  const releaseFile = 'docs/klink-owner-release-synonym-review-20261031.json';
+  const cases = [
+    ['data/klink-synonyms.json', bank => { bank.entries.find(row => !row.active).active = true; }],
+    ['docs/synonyms-review-20261031/word-review.json', review => { review.rows[0].allFourOptionsReviewed = false; }],
+    ['docs/synonyms-review-20261031/audio-review.json', audio => { audio.rows[0].technicalPass = false; }],
+    ['docs/synonyms-review-20261031/audio-review.json', audio => { audio.directListeningStatus = 'goedgekeurd'; }],
+    ['docs/synonyms-review-20261031/audio-review.json', audio => { audio.rows[0].pronunciationApprovedByListening = true; }],
+  ];
+  for (const [file, mutate] of cases) {
+    const release = JSON.parse(readFileSync(releaseFile)), altered = JSON.parse(readFileSync(file));
+    mutate(altered); const bytes = Buffer.from(JSON.stringify(altered)), sha = createHash('sha256').update(bytes).digest('hex');
+    if (release.files[file]) release.files[file] = sha;
+    if (release.evidence[file]) release.evidence[file] = sha;
+    const read = path => path === releaseFile ? Buffer.from(JSON.stringify(release)) : path === file ? bytes : readFileSync(path);
+    assert.throws(() => verifySynonymReviewRelease(read), file);
   }
 });
