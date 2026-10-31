@@ -1,5 +1,6 @@
 import lessonContent from '../data/klink-docent-lessons.json' with { type: 'json' };
 import additionalLessons from '../data/klink-docent-extra-lessons.json' with { type: 'json' };
+import nextLessons from '../data/klink-docent-extra-lessons-10-15.json' with { type: 'json' };
 import classroomContent from '../data/klink-docent-mat.json' with { type: 'json' };
 import routeContent from '../data/klink-docent-routes.json' with { type: 'json' };
 import { wordById } from './klink-curriculum.ts';
@@ -158,6 +159,7 @@ export const classroomLessons = [
     presentation: { imageAlt: 'Een mat bij een deur', phrases: ['De mat', 'ligt', 'bij de deur.'], entryAction: 'Kom binnen. Veeg je voeten op de mat.', ownPrompt: 'Vertel over de mat bij jou thuis.', ownHint: 'Waar ligt hij? Wat doe jij als je binnenkomt?', wordUse: 'Waar ligt nog een mat? Vertel of laat zien.' } },
   ...lessonContent,
   ...additionalLessons,
+  ...nextLessons,
 ].map(content => {
   const pack = lessonPackages.find(pack => pack.lessons.some(lesson => lesson.newWords?.includes(content.wordRef)))!;
   const lesson = pack.lessons.find(lesson => lesson.newWords?.includes(content.wordRef))!;

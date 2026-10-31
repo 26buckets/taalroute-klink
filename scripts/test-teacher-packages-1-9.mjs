@@ -8,7 +8,7 @@ import {worksheets,worksheetSelection,worksheetHash} from '../lib/teacher-worksh
 
 const groups=['kam kat kan','kip kin ik','in is en kast','mes nek mens','pak bon bot','bus dak bed dit','kop kok op','mus kus munt','mand mond kind post'];
 test('all nine packages retain 30 lesson kernels, 720 phases and 900 matching answers',()=>{
- assert.equal(classroomLessons.length,38);assert.equal(worksheets.length,38);
+ assert.equal(classroomLessons.length,58);assert.equal(worksheets.length,58);
  assert.deepEqual(additional.map(x=>x.id),groups.flatMap(x=>x.split(' ')));
  assert.deepEqual(worksheets.map(x=>x.id),classroomLessons.map(x=>x.id));
  const ids=new Set();let phases=0,answers=0;
