@@ -243,9 +243,14 @@ function ReviewQueue({ savedWordIds, completed, onAttempt, onWords, onBack, onTo
     <div className="learner-page review-page">
       <header className="cp-context-header"><button className="text-back" onClick={onBack} aria-label="Terug" title="Terug"><ArrowLeft /></button><h1>Nog een keer</h1><small className="cp-context-meta">{items.length} bewaard</small></header>
       <div className="cp-page-workspace">
-      <p>Tik en luister.</p>
-      {hasScheduled && <div className="cp-review-mixed"><a className="primary-button" href={chapterHash({ chapter: 'repeat', activity: 'learning-review', level: 'all' })} onClick={stopMedia}><RefreshCw aria-hidden="true" />Oefen opnieuw<ArrowRight aria-hidden="true" /></a></div>}
-      {pack.words.length >= 2 && <div className="cp-review-mixed"><button className="primary-button" onClick={() => { stopMedia(); setMixed(true); }}><RefreshCw aria-hidden="true" />Woordenmix<ArrowRight aria-hidden="true" /></button></div>}
+      {(hasScheduled || pack.words.length >= 2) && <section className="cp-review-tools" aria-label="Eerder geoefend">
+        <div className="cp-review-copy"><h2>Eerder geoefend</h2><p>Herhaal wat je eerder hebt geoefend.</p></div>
+        <div className="cp-review-actions">
+          {hasScheduled && <div className="cp-review-mixed"><a className="primary-button" href={chapterHash({ chapter: 'repeat', activity: 'learning-review', level: 'all' })} onClick={stopMedia}><RefreshCw aria-hidden="true" />Oefen opnieuw<ArrowRight aria-hidden="true" /></a></div>}
+          {pack.words.length >= 2 && <div className="cp-review-mixed"><button className="primary-button" onClick={() => { stopMedia(); setMixed(true); }}><RefreshCw aria-hidden="true" />Woordenmix<ArrowRight aria-hidden="true" /></button></div>}
+        </div>
+      </section>}
+      {items.length > 0 && <p className="cp-review-instruction">Tik en luister.</p>}
       {items.length === 0 ? <section className="honest-empty"><RefreshCw /><h2>Kies eerst een woord</h2><p>Tik bij een woord op Bewaar.</p><button className="primary-button" onClick={onWords}>Kies woorden<ArrowRight /></button></section> : <section className="review-word-list"><header><div><span className="eyebrow"></span><h2>Jouw woorden</h2></div><small>Tik op een kaart om te luisteren</small></header><div>{items.map((word) => <button key={word.id} disabled={!word.audio} onClick={() => word.audio && playMedia(word.audio).catch(() => onToast('Het geluid kon niet worden afgespeeld.'))}>{word.image ? <Image src={word.image} alt="" width={760} height={760} fallbackWord={wordLabel(word)} placeholderClassName="klink-review-placeholder" /> : <WordPlaceholder word={wordLabel(word)} className="klink-review-placeholder" decorative />}<span><small>{learnerListName(getPackage(word.packageId))}</small><strong>{wordLabel(word)}</strong>{wordWithArticle(word) && <small id={`article-global-${word.id}`} className="cp-word-article">{wordWithArticle(word)}</small>}<small>{word.audio ? 'Luister' : 'Lees samen met je docent'}</small></span>{word.audio && <Volume2 />}</button>)}</div></section>}
       </div>
     </div>

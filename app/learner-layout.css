@@ -279,3 +279,25 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .cp-home .cp-direct-actions { gap:6px; margin-bottom:8px; }
 .product-root .consistent-layout .cp-home .cp-direct-actions button { min-height:44px; padding:6px 10px; font-size:16px; font-weight:400; }
 .cp-home .cp-direct-heading { margin-bottom:8px; }
+
+/* Approved review layout: one quiet workspace with a centered saved-word invitation. */
+.product-root .consistent-layout .review-page > .cp-page-workspace { padding:24px; min-height:0; }
+.review-page .cp-review-tools { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; padding-bottom:22px; border-bottom:1px solid var(--line); }
+.review-page .cp-review-copy { min-width:0; }
+.review-page .cp-review-copy h2 { margin:0 0 5px; font-size:20px; font-weight:500; }
+.review-page .cp-review-copy p { margin:0; color:var(--muted); }
+.review-page .cp-review-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; }
+.review-page .cp-review-actions .cp-review-mixed { margin:0; }
+.review-page .cp-review-actions :is(a,button) { min-height:48px; font-size:16px; font-weight:400; white-space:nowrap; justify-content:center; }
+.review-page .honest-empty { min-height:300px; margin:0; padding:26px 8px 12px; gap:12px; background:transparent; border:0; border-radius:0; box-shadow:none; }
+.review-page .honest-empty > svg { width:42px; height:42px; }
+.review-page .honest-empty h2 { font-weight:500; }
+.review-page .cp-review-instruction { margin:20px 0 12px; }
+@media (max-width:650px) {
+  .product-root .consistent-layout .review-page > .cp-page-workspace { padding:20px 16px; }
+  .review-page .cp-review-tools { flex-direction:column; align-items:stretch; gap:14px; padding-bottom:20px; }
+  .review-page .cp-review-actions { display:grid; grid-template-columns:minmax(0,1fr); }
+  .review-page .cp-review-actions :is(a,button) { width:100%; }
+  .review-page .honest-empty { min-height:280px; padding:28px 0 8px; }
+  .review-page .honest-empty h2 { font-size:24px; }
+}
