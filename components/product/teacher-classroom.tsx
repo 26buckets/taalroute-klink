@@ -21,6 +21,9 @@ import {
   Volume2,
   X,
   Camera,
+  ChevronDown,
+  Wrench,
+  List,
   PencilLine,
 } from "lucide-react";
 import Image from "next/image";
@@ -529,7 +532,11 @@ function MirrorBoard() {
   );
 }
 
-export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => void; onActiveChange?: (active: boolean) => void }) {
+export function TeacherClassroom({
+  onActiveChange,
+}: {
+  onActiveChange?: (active: boolean) => void;
+}) {
   const [state, setState] = useState<ClassroomState>(() => readClassroom());
   const [screen, setScreen] = useState<"entry" | "lesson">(() =>
     readClassroom().active ? "lesson" : "entry",
@@ -539,7 +546,23 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
   );
   const [pause, setPause] = useState(false),
     [feedback, setFeedback] = useState("");
+  const [panel, setPanel] = useState<"phases" | "tools" | null>(null);
   const [tool, setTool] = useState<BoardTool | null>(null);
+  useEffect(() => {
+    if (!panel || tool) return;
+    function closePanel(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      setPanel(null);
+      document
+        .querySelector<HTMLButtonElement>(
+          `[aria-controls="kpd-${panel === "phases" ? "phase" : "tool"}-choices"]`,
+        )
+        ?.focus();
+    }
+    document.addEventListener("keydown", closePanel);
+    return () => document.removeEventListener("keydown", closePanel);
+  }, [panel, tool]);
+
   const [strokes, setStrokes] = useState<Stroke[]>([]),
     [boardText, setBoardText] = useState("");
   const [toolWord, setToolWord] = useState(false),
@@ -579,6 +602,7 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
     });
   }
   function go(index: number) {
+    setPanel(null);
     const round = routeIds.indexOf(state.route);
     if (index >= phases.length && round < routeIds.length - 1) {
       switchRound(routeIds[round + 1], 0);
@@ -593,6 +617,7 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
     update({ phase: index });
   }
   function switchRound(route: ClassroomRoute, phase?: number) {
+    setPanel(null);
     audio.stop();
     roundStates.current[state.route] = state;
     const next =
@@ -688,14 +713,18 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
 
   if (screen === "entry")
     return (
-      <TeacherWorkspaceFrame view="plus" title={<ClassroomBrand />}>
-      <section className="kpd kpd-gate">
-        <h2>mat</h2>
-        <button className="primary-button" onClick={start}>
-          <Play />
-          Les openen
-        </button>
-      </section>
+      <TeacherWorkspaceFrame view="plus">
+        <section className="kpd kpd-gate">
+          <Image src={matWord.image!} alt="" width={180} height={180} />
+          <div>
+            <h3>mat</h3>
+            <p>Woord · Zin · Tekst</p>
+            <button className="primary-button" onClick={start}>
+              <Play />
+              Les openen
+            </button>
+          </div>
+        </section>
       </TeacherWorkspaceFrame>
     );
 
@@ -705,18 +734,6 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
         <h1>
           <ClassroomBrand />
         </h1>
-        <nav className="kpd-rounds" aria-label="Stappen">
-          {routeIds.map((route) => (
-            <button
-              key={route}
-              className="secondary-button"
-              aria-current={state.route === route ? "step" : undefined}
-              onClick={() => switchRound(route)}
-            >
-              {roundLabels[route]}
-            </button>
-          ))}
-        </nav>
         <div className="kpd-actions">
           <button
             className="secondary-button"
@@ -729,28 +746,94 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
             {pause ? "Hervatten" : "Pauze"}
           </button>
           <button className="secondary-button" onClick={leave}>
-            Les sluiten
-          </button>
-          <button className="secondary-button" onClick={() => { leave(); onExit(); }}>
-            <ArrowLeft />Overzicht
+            <ArrowLeft />
+            Lesoverzicht
           </button>
         </div>
       </header>
       <div className="kpd-session">
         <div className="kpd-board" hidden={pause}>
-          <nav className="kpd-phases" aria-label="Lesfasen">
-            {phases.map((p, i) => (
+          <div className="kpd-lesson-bar">
+            {" "}
+            <nav className="kpd-rounds" aria-label="Stappen">
+              {routeIds.map((route) => (
+                <button
+                  key={route}
+                  className="secondary-button"
+                  aria-current={state.route === route ? "step" : undefined}
+                  onClick={() => switchRound(route)}
+                >
+                  {roundLabels[route]}
+                </button>
+              ))}
+            </nav>
+            <div className="kpd-lesson-options">
               <button
                 className="secondary-button"
-                key={p.title}
-                aria-current={state.phase === i ? "step" : undefined}
-                onClick={() => go(i)}
+                aria-expanded={panel === "phases"}
+                aria-controls="kpd-phase-choices"
+                onClick={() => setPanel(panel === "phases" ? null : "phases")}
               >
-                <span>{i + 1}</span>
-                {p.title}
+                <List />
+                Kies onderdeel
+                <ChevronDown />
               </button>
-            ))}
-          </nav>
+              <button
+                className="secondary-button"
+                aria-expanded={panel === "tools"}
+                aria-controls="kpd-tool-choices"
+                onClick={() => setPanel(panel === "tools" ? null : "tools")}
+              >
+                <Wrench />
+                Hulpmiddelen
+                <ChevronDown />
+              </button>
+            </div>
+          </div>
+          <div className="kpd-drawers">
+            <nav
+              id="kpd-phase-choices"
+              className="kpd-phases"
+              aria-label="Lesfasen"
+              hidden={panel !== "phases"}
+            >
+              {phases.map((p, i) => (
+                <button
+                  className="secondary-button"
+                  key={p.title}
+                  aria-current={state.phase === i ? "step" : undefined}
+                  onClick={() => go(i)}
+                >
+                  <span>{i + 1}</span>
+                  {p.title}
+                </button>
+              ))}
+            </nav>
+            <nav
+              id="kpd-tool-choices"
+              className="kpd-tools"
+              hidden={panel !== "tools"}
+              aria-label="Hulpmiddelen"
+            >
+              {tools.map((name) => (
+                <button
+                  className="secondary-button"
+                  key={name}
+                  onClick={(e) => {
+                    audio.stop();
+                    opener.current = e.currentTarget;
+                    setTool(name);
+                  }}
+                >
+                  {name === "Schrijfbord" && <PencilLine />}
+                  {name}
+                </button>
+              ))}
+              <button className="secondary-button" onClick={chooseVariant}>
+                Andere hulp
+              </button>
+            </nav>
+          </div>
           <section className="kpd-stage" aria-label={phase.title}>
             <h2>
               {state.route === "a" && state.phase === 1 && saySelf
@@ -1060,22 +1143,7 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
               />
             )}
           </div>
-          <nav className="kpd-tools" aria-label="Hulpmiddelen">
-            {tools.map((name) => (
-              <button
-                className="secondary-button"
-                key={name}
-                onClick={(e) => {
-                  audio.stop();
-                  opener.current = e.currentTarget;
-                  setTool(name);
-                }}
-              >
-                {name === "Schrijfbord" && <PencilLine />}
-                {name}
-              </button>
-            ))}
-          </nav>
+
           <footer className="kpd-footer">
             <button
               className="secondary-button"
@@ -1085,9 +1153,12 @@ export function TeacherClassroom({ onExit, onActiveChange }: { onExit: () => voi
               <ArrowLeft />
               Vorige
             </button>
-            <button className="secondary-button" onClick={chooseVariant}>
-              Andere hulp
-            </button>
+            <span className="kpd-position" aria-live="polite">
+              {phase.title}
+              <small>
+                {state.phase + 1} van {phases.length}
+              </small>
+            </span>
             <button
               className="primary-button"
               onClick={() =>

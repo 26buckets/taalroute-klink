@@ -31,7 +31,7 @@ try {
   });
   const page = await context.newPage();
   await start(page);
-  await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
+  await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
   const cdp = await context.newCDPSession(page);
   async function drag(letter, slot) {
     const source = await page
@@ -93,6 +93,7 @@ try {
   checks.push(
     'solution fills the three slots; hiding restores the original partial work',
   );
+  await page.getByRole('button', { name: 'Hulpmiddelen', exact: true }).click();
   const mirror = page.getByRole('button', { name: 'Spiegelbord', exact: true });
   await mirror.focus();
   await page.keyboard.press('Enter');
@@ -124,7 +125,7 @@ try {
       (value) => (document.documentElement.style.zoom = String(value)),
       zoom,
     );
-    await page.getByRole('button', { name: '1 Kijken', exact: true }).click();
+    await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button', { name: '1 Kijken', exact: true }).click();
     assert(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth + 1,
@@ -134,7 +135,7 @@ try {
   }
   checks.push('100/125/150% CSS zoom at 1280x960, no horizontal clipping');
   await context.setOffline(true);
-  await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
+  await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
   await page.getByRole('button', { name: 'Leg a', exact: true }).click();
   assert.equal(await page.locator('[data-tile-slot="1"]').innerText(), 'a');
   await safe(page);
@@ -189,7 +190,7 @@ try {
     r.abort(),
   );
   await start(fp);
-  await fp.getByRole('button', { name: '2 Luisteren', exact: true }).click();
+  await fp.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await fp.getByRole('button', { name: '2 Luisteren', exact: true }).click();
   await fp.locator('.kpd-stage .kpd-missing').waitFor();
   assert(await fp.locator('.kpd-stage button:has(.kpd-missing)').isDisabled());
   await safe(fp);

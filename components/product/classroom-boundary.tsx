@@ -33,21 +33,12 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
       window.removeEventListener('pageshow', restore);
     };
   }, []);
-  function exit() {
-    if (window.location.pathname !== '/') {
-      window.location.assign('/');
-      return;
-    }
-    window.location.hash = '';
-    setClassroom(false);
-    setMaterials(false);
-  }
   if (classroom === null) return <output>Klink wordt geopend…</output>;
   return (
     <>
       <TaalrouteHeader classroom={projecting} />
       {classroom ? (
-        <TeacherClassroom onExit={exit} onActiveChange={setProjecting} />
+        <TeacherClassroom onActiveChange={setProjecting} />
       ) : materials ? (
         <TeacherMaterials />
       ) : (

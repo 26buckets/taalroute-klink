@@ -23,8 +23,8 @@ for (const { name, engine, options } of [
       const saved = await page.evaluate(() =>
         sessionStorage.getItem('klink.docent.les.v1'),
       );
-      await page.locator('input[name="route"][value="c"]').check();
-      await page.locator('input[name="variant"][value="extend"]').check();
+      await page.locator('label:has(input[name="route"][value="c"])').click();
+      await page.locator('label:has(input[name="variant"][value="extend"])').click();
       assert.equal(
         await page
           .getByRole('button', { name: 'Les openen', exact: true })
@@ -58,11 +58,12 @@ for (const { name, engine, options } of [
         ),
         'basic',
       );
-      await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
+      await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
       await page.getByRole('button', { name: 'Leg m', exact: true }).click();
       await page.locator('.kpd-rounds button').nth(1).click();
       await page.locator('.kpd-rounds button').nth(0).click();
       assert.equal(await page.locator('[data-tile-slot="0"]').innerText(), 'm');
+      await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();
       await page.locator('.kpd-phases button').last().click();
       await page
         .getByRole('button', { name: 'Verder met zin', exact: true })
@@ -84,6 +85,7 @@ for (const { name, engine, options } of [
       await page
         .getByRole('button', { name: 'Verder met zin', exact: true })
         .click();
+      await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();
       await page.locator('.kpd-phases button').last().click();
       await page
         .getByRole('button', { name: 'Verder met tekst', exact: true })
@@ -93,7 +95,8 @@ for (const { name, engine, options } of [
         'Stap 3 · Tekst',
       );
       for (let phase = 0; phase < 8; phase++) {
-        await page.locator('.kpd-phases button').nth(phase).click();
+        await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();
+      await page.locator('.kpd-phases button').nth(phase).click();
         const reveal = page.getByRole('button', {
           name: phase === 6 ? 'Voorbeeldzin tonen' : 'Tekst tonen',
           exact: true,
@@ -125,7 +128,7 @@ for (const { name, engine, options } of [
           );
         }
       }
-      await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
+      await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();await page.getByRole('button', { name: '4 Bouwen', exact: true }).click();
       assert.equal(await page.locator('.kpd-word-cards button').count(), 7);
       for (const word of ['Ik', 'veeg', 'mijn', 'voeten', 'op', 'de', 'mat.'])
         await page
@@ -170,6 +173,7 @@ for (const { name, engine, options } of [
         path: `${out}/${name}-${viewport.width}-tekst.png`,
         fullPage: true,
       });
+      await page.getByRole('button', { name: 'Hulpmiddelen', exact: true }).click();
       await page
         .getByRole('button', { name: 'Schrijfbord', exact: true })
         .click();
@@ -177,6 +181,7 @@ for (const { name, engine, options } of [
         .getByRole('textbox', { name: 'Of typ op het bord' })
         .fill('oude notitie');
       await page.keyboard.press('Escape');
+      await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();
       await page.locator('.kpd-phases button').last().click();
       await page
         .getByRole('button', { name: 'Les afronden', exact: true })
@@ -192,6 +197,7 @@ for (const { name, engine, options } of [
         await page.locator('.kpd-rounds [aria-current]').innerText(),
         'Stap 1 · Woord',
       );
+      await page.getByRole('button', { name: 'Hulpmiddelen', exact: true }).click();
       await page
         .getByRole('button', { name: 'Schrijfbord', exact: true })
         .click();
@@ -203,16 +209,16 @@ for (const { name, engine, options } of [
       );
       await page.keyboard.press('Escape');
       await page
-        .getByRole('button', { name: 'Les sluiten', exact: true })
+        .getByRole('button', { name: 'Lesoverzicht', exact: true })
         .click();
       await page
         .getByRole('button', { name: 'Les openen', exact: true })
         .waitFor();
       await page.getByRole('button', { name: 'Terug naar Klink', exact: true }).click();
       await page.locator('.hdr001-menu-trigger').click();
-      await page.getByRole('link', { name: 'Klink Plus docent', exact: true }).click();
+      await page.getByRole('link', { name: 'Klink+docent', exact: true }).click();
       await page.getByRole('button', { name: 'Les openen', exact: true }).click();
-      await page.getByRole('button', { name: 'Overzicht', exact: true }).click();
+      await page.getByRole('button', { name: 'Lesoverzicht', exact: true }).click();
       await page.locator('.klink-header-beta').waitFor();
       assert.equal(await page.locator('[data-classroom="active"]').count(), 0);
       assert.deepEqual(errors, []);
