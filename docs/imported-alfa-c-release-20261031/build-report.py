@@ -73,7 +73,7 @@ htmltext='''<!doctype html><html lang="nl"><meta charset="utf-8"><meta name="vie
 if (D/'example-browser.json').exists():htmltext=htmltext.replace('<li>Lokale browsercontrole', '<li>De drie herstelde audiovoorbeelden werken op desktop en mobiel in Chromium en WebKit. Zeven werkelijke audiobestanden zijn technisch gedecodeerd in beide browsers; de ingebedde Taalroute-metadata zijn gecontroleerd.</li><li>Lokale browsercontrole')
 htmltext=htmltext.replace('657 gesproken tekstkoppelingen',str(checks['checkedSpeechBindings'])+' gesproken tekstkoppelingen')
 
-links='<p><a href="https://klink.taalroute.nl/#learner/chapters/repeat/read-series?level=b1&amp;help=guided">Open de B1-leesreeksen</a> · <a href="https://klink.taalroute.nl/#learner/chapters/alfa-c-paper/sequence/werk?level=alfa-c&amp;help=practice">Open de mapopdrachten</a> · <a href="https://klink.taalroute.nl/#learner/chapters/grammar?level=alfa-c&amp;help=guided">Open Alfa C-grammatica</a></p>'
+links='<p><a href="https://klink.taalroute.nl/#learner/chapters/repeat/read-series?level=b1&amp;help=guided">Open de B1-leesreeksen</a> · <a href="https://klink.taalroute.nl/#learner/chapters/alfa-c-paper/sequence/werk?level=alfa-c&amp;help=practice">Open de mapopdrachten</a> · <a href="https://klink.taalroute.nl/#learner/alfa-c/docent-grammatica?level=alfa-c&amp;help=guided">Open Alfa C-grammatica</a></p>'
 htmltext=htmltext.replace('<nav>',links+'<nav>',1)
 if (D/'publication.json').exists():
  publication=json.loads((D/'publication.json').read_text())

@@ -1,4 +1,12 @@
-Actuele livebasis na het inmiddels gepubliceerde leesherstel: `54e9d39b57f9190523e6903f1e0fad24eda484b3`, een afstammeling van de hieronder beschreven Synoniemen-vrijgave. Synoniemen-woordbank, 68 opnamen en de drie oefenvormen zijn behouden; opnieuw in beide browsers gecontroleerd. Bewijs: `docs/synonyms-review-20261031/current-live-preservation.json`. Definitief Synoniemen-bron-/controlepakket volledig van Drive teruggelezen: `1j68Qom5UcTYkTdIWXlYg2wkDBoukENgB`.
+## 31 oktober 2026 — leesreeksen en Alfa C hersteld
+
+Livebron `54e9d39b57f9190523e6903f1e0fad24eda484b3`, schone canonieke main; Worker `0caabcfa-c9b9-46ed-86f6-16c0572ec11a`. Via `npm run deploy`, voortbouwend op de daadwerkelijk gepubliceerde Synoniemen-review `bfef2c3d813e00d9dc5fc313c72c8f453e991a1e`. De 71 nieuwe afbeeldingen en recente betekenis-/niveaucorrecties van Synoniemen zijn behouden.
+
+Nico’s drie beslissingen verwerkt: 28 formele B1-woorden apart begeleid met betekenis en voorbeeld, in 50 uitbreidingslijsten (66 woordplaatsen); papier in de map in vier Alfa C-taken, met vijf vervangende opnamen; grammatica begeleid met expliciete voorbereiding op werkwoorden en betekenisgebaren. Eerdere leesvraag-, antwoord- en docentcorrecties mee gepubliceerd. Oude links, oorspronkelijke taak-ID’s en gedeelde voortgang behouden; geen automatische zelfstandige niveauvrijgave.
+
+65.505 oefenidentiteiten van de meest recente bron behouden. Alle 13.573 publieke inhoudsbestanden bytegelijk in de build; ingetrokken audio blijft uitgesloten. Lokale types, lint, build, inhoud-, antwoord-, voortgangs- en browsercontroles slagen. Twee browsers; 78 gekoppelde audiobestanden gedecodeerd; vijf nieuwe opnamen automatisch getranscribeerd en technisch gecontroleerd. Zeven negatieve vrijgaveproeven slagen. Geen zware cloudcontroles of nieuwe workflows.
+
+Online: 371 bestanden bytegelijk teruggelezen, vijf ingebedde Taalroute-audiometadatasets behouden, 16 lees-/audio-/voortgangscontroles, 48 functionele stappen op desktop/smal scherm en twaalf directe resultaatlinks gecontroleerd. Menselijke luisterreview, onafhankelijke niveau-/doelgroeptoets en fysieke klasproef blijven open. Bewijs en herstelgegevens: `docs/imported-alfa-c-release-20261031/`. Gecontroleerde bronback-up op Drive: `1I_daukTsNpi2SXSR5mSHs3erwyyBpdMV`. De volgende publicatie moet deze vrijgave-opvolger behouden.
 
 ## 31 oktober 2026 — Synoniemen: betekenis, instapniveaus en gecentreerde woordkaarten
 
@@ -9,6 +17,8 @@ Alle 210 paren met vier antwoordkaarten en omkering redactioneel beoordeeld. 35 
 Alle 68 aangeboden MP3's hebben correcte Taalroute-metadata, nul overstuurde samples en intacte audiogrenzen. Blinde herkenning: Scribe 68/68, Whisper 66/68. Uitspraak/klemtoon zijn niet als beluisterd goedgekeurd: directe audioanalyse leverde geen bruikbaar resultaat; menselijke luisterronde open voor alle 68, met extra aandacht voor circa en reeks. Geen nieuwe synthese en geen wijzigingen aan bestaande media.
 
 Lokaal: 13 gerichte tests inclusief vijf afkeurproeven, types/lint/productieopbouw en volledige historische publicatiepoort geslaagd; alle 185 actieve vragen, zeven oefenvormscenario's, twaalf centrering-/gewicht-/schermmaatgevallen en 136 native audiocontroles. Behoud bestaande woordrondes bewezen met 312 browserwisselingen en 112 overzicht/open/terug-reizen, zes niveaus en vijf schermmaten in Chromium/WebKit. Online opnieuw alle 185 vragen, zeven oefenvormscenario's, twaalf kaartgevallen en alle 68 bestanden in beide browsers bytegelijk teruggelezen en afgespeeld. Metadata zijn door deze bestandsidentiteit aantoonbaar behouden. Geen fysieke toestellen, cursistenpilot of menselijke luistergoedkeuring. Alle zware controles lokaal; geen GitHub Actions-workflows.
+
+Definitief Synoniemen-bron-/controlepakket volledig van Drive teruggelezen en gecontroleerd: `1j68Qom5UcTYkTdIWXlYg2wkDBoukENgB`. De drie Synoniemen-vormen zijn opnieuw in beide browsers gecontroleerd op de huidige leesherstel-livebron `54e9d39b57f9190523e6903f1e0fad24eda484b3`; zie `docs/synonyms-review-20261031/current-live-preservation.json`.
 
 Gecontroleerde bronbackup daadwerkelijk van Drive teruggelezen: `1UOfvk4BFWDVtVXj_MBFHZrNrGlZ1ijT9`. Bewijzen en herstelgegevens: `docs/synonyms-review-20261031/`. Het leesbare controleverslag bewaart alle 210 paren, de redenen per besluit en de 68 opnamen voor de open luisterronde.
 
