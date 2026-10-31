@@ -1,14 +1,14 @@
-import { verifyReviewEmptyRelease, readBeforeReviewEmpty } from './check-review-empty-release-20261031.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
+import { verifyAutomaticImagesRelease, readBeforeAutomaticImages } from './check-automatic-images-release-20261031.mjs';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const sort=(a,b)=>a.localeCompare(b);
 const lines=b=>b.toString().trim().split('\n').filter(Boolean).sort(sort);
 export function verifyImageSizeRelease(read=readFileSync){
- const successor=verifyReviewEmptyRelease(read),currentRead=read;read=file=>readBeforeReviewEmpty(file,successor,currentRead);
+ const successor=verifyAutomaticImagesRelease(read),currentRead=read;read=file=>readBeforeAutomaticImages(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-image-size-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved);assert.equal(r.generateImages,false);
  assert.equal(r.baselineSourceCommit,'b368996ce81590ddfa0afee1d5d488e415c9f58c');
@@ -31,4 +31,4 @@ export function verifyImageSizeRelease(read=readFileSync){
  const backup=JSON.parse(read('docs/image-size-audit-20261031/backup.json'));assert(backup.verified&&backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
  return {...r,successor};
 }
-export function readBeforeImageSize(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeReviewEmpty(file,r.successor,read);}
+export function readBeforeImageSize(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeAutomaticImages(file,r.successor,read);}

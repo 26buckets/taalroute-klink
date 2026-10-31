@@ -4,18 +4,18 @@
   "userRequest": "Deze was vroeger beter. Lijkt wel of die bewaart en herhaalt, is niet meer de optie. Dus ik begrijp het niet. Het is een beetje anders dan normaal. Dan moeten we even ervoor zorgen dat dat niet gebeurt. Ik heb de fouten en de goede. De goede is heel mooi in het midden neergezet. Ik begrijp niet waarom die niet meer actief is op dit moment op sommige plekken.",
   "scope": "Restore the existing centered choose-and-save invitation whenever there are zero valid saved words, retaining scheduled review and completed-word mixes. No new content, media, routes or storage changes.",
   "publicationAuthorization": "Targeted correction of the existing live KLINK app under the ongoing repair/publication request; retain latest approved image and startup release.",
-  "baselineSourceCommit": "df2a0d3a6b973b7cf1ce3ebdfa92031a09ed0834",
-  "liveSourceCommit": "e611ccae44d777f6d36db6aa100785fdfdf2363e",
+  "baselineSourceCommit": "ca209e707201e617196983352f3d7541c1be7b2c",
+  "liveSourceCommit": "fb4d4cb94b9158c3406a735db91b41d8165980a2",
   "changedFiles": [
     "components/product/learner-app.tsx",
-    "scripts/check-image-size-release-20261031.mjs",
+    "scripts/check-automatic-images-release-20261031.mjs",
     "scripts/check-review-empty-release-20261031.mjs",
     "scripts/test-review-saved-words-browser.mjs"
   ],
   "files": {
     "components/product/learner-app.tsx": "bf8e6588c6c3b5e8678d652923c58afedc47d5edc2d2863f6692ea7f81a08492",
-    "scripts/check-image-size-release-20261031.mjs": "10b8db32399053e4bf405f4a69a5fcb13dc4058e0ffffc1ec6151e665750e8cc",
-    "scripts/check-review-empty-release-20261031.mjs": "d6ea792f7407364e230f63bac7af976b016f2f0e55e96c86f9fe89835376ddae",
+    "scripts/check-automatic-images-release-20261031.mjs": "d196613dcd2531c1147c1f176da06dc87a4dd88e52df15599a4a835785a29bfc",
+    "scripts/check-review-empty-release-20261031.mjs": "e78771e4e05e48e77dfbec38cd9b210bee6ccbade63a73a12506033434e5b12f",
     "scripts/test-review-saved-words-browser.mjs": "1805a55bd7bc83597be39ca66a09d7229eac15817e5fa1d51adc90b9c01c7c90"
   }
 }

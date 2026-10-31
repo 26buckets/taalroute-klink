@@ -8,13 +8,13 @@ const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean).sort(
 export function verifyReviewEmptyRelease(read = readFileSync) {
  const r = JSON.parse(read('docs/klink-owner-release-review-empty-20261031.json'));
  assert.equal(r.approvedBy, 'Nico'); assert.equal(r.publicationApproved, true);
- assert.equal(r.baselineSourceCommit, 'df2a0d3a6b973b7cf1ce3ebdfa92031a09ed0834');
- assert.equal(r.liveSourceCommit, 'e611ccae44d777f6d36db6aa100785fdfdf2363e');
+ assert.equal(r.baselineSourceCommit, 'ca209e707201e617196983352f3d7541c1be7b2c');
+ assert.equal(r.liveSourceCommit, 'fb4d4cb94b9158c3406a735db91b41d8165980a2');
  git('merge-base', '--is-ancestor', r.liveSourceCommit, r.baselineSourceCommit);
  git('merge-base', '--is-ancestor', r.baselineSourceCommit, 'HEAD');
  const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts', 'db', 'drizzle', '.github', 'AGENTS.md', 'PUBLICATIE.md', 'docs/KLINK-DOCENTHANDLEIDING.md', 'vite.config.ts', 'next.config.ts', 'package.json', 'package-lock.json', 'wrangler.jsonc'];
  const changed = [...new Set([...lines(git('diff', '--name-only', r.baselineSourceCommit, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])].sort((a,b)=>a.localeCompare(b));
- const expected = ['components/product/learner-app.tsx', 'scripts/test-review-saved-words-browser.mjs', 'scripts/check-review-empty-release-20261031.mjs', 'scripts/check-image-size-release-20261031.mjs'].sort((a,b)=>a.localeCompare(b));
+ const expected = ['components/product/learner-app.tsx', 'scripts/test-review-saved-words-browser.mjs', 'scripts/check-review-empty-release-20261031.mjs', 'scripts/check-automatic-images-release-20261031.mjs'].sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed, expected); assert.deepEqual(r.changedFiles, expected);
  for (const f of expected) assert.equal(sha(read(f)), r.files[f], f);
  const component = 'components/product/learner-app.tsx', before = git('show', r.baselineSourceCommit + ':' + component).toString();

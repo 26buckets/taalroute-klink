@@ -9,9 +9,9 @@
   "lint": true,
   "build": true,
   "localOnly": true,
-  "date": "2026-10-31T09:23:27.174311+00:00",
-  "baselineSourceCommit": "df2a0d3a6b973b7cf1ce3ebdfa92031a09ed0834",
-  "baselineLiveSource": "e611ccae44d777f6d36db6aa100785fdfdf2363e",
+  "date": "2026-10-31T09:29:57.533474+00:00",
+  "baselineSourceCommit": "ca209e707201e617196983352f3d7541c1be7b2c",
+  "baselineLiveSource": "fb4d4cb94b9158c3406a735db91b41d8165980a2",
   "runtimeChange": "Remove only the condition hiding the existing zero-saved-word invitation when review or mix is available.",
   "browserCases": 20,
   "engines": [
@@ -28,5 +28,5 @@
   "limitations": [
     "Physical phones not tested. Existing audio played/requested through the browser; no new pronunciation review."
   ],
-  "priorRecovery": "docs/image-size-audit-20261031/final-backup.json"
+  "priorRecovery": "docs/automatic-images-20261031/final-backup.json"
 }

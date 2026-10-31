@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "vinext dev",
-    "prebuild": "node scripts/write-klink-release.mjs",
+    "prebuild": "npm run images:check && node scripts/write-klink-release.mjs",
     "build": "vinext build",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
@@ -32,7 +32,10 @@
     "format": "oxfmt",
     "db:generate": "drizzle-kit generate",
     "test:standard-players": "node --test scripts/test-standard-players.mjs && node scripts/test-standard-players-browser.mjs && node scripts/test-standard-player-variants-browser.mjs && node scripts/test-standard-integration-browser.mjs",
-    "test:content-import": "node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs"
+    "test:content-import": "node --test scripts/test-imported-practice.mjs scripts/test-cumulative-integration.mjs && node scripts/test-imported-practice-browser.mjs && node scripts/test-cumulative-workflow-browser.mjs && node scripts/test-cumulative-routes-browser.mjs",
+    "images:prepare": "node scripts/prepare-images.mjs",
+    "images:check": "node scripts/prepare-images.mjs --check",
+    "predeploy": "npm run images:prepare"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
@@ -68,6 +71,7 @@
     "oxlint": "1.76.0",
     "oxlint-tsgolint": "7.0.2001",
     "shadcn": "4.18.0",
+    "sharp": "0.34.5",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "vinext": "1.1.0",
