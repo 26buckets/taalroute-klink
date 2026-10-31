@@ -1,3 +1,19 @@
+## 31 oktober 2026 — zelfstandige A1- en A2-zinnenrondes
+
+Livebron `b4df210793db0a5bf9b6bb1a8aecc3a9ee4352c6`, schone canonieke main; Worker `42c6342f-2d07-408f-abff-21d2e3d5aad0`. Normaal gepubliceerd via `npm run deploy` bovenop de echte laatste leesrondesversie `f1133f7a` en dossiercommit `c5555f21`.
+
+Nico vroeg publicatie van de gemaakte A1/A2-zinnen en teksten op de juiste plek. Zinnen → Zelf oefenen → Luister en lees mee bevat nu twee zinnenrondes per niveau: 12 en 10 vragen, samen 44 brongebonden vragen met drie keuzes en gerichte feedback. Gebruikt uitsluitend de bestaande speler, navigatie en goedgekeurde opmaak. Alle 1.487 bestaande collecties, de zes leesteksten met 24 vragen, docentwerkbladen, media en oorspronkelijke voortgang blijven behouden. Geen nieuwe appcode, CSS, stem, opname, afhankelijkheid of opslagomzetting. De nieuwe vrijgave geldt uitsluitend voor deze vier afgeleide opdrachten; de oorspronkelijke leesstatussen en overige audiopauzes blijven brongebonden behouden.
+
+De 44 bestaande opnamen zijn aan de exacte bronzin gekoppeld, technisch afgespeeld en op Taalroute-artiest, albumartiest, passend album en ongewenste generatormetadata gecontroleerd. De werkelijk aangeboden bestanden zijn bytegelijk teruggelezen; metadata en geluidsdata zijn dus behouden. Geen nieuwe menselijke luistergoedkeuring geclaimd.
+
+Lokaal geslaagd: 44 bron-/antwoordmodellen, alle bestaande collecties, curriculum (48 geslaagd, één bestaande overgeslagen controle), navigatie, typen, gerichte lintcontrole, bouw en normale publicatiepoort, inclusief de bestaande audiometadatacontroles. 32 volledige zinnenreeksen met 352 vraagweergaven en 704 afleidercontroles in Chromium/WebKit op desktop/mobiel en licht/donker; werkelijke audio, handmatig doorgaan, hervatten, afronden, herhalen, teruggaan en oude voortgang. Acht exacte vergelijkingen met de bestaande live-speler. Alle 50 historische behoudtests plus twaalf nieuwe en tien voorafgaande afkeurproeven geslaagd.
+
+Online geslaagd: zestien volledige zinnenrondes met 176 vraagweergaven, acht bestaande leesrondes met 96 vragen en acht menucontroles in Chromium/WebKit op desktop/mobiel in lichte stand. Alle 89 gecontroleerde bestanden bytegelijk, waaronder de vier zinnenbestanden, twee bestaande leesbestanden, alle gebouwde clientbestanden, twee officiële logo's en 44 opnamen. De vijf bestaande inhoudskenmerken zijn gelijk aan de vorige livebron. Verborgen B2-ruimte behouden. Fysieke telefoontest, onafhankelijke menselijke review en cursistenpilot blijven open.
+
+Akkoord, bronnen en bewijs: `docs/klink-owner-release-sentence-rounds-20261031.json` en `docs/zinnen-a1-a2-20261031/`. De volledige Drive-herstelkopie met oorspronkelijke opnamen, bronbundle en 104 gecontroleerde manifestbestanden is teruggelezen: https://drive.google.com/file/d/1IN0osGtij0ZJ9kAwpNJ0jjmBbMQ0yJei/view?usp=drivesdk . Het aanvullende online publicatiedossier wordt in hetzelfde dossier vastgelegd. Geen GitHub-workflows; alle zware controles lokaal. Een back-up is geen livepublicatie.
+
+Controle: https://klink.taalroute.nl/#learner/chapters/sentences/sentences?level=a1&help=practice en https://klink.taalroute.nl/#learner/chapters/sentences/sentences?level=a2&help=practice . Teksten blijven onder Teksten → Zelf oefenen → Begrijp het verhaal.
+
 ## 31 oktober 2026 — twee leesrondes voor A1 en A2
 
 Livebron `f1133f7afed0e90ecdb04664ea6d4fde0d3aa253`, schone canonieke main; Worker `e84ce14d-1c90-4805-9d30-f60faf201511`. Normaal gepubliceerd via `npm run deploy` bovenop de laatst gepubliceerde bron `bd246ef9ded72364acb0a4c6d60a9137d1446698`, inclusief de goedgekeurde interactieve reacties en gekoppelde docentwerkbladen.
