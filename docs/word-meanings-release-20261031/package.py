@@ -7,7 +7,7 @@ req='Ja, volg je advies bij die vier groepen twijfelgevallen. Pas de gekoppelde 
 evidence=['audio.json','audio-quality.json','changes.json','package-amendments.json','new-extension-words.json','preservation.json','associated-audio-check.json','direct-links.json','README.md']
 auth={'approvedBy':'Nico','approvedAt':'2026-10-31','userRequest':req,'audioAuthorization':'Maak de noodzakelijke opnamen','publicationApproved':True,'baselineSourceCommit':base,'liveSourceCommit':'974b887d804b3c463d78407f3f4b12936636e43b','changedFiles':files,'files':{f:sha(P(f).read_bytes())for f in files},'evidence':{str(D/f):sha((D/f).read_bytes())for f in evidence},'humanListeningReview':'open','newRecordings':4,'existingAudioPreserved':True,'noCloudWorkflows':True}
 P('docs/klink-owner-release-word-meanings-20261031.json').write_text(json.dumps(auth,ensure_ascii=False,indent=2)+'\n')
-paths={p:P(p)for p in files+['docs/klink-owner-release-word-meanings-20261031.json']}
+paths={p:P(p)for p in files+['docs/klink-owner-release-word-meanings-20261031.json','PUBLICATIE-ACTUEEL.md']}
 for directory in [D,P('docs/word-meanings-review-20261031')]:
  for p in directory.rglob('*'):
   if p.is_file() and p.name not in ['dev-server.log','backup.json','local-backup.json','final-backup.json'] and p.suffix not in ['.zip']:paths[str(p)]=p

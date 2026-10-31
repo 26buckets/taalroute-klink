@@ -1,3 +1,13 @@
+## 31 oktober 2026 — woordbetekenissen en begeleide uitbreiding
+
+Livebron `c8dc485755326b98ff7012de17527d8e087d8b38`, schone canonieke main; Worker `ef9261bb-73eb-486d-b03c-160d63e2a27d`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de goedgekeurde toetsenbordrelease `974b887d804b3c463d78407f3f4b12936636e43b` en canonieke opvolger `7606464fe84907200c52f332e4380b3fad5456f5`. Behoud deze opvolger bij iedere volgende publicatie.
+
+De vier goedgekeurde betekenisbesluiten en eerdere 111 betekenisverbeteringen zijn verwerkt: aparte betekenissen van pak, want, regent, zinnen en voorkomen; optionele begeleide herkenning van de grove vloek; zestien extra verdiepingswoorden naast de eerdere 28, samen 44. Gekoppelde opdrachten, antwoorden, woordrondes en gedeelde voortgang zijn aangepast met behoud van alle 65.505 oefenidentiteiten en oorspronkelijke audio. Vier expliciet goedgekeurde contextopnamen toegevoegd. Alle 246 gekoppelde audiobestanden technisch gecontroleerd; nieuwe bestanden hebben gecontroleerde ingebedde Taalroute-metadata.
+
+Bewijs en herstelgegevens: `docs/word-meanings-release-20261031/`. De actuele online-controle staat in `publication.json`, `live-files.json`, `live-browser.json` en `live-direct-check.json`. Direct resultaat: https://klink.taalroute.nl/klink-betekenisherstel-20261031.html. Bron-/resultaatback-up op Drive: `1o-NvgThGLJ2lMOG9vBm5MkKVmGuGBAUW`, met download- en manifestcontrole in `final-backup.json`.
+
+Alle zware controles lokaal uitgevoerd; geen GitHub-workflows toegevoegd of aanwezig. Menselijke beoordeling van uitspraak/klemtoon, onafhankelijke niveau-/doelgroeptoets en fysieke klasproef blijven open. Volledige repository-lint bevat bestaande fouten buiten deze wijziging; gewijzigde bronbestanden, types, gerichte tests en publicatiecontrole slagen.
+
 ## 31 oktober 2026 — Enter, pijlen en spatie
 
 Livebron `974b887d804b3c463d78407f3f4b12936636e43b`, schone canonieke main; Worker `3baff5bd-6480-4b21-874b-8629767acfba`. Normaal gepubliceerd via `npm run deploy` als afstammeling van actuele livebron `54e9d39b57f9190523e6903f1e0fad24eda484b3`. Enter controleert het antwoord; na Goed gaat de volgende Enter verder. Pijlen gebruiken de bestaande vrijgegeven Verder- en Terug-acties. Spatie bedient de geselecteerde knop of speelt het opdrachtgeluid opnieuw af. Tekstvelden houden hun gewone bediening. Geen sprongen door ingedrukte toetsen of automatische feedbacktimers bij toetsenbordgebruik. Luisteren en opnemen blokkeren het overslaan van opdrachten. Op één blad en de werkbladen hebben dezelfde bediening, met behoud van ingevulde afgeronde woorden bij teruggaan.
