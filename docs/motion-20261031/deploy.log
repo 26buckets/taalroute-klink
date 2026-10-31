@@ -1,0 +1,497 @@
+
+> taalroute-klink@0.1.0 predeploy
+> npm run images:prepare
+
+
+> taalroute-klink@0.1.0 images:prepare
+> node scripts/prepare-images.mjs
+
+{"checked":1401,"prepared":0,"sourceBytes":277102984,"appBytes":33427318,"maxBytes":98304}
+
+> taalroute-klink@0.1.0 deploy
+> npm run check:publication && npm run build && wrangler deploy --config dist/server/wrangler.json
+
+
+> taalroute-klink@0.1.0 check:publication
+> node scripts/check-curriculum-release.mjs
+
+✔ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (87.0295ms)
+✔ Former group 2 resumes at its actual exercise; first a steps remain small and consecutive (0.467ms)
+✔ Approved navigation photos remain separate from every preserved word cover (3.221542ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 312.000417
+{"audio":338,"images":338,"contextAudio":12,"instructionAudio":20,"comprehensionAudio":7,"missingAudio":0,"missingImages":0}
+{"files":1979,"metadata":"passed","pronunciationApproval":"not-inferred"}
+Publicatiebasis en inhoudelijke vrijgave gecontroleerd.
+
+> taalroute-klink@0.1.0 prebuild
+> node scripts/build-word-library-index.mjs --check && npm run images:check && node scripts/write-klink-release.mjs
+
+Word library: 5127 cards linked; index 2222379 bytes
+
+> taalroute-klink@0.1.0 images:check
+> node scripts/prepare-images.mjs --check
+
+{"checked":1401,"prepared":0,"sourceBytes":277102984,"appBytes":33427318,"maxBytes":98304}
+Klink release marker: bd246ef9ded72364acb0a4c6d60a9137d1446698, clean=true
+
+> taalroute-klink@0.1.0 build
+> vinext build
+
+[vinext] Tip: migrate from `vinext build` to `vite build`.
+(node:9418) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[1/5] analyze client references...
+vite v8.3.4 building rsc environment for production...
+transforming...
+✓ 317 modules transformed.
+rendering chunks...
+✓ built in 334ms
+[2/5] analyze server references...
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 562 modules transformed.
+rendering chunks...
+✓ built in 528ms
+[3/5] build rsc environment...
+vite v8.3.4 building rsc environment for production...
+transforming...
+✓ 309 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/server/__vinext_cacheability_manifest.js                                                                                                  0.02 kB
+dist/server/__vinext_cacheability_request_projection.js                                                                                        0.02 kB
+dist/server/__vinext_pregenerated_concrete_paths.js                                                                                            0.05 kB
+dist/server/wrangler.json                                                                                                                      1.33 kB │ gzip:   0.70 kB
+dist/server/.vite/manifest.json                                                                                                               21.29 kB │ gzip:   2.32 kB
+dist/server/_next/static/css/layout.0n_gQ7M-.css                                                                                               3.55 kB │ gzip:   1.12 kB
+dist/server/_next/static/css/index.MmM7Ac6N.css                                                                                              494.92 kB │ gzip:  80.74 kB
+dist/server/_next/static/navigation.react-server-CFgewAnO.js                                                                                   0.04 kB │ gzip:   0.06 kB
+dist/server/_next/static/cacheability-limits-BTpP4ZoO.js                                                                                       0.05 kB │ gzip:   0.07 kB
+dist/server/_next/static/record-BGze3w87.js                                                                                                    0.07 kB │ gzip:   0.09 kB
+dist/server/_next/static/work-unit-async-storage-Bk7wGABB.js                                                                                   0.12 kB │ gzip:   0.12 kB
+dist/server/_next/static/route-DE53FFhM.js                                                                                                     0.13 kB │ gzip:   0.13 kB
+dist/server/_next/static/route-CZAvSdbp.js                                                                                                     0.13 kB │ gzip:   0.14 kB
+dist/server/_next/static/page-CEJcx_mx.js                                                                                                      0.15 kB │ gzip:   0.14 kB
+dist/server/_next/static/link-DkkkFK0A.js                                                                                                      0.17 kB │ gzip:   0.16 kB
+dist/server/_next/static/page-3Xv0YoQb.js                                                                                                      0.18 kB │ gzip:   0.16 kB
+dist/server/_next/static/client-trace-metadata-DUR2PiYt.js                                                                                     0.34 kB │ gzip:   0.21 kB
+dist/server/_next/static/not-found-CwnaxWzH.js                                                                                                 0.46 kB │ gzip:   0.32 kB
+dist/server/_next/static/navigation-errors-CVfN8gFf.js                                                                                         0.51 kB │ gzip:   0.36 kB
+dist/server/_next/static/request-context-B1CLDfIO.js                                                                                           0.54 kB │ gzip:   0.35 kB
+dist/server/_next/static/implicit-tags-BwYyl4Tq.js                                                                                             0.71 kB │ gzip:   0.42 kB
+dist/server/_next/static/rolldown-runtime-XKyaHtl9.js                                                                                          0.72 kB │ gzip:   0.42 kB
+dist/server/_next/static/server-DwUyNXcg.js                                                                                                    0.74 kB │ gzip:   0.45 kB
+dist/server/_next/static/isr-decision-Cov8qLGF.js                                                                                              0.77 kB │ gzip:   0.37 kB
+dist/server/_next/static/framework~index~not-found~page~layout~page~layout~app-route-handler-dispatch~app-page-cache~lbgoimfz-B5xvGpEX.js      0.82 kB │ gzip:   0.55 kB
+dist/server/_next/static/worker-prerender-discovery-B17VPmR4.js                                                                                0.83 kB │ gzip:   0.48 kB
+dist/server/_next/static/app-static-generation-BX8cz43B.js                                                                                     0.91 kB │ gzip:   0.51 kB
+dist/server/_next/static/navigation-context-state-CPF5gGZm.js                                                                                  0.93 kB │ gzip:   0.46 kB
+dist/server/_next/static/arrow-right-CoLseE06.js                                                                                               0.94 kB │ gzip:   0.62 kB
+dist/server/_next/static/layout-CUL-xl85.js                                                                                                    1.40 kB │ gzip:   0.77 kB
+dist/server/_next/static/root-params-Cv6x3KWp.js                                                                                               1.55 kB │ gzip:   0.72 kB
+dist/server/_next/static/app-prerender-static-params-CktJLKjR.js                                                                               1.63 kB │ gzip:   0.71 kB
+dist/server/_next/static/page-BS8ZW7Sk.js                                                                                                      1.94 kB │ gzip:   0.90 kB
+dist/server/_next/static/page-CGjxiFx3.js                                                                                                      2.07 kB │ gzip:   0.92 kB
+dist/server/_next/static/app-prerender-endpoints-j791WDZ-.js                                                                                   2.45 kB │ gzip:   0.98 kB
+dist/server/_next/static/app-page-cache-render-BbO8-8mV.js                                                                                     2.59 kB │ gzip:   1.19 kB
+dist/server/_next/static/isr-cache-DE4kEAeV.js                                                                                                 3.22 kB │ gzip:   1.66 kB
+dist/server/_next/static/app-page-tracing-DvSteL-N.js                                                                                          3.45 kB │ gzip:   1.72 kB
+dist/server/_next/static/framework~index-DZuGYfbT.js                                                                                           3.80 kB │ gzip:   1.51 kB
+dist/server/_next/static/cache-handler-DgpIBafn.js                                                                                             4.16 kB │ gzip:   1.53 kB
+dist/server/_next/static/request-pipeline-CtjUZf7P.js                                                                                          4.58 kB │ gzip:   1.86 kB
+dist/server/_next/static/framework~index~not-found~page~layout~page~layout~page~page~app-rsc-response-stage~app-rout~wh1g1d0s-BB7B2QBH.js      5.49 kB │ gzip:   2.28 kB
+dist/server/_next/static/middleware-response-headers-DCgoGx-y.js                                                                               5.96 kB │ gzip:   2.41 kB
+dist/server/_next/static/headers-W3s3lyIu.js                                                                                                   6.26 kB │ gzip:   2.47 kB
+dist/server/_next/static/response-stage-policy-CFLuBKIB.js                                                                                     6.90 kB │ gzip:   2.37 kB
+dist/server/_next/static/app-page-cache-finalizer-DG50zV4A.js                                                                                  7.01 kB │ gzip:   2.48 kB
+dist/server/_next/static/app-rsc-response-stage-C34J4eLu.js                                                                                    7.47 kB │ gzip:   2.58 kB
+dist/server/_next/static/app-page-cache-Co-DVnU-.js                                                                                            7.55 kB │ gzip:   2.56 kB
+dist/server/_next/static/artifact-compatibility-BFFvG_ci.js                                                                                   10.66 kB │ gzip:   3.67 kB
+dist/server/_next/static/cacheability-request-p1QAOHGO.js                                                                                     10.71 kB │ gzip:   3.68 kB
+dist/server/_next/static/app-elements-Bx239pVF.js                                                                                             11.28 kB │ gzip:   3.84 kB
+dist/server/_next/static/app-page-execution-CrkPt-gQ.js                                                                                       11.51 kB │ gzip:   4.11 kB
+dist/server/_next/static/prerender-work-unit-setup-DpzMlwu1.js                                                                                12.67 kB │ gzip:   4.76 kB
+dist/server/_next/static/rsc-completion-metadata-DCUR-EYT.js                                                                                  13.09 kB │ gzip:   4.69 kB
+dist/server/_next/static/config-headers-DcX-e14j.js                                                                                           15.33 kB │ gzip:   4.87 kB
+dist/server/_next/static/text-stream-JK_Hk292.js                                                                                              19.50 kB │ gzip:   5.93 kB
+dist/server/_next/static/fetch-cache-DOaEXCdc.js                                                                                              31.37 kB │ gzip:  10.42 kB
+dist/server/_next/static/klink-teacher-manual-MeQiPnG2.js                                                                                     49.62 kB │ gzip:  15.13 kB
+dist/server/_next/static/app-route-handler-dispatch-D4PSWL7n.js                                                                               52.46 kB │ gzip:  18.66 kB
+dist/server/_next/static/framework~index~not-found~page~layout~page~layout~page~app-route-handler-dispatch-DrhQgJY7.js                        53.15 kB │ gzip:  16.02 kB
+dist/server/index.js                                                                                                                       1,120.46 kB │ gzip: 203.74 kB
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0mapp/layout.tsx is dynamically imported by \0virtual:vinext-rsc-entry but also statically imported by \0virtual:vinext-rsc-entry, dynamic import will not move module into another chunk.
+
+✓ built in 1.05s
+[4/5] build client environment...
+vite v8.3.4 building client environment for production...
+`output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.
+transforming...
+✓ 2268 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/client/vinext-client-entry-manifest.json                               0.06 kB │ gzip:     0.08 kB
+dist/client/.assetsignore                                                   0.30 kB
+dist/client/.vite/manifest.json                                             8.51 kB │ gzip:     1.14 kB
+dist/client/_next/static/css/layout.0n_gQ7M-.css                            3.55 kB │ gzip:     1.12 kB
+dist/client/_next/static/css/practice-workspace.BLdFRIZU.css               19.07 kB │ gzip:     4.07 kB
+dist/client/_next/static/css/teacher-classroom.CTAAiTJd.css                22.63 kB │ gzip:     4.80 kB
+dist/client/_next/static/css/index.MmM7Ac6N.css                           494.92 kB │ gzip:    80.74 kB
+dist/client/_next/static/chunks/chevron-down-DAV--EgV.js                    0.12 kB │ gzip:     0.14 kB
+dist/client/_next/static/chunks/arrow-left-CqvUMorn.js                      0.16 kB │ gzip:     0.16 kB
+dist/client/_next/static/chunks/manual-legacy-link-tQpH5R2Q.js              0.30 kB │ gzip:     0.25 kB
+dist/client/_next/static/chunks/layout-segment-context-B00pxBjv.js          0.49 kB │ gzip:     0.34 kB
+dist/client/_next/static/chunks/createLucideIcon-Dm_FQo4K.js                0.55 kB │ gzip:     0.37 kB
+dist/client/_next/static/chunks/circle-alert-Bo6tpvpE.js                    0.58 kB │ gzip:     0.36 kB
+dist/client/_next/static/chunks/rolldown-runtime-XKyaHtl9.js                0.72 kB │ gzip:     0.42 kB
+dist/client/_next/static/chunks/Icon-DZzxKt-u.js                            1.08 kB │ gzip:     0.65 kB
+dist/client/_next/static/chunks/motion-feedback-D2ZpGRRY.js                 1.21 kB │ gzip:     0.59 kB
+dist/client/_next/static/chunks/manual-navigation-CUQcU4d0.js               1.21 kB │ gzip:     0.59 kB
+dist/client/_next/static/chunks/script-C1wplG1n.js                          3.79 kB │ gzip:     1.59 kB
+dist/client/_next/static/chunks/classroom-boundary-P43JTgVU.js              7.50 kB │ gzip:     2.79 kB
+dist/client/_next/static/chunks/page-CfYefJFO.js                           11.10 kB │ gzip:     3.94 kB
+dist/client/_next/static/chunks/link-HbySC_IW.js                           11.93 kB │ gzip:     4.55 kB
+dist/client/_next/static/chunks/hybrid-client-route-owner-DOetRTlj.js      20.36 kB │ gzip:     6.49 kB
+dist/client/_next/static/chunks/compact-image-D1Bgj8Sk.js                  88.67 kB │ gzip:    22.80 kB
+dist/client/_next/static/chunks/index-mNsYRUvK.js                         115.35 kB │ gzip:    33.97 kB
+dist/client/_next/static/chunks/vinext-De_7ozG7.js                        153.99 kB │ gzip:    46.75 kB
+dist/client/_next/static/chunks/framework-D0bOVToA.js                     190.03 kB │ gzip:    59.71 kB
+dist/client/_next/static/chunks/teacher-classroom-CreOpj6H.js             241.44 kB │ gzip:    39.83 kB
+dist/client/_next/static/chunks/practice-workspace-hr9uXM-z.js            883.50 kB │ gzip:   201.25 kB
+dist/client/_next/static/chunks/klink-word-library-index-B_2_v1TM.js    2,127.29 kB │ gzip:   371.17 kB
+dist/client/_next/static/chunks/klink-curriculum-aJzNSxdY.js           24,413.53 kB │ gzip: 2,878.80 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.42s
+[33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 4.5s of this 5.4s build (83%).
+The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+  - plugin vite:prepare-out-dir renderStart (69%, 3.7s, 1 call)
+Additional callback time came from the callbacks below and from callbacks under 1s.
+2 callbacks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
+  - plugin alias resolveId (7077 calls)
+  - plugin vinext:og-inline-fetch-assets resolveId (6824 calls)
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
+
+[5/5] build ssr environment...
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 563 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/server/ssr/_next/static/css/practice-workspace.BLdFRIZU.css        19.07 kB │ gzip:     4.07 kB
+dist/server/ssr/_next/static/css/teacher-classroom.CTAAiTJd.css         22.63 kB │ gzip:     4.80 kB
+dist/server/ssr/_next/static/navigation-server-DOlyIAQL.js               0.04 kB │ gzip:     0.06 kB
+dist/server/ssr/_next/static/app-nav-failure-handler-BW2-CIfV.js         0.07 kB │ gzip:     0.07 kB
+dist/server/ssr/_next/static/record-BGze3w87.js                          0.07 kB │ gzip:     0.09 kB
+dist/server/ssr/_next/static/chevron-down-BSxlam7M.js                    0.12 kB │ gzip:     0.14 kB
+dist/server/ssr/_next/static/arrow-left-C8sKsiyd.js                      0.16 kB │ gzip:     0.16 kB
+dist/server/ssr/_next/static/hybrid-client-route-owner-znTS_LJu.js       0.16 kB │ gzip:     0.13 kB
+dist/server/ssr/_next/static/static.edge-BokRvTtT.js                     0.20 kB │ gzip:     0.15 kB
+dist/server/ssr/_next/static/manual-legacy-link-BbxocN1e.js              0.25 kB │ gzip:     0.22 kB
+dist/server/ssr/_next/static/jsx-runtime-De_sfiaX.js                     0.42 kB │ gzip:     0.29 kB
+dist/server/ssr/_next/static/layout-segment-context-t561rjMT.js          0.47 kB │ gzip:     0.33 kB
+dist/server/ssr/_next/static/app-prefetch-fetch-queue-DzDwYwdo.js        0.48 kB │ gzip:     0.30 kB
+dist/server/ssr/_next/static/createLucideIcon-DR2a_CnR.js                0.50 kB │ gzip:     0.35 kB
+dist/server/ssr/_next/static/circle-alert-DEPpYJLT.js                    0.58 kB │ gzip:     0.35 kB
+dist/server/ssr/_next/static/streamed-icons-DBjPGBXU.js                  0.69 kB │ gzip:     0.44 kB
+dist/server/ssr/_next/static/client-page-root-1h6nvfus.js                0.92 kB │ gzip:     0.54 kB
+dist/server/ssr/_next/static/Icon-DAbU9cn5.js                            1.03 kB │ gzip:     0.62 kB
+dist/server/ssr/_next/static/app-router-scroll-state-Chjrq4uf.js         1.07 kB │ gzip:     0.55 kB
+dist/server/ssr/_next/static/motion-feedback-CEmdOnc9.js                 1.16 kB │ gzip:     0.56 kB
+dist/server/ssr/_next/static/manual-navigation-B1ZFUjaC.js               1.21 kB │ gzip:     0.59 kB
+dist/server/ssr/_next/static/navigation-context-state-Cuq7aAcy.js        1.56 kB │ gzip:     0.62 kB
+dist/server/ssr/_next/static/app-router-scroll-Dwo-dqjr.js               2.21 kB │ gzip:     1.03 kB
+dist/server/ssr/_next/static/navigation-errors-CQYdyXv1.js               2.23 kB │ gzip:     0.99 kB
+dist/server/ssr/_next/static/script-CKxcG5Ds.js                          3.38 kB │ gzip:     1.45 kB
+dist/server/ssr/_next/static/react-dom-DddN9NaQ.js                       3.53 kB │ gzip:     1.33 kB
+dist/server/ssr/_next/static/route-matching-D20neNTO.js                  5.28 kB │ gzip:     2.01 kB
+dist/server/ssr/_next/static/error-boundary-Cn6hY73Y.js                  6.10 kB │ gzip:     1.88 kB
+dist/server/ssr/_next/static/classroom-boundary-s86amC7n.js              6.50 kB │ gzip:     2.45 kB
+dist/server/ssr/_next/static/react-7MJikUDl.js                           7.92 kB │ gzip:     3.06 kB
+dist/server/ssr/_next/static/link-Dn5F_BGB.js                            8.05 kB │ gzip:     3.42 kB
+dist/server/ssr/_next/static/page-B-6Y2-9s.js                           10.34 kB │ gzip:     3.72 kB
+dist/server/ssr/_next/static/app-elements-BxTwZl3G.js                   11.36 kB │ gzip:     3.57 kB
+dist/server/ssr/_next/static/navigation-DW29F1sJ.js                     54.73 kB │ gzip:    16.44 kB
+dist/server/ssr/_next/static/compact-image-DwqBJ9Gn.js                 102.71 kB │ gzip:    26.79 kB
+dist/server/ssr/_next/static/teacher-classroom-DGffGP-O.js             241.32 kB │ gzip:    39.79 kB
+dist/server/ssr/index.js                                               266.97 kB │ gzip:    84.00 kB
+dist/server/ssr/_next/static/practice-workspace-C4DTT-Ci.js            881.27 kB │ gzip:   201.67 kB
+dist/server/ssr/_next/static/klink-word-library-index-B_2_v1TM.js    2,127.29 kB │ gzip:   371.17 kB
+dist/server/ssr/_next/static/klink-curriculum-BqhQw8Jk.js           24,413.17 kB │ gzip: 2,880.15 kB
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0m../../.codex/klink-menu-20261029/node_modules/vinext/dist/shims/default-global-error.js is dynamically imported by \0virtual:vite-rsc/client-references but also statically imported by ../../.codex/klink-menu-20261029/node_modules/vinext/dist/server/app-ssr-entry.js, ../../.codex/klink-menu-20261029/node_modules/vinext/dist/shims/error-boundary.js, dynamic import will not move module into another chunk.
+
+[33m[INEFFECTIVE_DYNAMIC_IMPORT] [0m../../.codex/klink-menu-20261029/node_modules/vinext/dist/shims/slot.js is dynamically imported by \0virtual:vite-rsc/client-references but also statically imported by ../../.codex/klink-menu-20261029/node_modules/vinext/dist/server/app-ssr-entry.js, ../../.codex/klink-menu-20261029/node_modules/vinext/dist/shims/client-page-root.js, dynamic import will not move module into another chunk.
+
+✓ built in 1.43s
+
+  Route (app)
+  ┌ ? /                 
+  ├ λ /api/attempts     
+  ├ λ /api/review-items 
+  ├ ? /docenten         
+  ├ ƒ /docenten/:chapter
+  └ ? /proef-alfa-c     
+
+  λ API  ƒ Dynamic  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete.
+
+
+ ⛅️ wrangler 4.92.0 (update available 4.156.0)
+──────────────────────────────────────────────
+Attaching additional modules:
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────┬──────────────┐
+│ Name                                                                                                                          │ Type │ Size         │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ __vinext_action_owner_manifest.js                                                                                             │ esm  │ 0.02 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ __vinext_cacheability_manifest.js                                                                                             │ esm  │ 0.02 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ __vinext_cacheability_request_projection.js                                                                                   │ esm  │ 0.02 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ __vinext_pregenerated_concrete_paths.js                                                                                       │ esm  │ 0.05 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ __vite_rsc_assets_manifest.js                                                                                                 │ esm  │ 6.41 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-elements-Bx239pVF.js                                                                                         │ esm  │ 11.02 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-page-cache-Co-DVnU-.js                                                                                       │ esm  │ 7.37 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-page-cache-finalizer-DG50zV4A.js                                                                             │ esm  │ 6.85 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-page-cache-render-BbO8-8mV.js                                                                                │ esm  │ 2.54 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-page-execution-CrkPt-gQ.js                                                                                   │ esm  │ 11.24 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-page-tracing-DvSteL-N.js                                                                                     │ esm  │ 3.38 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-prerender-endpoints-j791WDZ-.js                                                                              │ esm  │ 2.40 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-prerender-static-params-CktJLKjR.js                                                                          │ esm  │ 1.60 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-route-handler-dispatch-D4PSWL7n.js                                                                           │ esm  │ 51.23 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-rsc-response-stage-C34J4eLu.js                                                                               │ esm  │ 7.30 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/app-static-generation-BX8cz43B.js                                                                                │ esm  │ 0.89 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/arrow-right-CoLseE06.js                                                                                          │ esm  │ 0.92 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/artifact-compatibility-BFFvG_ci.js                                                                               │ esm  │ 10.42 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/cache-handler-DgpIBafn.js                                                                                        │ esm  │ 4.06 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/cacheability-limits-BTpP4ZoO.js                                                                                  │ esm  │ 0.05 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/cacheability-request-p1QAOHGO.js                                                                                 │ esm  │ 10.47 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/client-trace-metadata-DUR2PiYt.js                                                                                │ esm  │ 0.33 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/config-headers-DcX-e14j.js                                                                                       │ esm  │ 14.97 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/fetch-cache-DOaEXCdc.js                                                                                          │ esm  │ 30.64 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/framework~index-DZuGYfbT.js                                                                                      │ esm  │ 3.72 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/framework~index~not-found~page~layout~page~layout~app-route-handler-dispatch~app-page-cache~lbgoimfz-B5xvGpEX.js │ esm  │ 0.80 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/framework~index~not-found~page~layout~page~layout~page~app-route-handler-dispatch-DrhQgJY7.js                    │ esm  │ 51.91 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/framework~index~not-found~page~layout~page~layout~page~page~app-rsc-response-stage~app-rout~wh1g1d0s-BB7B2QBH.js │ esm  │ 5.37 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/headers-W3s3lyIu.js                                                                                              │ esm  │ 6.12 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/implicit-tags-BwYyl4Tq.js                                                                                        │ esm  │ 0.70 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/isr-cache-DE4kEAeV.js                                                                                            │ esm  │ 3.15 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/isr-decision-Cov8qLGF.js                                                                                         │ esm  │ 0.76 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/klink-teacher-manual-MeQiPnG2.js                                                                                 │ esm  │ 48.46 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/layout-CUL-xl85.js                                                                                               │ esm  │ 1.37 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/link-DkkkFK0A.js                                                                                                 │ esm  │ 0.17 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/middleware-response-headers-DCgoGx-y.js                                                                          │ esm  │ 5.83 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/navigation-context-state-CPF5gGZm.js                                                                             │ esm  │ 0.91 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/navigation-errors-CVfN8gFf.js                                                                                    │ esm  │ 0.50 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/navigation.react-server-CFgewAnO.js                                                                              │ esm  │ 0.05 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/not-found-CwnaxWzH.js                                                                                            │ esm  │ 0.45 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/page-3Xv0YoQb.js                                                                                                 │ esm  │ 0.18 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/page-BS8ZW7Sk.js                                                                                                 │ esm  │ 1.90 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/page-CEJcx_mx.js                                                                                                 │ esm  │ 0.15 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/page-CGjxiFx3.js                                                                                                 │ esm  │ 2.03 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/prerender-work-unit-setup-DpzMlwu1.js                                                                            │ esm  │ 12.37 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/record-BGze3w87.js                                                                                               │ esm  │ 0.08 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/request-context-B1CLDfIO.js                                                                                      │ esm  │ 0.53 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/request-pipeline-CtjUZf7P.js                                                                                     │ esm  │ 4.47 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/response-stage-policy-CFLuBKIB.js                                                                                │ esm  │ 6.74 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/rolldown-runtime-XKyaHtl9.js                                                                                     │ esm  │ 0.71 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/root-params-Cv6x3KWp.js                                                                                          │ esm  │ 1.52 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/route-CZAvSdbp.js                                                                                                │ esm  │ 0.14 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/route-DE53FFhM.js                                                                                                │ esm  │ 0.13 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/rsc-completion-metadata-DCUR-EYT.js                                                                              │ esm  │ 12.78 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/server-DwUyNXcg.js                                                                                               │ esm  │ 0.73 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/text-stream-JK_Hk292.js                                                                                          │ esm  │ 19.04 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/work-unit-async-storage-Bk7wGABB.js                                                                              │ esm  │ 0.13 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ _next/static/worker-prerender-discovery-B17VPmR4.js                                                                           │ esm  │ 0.81 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/__vite_rsc_assets_manifest.js                                                                                             │ esm  │ 6.41 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/Icon-DAbU9cn5.js                                                                                             │ esm  │ 1.01 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/app-elements-BxTwZl3G.js                                                                                     │ esm  │ 11.10 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/app-nav-failure-handler-BW2-CIfV.js                                                                          │ esm  │ 0.07 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/app-prefetch-fetch-queue-DzDwYwdo.js                                                                         │ esm  │ 0.47 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/app-router-scroll-Dwo-dqjr.js                                                                                │ esm  │ 2.17 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/app-router-scroll-state-Chjrq4uf.js                                                                          │ esm  │ 1.05 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/arrow-left-C8sKsiyd.js                                                                                       │ esm  │ 0.16 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/chevron-down-BSxlam7M.js                                                                                     │ esm  │ 0.13 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/circle-alert-DEPpYJLT.js                                                                                     │ esm  │ 0.57 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/classroom-boundary-s86amC7n.js                                                                               │ esm  │ 6.35 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/client-page-root-1h6nvfus.js                                                                                 │ esm  │ 0.90 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/compact-image-DwqBJ9Gn.js                                                                                    │ esm  │ 100.31 KiB   │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/createLucideIcon-DR2a_CnR.js                                                                                 │ esm  │ 0.49 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/error-boundary-Cn6hY73Y.js                                                                                   │ esm  │ 5.96 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/hybrid-client-route-owner-znTS_LJu.js                                                                        │ esm  │ 0.16 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/jsx-runtime-De_sfiaX.js                                                                                      │ esm  │ 0.41 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/klink-curriculum-BqhQw8Jk.js                                                                                 │ esm  │ 23840.99 KiB │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/klink-word-library-index-B_2_v1TM.js                                                                         │ esm  │ 2077.43 KiB  │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/layout-segment-context-t561rjMT.js                                                                           │ esm  │ 0.46 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/link-Dn5F_BGB.js                                                                                             │ esm  │ 7.86 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/manual-legacy-link-BbxocN1e.js                                                                               │ esm  │ 0.25 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/manual-navigation-B1ZFUjaC.js                                                                                │ esm  │ 1.19 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/motion-feedback-CEmdOnc9.js                                                                                  │ esm  │ 1.14 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/navigation-DW29F1sJ.js                                                                                       │ esm  │ 53.46 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/navigation-context-state-Cuq7aAcy.js                                                                         │ esm  │ 1.53 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/navigation-errors-CQYdyXv1.js                                                                                │ esm  │ 2.18 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/navigation-server-DOlyIAQL.js                                                                                │ esm  │ 0.05 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/page-B-6Y2-9s.js                                                                                             │ esm  │ 10.10 KiB    │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/practice-workspace-C4DTT-Ci.js                                                                               │ esm  │ 860.62 KiB   │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/react-7MJikUDl.js                                                                                            │ esm  │ 7.73 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/react-dom-DddN9NaQ.js                                                                                        │ esm  │ 3.45 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/record-BGze3w87.js                                                                                           │ esm  │ 0.08 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/route-matching-D20neNTO.js                                                                                   │ esm  │ 5.16 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/script-CKxcG5Ds.js                                                                                           │ esm  │ 3.31 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/static.edge-BokRvTtT.js                                                                                      │ esm  │ 0.20 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/streamed-icons-DBjPGBXU.js                                                                                   │ esm  │ 0.67 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/_next/static/teacher-classroom-DGffGP-O.js                                                                                │ esm  │ 235.67 KiB   │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/index.js                                                                                                                  │ esm  │ 260.72 KiB   │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ ssr/vinext-client-assets.js                                                                                                   │ esm  │ 5.57 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ vinext-client-assets.js                                                                                                       │ esm  │ 5.57 KiB     │
+├───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────┼──────────────┤
+│ Total (99 modules)                                                                                                            │      │ 27902.04 KiB │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────┴──────────────┘
+🌀 Building list of assets...
+✨ Read 14944 files from the assets directory /Users/nicoknoester/.cache/klink-direct-release-20261030/dist/client
+🌀 Starting asset upload...
+🌀 Found 17 new or modified static assets to upload. Proceeding with upload...
++ /vinext-client-entry-manifest.json
++ /_next/static/chunks/motion-feedback-D2ZpGRRY.js
++ /_next/static/chunks/classroom-boundary-P43JTgVU.js
++ /_next/static/chunks/hybrid-client-route-owner-DOetRTlj.js
++ /_next/static/chunks/vinext-De_7ozG7.js
++ /_next/static/chunks/practice-workspace-hr9uXM-z.js
++ /_next/static/chunks/layout-segment-context-B00pxBjv.js
++ /_next/static/chunks/manual-navigation-CUQcU4d0.js
++ /_next/static/chunks/page-CfYefJFO.js
++ /_next/static/chunks/compact-image-D1Bgj8Sk.js
++ /_next/static/chunks/teacher-classroom-CreOpj6H.js
++ /_next/static/chunks/klink-curriculum-aJzNSxdY.js
++ /release.json
++ /_next/static/chunks/script-C1wplG1n.js
++ /_next/static/chunks/link-HbySC_IW.js
++ /_next/static/chunks/index-mNsYRUvK.js
++ /_next/static/css/index.MmM7Ac6N.css
+Uploaded 5 of 17 assets
+Uploaded 11 of 17 assets
+Uploaded 17 of 17 assets
+✨ Success! Uploaded 17 files (14794 already uploaded) (6.94 sec)
+
+Total Upload: 28996.24 KiB / gzip: 3871.38 KiB
+Worker Startup Time: 27 ms
+Your Worker has access to the following bindings:
+Binding                       Resource         
+env.DB (taalroute-klink)      D1 Database      
+
+Uploaded taalroute-klink (26.81 sec)
+Deployed taalroute-klink triggers (6.64 sec)
+  klink.taalroute.nl (custom domain)
+Current Version ID: 2aed9eb8-f5a7-4706-97bb-a3db24f47ca6

@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,readdirSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+const root='/Users/nicoknoester/.cache/klink-direct-release-20261030';
+const read=p=>readFileSync(root+'/'+p),json=p=>JSON.parse(read(p)),sha=b=>createHash('sha256').update(b).digest('hex');
+const expected=json('public/release.json'),before=json('docs/motion-20261031/baseline-live.json');
+assert.equal(expected.sourceCommit,execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim());assert.equal(expected.branch,'main');assert.equal(expected.sourceClean,true);
+const previous=[...json('docs/werkbladen-publicatie-20261031/live-checks.json').files,...json('docs/review-style-20261031/live-files.json').files];
+const paths=[...new Set(['/release.json',...previous.map(f=>f.path).filter(p=>p!=='/release.json'&&existsSync(root+'/public'+p)),...readdirSync(root+'/dist/client',{recursive:true}).filter(p=>/\.(js|css|woff2)$/.test(p)).map(p=>'/'+p)])];
+let next=0;const files=[];
+await Promise.all(Array.from({length:6},async()=>{while(next<paths.length){
+ const path=paths[next++],r=await fetch('https://klink.taalroute.nl'+path,{cache:'no-store'});assert.equal(r.status,200,path);
+ const bytes=Buffer.from(await r.arrayBuffer()),local=existsSync(root+'/public'+path)?read('public'+path):read('dist/client'+path);assert.equal(sha(bytes),sha(local),path);
+ if(path==='/release.json')assert.deepEqual(JSON.parse(bytes),expected);
+ files.push({path,bytes:bytes.length,sha256:sha(bytes),exact:true});
+}}));
+for(const k of ['curriculumEdition','lexiconExportSha256','sectionsSha256','sectionPhotosSha256','contentSha256'])assert.equal(expected[k],before[k],k);
+assert(files.length>100);
+writeFileSync(root+'/outputs/motion-20261031-live-files.json',JSON.stringify({sourceCommit:expected.sourceCommit,allExact:true,count:files.length,contentFingerprintsUnchanged:true,files},null,2)+'\n');
+console.log('PASS',files.length,'offered files byte-identical; release source and all content fingerprints preserved');
