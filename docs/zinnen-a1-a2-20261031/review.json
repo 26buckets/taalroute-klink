@@ -1,0 +1,48 @@
+{
+  "answers": true,
+  "audio": true,
+  "player": true,
+  "appearance": true,
+  "progress": true,
+  "preservation": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "newAppCode": false,
+  "newCss": false,
+  "originalCollectionsPreserved": 1487,
+  "newRounds": 4,
+  "questions": 44,
+  "browserJourneys": 32,
+  "questionPresentations": 352,
+  "wrongAnswerChecks": 704,
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "widths": [
+    1366,
+    390
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "sourceReadingFlagsChanged": false,
+  "humanListeningApprovalAdded": false,
+  "physicalPhoneTest": false,
+  "independentHumanReview": false,
+  "learnerPilot": false,
+  "githubActionsWorkflows": false,
+  "evidence": {
+    "answers": "content.log",
+    "audio": "audio-check.json; existing-audio-live.json; player-check.json",
+    "appearance": "appearance-check.json; git diff app/components/lib empty",
+    "progress": "player-check.json; navigation.log",
+    "preservation": "content.log; curriculum.log; previous-reading-rounds.log",
+    "types": "types.log",
+    "lint": "lint.log",
+    "build": "build.log"
+  }
+}

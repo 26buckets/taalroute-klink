@@ -5,8 +5,9 @@ import {productionIndex,validateProductionCollection} from '../lib/production-pr
 import {chapterHash,parseChapterHash,availableChapterCollections} from '../lib/practice-chapters.ts';
 const source=JSON.parse(read('docs/leesrondes-a1-a2-20261031/source.json'));
 const prior=JSON.parse(gitExec('git',['show','bd246ef9ded72364acb0a4c6d60a9137d1446698:data/klink-production-index.json']));
-assert.deepEqual(productionIndex.slice(0,-2),prior,'Every existing collection, URL, level and count stays exact');
-const added=productionIndex.slice(-2),ids=new Set();
+const readingIndex=productionIndex.filter(row=>!row.id.startsWith('klink-zinnen-zelf-'));
+assert.deepEqual(readingIndex.slice(0,-2),prior,'Every existing collection, URL, level and count stays exact');
+const added=readingIndex.slice(-2),ids=new Set();
 assert.deepEqual(added.map(r=>r.level),['a1','a2']);
 for(const row of added){
  assert.equal(row.help,'practice');assert.equal(row.count,12);
