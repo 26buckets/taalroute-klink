@@ -67,7 +67,7 @@
     "unchangedAffectedPlayerAndCatalog": true
   },
   "explanation": "All 53 current bounded publication proof files passed (82 assertions). The four historical failures are the unchanged obsolete checks documented with baseline proof in the prior 1\u20139 dossier; no assertion was weakened or deleted. The active historical gate chain and the new bounded 10\u201315 release proof passed.",
-  "normalPublicationGate": "Feature run correctly blocked dirty noncanonical branch; final canonical main run recorded after commit in publication-gate.log.",
+  "normalPublicationGate": "passed on clean canonical main, then passed again through npm run deploy",
   "currentGuardFilesPassed": 53,
   "assertionsPassed": 82,
   "assertionsFailed": 0,

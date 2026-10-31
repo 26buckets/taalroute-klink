@@ -6,7 +6,7 @@ import {getClassroomLesson} from '../../lib/teacher-classroom.ts';
 const base=process.env.KLINK_URL??'https://klink.taalroute.nl',smoke=process.env.KLINK_SMOKE==='1',checks=[],errors=[];
 for(const[name,engine]of Object.entries(smoke?{chromium}:{chromium,webkit})){
  const b=await engine.launch();try{for(const width of smoke?[390]:[1366,390]){
-  const p=await b.newPage({viewport:{width,height:900}});p.setDefaultTimeout(20000);p.on('pageerror',e=>errors.push(e.message));await p.emulateMedia({reducedMotion:'reduce'});
+  const p=await b.newPage({viewport:{width,height:900}});p.setDefaultTimeout(20000);p.on('pageerror',e=>errors.push(e.message));await p.addInitScript(()=>{window.audioPlayed=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.addEventListener('ended',()=>window.audioPlayed.push(this.currentSrc),{once:true});return play.call(this);};});await p.emulateMedia({reducedMotion:'reduce'});
   await p.goto(base+'/#teacher/plus');await p.getByRole('button',{name:'Les openen: mat',exact:true}).waitFor();assert.equal(await p.locator('.kpd-lesson-choice').count(),58);
   for(const source of smoke?extra.filter(l=>l.id==='maand'):extra){
    const l=getClassroomLesson(source.id);await p.getByRole('button',{name:'Les openen: '+l.id,exact:true}).click();
@@ -20,7 +20,8 @@ for(const[name,engine]of Object.entries(smoke?{chromium}:{chromium,webkit})){
     await p.getByText('Antwoorden voor de docent',{exact:true}).click();assert.equal(await p.locator('.kpd-answers-print li').count(),10);assert.equal(await p.locator(`a[href="${s.answerPdf}"]`).count(),1);assert.equal(await p.locator(`a[href="${source.worksheet.planPdf}"]`).count(),1);
     await p.getByRole('link',{name:'Terug naar de les',exact:true}).click();await p.locator('.kpd-rounds [aria-current]').waitFor();assert((await p.locator('.kpd-position').innerText()).includes('4 van 8'));
    }
-   await p.getByRole('button',{name:'Lesoverzicht',exact:true}).click();checks.push({engine:name,width,lesson:l.id,allThreeRounds:true,lettersAndCardsCorrect:true,worksheetsAnswersPlan:true,matchingRoundReturn:true});
+   if(width===1366){await p.locator('.kpd-rounds button').first().click();await p.getByRole('button',{name:'Kies onderdeel',exact:true}).click();await p.locator('.kpd-phases button').nth(1).click();const listen=p.locator('.kpd-stage').getByRole('button',{name:'Luister',exact:true});await p.waitForFunction(()=>[...document.querySelectorAll('.kpd-stage button')].some(b=>b.textContent.trim()==='Luister'&&!b.disabled));await listen.click();await p.waitForFunction(src=>window.audioPlayed.some(url=>url.endsWith(src)),l.word.audio);}
+   await p.getByRole('button',{name:'Lesoverzicht',exact:true}).click();checks.push({engine:name,width,lesson:l.id,allThreeRounds:true,lettersAndCardsCorrect:true,worksheetsAnswersPlan:true,matchingRoundReturn:true,nativeWordPlayback:width===1366});console.log("LIVE",name,width,l.id);
   }
   await p.goto(base+'/#learner/home');await p.locator('.cp-home').waitFor();assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await p.close();
  }
