@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { verifyImageSizeRelease, readBeforeImageSize } from './check-image-size-release-20261031.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -33,12 +34,13 @@ export function verifyExtraImagePreservation(read=readFileSync){
  return m;
 }
 export function verifyExtraImagesRelease(read=readFileSync){
+ const successor=verifyImageSizeRelease(read),currentRead=read;read=file=>readBeforeImageSize(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-drive-extra-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.generateImages,false);
  assert.equal(r.userRequest,'Oké. Er staan op de Google Drive weer heel veel nieuwe afbeeldingen. Zorg dat deze gekoppeld worden, zo klein mogelijk formaat natuurlijk, en zet alles online.');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots));
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
  const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','data/klink-word-round-index.json','scripts/check-keyboard-consistency-release-20261031.mjs','scripts/check-drive-extra-release-20261031.mjs','scripts/test-drive-extra-20261031.mjs','scripts/test-drive-images-browser-20261031.mjs'];
  assert(changed.every(f=>allowed.includes(f)||/^public\/package-media\/klink-drive-extra-20261031\/[a-z]+-[a-f0-9]{10}\.webp$/.test(f)||/^public\/practice-content\/klink-20261029\/[A-Za-z0-9_-]+-drive-extra-[a-f0-9]{16}\.json$/.test(f)));
@@ -46,6 +48,6 @@ export function verifyExtraImagesRelease(read=readFileSync){
  const m=verifyExtraImagePreservation(read);assert.equal(m.baselineSourceCommit,r.baselineSourceCommit);assert.equal(new Set(m.assets.map(a=>a.url)).size,107);
  const review=JSON.parse(read('docs/drive-images-extra-20261031/review.json'));for(const k of ['images','hands','compact','content','answers','progress','browser','build','types','scopedLint','localOnly'])assert.equal(review[k],true,k);
  const backup=JSON.parse(read('docs/drive-images-extra-20261031/backup.json'));assert(backup.verified&&backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
-export function readBeforeExtraImages(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeExtraImages(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeImageSize(file,r.successor,read);}

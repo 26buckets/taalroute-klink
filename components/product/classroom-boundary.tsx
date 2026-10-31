@@ -1,13 +1,15 @@
 'use client';
 
-import { useLayoutEffect, useState, type ReactNode } from 'react';
+import { lazy, Suspense, useLayoutEffect, useState, type ReactNode } from 'react';
 import {
   classroomHash,
   classroomMaterialsHash,
-  readClassroom,
-} from '@/lib/teacher-classroom';
-import { TeacherClassroom, TeacherMaterials } from './teacher-classroom';
+  readClassroomActive,
+} from '@/lib/classroom-visibility';
 import { TaalrouteHeader } from './taalroute-header';
+
+const TeacherClassroom = lazy(() => import('./teacher-classroom').then(m => ({ default: m.TeacherClassroom })));
+const TeacherMaterials = lazy(() => import('./teacher-classroom').then(m => ({ default: m.TeacherMaterials })));
 
 // Check before showing any route: Back and reload must not reveal teacher-only material.
 export function ClassroomBoundary({ children }: { children: ReactNode }) {
@@ -16,7 +18,7 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
   const [materials, setMaterials] = useState(false);
   useLayoutEffect(() => {
     const restore = () => {
-      const active = readClassroom().active;
+      const active = readClassroomActive();
       if (active && !window.location.hash.startsWith(classroomHash))
         window.history.replaceState(null, '', classroomHash);
       setProjecting(active);
@@ -46,13 +48,13 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
   return (
     <>
       <TaalrouteHeader classroom={projecting} />
-      {classroom ? (
+      <Suspense fallback={<output>Klink wordt geopend…</output>}>{classroom ? (
         <TeacherClassroom onExit={exit} onActiveChange={setProjecting} />
       ) : materials ? (
         <TeacherMaterials />
       ) : (
         children
-      )}
+      )}</Suspense>
     </>
   );
 }

@@ -9,7 +9,7 @@ import { alfaCChapters } from '@/lib/alfa-c-navigation';
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowRight, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, Search, UserRound, UsersRound } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { ProductionRound } from './production-round';
 import { GroupRound } from './package-group-practice';
 import { playMedia, stopMedia } from './shared';

@@ -1,7 +1,7 @@
 "use client";
 import { useLayoutEffect, useRef, useState } from 'react';
 import { Maximize, Minimize, Menu, ChevronDown, Presentation, ListChecks } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import Link from 'next/link';
 const apps = [["studio", "Studio", "/", "#096cdb"], ["muziek", "Muziek", "/", "#7545e8"], ["actief", "Actief", "/", "#0090f2"], ["digibord", "DigiBord", "/", "#0090f2"], ["spreektijd", "Spreektijd", "/", "#c76349"], ["klankstudio", "Klankstudio", "/", "#285f47"], ["missies", "Missies", "/#docent", "#59402d"], ["oppad", "Op Pad", "/docent/", "#096cdb"], ["theaterlezen", "Theaterlezen", "/", "#a27722"], ["zinnen", "Zinnen", "/", "#91472f"], ["klink", "KLINK", "/", "#482c46"]];
 export function TaalrouteHeader({ classroom = false }: { classroom?: boolean }) {

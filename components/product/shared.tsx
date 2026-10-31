@@ -1,7 +1,7 @@
 'use client';
 
 import { LogOut } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { ReactNode } from 'react';
 import { playMedia, DEFAULT_AUDIO_RATE } from '@/lib/media-player';
 export { playMedia, stopMedia } from '@/lib/media-player';

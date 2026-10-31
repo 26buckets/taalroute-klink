@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, useSyncExternalStore } from 'react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { ArrowLeft, ArrowRight, Check, Eye, Pause, Snail, Volume2 } from 'lucide-react';
 import { getSlowAudio, setSlowAudio, subscribeSlowAudio } from '@/lib/media-player';
 import type { PackageExercise } from '@/lib/package-content';

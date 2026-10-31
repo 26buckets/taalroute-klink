@@ -89,7 +89,7 @@ try {
   await page.getByRole('button', { name: 'Begin', exact: true }).focus();
   await page.keyboard.press('Enter');
   await page.locator('.cp-home').waitFor();
-  assert.equal(await page.locator('.cp-package-grid > button').count(), 15);
+  assert.equal(await page.locator('.cp-chapter-grid > button').count(), 12);
   await page.goto(base);
   await page.waitForLoadState('networkidle');
   await page.getByRole('link', { name: 'Bekijk de handleiding', exact: true }).click();
@@ -100,6 +100,6 @@ try {
   await page.locator('.staff-app').waitFor();
   assert(page.url().endsWith('#teacher'));
   assert.deepEqual(errors, []);
-  writeFileSync(`${out}/landing-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, widths: [1440, 1024, 768, 390, 320], heading: 'Oefen klanken, letters en woorden', publisher: 'Een leermiddel van Taalroute', publisherPlacement: 'footer', hero: 'higher and centered', alfabetaPlacement: 'footer', learner: 'invalid code, valid code and 15 sections checked', teacher: 'manual and existing environment open', organizations: 'explanation, trial entry and contact destination checked; no email sent', errors }, null, 2));
+  writeFileSync(`${out}/landing-${base.startsWith('https') ? 'live' : 'local'}.json`, JSON.stringify({ base, widths: [1440, 1024, 768, 390, 320], heading: 'Oefen klanken, letters en woorden', publisher: 'Een leermiddel van Taalroute', publisherPlacement: 'footer', hero: 'higher and centered', alfabetaPlacement: 'footer', learner: 'invalid code, valid code and 12 sections checked', teacher: 'manual and existing environment open', organizations: 'explanation, trial entry and contact destination checked; no email sent', errors }, null, 2));
   console.log('PASS landing: five widths, Taalroute publisher, Alfabeta footer, learner and teacher entrances.');
 } finally { await browser.close(); }

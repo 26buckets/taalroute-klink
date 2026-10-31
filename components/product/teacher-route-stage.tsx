@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { Eye, PencilLine, RotateCcw, Undo2 } from 'lucide-react';
 import {
   classroomRoutes,

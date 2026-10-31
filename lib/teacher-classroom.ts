@@ -1,6 +1,8 @@
 import classroomContent from '../data/klink-docent-mat.json' with { type: 'json' };
 import routeContent from '../data/klink-docent-routes.json' with { type: 'json' };
 import { wordById } from './klink-curriculum.ts';
+import { classroomKey, rememberClassroomActive } from './classroom-visibility.ts';
+export { classroomHash, classroomMaterialsHash, classroomKey } from './classroom-visibility.ts';
 export { classroomContent };
 export const classroomRoutes = routeContent.routes;
 export type ClassroomRoute = keyof typeof classroomRoutes;
@@ -19,14 +21,11 @@ export function prerequisitesForRoute(route: ClassroomRoute) {
 import { lessonPackages } from './package-content.ts';
 import { exercisesForLesson } from './taalroute-packages.ts';
 
-export const classroomHash = '#teacher/plus';
-export const classroomMaterialsHash = '#teacher/materials';
 export const roundLabels = {
   a: 'Stap 1 · Woord',
   b: 'Stap 2 · Zin',
   c: 'Stap 3 · Tekst',
 };
-export const classroomKey = 'klink.docent.les.v1';
 export const matPack = lessonPackages.find((pack) =>
   pack.lessons.some((lesson) =>
     lesson.newWords?.includes(classroomContent.wordRef),
@@ -267,10 +266,12 @@ export function readClassroom() {
   } catch {
     /* Keep the current lesson if browser storage is unavailable. */
   }
+  rememberClassroomActive(memory.active);
   return memory;
 }
 export function saveClassroom(state: ClassroomState) {
   memory = state;
+  rememberClassroomActive(state.active);
   try {
     sessionStorage.setItem(classroomKey, JSON.stringify(state));
     return true;

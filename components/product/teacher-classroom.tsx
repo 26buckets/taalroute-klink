@@ -23,7 +23,7 @@ import {
   Camera,
   PencilLine,
 } from "lucide-react";
-import Image from "next/image";
+import Image from "./compact-image";
 import { TeacherWorkspaceFrame } from "./teacher-workspace-frame";
 import { PackageExerciseBrowser } from "./package-exercise-browser";
 import { playMedia, stopMedia } from "@/lib/media-player";

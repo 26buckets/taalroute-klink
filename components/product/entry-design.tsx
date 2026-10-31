@@ -2,7 +2,7 @@
 
 import type { Portal } from '@/app/page';
 import { ArrowLeft, ArrowRight, BookOpen, Building2, ChevronRight, CircleAlert, Headphones, KeyRound, Library } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 

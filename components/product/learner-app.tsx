@@ -45,7 +45,7 @@ import {
   Volume2,
   WholeWord,
 } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { useEffect, useMemo, useState } from 'react';
 
 type LearnerView = 'home' | 'packages' | 'package' | 'words' | 'review' | 'chapters' | 'sounds' | 'alfa-c-teacher';

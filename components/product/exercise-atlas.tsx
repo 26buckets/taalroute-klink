@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image from './compact-image';
 import type { ExerciseDemoId } from '@/components/product/exercise-sampler';
 import {
   ArrowLeft,

@@ -25,7 +25,7 @@ import {
   Volume2,
   WholeWord,
 } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 
 type Feedback = 'idle' | 'right' | 'wrong';

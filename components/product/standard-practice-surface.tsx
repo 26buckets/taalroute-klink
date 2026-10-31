@@ -1,4 +1,6 @@
 'use client';
+
+import { compactImageSrc } from '@/lib/compact-images';
 import { useRef, useState } from 'react';
 import { Check, RotateCcw, Volume2 } from 'lucide-react';
 import type { AudioPlayer, PackageExercise, ExerciseAudio } from '@/lib/package-content';
@@ -95,7 +97,7 @@ function HotspotSurface({ task, onFinish, onReset, onHelp, canAnswer, answeredCo
     <div className="cp-hotspot-image">
       {/* The full uncropped image defines the normalized region coordinate system. */}
       {/* oxlint-disable-next-line nextjs/no-img-element */}
-      <img src={task.image.src} alt={task.image.altText || 'Plaatje bij de oefening'} onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />
+      <img src={task.image.src ? compactImageSrc(task.image.src) : undefined} alt={task.image.altText || 'Plaatje bij de oefening'} decoding="async" onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />
       {loaded && !failed && task.regions.map((region, at) => <button key={region.id} className="secondary-button cp-hotspot-target" aria-label={`Plek ${at + 1}: ${region.label}`} aria-pressed={selected === region.id} disabled={!canAnswer || answeredCorrectly} style={{ left: `${(region.x + region.width / 2) * 100}%`, top: `${(region.y + region.height / 2) * 100}%` }} onClick={() => choose(region.id)}><span aria-hidden="true">{at + 1}</span></button>)}
     </div>
     <fieldset className="cp-hotspot-list"><legend>Tik op het plaatje. Of kies een plek in de lijst.</legend>{task.regions.map((region, at) => <button key={region.id} className="secondary-button" aria-pressed={selected === region.id} disabled={!canAnswer || answeredCorrectly || !loaded || failed} onClick={() => choose(region.id)}>{at + 1}. {region.label}</button>)}</fieldset>

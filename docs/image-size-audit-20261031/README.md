@@ -1,0 +1,19 @@
+# Compacte KLINK-beelden en sneller openen — 31 oktober 2026
+
+Nico vraagt alle beelden op grootte te controleren, zo klein mogelijk online aan te bieden en het trage laden te onderzoeken. Dit volgt op zijn expliciete opdracht de bestaande beelden gekoppeld online te publiceren. Geen nieuwe beelden genereren.
+
+Basis: canonieke main b368996ce81590ddfa0afee1d5d488e415c9f58c; werkelijk live dd2a077394916483daece15659ffbc15c3e988a9. De bron is een afstammeling van die liveversie. Geen andere wijzigingen meenemen.
+
+1.353 afbeeldingen gecontroleerd, inclusief SVG en favicon. 506 te zware/grote bronnen krijgen afzonderlijke compacte webversies. Originele bestanden, inhoudsbanken, antwoorden, opdrachtidentiteiten, audio, routes en voortgangskoppelingen blijven bytegelijk. De bestaande gedeelde afbeeldingscomponent kiest de compacte versie; ook de hotspotspeler doet dat. Kleine bestaande beelden gaan direct naar hun bron en niet meer via een eindpunt dat de ongewijzigde originele bytes terugstuurde.
+
+Alle aangeboden beeldversies zijn maximaal 92.690 bytes (budget 96 KiB). De gehele beeldverzameling gaat van 274.600.874 naar 32.923.922 bytes: 241.676.952 bytes minder, circa 88%. De 506 gewijzigde weergaven gaan samen van 255.417.059 naar 13.740.107 bytes. Deze totalen beschrijven de verzameling, niet één paginadownload. Gewone foto's maximaal 640 px; de startfoto 960 px; handschriftvoorbeelden behouden tot 1280 px voor leesbaarheid. Geen uitsnede of generatieve aanpassing. Het officiële KLINK-logo blijft volledig ongewijzigd. Het Taalroute-Theaterlezen-logo behoudt zijn vectorpaden met alleen een verkleinde PNG-textuur; het Rivaro-logo krijgt een verliesloze browserweergave voor klein gebruik. Originele vectoren blijven beschikbaar.
+
+Alle oorspronkelijke openbare bronpaden blijven voor herstel en oude verwijzingen bestaan. De actuele app kiest uitsluitend de compacte versies. De compacte bestanden hebben inhoudsgebonden namen en een lange browsercache; nieuwe versies krijgen een nieuwe naam. Er worden geen oorspronkelijke beelden verwijderd of overschreven.
+
+De startpagina laadde vóór deze wijziging ongeveer 3,53 MB, waaronder een lesgegevensbestand van 2,37 MB over het netwerk / 24,19 MB uitgepakt. Een mobiele woordenlijst haalde voor vier kleine kaarten ongeveer 3,1 MB aan foto's op. De cursist-/docentwerkplek en docentlesinhoud worden nu pas bij openen geladen. De bestaande bescherming tegen het tonen van docentvoorbereiding bij projectie blijft behouden, ook bij beschadigde of geblokkeerde browseropslag.
+
+Controles: ieder origineel en ieder compact bestand op hash, bestandsgrootte en verhouding; alle rasterversies op pixelverschil tegenover dezelfde verkleinde bron; representatieve leesbaarheid en werkelijk geplaatste beelden; alle compacte bestanden decoderen in Chromium en WebKit; desktop/mobiel, startpagina op vijf breedtes, docentmodus, toetsenbediening, navigatie en voortgang. Dit is een technische formaat-/behoudcontrole, geen nieuwe inhoudelijke of menselijke goedkeuring van de reeds bestaande beelden. Geen fysieke telefoontest. Geen nieuwe beeld-, audio- of inhoudsproductie.
+
+Een oude startpaginatest verwachtte nog vijftien kaarten. De huidige liveversie en lokale versie hebben beide de afgesproken twaalf hoofdkaarten; de test is daaraan aangepast. De docentroute-test wacht nu op de geladen werkplek vóór controle.
+
+Zware controles uitsluitend lokaal. Geen GitHub Actions aanwezig of toegevoegd. Publicatie uitsluitend via de bestaande `npm run deploy`-poort met een aanvullende brongebonden vrijgave. De werkelijke live-downloads, cache en koude/warmere laadtijd worden na publicatie vastgelegd in dit dossier. Een lokale productiepreview startte niet door; de productieopbouw en lokale ontwikkelservercontroles slagen, met aanvullende controles op de werkelijk gepubliceerde versie.

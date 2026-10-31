@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import Image from './compact-image';
 import { Image as ImageIcon, Images, PanelsTopLeft, MessageCircleQuestion, FileImage } from 'lucide-react';
 import { contentPackages } from '@/lib/package-content';
 import { klinkContexts } from '@/lib/klink-context';

@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "copy": true,
+      "partial": true,
+      "wrongExcluded": true,
+      "deduplicated": true,
+      "repeatAndReload": true,
+      "widths": [
+        1366,
+        768,
+        390,
+        320
+      ]
+    },
+    {
+      "engine": "chromium",
+      "lazyProduction": true
+    },
+    {
+      "engine": "chromium",
+      "sheet": true
+    },
+    {
+      "engine": "chromium",
+      "worksheet": true
+    },
+    {
+      "engine": "chromium",
+      "storageFailureVisible": true
+    },
+    {
+      "engine": "webkit",
+      "copy": true,
+      "partial": true,
+      "wrongExcluded": true,
+      "deduplicated": true,
+      "repeatAndReload": true,
+      "widths": [
+        1366,
+        768,
+        390,
+        320
+      ]
+    },
+    {
+      "engine": "webkit",
+      "lazyProduction": true
+    },
+    {
+      "engine": "webkit",
+      "sheet": true
+    },
+    {
+      "engine": "webkit",
+      "worksheet": true
+    },
+    {
+      "engine": "webkit",
+      "storageFailureVisible": true
+    }
+  ],
+  "errors": []
+}

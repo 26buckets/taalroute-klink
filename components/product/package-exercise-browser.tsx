@@ -41,7 +41,7 @@ Eye,
 Search,
   Volume2,
 } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { stopMedia } from '@/components/product/shared';
 import { StandardPracticeSurface } from './standard-practice-surface';

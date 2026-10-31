@@ -22,7 +22,7 @@ import {
   WholeWord,
 } from 'lucide-react';
 import { type ReactNode, useState } from 'react';
-import Image from 'next/image';
+import Image from './compact-image';
 
 export type ExerciseDemoId = 'picture' | 'syllables' | 'position' | 'sentence' | 'flash' | 'document' | 'dialogue' | 'timetable' | 'category';
 type DemoFeedback = 'idle' | 'right' | 'wrong';
