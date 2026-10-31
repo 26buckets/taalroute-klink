@@ -1,0 +1,32 @@
+{
+  "emptyStates": true,
+  "saveLifecycle": true,
+  "scheduledReview": true,
+  "progress": true,
+  "audio": true,
+  "mobile": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "date": "2026-10-31T09:23:27.174311+00:00",
+  "baselineSourceCommit": "df2a0d3a6b973b7cf1ce3ebdfa92031a09ed0834",
+  "baselineLiveSource": "e611ccae44d777f6d36db6aa100785fdfdf2363e",
+  "runtimeChange": "Remove only the condition hiding the existing zero-saved-word invitation when review or mix is available.",
+  "browserCases": 20,
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "widths": [
+    1366,
+    390
+  ],
+  "relatedUnitCases": 13,
+  "cause": "The existing invitation was deliberately suppressed by hasScheduled or pack.words.length >= 2. No saved words or progress were deleted.",
+  "before": "Production regression reproduced: missing invitation with scheduled=true, completed=false.",
+  "limitations": [
+    "Physical phones not tested. Existing audio played/requested through the browser; no new pronunciation review."
+  ],
+  "priorRecovery": "docs/image-size-audit-20261031/final-backup.json"
+}
