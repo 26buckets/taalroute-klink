@@ -44,5 +44,9 @@
     "types": "types.log",
     "lint": "lint.log",
     "build": "build.log"
-  }
+  },
+  "historicalPreservationTests": 50,
+  "releaseRejectionTests": 12,
+  "previousReleaseRejectionTests": 10,
+  "developmentGateOnlyIssue": "Canonical main is required; all other publication checks passed."
 }
