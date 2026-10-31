@@ -27,6 +27,10 @@ try {
   assert.equal(size.width, 640); assert(Math.abs(size.width / size.height - 1.5) < .01);
   const modified = statSync(join(root, 'public', map['/new.png'])).mtimeMs;
   assert.equal((await prepareImages(root)).prepared, 0);
+  const tinyLarge = await sharp({ create: { width: 2000, height: 2000, channels: 3, background: '#abcdef' } }).avif({ quality: 20 }).toBuffer();
+  put('public/tiny-large.avif', tinyLarge);
+  await prepareImages(root);
+  assert.equal(json('data/klink-image-preparation.json')['/tiny-large.avif'].width, 640, 'Tiny file size cannot retain unnecessarily large decoded dimensions');
   assert.equal(statSync(join(root, 'public', map['/new.png'])).mtimeMs, modified);
   await prepareImages(root, { check: true });
   copyFileSync('lib/compact-images.ts', join(root, 'lib/compact-images.ts'));

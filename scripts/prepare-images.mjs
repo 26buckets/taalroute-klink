@@ -81,7 +81,7 @@ export async function prepareImages(root = process.cwd(), { check = false } = {}
       }
       await inspect(output, src);
       // Do not trade quality for a larger file when the source already fits.
-      if (output.length >= source.length && source.length <= imageBudget) output = source;
+      if (output.length >= source.length && source.length <= imageBudget && Math.max(metadata.width, metadata.height) <= limit(src)) output = source;
     }
     await inspect(output, src);
     const url = output === source ? src : outputDirectory + sha(output).slice(0, 20) + '.webp';
