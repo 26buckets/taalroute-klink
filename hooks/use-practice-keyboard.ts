@@ -17,7 +17,7 @@ export function usePracticeKeyboard({ enabled = true, busy = false, onUse, onLis
   function onKeyDownCapture(event: KeyboardEvent<HTMLElement>) {
     if (!enabled || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.nativeEvent.isComposing) return;
     const root = event.currentTarget, target = event.target as HTMLElement;
-    if (!['Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(event.key) || target.closest('textarea, select, [contenteditable="true"], [role="menu"], [role="listbox"], [role="slider"], [role="tablist"], audio, video, [role="dialog"]')) return;
+    if (!['Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(event.key) || target.closest('textarea, select, [contenteditable]:not([contenteditable="false"]), [role="menu"], [role="listbox"], [role="slider"], [role="tablist"], audio, video, [role="dialog"]')) return;
     const input = target.closest('input');
     if (input && event.key !== 'Enter') return;
     if (event.repeat) { event.preventDefault(); return; }
@@ -25,21 +25,22 @@ export function usePracticeKeyboard({ enabled = true, busy = false, onUse, onLis
     if (!target.closest('[data-practice-automatic]')) onUse?.();
     const item = target.closest<HTMLElement>('[data-practice-item]');
     const confirmedInput = event.key === 'Enter' && item?.dataset.practiceReady === 'true' && (input || target.closest('[data-practice-check]'));
-    const button = target.closest('button, a, [role="button"]');
+    const button = target.closest('button, a, summary, [role="button"]');
     // Native activation happens on keyup for Space; never also click it here.
     if (!confirmedInput && button && (event.key === 'Enter' || event.key === ' ')) return;
     if (!confirmedInput && input?.form) return;
     event.preventDefault();
     if (busy || practiceBusy(root)) return;
     if (!item && root.querySelector('[data-practice-item]')) {
-      root.querySelector<HTMLElement>('[data-practice-item][data-practice-ready="false"], [data-practice-item]')?.focus();
+      (root.querySelector<HTMLElement>('[data-practice-item][data-practice-ready="false"]') ?? root.querySelector<HTMLElement>('[data-practice-item]'))?.focus();
       return;
     }
     const scope = item ?? root;
     const click = (selector: string, within: HTMLElement = root) => {
-      const action = within.querySelector<HTMLButtonElement>(selector);
-      if (!action || action.disabled) return false;
-      action.click(); return true;
+      const action = Array.from(within.querySelectorAll<HTMLButtonElement>(selector)).find(button => button.getClientRects().length > 0);
+      if (!action) return false;
+      if (!action.disabled && action.getAttribute('aria-disabled') !== 'true') action.click();
+      return true;
     };
     const move = (direction: number) => {
       if (item) {

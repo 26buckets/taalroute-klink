@@ -795,6 +795,7 @@ function SpeakSurface({ exercise, onAudio, onFinish, onRecordingChange }: Surfac
 
 function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onFinish']; onRecordingChange?: (busy: boolean) => void }) {
   const [recording, setRecording] = useState(false);
+  const [playingRecording, setPlayingRecording] = useState(false);
   const [audioUrl, setAudioUrl] = useState('');
   const [message, setMessage] = useState('Neem je stem op en luister terug.');
   const recorder = useRef<MediaRecorder | null>(null);
@@ -802,7 +803,7 @@ function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onF
   const chunks = useRef<Blob[]>([]);
   const mounted = useRef(true);
   const [requesting, setRequesting] = useState(false);
-  useEffect(() => { onRecordingChange?.(recording || requesting); return () => onRecordingChange?.(false); }, [recording, requesting, onRecordingChange]);
+  useEffect(() => { onRecordingChange?.(recording || requesting || playingRecording); return () => onRecordingChange?.(false); }, [recording, requesting, playingRecording, onRecordingChange]);
 
   useEffect(() => {
     mounted.current = true;
@@ -846,7 +847,7 @@ function Recorder({ onFinish, onRecordingChange }: { onFinish: SurfaceProps['onF
     }
   }
 
-  return <div className="cp-recorder" data-practice-recording={recording || requesting}><output aria-live="polite">{message}</output><button aria-disabled={requesting} className={recording ? 'recording' : ''} onClick={toggle}>{recording ? <Pause /> : <Mic />}<span>{requesting ? 'Even wachten' : recording ? 'Stop' : 'Neem op'}</span></button>{audioUrl && <audio ref={applyDefaultAudioRate} controls src={audioUrl} aria-label="Jouw opname" />}<button data-practice-check className="primary-button" disabled={recording || requesting} onClick={() => onFinish(audioUrl ? 'opgenomen' : 'hardop geoefend', true, 'Je hebt geoefend. Luister zelf of samen met je docent.')}>Klaar<Check /></button></div>;
+  return <div className="cp-recorder" data-practice-recording={recording || requesting || playingRecording}><output aria-live="polite">{message}</output><button aria-disabled={requesting} className={recording ? 'recording' : ''} onClick={toggle}>{recording ? <Pause /> : <Mic />}<span>{requesting ? 'Even wachten' : recording ? 'Stop' : 'Neem op'}</span></button>{audioUrl && <audio onPlay={() => setPlayingRecording(true)} onPause={() => setPlayingRecording(false)} onEnded={() => setPlayingRecording(false)} onError={() => setPlayingRecording(false)} ref={applyDefaultAudioRate} controls src={audioUrl} aria-label="Jouw opname" />}<button data-practice-check className="primary-button" disabled={recording || requesting || playingRecording} onClick={() => onFinish(audioUrl ? 'opgenomen' : 'hardop geoefend', true, 'Je hebt geoefend. Luister zelf of samen met je docent.')}>Klaar<Check /></button></div>;
 }
 
 function WritingSurface({ exercise, onAudio, onFinish, onReset }: SurfaceProps & { onReset: () => void }) {

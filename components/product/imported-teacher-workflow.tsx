@@ -26,7 +26,7 @@ export function TeacherPreparation({task,locked,onBegin}:{task:ContentTask;locke
     <details><summary>Bron en context</summary><p className="cp-content-stimulus">{task.stimulus}</p></details>
    </>}
   </details>
-  <button className="primary-button" disabled={locked} onClick={onBegin}>Begin samen<ArrowRight/></button>
+  <button data-practice-check className="primary-button" disabled={locked} onClick={onBegin}>Begin samen<ArrowRight/></button>
  </section>;
 }
 export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
@@ -59,7 +59,7 @@ export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
   <p>Wat gaat goed? Wat wil je nog oefenen?</p>
   <details className="cp-guided-details"><summary>Voor de docent: afronden</summary><p>{task.teacherGuidance}</p>
    {flow.criteria.map((criterion,index)=><label className="cp-observation" key={index}><span>{criterion}</span><select disabled={locked} value={state.observations[String(index)]??''} onChange={event=>setState(current=>({...current,observations:{...current.observations,[index]:event.target.value}}))}><option value="">Kies je waarneming</option>{judgments.map(value=><option key={value}>{value}</option>)}</select></label>)}
-   <p>Afronden betekent dat jullie geoefend hebben. Het is geen beheersingsscore.</p><button className="primary-button" disabled={locked||!complete} onClick={finish}>Waarnemingen vastleggen<Check/></button>
+   <p>Afronden betekent dat jullie geoefend hebben. Het is geen beheersingsscore.</p><button data-practice-check className="primary-button" disabled={locked||!complete} onClick={finish}>Waarnemingen vastleggen<Check/></button>
   </details>
  </section>;
  return <section className="cp-task-card cp-teacher-workflow" data-teacher-workflow={flow.kind} data-workflow-phase={phase?.id??'review'}>
@@ -67,10 +67,10 @@ export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
   {teacher ? <div className="cp-workflow-teacher">
    {!privateView?<><p>Laat de cursist tijdens deze docentweergave niet meekijken. Hier kunnen voorbeelden en antwoorden staan.</p><button className="secondary-button" onClick={()=>setPrivateView(true)}>De cursist kijkt niet mee</button></>:<>
     <><h4>{reviewing?'Bespreek het gemaakte werk':'Docenthandeling'}</h4><p className="cp-content-stimulus">{reviewing?task.teacherGuidance:phase.instruction}</p>
-     {!reviewing&&<><button className="secondary-button" onClick={()=>{setTeacher(false);setPrivateView(false);}}>Begin deze stap<ArrowRight/></button><details onToggle={event=>{if(event.currentTarget.open)help();}}><summary>Extra hulp bekijken en registreren</summary><p className="cp-content-stimulus">{flow.help}</p></details></>}
+     {!reviewing&&<><button data-practice-check className="secondary-button" onClick={()=>{setTeacher(false);setPrivateView(false);}}>Begin deze stap<ArrowRight/></button><details onToggle={event=>{if(event.currentTarget.open)help();}}><summary>Extra hulp bekijken en registreren</summary><p className="cp-content-stimulus">{flow.help}</p></details></>}
      {reviewing&&<><h4>Beoordelingsreferentie</h4><p className="cp-content-stimulus">{flow.expected}</p><details><summary>Gemaakte antwoorden</summary>{state.replies.map(reply=><div key={reply.phaseId}><p><strong>{flow.phases.find(item=>item.id===reply.phaseId)?.label}</strong></p>{reply.answer&&<p className="cp-content-stimulus">{reply.answer}</p>}{Object.entries(reply.fields).map(([label,value])=><p key={label}>{label}: {value||'Niet ingevuld'}</p>)}{reply.tileOrder.length>0&&<p>{reply.tileOrder.map(index=>flow.phases.find(item=>item.id===reply.phaseId)?.tiles?.[index]).join(' · ')}</p>}{reply.interlude&&<p>Tussendoor: {reply.interlude}<br/>Werkelijke tussenpoos: {reply.interval}<br/>Opnieuw aangeboden: {reply.exposure}</p>}<p>{reply.helpUsed?'Hulp geregistreerd.':'Geen extra hulp geregistreerd; dit bewijst geen zelfstandige beheersing.'}</p></div>)}</details>
       {flow.criteria.map((criterion,index)=><label className="cp-observation" key={index}><span>{criterion}</span><select disabled={locked} value={state.observations[String(index)]??''} onChange={event=>setState(current=>({...current,observations:{...current.observations,[index]:event.target.value}}))}><option value="">Kies je waarneming</option>{judgments.map(value=><option key={value}>{value}</option>)}</select></label>)}
-      <p>Beoordeel alleen wat je werkelijk hebt gezien. Afronden geeft geen automatische beheersingsscore.</p><button className="primary-button" disabled={locked||!complete} onClick={finish}>Waarnemingen vastleggen<Check/></button></>}
+      <p>Beoordeel alleen wat je werkelijk hebt gezien. Afronden geeft geen automatische beheersingsscore.</p><button data-practice-check className="primary-button" disabled={locked||!complete} onClick={finish}>Waarnemingen vastleggen<Check/></button></>}
     </>
    </>}
   </div>:!state.prepared?<p>Bereid de opdracht eerst samen met je docent voor.</p>:reviewing?<p>Bespreek je antwoorden samen met je docent.</p>:<>
@@ -84,7 +84,7 @@ export function ImportedTeacherWorkflow({id,task,locked,onFinish,onHelp}:Props){
    {phase.response==='oral'&&<p>Voer de opdracht samen met je docent uit. Je mag antwoorden of aanwijzen zoals afgesproken.</p>}
    {needsNote&&!['text','paper'].includes(phase.response)&&<label className="cp-text-entry"><span>Docentnotitie: wat was het eerste antwoord of resultaat?</span><textarea rows={2} disabled={locked} value={state.note} onChange={event=>setState(current=>({...current,note:event.target.value}))}/></label>}
    <button className="secondary-button" aria-pressed={state.performed} disabled={locked} onClick={()=>setState(current=>({...current,performed:!current.performed}))}>{state.performed?'Deze stap is uitgevoerd':'Ik heb deze stap uitgevoerd'}</button>
-   <button className="primary-button" disabled={locked||!responseReady} onClick={advance}>{state.index+1===flow.phases.length?'Samen bekijken':'Volgende stap'}<ArrowRight/></button>
+   <button data-practice-step-next data-practice-check className="primary-button" disabled={locked||!responseReady} onClick={advance}>{state.index+1===flow.phases.length?'Samen bekijken':'Volgende stap'}<ArrowRight/></button>
   </>}
  </section>;
 }

@@ -18,8 +18,8 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   const correct = answer.correctOptionIds?.includes(selected);
   const synonyms = exercise.mode === 'synonyms';
   return <section className={`cp-task-card cp-extended-task${synonyms ? ' cp-synonyms-task' : ''}`}>
-    {exercise.mode === 'sound-compare' ? <button className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar beide woorden</button> :
-      synonyms ? exercise.prompt?.audio?.src ? <button className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar het woord</button> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
+    {exercise.mode === 'sound-compare' ? <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar beide woorden</button> :
+      synonyms ? exercise.prompt?.audio?.src ? <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar het woord</button> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
     {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
@@ -40,7 +40,7 @@ export function SourceText({ exercise, onAudio, onHelp }: { exercise: PackageExe
   if (!blocks.length) return null;
   return <div className="cp-source-text">{blocks.map(block => <div key={block.id}>
     {block.speaker && <small>{block.speaker}</small>}<p>{block.text}</p>
-    {block.audio?.src && <button className="secondary-button" aria-label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 />Luister</button>}
+    {block.audio?.src && <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" aria-label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 />Luister</button>}
   </div>)}</div>;
 }
 
