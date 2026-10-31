@@ -40,7 +40,14 @@ test('All supplementary packs are selectable, with no generated audio-dependent 
   assert(selected.every(c=>c.levels?.length && c.exercises.every(e=>JSON.stringify(e.vocabularyLevels)===JSON.stringify(c.levels))),'Exact shared vocabulary membership, without duplicate tasks');
  }
 });
-test('Local export matches installed data exactly',()=>{
+test('Local export matches installed data except the recorded meaning repairs',()=>{
  const local=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-19/klink-lexicon-alle-woorden/woordbouw-pakketten.json'));
+ const repairs=JSON.parse(readFileSync('docs/word-meanings-review-20261031/changes.json')).fields.filter(row=>row.file==='data/klink-lexicon-wordbuild-rest.json');
+ for(const repair of repairs){
+  assert.equal(repair.path.at(-1),'meaning');
+  const target=repair.path.slice(0,-1).reduce((value,key)=>value[key],local);
+  assert.equal(target.meaning,repair.before);
+  target.meaning=repair.after;
+ }
  assert.deepEqual(additional,local);
 });
