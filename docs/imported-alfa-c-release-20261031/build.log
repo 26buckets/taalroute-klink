@@ -2,26 +2,26 @@
 > taalroute-klink@0.1.0 prebuild
 > node scripts/write-klink-release.mjs
 
-Klink release marker: a25c4e861ad7b4a6439a65c1a9d20059c6fb2410, clean=false
+Klink release marker: db865e99badf17355ae729f8689753e6d483f69f, clean=false
 
 > taalroute-klink@0.1.0 build
 > vinext build
 
 [vinext] Tip: migrate from `vinext build` to `vite build`.
-(node:1670) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
+(node:14100) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
 [1/5] analyze client references...
 vite v8.3.4 building rsc environment for production...
 transforming...
 ✓ 315 modules transformed.
 rendering chunks...
-✓ built in 424ms
+✓ built in 303ms
 [2/5] analyze server references...
 vite v8.3.4 building ssr environment for production...
 transforming...
 ✓ 546 modules transformed.
 rendering chunks...
-✓ built in 722ms
+✓ built in 484ms
 [3/5] build rsc environment...
 vite v8.3.4 building rsc environment for production...
 transforming...
@@ -63,36 +63,36 @@ dist/server/_next/static/app-prerender-static-params-CktJLKjR.js                
 dist/server/_next/static/page-3G6QYckO.js                                                                                                      1.94 kB │ gzip:   0.91 kB
 dist/server/_next/static/page-DpULfaer.js                                                                                                      2.07 kB │ gzip:   0.92 kB
 dist/server/_next/static/app-prerender-endpoints-j791WDZ-.js                                                                                   2.45 kB │ gzip:   0.98 kB
-dist/server/_next/static/app-page-cache-render-CYkKe3fU.js                                                                                     2.59 kB │ gzip:   1.20 kB
-dist/server/_next/static/isr-cache-CNsDBEvZ.js                                                                                                 3.22 kB │ gzip:   1.66 kB
-dist/server/_next/static/app-page-tracing-CK4AX9SI.js                                                                                          3.45 kB │ gzip:   1.73 kB
+dist/server/_next/static/app-page-cache-render-CT3bWcns.js                                                                                     2.59 kB │ gzip:   1.19 kB
+dist/server/_next/static/isr-cache--MK791Sc.js                                                                                                 3.22 kB │ gzip:   1.66 kB
+dist/server/_next/static/app-page-tracing-B3eTQii_.js                                                                                          3.45 kB │ gzip:   1.73 kB
 dist/server/_next/static/framework~index-D5HQBI_I.js                                                                                           3.80 kB │ gzip:   1.51 kB
 dist/server/_next/static/cache-handler-B78ZWYcS.js                                                                                             4.16 kB │ gzip:   1.53 kB
-dist/server/_next/static/request-pipeline-CyrRFyB8.js                                                                                          4.58 kB │ gzip:   1.86 kB
+dist/server/_next/static/request-pipeline-B4ZXZ9ij.js                                                                                          4.58 kB │ gzip:   1.86 kB
 dist/server/_next/static/framework~index~not-found~page~layout~page~layout~page~page~app-rsc-response-stage~app-rout~wh1g1d0s-BO2z_WaE.js      5.49 kB │ gzip:   2.28 kB
 dist/server/_next/static/middleware-response-headers-C91rdQk1.js                                                                               5.96 kB │ gzip:   2.41 kB
 dist/server/_next/static/headers-W3s3lyIu.js                                                                                                   6.26 kB │ gzip:   2.47 kB
 dist/server/_next/static/response-stage-policy-C95OFGs6.js                                                                                     6.90 kB │ gzip:   2.37 kB
-dist/server/_next/static/app-page-cache-finalizer-CGTfwO7q.js                                                                                  7.01 kB │ gzip:   2.48 kB
-dist/server/_next/static/app-rsc-response-stage-Bf9uLFsR.js                                                                                    7.47 kB │ gzip:   2.58 kB
-dist/server/_next/static/app-page-cache-CcRGbCAm.js                                                                                            7.55 kB │ gzip:   2.57 kB
-dist/server/_next/static/artifact-compatibility-BDcOXjos.js                                                                                   10.66 kB │ gzip:   3.67 kB
+dist/server/_next/static/app-page-cache-finalizer-BkXbrR-i.js                                                                                  7.01 kB │ gzip:   2.48 kB
+dist/server/_next/static/app-rsc-response-stage-C61-tp95.js                                                                                    7.47 kB │ gzip:   2.58 kB
+dist/server/_next/static/app-page-cache-Cc1lOc5F.js                                                                                            7.55 kB │ gzip:   2.57 kB
+dist/server/_next/static/artifact-compatibility-BIDe3f2F.js                                                                                   10.66 kB │ gzip:   3.67 kB
 dist/server/_next/static/cacheability-request-DG9s78Al.js                                                                                     10.71 kB │ gzip:   3.68 kB
-dist/server/_next/static/app-elements-B4xFecDb.js                                                                                             11.28 kB │ gzip:   3.84 kB
-dist/server/_next/static/app-page-execution-DnRga6au.js                                                                                       11.51 kB │ gzip:   4.11 kB
-dist/server/_next/static/prerender-work-unit-setup-Cx-pnvTQ.js                                                                                12.67 kB │ gzip:   4.76 kB
-dist/server/_next/static/rsc-completion-metadata-DVPfe1oB.js                                                                                  13.09 kB │ gzip:   4.69 kB
+dist/server/_next/static/app-elements-COylYzZQ.js                                                                                             11.28 kB │ gzip:   3.84 kB
+dist/server/_next/static/app-page-execution-DA2M3v-B.js                                                                                       11.51 kB │ gzip:   4.11 kB
+dist/server/_next/static/prerender-work-unit-setup-D2a-eLZf.js                                                                                12.67 kB │ gzip:   4.76 kB
+dist/server/_next/static/rsc-completion-metadata-ChbUNMJF.js                                                                                  13.09 kB │ gzip:   4.69 kB
 dist/server/_next/static/config-headers-BZzELz_G.js                                                                                           15.33 kB │ gzip:   4.87 kB
-dist/server/_next/static/text-stream-B-04X6w4.js                                                                                              19.50 kB │ gzip:   5.93 kB
+dist/server/_next/static/text-stream-CcdVVuxZ.js                                                                                              19.50 kB │ gzip:   5.94 kB
 dist/server/_next/static/fetch-cache-WZb2z35O.js                                                                                              31.37 kB │ gzip:  10.42 kB
 dist/server/_next/static/klink-teacher-manual-MeQiPnG2.js                                                                                     49.62 kB │ gzip:  15.13 kB
-dist/server/_next/static/app-route-handler-dispatch-BqP3byEs.js                                                                               52.46 kB │ gzip:  18.66 kB
+dist/server/_next/static/app-route-handler-dispatch-HMkdTchp.js                                                                               52.46 kB │ gzip:  18.67 kB
 dist/server/_next/static/framework~index~not-found~page~layout~page~layout~page~app-route-handler-dispatch-BM2XMkqn.js                        53.15 kB │ gzip:  16.02 kB
-dist/server/index.js                                                                                                                       1,012.17 kB │ gzip: 183.69 kB
+dist/server/index.js                                                                                                                       1,012.17 kB │ gzip: 183.70 kB
 
 [33m[INEFFECTIVE_DYNAMIC_IMPORT] [0mapp/layout.tsx is dynamically imported by \0virtual:vinext-rsc-entry but also statically imported by \0virtual:vinext-rsc-entry, dynamic import will not move module into another chunk.
 
-✓ built in 1.26s
+✓ built in 975ms
 [4/5] build client environment...
 vite v8.3.4 building client environment for production...
 `output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.
@@ -108,34 +108,34 @@ dist/client/_next/static/css/classroom-boundary.Pr56k1E6.css               13.46
 dist/client/_next/static/css/page.BLdFRIZU.css                             19.07 kB │ gzip:     4.07 kB
 dist/client/_next/static/css/index.BaFtZFxX.css                           487.12 kB │ gzip:    79.30 kB
 dist/client/_next/static/chunks/manual-legacy-link-ClvCW6aF.js              0.30 kB │ gzip:     0.25 kB
-dist/client/_next/static/chunks/layout-segment-context-BC0O_dcK.js          0.49 kB │ gzip:     0.34 kB
+dist/client/_next/static/chunks/layout-segment-context-HEWpYB2p.js          0.49 kB │ gzip:     0.34 kB
 dist/client/_next/static/chunks/rolldown-runtime-hePW80VL.js                0.71 kB │ gzip:     0.42 kB
 dist/client/_next/static/chunks/chevron-down-DwsZ28fC.js                    0.73 kB │ gzip:     0.47 kB
 dist/client/_next/static/chunks/Icon-CXV7MFl9.js                            1.08 kB │ gzip:     0.65 kB
-dist/client/_next/static/chunks/manual-navigation-C1jmVEIB.js               1.18 kB │ gzip:     0.58 kB
-dist/client/_next/static/chunks/script-yy0we4L6.js                          3.80 kB │ gzip:     1.59 kB
-dist/client/_next/static/chunks/link-qfOrdHZP.js                           11.93 kB │ gzip:     4.55 kB
-dist/client/_next/static/chunks/hybrid-client-route-owner-C2-kgeIo.js      20.36 kB │ gzip:     6.49 kB
-dist/client/_next/static/chunks/classroom-boundary-JjO1Dj7A.js             73.91 kB │ gzip:    22.33 kB
-dist/client/_next/static/chunks/index-LxUJKQkX.js                         115.06 kB │ gzip:    33.88 kB
-dist/client/_next/static/chunks/vinext-CcT6fmUE.js                        153.99 kB │ gzip:    46.61 kB
+dist/client/_next/static/chunks/manual-navigation-CA-wg92n.js               1.18 kB │ gzip:     0.57 kB
+dist/client/_next/static/chunks/script-DZ8YeiB9.js                          3.80 kB │ gzip:     1.59 kB
+dist/client/_next/static/chunks/link-E0sHt_5n.js                           11.93 kB │ gzip:     4.55 kB
+dist/client/_next/static/chunks/hybrid-client-route-owner-eWTHSOTh.js      20.36 kB │ gzip:     6.49 kB
+dist/client/_next/static/chunks/classroom-boundary-DRZ-qaqN.js             73.91 kB │ gzip:    22.33 kB
+dist/client/_next/static/chunks/index-aVEerYw3.js                         115.06 kB │ gzip:    33.88 kB
+dist/client/_next/static/chunks/vinext-fLrI56Pt.js                        153.99 kB │ gzip:    46.61 kB
 dist/client/_next/static/chunks/framework-5hhgsyNd.js                     190.03 kB │ gzip:    59.71 kB
-dist/client/_next/static/chunks/page-D-yzDe-A.js                          761.83 kB │ gzip:   183.39 kB
-dist/client/_next/static/chunks/klink-curriculum-p5ukMo9O.js           23,944.18 kB │ gzip: 2,827.03 kB
+dist/client/_next/static/chunks/page-Ytc-3vUg.js                          761.65 kB │ gzip:   183.35 kB
+dist/client/_next/static/chunks/klink-curriculum-ktq57_4F.js           23,944.18 kB │ gzip: 2,827.03 kB
 
 [plugin builtin:vite-reporter] 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 10.24s
-[33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 9.1s of this 10.2s build (89%).
+✓ built in 3.83s
+[33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 3.0s of this 3.8s build (78%).
 The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
-  - plugin vite:prepare-out-dir renderStart (79%, 8.0s, 1 call)
+  - plugin vite:prepare-out-dir renderStart (58%, 2.2s, 1 call)
 Additional callback time came from the callbacks below and from callbacks under 1s.
 2 callbacks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
-  - plugin alias resolveId (7041 calls)
   - plugin vinext:og-inline-fetch-assets resolveId (6794 calls)
+  - plugin alias resolveId (7041 calls)
 See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
 
 [5/5] build ssr environment...
@@ -149,7 +149,7 @@ dist/server/ssr/_next/static/css/page.BLdFRIZU.css                      19.07 kB
 dist/server/ssr/_next/static/navigation-server-BPrfblvR.js               0.04 kB │ gzip:     0.06 kB
 dist/server/ssr/_next/static/app-nav-failure-handler-BW2-CIfV.js         0.07 kB │ gzip:     0.07 kB
 dist/server/ssr/_next/static/record-BGze3w87.js                          0.07 kB │ gzip:     0.09 kB
-dist/server/ssr/_next/static/hybrid-client-route-owner-B3z5pk6V.js       0.16 kB │ gzip:     0.13 kB
+dist/server/ssr/_next/static/hybrid-client-route-owner-CbRLGrej.js       0.16 kB │ gzip:     0.13 kB
 dist/server/ssr/_next/static/static.edge-CnfaGszC.js                     0.20 kB │ gzip:     0.15 kB
 dist/server/ssr/_next/static/manual-legacy-link-C6IOiwDy.js              0.25 kB │ gzip:     0.22 kB
 dist/server/ssr/_next/static/jsx-runtime-DrYeNbOf.js                     0.42 kB │ gzip:     0.29 kB
@@ -157,10 +157,10 @@ dist/server/ssr/_next/static/layout-segment-context-By2eXYug.js          0.47 kB
 dist/server/ssr/_next/static/app-prefetch-fetch-queue-d_NEpAms.js        0.48 kB │ gzip:     0.30 kB
 dist/server/ssr/_next/static/chevron-down-Cz7wQGz0.js                    0.68 kB │ gzip:     0.45 kB
 dist/server/ssr/_next/static/streamed-icons-CaMDVKAb.js                  0.69 kB │ gzip:     0.44 kB
-dist/server/ssr/_next/static/client-page-root-FHMVnp5z.js                0.92 kB │ gzip:     0.54 kB
+dist/server/ssr/_next/static/client-page-root-B0hoVYt4.js                0.92 kB │ gzip:     0.54 kB
 dist/server/ssr/_next/static/Icon-CNXBgGgg.js                            1.03 kB │ gzip:     0.62 kB
 dist/server/ssr/_next/static/app-router-scroll-state-Chjrq4uf.js         1.07 kB │ gzip:     0.55 kB
-dist/server/ssr/_next/static/manual-navigation-CGHuNZoz.js               1.18 kB │ gzip:     0.57 kB
+dist/server/ssr/_next/static/manual-navigation-CqcmETVq.js               1.18 kB │ gzip:     0.57 kB
 dist/server/ssr/_next/static/navigation-context-state-AYeqqLGj.js        1.56 kB │ gzip:     0.62 kB
 dist/server/ssr/_next/static/app-router-scroll-B-qRlO10.js               2.21 kB │ gzip:     1.03 kB
 dist/server/ssr/_next/static/navigation-errors-CQYdyXv1.js               2.23 kB │ gzip:     0.99 kB
@@ -169,19 +169,19 @@ dist/server/ssr/_next/static/react-dom-CtMtBVKi.js                       3.53 kB
 dist/server/ssr/_next/static/navigation-runtime-B3Nk4_Pv.js              5.28 kB │ gzip:     2.01 kB
 dist/server/ssr/_next/static/error-boundary-DeqNcdjS.js                  6.10 kB │ gzip:     1.88 kB
 dist/server/ssr/_next/static/react-Dy4OnCZg.js                           7.91 kB │ gzip:     3.06 kB
-dist/server/ssr/_next/static/link-BujIvK75.js                            8.05 kB │ gzip:     3.42 kB
+dist/server/ssr/_next/static/link-D7A-32K4.js                            8.05 kB │ gzip:     3.42 kB
 dist/server/ssr/_next/static/app-elements-CHZd1sNz.js                   11.36 kB │ gzip:     3.57 kB
-dist/server/ssr/_next/static/navigation-BCvxUima.js                     54.74 kB │ gzip:    16.45 kB
-dist/server/ssr/_next/static/classroom-boundary-BSxfXkS6.js             73.05 kB │ gzip:    22.09 kB
-dist/server/ssr/index.js                                               266.82 kB │ gzip:    83.97 kB
-dist/server/ssr/_next/static/page-CjDdOHwB.js                          759.66 kB │ gzip:   183.69 kB
+dist/server/ssr/_next/static/navigation-CJ1xOaaL.js                     54.74 kB │ gzip:    16.45 kB
+dist/server/ssr/_next/static/classroom-boundary-CCUSbruX.js             73.05 kB │ gzip:    22.09 kB
+dist/server/ssr/index.js                                               266.82 kB │ gzip:    83.96 kB
+dist/server/ssr/_next/static/page-D5FxZB7R.js                          759.48 kB │ gzip:   183.65 kB
 dist/server/ssr/_next/static/klink-curriculum-CbsEnvgu.js           23,957.95 kB │ gzip: 2,831.44 kB
 
 [33m[INEFFECTIVE_DYNAMIC_IMPORT] [0m../../../Users/nicoknoester/.cache/klink-image-dependencies-20261030/node_modules/vinext/dist/shims/default-global-error.js is dynamically imported by \0virtual:vite-rsc/client-references but also statically imported by ../../../Users/nicoknoester/.cache/klink-image-dependencies-20261030/node_modules/vinext/dist/server/app-ssr-entry.js, ../../../Users/nicoknoester/.cache/klink-image-dependencies-20261030/node_modules/vinext/dist/shims/error-boundary.js, dynamic import will not move module into another chunk.
 
 [33m[INEFFECTIVE_DYNAMIC_IMPORT] [0m../../../Users/nicoknoester/.cache/klink-image-dependencies-20261030/node_modules/vinext/dist/shims/slot.js is dynamically imported by \0virtual:vite-rsc/client-references but also statically imported by ../../../Users/nicoknoester/.cache/klink-image-dependencies-20261030/node_modules/vinext/dist/server/app-ssr-entry.js, ../../../Users/nicoknoester/.cache/klink-image-dependencies-20261030/node_modules/vinext/dist/shims/client-page-root.js, dynamic import will not move module into another chunk.
 
-✓ built in 1.65s
+✓ built in 1.36s
 
   Route (app)
   ┌ ? /                 

@@ -1,16 +1,14 @@
-✔ Cooking story and every linked dialogue variant share Sara, Ali and the shopping agreement (313.498792ms)
-✔ Owner decisions are resolved; borderline texts retain A2 and explicit preparation (0.544958ms)
-✔ B1 partitions retain every original task once, exact old links and shared completion (1030.736375ms)
-✔ Five exact replacement recordings cover source, instruction and example; source IDs and models stay meaningful (1.100166ms)
-✔ All 320 texts and dialogues have exact full-text and question reviews, without reading-level inflation (6.249875ms)
-✔ Every linked exercise uses the reviewed source and respects a harder writing task (933.7615ms)
-✔ All original long-content IDs remain reachable in free listening, under the new levels (16.971666ms)
-✔ Changing only the question invalidates its language review, instead of inheriting a stale level (9.04875ms)
-✔ Five fresh recordings have matching source text, retained originals and verified brand metadata (161.259417ms)
-✖ Every data amendment is bounded and reversible; historical source guards reject extra tampering (200.227292ms)
-✔ Twelve independent chapters cover all registered activities without changing Lexicon (15777.027209ms)
-✔ Source levels are honest, never inferred from matching words or a completed activity (0.615375ms)
-✔ Deep links validate chapter, activity, collection and level; stale links fail safely (53.6555ms)
+✔ Cooking story and every linked dialogue variant share Sara, Ali and the shopping agreement (226.421042ms)
+✔ Owner decisions are resolved; borderline texts retain A2 and explicit preparation (2.502084ms)
+✔ All 320 texts and dialogues have exact full-text and question reviews, without reading-level inflation (5.037458ms)
+✔ Every linked exercise uses the reviewed source and respects a harder writing task (673.6955ms)
+✔ All original long-content IDs remain reachable in free listening, under the new levels (6.474041ms)
+✔ Changing only the question invalidates its language review, instead of inheriting a stale level (6.948333ms)
+✔ Five fresh recordings have matching source text, retained originals and verified brand metadata (96.23275ms)
+✔ Every data amendment is bounded and reversible; historical source guards reject extra tampering (169.003209ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (10354.902416ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.487958ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (32.232209ms)
 {
   collections: 1462,
   exercisePlacements: 59532,
@@ -42,42 +40,22 @@
   pathsExist: true,
   localOnly: true
 }
-✔ scripts/test-production-content.mjs (2094.8605ms)
+✔ scripts/test-production-content.mjs (1168.287708ms)
+✔ 210 unique word-only questions have exactly one correct answer and traceable editorial sources (2.984291ms)
+✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (1.515333ms)
+✔ wrong answers become due for repetition, survive reload and retain the exact question (516.2ms)
+✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (1250.637292ms)
+✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.953875ms)
+✔ corrupt saved mixing preferences fall back safely (0.249ms)
 PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
-✔ scripts/test-word-round-continuity.mjs (8398.788292ms)
+✔ scripts/test-word-round-continuity.mjs (5459.86475ms)
 PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
-✔ scripts/test-word-rounds.mjs (2097ms)
-ℹ tests 16
+✔ scripts/test-word-rounds.mjs (1025.541667ms)
+ℹ tests 20
 ℹ suites 0
-ℹ pass 15
-ℹ fail 1
+ℹ pass 20
+ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 16537.523959
-
-✖ failing tests:
-
-test at scripts/test-long-content-review-20261030.mjs:85:6
-✖ Every data amendment is bounded and reversible; historical source guards reject extra tampering (200.227292ms)
-  AssertionError [ERR_ASSERTION]: public/content-register/active.json/3074/review
-  + actual - expected
-  
-  + 'Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.'
-  - 'Goedgekeurde kookherstelkeuze; technische audiocontrole uitgevoerd, menselijke luisterreview open.'
-  
-      at readBeforeLongReview (file:///private/tmp/klink-imported-alfa-c-20261031/scripts/check-long-review.mjs:19:56)
-      at TestContext.<anonymous> (file:///private/tmp/klink-imported-alfa-c-20261031/scripts/test-long-content-review-20261030.mjs:87:61)
-      at Test.runInAsyncScope (node:async_hooks:226:14)
-      at Test.run (node:internal/test_runner/test:1382:25)
-      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
-      at Test.postRun (node:internal/test_runner/test:1522:19)
-      at Test.run (node:internal/test_runner/test:1447:12)
-      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
-    generatedMessage: false,
-    code: 'ERR_ASSERTION',
-    actual: 'Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.',
-    expected: 'Goedgekeurde kookherstelkeuze; technische audiocontrole uitgevoerd, menselijke luisterreview open.',
-    operator: 'deepStrictEqual',
-    diff: 'simple'
-  }
+ℹ duration_ms 10736.159958
