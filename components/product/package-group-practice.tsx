@@ -1,4 +1,5 @@
 'use client';
+import { usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
 import { recordRoundSteps } from '@/lib/round-progress';
 import { RoundProgressNotice } from './round-progress';
 
@@ -98,6 +99,7 @@ function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pa
   const [session, setSession] = useState(() => {
     try { return restoreGroupSession(localStorage.getItem(storageKey) ?? (legacySessionId ? localStorage.getItem(groupSessionKey(legacySessionId, activity)) : null), exercises); } catch { return { done: false }; }
   });
+  const completionKeys = usePracticeKeyboard();
   const [initialId] = useState(session.exerciseId);
   const [sheet, setSheet] = useState(false);
   const [sheetOpened, setSheetOpened] = useState(false);
@@ -109,7 +111,7 @@ function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pa
     onAttempt?.(attempt);
   }
   function restart() { try { if (legacySessionId) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
-  if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
+  if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section {...completionKeys} className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button data-practice-next aria-keyshortcuts="Enter ArrowRight" className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={recordAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
   return <><RoundProgressNotice />
@@ -127,14 +129,16 @@ function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pa
 
 function PracticeSheet({ pack, exercises, title, showTitle, active, onAudio, onAttempt, onBack }: { pack: PackageDefinition; exercises: PackageExercise[]; title: string; showTitle: boolean; active: boolean; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void }) {
   const playback = useRef<AbortController | null>(null);
+  const keyboard = usePracticeKeyboard({ enabled: active });
+  useEffect(() => { if (active) keyboard.ref.current?.querySelector<HTMLElement>('[data-practice-item]')?.focus({ preventScroll: true }); }, [active, keyboard.ref]);
   const [round, setRound] = useState(0);
   const [done, setDone] = useState<string[]>([]);
   useEffect(() => { if (!active) playback.current?.abort(); return () => playback.current?.abort(); }, [active]);
   function startPlayback() { playback.current?.abort(); const controller = new AbortController(); playback.current = controller; return controller; }
-  return <section className="cp-practice-sheet cp-page-workspace" aria-label={title}>
+  return <section {...keyboard} className="cp-practice-sheet cp-page-workspace" aria-label={title}>
     <header>{showTitle && <h2>{title}</h2>}<output aria-label={`${done.length} van ${exercises.length} geoefend`}>{done.length} / {exercises.length}</output></header>
     <div className="cp-practice-sheet-grid">{exercises.map((exercise, index) => <SheetExercise key={`${round}:${exercise.exerciseId}`} pack={pack} exercise={exercise} number={index + 1} onAudio={onAudio} startPlayback={startPlayback} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
-    <footer><button className="secondary-button" onClick={() => { playback.current?.abort(); stopMedia(); setDone([]); setRound(value => value + 1); }}><RefreshCw />Nog een keer</button><button className="primary-button" onClick={() => { playback.current?.abort(); stopMedia(); onBack(); }}>Klaar<Check /></button></footer>
+    <footer><button className="secondary-button" onClick={() => { playback.current?.abort(); stopMedia(); setDone([]); setRound(value => value + 1); }}><RefreshCw />Nog een keer</button><button data-practice-next aria-keyshortcuts="Enter ArrowRight" className="primary-button" onClick={() => { playback.current?.abort(); stopMedia(); onBack(); }}>Klaar<Check /></button></footer>
   </section>;
 }
 
@@ -143,6 +147,9 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
   const [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
+  const [playing, setPlaying] = useState(false);
+  const row = useRef<HTMLElement>(null);
+  useEffect(() => { if (result === 'right' && !playing && row.current?.closest('[data-practice-keyboard="true"]')) row.current.focus({ preventScroll: true }); }, [result, playing]);
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
   const model = exercise.componentId === 'ALF-CMP-001';
@@ -155,9 +162,9 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
       objective: typeof exercise.objective === 'string' ? exercise.objective : `${exercise.mode}:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: model ? 'participation' : exercise.assessment ?? 'answer', independentReading: false });
     setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
   }
-  return <article className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
+  return <article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
     <ExerciseSurface pack={pack} exercise={exercise} guided answeredCorrectly={result === 'right'} canAnswer={heard && result !== 'right'} speakingOptionId="" onOpenExercise={() => {}} onReset={() => setResult('idle')} onHelp={() => { metrics.current.helpUsed = true; }} onFinish={finish} onAudio={async source => {
-      const controller = startPlayback(); playback.current = controller; setAudioError(false);
+      const controller = startPlayback(); playback.current = controller; setAudioError(false); setPlaying(true);
       if (exercise.readingTask) metrics.current.helpUsed = true;
       try {
         const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal });
@@ -166,6 +173,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
         if (ok !== false && source === (exercise.prompt?.audio?.src ?? findAudioSource(exercise))) { setHeard(true); if (model) finish('beluisterd', true); }
         return ok !== false;
       } catch { if (!controller.signal.aborted) setAudioError(true); return false; }
+      finally { if (playback.current === controller) setPlaying(false); }
     }} />
     <output aria-live="polite">{audioError ? 'Luisteren lukt niet. Tik opnieuw.' : result === 'right' ? <><Check aria-hidden="true" />{model ? 'Beluisterd' : 'Goed'}</> : result === 'wrong' ? exercise.feedback || 'Probeer nog een keer.' : ''}</output>
   </article>;
@@ -179,28 +187,36 @@ function BuildWorksheet({ showTitle, exercises, onAudio, onAttempt, initialId, o
   const ready = rows.every(item => done.includes(item.exerciseId));
   const instruction = rows[0]?.instructionAudio?.src;
   const [instructionError, setInstructionError] = useState(false);
-  return <section className="cp-word-worksheet cp-page-workspace" aria-label="Meer woorden maken">
+  const [instructionPlaying, setInstructionPlaying] = useState(false);
+  const keyboard = usePracticeKeyboard({ busy: instructionPlaying });
+  useEffect(() => { keyboard.ref.current?.querySelector<HTMLElement>('[data-practice-item]')?.focus({ preventScroll: true }); }, [page, keyboard.ref]);
+  return <section {...keyboard} className="cp-word-worksheet cp-page-workspace" aria-label="Meer woorden maken">
     {showTitle && <h2>Meer woorden maken</h2>}
-    {isInstructionAudioEnabled(instruction) && <button className="secondary-button" onClick={async () => { try { setInstructionError(await onAudio(instruction!) === false); } catch { setInstructionError(true); } }}><Volume2 />Luister naar de opdracht</button>}
+    {isInstructionAudioEnabled(instruction) && <button className="secondary-button" onClick={async () => { setInstructionPlaying(true); try { setInstructionError(await onAudio(instruction!, { waitUntilEnd: true }) === false); } catch { setInstructionError(true); } finally { setInstructionPlaying(false); } }}><Volume2 />Luister naar de opdracht</button>}
     {instructionError && <p role="alert">Het geluid lukt niet. Probeer opnieuw.</p>}
-    <div className="cp-worksheet-grid">{rows.map(exercise => <WorksheetRow key={exercise.exerciseId} exercise={exercise} onAudio={onAudio} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
-    <button className="primary-button" disabled={!ready} onClick={() => { stopMedia(); if ((page + 1) * 4 >= exercises.length) onDone(); else { const nextPage = page + 1; setPage(nextPage); onPosition(exercises[nextPage * 4].exerciseId); } }}>Verder<ArrowRight /></button>
+    <div className="cp-worksheet-grid">{rows.map(exercise => <WorksheetRow key={exercise.exerciseId} completed={done.includes(exercise.exerciseId)} exercise={exercise} onAudio={onAudio} onAttempt={onAttempt} onDone={() => setDone(current => current.includes(exercise.exerciseId) ? current : [...current, exercise.exerciseId])} />)}</div>
+    <button data-practice-previous aria-keyshortcuts="ArrowLeft" className="secondary-button" disabled={page === 0 || instructionPlaying} onClick={() => { stopMedia(); setPage(page - 1); onPosition(exercises[(page - 1) * 4].exerciseId); }}><ArrowLeft />Vorige</button>
+    <button data-practice-next aria-keyshortcuts="Enter ArrowRight" className="primary-button" disabled={!ready || instructionPlaying} onClick={() => { stopMedia(); if ((page + 1) * 4 >= exercises.length) onDone(); else { const nextPage = page + 1; setPage(nextPage); onPosition(exercises[nextPage * 4].exerciseId); } }}>Verder<ArrowRight /></button>
   </section>;
 }
 
-function WorksheetRow({ exercise, onAudio, onAttempt, onDone }: { exercise: PackageExercise; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
+function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { completed: boolean; exercise: PackageExercise; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onDone: () => void }) {
   const { settings } = useRouteSettings();
-  const [result, setResult] = useState<'idle' | 'right' | 'wrong'>('idle');
+  const [result, setResult] = useState<'idle' | 'right' | 'wrong'>(completed ? 'right' : 'idle');
   const [audioError, setAudioError] = useState(false);
   const [heard, setHeard] = useState(!exercise.requiresAudio);
+  const [playing, setPlaying] = useState(false);
+  const row = useRef<HTMLElement>(null);
+  useEffect(() => { if (result === 'right' && !playing && row.current?.closest('[data-practice-keyboard="true"]')) row.current.focus({ preventScroll: true }); }, [result, playing]);
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
-  return <article className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
+  return <article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
     <BuildSurface exercise={exercise} answeredCorrectly={result === 'right'} onAudio={async source => {
-      playback.current?.abort(); const controller = new AbortController(); playback.current = controller;
+      playback.current?.abort(); const controller = new AbortController(); playback.current = controller; setPlaying(true);
       try { const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal }); if (controller.signal.aborted) return false; setAudioError(ok === false); if (ok !== false) setHeard(true); return ok !== false; }
       catch { if (!controller.signal.aborted) setAudioError(true); return false; }
+      finally { if (playback.current === controller) setPlaying(false); }
     }} canAnswer={result !== 'right' && heard} onHelp={() => { metrics.current.helpUsed = true; }} onReset={() => setResult('idle')} onFinish={(answer, correct) => {
       metrics.current.attempts++;
       onAttempt?.({ exerciseId: exercise.exerciseId, mode: exercise.mode, answer, correct, attempts: metrics.current.attempts, helpUsed: metrics.current.helpUsed,

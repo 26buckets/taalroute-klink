@@ -1,0 +1,176 @@
+{
+  "checkedAt": "2026-10-31T00:45:26.378160+00:00",
+  "sourceCommit": "ca3d423cf23df8bb2178c1c014829782f7788c55",
+  "keyboard": true,
+  "audio": true,
+  "progress": true,
+  "navigation": true,
+  "mobile": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "keyboardScenarios": [
+    {
+      "engine": "chromium",
+      "enterWrongRightNext": true,
+      "heldKey": true,
+      "manualFeedback": true,
+      "backAndDedup": true,
+      "inputSpacesAndCursor": true,
+      "completion": true
+    },
+    {
+      "engine": "chromium",
+      "spaceReplay": true,
+      "audioBlocksNavigation": true,
+      "modifiers": true,
+      "menuUnaffected": true
+    },
+    {
+      "engine": "chromium",
+      "sheetEnterAndArrows": true,
+      "sheetSpace": true,
+      "worksheetArrows": true
+    },
+    {
+      "engine": "chromium",
+      "textareaNative": true
+    },
+    {
+      "engine": "chromium",
+      "nativeSpaceRecordStop": true,
+      "recordingBlocksNavigation": true
+    },
+    {
+      "engine": "chromium",
+      "mobileWidths": [
+        1366,
+        768,
+        390,
+        320,
+        844
+      ],
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "nativeAudioSpaceReplay": true,
+      "mobileTouchBackAndReload": true
+    },
+    {
+      "engine": "webkit",
+      "enterWrongRightNext": true,
+      "heldKey": true,
+      "manualFeedback": true,
+      "backAndDedup": true,
+      "inputSpacesAndCursor": true,
+      "completion": true
+    },
+    {
+      "engine": "webkit",
+      "spaceReplay": true,
+      "audioBlocksNavigation": true,
+      "modifiers": true,
+      "menuUnaffected": true
+    },
+    {
+      "engine": "webkit",
+      "sheetEnterAndArrows": true,
+      "sheetSpace": true,
+      "worksheetArrows": true
+    },
+    {
+      "engine": "webkit",
+      "textareaNative": true
+    },
+    {
+      "engine": "webkit",
+      "nativeSpaceRecordStop": true,
+      "recordingBlocksNavigation": true
+    },
+    {
+      "engine": "webkit",
+      "mobileWidths": [
+        1366,
+        768,
+        390,
+        320,
+        844
+      ],
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "nativeAudioSpaceReplay": true,
+      "mobileTouchBackAndReload": true
+    }
+  ],
+  "unitTests": 27,
+  "synonymScenarios": 7,
+  "readingChecks": 16,
+  "menuJourneys": 96,
+  "alfaCBlockReturns": 180,
+  "continuity": {
+    "base": "http://127.0.0.1:18971",
+    "results": [
+      {
+        "engine": "chromium",
+        "overviews": 56,
+        "opened": 56,
+        "switched": 156,
+        "widths": [
+          1366,
+          320,
+          390,
+          844,
+          768
+        ],
+        "levels": 6,
+        "nativeAudio": true,
+        "legacyCursor": true,
+        "parentCompletion": true,
+        "reload": true,
+        "touch": true
+      },
+      {
+        "engine": "webkit",
+        "overviews": 56,
+        "opened": 56,
+        "switched": 156,
+        "widths": [
+          1366,
+          320,
+          390,
+          844,
+          768
+        ],
+        "levels": 6,
+        "nativeAudio": true,
+        "legacyCursor": true,
+        "parentCompletion": true,
+        "reload": true,
+        "touch": true
+      }
+    ],
+    "errors": [],
+    "physicalDevices": false
+  },
+  "audioDetails": "Existing recordings played natively in both engines; no generated or changed audio. Microphone states tested with a controlled recorder, not physical microphone hardware.",
+  "preservation": "No changes to public, lib or data; original task IDs, attempt handlers and storage formats retained. Current reading support, 71 Drive images and synonym review retained.",
+  "files": {
+    "components/product/extended-practice-surface.tsx": "6b93a38781b2863c11ce888133b7bf3d5e19477e52b129d9d1636f6241ef1cc6",
+    "components/product/imported-practice-surface.tsx": "f139f294793edc3bc6b3083caf703b7c97cea965eb1fc8df4515bfc5d15b9391",
+    "components/product/package-exercise-browser.tsx": "13af56d26d324d2025edc5f2aa128419d7ac48d969df4d5bc09653866221a827",
+    "components/product/package-group-practice.tsx": "fcdd7d085ecb85a0592a695ff48d390fbe424cc1362523d3b20648e224c023db",
+    "components/product/standard-practice-surface.tsx": "84805f7724cf6c9e6c06209235e04197a7de18c54158bc9c711f2c99aabbdc9c",
+    "docs/KLINK-DOCENTHANDLEIDING.md": "56eceaa0539e09f49501447c660aa94e4b677848758ec19158c6831c7c8c01bd",
+    "hooks/use-practice-keyboard.ts": "e2897ba61e5eda9e67afe016991a00a84f5985898d1e3cfd0b2cd499acc25402",
+    "scripts/check-imported-alfa-c-release-20261031.mjs": "c0ca3698fc165b511cb672b6df86376cfd6ca347421c458619e7d527b666acaa",
+    "scripts/check-practice-keyboard-release.mjs": "6d23a10ee54c37ca69d10e84867ce3a39ee42de291b5e14de328582fd04ca3cd",
+    "scripts/test-practice-keyboard-browser.mjs": "a64b77c35ac770fb2d9c2e468699117b45ed709a3f6e842c35d3252d459295ad",
+    "scripts/test-practice-sheet-browser.mjs": "85f531dbeda0d0992146906d34c6dba67dd8d8630fe7492183834cb8a3dbe231"
+  },
+  "physicalDevices": false,
+  "workflows": "No .github workflows; all heavy checks local."
+}

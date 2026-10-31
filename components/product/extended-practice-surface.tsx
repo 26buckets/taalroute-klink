@@ -66,12 +66,12 @@ function FunctionalWriting({ exercise, onFinish, onReset, onHelp, onAudio }: Pro
     {exercise.mode === 'functional-form' && <fieldset className="cp-sender-choice"><legend>Van</legend>{task.speakers.map(name => <button key={name} className="secondary-button" aria-pressed={draft.from === name} onClick={() => update({ ...draft, from: name })}>{name}</button>)}</fieldset>}
     <label className="cp-text-entry"><span>Jouw bericht</span><textarea value={draft.message} maxLength={1000} rows={5} onChange={event => update({ ...draft, message: event.target.value })} /></label>
     <small>{storageFailed ? 'Bewaren lukt niet. Kopieer je tekst voordat je weggaat.' : 'Alleen in dit tabblad bewaard. Niet naar iemand verstuurd.'}</small>
-    <div className="cp-task-actions"><button className="primary-button" disabled={!draft.message.trim() || (exercise.mode === 'functional-form' && !draft.from)} onClick={() => setChecking(true)}>Kijk na<Check /></button>
+    <div className="cp-task-actions"><button data-practice-check={checking ? undefined : true} className="primary-button" disabled={!draft.message.trim() || (exercise.mode === 'functional-form' && !draft.from)} onClick={() => setChecking(true)}>Kijk na<Check /></button>
       <button className="secondary-button" onClick={() => { setExample(!example); onHelp(); }}>Voorbeeld</button>
       <button className="secondary-button" disabled={!draft.message && !draft.from} onClick={() => update({ message: '', from: '' })}><RotateCcw />Wis</button></div>
     {example && <p className="cp-source-text">{task.example}</p>}
     {checking && <div className="cp-writing-check"><h4>Staat dit in jouw bericht?</h4>{task.criteria.map((criterion, index) => <label key={criterion}><input type="checkbox" checked={checked.includes(index)} onChange={event => setChecked(value => event.target.checked ? [...value, index] : value.filter(at => at !== index))} /><span>{criterion}</span></label>)}
-      <button className="primary-button" disabled={checked.length !== task.criteria.length} onClick={() => onFinish('bericht geschreven en zelf nagekeken', true, 'Je hebt je bericht nagekeken. Je docent kan meelezen.')}>Klaar<Check /></button>
+      <button data-practice-check className="primary-button" disabled={checked.length !== task.criteria.length} onClick={() => onFinish('bericht geschreven en zelf nagekeken', true, 'Je hebt je bericht nagekeken. Je docent kan meelezen.')}>Klaar<Check /></button>
       <button className="secondary-button" onClick={() => onFinish('bericht geschreven; docentcontrole gevraagd', true, 'Bespreek je bericht met je docent.')}>Samen nakijken</button>
     </div>}
   </section>;

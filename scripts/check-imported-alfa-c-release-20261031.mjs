@@ -1,13 +1,15 @@
+import {verifyPracticeKeyboardRelease,readBeforePracticeKeyboard} from './check-practice-keyboard-release.mjs';
 import assert from 'node:assert/strict';import{readFileSync}from'node:fs';import{execFileSync}from'node:child_process';import{createHash}from'node:crypto';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});const lines=b=>b.toString().trim().split('\n').filter(Boolean).sort((a,b)=>a.localeCompare(b));const sha=b=>createHash('sha256').update(b).digest('hex');
 export function verifyImportedAlfaCRelease(read=readFileSync){
+ const successor=verifyPracticeKeyboardRelease(read),currentRead=read;read=file=>readBeforePracticeKeyboard(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-imported-alfa-c-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);
  assert.equal(r.userRequest,'Ja, volg je advies bij die drie twijfelgevallen. Pas de gekoppelde opdrachten en antwoorden aan, controleer de audio en zet de herstelversie daarna live. Geef mij weer een directe link naar het resultaat.');
  assert.equal(r.baselineSourceCommit,'bfef2c3d813e00d9dc5fc313c72c8f453e991a1e');assert.equal(r.liveSourceCommit,'bfef2c3d813e00d9dc5fc313c72c8f453e991a1e');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots));
  assert.deepEqual([...changed].sort((a,b)=>a < b ? -1 : a > b ? 1 : 0), ["AGENTS.md", "app/learner-ui.css", "components/product/package-exercise-browser.tsx", "components/product/practice-chapters.tsx", "data/klink-alfa-c-docent.json", "data/klink-alfa-c-functioneel-audio.json", "data/klink-alfa-c-functioneel.json", "data/klink-alfa-c-readalong.json", "data/klink-b1-reading-support.json", "data/klink-imported-practice.json", "docs/KLINK-DOCENTHANDLEIDING.md", "lib/practice-chapters.ts", "lib/production-practice.ts", "public/package-audio/leesherstel-20261031/guide-1fbd568d406b.mp3", "public/package-audio/leesherstel-20261031/guide-947ccbc2020e.mp3", "public/package-audio/leesherstel-20261031/target-27fdc7709f21.mp3", "public/package-audio/leesherstel-20261031/target-edfdce6ae549.mp3", "public/package-audio/leesherstel-20261031/target-f1343a083cd2.mp3", "scripts/build-audio-register.mjs", "scripts/check-imported-alfa-c-release-20261031.mjs", "scripts/check-synonym-review-release-20261031.mjs", "scripts/test-alfa-c-functioneel-browser.mjs", "scripts/test-alfa-c-functioneel.mjs", "scripts/test-alfa-c-preview.mjs", "scripts/test-alfa-c-texts.mjs", "scripts/test-audio-register.mjs", "scripts/test-imported-alfa-c-recovery-20261031.mjs", "scripts/test-imported-alfa-c-recovery-browser-20261031.mjs"]);
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
@@ -19,6 +21,6 @@ export function verifyImportedAlfaCRelease(read=readFileSync){
  for(const k of ['types','lint','build','unit','browser','nativePlayback','audioMetadata','preservation','localOnly'])assert.equal(checks[k],true,k);
  const backup=JSON.parse(read('docs/imported-alfa-c-release-20261031/backup.json'));assert.equal(backup.verified,true);assert(backup.driveId&&backup.sha256);
  for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
-export function readBeforeImportedAlfaC(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',`${r.baselineSourceCommit}:${file}`):read(file);}
+export function readBeforeImportedAlfaC(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',`${r.baselineSourceCommit}:${file}`):readBeforePracticeKeyboard(file,r.successor,read);}
