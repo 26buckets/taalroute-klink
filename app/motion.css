@@ -1,0 +1,43 @@
+/* Approved motion leaves dimensions, positions and learning state unchanged. */
+.klink-motion :where(button, a.primary-button, a.secondary-button) {
+  transition: scale 160ms ease, color 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+.klink-motion :where(button:not(:disabled):not([aria-disabled="true"]), a.primary-button, a.secondary-button):active { scale: .985; }
+.klink-motion .cp-exercise-stage > :is(.cp-task-card, .ac-workspace) { animation: klink-appear 180ms ease-out; }
+.klink-motion :where(.cp-choice-grid, .cp-extended-option, .cp-board-grid) button.selected,
+.klink-motion .cp-match-board button:has(> .lucide-check),
+.klink-motion .cp-exercise-feedback.right > svg,
+.klink-motion .cp-exercise-feedback.wrong > output,
+.klink-motion .pilot-footer [data-motion-feedback="right"],
+.klink-motion .pilot-footer [data-motion-feedback="wrong"],
+.klink-motion .pilot-footer [data-motion-feedback="done"] { animation: klink-appear 200ms ease-out; }
+.klink-motion button.saved > svg,
+.klink-motion button[aria-pressed="true"] > .lucide-bookmark-check { animation: klink-confirm 200ms ease-out; fill: currentColor; }
+.klink-motion [data-audio-active="true"] { outline: 2px solid var(--primary, #173f4b); outline-offset: -3px; }
+.klink-motion [data-audio-active="true"] .lucide-volume-2 { opacity: .65; }
+.klink-motion .cp-flash-card { perspective: 900px; }
+.klink-motion .cp-card-turn { display: grid; width: 100%; height: 100%; min-width: 0; min-height: 0; transform-style: preserve-3d; transition: transform 250ms ease-in-out; }
+.klink-motion .cp-card-face { grid-area: 1 / 1; display: grid; place-items: center; min-width: 0; min-height: 0; backface-visibility: hidden; transition: visibility 0s linear 125ms; }
+.klink-motion .cp-card-back { transform: rotateY(180deg); visibility: hidden; }
+.klink-motion .cp-flash-card.flipped .cp-card-turn { transform: rotateY(180deg); }
+.klink-motion .cp-flash-card.flipped .cp-card-front { visibility: hidden; }
+.klink-motion .cp-flash-card.flipped .cp-card-back { visibility: visible; }
+.klink-motion .cp-memory-grid button.open { animation: klink-reveal 200ms ease-out; }
+@keyframes klink-appear { from { opacity: .55; } to { opacity: 1; } }
+@keyframes klink-confirm { from { scale: .88; opacity: .55; } to { scale: 1; opacity: 1; } }
+@keyframes klink-reveal { from { transform: perspective(900px) rotateY(-70deg); opacity: .55; } to { transform: perspective(900px) rotateY(0); opacity: 1; } }
+@media (prefers-reduced-motion: reduce), print {
+  .klink-motion :where(button, a.primary-button, a.secondary-button, .cp-card-turn, .cp-card-face) { transition: none !important; }
+  .klink-motion .cp-exercise-stage > :is(.cp-task-card, .ac-workspace),
+  .klink-motion :where(.cp-choice-grid, .cp-extended-option, .cp-board-grid) button.selected,
+  .klink-motion .cp-match-board button:has(> .lucide-check),
+  .klink-motion .cp-exercise-feedback.right > svg,
+  .klink-motion .cp-exercise-feedback.wrong > output,
+  .klink-motion .pilot-footer [data-motion-feedback="right"],
+  .klink-motion .pilot-footer [data-motion-feedback="wrong"],
+  .klink-motion .pilot-footer [data-motion-feedback="done"],
+  .klink-motion button.saved > svg,
+  .klink-motion button[aria-pressed="true"] > .lucide-bookmark-check,
+  .klink-motion .cp-memory-grid button.open { animation: none !important; }
+  .klink-motion :where(button, a.primary-button, a.secondary-button):active { scale: 1; }
+}

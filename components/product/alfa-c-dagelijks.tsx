@@ -80,7 +80,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
               </>}
         </AlfaCWorkspace>
       </div>
-      <footer className="pilot-footer"><output aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output><button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || result !== 'right'} onClick={onNext}>Verder<ArrowRight /></button></footer>
+      <footer className="pilot-footer"><output data-motion-feedback={result} aria-live="polite">{result === 'right' ? step.speech.G : result === 'wrong' ? step.speech.F : ''}</output><button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || result !== 'right'} onClick={onNext}>Verder<ArrowRight /></button></footer>
     </div></div>
   </section>;
 }

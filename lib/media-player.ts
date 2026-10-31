@@ -57,6 +57,7 @@ export function playMedia(source: string, options: AudioOptions = {}): Promise<b
   // Reuse the element unlocked by the learner's gesture, including on mobile.
   const audio = activeAudio ??= new Audio();
   audio.src = source;
+  if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('klink-audio-source', { detail: audio }));
   applyDefaultAudioRate(audio, options.playbackRate);
   return new Promise((resolve, reject) => {
     let settled = false;

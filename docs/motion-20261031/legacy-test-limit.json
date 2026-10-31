@@ -1,0 +1,8 @@
+{
+  "test": "scripts/test-demo-mobile-browser.mjs",
+  "reason": "Uses retired .cp-home-hero button entry, removed in previously approved compact Start release.",
+  "currentLocal": "Fails at that same obsolete selector before reaching the examples.",
+  "publishedBaseline": "Same failure reproduced on 7b0e0a8862f50b519c70ce6d25acea3f641e8eed.",
+  "currentCoverage": "Current route-based motion test checks matching static-step instructional cues with reduced motion, plus 120 layout samples; existing 58-form keyboard parity and direct mobile route controls pass.",
+  "noRuntimeWorkaround": true
+}

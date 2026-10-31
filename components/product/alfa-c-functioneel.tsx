@@ -159,7 +159,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         </AlfaCWorkspace>
       </div>
       <footer className="pilot-footer">
-        <output aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? step.successFeedback : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>
+        <output data-motion-feedback={result} aria-live="polite">{result === 'wrong' ? step.retryVisible : result === 'right' ? step.successFeedback : result === 'done' ? (step.automaticAcknowledgement ?? step.successFeedback) : ''}</output>
         {result === 'done' && <button className="secondary-button" onClick={() => { setResult('idle'); setHelp(true); setRetry(true); markHelp(); void guide(step.retryVisible); }}><RefreshCw />Nog eens</button>}
         <button className="primary-button" disabled={busy || model || Boolean(readAlong.reading) || !['right', 'done'].includes(result)} onClick={onNext}>Verder<ArrowRight /></button>
       </footer>

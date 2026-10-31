@@ -11,6 +11,8 @@ import './taalroute-header.css';
 import './learner-layout.css';
 import './sounds.css';
 import './teaching.css';
+import './motion.css';
+import { MotionFeedback } from '@/components/product/motion-feedback';
 import { ClassroomBoundary } from '@/components/product/classroom-boundary';
 
 const geistSans = Geist({
@@ -55,8 +57,9 @@ export default function RootLayout({
     <html lang="nl">
       <head><Script strategy="beforeInteractive" src="/taalroute-menu/appearance.js" data-preference-key="taalroute-klink-appearance-v1"/><Script strategy="beforeInteractive" src="/taalroute-menu/menu-controls.js?v=delen-20261024" data-share-app="klink"/></head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased klink-motion`}
       >
+        <MotionFeedback />
         <ClassroomBoundary>{children}</ClassroomBoundary>
       </body>
     </html>

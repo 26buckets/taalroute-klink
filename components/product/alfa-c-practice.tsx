@@ -445,7 +445,7 @@ function PilotPlayer({
             )}
           </div>
           <footer className="pilot-footer">
-            <output>
+            <output data-motion-feedback={result}>
               {result === 'right' ? (
                 <>
                   <Check />

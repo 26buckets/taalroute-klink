@@ -1,0 +1,14 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('.cp-home-hero button')[22m
+
+    at /Users/nicoknoester/.cache/klink-motion-20261031/scripts/test-demo-mobile-browser.mjs:24:87 {
+  log: [ "  - waiting for locator('.cp-home-hero button')" ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.4.0
