@@ -1,3 +1,13 @@
+## 31 oktober 2026 — vaste luisterplek linksboven ín het speelvlak
+
+Livebron `e1a13cd175fed4b235ebb4017b85f3444e214474`, schone canonieke main; Worker `d53c9571-5b4d-46e9-8ce9-af7b612c888c`. Gewoon gepubliceerd via `npm run deploy`, bovenop de werkelijke livebron `7e713d63` en canonieke dossierbasis `093a01a4`.
+
+Nico corrigeert de eerdere plek expliciet aan de hand van het rode kader in zijn screenshot. De hoofdluisterknop staat voortaan linksboven binnen het speelvlak, onder de oefentitel, en blijft bij scrollen bereikbaar. Hij staat niet meer in de oefenkop. Dit is de standaard voor de gedeelde spelers, de Alfa C-spelers, het cursistscherm van de docent en de afzonderlijke werkbladrijen. Alleen de JSX-doellocaties en plaatsingsstijl wijzigen; afspeelfuncties en de rest van de vijf spelerbestanden zijn identiek na weglaten van de doellocaties. Inhoud, audio, routes, voortgang, overige indeling, huidige lessen en vaste vloer blijven behouden. Geen nieuwe audio, beelden of configuratie.
+
+Lokaal en online slagen alle 204 desktop-/mobiel-/licht-/donkercontroles in Chromium/WebKit, inclusief de twaalf omgevingen van het gemarkeerde gesprek Een ander ingrediënt en behoud van de knop bij scrollen. Ook slagen 466 toetsen-/knopvergelijkingen voor alle 58 oefenvormen, de uitgebreide lokale én online toetsenreeks, 66 docentcontroles, zestien publicatiebewijstests, curriculum (48 geslaagd, één bestaande skip), typen, gerichte lint, bouw en de gewone publicatiepoort met 1.979 audiometadatarecords. Drie aangeboden oorspronkelijke audiobestanden zijn opnieuw bytegelijk teruggelezen. Fysieke telefoons zijn niet getest. Alle uitgebreide controles draaien lokaal; geen GitHub Actions toegevoegd of gebruikt.
+
+De concrete nieuwe uiterlijkstandaard en het bronbeeld staan in `VORMGEVING-VASTGEZET.md`, `docs/klink-owner-release-listen-playfield-left-20261031.json` en `docs/listen-playfield-left-20261031/`. De eerdere rechterhoek-vrijgave blijft als historie bewaard. De bronherstelkopie en het definitieve publicatiedossier staan geverifieerd in de bestaande Drive-projectmap `1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR`; zie `backup.json` en `final-backup.json`. Een back-up is geen livepublicatie; de livebron is hierboven apart bevestigd.
+
 ## 31 oktober 2026 — compacte luisterknop rechtsboven in de oefenvlakken
 
 Livebron `7e713d637dc5a213d488528efa663327fc752341`, schone canonieke main; Worker `32886038-9632-4655-b4cf-8db0563a6f21`. Gewoon gepubliceerd via `npm run deploy`, vanaf main `52d2048b` bovenop de werkelijke livebron `4ebac3a0`. De canonieke publicatiebranch en bron zijn bijgewerkt; geen alternatieve configuratie of GitHub Actions.
