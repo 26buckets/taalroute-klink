@@ -1,0 +1,45 @@
+{
+  "base": "http://127.0.0.1:18975",
+  "checks": [
+    {
+      "engine": "chromium",
+      "opened": 161,
+      "widths": 4,
+      "levels": 6,
+      "metadata": true,
+      "lazyOverview": true,
+      "backAndFocus": true
+    },
+    {
+      "engine": "chromium",
+      "nativeWordAudio": true,
+      "legacyPosition": true,
+      "legacyLink": true,
+      "sharedCompletion": true,
+      "reload": true,
+      "replay": true,
+      "oldStorageRetained": true
+    },
+    {
+      "engine": "webkit",
+      "opened": 161,
+      "widths": 4,
+      "levels": 6,
+      "metadata": true,
+      "lazyOverview": true,
+      "backAndFocus": true
+    },
+    {
+      "engine": "webkit",
+      "nativeWordAudio": true,
+      "legacyPosition": true,
+      "legacyLink": true,
+      "sharedCompletion": true,
+      "reload": true,
+      "replay": true,
+      "oldStorageRetained": true
+    }
+  ],
+  "errors": [],
+  "physicalDevice": false
+}
