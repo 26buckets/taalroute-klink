@@ -51,6 +51,7 @@ function fixture(t) {
 }
 async function resume(page, t) {
   await page.goto(base + '/#learner/alfa-c/docent-' + t.group);
+  await page.locator('.ac-docent').waitFor();
   await page.evaluate(
     ({ key, data }) => localStorage.setItem(key, JSON.stringify(data)),
     { key: teacherStorageKey, data: fixture(t) },

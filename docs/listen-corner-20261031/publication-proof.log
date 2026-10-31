@@ -1,0 +1,21 @@
+✔ approved corner placement retains content, audio, storage and full local checks (124.065166ms)
+✔ rejects missing appearance consent (0.499083ms)
+✔ rejects missing publication consent (0.111375ms)
+✔ rejects changed control (42.843ms)
+✔ rejects unverified backup (76.449541ms)
+✔ rejects incomplete mobile review (72.288333ms)
+PASS approved scope; nine rejected changes: consent, live base, audio/progress/reduced motion, backup and runtime changes
+✔ scripts/test-motion-release-20261031.mjs (9988.290917ms)
+✔ bounded worksheet cleanup retains all 58 lessons, answers and verified backup (176.920375ms)
+✔ rejects unapproved board design (92.049625ms)
+✔ rejects changed answers (84.731292ms)
+✔ rejects missing backup (104.547542ms)
+✔ rejects unapproved scope (64.629583ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9993.503208

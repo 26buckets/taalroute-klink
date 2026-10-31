@@ -11,7 +11,7 @@ const roots=['app','components','hooks','data','lib','public','scripts','db','dr
 const allowed=[
  'app/learner-layout.css',
  ...['exercise-listen','package-exercise-browser','package-group-practice','extended-practice-surface','standard-practice-surface','learning-path-surface','dialogue-surface','alfa-c-practice','alfa-c-dagelijks','alfa-c-functioneel','alfa-c-docent'].map(n=>'components/product/'+n+'.tsx'),
- 'scripts/check-teacher-packages-10-15-release-20261031.mjs','scripts/check-worksheet-cleanup-release-20261031.mjs','scripts/check-listen-corner-release-20261031.mjs','scripts/test-listen-corner-release-20261031.mjs','scripts/test-listen-corner-browser-20261031.mjs',
+ 'scripts/check-teacher-packages-10-15-release-20261031.mjs','scripts/check-worksheet-cleanup-release-20261031.mjs','scripts/check-listen-corner-release-20261031.mjs','scripts/test-listen-corner-release-20261031.mjs','scripts/test-listen-corner-browser-20261031.mjs','scripts/test-alfa-c-docent-browser.mjs',
 ];
 export function verifyListenCornerRelease(read=readFileSync){
  const r=JSON.parse(read('docs/klink-owner-release-listen-corner-20261031.json'));

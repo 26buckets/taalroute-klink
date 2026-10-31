@@ -1,0 +1,31 @@
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (8903.560667ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.469292ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (42.725292ms)
+✔ Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast (1.426417ms)
+✔ Sound sorting rejects unapproved or missing recordings (0.148ms)
+✔ Precise text selection preserves source token offsets and only accepts a complete exact answer span (0.33075ms)
+✔ Every attached precise mark task refers literally to its existing source and question (106.149375ms)
+✔ Gap players preserve the existing full sentence while withholding the complete model (86.819083ms)
+✔ Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders (30.604875ms)
+✔ Scene task stays unoffered without approved media and valid normalized regions (0.376208ms)
+✔ All branching paths contain two or three meaningful choices and finish as participation (0.254291ms)
+✔ Standard activities are reachable in existing stages and preserve source/lesson references (4257.238459ms)
+✔ Completion and model-supported answers do not add standard players to mastery/review (1.934042ms)
+✔ Expanded list coverage retains every word, all six players and distinct scene targets (304.167959ms)
+✔ Every new branch keeps source identities and terminates after two or three decisions (0.6385ms)
+✔ mat uses the canonical lesson, word, media and existing practice (0.710542ms)
+✔ three content routes are independent of support and trace prerequisites honestly (0.450917ms)
+✔ sentence and text cards preserve duplicates and reject invalid ordering (0.159208ms)
+✔ tile actions preserve unique known letters and allow reordering (0.08325ms)
+✔ session round trip preserves lesson; malformed storage fails closed (0.0915ms)
+✔ runtime sound manifest has isolated slots and rejects unsafe sources and fallbacks (0.29075ms)
+PASS: 24 unchanged double-sided A4 PDFs, 48 previews, 240 unique answers, validated lesson/round links
+✔ scripts/test-teacher-worksheets.mjs (1130.774916ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9220.893083

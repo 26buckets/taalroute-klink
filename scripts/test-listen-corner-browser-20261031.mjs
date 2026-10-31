@@ -45,7 +45,7 @@ for(const [engineName,engine]of Object.entries({chromium,webkit})){
      });
      assert(geometry.width>=48&&geometry.height>=48);
      assert(geometry.right>=0&&geometry.right<=24,JSON.stringify({route,width,geometry}));
-     assert(geometry.top>=0&&geometry.bottom>=0);
+     assert(geometry.top>=0&&geometry.top<=16&&geometry.bottom>=0,JSON.stringify({route,width,geometry}));
      assert(geometry.label);
      if(['meet','cards','text-question'].includes(route.name)&&theme==='light'&&width===390){
       await page.waitForFunction(()=>window.__listenAudio.every(a=>a.paused||a.ended));
