@@ -1,3 +1,17 @@
+## 31 oktober 2026 — één woordenoverzicht met zoeken en echte oefenfilters
+
+Livebron `d6246bf96c0aea01e230d5ef576fe0365f368b9c`, schone canonieke main; Worker `01d968f4-a15e-4854-b492-dd2179f4b22a`. Normaal gepubliceerd met `npm run deploy`, bovenop de nieuwste goedgekeurde Start-knoprelease `1a36fe5f` en dossiercommit `96f3bf78`. Die knop blijft direct naast Klankenkaart staan; de docentlessen blijven behouden.
+
+Nico keurde expliciet het menuadvies voor Woorden bekijken goed. Alle 5.127 bestaande woordkaarten staan samen, met zoeken, Alle woorden/Bewaarde woorden en Niveau → Onderdeel → Oefening. Koppelingen zijn afgeleid van echte doelwoord-ID’s en bestaande oefen-/woordronde-ID’s; combinaties matchen binnen dezelfde oefening. De 18 andere bron-ID’s zonder bestaande kaart worden niet op spelling aan andere betekenissen gekoppeld. Geen nieuwe beelden of audio; originele media, lidwoorden, betekenisverschillen, bewaar-ID’s en overige opslag behouden.
+
+Eerst 24 kaarten; meer op verzoek. De oefenindex laadt pas in de woordbibliotheek. De bouw blokkeert een verouderde index. De eerdere automatische beeldverkleining blijft behouden. Alleen de expliciet goedgekeurde bibliotheekweergave wijzigt; het oorspronkelijke vormgevingsreferentiepunt plus afzonderlijke Start- en bibliotheekakkoorden blijven bewaard.
+
+Lokaal: exacte/reproduceerbare index, alle kaartobjecten behouden, filters zonder kruislingse niveaukoppelingen, laden/herstel, zoek- en bewaarhandelingen, native woordaudio, navigatie en 12 vergelijkingen van overige schermen tegen de nieuwste livebasis op desktop/mobiel en licht/donker. Types, lint, build, beeldcontrole, normale volledige publicatiepoort en gerichte afkeurproeven van de nieuwe en twee voorafgaande publicatiepoorten geslaagd. Geen GitHub-workflows; zware controles lokaal.
+
+Online: 14 bibliotheekgevallen en 20 herhaal-/bewaargevallen in Chromium/WebKit; oorspronkelijke opname speelt af en bewaren/herladen werkt. Alle 29 gebouwde runtimebestanden zijn bytegelijk teruggelezen; de bestaande inhoudskenmerken in release.json zijn gelijk gebleven. Geen fysieke toestelproeven of nieuwe menselijke beeld-/uitspraakgoedkeuring.
+
+Bronback-up volledig teruggelezen met ZIP CRC en SHA256: `1Nm7kuDVPXZknz4esJ9U7IYdxRtEto52n`. Definitieve online-/herstelkopie: `docs/word-library-menu-20261031/final-backup.json`. Vrijgave, controle en scope: `docs/klink-owner-release-word-library-20261031.json` en `docs/word-library-menu-20261031/`. Gebruik deze canonieke opvolger; publiceer geen oudere bibliotheek terug.
+
 ## 31 oktober 2026 — Stap voor stap naast Klankenkaart
 
 Livebron `1a36fe5fe228f305069ca50e0a2a3b75c6f35191`, schone canonieke main; Worker `b63ee9c7-5b87-4e6e-88ce-e0234254aeb1`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de vaste vormgevingsvloer `cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2` en de bijbehorende vastzetafspraak `ec613baf`.
