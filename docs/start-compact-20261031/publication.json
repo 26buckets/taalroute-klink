@@ -1,0 +1,45 @@
+{
+  "sourceCommit": "f302ecb5ef17517eb373f7fb692a80d6cc0938a7",
+  "branch": "main",
+  "sourceClean": true,
+  "workerVersion": "b19fed3f-87b9-4dac-ae53-4f4c28be714c",
+  "release": {
+    "application": "Klink",
+    "builtAt": "2026-10-31T11:40:38.017Z",
+    "sourceCommit": "f302ecb5ef17517eb373f7fb692a80d6cc0938a7",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "publishedAt": "2026-10-31T11:46:31.177886+00:00",
+  "normalPublicationCommand": "npm run deploy",
+  "liveRuntimeFilesExact": 50,
+  "liveStartLayouts": 16,
+  "unaffectedScreenComparisons": 12,
+  "browsers": [
+    "Chromium",
+    "WebKit"
+  ],
+  "screenWidths": [
+    1366,
+    768,
+    390,
+    320
+  ],
+  "mobileTouch": true,
+  "nativeAudio": true,
+  "progressPreserved": true,
+  "historicalProofTests": 50,
+  "sourceApprovalRejectionTests": 8,
+  "previousPackageApprovalRejectionTests": 13,
+  "newerPackageGridPreserved": true,
+  "contentAndAudioFilesChanged": 0,
+  "storageMigration": false,
+  "githubWorkflows": false,
+  "physicalPhoneTest": false,
+  "touchFixtureNote": "Compare parsed progress values: existing resume serialization preserves values, with no guarantee of JSON property order."
+}

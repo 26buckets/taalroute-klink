@@ -1,3 +1,15 @@
+## 31 oktober 2026 — compact Start en hervatten in de kop
+
+Livebron `f302ecb5ef17517eb373f7fb692a80d6cc0938a7`, schone canonieke main; Worker `b19fed3f-87b9-4dac-ae53-4f4c28be714c`. Normaal gepubliceerd met `npm run deploy` als afstammeling van de nieuwste goedgekeurde woordkaartbreedte `ec0fb8f1` en dossiercommit `6248d38e`. Geen oude app teruggezet.
+
+Nico keurde de getoonde titelplek voor Verder met … expliciet goed en vroeg de overige Start-bediening compacter. De bestaande hervatknop staat op de titelplek, met dezelfde opslagvoorwaarde, lespositie en klikhandeling. Zonder bestaande voortgang blijft Start staan. Klankenkaart en Stap voor stap zijn compacter; alleen Start-tussenruimtes verkleind. Op zeer lage telefoons blijft de hervatknop zichtbaar. De niveauknoppen, verborgen B2-ruimte, twaalf categorieën, zes oorspronkelijke stappen/video's, actuele woordenbibliotheek, docentfuncties en nieuwste woordkaarten blijven behouden. Vier kleine UI-bronwijzigingen; geen nieuwe inhoud, audio, afbeeldingen, routes of opslagomzetting.
+
+Lokaal: twee browsers, vier breedtes, licht/donker; zestien Start-vergelijkingen en twaalf ongewijzigde andere schermen. Gerichte navigatie, zes unitcontroles, alle 46 originele klanken, toetsenbord, bestaande opslag en hervatten; types, lint en build geslaagd. Na het samenvoegen van de nieuwste publicatie opnieuw de navigatie-/schermcontrole, volledige publicatiepoort met 1.979 audiometadatacontroles en vijftig historische behoudtests. Acht gerichte afkeurproeven en dertien van de voorafgaande woordkaartvrijgave geslaagd. Alle zware controles lokaal; geen GitHub-workflows.
+
+Online: juiste broncommit, vijftig aangeboden bestanden bytegelijk en alle bestaande inhoudskenmerken gelijk. Zestien schermgevallen, twaalf overige schermvergelijkingen, directe navigatie, Enter, beide mobiele touch-browsers, originele klankaudio en dezelfde opgeslagen oefenpositie gecontroleerd. Geen fysieke telefoontest.
+
+Scope en akkoord: `docs/klink-owner-release-start-compact-20261031.json` en `docs/appearance-floor-20261031/approved-updates/start-compact-20261031.json`. Oorspronkelijke vormgevingsvloer en alle eerdere akkoorden behouden. Dossier: `docs/start-compact-20261031/`; actuele bronherstelkopie op Drive volledig teruggelezen: `18_kuynge4B-6KWUNFvyNNBhsDJQdW6lv`. Definitieve online-/herstelkopie: zie `final-backup.json` in het dossier.
+
 ## 31 oktober 2026 — woordkaarten vullen de witte werkkaart
 
 Livebron `ec0fb8f1e856062eeaebf98c9a8f52044e8cee3f`, schone canonieke main; Worker `3055be5e-b45d-472d-aea5-1f63f2be2130`. Via de normale `npm run deploy`-poort, bovenop de twintig zelfstandige woordcombinaties van de60f8a4. Nico vroeg expliciet de grote lege strook rechts naast de kaarten te verwijderen.
