@@ -1,3 +1,13 @@
+## 31 oktober 2026 — nieuwe beelden automatisch compact
+
+Livebron `fb4d4cb94b9158c3406a735db91b41d8165980a2`, schone canonieke main; Worker `3b7f81c2-98a4-4e6a-85a3-643172327cd8`. Via de gewone `npm run deploy`, afstammeling van e611ccae en canonieke documentatiebasis df2a0d3a.
+
+Nieuwe rasterbeelden worden vóór publicatie automatisch voorbereid. De gedeelde beeldkoppeling gebruikt compacte WebP-versies; originelen blijven behouden. Maximaal 96 KiB per appbeeld, normale foto’s 640 pixels, hero 960 en handschrift 1280. Een alleen-lezencontrole vóór iedere build blokkeert te zware/onvoorbereide/beschadigde beelden en oude koppelingen bij een gewijzigde bron. Grote vectoren en animaties vereisen gerichte controle. Voorbereide bestanden moeten zoals alle broninhoud gecontroleerd en gecommit zijn; geen omzeiling van de publicatiepoort.
+
+Alle 1.353 bestaande beeldbronnen en de 503 compacte versies behouden. Geen wijzigingen aan schermen, inhoud, audio, routes of voortgang; alle vijf live-inhoudskenmerken zijn gelijk. Bron-/afmetings-/budget-/integriteits- en herhaaltests, echte beeldresolver, types, lint, build, 50 historische behoudtests en negen gerichte afkeurproeven geslaagd. Online: alle 503 compacte beelden geladen in Chromium/WebKit, woordenbibliotheek en lichte start op desktop/mobiel gecontroleerd. Geen fysieke telefoontest. Geen GitHub-workflows.
+
+Dossier: `docs/automatic-images-20261031/`. `MENUADVIES.md` beschrijft één woordenbibliotheek met zoeken, Alle woorden/Bewaarde woorden en filters op niveau/onderdeel/oefening; dit menu is nog niet ingebouwd. Gecontroleerde bron-back-up: `1Svub_JQctuyF7F-x0adHkrRF5buD1IhW`; online-eindcontrole in `final-backup.json`.
+
 ## 31 oktober 2026 — compacte beelden en uitgesteld laden
 
 Livebron `e611ccae44d777f6d36db6aa100785fdfdf2363e`, schone canonieke main; Worker `7a405f0a-0c3b-4510-9693-1b8040886c00`. Via de normale `npm run deploy`-poort gepubliceerd als afstammeling van b368996c en de livebron dd2a0773.
