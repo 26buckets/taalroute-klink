@@ -24,7 +24,7 @@ export function PracticeLine({ available, selected, onSelect }: { available?: st
     window.addEventListener('message', dismiss);
     return () => window.removeEventListener('message', dismiss);
   }, [explanation]);
-  return <Dialog open={explanation !== null} onOpenChange={open => { if (!open) setExplanation(null); }}><section ref={line} className={`cp-practice-line${onSelect ? '' : ' cp-practice-line-overview'}`} aria-label="Oefenlijn"><h2>Zo oefen je</h2>
+  return <Dialog open={explanation !== null} onOpenChange={open => { if (!open) setExplanation(null); }}><section ref={line} className={`cp-practice-line${onSelect ? '' : ' cp-practice-line-overview'}`} aria-label="Oefenlijn">{onSelect && <h2>Zo oefen je</h2>}
     <ol>{practiceStages.map((stage, index) => {
       const Icon = stageIcons[index], enabled = !available || available.includes(stage.id);
       const number = <span className="cp-line-number">{index + 1}</span>;

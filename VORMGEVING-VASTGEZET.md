@@ -1,5 +1,7 @@
 # Klink — vaste vormgevingsbasis
 
+Gerichte correctie van Nico, 31 oktober 2026: in de uitgeklapte uitleg op Start staat Zo oefen je alleen op de uitklapknop. De herhaalde binnentitel is verwijderd; de zes stappen en hun uitleg blijven behouden. De zelfstandige oefenlijn behoudt zijn titel. Zie `docs/klink-owner-release-single-practice-title-20261031.json`.
+
 Nieuwe standaard op concrete correctie van Nico, 31 oktober 2026: de hoofdluisterknop staat altijd **linksboven binnen het speelvlak, onder de oefentitel**, zoals met het rode kader aangegeven in `docs/listen-playfield-left-20261031/marked-reference.png`. Dit vervangt uitsluitend de eerdere plaatsing rechtsboven in de kop. Behoud de compacte knop, bestaande afspeelfunctie, toetsen, inhoud, voortgang en overige indeling. Dit is een gerichte vervolgcorrectie op de gepubliceerde echte app. Zie `docs/klink-owner-release-listen-playfield-left-20261031.json`.
 
 Gericht akkoord van Nico, 31 oktober 2026: het getoonde voorbeeld met een compacte luisterknop rechtsboven in het bestaande oefenvlak wordt doorgevoerd en gepubliceerd. Alleen de primaire luisterbediening verhuist; losse antwoord- en beurtgeluiden blijven bij hun inhoud. Behoud schermindeling, inhoud, media, voortgang en de eerdere vloer. Zie `docs/klink-owner-release-listen-corner-20261031.json` en `docs/listen-corner-20261031/`. De oorspronkelijke vloer blijft bewaard; uitsluitend dit akkoord is toegevoegd.
