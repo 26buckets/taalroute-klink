@@ -1,3 +1,13 @@
+## 31 oktober 2026 — bewaarkeuze bij herhaalwerk behouden
+
+Livebron `b0191b87b73e4062f1a9d19a4b60dc067917a938`, schone canonieke main; Worker `de8691c5-db5d-443e-9c02-d6b9382b0dd4`. Via de normale `npm run deploy` gepubliceerd als afstammeling van de nieuwste automatische beeldvoorbereiding `fb4d4cb94b9158c3406a735db91b41d8165980a2` en canonieke bron `ca209e707201e617196983352f3d7541c1be7b2c`.
+
+Bij nul bewaarde woorden staat het bestaande gecentreerde blok **Kies eerst een woord** weer altijd in Nog een keer. Eerder werd het verborgen zodra herhaalwerk klaarstond of een woordenmix mogelijk was. De bestaande knoppen Oefen opnieuw en Woordenmix blijven beschikbaar. Eén bestaande weergavevoorwaarde verwijderd; geen inhoud, media, routes, antwoorden, opslagformaten of toetsenlogica gewijzigd. Alle vijf inhoudskenmerken gelijk aan de vorige liveversie; nieuwste beeldoptimalisatie en automatische beeldvoorbereiding behouden.
+
+Lokaal: fout op productie gereproduceerd, twintig browsergevallen in Chromium/WebKit op desktop en mobiel, bewaren/herladen/originele woordaudio/verwijderen, geplande herhaling en woordenmix werkelijk geopend, dertien gerichte unittests, bestaande toetsen-/audio-/voortgangsreeksen en directe navigatie, types, lint en productieopbouw geslaagd. Zes nieuwe afkeurproeven, alle vijftig historische behoudtests en de normale publicatiepoort inclusief 1.979 audiometadatacontroles geslaagd. Alle controles lokaal; geen GitHub-workflows aanwezig of toegevoegd.
+
+Online: dezelfde twintig bewaar-/herhaalgevallen en 38 bestanden bytegelijk gecontroleerd. Geen fysieke telefoontest of nieuwe uitspraakbeoordeling. Bronherstelkopie volledig teruggelezen met ZIP- en bronhashcontrole: `11dPZEDCD7lZ6rb5JYUjK-FrfmncfJv18`. Definitief onlinedossier: `docs/review-empty-20261031/`; volledig teruggelezen online-/herstelkopie: `1WdL7YodrbpU4xKS9-EWZks27jm3EHKB_`, zie `final-backup.json`.
+
 ## 31 oktober 2026 — nieuwe beelden automatisch compact
 
 Livebron `fb4d4cb94b9158c3406a735db91b41d8165980a2`, schone canonieke main; Worker `3b7f81c2-98a4-4e6a-85a3-643172327cd8`. Via de gewone `npm run deploy`, afstammeling van e611ccae en canonieke documentatiebasis df2a0d3a.
