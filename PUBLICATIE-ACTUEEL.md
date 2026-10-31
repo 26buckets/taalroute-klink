@@ -1,3 +1,13 @@
+## 31 oktober 2026 — rustige vormgeving van Nog een keer
+
+Livebron `feb9d1276880b571a85506393f4cc6430ddc9b47`, schone canonieke main; Worker `5698fc18-b49f-46bb-87db-6ef203eadddb`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de nieuwste goedgekeurde oefenlijstrasters `bf4eb0cf` en dossiercommit `b1ca75f8`. De nieuwste Start-, woordkaart-, Blinddruk- en oefenlijstwijzigingen zijn behouden.
+
+Nico heeft het getoonde voorbeeld en online publicatie expliciet goedgekeurd. Alleen Nog een keer gewijzigd: Eerder geoefend, uitleg en bestaande herhaalacties bij elkaar, een subtiele scheidingslijn en het behouden gecentreerde bewaarblok. Op mobiel staan de bestaande acties onder elkaar. De oorspronkelijke beschikbaarheid van Oefen opnieuw en Woordenmix blijft behouden; Tik en luister verschijnt bij bewaarde woorden. Geen inhoud-, audio-, route-, opslag- of voortgangswijziging. De oorspronkelijke uiterlijkvloer blijft staan; uitsluitend dit scherm heeft een brongebonden aanvullend akkoord.
+
+Lokaal: types, gerichte lint, build, 48 schermtoestanden in Chromium/WebKit met desktop/mobiel en licht/donker, twaalf andere schermvergelijkingen, twintig bewaar-/herlaad-/audio-/verwijdercontroles, Enter/spatie/aanraken en behoud van oorspronkelijke voortgang geslaagd. Vijftig historische behoudtests geslaagd voor de laatste onafhankelijke rasterintegratie; de twee geraakte UI-bestanden bleven bytegelijk. Daarna opnieuw build, normale volledige publicatiepoort (inclusief bestaande audiometadata), eigen en voorafgaande afkeurproeven en volledige gerichte browsercontrole uitgevoerd. Geen zware GitHub-workflows.
+
+Online: 48 schermtoestanden, twaalf overige schermvergelijkingen, twintig bewaarcontroles, bediening met Enter/spatie/aanraken en originele audio in beide mobiele browsers geslaagd. Vijftig werkelijk aangeboden bestanden bytegelijk aan de build; alle vijf inhoudskenmerken gelijk aan de vorige livebron. Geen fysieke telefoontest. Dossier, akkoord en teruggelezen Drive-herstelkopieen: `docs/review-style-20261031/` en `docs/appearance-floor-20261031/approved-updates/review-style-20261031.json`.
+
 ## 31 oktober 2026 — vaste kaartbreedte in oefenlijsten
 
 Livebron `bf4eb0cffa0aa0be27cec1df39d1e8126e38e44b`, schone canonieke main; Worker `69278d06-687b-4349-bf84-fa755dd3f159`. Normaal gepubliceerd via `npm run deploy`, bovenop de nieuwste goedgekeurde Blinddruk-versie `a441bf35`. De laatste Start-, woordkaart- en tijdelijke beeldverbeteringen blijven behouden.
