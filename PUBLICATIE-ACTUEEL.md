@@ -1,3 +1,17 @@
+## 31 oktober 2026 — twee leesrondes voor A1 en A2
+
+Livebron `f1133f7afed0e90ecdb04664ea6d4fde0d3aa253`, schone canonieke main; Worker `e84ce14d-1c90-4805-9d30-f60faf201511`. Normaal gepubliceerd via `npm run deploy` bovenop de laatst gepubliceerde bron `bd246ef9ded72364acb0a4c6d60a9137d1446698`, inclusief de goedgekeurde interactieve reacties en gekoppelde docentwerkbladen.
+
+Teksten → Zelf oefenen → Begrijp het verhaal bevat nu één leesronde per niveau: telkens drie bestaande nagekeken kandidaatteksten en twaalf begripsvragen. Alle zes leesteksten zijn woordelijk behouden. Antwoorden en gerichte feedback zijn brongebonden gecontroleerd. De interne bewijsplaatsen staan in het redactiedossier en de brongegevens, niet als dubbele bewijsregel op het cursistenscherm. Het vastgezette uiterlijk, de 1.485 bestaande extra collecties, alle overige inhoud, media, routes en oorspronkelijke voortgang blijven behouden. Geen opslagomzetting.
+
+Voor deze zes nieuwe teksten is geen exacte bestaande opname vastgesteld. De leesrondes bieden daarom geen voorleesaudio; er zijn geen nieuwe opnamen gegenereerd en geen afwijkende of defecte luisterknoppen toegevoegd. De bestaande audio is behouden, met een daadwerkelijke afspeelcontrole en de normale controle van 1.979 merkmetadatarecords. Geen menselijke uitspraakgoedkeuring geclaimd.
+
+Lokaal geslaagd: inhoud en 24 antwoordmodellen, de volledige curriculumcontrole (48 geslaagd, één bestaande overgeslagen controle), navigatie en voortgang, typen, gerichte lintcontrole en bouw, 24 complete browserreeksen met 288 antwoord-/herpogingsgevallen in Chromium/WebKit op drie breedtes en licht/donker, acht vergelijkingen van de bestaande speler met live en alle 50 historische publicatiecontroles plus tien gerichte afkeurproeven.
+
+Online geslaagd: acht volledige leesrondes met 96 antwoord-/herpogingsgevallen in beide engines op desktop/mobiel in licht; afronden, herhalen en hervatten zijn gecontroleerd. De twee nieuwe inhoudsbestanden, alle gebouwde clientbestanden en een bestaande opname zijn teruggelezen: 32 aangeboden bestanden bytegelijk. Fysieke apparaatproef, onafhankelijke menselijke review en cursistenpilot blijven open.
+
+Akkoord, bron, controles en geverifieerde Drive-herstelkopieën: `docs/leesrondes-a1-a2-20261031/` en `docs/klink-owner-release-reading-rounds-20261031.json`. De normale opvolgende publicatiepoort blijft verplicht. Geen GitHub Actions-workflows; alle zware controles lokaal. Een Drive-back-up is geen livepublicatie; de liveversie is hierboven afzonderlijk bevestigd.
+
 ## 31 oktober 2026 — rustige interacties in de hele Klink-app
 
 Livebron `bd246ef9ded72364acb0a4c6d60a9137d1446698`, schone canonieke main; Worker `2aed9eb8-f5a7-4706-97bb-a3db24f47ca6`. Normaal gepubliceerd via `npm run deploy`, bovenop de werkelijke laatste werkbladenversie `7b0e0a88` en dossiercommit `7e7cf58e`. Alle eerdere Start-, woorden-, synoniemen-, herhaal- en docent/werkbladfuncties behouden.
