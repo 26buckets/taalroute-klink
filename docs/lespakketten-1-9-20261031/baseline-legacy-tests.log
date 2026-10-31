@@ -1,0 +1,568 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Only avoid redundant image resizing for already compact images
++ actual - expected
+... Skipped lines
+
+  "'use client';\n" +
++   "import { WordPlaceholder } from './word-placeholder';\n" +
++   "import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';\n" +
+    '\n' +
+    "import { useId } from 'react';\n" +
++   "import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';\n" +
+    "import { wordWithArticle } from '@/lib/word-articles';\n" +
+    '\n' +
+    "import { DialogueSurface, type DialogueControls } from './dialogue-surface';\n" +
+    "import { WordSounds } from './sound-reference';\n" +
+    "import { ImportedPracticeSurface } from './imported-practice-surface';\n" +
+...
+    "} from 'lucide-react';\n" +
++   "import Image from './compact-image';\n" +
+-   "import Image from 'next/image';\n" +
+    "import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode } from 'react';\n" +
+    "import { stopMedia } from '@/components/product/shared';\n" +
+    "import { StandardPracticeSurface } from './standard-practice-surface';\n" +
+    "import { orderAccepted } from '@/lib/standard-player-contract';\n" +
+    "import { ExtendedPracticeSurface } from './extended-practice-surface';\n" +
+...
+    'const asArray = <T,>(value: unknown) => (Array.isArray(value) ? value as T[] : []);\n' +
++   'const wordLabels = new Map(allPackageWords.map(word => [word.id, word.word]));\n' +
+    "const wordPictures = new Map(allPackageWords.filter(word => word.image).map(word => [word.id, { src: word.image, altText: 'Afbeelding bij het woord' }]));\n" +
+    "const asRecord = (value: unknown) => value && typeof value === 'object' ? value as Record<string, unknown> : {};\n" +
+    "const asString = (value: unknown) => typeof value === 'string' || typeof value === 'number' ? `${value}` : '';\n" +
+    "const instructionMemoryKey = 'klink.instructies.v1';\n" +
+    'function previousInstructions(): Set<string> {\n' +
+...
+    '  const [autoPaused, setAutoPaused] = useState(false);\n' +
++   '  const [keyboardMode, setKeyboardMode] = useState(false);\n' +
++   '  const keyboardUsed = useRef(false);\n' +
++   '  const advancing = useRef(false);\n' +
++   '  const [recording, setRecording] = useState(false);\n' +
+    '  const [holdFeedback, setHoldFeedback] = useState(false);\n' +
+    '  const [paceSeconds, setPaceSeconds] = useState(0);\n' +
+    '  const [pageVisible, setPageVisible] = useState(true);\n' +
+    '  const [audioPending, setAudioPending] = useState(false);\n' +
+    '  const [instructionFailed, setInstructionFailed] = useState(false);\n' +
+...
+    '  const exerciseStage = useRef<HTMLDivElement>(null);\n' +
++   '  useLayoutEffect(() => {\n' +
++   '    const stage = exerciseStage.current;\n' +
++   "    const main = stage?.closest<HTMLElement>('.learner-main');\n" +
++   '    if (!stage || !main) return;\n' +
++   '    const resize = () => {\n' +
++   "      const nav = document.querySelector<HTMLElement>('.learner-nav');\n" +
++   "      const bottom = nav && getComputedStyle(nav).position === 'fixed' ? nav.getBoundingClientRect().top : window.innerHeight;\n" +
++   "      const feedback = stage.parentElement?.querySelector<HTMLElement>('.cp-exercise-feedback');\n" +
++   '      const top = stage.getBoundingClientRect().top + main.scrollTop;\n' +
++   "      stage.style.setProperty('--practice-stage-height', `${Math.max(180, bottom - top - (feedback?.offsetHeight ?? 112) - 12)}px`);\n" +
++   '    };\n' +
++   '    const observer = new ResizeObserver(resize);\n' +
++   '    observer.observe(main);\n' +
++   "    for (const el of main.querySelectorAll('.cp-context-header, .cp-practice-display, .cp-exercise-record-head, .cp-exercise-feedback')) observer.observe(el);\n" +
++   "    window.addEventListener('resize', resize);\n" +
++   '    resize();\n' +
++   "    return () => { observer.disconnect(); window.removeEventListener('resize', resize); };\n" +
++   '  }, [guided, practiceRound, completed]);\n' +
++   '  const completio'... 77215 more characters
+-   '  const completionHeading = useRef<HTMLHeadingElement>(null);\n' +
+-   '  const records = exercises.filter((exercise) => exercise.componentId === familyId);\n' +
+-   '  const exercise = records[Math.min(recordIndex, Math.max(0, records.length - 1))] ?? exercises[0];\n' +
+-   '  const guidedIndex = guided ? exercises.findIndex((item) => item.exerciseId === exercise?.exerciseId) : -1;\n' +
+-   "  const exerciseId = exercise?.exerciseId ?? '';\n" +
+-   "  const selfPaced = exercise?.assessment === 'participation' || exercise?.componentId === 'ALF-CMP-001';\n" +
+-   '  const needsListen = Boolean(exercise?.requiresAudio);\n' +
+-   "  const sentenceQuestion = exercise?.mode === 'sentence-question';\n" +
+-   '  const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);\n' +
+-   '  const firstLetterGuide = exercise && hasFirstLetterGuide(exercise, guided);\n' +
+-   "  const manualAdvance = exercise?.mode === 'connected-dialogue' || exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));\n" +
+-   "  const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;\n" +
+-   '  const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);\n' +
+-   '  async function listen(source?: string, automaticStart = false, singleTurn?: number) {\n' +
+-   "    if ((exercise?.readingTask || exercise?.componentId === 'KLINK-EXTENDED' || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;\n" +
+-   "    if (!automaticStart && result === 'right') setHo"... 69329 more characters
+
+    at file:///Users/nicoknoester/.cache/klink-docent-baseline-20261031/scripts/test-image-release-20261030.mjs:11:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:447:25)
+    at async node:internal/modules/esm/loader:646:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: "'use client';\n" +
+    "import { WordPlaceholder } from './word-placeholder';\n" +
+    "import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';\n" +
+    '\n' +
+    "import { useId } from 'react';\n" +
+    "import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';\n" +
+    "import { wordWithArticle } from '@/lib/word-articles';\n" +
+    '\n' +
+    "import { DialogueSurface, type DialogueControls } from './dialogue-surface';\n" +
+    "import { WordSounds } from './sound-reference';\n" +
+    "import { ImportedPracticeSurface } from './imported-practice-surface';\n" +
+    "import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';\n" +
+    '\n' +
+    '/* oxlint-disable jsx-a11y/media-has-caption -- Eigen oefenopnames hebben geen afzonderlijk ondertitelspoor. */\n' +
+    '\n' +
+    'import type {\n' +
+    '  ExerciseImage,\n' +
+    '  PackageDefinition,\n' +
+    '  PackageExercise,\n' +
+    '  AudioPlayer,\n' +
+    '  PracticeAttempt,\n' +
+    "} from '@/lib/package-content';\n" +
+    "import { exerciseHelp, hasFirstLetterGuide, isBeginnerLesson, beginnerExerciseDemo } from '@/lib/lesson-plan';\n" +
+    "import { applyDefaultAudioRate } from '@/lib/media-player';\n" +
+    "import { isInstructionAudioEnabled, isWithdrawnAudio } from '@/lib/audio-policy';\n" +
+    "import { learnerExerciseNames, learnerPhaseNames } from '@/lib/learner-copy';\n" +
+    'import {\n' +
+    '  ArrowLeft,\n' +
+    '  ArrowRight,\n' +
+    '  Check,\n' +
+    'Eye,\n' +
+    '  CircleAlert,\n' +
+    '  FileText,\n' +
+    '  Pointer as Hand,\n' +
+    '  Mic,\n' +
+    '  Pause,\n' +
+    ' Play,\n' +
+    '  PencilLine,\n' +
+    '  RefreshCw,\n' +
+    '  RotateCcw,\n' +
+    '  Shapes,\n' +
+    'Search,\n' +
+    '  Volume2,\n' +
+    "} from 'lucide-react';\n" +
+    "import Image from './compact-image';\n" +
+    "import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode } from 'react';\n" +
+    "import { stopMedia } from '@/components/product/shared';\n" +
+    "import { StandardPracticeSurface } from './standard-practice-surface';\n" +
+    "import { orderAccepted } from '@/lib/standard-player-contract';\n" +
+    "import { ExtendedPracticeSurface } from './extended-practice-surface';\n" +
+    "import { LearningPathSurface } from './learning-path-surface';\n" +
+    "import { useRouteSettings } from './route-settings';\n" +
+    "import { allPackageWords } from '@/lib/package-content';\n" +
+    '\n' +
+    "type ResultState = 'idle' | 'right' | 'wrong';\n" +
+    'type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };\n' +
+    'type Tile = { id: string; token: string };\n' +
+    'type TextField = { id: string; acceptedAnswers?: string[] };\n' +
+    'type ExerciseItem = { itemId: string; text?: string; content?: CardContent; pairKey?: string };\n' +
+    'type CardContent = { text?: string; image?: ExerciseImage };\n' +
+    '\n' +
+    "const normalize = (value: string) => value.trim().replace(/\\s+/g, ' ').toLocaleLowerCase('nl-NL').replace(/[.!?]+$/, '');\n" +
+    'const asArray = <T,>(value: unknown) => (Array.isArray(value) ? value as T[] : []);\n' +
+    'const wordLabels = new Map(allPackageWords.map(word => [word.id, word.word]));\n' +
+    "const wordPictures = new Map(allPackageWords.filter(word => word.image).map(word => [word.id, { src: word.image, altText: 'Afbeelding bij het woord' }]));\n" +
+    "const asRecord = (value: unknown) => value && typeof value === 'object' ? value as Record<string, unknown> : {};\n" +
+    "const asString = (value: unknown) => typeof value === 'string' || typeof value === 'number' ? `${value}` : '';\n" +
+    "const instructionMemoryKey = 'klink.instructies.v1';\n" +
+    'function previousInstructions(): Set<string> {\n' +
+    "  if (typeof window === 'undefined') return new Set();\n" +
+    '  try {\n' +
+    "    const stored: unknown = JSON.parse(sessionStorage.getItem(instructionMemoryKey) ?? '[]');\n" +
+    "    return new Set(Array.isArray(stored) ? stored.filter((item): item is string => typeof item === 'string' && item.startsWith('/package-audio/instructions/')) : []);\n" +
+    '  } catch { return new Set(); }\n' +
+    '}\n' +
+    '\n' +
+    'function exerciseImage(exercise: PackageExercise) {\n' +
+    '  if (exercise.prompt?.image) return exercise.prompt.image;\n' +
+    '  const direct = asRecord(exercise.image);\n' +
+    '  if (direct.assetId || direct.src) return direct as ExerciseImage;\n' +
+    '  const stimulus = asRecord(exercise.stimulus);\n' +
+    '  const image = asRecord(stimulus.image);\n' +
+    '  return image.assetId || image.src ? image as ExerciseImage : undefined;\n' +
+    '}\n' +
+    '\n' +
+    'export function findAudioSource(value: unknown): string | undefined {\n' +
+    '  if (Array.isArray(value)) {\n' +
+    '    for (const item of value) {\n' +
+    '      const source = findAudioSource(item);\n' +
+    '      if (source) return source;\n' +
+    '    }\n' +
+    '    return undefined;\n' +
+    '  }\n' +
+    "  if (!value || typeof value !== 'object') return undefined;\n" +
+    '  const record = value as Record<string, unknown>;\n' +
+    "  if (typeof record.audioId === 'string' && typeof record.src === 'string') return record.src;\n" +
+    '  for (const [key, item] of Object.entries(record)) {\n' +
+    "    if (key === 'instructionAudio') continue;\n" +
+    '    const source = findAudioSource(item);\n' +
+    '    if (source) return source;\n' +
+    '  }\n' +
+    '  return undefined;\n' +
+    '}\n' +
+    '\n' +
+    'function containsPublishedImage(value: unknown): boolean {\n' +
+    '  if (Array.isArray(value)) return value.some(containsPublishedImage);\n' +
+    "  if (!value || typeof value !== 'object') return false;\n" +
+    '  const record = value as Record<string, unknown>;\n' +
+    "  return typeof record.src === 'string' || Object.entries(record).some(([key, value]) => key !== 'audio' && key !== 'instructionAudio' && containsPublishedImage(value));\n" +
+    '}\n' +
+    '\n' +
+    'function representativeIndex(exercises: PackageExercise[], familyId: string) {\n' +
+    '  const records = exercises.filter((exercise) => exercise.componentId === familyId);\n' +
+    '  const visualIndex = records.findIndex(containsPublishedImage);\n' +
+    '  return visualIndex >= 0 ? visualIndex : 0;\n' +
+    '}\n' +
+    '\n' +
+    'export function PackageExerciseBrowser({\n' +
+    '  pack,\n' +
+    '  onAudio,\n' +
+    '  exercises = pack.exercises,\n' +
+    '  guided = false,\n' +
+    "  eyebrow = 'Oefenen',\n" +
+    "  title = 'Kies een oefening',\n" +
+    "  description = 'Kijk, luister en oefen.',\n" +
+    '  onComplete,\n' +
+    "  completeLabel = 'Terug naar de lessen',\n" +
+    '  initialExerciseId,\n' +
+    '  onPosition,\n' +
+    '  onLessonDone,\n' +
+    '  onAttempt,\n' +
+    '  practiceRound = false,\n' +
+    '  exerciseMenu,\n' +
+    '}: {\n' +
+    '  pack: PackageDefinition;\n' +
+    '  onAudio: AudioPlayer;\n' +
+    '  exercises?: PackageExercise[];\n' +
+    '  guided?: boolean;\n' +
+    '  eyebrow?: string;\n' +
+    '  title?: string;\n' +
+    '  description?: string;\n' +
+    '  onComplete?: () => void;\n' +
+    '  completeLabel?: string;\n' +
+    '  initialExerciseId?: string;\n' +
+    '  onPosition?: (exerciseId: string) => void;\n' +
+    '  onLessonDone?: () => void;\n' +
+    '  onAttempt?: (attempt: PracticeAttempt) => void;\n' +
+    '  practiceRound?: boolean;\n' +
+    '  exerciseMenu?: ExerciseMenuProps;\n' +
+    '}) {\n' +
+    '  const exerciseTypes = pack.exerciseTypes\n' +
+    '    .map((type) => ({ ...type, label: learnerExerciseNames[type.id] ?? type.label, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))\n' +
+    '    .filter((type) => type.count > 0);\n' +
+    '  const initialExercise = exercises.find(item => item.exerciseId === initialExerciseId) ?? exercises[0];\n' +
+    '  // Browsing ahead must not move the saved route past unfinished exercises.\n' +
+    '  const [nextRequiredIndex, setNextRequiredIndex] = useState(() => Math.max(0, exercises.findIndex(item => item.exerciseId === initialExercise?.exerciseId)));\n' +
+    "  const initialFamilyId = (guided || initialExerciseId ? initialExercise?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';\n" +
+    '  const [familyId, setFamilyId] = useState(initialFamilyId);\n' +
+    '  const [recordIndex, setRecordIndex] = useState(() => guided || initialExerciseId ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));\n' +
+    '  const [completed, setCompleted] = useState(false);\n' +
+    '  const [returnedToUnfinished, setReturnedToUnfinished] = useState(false);\n' +
+    "  const [result, setResult] = useState<ResultState>('idle');\n" +
+    '  const [exerciseMenuOpen, setExerciseMenuOpen] = useState(false);\n' +
+    "  const [message, setMessage] = useState('Neem je tijd.');\n" +
+    '  const [heard, setHeard] = useState(false);\n' +
+    '  const [activeTurn, setActiveTurn] = useState(0);\n' +
+    '  const [completedDialoguePlays, setCompletedDialoguePlays] = useState(0);\n' +
+    '  const heardTurns = useRef(new Set<number>());\n' +
+    '  const [audioError, setAudioError] = useState(false);\n' +
+    '  const [autoPaused, setAutoPaused] = useState(false);\n' +
+    '  const [keyboardMode, setKeyboardMode] = useState(false);\n' +
+    '  const keyboardUsed = useRef(false);\n' +
+    '  const advancing = useRef(false);\n' +
+    '  const [recording, setRecording] = useState(false);\n' +
+    '  const [holdFeedback, setHoldFeedback] = useState(false);\n' +
+    '  const [paceSeconds, setPaceSeconds] = useState(0);\n' +
+    '  const [pageVisible, setPageVisible] = useState(true);\n' +
+    '  const [audioPending, setAudioPending] = useState(false);\n' +
+    '  const [instructionFailed, setInstructionFailed] = useState(false);\n' +
+    "  const [speakingOptionId, setSpeakingOptionId] = useState('');\n" +
+    '  const playback = useRef<AbortController | null>(null);\n' +
+    '  const explainedModes = useRef(previousInstructions());\n' +
+    '  const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });\n' +
+    '  const { settings } = useRouteSettings();\n' +
+    '  const reportPosition = useEffectEvent((id: string) => {\n' +
+    '    if (practiceRound || exercises.findIndex(item => item.exerciseId === id) <= nextRequiredIndex) onPosition?.(id);\n' +
+    '  });\n' +
+    "  const currentId = useRef('');\n" +
+    '  const taskHeading = useRef<HTMLHeadingElement>(null);\n' +
+    '  const exerciseStage = useRef<HTMLDivElement>(null);\n' +
+    '  useLayoutEffect(() => {\n' +
+    '    const stage = exerciseStage.current;\n' +
+    "    const main = stage?.closest<HTMLElement>('.learner-main');\n" +
+    '    if (!stage || !main) return;\n' +
+    '    const resize = () => {\n' +
+    "      const nav = document.querySelector<HTMLElement>('.learner-nav');\n" +
+    "      const bottom = nav && getComputedStyle(nav).position === 'fixed' ? nav.getBoundingClientRect().top : window.innerHeight;\n" +
+    "      const feedback = stage.parentElement?.querySelector<HTMLElement>('.cp-exercise-feedback');\n" +
+    '      const top = stage.getBoundingClientRect().top + main.scrollTop;\n' +
+    "      stage.style.setProperty('--practice-stage-height', `${Math.max(180, bottom - top - (feedback?.offsetHeight ?? 112) - 12)}px`);\n" +
+    '    };\n' +
+    '    const observer = new ResizeObserver(resize);\n' +
+    '    observer.observe(main);\n' +
+    "    for (const el of main.querySelectorAll('.cp-context-header, .cp-practice-display, .cp-exercise-record-head, .cp-exercise-feedback')) observer.observe(el);\n" +
+    "    window.addEventListener('resize', resize);\n" +
+    '    resize();\n' +
+    "    return () => { observer.disconnect(); window.removeEventListener('resize', resize); };\n" +
+    '  }, [guided, practiceRound, completed]);\n' +
+    '  const completio'... 77215 more characters,
+  expected: "'use client';\n" +
+    '\n' +
+    "import { useId } from 'react';\n" +
+    "import { wordWithArticle } from '@/lib/word-articles';\n" +
+    '\n' +
+    "import { DialogueSurface, type DialogueControls } from './dialogue-surface';\n" +
+    "import { WordSounds } from './sound-reference';\n" +
+    "import { ImportedPracticeSurface } from './imported-practice-surface';\n" +
+    "import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';\n" +
+    '\n' +
+    '/* oxlint-disable jsx-a11y/media-has-caption -- Eigen oefenopnames hebben geen afzonderlijk ondertitelspoor. */\n' +
+    '\n' +
+    'import type {\n' +
+    '  ExerciseImage,\n' +
+    '  PackageDefinition,\n' +
+    '  PackageExercise,\n' +
+    '  AudioPlayer,\n' +
+    '  PracticeAttempt,\n' +
+    "} from '@/lib/package-content';\n" +
+    "import { exerciseHelp, hasFirstLetterGuide, isBeginnerLesson, beginnerExerciseDemo } from '@/lib/lesson-plan';\n" +
+    "import { applyDefaultAudioRate } from '@/lib/media-player';\n" +
+    "import { isInstructionAudioEnabled, isWithdrawnAudio } from '@/lib/audio-policy';\n" +
+    "import { learnerExerciseNames, learnerPhaseNames } from '@/lib/learner-copy';\n" +
+    'import {\n' +
+    '  ArrowLeft,\n' +
+    '  ArrowRight,\n' +
+    '  Check,\n' +
+    'Eye,\n' +
+    '  CircleAlert,\n' +
+    '  FileText,\n' +
+    '  Pointer as Hand,\n' +
+    '  Mic,\n' +
+    '  Pause,\n' +
+    ' Play,\n' +
+    '  PencilLine,\n' +
+    '  RefreshCw,\n' +
+    '  RotateCcw,\n' +
+    '  Shapes,\n' +
+    'Search,\n' +
+    '  Volume2,\n' +
+    "} from 'lucide-react';\n" +
+    "import Image from 'next/image';\n" +
+    "import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState, type ReactNode } from 'react';\n" +
+    "import { stopMedia } from '@/components/product/shared';\n" +
+    "import { StandardPracticeSurface } from './standard-practice-surface';\n" +
+    "import { orderAccepted } from '@/lib/standard-player-contract';\n" +
+    "import { ExtendedPracticeSurface } from './extended-practice-surface';\n" +
+    "import { LearningPathSurface } from './learning-path-surface';\n" +
+    "import { useRouteSettings } from './route-settings';\n" +
+    "import { allPackageWords } from '@/lib/package-content';\n" +
+    '\n' +
+    "type ResultState = 'idle' | 'right' | 'wrong';\n" +
+    'type ChoiceOption = { id: string; label?: string; grapheme?: string; image?: ExerciseImage; audio?: unknown };\n' +
+    'type Tile = { id: string; token: string };\n' +
+    'type TextField = { id: string; acceptedAnswers?: string[] };\n' +
+    'type ExerciseItem = { itemId: string; text?: string; content?: CardContent; pairKey?: string };\n' +
+    'type CardContent = { text?: string; image?: ExerciseImage };\n' +
+    '\n' +
+    "const normalize = (value: string) => value.trim().replace(/\\s+/g, ' ').toLocaleLowerCase('nl-NL').replace(/[.!?]+$/, '');\n" +
+    'const asArray = <T,>(value: unknown) => (Array.isArray(value) ? value as T[] : []);\n' +
+    "const wordPictures = new Map(allPackageWords.filter(word => word.image).map(word => [word.id, { src: word.image, altText: 'Afbeelding bij het woord' }]));\n" +
+    "const asRecord = (value: unknown) => value && typeof value === 'object' ? value as Record<string, unknown> : {};\n" +
+    "const asString = (value: unknown) => typeof value === 'string' || typeof value === 'number' ? `${value}` : '';\n" +
+    "const instructionMemoryKey = 'klink.instructies.v1';\n" +
+    'function previousInstructions(): Set<string> {\n' +
+    "  if (typeof window === 'undefined') return new Set();\n" +
+    '  try {\n' +
+    "    const stored: unknown = JSON.parse(sessionStorage.getItem(instructionMemoryKey) ?? '[]');\n" +
+    "    return new Set(Array.isArray(stored) ? stored.filter((item): item is string => typeof item === 'string' && item.startsWith('/package-audio/instructions/')) : []);\n" +
+    '  } catch { return new Set(); }\n' +
+    '}\n' +
+    '\n' +
+    'function exerciseImage(exercise: PackageExercise) {\n' +
+    '  if (exercise.prompt?.image) return exercise.prompt.image;\n' +
+    '  const direct = asRecord(exercise.image);\n' +
+    '  if (direct.assetId || direct.src) return direct as ExerciseImage;\n' +
+    '  const stimulus = asRecord(exercise.stimulus);\n' +
+    '  const image = asRecord(stimulus.image);\n' +
+    '  return image.assetId || image.src ? image as ExerciseImage : undefined;\n' +
+    '}\n' +
+    '\n' +
+    'export function findAudioSource(value: unknown): string | undefined {\n' +
+    '  if (Array.isArray(value)) {\n' +
+    '    for (const item of value) {\n' +
+    '      const source = findAudioSource(item);\n' +
+    '      if (source) return source;\n' +
+    '    }\n' +
+    '    return undefined;\n' +
+    '  }\n' +
+    "  if (!value || typeof value !== 'object') return undefined;\n" +
+    '  const record = value as Record<string, unknown>;\n' +
+    "  if (typeof record.audioId === 'string' && typeof record.src === 'string') return record.src;\n" +
+    '  for (const [key, item] of Object.entries(record)) {\n' +
+    "    if (key === 'instructionAudio') continue;\n" +
+    '    const source = findAudioSource(item);\n' +
+    '    if (source) return source;\n' +
+    '  }\n' +
+    '  return undefined;\n' +
+    '}\n' +
+    '\n' +
+    'function containsPublishedImage(value: unknown): boolean {\n' +
+    '  if (Array.isArray(value)) return value.some(containsPublishedImage);\n' +
+    "  if (!value || typeof value !== 'object') return false;\n" +
+    '  const record = value as Record<string, unknown>;\n' +
+    "  return typeof record.src === 'string' || Object.entries(record).some(([key, value]) => key !== 'audio' && key !== 'instructionAudio' && containsPublishedImage(value));\n" +
+    '}\n' +
+    '\n' +
+    'function representativeIndex(exercises: PackageExercise[], familyId: string) {\n' +
+    '  const records = exercises.filter((exercise) => exercise.componentId === familyId);\n' +
+    '  const visualIndex = records.findIndex(containsPublishedImage);\n' +
+    '  return visualIndex >= 0 ? visualIndex : 0;\n' +
+    '}\n' +
+    '\n' +
+    'export function PackageExerciseBrowser({\n' +
+    '  pack,\n' +
+    '  onAudio,\n' +
+    '  exercises = pack.exercises,\n' +
+    '  guided = false,\n' +
+    "  eyebrow = 'Oefenen',\n" +
+    "  title = 'Kies een oefening',\n" +
+    "  description = 'Kijk, luister en oefen.',\n" +
+    '  onComplete,\n' +
+    "  completeLabel = 'Terug naar de lessen',\n" +
+    '  initialExerciseId,\n' +
+    '  onPosition,\n' +
+    '  onLessonDone,\n' +
+    '  onAttempt,\n' +
+    '  practiceRound = false,\n' +
+    '  exerciseMenu,\n' +
+    '}: {\n' +
+    '  pack: PackageDefinition;\n' +
+    '  onAudio: AudioPlayer;\n' +
+    '  exercises?: PackageExercise[];\n' +
+    '  guided?: boolean;\n' +
+    '  eyebrow?: string;\n' +
+    '  title?: string;\n' +
+    '  description?: string;\n' +
+    '  onComplete?: () => void;\n' +
+    '  completeLabel?: string;\n' +
+    '  initialExerciseId?: string;\n' +
+    '  onPosition?: (exerciseId: string) => void;\n' +
+    '  onLessonDone?: () => void;\n' +
+    '  onAttempt?: (attempt: PracticeAttempt) => void;\n' +
+    '  practiceRound?: boolean;\n' +
+    '  exerciseMenu?: ExerciseMenuProps;\n' +
+    '}) {\n' +
+    '  const exerciseTypes = pack.exerciseTypes\n' +
+    '    .map((type) => ({ ...type, label: learnerExerciseNames[type.id] ?? type.label, count: exercises.filter((exercise) => exercise.componentId === type.id).length }))\n' +
+    '    .filter((type) => type.count > 0);\n' +
+    '  const initialExercise = exercises.find(item => item.exerciseId === initialExerciseId) ?? exercises[0];\n' +
+    '  // Browsing ahead must not move the saved route past unfinished exercises.\n' +
+    '  const [nextRequiredIndex, setNextRequiredIndex] = useState(() => Math.max(0, exercises.findIndex(item => item.exerciseId === initialExercise?.exerciseId)));\n' +
+    "  const initialFamilyId = (guided || initialExerciseId ? initialExercise?.componentId : exerciseTypes[0]?.id) ?? 'ALF-CMP-001';\n" +
+    '  const [familyId, setFamilyId] = useState(initialFamilyId);\n' +
+    '  const [recordIndex, setRecordIndex] = useState(() => guided || initialExerciseId ? Math.max(0, exercises.filter(item => item.componentId === initialFamilyId).findIndex(item => item.exerciseId === initialExercise?.exerciseId)) : representativeIndex(exercises, initialFamilyId));\n' +
+    '  const [completed, setCompleted] = useState(false);\n' +
+    '  const [returnedToUnfinished, setReturnedToUnfinished] = useState(false);\n' +
+    "  const [result, setResult] = useState<ResultState>('idle');\n" +
+    '  const [exerciseMenuOpen, setExerciseMenuOpen] = useState(false);\n' +
+    "  const [message, setMessage] = useState('Neem je tijd.');\n" +
+    '  const [heard, setHeard] = useState(false);\n' +
+    '  const [activeTurn, setActiveTurn] = useState(0);\n' +
+    '  const [completedDialoguePlays, setCompletedDialoguePlays] = useState(0);\n' +
+    '  const heardTurns = useRef(new Set<number>());\n' +
+    '  const [audioError, setAudioError] = useState(false);\n' +
+    '  const [autoPaused, setAutoPaused] = useState(false);\n' +
+    '  const [holdFeedback, setHoldFeedback] = useState(false);\n' +
+    '  const [paceSeconds, setPaceSeconds] = useState(0);\n' +
+    '  const [pageVisible, setPageVisible] = useState(true);\n' +
+    '  const [audioPending, setAudioPending] = useState(false);\n' +
+    '  const [instructionFailed, setInstructionFailed] = useState(false);\n' +
+    "  const [speakingOptionId, setSpeakingOptionId] = useState('');\n" +
+    '  const playback = useRef<AbortController | null>(null);\n' +
+    '  const explainedModes = useRef(previousInstructions());\n' +
+    '  const metrics = useRef({ started: 0, attempts: 0, helpUsed: false, plays: 0 });\n' +
+    '  const { settings } = useRouteSettings();\n' +
+    '  const reportPosition = useEffectEvent((id: string) => {\n' +
+    '    if (practiceRound || exercises.findIndex(item => item.exerciseId === id) <= nextRequiredIndex) onPosition?.(id);\n' +
+    '  });\n' +
+    "  const currentId = useRef('');\n" +
+    '  const taskHeading = useRef<HTMLHeadingElement>(null);\n' +
+    '  const exerciseStage = useRef<HTMLDivElement>(null);\n' +
+    '  const completionHeading = useRef<HTMLHeadingElement>(null);\n' +
+    '  const records = exercises.filter((exercise) => exercise.componentId === familyId);\n' +
+    '  const exercise = records[Math.min(recordIndex, Math.max(0, records.length - 1))] ?? exercises[0];\n' +
+    '  const guidedIndex = guided ? exercises.findIndex((item) => item.exerciseId === exercise?.exerciseId) : -1;\n' +
+    "  const exerciseId = exercise?.exerciseId ?? '';\n" +
+    "  const selfPaced = exercise?.assessment === 'participation' || exercise?.componentId === 'ALF-CMP-001';\n" +
+    '  const needsListen = Boolean(exercise?.requiresAudio);\n' +
+    "  const sentenceQuestion = exercise?.mode === 'sentence-question';\n" +
+    '  const canAnswer = (!needsListen || heard) && (!(sentenceQuestion || exercise?.playAllBlocks) || !audioPending);\n' +
+    '  const firstLetterGuide = exercise && hasFirstLetterGuide(exercise, guided);\n' +
+    "  const manualAdvance = exercise?.mode === 'connected-dialogue' || exercise?.manualAdvance || (exercise && isBeginnerLesson(exercise, guided && !practiceRound));\n" +
+    "  const automatic = guided && !exerciseMenuOpen && result === 'right' && !selfPaced && !firstLetterGuide && !manualAdvance && !exercise?.learningPathId && exercise?.componentId !== 'KLINK-EXTENDED' && !autoPaused && !holdFeedback && !audioPending;\n" +
+    '  const stimulus = exercise?.prompt?.audio?.src ?? findAudioSource(exercise?.textBlocks);\n' +
+    '  async function listen(source?: string, automaticStart = false, singleTurn?: number) {\n' +
+    "    if ((exercise?.readingTask || exercise?.componentId === 'KLINK-EXTENDED' || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;\n" +
+    "    if (!automaticStart && result === 'right') setHo"... 69329 more characters,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
+✖ scripts/test-image-release-20261030.mjs (69.765375ms)
+✔ Image publication preserves audio and rejects unrelated, missing or duplicate changes (1.316333ms)
+✖ Every approved image reaches the existing word cards without losing meanings (0.517125ms)
+✔ New word audio preserves pictures and only the explicitly named existing recording can be replaced (1.474042ms)
+✖ All 5127 displayed word cards resolve audio and keep the latest approved images (104.378333ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 2
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 307.708167
+
+✖ failing tests:
+
+test at scripts/test-image-release-20261030.mjs:1:1
+✖ scripts/test-image-release-20261030.mjs (69.765375ms)
+  'test failed'
+
+test at scripts/test-image-release.mjs:17:1
+✖ Every approved image reaches the existing word cards without losing meanings (0.517125ms)
+  AssertionError [ERR_ASSERTION]: klink-woord-goed
+  + actual - expected
+  
+  + '/package-media/word-photo-repair-20261029/goed.webp'
+  - '/package-media/artsmart-20261025/k249.webp'
+  
+      at TestContext.<anonymous> (file:///Users/nicoknoester/.cache/klink-docent-baseline-20261031/scripts/test-image-release.mjs:21:30)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '/package-media/word-photo-repair-20261029/goed.webp',
+    expected: '/package-media/artsmart-20261025/k249.webp',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts/test-word-audio-release.mjs:19:1
+✖ All 5127 displayed word cards resolve audio and keep the latest approved images (104.378333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '/package-audio/betekenissen-20261031/regent-weer.mp3'
+  - '/package-audio/woorden-20261025/B5R-e8279948dbb7.mp3'
+  
+      at TestContext.<anonymous> (file:///Users/nicoknoester/.cache/klink-docent-baseline-20261031/scripts/test-word-audio-release.mjs:22:126)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '/package-audio/betekenissen-20261031/regent-weer.mp3',
+    expected: '/package-audio/woorden-20261025/B5R-e8279948dbb7.mp3',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
