@@ -1,5 +1,7 @@
 # Klink — vaste vormgevingsbasis
 
+Gerichte vervolgopdracht van Nico, 31 oktober 2026: herstel de binnenruimte bij het pijltje op de werkbladpagina en verwijder Extra materiaal volledig. Het antwoordblok blijft op zijn plaats; alleen de standaard horizontale binnenruimte van 20px wordt hersteld. Antwoorden, PDF-downloads en docentlesplannen blijven werken. Digitale observatie is voor een latere afzonderlijke app, niet voor dit blok. Bronopdracht en controles: `docs/klink-owner-release-worksheet-cleanup-20261031.json` en `docs/worksheet-cleanup-20261031/`. Dit akkoord geldt uitsluitend voor deze correctie; de eerdere vloer en het maand-akkoord blijven behouden.
+
 Gericht aanvullend akkoord van Nico, 31 oktober 2026: uitsluitend het woord **maand** wordt in Klink+docent op schermen smaller dan 361 pixels met 80px weergegeven. Nico zag het concrete voorbeeld en antwoordde: “Ja, voer dit gerichte herstel uit”. Zie `docs/lespakketten-10-15-20261031/month-appearance-approval.json` en het bijbehorende voorstelbeeld. Alle overige woorden, breedtes, schermen en vormgeving behouden de vaste vloer. De oorspronkelijke `docs/appearance-floor-20261031/floor.json` blijft ongewijzigd.
 
 Nico, 31 oktober 2026: “zorg dat deze versie de nieuwe vloer wordt en dat we die even vastzetten en dat er niet zomaar meer veranderingen plaatsvinden zonder duidelijke toestemming bedoel ik. En dit bedoel ik hier bedoel ik alleen maar mee hoe het eruitziet. De content is een ander verhaal, dat moeten we blijven updaten, blijven toevoegen, enzovoort.”

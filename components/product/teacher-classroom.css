@@ -1237,9 +1237,8 @@
 .kpd-worksheet-previews figcaption { margin-bottom: 8px; }
 .kpd-worksheet-previews img { display: block; width: 100%; height: auto; background: white; border: 1px solid var(--line); }
 .kpd-worksheet-extras { max-width: none; padding: 0; margin-top: 24px; font-size: 18px; }
-.kpd-worksheet-extras details { border-top: 1px solid var(--line); padding: 16px 0; }
+.kpd-worksheet-extras details { border-top: 1px solid var(--line); padding: 16px 20px; }
 .kpd-worksheet-extras summary { cursor: pointer; padding: 8px 0; }
-.kpd-worksheet-extras select { margin-left: 12px; }
 .kpd-worksheet-extras .kpd-print-page { margin: 16px 0; }
 .kpd-worksheet-extras .kpd-answers-print li { break-inside: avoid; margin-bottom: 16px; }
 .kpd-answers-print h4 { font-size: inherit; font-weight: 500; margin: 0; }
@@ -1256,9 +1255,7 @@
 }
 @media print {
   body:has(.kpd-worksheets) [hidden],
-  body:has(.kpd-worksheets) .kpd-worksheets > :not(:has(.kpd-print-page)),
-  .kpd-worksheet-extras[data-print-kind='extra'] .kpd-worksheet-answers,
-  .kpd-worksheet-extras[data-print-kind='answers'] .kpd-extra-materials { display: none !important; }
+  body:has(.kpd-worksheets) .kpd-worksheets > :not(:has(.kpd-print-page)) { display: none !important; }
   .kpd-worksheets, .kpd-worksheet-extras, .kpd-worksheet-extras details { padding: 0 !important; margin: 0 !important; border: 0 !important; }
   body:has(.kpd) .kpd-answers-print, body:has(.kpd) .kpd-answers-print * { visibility: visible !important; }
   body:has(.kpd) .kpd-answers-print { width: auto !important; min-height: 0 !important; max-height: none; break-inside: auto; font-size: 11pt; }

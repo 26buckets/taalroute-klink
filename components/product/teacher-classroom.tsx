@@ -60,7 +60,6 @@ import {
 import {
   ClassroomBrand,
   TeacherRouteStage,
-  RouteCards,
 } from "./teacher-route-stage";
 import "./teacher-classroom.css";
 
@@ -199,100 +198,6 @@ function SoundButtons({
         );
       })}
     </div>
-  );
-}
-
-function LetterCards({ lessonId = "mat" }: { lessonId?: string }) {
-  const { units: matUnits, display } = getClassroomLesson(lessonId);
-  return (
-    <article
-      className="kpd-worksheet kpd-print-page"
-      aria-label="Letterkaarten"
-    >
-      <header>
-        <Image src="/klink-wordmark.svg" alt="Klink" width={125} height={41} />
-        <h2>{display.toUpperCase()}</h2>
-      </header>
-      <div className="kpd-large-cards">
-        {matUnits.map((unit, index) => (
-          <div key={`${unit}-${index}`}>{unit}</div>
-        ))}
-      </div>
-      <div className="kpd-large-cards">
-        {matUnits.map((unit, index) => (
-          <div key={`${unit}-${index}`}>&nbsp;</div>
-        ))}
-      </div>
-      <ArrowRight aria-label="Van links naar rechts" />
-    </article>
-  );
-}
-
-function ObservationSheet({ route, lessonId = "mat" }: { route: ClassroomRoute; lessonId?: string }) {
-  const { word: matWord, units: matUnits, routes: classroomRoutes } = getClassroomLesson(lessonId);
-  const rows =
-    route !== "a"
-      ? phasesForRoute(route, lessonId)
-          .filter((_, i) => [0, 3, 4, 5, 6, 7].includes(i))
-          .map((p) => [
-            p.title + " — " + p.observe,
-            "Zelfstandig / met aanwijzing / met model / nog niet waargenomen",
-          ])
-      : [
-          [
-            `Betekenis ${matWord.word}`,
-            "Zonder directe hulp / met hulp of model / nog niet waargenomen",
-          ],
-          [
-            "Woord nazeggen",
-            "Na mondelinge vraag / alleen na voorbeeld / nog niet waargenomen",
-          ],
-          [
-            "Klanken m, korte a, t aanwijzen",
-            "Zelfstandig / met hulp / nog niet waargenomen",
-          ],
-          [
-            `Letters ${matUnits.join("-")} leggen`,
-            "Zelfstandig / met hulp / nog niet waargenomen",
-          ],
-          [
-            "Mat lezen zonder directe foto of audio",
-            "Zelfstandig / met klankhulp / nog niet waargenomen",
-          ],
-          [
-            "Mondeling gebruiken",
-            "Eigen voorbeeld / reactie op vraag / nog niet waargenomen",
-          ],
-          ["Volgende Klink-oefening getoond", "Ja / later tonen"],
-        ];
-  return (
-    <article
-      className="kpd-worksheet kpd-print-page kpd-observation"
-      aria-label="Docentobservatie"
-    >
-      <h2>
-        <ClassroomBrand />
-      </h2>
-      <h3>Observatie {matWord.word} · {classroomRoutes[route].label}</h3>
-      <p>Datum: _________________ Groep: _________________</p>
-      <p>Cursistcode (alleen op papier): _____________________</p>
-      <dl>
-        {rows.map(([title, response]) => (
-          <div key={title}>
-            <dt>{title}</dt>
-            <dd>{response}</dd>
-          </div>
-        ))}
-      </dl>
-      <p>Opmerking:</p>
-      <div className="kpd-write-line" />
-      <p>Volgende leerhandeling:</p>
-      <div className="kpd-write-line" />
-      <p>
-        Nog niet waargenomen betekent niet: kan het niet. Dit is geen toets of
-        niveau-oordeel. Bewaar dit blad buiten de projectie.
-      </p>
-    </article>
   );
 }
 
@@ -1174,13 +1079,11 @@ export function TeacherClassroom({
 
 export function TeacherMaterials() {
   const [hash, setHash] = useState(() => typeof window === "undefined" ? "" : window.location.hash);
-  const [extra, setExtra] = useState("letters");
-  const [printKind, setPrintKind] = useState("extra");
   const { lesson, round, fromLesson } = worksheetSelection(hash);
   const sheet = lesson?.rounds[round];
   const returning = fromLesson && readClassroom().active;
   useEffect(() => {
-    const sync = () => { setHash(window.location.hash); setExtra("letters"); };
+    const sync = () => { setHash(window.location.hash); };
     window.addEventListener("hashchange", sync);
     return () => window.removeEventListener("hashchange", sync);
   }, []);
@@ -1191,10 +1094,6 @@ export function TeacherMaterials() {
       if (returning) saveClassroom({ ...readClassroom(), active: false });
       window.location.hash = target;
     }
-  }
-  function printExtra(kind: string) {
-    setPrintKind(kind);
-    requestAnimationFrame(() => window.print());
   }
   return <TeacherWorkspaceFrame view="materials" onNavigate={navigate}>
     <section className="kpd-worksheets" aria-label="Werkbladen per les">
@@ -1234,7 +1133,7 @@ export function TeacherMaterials() {
             </a>
           </figure>)}
         </div>
-        <div className="kpd kpd-worksheet-extras" data-print-kind={printKind}>
+        <div className="kpd kpd-worksheet-extras">
           <details key={`${lesson.id}-${round}-answers`} className="kpd-worksheet-answers">
             <summary>Antwoorden voor de docent</summary>
             <article className="kpd-answers-print kpd-print-page" aria-label="Antwoordblad">
@@ -1247,20 +1146,9 @@ export function TeacherMaterials() {
                 <p>{item.action}</p>
               </li>)}</ol>
             </article>
-            <button className="secondary-button" onClick={() => printExtra("answers")}><Printer />Print antwoorden</button>
+            <button className="secondary-button" onClick={() => window.print()}><Printer />Print antwoorden</button>
             <a className="secondary-button" href={"answerPdf" in sheet && typeof sheet.answerPdf === "string" ? sheet.answerPdf : "/docent-werkbladen/kpd08/docentantwoorden.pdf"} download><Download />{"answerPdf" in sheet ? "Antwoordblad (PDF)" : "Alle docentantwoorden (PDF)"}</a>
             {"planPdf" in lesson && typeof lesson.planPdf === "string" && <a className="secondary-button" href={lesson.planPdf} download><Download />Docentlesplan (PDF)</a>}
-          </details>
-          <details className="kpd-extra-materials">
-            <summary>Extra materiaal</summary>
-            <label>Materiaal<select aria-label="Extra materiaal" value={extra} onChange={event => setExtra(event.target.value)}>
-              <option value="letters">{round === "a" ? "Letterkaarten" : "Woordkaartjes"}</option>
-              <option value="observation">Docentobservatie</option>
-            </select></label>
-            <div className="kpd-extra-print">
-              {extra === "observation" ? <ObservationSheet route={round} lessonId={lesson.id} /> : round === "a" ? <LetterCards lessonId={lesson.id} /> : <RouteCards route={round} lessonId={lesson.id} />}
-            </div>
-            <button className="secondary-button" onClick={() => printExtra("extra")}><Printer />Print extra materiaal</button>
           </details>
         </div>
       </>}
