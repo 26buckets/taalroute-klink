@@ -1,0 +1,25 @@
+✔ approved corner placement retains content, audio, storage and full local checks (244.776709ms)
+✔ rejects missing appearance consent (92.881959ms)
+✔ rejects missing publication consent (85.939833ms)
+✔ rejects changed control (122.065791ms)
+✔ rejects unverified backup (138.673459ms)
+✔ rejects incomplete mobile review (140.770791ms)
+✔ approved playfield position retains original handlers, contents and progress (175.839417ms)
+✔ rejects changed docs/klink-owner-release-listen-playfield-left-20261031.json (0.504833ms)
+✔ rejects changed app/learner-layout.css (40.768125ms)
+✔ rejects changed docs/listen-playfield-left-20261031/backup.json (89.929667ms)
+PASS approved scope; nine rejected changes: consent, live base, audio/progress/reduced motion, backup and runtime changes
+✔ scripts/test-motion-release-20261031.mjs (10008.677791ms)
+✔ bounded worksheet cleanup retains all 58 lessons, answers and verified backup (295.588958ms)
+✔ rejects unapproved board design (165.965583ms)
+✔ rejects changed answers (153.668208ms)
+✔ rejects missing backup (186.197958ms)
+✔ rejects unapproved scope (141.263916ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10015.151209

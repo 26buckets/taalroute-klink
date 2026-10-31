@@ -458,7 +458,6 @@ function PackageExercisePlayer({
               {guided && !firstLetterGuide && !manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button data-practice-automatic aria-label={autoPaused || keyboardMode ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused || keyboardMode} onClick={() => { const paused = autoPaused || keyboardMode; keyboardUsed.current = false; setKeyboardMode(false); setAutoPaused(!paused); }}>{autoPaused || keyboardMode ? <Play /> : <Pause />}</button>}
               <b aria-label={`${guided ? 'Stap' : 'Oefening'} ${guided ? guidedIndex + 1 : recordIndex + 1} van ${guided ? exercises.length : records.length}`}>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
               {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
-              <ExerciseAudioSlot />
             </nav>);
   return (
     <section {...keyboard} data-practice-ready={result === 'right'} className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
@@ -477,6 +476,7 @@ function PackageExercisePlayer({
           </header>
 
           <div className="cp-exercise-stage" ref={exerciseStage}>
+            <ExerciseAudioSlot />
             {pacedReading && <fieldset className="cp-pace-controls" aria-label="Tempo">{[0, 6, 9].map(seconds => <button key={seconds} className="secondary-button" aria-pressed={paceSeconds === seconds} onClick={() => setPaceSeconds(seconds)}>{seconds ? `${seconds} seconden` : 'Eigen tempo'}</button>)}</fieldset>}
             {!guided && modes.length > 1 && <label className="cp-mode-picker">Wat wil je oefenen?<select value={isIndividual(exercise) ? exercise.exerciseId : exercise.mode} onChange={event => openAt(records.findIndex(item => item.exerciseId === event.target.value || item.mode === event.target.value))}>{modes.map(item => {
               const isQuestion = item.mode === 'sentence-question';

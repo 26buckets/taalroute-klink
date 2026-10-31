@@ -302,11 +302,9 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
   .review-page .honest-empty h2 { font-size:24px; }
 }
 
-/* Approved compact audio control: the existing handler lives in the exercise header. */
+/* The primary audio control stays inside the playfield, below its heading. */
 .learner-app .cp-listen-slot { display: inline-flex; flex: 0 0 auto; margin: 0; }
 .learner-app .cp-listen-slot:not(:has(button:not([hidden]))) { display: none; }
-.learner-app .cp-exercise-record-head:has(.cp-listen-slot button:not([hidden])) { position: relative; padding-right: 80px; min-height: 72px; }
-.learner-app .cp-exercise-record-head .cp-listen-slot { position: absolute; top: 12px; right: 16px; }
 .learner-app .cp-exercise-listen { width: 48px; height: 48px; min-width: 48px; min-height: 48px; padding: 0; display: inline-flex; align-items: center; justify-content: center; }
 .learner-app .cp-exercise-listen[hidden] { display: none; }
 .learner-app .cp-exercise-listen svg { width: 20px; height: 20px; }
@@ -314,8 +312,11 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .cp-corner-prompt > div:empty { display: none; }
 .learner-app :is(.cp-sheet-item, .cp-worksheet-row) { position: relative; }
 .learner-app :is(.cp-sheet-item, .cp-worksheet-row):has(> .cp-listen-slot button) { padding-top: 64px; }
-.learner-app :is(.cp-sheet-item, .cp-worksheet-row) > .cp-listen-slot { position: absolute; top: 8px; right: 8px; }
+.learner-app :is(.cp-sheet-item, .cp-worksheet-row) > .cp-listen-slot { position: absolute; top: 8px; left: 8px; }
 .learner-app .cp-source-text > div:has(> .cp-block-listen) { position: relative; padding-right: 56px; }
 .learner-app .cp-block-listen { position: absolute; top: 0; right: 0; width: 48px; height: 48px; padding: 0; }
-.learner-app .pilot-player .pilot-head > div:has(.cp-listen-slot) { margin-left: auto; }
-.learner-app .ac-document-player .pilot-head:has(.cp-listen-slot) h2 { min-width: 0; overflow-wrap: anywhere; }
+.learner-app .cp-exercise-stage:has(> .cp-listen-slot button:not([hidden])) { scroll-padding-top: 72px; }
+.learner-app .cp-exercise-stage > .cp-listen-slot { position: sticky; top: 12px; align-self: flex-start; justify-self: start; flex: 0 0 auto; z-index: 2; margin-bottom: 12px; }
+.learner-app .ac-document-player .cp-exercise-stage:has(> .cp-listen-slot button:not([hidden])) { display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.learner-app .ac-document-player .cp-exercise-stage > .cp-listen-slot { margin: 0 0 12px; }
+.learner-app .ac-docent-learner > .cp-listen-slot { justify-self: start; }

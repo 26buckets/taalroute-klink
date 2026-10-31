@@ -1,3 +1,4 @@
+import {verifyListenPlayfieldLeftRelease,readBeforeListenPlayfieldLeft} from './check-listen-playfield-left-release-20261031.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -14,14 +15,15 @@ const allowed=[
  'scripts/check-teacher-packages-10-15-release-20261031.mjs','scripts/check-worksheet-cleanup-release-20261031.mjs','scripts/check-listen-corner-release-20261031.mjs','scripts/test-listen-corner-release-20261031.mjs','scripts/test-listen-corner-browser-20261031.mjs','scripts/test-alfa-c-docent-browser.mjs',
 ];
 export function verifyListenCornerRelease(read=readFileSync){
+ const successor=verifyListenPlayfieldLeftRelease(read),currentRead=read;read=file=>readBeforeListenPlayfieldLeft(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-listen-corner-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChangeApproved,true);
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,'4ebac3a0b2d01368beeba90667280464ac76e5c0');assert(r.userRequest);
  git('merge-base','--is-ancestor',r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,sort([...allowed]));assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
- assert.equal(git('diff','--name-only',base,'--','hooks','data','lib','public','db','drizzle','components/product/teacher-classroom.tsx','components/product/teacher-classroom.css').length,0,'Content, audio, lessons, worksheets, routes and persistence unchanged');
+ assert.equal(git('diff','--name-only',base,successor.baselineSourceCommit,'--','hooks','data','lib','public','db','drizzle','components/product/teacher-classroom.tsx','components/product/teacher-classroom.css').length,0,'Content, audio, lessons, worksheets, routes and persistence unchanged');
  const control=read('components/product/exercise-listen.tsx').toString();
  assert(control.includes('createPortal'));assert(control.includes('aria-label={label}'));assert(control.includes('aria-keyshortcuts="Space"'));
  assert(!/localStorage|sessionStorage|\.play\(|\.pause\(|new Audio|preventDefault/.test(control),'Only placement changes; existing handlers own playback and progress');
@@ -33,8 +35,8 @@ export function verifyListenCornerRelease(read=readFileSync){
  const keys=JSON.parse(read(folder+'keyboard-all-forms.json'));assert.equal(keys.forms,58);assert.equal(keys.checks.length,466);assert.deepEqual(keys.errors,[]);
  const browser=JSON.parse(read(folder+'browser-checks.json'));assert.equal(browser.checks.length,192);assert.deepEqual(browser.errors,[]);
  const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
 export function readBeforeListenCorner(file,r,read=readFileSync){
- return r.changedFiles.includes(file)||file==='docs/appearance-floor-20261031/floor.json'?git('show',base+':'+file):read(file);
+ return r.changedFiles.includes(file)||file==='docs/appearance-floor-20261031/floor.json'?git('show',base+':'+file):readBeforeListenPlayfieldLeft(file,r.successor,read);
 }

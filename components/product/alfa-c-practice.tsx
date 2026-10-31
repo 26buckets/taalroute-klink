@@ -331,7 +331,6 @@ function PilotPlayer({
               <span>
                 {index + 1} / {total}
               </span>
-              <ExerciseAudioSlot />
             </div>
           </header>
             <div className="pilot-tools ac-support-tools">
@@ -372,6 +371,7 @@ function PilotPlayer({
               )}
             </div>
           <div className="cp-exercise-stage">
+            <ExerciseAudioSlot />
             {audioError && (
               <p role="alert">{alfaCCommonTexts['Geluidsbestand werkt niet'].text}</p>
             )}

@@ -1,0 +1,37 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-10-31",
+  "userRequest": "Dus ik wil hem in het speelvlak hebben aan de linkerbovenhoek. Dus ik heb de titel: Luister naar het gesprek bijvoorbeeld, en daaronder staat die knop. Dit moet standaard worden voor de complete app. Altijd daar is de luisterknop.",
+  "appearanceChangeApproved": true,
+  "publicationApproved": true,
+  "publicationAuthorization": "Gerichte correctie op de zojuist expliciet opgedragen publicatie van de echte Klink-app; de bestaande publicatieopdracht blijft van toepassing.",
+  "baselineSourceCommit": "093a01a42f5c2d2763a2943d5a79b0d6b37a8792",
+  "liveSourceCommit": "7e713d637dc5a213d488528efa663327fc752341",
+  "screenshotSha256": "fcd3cd410cfccd76b0ddfeb5a28a4169e00bc638a4b3aa145318e63246876f8f",
+  "approval": "docs/appearance-floor-20261031/approved-updates/listen-playfield-left-20261031.json",
+  "scope": "De bestaande 48px hoofdluisterknop staat linksboven binnen het speelvlak, onder de oefentitel, op de gemarkeerde plek. De kop bevat geen hoofdluisterknop. Bij scrollen blijft de knop bereikbaar. Alleen de JSX-doellocaties en de plaatsingsstijl wijzigen; afspeelfuncties, indeling buiten deze correctie, inhoud, media, routes en opslag blijven gelijk.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/alfa-c-dagelijks.tsx",
+    "components/product/alfa-c-docent.tsx",
+    "components/product/alfa-c-functioneel.tsx",
+    "components/product/alfa-c-practice.tsx",
+    "components/product/package-exercise-browser.tsx",
+    "scripts/check-listen-corner-release-20261031.mjs",
+    "scripts/check-listen-playfield-left-release-20261031.mjs",
+    "scripts/test-listen-playfield-left-browser-20261031.mjs",
+    "scripts/test-listen-playfield-left-release-20261031.mjs"
+  ],
+  "files": {
+    "app/learner-layout.css": "b0c23ab751b3245ea198ad4ad33a6421ec81efa41f660c0e0dc21623dae5ead0",
+    "components/product/alfa-c-dagelijks.tsx": "94c38b73b5d56d634e8dc27fc891d0efd173259f016bd2c86c3c87b906207032",
+    "components/product/alfa-c-docent.tsx": "850a1e3736fe0b9933347092202a3058c7ccebfd3923037718cf4b4bb6308480",
+    "components/product/alfa-c-functioneel.tsx": "205e335d322409c187565c652b47970725d5b12e8b810d6f100835f1979493d8",
+    "components/product/alfa-c-practice.tsx": "42a07551092b2e8d393ddf470a757ff4a0838b33fbfdb1e44b1336d53ded95e5",
+    "components/product/package-exercise-browser.tsx": "e0888ba87429fa86f0675bcf8de6ea839c163df0477ed403c2d408da60607e6e",
+    "scripts/check-listen-corner-release-20261031.mjs": "d1473bc7eb1390d99317645ae20f4aab9b61964681ac0e14dddc5855a412a32f",
+    "scripts/check-listen-playfield-left-release-20261031.mjs": "a2a279dd036734ac772412f97480fc48943716026b1c02b459eed7a7e6b75295",
+    "scripts/test-listen-playfield-left-browser-20261031.mjs": "224fa526f40e0a2f6ce90efcd84fc40a74ff58c38e92b586d3a48629a6beffc2",
+    "scripts/test-listen-playfield-left-release-20261031.mjs": "30fa07db1f16b1b32ae74dcf0044013d015937b1accacc4e92f9388fcf0f2093"
+  }
+}

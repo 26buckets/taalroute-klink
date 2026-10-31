@@ -137,7 +137,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head">
         <h2 ref={title} tabIndex={-1}>{step.screen}</h2>
-        <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span><ExerciseAudioSlot /></div>
+        <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div>
       </header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
         <ExerciseListen inline={model ? Boolean(step.exampleTargetTexts.length) : Boolean(step.dictationTexts.length || documents.length)} label="Luister naar de uitleg" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)} />
@@ -147,6 +147,7 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
+            <ExerciseAudioSlot />
         <AlfaCWorkspace key={model ? 'example' : 'task'} source={model ? (step.exampleHandwriting ? <Image unoptimized width={1884} height={835} className="functional-handwriting" src={step.exampleHandwriting} alt="Ik kom maandag om 9 uur." /> : <DocumentSet documents={(step.exampleVisible ?? '').split('\n\n').map((text, n) => ({ id: `${step.id}:example:${n}`, title: text.split('\n')[0], text }))} />) : source} supportOpen={help || Boolean(readAlong.reading)}>
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stopPlayback(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.exampleInstruction}</p><button className="primary-button" onClick={() => { stopPlayback(); setModel(false); setHelp(false); setResult('idle'); setSelected(''); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{retry ? step.retryVisible : step.helpVisible}</p><button className="secondary-button" disabled={busy} onClick={() => void guide(retry ? step.retryVisible : step.helpVisible)}><Volume2 />Luister naar de tip</button><button className="secondary-button" onClick={() => { stopPlayback(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>

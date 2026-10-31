@@ -541,7 +541,6 @@ function TeacherPlayer({
         <button className="secondary-button" disabled={busy} onClick={leave}>
           Andere opdracht
         </button>
-        {!teacher && <ExerciseAudioSlot />}
       </div>
       {teacher ? (
         <div className="ac-docent-private">
@@ -752,6 +751,7 @@ function TeacherPlayer({
           >
             {task.kind === 'grammar' ? 'Zinkaart' : stage.prompt}
           </h2>
+          <ExerciseAudioSlot />
           {stage.display && !model && (
             <div className="ac-docent-card">
               {stage.display.split('\n').map((line, i) => (

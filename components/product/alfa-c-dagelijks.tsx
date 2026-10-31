@@ -62,7 +62,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
   }
   return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-daily-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
-      <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span><ExerciseAudioSlot /></div></header>
+      <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div></header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
         <ExerciseListen inline={Boolean(step.audio.O)} label="Luister naar de uitleg" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I], true); }} />
         {step.audio.O && <ExerciseListen label="Luister naar de tekst" disabled={busy} onClick={() => { support('content'); void play([step.audio.O!]); }} />}
@@ -71,6 +71,7 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
       </div>
       <div className="cp-exercise-stage">
+            <ExerciseAudioSlot />
         <AlfaCWorkspace source={<DocumentSet documents={step.documents} />} supportOpen={model || help || Boolean(readAlong.reading)}>
           {readAlong.reading ? <AlfaCExplanation reading={readAlong.reading} onClose={() => { stop(); readAlong.clear(); }} /> : model ? <section className="pilot-model"><h3>Voorbeeld</h3><p>{step.example}</p><button className="primary-button" onClick={() => { stop(); setModel(false); setChosen([]); setResult('idle'); }}>Nu jij<ArrowRight /></button></section>
             : help ? <aside className="pilot-help"><h3>Help</h3><p>{step.speech.H}</p><button className="secondary-button" onClick={() => { stop(); setHelp(false); }}>Terug naar de opdracht<ArrowRight /></button></aside>
