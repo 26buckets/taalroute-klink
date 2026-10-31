@@ -1,3 +1,12 @@
+## 31 oktober 2026 — 71 gecontroleerde Drive-woordbeelden online
+
+- Werkelijk gepubliceerde bron: `f86dd0ffb872dbfb3b54c585860d6e9c6bb63054`; Worker `6fd1df38-f6f6-4e95-9352-e2320491cbe0`.
+- 84 woorden onderzocht, 93 bestaande versies bekeken; 71 beelden hergebruikt (4.2 MB WebP), 1.354 beeldplaatsen in 200 oefenbestanden. Geen beeldgeneratie.
+- 13 woorden uit deze ronde blijven op Aanpassen. Open register: 161 unieke woorden, waarvan 136 zonder nieuw gevonden bruikbaar beeld en 25 herstelpunten; 213 woordplaatsen in het oefenoverzicht.
+- Geheel, zichtbare handen/details en 300px-weergave gecontroleerd; geen menselijke goedkeuring verondersteld. 480 livebestanden byte-identiek teruggelezen; 284 livebeeldcontroles in Chromium/WebKit op desktop/mobiel.
+- Alle bronopdrachten, antwoorden, audio, oude bestanden, voortgang en actuele woordronde-/synoniemverbeteringen behouden. Lokale woordronde- en continuïteitstests geslaagd. Geen nieuwe GitHub-workflows; 90 reeds bestaande lintfoutbestanden buiten de wijziging vastgelegd.
+- Bewijs en terugval: `docs/drive-images-20261031/`. Gecontroleerde Drive-bronback-up: https://drive.google.com/file/d/19whI0pzhAtZgFj2s_mw43tfDpgDcZt3S/view
+
 ## 31 oktober 2026 — Synoniemen bij de bestaande niveaus
 
 Livebron `da4401d4fd471a3a48029350a5a7690dbd084629`, schone canonieke main; Worker `f1a15df8-c32a-40fc-abd5-be6f475907c6`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van actuele livebron `02f16c1fdcb540550de91510c1a11c7ca29c4bbd`. Uitsluitend de extra Synoniemen-link op Woorden bekijken verwijderd. De bestaande plek bij A1, A2 en B1, alle 210 vragen, drie oefenvormen, 68 opnamen, 338 leswoorden, oude links, hervatten en voortgang zijn behouden. Geen toetsenbordcode gewijzigd; de vraag daarover betreft advies.
