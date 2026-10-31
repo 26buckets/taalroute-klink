@@ -6,10 +6,10 @@ const base=process.env.KLINK_URL||'http://127.0.0.1:18981',out=process.env.KLINK
 const checks=[],errors=[];
 for(const [engine,type] of Object.entries({chromium,webkit})){
  const browser=await type.launch();try{for(const width of [1366,390,320]){
-  const page=await browser.newPage({viewport:{width,height:width===1366?900:844}});page.on('pageerror',e=>errors.push(e.message));
+  const page=await browser.newPage({viewport:{width,height:width===1366?900:844}});await page.emulateMedia({reducedMotion:'reduce'});page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>{window.audioPlayed=[];const play=Reflect.get(HTMLMediaElement.prototype,'play');HTMLMediaElement.prototype.play=function(){this.addEventListener('ended',()=>window.audioPlayed.push(this.currentSrc),{once:true});return play.call(this);};});
   await page.goto(base+'/#teacher/plus');await page.getByRole('button',{name:'Les openen: mat',exact:true}).waitFor();
-  assert.equal(await page.locator('.kpd-lesson-choice').count(),8);assert.equal(await page.locator('.kpd-home-header a').count(),0);
+  assert.equal(await page.locator('.kpd-lesson-choice').count(),classroomLessons.length);assert.equal(await page.locator('.kpd-home-header a').count(),0);
   await page.locator('.kpd-lesson-choice img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
   await page.screenshot({path:`${out}/${engine}-${width}-lessons.png`});
   for(const lesson of classroomLessons){
@@ -21,15 +21,16 @@ for(const [engine,type] of Object.entries({chromium,webkit})){
      await page.getByRole('button',{name:'Kies onderdeel',exact:true}).click();await page.locator('.kpd-phases button').nth(phase).click();
      assert((await page.locator('.kpd-position').innerText()).includes(`${phase+1} van 8`));
      if(phase===0){
-      const buttons=page.locator('.kpd-visibility-controls button'),before=await buttons.evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}}));
+      // Compare page coordinates: clicking a control below the fold can scroll it into view.
+      const buttons=page.locator('.kpd-visibility-controls button'),before=await buttons.evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y+scrollY,width:r.width,height:r.height}}));
       assert.equal(await buttons.count(),2);assert.equal(await page.getByRole('button',{name:'Foto groter',exact:true}).count(),0);
-      for(const i of [0,1,0,1]){await buttons.nth(i).click();const after=await buttons.evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}}));for(let j=0;j<2;j++)for(const k of ['x','y','width','height'])assert(Math.abs(after[j][k]-before[j][k])<=1,`moving control ${lesson.id} ${route} ${width} ${k}`);}
+      for(const i of [0,1,0,1]){await buttons.nth(i).click();const after=await buttons.evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y+scrollY,width:r.width,height:r.height}}));for(let j=0;j<2;j++)for(const k of ['x','y','width','height'])assert(Math.abs(after[j][k]-before[j][k])<=1,`moving control ${lesson.id} ${route} ${width} ${k}`);}
      }
      const reveal=page.getByRole('button',{name:phase===6&&route==='c'?'Voorbeeldzin tonen':route==='b'?'Zin tonen':'Tekst tonen',exact:true});if(await reveal.count())await reveal.click();
      if(phase===3){
       if(route==='a'){
        const hide=page.getByRole('button',{name:'Oplossing verbergen',exact:true});if(await hide.count())await hide.click();
-       for(const unit of lesson.units)await page.getByRole('button',{name:`Leg ${unit}`,exact:true}).click();
+       for(const unit of lesson.units)await page.locator('.kpd-tiles button:not(:disabled)').filter({hasText:new RegExp('^'+unit+'$')}).first().click();
       }else for(const word of lesson.routes[route].cards)await page.locator('.kpd-word-cards').getByRole('button',{name:word,exact:true}).all().then(async buttons=>{for(const button of buttons)if(await button.isEnabled()){await button.click();break;}});
       await page.getByRole('button',{name:'Kijk na',exact:true}).click();assert((await page.locator(route==='a'?'.kpd-stage output':'.kpd-route-feedback').innerText()).includes('Ja,'));
      }

@@ -7,6 +7,7 @@ import {
   getClassroomLesson,
   isCorrectSequence,
   sequenceForRoute,
+  phasesForRoute,
   type ClassroomState,
   type ClassroomRoute,
   type Variant,
@@ -60,6 +61,7 @@ export function TeacherRouteStage({
   const [selectedSentence, setSelectedSentence] = useState('');
   const textParts = classroomRoutes.c.example.split('\n');
   const route = classroomRoutes[state.route];
+  const phase = phasesForRoute(state.route, state.lessonId)[state.phase];
   const shown = state.shown[state.phase];
   const sentence = (
     <p
@@ -73,7 +75,7 @@ export function TeacherRouteStage({
   const photo = (
     <Image
       className="kpd-photo"
-      src={matWord.image!}
+      src={getClassroomLesson(state.lessonId).boardImage!}
       alt={matWord.word}
       width={800}
       height={800}
@@ -128,10 +130,21 @@ export function TeacherRouteStage({
             {state.phase === 1 && (
               <p>De docent leest voor. Luister en vertel.</p>
             )}
+            {phase.studentAction && !(state.route === 'c' && state.phase === 0) && <p>{phase.studentAction}</p>}
           </div>
         </div>
       </div>
     );
+
+  if (phase.studentAction && ([2, 5, 7].includes(state.phase) || state.phase === 6 && state.route === 'b'))
+    return <>
+      {state.phase === 2 && state.route === 'b' ? <div className="kpd-word-cards">
+        {route.cards.map((word, index) => <button className="secondary-button" key={index} aria-pressed={selectedWord === String(index)} onClick={() => setSelectedWord(selectedWord === String(index) ? '' : String(index))}>{word}</button>)}
+      </div> : sentence}
+      <p>{phase.studentAction}</p>
+      {shown && <output className="kpd-route-feedback" aria-live="polite">{phase.expected}</output>}
+      <div className="kpd-actions"><button className="secondary-button" onClick={reveal}><Eye />{shown ? 'Voorbeeld verbergen' : 'Voorbeeld tonen'}</button></div>
+    </>;
 
   if (state.phase === 2)
     return state.route === 'b' ? (

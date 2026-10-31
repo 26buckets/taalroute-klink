@@ -1,4 +1,5 @@
 import lessonContent from '../data/klink-docent-lessons.json' with { type: 'json' };
+import additionalLessons from '../data/klink-docent-extra-lessons.json' with { type: 'json' };
 import classroomContent from '../data/klink-docent-mat.json' with { type: 'json' };
 import routeContent from '../data/klink-docent-routes.json' with { type: 'json' };
 import { wordById } from './klink-curriculum.ts';
@@ -71,6 +72,8 @@ export type LessonPhase = {
   expected?: string;
   hint?: string;
   feedback?: string;
+  studentAction?: string;
+  visible?: string;
 };
 export const phases: LessonPhase[] = [
   {
@@ -154,14 +157,19 @@ export const classroomLessons = [
   { id: 'mat', wordRef: classroomContent.wordRef, display: 'de mat', phases, routes: classroomRoutes,
     presentation: { imageAlt: 'Een mat bij een deur', phrases: ['De mat', 'ligt', 'bij de deur.'], entryAction: 'Kom binnen. Veeg je voeten op de mat.', ownPrompt: 'Vertel over de mat bij jou thuis.', ownHint: 'Waar ligt hij? Wat doe jij als je binnenkomt?', wordUse: 'Waar ligt nog een mat? Vertel of laat zien.' } },
   ...lessonContent,
+  ...additionalLessons,
 ].map(content => {
   const pack = lessonPackages.find(pack => pack.lessons.some(lesson => lesson.newWords?.includes(content.wordRef)))!;
   const lesson = pack.lessons.find(lesson => lesson.newWords?.includes(content.wordRef))!;
   const word = pack.words.find(word => word.id === content.wordRef)!;
-  return { ...content, pack, lesson, word, units: word.segmentation.split('|'), exercises: exercisesForLesson(pack, lesson) };
+  const boardImage = 'boardImage' in content && typeof content.boardImage === 'string' ? content.boardImage : word.image;
+  return { ...content, boardImage, pack, lesson, word, units: word.segmentation.split('|'), exercises: exercisesForLesson(pack, lesson) };
 });
 export function getClassroomLesson(lessonId = 'mat') {
   return classroomLessons.find(lesson => lesson.id === lessonId) ?? classroomLessons[0];
+}
+export function classroomSoundId(units: string[], index: number) {
+  return units[index] === 'd' && index === units.length - 1 ? 't' : units[index];
 }
 export function phasesForRoute(route: ClassroomRoute, lessonId = 'mat'): LessonPhase[] {
   const lesson = getClassroomLesson(lessonId);
@@ -263,7 +271,7 @@ export function restoreClassroom(raw: string | null): ClassroomState {
       const t = value.tiles?.[i];
       return typeof t === 'string' &&
         lesson.units.includes(t) &&
-        value.tiles.indexOf(t) === i
+        value.tiles.slice(0, i + 1).filter((letter: unknown) => letter === t).length <= lesson.units.filter(letter => letter === t).length
         ? t
         : '';
     });
@@ -315,8 +323,9 @@ export function placeTile(tiles: string[], letter: string, position?: number, le
   const units = getClassroomLesson(lessonId).units;
   const target = position ?? units.findIndex((_, i) => !tiles[i]);
   if (!units.includes(letter) || target < 0 || target >= units.length) return tiles;
-  const next = units.map((_, i) => tiles[i] === letter ? '' : (tiles[i] ?? ''));
-  const previous = tiles.indexOf(letter);
+  if (tiles[target] === letter) return tiles;
+  const next = units.map((_, i) => tiles[i] ?? '');
+  const previous = tiles.filter(value => value === letter).length >= units.filter(value => value === letter).length ? tiles.indexOf(letter) : -1;
   next[target] = letter;
   if (previous >= 0 && previous !== target) next[previous] = tiles[target] ?? '';
   return next;

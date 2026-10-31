@@ -42,6 +42,7 @@ import {
   routeIds,
   roundLabels,
   phasesForRoute,
+  classroomSoundId,
   type ClassroomRoute,
   classroomHash,
   freshClassroom,
@@ -74,7 +75,10 @@ function useClassroomAudio(lessonId = "mat") {
   const [revision, setRevision] = useState(0);
   const [playing, setPlaying] = useState("");
   const run = useRef(0);
-  const sources = useMemo<Record<string, string>>(() => ({ word: lesson.word.audio ?? "", ...Object.fromEntries(lesson.units.map(id => [id, ["m", "a", "t"].includes(id) ? registry[id] ?? "" : soundById.get(id)?.audio ?? ""])) }), [lesson, registry]);
+  const sources = useMemo<Record<string, string>>(() => ({ word: lesson.word.audio ?? "", ...Object.fromEntries(lesson.units.map((id, index) => {
+    const sound = classroomSoundId(lesson.units, index);
+    return [id, ["m", "a", "t"].includes(sound) ? registry[sound] ?? "" : soundById.get(sound)?.audio ?? ""];
+  })) }), [lesson, registry]);
   const status = Object.fromEntries(Object.entries(sources).map(([id, source]) => [id, !source || isWithdrawnAudio(source) ? "missing" : clips[id]?.source === source ? clips[id].status : "loading"])) as Record<string, ClipStatus>;
   useEffect(() => {
     const controller = new AbortController();
@@ -157,11 +161,11 @@ function SoundButtons({
   const [pointed, setPointed] = useState("");
   return (
     <div className="kpd-sounds">
-      {matUnits.map((id) => {
-        const name = id === "a" ? "korte a" : id === "e" ? "korte e" : id;
+      {matUnits.map((id, index) => {
+        const name = id === "d" && index === matUnits.length - 1 ? "t aan het eind; je schrijft d" : ["a", "e", "i", "o", "u"].includes(id) ? `korte ${id}` : id;
         const status = audio.status[id] ?? "loading";
         return (
-          <div key={id} className="kpd-sound">
+          <div key={`${id}-${index}`} className="kpd-sound">
             <button
               className="secondary-button kpd-sound-select"
               aria-label={`Wijs ${id} aan`}
@@ -175,7 +179,7 @@ function SoundButtons({
               type="button"
               disabled={status !== "ready"}
               aria-label={`Luister naar de klank ${name}`}
-              aria-describedby={`${prefix}-${id}`}
+              aria-describedby={`${prefix}-${index}`}
               aria-pressed={audio.playing === id}
               onClick={() => void audio.listen(id)}
             >
@@ -184,7 +188,7 @@ function SoundButtons({
                 <X className="kpd-missing" aria-hidden="true" />
               )}
             </button>
-            <output id={`${prefix}-${id}`} className="sr-only">
+            <output id={`${prefix}-${index}`} className="sr-only">
               {status === "missing"
                 ? `Opname van ${name} ontbreekt of kan niet afspelen.`
                 : status === "loading"
@@ -210,13 +214,13 @@ function LetterCards({ lessonId = "mat" }: { lessonId?: string }) {
         <h2>{display.toUpperCase()}</h2>
       </header>
       <div className="kpd-large-cards">
-        {matUnits.map((unit) => (
-          <div key={unit}>{unit}</div>
+        {matUnits.map((unit, index) => (
+          <div key={`${unit}-${index}`}>{unit}</div>
         ))}
       </div>
       <div className="kpd-large-cards">
-        {matUnits.map((unit) => (
-          <div key={unit}>&nbsp;</div>
+        {matUnits.map((unit, index) => (
+          <div key={`${unit}-${index}`}>&nbsp;</div>
         ))}
       </div>
       <ArrowRight aria-label="Van links naar rechts" />
@@ -617,7 +621,7 @@ export function TeacherClassroom({
       height={800}
       className="kpd-photo"
       onError={() => setPhotoError(true)}
-      src={matWord.image!}
+      src={getClassroomLesson(state.lessonId).boardImage!}
       alt={matWord.word}
     />
   );
@@ -641,7 +645,7 @@ export function TeacherClassroom({
       <TeacherWorkspaceFrame view="plus">
         <div className="kpd-lesson-list">
           {classroomLessons.map(lesson => <button key={lesson.id} className="kpd-lesson-choice" aria-label={`Les openen: ${lesson.word.word}`} onClick={() => start(lesson.id)}>
-            <Image src={lesson.word.image!} alt="" width={120} height={120} />
+            <Image src={lesson.boardImage!} alt="" width={120} height={120} />
             <span>{lesson.word.word}</span><ArrowRight aria-hidden="true" />
           </button>)}
         </div>
@@ -834,7 +838,7 @@ export function TeacherClassroom({
                 <div className="kpd-slots" aria-label="Het gelegde woord">
                   {matUnits.map((unit, i) => (
                     <button
-                      key={unit}
+                      key={`${unit}-${i}`}
                       data-tile-slot={i}
                       className="kpd-letter secondary-button"
                       disabled={shown}
@@ -857,13 +861,13 @@ export function TeacherClassroom({
                   ))}
                 </div>
                 <div className="kpd-tiles" aria-label="Losse letters">
-                  {[...matUnits].reverse().map((unit) => (
+                  {[...matUnits].reverse().map((unit, index) => (
                     <button
                       type="button"
                       className="kpd-letter secondary-button"
-                      key={unit}
+                      key={`${unit}-${index}`}
                       aria-label={`Leg ${unit}`}
-                      disabled={state.tiles.includes(unit)}
+                      disabled={state.tiles.filter(letter => letter === unit).length > [...matUnits].reverse().slice(0, index).filter(letter => letter === unit).length}
                       onPointerDown={(e) => {
                         dragged.current = false;
                         e.currentTarget.setPointerCapture(e.pointerId);
@@ -987,19 +991,19 @@ export function TeacherClassroom({
               <>
                 {photo}
                 <p>
-                  {state.variant === "extend"
+                  {phase.studentAction || (state.variant === "extend"
                     ? presentation.wordUse
                     : state.variant === "support"
                       ? `Wijs ${display} aan. Zeg het woord.`
-                      : "Zeg het woord. De ander wijst aan. Wissel."}
+                      : "Zeg het woord. De ander wijst aan. Wissel.")}
                 </p>
               </>
             )}
             {state.route === "a" && state.phase === 6 && (
               <>
-                <PencilLine className="kpd-paper-icon" aria-hidden="true" />
-                <p>Nu zelfstandig op papier.</p>
-                <p>Klaar? Kijk nog eens naar jouw woord.</p>
+                {!phase.studentAction && <PencilLine className="kpd-paper-icon" aria-hidden="true" />}
+                <p>{phase.studentAction || "Nu zelfstandig op papier."}</p>
+                {!phase.studentAction && <p>Klaar? Kijk nog eens naar jouw woord.</p>}
                 <button className="secondary-button" onClick={reveal}>
                   {shown ? "Voorbeeld verbergen" : "Voorbeeld tonen"}
                 </button>
@@ -1049,7 +1053,7 @@ export function TeacherClassroom({
                 }}
                 onComplete={() => update({ regular: false })}
                 completeLabel="Terug naar de les"
-                title="Oefen met mat"
+                title={`Oefen met ${matWord.word}`}
                 description="Kijk, luister en leg het woord."
               />
             )}
@@ -1244,7 +1248,8 @@ export function TeacherMaterials() {
               </li>)}</ol>
             </article>
             <button className="secondary-button" onClick={() => printExtra("answers")}><Printer />Print antwoorden</button>
-            <a className="secondary-button" href="/docent-werkbladen/kpd08/docentantwoorden.pdf" download><Download />Alle docentantwoorden (PDF)</a>
+            <a className="secondary-button" href={"answerPdf" in sheet && typeof sheet.answerPdf === "string" ? sheet.answerPdf : "/docent-werkbladen/kpd08/docentantwoorden.pdf"} download><Download />{"answerPdf" in sheet ? "Antwoordblad (PDF)" : "Alle docentantwoorden (PDF)"}</a>
+            {"planPdf" in lesson && typeof lesson.planPdf === "string" && <a className="secondary-button" href={lesson.planPdf} download><Download />Docentlesplan (PDF)</a>}
           </details>
           <details className="kpd-extra-materials">
             <summary>Extra materiaal</summary>

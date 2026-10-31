@@ -12,10 +12,11 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
     for (const width of [1440, 390]) {
       const page = await browser.newPage({ viewport: { width, height: 900 } });
       page.setDefaultTimeout(15000);
+      await page.emulateMedia({reducedMotion:'reduce'});
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(base + '/#teacher/materials');
       await page.locator('.kpd-worksheet-grid').waitFor();
-      assert.equal(await page.locator('.kpd-worksheet-lesson').count(), 8);
+      assert.equal(await page.locator('.kpd-worksheet-lesson').count(), worksheets.length);
       await page.screenshot({ path: `${out}/${engine}-${width}-dashboard.png`, fullPage: true });
       for (const lesson of worksheets) {
         console.log('Checking', engine, width, lesson.id);
@@ -36,8 +37,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
           }
           await page.getByText('Antwoorden voor de docent', { exact: true }).click();
           assert.equal(await page.locator('.kpd-answers-print li').count(), 10);
-          const text = await page.locator('.kpd-answers-print').innerText();
-          for (const answer of sheet.answers) assert(text.includes(answer.answer));
+          const text = (await page.locator('.kpd-answers-print').innerText()).replace(/\s+/g,' ');
+          for (const answer of sheet.answers) assert(text.includes(answer.answer.replace(/\s+/g,' ')),`${lesson.id}/${round}/${answer.number}`);
           assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
           await page.reload();
           await page.locator('.kpd-worksheet-rounds [aria-current]').waitFor();
@@ -50,7 +51,7 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         assert.equal(await page.locator('.kpd-big-word').innerText(), lesson.id);
         await page.getByRole('button', { name: 'Kies onderdeel', exact: true }).click();
         await page.locator('.kpd-phases button').nth(3).click();
-        await page.getByRole('button', { name: `Leg ${lesson.id[0]}`, exact: true }).click();
+        await page.locator('.kpd-tiles button:not(:disabled)').filter({hasText: new RegExp('^'+lesson.id[0]+'$')}).first().click();
         const before = await page.evaluate(() => sessionStorage.getItem('klink.docent.les.v1'));
         const board = await page.locator('.kpd-stage').boundingBox();
         await page.getByRole('button', { name: 'Werkblad', exact: true }).click();
@@ -93,4 +94,4 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
 }
 assert.deepEqual(errors, []);
 writeFileSync(out + '/browser-checks.json', JSON.stringify({ checks, errors }, null, 2));
-console.log('PASS', checks.length, 'worksheet views; 32 lesson returns, direct B/C links and reload; Chromium/WebKit desktop/mobile');
+console.log('PASS', checks.length, `worksheet views; ${worksheets.length*4} lesson returns, direct B/C links and reload; Chromium/WebKit desktop/mobile`);

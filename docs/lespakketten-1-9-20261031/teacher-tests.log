@@ -1,0 +1,23 @@
+✔ mat uses the canonical lesson, word, media and existing practice (0.75025ms)
+✔ three content routes are independent of support and trace prerequisites honestly (0.674834ms)
+✔ sentence and text cards preserve duplicates and reject invalid ordering (0.219ms)
+✔ tile actions preserve unique known letters and allow reordering (0.109917ms)
+✔ session round trip preserves lesson; malformed storage fails closed (0.114666ms)
+✔ runtime sound manifest has isolated slots and rejects unsafe sources and fallbacks (0.585792ms)
+✔ eight source lessons have 24 complete phases, canonical assets and distinct sentences (13.203084ms)
+✔ saved lesson state migrates mat and rejects foreign exercise IDs, unknown letters and excessive input (0.370125ms)
+✔ per-lesson progress is isolated and corrupted or unavailable storage does not open another lesson (0.297ms)
+✔ all nine packages retain 30 lesson kernels, 720 phases and 900 matching answers (5977.472958ms)
+✔ repeated letters build, move, clear and restore without admitting excess copies (0.296333ms)
+✔ final d uses the existing t sound, while initial d and written letters remain intact (0.084792ms)
+✔ review repairs preserve meaning, exact text evidence and matching models (0.09275ms)
+PASS: 24 unchanged double-sided A4 PDFs, 48 previews, 240 unique answers, validated lesson/round links
+✔ scripts/test-teacher-worksheets.mjs (1565.544083ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6324.106542

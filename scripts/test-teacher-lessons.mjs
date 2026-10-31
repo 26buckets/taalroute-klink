@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {classroomLessons,getClassroomLesson,phasesForRoute,sequenceForRoute,isCorrectSequence,freshClassroom,restoreClassroom,saveClassroom,readLessonClassroom} from '../lib/teacher-classroom.ts';
 test('eight source lessons have 24 complete phases, canonical assets and distinct sentences',()=>{
- assert.deepEqual(classroomLessons.map(l=>l.id),['mat','tas','map','man','pan','jas','pen','pet']);
- for(const l of classroomLessons){
+ assert.deepEqual(classroomLessons.slice(0,8).map(l=>l.id),['mat','tas','map','man','pan','jas','pen','pet']);
+ for(const l of classroomLessons.slice(0,8)){
   assert.deepEqual(freshClassroom('basic','a',l.id).shown.slice(0,2),[true,true]);assert.equal(l.word.word,l.id);assert.equal(l.units.join(''),l.id);
   for(const src of [l.word.image,l.word.audio])assert(readFileSync('public'+src).length>500);
   assert(l.exercises.length>0);

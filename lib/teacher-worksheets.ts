@@ -1,7 +1,8 @@
-import worksheets from '../data/klink-docent-worksheets.json' with { type: 'json' };
+import originalWorksheets from '../data/klink-docent-worksheets.json' with { type: 'json' };
+import additionalLessons from '../data/klink-docent-extra-lessons.json' with { type: 'json' };
 import type { ClassroomRoute } from './teacher-classroom.ts';
 
-export { worksheets };
+export const worksheets = [...originalWorksheets, ...additionalLessons.map(lesson => lesson.worksheet)];
 export function worksheetSelection(hash: string) {
   const query = new URLSearchParams(hash.split('?')[1] ?? '');
   const lesson = worksheets.find(lesson => lesson.id === query.get('lesson'));
