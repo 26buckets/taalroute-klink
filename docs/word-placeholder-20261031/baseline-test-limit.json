@@ -1,0 +1,6 @@
+{
+  "sameExistingFailure": true,
+  "assertion": "AssertionError [ERR_ASSERTION]: chromium/390/alfa-a/activities: frame moved\n+ actual - expected\n... Skipped lines\n\n  [\n    {\n      width: 366,\n      x: 12,\n      y: 60\n...\n      x: 12,\n+     y: 184\n-     y: 172\n    },\n    {\n      width: 358,\n      x: 16,\n+     y: 126\n-     y: 120\n    },\n    {\n      width: 358,\n      x: 16,\n+     y: 184\n-     y: 172\n    }\n  ]\n\n",
+  "liveSourceCommit": "f302ecb5ef17517eb373f7fb692a80d6cc0938a7",
+  "noScopeExpansion": true
+}

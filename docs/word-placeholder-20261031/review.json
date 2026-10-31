@@ -1,0 +1,25 @@
+{
+  "wholeWords": true,
+  "faintLogo": true,
+  "imagesPreserved": true,
+  "savedWords": true,
+  "navigation": true,
+  "responsive": true,
+  "lightDark": true,
+  "unchangedScreens": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "scope": "Shared Blinddruk for existing missing-word image slots, library, saved words, package words and failed known-word images. Intentionally imageless tasks, navigation icons and all actual media remain unchanged.",
+  "logoOpacity": 0.035,
+  "longWordLogoOpacity": 0.02,
+  "wholeWordsChecked": 4694,
+  "media": "No original public, lib, data or hooks files changed",
+  "reactReview": "Direct shared component, no new dependencies or effects; scoped failure state, existing error callback retained; text accessible and decorative duplicate hidden.",
+  "baselineTestLimit": "Historical Alfa C exact-frame test fails with the same mobile 12px difference on current live baseline and local. Navigation and preserved progress verified by word-round continuity, Start, sections and word-library tests.",
+  "notChecked": [
+    "Physical devices",
+    "New human image/audio review; media unchanged"
+  ]
+}

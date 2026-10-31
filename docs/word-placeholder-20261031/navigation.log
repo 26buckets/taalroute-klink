@@ -1,0 +1,53 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: chromium/390/alfa-a/activities: frame moved
++ actual - expected
+... Skipped lines
+
+  [
+    {
+      width: 366,
+      x: 12,
+      y: 60
+...
+      x: 12,
++     y: 184
+-     y: 172
+    },
+    {
+      width: 358,
+      x: 16,
++     y: 126
+-     y: 120
+    },
+    {
+      width: 358,
+      x: 16,
++     y: 184
+-     y: 172
+    }
+  ]
+
+    at sameFrame (file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/scripts/test-alfa-c-menu-browser.mjs:26:16)
+    at async file:///Users/nicoknoester/.cache/klink-publicatie-herstel-20261030/scripts/test-alfa-c-menu-browser.mjs:94:11 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    { x: 12, y: 60, width: 366 },
+    { x: 12, y: 184, width: 366 },
+    { x: 16, y: 126, width: 358 },
+    { x: 16, y: 184, width: 358 }
+  ],
+  expected: [
+    { x: 12, y: 60, width: 366 },
+    { x: 12, y: 172, width: 366 },
+    { x: 16, y: 120, width: 358 },
+    { x: 16, y: 172, width: 358 }
+  ],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.4.0
