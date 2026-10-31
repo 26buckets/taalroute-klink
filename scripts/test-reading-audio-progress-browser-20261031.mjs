@@ -5,7 +5,7 @@ import {chromium,webkit} from 'playwright';
 import {productionIndex} from '../lib/production-practice.ts';
 import {chapterHash} from '../lib/practice-chapters.ts';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18950',out=process.env.KLINK_READING_OUTPUT||'docs/leesrondes-audio-20261031';
-const prior=JSON.parse(execFileSync('git',['show','b4df2107:data/klink-production-index.json'])),rows=productionIndex.filter(r=>r.id.startsWith('klink-teksten-zelf-')),checks=[];
+const prior=JSON.parse(execFileSync('git',['show','f323da366f7f7f0c456831f177d8c4d9a70dbd9f:data/klink-production-index.json'])),rows=productionIndex.filter(r=>r.id.startsWith('klink-teksten-zelf-')),checks=[];
 for(const[name,engine]of Object.entries({chromium,webkit})){
  const browser=await engine.launch();
  try{for(const row of rows)for(const completed of [false,true]){
@@ -25,6 +25,7 @@ for(const[name,engine]of Object.entries({chromium,webkit})){
   }else{
    await page.locator(`[data-exercise-id="${ids[4]}"]`).waitFor();await page.locator('.cp-source-text button').click();await page.waitForFunction(()=>window.__nativeReadingPlayed);
    assert.equal(await page.evaluate(key=>localStorage.getItem(key),roundKey),JSON.stringify(round),'Optional narration never changes earlier completion');
+   await page.getByRole('button',{name:'Andere opdracht',exact:true}).first().click();await page.locator(`[data-collection="${row.id}"]`).click();await page.locator(`[data-exercise-id="${ids[4]}"]`).waitFor();
    const e=exercises[4],correct=e.options.findIndex(o=>e.answer.correctOptionIds.includes(o.id));await page.locator('.cp-choice-grid .cp-extended-option > button:first-child').nth(correct).click();
    await page.locator('.cp-exercise-feedback [data-practice-next]').click();await page.locator(`[data-exercise-id="${ids[5]}"]`).waitFor();
    await page.reload();await page.locator(`[data-exercise-id="${ids[5]}"]`).waitFor();

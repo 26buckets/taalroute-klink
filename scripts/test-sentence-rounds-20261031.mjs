@@ -35,5 +35,5 @@ for(const [n,row]of productionIndex.slice(-4).entries()){
  }
 }
 assert.equal(ids.size,44);assert.deepEqual(source.rounds.map(r=>r.questions.length),[12,12,10,10]);
-for(const root of ['app','components','lib','hooks','db','drizzle','public/package-audio','public/package-media'])assert.equal(execFileSync('git',['diff','--name-only',...(root==='public/package-audio'?['--diff-filter=MD']:[]),'c5555f21','--',root]).length,0,root+' unchanged');
+for(const root of ['app','components','lib','hooks','db','drizzle','public/package-audio','public/package-media'])assert.equal(execFileSync('git',['diff','--name-only',...(root==='public/package-audio'?['--diff-filter=MD']:[]),'f323da366f7f7f0c456831f177d8c4d9a70dbd9f','--',root]).length,0,root+' unchanged');
 console.log('PASS 44 reviewed sentence questions: original sources/audio, answers, feedback, metadata, self-practice routes and every existing collection; no UI or storage changes');

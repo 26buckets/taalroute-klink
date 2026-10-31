@@ -1,0 +1,87 @@
+{
+  "base": "http://127.0.0.1:18950",
+  "checks": [
+    {
+      "engine": "chromium",
+      "level": "a1",
+      "slow": false,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.85,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "chromium",
+      "level": "a1",
+      "slow": true,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.65,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "chromium",
+      "level": "a2",
+      "slow": false,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.85,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "chromium",
+      "level": "a2",
+      "slow": true,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.65,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "webkit",
+      "level": "a1",
+      "slow": false,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.85,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "webkit",
+      "level": "a1",
+      "slow": true,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.65,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "webkit",
+      "level": "a2",
+      "slow": false,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.85,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    },
+    {
+      "engine": "webkit",
+      "level": "a2",
+      "slow": true,
+      "errorRecovery": true,
+      "noFalseCompletion": true,
+      "rate": 0.65,
+      "pitchPreserved": true,
+      "backStopsAudio": true
+    }
+  ],
+  "errors": [],
+  "syntheticFailure": true
+}

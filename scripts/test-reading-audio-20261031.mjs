@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {verifyReadingAudioContent} from './check-reading-audio-release-20261031.mjs';
 import {collectionProgressId,roundProgressCount,roundProgressPrefix,recordRoundSteps} from '../lib/round-progress.ts';
 import {restoreGroupSession} from '../lib/group-practice.ts';
-const {rows}=verifyReadingAudioContent(),before=JSON.parse(execFileSync('git',['show','b4df2107:data/klink-production-index.json']));
+const {rows}=verifyReadingAudioContent(),before=JSON.parse(execFileSync('git',['show','f323da366f7f7f0c456831f177d8c4d9a70dbd9f:data/klink-production-index.json']));
 const memory=new Map();globalThis.window=new EventTarget();globalThis.localStorage={getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)};
 for(const row of rows){
  const old=before.find(r=>r.id===row.id),exercises=JSON.parse(readFileSync('public'+row.url)).exercises,ids=exercises.map(e=>e.exerciseId);

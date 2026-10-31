@@ -1,3 +1,4 @@
+import {verifyReadingAudioRelease,readBeforeReadingAudio} from './check-reading-audio-release-20261031.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,11 +9,12 @@ const sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const lines=b=>sort(b.toString().trim().split('\n').filter(Boolean));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyTeacherPackagesRelease(read=readFileSync){
+ const successor=verifyReadingAudioRelease(read),currentRead=read;read=file=>readBeforeReadingAudio(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-teacher-packages-1-9-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChanged,false);assert(r.userRequest&&r.repairRequest);
  assert.equal(r.baselineSourceCommit,'b4df210793db0a5bf9b6bb1a8aecc3a9ee4352c6');assert.equal(r.liveSourceCommit,'b4df210793db0a5bf9b6bb1a8aecc3a9ee4352c6');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  const allowed=new Set(['components/product/teacher-classroom.tsx','components/product/teacher-route-stage.tsx','lib/teacher-classroom.ts','lib/teacher-worksheets.ts','data/klink-docent-extra-lessons.json','data/klink-compact-images-20261031.json','data/klink-image-preparation.json','scripts/test-teacher-lessons.mjs','scripts/test-teacher-lessons-browser.mjs','scripts/test-teacher-worksheets.mjs','scripts/test-teacher-worksheets-browser.mjs','scripts/test-teacher-packages-1-9.mjs','scripts/check-sentence-rounds-release-20261031.mjs','scripts/check-teacher-packages-release-20261031.mjs','scripts/test-teacher-packages-release-20261031.mjs']);
  const source=JSON.parse(read('docs/lespakketten-1-9-20261031/sources.json'));
@@ -26,7 +28,7 @@ export function verifyTeacherPackagesRelease(read=readFileSync){
   for(const[k,v]of Object.entries(before))assert.deepEqual(after[k],v,`Existing image preparation ${k}`);
   for(const k of Object.keys(after).filter(k=>!(k in before)))assert(k.startsWith('/docent-werkbladen/lespakketten-1-9/'),'Only new lesson previews and drawings');
  }
- assert.equal(git('diff','--name-only',r.baselineSourceCommit,'--','app','hooks','db','drizzle','data/klink-docent-lessons.json','data/klink-docent-mat.json','data/klink-docent-routes.json','data/klink-docent-worksheets.json','lib/learner-progress.ts','lib/learning-review.ts','lib/round-progress.ts','lib/media-player.ts').length,0,'Existing design, lessons, audio player and storage remain intact');
+ assert.equal(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','app','hooks','db','drizzle','data/klink-docent-lessons.json','data/klink-docent-mat.json','data/klink-docent-routes.json','data/klink-docent-worksheets.json','lib/learner-progress.ts','lib/learning-review.ts','lib/round-progress.ts','lib/media-player.ts').length,0,'Existing design, lessons, audio player and storage remain intact');
  assert.equal(read('docs/appearance-floor-20261031/floor.json').toString(),git('show',r.baselineSourceCommit+':docs/appearance-floor-20261031/floor.json').toString());
  const lessons=JSON.parse(read('data/klink-docent-extra-lessons.json'));
  assert.equal(lessons.length,30);assert.equal(new Set(lessons.map(l=>l.id)).size,30);
@@ -38,6 +40,6 @@ export function verifyTeacherPackagesRelease(read=readFileSync){
  assert.equal(review.newAudioGenerated,false);assert.equal(review.physicalPrint,false);assert.equal(review.classroomPilot,false);
  const backup=JSON.parse(read('docs/lespakketten-1-9-20261031/backup.json'));assert(backup.verified&&backup.fullReadback&&backup.driveFolderId&&backup.archives.length);
  for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
-export function readBeforeTeacherPackages(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):read(file);}
+export function readBeforeTeacherPackages(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeReadingAudio(file,r.successor,read);}

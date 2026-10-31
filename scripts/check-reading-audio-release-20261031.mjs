@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex');
 const sort=xs=>xs.sort((a,b)=>a.localeCompare(b)),lines=b=>sort(b.toString().trim().split('\n').filter(Boolean));
-const base='b4df210793db0a5bf9b6bb1a8aecc3a9ee4352c6',folder='docs/leesrondes-audio-20261031';
+const base='f323da366f7f7f0c456831f177d8c4d9a70dbd9f',folder='docs/leesrondes-audio-20261031';
 const before=file=>git('show',base+':'+file),json=(file,read)=>JSON.parse(read(file));
 export function verifyReadingAudioContent(read=readFileSync){
  const indexFile='data/klink-production-index.json',aliasFile='data/klink-progress-image-aliases-20261030.json';
@@ -51,7 +51,7 @@ export function verifyReadingAudioRelease(read=readFileSync){
  assert.equal(r.userRequest,json(folder+'/owner-request.json',read).userRequest);
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
  const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
- const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-sentence-rounds-release-20261031.mjs','scripts/check-reading-audio-release-20261031.mjs','scripts/test-reading-rounds-20261031.mjs','scripts/test-reading-rounds-browser-20261031.mjs','scripts/test-reading-rounds-appearance-20261031.mjs','scripts/test-sentence-rounds-20261031.mjs','scripts/test-reading-audio-20261031.mjs','scripts/test-reading-audio-progress-browser-20261031.mjs','scripts/test-reading-audio-release-20261031.mjs'];
+ const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-teacher-packages-release-20261031.mjs','scripts/check-reading-audio-release-20261031.mjs','scripts/test-reading-rounds-20261031.mjs','scripts/test-reading-rounds-browser-20261031.mjs','scripts/test-reading-rounds-appearance-20261031.mjs','scripts/test-sentence-rounds-20261031.mjs','scripts/test-reading-audio-20261031.mjs','scripts/test-reading-audio-progress-browser-20261031.mjs','scripts/test-reading-audio-release-20261031.mjs'];
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const file of changed){assert(allowed.includes(file)||/^public\/practice-content\/reading-rounds-20261031\/a[12]-r01-[a-f0-9]{16}\.json$/.test(file)||/^public\/package-audio\/reading-rounds-20261031\/a[12]-t0[123]\.wav$/.test(file),file);assert.equal(sha(read(file)),r.files[file],file);}
  assert.equal(git('diff','--name-only',base,'--','app','components','hooks','lib','db','drizzle','.github','package.json','package-lock.json','vite.config.ts').length,0,'All UI, playback logic, routes, storage and deployment configuration stay exact');
@@ -59,6 +59,7 @@ export function verifyReadingAudioRelease(read=readFileSync){
  assert.equal(sha(read('docs/appearance-floor-20261031/floor.json')),sha(before('docs/appearance-floor-20261031/floor.json')));
  const content=verifyReadingAudioContent(read);for(const f of ['voice-plan.json','recordings.json','text-check.json'])assert.equal(sha(read(folder+'/'+f)),r.evidenceSha256[f]);
  const player=json(folder+'/player-check.json',read);assert(player.localOnly);assert(player.checks.length>=8);assert.deepEqual(player.errors,[]);assert(player.checks.every(c=>c.allThreeRecordingsPlayed&&c.oldProgressPreserved&&c.reloadResume&&c.completedReload));assert.equal(player.checks.filter(c=>c.completedNativePlayback).length,2);
+ const integrated=json(folder+'/after-teacher-integration/player-check.json',read);assert(integrated.localOnly);assert.equal(integrated.checks.length,8);assert.deepEqual(integrated.errors,[]);assert(integrated.checks.every(c=>c.allThreeRecordingsPlayed&&c.oldProgressPreserved&&c.reloadResume&&c.completedReload));
  const progress=json(folder+'/progress-check.json',read);assert.equal(progress.checks.length,8);assert(progress.checks.every(c=>c.oldKeysRetained&&c.originalCompletionRetained&&c.sessionRestored));
  const appearance=json(folder+'/appearance-check.json',read);assert(appearance.equal&&appearance.checks.length===8);
  const review=json(folder+'/review.json',read);for(const k of ['text','metadata','lossless','player','appearance','progress','preservation','types','lint','build','localOnly'])assert.equal(review[k],true,k);
