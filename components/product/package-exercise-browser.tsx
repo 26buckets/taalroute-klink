@@ -1,4 +1,5 @@
 'use client';
+import { readingSupportForExercise } from '@/lib/production-practice';
 
 import { useId } from 'react';
 import { wordWithArticle } from '@/lib/word-articles';
@@ -393,7 +394,7 @@ export function PackageExerciseBrowser({
   }
 
   const advanceAfterFeedback = useEffectEvent(() => next());
-  const pacedReading = exercise?.mode === 'read-series' || exercise?.mode === 'paper-dictation';
+  const pacedReading = (exercise?.mode === 'read-series' || exercise?.mode === 'paper-dictation') && !readingSupportForExercise(exercise);
   useEffect(() => {
     const update = () => setPageVisible(!document.hidden);
     update(); document.addEventListener('visibilitychange', update);
@@ -752,13 +753,14 @@ function WordPicture({ exercise, onHelp, answeredCorrectly }: { exercise: Packag
 }
 
 function ReadingSurface({ exercise, onAudio, onFinish, guided, canAnswer }: SurfaceProps & { guided: boolean; canAnswer: boolean }) {
+  const readingSupport = readingSupportForExercise(exercise);
   const blocks = asArray<{ id: string; text: string; speaker?: string; audio?: unknown }>(exercise.textBlocks);
   const image = exerciseImage(exercise);
   const audio = exercise.prompt?.audio?.src;
-  return <section className={`cp-task-card cp-context-card${isBeginnerLesson(exercise, guided) && exercise.mode === 'listen-situation' ? ' cp-beginner-listening' : ''}`}><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-context-layout">{image && (audio ? <button className="cp-context-image" aria-label="Luister bij de foto" onClick={() => onAudio(audio)}><ExerciseImageView image={image} /></button> : <ExerciseImageView image={image} />)}<div className="cp-reading-blocks">{blocks.map(block => {
+  return <section className={`cp-task-card cp-context-card${isBeginnerLesson(exercise, guided) && exercise.mode === 'listen-situation' ? ' cp-beginner-listening' : ''}`}><Prompt exercise={exercise} onAudio={onAudio} /><div className="cp-context-layout">{image && (audio ? <button className="cp-context-image" aria-label="Luister bij de foto" onClick={() => onAudio(audio)}><ExerciseImageView image={image} /></button> : <ExerciseImageView image={image} />)}<div className={`cp-reading-blocks${readingSupport ? ' cp-reading-support' : ''}`}>{blocks.map(block => {
     const source = findAudioSource(block.audio);
     return source ? <button key={block.id} aria-label={`Luister: ${block.speaker ? `${block.speaker}: ` : ''}${block.text}`} onClick={() => onAudio(source)}>{block.speaker && <small>{block.speaker}<br /></small>}{block.text}</button> : <p key={block.id}>{block.text}</p>;
-  })}</div></div>{!guided && <button className="primary-button" disabled={!canAnswer} onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}</section>;
+  })}{readingSupport && <aside aria-label="Betekenis en voorbeeld"><p>{readingSupport.meaning}</p><p>{readingSupport.example}</p><small>Lees de voorbeeldzin samen. Leg in je eigen woorden uit wat het woord hier betekent.</small></aside>}</div></div>{!guided && <button className="primary-button" disabled={!canAnswer} onClick={() => onFinish('samen geoefend', true)}>Klaar<Check /></button>}</section>;
 }
 
 function LinkedQuestionSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pack: PackageDefinition }) {

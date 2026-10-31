@@ -1,0 +1,83 @@
+✔ Cooking story and every linked dialogue variant share Sara, Ali and the shopping agreement (313.498792ms)
+✔ Owner decisions are resolved; borderline texts retain A2 and explicit preparation (0.544958ms)
+✔ B1 partitions retain every original task once, exact old links and shared completion (1030.736375ms)
+✔ Five exact replacement recordings cover source, instruction and example; source IDs and models stay meaningful (1.100166ms)
+✔ All 320 texts and dialogues have exact full-text and question reviews, without reading-level inflation (6.249875ms)
+✔ Every linked exercise uses the reviewed source and respects a harder writing task (933.7615ms)
+✔ All original long-content IDs remain reachable in free listening, under the new levels (16.971666ms)
+✔ Changing only the question invalidates its language review, instead of inheriting a stale level (9.04875ms)
+✔ Five fresh recordings have matching source text, retained originals and verified brand metadata (161.259417ms)
+✖ Every data amendment is bounded and reversible; historical source guards reject extra tampering (200.227292ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (15777.027209ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.615375ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (53.6555ms)
+{
+  collections: 1462,
+  exercisePlacements: 59532,
+  uniqueSourceRecords: {
+    'build-model': 816,
+    copy: 8386,
+    meet: 641,
+    memory: 5,
+    'read-series': 8386,
+    'spelling-path': 698,
+    'word-bingo': 1344,
+    'word-sort': 192,
+    worksheet: 816,
+    'worksheet-heard': 840,
+    listen: 1152,
+    'hear-match': 192,
+    read: 576,
+    match: 192,
+    cards: 576,
+    'image-bingo': 2
+  },
+  referencedMedia: 5913,
+  indexBytes: 454710,
+  indexGzipBytes: 38225,
+  largestCollectionBytes: 129192,
+  oldAlfaAIdsPreserved: true,
+  all45AlfaBRecallTasks: true,
+  sourceAnswers: true,
+  pathsExist: true,
+  localOnly: true
+}
+✔ scripts/test-production-content.mjs (2094.8605ms)
+PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (8398.788292ms)
+PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
+✔ scripts/test-word-rounds.mjs (2097ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 15
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16537.523959
+
+✖ failing tests:
+
+test at scripts/test-long-content-review-20261030.mjs:85:6
+✖ Every data amendment is bounded and reversible; historical source guards reject extra tampering (200.227292ms)
+  AssertionError [ERR_ASSERTION]: public/content-register/active.json/3074/review
+  + actual - expected
+  
+  + 'Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.'
+  - 'Goedgekeurde kookherstelkeuze; technische audiocontrole uitgevoerd, menselijke luisterreview open.'
+  
+      at readBeforeLongReview (file:///private/tmp/klink-imported-alfa-c-20261031/scripts/check-long-review.mjs:19:56)
+      at TestContext.<anonymous> (file:///private/tmp/klink-imported-alfa-c-20261031/scripts/test-long-content-review-20261030.mjs:87:61)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'Nieuwe vaste stemkoppeling; menselijke luisterreview staat open.',
+    expected: 'Goedgekeurde kookherstelkeuze; technische audiocontrole uitgevoerd, menselijke luisterreview open.',
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

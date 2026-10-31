@@ -34,7 +34,7 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       };
     });
     const idle=()=>page.waitForFunction(()=>!document.querySelector('.functional-player .pilot-tools button')?.disabled);
-    await page.goto(base+'/#learner/alfa-c');await page.getByRole('button',{name:'Lezen en schrijven',exact:true}).click();await page.locator('[data-chapter-activity="sequence"]').click();await page.locator('[data-functional-block]').first().waitFor();
+    await page.goto(base+'/#learner/chapters/alfa-c-paper/sequence?level=alfa-c&help=practice');await page.locator('[data-functional-block]').first().waitFor();
     assert.equal(await page.locator('[data-functional-block]').count(),6);assert.equal(await page.locator('[data-pilot-block]').count(),0);
     const sentinel='{"version":1,"positions":{"winkel":7},"records":{}}';
     await page.evaluate(v=>{localStorage.setItem('klink.preview.alfa-c.v1',v);localStorage.setItem('klink.taalroute.attempts.v1','[{"sentinel":true}]');},sentinel);
@@ -106,14 +106,14 @@ for(const [name,engine] of Object.entries({chromium,webkit})) {
       await page.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();
       await page.getByRole('link',{name:'Kies een ander blok'}).click();await page.locator('[data-functional-block]').first().waitFor();
       const card=page.locator(`[data-functional-block="${block.id}"]`);assert((await card.getAttribute('class')).includes('is-complete'));assert((await card.innerText()).includes('Afgerond · 12 van 12'));
-      if(block.id==='lijst'){await card.click();await page.getByRole('button',{name:'Het hele blok opnieuw',exact:true}).click();await page.locator('[data-functional-step]').waitFor();await page.getByRole('button',{name:'Andere opdracht',exact:true}).click();await page.reload();await card.waitFor();assert((await card.getAttribute('class')).includes('is-complete'),'Completion survives repeat and reload');}
+      if(block.id==='lijst'){await card.click();await page.getByRole('button',{name:'Het hele blok opnieuw',exact:true}).click();await page.locator('[data-functional-step]').waitFor();await page.getByRole('button',{name:'Andere opdracht',exact:true}).click();await page.reload();await card.waitFor();await page.waitForFunction(id=>document.querySelector(`[data-functional-block="${id}"]`)?.classList.contains('is-complete'),block.id);assert((await card.getAttribute('class')).includes('is-complete'),'Completion survives repeat and reload');}
     }
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.preview.alfa-c.v1')),sentinel);
     assert.equal(await page.evaluate(()=>localStorage.getItem('klink.taalroute.attempts.v1')),'[{"sentinel":true}]');
     await page.setViewportSize({width:320,height:568});
     for(const block of functionalBlocks)for(const step of block.steps) {
       await page.evaluate(({key,id,n})=>localStorage.setItem(key,JSON.stringify({version:1,positions:{[id]:n},records:{}})),{key:functionalStorageKey,id:block.id,n:step.number-1});
-      await page.goto(base+`/#learner/alfa-c/${block.id}`);await page.reload();
+      await page.goto(base+`/?task=${step.id}#learner/chapters/alfa-c-paper/sequence/${block.id}?level=alfa-c&help=practice`);
       await page.locator(`[data-functional-step="${step.id}"]`).waitFor();
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal overflow: '+step.id);
       const sizes=await page.locator('.functional-player button').evaluateAll(a=>a.filter(x=>x.getBoundingClientRect().height).map(x=>({label:x.textContent,h:x.getBoundingClientRect().height})));

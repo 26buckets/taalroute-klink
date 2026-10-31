@@ -142,7 +142,7 @@ test('Inventory generation is deterministic, and does not mutate the learner cur
     ],
   };
   const registry = buildAudioRegister(fixture);
-  assert(JSON.stringify(rows) === JSON.stringify(registry.active), 'Published inventory snapshot must match current local content');
+  assert.deepEqual(rows, JSON.parse(JSON.stringify(registry.active)), 'Published inventory snapshot must match current local content');
   assert.equal(registry.planned.length, 2);
   assert.equal(
     registry.planned.find((row) => row.role === 'target').status,

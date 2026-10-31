@@ -1,3 +1,5 @@
+import support from '../data/klink-b1-reading-support.json' with { type: 'json' };
+import type { ChapterCollection } from './practice-chapters';
 import index from '../data/klink-production-index.json' with { type: 'json' };
 import type { PackageDefinition, PackageExercise } from './package-content';
 
@@ -19,4 +21,20 @@ export function validateProductionCollection(value: unknown, id: string, count: 
     ids.add(exercise.exerciseId);
   }
   return data.exercises;
+}
+
+// Keep the complete source available to old links and share its completion records.
+export function readingSelections(collection: ChapterCollection): ChapterCollection[] {
+  const selection = (support.collections as Record<string, { allExerciseIds: string[]; supportIds: string[] }>)[collection.id];
+  if (!selection) return [collection];
+  const supported = new Set(selection.supportIds);
+  return [false, true].flatMap(extension => {
+    const exerciseIds = selection.allExerciseIds.filter(id => supported.has(id) === extension);
+    return exerciseIds.length ? [{ ...collection, id: `${collection.id}~${extension ? 'extension' : 'core'}`, title: `${extension ? 'Uitbreiding met je docent' : 'Basis'} · ${collection.title}`, readingSelection: { sourceId: collection.id, allExerciseIds: selection.allExerciseIds, exerciseIds } }] : [];
+  });
+}
+export function readingSupportForExercise(exercise: PackageExercise) {
+  if (exercise.mode !== 'read-series' || exercise.contentLevel !== 'b1' || !Array.isArray(exercise.textBlocks)) return;
+  const word = (exercise.textBlocks as { text: string }[])[0]?.text;
+  return (support.words as Record<string, { meaning: string; example: string }>)[word];
 }

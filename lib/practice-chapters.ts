@@ -1,4 +1,4 @@
-import { productionIndex, productionPack } from './production-practice.ts';
+import { productionIndex, productionPack, readingSelections } from './production-practice.ts';
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { synonymCollections, synonymActivities } from './synonyms.ts';
@@ -32,7 +32,7 @@ for (const activity of importedActivities) practiceChapters.find(chapter => chap
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string; wordRound?: WordRound & { sourceId: string; allExerciseIds: string[] } };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string; readingSelection?: { sourceId: string; allExerciseIds: string[]; exerciseIds: string[] }; wordRound?: WordRound & { sourceId: string; allExerciseIds: string[] } };
 export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string; words?: string[] };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -60,12 +60,12 @@ export function availableChapterCollections(activity: GroupActivity, selection: 
 }
 
 export function displayedChapterCollections(activity: GroupActivity, selection: ChapterLocation, review: LearningReview = {}) {
-  const collections = availableChapterCollections(activity, selection, review);
+  const collections = availableChapterCollections(activity, selection, review).flatMap(readingSelections);
   return wordRoundActivities.has(activity) ? collections.flatMap(chapterWordRounds) : collections;
 }
 
 function findChapterCollection(activity: GroupActivity, id?: string) {
-  return chapterCollections(activity).flatMap(item => wordRoundActivities.has(activity) ? [item, ...chapterWordRounds(item)] : [item]).find(item => item.id === id);
+  return chapterCollections(activity).flatMap(item => wordRoundActivities.has(activity) ? [item, ...chapterWordRounds(item), ...readingSelections(item)] : [item]).find(item => item.id === id);
 }
 
 
@@ -179,6 +179,7 @@ function collectionWordIds(collection: ChapterCollection) {
 export function chapterExerciseChoices(location: ChapterLocation) {
   if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
   const source = selectedChapterCollection(location);
+  if (source?.readingSelection) return [];
   const words = source?.wordRound?.wordIds;
   const sourceId = source?.wordRound?.sourceId ?? location.collection;
   const wholeWords = source && !words && wordRoundActivities.has(location.activity) ? collectionWordIds(source) : undefined;
