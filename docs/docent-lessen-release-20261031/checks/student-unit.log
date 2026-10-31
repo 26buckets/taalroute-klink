@@ -1,0 +1,47 @@
+✔ navigation preferences validate input and retain both old route axes (1.72275ms)
+✔ Start restores the last selection while inner bookmarks keep their original scope (7.102041ms)
+{
+  collections: 1462,
+  exercisePlacements: 59532,
+  uniqueSourceRecords: {
+    'build-model': 816,
+    copy: 8386,
+    meet: 641,
+    memory: 5,
+    'read-series': 8386,
+    'spelling-path': 698,
+    'word-bingo': 1344,
+    'word-sort': 192,
+    worksheet: 816,
+    'worksheet-heard': 840,
+    listen: 1152,
+    'hear-match': 192,
+    read: 576,
+    match: 192,
+    cards: 576,
+    'image-bingo': 2
+  },
+  referencedMedia: 5914,
+  indexBytes: 456128,
+  indexGzipBytes: 37880,
+  largestCollectionBytes: 129192,
+  oldAlfaAIdsPreserved: true,
+  all45AlfaBRecallTasks: true,
+  sourceAnswers: true,
+  pathsExist: true,
+  localOnly: true
+}
+✔ scripts/test-production-content.mjs (1924.275958ms)
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+✔ scripts/test-unified-practice-navigation.mjs (2757.277125ms)
+PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (10640.6345ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10650.228125
