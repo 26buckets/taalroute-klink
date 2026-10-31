@@ -1,4 +1,7 @@
 # Klink — officiële logobron
+## Werkbladendashboard — expliciet akkoord Nico, 31 oktober 2026
+Nico heeft het voorgestelde dashboard voor alle acht lessen goedgekeurd en gevraagd de bestaande werkbladen en juiste antwoorden aan het digibord te koppelen. Zie `docs/werkbladen-koppeling-20261031/README.md` en `sources.json`. Behoud één leskaart met Digibordles en Werkblad; drie echte PDF-keuzes Woord/Alfa A, Zin/Alfa B en Tekst/Alfa C. Geen ondersteuningsschijnvarianten. De Werkblad-knop bewaart de actieve les en opent de bijbehorende ronde; teruggaan behoudt het werk. Oorspronkelijke 24 cursisten-PDF's v0.4 en actuele antwoorden v0.4.3 blijven brongebonden. Lokale integratie; geen nieuwe publicatieopdracht. Controleer met `scripts/test-teacher-worksheets.mjs`, `scripts/test-teacher-worksheets-browser.mjs` en de bestaande bord-/printcontroles.
+
 
 Lees PUBLICATIE-ACTUEEL.md en PUBLICATIE.md vóór publicatie. Gebruik main, de actuele livebasis en npm run deploy. Behoud de bestaande publicatiepoort en historische inhoudsakkoorden.
 

@@ -2,6 +2,7 @@
 
 import {
   useEffect,
+  useEffectEvent,
   useId,
   useMemo,
   useRef,
@@ -26,19 +27,21 @@ import {
   Wrench,
   List,
   PencilLine,
+  FileText,
+  Presentation,
+  Download,
 } from "lucide-react";
 import Image from "./compact-image";
 import { soundById } from "@/lib/sounds";
 import { TeacherWorkspaceFrame } from "./teacher-workspace-frame";
+import { worksheets, worksheetHash, worksheetSelection } from "@/lib/teacher-worksheets";
 import { PackageExerciseBrowser } from "./package-exercise-browser";
 import { playMedia, stopMedia } from "@/lib/media-player";
 import { isWithdrawnAudio } from "@/lib/audio-policy";
 import {
-  classroomContent,
   routeIds,
   roundLabels,
   phasesForRoute,
-  prerequisitesForRoute,
   type ClassroomRoute,
   classroomHash,
   freshClassroom,
@@ -50,15 +53,12 @@ import {
   readClassroom,
   saveClassroom,
   tools,
-  variants,
   type BoardTool,
   type ClassroomState,
-  type Variant,
 } from "@/lib/teacher-classroom";
 import {
   ClassroomBrand,
   TeacherRouteStage,
-  RouteWorksheet,
   RouteCards,
 } from "./teacher-route-stage";
 import "./teacher-classroom.css";
@@ -195,70 +195,6 @@ function SoundButtons({
         );
       })}
     </div>
-  );
-}
-
-function Worksheet({ variant, lessonId = "mat" }: { variant: Variant; lessonId?: string }) {
-  const { word: matWord, units: matUnits, display } = getClassroomLesson(lessonId);
-  return (
-    <article className="kpd-worksheet kpd-print-page" aria-label="Werkblad">
-      <header>
-        <Image src="/klink-wordmark.svg" alt="Klink" width={125} height={41} />
-        <h2>{display.toUpperCase()}</h2>
-      </header>
-      <Image
-        width={800}
-        height={800}
-        className="kpd-paper-image"
-        src={matWord.image!}
-        alt={matWord.word}
-      />
-      {variant !== "extend" && (
-        <div className="kpd-cut-letters">
-          {(variant === "support"
-            ? matUnits
-            : [matUnits[2], matUnits[0], matUnits[1]]
-          ).map((unit) => (
-            <span key={unit}>{unit}</span>
-          ))}
-        </div>
-      )}
-      {variant === "support" && (
-        <div
-          className="kpd-trace-letters"
-          aria-label="Letters om over te trekken"
-        >
-          {matUnits.map((unit) => (
-            <span key={unit}>{unit}</span>
-          ))}
-        </div>
-      )}
-      {variant !== "extend" && (
-        <div className="kpd-paper-slots" aria-label="Drie lege lettervakken">
-          {matUnits.map((unit) => (
-            <span key={unit}>&nbsp;</span>
-          ))}
-        </div>
-      )}
-      <div className="kpd-cover-strip">
-        <span className="kpd-paper-word">{matWord.word}</span>
-      </div>
-      <div className="kpd-direction" aria-label="Werk van links naar rechts">
-        <ArrowRight aria-hidden="true" />
-      </div>
-      {variant === "support" ? (
-        <div className="kpd-write-line" />
-      ) : (
-        <>
-          <div className="kpd-paper-lines">
-            {matUnits.map((unit) => (
-              <span key={unit} />
-            ))}
-          </div>
-          <div className="kpd-draw-space" aria-label="Ruimte om te tekenen" />
-        </>
-      )}
-    </article>
   );
 }
 
@@ -653,6 +589,18 @@ export function TeacherClassroom({
     setScreen("entry");
     onActiveChange?.(false);
   }
+  const followLessonLink = useEffectEvent((event?: Event) => {
+      const [path, query] = window.location.hash.split('?');
+      if (path !== classroomHash) return;
+      const lessonId = new URLSearchParams(query).get('lesson');
+      if (classroomLessons.some(lesson => lesson.id === lessonId)) start(lessonId!);
+      else if (event && !readClassroom().active) leave();
+  });
+  useEffect(() => {
+    const opening = window.setTimeout(() => followLessonLink(), 0);
+    window.addEventListener('hashchange', followLessonLink);
+    return () => { window.clearTimeout(opening); window.removeEventListener('hashchange', followLessonLink); };
+  }, []);
   function reset() {
     audio.stop();
     update({
@@ -707,6 +655,11 @@ export function TeacherClassroom({
           <ClassroomBrand />
         </h1>
         <div className="kpd-actions">
+          <button className="secondary-button" onClick={() => {
+            audio.stop();
+            setPanel(null);
+            window.location.hash = worksheetHash(state.lessonId, state.route, true);
+          }}><FileText />Werkblad</button>
           <button
             className="secondary-button"
             onClick={() => {
@@ -1216,249 +1169,96 @@ export function TeacherClassroom({
 }
 
 export function TeacherMaterials() {
-  const [state, setState] = useState(() => freshClassroom());
-  const [preparation, setPreparation] = useState("");
-  const [printKind, setPrintKind] = useState("worksheet");
-  const { word: matWord, routes: classroomRoutes, display } = getClassroomLesson(state.lessonId);
-  const audio = useClassroomAudio(state.lessonId);
-  const route = classroomRoutes[state.route];
-  const phases = phasesForRoute(state.route, state.lessonId);
-  const commit = setState;
-  function update(change: Partial<ClassroomState>) {
-    setState({ ...state, ...change });
+  const [hash, setHash] = useState(() => typeof window === "undefined" ? "" : window.location.hash);
+  const [extra, setExtra] = useState("letters");
+  const [printKind, setPrintKind] = useState("extra");
+  const { lesson, round, fromLesson } = worksheetSelection(hash);
+  const sheet = lesson?.rounds[round];
+  const returning = fromLesson && readClassroom().active;
+  useEffect(() => {
+    const sync = () => { setHash(window.location.hash); setExtra("letters"); };
+    window.addEventListener("hashchange", sync);
+    return () => window.removeEventListener("hashchange", sync);
+  }, []);
+  function navigate(target: string) {
+    if (target === "teacher/materials") {
+      window.location.hash = `#teacher/materials${returning ? "?from=lesson" : ""}`;
+    } else {
+      if (returning) saveClassroom({ ...readClassroom(), active: false });
+      window.location.hash = target;
+    }
   }
-  function printMaterial() {
-    const previous = document.title;
-    Reflect.set(document, "title", printKind === "observation" ? "Klink docentobservatie" : display.toUpperCase());
-    window.addEventListener(
-      "afterprint",
-      () => {
-        Reflect.set(document, "title", previous);
-      },
-      { once: true },
-    );
-    window.print();
+  function printExtra(kind: string) {
+    setPrintKind(kind);
+    requestAnimationFrame(() => window.print());
   }
-  const wordAudio = (
-    <button
-      className="primary-button"
-      disabled={audio.status.word !== "ready"}
-      onClick={() => void audio.listen("word")}
-    >
-      <Volume2 />
-      Luister
-    </button>
-  );
-  return (
-    <TeacherWorkspaceFrame view="materials">
-    <section className="kpd kpd-prepare">
-      <label htmlFor="docent-les">Les<select id="docent-les" aria-label="Les" value={state.lessonId} onChange={event => { commit(freshClassroom("basic", "a", event.target.value)); setPreparation(""); setPrintKind("worksheet"); }}>{classroomLessons.map(lesson => <option key={lesson.id} value={lesson.id}>{lesson.word.word}</option>)}</select></label>
-      <p>De cursist oefent thuis. De docent brengt het in de klas tot leven.</p>
-      <h2>Docentinformatie en werkbladen · {matWord.word}</h2>
-      <p>
-        Deze informatie staat los van het digibord. Keuzes hier veranderen de
-        les niet. Op het bord begint iedereen bij stap 1 en gaat samen verder
-        naar stap 2 en 3.
-      </p>
-      <p>
-        <strong>Doel:</strong> {route.goal}
-      </p>
-      <p>{route.bookGoal}</p>
-      <fieldset>
-        <legend>Leerroute</legend>
-        <div className="kpd-route-options">
-          {routeIds.map((id) => (
-            <label key={id}>
-              <input
-                type="radio"
-                name="route"
-                value={id}
-                checked={state.route === id}
-                onChange={() => {
-                  commit(freshClassroom(state.variant, id, state.lessonId));
-                  setPrintKind("worksheet");
-                }}
-              />
-              <strong>{classroomRoutes[id].label}</strong>
-              <span>{classroomRoutes[id].goal}</span>
-              <em>{classroomRoutes[id].example}</em>
-            </label>
-          ))}
+  return <TeacherWorkspaceFrame view="materials" onNavigate={navigate}>
+    <section className="kpd-worksheets" aria-label="Werkbladen per les">
+      {!lesson || !sheet ? <>
+        <p>Kies een les. Het digibord en de werkbladen horen bij elkaar.</p>
+        <div className="kpd-worksheet-grid">
+          {worksheets.map(item => <article className="kpd-worksheet-lesson" key={item.id}>
+            <h3>{item.title}</h3>
+            <div className="kpd-worksheet-options">
+              <a className="secondary-button" href={`${classroomHash}?lesson=${item.id}`}><Presentation /><span>{item.title} · Digibordles</span><ArrowRight /></a>
+              <a className="secondary-button" href={worksheetHash(item.id, "a", returning)}><FileText /><span>{item.title} · Werkblad</span><ArrowRight /></a>
+            </div>
+          </article>)}
         </div>
-      </fieldset>
-      <section
-        className="kpd-prerequisites"
-        aria-label="Voorkennis voor deze route"
-      >
-        <h3>Voorkennis controleren</h3>
-        <ul>
-          {route.prerequisites.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-        {state.route !== "a" && (
-          <>
-            <p>
-              Introduceer nieuwe woorden samen voordat je verdergaat. De
-              aanwezigheid van een woord in Klink bewijst nog geen beheersing
-              door de cursist.
-            </p>
-            <ul>
-              {prerequisitesForRoute(state.route, state.lessonId).map((item) => (
-                <li key={item.token}>
-                  <strong>{item.token}</strong> —{" "}
-                  {item.wordRef
-                    ? `aanwezig in Klink; voorbereide klanken: ${item.units.join(", ")}`
-                    : "nieuw contextwoord in deze les; geen eigen Klink-leesstap gevonden. Eerst betekenis en lezen voorbereiden."}
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-      </section>
-      <fieldset>
-        <legend>Ondersteuning op het werkblad</legend>
-        <div className="kpd-variants">
-          {variants.map((variant) => (
-            <label key={variant.id}>
-              <input
-                type="radio"
-                name="variant"
-                value={variant.id}
-                checked={state.variant === variant.id}
-                onChange={() => {
-                  update({
-                    variant: variant.id,
-                    tiles: freshClassroom(variant.id, state.route, state.lessonId).tiles,
-                    shown: freshClassroom(variant.id, state.route, state.lessonId).shown,
-                  });
-                }}
-              />
-              <strong>{variant.label}</strong>
-              <span>{variant.description}</span>
-            </label>
-          ))}
+      </> : <>
+        <div className="kpd-worksheet-heading">
+          <a className="secondary-button" href={`#teacher/materials${returning ? "?from=lesson" : ""}`}><ArrowLeft />Alle werkbladen</a>
+          <h3>{lesson.title} · Werkblad</h3>
+          <a className="secondary-button" href={returning ? classroomHash : `${classroomHash}?lesson=${lesson.id}`}><Presentation />{returning ? "Terug naar de les" : `${lesson.title} · Digibordles`}</a>
         </div>
-      </fieldset>
-      <p>Leg klaar: {route.materials}</p>
-      <p>
-        De drie bordstappen horen bij Alfa A, Alfa B en Alfa C. Iedereen kan
-        meedoen aan de eerdere stappen. Een leesbeurt na een model telt niet als
-        zelfstandig leesbewijs.
-      </p>
-      <details>
-        <summary>Lesplan en observatie</summary>
-        <p>
-          Voorstel: {phases.reduce((sum, p) => sum + p.minutes, 0)} actieve
-          minuten, aanpasbaar aan de groep. Pauze en zelfstandige oefentijd
-          staan apart. Koppel dit blok aan je werkelijk ingeroosterde
-          bijeenkomst en boekdoel.
-        </p>
-        <label>
-          Boekdoel, bijeenkomst, tijd, pauze en vervolg
-          <textarea
-            value={preparation}
-            onChange={(e) => setPreparation(e.target.value)}
-            rows={3}
-            placeholder="Eigen lesvoorbereiding; alleen bewaard zolang dit scherm open is. Geen namen of leerlingdossier."
-          />
-        </label>
-        <ol>
-          {phases.map((p) => (
-            <li key={p.title}>
-              <strong>
-                {p.title} · {p.minutes} min.
-              </strong>
-              <p>{p.action}</p>
-              {p.expected && <p>Verwacht: {p.expected}</p>}
-              {p.hint && <p>Hulp: {p.hint}</p>}
-              {p.feedback && <p>Feedback: {p.feedback}</p>}
-              <p>Observeer: {p.observe}</p>
-              <small>Lesbezoekkader: {p.framework}</small>
-              {state.route === "a" && (
-                <details>
-                  <summary>Docentscript, hulp en feedback</summary>
-                  {(state.lessonId === "mat" ? classroomContent.screens : [])
-                    .filter((screen) => screen.phase === phases.indexOf(p))
-                    .map((screen) => (
-                      <p className="kpd-script" key={screen.id}>
-                        {screen.text}
-                      </p>
-                    ))}
-                </details>
-              )}
-            </li>
-          ))}
-        </ol>
-        <p>Vervolg: {route.followUp}</p>
-        <p>
-          Bekijk de foto en doe de situatie uit de zin en tekst in de klas voor. Zin- en tekstaudio zijn niet gekoppeld:
-          doe een benodigde luisterbeurt zelf voor. Bestaande woordaudio is geen
-          zinopname. Menselijke mediareview en klasproef blijven open.
-        </p>
-      </details>
-      <details>
-        <summary>Werkbladen printen</summary>
-        <p>
-          Laat de papierhandeling eerst zien. Gebruik schrijven alleen als
-          voorbereid doel; anders legt de cursist de{" "}
-          {state.route === "a" ? "losse letters" : "kaartjes"}. Een nabouwtaak
-          is geen zelfstandige leestoets.
-        </p>
-        <label>
-          Materiaal
-          <select
-            value={printKind}
-            onChange={(e) => setPrintKind(e.target.value)}
-          >
-            <option value="worksheet">Cursistenblad</option>
-            <option value="letters">
-              {state.route === "a"
-                ? "Letterkaarten"
-                : state.route === "b"
-                  ? "Woordkaartjes"
-                  : "Woordkaartjes"}
-            </option>
-            <option value="observation">Docentobservatie</option>
-          </select>
-        </label>
-        {printKind === "worksheet" ? (
-          state.route === "a" ? (
-            <Worksheet variant={state.variant} lessonId={state.lessonId} />
-          ) : (
-            <RouteWorksheet route={state.route} variant={state.variant} lessonId={state.lessonId} />
-          )
-        ) : printKind === "letters" ? (
-          state.route === "a" ? (
-            <LetterCards lessonId={state.lessonId} />
-          ) : (
-            <RouteCards route={state.route} lessonId={state.lessonId} />
-          )
-        ) : (
-          <ObservationSheet route={state.route} lessonId={state.lessonId} />
-        )}
-        <button className="secondary-button" onClick={printMaterial}>
-          <Printer />
-          Print materiaal
-        </button>
-      </details>
-      <details>
-        <summary>Geluid controleren</summary>
-        <p>
-          De losse klanken m, korte a en t zijn gekoppeld. Een kruisje betekent
-          dat een opname niet afspeelt. Probeer opnieuw of doe de klank zelf voor.
-        </p>
-        <SoundButtons audio={audio} lessonId={state.lessonId} />
-        {wordAudio}
-        <button className="secondary-button" onClick={audio.retry}>
-          Opnamen opnieuw controleren
-        </button>
-        <p>
-          De bestaande woordopname heeft nog een open menselijke
-          uitspraakreview.
-        </p>
-      </details>
+        <nav className="kpd-worksheet-rounds" aria-label="Kies een werkblad">
+          {routeIds.map(id => <a key={id} className="secondary-button" aria-current={round === id ? "page" : undefined} href={worksheetHash(lesson.id, id, returning)}>
+            {lesson.rounds[id].title} · {lesson.rounds[id].level}
+          </a>)}
+        </nav>
+        <div className="kpd-worksheet-actions">
+          <p>{sheet.title} · 2 pagina’s · 10 opdrachten</p>
+          <a className="primary-button" href={sheet.pdf} target="_blank" rel="noopener"><Printer />Openen en printen<span className="sr-only"> (PDF in nieuw tabblad)</span></a>
+          <a className="secondary-button" href={sheet.pdf} download><Download />Downloaden</a>
+        </div>
+        <p className="kpd-print-tip">Dubbelzijdig printen: omslaan over de lange zijde.</p>
+        <div className="kpd-worksheet-previews" aria-label={`${lesson.title} · ${sheet.title} · beide zijden`}>
+          {sheet.previews.map((src, i) => <figure key={src}>
+            <figcaption>{i === 0 ? "Voorkant" : "Achterkant"}</figcaption>
+            <a href={`${sheet.pdf}#page=${i + 1}`} target="_blank" rel="noopener" aria-label={`${i === 0 ? "Voorkant" : "Achterkant"} groter bekijken (PDF in nieuw tabblad)`}>
+              <Image src={src} alt={`${lesson.title} · ${sheet.title}, ${i === 0 ? "voorkant" : "achterkant"}`} width="595" height="842" loading="eager" />
+            </a>
+          </figure>)}
+        </div>
+        <div className="kpd kpd-worksheet-extras" data-print-kind={printKind}>
+          <details key={`${lesson.id}-${round}-answers`} className="kpd-worksheet-answers">
+            <summary>Antwoorden voor de docent</summary>
+            <article className="kpd-answers-print kpd-print-page" aria-label="Antwoordblad">
+              <ClassroomBrand />
+              <h3>{lesson.title} · {sheet.title} · Antwoorden</h3>
+              <ol>{sheet.answers.map(item => <li key={item.id}>
+                <h4>{item.title}</h4>
+                {item.oral && <p><strong>Voorlezen:</strong> {item.oral}</p>}
+                <p><strong>Antwoord:</strong> {item.answer}</p>
+                <p>{item.action}</p>
+              </li>)}</ol>
+            </article>
+            <button className="secondary-button" onClick={() => printExtra("answers")}><Printer />Print antwoorden</button>
+            <a className="secondary-button" href="/docent-werkbladen/kpd08/docentantwoorden.pdf" download><Download />Alle docentantwoorden (PDF)</a>
+          </details>
+          <details className="kpd-extra-materials">
+            <summary>Extra materiaal</summary>
+            <label>Materiaal<select aria-label="Extra materiaal" value={extra} onChange={event => setExtra(event.target.value)}>
+              <option value="letters">{round === "a" ? "Letterkaarten" : "Woordkaartjes"}</option>
+              <option value="observation">Docentobservatie</option>
+            </select></label>
+            <div className="kpd-extra-print">
+              {extra === "observation" ? <ObservationSheet route={round} lessonId={lesson.id} /> : round === "a" ? <LetterCards lessonId={lesson.id} /> : <RouteCards route={round} lessonId={lesson.id} />}
+            </div>
+            <button className="secondary-button" onClick={() => printExtra("extra")}><Printer />Print extra materiaal</button>
+          </details>
+        </div>
+      </>}
     </section>
-    </TeacherWorkspaceFrame>
-  );
+  </TeacherWorkspaceFrame>;
 }

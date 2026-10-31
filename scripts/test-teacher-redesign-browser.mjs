@@ -40,7 +40,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       await page
         .getByRole('button', { name: 'Werkbladen', exact: true })
         .click();
-      await page.locator('label:has(input[name="route"][value="c"])').click();
+      await page.getByRole('link', { name: 'Mat · Werkblad', exact: true }).click();
+      await page.getByRole('link', { name: 'Tekst · Alfa C', exact: true }).click();
       assert.equal(
         await page
           .getByRole('button', { name: 'Les openen: mat', exact: true })
@@ -127,7 +128,8 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
       await page.locator('[data-tile-slot="0"]').waitFor();
       assert.equal(await page.locator('[data-tile-slot="0"]').innerText(), 'm');
       await page.getByRole('button', { name: 'Pauze', exact: true }).click();
-      assert.equal(await page.locator('.kpd-board').isVisible(), false);
+      assert.equal(await page.locator('.kpd-board').evaluate(el => getComputedStyle(el).opacity), '0');
+      assert(await page.locator('.kpd-board').evaluate(el => el.inert));
       await page
         .getByRole('button', { name: 'Verder met de les', exact: true })
         .click();

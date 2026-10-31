@@ -7,9 +7,11 @@ import { ClassroomBrand } from './teacher-route-stage';
 export function TeacherWorkspaceFrame({
   view,
   children,
+  onNavigate,
 }: {
   view: 'plus' | 'materials';
   children: ReactNode;
+  onNavigate?: (hash: string) => void;
 }) {
   return (
     <div className="product-root">
@@ -20,7 +22,8 @@ export function TeacherWorkspaceFrame({
               className={view === 'plus' ? 'active' : ''}
               aria-current={view === 'plus' ? 'page' : undefined}
               onClick={() => {
-                window.location.hash = 'teacher/plus';
+                if (onNavigate) onNavigate('teacher/plus');
+                else window.location.hash = 'teacher/plus';
               }}
             >
               <Presentation />
@@ -30,7 +33,8 @@ export function TeacherWorkspaceFrame({
               className={view === 'materials' ? 'active' : ''}
               aria-current={view === 'materials' ? 'page' : undefined}
               onClick={() => {
-                window.location.hash = 'teacher/materials';
+                if (onNavigate) onNavigate('teacher/materials');
+                else window.location.hash = 'teacher/materials';
               }}
             >
               <BookOpen />
@@ -38,7 +42,8 @@ export function TeacherWorkspaceFrame({
             </button>
             <button
               onClick={() => {
-                window.location.hash = 'learner/home';
+                if (onNavigate) onNavigate('learner/home');
+                else window.location.hash = 'learner/home';
               }}
             >
               <ArrowLeft />

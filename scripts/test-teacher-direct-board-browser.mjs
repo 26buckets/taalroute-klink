@@ -23,8 +23,8 @@ for (const { name, engine, options } of [
       const saved = await page.evaluate(() =>
         sessionStorage.getItem('klink.docent.les.v1'),
       );
-      await page.locator('label:has(input[name="route"][value="c"])').click();
-      await page.locator('label:has(input[name="variant"][value="extend"])').click();
+      await page.getByRole('link', { name: 'Mat · Werkblad', exact: true }).click();
+      await page.getByRole('link', { name: 'Tekst · Alfa C', exact: true }).click();
       assert.equal(
         await page
           .getByRole('button', { name: 'Les openen: mat', exact: true })

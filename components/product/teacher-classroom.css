@@ -1217,3 +1217,49 @@
   .kpd-live .kpd-visibility-controls { width: 100%; margin: 8px 0 0; }
   .kpd-live .kpd-visibility-controls button { font-size: 14px; height: 48px; min-height: 48px; }
 }
+
+.kpd-worksheets { padding: 0 24px 24px; }
+.kpd-worksheets > p { margin: 0 0 12px; font-size: 18px; }
+.kpd-worksheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.kpd-worksheet-lesson { border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; min-width: 0; }
+.kpd-worksheet-lesson h3 { font-size: 22px; line-height: 28px; font-weight: 500; margin: 0 0 8px; }
+.kpd-worksheet-options { display: grid; gap: 8px; }
+.kpd-worksheet-options a { width: 100%; min-height: 48px; font-size: 18px; justify-content: flex-start; padding: 10px 12px; }
+.kpd-worksheet-options a span { flex: 1; text-align: left; }
+.kpd-worksheets a { text-decoration: none; }
+.kpd-worksheet-heading, .kpd-worksheet-rounds, .kpd-worksheet-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 16px; }
+.kpd-worksheet-heading h3 { flex: 1; font-weight: 500; font-size: 24px; margin: 0; }
+.kpd-worksheet-rounds a { flex: 1; }
+.kpd-worksheet-rounds [aria-current] { background: var(--primary); color: var(--paper); border-color: var(--primary); }
+.kpd-worksheet-actions p { flex: 1; margin: 0; }
+.kpd-worksheet-previews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.kpd-worksheet-previews figure { min-width: 0; margin: 0; }
+.kpd-worksheet-previews figcaption { margin-bottom: 8px; }
+.kpd-worksheet-previews img { display: block; width: 100%; height: auto; background: white; border: 1px solid var(--line); }
+.kpd-worksheet-extras { max-width: none; padding: 0; margin-top: 24px; font-size: 18px; }
+.kpd-worksheet-extras details { border-top: 1px solid var(--line); padding: 16px 0; }
+.kpd-worksheet-extras summary { cursor: pointer; padding: 8px 0; }
+.kpd-worksheet-extras select { margin-left: 12px; }
+.kpd-worksheet-extras .kpd-print-page { margin: 16px 0; }
+.kpd-worksheet-extras .kpd-answers-print li { break-inside: avoid; margin-bottom: 16px; }
+.kpd-answers-print h4 { font-size: inherit; font-weight: 500; margin: 0; }
+.kpd-answers-print p { margin: 4px 0; }
+.kpd-answers-print ol { list-style: decimal outside; padding-left: 28px; }
+@media (max-width: 899px) {
+  .kpd-worksheet-grid, .kpd-worksheet-previews { grid-template-columns: minmax(0, 1fr); }
+  .kpd-worksheets { padding: 0 16px 16px; }
+  .kpd-worksheet-options a { font-size: 16px; }
+  .kpd-worksheet-heading h3 { flex-basis: 100%; order: -1; }
+  .kpd-worksheet-rounds { gap: 6px; }
+  .kpd-worksheet-rounds a { padding: 8px; font-size: 16px; white-space: normal; text-align: center; }
+  .kpd-worksheet-actions p { flex-basis: 100%; }
+}
+@media print {
+  body:has(.kpd-worksheets) [hidden],
+  body:has(.kpd-worksheets) .kpd-worksheets > :not(:has(.kpd-print-page)),
+  .kpd-worksheet-extras[data-print-kind='extra'] .kpd-worksheet-answers,
+  .kpd-worksheet-extras[data-print-kind='answers'] .kpd-extra-materials { display: none !important; }
+  .kpd-worksheets, .kpd-worksheet-extras, .kpd-worksheet-extras details { padding: 0 !important; margin: 0 !important; border: 0 !important; }
+  body:has(.kpd) .kpd-answers-print, body:has(.kpd) .kpd-answers-print * { visibility: visible !important; }
+  body:has(.kpd) .kpd-answers-print { width: auto !important; min-height: 0 !important; max-height: none; break-inside: auto; font-size: 11pt; }
+}

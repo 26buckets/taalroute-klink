@@ -6,17 +6,25 @@ fs.mkdirSync(out,{recursive:true});const checks=[];
 for(const [engine,type] of Object.entries({chromium,webkit})){
  const browser=await type.launch();try{
   for(const route of ['a','b','c']){
-   for(const material of ['worksheet','letters','observation']){
-    const page=await browser.newPage();await page.goto(base+'/#teacher/materials');
-    await page.locator(`label:has(input[name="route"][value="${route}"])`).click();
-    await page.getByText('Werkbladen printen',{exact:true}).click();
-    await page.locator('details select').selectOption(material);await page.emulateMedia({media:'print'});
-    assert(await page.locator('.kpd-print-page').isVisible());
-    assert(await page.locator('.kpd-print-page').evaluate(el=>{
+   for(const material of ['answers','letters','observation']){
+    const page=await browser.newPage();await page.goto(base+`/#teacher/materials?lesson=mat&round=${route}`);
+    await page.locator('.kpd-worksheet-previews').waitFor();
+    await page.evaluate(() => { window.print = () => {}; });
+    if (material === 'answers') {
+      await page.getByText('Antwoorden voor de docent', { exact: true }).click();
+      await page.getByRole('button', { name: 'Print antwoorden', exact: true }).click();
+    } else {
+      await page.getByText('Extra materiaal', { exact: true }).click();
+      await page.getByLabel('Extra materiaal', { exact: true }).selectOption(material);
+      await page.getByRole('button', { name: 'Print extra materiaal', exact: true }).click();
+    }
+    await page.emulateMedia({media:'print'});
+    assert(await page.locator('.kpd-print-page:visible').isVisible());
+    assert(await page.locator('.kpd-print-page:visible').evaluate(el=>{
      for(let n=el.parentElement;n;n=n.parentElement){const s=getComputedStyle(n);if(['hidden','clip','auto'].includes(s.overflow)||s.position==='fixed')return false;}return true;
     }),`print clipped: ${engine} ${route} ${material}`);
-    await page.locator('.kpd-print-page img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
-    if(engine==='chromium'&&material==='worksheet')await page.pdf({path:`${out}/print-${route}.pdf`,preferCSSPageSize:true});
+    await page.locator('.kpd-print-page:visible img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
+    if(engine==='chromium'&&material==='answers')await page.pdf({path:`${out}/print-${route}.pdf`,preferCSSPageSize:true});
     checks.push({engine,route,material});await page.close();
    }
   }

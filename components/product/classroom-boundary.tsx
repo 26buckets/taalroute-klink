@@ -19,11 +19,15 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
   useLayoutEffect(() => {
     const restore = () => {
       const active = readClassroomActive();
-      if (active && !window.location.hash.startsWith(classroomHash))
+      const [path, query] = window.location.hash.split('?');
+      const worksheet = path === classroomMaterialsHash;
+      // Only the deliberate worksheet link may interrupt projection; keep the lesson mounted.
+      const fromLesson = worksheet && new URLSearchParams(query).get('from') === 'lesson';
+      if (active && !window.location.hash.startsWith(classroomHash) && !fromLesson)
         window.history.replaceState(null, '', classroomHash);
       setProjecting(active);
       setClassroom(active || window.location.hash.startsWith(classroomHash));
-      setMaterials(!active && window.location.hash === classroomMaterialsHash);
+      setMaterials(worksheet && (!active || fromLesson));
     };
     restore();
     window.addEventListener('hashchange', restore);
@@ -38,14 +42,12 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
   if (classroom === null) return <output>Klink wordt geopend…</output>;
   return (
     <>
-      <TaalrouteHeader classroom={projecting} />
-      <Suspense fallback={<output>Klink wordt geopend…</output>}>{classroom ? (
-        <TeacherClassroom onActiveChange={setProjecting} />
-      ) : materials ? (
-        <TeacherMaterials />
-      ) : (
-        children
-      )}</Suspense>
+      <TaalrouteHeader classroom={projecting && !materials} />
+      <Suspense fallback={<output>Klink wordt geopend…</output>}>
+        {classroom && <div hidden={materials}><TeacherClassroom onActiveChange={setProjecting} /></div>}
+        {materials && <TeacherMaterials />}
+        {!classroom && !materials && children}
+      </Suspense>
     </>
   );
 }
