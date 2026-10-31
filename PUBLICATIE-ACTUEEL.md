@@ -1,3 +1,13 @@
+## 31 oktober 2026 — 107 aanvullende Drivebeelden
+
+Livebron `dd2a077394916483daece15659ffbc15c3e988a9`, schone canonieke main; Worker `a5f9d7ff-a993-4e29-84dc-f4969261c6d1`. Via de normale `npm run deploy`-route gepubliceerd als afstammeling van de actuele toetsenbordrelease `9ad8af333dd25d38087b6f1e2fecdd31301c8d96`, met behoud van diens definitieve publicatieregistratie `ab20539102578e9b48013dac4527894150116d58`.
+
+107 bestaande Drivebeelden compact gekoppeld aan 107 woorden: 1.482 beeldplaatsen in 135 verzamelingen. De webbestanden zijn samen 3.807.372 bytes; originele Drivebeelden blijven behouden. Geen beeldgeneratie. 139 bronversies beoordeeld, inclusief zichtbare handen/detailuitsneden en compact formaat. Voorgesteld hergebruik van loon/salaris en onderzoek/huisarts is niet uitgevoerd omdat dezelfde foto's dan verschillende woorden binnen één oefenset zouden voorstellen. 54 woorden blijven open: 25 zonder bevestigde bruikbare bron, 29 aanpassen/vervangen; samen 77 plaatsen in het oefeningsoverzicht.
+
+Alle 65.505 oefenidentiteiten, antwoorden, eerdere media, audio, routes en voortgang behouden. Lokaal: bron-/antwoord-/voortgangscontrole, negatieve afkeurproeven, types, gerichte lint, productieopbouw, 428 beeldplaatsingen, 312 vormwisselingen en 112 overzicht/open/terug-reizen, native audio en toetsenbord-/opslagcontroles. Alle 50 historische publicatietests en de normale publicatiepoort slagen. Online: 454 bestanden bytegelijk teruggelezen, alle 107 beelden in Chromium/WebKit op desktop/mobiel geplaatst, toetsenbediening en voortgang gecontroleerd. Geen fysieke toestellen of onafhankelijke menselijke beeldgoedkeuring.
+
+Bewijs: `docs/drive-images-extra-20261031/`. Gecontroleerd bronpakket op Drive: `19aAyjxTRezuuqNgUI5AKZsd8WKXboZ1x`. Definitieve online- en overzichtsback-up: zie `final-backup.json` in hetzelfde dossier. Het bijgewerkte overzicht staat lokaal op poort 18874; de beelden zijn live op https://klink.taalroute.nl. Geen GitHub-workflows toegevoegd of aanwezig; zware controles lokaal uitgevoerd.
+
 ## 31 oktober 2026 — toetsenbordherstel bij alle oefenvormen
 
 Livebron `9ad8af333dd25d38087b6f1e2fecdd31301c8d96`, schone canonieke main; Worker `4c822602-b9c4-4cd9-95ae-40b16b978d55`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de actuele goedgekeurde livebron `c8dc485755326b98ff7012de17527d8e087d8b38`. Enter volgt de zichtbare controle- of tussenstap; pijlen slaan uitgeschakelde stappen niet over. Spatie volgt de zichtbare luisterknop, het geselecteerde woord bij geluidsorteren en de gekozen gespreksbeurt. Uitklapbare uitleg en tekstvelden houden hun eigen bediening. Opnemen en het terugluisteren van eigen opnamen blokkeren voortijdig afronden.
