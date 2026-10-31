@@ -1,0 +1,41 @@
+{
+  "approvedBy": "Nico",
+  "publicationApproved": true,
+  "userRequest": "Controleer nu ook alle woordparen en antwoordopties in Synoniemen op betekenis en A1-, A2- en B1-niveau. Controleer de 68 nieuwe opnamen op uitspraak en afgekapt geluid en herstel eventuele fouten. zet het woord ook midden in de kaart. Ook graag iets dikgedrukter",
+  "priorPublicationRequest": "Ja, maak ook de ontbrekende audio en zet Synoniemen daarna online in Klink.",
+  "baselineSourceCommit": "f86dd0ffb872dbfb3b54c585860d6e9c6bb63054",
+  "liveSourceCommit": "f86dd0ffb872dbfb3b54c585860d6e9c6bb63054",
+  "canonicalBranch": "main",
+  "scope": "Gerichte Synoniemen-betekenis-/niveaucorrectie, centrering en gewicht 500; oorspronkelijke media en alle andere functies behouden. Uitspraak is niet als beluisterd goedgekeurd.",
+  "changedFiles": [
+    "app/learner-ui.css",
+    "data/klink-synonyms.json",
+    "lib/practice-chapters.ts",
+    "lib/synonyms.ts",
+    "scripts/check-drive-images-release-20261031.mjs",
+    "scripts/check-synonym-review-release-20261031.mjs",
+    "scripts/test-synonym-review-browser.mjs",
+    "scripts/test-synonyms-browser.mjs",
+    "scripts/test-synonyms.mjs"
+  ],
+  "files": {
+    "app/learner-ui.css": "ec2c7a43883c93ebafb610f0306d8f23094c454fa170f51815952298123c6a20",
+    "data/klink-synonyms.json": "8d006974eb965069757f942ddb0490f2e3e55d962439f76c43090920cf01fce7",
+    "lib/practice-chapters.ts": "b7ad261498203336c3ad0632b2c6ed5993dd6a5578d568164e4ddc80188e4d35",
+    "lib/synonyms.ts": "cc7bbe4ed514c62611be0372f0af11654a03ec08b547237b860c6dc52771dc12",
+    "scripts/check-drive-images-release-20261031.mjs": "dd653c34884aab354132cbf6bee1af65c85923b9330e723163e67a0ffe1c4b79",
+    "scripts/check-synonym-review-release-20261031.mjs": "22d40ecb60adffa2ea75122ac2f7da8c9d3930cd0f7d35d3073ca82b06a55d3c",
+    "scripts/test-synonym-review-browser.mjs": "858dda9ac4b64f859dcf4c6e32210613e60e28f2723cd55cad280c2f516a17ce",
+    "scripts/test-synonyms-browser.mjs": "9c1c9a1613547ebc4fb28aae4f20e83bced96f2201349e553050d92f14d89a75",
+    "scripts/test-synonyms.mjs": "a5218fcb9600709fceeeb91020915ceb747bfb94a1e628d1205d567d7544b063"
+  },
+  "evidence": {
+    "docs/synonyms-review-20261031/word-review.json": "cdd3a07cb4e289abdb07f7f8e54e27e3b94587b6361c23b1aed4fd85cbbe5df8",
+    "docs/synonyms-review-20261031/audio-review.json": "97225a985b95e75ab23c6a4c0c41f2f8d7a0b1dcf3daf685bf5141b7b8d5eded",
+    "docs/synonyms-review-20261031/native-browser.json": "fe346d548f9125f647e4b00e6fbbf0c7dd2f942e95b4f63f3eeb63b2a6023e83",
+    "docs/synonyms-review-20261031/verification.json": "56df722e9cb83a104cbf3f0aad769cf67b027fef100e48f6bf50c32bc442ac84"
+  },
+  "newAudio": 0,
+  "newImages": 0,
+  "independentHumanReview": false
+}

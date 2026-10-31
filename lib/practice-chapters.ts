@@ -1,7 +1,7 @@
 import { productionIndex, productionPack, readingSelections } from './production-practice.ts';
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
-import { synonymCollections, synonymActivities } from './synonyms.ts';
+import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -189,7 +189,7 @@ export function chapterExerciseChoices(location: ChapterLocation) {
       ? [...candidates.filter(item => item.id === sourceId), ...candidates.filter(item => item.id !== sourceId)].find(item => selectChapterWords(item, words))
       : candidates.find(item => {
         if (item.id !== sourceId) return false;
-        if (!wordRoundActivities.has(location.activity!) || activity.id === location.activity) return true;
+        if (isSynonymPack(item.pack) || !wordRoundActivities.has(location.activity!) || activity.id === location.activity) return true;
         const targetWords = collectionWordIds(item);
         return wholeWords && targetWords && wholeWords.size === targetWords.size && [...wholeWords].every(id => targetWords.has(id));
       });
@@ -221,6 +221,7 @@ export function parseChapterHash(hash: string): ChapterLocation {
     const candidate = activity && findChapterCollection(activity, collection);
     // A level correction must not strand a bookmarked text, dialogue or linked task.
     if (candidate && activity && singleSourceActivities.has(activity) && level !== 'all') selection.level = candidate.level;
+    if (candidate && isSynonymPack(candidate.pack) && level !== 'all' && !candidate.levels?.includes(level)) selection.level = candidate.level;
     // Old direct links keep their exercise, with its existing support requirement visible.
     if (!selection.help && candidate) selection.help = candidate.help ?? exerciseSetHelp(candidate.exercises);
     if (!selection.help && activity) {

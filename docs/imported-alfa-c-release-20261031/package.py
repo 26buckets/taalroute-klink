@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,zipfile,subprocess
 D=Path('docs/imported-alfa-c-release-20261031');O=Path('/Users/nicoknoester/Documents/Codex/2026-10-30/wat-ik-zo-bijzonder-vind-is/outputs/klink-leesreeksen-alfa-c-live-20261031')
-base='f86dd0ffb872dbfb3b54c585860d6e9c6bb63054';files=json.loads((D/'allowed-files.json').read_text());sha=lambda b:hashlib.sha256(b).hexdigest()
+base='bfef2c3d813e00d9dc5fc313c72c8f453e991a1e';files=json.loads((D/'allowed-files.json').read_text());sha=lambda b:hashlib.sha256(b).hexdigest()
 req='Ja, volg je advies bij die drie twijfelgevallen. Pas de gekoppelde opdrachten en antwoorden aan, controleer de audio en zet de herstelversie daarna live. Geef mij weer een directe link naar het resultaat.'
 evidence=['audio.json','audio-quality.json','source-amendments.json','owner-review.json','preservation.json','associated-audio.json']
 auth={'approvedBy':'Nico','approvedAt':'2026-10-31','userRequest':req,'publicationApproved':True,'baselineSourceCommit':base,'liveSourceCommit':base,'changedFiles':files,'files':{f:sha(Path(f).read_bytes())for f in files},'evidence':{str(D/f):sha((D/f).read_bytes())for f in evidence},'humanListeningReview':'open','newRecordings':5,'existingAudioPreserved':True,'noCloudWorkflows':True}

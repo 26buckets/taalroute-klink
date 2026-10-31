@@ -1,4 +1,4 @@
-import {verifyImportedAlfaCRelease,readBeforeImportedAlfaC} from './check-imported-alfa-c-release-20261031.mjs';
+import {verifySynonymReviewRelease,readBeforeSynonymReview} from './check-synonym-review-release-20261031.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -33,7 +33,8 @@ export function verifyDriveImagePreservation(read=readFileSync){
  return m;
 }
 export function verifyDriveImagesRelease(read=readFileSync){
- const successor=verifyImportedAlfaCRelease(read),currentRead=read;read=file=>readBeforeImportedAlfaC(file,successor,currentRead);
+ const successor=verifySynonymReviewRelease(read),currentRead=read;
+ read=file=>readBeforeSynonymReview(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-drive-images-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.generateImages,false);assert.equal(r.userRequest,'Controleer die 84 beelden op Google Drive, koppel de goede aan de juiste KLINK-oefeningen en zet ze online. Werk daarna de lijst bij. Geen nieuwe afbeeldingen maken.');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
@@ -47,4 +48,4 @@ export function verifyDriveImagesRelease(read=readFileSync){
  const backup=JSON.parse(read('docs/drive-images-20261031/backup.json'));assert(backup.verified&&backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
  return {...r,successor};
 }
-export function readBeforeDriveImages(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeImportedAlfaC(file,r.successor,read);}
+export function readBeforeDriveImages(file,r,read=readFileSync){return r.changedFiles.includes(file)||r.historicalFiles.includes(file)?git('show',r.baselineSourceCommit+':'+file):readBeforeSynonymReview(file,r.successor,read);}
