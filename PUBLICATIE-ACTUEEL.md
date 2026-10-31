@@ -1,3 +1,15 @@
+## 31 oktober 2026 — woordkaarten vullen de witte werkkaart
+
+Livebron `ec0fb8f1e856062eeaebf98c9a8f52044e8cee3f`, schone canonieke main; Worker `3055be5e-b45d-472d-aea5-1f63f2be2130`. Via de normale `npm run deploy`-poort, bovenop de twintig zelfstandige woordcombinaties van de60f8a4. Nico vroeg expliciet de grote lege strook rechts naast de kaarten te verwijderen.
+
+Alleen twee kolombreedteregels gewijzigd: de bestaande kolommen verdelen de beschikbare ruimte gelijkmatig. Dezelfde kolomaantallen, volgorde, vijftien onderdelen en 302 lessen; foto's vierkant en ongewijzigd, knoppen, tekststijl, kleuren, routes en voortgang behouden. Het oorspronkelijke vormgevingsreferentiepunt blijft staan met één gerichte aanvullende goedkeuring.
+
+Lokaal: elf schermbreedtes, zestien Chromium/WebKit-vergelijkingen in licht/donker; alle onderdelen, lesbediening en oude lespositie. Types, gerichte lint, build, normale publicatiepoort, vijftig historische publicatietests en dertien afkeurproeven geslaagd. De brede repository-lint heeft bestaande meldingen; een bredere spelertest heeft een verouderde aanname over de eerste 24 bibliotheekwoorden, ook op de oude livebasis bevestigd. Geen productfout in deze wijziging; dossier vermeldt de beperking. Geen GitHub-workflows; alle zware controles lokaal.
+
+Online: exacte broncommit en 28 runtimebestanden teruggelezen, alle inhoudskenmerken gelijk. Vijftien kaarten en elf breedtes, hervatten van de oude lespositie en WebKit-toetsenbord/open/terug op desktop en mobiel gecontroleerd. Fysiek klasscherm blijft ongecontroleerd; geen nieuwe audio of beelden.
+
+Direct resultaat: https://klink.taalroute.nl/#learner/packages . Vrijgave: `docs/klink-owner-release-package-grid-20261031.json`; controles en Drive-herstelkopieën: `docs/package-grid-width-20261031/`.
+
 ## 31 oktober 2026 — twintig zelfstandige woordcombinaties gevuld
 
 Livebron `de60f8a4e3d62a8a717e9c4d5c1f3d36be7059f4`, schone canonieke main; Worker `26271755-b37f-4215-998f-2a321da73f70`. Via de normale `npm run deploy`-poort. Behoudt de goedgekeurde Start-knop en nieuwe woordenbibliotheek van d6246bf9; de eerste gecontroleerde aanvulling a84deca3 blijft voorouder.
