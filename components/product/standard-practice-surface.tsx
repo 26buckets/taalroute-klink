@@ -1,5 +1,6 @@
 'use client';
 
+import { ExerciseListen } from './exercise-listen';
 import { compactImageSrc } from '@/lib/compact-images';
 import { useRef, useState } from 'react';
 import { Check, RotateCcw, Volume2 } from 'lucide-react';
@@ -52,7 +53,7 @@ function SortSurface({ task, onAudio, onFinish, onReset, onHelp, canAnswer, answ
     <p>Kies een woord. Kies daarna een vak.</p>
     <div className="cp-sort-items">{task.items.map(item => <div key={item.id} hidden={!sheet && selected !== item.id && !answeredCorrectly}>
       <button ref={node => { itemRefs.current[item.id] = node; }} className="secondary-button" data-sort-item={item.id} aria-pressed={selected === item.id} disabled={locked || done(item.id)} draggable={!locked && !done(item.id)} onDragStart={event => { event.dataTransfer.setData('text/plain', item.id); setSelected(item.id); }} onClick={() => setSelected(item.id)}>{task.basis === 'sound' ? 'Luister naar het woord' : item.label}{done(item.id) && <Check aria-label="Klaar" />}</button>
-      {task.basis === 'sound' && <button data-practice-listen={selected === item.id ? true : undefined} aria-keyshortcuts="Space" className="secondary-button" aria-label={`Luister naar woord ${task.items.indexOf(item) + 1}`} onClick={async () => { setAudioError(false); try { const result = await onAudio(item.audio?.src, { waitUntilEnd: true }); if (result === false) throw Error('audio'); setHeard(ids => [...new Set([...ids, item.id])]); } catch { setAudioError(true); } }}><Volume2 /></button>}
+      {task.basis === 'sound' && <ExerciseListen hidden={selected !== item.id} label={`Luister naar woord ${task.items.indexOf(item) + 1}`} onClick={async () => { setAudioError(false); try { const result = await onAudio(item.audio?.src, { waitUntilEnd: true }); if (result === false) throw Error('audio'); setHeard(ids => [...new Set([...ids, item.id])]); } catch { setAudioError(true); } }} />}
       {placements[item.id] && <small>{task.categories.find(c => c.id === placements[item.id])?.label}</small>}
     </div>)}</div>
     {audioError && <output aria-live="polite">Het geluid werkt niet. Probeer het nog eens.</output>}
@@ -64,7 +65,7 @@ function MarkSurface({ task, exercise, onAudio, onFinish, onReset, onHelp, canAn
   const [selected, setSelected] = useState<string[]>([]);
   return <>
     <p>Lees de vraag. Tik op de woorden met het antwoord.</p>
-    {((exercise.sourceBlocks ?? []) as { id: string; audio?: ExerciseAudio }[]).filter(block => block.audio?.src).map(block => <button data-practice-listen aria-keyshortcuts="Space" key={block.id} className="secondary-button" onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 />Luister naar de tekst</button>)}
+    {((exercise.sourceBlocks ?? []) as { id: string; audio?: ExerciseAudio }[]).filter(block => block.audio?.src).map((block,index) => index === 0 ? <ExerciseListen key={block.id} label="Luister naar de tekst" onClick={() => { onHelp(); void onAudio(block.audio?.src); }} /> : <button key={block.id} className="secondary-button" aria-label={`Luister naar tekst ${index + 1}`} onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 /></button>)}
     <div className="cp-mark-text" aria-label="Tik op de woorden">{task.tokens.map(token => <button className="secondary-button" key={token.id} data-word-token={token.id} disabled={!canAnswer || answeredCorrectly} aria-pressed={selected.includes(token.id)} onClick={() => { setSelected(ids => ids.includes(token.id) ? ids.filter(id => id !== token.id) : [...ids, token.id]); onReset(); }}>{token.text}</button>)}</div>
     <div className="cp-task-actions"><button data-practice-check className="primary-button" disabled={!canAnswer || !selected.length || answeredCorrectly} onClick={() => onFinish(JSON.stringify(selected), task.acceptedSelections.some(ids => sameSelection(selected, ids)), task.acceptedSelections.some(ids => sameSelection(selected, ids)) ? 'Goed. Dit is het antwoord.' : task.help)}>Controleer<Check /></button>
       <button className="secondary-button" disabled={!selected.length || answeredCorrectly} onClick={() => { setSelected([]); onReset(); }}><RotateCcw />Wis</button></div>

@@ -1,4 +1,5 @@
 'use client';
+import { ExerciseListen } from './exercise-listen';
 import { StandardPracticeSurface } from './standard-practice-surface';
 import { useState } from 'react';
 import { Check, Volume2, RotateCcw } from 'lucide-react';
@@ -18,8 +19,8 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   const correct = answer.correctOptionIds?.includes(selected);
   const synonyms = exercise.mode === 'synonyms';
   return <section className={`cp-task-card cp-extended-task${synonyms ? ' cp-synonyms-task' : ''}`}>
-    {exercise.mode === 'sound-compare' ? <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar beide woorden</button> :
-      synonyms ? exercise.prompt?.audio?.src ? <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" onClick={() => onAudio(exercise.prompt?.audio?.src)}><Volume2 />Luister naar het woord</button> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
+    {exercise.mode === 'sound-compare' ? <ExerciseListen label="Luister naar beide woorden" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> :
+      synonyms ? exercise.prompt?.audio?.src ? <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
     {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
@@ -35,12 +36,12 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   </section>;
 }
 
-export function SourceText({ exercise, onAudio, onHelp }: { exercise: PackageExercise; onAudio: AudioPlayer; onHelp: () => void }) {
+export function SourceText({ exercise, onAudio, onHelp, corner = true }: { exercise: PackageExercise; onAudio: AudioPlayer; onHelp: () => void; corner?: boolean }) {
   const blocks = (exercise.sourceBlocks ?? []) as Block[];
   if (!blocks.length) return null;
-  return <div className="cp-source-text">{blocks.map(block => <div key={block.id}>
+  return <div className="cp-source-text">{blocks.map((block, index) => <div key={block.id}>
     {block.speaker && <small>{block.speaker}</small>}<p>{block.text}</p>
-    {block.audio?.src && <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" aria-label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 />Luister</button>}
+    {block.audio?.src && (corner && index === blocks.findIndex(item => item.audio?.src) ? <ExerciseListen label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }} /> : <button className="secondary-button cp-block-listen" aria-label={block.speaker ? `Luister naar ${block.speaker}` : 'Luister naar de tekst'} onClick={() => { onHelp(); void onAudio(block.audio?.src); }}><Volume2 /></button>)}
   </div>)}</div>;
 }
 
@@ -61,8 +62,8 @@ function FunctionalWriting({ exercise, onFinish, onReset, onHelp, onAudio }: Pro
   }
   return <section className="cp-task-card cp-extended-task">
     <h4>{task.prompt}</h4>
-    {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De opdracht</button>}
-    <details><summary>Het gesprek</summary><SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} /></details>
+    {(exercise.questionAudio as ExerciseAudio)?.src && <ExerciseListen label="Luister naar de opdracht" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)} />}
+    <details><summary>Het gesprek</summary><SourceText corner={false} exercise={exercise} onAudio={onAudio} onHelp={onHelp} /></details>
     {exercise.mode === 'functional-form' && <fieldset className="cp-sender-choice"><legend>Van</legend>{task.speakers.map(name => <button key={name} className="secondary-button" aria-pressed={draft.from === name} onClick={() => update({ ...draft, from: name })}>{name}</button>)}</fieldset>}
     <label className="cp-text-entry"><span>Jouw bericht</span><textarea value={draft.message} maxLength={1000} rows={5} onChange={event => update({ ...draft, message: event.target.value })} /></label>
     <small>{storageFailed ? 'Bewaren lukt niet. Kopieer je tekst voordat je weggaat.' : 'Alleen in dit tabblad bewaard. Niet naar iemand verstuurd.'}</small>

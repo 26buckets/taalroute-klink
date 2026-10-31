@@ -1,4 +1,5 @@
 'use client';
+import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordDailyRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Eye, HelpCircle, Volume2 } from 'lucide-react';
@@ -61,10 +62,10 @@ function DailyPlayer({ block, step, index, record, onRecord, onPrevious, onNext 
   }
   return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-daily-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
-      <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div></header>
+      <header className="cp-exercise-record-head pilot-head"><h2 ref={heading} tabIndex={-1}>{step.instruction}</h2><div><button className="secondary-button" aria-label="Vorige opdracht" disabled={!onPrevious} onClick={onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span><ExerciseAudioSlot /></div></header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
-        <button className="secondary-button" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I], true); }}><Volume2 />Uitleg</button>
-        {step.audio.O && <button className="secondary-button" disabled={busy} onClick={() => { support('content'); void play([step.audio.O!]); }}><Volume2 />Tekst horen</button>}
+        <ExerciseListen inline={Boolean(step.audio.O)} label="Luister naar de uitleg" disabled={busy} onClick={() => { support('instruction'); void play([...(index === 0 ? [block.startAudio] : []), step.audio.I], true); }} />
+        {step.audio.O && <ExerciseListen label="Luister naar de tekst" disabled={busy} onClick={() => { support('content'); void play([step.audio.O!]); }} />}
         <button className="secondary-button" aria-expanded={model} onClick={() => { if (!model) { support('example'); void play([step.audio.V]); } else stop(); setHelp(false); setModel(!model); }}><Eye />Voorbeeld</button>
         <button className="secondary-button" aria-expanded={help} onClick={() => { if (!help) { support('help'); void play([step.audio.H]); } else stop(); setModel(false); setHelp(!help); }}><HelpCircle />Help</button>
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}

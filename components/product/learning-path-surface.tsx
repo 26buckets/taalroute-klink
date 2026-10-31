@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { ExerciseListen } from './exercise-listen';
 import { Volume2 } from 'lucide-react';
 import type { AudioPlayer, ExerciseAudio, PackageExercise } from '@/lib/package-content';
 
@@ -17,10 +18,10 @@ export function LearningPathSurface({ exercise, onAudio, onFinish, onHelp, canAn
   return <section className="cp-task-card cp-learning-task">
     {model ? <>
       <p className="cp-learning-example">{modelUnits ? modelUnits.map((unit, index) => <span key={index}>{index > 0 && ' · '}{index === exercise.modelFocus ? <mark data-model-unit>{unit}</mark> : unit}</span>) : String(exercise.displayWord)}</p>
-      {source && <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" onClick={() => onAudio(source)}><Volume2 />Luister</button>}
+      {source && <ExerciseListen label="Luister" onClick={() => onAudio(source)} />}
       <p>{String(exercise.explanation)}</p>
     </> : <>
-      {source && <button data-practice-listen aria-keyshortcuts="Space" className="secondary-button" onClick={() => onAudio(source)}><Volume2 />Luister</button>}
+      {source && <ExerciseListen label="Luister" onClick={() => onAudio(source)} />}
       {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
       {typeof exercise.maskedWord === 'string' && <p className="cp-missing-word">{exercise.maskedWord}</p>}
       <div className="cp-choice-grid">{options.map(option => <button key={option.id} disabled={!canAnswer || answers.includes(selected)} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {

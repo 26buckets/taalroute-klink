@@ -1,5 +1,6 @@
 'use client';
 
+import { ExerciseListen } from './exercise-listen';
 import { useRef, useState, useSyncExternalStore } from 'react';
 import Image from './compact-image';
 import { ArrowLeft, ArrowRight, Check, Eye, Pause, Snail, Volume2 } from 'lucide-react';
@@ -50,7 +51,7 @@ export function DialogueSurface({ exercise, controls, guided, canAnswer, onFinis
     </div>
     <nav className="cp-dialogue-controls" aria-label="Gesprek afspelen">
       <button className="secondary-button" data-practice-step-previous={perTurn ? true : undefined} disabled={active === 0} onClick={() => controls.select(active - 1)} aria-label="Vorige spreekbeurt"><ArrowLeft /></button>
-      <button data-practice-listen aria-keyshortcuts="Space" className="primary-button" onClick={play}><Volume2 />{perTurn ? 'Luister naar deze beurt' : 'Luister naar het gesprek'}</button>
+      <ExerciseListen onClick={play} label={perTurn ? 'Luister naar deze beurt' : 'Luister naar het gesprek'} />
       <button className="secondary-button" data-practice-step-next={perTurn ? true : undefined} disabled={active === blocks.length - 1} onClick={() => controls.select(active + 1)} aria-label="Volgende spreekbeurt"><ArrowRight /></button>
       <button className="secondary-button" disabled={!controls.playing} onClick={controls.pause}><Pause />Pauze</button>
       <button type="button" className="secondary-button cp-slow-audio" aria-label="Langzamer afspelen" aria-pressed={slow} title="Langzamer luisteren in alle onderdelen tijdens deze sessie" onClick={() => setSlowAudio(!slow)}><Snail aria-hidden="true" />Langzamer</button>

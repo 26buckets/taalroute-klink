@@ -1,0 +1,23 @@
+{
+  "layoutPreserved": true,
+  "contentPreserved": true,
+  "audioPreserved": true,
+  "progressPreserved": true,
+  "keyboard": true,
+  "mobileTouch": true,
+  "lightDark": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "physicalPhoneTested": false,
+  "newAudio": false,
+  "newImages": false,
+  "notes": [
+    "466 keyboard/button checks across 58 exercise forms in Chromium and WebKit.",
+    "192 geometry/touch/theme checks, including native playback and its activity indicator.",
+    "Existing keyboard browser suite covers wrong/right/next, repeated keys, input spaces/cursors, audio busy gates, worksheet navigation, recording, native audio, touch back/reload and saved progress.",
+    "Sixteen unchanged screens compare pixel-identically with the current live application.",
+    "Initial teacher run was invalidated by development-module reload errors during concurrent edits. The complete suite is rerun after the runtime code is fixed; see docent-checks.json."
+  ]
+}

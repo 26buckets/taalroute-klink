@@ -5,6 +5,7 @@ import { RoundProgressNotice } from './round-progress';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, ArrowRightLeft, BookOpen, Check, Ear, Eye, Grid2X2, Image as ImageIcon, Keyboard, Link2, MessageCircle, Mic, PencilLine, Puzzle, RefreshCw, Search, Shuffle, Volume2 } from 'lucide-react';
+import { ExerciseAudioProvider, ExerciseAudioSlot } from './exercise-listen';
 import { BuildSurface, ExerciseSurface, findAudioSource, PackageExerciseBrowser } from './package-exercise-browser';
 import { stopMedia } from './shared';
 import { isInstructionAudioEnabled } from '@/lib/audio-policy';
@@ -162,7 +163,8 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
       objective: typeof exercise.objective === 'string' ? exercise.objective : `${exercise.mode}:${typeof exercise.wordId === 'string' ? exercise.wordId : exercise.exerciseId}`, assessment: model ? 'participation' : exercise.assessment ?? 'answer', independentReading: false });
     setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
   }
-  return <article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
+  return <ExerciseAudioProvider><article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
+    <ExerciseAudioSlot />
     <ExerciseSurface pack={pack} exercise={exercise} guided answeredCorrectly={result === 'right'} canAnswer={heard && result !== 'right'} speakingOptionId="" onOpenExercise={() => {}} onReset={() => setResult('idle')} onHelp={() => { metrics.current.helpUsed = true; }} onFinish={finish} onAudio={async source => {
       const controller = startPlayback(); playback.current = controller; setAudioError(false); setPlaying(true);
       if (exercise.readingTask) metrics.current.helpUsed = true;
@@ -176,7 +178,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
       finally { if (playback.current === controller) setPlaying(false); }
     }} />
     <output aria-live="polite">{audioError ? 'Luisteren lukt niet. Tik opnieuw.' : result === 'right' ? <><Check aria-hidden="true" />{model ? 'Beluisterd' : 'Goed'}</> : result === 'wrong' ? exercise.feedback || 'Probeer nog een keer.' : ''}</output>
-  </article>;
+  </article></ExerciseAudioProvider>;
 }
 
 function BuildWorksheet({ showTitle, exercises, onAudio, onAttempt, initialId, onPosition, onDone }: { showTitle: boolean; exercises: PackageExercise[]; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; initialId?: string; onPosition: (id: string) => void; onDone: () => void }) {
@@ -211,7 +213,8 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { com
   const playback = useRef<AbortController | null>(null);
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
-  return <article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
+  return <ExerciseAudioProvider><article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
+    <ExerciseAudioSlot />
     <BuildSurface exercise={exercise} answeredCorrectly={result === 'right'} onAudio={async source => {
       playback.current?.abort(); const controller = new AbortController(); playback.current = controller; setPlaying(true);
       try { const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal }); if (controller.signal.aborted) return false; setAudioError(ok === false); if (ok !== false) setHeard(true); return ok !== false; }
@@ -224,5 +227,5 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { com
       setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
     }} />
     <output aria-live="polite">{audioError ? 'Het geluid lukt niet. Probeer opnieuw.' : result === 'right' ? <><Check />Goed</> : result === 'wrong' ? 'Kijk naar het voorbeeld. Verander een letter.' : ''}</output>
-  </article>;
+  </article></ExerciseAudioProvider>;
 }

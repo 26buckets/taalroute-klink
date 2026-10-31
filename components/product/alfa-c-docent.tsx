@@ -1,4 +1,5 @@
 'use client';
+import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { useEffect, useRef, useState } from 'react';
 import {
   ArrowLeft,
@@ -79,7 +80,11 @@ function download(text: string) {
   a.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
-export function AlfaCTeacherPractice({ group }: { group: string }) {
+export function AlfaCTeacherPractice(props: Parameters<typeof AlfaCTeacherContent>[0]) {
+  return <ExerciseAudioProvider><AlfaCTeacherContent {...props} /></ExerciseAudioProvider>;
+}
+
+function AlfaCTeacherContent({ group }: { group: string }) {
   const returnLevel = typeof window !== 'undefined' && new URLSearchParams(window.location.hash.split('?')[1]).get('level') === 'all' ? 'all' : 'alfa-c';
   const tasks = teacherTasks.filter((t) => t.group === group),
     [taskId, setTaskId] = useState(''),
@@ -536,6 +541,7 @@ function TeacherPlayer({
         <button className="secondary-button" disabled={busy} onClick={leave}>
           Andere opdracht
         </button>
+        {!teacher && <ExerciseAudioSlot />}
       </div>
       {teacher ? (
         <div className="ac-docent-private">
@@ -764,15 +770,8 @@ function TeacherPlayer({
                     )),
               )
               .map((src, i) => (
-                <button
-                  key={src}
-                  className="secondary-button"
-                  disabled={busy}
-                  onClick={() => listen(src)}
-                >
-                  <Volume2 />
-                  {stage.audio.length > 1 ? `Luister ${i + 1}` : 'Luister'}
-                </button>
+                <ExerciseListen key={src} inline={i > 0} disabled={busy}
+                  label={stage.audio.length > 1 ? `Luister ${i + 1}` : 'Luister'} onClick={() => listen(src)} />
               ))}
           </div>
           {audioError && <p role="alert">{audioError}</p>}

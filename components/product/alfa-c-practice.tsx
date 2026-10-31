@@ -1,4 +1,5 @@
 'use client';
+import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordPilotRounds } from '@/lib/alfa-c-round-progress';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import {
@@ -32,7 +33,11 @@ import { dailyBlocks } from '@/lib/alfa-c-dagelijks';
 import { AlfaCDailyPractice } from './alfa-c-dagelijks';
 import { AlfaCFunctionalPractice } from './alfa-c-functioneel';
 
-export function AlfaCPractice({ selected, backHref, header }: { selected: string; backHref: string; header: ReactNode }) {
+export function AlfaCPractice(props: Parameters<typeof AlfaCPracticeContent>[0]) {
+  return <ExerciseAudioProvider><AlfaCPracticeContent {...props} /></ExerciseAudioProvider>;
+}
+
+function AlfaCPracticeContent({ selected, backHref, header }: { selected: string; backHref: string; header: ReactNode }) {
   const [progress, setProgress] = useState<PilotProgress>({
     version: 1,
     positions: {},
@@ -326,19 +331,12 @@ function PilotPlayer({
               <span>
                 {index + 1} / {total}
               </span>
+              <ExerciseAudioSlot />
             </div>
           </header>
             <div className="pilot-tools ac-support-tools">
-              <button
-                className="secondary-button"
-                onClick={() =>
-                  void play(step.exercise.prompt?.audio?.src, model ? 'example' : 'instruction', true)
-                }
-                disabled={busy}
-              >
-                <Volume2 />
-                {busy ? 'Luisteren…' : 'Luister'}
-              </button>
+              <ExerciseListen inline={!model} label={model ? 'Luister naar het voorbeeld' : 'Luister naar de uitleg'}
+                onClick={() => void play(step.exercise.prompt?.audio?.src, model ? 'example' : 'instruction', true)} disabled={busy} />
               {!participation && (
                 <>
                   <button

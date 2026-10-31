@@ -1,4 +1,5 @@
 'use client';
+import { ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { recordFunctionalRounds } from '@/lib/alfa-c-round-progress';
 import { FunctionalResponseFields } from './alfa-c-response';
 import { emptyFunctionalResponse, functionalActions, functionalResponseReady, functionalResponseText, type FunctionalResponse } from '@/lib/alfa-c-response';
@@ -130,17 +131,17 @@ function FunctionalPlayer({ block, step, index, record, records, onOpenTask, onP
 
     {step.handwriting ? <figure className="ac-handwriting"><Image unoptimized width={1254} height={1254} className="functional-handwriting" src={step.handwriting} alt={documents[0]?.text ?? ''} /></figure> : documents.length > 0 && <DocumentSet documents={documents} />}
     {step.presentation.filter(view => view.kind === 'audioOnly').map((view, n) => <p className="ac-task-context" key={n}>{view.text}</p>)}
-    {step.dictationTexts.length > 0 && <div className="ac-dictation-controls">{step.dictationTexts.map((text, n) => <button key={n} className="secondary-button" disabled={busy} onClick={() => void play([{ role: 'target', text }], n)}><Volume2 />Luister{step.dictationTexts.length > 1 ? ` ${n + 1}` : step.id.endsWith('formulier-08') ? ' naar het nummer' : ' naar de zin'}</button>)}</div>}
+    {step.dictationTexts.length > 0 && <div className="ac-dictation-controls">{step.dictationTexts.map((text, n) => <ExerciseListen key={n} inline={n > 0 || model} label={step.dictationTexts.length > 1 ? `Luister ${n + 1}` : step.id.endsWith('formulier-08') ? 'Luister naar het nummer' : 'Luister naar de zin'} disabled={busy} onClick={() => void play([{ role: 'target', text }], n)} />)}</div>}
   </div>;
   return <section className="cp-exercise-browser is-mixed-round pilot-player functional-player ac-document-player" data-functional-step={step.id}>
     <div className="cp-exercise-workspace"><div className="cp-exercise-main">
       <header className="cp-exercise-record-head pilot-head">
         <h2 ref={title} tabIndex={-1}>{step.screen}</h2>
-        <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span></div>
+        <div><button className="secondary-button" aria-label="Vorige opdracht" onClick={onPrevious} disabled={!onPrevious}><ArrowLeft /></button><span>{index + 1} / 12</span><ExerciseAudioSlot /></div>
       </header>
       <div className="pilot-tools ac-support-tools" aria-label="Hulp bij de opdracht">
-        <button className="secondary-button" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)}><Volume2 />Uitleg</button>
-        {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <button className="secondary-button" disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }}><Volume2 />{model ? 'Voorbeeld horen' : 'Tekst horen'}</button>}
+        <ExerciseListen inline={Boolean(step.dictationTexts.length || (model ? step.exampleTargetTexts.length : documents.length))} label="Luister naar de uitleg" disabled={busy} onClick={() => void play(model ? [{ role: 'guide', text: step.exampleInstruction }] : [...(index === 0 ? [{ role: 'guide' as const, text: block.start }] : []), { role: 'guide', text: step.instruction }], undefined, true)} />
+        {(model ? step.exampleTargetTexts.length : documents.length) > 0 && <ExerciseListen inline={!model && step.dictationTexts.length > 0} label={model ? 'Luister naar het voorbeeld' : 'Luister naar de tekst'} disabled={busy} onClick={() => { markHelp(); void play((model ? step.exampleTargetTexts : documents.map(d => d.text)).map(text => ({ role: 'target', text }))); }} />}
         {step.exampleVisible && <button className="secondary-button" aria-expanded={model} onClick={() => { markHelp(); setModel(!model); setHelp(false); setResult('idle'); setSelected(''); if (!model) void guide(step.exampleInstruction); else stopPlayback(); }}><Eye />Voorbeeld</button>}
         <button className="secondary-button" aria-expanded={help} onClick={() => { markHelp(); setHelp(!help); setModel(false); setRetry(false); if (!help) void guide(step.helpVisible); else stopPlayback(); }}><HelpCircle />Help</button>
         {audioError && <p role="alert">Het geluid werkt niet. Probeer het opnieuw.</p>}
