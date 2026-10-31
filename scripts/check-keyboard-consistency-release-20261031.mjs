@@ -1,15 +1,17 @@
+import {verifyExtraImagesRelease,readBeforeExtraImages} from './check-drive-extra-release-20261031.mjs';
 import assert from 'node:assert/strict';import{readFileSync}from'node:fs';import{execFileSync}from'node:child_process';import{createHash}from'node:crypto';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6});const lines=b=>b.toString().trim().split('\n').filter(Boolean).sort((a,b)=>a.localeCompare(b));const sha=b=>createHash('sha256').update(b).digest('hex');
 export function verifyKeyboardConsistencyRelease(read=readFileSync){
+ const successor=verifyExtraImagesRelease(read),currentRead=read;read=file=>readBeforeExtraImages(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-keyboard-consistency-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.userRequest,'Zet deze herstelversie nu online in de echte Klink-app. Behoud alle inhoud, audio en voortgang en controleer daarna ook de toetsen en bediening op mobiel.');assert.equal(r.baselineSourceCommit,'c8dc485755326b98ff7012de17527d8e087d8b38');git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots));
  const expected=['components/product/dialogue-surface.tsx','components/product/extended-practice-surface.tsx','components/product/imported-teacher-workflow.tsx','components/product/learning-path-surface.tsx','components/product/package-exercise-browser.tsx','components/product/standard-practice-surface.tsx','hooks/use-practice-keyboard.ts','scripts/keyboard-test-fixture.tsx','scripts/test-keyboard-all-forms-browser.mjs','scripts/test-practice-keyboard-browser.mjs','scripts/check-keyboard-consistency-release-20261031.mjs','scripts/check-word-meanings-release-20261031.mjs','scripts/test-keyboard-consistency-live.mjs','scripts/test-publication-proof.mjs'].sort((a,b)=>a.localeCompare(b));
- assert.deepEqual(changed,expected);assert.deepEqual([...r.changedFiles].sort((a,b)=>a.localeCompare(b)),expected);for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);assert.deepEqual(lines(git('diff','--name-only',r.baselineSourceCommit,'--','data','lib','public')),[]);
+ assert.deepEqual(changed,expected);assert.deepEqual([...r.changedFiles].sort((a,b)=>a.localeCompare(b)),expected);for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);assert.deepEqual(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','data','lib','public')),[]);
  const prior=JSON.parse(read('docs/keyboard-all-forms-20261031/review.json'));assert.equal(prior.forms,58);assert.equal(prior.keyboardButtonComparisons,464);for(const[f,h]of Object.entries(prior.files))assert.equal(sha(read(f)),h,f);
  const checks=JSON.parse(read('docs/keyboard-all-forms-publish-20261031/review.json'));for(const k of['keyboard','audio','progress','navigation','mobile','types','lint','build','localOnly'])assert.equal(checks[k],true,k);
  const backup=JSON.parse(read('docs/keyboard-all-forms-publish-20261031/backup.json'));assert(backup.verified&&backup.driveId&&backup.sha256);for(const f of changed)assert.equal(backup.files[f],r.files[f],f);
- return r;
+ return {...r,successor};
 }
-export function readBeforeKeyboardConsistency(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',`${r.baselineSourceCommit}:${file}`):read(file);}
+export function readBeforeKeyboardConsistency(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',`${r.baselineSourceCommit}:${file}`):readBeforeExtraImages(file,r.successor,read);}
