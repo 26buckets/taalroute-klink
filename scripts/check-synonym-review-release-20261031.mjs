@@ -10,11 +10,11 @@ export function verifySynonymReviewRelease(read=readFileSync){
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);
  assert.equal(r.userRequest,'Controleer nu ook alle woordparen en antwoordopties in Synoniemen op betekenis en A1-, A2- en B1-niveau. Controleer de 68 nieuwe opnamen op uitspraak en afgekapt geluid en herstel eventuele fouten. zet het woord ook midden in de kaart. Ook graag iets dikgedrukter');
  assert.equal(r.priorPublicationRequest,'Ja, maak ook de ontbrekende audio en zet Synoniemen daarna online in Klink.');
- assert.equal(r.baselineSourceCommit,'a1aa0af0b7dd213016757f53a8c1c0b638f3394d');assert.equal(r.liveSourceCommit,'02f16c1fdcb540550de91510c1a11c7ca29c4bbd');
+ assert.equal(r.baselineSourceCommit,'b4eb3da2f9dda9ff57391037adcc5025dd0f2d2b');assert.equal(r.liveSourceCommit,'da4401d4fd471a3a48029350a5a7690dbd084629');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','package.json','package-lock.json','wrangler.jsonc'];
  const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
- const allowed=['app/learner-ui.css','data/klink-synonyms.json','lib/practice-chapters.ts','lib/synonyms.ts','scripts/check-word-round-continuity-release.mjs','scripts/check-synonym-review-release-20261031.mjs','scripts/test-synonyms.mjs','scripts/test-synonyms-browser.mjs','scripts/test-synonym-review-browser.mjs'].sort((a,b)=>a.localeCompare(b));
+ const allowed=['app/learner-ui.css','data/klink-synonyms.json','lib/practice-chapters.ts','lib/synonyms.ts','scripts/check-synonym-placement-release.mjs','scripts/check-synonym-review-release-20261031.mjs','scripts/test-synonyms.mjs','scripts/test-synonyms-browser.mjs','scripts/test-synonym-review-browser.mjs'].sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,allowed);assert.deepEqual([...r.changedFiles].sort((a,b)=>a.localeCompare(b)),allowed);
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  for(const [f,h]of Object.entries(r.evidence))assert.equal(sha(read(f)),h,f);
