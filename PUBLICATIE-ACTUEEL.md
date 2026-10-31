@@ -1,3 +1,13 @@
+## 31 oktober 2026 — toetsenbordherstel bij alle oefenvormen
+
+Livebron `9ad8af333dd25d38087b6f1e2fecdd31301c8d96`, schone canonieke main; Worker `4c822602-b9c4-4cd9-95ae-40b16b978d55`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de actuele goedgekeurde livebron `c8dc485755326b98ff7012de17527d8e087d8b38`. Enter volgt de zichtbare controle- of tussenstap; pijlen slaan uitgeschakelde stappen niet over. Spatie volgt de zichtbare luisterknop, het geselecteerde woord bij geluidsorteren en de gekozen gespreksbeurt. Uitklapbare uitleg en tekstvelden houden hun eigen bediening. Opnemen en het terugluisteren van eigen opnamen blokkeren voortijdig afronden.
+
+Alle inhoud, oorspronkelijke taak-ID’s, audio, beelden, routes en opslagformaten zijn behouden, inclusief het nieuwste betekenisherstel met vier contextopnamen. Geen gewijzigde data, lib of publieke bronbestanden. Beoordeling van de herstelversie: 58 oefenvormen, 464 toets/knopvergelijkingen en aanvullende randgevallen in twee browsers; toetsenbord-, native-woordaudio- en mobiele regressie; tien voortgangsgevallen, vijftien unitgevallen, types, lint en build geslaagd. Voor publicatie ook 96 menureizen, 180 Alfa C-terugwegen, 50 historische controlepunten afgerond (49 geslaagd in de volledige ronde; één herstelde testfixture gericht opnieuw geslaagd) en 26 gerichte afkeurproeven. Alle zware controles lokaal; geen GitHub-workflows.
+
+Online: veertien toetsenbord-/mobiele-/opslag-/native-audiogroepen plus vier gespreks-/docentstapgroepen op Chromium/WebKit geslaagd. Alle 32 gebouwde app-, logo-, register- en steekproefaudiobestanden bytegelijk teruggelezen, inclusief de vier recente betekenisopnamen. De vijf inhoudskenmerken van release.json zijn gelijk aan de vorige liveversie. Geen fysieke telefoons of microfoonhardware getest; geen nieuwe uitspraakbeoordeling afgeleid uit de technische controle.
+
+Bronpakket volledig teruggelezen van Drive met SHA256, ZIP CRC en broncontrole: `1v18EnUV_7-fG02mA68TWF8FAevARAxjg`. Online-/herstelkopie eveneens volledig teruggelezen: `16oh8Ovo46ofHyHPMPAohmKsln2z3m8O8`. Bewijs: `docs/keyboard-all-forms-publish-20261031/`. Gebruik deze canonieke opvolger voor een volgende publicatie.
+
 ## 31 oktober 2026 — woordbetekenissen en begeleide uitbreiding
 
 Livebron `c8dc485755326b98ff7012de17527d8e087d8b38`, schone canonieke main; Worker `ef9261bb-73eb-486d-b03c-160d63e2a27d`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de goedgekeurde toetsenbordrelease `974b887d804b3c463d78407f3f4b12936636e43b` en canonieke opvolger `7606464fe84907200c52f332e4380b3fad5456f5`. Behoud deze opvolger bij iedere volgende publicatie.
