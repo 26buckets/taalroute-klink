@@ -1,11 +1,10 @@
 'use client';
 
 import { EntryScreen } from '@/components/product/entry-design';
-import { LearnerApp } from '@/components/product/learner-app';
-import { TeacherApp } from '@/components/product/staff-apps';
-import { RouteSettingsProvider } from '@/components/product/route-settings';
 import { CheckCircle2 } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
+
+const PracticeWorkspace = lazy(() => import('@/components/product/practice-workspace'));
 
 export type Portal = 'entry' | 'learner' | 'teacher';
 
@@ -58,11 +57,10 @@ export default function KlinkProductSlice() {
   }, []);
 
   return (
-    <RouteSettingsProvider><div className="product-root" data-theme="taalroute">
+    <div className="product-root" data-theme="taalroute">
       {portal === 'entry' && <EntryScreen onPortal={openPortal} />}
-      {portal === 'learner' && <LearnerApp onExit={() => openPortal('entry')} onToast={setToast} />}
-      {portal === 'teacher' && <TeacherApp onExit={() => openPortal('entry')} onToast={setToast} />}
+      {portal !== 'entry' && <Suspense fallback={<output>Klink wordt geopend…</output>}><PracticeWorkspace portal={portal} onExit={() => openPortal('entry')} onToast={setToast} /></Suspense>}
       {toast && <output className="toast-message"><CheckCircle2 />{toast}</output>}
-    </div></RouteSettingsProvider>
+    </div>
   );
 }

@@ -7,7 +7,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Check, Eye, FileText, HelpCircle, RefreshCw, Volume2 } from 'lucide-react';
 import { functionalAudio, functionalOptions, functionalStorageKey, readFunctionalProgress, type FunctionalBlock, type FunctionalProgress, type FunctionalRecord, type FunctionalStep } from '@/lib/alfa-c-functioneel';
 import { playMedia, stopMedia } from './shared';
-import Image from 'next/image';
+import Image from './compact-image';
 import { AlfaCWorkspace, DocumentSet, PracticeDocument } from './alfa-c-workspace';
 
 export function AlfaCFunctionalPractice({ block, backHref, header }: { backHref: string; header: ReactNode; block: FunctionalBlock }) {

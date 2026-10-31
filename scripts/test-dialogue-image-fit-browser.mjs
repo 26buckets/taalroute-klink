@@ -1,3 +1,4 @@
+import { compactImageSrc } from '../lib/compact-images.ts';
 import assert from 'node:assert/strict';
 import {readFileSync, writeFileSync, mkdirSync} from 'node:fs';
 const {chromium}=await import('/Users/nicoknoester/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs');
@@ -11,7 +12,7 @@ async function inspect(d,width,height=900) {
  await p.goto(`${base}/#learner/chapters/practical/dialogues/${d.id}?level=${d.sourceLevel.toLowerCase()}`);
  await p.waitForFunction(id=>document.querySelector('.cp-exercise-browser')?.dataset.exerciseId.includes(id),d.id);
  const img=p.locator('.cp-dialogue-scene > img');await img.waitFor();
- await p.waitForFunction(src=>{const e=document.querySelector('.cp-dialogue-scene > img');return e?.complete&&e.naturalWidth>0&&e.getAttribute('src')===src;},d.image.src);
+ await p.waitForFunction(src=>{const e=document.querySelector('.cp-dialogue-scene > img');return e?.complete&&e.naturalWidth>0&&e.getAttribute('src')===src;},compactImageSrc(d.image.src));
  const metrics=await img.evaluate(e=>{const r=e.getBoundingClientRect(),s=getComputedStyle(e);return {natural:[e.naturalWidth,e.naturalHeight],box:[r.width,r.height],fit:s.objectFit,border:s.borderWidth};});
  assert.equal(metrics.fit,'contain');assert.equal(metrics.border,'0px');
  assert(Math.abs(metrics.box[1]-metrics.box[0]*metrics.natural[1]/metrics.natural[0])<1,`${d.id}/${width}: complete natural image ratio`);

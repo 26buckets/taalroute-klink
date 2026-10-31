@@ -1,7 +1,7 @@
 'use client';
 import { useState, type ReactNode } from 'react';
 import { Check, FileText } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import './alfa-c-workspace.css';
 
 type Document = { id?: string; title?: string; text: string };

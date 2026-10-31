@@ -1,0 +1,31 @@
+{
+  "base": "http://127.0.0.1:18976",
+  "checks": [
+    {
+      "engine": "chromium",
+      "dialogueCurrentTurnSpace": true,
+      "arrows": true,
+      "noDisabledFallthrough": true
+    },
+    {
+      "engine": "chromium",
+      "teacherEnterBegins": true,
+      "unfinishedStepNotGraded": true,
+      "mobileTouch": true
+    },
+    {
+      "engine": "webkit",
+      "dialogueCurrentTurnSpace": true,
+      "arrows": true,
+      "noDisabledFallthrough": true
+    },
+    {
+      "engine": "webkit",
+      "teacherEnterBegins": true,
+      "unfinishedStepNotGraded": true,
+      "mobileTouch": true
+    }
+  ],
+  "errors": [],
+  "physicalDevices": false
+}

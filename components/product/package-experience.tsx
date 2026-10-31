@@ -39,7 +39,7 @@ import {
   Volume2,
   WholeWord,
 } from 'lucide-react';
-import Image from 'next/image';
+import Image from './compact-image';
 import { useEffect, useState } from 'react';
 
 type PackageTab =

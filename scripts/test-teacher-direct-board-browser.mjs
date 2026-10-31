@@ -38,6 +38,7 @@ for (const { name, engine, options } of [
         saved,
       );
       await page.goto(base + '/#teacher/plus');
+      await page.getByRole('button', { name: 'Les openen', exact: true }).waitFor();
       assert.equal(await page.locator('input,textarea,select').count(), 0);
       assert(
         !/voorbereid|Alfa|lesplan/i.test(

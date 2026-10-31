@@ -1,3 +1,33 @@
+## 31 oktober 2026 — compacte beelden en uitgesteld laden
+
+Livebron `e611ccae44d777f6d36db6aa100785fdfdf2363e`, schone canonieke main; Worker `7a405f0a-0c3b-4510-9693-1b8040886c00`. Via de normale `npm run deploy`-poort gepubliceerd als afstammeling van b368996c en de livebron dd2a0773.
+
+Alle 1.353 beeldbestanden gecontroleerd; 506 zware/grote bronnen gebruiken nu 503 compacte webbestanden. Maximaal 92.690 bytes per aangeboden beeld; de beeldverzameling daalt van 274.600.874 naar 32.923.922 bytes. Originele bronnen, inhoud, antwoorden, audio, routes en voortgangskoppelingen behouden. De actuele app gebruikt compacte versies; oude bronpaden blijven voor herstel en oude verwijzingen bestaan. Geen beeldgeneratie.
+
+Startpagina downloadt mediaan 3,528,796 versus 425,575 bytes (87.9% minder, drie lokale browsermetingen). Cursist-/docentwerkplek en lesgegevens laden pas bij openen. Projectiebescherming blijft intact bij beschadigde of geblokkeerde browseropslag. Alle beeldbytes en compacte cacheheaders online gecontroleerd; desktop/mobiel in Chromium en WebKit, docentmodus en voortgang geslaagd. Lokaal 112 menureizen, 312 vormwisselingen, toetsen/audio/opslag en vijf schermbreedtes gecontroleerd; 50 historische behoudtests en vijf nieuwe afkeurproeven geslaagd. Geen fysieke telefoontest; lokale productiepreview startte niet door, build/dev-controles en echte productiecontroles slagen.
+
+Dossier: `docs/image-size-audit-20261031/`, met `LAADCONTROLE.md`, `publication.json`, bron-back-up `backup.json` en definitieve onlineback-up `final-backup.json`. Geen GitHub Actions aanwezig/toegevoegd; zware controles lokaal.
+
+## 31 oktober 2026 — 107 aanvullende Drivebeelden
+
+Livebron `dd2a077394916483daece15659ffbc15c3e988a9`, schone canonieke main; Worker `a5f9d7ff-a993-4e29-84dc-f4969261c6d1`. Via de normale `npm run deploy`-route gepubliceerd als afstammeling van de actuele toetsenbordrelease `9ad8af333dd25d38087b6f1e2fecdd31301c8d96`, met behoud van diens definitieve publicatieregistratie `ab20539102578e9b48013dac4527894150116d58`.
+
+107 bestaande Drivebeelden compact gekoppeld aan 107 woorden: 1.482 beeldplaatsen in 135 verzamelingen. De webbestanden zijn samen 3.807.372 bytes; originele Drivebeelden blijven behouden. Geen beeldgeneratie. 139 bronversies beoordeeld, inclusief zichtbare handen/detailuitsneden en compact formaat. Voorgesteld hergebruik van loon/salaris en onderzoek/huisarts is niet uitgevoerd omdat dezelfde foto's dan verschillende woorden binnen één oefenset zouden voorstellen. 54 woorden blijven open: 25 zonder bevestigde bruikbare bron, 29 aanpassen/vervangen; samen 77 plaatsen in het oefeningsoverzicht.
+
+Alle 65.505 oefenidentiteiten, antwoorden, eerdere media, audio, routes en voortgang behouden. Lokaal: bron-/antwoord-/voortgangscontrole, negatieve afkeurproeven, types, gerichte lint, productieopbouw, 428 beeldplaatsingen, 312 vormwisselingen en 112 overzicht/open/terug-reizen, native audio en toetsenbord-/opslagcontroles. Alle 50 historische publicatietests en de normale publicatiepoort slagen. Online: 454 bestanden bytegelijk teruggelezen, alle 107 beelden in Chromium/WebKit op desktop/mobiel geplaatst, toetsenbediening en voortgang gecontroleerd. Geen fysieke toestellen of onafhankelijke menselijke beeldgoedkeuring.
+
+Bewijs: `docs/drive-images-extra-20261031/`. Gecontroleerd bronpakket op Drive: `19aAyjxTRezuuqNgUI5AKZsd8WKXboZ1x`. Definitieve online- en overzichtsback-up: zie `final-backup.json` in hetzelfde dossier. Het bijgewerkte overzicht staat lokaal op poort 18874; de beelden zijn live op https://klink.taalroute.nl. Geen GitHub-workflows toegevoegd of aanwezig; zware controles lokaal uitgevoerd.
+
+## 31 oktober 2026 — toetsenbordherstel bij alle oefenvormen
+
+Livebron `9ad8af333dd25d38087b6f1e2fecdd31301c8d96`, schone canonieke main; Worker `4c822602-b9c4-4cd9-95ae-40b16b978d55`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de actuele goedgekeurde livebron `c8dc485755326b98ff7012de17527d8e087d8b38`. Enter volgt de zichtbare controle- of tussenstap; pijlen slaan uitgeschakelde stappen niet over. Spatie volgt de zichtbare luisterknop, het geselecteerde woord bij geluidsorteren en de gekozen gespreksbeurt. Uitklapbare uitleg en tekstvelden houden hun eigen bediening. Opnemen en het terugluisteren van eigen opnamen blokkeren voortijdig afronden.
+
+Alle inhoud, oorspronkelijke taak-ID’s, audio, beelden, routes en opslagformaten zijn behouden, inclusief het nieuwste betekenisherstel met vier contextopnamen. Geen gewijzigde data, lib of publieke bronbestanden. Beoordeling van de herstelversie: 58 oefenvormen, 464 toets/knopvergelijkingen en aanvullende randgevallen in twee browsers; toetsenbord-, native-woordaudio- en mobiele regressie; tien voortgangsgevallen, vijftien unitgevallen, types, lint en build geslaagd. Voor publicatie ook 96 menureizen, 180 Alfa C-terugwegen, 50 historische controlepunten afgerond (49 geslaagd in de volledige ronde; één herstelde testfixture gericht opnieuw geslaagd) en 26 gerichte afkeurproeven. Alle zware controles lokaal; geen GitHub-workflows.
+
+Online: veertien toetsenbord-/mobiele-/opslag-/native-audiogroepen plus vier gespreks-/docentstapgroepen op Chromium/WebKit geslaagd. Alle 32 gebouwde app-, logo-, register- en steekproefaudiobestanden bytegelijk teruggelezen, inclusief de vier recente betekenisopnamen. De vijf inhoudskenmerken van release.json zijn gelijk aan de vorige liveversie. Geen fysieke telefoons of microfoonhardware getest; geen nieuwe uitspraakbeoordeling afgeleid uit de technische controle.
+
+Bronpakket volledig teruggelezen van Drive met SHA256, ZIP CRC en broncontrole: `1v18EnUV_7-fG02mA68TWF8FAevARAxjg`. Online-/herstelkopie eveneens volledig teruggelezen: `16oh8Ovo46ofHyHPMPAohmKsln2z3m8O8`. Bewijs: `docs/keyboard-all-forms-publish-20261031/`. Gebruik deze canonieke opvolger voor een volgende publicatie.
+
 ## 31 oktober 2026 — woordbetekenissen en begeleide uitbreiding
 
 Livebron `c8dc485755326b98ff7012de17527d8e087d8b38`, schone canonieke main; Worker `ef9261bb-73eb-486d-b03c-160d63e2a27d`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van de goedgekeurde toetsenbordrelease `974b887d804b3c463d78407f3f4b12936636e43b` en canonieke opvolger `7606464fe84907200c52f332e4380b3fad5456f5`. Behoud deze opvolger bij iedere volgende publicatie.
