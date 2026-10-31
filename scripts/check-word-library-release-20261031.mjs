@@ -8,12 +8,12 @@ const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean).sort(
 export function verifyWordLibraryRelease(read=readFileSync) {
  const r=JSON.parse(read('docs/klink-owner-release-word-library-20261031.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.visualScope,'WordLibrary');
- assert.equal(r.baselineSourceCommit,'ec613bafcdae4591add4b94a65390773df46738f');
- assert.equal(r.liveSourceCommit,'cc7fff4646d3ad9bdb33f13cc7e75eec1b356fa2');
+ assert.equal(r.baselineSourceCommit,'96f3bf78a0556af7dff6d48a16028f886957530b');
+ assert.equal(r.liveSourceCommit,'1a36fe5fe228f305069ca50e0a2a3b75c6f35191');
  git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
  const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
- const allowed=['app/learner-ui.css','components/product/learner-app.tsx','lib/word-library.ts','data/klink-word-library-index.json','package.json','scripts/build-word-library-index.mjs','scripts/check-docent-lessons-release-20261031.mjs','scripts/check-word-library-release-20261031.mjs','scripts/test-word-library-release-20261031.mjs','scripts/test-word-library.mjs','scripts/test-word-library-browser.mjs','scripts/test-word-library-continuity-browser.mjs','scripts/test-existing-player-browser.mjs','scripts/test-learner-ux-browser.mjs','scripts/test-review-saved-words-browser.mjs','scripts/test-word-articles-browser.mjs','scripts/test-word-audio-ui-browser.mjs'];
+ const allowed=['app/learner-ui.css','components/product/learner-app.tsx','lib/word-library.ts','data/klink-word-library-index.json','package.json','scripts/build-word-library-index.mjs','scripts/check-start-step-release-20261031.mjs','scripts/check-word-library-release-20261031.mjs','scripts/test-word-library-release-20261031.mjs','scripts/test-word-library.mjs','scripts/test-word-library-browser.mjs','scripts/test-word-library-continuity-browser.mjs','scripts/test-existing-player-browser.mjs','scripts/test-learner-ux-browser.mjs','scripts/test-review-saved-words-browser.mjs','scripts/test-word-articles-browser.mjs','scripts/test-word-audio-ui-browser.mjs'];
  assert.deepEqual(changed,[...r.changedFiles].sort((a,b)=>a.localeCompare(b)));assert(changed.every(f=>allowed.includes(f)),'Only the approved word library and its checks');
  for(const[f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);for(const f of changed)assert(r.files[f],f);
  assert.equal(git('diff','--name-only','--diff-filter=MD',r.baselineSourceCommit,'--','data','public').length,0,'Existing content and media remain byte-identical');
