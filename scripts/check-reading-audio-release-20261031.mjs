@@ -1,3 +1,4 @@
+import {verifyNextTeacherPackagesRelease,readBeforeNextTeacherPackages} from './check-teacher-packages-10-15-release-20261031.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -45,17 +46,18 @@ export function verifyReadingAudioContent(read=readFileSync){
  return {rows,recordings:record.recordings};
 }
 export function verifyReadingAudioRelease(read=readFileSync){
+ const successor=verifyNextTeacherPackagesRelease(read),currentRead=read;read=file=>readBeforeNextTeacherPackages(file,successor,currentRead);
  const r=json('docs/klink-owner-release-reading-audio-20261031.json',read);
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChanged,false);assert.equal(r.newAudioGenerated,true);
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
  assert.equal(r.userRequest,json(folder+'/owner-request.json',read).userRequest);
  const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots));
  const allowed=['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json','scripts/check-teacher-packages-release-20261031.mjs','scripts/check-reading-audio-release-20261031.mjs','scripts/test-reading-rounds-20261031.mjs','scripts/test-reading-rounds-browser-20261031.mjs','scripts/test-reading-rounds-appearance-20261031.mjs','scripts/test-sentence-rounds-20261031.mjs','scripts/test-reading-audio-20261031.mjs','scripts/test-reading-audio-progress-browser-20261031.mjs','scripts/test-reading-audio-release-20261031.mjs'];
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const file of changed){assert(allowed.includes(file)||/^public\/practice-content\/reading-rounds-20261031\/a[12]-r01-[a-f0-9]{16}\.json$/.test(file)||/^public\/package-audio\/reading-rounds-20261031\/a[12]-t0[123]\.wav$/.test(file),file);assert.equal(sha(read(file)),r.files[file],file);}
- assert.equal(git('diff','--name-only',base,'--','app','components','hooks','lib','db','drizzle','.github','package.json','package-lock.json','vite.config.ts').length,0,'All UI, playback logic, routes, storage and deployment configuration stay exact');
- assert.equal(git('diff','--name-only','--diff-filter=MD',base,'--','public').length,0,'All previously published media and content files remain exact');
+ assert.equal(git('diff','--name-only',base,successor.baselineSourceCommit,'--','app','components','hooks','lib','db','drizzle','.github','package.json','package-lock.json','vite.config.ts').length,0,'All UI, playback logic, routes, storage and deployment configuration stay exact');
+ assert.equal(git('diff','--name-only','--diff-filter=MD',base,successor.baselineSourceCommit,'--','public').length,0,'All previously published media and content files remain exact');
  assert.equal(sha(read('docs/appearance-floor-20261031/floor.json')),sha(before('docs/appearance-floor-20261031/floor.json')));
  const content=verifyReadingAudioContent(read);for(const f of ['voice-plan.json','recordings.json','text-check.json'])assert.equal(sha(read(folder+'/'+f)),r.evidenceSha256[f]);
  const player=json(folder+'/player-check.json',read);assert(player.localOnly);assert(player.checks.length>=8);assert.deepEqual(player.errors,[]);assert(player.checks.every(c=>c.allThreeRecordingsPlayed&&c.oldProgressPreserved&&c.reloadResume&&c.completedReload));assert.equal(player.checks.filter(c=>c.completedNativePlayback).length,2);
@@ -64,6 +66,6 @@ export function verifyReadingAudioRelease(read=readFileSync){
  const appearance=json(folder+'/appearance-check.json',read);assert(appearance.equal&&appearance.checks.length===8);
  const review=json(folder+'/review.json',read);for(const k of ['text','metadata','lossless','player','appearance','progress','preservation','types','lint','build','localOnly'])assert.equal(review[k],true,k);
  const backup=json(folder+'/backup.json',read);assert(backup.verified&&backup.driveId&&backup.downloadedByteIdentical&&backup.zipCrcVerified);for(const file of changed)assert.equal(backup.files[file],r.files[file],file);for(const a of content.recordings)assert.equal(backup.originals[a.id],a.originalSha256);
- return r;
+ return {...r,successor};
 }
-export function readBeforeReadingAudio(file,r,read=readFileSync){return r.changedFiles.includes(file)?before(file):read(file);}
+export function readBeforeReadingAudio(file,r,read=readFileSync){return r.changedFiles.includes(file)?before(file):readBeforeNextTeacherPackages(file,r.successor,read);}

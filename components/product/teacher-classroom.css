@@ -1263,3 +1263,9 @@
   body:has(.kpd) .kpd-answers-print, body:has(.kpd) .kpd-answers-print * { visibility: visible !important; }
   body:has(.kpd) .kpd-answers-print { width: auto !important; min-height: 0 !important; max-height: none; break-inside: auto; font-size: 11pt; }
 }
+
+@media (max-width: 360px) {
+  .kpd-big-word[data-word="maand"] {
+    font-size: 80px;
+  }
+}

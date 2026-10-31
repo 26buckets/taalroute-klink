@@ -669,7 +669,13 @@
               "criteria": "Correcte keuze/lettervolgorde en betekenis.",
               "layout": "regel",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-SOK-WB-A-05",
@@ -705,7 +711,21 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Correcte keuze/lettervolgorde en betekenis.",
               "layout": "keuze",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "kos",
+                  "sok",
+                  "osk",
+                  "sok"
+                ],
+                [
+                  "sko",
+                  "sok",
+                  "kos",
+                  "sko"
+                ]
+              ]
             },
             {
               "id": "KPD-SOK-WB-A-08",
@@ -717,7 +737,13 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "schrijven",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-SOK-WB-A-09",
@@ -729,7 +755,13 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "schrijven",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-SOK-WB-A-10",
@@ -939,7 +971,7 @@
               "id": "KPD-SOK-WB-C-05",
               "number": 5,
               "title": "Zet de drie stappen uit de tekst op volgorde.",
-              "body": "Schrijf 1, 2, 3.\n□ aantrekken     □ liggen     □ pakken",
+              "body": "Schrijf 1, 2, 3.\n___ aantrekken     ___ liggen     ___ pakken",
               "answer": "aantrekken 3; liggen 1; pakken 2.",
               "oral": "",
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -1675,7 +1707,13 @@
               "criteria": "Correcte keuze/lettervolgorde en betekenis.",
               "layout": "schrijven",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-STOP-WB-A-05",
@@ -1711,7 +1749,21 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Correcte keuze/lettervolgorde en betekenis.",
               "layout": "keuze",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "pots",
+                  "stop",
+                  "stpo",
+                  "stop"
+                ],
+                [
+                  "stop",
+                  "opst",
+                  "spot",
+                  "post"
+                ]
+              ]
             },
             {
               "id": "KPD-STOP-WB-A-08",
@@ -1723,7 +1775,13 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "schrijven",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-STOP-WB-A-09",
@@ -1735,7 +1793,13 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "schrijven",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-STOP-WB-A-10",
@@ -1945,7 +2009,7 @@
               "id": "KPD-STOP-WB-C-05",
               "number": 5,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "Schrijf 1, 2, 3.\n□ Ik wacht even.\n□ Ik stop bij de deur.\n□ De deur is dicht.",
+              "body": "Schrijf 1, 2, 3.\n___ Ik wacht even.\n___ Ik stop bij de deur.\n___ De deur is dicht.",
               "answer": "1 bij Ik stop; 2 bij De deur is dicht; 3 bij Ik wacht even.",
               "oral": "",
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -2688,7 +2752,13 @@
               "criteria": "Correcte keuze/lettervolgorde en betekenis.",
               "layout": "schrijven",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-STAD-WB-A-05",
@@ -2724,7 +2794,21 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Correcte keuze/lettervolgorde en betekenis.",
               "layout": "keuze",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "stad",
+                  "dast",
+                  "stda",
+                  "stad"
+                ],
+                [
+                  "stad",
+                  "sdta",
+                  "tats",
+                  "dast"
+                ]
+              ]
             },
             {
               "id": "KPD-STAD-WB-A-08",
@@ -2748,7 +2832,13 @@
               "action": "Geef eerst denktijd. Doe pas daarna één voorbeeld voor. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "schrijven",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-STAD-WB-A-10",
@@ -3709,7 +3799,13 @@
               "criteria": "Docent spreekt /b/ /oː/ /m/ voor; schrijf drie klanken en letters, geen vier vakken.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOOM-WB-A-05",
@@ -3745,7 +3841,21 @@
               "action": "Dit meet woordbeeldherkenning met visueel model. Noem andere rijtjes niet automatisch niet-bestaande woorden. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Dit meet woordbeeldherkenning met visueel model. Noem andere rijtjes niet automatisch niet-bestaande woorden.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "moob",
+                  "boom",
+                  "bomo",
+                  "bo om"
+                ],
+                [
+                  "boom",
+                  "bo mo",
+                  "obom",
+                  "boom"
+                ]
+              ]
             },
             {
               "id": "KPD-BOOM-WB-A-08",
@@ -3757,7 +3867,13 @@
               "action": "Docent zegt achtereenvolgens /b/ (stemhebbende b), /oː/ (lange oo), /m/. Laat tussenruimte. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOOM-WB-A-09",
@@ -3769,7 +3885,17 @@
               "action": "Toon het gedrukte boom pas als hulp na eerste poging. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "Letters",
+                  "count": 4
+                },
+                {
+                  "label": "Stukjes",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOOM-WB-A-10",
@@ -3827,7 +3953,7 @@
               "answer": "bij het huis",
               "oral": "",
               "action": "Voor Boon is de vraag: Wat zie ik? Voor Boom/Boot: Waar is het? Leg afleiders mondeling uit indien nodig. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Voor Boon is de vraag: Wat zie ik? Voor Boom/Boot: Waar is het? Leg afleiders mondeling uit indien nodig.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "choice",
               "visual": null
             },
@@ -3863,7 +3989,7 @@
               "answer": "De boom staat bij het huis.",
               "oral": "",
               "action": "Bespreek voor Boon expliciet kleur; wijs erop dat de andere zin afwijkt van de brontekst. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Bespreek voor Boon expliciet kleur; wijs erop dat de andere zin afwijkt van de brontekst.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "choice",
               "visual": null
             },
@@ -3947,7 +4073,7 @@
               "answer": "bij het huis",
               "oral": "",
               "action": "Het antwoord moet uit de tekst volgen; bij Boon op mijn bord. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Het antwoord moet uit de tekst volgen; bij Boon op mijn bord.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "write",
               "visual": null
             },
@@ -3966,7 +4092,7 @@
             {
               "id": "KPD-BOOM-WB-C-04",
               "number": 4,
-              "title": "Wat gebeurt daarna?",
+              "title": "Wat gebeurt er daarna?",
               "body": "De boom staat bij het huis.\nEr zit een mus in de boom.\nDe mus vliegt weg.\nWat doet de mus daarna?\n________________________",
               "answer": "De mus vliegt weg.",
               "oral": "",
@@ -3979,7 +4105,7 @@
               "id": "KPD-BOOM-WB-C-05",
               "number": 5,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "□ De mus vliegt weg.\n□ De boom staat bij het huis.\n□ Er zit een mus in de boom.",
+              "body": "___ De mus vliegt weg.\n___ De boom staat bij het huis.\n___ Er zit een mus in de boom.",
               "answer": "Bij de drie getoonde regels: 3, 1, 2.",
               "oral": "",
               "action": "De nummering volgt letterlijk de driezinnentekst. Bij Boon zien, liggen, eten in verhaalvolgorde. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -4031,9 +4157,10 @@
               "answer": "Eerst: de mus zit in de boom. Daarna: de mus vliegt weg.",
               "oral": "",
               "action": "Volgorde klopt: Boom mus in boom → weg; Boon op bord → wordt gegeten; Boot man bij boot → vaart weg. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Volgorde klopt: Boom mus in boom → weg; Boon op bord → wordt gegeten; Boot man bij boot → vaart weg.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "draw2",
-              "visual": null
+              "visual": null,
+              "drawingPanels": 2
             },
             {
               "id": "KPD-BOOM-WB-C-10",
@@ -4724,7 +4851,13 @@
               "criteria": "Docent spreekt /b/ /oː/ /n/ voor; schrijf drie klanken en letters, geen vier vakken.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOON-WB-A-05",
@@ -4760,7 +4893,21 @@
               "action": "Dit meet woordbeeldherkenning met visueel model. Noem andere rijtjes niet automatisch niet-bestaande woorden. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Dit meet woordbeeldherkenning met visueel model. Noem andere rijtjes niet automatisch niet-bestaande woorden.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "boon",
+                  "noob",
+                  "bono",
+                  "bo on"
+                ],
+                [
+                  "boon",
+                  "nobo",
+                  "bo no",
+                  "boon"
+                ]
+              ]
             },
             {
               "id": "KPD-BOON-WB-A-08",
@@ -4772,7 +4919,13 @@
               "action": "Docent zegt achtereenvolgens /b/ (stemhebbende b), /oː/ (lange oo), /n/. Laat tussenruimte. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOON-WB-A-09",
@@ -4784,7 +4937,17 @@
               "action": "Toon het gedrukte boon pas als hulp na eerste poging. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "Letters",
+                  "count": 4
+                },
+                {
+                  "label": "Stukjes",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOON-WB-A-10",
@@ -4837,12 +5000,12 @@
             {
               "id": "KPD-BOON-WB-B-03",
               "number": 3,
-              "title": "Welk woord vertelt de kleur?",
+              "title": "Wat zie ik?",
               "body": "Ik zie een bruine boon.\n□ een bruine boon      □ een groene boon",
               "answer": "een bruine boon",
               "oral": "",
               "action": "Voor Boon is de vraag: Wat zie ik? Voor Boom/Boot: Waar is het? Leg afleiders mondeling uit indien nodig. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Voor Boon is de vraag: Wat zie ik? Voor Boom/Boot: Waar is het? Leg afleiders mondeling uit indien nodig.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "choice",
               "visual": null
             },
@@ -4981,7 +5144,7 @@
             {
               "id": "KPD-BOON-WB-C-04",
               "number": 4,
-              "title": "Wat gebeurt daarna?",
+              "title": "Wat gebeurt er daarna?",
               "body": "Ik zie een bruine boon.\nDe boon ligt op mijn bord.\nIk eet de boon.\nWat doe ik daarna met de boon?\n________________________",
               "answer": "Ik eet de boon.",
               "oral": "",
@@ -4994,7 +5157,7 @@
               "id": "KPD-BOON-WB-C-05",
               "number": 5,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "□ Ik eet de boon.\n□ Ik zie een bruine boon.\n□ De boon ligt op mijn bord.",
+              "body": "___ Ik eet de boon.\n___ Ik zie een bruine boon.\n___ De boon ligt op mijn bord.",
               "answer": "Bij de drie getoonde regels: 3, 1, 2.",
               "oral": "",
               "action": "De nummering volgt letterlijk de driezinnentekst. Bij Boon zien, liggen, eten in verhaalvolgorde. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -5046,9 +5209,10 @@
               "answer": "Eerst: de boon ligt op het bord. Daarna: ik eet de boon.",
               "oral": "",
               "action": "Volgorde klopt: Boom mus in boom → weg; Boon op bord → wordt gegeten; Boot man bij boot → vaart weg. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Volgorde klopt: Boom mus in boom → weg; Boon op bord → wordt gegeten; Boot man bij boot → vaart weg.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "draw2",
-              "visual": null
+              "visual": null,
+              "drawingPanels": 2
             },
             {
               "id": "KPD-BOON-WB-C-10",
@@ -5743,7 +5907,13 @@
               "criteria": "Docent spreekt /b/ /oː/ /t/ voor; schrijf drie klanken en letters, geen vier vakken.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOOT-WB-A-05",
@@ -5779,7 +5949,21 @@
               "action": "Dit meet woordbeeldherkenning met visueel model. Noem andere rijtjes niet automatisch niet-bestaande woorden. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Dit meet woordbeeldherkenning met visueel model. Noem andere rijtjes niet automatisch niet-bestaande woorden.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "boot",
+                  "toob",
+                  "boto",
+                  "bo ot"
+                ],
+                [
+                  "boot",
+                  "obto",
+                  "bo to",
+                  "boot"
+                ]
+              ]
             },
             {
               "id": "KPD-BOOT-WB-A-08",
@@ -5791,7 +5975,13 @@
               "action": "Docent zegt achtereenvolgens /b/ (stemhebbende b), /oː/ (lange oo), /t/. Laat tussenruimte. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOOT-WB-A-09",
@@ -5803,7 +5993,17 @@
               "action": "Toon het gedrukte boot pas als hulp na eerste poging. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "Letters",
+                  "count": 4
+                },
+                {
+                  "label": "Stukjes",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BOOT-WB-A-10",
@@ -5861,7 +6061,7 @@
               "answer": "bij de brug",
               "oral": "",
               "action": "Voor Boon is de vraag: Wat zie ik? Voor Boom/Boot: Waar is het? Leg afleiders mondeling uit indien nodig. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Voor Boon is de vraag: Wat zie ik? Voor Boom/Boot: Waar is het? Leg afleiders mondeling uit indien nodig.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "choice",
               "visual": null
             },
@@ -5897,7 +6097,7 @@
               "answer": "De boot ligt bij de brug.",
               "oral": "",
               "action": "Bespreek voor Boon expliciet kleur; wijs erop dat de andere zin afwijkt van de brontekst. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Bespreek voor Boon expliciet kleur; wijs erop dat de andere zin afwijkt van de brontekst.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "choice",
               "visual": null
             },
@@ -5981,7 +6181,7 @@
               "answer": "bij de brug",
               "oral": "",
               "action": "Het antwoord moet uit de tekst volgen; bij Boon op mijn bord. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Het antwoord moet uit de tekst volgen; bij Boon op mijn bord.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "write",
               "visual": null
             },
@@ -6000,7 +6200,7 @@
             {
               "id": "KPD-BOOT-WB-C-04",
               "number": 4,
-              "title": "Wat gebeurt daarna?",
+              "title": "Wat gebeurt er daarna?",
               "body": "De boot ligt bij de brug.\nEen man stapt in de boot.\nDaarna vaart hij weg.\nWat doet de man daarna?\n________________________",
               "answer": "Hij vaart weg.",
               "oral": "",
@@ -6013,7 +6213,7 @@
               "id": "KPD-BOOT-WB-C-05",
               "number": 5,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "□ Daarna vaart hij weg.\n□ De boot ligt bij de brug.\n□ Een man stapt in de boot.",
+              "body": "___ Daarna vaart hij weg.\n___ De boot ligt bij de brug.\n___ Een man stapt in de boot.",
               "answer": "Bij de drie getoonde regels: 3, 1, 2.",
               "oral": "",
               "action": "De nummering volgt letterlijk de driezinnentekst. Bij Boon zien, liggen, eten in verhaalvolgorde. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -6065,9 +6265,10 @@
               "answer": "Eerst: de man stapt in de boot. Daarna: dezelfde man vaart met de boot weg.",
               "oral": "",
               "action": "Volgorde klopt: Boom mus in boom → weg; Boon op bord → wordt gegeten; Boot man bij boot → vaart weg. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
-              "criteria": "Volgorde klopt: Boom mus in boom → weg; Boon op bord → wordt gegeten; Boot man bij boot → vaart weg.",
+              "criteria": "Beoordeel het opgegeven lesgebonden antwoord; noteer benodigde steun afzonderlijk.",
               "layout": "draw2",
-              "visual": null
+              "visual": null,
+              "drawingPanels": 2
             },
             {
               "id": "KPD-BOOT-WB-C-10",
@@ -6174,7 +6375,7 @@
         "visible": "tand",
         "studentAction": "Cursist A zegt het woord; cursist B wijst het juiste voorwerp of deel aan. Wissel.",
         "action": "Gebruik het echte materiaal. Doe met een tandenborstel bij een gebitsmodel voor hoe poetsen en spoelen eruitzien. Niet bij cursisten zelf.",
-        "expected": "Het bedoelde tand(en) wordt correct herkend en genoemd.",
+        "expected": "De tand wordt correct herkend en benoemd.",
         "hint": "Doe de betekenis voor en herhaal de opdracht met twee cursisten.",
         "feedback": "Ja, dat past bij tand. Het bedoelde tand(en) wordt correct herkend en genoemd.",
         "retry": "Welke aanwijzing helpt de ander? Probeer het nog eens.",
@@ -6317,7 +6518,7 @@
             "visible": "tand",
             "studentAction": "Cursist A zegt het woord; cursist B wijst het juiste voorwerp of deel aan. Wissel.",
             "action": "Gebruik het echte materiaal. Doe met een tandenborstel bij een gebitsmodel voor hoe poetsen en spoelen eruitzien. Niet bij cursisten zelf.",
-            "expected": "Het bedoelde tand(en) wordt correct herkend en genoemd.",
+            "expected": "De tand wordt correct herkend en benoemd.",
             "hint": "Doe de betekenis voor en herhaal de opdracht met twee cursisten.",
             "feedback": "Ja, dat past bij tand. Het bedoelde tand(en) wordt correct herkend en genoemd.",
             "retry": "Welke aanwijzing helpt de ander? Probeer het nog eens.",
@@ -6592,7 +6793,7 @@
             "studentAction": "Plaats de kaartjes samen in zinsvolgorde en lees hardop.",
             "action": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
             "expected": "Daarna spoel ik mijn mond.",
-            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt daarna?",
+            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt er daarna?",
             "feedback": "Ja, dat past bij tand. Daarna spoel ik mijn mond.",
             "retry": "Lees de zin. Welk woord staat op de verkeerde plek?",
             "observe": "Gebruikt cursist betekenis of alleen memoriseren van de regel?",
@@ -6756,7 +6957,13 @@
               "criteria": "Van links naar rechts in de volgorde van de doelwoordspelling.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-TAND-WB-A-05",
@@ -6792,7 +6999,21 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Markeer uitsluitend de exact gespelde doelwoordvorm; andere letterrijen worden niet tot nepwoorden verklaard.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "dant",
+                  "tand",
+                  "tant",
+                  "tand"
+                ],
+                [
+                  "tnda",
+                  "tand",
+                  "nadt",
+                  "dant"
+                ]
+              ]
             },
             {
               "id": "KPD-TAND-WB-A-08",
@@ -6804,7 +7025,13 @@
               "action": "Zeg alleen de drie eerste klanken, afzonderlijk en met pauze. Noem geen letternamen. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-TAND-WB-A-09",
@@ -6816,7 +7043,13 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-TAND-WB-A-10",
@@ -7187,7 +7420,7 @@
         "visible": "been",
         "studentAction": "Cursist A zegt het woord; cursist B wijst het juiste voorwerp of deel aan. Wissel.",
         "action": "Gebruik het echte materiaal. Laat een poppetje of docent zelf op een stoel gaan zitten; raak niemand aan en vraag niet naar klachten.",
-        "expected": "Het bedoelde been wordt correct herkend en genoemd.",
+        "expected": "Het been wordt correct herkend en benoemd.",
         "hint": "Doe de betekenis voor en herhaal de opdracht met twee cursisten.",
         "feedback": "Ja, dat past bij been. Het bedoelde been wordt correct herkend en genoemd.",
         "retry": "Welke aanwijzing helpt de ander? Probeer het nog eens.",
@@ -7329,7 +7562,7 @@
             "visible": "been",
             "studentAction": "Cursist A zegt het woord; cursist B wijst het juiste voorwerp of deel aan. Wissel.",
             "action": "Gebruik het echte materiaal. Laat een poppetje of docent zelf op een stoel gaan zitten; raak niemand aan en vraag niet naar klachten.",
-            "expected": "Het bedoelde been wordt correct herkend en genoemd.",
+            "expected": "Het been wordt correct herkend en benoemd.",
             "hint": "Doe de betekenis voor en herhaal de opdracht met twee cursisten.",
             "feedback": "Ja, dat past bij been. Het bedoelde been wordt correct herkend en genoemd.",
             "retry": "Welke aanwijzing helpt de ander? Probeer het nog eens.",
@@ -7607,7 +7840,7 @@
             "studentAction": "Plaats de kaartjes samen in zinsvolgorde en lees hardop.",
             "action": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
             "expected": "Ik ga op een stoel zitten.",
-            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt daarna?",
+            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt er daarna?",
             "feedback": "Ja, dat past bij been. Ik ga op een stoel zitten.",
             "retry": "Lees de zin. Welk woord staat op de verkeerde plek?",
             "observe": "Gebruikt cursist betekenis of alleen memoriseren van de regel?",
@@ -7770,7 +8003,13 @@
               "criteria": "Van links naar rechts in de volgorde van de doelwoordspelling.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BEEN-WB-A-05",
@@ -7806,7 +8045,21 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Markeer uitsluitend de exact gespelde doelwoordvorm; andere letterrijen worden niet tot nepwoorden verklaard.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "beem",
+                  "been",
+                  "neen",
+                  "beee"
+                ],
+                [
+                  "been",
+                  "bene",
+                  "been",
+                  "eenb"
+                ]
+              ]
             },
             {
               "id": "KPD-BEEN-WB-A-08",
@@ -7818,7 +8071,13 @@
               "action": "Zeg alleen de drie eerste klanken, afzonderlijk en met pauze. Noem geen letternamen. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BEEN-WB-A-09",
@@ -7830,7 +8089,13 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BEEN-WB-A-10",
@@ -8201,7 +8466,7 @@
         "visible": "bord",
         "studentAction": "Cursist A zegt het woord; cursist B wijst het juiste voorwerp of deel aan. Wissel.",
         "action": "Gebruik het echte materiaal. Laat met een echt bord en een stuk brood de relaties op en op tafel zien; eten hoeft niet echt.",
-        "expected": "Het bedoelde eetbord wordt correct herkend en genoemd.",
+        "expected": "Het bord wordt correct herkend en benoemd.",
         "hint": "Doe de betekenis voor en herhaal de opdracht met twee cursisten.",
         "feedback": "Ja, dat past bij bord. Het bedoelde eetbord wordt correct herkend en genoemd.",
         "retry": "Welke aanwijzing helpt de ander? Probeer het nog eens.",
@@ -8344,7 +8609,7 @@
             "visible": "bord",
             "studentAction": "Cursist A zegt het woord; cursist B wijst het juiste voorwerp of deel aan. Wissel.",
             "action": "Gebruik het echte materiaal. Laat met een echt bord en een stuk brood de relaties op en op tafel zien; eten hoeft niet echt.",
-            "expected": "Het bedoelde eetbord wordt correct herkend en genoemd.",
+            "expected": "Het bord wordt correct herkend en benoemd.",
             "hint": "Doe de betekenis voor en herhaal de opdracht met twee cursisten.",
             "feedback": "Ja, dat past bij bord. Het bedoelde eetbord wordt correct herkend en genoemd.",
             "retry": "Welke aanwijzing helpt de ander? Probeer het nog eens.",
@@ -8622,7 +8887,7 @@
             "studentAction": "Plaats de kaartjes samen in zinsvolgorde en lees hardop.",
             "action": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
             "expected": "Ik leg brood op het bord.",
-            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt daarna?",
+            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt er daarna?",
             "feedback": "Ja, dat past bij bord. Ik leg brood op het bord.",
             "retry": "Lees de zin. Welk woord staat op de verkeerde plek?",
             "observe": "Gebruikt cursist betekenis of alleen memoriseren van de regel?",
@@ -8787,7 +9052,13 @@
               "criteria": "Van links naar rechts in de volgorde van de doelwoordspelling.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-BORD-WB-A-05",
@@ -8823,7 +9094,21 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Markeer uitsluitend de exact gespelde doelwoordvorm; andere letterrijen worden niet tot nepwoorden verklaard.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "brod",
+                  "bord",
+                  "bort",
+                  "bord"
+                ],
+                [
+                  "dorb",
+                  "bord",
+                  "boor",
+                  "brdo"
+                ]
+              ]
             },
             {
               "id": "KPD-BORD-WB-A-08",
@@ -8835,7 +9120,13 @@
               "action": "Zeg alleen de drie eerste klanken, afzonderlijk en met pauze. Noem geen letternamen. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-BORD-WB-A-09",
@@ -8847,7 +9138,13 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-BORD-WB-A-10",
@@ -9642,7 +9939,7 @@
             "studentAction": "Plaats de kaartjes samen in zinsvolgorde en lees hardop.",
             "action": "Toon eerst alleen de losse kaarten, laat ordenen. Bespreek de hoofdletter en punt. Geen papier vereist.",
             "expected": "Ik pak de jurk uit de kast.",
-            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt daarna?",
+            "hint": "Welk woord heeft een hoofdletter? Wat gebeurt er daarna?",
             "feedback": "Ja, dat past bij jurk. Ik pak de jurk uit de kast.",
             "retry": "Lees de zin. Welk woord staat op de verkeerde plek?",
             "observe": "Gebruikt cursist betekenis of alleen memoriseren van de regel?",
@@ -9808,7 +10105,13 @@
               "criteria": "Van links naar rechts in de volgorde van de doelwoordspelling.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-JURK-WB-A-05",
@@ -9844,7 +10147,21 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Markeer uitsluitend de exact gespelde doelwoordvorm; andere letterrijen worden niet tot nepwoorden verklaard.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "jruk",
+                  "jurk",
+                  "jirk",
+                  "jurk"
+                ],
+                [
+                  "kurj",
+                  "jruk",
+                  "jurk",
+                  "juik"
+                ]
+              ]
             },
             {
               "id": "KPD-JURK-WB-A-08",
@@ -9856,7 +10173,13 @@
               "action": "Zeg alleen de drie eerste klanken, afzonderlijk en met pauze. Noem geen letternamen. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-JURK-WB-A-09",
@@ -9868,7 +10191,13 @@
               "action": "Geef het model pas na de eerste zelfstandige poging. Beschrijf hulp en eigen uitvoering afzonderlijk. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-JURK-WB-A-10",
@@ -10848,7 +11177,19 @@
               "action": " Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Omcirkel de doelwoordvorm; overige letterrijen zijn alleen vergelijkingsmateriaal.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "akka",
+                  "kaak",
+                  "kaka",
+                  "kaak"
+                ],
+                [
+                  "kkaa",
+                  "aakk"
+                ]
+              ]
             },
             {
               "id": "KPD-KAAK-WB-A-08",
@@ -11825,7 +12166,13 @@
               "criteria": "Correcte volgorde van vier letters.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-KAAS-WB-A-05",
@@ -11861,7 +12208,19 @@
               "action": " Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Visuele herkenning; andere letterrijen geen nepwoorden noemen.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "kaas",
+                  "kasa",
+                  "asak",
+                  "kaas"
+                ],
+                [
+                  "skaa",
+                  "aask"
+                ]
+              ]
             },
             {
               "id": "KPD-KAAS-WB-A-08",
@@ -11873,7 +12232,13 @@
               "action": " Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-KAAS-WB-A-09",
@@ -12835,7 +13200,13 @@
               "criteria": "Alle vier letters in goede volgorde.",
               "layout": "boxes",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-NAAM-WB-A-05",
@@ -12871,7 +13242,19 @@
               "action": " Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Andere combinaties alleen als letterrijen aanbieden.",
               "layout": "choice",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "maan",
+                  "naam",
+                  "anma",
+                  "naam"
+                ],
+                [
+                  "mnaa",
+                  "anma"
+                ]
+              ]
             },
             {
               "id": "KPD-NAAM-WB-A-08",
@@ -12883,7 +13266,13 @@
               "action": " Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "boxes",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-NAAM-WB-A-09",
@@ -13845,7 +14234,13 @@
               "criteria": "Alle vier lettertekens in de correcte volgorde.",
               "layout": "write",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-KOOK-WB-A-05",
@@ -13857,7 +14252,13 @@
               "action": "Zeg het hele woord kook. Noem pas na eerste poging langzaam de klanken k, oo, k. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-KOOK-WB-A-06",
@@ -13881,7 +14282,21 @@
               "action": "Andere combinaties dienen alleen voor visuele discriminatie; noem ze niet automatisch nepwoorden. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Drie correcte doelwoordvormen gemarkeerd.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "kook",
+                  "ko ok",
+                  "kokk",
+                  "kook"
+                ],
+                [
+                  "koek",
+                  "kook",
+                  "ookk",
+                  "kkoo"
+                ]
+              ]
             },
             {
               "id": "KPD-KOOK-WB-A-08",
@@ -13893,7 +14308,13 @@
               "action": "Spreek drie losse klanken: /k/, /oː/, /k/; geef tussen elke klank tijd. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-KOOK-WB-A-09",
@@ -13905,7 +14326,13 @@
               "action": "Laat klinkers apart als letters schrijven. Leg daarna het verschil uit met drie klanken. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-KOOK-WB-A-10",
@@ -14127,7 +14554,7 @@
               "id": "KPD-KOOK-WB-C-06",
               "number": 6,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "Schrijf 1, 2 en 3 bij de drie zinnen.\n□ [ ] Ik eet de bonen met brood.\n□ [ ] Ik kook de bonen.\n□ [ ] Daarna doe ik ze op mijn bord.",
+              "body": "Schrijf 1, 2 en 3 bij de drie zinnen.\n___ Ik eet de bonen met brood.\n___ Ik kook de bonen.\n___ Daarna doe ik ze op mijn bord.",
               "answer": "3, 1, 2",
               "oral": "",
               "action": "Zeg dat 1 het begin is, 3 het eind. Lees de tekst eventueel opnieuw. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -14854,7 +15281,13 @@
               "criteria": "Alle vier lettertekens in de correcte volgorde.",
               "layout": "write",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-KOOP-WB-A-05",
@@ -14866,7 +15299,13 @@
               "action": "Zeg het hele woord koop. Noem pas na eerste poging langzaam de klanken k, oo, p. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-KOOP-WB-A-06",
@@ -14890,7 +15329,20 @@
               "action": "Andere combinaties dienen alleen voor visuele discriminatie; noem ze niet automatisch nepwoorden. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Drie correcte doelwoordvormen gemarkeerd.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "koop",
+                  "opko",
+                  "kopo",
+                  "koop"
+                ],
+                [
+                  "oopk",
+                  "koop",
+                  "pook"
+                ]
+              ]
             },
             {
               "id": "KPD-KOOP-WB-A-08",
@@ -14902,7 +15354,13 @@
               "action": "Spreek drie losse klanken: /k/, /oː/, /p/; geef tussen elke klank tijd. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-KOOP-WB-A-09",
@@ -14914,7 +15372,13 @@
               "action": "Laat klinkers apart als letters schrijven. Leg daarna het verschil uit met drie klanken. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-KOOP-WB-A-10",
@@ -15136,7 +15600,7 @@
               "id": "KPD-KOOP-WB-C-06",
               "number": 6,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "Schrijf 1, 2 en 3 bij de drie zinnen.\n□ [ ] Daarna doe ik het brood in mijn tas.\n□ [ ] Ik koop een brood.\n□ [ ] Ik betaal bij de kassa.",
+              "body": "Schrijf 1, 2 en 3 bij de drie zinnen.\n___ Daarna doe ik het brood in mijn tas.\n___ Ik koop een brood.\n___ Ik betaal bij de kassa.",
               "answer": "3, 1, 2",
               "oral": "",
               "action": "Zeg dat 1 het begin is, 3 het eind. Lees de tekst eventueel opnieuw. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -15860,7 +16324,13 @@
               "criteria": "Alle vier lettertekens in de correcte volgorde.",
               "layout": "write",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-MAAK-WB-A-05",
@@ -15872,7 +16342,13 @@
               "action": "Zeg het hele woord maak. Noem pas na eerste poging langzaam de klanken m, aa, k. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-MAAK-WB-A-06",
@@ -15896,7 +16372,20 @@
               "action": "Andere combinaties dienen alleen voor visuele discriminatie; noem ze niet automatisch nepwoorden. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Drie correcte doelwoordvormen gemarkeerd.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "maak",
+                  "akma",
+                  "maka",
+                  "maak"
+                ],
+                [
+                  "aakm",
+                  "maak",
+                  "kaam"
+                ]
+              ]
             },
             {
               "id": "KPD-MAAK-WB-A-08",
@@ -15908,7 +16397,13 @@
               "action": "Spreek drie losse klanken: /m/, /aː/, /k/; geef tussen elke klank tijd. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-MAAK-WB-A-09",
@@ -15920,7 +16415,13 @@
               "action": "Laat klinkers apart als letters schrijven. Leg daarna het verschil uit met drie klanken. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Schrijf exact de gevraagde letters of lettergroepen. Een betekenisgelijke spelling is geen juist antwoord. Noteer ondersteuning afzonderlijk.",
               "layout": "write",
-              "visual": null
+              "visual": null,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-MAAK-WB-A-10",
@@ -16142,7 +16643,7 @@
               "id": "KPD-MAAK-WB-C-06",
               "number": 6,
               "title": "Zet de zinnen in de volgorde van de tekst.",
-              "body": "Schrijf 1, 2 en 3 bij de drie zinnen.\n□ [ ] Daarna schrijf ik mijn naam op de kaart.\n□ [ ] Ik maak een kaart.\n□ [ ] Ik teken een bloem.",
+              "body": "Schrijf 1, 2 en 3 bij de drie zinnen.\n___ Daarna schrijf ik mijn naam op de kaart.\n___ Ik maak een kaart.\n___ Ik teken een bloem.",
               "answer": "3, 1, 2",
               "oral": "",
               "action": "Zeg dat 1 het begin is, 3 het eind. Lees de tekst eventueel opnieuw. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -16869,7 +17370,13 @@
               "criteria": "De lettergroep aa mag niet worden gesplitst.",
               "layout": "Schrijf het woord in volgorde.",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-MAAN-WB-A-05",
@@ -16899,13 +17406,23 @@
               "id": "KPD-MAAN-WB-A-07",
               "number": 7,
               "title": "Zoek maan. Omcirkel.",
-              "body": "maan  naam  aman  maan  mee  maan",
-              "answer": "Posities 1, 4 en 6.",
+              "body": "maan  naam  aman  maan  mee  amna",
+              "answer": "Posities 1 en 4.",
               "oral": "",
               "action": "Geen onterechte “nepwoord”-claim. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Zoek alleen de exacte geschreven vorm maan; de andere reeksen hoeven niet gelezen te worden.",
               "layout": "Omcirkel de twee keer maan.",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "maan",
+                  "naam",
+                  "aman",
+                  "maan",
+                  "mee",
+                  "amna"
+                ]
+              ]
             },
             {
               "id": "KPD-MAAN-WB-A-08",
@@ -17881,7 +18398,13 @@
               "criteria": "Alle vier kaartjes nodig.",
               "layout": "Schrijf het woord.",
               "visual": null,
-              "boxes": 4
+              "boxes": 4,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 4
+                }
+              ]
             },
             {
               "id": "KPD-MAAND-WB-A-05",
@@ -17917,7 +18440,17 @@
               "action": "Laat verschillen zien zonder afleider te leren. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Exacte woordvorm; gebruik andere rijvormen niet als “nepwoorden”.",
               "layout": "Omcirkel alle keren maand.",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "maan",
+                  "maand",
+                  "maand",
+                  "maant",
+                  "mee",
+                  "maand"
+                ]
+              ]
             },
             {
               "id": "KPD-MAAND-WB-A-08",
@@ -18073,7 +18606,7 @@
               "action": "Twee correcte kalenderbladen in de visuele leskaart. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Exacte kalendernaam bij de zin.",
               "layout": "Zet een kruis bij APRIL 2027.",
-              "visual": null
+              "visual": "maand"
             },
             {
               "id": "KPD-MAAND-WB-B-10",
@@ -18897,7 +19430,13 @@
               "criteria": "ee blijft als één kaartje bij elkaar.",
               "layout": "Schrijf het woord.",
               "visual": null,
-              "boxes": 2
+              "boxes": 2,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 2
+                }
+              ]
             },
             {
               "id": "KPD-MEE-WB-A-05",
@@ -18933,7 +19472,17 @@
               "action": "Voorbereiden onderscheid met meer. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Exact doelwoord; andere woorden niet als betekenisloze tekst presenteren.",
               "layout": "Omcirkel mee drie keer.",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "mee",
+                  "meer",
+                  "mee",
+                  "nee",
+                  "mee",
+                  "meet"
+                ]
+              ]
             },
             {
               "id": "KPD-MEE-WB-A-08",
@@ -19179,7 +19728,7 @@
               "id": "KPD-MEE-WB-C-06",
               "number": 6,
               "title": "Zet de handelingen in volgorde.",
-              "body": "□ Boodschappen doen.\n□ Naar de winkel gaan.",
+              "body": "___ Boodschappen doen.\n___ Naar de winkel gaan.",
               "answer": "Eerste regel 2; tweede regel 1.",
               "oral": "",
               "action": "Dit is een aanvullende taak, geen letterlijke tijdsvolgorde in tekst. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
@@ -19202,7 +19751,7 @@
             {
               "id": "KPD-MEE-WB-C-08",
               "number": 8,
-              "title": "Kies het passende beeld.",
+              "title": "Welke zin past?",
               "body": "A Twee mensen lopen samen naar één winkel. B Eén persoon blijft thuis.",
               "answer": "A",
               "oral": "",
@@ -19904,7 +20453,13 @@
               "criteria": "Drie klankkaartjes, vier letters.",
               "layout": "Schrijf het woord.",
               "visual": null,
-              "boxes": 3
+              "boxes": 3,
+              "boxRows": [
+                {
+                  "label": "",
+                  "count": 3
+                }
+              ]
             },
             {
               "id": "KPD-MEER-WB-A-05",
@@ -19940,7 +20495,17 @@
               "action": "Vergelijk m-ee-r visueel. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Zoek alleen de exacte geschreven vorm meer; de andere vormen hoeven niet gelezen te worden.",
               "layout": "Omcirkel meer drie keer.",
-              "visual": null
+              "visual": null,
+              "searchRows": [
+                [
+                  "meer",
+                  "mee",
+                  "meer",
+                  "maar",
+                  "meer",
+                  "me"
+                ]
+              ]
             },
             {
               "id": "KPD-MEER-WB-A-08",
@@ -20096,7 +20661,8 @@
               "action": "Niet tellen of exacte liters verwachten. Lees de opdracht zo nodig voor en bereid alle keuzeopties mondeling voor. Noteer hulp afzonderlijk.",
               "criteria": "Relatieve hoeveelheid moet zichtbaar verschillen.",
               "layout": "Teken twee standen van dezelfde kom.",
-              "visual": null
+              "visual": null,
+              "drawingPanels": 2
             },
             {
               "id": "KPD-MEER-WB-B-10",

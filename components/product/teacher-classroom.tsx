@@ -797,7 +797,7 @@ export function TeacherClassroom({
                 <div className="kpd-word-column">
                   <div className="kpd-word-space" style={{ visibility: shown ? "visible" : "hidden" }} aria-hidden={!shown}>
                     <p>{display}</p>
-                    <p className="kpd-big-word">{matWord.word}</p>
+                    <p className="kpd-big-word" data-word={matWord.word}>{matWord.word}</p>
                   </div>
                   <div className="kpd-actions">
                     {state.phase === 1 && wordAudio}
@@ -829,12 +829,12 @@ export function TeacherClassroom({
                     Geluid opnieuw controleren
                   </button>
                 </div>
-                {shown && <p className="kpd-big-word">{matWord.word}</p>}
+                {shown && <p className="kpd-big-word" data-word={matWord.word}>{matWord.word}</p>}
               </>
             )}
             {state.route === "a" && state.phase === 3 && (
               <>
-                {shown && <p className="kpd-big-word">{matWord.word}</p>}
+                {shown && <p className="kpd-big-word" data-word={matWord.word}>{matWord.word}</p>}
                 <div className="kpd-slots" aria-label="Het gelegde woord">
                   {matUnits.map((unit, i) => (
                     <button
@@ -957,7 +957,7 @@ export function TeacherClassroom({
                 <div className="kpd-word-column">
                   <div className="kpd-reading-card">
                     {shown ? (
-                      <p className="kpd-big-word">{matWord.word}</p>
+                      <p className="kpd-big-word" data-word={matWord.word}>{matWord.word}</p>
                     ) : (
                       <span aria-label="Woord afgedekt">—</span>
                     )}
@@ -1007,7 +1007,7 @@ export function TeacherClassroom({
                 <button className="secondary-button" onClick={reveal}>
                   {shown ? "Voorbeeld verbergen" : "Voorbeeld tonen"}
                 </button>
-                {shown && <p className="kpd-big-word">{matWord.word}</p>}
+                {shown && <p className="kpd-big-word" data-word={matWord.word}>{matWord.word}</p>}
               </>
             )}
             {state.route === "a" && state.phase === 7 && (
@@ -1134,7 +1134,7 @@ export function TeacherClassroom({
             {toolImage && tool === "Woordbord" && photo}
             <div className="kpd-reading-card">
               {toolWord ? (
-                <p className="kpd-big-word">{matWord.word}</p>
+                <p className="kpd-big-word" data-word={matWord.word}>{matWord.word}</p>
               ) : (
                 <span aria-label="Woord afgedekt">—</span>
               )}
