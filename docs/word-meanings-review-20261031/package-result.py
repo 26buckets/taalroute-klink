@@ -8,7 +8,7 @@ sources.update(['data/klink-production-index.json','data/klink-progress-image-al
 files={}
 for f in sources:files['herstel/bron/'+f]=root/f
 for f in p.iterdir():
- if f.is_file() and f.name not in ['dev-server.log','browser-failure.txt']:files['herstel/'+str(f)]=f
+ if f.is_file() and f.name not in ['dev-server.log','browser-failure.txt']:files['herstel/'+str(f.relative_to(root))]=f
 for f in out.rglob('*'):
  if f.is_file() and f.suffix not in ['.zip'] and f.name not in ['browser-failure.png','backup-verification.json']:files['resultaat/'+str(f.relative_to(out))]=f
 for m in json.loads((p/'verification.json').read_text())['audioFiles']:files['herstel/bestaande-audio'+m['src']]=root/('public'+m['src'])
@@ -19,4 +19,7 @@ zipfile_path=out/'Klink-woordbetekenissen-resultaat-en-herstel-20261031.zip'
 with zipfile.ZipFile(zipfile_path,'w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
  for name,file in files.items():z.write(file,name)
  z.writestr('MANIFEST.json',json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+with zipfile.ZipFile(zipfile_path) as z:
+ assert set(z.namelist())==set(files)|{'MANIFEST.json'}
+ for name,expected in manifest['files'].items():assert hashlib.sha256(z.read(name)).hexdigest()==expected['sha256']
 print(json.dumps({'path':str(zipfile_path),'bytes':zipfile_path.stat().st_size,'sha256':hashlib.sha256(zipfile_path.read_bytes()).hexdigest(),'files':len(files),'commit':commit}))
