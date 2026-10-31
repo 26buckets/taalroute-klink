@@ -181,9 +181,8 @@ function LearnerHome({ onPackages, onSounds, onBack, progress, onLesson, onAttem
   const pack = lessonPackages.find(item => item.id === position?.packageId);
   const lesson = pack?.lessons.find(item => item.id === position?.lessonId);
   const resumeWord = pack && lesson ? lessonPreviewWords(pack, lesson)[0] : undefined;
-  return <PracticeChapters onBack={onBack} onAttempt={onAttempt} startActions={<>
+  return <PracticeChapters onBack={onBack} onAttempt={onAttempt} startTitle={position && position === progress.position && resumeWord ? <button className="secondary-button cp-direct-resume" onClick={() => onLesson(position)}>Verder met {wordLabel(resumeWord)}<ArrowRight aria-hidden="true" /></button> : undefined} startActions={<>
     <div className="cp-direct-actions">
-      {position && position === progress.position && resumeWord && <button className="secondary-button cp-direct-resume" onClick={() => onLesson(position)}>Verder met {wordLabel(resumeWord)}<ArrowRight aria-hidden="true" /></button>}
       <button className="secondary-button" onClick={onSounds}><Ear aria-hidden="true" />Klankenkaart<ArrowRight aria-hidden="true" /></button>
       <button className="secondary-button" onClick={onPackages}><PackageOpen aria-hidden="true" />Stap voor stap<ArrowRight aria-hidden="true" /></button>
     </div>

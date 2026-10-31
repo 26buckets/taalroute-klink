@@ -45,7 +45,7 @@ export function PracticeChapterCards({ onOpen, isAvailable, count }: { onOpen: (
   })}</div>;
 }
 
-export function PracticeChapters({ onBack, onAttempt, startActions, startFooter }: { onBack: () => void; onAttempt: (attempt: PracticeAttempt) => void; startActions?: ReactNode; startFooter?: ReactNode }) {
+export function PracticeChapters({ onBack, onAttempt, startTitle, startActions, startFooter }: { onBack: () => void; onAttempt: (attempt: PracticeAttempt) => void; startTitle?: ReactNode; startActions?: ReactNode; startFooter?: ReactNode }) {
   const { practice, changePractice } = useRouteSettings();
   const progressReady = useRoundProgress();
   useEffect(importExistingSequenceProgress, []);
@@ -111,7 +111,7 @@ export function PracticeChapters({ onBack, onAttempt, startActions, startFooter 
   const back = collection ? toCollections : activitySelected ? () => open({ chapter: chapter!.id, ...selection }) : chapter ? () => open(selection) : location.help ? () => open({ level: location.level }) : onBack;
   if (sequenceBlock) return <AlfaCPractice key={sequenceBlock.id} selected={sequenceBlock.id} backHref={chapterHash({ ...location, collection: undefined })} header={<PracticeHeader title={sequenceBlock.title} backLabel="Andere opdracht" onBack={toCollections} headingRef={heading} meta={`Oefenen · ${chapter!.title}`} />} />;
   return <div className={`learner-page cp-chapters cp-direct-practice ${!chapter ? 'cp-home' : ''} ${collection ? 'cp-chapter-playing' : ''}`} data-chapter-page={chapter?.id ?? 'all'}>
-    <PracticeHeader title={title} headingRef={heading} onBack={chapter ? back : undefined} backLabel={collection ? 'Andere opdracht' : activitySelected ? chapter!.title : chapter ? 'Start' : 'Terug'} metaLabel={!collection && chapter ? 'Je bent hier' : undefined} meta={collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activitySelected ? ` · ${chapter.title}` : ''}` : ''} actions={!collection && <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>} />
+    <PracticeHeader title={!chapter && startTitle ? startTitle : title} headingRef={heading} onBack={chapter ? back : undefined} backLabel={collection ? 'Andere opdracht' : activitySelected ? chapter!.title : chapter ? 'Start' : 'Terug'} metaLabel={!collection && chapter ? 'Je bent hier' : undefined} meta={collection ? exerciseSetHelp(collection.exercises) === 'guided' ? 'Samen met je docent.' : '' : chapter ? `Oefenen${activitySelected ? ` · ${chapter.title}` : ''}` : ''} actions={!collection && <nav className="cp-practice-modes" aria-label="Manier van oefenen">{([['practice', 'Zelf oefenen', UserRound], ['guided', 'Met je docent', UsersRound]] as const).map(([id, label, Icon]) => <button key={id} className="secondary-button" aria-pressed={location.help === id} onClick={() => openMode(id)}><Icon aria-hidden="true" />{label}</button>)}</nav>} />
     {collection && chapter && <p className="sr-only" aria-label="Je bent hier">Oefenen · {chapter.title}</p>}
     {!collection && <div className="cp-page-workspace">
     <MyRoute direct showPracticeChoice={false} availableLevels={availableLevels} selection={location} onSelectionChange={next => open({ ...location, ...next, collection: undefined })} />

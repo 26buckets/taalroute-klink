@@ -240,8 +240,17 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .product-root .consistent-layout .cp-direct-practice > .cp-context-header h1 { min-height:48px; display:flex; align-items:center; }
 .cp-direct-help { margin-top:16px; }
 @media (max-width:650px) and (max-height:600px) {
-  .product-root .consistent-layout .cp-home.cp-direct-practice > .cp-context-header h1,
+  .product-root .consistent-layout .cp-home.cp-direct-practice > .cp-context-header h1:not(:has(.cp-direct-resume)),
   .cp-home .cp-direct-heading { position:absolute; width:1px; height:1px; min-height:0; padding:0; margin:0; overflow:hidden; clip-path:inset(50%); }
   .cp-home .cp-direct-actions { margin-bottom:12px; }
 }
 .learner-app .cp-sheet-item .cp-model-content > .cp-word-placeholder { width: min(180px, 100%); height: 180px; }
+
+/* Approved compact Start controls; all other chapter screens keep their spacing. */
+.product-root .consistent-layout .cp-home.cp-direct-practice > .cp-context-header { padding-block:4px; }
+.product-root .consistent-layout .cp-home .cp-direct-resume { min-height:48px; padding:8px 12px; background:var(--primary-soft); font-size:18px; font-weight:400; }
+.product-root .consistent-layout .cp-home .cp-direct-levels { margin-bottom:8px; }
+.product-root .consistent-layout .cp-home .cp-direct-levels legend { margin-bottom:4px; }
+.cp-home .cp-direct-actions { gap:6px; margin-bottom:8px; }
+.product-root .consistent-layout .cp-home .cp-direct-actions button { min-height:44px; padding:6px 10px; font-size:16px; font-weight:400; }
+.cp-home .cp-direct-heading { margin-bottom:8px; }

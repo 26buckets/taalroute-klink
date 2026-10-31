@@ -1,0 +1,126 @@
+{
+  "navigation": true,
+  "mobile": true,
+  "keyboard": true,
+  "progress": true,
+  "contentPreserved": true,
+  "otherScreensPreserved": true,
+  "lightDark": true,
+  "types": true,
+  "lint": true,
+  "build": true,
+  "localOnly": true,
+  "userScope": "Approved heading placement and compact Start controls only",
+  "runtimeFiles": 4,
+  "layoutCases": 16,
+  "unaffectedScreenComparisons": 12,
+  "unitTests": 6,
+  "nativeSoundCheck": "Original 46 sounds, word playback, playback rates, error recovery and navigation passed",
+  "appearanceGains": [
+    {
+      "browser": "chromium",
+      "theme": "light",
+      "width": 1366,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "chromium",
+      "theme": "light",
+      "width": 768,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "chromium",
+      "theme": "light",
+      "width": 390,
+      "pixelsUp": 53.1875
+    },
+    {
+      "browser": "chromium",
+      "theme": "light",
+      "width": 320,
+      "pixelsUp": 10.78125
+    },
+    {
+      "browser": "chromium",
+      "theme": "dark",
+      "width": 1366,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "chromium",
+      "theme": "dark",
+      "width": 768,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "chromium",
+      "theme": "dark",
+      "width": 390,
+      "pixelsUp": 53.1875
+    },
+    {
+      "browser": "chromium",
+      "theme": "dark",
+      "width": 320,
+      "pixelsUp": 10.78125
+    },
+    {
+      "browser": "webkit",
+      "theme": "light",
+      "width": 1366,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "webkit",
+      "theme": "light",
+      "width": 768,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "webkit",
+      "theme": "light",
+      "width": 390,
+      "pixelsUp": 53.1875
+    },
+    {
+      "browser": "webkit",
+      "theme": "light",
+      "width": 320,
+      "pixelsUp": 10.78125
+    },
+    {
+      "browser": "webkit",
+      "theme": "dark",
+      "width": 1366,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "webkit",
+      "theme": "dark",
+      "width": 768,
+      "pixelsUp": 24
+    },
+    {
+      "browser": "webkit",
+      "theme": "dark",
+      "width": 390,
+      "pixelsUp": 53.1875
+    },
+    {
+      "browser": "webkit",
+      "theme": "dark",
+      "width": 320,
+      "pixelsUp": 10.78125
+    }
+  ],
+  "physicalPhoneTest": false,
+  "reactReview": "Existing component/header reused; no new hooks, storage, fetching or dependencies; only Start selects the alternate heading content",
+  "unrelatedChanges": false,
+  "newerPublicationPreserved": {
+    "source": "ec0fb8f1e856062eeaebf98c9a8f52044e8cee3f",
+    "main": "6248d38e40f9614a8c875bc8f4c388d8897f4a5c",
+    "runtimeIdenticalToPriorLocalTests": true,
+    "newOnlineBaselineCompared": true
+  }
+}

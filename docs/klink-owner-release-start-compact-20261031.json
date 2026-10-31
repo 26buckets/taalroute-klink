@@ -1,0 +1,35 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-10-31",
+  "userRequest": "met verder net. Dat is duidelijk. die goede plek, die mag doorgevoerd worden, maar die andere moet compacter. geen advies.",
+  "interpretation": "Implement the explicitly approved Verder met … heading position and make the remaining Start controls more compact. Existing live implementation context; no other appearance or content changes.",
+  "appearanceChangeApproved": true,
+  "publicationApproved": true,
+  "baselineSourceCommit": "6248d38e40f9614a8c875bc8f4c388d8897f4a5c",
+  "liveSourceCommit": "ec0fb8f1e856062eeaebf98c9a8f52044e8cee3f",
+  "liveWorkerVersion": "3055be5e-b45d-472d-aea5-1f63f2be2130",
+  "visualScope": "Start only: resume button in heading; reduced control sizing and spacing, readable mode/level controls unchanged",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/learner-app.tsx",
+    "components/product/practice-chapters.tsx",
+    "components/product/practice-header.tsx",
+    "scripts/check-package-grid-release-20261031.mjs",
+    "scripts/check-start-compact-release-20261031.mjs",
+    "scripts/test-start-compact-browser-20261031.mjs",
+    "scripts/test-start-compact-release-20261031.mjs"
+  ],
+  "files": {
+    "app/learner-layout.css": "f1130f385b689a7b3f4964942a35b763a67c4673dbbff6bbd642d96ccea1bfc6",
+    "components/product/learner-app.tsx": "7423c02596100e43aafc3c24e81c752238ba20d850eea5f7583f86a848ffed48",
+    "components/product/practice-chapters.tsx": "004a17e53ebea13023962948270e198c291b0aea7f963e0bd7e87256f2534b1a",
+    "components/product/practice-header.tsx": "1027e548140261c840cabdcf760ce44bd494adf0677bc9e541d533e706ecbf2e",
+    "scripts/check-package-grid-release-20261031.mjs": "54a04bf542634f217e1f64ff21f86acdd48d7ed0b32f148f3ffb15519f3d425e",
+    "scripts/check-start-compact-release-20261031.mjs": "1ef7f05db6ceaaae04e988975cc014ee26dbd2241bb1bec91c7ec843c99d4648",
+    "scripts/test-start-compact-browser-20261031.mjs": "c6224e8fdfacf0f1585d400cfa5970ed6fc782e1eb67f5605db71f4efbe4718f",
+    "scripts/test-start-compact-release-20261031.mjs": "a78f1eacb1cf9651de8d9480dfd79a24509445101cce819e00a2ff9848613b48"
+  },
+  "newMedia": false,
+  "storageMigration": false,
+  "originalAppearanceFloorRetained": true
+}
