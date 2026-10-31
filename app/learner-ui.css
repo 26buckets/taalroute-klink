@@ -34,6 +34,7 @@
 .cp-home-chapters { margin-top: 32px; }
 .cp-home-chapters > h2 { margin-bottom: 16px; font-weight: 500; }
 .cp-chapter-grid, .cp-chapter-collections { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; }
+.cp-chapter-collections { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
 .cp-chapter-grid .cp-activity-button { min-height: 76px; font-size: 20px; font-weight: 500; text-align: left; }
 .cp-chapter-levels { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; border: 0; }
 .cp-chapter-levels [aria-pressed="true"] { color: #fff; background: var(--primary); border-color: var(--primary); }
