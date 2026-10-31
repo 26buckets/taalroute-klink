@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, copyFileSync, cpSync, mkdirSync, mkdtempSync, rmSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { spawnSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { verifyArticleReviewRelease, readBeforeArticleReview } from './check-article-review-release.mjs';
 import { verifyWordLibraryRelease, readBeforeWordLibrary } from './check-word-library-release.mjs';
 import { verifyWordAudioRelease } from './check-word-audio-release.mjs';
@@ -29,8 +29,11 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     for (const name of readdirSync('scripts').filter(name => /^check-.*\.mjs$/.test(name))) copyFileSync(join('scripts', name), join(dir, 'scripts', name));
     if (changeWordbuild) {
       const path = join(dir, 'data/klink-lexicon-wordbuild-rest.json');
-      const catalog = JSON.parse(readFileSync(path));
+      const file = 'data/klink-lexicon-wordbuild-rest.json';
+      const before = verifiedWordAudio.files[file] ? execFileSync('git', ['show', `${verifiedWordAudio.baselineSourceCommit}:${file}`]) : readBeforeArticleReview(file, reviewedArticles, readPrevious);
+      const catalog = JSON.parse(before);
       changeWordbuild(catalog);
+      assert.notDeepEqual(catalog, JSON.parse(before), 'The rejection fixture must actually change the approved source');
       writeFileSync(path, JSON.stringify(catalog));
     }
     if (changeImported) {
@@ -40,6 +43,13 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
       writeFileSync(path, JSON.stringify(catalog));
     }
     copyFileSync('scripts/check-curriculum-release.mjs', join(dir, 'scripts/check-curriculum-release.mjs'));
+    if (changeWordbuild) {
+      const gate = join(dir, 'scripts/check-curriculum-release.mjs');
+      const marker = 'const readApprovedFile = file => wordAudioRelease.files[file]';
+      assert(readFileSync(gate, 'utf8').includes(marker));
+      // Exercise the historical approval boundary even when a later release freezes the live file.
+      writeFileSync(gate, readFileSync(gate, 'utf8').replace(marker, `const readApprovedFile = file => file === 'data/klink-lexicon-wordbuild-rest.json' ? readFileSync(${JSON.stringify(join(dir, 'data/klink-lexicon-wordbuild-rest.json'))}) : wordAudioRelease.files[file]`));
+    }
     if (changeImported) {
       const gate = join(dir, 'scripts/check-curriculum-release.mjs');
       writeFileSync(gate, readFileSync(gate, 'utf8').replace("readBeforeDialogues('data/klink-imported-practice.json')", `readFileSync(${JSON.stringify(join(dir, 'data/klink-imported-practice.json'))})`));
