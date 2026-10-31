@@ -1,3 +1,17 @@
+## 31 oktober 2026 — twintig zelfstandige woordcombinaties gevuld
+
+Livebron `de60f8a4e3d62a8a717e9c4d5c1f3d36be7059f4`, schone canonieke main; Worker `26271755-b37f-4215-998f-2a321da73f70`. Via de normale `npm run deploy`-poort. Behoudt de goedgekeurde Start-knop en nieuwe woordenbibliotheek van d6246bf9; de eerste gecontroleerde aanvulling a84deca3 blijft voorouder.
+
+Sorteer de woorden en Woorden gebruiken staan op alle zes niveaus bij Zelf oefenen. Zoek hetzelfde woord en Zoek het woord zijn aangevuld voor Alfa C, A1, A2 en B1. 604 complete sorteerborden, 542 doelwoorden per zoekvorm en 42 gesloten contextvragen. De 1.060 docentopdrachten, oude bronnen, audio, taak-ID's, eigen antwoorden en voortgang blijven behouden. Nieuwe vormen krijgen eigen afrondingen. Alfa-synoniemen blijven leeg. Geen CSS of visuele herindeling; alleen inhoud, tellingen en beschikbaarheid veranderen. Alfa A/B vragen vooraf gezamenlijke uitleg; geen zelfstandige lees- of beheersingsclaim.
+
+Vijf te brede contrastwoordverwijzingen in de nieuwe Alfa A-vragen zijn bij de online nareview beperkt tot het echte doelwoord. Vragen, antwoorden, IDs en audio gelijk; woordenbibliotheekindex opnieuw gecontroleerd. De twee functionele spelerwijzigingen houden zelfstandige en docentondersteunde pogingen correct gescheiden.
+
+Lokaal: alle sorteersleutels, 1.084 zoekvragen en 42 contextvragen; echte opgeslagen pogingen; alle 1.485 productiebronnen; 80 oefenvorm/niveau/browser/schermscenario's, 124 open-/terugroutes en 366 wisselingen met dezelfde woorden. 50 historische behoudtests en acht afkeurproeven; types, lint, build en normale publicatiepoort geslaagd. Geen GitHub-workflows; zware controles lokaal.
+
+Online: 80 scenario's op de eerste aanvulling; na de uitsluitend inhoudelijke doelwoordcorrectie opnieuw alle 24 directe links, 14 bibliotheekgevallen en 1.134 aangeboden bestanden gecontroleerd. Alle 1.110 gekoppelde bestaande opnamen bytegelijk, volledig gedecodeerd en met ingebedde Taalroute-metadata. Geen nieuwe audio/beelden; menselijke luisterreview en fysieke praktijkproef blijven open.
+
+Direct resultaat: https://klink.taalroute.nl/klink-woorden-aanvulling-20261031 . Dossier: `docs/word-coverage-release-20261031/`; inhoudelijke vrijgave: `docs/klink-owner-release-word-coverage-20261031.json`. Gecontroleerde bronkopie: `115t6EnWVro4cBEunIJsh0PorxV4KAJGa`; definitieve online-/herstelkopie: zie `final-backup.json` in het dossier.
+
 ## 31 oktober 2026 — één woordenoverzicht met zoeken en echte oefenfilters
 
 Livebron `d6246bf96c0aea01e230d5ef576fe0365f368b9c`, schone canonieke main; Worker `01d968f4-a15e-4854-b492-dd2179f4b22a`. Normaal gepubliceerd met `npm run deploy`, bovenop de nieuwste goedgekeurde Start-knoprelease `1a36fe5f` en dossiercommit `96f3bf78`. Die knop blijft direct naast Klankenkaart staan; de docentlessen blijven behouden.
