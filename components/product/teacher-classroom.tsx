@@ -613,7 +613,7 @@ export function TeacherClassroom({
     roundStates.current[state.route] = state;
     const next =
       roundStates.current[route] ?? freshClassroom(state.variant, route, state.lessonId);
-    commit({ ...next, active: true, phase: phase ?? next.phase });
+    commit({ ...next, ownSentence: state.ownSentence, active: true, phase: phase ?? next.phase });
     setFeedback("");
     setSaySelf(false);
     setReadCheck(false);

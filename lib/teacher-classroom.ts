@@ -303,7 +303,7 @@ export function saveClassroom(state: ClassroomState) {
 }
 export function readLessonClassroom(lessonId: string) {
   try {
-    const raw = sessionStorage.getItem(`${classroomKey}.${lessonId}`);
+    const raw = sessionStorage.getItem(`${classroomKey}.${lessonId}`) ?? sessionStorage.getItem(classroomKey);
     if (raw) {
       const state = restoreClassroom(raw);
       if (state.lessonId === lessonId) return state;

@@ -30,6 +30,7 @@ test('saved lesson state migrates mat and rejects foreign exercise IDs, unknown 
 test('per-lesson progress is isolated and corrupted or unavailable storage does not open another lesson',()=>{
  const data=new Map();globalThis.sessionStorage={getItem:k=>data.get(k)??null,setItem:(k,v)=>data.set(k,v)};
  try{
+  data.set('klink.docent.les.v1',JSON.stringify({active:false,phase:5}));assert.equal(readLessonClassroom('mat').phase,5);
   for(const id of ['mat','tas','pen'])saveClassroom({...freshClassroom('basic','c',id),phase:6,ownSentence:'Mijn '+id});
   for(const id of ['mat','tas','pen'])assert.equal(readLessonClassroom(id).ownSentence,'Mijn '+id);
   data.set('klink.docent.les.v1.tas',JSON.stringify(freshClassroom('basic','c','pen')));assert.equal(readLessonClassroom('tas').lessonId,'tas');assert.equal(readLessonClassroom('tas').ownSentence,'');
