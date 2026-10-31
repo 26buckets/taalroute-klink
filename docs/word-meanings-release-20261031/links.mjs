@@ -1,0 +1,7 @@
+import{readFileSync as read,writeFileSync as write}from'node:fs';import assert from'node:assert/strict';import{productionIndex,exerciseWord}from'../../lib/production-practice.ts';import{chapterHash,parseChapterHash,selectedChapterCollection,practiceChapters}from'../../lib/practice-chapters.ts';
+const words=['pak','want','regent','zinnen','voorkomen','godverdomme',...JSON.parse(read('docs/word-meanings-release-20261031/new-extension-words.json'))],out=[];
+for(const word of words){const level=['pak','want','voorkomen'].includes(word)?'a2':'b1';let row,e;
+for(const r of productionIndex.filter(r=>r.activity==='copy'&&r.level===level)){const found=JSON.parse(read('public'+r.url)).exercises.find(x=>exerciseWord(x)===word);if(found){row=r;e=found;break;}}
+assert(e?.wordId,word);const selection={chapter:practiceChapters.find(c=>c.activities.includes('copy')).id,activity:'copy',level,help:row.help,collection:row.id+(['pak','want','regent','zinnen','voorkomen'].includes(word)?'':'~extension'),words:[e.wordId]};const hash=chapterHash(selection),selected=selectedChapterCollection(parseChapterHash(hash));assert(selected?.wordRound?.exerciseIds.includes(e.exerciseId),word);assert.equal(selected.wordRound.wordIds.length,1);out.push({word,level,exerciseId:e.exerciseId,hash,url:'https://klink.taalroute.nl/'+hash});
+}
+write('docs/word-meanings-release-20261031/direct-links.json',JSON.stringify(out,null,2));console.log(out.length+' validated links to one selected word');

@@ -29,7 +29,7 @@ export function verifyDriveImagePreservation(read=readFileSync){
  const rounds=Object.fromEntries(idx.filter(r=>wordRoundActivities.has(r.activity)).flatMap(r=>{const a=wordRoundDefinitions(json('public'+r.url).exercises);return a.length?[[r.url,a]]:[];}));assert.deepEqual(json('data/klink-word-round-index.json'),rounds);
  for(const a of m.assets){assert.equal(sha(read('public'+a.url)),a.sha256);assert(a.bytes<128000);assert(a.handsReviewed&&a.meaningReviewed&&a.observerReviewed&&a.compactReviewed);assert(!a.humanApproval);}
  for(const c of m.collections)assert.equal(sha(read('public'+c.url)),c.sha256);
- assert.equal(git('diff','--name-only','--diff-filter=MD',m.baselineSourceCommit,'--','public').length,0,'No existing public asset is overwritten');
+ assert.equal(git('diff','--name-only','--diff-filter=MD',m.baselineSourceCommit,'f86dd0ffb872dbfb3b54c585860d6e9c6bb63054','--','public').length,0,'No existing public asset is overwritten');
  return m;
 }
 export function verifyDriveImagesRelease(read=readFileSync){

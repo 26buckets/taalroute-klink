@@ -767,3 +767,10 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
 @media (max-width: 760px) {
   .learner-app .cp-reading-support aside p { font-size: 18px; line-height: 1.5; }
 }
+
+.cp-meaning-contexts { display: grid; gap: 0.5rem; max-width: 100%; }
+.cp-meaning-contexts .cp-task-actions { flex-wrap: wrap; }
+.cp-meaning-contexts button[aria-pressed="true"] { border-color: var(--cp-accent, #173f4a); }
+.cp-meaning-example { display: flex; align-items: center; gap: 0.75rem; }
+.cp-meaning-example img { flex: 0 0 80px; object-fit: contain; }
+.cp-meaning-example p { margin: 0.25rem 0; }

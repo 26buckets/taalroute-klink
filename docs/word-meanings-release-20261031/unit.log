@@ -1,0 +1,38 @@
+✔ Stable script IDs preserve exact language and separate instruction from target (0.84925ms)
+✔ Later binding is exact, reviewed, branded and never silently replaces current audio (0.130583ms)
+✔ All active word, context, instruction and comprehension audio IDs have a register slot (32.440667ms)
+✔ Prepared scripts remain unplaced, deduplicated by role, with honest archive status (62.9865ms)
+✔ Inventory generation is deterministic, and does not mutate the learner curriculum (797.087834ms)
+✔ Broader domains do not claim a full method from renderers or exercise counts (0.098833ms)
+✔ Every meaning and all 40 base parts come from the fixed Lexicon edition (0.730708ms)
+✔ All words, core steps and extensions resolve and produce scaffolded activities (9.130291ms)
+✔ Recall never silently introduces words that have not yet been introduced (0.639958ms)
+✔ Long-word prerequisites do not silently place the 78 words in a core group (1.39425ms)
+✔ Every spelling construction produces the original form, including repeated letters (0.431041ms)
+✔ The two pak meanings stay distinct and cannot be ambiguous distractors (0.1355ms)
+✔ Storage is optional, validated and independent from old CP progress (0.268833ms)
+✔ Every linked media file exists; no Drive links or rejected standalone sound (24.365709ms)
+✔ B1 partitions retain every original task once, exact old links and shared completion (638.4905ms)
+✔ Five exact replacement recordings cover source, instruction and example; source IDs and models stay meaningful (0.342792ms)
+✔ Every added word has exactly one new model task, with preserved sources and routes (24.532542ms)
+✔ All supplementary packs are selectable, with no generated audio-dependent or unrelated activities (23.463834ms)
+✔ Local export matches installed data except the recorded meaning repairs (50.971916ms)
+✔ Twenty additional words preserve every existing package and are reachable (15.265708ms)
+✔ No listening activity is offered without audio; model answers stay exact (0.30975ms)
+✔ navigation preferences validate input and retain both old route axes (0.826417ms)
+✔ Start restores the last selection while inner bookmarks keep their original scope (4.90975ms)
+✔ 44 guided words retain all 28 previous definitions and include the 16 accepted decisions (0.461625ms)
+✔ Every guided selection partitions its source once, retains old links and shares original progress (446.708875ms)
+✔ Homonyms keep spelling answers, explicit contexts and original Alfa senses; register requires recognition only (172.184542ms)
+PASS continuity: 1675 collections, 7128 small rounds, 47782 unchanged tasks, 1727 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (6565.536416ms)
+PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
+✔ scripts/test-word-rounds.mjs (1033.327583ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6574.802791

@@ -1,0 +1,2146 @@
+[
+  {
+    "id": "klink-leesstap-04:klink-woord-man:model",
+    "afterSha256": "5f773f455f65afdaca7adbf70fdfa1351306967dcee98c71efefec4fc66e7a3c",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-man:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+          "altText": "Een volwassen man."
+        },
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "text": {
+        "primary": "man"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-map:word-image",
+    "afterSha256": "ea75526fa3b19f384a848f286b124fd85c37352665b74d49ed9bfab8d8ca510e",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-map:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-map",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-map.mp3",
+          "audioId": "klink-woord-map"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-map",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-map-context-02.webp",
+            "altText": "Omslag waarin je papieren bij elkaar bewaart."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-map"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van map en man; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "map"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-map:heard-image",
+    "afterSha256": "99e2a78c46539723a033db982a22d02710f8c0660dc47b35858d6ccbed6ead08",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-map:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-map",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-map.mp3",
+          "audioId": "klink-woord-map"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-map",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-map-context-02.webp",
+            "altText": "Omslag waarin je papieren bij elkaar bewaart."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-map"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van map en man; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-man:word-image",
+    "afterSha256": "9f0a54721087c3caf6c5e078d53b5881279ce32eadcb99b1cdd683acfeb579f2",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-man:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-map",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-map-context-02.webp",
+            "altText": "Omslag waarin je papieren bij elkaar bewaart."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en map; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "man"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-man:heard-image",
+    "afterSha256": "5cb28ad66c0fe8b14d7ed88dc1c0c7dd5e08f858cb4830f0c9f396f962b41283",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-man:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-map",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-map-context-02.webp",
+            "altText": "Omslag waarin je papieren bij elkaar bewaart."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en map; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-man:word-card",
+    "afterSha256": "cd90afd4ac51ad5f4f7db0dba5dd834d5e694b2484ba456708d1710939719c30",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-man:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-man",
+          "front": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+              "altText": "Een volwassen man."
+            }
+          },
+          "back": {
+            "text": "man"
+          },
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-man:word-image-match",
+    "afterSha256": "2c96d467610ffc3bf0b08ca76ece02c52806124be5b793103af7ebbd95c60ace",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-man:word-image-match",
+      "componentId": "ALF-CMP-004",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "word-image-match",
+      "title": "Kies een woord. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-03",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/koppelen.wav",
+        "audioId": "koppelen"
+      },
+      "prompt": {
+        "text": "Kies een woord. Kies de foto."
+      },
+      "sources": [
+        {
+          "id": "klink-woord-man",
+          "label": "man",
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        },
+        {
+          "id": "klink-woord-pan",
+          "label": "pan",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-pan.wav",
+            "audioId": "klink-woord-pan"
+          }
+        }
+      ],
+      "targets": [
+        {
+          "id": "image-klink-woord-pan",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "altText": "Kookgerei waarin je eten verhit."
+          }
+        },
+        {
+          "id": "image-klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "mapping": {
+          "klink-woord-man": "image-klink-woord-man",
+          "klink-woord-pan": "image-klink-woord-pan"
+        }
+      },
+      "distractorReason": "Twee voorbereide, verschillende woordbetekenissen koppelen; elke foto hoort bij één woord."
+    },
+    "fields": [
+      {
+        "path": [
+          "targets",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:klink-woord-man:memory",
+    "afterSha256": "e3bca9db6eae683218ccfda98365c23a8256c0858cb85a6d9f81ae4a97717787",
+    "before": {
+      "exerciseId": "klink-leesstap-04:klink-woord-man:memory",
+      "componentId": "ALF-CMP-015",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "memory",
+      "title": "Zoek het woord en het beeld bij elkaar.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-04",
+      "phase": "recall",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/paren.wav",
+        "audioId": "paren"
+      },
+      "prompt": {
+        "text": "Zoek het woord en het beeld bij elkaar.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "items": [
+        {
+          "itemId": "word-klink-woord-man",
+          "pairKey": "klink-woord-man",
+          "content": {
+            "text": "man"
+          }
+        },
+        {
+          "itemId": "word-klink-woord-pan",
+          "pairKey": "klink-woord-pan",
+          "content": {
+            "text": "pan"
+          }
+        },
+        {
+          "itemId": "image-klink-woord-pan",
+          "pairKey": "klink-woord-pan",
+          "content": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+              "altText": "Kookgerei waarin je eten verhit."
+            }
+          }
+        },
+        {
+          "itemId": "image-klink-woord-man",
+          "pairKey": "klink-woord-man",
+          "content": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+              "altText": "Een volwassen man."
+            }
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "items",
+          "3",
+          "content",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-04:zin-man",
+    "afterSha256": "d66139bc651b9d7ff00913194707e6bc54f32f56e32aaddb0807957ce18f6f1e",
+    "before": {
+      "exerciseId": "klink-leesstap-04:zin-man",
+      "componentId": "ALF-CMP-007",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-04",
+      "mode": "listen-sentence",
+      "title": "Luister en kijk.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Een bekend woord horen in een betekenisvolle zin of situatie; luisteren met tekststeun, niet zelfstandig lezen.",
+      "activityTypeId": "ZI-01",
+      "phase": "use",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/meeluisteren.wav",
+        "audioId": "meeluisteren"
+      },
+      "prompt": {
+        "text": "Luister en kijk.",
+        "audio": {
+          "src": "/package-audio/cp001/aa-l01-aud-sent-002.mp3",
+          "audioId": "zin-man"
+        }
+      },
+      "contextId": "zin-man",
+      "textBlocks": [
+        {
+          "id": "zin-man",
+          "text": "Dit is een man.",
+          "audio": {
+            "src": "/package-audio/cp001/aa-l01-aud-sent-002.mp3",
+            "audioId": "zin-man"
+          }
+        }
+      ],
+      "image": {
+        "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+        "altText": "Een volwassen man."
+      },
+      "requiresAudio": true,
+      "access": "supported-listening",
+      "preparation": "Bespreek de betekenis van de hele zin mondeling. Het doelwoord is eerder in deze les getoond. De overige woorden hoeven nog niet zelfstandig leesbaar te zijn.",
+      "independentReading": false,
+      "humanReview": "approved"
+    },
+    "fields": [
+      {
+        "path": [
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-man:model",
+    "afterSha256": "701245f971669282eb29d7be24825f1f2629dfd5fc745ae907c66a168194eb7c",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-man:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+          "altText": "Een volwassen man."
+        },
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "text": {
+        "primary": "man"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-man:word-image",
+    "afterSha256": "51a76aa65025d936de74f283a5742a55bcfa0911258dc07f355991ca08be4237",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-man:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-pan",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "altText": "Kookgerei waarin je eten verhit."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en pan; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "man"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-man:heard-image",
+    "afterSha256": "aa802cb566bd8382368a53812a260eb0d51f3d9c978d2b3aa256f0972659ca12",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-man:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-pan",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "altText": "Kookgerei waarin je eten verhit."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en pan; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-man:word-card",
+    "afterSha256": "16634d99d9a5a02d25abed98aaf2a6e3e11e0d3f22a251b1df5e06f1b9f763b8",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-man:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-man",
+          "front": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+              "altText": "Een volwassen man."
+            }
+          },
+          "back": {
+            "text": "man"
+          },
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-pan:word-image",
+    "afterSha256": "89b1d51bede1b9979fc8d934dad0f33bcf7afa8b7af1d97665beeaa3378d85fe",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-pan:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-pan",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-pan.wav",
+          "audioId": "klink-woord-pan"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-pan",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "altText": "Kookgerei waarin je eten verhit."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-pan"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van pan en man; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "pan"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-pan:heard-image",
+    "afterSha256": "014e0f0a5b40d849c9ba0d31aa63ff74139f41a6567544c1b92b44addeee363b",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-pan:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-pan",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-pan.wav",
+          "audioId": "klink-woord-pan"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-pan",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-pan-context-02.webp",
+            "altText": "Kookgerei waarin je eten verhit."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-pan"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van pan en man; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-jas:word-image",
+    "afterSha256": "d7549bf505f8fbac08d23245f800ea3b5711281bdf70ffd7fa117b3e49f26029",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-jas:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-jas",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-jas.wav",
+          "audioId": "klink-woord-jas"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-jas",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k262.webp",
+            "altText": "Een kledingstuk dat je buiten over andere kleding draagt."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-jas"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van jas en man; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "jas"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-jas:heard-image",
+    "afterSha256": "2bd4fafd07eeae6554aec0b484d2287ff60ecf6ef280878eb13f2598513eeaab",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-jas:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-jas",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-jas.wav",
+          "audioId": "klink-woord-jas"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-jas",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k262.webp",
+            "altText": "Een kledingstuk dat je buiten over andere kleding draagt."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-jas"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van jas en man; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-tas:word-image",
+    "afterSha256": "6cf95c8314f752eee3cf35dc3bed42b78b2cca9c1387e494e23b012df50e1a8d",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-tas:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-tas",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-tas.wav",
+          "audioId": "klink-woord-tas"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-tas",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k341.webp",
+            "altText": "Een draagtas voor spullen."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-tas"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van tas en man; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "tas"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-tas:heard-image",
+    "afterSha256": "72e1bf6124ee6c13ea8cd750188d6a7221b5ef1b63a8f40f257c7d79d2343020",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-tas:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-tas",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-tas.wav",
+          "audioId": "klink-woord-tas"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-tas",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k341.webp",
+            "altText": "Een draagtas voor spullen."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-tas"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van tas en man; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-jas:word-image-match",
+    "afterSha256": "6c0f30b0b45a9655a6776f462ca0df2f08415584083f2d91d0d53ffb3422035d",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-jas:word-image-match",
+      "componentId": "ALF-CMP-004",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "word-image-match",
+      "title": "Kies een woord. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-jas",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-03",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/koppelen.wav",
+        "audioId": "koppelen"
+      },
+      "prompt": {
+        "text": "Kies een woord. Kies de foto."
+      },
+      "sources": [
+        {
+          "id": "klink-woord-jas",
+          "label": "jas",
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-jas.wav",
+            "audioId": "klink-woord-jas"
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "label": "man",
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        }
+      ],
+      "targets": [
+        {
+          "id": "image-klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "image-klink-woord-jas",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k262.webp",
+            "altText": "Een kledingstuk dat je buiten over andere kleding draagt."
+          }
+        }
+      ],
+      "answer": {
+        "mapping": {
+          "klink-woord-jas": "image-klink-woord-jas",
+          "klink-woord-man": "image-klink-woord-man"
+        }
+      },
+      "distractorReason": "Twee voorbereide, verschillende woordbetekenissen koppelen; elke foto hoort bij één woord."
+    },
+    "fields": [
+      {
+        "path": [
+          "targets",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-05:klink-woord-jas:memory",
+    "afterSha256": "f842ef8373f297c0165decc90efeb682c23e88140173742984becabf8d8ed5da",
+    "before": {
+      "exerciseId": "klink-leesstap-05:klink-woord-jas:memory",
+      "componentId": "ALF-CMP-015",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-05",
+      "mode": "memory",
+      "title": "Zoek het woord en het beeld bij elkaar.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-jas",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-04",
+      "phase": "recall",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/paren.wav",
+        "audioId": "paren"
+      },
+      "prompt": {
+        "text": "Zoek het woord en het beeld bij elkaar.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-jas.wav",
+          "audioId": "klink-woord-jas"
+        }
+      },
+      "items": [
+        {
+          "itemId": "word-klink-woord-jas",
+          "pairKey": "klink-woord-jas",
+          "content": {
+            "text": "jas"
+          }
+        },
+        {
+          "itemId": "word-klink-woord-man",
+          "pairKey": "klink-woord-man",
+          "content": {
+            "text": "man"
+          }
+        },
+        {
+          "itemId": "image-klink-woord-man",
+          "pairKey": "klink-woord-man",
+          "content": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+              "altText": "Een volwassen man."
+            }
+          }
+        },
+        {
+          "itemId": "image-klink-woord-jas",
+          "pairKey": "klink-woord-jas",
+          "content": {
+            "image": {
+              "src": "/package-media/artsmart-20261025/k262.webp",
+              "altText": "Een kledingstuk dat je buiten over andere kleding draagt."
+            }
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "items",
+          "2",
+          "content",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-07:klink-woord-man:model",
+    "afterSha256": "f0ca942729be035541e3082e2e871de485ddc98e7d4e7ec9e4a0d83ac1cc21e2",
+    "before": {
+      "exerciseId": "klink-leesstap-07:klink-woord-man:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-07",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+          "altText": "Een volwassen man."
+        },
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "text": {
+        "primary": "man"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-07:klink-woord-man:word-image",
+    "afterSha256": "d2880ee6032a154e766815fb0042d5f91c348835354b69fa2a4a504a270f096d",
+    "before": {
+      "exerciseId": "klink-leesstap-07:klink-woord-man:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-07",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-pen",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k307.webp",
+            "altText": "Voorwerp waarmee je met inkt schrijft."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en pen; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "man"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-07:klink-woord-man:heard-image",
+    "afterSha256": "a5e8611a7f212693ce9a2f4920198f6755eebe3e283f32cf8c04d2ef23458640",
+    "before": {
+      "exerciseId": "klink-leesstap-07:klink-woord-man:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-07",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        },
+        {
+          "id": "klink-woord-pen",
+          "image": {
+            "src": "/package-media/artsmart-20261025/k307.webp",
+            "altText": "Voorwerp waarmee je met inkt schrijft."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en pen; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "0",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-leesstap-07:klink-woord-man:word-card",
+    "afterSha256": "e3a587e487add95e6d6ace01792e0036227bd24c16362840179c7e17141ebb44",
+    "before": {
+      "exerciseId": "klink-leesstap-07:klink-woord-man:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "klink-leesstap-07",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-man",
+          "front": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+              "altText": "Een volwassen man."
+            }
+          },
+          "back": {
+            "text": "man"
+          },
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-uitbreiding-6:klink-woord-man:model",
+    "afterSha256": "8c3709d877af817907284e35d3c4c2421aa8e370c3441ddeeb8d93baeb6adccd",
+    "before": {
+      "exerciseId": "klink-uitbreiding-6:klink-woord-man:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "klink-uitbreiding-6",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+          "altText": "Een volwassen man."
+        },
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "text": {
+        "primary": "man"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-uitbreiding-6:klink-woord-man:word-image",
+    "afterSha256": "fb20b616c6b8fb5601d251ec961d6537ca7ad09fffcc6413029ab44dfe907bb9",
+    "before": {
+      "exerciseId": "klink-uitbreiding-6:klink-woord-man:word-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-uitbreiding-6",
+      "mode": "word-image",
+      "title": "Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-02",
+      "phase": "use",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woord-foto.wav",
+        "audioId": "woord-foto"
+      },
+      "prompt": {
+        "text": "Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-boom",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-boom-context-02.webp",
+            "altText": "Grote plant met een stam en takken."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en boom; beide beelden blijven op dezelfde plaats.",
+      "exampleWord": "man"
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-uitbreiding-6:klink-woord-man:heard-image",
+    "afterSha256": "38d25a22ba3f416ae25939de5ad7383346d9dfdc635041fdccbe714a6c80247e",
+    "before": {
+      "exerciseId": "klink-uitbreiding-6:klink-woord-man:heard-image",
+      "componentId": "ALF-CMP-002",
+      "contractVersion": "1.0",
+      "lessonId": "klink-uitbreiding-6",
+      "mode": "heard-image",
+      "title": "Luister. Kies de foto.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-01",
+      "phase": "recognize",
+      "assessment": "answer",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/hoor-foto.wav",
+        "audioId": "hoor-foto"
+      },
+      "prompt": {
+        "text": "Luister. Kies de foto.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "options": [
+        {
+          "id": "klink-woord-boom",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-boom-context-02.webp",
+            "altText": "Grote plant met een stam en takken."
+          }
+        },
+        {
+          "id": "klink-woord-man",
+          "image": {
+            "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+            "altText": "Een volwassen man."
+          }
+        }
+      ],
+      "answer": {
+        "correctOptionIds": [
+          "klink-woord-man"
+        ]
+      },
+      "distractorReason": "Onderscheid de al aangeboden betekenissen van man en boom; beide beelden blijven op dezelfde plaats.",
+      "requiresAudio": true
+    },
+    "fields": [
+      {
+        "path": [
+          "options",
+          "1",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "klink-uitbreiding-6:klink-woord-man:word-card",
+    "afterSha256": "18af8b86a1a2c7b6f07efe67a0739633a301bdadbfe77c0640bbe759897aef34",
+    "before": {
+      "exerciseId": "klink-uitbreiding-6:klink-woord-man:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "klink-uitbreiding-6",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-man",
+      "objective": "Voorstel voor Alfa A: lezen binnen de klankopbouw. De betekenis is bekend en alle hieronder genoemde leesvoorwaarden zijn bruikbaar. Dit is geen vaste niveaueis of lesnummer.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+          "audioId": "klink-woord-man"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-man",
+          "front": {
+            "image": {
+              "src": "/package-media/cp001/aa-cp001-man-context-02.webp",
+              "altText": "Een volwassen man."
+            }
+          },
+          "back": {
+            "text": "man"
+          },
+          "audio": {
+            "src": "/package-audio/woorden-20261025/klink-woord-man.mp3",
+            "audioId": "klink-woord-man"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Een volwassen man.",
+        "after": "Een volwassen mannelijk persoon."
+      }
+    ]
+  },
+  {
+    "id": "woord-klink-woord-groente:klink-woord-groente:model",
+    "afterSha256": "5d6b80099ee4ca60f4ea9e48193ed994ad1bf618680aae85fadb6a94717b6533",
+    "before": {
+      "exerciseId": "woord-klink-woord-groente:klink-woord-groente:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "woord-klink-woord-groente",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-groente",
+      "objective": "De onbeklemtoonde slot-e in groente lezen.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/artsmart-20261025/k251.webp",
+          "altText": "Eetbare delen van planten die als groente worden gebruikt."
+        },
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-groente.wav",
+          "audioId": "klink-woord-groente"
+        }
+      },
+      "text": {
+        "primary": "groente"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Eetbare delen van planten die als groente worden gebruikt.",
+        "after": "Eetbare delen van planten die je bij een maaltijd eet, zoals wortels, sla en bloemkool."
+      }
+    ]
+  },
+  {
+    "id": "woord-klink-woord-groente:klink-woord-groente:word-card",
+    "afterSha256": "79e5794825cb9488b7a43472ae89ffcdb4e98fd5df7cd8db7c89e860611d1429",
+    "before": {
+      "exerciseId": "woord-klink-woord-groente:klink-woord-groente:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "woord-klink-woord-groente",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-groente",
+      "objective": "De onbeklemtoonde slot-e in groente lezen.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-groente.wav",
+          "audioId": "klink-woord-groente"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-groente",
+          "front": {
+            "image": {
+              "src": "/package-media/artsmart-20261025/k251.webp",
+              "altText": "Eetbare delen van planten die als groente worden gebruikt."
+            }
+          },
+          "back": {
+            "text": "groente"
+          },
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-groente.wav",
+            "audioId": "klink-woord-groente"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Eetbare delen van planten die als groente worden gebruikt.",
+        "after": "Eetbare delen van planten die je bij een maaltijd eet, zoals wortels, sla en bloemkool."
+      }
+    ]
+  },
+  {
+    "id": "woord-klink-woord-moeder:klink-woord-moeder:model",
+    "afterSha256": "1c9e00702d6a96f8a00c8850477cd8b315bd929aea6a1a144c4b5e1fd2573117",
+    "before": {
+      "exerciseId": "woord-klink-woord-moeder:klink-woord-moeder:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "woord-klink-woord-moeder",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-moeder",
+      "objective": "De onbeklemtoonde e in moeder lezen.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/taalroute/klink-woord-moeder.webp",
+          "altText": "Een ouder die moeder is."
+        },
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-moeder.wav",
+          "audioId": "klink-woord-moeder"
+        }
+      },
+      "text": {
+        "primary": "moeder"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Een ouder die moeder is.",
+        "after": "Een vrouwelijke ouder."
+      }
+    ]
+  },
+  {
+    "id": "woord-klink-woord-moeder:klink-woord-moeder:word-card",
+    "afterSha256": "bcee3411967e531885fdead4c00fb01fe533c62ec22a79009bdd227d5f7dbe98",
+    "before": {
+      "exerciseId": "woord-klink-woord-moeder:klink-woord-moeder:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "woord-klink-woord-moeder",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-moeder",
+      "objective": "De onbeklemtoonde e in moeder lezen.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-moeder.wav",
+          "audioId": "klink-woord-moeder"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-moeder",
+          "front": {
+            "image": {
+              "src": "/package-media/taalroute/klink-woord-moeder.webp",
+              "altText": "Een ouder die moeder is."
+            }
+          },
+          "back": {
+            "text": "moeder"
+          },
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-moeder.wav",
+            "audioId": "klink-woord-moeder"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Een ouder die moeder is.",
+        "after": "Een vrouwelijke ouder."
+      }
+    ]
+  },
+  {
+    "id": "woord-klink-woord-vader:klink-woord-vader:model",
+    "afterSha256": "5d00fd2d258deedcf4a4232713a9c342266d4f7e34be178eff9bc3cc5805ca41",
+    "before": {
+      "exerciseId": "woord-klink-woord-vader:klink-woord-vader:model",
+      "componentId": "ALF-CMP-001",
+      "contractVersion": "1.0",
+      "lessonId": "woord-klink-woord-vader",
+      "mode": "model",
+      "title": "Kijk en luister.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-vader",
+      "objective": "De enkele a in vader als lange a lezen.",
+      "activityTypeId": "KL-01",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/kijken.wav",
+        "audioId": "kijken"
+      },
+      "prompt": {
+        "text": "Kijk en luister.",
+        "image": {
+          "src": "/package-media/completion-20261017/klink-woord-vader.webp",
+          "altText": "Een ouder die vader is."
+        },
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-vader.wav",
+          "audioId": "klink-woord-vader"
+        }
+      },
+      "text": {
+        "primary": "vader"
+      }
+    },
+    "fields": [
+      {
+        "path": [
+          "prompt",
+          "image",
+          "altText"
+        ],
+        "before": "Een ouder die vader is.",
+        "after": "Een mannelijke ouder."
+      }
+    ]
+  },
+  {
+    "id": "woord-klink-woord-vader:klink-woord-vader:word-card",
+    "afterSha256": "5dfb39ab0a6fb1a9991466976899bd7686334fdf0c46cc8e7bccfceac1c7e823",
+    "before": {
+      "exerciseId": "woord-klink-woord-vader:klink-woord-vader:word-card",
+      "componentId": "ALF-CMP-016",
+      "contractVersion": "1.0",
+      "lessonId": "woord-klink-woord-vader",
+      "mode": "word-card",
+      "title": "Bekijk het woordkaartje.",
+      "sourceStatus": "approved",
+      "wordId": "klink-woord-vader",
+      "objective": "De enkele a in vader als lange a lezen.",
+      "activityTypeId": "BB-05",
+      "phase": "meet",
+      "assessment": "participation",
+      "instructionAudio": {
+        "src": "/package-audio/instructions/woordkaart.wav",
+        "audioId": "woordkaart"
+      },
+      "prompt": {
+        "text": "Bekijk het woordkaartje.",
+        "audio": {
+          "src": "/package-audio/taalroute/klink-woord-vader.wav",
+          "audioId": "klink-woord-vader"
+        }
+      },
+      "cards": [
+        {
+          "cardId": "klink-woord-vader",
+          "front": {
+            "image": {
+              "src": "/package-media/completion-20261017/klink-woord-vader.webp",
+              "altText": "Een ouder die vader is."
+            }
+          },
+          "back": {
+            "text": "vader"
+          },
+          "audio": {
+            "src": "/package-audio/taalroute/klink-woord-vader.wav",
+            "audioId": "klink-woord-vader"
+          }
+        }
+      ]
+    },
+    "fields": [
+      {
+        "path": [
+          "cards",
+          "0",
+          "front",
+          "image",
+          "altText"
+        ],
+        "before": "Een ouder die vader is.",
+        "after": "Een mannelijke ouder."
+      }
+    ]
+  }
+]

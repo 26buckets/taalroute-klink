@@ -65,13 +65,13 @@ export function displayedChapterCollections(activity: GroupActivity, selection: 
 }
 
 function findChapterCollection(activity: GroupActivity, id?: string) {
-  return chapterCollections(activity).flatMap(item => wordRoundActivities.has(activity) ? [item, ...chapterWordRounds(item), ...readingSelections(item)] : [item]).find(item => item.id === id);
+  return chapterCollections(activity).flatMap(item => [item, ...(wordRoundActivities.has(activity) ? chapterWordRounds(item) : []), ...readingSelections(item).flatMap(part => [part, ...(wordRoundActivities.has(activity) ? chapterWordRounds(part) : [])])]).find(item => item.id === id);
 }
 
 
 export function selectedChapterCollection(location: ChapterLocation) {
   if (!location.activity || !location.collection) return undefined;
-  const collection = location.words ? chapterCollections(location.activity).find(item => item.id === location.collection) : displayedChapterCollections(location.activity, location).find(item => item.id === location.collection) ?? findChapterCollection(location.activity, location.collection);
+  const collection = location.words ? findChapterCollection(location.activity, location.collection) : displayedChapterCollections(location.activity, location).find(item => item.id === location.collection) ?? findChapterCollection(location.activity, location.collection);
   if (!collection || !matchesChapterSelection(collection, location)) return undefined;
   return location.words ? selectChapterWords(collection, location.words) : collection;
 }
@@ -179,7 +179,7 @@ function collectionWordIds(collection: ChapterCollection) {
 export function chapterExerciseChoices(location: ChapterLocation) {
   if (!location.activity || !location.collection || location.activity === 'learning-review') return [];
   const source = selectedChapterCollection(location);
-  if (source?.readingSelection) return [];
+  if (source?.readingSelection && !source.wordRound) return [];
   const words = source?.wordRound?.wordIds;
   const sourceId = source?.wordRound?.sourceId ?? location.collection;
   const wholeWords = source && !words && wordRoundActivities.has(location.activity) ? collectionWordIds(source) : undefined;

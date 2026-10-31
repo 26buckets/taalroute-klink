@@ -7,7 +7,7 @@ import {taalroutePackages} from '../lib/taalroute-packages.ts';
 import {groupActivities,groupExercises} from '../lib/group-practice.ts';
 import {chapterCollections} from '../lib/practice-chapters.ts';
 const spell=w=>w.normalize('NFC').toLocaleLowerCase('nl');
-test('Every added word has exactly one new model task, with preserved sources and routes',()=>{
+void test('Every added word has exactly one new model task, with preserved sources and routes',()=>{
  assert.equal(additional.publicationAllowed,false);
  assert.deepEqual(contentPackages.slice(0,15),taalroutePackages);
  assert.equal(additional.packs.length,52);
@@ -32,7 +32,7 @@ test('Every added word has exactly one new model task, with preserved sources an
  assert.equal(new Set(allPackageWords.map(w=>w.id)).size,allPackageWords.length);
  assert.equal(new Set(allPackageWords.map(w=>spell(w.word))).size,5126);
 });
-test('All supplementary packs are selectable, with no generated audio-dependent or unrelated activities',()=>{
+void test('All supplementary packs are selectable, with no generated audio-dependent or unrelated activities',()=>{
  const collections=chapterCollections('build-model');
  for(const pack of additional.packs){
   for(const activity of groupActivities){const rows=groupExercises(pack,activity.id);assert.equal(rows.length,pack.practiceActivities.includes(activity.id)?pack.exercises.length:0,`${pack.id}/${activity.id}`);}
@@ -40,7 +40,14 @@ test('All supplementary packs are selectable, with no generated audio-dependent 
   assert(selected.every(c=>c.levels?.length && c.exercises.every(e=>JSON.stringify(e.vocabularyLevels)===JSON.stringify(c.levels))),'Exact shared vocabulary membership, without duplicate tasks');
  }
 });
-test('Local export matches installed data exactly',()=>{
+void test('Local export matches installed data except the recorded meaning repairs',()=>{
  const local=JSON.parse(readFileSync('/Users/nicoknoester/Documents/Codex/2026-10-19/klink-lexicon-alle-woorden/woordbouw-pakketten.json'));
+ const repairs=['docs/word-meanings-review-20261031/changes.json','docs/word-meanings-release-20261031/changes.json'].flatMap(file=>JSON.parse(readFileSync(file)).fields).filter(row=>row.file==='data/klink-lexicon-wordbuild-rest.json');
+ for(const repair of repairs){
+  const key=repair.path.at(-1);assert(['meaning','audioContext'].includes(key));
+  const target=repair.path.slice(0,-1).reduce((value,key)=>value[key],local);
+  assert.equal(target[key] ?? null,repair.before);
+  target[key]=repair.after;
+ }
  assert.deepEqual(additional,local);
 });

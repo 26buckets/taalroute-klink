@@ -1,4 +1,6 @@
 import support from '../data/klink-b1-reading-support.json' with { type: 'json' };
+import guidedSelections from '../data/klink-guided-word-selections.json' with { type: 'json' };
+import meaningContexts from '../data/klink-meaning-contexts.json' with { type: 'json' };
 import type { ChapterCollection } from './practice-chapters';
 import index from '../data/klink-production-index.json' with { type: 'json' };
 import type { PackageDefinition, PackageExercise } from './package-content';
@@ -24,17 +26,37 @@ export function validateProductionCollection(value: unknown, id: string, count: 
 }
 
 // Keep the complete source available to old links and share its completion records.
+const recordedSelections = { ...support.collections, ...guidedSelections } as Record<string, { allExerciseIds: string[]; supportIds: string[] }>;
+const selectionCache = new WeakMap<ChapterCollection, ChapterCollection[]>();
 export function readingSelections(collection: ChapterCollection): ChapterCollection[] {
-  const selection = (support.collections as Record<string, { allExerciseIds: string[]; supportIds: string[] }>)[collection.id];
+  const cached = selectionCache.get(collection);
+  if (cached) return cached;
+  const supportIds = collection.exercises.filter(e => exerciseWord(e) in support.words || exerciseWord(e) === 'godverdomme').map(e => e.exerciseId);
+  const selection = recordedSelections[collection.id] ?? (supportIds.length ? { allExerciseIds: collection.exercises.map(e => e.exerciseId), supportIds } : undefined);
   if (!selection) return [collection];
   const supported = new Set(selection.supportIds);
-  return [false, true].flatMap(extension => {
+  const result = [false, true].flatMap(extension => {
     const exerciseIds = selection.allExerciseIds.filter(id => supported.has(id) === extension);
-    return exerciseIds.length ? [{ ...collection, id: `${collection.id}~${extension ? 'extension' : 'core'}`, title: `${extension ? 'Uitbreiding met je docent' : 'Basis'} · ${collection.title}`, readingSelection: { sourceId: collection.id, allExerciseIds: selection.allExerciseIds, exerciseIds } }] : [];
+    return exerciseIds.length ? [{ ...collection, exercises: collection.exercises.filter(e => exerciseIds.includes(e.exerciseId)), id: `${collection.id}~${extension ? 'extension' : 'core'}`, title: `${extension ? 'Uitbreiding met je docent' : 'Basis'} · ${collection.title}`, readingSelection: { sourceId: collection.id, allExerciseIds: selection.allExerciseIds, exerciseIds } }] : [];
   });
+  selectionCache.set(collection, result);
+  return result;
 }
 export function readingSupportForExercise(exercise: PackageExercise) {
   if (exercise.mode !== 'read-series' || exercise.contentLevel !== 'b1' || !Array.isArray(exercise.textBlocks)) return;
   const word = (exercise.textBlocks as { text: string }[])[0]?.text;
   return (support.words as Record<string, { meaning: string; example: string }>)[word];
+}
+
+export function exerciseWord(exercise: PackageExercise): string {
+  const value = exercise.exampleWord ?? exercise.helpWord ?? exercise.displayWord ?? (exercise.textBlocks as { text: string }[] | undefined)?.[0]?.text;
+  return typeof value === 'string' ? value : '';
+}
+
+export type MeaningContext = { label: string; choice?: string; meaning: string; example: string; image?: string; audio?: string; optional?: boolean };
+export function wordMeaningContexts(exercise: PackageExercise): MeaningContext[] {
+  if (exercise.contextId || exercise.learningPathId) return [];
+  const word = exerciseWord(exercise);
+  if (['pak', 'want'].includes(word) && (typeof exercise.contentLevel !== 'string' || exercise.contentLevel.startsWith('alfa-'))) return [];
+  return (meaningContexts as Record<string, MeaningContext[]>)[word] ?? [];
 }

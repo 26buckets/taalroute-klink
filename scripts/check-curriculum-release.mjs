@@ -891,8 +891,8 @@ try {
   requireProof(wordbuildBackup.downloadedByteIdentical === true && wordbuildBackup.zipCrcVerified === true && wordbuildBackup.parentVerified === true && wordbuildBackup.manifestEntriesVerified === wordbuildProof('source-manifest').length);
   const backedUp = new Map(wordbuildProof('source-manifest').map(row => [row.path, row.sha256]));
   for (const file of wordbuildFiles) requireProof(backedUp.get(file) === (compactFiles.includes(file) ? compactPrevious.files[file] : menuFiles.includes(file) ? menuPrevious.files[file] : beginnerPrevious.files[file]));
-  const trial = read('../data/klink-lexicon-wordbuild-20.json'), rest = read('../data/klink-lexicon-wordbuild-rest.json');
-  for (const file of ['data/klink-lexicon-wordbuild-20.json', 'data/klink-lexicon-wordbuild-rest.json']) requireProof(createHash('sha256').update(readFileSync(new URL('../' + file, import.meta.url))).digest('hex') === approval.files[file]);
+  const trial = JSON.parse(readApprovedFile('data/klink-lexicon-wordbuild-20.json')), rest = JSON.parse(readApprovedFile('data/klink-lexicon-wordbuild-rest.json'));
+  for (const file of ['data/klink-lexicon-wordbuild-20.json', 'data/klink-lexicon-wordbuild-rest.json']) requireProof(createHash('sha256').update(readApprovedFile(file)).digest('hex') === approval.files[file]);
   requireProof(rest.selectionPolicy.id === 'klink-basisselectie-nico-20261019' && digest(rest.selectionPolicy) === digest(wordbuildProof('selectiebeleid')));
   const words = [trial, ...rest.packs].flatMap(pack => pack.words), tasks = [trial, ...rest.packs].flatMap(pack => pack.exercises);
   requireProof(words.length === 4789 && tasks.length === 4789 && new Set(words.map(word => word.id)).size === 4789 && new Set(tasks.map(task => task.exerciseId)).size === 4789);
