@@ -28,8 +28,9 @@ for(const row of added){
   assert.equal(e.correctFeedback,question.correctFeedback);assert.equal(e.feedback,question.retryFeedback);
   assert.equal(e.sourceEvidence,question.evidence);assert(text.text.includes(e.sourceEvidence));
   assert.equal(e.manualAdvance,true);assert.equal(e.requiresAudio,false);assert.equal(e.reviewEligible,false);
-  assert(!/"(?:audio|instructionAudio|questionAudio|feedbackAudio|src)"\s*:/.test(JSON.stringify(e)),'No unsupported audio or hidden fallback');
+  assert.equal(e.sourceBlocks[0].audio?.src, `/package-audio/reading-rounds-20261031/${text.id.toLowerCase()}.wav`);
+  for(const field of ['instructionAudio','questionAudio','feedbackAudio']) assert.equal(e[field],undefined);
  }
 }
 assert.equal(ids.size,24);
-console.log('PASS both levels: 24 reviewed answers, exact passages and feedback, self-practice routes, stable IDs, absent unverified audio; all prior collections preserved');
+console.log('PASS both levels: 24 reviewed answers, exact passages and feedback, self-practice routes, stable IDs, six source-bound narrations; all prior collections preserved');

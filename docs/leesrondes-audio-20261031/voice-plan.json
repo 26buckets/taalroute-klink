@@ -1,0 +1,91 @@
+{
+  "recordedAt": "2026-10-31T15:41:46.211419+00:00",
+  "approvedBy": "Nico",
+  "userRequest": "Maak nu ook de voorleesaudio voor de zes A1- en A2-teksten en koppel die aan de leesrondes in Klink. Controleer de opnamen en Taalroute-metadata en zet ze online, met behoud van uiterlijk, inhoud en voortgang. Je mag variëren tussen man en vrouw.",
+  "rolePolicy": "External narrators read the complete source, including quoted speech; narrators are not character identities. No spoken instructions.",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "model": "eleven_v4",
+  "transport": "Existing signed-in ElevenLabs studio",
+  "settings": {
+    "stability": 0.5,
+    "similarity": 0.75,
+    "style": 0
+  },
+  "items": [
+    {
+      "id": "A1-T01",
+      "title": "Naar school",
+      "level": "A1",
+      "text": "Sara gaat op maandag naar school. De les begint om negen uur. Sara gaat met de bus. Om acht uur gaat Sara van huis. In haar tas zit een boek.",
+      "role": "external-narrator",
+      "gender": "female",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "voiceName": "Roos dutch professional voice",
+      "textSha256": "f773b29788a651f0c9dd9bf7ff180397ea1910eabb94bfffd629455f25bf78a2",
+      "src": "/package-audio/reading-rounds-20261031/a1-t01.wav"
+    },
+    {
+      "id": "A1-T02",
+      "title": "In de winkel",
+      "level": "A1",
+      "text": "Op zaterdag gaat Omar naar de winkel. Hij koopt brood, melk en twee appels. De melk kost drie euro. Omar betaalt bij de kassa. Daarna gaat hij naar huis.",
+      "role": "external-narrator",
+      "gender": "male",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko - Clear Dutch Narrator",
+      "textSha256": "1ebd542961c61707bb2adf5d969b5de126b208258cbce0a70e84303d5ca6e7b4",
+      "src": "/package-audio/reading-rounds-20261031/a1-t02.wav"
+    },
+    {
+      "id": "A1-T03",
+      "title": "Fatima is ziek",
+      "level": "A1",
+      "text": "Fatima is vandaag ziek. Zij gaat niet naar haar werk. Om acht uur belt zij haar baas. Zij zegt: 'Ik ben ziek.' Haar baas zegt: 'Blijf thuis.' Morgen gaat Fatima naar de dokter.",
+      "role": "external-narrator",
+      "gender": "female",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "voiceName": "Roos dutch professional voice",
+      "textSha256": "a5b823417c173f2dbe13c73ad299ba1fb3567bbe396fb20c5cbf2084120f6b8f",
+      "src": "/package-audio/reading-rounds-20261031/a1-t03.wav"
+    },
+    {
+      "id": "A2-T01",
+      "title": "Een andere afspraak",
+      "level": "A2",
+      "text": "Farid heeft dinsdag om tien uur een afspraak bij de tandarts. Op maandag krijgt hij een bericht van zijn werkgever: hij moet dinsdag om negen uur beginnen met werken. Dan kan hij niet naar de tandarts. Daarom belt Farid de tandarts. De medewerker verzet de afspraak naar donderdag om half drie. Farid schrijft de nieuwe tijd in zijn agenda. Daarna krijgt hij een sms met de nieuwe afspraak.",
+      "role": "external-narrator",
+      "gender": "male",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko - Clear Dutch Narrator",
+      "textSha256": "cb5d3ad324929563666750082937297bea539cd8bbe7bc8fa31b823ab3fb664d",
+      "src": "/package-audio/reading-rounds-20261031/a2-t01.wav"
+    },
+    {
+      "id": "A2-T02",
+      "title": "Met de bus naar het werk",
+      "level": "A2",
+      "text": "Elif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker, omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 uur en komt om 8.05 uur aan. Elif loopt daarna nog vijf minuten naar haar werk. Haar dienst begint om 8.30 uur.",
+      "role": "external-narrator",
+      "gender": "female",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "voiceName": "Roos dutch professional voice",
+      "textSha256": "91ab0f6a68b228686a6d8fffcfcb93cfffba832fad5abf10da26d2db9a226f21",
+      "src": "/package-audio/reading-rounds-20261031/a2-t02.wav"
+    },
+    {
+      "id": "A2-T03",
+      "title": "Een boek lenen",
+      "level": "A2",
+      "text": "Yara wil beter Nederlands leren. Daarom gaat zij zaterdag naar de bibliotheek om een makkelijk boek te lenen. Op de deur staat dat de bibliotheek op zaterdag tot vier uur open is. Yara komt om half vier binnen, maar haar bibliotheekpas ligt thuis. De medewerker zegt: 'Zonder pas mag je het boek niet meenemen.' Yara mag het boek vandaag wel in de bibliotheek lezen. Zij besluit maandag met haar pas terug te komen.",
+      "role": "external-narrator",
+      "gender": "male",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko - Clear Dutch Narrator",
+      "textSha256": "3ca714f2740ebff4e6b03278f3a259a955b1f385f60f7fb812f31bf417c6907a",
+      "src": "/package-audio/reading-rounds-20261031/a2-t03.wav"
+    }
+  ],
+  "voicePlanUpdateBeforeMaleGeneration": "2026-10-31T15:47:13.990532+00:00",
+  "voiceSelectionNote": "Peter was not available in the existing saved voice library. Use the established Klink narrator Remko for all male external narration.",
+  "settingsEvidence": "The studio per-voice preset can override global controls; preserve the actual provider filename and settings per recording. First Roos download reports sp103_s70_sb78."
+}

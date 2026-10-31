@@ -1,0 +1,575 @@
+{
+  "id": "A2-T02",
+  "model": "whisper-large-v3-turbo",
+  "sha256": "586881b09bfc2e5e93ddcca7b36825ddd96bd1f122722c9cc4d332234d9ccaad",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Elif gaat meestal met de fiets naar haar werk. Op woensdagochtend staat haar fiets bij de fietsenmaker omdat de rem kapot is. Het regent ook hard. Daarom neemt Elif bus 12. De bus vertrekt om 7.40 en komt om 8.05 aan. Elif loopt daarna nog 5 minuten naar haar werk. Haar dienst begint om 8.30.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.28,
+      "text": " Elif gaat meestal met de fiets naar haar werk.",
+      "tokens": [
+        50365,
+        2699,
+        351,
+        17829,
+        385,
+        377,
+        304,
+        1131,
+        368,
+        15848,
+        1385,
+        12762,
+        39371,
+        37585,
+        13,
+        50480
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " Elif",
+          "start": 0.0,
+          "end": 0.4,
+          "probability": 0.82421875
+        },
+        {
+          "word": " gaat",
+          "start": 0.4,
+          "end": 0.58,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " meestal",
+          "start": 0.58,
+          "end": 1.06,
+          "probability": 0.99609375
+        },
+        {
+          "word": " met",
+          "start": 1.06,
+          "end": 1.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.22,
+          "end": 1.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " fiets",
+          "start": 1.34,
+          "end": 1.62,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 1.62,
+          "end": 1.78,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " haar",
+          "start": 1.78,
+          "end": 1.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werk.",
+          "start": 1.96,
+          "end": 2.28,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.54,
+      "end": 6.86,
+      "text": " Op woensdagochtend staat haar fiets bij de fietsenmaker omdat de rem kapot is.",
+      "tokens": [
+        50506,
+        12011,
+        6020,
+        694,
+        67,
+        6442,
+        4701,
+        521,
+        28836,
+        39371,
+        15848,
+        1385,
+        10317,
+        368,
+        15848,
+        1385,
+        268,
+        18821,
+        34982,
+        368,
+        890,
+        13816,
+        310,
+        307,
+        13,
+        50709
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 2.54,
+          "end": 2.94,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " woensdagochtend",
+          "start": 2.94,
+          "end": 3.82,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " staat",
+          "start": 3.82,
+          "end": 4.06,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " haar",
+          "start": 4.06,
+          "end": 4.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " fiets",
+          "start": 4.22,
+          "end": 4.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 4.5,
+          "end": 4.64,
+          "probability": 0.994140625
+        },
+        {
+          "word": " de",
+          "start": 4.64,
+          "end": 4.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " fietsenmaker",
+          "start": 4.78,
+          "end": 5.48,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " omdat",
+          "start": 5.48,
+          "end": 5.8,
+          "probability": 0.76416015625
+        },
+        {
+          "word": " de",
+          "start": 5.8,
+          "end": 5.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " rem",
+          "start": 5.98,
+          "end": 6.22,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kapot",
+          "start": 6.22,
+          "end": 6.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is.",
+          "start": 6.6,
+          "end": 6.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.12,
+      "end": 8.32,
+      "text": " Het regent ook hard.",
+      "tokens": [
+        50734,
+        12045,
+        1121,
+        317,
+        7839,
+        1152,
+        13,
+        50782
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 7.12,
+          "end": 7.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " regent",
+          "start": 7.5,
+          "end": 7.9,
+          "probability": 1.0
+        },
+        {
+          "word": " ook",
+          "start": 7.9,
+          "end": 8.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hard.",
+          "start": 8.04,
+          "end": 8.32,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.66,
+      "end": 10.34,
+      "text": " Daarom neemt Elif bus 12.",
+      "tokens": [
+        50806,
+        29883,
+        298,
+        408,
+        443,
+        83,
+        2699,
+        351,
+        1255,
+        2272,
+        13,
+        50890
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 8.66,
+          "end": 9.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " neemt",
+          "start": 9.22,
+          "end": 9.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Elif",
+          "start": 9.46,
+          "end": 9.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bus",
+          "start": 9.82,
+          "end": 10.06,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " 12.",
+          "start": 10.06,
+          "end": 10.34,
+          "probability": 0.9853515625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 10.8,
+      "end": 15.06,
+      "text": " De bus vertrekt om 7.40 en komt om 8.05 aan.",
+      "tokens": [
+        50921,
+        1346,
+        1255,
+        1306,
+        3599,
+        2320,
+        3406,
+        1614,
+        13,
+        5254,
+        465,
+        27760,
+        3406,
+        1649,
+        13,
+        13328,
+        9904,
+        13,
+        51122
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 10.8,
+          "end": 11.24,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bus",
+          "start": 11.24,
+          "end": 11.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertrekt",
+          "start": 11.48,
+          "end": 11.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 11.96,
+          "end": 12.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " 7",
+          "start": 12.16,
+          "end": 12.5,
+          "probability": 0.91015625
+        },
+        {
+          "word": ".40",
+          "start": 12.5,
+          "end": 13.02,
+          "probability": 0.666015625
+        },
+        {
+          "word": " en",
+          "start": 13.02,
+          "end": 13.52,
+          "probability": 0.830078125
+        },
+        {
+          "word": " komt",
+          "start": 13.52,
+          "end": 13.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 13.76,
+          "end": 13.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 8",
+          "start": 13.92,
+          "end": 14.2,
+          "probability": 0.9892578125
+        },
+        {
+          "word": ".05",
+          "start": 14.2,
+          "end": 14.66,
+          "probability": 0.8857421875
+        },
+        {
+          "word": " aan.",
+          "start": 14.66,
+          "end": 15.06,
+          "probability": 0.9365234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.5,
+      "end": 18.16,
+      "text": " Elif loopt daarna nog 5 minuten naar haar werk.",
+      "tokens": [
+        51151,
+        2699,
+        351,
+        450,
+        5747,
+        12390,
+        629,
+        9638,
+        1025,
+        923,
+        7886,
+        12762,
+        39371,
+        37585,
+        13,
+        51274
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " Elif",
+          "start": 15.5,
+          "end": 16.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " loopt",
+          "start": 16.02,
+          "end": 16.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " daarna",
+          "start": 16.24,
+          "end": 16.56,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 16.56,
+          "end": 16.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 5",
+          "start": 16.8,
+          "end": 17.1,
+          "probability": 0.580078125
+        },
+        {
+          "word": " minuten",
+          "start": 17.1,
+          "end": 17.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " naar",
+          "start": 17.54,
+          "end": 17.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 17.68,
+          "end": 17.84,
+          "probability": 1.0
+        },
+        {
+          "word": " werk.",
+          "start": 17.84,
+          "end": 18.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.54,
+      "end": 20.44,
+      "text": " Haar dienst begint om 8.30.",
+      "tokens": [
+        51297,
+        4064,
+        289,
+        1026,
+        268,
+        372,
+        4612,
+        686,
+        3406,
+        1649,
+        13,
+        3446,
+        13,
+        51391
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.09223962681634086,
+      "compression_ratio": 1.5260416666666667,
+      "no_speech_prob": 7.329394036137415e-12,
+      "words": [
+        {
+          "word": " Haar",
+          "start": 18.54,
+          "end": 18.8,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " dienst",
+          "start": 18.8,
+          "end": 19.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 19.12,
+          "end": 19.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 19.54,
+          "end": 19.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 8",
+          "start": 19.72,
+          "end": 20.0,
+          "probability": 0.99658203125
+        },
+        {
+          "word": ".30.",
+          "start": 20.0,
+          "end": 20.44,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ],
+  "language": "nl"
+}

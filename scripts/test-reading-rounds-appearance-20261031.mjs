@@ -9,7 +9,7 @@ for(const[name,engine]of Object.entries({chromium,webkit})){
  const browser=await engine.launch();
  try{for(const theme of ['light','dark'])for(const width of [1366,390]){
   const samples=[];
-  for(const base of ['https://klink.taalroute.nl','http://127.0.0.1:18948']){
+  for(const base of ['https://klink.taalroute.nl',process.env.KLINK_TEST_URL||'http://127.0.0.1:18950']){
    const page=await browser.newPage({viewport:{width,height:900},colorScheme:theme});
    await page.emulateMedia({reducedMotion:'reduce'});
    await page.goto(base+'/?reading-appearance=20261031'+route);
@@ -27,5 +27,5 @@ for(const[name,engine]of Object.entries({chromium,webkit})){
   checks.push({engine:name,theme,width,existingPlayerEqualsLive:true});
  }}finally{await browser.close();}
 }
-writeFileSync('docs/leesrondes-a1-a2-20261031/appearance-check.json',JSON.stringify({equal:true,checks,sourceMarkupUnchanged:true,stylesUnchanged:true},null,2)+'\n');
+writeFileSync('docs/leesrondes-audio-20261031/appearance-check.json',JSON.stringify({equal:true,checks,sourceMarkupUnchanged:true,stylesUnchanged:true},null,2)+'\n');
 console.log('PASS',checks.length,'live/local existing-player comparisons on desktop/mobile in light/dark');

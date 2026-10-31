@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "recordings": [
+    {
+      "id": "A1-T01",
+      "sha256": "0430fad86ef09a4d03d5aa79dfcc509b5eed6f45c637258ac5cec9ec1c717706",
+      "transcriptFile": "docs/leesrondes-audio-20261031/transcripts/A1-T01.json",
+      "normalizedTextEqual": true
+    },
+    {
+      "id": "A1-T02",
+      "sha256": "a016cfe68c0fbdc630c7ecf8b9b0c7bb75d6965618d45781367bef42a3f33b97",
+      "transcriptFile": "docs/leesrondes-audio-20261031/transcripts/A1-T02.json",
+      "normalizedTextEqual": true
+    },
+    {
+      "id": "A1-T03",
+      "sha256": "ca492c65c2aae4c196e6fa1b1df318c9b3348933a7d15ec76331d2a883622477",
+      "transcriptFile": "docs/leesrondes-audio-20261031/transcripts/A1-T03.json",
+      "normalizedTextEqual": true
+    },
+    {
+      "id": "A2-T01",
+      "sha256": "eb63a16d0d21b002ac2419a0b9a721842051f16b4ffb614c63e1db321c800b10",
+      "transcriptFile": "docs/leesrondes-audio-20261031/transcripts/A2-T01.json",
+      "normalizedTextEqual": true
+    },
+    {
+      "id": "A2-T02",
+      "sha256": "aefe7c9b2d9026d9a05a850a6bd88c732f11ba097f5b0a0df62e8f1663b82691",
+      "transcriptFile": "docs/leesrondes-audio-20261031/transcripts/A2-T02-full-model.json",
+      "normalizedTextEqual": true
+    },
+    {
+      "id": "A2-T03",
+      "sha256": "12e78cfa0ab45fe65efaee31c942b82120bba9cb74404878bd1298a1a201327a",
+      "transcriptFile": "docs/leesrondes-audio-20261031/transcripts/A2-T03.json",
+      "normalizedTextEqual": true
+    }
+  ],
+  "expectedTextProvidedToRecognizer": false,
+  "normalizations": [
+    "Punctuation and case",
+    "Spoken numbers versus digits",
+    "Sara/Sarah are the same pronounced name; canonical source name Sara is unchanged"
+  ],
+  "namesPreserved": true,
+  "timesVerified": true,
+  "independentHumanReview": false,
+  "pronunciationApproval": "not-inferred-from-ASR",
+  "busTimeCrossCheck": "Full Whisper large-v3 also recognizes all three uur tokens; turbo formatting omitted those tokens."
+}

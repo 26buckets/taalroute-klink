@@ -1,0 +1,266 @@
+{
+  "id": "A1-T01",
+  "model": "whisper-large-v3-turbo",
+  "sha256": "0ccfd5ab360bf6d12ec841688dfbb2c2cbc965eb8a0061e4f6fb485d5e0f2820",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Sarah gaat op maandag naar school. De les begint om 9 uur. Sarah gaat met de bus. Om 8 uur gaat Sarah van huis. In haar tas zit een boek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.88,
+      "text": " Sarah gaat op maandag naar school. De les begint om 9 uur.",
+      "tokens": [
+        50365,
+        9519,
+        17829,
+        999,
+        463,
+        474,
+        559,
+        12762,
+        1395,
+        13,
+        1346,
+        1512,
+        4612,
+        686,
+        3406,
+        1722,
+        344,
+        374,
+        13,
+        50559
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.08939921337625255,
+      "compression_ratio": 1.2685185185185186,
+      "no_speech_prob": 6.7775472734066255e-12,
+      "words": [
+        {
+          "word": " Sarah",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.814453125
+        },
+        {
+          "word": " gaat",
+          "start": 0.34,
+          "end": 0.68,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " op",
+          "start": 0.68,
+          "end": 0.84,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " maandag",
+          "start": 0.84,
+          "end": 1.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 1.32,
+          "end": 1.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " school.",
+          "start": 1.46,
+          "end": 1.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " De",
+          "start": 2.06,
+          "end": 2.4,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " les",
+          "start": 2.4,
+          "end": 2.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " begint",
+          "start": 2.68,
+          "end": 3.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 3.04,
+          "end": 3.18,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " 9",
+          "start": 3.18,
+          "end": 3.46,
+          "probability": 0.87255859375
+        },
+        {
+          "word": " uur.",
+          "start": 3.46,
+          "end": 3.88,
+          "probability": 0.94873046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.2,
+      "end": 9.94,
+      "text": " Sarah gaat met de bus. Om 8 uur gaat Sarah van huis. In haar tas zit een boek.",
+      "tokens": [
+        50586,
+        9519,
+        17829,
+        1131,
+        368,
+        1255,
+        13,
+        9757,
+        1649,
+        344,
+        374,
+        17829,
+        9519,
+        3161,
+        46526,
+        13,
+        682,
+        39371,
+        8023,
+        25013,
+        3881,
+        748,
+        916,
+        13,
+        50862
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.08939921337625255,
+      "compression_ratio": 1.2685185185185186,
+      "no_speech_prob": 6.7775472734066255e-12,
+      "words": [
+        {
+          "word": " Sarah",
+          "start": 4.2,
+          "end": 4.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gaat",
+          "start": 4.74,
+          "end": 5.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " met",
+          "start": 5.04,
+          "end": 5.2,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 5.2,
+          "end": 5.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus.",
+          "start": 5.32,
+          "end": 5.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Om",
+          "start": 6.04,
+          "end": 6.38,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " 8",
+          "start": 6.38,
+          "end": 6.64,
+          "probability": 0.970703125
+        },
+        {
+          "word": " uur",
+          "start": 6.64,
+          "end": 6.96,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " gaat",
+          "start": 6.96,
+          "end": 7.18,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Sarah",
+          "start": 7.18,
+          "end": 7.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " van",
+          "start": 7.54,
+          "end": 7.7,
+          "probability": 1.0
+        },
+        {
+          "word": " huis.",
+          "start": 7.7,
+          "end": 8.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " In",
+          "start": 8.36,
+          "end": 8.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 8.7,
+          "end": 8.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tas",
+          "start": 8.84,
+          "end": 9.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zit",
+          "start": 9.16,
+          "end": 9.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 9.48,
+          "end": 9.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " boek.",
+          "start": 9.62,
+          "end": 9.94,
+          "probability": 1.0
+        }
+      ]
+    }
+  ],
+  "language": "nl"
+}

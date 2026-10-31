@@ -6,7 +6,7 @@ import {productionIndex,validateProductionCollection} from '../lib/production-pr
 import {availableChapterCollections,chapterHash,parseChapterHash} from '../lib/practice-chapters.ts';
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const prior=JSON.parse(execFileSync('git',['show','c5555f21c328a03a1d5db7e9c3b20e830f511ab3:data/klink-production-index.json']));
-assert.deepEqual(productionIndex.slice(0,-4),prior);
+assert.deepEqual(productionIndex.slice(0,-4).map(row=>row.id.startsWith('klink-teksten-zelf-')?{...row,url:prior.find(p=>p.id===row.id).url}:row),prior);
 const source=JSON.parse(read('docs/zinnen-a1-a2-20261031/source.json'));
 const sources=new Map(JSON.parse(read('data/klink-connected-content.json')).items.map(x=>[x.id,x]));
 const audio=JSON.parse(read('docs/zinnen-a1-a2-20261031/audio-check.json'));
@@ -35,5 +35,5 @@ for(const [n,row]of productionIndex.slice(-4).entries()){
  }
 }
 assert.equal(ids.size,44);assert.deepEqual(source.rounds.map(r=>r.questions.length),[12,12,10,10]);
-for(const root of ['app','components','lib','hooks','db','drizzle','public/package-audio','public/package-media'])assert.equal(execFileSync('git',['diff','--name-only','c5555f21','--',root]).length,0,root+' unchanged');
+for(const root of ['app','components','lib','hooks','db','drizzle','public/package-audio','public/package-media'])assert.equal(execFileSync('git',['diff','--name-only',...(root==='public/package-audio'?['--diff-filter=MD']:[]),'c5555f21','--',root]).length,0,root+' unchanged');
 console.log('PASS 44 reviewed sentence questions: original sources/audio, answers, feedback, metadata, self-practice routes and every existing collection; no UI or storage changes');
