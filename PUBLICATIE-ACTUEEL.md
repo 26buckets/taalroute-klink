@@ -1,3 +1,13 @@
+## 1 november 2026 — één titel bij Zo oefen je
+
+Livebron `0c5ed30d9b1703c2c8418387122c248b554dae9d`, schone canonieke main; Worker `71e27af9-3b38-4779-9166-64f1969e662d`. Gewoon gepubliceerd via `npm run deploy` vanaf de laatst goedgekeurde livebasis `e1a13cd1` en dossierbasis `92e78dc8`.
+
+Op de concrete correctie van Nico verschijnt Zo oefen je op Start alleen nog op de uitklapknop. Alleen de binnenste overzichtstitel vervalt; de zelfstandige oefenlijn behoudt zijn titel. De zes stappen, uitlegkaartjes, video’s, bediening en alle overige vormgeving blijven behouden. De enige runtimewijziging is de voorwaarde bij deze ene titel. Inhoud, media, routes, opslag en de vaste luisterplek blijven ongewijzigd.
+
+Lokaal én online slagen twaalf desktop-/mobiel-/licht-/donkercontroles in Chromium/WebKit en 72 uitleginteracties per reeks. Uitklappen met Enter/spatie of aanraken, alle uitlegvensters openen/sluiten, de zelfstandige titel en gelijkblijvende lokale opslag zijn gecontroleerd. Typen, gerichte lint, bouw, acht publicatiebewijstests en de gewone publicatiepoort slagen; de vier live-inhoudskenmerken blijven gelijk. Zware controles lokaal, geen GitHub-workflows. Geen fysieke telefoon getest.
+
+Akkoord, referentie en bron-/onlinecontroles: `docs/klink-owner-release-single-practice-title-20261031.json` en `docs/single-practice-title-20261031/`. Bronherstel en definitief dossier staan volledig teruggelezen en geverifieerd in de bestaande Drive-projectmap `1MA6t7naBAJP-fqlhDIvSBuaw8G4okvZR`; zie `backup.json` en `final-backup.json`. De vastgezette vormgeving is uitsluitend voor deze concrete titelcorrectie aangevuld.
+
 ## 31 oktober 2026 — vaste luisterplek linksboven ín het speelvlak
 
 Livebron `e1a13cd175fed4b235ebb4017b85f3444e214474`, schone canonieke main; Worker `d53c9571-5b4d-46e9-8ce9-af7b612c888c`. Gewoon gepubliceerd via `npm run deploy`, bovenop de werkelijke livebron `7e713d63` en canonieke dossierbasis `093a01a4`.

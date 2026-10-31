@@ -1,0 +1,32 @@
+{
+  "application": "Klink",
+  "publishedOn": "2026-11-01",
+  "sourceCommit": "0c5ed30d9b1703c2c8418387122c248b554dae9d",
+  "workerVersion": "71e27af9-3b38-4779-9166-64f1969e662d",
+  "branch": "main",
+  "sourceClean": true,
+  "baselineSourceCommit": "92e78dc85e137856314818bd28eb72e8288288f2",
+  "previousLiveSource": "e1a13cd175fed4b235ebb4017b85f3444e214474",
+  "scope": "Alleen de herhaalde titel in het uitgeklapte Zo oefen je op Start verwijderen. De knop, zes stappen, uitleg, zelfstandige oefenlijntitel en alle bestaande functies blijven behouden.",
+  "checks": {
+    "localScreens": 12,
+    "onlineScreens": 12,
+    "localExplanations": 72,
+    "onlineExplanations": 72,
+    "types": true,
+    "lint": true,
+    "build": true,
+    "proofTestsPassed": 8,
+    "normalPublicationGate": true,
+    "sourceOnlyExpectedRuntimeChange": true,
+    "fourLiveContentFingerprintsPreserved": true
+  },
+  "physicalPhoneTested": false,
+  "files": {
+    "components/product/practice-line.tsx": "c23499721f87836ad66eee000d28e7bade0116907edd76f223a486597078490b",
+    "scripts/check-listen-playfield-left-release-20261031.mjs": "502c135fb41dc5ac7ecef3fbfdea8ffe35a60f473d05ab7b526d2cebe270897f",
+    "scripts/check-single-practice-title-release-20261031.mjs": "039d8e0581d9b5814a043d14310b711d5dc809d1d021452ebb38084fdea4a75d",
+    "scripts/test-single-practice-title-browser-20261031.mjs": "511cf5ce11cc2fad3934bf8426a9b1fa1c59519df3a91168fd7db161399178b2",
+    "scripts/test-single-practice-title-release-20261031.mjs": "17ef0e8a632d58de792fabe5dbce5ea061873a9920ebdad8e08af8e68bd325db"
+  }
+}
