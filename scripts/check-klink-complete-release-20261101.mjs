@@ -1,3 +1,4 @@
+import {verifyAlfaCNoScrollRelease,readBeforeAlfaCNoScroll} from './check-alfa-c-no-scroll-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -16,6 +17,7 @@ export const completeCoreFiles=[
  'scripts/test-practice-chapters.mjs',
 ];
 export function verifyCompleteRelease(read=readFileSync){
+ const successor=verifyAlfaCNoScrollRelease(read),currentRead=read;read=file=>readBeforeAlfaCNoScroll(file,successor,currentRead);
  const json=file=>JSON.parse(read(file));
  const r=json('docs/klink-owner-release-complete-20261101.json'),request=json(folder+'owner-instruction.json');
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChanged,false);
@@ -27,7 +29,7 @@ export function verifyCompleteRelease(read=readFileSync){
  const clips=plans.flatMap(p=>p.clips);assert.equal(clips.length,807);
  const expected=sort([...completeCoreFiles,...manifest.runtimeFiles,...clips.map(c=>'public'+c.src)]);
  assert.equal(new Set(expected).size,expected.length);
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,expected);assert.deepEqual(r.changedFiles,expected);assert.deepEqual(sort(Object.keys(r.files)),expected);
  for(const file of expected)assert.equal(sha(read(file)),r.files[file],file);
  for(const[file,hash]of Object.entries(r.evidenceFiles))assert.equal(sha(read(file)),hash,file);
@@ -68,6 +70,6 @@ export function verifyCompleteRelease(read=readFileSync){
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);
  assert(backup.indexFullReadback&&backup.parts.length>=4&&backup.parts.every(p=>p.verified&&p.fullReadback&&p.zipIntegrity&&p.driveId&&p.sha256&&p.bytes<104857600));
  assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return r;
+ return {...r,successor};
 }
-export function readBeforeCompleteRelease(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeCompleteRelease(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeAlfaCNoScroll(file,r.successor,read);}

@@ -105,12 +105,6 @@
   .ac-document-player .pilot-footer { padding: 10px; }
   .ac-document-player .pilot-footer > output { font-size: 16px; }
 }
-/* At high zoom/very short heights, allow normal page reflow instead of clipping text. */
-@media (min-width: 1101px) and (max-height: 699px) {
-  .product-root .consistent-layout .ac-document-page { height: auto; }
-  .ac-document-player .cp-exercise-stage { min-height: 460px !important; }
-}
-
 .ac-explanation { min-width: 0; }
 .ac-explanation h3 { margin: 0 0 12px; font-size: 22px; font-weight: 500; }
 .ac-explanation p { margin: 0 0 20px; font-size: 20px; line-height: 1.65; }
@@ -132,6 +126,64 @@
 
 .ac-functional-source { display: grid; gap: 16px; width: 100%; min-width: 0; }
 .ac-online-response { font-size: 20px; line-height: 1.45; }
+.product-root .consistent-layout .ac-document-player.cp-exercise-browser .cp-exercise-stage { height: 100%; min-height: 0; padding: 0; }
+.product-root .consistent-layout .ac-document-player.cp-exercise-browser > .cp-exercise-workspace,
+.product-root .consistent-layout .ac-document-player.cp-exercise-browser .cp-exercise-main { height: 100%; min-height: 0; }
+.product-root .consistent-layout .ac-document-player.cp-exercise-browser > .cp-exercise-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+.ac-support-tools > .cp-exercise-tools { display: contents; }
+.ac-support-tools .cp-listen-slot { order: -1; }
+.ac-support-tools .cp-view-panel { margin-left: auto; order: 1; }
+.ac-panel-viewport { position: relative; min-width: 0; min-height: 0; height: 100%; overflow: hidden; }
+.ac-source-viewport { background: #f0f3f1; }
+.ac-answer-viewport { border-left: 1px solid var(--line, #d4ddda); }
+.ac-page-window { position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; }
+.learner-app .ac-document-player .ac-panel-content { position: absolute; top: 0; left: 0; width: 100%; height: auto; min-height: 0; overflow: visible; border: 0; }
+.learner-app .ac-document-player .ac-panel-content[data-tight] { padding-block: 0; }
+.ac-panel-content[data-tight] > :last-child { margin-bottom: 0; }
+.ac-panel-content .functional-handwriting { max-height: max(48px, calc(var(--ac-panel-height, 360px) - 32px)); object-fit: contain; }
+.ac-panel-content textarea { max-height: max(48px, calc(var(--ac-panel-height, 360px) - 64px)); }
+.ac-page-nav { display: flex; align-items: center; gap: 4px; order: 1; }
+.ac-page-nav > button { width: 48px; height: 48px; min-width: 48px; padding: 0; }
+.ac-page-nav > span { white-space: nowrap; font-size: 16px; }
+.ac-document-player .pilot-footer > .primary-button { order: 2; }
+.ac-document-player .pilot-footer { justify-content: flex-end; }
+.ac-workspace { grid-template-rows: minmax(0, 1fr) auto; }
+.ac-task-feedback { padding: 8px 12px; border-top: 1px solid var(--line); font-size: 17px; line-height: 1.4; }
+.ac-task-feedback:empty { display: none; }
+.ac-online-response fieldset:has(> label) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ac-online-response fieldset:has(> label) > legend { grid-column: 1 / -1; }
+@media (max-width: 1100px) {
+  .product-root .consistent-layout .learner-main:has(.ac-document-page) { padding-bottom: 68px; overflow: hidden; }
+  .product-root .consistent-layout .ac-document-page { height: calc(var(--klink-app-height) - 68px); min-height: 0; }
+  .learner-app .ac-document-player .cp-exercise-main { min-height: 0; }
+  .ac-document-player .ac-support-tools { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 8px; }
+  .ac-support-tools > .cp-exercise-tools { display: flex; flex: 0 0 100%; order: -1; justify-content: space-between; margin: 0; position: static; }
+  .ac-support-tools > button { flex: 1; min-height: 48px; }
+  .learner-app .ac-workspace { height: 100%; grid-template-rows: auto minmax(0, 1fr) auto; }
+  .ac-workspace-panels { min-height: 0; }
+  .ac-source-panel, .ac-answer-panel { height: 100%; min-height: 0; padding: 8px; overflow: auto; }
+  .ac-workspace[data-mobile-view="source"] .ac-answer-viewport, .ac-workspace[data-mobile-view="answer"] .ac-source-viewport { display: none; }
+  .ac-document-player:has(.ac-workspace[data-mobile-view="source"]) .ac-page-nav[data-panel="answer"], .ac-document-player:has(.ac-workspace[data-mobile-view="answer"]) .ac-page-nav[data-panel="source"] { display: none; }
+  .ac-page-name { display: none; }
+  .ac-answer-viewport { border: 0; }
+  .ac-document-paper { padding: 12px; }
+  .ac-document-line + .ac-document-line { margin-top: 4px; }
+  .ac-answer-panel .functional-choice-grid button { min-height: 48px; padding-block: 6px; }
+  .ac-document-player .pilot-footer > .secondary-button { min-width: 48px; width: 48px; padding: 0; font-size: 0; }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  .ac-support-tools > .cp-exercise-tools { display: contents; }
+}
+@media (max-height: 700px) {
+  body:has(.learner-app.consistent-layout .ac-document-page) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }
+  body:has(.learner-app.consistent-layout .ac-document-page) > .taalroute-header,
+  .product-root .learner-app.consistent-layout:has(.ac-document-page) > .learner-nav { display: none; }
+  .product-root .learner-app.consistent-layout:has(.ac-document-page), .product-root .learner-app.consistent-layout.is-collapsed:has(.ac-document-page) { grid-template-columns: minmax(0, 1fr); }
+  .product-root .consistent-layout .learner-main:has(.ac-document-page), .product-root .consistent-layout .ac-document-page { height: 100dvh; padding-bottom: 0; }
+  .product-root .consistent-layout .ac-document-page > .cp-context-header { position: absolute; top: 8px; left: 12px; width: 48px; min-height: 48px; height: 48px; padding: 0; grid-template-columns: 48px; grid-template-rows: 48px; }
+  .ac-document-page > .cp-context-header > :not(button):not(a) { display: none; }
+  .learner-app .ac-document-player .pilot-head { padding-left: 64px; }
+}
 @media (min-width: 1101px) and (min-height: 700px) {
   .functional-player .ac-source-panel, .functional-player .ac-answer-panel { overflow-y: auto; min-height: 0; }
   .functional-player .ac-source-panel { align-items: safe center; }

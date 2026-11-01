@@ -4,6 +4,7 @@ import { useState, type ReactNode } from 'react';
 import { Check, FileText } from 'lucide-react';
 import Image from './compact-image';
 import './alfa-c-workspace.css';
+import { AlfaCPanel } from './alfa-c-panel';
 
 type Document = { id?: string; title?: string; text: string };
 function documentKind({ id = '', title = '', text }: Document) {
@@ -47,10 +48,11 @@ export function DocumentSet({ documents }: { documents: Document[] }) {
   </div>;
 }
 
-export function AlfaCWorkspace({ source, supportOpen = false, children }: { source: ReactNode; supportOpen?: boolean; children: ReactNode }) {
+export function AlfaCWorkspace({ source, supportOpen = false, feedback, children }: { source: ReactNode; supportOpen?: boolean; feedback?: ReactNode; children: ReactNode }) {
   const [view, setView] = useState<'source' | 'answer'>('source');
   return <div className="ac-workspace" data-mobile-view={supportOpen ? 'answer' : view}>
     <nav className="ac-panel-switch" aria-label="Tekst of opdracht"><button className="secondary-button" aria-pressed={!supportOpen && view === 'source'} onClick={() => setView('source')} disabled={supportOpen}><FileText />Tekst</button><button className="secondary-button" aria-pressed={supportOpen || view === 'answer'} onClick={() => setView('answer')}><Check />Opdracht</button></nav>
-    <div className="ac-workspace-panels"><div className="ac-source-panel">{source}</div><div className="ac-answer-panel">{children}</div></div>
+    <div className="ac-workspace-panels"><AlfaCPanel kind="source">{source}</AlfaCPanel><AlfaCPanel kind="answer">{children}</AlfaCPanel></div>
+    {feedback}
   </div>;
 }
