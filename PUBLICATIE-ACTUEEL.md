@@ -1,3 +1,15 @@
+## Actuele publicatie — eerste twintig schrijfoefeningen — 1 november 2026
+
+Livebron `780d798ba604114c5be5828aa89c2932ef45faac`; Worker `516d853f-5e16-481f-935c-278d74f8986f`. Via de gewone `npm run deploy` gepubliceerd vanaf schone canonieke main, als afstammeling van de goedgekeurde livebron `4612b27eebe2ef45c6d806ed18df09f7e8f1e934`. De nieuwste synoniemenreview, laadanimatie en overige gepubliceerde functies blijven behouden.
+
+Schrijven > Typ na > Alfa C > Met de docent bevat Woorden en korte zinnen · 1: KSW-AC-TN-001–020. Het model blijft zichtbaar. Letters, interne spaties, hoofdletters en leestekens worden exact vergeleken; buitenste invoerspaties mogen verschillen. De bestaande spelers en hun beoordeling blijven behouden. Bron-IDs, oude collecties, media, routes, opslag en opmaak blijven behouden. Geen nieuwe audio of beelden.
+
+Lokaal slagen 22 bron-/antwoordproeven, 10 positieve/negatieve vrijgaveproeven, 240 oefenstromen, 8 vergelijkingen met de eerdere live-speler en 16 gesloten/open-toetsenbordlay-outs in Chromium/WebKit, drie schermmaten en licht/donker. Online slagen opnieuw 240 oefenstromen en 16 toetsenbordlay-outs; het daadwerkelijk aangeboden JSON-bestand is bytegelijk. Typecheck, gerichte lint, bouw en de volledige vaste publicatiepoort slagen. Alle zware controles lokaal; geen GitHub-workflows toegevoegd.
+
+De actuele native bron is teruggelezen: de 20 JSON-bronrecords zijn ongewijzigd. In het aanvullende algemene batchcontract staat ook een exacte eerste verschilpositie in de foutfeedback. Die aanvulling ontbreekt nog in deze eerste publicatie en wordt brongebonden toegevoegd in de vervolgrelease met de volgende kopieerrondes. De bestaande exacte beoordeling en individuele hints werken. Menselijke NT2-review en cursistenpilot zijn niet uitgevoerd; Nico's automatische eigenaars- en publicatieakkoord is brongebonden vastgelegd. Geen fysieke telefoon of native schermtoetsenbord getest.
+
+Akkoord en controles: `docs/klink-owner-release-writing-copy-20261101.json`, `docs/writing-copy-20261101/`. Bron-, online- en herstelbestanden zijn in de bestaande Drive-projectmap opgeslagen en volledig teruggelezen; alle 70 manifestbestanden en ZIP-integriteit zijn gecontroleerd. Zie `final-backup.json`.
+
 ## Actuele publicatie — onafhankelijke taalreview Synoniemen — 1 november 2026
 
 Livebron `4612b27eebe2ef45c6d806ed18df09f7e8f1e934`; Worker `4f6a9042-fb44-4ec6-8aa5-4b826125ecb0`. Normaal gepubliceerd via `npm run deploy` vanaf schone canonieke main, als afstammeling van de goedgekeurde en inmiddels live openingsanimatie `6dd42a5df6ed0fb29a2a0c0922cc67b24a2ace36`. De eerdere cursistinfo, het officiële logo, de loader, overige inhoud, audio, routes, opslag en vormgevingsvloer blijven behouden.
