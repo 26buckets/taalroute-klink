@@ -514,3 +514,21 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
 .learner-app .cp-instruction-example h4 { font-size: inherit; line-height: inherit; font-weight: 500; }
 .learner-app .cp-instruction-example ul { padding-left: 1.25em; list-style: disc; }
 .learner-app .cp-instruction-example li + li { margin-top: 8px; }
+
+/* Nico's local approval: visually separate the existing long instructions and spelling steps. */
+.learner-app .cp-instruction-example section { padding: 16px; border-radius: var(--radius); }
+.learner-app .cp-instruction-context { background: var(--canvas); }
+.learner-app .cp-instruction-step { background: var(--primary-soft); }
+.learner-app .cp-instruction-application { background: var(--canvas); border-top: 2px solid var(--line-strong); }
+.learner-app .cp-instruction-step h4 { display: flex; align-items: flex-start; gap: 12px; }
+.learner-app .cp-instruction-step h4 > :last-child { min-width: 0; }
+.learner-app .cp-instruction-number { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--primary); color: #fff; font-size: 20px; font-weight: 500; line-height: 1; }
+.learner-app .cp-guided-instructions { display: grid; gap: 12px; padding: 0; list-style: none; }
+.learner-app .cp-guided-instructions li { display: flex; align-items: flex-start; gap: 12px; margin: 0; padding: 16px; border-radius: var(--radius); background: var(--primary-soft); }
+@media (max-width: 480px) {
+ .learner-app .cp-instruction-example section, .learner-app .cp-guided-instructions li { padding: 12px; }
+}
+
+@media (max-width: 820px) {
+ .learner-app .cp-teacher-workflow:has(> .cp-guided-instructions) > :is(.cp-workflow-controls, .cp-guided-instructions, .cp-workflow-source) { grid-column: 1 / -1; min-width: 0; }
+}

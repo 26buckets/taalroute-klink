@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-01",
+  "localOnly": true,
+  "grammarExercises": 89,
+  "spellingExercises": 32,
+  "grammarSourceWordChecks": 89,
+  "unitTests": {
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0
+  },
+  "afterMobileFixFocusedTests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "browserScenarios": {
+    "representativeLessons": 8,
+    "cases": 96,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "widths": [
+      1366,
+      390,
+      320
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "pageErrors": 0,
+    "mobileSpellingSourceFullWidth": true
+  },
+  "existingExampleChecks": 12,
+  "unchangedHomePixelComparisons": 4,
+  "types": "passed",
+  "targetedLint": "passed",
+  "build": "passed",
+  "unchanged": [
+    "source banks",
+    "audio and images",
+    "answers and progress formats",
+    "canonical appearance floor",
+    "publication safeguards",
+    "GitHub workflows"
+  ],
+  "visualReview": [
+    "B1 grammar desktop and mobile",
+    "A2 spelling 390px after full-width repair"
+  ],
+  "limitations": [
+    "No physical telephone",
+    "No screen reader trial",
+    "No learner focus or learning-effect study",
+    "No substantive text shortening"
+  ],
+  "publication": false,
+  "codeReview": "Small synchronous formatting function; explicit numbering validated; original text retained; fallback rendering for other sources; semantic headings and lists; no extra dependencies or storage.",
+  "files": [
+    {
+      "path": "app/learner-layout.css",
+      "sha256": "d99c206432ca1d0ae1a5d7b81cb4657e797d14907b1c4d72a3875773fb4c5e43"
+    },
+    {
+      "path": "components/product/grammar-instruction-example.tsx",
+      "sha256": "452740c134749e66e0b579bd7d91627479981c5f72f8a60546b1ab2f6ad3feae"
+    },
+    {
+      "path": "components/product/imported-teacher-workflow.tsx",
+      "sha256": "e0afc31ec104495f7f46d69e57c3ff82cb22655637af8d19d587b07d1fac07ba"
+    },
+    {
+      "path": "docs/instruction-local-20261101/layout-addition.css",
+      "sha256": "f1fbee77c6fb2c9376ebe1cd2e03cb938f6d4fff9f09135fd426014bd73b78c3"
+    },
+    {
+      "path": "scripts/test-instruction-example.mjs",
+      "sha256": "63f47876268d33bf9ec66191dbdbbe18cbd0e7d1ba45c9bf16755a368a04e674"
+    },
+    {
+      "path": "scripts/test-instruction-layout-browser.mjs",
+      "sha256": "a1b746e3edd03c798321b50be6915772a045618155f41713a5c1570fe2175d93"
+    },
+    {
+      "path": "scripts/test-word-use.mjs",
+      "sha256": "24d3be933ac2f8ed3e3dfc4248a30dda31a6e4b1f60c270c93a26370006368fe"
+    }
+  ]
+}

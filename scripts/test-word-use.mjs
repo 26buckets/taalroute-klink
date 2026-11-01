@@ -70,7 +70,7 @@ function readPreservedAppearance(file) {
  const current=readFileSync(file);
  if(file!=='app/learner-layout.css')return current;
  const addition=readFileSync('docs/instruction-local-20261101/layout-addition.css');
- assert.equal(createHash('sha256').update(addition).digest('hex'),'f28371faa8fc19a8ac899c2daf42059b080189b91d0489185498a93c0337df07');
+ assert.equal(createHash('sha256').update(addition).digest('hex'),'f1fbee77c6fb2c9376ebe1cd2e03cb938f6d4fff9f09135fd426014bd73b78c3');
  assert(current.subarray(-addition.length).equals(addition));
  return current.subarray(0,current.length-addition.length);
 }
