@@ -1,0 +1,79 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [],
+  "errors": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "same-word",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "same-word",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "text-question",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "activity": "same-word",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "text-question",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "activity": "same-word",
+      "error": "page.waitForFunction: Timeout 15000ms exceeded."
+    }
+  ],
+  "physicalPhoneTested": false
+}

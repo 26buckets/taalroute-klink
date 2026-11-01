@@ -28,6 +28,7 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
     const selectedAnswer = target.closest('.cp-choice-grid button[aria-pressed="true"], .cp-evidence-options button[aria-pressed="true"], .cp-large-options button[aria-pressed="true"]');
     const confirmAnswer = event.key === 'Enter' && (selectedAnswer || (item ?? root).dataset.practiceReady === 'true' && (input || target.closest('[data-practice-check]')));
     const button = target.closest('button, a, summary, [role="button"]');
+    root.dataset.practiceFocusNext = event.key === ' ' && (!button || selectedAnswer) ? 'false' : 'true';
     // Keep native button activation, except replaying audio from a selected answer.
     if (!confirmAnswer && button && (event.key === 'Enter' || event.key === ' ' && !selectedAnswer)) return;
     if (!confirmAnswer && input?.form) return;
@@ -77,5 +78,8 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
     document.addEventListener('keydown', keyFromPage);
     return () => document.removeEventListener('keydown', keyFromPage);
   }, [onKeyDownCapture]);
-  return { ref, onKeyDownCapture };
+  return { ref, onKeyDownCapture, onPointerDownCapture: () => {
+    // A mouse or touch answer must not inherit an earlier keyboard focus move.
+    if (ref.current) delete ref.current.dataset.practiceFocusNext;
+  } };
 }
