@@ -6,7 +6,8 @@ import {createHash} from 'node:crypto';
 export const instructionCandidateFile='docs/instruction-integration-20261101/prepared.json';
 const base='b670d0c1337eea07e96662237de4b9508de9735c';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
-const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
+const sourceCache=new Map();
+const git=(...args)=>{if(args[0]!=='show')return execFileSync('git',args,{maxBuffer:128e6});const key=args.join('\0');if(!sourceCache.has(key))sourceCache.set(key,execFileSync('git',args,{maxBuffer:128e6}));return Buffer.from(sourceCache.get(key));};
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.toSorted();
 const snapshots=new Map();
@@ -22,7 +23,25 @@ function grammarBefore(file,scope){
 }
 const alfaScopeFile='docs/grammar-alfa-b1-20261101/scope.json';
 const alfaScopeHash='bfb03db9da8d5c5cb0cd47f32f1fe5083e56fea1fe572e5f3f549f2a2d785bd0';
+const integrationFile='docs/grammar-live-integration-20261101/scope.json';
+const integrationHash='686da86a949fa6ee732026ba99129420d82a0e31a2a29c22aded3d7f44dc080c';
+function verifyIntegration(read){
+ const bytes=read(integrationFile);assert.equal(sha(bytes),integrationHash,'Only the reviewed local merge is allowed');
+ const r=JSON.parse(bytes);
+ assert.equal(r.liveSourceCommit,'be7d78289945084612b20a0aa3058bb7730a43a5');
+ assert.equal(r.previousCandidate,'f16073e9');
+ assert.equal(r.localOnly,true);assert.equal(r.publicationApproved,false);assert.equal(r.productionBatch,false);
+ for(const revision of [r.liveSourceCommit,r.previousCandidate])git('merge-base','--is-ancestor',revision,'HEAD');
+ const changed=sort([...new Set([...lines(git('diff','--name-only',r.liveSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ assert.deepEqual(changed,sort([...Object.keys(r.files),'scripts/check-instruction-candidate.mjs']),'Every local merge change must be accounted for');
+ for(const[file,hash]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),hash,file);
+ for(const[file,hash]of Object.entries(r.liveFingerprints))assert.equal(sha(git('show',r.liveSourceCommit+':'+file)),hash,file);
+ return r;
+}
 export function verifyInstructionCandidate(read=readFileSync){
+ const integration=verifyIntegration(read);
+ // Validate the previously frozen local scopes at their original source after checking every merged byte.
+ read=file=>git('show',integration.previousCandidate+':'+file);
  const currentRead=read,alfaBytes=read(alfaScopeFile);
  assert.equal(sha(alfaBytes),alfaScopeHash,'Only the authorized Alfa/B1 local rehearsal is allowed');
  const alfa=JSON.parse(alfaBytes);
@@ -48,7 +67,7 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(r.localOnly,true);assert.equal(r.publicationApproved,false,'This preparation grants no publication authority');
  assert.equal(r.userRequest,'Voeg deze correcties samen met de nieuwste livebasis en los de resterende testafwijkingen en vrijgavepunten veilig op. Behoud deze opmaak, test alles lokaal en publiceer nog niets.');
  git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,integration.previousCandidate,'--',...roots)));
  assert.deepEqual(changed,sort([...new Set([...Object.keys(r.files),...grammar.releaseFiles,...alfa.releaseFiles])]),'Every changed or untracked release file must be accounted for');
  const instructionChanges=Object.keys(r.files);
  for(const [file,hash]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),hash,file);
@@ -75,8 +94,9 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(periods,2);
  for(const[file,data]of restored)assert.deepEqual(data,JSON.parse(instructionBaseline(file)),'All other source fields remain unchanged: '+file);
  for(const f of JSON.parse(read('docs/instruction-local-20261101/scope.json')).files.filter(f=>f.path.endsWith('.pdf')))assert.equal(sha(read(f.path)),f.afterSha256);
- return {...r,grammarExtension:grammar,alfaExtension:alfa};
+ return {...r,grammarExtension:grammar,alfaExtension:alfa,integration};
 }
 export function readBeforeInstructionCandidate(file,proof,read=readFileSync){
+ if(proof?.integration)return Object.hasOwn(proof.integration.liveFiles,file)?git('show',proof.integration.liveSourceCommit+':'+file):read(file);
  return proof&&Object.hasOwn(proof.files,file)?instructionBaseline(file):proof?.grammarExtension?.files[file]?.before?grammarBefore(file,proof.grammarExtension):proof?.alfaExtension?.files[file]?.before?grammarBefore(file,proof.alfaExtension):read(file);
 }
