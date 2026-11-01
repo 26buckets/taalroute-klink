@@ -761,7 +761,7 @@ function Workspace({
         !search.get('correction') &&
         !search.get('general') ? (
         <>
-          <Link href={go('observeren') + '&general=1'}>
+          <Link prefetch={false} href={go('observeren') + '&general=1'}>
             Algemene vaardigheidsobservatie
           </Link>
           <SourceObservationForm

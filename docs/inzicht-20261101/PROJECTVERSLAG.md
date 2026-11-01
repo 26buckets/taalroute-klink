@@ -83,3 +83,12 @@ Echte accountactivatie/identiteitscontrole, identity lifecycle en herstelbevoegd
 De herstelset is een geteste momentopname van 1 november 2026, 03:46 UTC; latere browserproeven voegen alleen fictieve testrecords toe. Tijdens deze vervolgproef stond upstream main elf commits verder (`9b5ca8c9`), zonder wijzigingen aan Inzicht, Vite-configuratie, packagebestanden of workflows. De reviewbranch blijft op de vastgelegde basis; integratie met de actuele hoofdbranch hoort bij een afzonderlijke mergebeoordeling.
 
 Aanvullende herstelkopie na de volledige proef: 2026-11-01T04:41:23.542Z, checksum `2c79bec36ac3b1e90f0cd62d2d6b417f76d0b15f0c7834e07a24195f90ad7402`. Deze actuele credentialvrije onderwijsset is opnieuw veldgelijk hersteld in SQLite en lokale PostgreSQL. De afzonderlijke D1-hersteltest en Time Travel zijn niet opnieuw uitgevoerd; hun eerdere schema-5-bewijs blijft bij de oude geteste herstelset bewaard. Het nieuwe pakket bevat beide duidelijk gescheiden sets. Geen authgeheimen, wachtwoorden of herstelcodes in Drive.
+
+
+## Visuele uitbreiding — aansluitend op 8744afab, 1 november 2026
+
+De oorspronkelijke Woord/Zin/Tekst-observatie en drie interactieve rapportages zijn nu daadwerkelijk in de reviewcode opgenomen: individuele observatieontwikkeling met echte geregistreerde lesuren, strikt vergelijkbare groepsverdelingen en brongebonden landelijke doeloriëntatie zonder fictieve normen. Zie `VISUELE-RAPPORTAGES.md` voor bronherkomst, precieze statistiek, toepassingsgrenzen en herhaalbare controles.
+
+Deze uitbreiding is gerebased op `8744afab`; de snelheids-, authenticatie- en quotumreparaties blijven behouden. De gecombineerde suite slaagt met 90 tests; daarnaast zijn Chromium/WebKit, PDF, Klink+Docent en herstel lokaal gecontroleerd. Bronrevisies en aanwezigheidsrevisies komen in additieve migraties 0006/0007. MFA-migratie 0004 en retry-migratie 0005 blijven ongewijzigd.
+
+**Nog niet online:** de D1-dagschrijflimiet blokkeert de bestaande staging. Schema blijft daar 5. De bronobservaties en rapportages zijn niet gedeployed; ook de laatste parallelle quotumfoutafhandeling is volgens het snelheidsverslag nog niet gedeployed. Geen migratie-/deploybeveiliging omzeild. Het nieuwe Drive-pakket bevat de actuele toepasbare codepatch en lokale testbewijzen, geen ruwe databaseback-up of geheimen. Definitieve review- en bouwstatus: `evidence/visual/release.json`. De oudere deployment- en acceptatiebewijzen hierboven blijven historische snapshots; zij bewijzen niet de online werking van deze nieuwe uitbreiding.
