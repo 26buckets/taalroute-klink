@@ -1,0 +1,38 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_v4",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "newInstructionAudio": false,
+  "settings": {
+    "speed": 1,
+    "stability": 0.5,
+    "similarity_boost": 0.75
+  },
+  "existingAudio": "Alle acht oorspronkelijke Remko-opnamen en alle overige bestaande bestanden blijven bytegelijk. Vier andere antwoorden gebruiken bestaande woordaudio. Versnellen hergebruikt SW059.",
+  "newRecordings": [
+    {
+      "id": "SC001",
+      "text": "zeggen dat iets niet waar is",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko",
+      "role": "target",
+      "src": "/package-audio/synoniemen-context-20261101/SC001.mp3"
+    },
+    {
+      "id": "SC002",
+      "text": "zeggen dat iemand ongelijk heeft",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "voiceName": "Roos",
+      "role": "target",
+      "src": "/package-audio/synoniemen-context-20261101/SC002.mp3"
+    },
+    {
+      "id": "SC003",
+      "text": "sneller maken",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko",
+      "role": "target",
+      "src": "/package-audio/synoniemen-context-20261101/SC003.mp3"
+    }
+  ]
+}

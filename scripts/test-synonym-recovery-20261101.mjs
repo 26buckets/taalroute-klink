@@ -13,8 +13,8 @@ const baseline=JSON.parse(execFileSync('git',['show','87a3a2ba3854f2fe11e1255f29
 test('seven new questions preserve the original 210 records, all IDs and all A1/A2 availability',()=>{
  assert.deepEqual(synonymBank.entries.slice(0,210),baseline.entries);
  assert.deepEqual({...synonymBank,entries:baseline.entries},baseline);
- assert.equal(synonymBank.entries.length,217);assert.equal(synonymBank.entries.filter(e=>e.active).length,192);
- for(const [level,n]of [['a1',16],['a2',59],['b1',192]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
+ assert.equal(synonymBank.entries.length,225);assert.equal(synonymBank.entries.filter(e=>e.active).length,200);
+ for(const [level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
  assert.equal(review.recovered.length,7);assert.equal(review.retained.length,8);
  assert.equal(new Set([...review.recovered.map(r=>r.recordingWord),...review.retained.map(r=>r.word)]).size,15);
 });
@@ -37,13 +37,15 @@ test('all seven questions reverse, mix, turn and play their exact word in both d
   }
  }
  assert.equal(seen,7);
- const active=new Set(synonymBank.entries.filter(e=>e.active).flatMap(e=>[e.word,e.synonym]));
+ const active=new Set(synonymBank.entries.slice(0,217).filter(e=>e.active).flatMap(e=>[e.word,e.synonym]));
  for(const r of review.retained)assert(!active.has(r.word),r.word);
 });
 
 test('all existing bindings remain and one female ElevenLabs counterpart has actual Taalroute metadata',()=>{
  const old=JSON.parse(execFileSync('git',['show','87a3a2ba3854f2fe11e1255f29ebf5d0017d042a:data/klink-synonym-audio.json']));
- const audio=JSON.parse(readFileSync('data/klink-synonym-audio.json'));
+ const current=JSON.parse(readFileSync('data/klink-synonym-audio.json'));
+ const released=JSON.parse(execFileSync('git',['show','12715486542e6aa766862a8068cd4ce65294ed28:data/klink-synonym-audio.json']));
+ const audio=Object.fromEntries(Object.entries(current).filter(([key])=>key in released));
  for(const[k,v]of Object.entries(old))assert.deepEqual(audio[k],v);
  assert.deepEqual(Object.keys(audio).filter(k=>!(k in old)),['synonym-word:bestedingen']);
  const c=JSON.parse(readFileSync(folder+'/audio.json'));assert.equal(c.provider,'ElevenLabs');assert.equal(c.voiceId,'7qdUFMklKPaaAVMsBTBt');assert.equal(c.humanListeningReview,'open');assert(c.audioPacketsUnchanged);

@@ -34,8 +34,9 @@ export function synonymExercises(pack: { exercises: PackageExercise[] }, activit
     const entry = entriesById.get(typeof exercise.synonymPairId === 'string' ? exercise.synonymPairId : exercise.exerciseId);
     if (!entry) return [];
     const word = reverse ? entry.synonym : entry.word, synonym = reverse ? entry.word : entry.synonym;
+    const context = 'context' in entry ? reverse ? entry.reverseContext : entry.context : undefined;
     const base = { ...exercise, synonymPairId: entry.id, exerciseId: `${entry.id}${reverse ? ':reverse' : ''}`, groupActivity: activity,
-      prompt: { text: word }, objective: `synonyms:${word}`, correctFeedback: `${word} betekent bijna hetzelfde als ${synonym}.` };
+      prompt: { text: word }, ...(context ? { synonymContext: context } : {}), objective: `synonyms:${word}`, correctFeedback: context ? 'Goed, dat past bij deze zin.' : `${word} betekent bijna hetzelfde als ${synonym}.` };
     if (activity === 'cards') return [{ ...base, exerciseId: `${base.exerciseId}:cards`, componentId: 'ALF-CMP-016', mode: 'synonym-card',
       title: 'Bedenk een synoniem. Draai de kaart.', prompt: undefined, options: undefined, answer: undefined,
       cards: [{ cardId: entry.id, front: { text: word }, back: { text: synonym } }],
@@ -46,7 +47,8 @@ export function synonymExercises(pack: { exercises: PackageExercise[] }, activit
     if (activity === 'hear-match' && !src) return [];
     const options = entry.options.map((label, index) => ({ id: String(index), label: label === entry.synonym ? synonym : label }));
     return [{ ...base, componentId: 'KLINK-EXTENDED', mode: 'synonyms',
-      exerciseId: `${base.exerciseId}${src ? ':hear-match' : ''}`, title: src ? 'Luister. Welk woord betekent bijna hetzelfde?' : bank.instruction,
+      exerciseId: `${base.exerciseId}${src ? ':hear-match' : ''}`, title: context ? src ? 'Luister. Wat betekent dit in deze zin?' : 'Wat betekent dit in deze zin?' : src ? 'Luister. Welk woord betekent bijna hetzelfde?' : bank.instruction,
+      ...(context && src ? { synonymContext: context.replace(word, '…') } : {}),
       prompt: src ? { audio: { src } } : { text: word },
       options: seed === 1 ? options : orderedChoices(options, seed + bank.entries.indexOf(entry)),
       answer: { correctOptionIds: [String(entry.options.indexOf(entry.synonym))] },
@@ -71,11 +73,12 @@ export const synonymCollections = [...grouped.values()].flatMap(entries => {
     const title = first.collectionTitle;
     const exercises: PackageExercise[] = selected.map(entry => ({
       exerciseId: entry.id, synonymPairId: entry.id, componentId: 'KLINK-EXTENDED', contractVersion: '1.0',
-      mode: 'synonyms', groupActivity: 'synonyms', title: bank.instruction,
+      mode: 'synonyms', groupActivity: 'synonyms', title: 'context' in entry ? 'Wat betekent dit in deze zin?' : bank.instruction,
+      ...('context' in entry ? { synonymContext: entry.context } : {}),
       prompt: { text: entry.word }, vocabularyLevels: entry.levels,
       options: entry.options.map((label, index) => ({ id: String(index), label })),
       answer: { correctOptionIds: [String(entry.options.indexOf(entry.synonym))] },
-      correctFeedback: `${entry.word} betekent bijna hetzelfde als ${entry.synonym}.`,
+      correctFeedback: 'context' in entry ? 'Goed, dat past bij deze zin.' : `${entry.word} betekent bijna hetzelfde als ${entry.synonym}.`,
       feedback: 'Dat woord betekent iets anders. Probeer opnieuw.',
       objective: `synonyms:${entry.word}`, phase: 'recall', assessment: 'answer',
       requiresAudio: false, manualAdvance: true, reviewEligible: true,

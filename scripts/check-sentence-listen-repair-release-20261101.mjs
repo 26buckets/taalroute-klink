@@ -1,3 +1,4 @@
+import {verifySynonymContextRelease,readBeforeSynonymContext} from './check-synonym-context-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,13 +9,14 @@ const roots=['app','components','hooks','data','lib','public','scripts','db','dr
 const allowed=['app/learner-layout.css','components/product/package-exercise-browser.tsx','scripts/check-synonym-recovery-release-20261101.mjs','scripts/check-sentence-listen-repair-release-20261101.mjs','scripts/test-sentence-listen-repair-release-20261101.mjs','scripts/test-sentence-listen-repair-browser-20261101.mjs'].sort((a,b)=>a.localeCompare(b));
 const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifySentenceListenRepairRelease(read=readFileSync){
+ const successor=verifySynonymContextRelease(read);const readCurrent=read;read=file=>readBeforeSynonymContext(file,successor,readCurrent);
  const r=JSON.parse(read('docs/klink-owner-release-sentence-listen-repair-20261101.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChangeApproved,true);
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,'12715486542e6aa766862a8068cd4ce65294ed28');assert(r.userRequest.includes('Zorg dat die even groot zijn'));
  git('merge-base','--is-ancestor',r.liveSourceCommit,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=[...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
+ const changed=lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)).sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,allowed);assert.deepEqual(r.changedFiles,allowed);assert.deepEqual(Object.keys(r.files).sort((a,b)=>a.localeCompare(b)),allowed);for(const file of allowed)assert.equal(sha(read(file)),r.files[file],file);
- assert.equal(git('diff','--name-only',base,'--','data','lib','public','hooks','db','drizzle','.github','package.json','package-lock.json','wrangler.jsonc').length,0,'All content, recordings, identifiers and storage stay unchanged');
+ assert.equal(git('diff','--name-only',base,successor.baselineSourceCommit,'--','data','lib','public','hooks','db','drizzle','.github','package.json','package-lock.json','wrangler.jsonc').length,0,'All content, recordings, identifiers and storage stay unchanged');
  const floor=JSON.parse(read('docs/appearance-floor-20261031/floor.json')),old=JSON.parse(git('show',base+':docs/appearance-floor-20261031/floor.json'));
  assert.deepEqual({...floor,approvedUpdates:old.approvedUpdates},old);assert.deepEqual(floor.approvedUpdates,[...old.approvedUpdates,r.approval]);
  const approval=JSON.parse(read(r.approval));assert.equal(approval.userRequest,r.userRequest);assert.deepEqual(approval.files,r.files);
@@ -23,6 +25,6 @@ export function verifySentenceListenRepairRelease(read=readFileSync){
  const keys=JSON.parse(read(folder+'keyboard-checks.json'));assert.equal(keys.forms,58);assert.equal(keys.checks.length,466);assert.deepEqual(keys.errors,[]);
  const review=JSON.parse(read(folder+'review.json'));for(const key of['contentPreserved','audioBytesPreserved','progressPreserved','nativePlayback','blockedAutoplay','realFailureRetry','mobileTouch','keyboard','lightDark','latestSynonymsPreserved','types','lint','curriculum','localOnly'])assert.equal(review[key],true,key);
  const backup=JSON.parse(read(folder+'backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);
- return r;
+ return {...r,successor};
 }
-export function readBeforeSentenceListenRepair(file,r,read=readFileSync){return r.changedFiles.includes(file)||file==='docs/appearance-floor-20261031/floor.json'?git('show',base+':'+file):read(file);}
+export function readBeforeSentenceListenRepair(file,r,read=readFileSync){return r.changedFiles.includes(file)||file==='docs/appearance-floor-20261031/floor.json'?git('show',base+':'+file):readBeforeSynonymContext(file,r.successor,read);}

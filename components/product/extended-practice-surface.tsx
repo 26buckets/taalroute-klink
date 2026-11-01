@@ -20,8 +20,9 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   const correct = answer.correctOptionIds?.includes(selected);
   const synonyms = exercise.mode === 'synonyms';
   return <section className={`cp-task-card cp-extended-task${synonyms ? ' cp-synonyms-task' : ''}`}>
+    {synonyms && exercise.prompt?.audio?.src && typeof exercise.synonymContext === 'string' && <p className="cp-synonym-context">{exercise.synonymContext}</p>}
     {exercise.mode === 'sound-compare' ? <ExerciseListen label="Luister naar beide woorden" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> :
-      synonyms ? exercise.prompt?.audio?.src ? <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
+      synonyms ? exercise.prompt?.audio?.src ? <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> : typeof exercise.synonymContext === 'string' && exercise.prompt?.text ? <p className="cp-synonym-word cp-synonym-context-card">{exercise.synonymContext.split(exercise.prompt.text)[0]}<strong>{exercise.prompt.text}</strong>{exercise.synonymContext.split(exercise.prompt.text)[1]}</p> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
     {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {

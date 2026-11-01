@@ -565,7 +565,31 @@ html:has(.is-mixed-round) { scroll-padding-bottom: 84px; }
 }
 .learner-app .cp-synonym-round .cp-flash-card strong { font-weight: 500; text-align: center; }
 .learner-app .cp-synonym-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-block: 12px; }
-.learner-app .cp-synonym-controls > output { flex-basis: 100%; font-size: 14px; }
+.learner-app .cp-synonym-context { margin: 0; font-size: clamp(18px, 2vw, 24px); line-height: 1.4; text-align: center; overflow-wrap: anywhere; }
+.learner-app .cp-synonym-context-card { display: block; align-content: center; font-size: clamp(20px, 2.6vw, 28px); font-weight: 400; line-height: 1.4; }
+.learner-app .cp-synonym-context-card strong { font-weight: 500; }
+.cp-chapter-playing:has(.cp-synonym-round) { grid-template-columns: minmax(0, 1fr) auto; padding-bottom: 0; }
+.learner-app .learner-main:has(.cp-chapter-playing .cp-synonym-round) { padding-bottom: 0; }
+.product-root .consistent-layout .cp-chapter-playing:has(.cp-synonym-round) > .cp-context-header { grid-column: 1; }
+.product-root .consistent-layout .cp-chapter-playing:has(.cp-synonym-round) > .cp-page-workspace,
+.cp-chapter-playing .cp-synonym-round { display: contents; }
+.cp-chapter-playing .cp-synonym-round > * { grid-column: 1 / -1; min-width: 0; }
+.learner-app .cp-chapter-playing .cp-synonym-controls { grid-column: 2; grid-row: 1; justify-content: flex-end; margin: 0; padding-right: 16px; }
+.learner-app .cp-synonym-round .cp-exercise-stage > .cp-task-card:is(.cp-synonyms-task, :has(> .cp-flash-card)) { flex: 1 1 0; height: auto; max-height: none; margin-block: 0; gap: 12px; }
+.learner-app .cp-synonym-round .cp-task-card:has(> .cp-synonym-context):has(> .cp-flash-card) { grid-template-rows: auto minmax(0, 1fr) auto auto; }
+.learner-app .cp-synonym-round .cp-task-card:has(> .cp-synonym-context) > .cp-flash-card { height: 100%; max-height: 100%; min-height: 0; aspect-ratio: auto; }
+.learner-app .cp-synonym-round .cp-task-card:has(> .cp-synonym-context) .cp-flash-card strong { font-size: clamp(18px, 3vw, 32px); line-height: 1.25; }
+@media (max-width: 600px) {
+  .cp-synonym-label { display: none; }
+  .learner-app .cp-chapter-playing .cp-synonym-controls { padding-right: 4px; }
+  .learner-app .cp-synonym-controls button { width: 44px; min-width: 44px; height: 44px; padding: 8px; }
+  .learner-app .cp-synonym-round .cp-exercise-menu-bar { padding: 8px 12px; gap: 8px; }
+  .learner-app .cp-synonym-round .cp-exercise-menu-bar > button { padding-inline: 10px; font-size: 14px; }
+  .learner-app .cp-synonym-round .cp-exercise-record-head nav b { min-width: 28px; }
+  .learner-app .cp-synonyms-task .cp-extended-option > button:first-child { min-height: 56px; font-size: 20px; padding: 8px; }
+  .learner-app .cp-synonyms-task:has(.cp-synonym-context, .cp-synonym-context-card) .cp-extended-option > button:first-child { font-size: 18px; line-height: 1.35; }
+  .learner-app .cp-synonym-context-card { padding: 8px; font-size: 20px; }
+}
 .cp-source-proof { border-left: 3px solid #48776c; padding: .75rem; text-align: left; }
 .cp-evidence-options { display: grid; gap: .75rem; width: 100%; }
 .cp-evidence-options button { min-height: 48px; padding: 1rem; text-align: left; border: 1px solid #cbd6d2; border-radius: 12px; background: white; line-height: 1.55; }

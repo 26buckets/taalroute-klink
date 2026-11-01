@@ -1,0 +1,36 @@
+✔ approved view controls preserve content, original storage and media (689.548125ms)
+✔ rejects changed components/product/exercise-view.tsx (335.8675ms)
+✔ rejects changed docs/klink-owner-release-exercise-view-20261101.json (317.589041ms)
+✔ rejects changed docs/exercise-view-20261101/backup.json (452.010625ms)
+✔ approved autoplay repair preserves the latest live content, audio and progress (448.638875ms)
+✔ rejects altered components/product/package-exercise-browser.tsx (60.388167ms)
+✔ rejects altered app/learner-layout.css (179.634833ms)
+✔ rejects altered docs/klink-owner-release-sentence-listen-repair-20261101.json (152.827916ms)
+✔ rejects altered docs/sentence-listen-repair-20261101/backup.json (178.687958ms)
+✔ eight distinct B1 context tasks preserve all 217 earlier records and A1/A2 availability (2.352084ms)
+✔ all eight support reverse, mix, turn and listen without leaking the heard word (1599.627375ms)
+✔ context errors survive reload in the same repeat task and direction; turning cards is not mastery (6.118625ms)
+✔ all existing media and bindings stay unchanged; three exact ElevenLabs phrases have lossless Taalroute metadata (80.012625ms)
+✔ publication requires exact context scope, explicit layout approval and verified recovery backup (454.366083ms)
+✔ seven new questions preserve the original 210 records, all IDs and all A1/A2 availability (2.04325ms)
+✔ all seven questions reverse, mix, turn and play their exact word in both directions (1610.789333ms)
+✔ all existing bindings remain and one female ElevenLabs counterpart has actual Taalroute metadata (31.256792ms)
+✔ publication permits only the approved recovery and rejects missing authorization or backup (1104.705125ms)
+✔ only the 68 missing synonym words are added, with checked brand metadata and the exact target voice (2.322958ms)
+✔ incomplete, mismatched, unbranded and falsely human-approved recordings are rejected (5.117584ms)
+✔ 225 preserved source pairs and 200 active word/context questions have exactly one correct answer and traceable editorial sources (2.766583ms)
+✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (2.386625ms)
+✔ wrong answers become due for repetition, survive reload and retain the exact question (486.933417ms)
+✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (1160.777167ms)
+✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.628458ms)
+✔ corrupt saved mixing preferences fall back safely (0.185125ms)
+✔ meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels (4.089375ms)
+✔ publication rejects reactivated unsafe pairs, missing reviews and false listening claims (29350.672833ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 31476.68675

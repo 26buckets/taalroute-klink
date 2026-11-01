@@ -8,19 +8,20 @@ import { availableChapterCollections, chapterCollections, chapterExerciseChoices
 import { groupExercises } from '../lib/group-practice.ts';
 import { parseLearningReview, updateLearningReview } from '../lib/learning-review.ts';
 
-test('217 preserved source pairs and 192 active word-only questions have exactly one correct answer and traceable editorial sources', () => {
-  assert.equal(synonymBank.entries.length, 217);
-  assert.equal(new Set(synonymBank.entries.map(entry => entry.id)).size, 217);
+test('225 preserved source pairs and 200 active word/context questions have exactly one correct answer and traceable editorial sources', () => {
+  assert.equal(synonymBank.entries.length, 225);
+  assert.equal(new Set(synonymBank.entries.map(entry => entry.id)).size, 225);
   assert.equal(synonymBank.sourceReview.length, 43);
   assert.equal(synonymBank.entries.filter(entry => entry.source.kind === 'lexicon-pair').length, 32);
   const exercises = synonymCollections.flatMap(collection => collection.exercises);
-  assert.equal(exercises.length, 192);
+  assert.equal(exercises.length, 200);
   for (const entry of synonymBank.entries) {
     assert.equal(entry.options.length, 4);
     assert.equal(new Set(entry.options).size, 4);
     assert.equal(entry.options.filter(option => option === entry.synonym).length, 1);
     assert(!entry.options.includes(entry.word));
-    assert([entry.word, ...entry.options].every(word => !/\s/.test(word)));
+    if (!entry.context) assert([entry.word, ...entry.options].every(word => !/\s/.test(word)));
+    else { assert(entry.context.includes(entry.word)); assert(entry.reverseContext.includes(entry.synonym)); assert.equal(entry.minimumLevel, 'b1'); }
     assert.equal(entry.review.individualCefrValidated, false);
     assert(entry.source.kind === 'editorial-addition' || entry.sourceWords.length || entry.source.id);
   }
@@ -42,7 +43,7 @@ test('217 preserved source pairs and 192 active word-only questions have exactly
 
 test('A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes', () => {
   assert(practiceChapters.find(chapter => chapter.id === 'words').activities.includes('synonyms'));
-  for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 192]]) {
+  for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 200]]) {
     const selected = availableChapterCollections('synonyms', { level, help: 'practice' });
     assert.equal(selected.flatMap(collection => collection.exercises).length, expected);
     for (const collection of selected) {
@@ -115,8 +116,8 @@ test('all pairs reverse, mix and turn without changing sources or counting a rev
     }
   }
   assert.equal(JSON.stringify(synonymBank), before);
-  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match')).length, 192);
-  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match', 1, true)).length, 192);
+  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match')).length, 200);
+  assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match', 1, true)).length, 200);
 });
 
 test('reverse and heard answers retain their exact repetition task; cards never enter the queue', () => {

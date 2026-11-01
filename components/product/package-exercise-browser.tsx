@@ -1052,6 +1052,7 @@ function CardsSurface({ exercise, pack, onAudio, onFinish }: SurfaceProps & { pa
   const phrase = wordWithArticle(pack.words.find(word => word.id === card?.cardId && word.word === backText) ?? pack.words.find(word => word.image && word.image === card?.front?.image?.src && word.word === backText));
   return <section className="cp-task-card">
     {source && <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(source)} />}
+    {typeof exercise.synonymContext === 'string' && <p className="cp-synonym-context">{exercise.synonymContext}</p>}
     {card && <button className={`cp-flash-card ${flipped ? 'flipped' : ''}`} aria-describedby={flipped && phrase ? articleId : undefined} aria-label={card.front?.text ? flipped ? 'Toon het eerste woord' : 'Toon het synoniem' : flipped ? 'Toon de foto' : 'Toon het woord'} aria-pressed={flipped} onClick={() => { setFlipped(!flipped); if (!flipped && cards.length === 1) onFinish('kaart bekeken', true); }}><span key={index} className="cp-card-turn"><span className="cp-card-face cp-card-front" aria-hidden={flipped}>{card.front?.text ? <strong {...textView}>{card.front.text}</strong> : <ExerciseImageView optional image={card.front?.image} word={backText} />}</span><span className="cp-card-face cp-card-back" aria-hidden={!flipped}><strong {...textView}>{backText}{phrase && <small id={articleId} className="cp-word-article">{phrase}</small>}</strong></span></span></button>}
     <span className="cp-card-hint">Tik op de kaart.</span>
     <div className="cp-task-actions">

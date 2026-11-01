@@ -1,0 +1,37 @@
+✔ Matching help describes the actual source and target controls (28.308875ms)
+✔ Whole word groups feed the exercise library, without changing the curriculum (3489.789166ms)
+✔ Every first-group word is a target in all basic word activities (1.146292ms)
+✔ Bingo has per-word turns, stable boards, no answer model, and audio gating (38.709083ms)
+✔ Sentence recognition reuses real near-contrast sentences and retains reading conditions (89.267667ms)
+✔ Connected instructions do not change participation into proven skill or unpark the short t (0.697375ms)
+✔ Group progress rejects unknown IDs and never uses lesson-progress keys (0.22725ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (11158.731167ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.541125ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (53.924792ms)
+✔ eight distinct B1 context tasks preserve all 217 earlier records and A1/A2 availability (5.523834ms)
+✔ all eight support reverse, mix, turn and listen without leaking the heard word (1949.946458ms)
+✔ context errors survive reload in the same repeat task and direction; turning cards is not mastery (10.450583ms)
+✔ all existing media and bindings stay unchanged; three exact ElevenLabs phrases have lossless Taalroute metadata (165.414917ms)
+✔ seven new questions preserve the original 210 records, all IDs and all A1/A2 availability (3.892292ms)
+✔ all seven questions reverse, mix, turn and play their exact word in both directions (1916.530875ms)
+✔ all existing bindings remain and one female ElevenLabs counterpart has actual Taalroute metadata (134.854292ms)
+✔ 225 preserved source pairs and 200 active word/context questions have exactly one correct answer and traceable editorial sources (3.63275ms)
+✔ A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes (2.846458ms)
+✔ wrong answers become due for repetition, survive reload and retain the exact question (673.7405ms)
+✔ all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery (1416.591291ms)
+✔ reverse and heard answers retain their exact repetition task; cards never enter the queue (0.509417ms)
+✔ corrupt saved mixing preferences fall back safely (0.132292ms)
+✔ meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels (2.433583ms)
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+✔ scripts/test-unified-practice-navigation.mjs (2368.297542ms)
+PASS continuity: 1692 collections, 7461 small rounds, 49226 unchanged tasks, 1982 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (8544.357375ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11606.969916

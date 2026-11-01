@@ -86,9 +86,8 @@ function SynonymRound(props: GroupRoundProps) {
   }
   return <div className="cp-synonym-round">
     <nav className="cp-synonym-controls" aria-label="Synoniemen wisselen">
-      <button className="secondary-button" aria-pressed={settings.reverse} onClick={() => { stopMedia(); setSettings(current => ({ ...current, reverse: !current.reverse })); }}><ArrowRightLeft aria-hidden="true" />Wissel woord en synoniem</button>
-      <button className="secondary-button" onClick={mix}><Shuffle aria-hidden="true" />Mix de kaarten</button>
-      <output>{settings.reverse ? 'Synoniem → woord' : 'Woord → synoniem'}{props.activity === 'hear-match' ? ` · Met geluid: ${exercises.length} van ${props.pack.exercises.length} woordparen` : ''}</output>
+      <button className="secondary-button" aria-label="Wissel woord en synoniem" title="Wissel woord en synoniem" aria-pressed={settings.reverse} onClick={() => { stopMedia(); setSettings(current => ({ ...current, reverse: !current.reverse })); }}><ArrowRightLeft aria-hidden="true" /><span className="cp-synonym-label">Wissel woord en synoniem</span></button>
+      <button className="secondary-button" aria-label="Mix de kaarten" title="Mix de kaarten" onClick={mix}><Shuffle aria-hidden="true" /><span className="cp-synonym-label">Mix de kaarten</span></button>
     </nav>
     {exercises.length ? <GroupRoundPlayer {...props} key={`${settings.reverse}:${settings.seed}`} exerciseSet={exercises} sessionId={sessionId} progressId={props.progressId ? `${props.progressId}${settings.reverse ? ':reverse' : ''}` : undefined} onAgain={mix} /> : <p>Voor deze richting is nog geen geluid beschikbaar. Wissel woord en synoniem of kies een andere oefening.</p>}
   </div>;
