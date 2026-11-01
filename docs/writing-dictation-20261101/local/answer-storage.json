@@ -40,6 +40,12 @@
     },
     {
       "engine": "chromium",
+      "legacyAttemptOutsideNewWriting": true,
+      "priorHistoryByteIdentical": true,
+      "availableCopyFirstAndLastPreservedBeforeRollingAppend": true
+    },
+    {
+      "engine": "chromium",
       "storageDenied": true,
       "warningVisibleOnlyOnFailure": true,
       "inMemoryResponseRetained": true,
@@ -80,6 +86,12 @@
       "firstIncorrectKept": true,
       "latestCorrectKept": true,
       "modelNeverPrefilled": true
+    },
+    {
+      "engine": "webkit",
+      "legacyAttemptOutsideNewWriting": true,
+      "priorHistoryByteIdentical": true,
+      "availableCopyFirstAndLastPreservedBeforeRollingAppend": true
     },
     {
       "engine": "webkit",

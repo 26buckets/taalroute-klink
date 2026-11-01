@@ -13,7 +13,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
   const c=await b.newContext({viewport:{width,height:width===320?568:844}}),p=await c.newPage();
   await c.addInitScript(()=>{window.Audio=class extends EventTarget{constructor(src){super();this.src=src;this.paused=true;this.currentTime=0;this.playbackRate=1;}play(){this.paused=false;this.timer=setTimeout(()=>{this.paused=true;this.dispatchEvent(new Event('ended'));},20);return Promise.resolve();}pause(){this.paused=true;clearTimeout(this.timer);}};});
   p.on('pageerror',e=>errors.push({engine,width,theme,message:e.message}));
-  const round=writingDictationRounds[Math.floor(n/20)],e=round.exercises[n%20],route=base+'/'+chapterHash({chapter:'writing',activity:'dictation',collection:round.id,level:'alfa-c',help:'practice'});
+  const id='KSW-AC-HT-'+String(n+1).padStart(3,'0'),round=writingDictationRounds.find(r=>r.exercises.some(e=>e.writingSourceId===id)),e=round.exercises.find(e=>e.writingSourceId===id),route=base+'/'+chapterHash({chapter:'writing',activity:'dictation',collection:round.id,level:'alfa-c',help:'practice'});
   await p.goto(base);await p.evaluate(({theme,key,id})=>{window.TaalrouteAppearance.set(theme);localStorage.setItem(key,JSON.stringify({version:1,exerciseId:id,done:false}));},{theme,key:groupSessionKey('chapter:dictation:'+round.id,'dictation',collectionProgressId('dictation',round.id)),id:e.exerciseId});
   await p.goto('about:blank');await p.goto(route);await p.locator(`[data-exercise-id="${e.exerciseId}"]`).waitFor();
   const automatic=p.locator('[data-practice-automatic]');if(await automatic.getAttribute('aria-pressed')==='false')await automatic.click();

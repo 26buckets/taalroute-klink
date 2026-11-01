@@ -157,7 +157,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     }
   }
   result.push(...productionIndex.filter(row => row.activity === activity).map(row => ({ id: row.id, title: row.title, level: row.level as ChapterLevel, help: row.help as ContentHelp, pack: productionPack(row), exercises: [], contentUrl: row.url, exerciseCount: row.count, placeholderCount: 'placeholderCount' in row ? row.placeholderCount : undefined, image: row.image || undefined })));
-  if (activity === 'dictation') result.push(...writingDictationRounds.map(round => ({ id: round.id, title: round.title, level: 'alfa-c' as const, help: 'practice' as const, pack: productionPack({ ...round, level: 'alfa-c', activity, count: 20 }), exercises: round.exercises })));
+  if (activity === 'dictation') result.push(...writingDictationRounds.map(round => ({ id: round.id, title: round.title, level: 'alfa-c' as const, help: 'practice' as const, pack: productionPack({ ...round, level: 'alfa-c', activity, count: round.exercises.length }), exercises: round.exercises })));
   if (activity === 'learning-review' || synonymActivities.some(id => id === activity)) result.push(...synonymCollections.flatMap(collection => {
     const exercises = groupExercises(collection.pack, activity);
     return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];

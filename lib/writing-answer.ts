@@ -22,9 +22,9 @@ export function updateWritingAnswer(current: WritingAnswer, draft: string, submi
 export function preserveAvailableCopyAnswers(storage: Pick<Storage, 'getItem' | 'setItem'>) {
   let history: unknown;
   const raw = storage.getItem('klink.taalroute.attempts.v1') ?? '[]';
+  if (storage.getItem('klink.writing-prior-attempts.v1') === null) storage.setItem('klink.writing-prior-attempts.v1', raw);
   try { history = JSON.parse(raw); } catch { return; }
   if (!Array.isArray(history)) return;
-  if (storage.getItem('klink.writing-prior-attempts.v1') === null) storage.setItem('klink.writing-prior-attempts.v1', raw);
   const copies = new Map<string, WritingAnswer>();
   for (const attempt of history.slice(-200)) {
     if (!attempt || typeof attempt !== 'object' || typeof attempt.exerciseId !== 'string' || !/^KSW-(?:AC-TN-(?:00[1-9]|0[1-9]\d|100)|AA-TN-00[678])$/.test(attempt.exerciseId) || attempt.mode !== 'copy-word' || attempt.assessment !== 'answer' || typeof attempt.answer !== 'string' || !attempt.answer.trim() || attempt.answer.length > 10000) continue;

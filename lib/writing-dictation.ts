@@ -13,6 +13,7 @@ export const writingDictationRounds = data.rounds.map(round => ({ ...round, exer
   return {
     ...structuredClone(original ?? { exerciseId: position.id, componentId: 'ALF-CMP-006', contractVersion: '1.0', mode: 'word-dictation', fields: [{ id: 'word', acceptedAnswers: [position.target] }] }),
     writingSourceId: position.id, groupActivity: 'dictation', contentLevel: 'alfa-c', vocabularyLevels: ['alfa-c'],
+    ...('wordId' in position ? { wordId: position.wordId, targetWordIds: [position.wordId] } : {}),
     title: 'Luister en typ het woord.', objective: 'Je oefent om een woord dat je hoort goed te schrijven.',
     instructionAudio: { src: position.instructionAudio || instruction },
     prompt: { audio: { src: position.audio } }, requiresAudio: true, audioOnly: true,
@@ -22,4 +23,4 @@ export const writingDictationRounds = data.rounds.map(round => ({ ...round, exer
   } satisfies PackageExercise;
 }) }));
 
-if (writingDictationRounds.length !== 5 || writingDictationRounds.some(round => round.positions.length !== 20) || new Set(writingDictationRounds.flatMap(round => round.positions.map(p => p.id))).size !== 100) throw new Error('Invalid writing positions');
+if (writingDictationRounds.length !== 15 || writingDictationRounds.some(round => round.positions.length < 6 || round.positions.length > 7) || new Set(writingDictationRounds.flatMap(round => round.positions.map(p => p.id))).size !== 100) throw new Error('Invalid writing positions');

@@ -1,5 +1,5 @@
 {
-  "passed": false,
+  "passed": true,
   "targets": [
     {
       "sourceId": "KSW-AC-HT-001",
@@ -95,7 +95,7 @@
       "sourceId": "KSW-AC-HT-010",
       "canonicalId": "groep-8:group:dictation:klink-leesstap-30:klink-woord-pijn:word-dictation",
       "target": "pijn",
-      "src": "/package-audio/klink-writing-20261101/pijn.wav",
+      "src": "/package-audio/word-listening-20261101/repair-pijn.wav",
       "spokenEvidence": "targeted-recording-blind-exact",
       "metadataPassed": true,
       "passed": true,
@@ -465,10 +465,10 @@
       "sourceId": "KSW-AC-HT-047",
       "canonicalId": "groep-8:group:dictation:klink-leesstap-29:klink-woord-ei:word-dictation",
       "target": "ei",
-      "src": "/package-audio/taalroute/klink-woord-ei.wav",
-      "spokenEvidence": null,
+      "src": "/package-audio/word-listening-20261101/repair-ei.wav",
+      "spokenEvidence": "targeted-recording-blind-exact",
       "metadataPassed": true,
-      "passed": false,
+      "passed": true,
       "humanListening": false
     },
     {
@@ -825,7 +825,7 @@
       "sourceId": "KSW-AC-HT-083",
       "canonicalId": "KSW-AC-HT-083",
       "target": "pit",
-      "src": "/package-audio/klink-writing-20261101/pit.wav",
+      "src": "/package-audio/word-listening-20261101/repair-pit.wav",
       "spokenEvidence": "targeted-recording-blind-exact",
       "metadataPassed": true,
       "passed": true,
@@ -1180,7 +1180,7 @@
       "metadataPassed": true
     },
     {
-      "src": "/package-audio/klink-writing-20261101/pijn.wav",
+      "src": "/package-audio/word-listening-20261101/repair-pijn.wav",
       "bytes": 65732,
       "sha256": "8fd0867a6df67f8a9f99165eb8d94e4b54e36db6ecfc42a44db41e79724fe0e0",
       "duration": 0.743039,
@@ -1788,18 +1788,18 @@
       "metadataPassed": true
     },
     {
-      "src": "/package-audio/taalroute/klink-woord-ei.wav",
-      "bytes": 63696,
-      "sha256": "f57c5eac728aed593a5cb89a1d68254f9d0db125eeab97e1a16b067e538c996f",
+      "src": "/package-audio/word-listening-20261101/repair-ei.wav",
+      "bytes": 63698,
+      "sha256": "1d42ef46dac963fab23c8e56a4950ee465b8ebdb54547d6837a71555b62ecbac",
       "duration": 0.72,
       "codec": "pcm_s16le",
       "tags": {
         "artist": "Taalroute",
-        "title": "ei",
-        "album": "Klink - Taalroute",
-        "encoder": "Lavf62.12.102",
         "album_artist": "Taalroute",
-        "publisher": "Taalroute"
+        "publisher": "Taalroute",
+        "album": "Klink - Woorden beluisteren",
+        "copyright": "Taalroute",
+        "title": "ei"
       },
       "metadataPassed": true
     },
@@ -2380,7 +2380,7 @@
       "metadataPassed": true
     },
     {
-      "src": "/package-audio/klink-writing-20261101/pit.wav",
+      "src": "/package-audio/word-listening-20261101/repair-pit.wav",
       "bytes": 68108,
       "sha256": "17358df912902c77d6413cf2e1feadf0dc51106de90c3ed9a76f82904034a172",
       "duration": 0.77,

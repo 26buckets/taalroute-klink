@@ -42,6 +42,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
   for(const[i,e]of round.exercises.entries()){
    const task=p.locator(`[data-exercise-id="${e.exerciseId}"]`);await task.waitFor();
    assert.equal(await task.locator('.cp-picture-help,.cp-meaning-contexts,img').count(),0);
+   assert.equal(await p.locator('h1').innerText(),'Hoor en typ','The practice heading must not show the word-list answers');
    assert.equal(await task.locator('.cp-word-hint strong').count(),0);
    const input=task.getByRole('textbox',{name:'Jouw antwoord',exact:true});await input.waitFor();
    await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);
@@ -62,15 +63,15 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    checks.push({engine,sourceId:e.writingSourceId,canonicalId:e.exerciseId,wrongRejected:true,correctAccepted:true,noAnswerModelBeforeHelp:true,noImage:true,noReadingOrReviewClaim:true,helpTracked:i===6});
    if(i===4){await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();const draft=p.getByRole('textbox',{name:'Jouw antwoord',exact:true});await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);await draft.fill('Mijn eigen concept');await p.reload();await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();}
   }
-  await p.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();assert.equal(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).done.length,progressKey),20);
+  await p.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();assert.equal(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).done.length,progressKey),round.exercises.length);
   assert.deepEqual(await p.evaluate(seed=>Object.fromEntries(Object.keys(seed).map(k=>[k,localStorage.getItem(k)])),old),old);
   const saved=await p.evaluate(k=>localStorage.getItem(k),progressKey);
   const answers=await p.evaluate(ids=>Object.fromEntries(ids.map(id=>[id,JSON.parse(localStorage.getItem('klink.writing-answer.v1:'+id))])),round.exercises.map(e=>e.writingSourceId));
   await p.locator('.honest-empty').getByRole('button',{name:'Nog een keer',exact:true}).click();await p.locator(`[data-exercise-id="${round.exercises[0].exerciseId}"]`).waitFor();assert.equal(await p.evaluate(k=>localStorage.getItem(k),progressKey),saved);
   for(const[id,answer]of Object.entries(answers))assert.deepEqual(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)),writingAnswerKey(id)),{...answer,draft:''},'Restart retains first and last real learner answers');
-  rounds.push({engine,id:round.id,positions:20,resumeAtSix:true,completionRetainedOnRestart:true,oldProgressAndDraftsUnchanged:true});
+  rounds.push({engine,id:round.id,positions:round.exercises.length,resumeAtSix:true,completionRetainedOnRestart:true,oldProgressAndDraftsUnchanged:true});
  }
  await c.close();
  }finally{await b.close();}
 }}finally{writeFileSync(out+'/browser.json',JSON.stringify({base,simulatedPlayback:true,checks,rounds,errors},null,2)+'\n');}
-assert.equal(checks.length,200);assert.equal(rounds.length,10);assert.deepEqual(errors,[]);console.log('Passed: 200 answer/help flows, 10 rounds, resume/restart and existing stores in Chromium/WebKit. Actual media remains a separate check.');
+assert.equal(checks.length,200);assert.equal(rounds.length,30);assert.deepEqual(errors,[]);console.log('Passed: 200 answer/help flows, 30 short rounds, resume/restart and existing stores in Chromium/WebKit. Actual media remains a separate check.');

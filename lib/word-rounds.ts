@@ -11,7 +11,7 @@ const selectionCache = new WeakMap<ChapterCollection, Map<string, ChapterCollect
 const unique = (ids: string[]) => [...new Set(ids)];
 
 export function wordRoundDefinitions(exercises: PackageExercise[], packWords: PackageWord[] = []): WordRound[] {
-  if (!exercises.length || exercises.some(item => item.writingSourceId || item.learningPathId || item.contextId || item.synonymPairId || !wordRoundActivities.has(typeof item.groupActivity === 'string' ? item.groupActivity : item.mode === 'model' ? 'meet' : ''))) return [];
+  if (!exercises.length || exercises.some(item => item.learningPathId || item.contextId || item.synonymPairId || !wordRoundActivities.has(typeof item.groupActivity === 'string' ? item.groupActivity : item.mode === 'model' ? 'meet' : ''))) return [];
   const byId = new Map(packWords.map(word => [word.id, word]));
   const targets = exercises.map(item => unique((Array.isArray(item.targetWordIds) && item.targetWordIds.length ? item.targetWordIds : typeof item.wordId === 'string' ? [item.wordId] : []).filter((id): id is string => typeof id === 'string')));
   if (targets.some(ids => !ids.length)) return [];
@@ -30,7 +30,7 @@ export function wordRoundDefinitions(exercises: PackageExercise[], packWords: Pa
       const text = own ? [(item.text as { primary?: string } | undefined)?.primary, item.exampleWord, item.displayWord, item.target, item.helpWord].find(value => typeof value === 'string' && value) as string | undefined : undefined;
       const label = text ?? source?.label ?? option?.label ?? card?.back?.text ?? (byId.get(id) ?? words.get(id))?.word;
       const image = (own ? item.prompt?.image : undefined) ?? option?.image ?? card?.front?.image ?? (item.targets as { id: string; image?: { src: string; placeholderWord?: string } }[] | undefined)?.find(row => row.id === `image-${id}`)?.image;
-      if (label) labels.set(id, { label: wordLabel({ id, word: label }), image: image?.placeholderWord || (label === 'want' && typeof item.meaning === 'string' && item.meaning.startsWith('Verbindt') && item.meaning.includes('Voorbeeld:')) ? undefined : image?.src ?? (byId.get(id) ?? words.get(id))?.image, placeholder: Boolean(image?.placeholderWord) });
+      if (label) labels.set(id, { label: wordLabel({ id, word: label }), image: item.writingSourceId || image?.placeholderWord || (label === 'want' && typeof item.meaning === 'string' && item.meaning.startsWith('Verbindt') && item.meaning.includes('Voorbeeld:')) ? undefined : image?.src ?? (byId.get(id) ?? words.get(id))?.image, placeholder: Boolean(image?.placeholderWord) });
     }
   });
   if (targets.flat().some(id => !labels.has(id))) return [];

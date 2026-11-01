@@ -1,24 +1,21 @@
-✔ Twelve independent chapters cover all registered activities without changing Lexicon (10037.113333ms)
-✔ Source levels are honest, never inferred from matching words or a completed activity (0.491833ms)
-✔ All 158 complete-release rounds are available through the existing level menus and links (24.936667ms)
-✔ Deep links validate chapter, activity, collection and level; stale links fail safely (44.210708ms)
-✔ All 576 stable positions resolve to unchanged canonical source content and media (26.8385ms)
-✔ Repeat rounds remain available independently of original completion or review deadlines (467.031291ms)
-✔ Broken source references and ambiguous position lists fail closed (0.59075ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (10160.216333ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (1.100208ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (31.076166ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (61.12125ms)
 PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
-✔ scripts/test-word-rounds.mjs (1074.49375ms)
-✔ draft edits, a first incorrect submission and a later correction keep distinct user responses (0.970334ms)
-✔ damaged, unknown or oversized stored records cannot become learner answers (0.161083ms)
-✔ imported position drafts stay separate from canonical questions and cover the published exact-copy batches (0.0605ms)
-✔ available old copy answers survive the rolling history without replacing existing drafts or treating models as answers (0.46375ms)
-✔ 100 source positions retain the answer contract: 54 references, 46 new canonical questions (4.077125ms)
-✔ five stable rounds open through both writing and spelling without changing old collections (5.642583ms)
-✔ five meaning cues identify the sense without displaying the spelling answer (0.212167ms)
-ℹ tests 15
+✔ scripts/test-word-rounds.mjs (1161.200291ms)
+✔ draft edits, a first incorrect submission and a later correction keep distinct user responses (0.853541ms)
+✔ damaged, unknown or oversized stored records cannot become learner answers (0.195166ms)
+✔ imported position drafts stay separate from canonical questions and cover the published exact-copy batches (0.0835ms)
+✔ available old copy answers survive the rolling history without replacing existing drafts or treating models as answers (0.513583ms)
+✔ 100 source positions retain the answer contract: 54 references, 46 new canonical questions (4.478ms)
+✔ fifteen short stable rounds open through both writing and spelling without changing old collections (1577.794583ms)
+✔ five meaning cues identify the sense without displaying the spelling answer (0.182917ms)
+ℹ tests 12
 ℹ suites 0
-ℹ pass 15
+ℹ pass 12
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 10431.934584
+ℹ duration_ms 10548.043292

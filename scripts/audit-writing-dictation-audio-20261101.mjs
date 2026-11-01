@@ -7,8 +7,10 @@ const folder='docs/writing-dictation-20261101/',json=file=>JSON.parse(readFileSy
 const whisper=json('audio-proof/existing-audio-asr.json'),ctc=json('audio-proof/uncertain-audio-dutch-ctc.json');
 const repairs=existsSync(folder+'audio-proof/target-repairs.json')?json('audio-proof/target-repairs.json'):[];
 const cuePlan=json('audio-proof/cues-production-plan.json'),cueFiles=json('audio-proof/cues-file-proof.json'),cueReview=json('audio-proof/cues-blind-asr-reviewed.json');
+const targetsPlan=json('audio-proof/upstream-final-selection-plan.json'),voiceSupplement=json('audio-proof/target-voice-supplement.json');
 assert.equal(cuePlan.voiceId,'h6uBOiAjLKklte8hdYio');assert.equal(cuePlan.targetVoiceId,'0qLmDzgqulxcvv0yf3kg');assert.notEqual(cuePlan.voiceId,cuePlan.targetVoiceId);
 assert.equal(cueReview.spokenEquivalentFiles,5);assert.equal(cueFiles.files.length,5);assert(cueFiles.files.every(f=>f.audioDataIdentical));assert(cueFiles.files.reduce((n,f)=>n+Number(f.characterCost),0)<=500);
+assert.equal(voiceSupplement.targetVoices.ei,'7qdUFMklKPaaAVMsBTBt');assert(voiceSupplement.eiVoiceDeclaredBeforeGeneration);
 const normalize=s=>s.trim().toLocaleLowerCase('nl-NL').replace(/[.!?]+$/,'');
 const exercises=writingDictationRounds.flatMap(r=>r.exercises),files=[];
 for(const src of new Set(exercises.flatMap(e=>[e.prompt.audio.src,e.instructionAudio.src]))){
@@ -23,7 +25,7 @@ const targets=exercises.map(e=>{
  const first=whisper.files.find(f=>f.src===e.prompt.audio.src&&f.sha256===file?.sha256&&f.target===e.helpWord),second=ctc.files.find(f=>f.src===e.prompt.audio.src&&f.target===e.helpWord);
  let spokenEvidence=first?.exactTranscript?'blind-whisper-exact':first&&second?.exact?'blind-dutch-ctc-exact':first&&e.helpWord==='plein'&&second?.text==='pleijn'?'blind-dutch-ctc-phonetic-equivalent':null;
  if(['pijn','ei','pit'].includes(e.helpWord)){
-  spokenEvidence=repair?.voiceId===cuePlan.targetVoiceId&&repair.originalPcmIdentical===true&&repair.blindTexts?.some(text=>normalize(text)===normalize(e.helpWord))?'targeted-recording-blind-exact':null;
+  spokenEvidence=repair&&repair.voiceId===targetsPlan.selection[e.helpWord]?.voiceId&&repair.voiceId!==cuePlan.voiceId&&repair.originalPcmIdentical===true&&repair.blindTexts?.some(text=>normalize(text)===normalize(e.helpWord))?'targeted-recording-blind-exact':null;
  }
  return {sourceId:e.writingSourceId,canonicalId:e.exerciseId,target:e.helpWord,src:e.prompt.audio.src,spokenEvidence,metadataPassed:file?.metadataPassed===true,passed:Boolean(file?.metadataPassed&&spokenEvidence),humanListening:false};
 });
