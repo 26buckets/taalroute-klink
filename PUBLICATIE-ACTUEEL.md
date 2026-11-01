@@ -26,6 +26,18 @@ Akkoord: `docs/klink-owner-release-goal-audit-20261101.json`. De concrete gerich
 
 ---
 
+## Eerder gepubliceerd — vijf volledige kopieerrondes — 1 november 2026
+
+Livebron `995ae4407c6b9c0765cf63f801009846ca30ed11`, schone canonieke main; Worker `88da2bf9-7f47-43ff-a80d-2a8580e61820`. Gepubliceerd via de gewone `npm run deploy`, bovenop de actuele goedgekeurde infoknop-/keuzebron `501b0b199de79e28fc20429718af8d5f5d14d167`. De infoknop in de opdrachtbalk, zichtbare bronkeuzes, leerdoelen, Synoniemen-review, openingsanimatie en alle eerdere functies blijven behouden.
+
+Schrijven > Typ na > Alfa C > Met de docent bevat nu Woorden en korte zinnen · 1–5: honderd bronposities met 99 verschillende voorbeelden. Bronpositie 097 hergebruikt dezelfde opdracht als 020 en behoudt haar eigen rondevoortgang. De oorspronkelijke eerste ronde en alle andere collecties blijven intact. Hoofdletters, interne spaties en leestekens zijn exact; buitenste invoerspaties mogen verschillen. De foutmelding geeft nu voor alle honderd posities het eerste afwijkende teken én een passende hint. Daarmee is het in de eerste publicatie gevonden feedbackpunt opgelost. Twintig hints gebruiken eenvoudige cursistentaal; alle oorspronkelijke bronrecords blijven bewaard. Alle honderd modellen zijn met de actuele native Google Docs vergeleken.
+
+Lokaal en online slagen 1.200 volledige oefenstromen, 96 korte/lange model- en toetsenbordindelingen, twaalf leerdoeldialogen en twee afwijzings-/herstelproeven met een defect bronbestand in Chromium/WebKit. De vijf aangeboden oefenbestanden zijn werkelijk bytegelijk teruggelezen. Lokaal slagen 131 eenheids-/bron-/matrixproeven, twaalf vrijgave-/herstelproeven, typecheck, gerichte lint, productieopbouw en de volledige gewone publicatiepoort. Bestaande antwoorden, opslag, routes, doelen, opmaak en media blijven behouden. De bestaande limiet van 200 recente pogingen en afzonderlijke afgeronde rondes zijn gecontroleerd. Geen nieuwe audio of beelden. Alle zware controles lokaal; geen GitHub-workflows toegevoegd.
+
+Op het kleinste gesimuleerde toetsenbordvlak blijft de volledige langste bron via de bestaande kaartscroll bereikbaar; invoer, Controleer en Verder blijven bereikbaar. Lettergroottes en compositie zijn behouden. Geen fysieke telefoon of native schermtoetsenbord getest. Menselijke NT2-review en cursistenpilot zijn niet uitgevoerd; Nico's automatische eigenaars- en publicatieakkoord geldt brongebonden. Het doel blijft nauwkeurig overnemen met een zichtbaar model.
+
+Akkoord en controles: `docs/klink-owner-release-writing-copy-next-20261101.json`, `docs/writing-copy-next-20261101/`. De bron-/controlekopie is volledig vanaf Drive teruggelezen: 143 manifestbestanden en ZIP-integriteit gecontroleerd. De definitieve herstelkopie en onlinebewijzen worden vastgelegd in `final-backup.json`.
+
 ## Actuele publicatie — info in opdrachtbalk en zichtbare antwoorden — 1 november 2026
 
 Livebron `501b0b199de79e28fc20429718af8d5f5d14d167`, schone canonieke main; Worker `160b3ec4-fdb5-4dea-94e7-25f001887683`. Normaal gepubliceerd via `npm run deploy`, als afstammeling van werkelijke vorige livebron `1fb7c126cc642aa9230652a11c60fe3b2ab3c065`; werkbasis `debea185` voegde daarna uitsluitend vrijgavebewijzen toe. De volledige bron, Synoniemen-review, naschrijfreeks, leerdoelenmatrix, openingsanimatie en alle eerdere vrijgaven blijven behouden.

@@ -1,0 +1,22 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "malformedBankRejected": true,
+      "retryWorks": true,
+      "differenceFeedbackWorks": true,
+      "oldProgressPreserved": true,
+      "requests": 3
+    },
+    {
+      "engine": "webkit",
+      "malformedBankRejected": true,
+      "retryWorks": true,
+      "differenceFeedbackWorks": true,
+      "oldProgressPreserved": true,
+      "requests": 3
+    }
+  ],
+  "errors": []
+}

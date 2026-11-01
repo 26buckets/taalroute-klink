@@ -1,4 +1,5 @@
 import { productionIndex, productionPack, readingSelections } from './production-practice.ts';
+import { sourceRepeatRounds, type SourceRepeat } from './source-repeat.ts';
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
@@ -34,7 +35,7 @@ practiceChapters.find(chapter => chapter.id === 'words')!.activities.push('word-
 
 export const chapterLevels = contentLevels;
 export type ChapterLevel = typeof chapterLevels[number]['id'];
-export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string; readingSelection?: { sourceId: string; allExerciseIds: string[]; exerciseIds: string[] }; wordRound?: WordRound & { sourceId: string; allExerciseIds: string[] } };
+export type ChapterCollection = { id: string; title: string; level: ChapterLevel; levels?: ChapterLevel[]; pack: PackageDefinition; exercises: PackageExercise[]; contentUrl?: string; sourceRepeat?: SourceRepeat; exerciseCount?: number; placeholderCount?: number; help?: ContentHelp; image?: string; readingSelection?: { sourceId: string; allExerciseIds: string[]; exerciseIds: string[] }; wordRound?: WordRound & { sourceId: string; allExerciseIds: string[] } };
 export type ChapterLocation = { sequence?: boolean; chapter?: string; activity?: GroupActivity; level: ChapterLevel; help?: ContentHelp; collection?: string; words?: string[] };
 const cache = new Map<GroupActivity, ChapterCollection[]>();
 const singleSourceActivities = new Set<GroupActivity>(['texts', 'text-question', 'text-evidence', 'dialogues', 'dialogue-question', 'dialogue-role', 'functional-message', 'functional-form']);
@@ -159,7 +160,10 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     const exercises = groupExercises(collection.pack, activity);
     return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
   }));
-  if (activity === 'learning-review') result.push(...wordUseCollections);
+  if (activity === 'learning-review') {
+    result.push(...wordUseCollections);
+    result.push(...sourceRepeatRounds.map(round => ({ id: round.id, title: round.title, level: round.level as ChapterLevel, help: 'practice' as const, pack: productionPack({ ...round, activity, count: 12 }), exercises: [], sourceRepeat: round, exerciseCount: 12 })));
+  }
   cache.set(activity, result);
   return result;
 }
