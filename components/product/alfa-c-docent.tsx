@@ -247,6 +247,7 @@ function AlfaCTeacherContent({ group }: { group: string }) {
               return <button
                 className="cp-activity-button"
                 aria-label={t.title}
+                aria-describedby={`ac-task-meta-${t.id}`}
                 aria-pressed={taskId === t.id}
                 key={t.id}
                 onClick={() => {
@@ -261,7 +262,7 @@ function AlfaCTeacherContent({ group }: { group: string }) {
               >
                 <span>
                   <strong>{title}</strong>
-                  <small className="cp-card-meta">{numbered && `Ronde ${numbered[2]} · `}Alfa C · {t.stages.length} {t.stages.length === 1 ? 'stap' : 'stappen'}</small>
+                  <small id={`ac-task-meta-${t.id}`} className="cp-card-meta">{numbered && `Ronde ${numbered[2]} · `}Alfa C · {t.stages.length} {t.stages.length === 1 ? 'stap' : 'stappen'}</small>
                   <small>
                     {store.sessions.some(
                       (s) =>
