@@ -15,16 +15,32 @@
     "requested": true,
     "newAppPublished": true,
     "newRuntimeImported": true,
-    "liveSource": "995ae4407c6b9c0765cf63f801009846ca30ed11",
-    "canonicalMain": "995ae4407c6b9c0765cf63f801009846ca30ed11",
+    "liveSource": "0c130f80053537b9976906b859e844a267912295",
+    "canonicalMain": "22d231b0e5944115137b1e1548ac4d61cf811778",
     "ancestryVerified": true,
-    "mainOnlyDocumentationSuccessor": false,
+    "mainOnlyDocumentationSuccessor": true,
     "existingAppearancePreserved": true,
     "githubWorkflowsFound": 0,
     "githubPushes": 3,
     "cloudRuns": 0,
     "governanceCommit": "48e79661f4a9ce06983ae1b3b15dbcb657cd104d",
-    "initialLiveSource": "76a8c365a83fd0181e79ca67077a891c1ae2a286"
+    "initialLiveSource": "76a8c365a83fd0181e79ca67077a891c1ae2a286",
+    "initialPublicationSnapshot": {
+      "requested": true,
+      "newAppPublished": true,
+      "newRuntimeImported": true,
+      "liveSource": "995ae4407c6b9c0765cf63f801009846ca30ed11",
+      "canonicalMain": "995ae4407c6b9c0765cf63f801009846ca30ed11",
+      "ancestryVerified": true,
+      "mainOnlyDocumentationSuccessor": false,
+      "existingAppearancePreserved": true,
+      "githubWorkflowsFound": 0,
+      "githubPushes": 3,
+      "cloudRuns": 0,
+      "governanceCommit": "48e79661f4a9ce06983ae1b3b15dbcb657cd104d",
+      "initialLiveSource": "76a8c365a83fd0181e79ca67077a891c1ae2a286"
+    },
+    "lastVerifiedAt": "2026-11-01T20:23:20.583364+00:00"
   },
   "scopeLimits": [
     "858 directe Drive-mapitems geïnventariseerd; niet alle historische submappen en bestanden inhoudelijk geaudit.",
@@ -362,5 +378,36 @@
     "repositoryPath": "26buckets/taalroute-klink/AGENTS.md"
   },
   "sourceBaselineAtInitialIntake": "08a44807052370ce16277edb2ac00adfcbdd0d2e",
-  "updatedAt": "2026-11-01T19:22:42.497374+00:00"
+  "updatedAt": "2026-11-01T20:23:20.583364+00:00",
+  "orderedPublicationPlan": {
+    "userRequest": "Prima, ga door met de loadertekst, woordaudio en Hoor en typ in deze volgorde. Publiceer gecontroleerde batches, werk het bronregister bij en voorkom dubbele inhoud. Behoud de huidige vormgeving en voortgang.",
+    "order": [
+      "loader-text",
+      "word-audio",
+      "hear-and-type"
+    ],
+    "steps": [
+      {
+        "id": "loader-text",
+        "title": "Loadertekst",
+        "status": "PUBLISHED_VERIFIED",
+        "sourceCommit": "0c130f80053537b9976906b859e844a267912295"
+      },
+      {
+        "id": "word-audio",
+        "title": "Woordaudio",
+        "status": "PREPARING"
+      },
+      {
+        "id": "hear-and-type",
+        "title": "Hoor en typ",
+        "status": "PREPARING",
+        "sourcePositions": 100,
+        "existingCanonicalReferences": 54,
+        "newCanonicalQuestionsPlanned": 46,
+        "sourcePositionsPublished": 0
+      }
+    ],
+    "updatedAt": "2026-11-01T20:23:20.583364+00:00"
+  }
 }

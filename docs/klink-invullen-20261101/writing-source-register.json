@@ -13,8 +13,15 @@
     "revisedTaskPublished": "KSW-AC-TN-097",
     "duplicateModelsNotAdded": 17,
     "independentHumanReview": false,
-    "scope": "Bronreconciliatie en gecontroleerde eerste batch; andere publicaties tellen alleen mee na afzonderlijke broncontrole.",
-    "verifiedThroughSuccessorSourceCommit": "ded58bb090a90c87f6a5881b35830fa44f3b4de2"
+    "scope": "Actueel bronregister met afzonderlijke gecontroleerde publicatiebatches; een audiobestand of lokale voorbereiding telt niet automatisch als aangesloten bronopdracht.",
+    "verifiedThroughSuccessorSourceCommit": "ded58bb090a90c87f6a5881b35830fa44f3b4de2",
+    "lastVerifiedLiveSourceCommit": "0c130f80053537b9976906b859e844a267912295",
+    "lastVerifiedAt": "2026-11-01T20:23:20.583364+00:00",
+    "onlineSourceRecords": 103,
+    "directSourceRecords": 103,
+    "verifiedReusedSourceRecords": 0,
+    "openReuseCriteria": 17,
+    "remainingSourceRecords": 760
   },
   "documents": [
     {
@@ -10125,5 +10132,70 @@
     "sourceRevisionsVerifiedAfterPublication": true,
     "visualParity": "online/visual-parity.json; native focus state and a one-pixel Chromium divider raster band documented; source styles and rendered markup preserved",
     "verifiedThroughSuccessorSourceCommit": "ded58bb090a90c87f6a5881b35830fa44f3b4de2"
+  },
+  "publicationBatches": [
+    {
+      "id": "loader-text",
+      "title": "Loadertekst zichtbaar",
+      "sequence": 1,
+      "status": "PUBLISHED_VERIFIED",
+      "sourceCommit": "0c130f80053537b9976906b859e844a267912295",
+      "previousLiveCommit": "be7d78289945084612b20a0aa3058bb7730a43a5",
+      "workerVersion": "28f6987d-6f0d-4113-8f93-28d7fb8c163f",
+      "verifiedAt": "2026-11-01T20:23:20.583364+00:00",
+      "normalPublicationRoute": "npm run deploy",
+      "ownerEvidence": "docs/opening-loader-label-20261101/publication.json",
+      "localBrowserChecks": 16,
+      "liveBrowserChecks": 16,
+      "contentHashesUnchanged": true,
+      "storagePreserved": true,
+      "existingDesignPreservedExceptRequestedLabel": true,
+      "sourceRecordsAdded": 0,
+      "newCanonicalQuestions": 0,
+      "newAudio": 0,
+      "backup": {
+        "verified": true,
+        "fullReadback": true,
+        "zipIntegrity": true,
+        "everyArchivedFileCompared": true,
+        "driveId": "13xqjBbP8T2LytZHVec2tXWgrGOg74gUc",
+        "url": "https://drive.google.com/file/d/13xqjBbP8T2LytZHVec2tXWgrGOg74gUc/view",
+        "sha256": "db823920983bed4add0be6bc52f93d778971eb5798de32edc6deea0b1112babf",
+        "bytes": 1041515,
+        "publishedSourceCommit": "0c130f80053537b9976906b859e844a267912295",
+        "includesSourceArchiveAndGitBundle": true
+      }
+    }
+  ],
+  "orderedPublicationPlan": {
+    "userRequest": "Prima, ga door met de loadertekst, woordaudio en Hoor en typ in deze volgorde. Publiceer gecontroleerde batches, werk het bronregister bij en voorkom dubbele inhoud. Behoud de huidige vormgeving en voortgang.",
+    "order": [
+      "loader-text",
+      "word-audio",
+      "hear-and-type"
+    ],
+    "steps": [
+      {
+        "id": "loader-text",
+        "title": "Loadertekst",
+        "status": "PUBLISHED_VERIFIED",
+        "sourceCommit": "0c130f80053537b9976906b859e844a267912295"
+      },
+      {
+        "id": "word-audio",
+        "title": "Woordaudio",
+        "status": "PREPARING"
+      },
+      {
+        "id": "hear-and-type",
+        "title": "Hoor en typ",
+        "status": "PREPARING",
+        "sourcePositions": 100,
+        "existingCanonicalReferences": 54,
+        "newCanonicalQuestionsPlanned": 46,
+        "sourcePositionsPublished": 0
+      }
+    ],
+    "updatedAt": "2026-11-01T20:23:20.583364+00:00"
   }
 }
