@@ -1,0 +1,36 @@
+{
+  "baselineLiveSourceCommit": "35182be471e139a7615181206ce1288c45886c86",
+  "canonicalDocumentationCommit": "d5cfe28a1b52b14d8931e38ad271267cd41dae4c",
+  "types": true,
+  "lint": true,
+  "lintScope": "All four changed scripts. Full-repository lint has six pre-existing errors in three byte-unchanged files; see unchanged-ui-and-existing-lint.json.",
+  "build": true,
+  "curriculumTests": {
+    "passed": 48,
+    "skipped": 1,
+    "failed": 0
+  },
+  "roundProgressUnit": true,
+  "packageCatalog": true,
+  "editorialReviewAll240": true,
+  "nativeSourcesExact": true,
+  "audioFilesDecodedAndBranded": true,
+  "appearanceUnchanged": true,
+  "progressPreserved": true,
+  "keyboardRegression": true,
+  "localOnly": true,
+  "independentNt2Review": false,
+  "humanListeningReview": false,
+  "physicalDeviceTested": false,
+  "classroomPilot": false,
+  "localProductionPreview": "Not passed: the local Wrangler preview exited before readiness; the Node preview cannot load the Cloudflare build. Successful production build and full development-browser checks are recorded separately. Live production verification remains required.",
+  "nativeMobileAudio": {
+    "cases": 12,
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "lightDark": true
+  },
+  "baselineWorkerVersion": "61d76dc2-e89f-4415-b34a-ab7f75163812"
+}
