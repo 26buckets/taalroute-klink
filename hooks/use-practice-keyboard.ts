@@ -18,7 +18,7 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
   function onKeyDownCapture(event: KeyboardEvent<HTMLElement>) {
     if (!enabled || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.nativeEvent.isComposing) return;
     const root = event.currentTarget, target = event.target as HTMLElement;
-    if (!['Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(event.key) || target.closest('textarea, select, [contenteditable]:not([contenteditable="false"]), [role="menu"], [role="listbox"], [role="slider"], [role="tablist"], audio, video, [role="dialog"]')) return;
+    if (!['Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(event.key) || target.closest('textarea, select, [contenteditable]:not([contenteditable="false"]), [role="menu"], [role="listbox"], [role="slider"], [role="tablist"], audio, video, [role="dialog"], [aria-haspopup="dialog"]')) return;
     const input = target.closest('input');
     if (input && event.key !== 'Enter') return;
     if (event.repeat) { event.preventDefault(); return; }
