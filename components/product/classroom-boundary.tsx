@@ -7,9 +7,12 @@ import {
   readClassroomActive,
 } from '@/lib/classroom-visibility';
 import { TaalrouteHeader } from './taalroute-header';
+import { loadTeacherWithRecovery } from './teacher-module-recovery';
 
-const TeacherClassroom = lazy(() => import('./teacher-classroom').then(m => ({ default: m.TeacherClassroom })));
-const TeacherMaterials = lazy(() => import('./teacher-classroom').then(m => ({ default: m.TeacherMaterials })));
+let teacherModule: Promise<typeof import('./teacher-classroom')> | undefined;
+const loadTeacher = () => teacherModule ??= loadTeacherWithRecovery(() => import('./teacher-classroom'));
+const TeacherClassroom = lazy(() => loadTeacher().then(m => ({ default: m.TeacherClassroom })));
+const TeacherMaterials = lazy(() => loadTeacher().then(m => ({ default: m.TeacherMaterials })));
 
 // Check before showing any route: Back and reload must not reveal teacher-only material.
 export function ClassroomBoundary({ children }: { children: ReactNode }) {
