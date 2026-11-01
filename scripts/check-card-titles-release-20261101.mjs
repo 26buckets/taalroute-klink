@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-const base = 'b7c04d8da4835c8b01f8314bd6247710ed75d0bf', folder = 'docs/card-titles-appwide-20261101/';
+const base = '38b937ebb11005942fc018e603f6658a53882857', live = 'b670d0c1337eea07e96662237de4b9508de9735c', folder = 'docs/card-titles-appwide-20261101/';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sort = values => values.sort((a, b) => a.localeCompare(b));
@@ -11,9 +11,10 @@ const roots = ['app', 'components', 'hooks', 'data', 'lib', 'public', 'scripts',
 export function verifyCardTitlesRelease(read = readFileSync) {
   const json = file => JSON.parse(read(file)), r = json('docs/klink-owner-release-card-titles-20261101.json');
   assert.equal(r.approvedBy, 'Nico'); assert(r.publicationApproved && r.appearanceChangeApproved);
-  assert.equal(r.baselineSourceCommit, base); assert.equal(r.liveSourceCommit, base);
+  assert.equal(r.baselineSourceCommit, base); assert.equal(r.liveSourceCommit, live);
   assert(r.userRequest.includes('zet deze versie nu live in Klink'));
   assert(r.userRequest.includes('door de hele app'));
+  git('merge-base', '--is-ancestor', live, base);
   git('merge-base', '--is-ancestor', base, 'HEAD');
   const changed = sort([...new Set([...lines(git('diff', '--name-only', base, '--', ...roots)), ...lines(git('ls-files', '--others', '--exclude-standard', '--', ...roots))])]);
   assert.deepEqual(changed, r.changedFiles); assert.deepEqual(sort(Object.keys(r.files)), changed);
@@ -24,6 +25,7 @@ export function verifyCardTitlesRelease(read = readFileSync) {
   assert.equal(browser.scopes, 234); assert.equal(browser.activities, 57); assert.equal(browser.results.length, 936); assert.deepEqual(browser.errors, []);
   assert(browser.results.every(c => c.cardsEqual && c.titles && c.counts && c.sourceIds && c.storagePreserved));
   assert(browser.extras.some(c => c.view === 'teacher/materials')); assert(browser.extras.some(c => c.view === 'words'));
+  assert.equal(new Set([...browser.results, ...browser.extras].map(c => c.activity).filter(Boolean)).size, 59);
   const p = json(folder + 'verification.json');
   for (const key of ['types', 'lint', 'unit', 'allParts', 'allLevels', 'allSourceContentPreserved', 'allMediaPreserved', 'progressPreserved', 'desktopMobile', 'reactReview', 'localOnly']) assert.equal(p[key], true, key);
   const backup = json(folder + 'backup.json');

@@ -7,6 +7,7 @@ import { lessonPackages, allPackageWords } from '../lib/package-content.ts';
 import { teacherGroups, teacherTasks } from '../lib/alfa-c-docent.ts';
 import { progressKey } from '../lib/learner-progress.ts';
 import { levelLabel } from '../lib/content-levels.ts';
+import { groupActivities } from '../lib/group-practice.ts';
 
 const base = process.env.KLINK_TEST_URL || 'http://127.0.0.1:18830';
 const out = process.env.KLINK_CARD_OUTPUT || 'outputs/card-titles-appwide-20261101';
@@ -22,6 +23,11 @@ for (const chapter of practiceChapters) for (const activity of chapter.activitie
   if (collections.length) scopes.push({ location, collections });
 }
 const results = [], extras = [], errors = [];
+const covered = new Set(scopes.map(s => s.location.activity));
+const otherScopes = groupActivities.filter(a => !covered.has(a.id)).map(a => {
+  const location = { chapter: practiceChapters.find(c => c.activities.includes(a.id)).id, activity: a.id, level: 'all', help: 'all' };
+  return { location, collections: displayedChapterCollections(a.id, location) };
+});
 const seed = { [progressKey]: JSON.stringify({ completed: [lessonPackages[0].lessons[0].id] }), 'klink.taalroute.savedWords.v1': JSON.stringify(allPackageWords.slice(0, 3).map(w => w.id)), 'klink.alfa-c.docent.v1': JSON.stringify({ version: 1, sessions: [] }) };
 for (const [engine, type] of Object.entries({ chromium, webkit })) {
   const browser = await type.launch();
@@ -69,6 +75,13 @@ for (const [engine, type] of Object.entries({ chromium, webkit })) {
         assert.deepEqual(await page.locator('[data-chapter]').evaluateAll(nodes => nodes.map(e => e.dataset.chapter)), practiceChapters.map(c => c.id));
         await equal('[data-chapter]', `${engine}/${width}/categories/${level}/${help}`);
         extras.push({ engine, width, view: 'categories', level, help });
+      }
+      for (const { location, collections } of otherScopes) {
+        await page.goto(`${base}/${chapterHash(location)}`);
+        await page.locator('[data-collection]').first().waitFor();
+        assert.deepEqual(await page.locator('[data-collection]').evaluateAll(nodes => nodes.map(n => n.dataset.collection)), collections.slice(0, 12).map(c => c.id));
+        await equal('[data-collection]', `${engine}/${width}/other-source-level/${location.activity}`);
+        extras.push({ engine, width, view: 'other-source-level', activity: location.activity, sourceIds: true, cardsEqual: true });
       }
       await page.goto(`${base}/#learner/packages`);
       await page.locator('.cp-photo-section').first().waitFor();
