@@ -1,5 +1,5 @@
 import assert from'node:assert/strict';import fs from'node:fs';import{createHash}from'node:crypto';
-const sha=b=>createHash('sha256').update(b).digest('hex'),folder='docs/b1-reviewed-release-20261101/',files=Object.keys(JSON.parse(fs.readFileSync('docs/klink-owner-release-b1-reviewed-20261101.json')).files).filter(f=>f.startsWith('public/'));
+const sha=b=>createHash('sha256').update(b).digest('hex'),_folder='docs/b1-reviewed-release-20261101/',files=Object.keys(JSON.parse(fs.readFileSync('docs/klink-owner-release-b1-reviewed-20261101.json')).files).filter(f=>f.startsWith('public/'));
 const result=[],start=await(await fetch('https://klink.taalroute.nl/release.json?t='+Date.now())).json();
 assert.equal(start.sourceCommit,process.env.KLINK_VERIFY_EXPECTED_SOURCE||'6838c678d794469cd7a438a00f7e8e01a19ebf77');assert(start.sourceClean);
 let index=0;await Promise.all(Array.from({length:6},async()=>{while(index<files.length){const file=files[index++],r=await fetch('https://klink.taalroute.nl/'+file.slice(7));assert(r.ok,file);const b=Buffer.from(await r.arrayBuffer());assert.equal(sha(b),sha(fs.readFileSync(file)),file);result.push({file,bytes:b.length,sha256:sha(b),byteEqual:true});}}));

@@ -30,7 +30,7 @@ void test('The only app changes replace deprecated image priority while retainin
  for(const file of ['components/product/shared.tsx','components/product/entry-design.tsx','components/product/compact-learner-app.tsx']){
   assert.equal(readFileSync(file,'utf8').replaceAll(' preload loading="eager" fetchPriority="high" ',' priority '),readBeforeCodeCleanup(file,proof).toString());
  }
- assert.equal(execFileSync('git',['diff','--name-only',proof.baselineSourceCommit,'--','data','public','app','hooks','lib','.github','.oxlintrc.json','package.json','package-lock.json']).length,0);
+ assert.equal(execFileSync('git',['diff','--name-only',proof.baselineSourceCommit,...(proof.publication?[proof.publication.localCandidate]:[]),'--','data','public','app','hooks','lib','.github','.oxlintrc.json','package.json','package-lock.json']).length,0);
 });
 void test('Cleanup cannot authorize publication, alter media or rewrite historical approvals',()=>{
  const proof=verifyCodeCleanup();assert.equal(proof.publicationApproved,false);assert.equal(proof.productionBatch,false);

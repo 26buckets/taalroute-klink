@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {contentPackages,lessonPackages} from '../lib/package-content.ts';
 import {taalroutePackages} from '../lib/taalroute-packages.ts';
+import {grammarLessonProposal} from '../lib/local-grammar-lessons.ts';
 import {chapterCollections,matchesChapterSelection,chapterHash,parseChapterHash} from '../lib/practice-chapters.ts';
 import {selectExerciseSet,exerciseSetHelp} from '../lib/content-levels.ts';
 import data from '../data/klink-lexicon-wordbuild-rest.json' with {type:'json'};
@@ -29,9 +30,11 @@ void test('Exact Basis selection is reachable at six levels, counted once and re
 void test('Excluded IDs never enter model tasks or word banks; original lesson route is preserved',()=>{
  const exclusions=new Set(data.selectionPolicy.excludedLexemeIds);
  assert(contentPackages.every(pack=>pack.words.every(word=>!exclusions.has(word.id))));
- assert.deepEqual(lessonPackages,taalroutePackages);
- assert.equal(lessonPackages.length,15);
- assert.equal(lessonPackages.flatMap(pack=>pack.lessons).length,302);
+ assert.deepEqual(lessonPackages,[...taalroutePackages,grammarLessonProposal]);
+ assert.equal(taalroutePackages.length,15);
+ assert.equal(taalroutePackages.flatMap(pack=>pack.lessons).length,302);
+ assert.equal(lessonPackages.length,16);
+ assert.equal(lessonPackages.flatMap(pack=>pack.lessons).length,303);
  for(const pack of data.packs)for(const word of pack.words){
    assert(word.selectedMeaningIds.length>0);
    for(const level of word.vocabularyLevels)assert(word.vocabularyCollections.includes(data.selectionPolicy.levelCollections[level]));

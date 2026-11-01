@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
+import {verifyGrammarPublication,readBeforeGrammarCandidate,grammarPublicationFile} from './check-grammar-publication-20261101.mjs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 
@@ -15,20 +16,23 @@ function before(file){
  return Buffer.from(snapshots.get(file));
 }
 export function verifyCodeCleanup(read=readFileSync){
+ const publication=existsSync(grammarPublicationFile)?verifyGrammarPublication(read):null;
+ const currentRead=read;if(publication)read=file=>readBeforeGrammarCandidate(file,publication,currentRead);
  const bytes=read(cleanupFile);assert.equal(sha(bytes),scopeHash,'Only the reviewed local code cleanup is allowed');
  const proof=JSON.parse(bytes);
  assert.equal(proof.baselineSourceCommit,baseline);assert.equal(proof.localOnly,true);
  assert.equal(proof.publicationApproved,false);assert.equal(proof.productionBatch,false);
  git('merge-base','--is-ancestor',baseline,'HEAD');
- const changed=[...new Set([...lines(git('diff','--name-only',baseline)),...lines(git('ls-files','--others','--exclude-standard'))])].filter(f=>!f.startsWith('docs/local-code-cleanup-20261101/')&&f!=='scripts/check-local-code-cleanup.mjs').toSorted((a,b)=>a<b?-1:a>b?1:0);
+ const changed=[...new Set([...lines(git('diff','--name-only',baseline,...(publication?[publication.localCandidate]:[]))),...(publication?[]:lines(git('ls-files','--others','--exclude-standard')))])].filter(f=>!f.startsWith('docs/local-code-cleanup-20261101/')&&f!=='scripts/check-local-code-cleanup.mjs').toSorted((a,b)=>a<b?-1:a>b?1:0);
  assert.deepEqual(changed,Object.keys(proof.files).toSorted((a,b)=>a<b?-1:a>b?1:0),'Every cleanup change must be accounted for');
  for(const[file,record]of Object.entries(proof.files)){
   assert(/^(scripts\/.*\.mjs|docs\/.*\.(?:mjs|cjs)|components\/product\/(?:shared|entry-design|compact-learner-app)\.tsx)$/.test(file),'No content, media, settings or layout changes: '+file);
   assert.equal(sha(read(file)),record.after,file);
   if(record.before)assert.equal(sha(before(file)),record.before,file);
  }
- return proof;
+ return {...proof,publication};
 }
 export function readBeforeCodeCleanup(file,proof,read=readFileSync){
+ const currentRead=read;if(proof?.publication)read=path=>readBeforeGrammarCandidate(path,proof.publication,currentRead);
  return proof?.files[file]?.before?before(file):read(file);
 }

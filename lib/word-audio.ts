@@ -1,6 +1,7 @@
 import { allPackageWords, type PackageWord } from './package-content.ts';
 import { isWithdrawnAudio } from './audio-policy.ts';
 import supplementalAudio from '../data/klink-inline-word-audio.json' with { type: 'json' };
+import publishedAudio from '../data/klink-word-audio-publication-20261101.json' with { type: 'json' };
 
 type WordAudioBinding = { src?: string; status: 'available' | 'missing' | 'blocked' | 'ambiguous'; reviewOpen?: boolean; localOnly?: boolean };
 type SupplementalAudio = { word: string; src: string; voiceId: string; role: string; metadataApproved: boolean; localOnly: boolean; humanReview?: string };
@@ -31,16 +32,17 @@ export function createWordAudioIndex(words: Pick<PackageWord, 'word' | 'audio' |
   }
   return index;
 }
+const publishedBindings = new Set(publishedAudio.bindings.map(clip => `${wordAudioKey(clip.word)}\0${clip.src}`));
 export function addLocalWordAudio(index: Map<string, WordAudioBinding>, recordings: SupplementalAudio[]) {
   for (const clip of recordings) {
     const key = wordAudioKey(clip.word);
     if (index.has(key) || clip.role !== 'target' || clip.humanReview === 'rejected' || !clip.voiceId || !clip.metadataApproved || clip.localOnly !== true) continue;
     const binding = createWordAudioIndex([{ word: clip.word, audio: clip.src, audioStatus: 'review-open' }]).get(key);
-    if (binding?.status === 'available') index.set(key, { ...binding, localOnly: true });
+    if (binding?.status === 'available') index.set(key, { ...binding, localOnly: !publishedBindings.has(`${key}\0${clip.src}`) });
   }
   return index;
 }
 export const isLocalWordAudioHost = (hostname: string) => ['localhost', '127.0.0.1', '[::1]', '::1'].includes(hostname);
-// Never infer inflections or derive sentence clips at runtime. Local recordings have no publication approval.
+// Only the exact owner-approved bindings are public; later local recordings stay local.
 export const wordAudioIndex = createWordAudioIndex(allPackageWords);
 addLocalWordAudio(wordAudioIndex, supplementalAudio);
