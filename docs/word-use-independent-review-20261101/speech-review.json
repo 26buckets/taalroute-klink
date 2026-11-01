@@ -1,0 +1,196 @@
+{
+  "provider": "ElevenLabs",
+  "model": "scribe_v2",
+  "language": "nld",
+  "checked": 15,
+  "normalizedMatches": 14,
+  "flags": [
+    {
+      "id": "WUI-7f8c74490eefb81d2044",
+      "text": "Lees of luister. Welke reactie past bij de situatie? Je kunt op woensdag een uur helpen. Zeg duidelijk dat elke avond niet lukt en bied die hulp op woensdag aan.",
+      "role": "instruction",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-7f8c74490eefb81d2044.mp3",
+      "start": 51.04000000000001,
+      "end": 61.920000000000016,
+      "recognized": "Lees of luister. Welke reactie past bij de situatie? Je kunt op woensdag 1.00u helpen. Zeg duidelijk dat elke avond niet lukt en biedt die hulp op woensdag aan.",
+      "normalizedMatch": false,
+      "similarity": 0.980544747081712,
+      "reviewCompleted": true,
+      "decision": "accepted transcription notation/homophone",
+      "reason": "1.00u schrijft het uitgesproken een uur anders. Bied/biedt zijn gelijkluidend; biedt in de transcriptie wijzigt geen gesproken woord. Het voorschrift bevat de correcte gebiedende wijs bied. Alle woorden zijn aanwezig."
+    }
+  ],
+  "checks": [
+    {
+      "id": "WUI-7d30a45530480d85f957",
+      "text": "Lees of luister. Welk woord maakt de combinatie af? Ik stuur de gemeente officieel een verzoek om een vergunning.",
+      "role": "instruction",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-7d30a45530480d85f957.mp3",
+      "start": 0,
+      "end": 7.36,
+      "recognized": "Lees of luister. Welk woord maakt de combinatie af? Ik stuur de gemeente officieel een verzoek om een vergunning.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-d614dbc35794f84313a8",
+      "text": "Lees of luister. Welk woord maakt de combinatie af? Ik wil weten waardoor de gebeurtenis is ontstaan.",
+      "role": "instruction",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-d614dbc35794f84313a8.mp3",
+      "start": 7.96,
+      "end": 15.08,
+      "recognized": "Lees of luister. Welk woord maakt de combinatie af? Ik wil weten waardoor de gebeurtenis is ontstaan.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-63e8ff5ea0edaaa3351b",
+      "text": "oplossen",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-63e8ff5ea0edaaa3351b.mp3",
+      "start": 15.68,
+      "end": 16.48,
+      "recognized": "Oplossen.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-81a6c5aa3ca80b928333",
+      "text": "Nee, de stoel is bezet.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-81a6c5aa3ca80b928333.mp3",
+      "start": 17.08,
+      "end": 19.08,
+      "recognized": "Nee, de stoel is bezet.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-e44de9a92c732467db03",
+      "text": "Nee, ik heb geen tijd.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-e44de9a92c732467db03.mp3",
+      "start": 19.68,
+      "end": 21.52,
+      "recognized": "Nee, ik heb geen tijd.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-8bcceae9efbbddd03304",
+      "text": "Nee, ik wil dat niet.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-8bcceae9efbbddd03304.mp3",
+      "start": 22.12,
+      "end": 23.880000000000003,
+      "recognized": "Nee, ik wil dat niet.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-d1433041ddc26c0dc605",
+      "text": "Nee, mijn boek blijft dicht.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-d1433041ddc26c0dc605.mp3",
+      "start": 24.48,
+      "end": 26.72,
+      "recognized": "Nee, mijn boek blijft dicht.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-84fb17f16b455343115c",
+      "text": "Nee, ik doe het niet open.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-84fb17f16b455343115c.mp3",
+      "start": 27.32,
+      "end": 29.32,
+      "recognized": "Nee, ik doe het niet open.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-13ee4d2b19509f36901e",
+      "text": "Nee, ik wil dat niet doen.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-13ee4d2b19509f36901e.mp3",
+      "start": 29.92,
+      "end": 31.840000000000003,
+      "recognized": "Nee, ik wil dat niet doen.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-a0611b46886a431551b9",
+      "text": "Nee, ik ben nog bezig.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-a0611b46886a431551b9.mp3",
+      "start": 32.440000000000005,
+      "end": 34.36000000000001,
+      "recognized": "Nee, ik ben nog bezig.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-44ed19f886450d0856c1",
+      "text": "Nee, ik moet nog beginnen.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-44ed19f886450d0856c1.mp3",
+      "start": 34.96000000000001,
+      "end": 36.80000000000001,
+      "recognized": "Nee, ik moet nog beginnen.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-fd64d5982a4ae82901d9",
+      "text": "Nee, ik ben nog niet klaar.",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-fd64d5982a4ae82901d9.mp3",
+      "start": 37.400000000000006,
+      "end": 39.32000000000001,
+      "recognized": "Nee, ik ben nog niet klaar.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-04abf2c115f73c959fb5",
+      "text": "Lees of luister. Welke reactie past bij de situatie? Je hebt de tijd goed gehoord en wilt die in andere woorden herhalen.",
+      "role": "instruction",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-04abf2c115f73c959fb5.mp3",
+      "start": 39.92000000000001,
+      "end": 47.84000000000001,
+      "recognized": "Lees of luister. Welke reactie past bij de situatie? Je hebt de tijd goed gehoord en wilt die in andere woorden herhalen.",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-c79102fdf26dde1c0b68",
+      "text": "Sinds wanneer heeft u deze klachten?",
+      "role": "target",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-c79102fdf26dde1c0b68.mp3",
+      "start": 48.44000000000001,
+      "end": 50.44000000000001,
+      "recognized": "Sinds wanneer heeft u deze klachten?",
+      "normalizedMatch": true,
+      "similarity": 1.0
+    },
+    {
+      "id": "WUI-7f8c74490eefb81d2044",
+      "text": "Lees of luister. Welke reactie past bij de situatie? Je kunt op woensdag een uur helpen. Zeg duidelijk dat elke avond niet lukt en bied die hulp op woensdag aan.",
+      "role": "instruction",
+      "src": "/package-audio/woordgebruik-onafhankelijk-20261101/WUI-7f8c74490eefb81d2044.mp3",
+      "start": 51.04000000000001,
+      "end": 61.920000000000016,
+      "recognized": "Lees of luister. Welke reactie past bij de situatie? Je kunt op woensdag 1.00u helpen. Zeg duidelijk dat elke avond niet lukt en biedt die hulp op woensdag aan.",
+      "normalizedMatch": false,
+      "similarity": 0.980544747081712
+    }
+  ],
+  "normalization": "case, punctuation, spacing, accents and written numerals; no words ignored",
+  "humanListeningReview": false,
+  "reviewCompleted": true,
+  "allNewSpokenTextsAccountedFor": true,
+  "unresolved": [],
+  "independentHumanListeningReview": false
+}

@@ -10,7 +10,7 @@ import {resolveRegisteredAudio} from '../lib/audio-register.ts';
 import {isInstructionAudioEnabled,isWithdrawnAudio} from '../lib/audio-policy.ts';
 const read=f=>JSON.parse(readFileSync(f)),base='9b5ca8c942d45dcf0988d3b893f55a23c069cca6';
 const bindings=read('data/klink-word-use-audio.json');
-test('288 authored questions: two activities, three levels and six short rounds at each level',()=>{
+void test('288 authored questions: two activities, three levels and six short rounds at each level',()=>{
  assert.equal(wordUseBank.entries.length,288);assert.equal(wordUseCollections.length,36);assert.equal(new Set(wordUseBank.entries.map(e=>e.id)).size,288);
  for(const activity of ['word-combinations','suitable-reply'])for(const level of ['a1','a2','b1']){
   const collections=availableChapterCollections(activity,{level,help:'practice'});assert.equal(collections.length,6);assert.equal(collections.flatMap(c=>c.exercises).length,48);assert(collections.every(c=>c.exercises.length===8));
@@ -18,8 +18,8 @@ test('288 authored questions: two activities, three levels and six short rounds 
  }
  for(const level of ['alfa-a','alfa-b','alfa-c','b2','support'])for(const activity of ['word-combinations','suitable-reply'])assert.equal(availableChapterCollections(activity,{level}).length,0);
 });
-test('every card has one correct answer, exact feedback and complete registered audio',()=>{
- const review=read('docs/word-use-language-review-20261101/content-review.json');assert.equal(review.rows.length,288);
+void test('every card has one correct answer, exact feedback and complete registered audio',()=>{
+ const review=read('docs/word-use-independent-review-20261101/content-review.json');assert.equal(review.rows.length,288);
  for(const collection of wordUseCollections)for(const e of collection.exercises){
   const row=wordUseBank.entries.find(x=>x.id===e.wordUseId),r=review.rows.find(x=>x.id===e.wordUseId);
   assert.equal(e.options.length,4);assert.equal(new Set(e.options.map(o=>o.label)).size,4);assert.equal(e.answer.correctOptionIds.length,1);
@@ -33,13 +33,13 @@ test('every card has one correct answer, exact feedback and complete registered 
   assert(isInstructionAudioEnabled(e.instructionAudio.src));
  }
 });
-test('speaker perspective and the final B1 task division stay unambiguous',()=>{
+void test('speaker perspective and the final B1 task division stay unambiguous',()=>{
  const a=wordUseBank.entries.find(x=>x.id==='word-use:suitable-reply:b1:01:recall:02');
  assert.equal(a.prompt,'Dus jij stuurt het verslag en ik bel de klant.');assert.equal(a.answer,'Klopt het dat ik het verslag stuur en jij de klant belt?');
  const b=wordUseBank.entries.at(-1);assert.equal(b.prompt,'Jij stuurt vandaag de informatie en ik bel morgen.');assert.equal(b.answer,'Dus ik stuur vandaag de informatie en jij belt morgen, klopt dat?');
  const signature=wordUseBank.entries.find(x=>x.prompt==='een handtekening …');assert(!signature.options.includes('geven'));
 });
-test('new collections keep their level, activity, IDs and answers through every route and review',()=>{
+void test('new collections keep their level, activity, IDs and answers through every route and review',()=>{
  const now=Date.now();
  for(const c of wordUseCollections){
   const activity=c.exercises[0].mode,chapter=activity==='word-combinations'?'words':'listening',location={chapter,activity,collection:c.id,level:c.level,help:'practice'};
@@ -53,13 +53,13 @@ test('new collections keep their level, activity, IDs and answers through every 
   const due=availableChapterCollections('learning-review',{level:c.level,help:'practice'},state,now).flatMap(x=>x.exercises);assert.equal(due.length,1);assert.equal(due[0].exerciseId,e.exerciseId);
  }
 });
-test('old synonym records, bank media, original curriculum, instructions and appearance remain unchanged',()=>{
- for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readFileSync(f),execFileSync('git',['show',(f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?read('docs/word-use-language-review-20261101/baseline.json').sourceCommit:base)+':'+f],{maxBuffer:128e6}),f);
+void test('old synonym records, bank media, original curriculum, instructions and appearance remain unchanged',()=>{
+ for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readFileSync(f),execFileSync('git',['show',(f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?read('docs/word-use-independent-review-20261101/baseline.json').sourceCommit:base)+':'+f],{maxBuffer:128e6}),f);
  for(const[level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
  const original=JSON.parse(execFileSync('git',['show',base+':data/klink-word-library-index.json'],{maxBuffer:16e6})),current=read('data/klink-word-library-index.json'),added=new Set(['word-combinations','suitable-reply']);
  assert.deepEqual({...current,chapters:current.chapters.map(c=>({...c,activities:c.activities.filter(a=>!added.has(a))})),activities:current.activities.filter(a=>!added.has(a.id))},original);
 });
-test('audio resolution refuses altered transcripts, roles, missing approval and unsafe paths',()=>{
+void test('audio resolution refuses altered transcripts, roles, missing approval and unsafe paths',()=>{
  const [id,entry]=Object.entries(bindings)[0];assert(entry);
  for(const changes of [{transcript:'anders'},{role:'wrong'},{review:'candidate'},{metadataApproved:false},{src:'/package-audio/../secret.mp3'}])assert.equal(resolveRegisteredAudio(id,entry.transcript,entry.role,undefined,{[id]:{...entry,...changes}}),undefined);
 });
