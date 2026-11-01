@@ -1,0 +1,27 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "userRequest": "Herstel die afspeelfout bij zinnen. Behoud de huidige indeling, alle inhoud, audio en voortgang. Test het luisteren en het mini-paneel ook op mobiel en zet de werkende versie online. Ik denk ook dat we even moeten kijken naar die... naar bijvoorbeeld een ander ingrediënt. Bij luisteren naar het gesprek, dan zien we dat afspeelknopje en die tekst laten zien en foto weg. Zorg dat die even groot zijn. Dat is één. En ik denk ook dat het hele stuk ook gelijk naar boven kan geschoven worden. Ja? Dus dan heb je meer ruimte, kan je de hele speler ook laten zien, enzovoort. Doe dat.",
+  "appearanceChangeApproved": true,
+  "publicationApproved": true,
+  "baselineSourceCommit": "9ee385d1199d4359b8e9059da3a06d57ac7d7ebf",
+  "liveSourceCommit": "12715486542e6aa766862a8068cd4ce65294ed28",
+  "approval": "docs/appearance-floor-20261031/approved-updates/sentence-listen-repair-20261101.json",
+  "scope": "Browser-blocked automatic playback requests a click without reporting a broken file. Actual failures keep retry. Three matching 48px controls. Remove the obsolete 68px mobile conversation chooser row and reduce conversation spacing; preserve content, recordings, progress, text size, photo aspect ratio and all other layout. Short screens retain scrolling.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/package-exercise-browser.tsx",
+    "scripts/check-sentence-listen-repair-release-20261101.mjs",
+    "scripts/check-synonym-recovery-release-20261101.mjs",
+    "scripts/test-sentence-listen-repair-browser-20261101.mjs",
+    "scripts/test-sentence-listen-repair-release-20261101.mjs"
+  ],
+  "files": {
+    "app/learner-layout.css": "302cda339ceed84e316feada02a0bc6a3cc231ed53afb58a1da15d3420a43b75",
+    "components/product/package-exercise-browser.tsx": "3b40cea6059a14d3cf35a33f35c81e45aca6ec407de54332846c57e0543f9c97",
+    "scripts/check-sentence-listen-repair-release-20261101.mjs": "b62ea043095dddaaa2e624004b451f6ff5149665f035bb6aff7c3654fe1abc90",
+    "scripts/check-synonym-recovery-release-20261101.mjs": "23946c6e21a1d33534c59d30ca5338fefd4737cf6f433410d58694da6dd77cef",
+    "scripts/test-sentence-listen-repair-browser-20261101.mjs": "f09622683725826c812c529b9ad886769fe831132bf930539209ff73cb84f08b",
+    "scripts/test-sentence-listen-repair-release-20261101.mjs": "172b209e3a6ccec161ccdec26357dfb2c059a61d14ef9129a29909c0b8bc6a6c"
+  }
+}

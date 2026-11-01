@@ -322,12 +322,20 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 .learner-app .ac-document-player .cp-exercise-stage:has(> .cp-exercise-tools) { display: grid; grid-template-rows: auto minmax(0, 1fr); }
 .learner-app .ac-document-player .cp-exercise-stage > .cp-exercise-tools { margin: 0 0 12px; }
 .learner-app .cp-view-panel { display: flex; align-items: center; gap: 2px; margin: 0 0 0 auto; padding: 0; border: 0; min-width: 0; }
-.learner-app .cp-view-toggle { width: 44px; height: 44px; min-width: 44px; min-height: 44px; display: grid; place-items: center; padding: 6px; border: 0; background: transparent; color: var(--ink); }
-.learner-app .cp-view-toggle > span { position: relative; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); }
-.learner-app .cp-view-toggle svg { width: 18px; height: 18px; stroke-width: 1.7; }
+.learner-app .cp-view-toggle { width: 48px; height: 48px; min-width: 48px; min-height: 48px; display: grid; place-items: center; padding: 0; border: 0; background: transparent; color: var(--ink); }
+.learner-app .cp-view-toggle > span { position: relative; display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--paper); }
+.learner-app .cp-view-toggle svg { width: 20px; height: 20px; stroke-width: 1.7; }
 .learner-app .cp-view-toggle[aria-pressed="true"] > span { border-color: var(--primary); background: var(--primary-soft); }
 .learner-app .cp-view-toggle[aria-pressed="false"] > span, .learner-app .cp-view-toggle:disabled { color: var(--muted); }
 .learner-app .cp-view-toggle:disabled { opacity: .55; }
 .learner-app .cp-view-toggle[data-view-toggle="text"][aria-pressed="false"] > span::after { content: ''; position: absolute; width: 24px; height: 1.5px; background: currentColor; transform: rotate(-45deg); }
 .learner-app [data-view-hidden="true"], .learner-app .cp-view-photo-hidden { visibility: hidden; pointer-events: none; }
 .learner-app .cp-additional-content:empty { display: none; }
+
+/* The conversation has no display chooser that needs the old extra mobile row. */
+@media (max-width: 900px) {
+  .learner-app .cp-chapter-playing:has(.cp-dialogue) { grid-template-rows: auto auto; }
+  .learner-app .cp-chapter-playing:has(.cp-dialogue) > .cp-exercise-browser { grid-row: 2; }
+}
+.product-root .consistent-layout .cp-exercise-stage .cp-dialogue { align-content: start; gap: 8px; padding-block: 0; margin-block: 0; }
+.learner-app .cp-exercise-stage:has(.cp-dialogue) > .cp-exercise-tools { top: 0; margin-bottom: 4px; }

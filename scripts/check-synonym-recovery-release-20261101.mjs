@@ -1,3 +1,4 @@
+import {verifySentenceListenRepairRelease,readBeforeSentenceListenRepair} from './check-sentence-listen-repair-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -15,12 +16,13 @@ export const recoveryFiles=[
  'scripts/test-synonym-recovery-20261101.mjs','scripts/test-synonym-recovery-browser-20261101.mjs',
 ];
 export function verifySynonymRecoveryRelease(read=readFileSync){
+ const successor=verifySentenceListenRepairRelease(read),currentRead=read;read=file=>readBeforeSentenceListenRepair(file,successor,currentRead);
  const r=JSON.parse(read('docs/klink-owner-release-synonym-recovery-20261101.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChanged,false);
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,base);
  assert.equal(r.userRequest,'Waarom staan die 15 opnamen in het archief? Kijk welke je kunt koppelen aan goede synoniemenopdrachten voor A1, A2 en B1 en zet die ook beschikbaar in Klink.');
  git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,sort([...recoveryFiles]));assert.deepEqual(r.changedFiles,changed);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  const before=JSON.parse(git('show',base+':data/klink-synonyms.json')),bank=JSON.parse(read('data/klink-synonyms.json'));
@@ -49,6 +51,6 @@ export function verifySynonymRecoveryRelease(read=readFileSync){
  assert.equal(read('docs/appearance-floor-20261031/floor.json').toString(),git('show',base+':docs/appearance-floor-20261031/floor.json').toString());
  const checks=JSON.parse(read(folder+'/verification.json'));for(const key of ['types','lint','build','unit','allNewPairs','threeModes','reverseDirections','nativePlayback','appearancePreserved','previousContentPreserved','localOnly'])assert.equal(checks[key],true,key);
  const backup=JSON.parse(read(folder+'/backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);
- return r;
+ return {...r,successor};
 }
-export function readBeforeSynonymRecovery(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeSynonymRecovery(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeSentenceListenRepair(file,r.successor,read);}

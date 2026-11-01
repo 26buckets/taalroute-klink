@@ -287,8 +287,10 @@ function PackageExercisePlayer({
       metrics.current.plays++;
       if (metrics.current.plays > 1) metrics.current.helpUsed = true;
       return true;
-    } catch {
-      if (isCurrent()) { setAudioError(true); if (source === stimulus) setHeard(false); }
+    } catch (error) {
+      // A browser asking for a first click has not rejected the recording itself.
+      const needsGesture = automaticStart && error instanceof Error && error.name === 'NotAllowedError';
+      if (isCurrent()) { setAudioError(!needsGesture); if (source === stimulus) setHeard(false); }
       return false;
     } finally {
       if (isCurrent()) { setAudioPending(false); setSpeakingOptionId(''); }
@@ -511,7 +513,7 @@ function PackageExercisePlayer({
             {result === 'idle' && <Shapes />}
             {result === 'right' && <Check />}
             {result === 'wrong' && <RefreshCw />}
-            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
+            <output aria-live="polite" aria-atomic="true"><strong>{audioError ? 'Probeer Luister opnieuw' : result === 'idle' ? returnedToUnfinished ? 'Eerst deze oefening' : !canAnswer ? audioPending ? 'Luister' : 'Tik op Luister' : 'Aan de slag' : result === 'right' ? selfPaced ? 'Geoefend' : 'Goed' : 'Probeer opnieuw'}</strong><small>{audioError ? instructionFailed ? 'Tik op de opdracht om opnieuw te luisteren.' : 'Het geluid lukt niet. Vraag zo nodig hulp.' : result === 'idle' ? returnedToUnfinished ? 'Deze oefening was nog niet af.' : !canAnswer ? exercise.mode === 'connected-dialogue' || !audioPending ? 'Gebruik de luisterknop.' : 'Je hoort het geluid vanzelf.' : exerciseHelp(exercise, guided) : result === 'right' && returningToUnfinished ? 'Er staat nog een oefening open.' : automatic ? 'Je gaat vanzelf verder.' : message}</small></output>
             <button data-practice-next aria-keyshortcuts="Enter ArrowRight" title="Verder (Enter of →)" className="secondary-button" disabled={audioPending || recording || (guided && (!canAnswer || ((!selfPaced || exercise.requiresExplicitCompletion === true) && result !== 'right')))} onClick={next}>{guided && guidedIndex >= exercises.length - 1 && (practiceRound || nextRequiredIndex >= guidedIndex) ? practiceRound ? (exercise.standardTask || exercise.mode === 'context-order' ? 'Klaar' : 'Ronde afronden') : 'Les afronden' : 'Verder'}<small aria-hidden="true">Enter / →</small><ArrowRight /></button>
           </footer>
         </div>
