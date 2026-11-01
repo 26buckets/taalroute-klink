@@ -1,0 +1,51 @@
+{
+  "published": true,
+  "liveRelease": {
+    "application": "Klink",
+    "builtAt": "2026-11-01T02:12:23.343Z",
+    "sourceCommit": "834e85e7eb0ebafd0a05e7d8aa5bc33b0ab4ed27",
+    "branch": "main",
+    "sourceClean": true,
+    "curriculumEdition": "klink-leerlijn-20261016-v1",
+    "lexiconExportSha256": "96e4ceb76fb378d83579fd4c4e353a43c1312ef16d636b34116eaef005e65d68",
+    "sectionsSha256": "91f394fdb5db45777ac1fae63bbc1abfb6e11e57120f39d1a64467f3184cb976",
+    "sectionPhotosSha256": "ce62e81ccf42bb2f4bc97d3663f2095fe5845be842870153b0312d0bc0cf9147",
+    "contentSha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+  },
+  "workerVersion": "92ee4ba2-38a7-4a99-b896-1c7198f7de9c",
+  "previousLiveSource": "9dd5c840cd7b6f9b819e9c683782b5920a3e829b",
+  "canonicalMain": true,
+  "normalNpmRunDeploy": true,
+  "publicationGuardPassed": true,
+  "initialGuardWaitedForConcurrentDossier": true,
+  "teacherLessons": 58,
+  "lessonPackages": 15,
+  "targetedUnitChecks": 27,
+  "publicationEvidenceTests": 14,
+  "curriculumPassed": 48,
+  "curriculumExistingSkip": 1,
+  "layoutAndStyleComparisons": 4,
+  "onlineRecoveryScenarios": 3,
+  "offeredClientLogoAndWorksheetFilesByteIdentical": 27,
+  "contentMediaRoutesAndOriginalProgressKeysUnchanged": true,
+  "projectionPrivacyPreserved": true,
+  "allFiveReleaseFingerprintsUnchanged": true,
+  "offlineAndBlockedStorageSafe": true,
+  "boundedRecoveryWithoutLoop": true,
+  "physicalPhoneTested": false,
+  "heavyGithubActionsAdded": false,
+  "browserTestSettingsRestored": true,
+  "files": {
+    "components/product/classroom-boundary.tsx": "085f0e616f479f8f732f6f2cabe7724f9aa38be783cb1ac31ffe5c90b9e4b583",
+    "components/product/teacher-module-recovery.ts": "971aa0f3c8d8f2685a6ca9467a3a21e8770ebd94ea59bbafc7886d1e78ada2ba",
+    "scripts/check-dialogue-mobile-photo-release-20261101.mjs": "c66acfaa7db58c0b312ce404c28eb11e913e7b8668daf573be98d5cbff6e8c21",
+    "scripts/check-teacher-module-recovery-release-20261101.mjs": "a247ae7cc5bb8ed3aa9454d268ca6fe6e9c4c370ce2eb5709c6b86196af9ba73",
+    "scripts/test-teacher-module-recovery-release-20261101.mjs": "f2bdaa39c6a8d0c11ca3bce4f749da539cd33dc966ed42880a97be866a32dfb6",
+    "scripts/test-teacher-module-recovery.mjs": "c6a581ba649eacf03f5444fc6337c6dcbe327019a866f00fb5e09d9d61d56229"
+  },
+  "limits": [
+    "Already open tabs using code from before this fix must load the new app once before the new recovery can apply.",
+    "Native navigation timing confirms the online automatic reload; no precise network event count is claimed after debugger buffer truncation.",
+    "Online existing course position and saved words remain identical. Other tabs were writing shared practice counters/preferences during testing; full all-key equality is proven in the isolated local fault fixture."
+  ]
+}

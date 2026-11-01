@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "lessons": 58,
+      "recovery": null,
+      "navigation": "reload",
+      "menuHidden": false,
+      "url": "https://klink.taalroute.nl/#teacher/plus",
+      "errorPage": false,
+      "preloadAndActualImport404": true,
+      "failedTeacherRequests": 2,
+      "manualRefresh": false,
+      "originalCourseAndSavedWordsIdentical": true,
+      "networkEventCountNotClaimed": "Shared debugger buffer truncated; native navigation timing confirms reload."
+    },
+    {
+      "scenario": "active lesson",
+      "preloadAndActualImport404": true,
+      "savedLessonIdentical": true,
+      "phase": "Luisteren / 2 van 8",
+      "projectionMenuHidden": true,
+      "errorPage": false
+    },
+    {
+      "scenario": "worksheet with active lesson",
+      "width": 390,
+      "preloadAndActualImport404": true,
+      "savedLessonIdentical": true,
+      "menuVisible": true,
+      "heading": "Mat · Werkblad",
+      "url": "https://klink.taalroute.nl/#teacher/materials?lesson=mat&round=a&from=lesson",
+      "errorPage": false
+    }
+  ],
+  "errors": []
+}
