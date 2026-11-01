@@ -20,10 +20,17 @@ test('Twelve independent chapters cover all registered activities without changi
     assert(collections.length, activity.id);
     assert.equal(new Set(collections.map(item => item.id)).size, collections.length, `${activity.id}: unique collections`);
     for (const collection of collections) {
+      if (collection.sourceRepeat) {
+        assert.equal(activity.id, 'learning-review');
+        assert.equal(collection.exercises.length, 0, 'Repetition references original banks');
+        assert.equal(collection.exerciseCount, 12);
+        assert.equal(collection.sourceRepeat.positions.length, 12);
+        continue;
+      }
       if (collection.contentUrl) {
         assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
         assert(collection.exerciseCount > 0);
-        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101)\//.test(collection.contentUrl));
+        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101)\//.test(collection.contentUrl));
         continue;
       }
       assert(collection.exercises.length);

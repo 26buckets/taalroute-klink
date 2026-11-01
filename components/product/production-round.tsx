@@ -7,21 +7,30 @@ import type { PackageExercise } from '@/lib/package-content';
 type Props = React.ComponentProps<typeof GroupRound> & { contentUrl: string; count: number; exerciseIds?: string[] };
 const cache = new Map<string, PackageExercise[]>();
 
+export async function loadProductionExercises(contentUrl: string, id: string, count: number, signal: AbortSignal, requiredIds: string[] = []) {
+  const cached = cache.get(contentUrl);
+  const hasRequired = (exercises: PackageExercise[]) => requiredIds.every(id => exercises.some(e => e.exerciseId === id));
+  if (cached && hasRequired(cached)) return cached;
+  if (cached) cache.delete(contentUrl);
+  const response = await fetch(contentUrl, { signal });
+  if (!response.ok) throw new Error('Unavailable');
+  const exercises = validateProductionCollection(await response.json(), id, count);
+  if (!hasRequired(exercises)) throw new Error('Missing source exercise');
+  signal.throwIfAborted();
+  if (cache.size >= 8) cache.delete(cache.keys().next().value!);
+  cache.set(contentUrl, exercises);
+  return exercises;
+}
+
 export function ProductionRound({ contentUrl, count, exerciseIds, ...props }: Props) {
   const [exercises, setExercises] = useState(() => cache.get(contentUrl));
   const [error, setError] = useState(false);
   const [retry, setRetry] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    const cached = cache.get(contentUrl);
-    const loading = cached ? Promise.resolve(cached) : fetch(contentUrl, { signal: controller.signal }).then(response => {
-      if (!response.ok) throw new Error('Unavailable');
-      return response.json();
-    }).then(value => validateProductionCollection(value, props.pack.id, count));
-    loading.then(loaded => {
+    loadProductionExercises(contentUrl, props.pack.id, count, controller.signal).then(loaded => {
       if (controller.signal.aborted) return;
-      if (!cached && cache.size >= 8) cache.delete(cache.keys().next().value!);
-      cache.set(contentUrl, loaded); setExercises(loaded);
+      setExercises(loaded);
     }).catch(() => { if (!controller.signal.aborted) setError(true); });
     return () => controller.abort();
   }, [contentUrl, count, props.pack.id, retry]);
