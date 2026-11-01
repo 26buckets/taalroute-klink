@@ -15,7 +15,7 @@ for(const src of new Set(exercises.flatMap(e=>[e.prompt.audio.src,e.instructionA
  if(!existsSync('public'+src))continue;
  const bytes=readFileSync('public'+src),media=JSON.parse(execFileSync('ffprobe',['-v','error','-show_format','-show_streams','-of','json','public'+src]));
  const tags=media.format.tags||{},brand=Object.fromEntries(Object.entries(tags).map(([k,v])=>[k.toLowerCase(),String(v)]));
- const metadataPassed=brand.artist==='Taalroute'&&/Taalroute|Klink/.test(brand.album||'')&&(!brand.album_artist||brand.album_artist==='Taalroute')&&(!brand.publisher||brand.publisher==='Taalroute')&&!/\b(?:suno|elevenlabs|openai|generator|gpt|model)\b/i.test(Object.values(tags).join(' '));
+ const metadataPassed=brand.artist==='Taalroute'&&/Taalroute|Klink/.test(brand.album||'')&&brand.album_artist==='Taalroute'&&brand.publisher==='Taalroute'&&!/\b(?:suno|elevenlabs|openai|generator|gpt|model)\b/i.test(Object.values(tags).join(' '));
  files.push({src,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex'),duration:Number(media.format.duration),codec:media.streams[0]?.codec_name,tags,metadataPassed});
 }
 const targets=exercises.map(e=>{

@@ -8,6 +8,12 @@ Het antwoord en plaatjes blijven vóór Help verborgen. Hoofdletters en buitenst
 
 Lokaal:200 antwoord-/hulpstromen en tien volledige rondes met hervatten/herstarten;200 werkbladstromen met verplichte beluistering en hulp-/herhaalregistratie;72 schermcontroles in Chromium/WebKit,1280/390/320,licht/donker. Gerichte bron-/route-/woord-/leerdoeltests,typen en lint. Deze antwoordtests simuleren afspelen voor snelheid; werkelijk aangeboden audiobestanden en native afspelen krijgen een afzonderlijke controle.
 
-Nog geen publicatieclaim:pit is technisch vrijgegeven; pijn en ei krijgen gericht herstel na onzekere onafhankelijke herkenning. Zevenennegentig bestaande doelwoordopnamen zijn brongebonden gecontroleerd; de lastige ASR-spelling pleijn bij plein is fonetisch verklaard en geen nieuw Nederlands antwoordalternatief. Definitieve media-, teruglees-, herstel- en publicatiecontroles blijven verplicht.
+Nog geen publicatieclaim:pit en pijn zijn technisch vrijgegeven; ei krijgt gericht herstel na onzekere onafhankelijke herkenning. Zevenennegentig bestaande doelwoordopnamen zijn brongebonden gecontroleerd; de lastige ASR-spelling pleijn bij plein is fonetisch verklaard en geen nieuw Nederlands antwoordalternatief. Definitieve media-, teruglees-, herstel- en publicatiecontroles blijven verplicht.
 
 Nico geeft doorlopende eigenaars-/publicatievrijgave voor gecontroleerde invulbatches. Dat is geen uitgevoerde menselijke NT2-, luister- of praktijkreview; die wordt hier niet verzonnen. Er is geen fysieke telefoon of klasproef uitgevoerd. GitHub Actions blijft ongebruikt; de controles draaien lokaal.
+
+## Behoud van eigen schrijfwerk
+
+De concepttekst, eerste ingediende reactie en laatste ingediende correctie krijgen afzonderlijke velden, per bronpositie. Dit geldt ook voor de reeds gepubliceerde exacte kopieerreeksen. Help of het model vult het antwoordvak nooit. Opnieuw oefenen leegt uitsluitend het actieve concept en bewaart eerste/laatste inzending; oorspronkelijke canonieke werk-/voortgangssleutels worden niet gewist.
+
+De nog beschikbare oude naschrijfantwoorden uit de rollende pogingengeschiedenis worden verliesvrij overgenomen zonder die geschiedenis te wijzigen. `firstFromAvailableHistory` betekent uitdrukkelijk eerste nog beschikbare inzending, geen bewijs van de allereerste inzending ooit. Een ongewijzigde kopie van de vooraf bestaande pogingengeschiedenis blijft daarnaast lokaal behouden. Lege/alleen-spatie-invoer wordt geen eerste inzending. Bij werkelijke opslagweigering blijft de invoer in het scherm en meldt de app dat opslaan niet lukt; herstel wordt gericht getest.

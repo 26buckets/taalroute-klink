@@ -5,6 +5,7 @@ import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exer
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
 import { exactCopyAnswer, copyDifferenceFeedback } from '@/lib/copy-answer';
+import { emptyWritingAnswer, parseWritingAnswer, updateWritingAnswer, writingAnswerKey, writingAnswerSourceId, preserveAvailableCopyAnswers } from '@/lib/writing-answer';
 
 import { useId } from 'react';
 import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
@@ -812,8 +813,30 @@ function WordHint({ exercise, onHelp }: { exercise: PackageExercise; onHelp: () 
 function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp, answeredCorrectly = false }: SurfaceProps & { onReset: () => void; canAnswer: boolean; onHelp: () => void; answeredCorrectly?: boolean }) {
   const fields = asArray<TextField>(exercise.fields);
   const [value, setValue] = useState('');
+  const writingId = writingAnswerSourceId(exercise);
+  const writing = useRef(emptyWritingAnswer());
+  const [writingReady, setWritingReady] = useState(!writingId);
+  const [writingError, setWritingError] = useState(false);
+  useEffect(() => {
+    if (!writingId) return;
+    const frame = requestAnimationFrame(() => {
+      let failed = false;
+      try { preserveAvailableCopyAnswers(localStorage); } catch { failed = true; }
+      try { writing.current = parseWritingAnswer(localStorage.getItem(writingAnswerKey(writingId))) ?? emptyWritingAnswer(); setValue(writing.current.draft); } catch { failed = true; }
+      setWritingError(failed);
+      setWritingReady(true);
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [writingId]);
+  function change(next: string, submitted = false) {
+    setValue(next);
+    if (!writingId) return;
+    writing.current = updateWritingAnswer(writing.current, next, submitted);
+    try { localStorage.setItem(writingAnswerKey(writingId), JSON.stringify(writing.current)); setWritingError(false); }
+    catch { setWritingError(true); }
+  }
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value)), exercise.answerPolicy === 'exact-copy' && accepted[0] !== undefined ? copyDifferenceFeedback(accepted[0], value, exercise.feedback) : undefined); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio}>{typeof exercise.meaningCue === 'string' && <p>{exercise.meaningCue}</p>}</Prompt>{!exercise.audioOnly && <><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /></>}<form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && writingReady && value.trim()) { change(value, true); onFinish(value, accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value)), exercise.answerPolicy === 'exact-copy' && accepted[0] !== undefined ? copyDifferenceFeedback(accepted[0], value, exercise.feedback) : undefined); } }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer || !writingReady} maxLength={writingId ? 10000 : undefined} value={value} onChange={(event) => { change(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !writingReady || !value.trim()}>Controleer<Check /></button></form>{writingError && <output>Je antwoord is alleen in dit scherm bewaard. Opslaan op dit apparaat lukt nu niet.</output>}<WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {

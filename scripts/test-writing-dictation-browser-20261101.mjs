@@ -6,6 +6,7 @@ import {chapterHash,displayedChapterCollections} from '../lib/practice-chapters.
 import {contentPackages} from '../lib/package-content.ts';
 import {progressKey} from '../lib/learner-progress.ts';
 import {groupSessionKey} from '../lib/group-practice.ts';
+import {writingAnswerKey} from '../lib/writing-answer.ts';
 import {collectionProgressId,roundProgressPrefix} from '../lib/round-progress.ts';
 const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19031';
 const out=process.env.KLINK_TEST_OUTPUT||'docs/writing-dictation-20261101/local';mkdirSync(out,{recursive:true});
@@ -15,6 +16,7 @@ const previousLesson=contentPackages.find(pack=>pack.lessons.some(l=>l.guidedExe
 const lesson=previousLesson.lessons.find(l=>l.guidedExerciseIds?.length);
 old[progressKey]=JSON.stringify({completed:[lesson.id],position:{packageId:previousLesson.id,lessonId:lesson.id,exerciseId:lesson.guidedExerciseIds[0]}});
 const referencedIds=new Set(writingDictationRounds.flatMap(r=>r.exercises.filter(e=>e.exerciseId!==e.writingSourceId).map(e=>e.exerciseId)));
+for(const id of referencedIds)old['klink.taalroute.content-workflow.v1:'+id]='{"draft":"Een oorspronkelijke eigen versie"}';
 const originalCollections=displayedChapterCollections('dictation',{level:'all',help:'all'}).filter(row=>!row.id.startsWith('ksw-ac-ht-')&&row.exercises.some(e=>referencedIds.has(e.exerciseId))).slice(0,3);
 assert.equal(originalCollections.length,3);
 for(const row of originalCollections){
@@ -43,26 +45,29 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    assert.equal(await task.locator('.cp-word-hint strong').count(),0);
    const input=task.getByRole('textbox',{name:'Jouw antwoord',exact:true});await input.waitFor();
    await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);
-   assert.equal(await input.inputValue(),'');
+   assert.equal(await input.inputValue(),i===5?'Mijn eigen concept':'');
    if(e.meaningCue)assert((await task.innerText()).includes(e.meaningCue));
    await input.fill('zzq');await task.getByRole('button',{name:'Controleer',exact:true}).click();
    assert.equal(await task.getAttribute('data-practice-ready'),'false');
    if(i===0&&e.helpWord.length>1){await input.fill(e.helpWord[0]+' '+e.helpWord.slice(1));await task.getByRole('button',{name:'Controleer',exact:true}).click();assert.equal(await task.getAttribute('data-practice-ready'),'false');}
-   if(i===6){await task.getByRole('button',{name:'Help',exact:true}).click();assert.equal(await task.locator('.cp-word-hint strong').innerText(),e.helpWord);}
+   if(i===6){await task.getByRole('button',{name:'Help',exact:true}).click();assert.equal(await task.locator('.cp-word-hint strong').innerText(),e.helpWord);assert.equal(await input.inputValue(),'zzq','Help is never copied into the learner answer');}
    await input.fill(i===0?'  '+e.helpWord.toLocaleUpperCase('nl-NL')+'  ':e.helpWord);
    await task.getByRole('button',{name:'Controleer',exact:true}).click();await p.locator('[data-practice-ready="true"]').waitFor();
    const attempts=await p.evaluate(()=>JSON.parse(localStorage.getItem('klink.taalroute.attempts.v1')||'[]'));const attempt=attempts.at(-1);
    assert.equal(attempt.exerciseId,e.exerciseId);assert.equal(attempt.correct,true);assert.equal(attempt.independentReading,false);assert.equal(attempt.reviewEligible,false);
    assert.equal(attempt.pictureSupport,undefined);
    assert.equal(attempt.support,i===6?'requested-help':'none');assert.equal(attempt.helpUsed,i===6);
+   const answer=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)),writingAnswerKey(e.writingSourceId));assert.equal(answer.first,'zzq');assert.equal(answer.last,await input.inputValue());
    await p.locator('[data-practice-next]').click();
    checks.push({engine,sourceId:e.writingSourceId,canonicalId:e.exerciseId,wrongRejected:true,correctAccepted:true,noAnswerModelBeforeHelp:true,noImage:true,noReadingOrReviewClaim:true,helpTracked:i===6});
-   if(i===4){await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();await p.reload();await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();}
+   if(i===4){await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();const draft=p.getByRole('textbox',{name:'Jouw antwoord',exact:true});await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);await draft.fill('Mijn eigen concept');await p.reload();await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();}
   }
   await p.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();assert.equal(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).done.length,progressKey),20);
   assert.deepEqual(await p.evaluate(seed=>Object.fromEntries(Object.keys(seed).map(k=>[k,localStorage.getItem(k)])),old),old);
   const saved=await p.evaluate(k=>localStorage.getItem(k),progressKey);
+  const answers=await p.evaluate(ids=>Object.fromEntries(ids.map(id=>[id,JSON.parse(localStorage.getItem('klink.writing-answer.v1:'+id))])),round.exercises.map(e=>e.writingSourceId));
   await p.locator('.honest-empty').getByRole('button',{name:'Nog een keer',exact:true}).click();await p.locator(`[data-exercise-id="${round.exercises[0].exerciseId}"]`).waitFor();assert.equal(await p.evaluate(k=>localStorage.getItem(k),progressKey),saved);
+  for(const[id,answer]of Object.entries(answers))assert.deepEqual(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)),writingAnswerKey(id)),{...answer,draft:''},'Restart retains first and last real learner answers');
   rounds.push({engine,id:round.id,positions:20,resumeAtSix:true,completionRetainedOnRestart:true,oldProgressAndDraftsUnchanged:true});
  }
  await c.close();

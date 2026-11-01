@@ -1,20 +1,24 @@
-✔ Twelve independent chapters cover all registered activities without changing Lexicon (10050.11525ms)
-✔ Source levels are honest, never inferred from matching words or a completed activity (0.7035ms)
-✔ All 158 complete-release rounds are available through the existing level menus and links (31.519958ms)
-✔ Deep links validate chapter, activity, collection and level; stale links fail safely (58.042541ms)
-✔ All 576 stable positions resolve to unchanged canonical source content and media (37.394166ms)
-✔ Repeat rounds remain available independently of original completion or review deadlines (552.976166ms)
-✔ Broken source references and ambiguous position lists fail closed (0.437459ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (10037.113333ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.491833ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (24.936667ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (44.210708ms)
+✔ All 576 stable positions resolve to unchanged canonical source content and media (26.8385ms)
+✔ Repeat rounds remain available independently of original completion or review deadlines (467.031291ms)
+✔ Broken source references and ambiguous position lists fail closed (0.59075ms)
 PASS word rounds: 68 source collections, 161 rounds, 1019 unchanged word tasks; matching titles/images, all levels, old/new links and shared progress
-✔ scripts/test-word-rounds.mjs (1393.806833ms)
-✔ 100 source positions retain the answer contract: 54 references, 46 new canonical questions (4.122167ms)
-✔ five stable rounds open through both writing and spelling without changing old collections (7.146541ms)
-✔ five meaning cues identify the sense without displaying the spelling answer (0.341458ms)
-ℹ tests 11
+✔ scripts/test-word-rounds.mjs (1074.49375ms)
+✔ draft edits, a first incorrect submission and a later correction keep distinct user responses (0.970334ms)
+✔ damaged, unknown or oversized stored records cannot become learner answers (0.161083ms)
+✔ imported position drafts stay separate from canonical questions and cover the published exact-copy batches (0.0605ms)
+✔ available old copy answers survive the rolling history without replacing existing drafts or treating models as answers (0.46375ms)
+✔ 100 source positions retain the answer contract: 54 references, 46 new canonical questions (4.077125ms)
+✔ five stable rounds open through both writing and spelling without changing old collections (5.642583ms)
+✔ five meaning cues identify the sense without displaying the spelling answer (0.212167ms)
+ℹ tests 15
 ℹ suites 0
-ℹ pass 11
+ℹ pass 15
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 10548.019166
+ℹ duration_ms 10431.934584

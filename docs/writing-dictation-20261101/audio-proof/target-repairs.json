@@ -15,5 +15,22 @@
     "technicalReleaseFrom": "Klink-word-listening chat, Nico-authorized coordination",
     "provenance": "target-pit.json",
     "metadataProof": "target-pit-metadata-proof.json"
+  },
+  {
+    "target": "pijn",
+    "src": "/package-audio/klink-writing-20261101/pijn.wav",
+    "sha256": "8fd0867a6df67f8a9f99165eb8d94e4b54e36db6ecfc42a44db41e79724fe0e0",
+    "originalPcmIdentical": true,
+    "voiceId": "0qLmDzgqulxcvv0yf3kg",
+    "model": "eleven_multilingual_v2",
+    "blindTexts": [
+      "pijn",
+      " Bye."
+    ],
+    "humanListening": false,
+    "credits": 2,
+    "technicalReview": "Exact Dutch CTC; multilingual Whisper English spelling retained as uncertainty; unchanged source PCM and Taalroute brand fields independently checked.",
+    "provenance": "target-pijn.json",
+    "metadataProof": "target-pijn-metadata-proof.json"
   }
 ]

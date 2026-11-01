@@ -3,6 +3,7 @@ import { LearnerExerciseInfo } from './learner-exercise-info';
 import { usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
 import { useWordListeningHelp } from '@/hooks/use-word-listening-help';
 import { recordRoundSteps } from '@/lib/round-progress';
+import { parseWritingAnswer, writingAnswerKey, writingAnswerSourceId } from '@/lib/writing-answer';
 import { RoundProgressNotice } from './round-progress';
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -115,7 +116,7 @@ function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pa
     if (progressId && attempt.correct) recordRoundSteps(progressId, progressExerciseIds ?? exercises.map(e => e.exerciseId), [attempt.exerciseId]);
     onAttempt?.(attempt);
   }
-  function restart() { try { if (legacySessionId || storageKey !== legacyStorageKey) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
+  function restart() { try { if (legacySessionId || storageKey !== legacyStorageKey) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { const sourceId = writingAnswerSourceId(exercise); if (sourceId) { const key = writingAnswerKey(sourceId), answer = parseWritingAnswer(localStorage.getItem(key)); if (answer) localStorage.setItem(key, JSON.stringify({ ...answer, draft: '' })); } else localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
   if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section {...completionKeys} className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button data-practice-next aria-keyshortcuts="Enter ArrowRight" className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={recordAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;
