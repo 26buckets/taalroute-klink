@@ -356,3 +356,24 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 /* Keep reading questions together instead of stretching their rows over the canvas. */
 .learner-app .cp-task-card.cp-extended-task:has(> .cp-source-text):has(> .cp-choice-grid) { height: auto; max-height: none; align-content: start; margin-block: 0; gap: 16px; }
 .learner-app .cp-task-card.cp-extended-task:has(> .cp-source-text):has(> .cp-choice-grid) > h4 { margin: 0; }
+
+/* Photo choices share the remaining canvas with the existing listening toolbar. */
+.learner-app .cp-exercise-stage > .cp-task-card:has(> .cp-choice-grid img, > .cp-choice-grid .cp-word-placeholder) { display: flex; flex-direction: column; flex: 1 1 0; height: auto; max-height: none; margin-block: 0; gap: 8px; }
+.learner-app .cp-exercise-stage > .cp-task-card > .cp-choice-grid:has(img, .cp-word-placeholder) { flex: 1 1 0; height: auto; }
+@media (max-height: 700px) {
+  body:has(.learner-app.consistent-layout .cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) { --taalroute-header-height: 0px; --klink-app-height: 100dvh; }
+  body:has(.learner-app.consistent-layout .cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) > .taalroute-header,
+  .product-root .learner-app.consistent-layout:has(.cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) > .learner-nav { display: none; position: static; }
+  .product-root .learner-app.consistent-layout:has(.cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) { grid-template-columns: minmax(0, 1fr); }
+  .product-root .consistent-layout .learner-main:has(.cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) { height: 100dvh; padding-bottom: 0; }
+  .learner-app .cp-exercise-browser:has(.cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) .cp-exercise-feedback { height: auto; min-height: 80px; }
+  .product-root .consistent-layout .cp-chapter-playing:has(.cp-exercise-stage > .cp-task-card > .cp-choice-grid :is(img, .cp-word-placeholder)) {
+    position: relative; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto;
+    > .cp-context-header { position: absolute; top: 4px; left: 0; width: 48px; min-height: 48px; height: 48px; padding: 0; grid-template-columns: 48px; grid-template-rows: 48px; z-index: 3; > :not(button) { display: none; } }
+    > .cp-practice-display { grid-column: 1; grid-row: 1; padding: 4px 0 4px 56px; > button { flex: 1; padding: 4px; gap: 4px; white-space: normal; } }
+    > .cp-exercise-browser { grid-column: 1; grid-row: 2; }
+  }
+}
+@media (max-height: 700px) and (min-width: 600px) and (max-width: 1100px) {
+  .learner-app .cp-exercise-stage > .cp-task-card > .cp-choice-grid:has(img, .cp-word-placeholder):not(:has(> button:nth-child(5))) { grid-template-columns: none; grid-template-rows: minmax(0, 1fr); grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+}

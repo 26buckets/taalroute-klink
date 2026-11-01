@@ -1,0 +1,28 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "d829bf9b4dea365c8197b977f5e38ddca9062adf",
+  "liveSourceCommit": "d829bf9b4dea365c8197b977f5e38ddca9062adf",
+  "userRequest": "hetzelfde geldt voor deze type opdrachten met luister en kies een foto. Ook hier zien we dat er gescrollt moet worden. wil ik je niet. Zorg dat het niet nodig is om te scrollen.",
+  "approval": "docs/appearance-floor-20261031/approved-updates/photo-choice-fit-20261101.json",
+  "scope": "Only active photo-choice cards share the remaining canvas with the existing audio/view toolbar. Preserve whole photos and aspect ratios, original text sizes, desktop two-column grid, all controls, content, audio, routes and progress. Short windows retain Back and both display controls while temporarily showing the focused task; short wide windows show up to four photos in one row and feedback can grow naturally. Other task layouts remain unchanged.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "scripts/check-photo-choice-fit-release-20261101.mjs",
+    "scripts/check-word-use-release-20261101.mjs",
+    "scripts/test-photo-choice-fit-browser-20261101.mjs",
+    "scripts/test-photo-choice-fit-release-20261101.mjs",
+    "VORMGEVING-VASTGEZET.md"
+  ],
+  "files": {
+    "app/learner-layout.css": "dfaecc019593f34b6de854d569abc16609ed47c9aef1f06444837d4bdccf2585",
+    "scripts/check-photo-choice-fit-release-20261101.mjs": "1080061b7d4f298785dfa56db12be55dd08cd4503d4ec675898f2176a6eae03a",
+    "scripts/check-word-use-release-20261101.mjs": "65038a2b356732c38840b8c609392746f7f229ad3e37a2215f0f9e37ed570458",
+    "scripts/test-photo-choice-fit-browser-20261101.mjs": "f299c14f21141ab2cfda928d750a6564c8ee5f35806b3f85931b178c68cb9846",
+    "scripts/test-photo-choice-fit-release-20261101.mjs": "c701aac04c37fbd6672316cd638cca17d756ce53a26dc40e19afd7a10b3114b0",
+    "VORMGEVING-VASTGEZET.md": "28a8c0c442c4560b0994e948ddebea141b976391bc6610ad9f4bb2dd4169a4be"
+  },
+  "cssDeltaSha256": "ff8c3faa3a464ee1ce19fde795e5e3a88988dd4a6111c7548f2ea3ebf142a072"
+}
