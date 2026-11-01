@@ -1,0 +1,3859 @@
+{
+  "base": "https://klink.taalroute.nl",
+  "checks": [
+    {
+      "engine": "chromium",
+      "activity": "word-combinations",
+      "key": "word-combinations|woordcombinaties|KLINK-EXTENDED|||||",
+      "id": "word-use:word-combinations:a1:01:recall:01",
+      "mode": "word-combinations",
+      "goal": "woordcombinaties",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordcombinaties",
+      "labels": [
+        "Woordbetekenis",
+        "Woorden combineren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "suitable-reply",
+      "key": "suitable-reply|passende-reactie|KLINK-EXTENDED|||||",
+      "id": "word-use:suitable-reply:a1:01:recall:01",
+      "mode": "suitable-reply",
+      "goal": "passende-reactie",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "passende-reactie",
+      "labels": [
+        "In de praktijk",
+        "Passend reageren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "meet",
+      "key": "model|woord-kennismaken|ALF-CMP-001|||||",
+      "id": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "mode": "model",
+      "goal": "woord-kennismaken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kennismaken",
+      "labels": [
+        "Woordbetekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "same-word",
+      "key": "same-word|woordbeeld|ALF-CMP-002|||||",
+      "id": "groep-1:group:same-word:groep-1:mixed:listen:klink-woord-map",
+      "mode": "same-word",
+      "goal": "woordbeeld",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordbeeld",
+      "labels": [
+        "Lezen",
+        "Woorden herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "key": "heard-image|hoor-foto|ALF-CMP-002|||||",
+      "id": "groep-1:group:listen:groep-1:mixed:listen:klink-woord-map",
+      "mode": "heard-image",
+      "goal": "hoor-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-foto",
+      "labels": [
+        "Luisteren",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "listen",
+      "key": "heard-word|hoor-woord|ALF-CMP-002|||||",
+      "id": "groep-3:group:listen:groep-3:mixed:listen:klink-woord-in",
+      "mode": "heard-word",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "read",
+      "key": "word-image|lees-foto|ALF-CMP-002|||||",
+      "id": "groep-1:group:read:groep-1:mixed:read:klink-woord-map",
+      "mode": "word-image",
+      "goal": "lees-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lees-foto",
+      "labels": [
+        "Lezen",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "match",
+      "key": "word-image-match|lees-foto|ALF-CMP-004|||||",
+      "id": "groep-1:group:match:groep-1:mixed:match:klink-woord-map",
+      "mode": "word-image-match",
+      "goal": "lees-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lees-foto",
+      "labels": [
+        "Lezen",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "hear-match",
+      "key": "hear-match|hoor-woord|ALF-CMP-004|||||",
+      "id": "groep-1:group:hear-match:groep-1:mixed:listen:klink-woord-man",
+      "mode": "hear-match",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "build-model",
+      "key": "word-build|bouw-model|ALF-CMP-005|||||",
+      "id": "groep-1:group:build-model:klink-leesstap-05:klink-woord-man:word-build",
+      "mode": "word-build",
+      "goal": "bouw-model",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-model",
+      "labels": [
+        "Spelling",
+        "Letters op volgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "build",
+      "key": "recall-word|bouw-gehoord|ALF-CMP-005|||||",
+      "id": "groep-1:group:build:groep-1:mixed:build:klink-woord-map",
+      "mode": "recall-word",
+      "goal": "bouw-gehoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-gehoord",
+      "labels": [
+        "Spelling",
+        "Horen en spellen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "worksheet-heard",
+      "key": "word-build|bouw-gehoord|ALF-CMP-005|||||",
+      "id": "HMM_A1_01_01",
+      "mode": "word-build",
+      "goal": "bouw-gehoord",
+      "layout": "per-item-tools",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-gehoord",
+      "labels": [
+        "Spelling",
+        "Horen en spellen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "missing",
+      "key": "missing-grapheme|ontbrekende-letter|ALF-CMP-002|||||",
+      "id": "groep-1:group:missing:klink-leesstap-04:klink-woord-man:missing-grapheme",
+      "mode": "missing-grapheme",
+      "goal": "ontbrekende-letter",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "ontbrekende-letter",
+      "labels": [
+        "Spelling",
+        "Woord aanvullen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "copy",
+      "key": "copy-word|overschrijven|ALF-CMP-006|||||",
+      "id": "groep-1:group:copy:klink-leesstap-05:klink-woord-man:copy-word",
+      "mode": "copy-word",
+      "goal": "overschrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "overschrijven",
+      "labels": [
+        "Schrijven",
+        "Precies schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "copy",
+      "key": "meaning-register|taalregister|ALF-CMP-002|||||",
+      "id": "TYP-B1-1454",
+      "mode": "meaning-register",
+      "goal": "taalregister",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "taalregister",
+      "labels": [
+        "Woordbetekenis",
+        "Passend taalgebruik"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "copy",
+      "key": "copy-word|overschrijven|ALF-CMP-006|||||exact-copy",
+      "id": "KSW-AC-TN-001",
+      "mode": "copy-word",
+      "goal": "overschrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "overschrijven",
+      "labels": [
+        "Schrijven",
+        "Precies schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "dictation",
+      "key": "word-dictation|woord-dictee|ALF-CMP-006|||||",
+      "id": "groep-1:group:dictation:klink-leesstap-05:klink-woord-man:word-dictation",
+      "mode": "word-dictation",
+      "goal": "woord-dictee",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-dictee",
+      "labels": [
+        "Spelling",
+        "Horen en schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "write",
+      "key": "write-word|woord-schrijven|ALF-CMP-012|||||",
+      "id": "groep-1:group:write:klink-leesstap-05:klink-woord-man:write-word",
+      "mode": "write-word",
+      "goal": "woord-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-schrijven",
+      "labels": [
+        "Schrijven",
+        "Woord schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "write-letter",
+      "key": "write-letter|letter-schrijven|ALF-CMP-012|||||",
+      "id": "groep-1:group:write-letter:letter-n",
+      "mode": "write-letter",
+      "goal": "letter-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "letter-schrijven",
+      "labels": [
+        "Schrijven",
+        "Letter typen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "paper-dictation",
+      "key": "paper-dictation|woord-dictee|ALF-CMP-012|||||",
+      "id": "groep-1:group:paper-dictation:groep-1:group:dictation:klink-leesstap-05:klink-woord-man:word-dictation",
+      "mode": "paper-dictation",
+      "goal": "woord-dictee",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-dictee",
+      "labels": [
+        "Spelling",
+        "Horen en schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "read-series",
+      "key": "read-series|woorden-hardop|ALF-CMP-007|||||",
+      "id": "groep-1:group:read-series:groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "mode": "read-series",
+      "goal": "woorden-hardop",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woorden-hardop",
+      "labels": [
+        "Lezen",
+        "Woorden lezen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "speak",
+      "key": "repeat-word|woord-uitspraak|ALF-CMP-009|||||",
+      "id": "groep-1:group:speak:klink-leesstap-05:klink-woord-man:repeat-word",
+      "mode": "repeat-word",
+      "goal": "woord-uitspraak",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-uitspraak",
+      "labels": [
+        "Spreken",
+        "Uitspraak"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "word-bingo",
+      "key": "word-bingo|hoor-woord|ALF-CMP-014|||||",
+      "id": "groep-1:group:word-bingo:groep-1:mixed:listen:klink-woord-man:klink-woord-tas",
+      "mode": "word-bingo",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "image-bingo",
+      "key": "image-bingo|hoor-foto|ALF-CMP-014|||||",
+      "id": "groep-1:group:image-bingo:groep-1:mixed:match:klink-woord-map:klink-woord-man",
+      "mode": "image-bingo",
+      "goal": "hoor-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-foto",
+      "labels": [
+        "Luisteren",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "memory",
+      "key": "memory|woord-kennismaken|ALF-CMP-015|||||",
+      "id": "groep-1:group:memory:groep-1:mixed:match:klink-woord-map",
+      "mode": "memory",
+      "goal": "woord-kennismaken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kennismaken",
+      "labels": [
+        "Woordbetekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "cards",
+      "key": "word-card|woord-kaart|ALF-CMP-016|||||",
+      "id": "groep-1:group:cards:klink-leesstap-05:klink-woord-man:word-card",
+      "mode": "word-card",
+      "goal": "woord-kaart",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kaart",
+      "labels": [
+        "Woordbetekenis",
+        "Woorden ophalen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "cards",
+      "key": "synonym-card|synoniemen|ALF-CMP-016|||||",
+      "id": "synonyms:recall:d04de24e4453:cards",
+      "mode": "synonym-card",
+      "goal": "synoniemen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "synoniemen",
+      "labels": [
+        "Woordbetekenis",
+        "Synoniemen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentences",
+      "key": "connected-sentence|zin-volgen|ALF-CMP-007|||||",
+      "id": "groep-1:group:sentences:klink-leesstap-03:klink-sentence-0bc18c78ac237777",
+      "mode": "connected-sentence",
+      "goal": "zin-volgen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-volgen",
+      "labels": [
+        "Luisteren",
+        "Zin volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentences",
+      "key": "text-question|tekst-info|KLINK-EXTENDED|||||",
+      "id": "klink-zinnen-zelf-a1-20261031-01",
+      "mode": "text-question",
+      "goal": "tekst-info",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-info",
+      "labels": [
+        "Lezen",
+        "Informatie vinden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "find-sentence",
+      "key": "find-sentence|gehoorde-zin|ALF-CMP-002|||||",
+      "id": "groep-1:group:find-sentence:klink-leesstap-04:klink-sentence-fdc6facd6c3fbe27",
+      "mode": "find-sentence",
+      "goal": "gehoorde-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gehoorde-zin",
+      "labels": [
+        "Luisteren",
+        "Zin herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-dictation",
+      "key": "sentence-dictation|zinsdictee|ALF-CMP-006|||||",
+      "id": "groep-1:group:sentence-dictation:klink-leesstap-03:klink-sentence-0bc18c78ac237777",
+      "mode": "sentence-dictation",
+      "goal": "zinsdictee",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zinsdictee",
+      "labels": [
+        "Spelling",
+        "Zin schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-speak",
+      "key": "sentence-speak|zin-uitspraak|ALF-CMP-009|||||",
+      "id": "groep-1:group:sentence-speak:klink-leesstap-03:klink-sentence-0bc18c78ac237777",
+      "mode": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-uitspraak",
+      "labels": [
+        "Spreken",
+        "Zinnen uitspreken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "understand",
+      "key": "sentence-question|zin-begrijpen|ALF-CMP-002|||||",
+      "id": "groep-1:group:understand:klink-leesstap-04:begrip-pan",
+      "mode": "sentence-question",
+      "goal": "zin-begrijpen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-begrijpen",
+      "labels": [
+        "Luisteren",
+        "Zin begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "texts",
+      "key": "connected-text|tekst-meeluisteren|ALF-CMP-007|||||",
+      "id": "groep-1:group:texts:klink-leesstap-05:klink-text-accb45a4f258b9c0",
+      "mode": "connected-text",
+      "goal": "tekst-meeluisteren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-meeluisteren",
+      "labels": [
+        "Luisteren",
+        "Tekst volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "dialogues",
+      "key": "connected-dialogue|gesprek-volgen|ALF-CMP-007|||||",
+      "id": "groep-1:group:dialogues:klink-leesstap-05:klink-dialogue-f97116495874666a",
+      "mode": "connected-dialogue",
+      "goal": "gesprek-volgen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gesprek-volgen",
+      "labels": [
+        "Luisteren",
+        "Gesprek volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-compare",
+      "key": "sound-compare|klankverschil|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:sound-compare:klink-woord-mat:0",
+      "mode": "sound-compare",
+      "goal": "klankverschil",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klankverschil",
+      "labels": [
+        "Klanken en letters",
+        "Klanken vergelijken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "dialogue-question",
+      "key": "dialogue-question|gesprek-begrip|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:dialogue-question:klink-dialogue-d0a263adf67c1b3c",
+      "mode": "dialogue-question",
+      "goal": "gesprek-begrip",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gesprek-begrip",
+      "labels": [
+        "In de praktijk",
+        "Gesprek begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-evidence",
+      "key": "text-evidence|tekst-bewijs|KLINK-EXTENDED|||mark||",
+      "id": "groep-1:group:text-evidence:klink-text-11469f28cc75975d",
+      "mode": "text-evidence",
+      "goal": "tekst-bewijs",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-bewijs",
+      "labels": [
+        "Lezen",
+        "Antwoord uitleggen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sentence-build",
+      "key": "sentence-build|zin-volgorde|ALF-CMP-005|||||",
+      "id": "groep-1:group:sentence-build:klink-sentence-cf6532e5ec2d5992",
+      "mode": "sentence-build",
+      "goal": "zin-volgorde",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-volgorde",
+      "labels": [
+        "Zinnen maken",
+        "Woordvolgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "verb-choice",
+      "key": "verb-choice|werkwoord|KLINK-EXTENDED|||gap||",
+      "id": "groep-1:group:verb-choice:klink-sentence-46608bcd4e85efc8",
+      "mode": "verb-choice",
+      "goal": "werkwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "werkwoord",
+      "labels": [
+        "Zinnen maken",
+        "Werkwoord kiezen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-message",
+      "key": "functional-message|bericht|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:functional-message:klink-dialogue-d0a263adf67c1b3c",
+      "mode": "functional-message",
+      "goal": "bericht",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bericht",
+      "labels": [
+        "Schrijven",
+        "Bericht schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "functional-form",
+      "key": "functional-form|formulier|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:functional-form:klink-dialogue-d0a263adf67c1b3c",
+      "mode": "functional-form",
+      "goal": "formulier",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "formulier",
+      "labels": [
+        "Schrijven",
+        "Formulier invullen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "dialogue-role",
+      "key": "dialogue-role|gespreksrol|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:dialogue-role:klink-dialogue-d0a263adf67c1b3c:0",
+      "mode": "dialogue-role",
+      "goal": "gespreksrol",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gespreksrol",
+      "labels": [
+        "Spreken",
+        "Zelf reageren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "word-sort",
+      "key": "word-sort|sorteer-letter|KLINK-STANDARD|||sort|letter|",
+      "id": "groep-1:group:word-sort:initial-m",
+      "mode": "word-sort",
+      "goal": "sorteer-letter",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "sorteer-letter",
+      "labels": [
+        "Lezen",
+        "Letters herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "word-sort",
+      "key": "word-sort|sorteer-spelling|KLINK-STANDARD|||sort|spelling|",
+      "id": "groep-1:group:word-sort:final-s",
+      "mode": "word-sort",
+      "goal": "sorteer-spelling",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "sorteer-spelling",
+      "labels": [
+        "Spelling",
+        "Schrijfpatronen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "word-sort",
+      "key": "word-sort|sorteer-betekenis|KLINK-STANDARD|||sort|meaning|",
+      "id": "groep-1:group:word-sort:person-object",
+      "mode": "word-sort",
+      "goal": "sorteer-betekenis",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "sorteer-betekenis",
+      "labels": [
+        "Woordbetekenis",
+        "Betekenissen ordenen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "context-order",
+      "key": "context-order|stappen|ALF-CMP-013|||||",
+      "id": "groep-1:group:context-order:klink-text-11469f28cc75975d",
+      "mode": "context-order",
+      "goal": "stappen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "stappen",
+      "labels": [
+        "In de praktijk",
+        "Volgorde van stappen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "situation-point",
+      "key": "situation-point|situatie|KLINK-STANDARD|||hotspot||",
+      "id": "groep-1:group:situation-point:situatie-map",
+      "mode": "situation-point",
+      "goal": "situatie",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "situatie",
+      "labels": [
+        "Woordbetekenis",
+        "Woord in een situatie"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "practice-branch",
+      "key": "practice-branch|praktijkkeuze|KLINK-STANDARD|||branch||",
+      "id": "groep-1:group:practice-branch:klink-dialogue-c3ecb2965e20ece2",
+      "mode": "practice-branch",
+      "goal": "praktijkkeuze",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "praktijkkeuze",
+      "labels": [
+        "In de praktijk",
+        "Keuze en gevolg"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-spelling",
+      "key": "content-teacher|spelling-controle|KLINK-CONTENT|teacher|spelling|||",
+      "id": "content:klink-sp-c-01-ramen",
+      "mode": "content-teacher",
+      "goal": "spelling-controle",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "spelling-controle",
+      "labels": [
+        "Spelling",
+        "Controleren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-spelling",
+      "key": "content-teacher|zinsafsluiting|KLINK-CONTENT|teacher|spelling|||",
+      "id": "content:klink-sp-c-02-huis",
+      "mode": "content-teacher",
+      "goal": "zinsafsluiting",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zinsafsluiting",
+      "labels": [
+        "Spelling",
+        "Hoofdletter en leesteken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-spelling",
+      "key": "content-teacher|eindletter|KLINK-CONTENT|teacher|spelling|||",
+      "id": "content:klink-sp-c-03-hand",
+      "mode": "content-teacher",
+      "goal": "eindletter",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "eindletter",
+      "labels": [
+        "Spelling",
+        "Eindletter controleren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-spelling",
+      "key": "content-teacher|woordgrenzen|KLINK-CONTENT|teacher|spelling|||",
+      "id": "content:klink-sp-c-02-leesboek",
+      "mode": "content-teacher",
+      "goal": "woordgrenzen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordgrenzen",
+      "labels": [
+        "Spelling",
+        "Spaties"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-choice|vraagwoord|KLINK-CONTENT|choice||||",
+      "id": "content:kg-vraag-001",
+      "mode": "content-choice",
+      "goal": "vraagwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "vraagwoord",
+      "labels": [
+        "Zinnen maken",
+        "Vraagwoorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|plaatswoord|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-ga-b-01-001",
+      "mode": "content-teacher",
+      "goal": "plaatswoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "plaatswoord",
+      "labels": [
+        "Zinnen maken",
+        "Plaats aangeven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|zijn-hebben|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-ga-b-02-001",
+      "mode": "content-teacher",
+      "goal": "zijn-hebben",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zijn-hebben",
+      "labels": [
+        "Zinnen maken",
+        "Zijn en hebben"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|vraag-begrijpen|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-ga-c-01-001",
+      "mode": "content-teacher",
+      "goal": "vraag-begrijpen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vraag-begrijpen",
+      "labels": [
+        "Lezen",
+        "Vraag begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|vraagzin|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f03-001",
+      "mode": "content-teacher",
+      "goal": "vraagzin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vraagzin",
+      "labels": [
+        "Zinnen maken",
+        "Vragen maken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|heden-zin|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f04-001",
+      "mode": "content-teacher",
+      "goal": "heden-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "heden-zin",
+      "labels": [
+        "Zinnen maken",
+        "Vertellen over nu"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|ontkenning|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f06-001",
+      "mode": "content-teacher",
+      "goal": "ontkenning",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "ontkenning",
+      "labels": [
+        "Zinnen maken",
+        "Niet en geen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|tijd-getallen|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f08-001",
+      "mode": "content-teacher",
+      "goal": "tijd-getallen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tijd-getallen",
+      "labels": [
+        "Zinnen maken",
+        "Datum, tijd en getallen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|zin-volgorde|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f09-001",
+      "mode": "content-teacher",
+      "goal": "zin-volgorde",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-volgorde",
+      "labels": [
+        "Zinnen maken",
+        "Woordvolgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|modaliteit|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f10-001",
+      "mode": "content-teacher",
+      "goal": "modaliteit",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "modaliteit",
+      "labels": [
+        "Zinnen maken",
+        "Kunnen, mogen en moeten"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|lidwoord|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f11-001",
+      "mode": "content-teacher",
+      "goal": "lidwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lidwoord",
+      "labels": [
+        "Zinnen maken",
+        "De en het"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|beschrijven|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f13-001",
+      "mode": "content-teacher",
+      "goal": "beschrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "beschrijven",
+      "labels": [
+        "Zinnen maken",
+        "Beschrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|hoeveelheid-zin|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f14-001",
+      "mode": "content-teacher",
+      "goal": "hoeveelheid-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoeveelheid-zin",
+      "labels": [
+        "Zinnen maken",
+        "Hoeveelheid en frequentie"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|voornaamwoord|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f15-001",
+      "mode": "content-teacher",
+      "goal": "voornaamwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "voornaamwoord",
+      "labels": [
+        "Zinnen maken",
+        "Verwijzen naar iemand"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|instructie-verzoek|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f18-001",
+      "mode": "content-teacher",
+      "goal": "instructie-verzoek",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "instructie-verzoek",
+      "labels": [
+        "Zinnen maken",
+        "Vragen en instrueren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|zinnen-verbinden|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f20-001",
+      "mode": "content-teacher",
+      "goal": "zinnen-verbinden",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zinnen-verbinden",
+      "labels": [
+        "Zinnen maken",
+        "Zinnen verbinden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|toekomst-zin|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f21-001",
+      "mode": "content-teacher",
+      "goal": "toekomst-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "toekomst-zin",
+      "labels": [
+        "Zinnen maken",
+        "Plannen en verwachtingen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|werkwoord-combineren|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f22-001",
+      "mode": "content-teacher",
+      "goal": "werkwoord-combineren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "werkwoord-combineren",
+      "labels": [
+        "Zinnen maken",
+        "Werkwoorden in een zin"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|grammatica-herstel|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a1-f24-001",
+      "mode": "content-teacher",
+      "goal": "grammatica-herstel",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "grammatica-herstel",
+      "labels": [
+        "Zinnen maken",
+        "Zinnen controleren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|vraagwoord|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g05-001",
+      "mode": "content-teacher",
+      "goal": "vraagwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vraagwoord",
+      "labels": [
+        "Zinnen maken",
+        "Vraagwoorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|er-gebruiken|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g10-001",
+      "mode": "content-teacher",
+      "goal": "er-gebruiken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "er-gebruiken",
+      "labels": [
+        "Zinnen maken",
+        "Er gebruiken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|vergelijken|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g14-001",
+      "mode": "content-teacher",
+      "goal": "vergelijken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vergelijken",
+      "labels": [
+        "Zinnen maken",
+        "Vergelijken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|passend-formuleren|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g22-001",
+      "mode": "content-teacher",
+      "goal": "passend-formuleren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "passend-formuleren",
+      "labels": [
+        "Zinnen maken",
+        "Passend formuleren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|voltooide-tijd|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g23-001",
+      "mode": "content-teacher",
+      "goal": "voltooide-tijd",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "voltooide-tijd",
+      "labels": [
+        "Zinnen maken",
+        "Voltooide tijd"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|verleden-zin|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g25-001",
+      "mode": "content-teacher",
+      "goal": "verleden-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "verleden-zin",
+      "labels": [
+        "Zinnen maken",
+        "Vertellen over vroeger"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|dat-vraagwoord|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g27-001",
+      "mode": "content-teacher",
+      "goal": "dat-vraagwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "dat-vraagwoord",
+      "labels": [
+        "Zinnen maken",
+        "Dat en vraagwoorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|woorddelen|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g28-001",
+      "mode": "content-teacher",
+      "goal": "woorddelen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woorddelen",
+      "labels": [
+        "Zinnen maken",
+        "Woorden en woorddelen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|vaste-woordgroepen|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-a2-g34-001",
+      "mode": "content-teacher",
+      "goal": "vaste-woordgroepen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vaste-woordgroepen",
+      "labels": [
+        "Zinnen maken",
+        "Vaste combinaties"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|passieve-zin|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-b1-g47-001",
+      "mode": "content-teacher",
+      "goal": "passieve-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "passieve-zin",
+      "labels": [
+        "Zinnen maken",
+        "Worden en zijn"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|indirect-weergeven|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-b1-g51-001",
+      "mode": "content-teacher",
+      "goal": "indirect-weergeven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "indirect-weergeven",
+      "labels": [
+        "Zinnen maken",
+        "In eigen woorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-grammatica",
+      "key": "content-teacher|indirecte-vragen|KLINK-CONTENT|teacher|grammar|||",
+      "id": "content:kg-b1-g54-001",
+      "mode": "content-teacher",
+      "goal": "indirecte-vragen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "indirecte-vragen",
+      "labels": [
+        "Zinnen maken",
+        "Indirecte vragen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-kern|KLINK-CONTENT|teacher||||",
+      "id": "content:kb-tb-20261018-04",
+      "mode": "content-teacher",
+      "goal": "tekst-kern",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-kern",
+      "labels": [
+        "Lezen",
+        "Kern begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-volgorde|KLINK-CONTENT|teacher||||",
+      "id": "content:kb-tb-20261018-05",
+      "mode": "content-teacher",
+      "goal": "tekst-volgorde",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-volgorde",
+      "labels": [
+        "Lezen",
+        "Volgorde begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-verwijzing|KLINK-CONTENT|teacher||||",
+      "id": "content:kb-tb-20261018-09",
+      "mode": "content-teacher",
+      "goal": "tekst-verwijzing",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-verwijzing",
+      "labels": [
+        "Lezen",
+        "Verwijzingen volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-info|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b06-07",
+      "mode": "content-teacher",
+      "goal": "tekst-info",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-info",
+      "labels": [
+        "Lezen",
+        "Informatie vinden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-voorwaarde|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b10-03",
+      "mode": "content-teacher",
+      "goal": "tekst-voorwaarde",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-voorwaarde",
+      "labels": [
+        "Lezen",
+        "Regels en afspraken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-precies|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b10-04",
+      "mode": "content-teacher",
+      "goal": "tekst-precies",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-precies",
+      "labels": [
+        "Lezen",
+        "Precies lezen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-gegevens|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b06-03",
+      "mode": "content-teacher",
+      "goal": "tekst-gegevens",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-gegevens",
+      "labels": [
+        "Lezen",
+        "Gegevens combineren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-bedoeling|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b07-03",
+      "mode": "content-teacher",
+      "goal": "tekst-bedoeling",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-bedoeling",
+      "labels": [
+        "Lezen",
+        "Bedoeling begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-reden|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b08-06",
+      "mode": "content-teacher",
+      "goal": "tekst-reden",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-reden",
+      "labels": [
+        "Lezen",
+        "Redenen begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-verband|KLINK-CONTENT|teacher||||",
+      "id": "content:klink-teksten-b11-02",
+      "mode": "content-teacher",
+      "goal": "tekst-verband",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-verband",
+      "labels": [
+        "Lezen",
+        "Verbanden begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-gesprekken",
+      "key": "content-choice|gesprek-lezen|KLINK-CONTENT|choice||||",
+      "id": "content:klink-gs-009",
+      "mode": "content-choice",
+      "goal": "gesprek-lezen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "gesprek-lezen",
+      "labels": [
+        "Lezen",
+        "Gesprek begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|letters-woorden|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-01",
+      "mode": "content-teacher",
+      "goal": "letters-woorden",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "letters-woorden",
+      "labels": [
+        "Schrijven",
+        "Letters en woorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|schriftelijk-verzoek|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-06",
+      "mode": "content-teacher",
+      "goal": "schriftelijk-verzoek",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "schriftelijk-verzoek",
+      "labels": [
+        "Schrijven",
+        "Iets vragen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|woordgrenzen|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:regie-20261018-schrijven-009-SCH-AC-01-01",
+      "mode": "content-teacher",
+      "goal": "woordgrenzen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordgrenzen",
+      "labels": [
+        "Spelling",
+        "Spaties"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|formulier|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-08",
+      "mode": "content-teacher",
+      "goal": "formulier",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "formulier",
+      "labels": [
+        "Schrijven",
+        "Formulier invullen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|naam-hoofdletter|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-09",
+      "mode": "content-teacher",
+      "goal": "naam-hoofdletter",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "naam-hoofdletter",
+      "labels": [
+        "Schrijven",
+        "Naam met hoofdletter"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|informatie-noteren|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-10",
+      "mode": "content-teacher",
+      "goal": "informatie-noteren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "informatie-noteren",
+      "labels": [
+        "Schrijven",
+        "Informatie opschrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|afspraak-noteren|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-final-sch-a102-leenbericht",
+      "mode": "content-teacher",
+      "goal": "afspraak-noteren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "afspraak-noteren",
+      "labels": [
+        "Schrijven",
+        "Afspraak noteren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|cijfers-schrijven|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-14",
+      "mode": "content-teacher",
+      "goal": "cijfers-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "cijfers-schrijven",
+      "labels": [
+        "Schrijven",
+        "Cijfers schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|lijst|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-17",
+      "mode": "content-teacher",
+      "goal": "lijst",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lijst",
+      "labels": [
+        "Schrijven",
+        "Lijst maken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|woord-schrijven|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:regie-20261018-schrijven-006-SCH-AB-01-01",
+      "mode": "content-teacher",
+      "goal": "woord-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-schrijven",
+      "labels": [
+        "Schrijven",
+        "Woord schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|klacht|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-final-sch-b101-klacht",
+      "mode": "content-teacher",
+      "goal": "klacht",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klacht",
+      "labels": [
+        "Schrijven",
+        "Klacht schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-schrijven",
+      "key": "content-teacher|schriftelijk-afwegen|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-final-sch-b102-keuzeverzoek",
+      "mode": "content-teacher",
+      "goal": "schriftelijk-afwegen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "schriftelijk-afwegen",
+      "labels": [
+        "Schrijven",
+        "Keuze toelichten"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|betekenis-precies|KLINK-CONTENT|teacher|precise-response|||",
+      "id": "content:klink-wp-b002-01",
+      "mode": "content-teacher",
+      "goal": "betekenis-precies",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "betekenis-precies",
+      "labels": [
+        "Woordbetekenis",
+        "Precieze betekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|woorden-hardop|KLINK-CONTENT|teacher|precise-response|||",
+      "id": "content:klink-wp-b002-04",
+      "mode": "content-teacher",
+      "goal": "woorden-hardop",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woorden-hardop",
+      "labels": [
+        "Lezen",
+        "Woorden lezen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|woord-schrijven|KLINK-CONTENT|teacher|precise-response|||",
+      "id": "content:klink-wp-b002-07",
+      "mode": "content-teacher",
+      "goal": "woord-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-schrijven",
+      "labels": [
+        "Schrijven",
+        "Woord schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|lettervolgorde-lezen|KLINK-CONTENT|teacher|precise-response|||",
+      "id": "content:klink-wp-b003-03",
+      "mode": "content-teacher",
+      "goal": "lettervolgorde-lezen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lettervolgorde-lezen",
+      "labels": [
+        "Lezen",
+        "Letters en betekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|woord-zelf-gebruiken|KLINK-CONTENT|teacher|model-fade|||",
+      "id": "content:klink-wp-b004-03",
+      "mode": "content-teacher",
+      "goal": "woord-zelf-gebruiken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-zelf-gebruiken",
+      "labels": [
+        "Woordbetekenis",
+        "Zelf gebruiken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|woord-toepassen|KLINK-CONTENT|teacher|functional-use|||",
+      "id": "content:klink-wp-b006-01",
+      "mode": "content-teacher",
+      "goal": "woord-toepassen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-toepassen",
+      "labels": [
+        "Woordbetekenis",
+        "Gebruiken in een situatie"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|eindletters-lezen|KLINK-CONTENT|teacher|precise-response|||",
+      "id": "content:klink-wp-b008-afname-04",
+      "mode": "content-teacher",
+      "goal": "eindletters-lezen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "eindletters-lezen",
+      "labels": [
+        "Lezen",
+        "Eindletters vergelijken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "content-woordpakketten",
+      "key": "content-choice|betekenis-herkennen|KLINK-CONTENT|choice||||",
+      "id": "content:self-use:klink-wp-b002-01",
+      "mode": "content-choice",
+      "goal": "betekenis-herkennen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "betekenis-herkennen",
+      "labels": [
+        "Woordbetekenis",
+        "Precieze betekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "key": "learning-example|klank-first|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-first-1:example:0",
+      "mode": "learning-example",
+      "goal": "klank-first",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-first",
+      "labels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "key": "learning-choice|klank-first|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-first-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "klank-first",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-first",
+      "labels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "key": "learning-example|klank-last|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-last-1:example:0",
+      "mode": "learning-example",
+      "goal": "klank-last",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-last",
+      "labels": [
+        "Klanken en letters",
+        "Laatste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "key": "learning-choice|klank-last|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-last-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "klank-last",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-last",
+      "labels": [
+        "Klanken en letters",
+        "Laatste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "key": "learning-example|klank-middle|KLINK-LEARNING|||||",
+      "id": "groep-3:sound-path:sound-middle-1:example:0",
+      "mode": "learning-example",
+      "goal": "klank-middle",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-middle",
+      "labels": [
+        "Klanken en letters",
+        "Middelste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "sound-path",
+      "key": "learning-choice|klank-middle|KLINK-LEARNING|||||",
+      "id": "groep-3:sound-path:sound-middle-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "klank-middle",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-middle",
+      "labels": [
+        "Klanken en letters",
+        "Middelste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-example|lange-klinker|KLINK-LEARNING|||||",
+      "id": "groep-5:spelling-path:spelling-long-1:example:0",
+      "mode": "learning-example",
+      "goal": "lange-klinker",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lange-klinker",
+      "labels": [
+        "Spelling",
+        "Lange klinker"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-choice|lange-klinker|KLINK-LEARNING|||||",
+      "id": "groep-5:spelling-path:spelling-long-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "lange-klinker",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lange-klinker",
+      "labels": [
+        "Spelling",
+        "Lange klinker"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-example|lettergroep|KLINK-LEARNING|||||",
+      "id": "groep-6:spelling-path:spelling-pairs-1:example:0",
+      "mode": "learning-example",
+      "goal": "lettergroep",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lettergroep",
+      "labels": [
+        "Spelling",
+        "Twee letters, één klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-choice|lettergroep|KLINK-LEARNING|||||",
+      "id": "groep-6:spelling-path:spelling-pairs-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "lettergroep",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lettergroep",
+      "labels": [
+        "Spelling",
+        "Twee letters, één klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-example|dubbele-medeklinker|KLINK-LEARNING|||||",
+      "id": "route-dubbel:spelling-path:spelling-double-1:example:0",
+      "mode": "learning-example",
+      "goal": "dubbele-medeklinker",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "dubbele-medeklinker",
+      "labels": [
+        "Spelling",
+        "Dubbele medeklinker"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-choice|dubbele-medeklinker|KLINK-LEARNING|||||",
+      "id": "route-dubbel:spelling-path:spelling-double-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "dubbele-medeklinker",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "dubbele-medeklinker",
+      "labels": [
+        "Spelling",
+        "Dubbele medeklinker"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-example|open-lettergreep|KLINK-LEARNING|||||",
+      "id": "route-open:spelling-path:spelling-open-1:example:0",
+      "mode": "learning-example",
+      "goal": "open-lettergreep",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "open-lettergreep",
+      "labels": [
+        "Spelling",
+        "Eén klinkerletter"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-choice|open-lettergreep|KLINK-LEARNING|||||",
+      "id": "route-open:spelling-path:spelling-open-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "open-lettergreep",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "open-lettergreep",
+      "labels": [
+        "Spelling",
+        "Eén klinkerletter"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-example|woordspelling|KLINK-LEARNING|||||",
+      "id": "ZSH-A1-0001:example",
+      "mode": "learning-example",
+      "goal": "woordspelling",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordspelling",
+      "labels": [
+        "Spelling",
+        "Woordspelling"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "spelling-path",
+      "key": "learning-choice|woordspelling|KLINK-LEARNING|||||",
+      "id": "ZSH-A1-0001:practice",
+      "mode": "learning-choice",
+      "goal": "woordspelling",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordspelling",
+      "labels": [
+        "Spelling",
+        "Woordspelling"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "key": "learning-example|vraagzin|KLINK-LEARNING|||||",
+      "id": "groep-3:grammar-path:grammar-question-1:example:0",
+      "mode": "learning-example",
+      "goal": "vraagzin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vraagzin",
+      "labels": [
+        "Zinnen maken",
+        "Vragen maken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "key": "learning-example|meervoud-zin|KLINK-LEARNING|||||",
+      "id": "groep-4:grammar-path:grammar-we-1:example:0",
+      "mode": "learning-example",
+      "goal": "meervoud-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "meervoud-zin",
+      "labels": [
+        "Zinnen maken",
+        "Meer dan één"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "grammar-path",
+      "key": "learning-choice|meervoud-zin|KLINK-LEARNING|||||",
+      "id": "groep-4:grammar-path:grammar-we-1:practice:1",
+      "mode": "learning-choice",
+      "goal": "meervoud-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "meervoud-zin",
+      "labels": [
+        "Zinnen maken",
+        "Meer dan één"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "hear-word",
+      "key": "heard-word|hoor-woord|ALF-CMP-002|||||",
+      "id": "groep-1:group:hear-word:groep-1:mixed:listen:klink-woord-map",
+      "mode": "heard-word",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "worksheet",
+      "key": "word-build|bouw-model|ALF-CMP-005|||||",
+      "id": "groep-1:group:worksheet:klink-leesstap-05:klink-woord-man:word-build",
+      "mode": "word-build",
+      "goal": "bouw-model",
+      "layout": "per-item-tools",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-model",
+      "labels": [
+        "Spelling",
+        "Letters op volgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "worksheet-heard",
+      "key": "recall-word|bouw-gehoord|ALF-CMP-005|||||",
+      "id": "groep-1:group:worksheet-heard:groep-1:group:build:groep-1:mixed:build:klink-woord-map",
+      "mode": "recall-word",
+      "goal": "bouw-gehoord",
+      "layout": "per-item-tools",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-gehoord",
+      "labels": [
+        "Spelling",
+        "Horen en spellen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "word-sentence",
+      "key": "model|woord-kennismaken|ALF-CMP-001|||||",
+      "id": "groep-1:group:word-sentence:klink-woord-man:0:groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "mode": "model",
+      "goal": "woord-kennismaken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kennismaken",
+      "labels": [
+        "Woordbetekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "text-question",
+      "key": "text-question|tekst-info|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:text-question:klink-text-11469f28cc75975d",
+      "mode": "text-question",
+      "goal": "tekst-info",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-info",
+      "labels": [
+        "Lezen",
+        "Informatie vinden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "practical-path",
+      "key": "connected-dialogue|gesprek-volgen|ALF-CMP-007|||||",
+      "id": "groep-1:practical-path:klink-dialogue-b19f8672e40c2017:example:0",
+      "mode": "connected-dialogue",
+      "goal": "gesprek-volgen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gesprek-volgen",
+      "labels": [
+        "Luisteren",
+        "Gesprek volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "reading-path",
+      "key": "connected-text|tekst-meeluisteren|ALF-CMP-007|||||",
+      "id": "groep-1:reading-path:klink-text-accb45a4f258b9c0:example:0",
+      "mode": "connected-text",
+      "goal": "tekst-meeluisteren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-meeluisteren",
+      "labels": [
+        "Luisteren",
+        "Tekst volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "learning-review",
+      "key": "learning-choice|klank-first|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-first-1:recall:9",
+      "mode": "learning-choice",
+      "goal": "klank-first",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-first",
+      "labels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "synonyms",
+      "key": "synonyms|synoniemen|KLINK-EXTENDED|||||",
+      "id": "synonyms:recall:d04de24e4453",
+      "mode": "synonyms",
+      "goal": "synoniemen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "synoniemen",
+      "labels": [
+        "Woordbetekenis",
+        "Synoniemen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "word-combinations",
+      "key": "word-combinations|woordcombinaties|KLINK-EXTENDED|||||",
+      "id": "word-use:word-combinations:a1:01:recall:01",
+      "mode": "word-combinations",
+      "goal": "woordcombinaties",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordcombinaties",
+      "labels": [
+        "Woordbetekenis",
+        "Woorden combineren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "suitable-reply",
+      "key": "suitable-reply|passende-reactie|KLINK-EXTENDED|||||",
+      "id": "word-use:suitable-reply:a1:01:recall:01",
+      "mode": "suitable-reply",
+      "goal": "passende-reactie",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "passende-reactie",
+      "labels": [
+        "In de praktijk",
+        "Passend reageren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "meet",
+      "key": "model|woord-kennismaken|ALF-CMP-001|||||",
+      "id": "groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "mode": "model",
+      "goal": "woord-kennismaken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kennismaken",
+      "labels": [
+        "Woordbetekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "same-word",
+      "key": "same-word|woordbeeld|ALF-CMP-002|||||",
+      "id": "groep-1:group:same-word:groep-1:mixed:listen:klink-woord-map",
+      "mode": "same-word",
+      "goal": "woordbeeld",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woordbeeld",
+      "labels": [
+        "Lezen",
+        "Woorden herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "listen",
+      "key": "heard-image|hoor-foto|ALF-CMP-002|||||",
+      "id": "groep-1:group:listen:groep-1:mixed:listen:klink-woord-map",
+      "mode": "heard-image",
+      "goal": "hoor-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-foto",
+      "labels": [
+        "Luisteren",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "hear-word",
+      "key": "heard-word|hoor-woord|ALF-CMP-002|||||",
+      "id": "groep-1:group:hear-word:groep-1:mixed:listen:klink-woord-map",
+      "mode": "heard-word",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "read",
+      "key": "word-image|lees-foto|ALF-CMP-002|||||",
+      "id": "groep-1:group:read:groep-1:mixed:read:klink-woord-map",
+      "mode": "word-image",
+      "goal": "lees-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lees-foto",
+      "labels": [
+        "Lezen",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "match",
+      "key": "word-image-match|lees-foto|ALF-CMP-004|||||",
+      "id": "groep-1:group:match:groep-1:mixed:match:klink-woord-map",
+      "mode": "word-image-match",
+      "goal": "lees-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lees-foto",
+      "labels": [
+        "Lezen",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "hear-match",
+      "key": "hear-match|hoor-woord|ALF-CMP-004|||||",
+      "id": "groep-1:group:hear-match:groep-1:mixed:listen:klink-woord-man",
+      "mode": "hear-match",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "build-model",
+      "key": "word-build|bouw-model|ALF-CMP-005|||||",
+      "id": "groep-1:group:build-model:klink-leesstap-05:klink-woord-man:word-build",
+      "mode": "word-build",
+      "goal": "bouw-model",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-model",
+      "labels": [
+        "Spelling",
+        "Letters op volgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "build",
+      "key": "recall-word|bouw-gehoord|ALF-CMP-005|||||",
+      "id": "groep-1:group:build:groep-1:mixed:build:klink-woord-map",
+      "mode": "recall-word",
+      "goal": "bouw-gehoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-gehoord",
+      "labels": [
+        "Spelling",
+        "Horen en spellen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "worksheet",
+      "key": "word-build|bouw-model|ALF-CMP-005|||||",
+      "id": "groep-1:group:worksheet:klink-leesstap-05:klink-woord-man:word-build",
+      "mode": "word-build",
+      "goal": "bouw-model",
+      "layout": "per-item-tools",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-model",
+      "labels": [
+        "Spelling",
+        "Letters op volgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "worksheet-heard",
+      "key": "recall-word|bouw-gehoord|ALF-CMP-005|||||",
+      "id": "groep-1:group:worksheet-heard:groep-1:group:build:groep-1:mixed:build:klink-woord-map",
+      "mode": "recall-word",
+      "goal": "bouw-gehoord",
+      "layout": "per-item-tools",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bouw-gehoord",
+      "labels": [
+        "Spelling",
+        "Horen en spellen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "missing",
+      "key": "missing-grapheme|ontbrekende-letter|ALF-CMP-002|||||",
+      "id": "groep-1:group:missing:klink-leesstap-04:klink-woord-man:missing-grapheme",
+      "mode": "missing-grapheme",
+      "goal": "ontbrekende-letter",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "ontbrekende-letter",
+      "labels": [
+        "Spelling",
+        "Woord aanvullen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "copy",
+      "key": "copy-word|overschrijven|ALF-CMP-006|||||",
+      "id": "groep-1:group:copy:klink-leesstap-05:klink-woord-man:copy-word",
+      "mode": "copy-word",
+      "goal": "overschrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "overschrijven",
+      "labels": [
+        "Schrijven",
+        "Precies schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "dictation",
+      "key": "word-dictation|woord-dictee|ALF-CMP-006|||||",
+      "id": "groep-1:group:dictation:klink-leesstap-05:klink-woord-man:word-dictation",
+      "mode": "word-dictation",
+      "goal": "woord-dictee",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-dictee",
+      "labels": [
+        "Spelling",
+        "Horen en schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "write",
+      "key": "write-word|woord-schrijven|ALF-CMP-012|||||",
+      "id": "groep-1:group:write:klink-leesstap-05:klink-woord-man:write-word",
+      "mode": "write-word",
+      "goal": "woord-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-schrijven",
+      "labels": [
+        "Schrijven",
+        "Woord schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "write-letter",
+      "key": "write-letter|letter-schrijven|ALF-CMP-012|||||",
+      "id": "groep-1:group:write-letter:letter-n",
+      "mode": "write-letter",
+      "goal": "letter-schrijven",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "letter-schrijven",
+      "labels": [
+        "Schrijven",
+        "Letter typen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "paper-dictation",
+      "key": "paper-dictation|woord-dictee|ALF-CMP-012|||||",
+      "id": "groep-1:group:paper-dictation:groep-1:group:dictation:klink-leesstap-05:klink-woord-man:word-dictation",
+      "mode": "paper-dictation",
+      "goal": "woord-dictee",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-dictee",
+      "labels": [
+        "Spelling",
+        "Horen en schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "read-series",
+      "key": "read-series|woorden-hardop|ALF-CMP-007|||||",
+      "id": "groep-1:group:read-series:groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "mode": "read-series",
+      "goal": "woorden-hardop",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woorden-hardop",
+      "labels": [
+        "Lezen",
+        "Woorden lezen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "speak",
+      "key": "repeat-word|woord-uitspraak|ALF-CMP-009|||||",
+      "id": "groep-1:group:speak:klink-leesstap-05:klink-woord-man:repeat-word",
+      "mode": "repeat-word",
+      "goal": "woord-uitspraak",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-uitspraak",
+      "labels": [
+        "Spreken",
+        "Uitspraak"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "word-bingo",
+      "key": "word-bingo|hoor-woord|ALF-CMP-014|||||",
+      "id": "groep-1:group:word-bingo:groep-1:mixed:listen:klink-woord-man:klink-woord-tas",
+      "mode": "word-bingo",
+      "goal": "hoor-woord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-woord",
+      "labels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "image-bingo",
+      "key": "image-bingo|hoor-foto|ALF-CMP-014|||||",
+      "id": "groep-1:group:image-bingo:groep-1:mixed:match:klink-woord-map:klink-woord-man",
+      "mode": "image-bingo",
+      "goal": "hoor-foto",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "hoor-foto",
+      "labels": [
+        "Luisteren",
+        "Woord en foto"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "memory",
+      "key": "memory|woord-kennismaken|ALF-CMP-015|||||",
+      "id": "groep-1:group:memory:groep-1:mixed:match:klink-woord-map",
+      "mode": "memory",
+      "goal": "woord-kennismaken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kennismaken",
+      "labels": [
+        "Woordbetekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "cards",
+      "key": "word-card|woord-kaart|ALF-CMP-016|||||",
+      "id": "groep-1:group:cards:klink-leesstap-05:klink-woord-man:word-card",
+      "mode": "word-card",
+      "goal": "woord-kaart",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kaart",
+      "labels": [
+        "Woordbetekenis",
+        "Woorden ophalen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentences",
+      "key": "connected-sentence|zin-volgen|ALF-CMP-007|||||",
+      "id": "groep-1:group:sentences:klink-leesstap-03:klink-sentence-0bc18c78ac237777",
+      "mode": "connected-sentence",
+      "goal": "zin-volgen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-volgen",
+      "labels": [
+        "Luisteren",
+        "Zin volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "word-sentence",
+      "key": "model|woord-kennismaken|ALF-CMP-001|||||",
+      "id": "groep-1:group:word-sentence:klink-woord-man:0:groep-1:group:meet:klink-leesstap-05:klink-woord-man:model",
+      "mode": "model",
+      "goal": "woord-kennismaken",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "woord-kennismaken",
+      "labels": [
+        "Woordbetekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "find-sentence",
+      "key": "find-sentence|gehoorde-zin|ALF-CMP-002|||||",
+      "id": "groep-1:group:find-sentence:klink-leesstap-04:klink-sentence-fdc6facd6c3fbe27",
+      "mode": "find-sentence",
+      "goal": "gehoorde-zin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gehoorde-zin",
+      "labels": [
+        "Luisteren",
+        "Zin herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-dictation",
+      "key": "sentence-dictation|zinsdictee|ALF-CMP-006|||||",
+      "id": "groep-1:group:sentence-dictation:klink-leesstap-03:klink-sentence-0bc18c78ac237777",
+      "mode": "sentence-dictation",
+      "goal": "zinsdictee",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zinsdictee",
+      "labels": [
+        "Spelling",
+        "Zin schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-speak",
+      "key": "sentence-speak|zin-uitspraak|ALF-CMP-009|||||",
+      "id": "groep-1:group:sentence-speak:klink-leesstap-03:klink-sentence-0bc18c78ac237777",
+      "mode": "sentence-speak",
+      "goal": "zin-uitspraak",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-uitspraak",
+      "labels": [
+        "Spreken",
+        "Zinnen uitspreken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "understand",
+      "key": "sentence-question|zin-begrijpen|ALF-CMP-002|||||",
+      "id": "groep-1:group:understand:klink-leesstap-04:begrip-pan",
+      "mode": "sentence-question",
+      "goal": "zin-begrijpen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-begrijpen",
+      "labels": [
+        "Luisteren",
+        "Zin begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "texts",
+      "key": "connected-text|tekst-meeluisteren|ALF-CMP-007|||||",
+      "id": "groep-1:group:texts:klink-leesstap-05:klink-text-accb45a4f258b9c0",
+      "mode": "connected-text",
+      "goal": "tekst-meeluisteren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-meeluisteren",
+      "labels": [
+        "Luisteren",
+        "Tekst volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "dialogues",
+      "key": "connected-dialogue|gesprek-volgen|ALF-CMP-007|||||",
+      "id": "groep-1:group:dialogues:klink-leesstap-05:klink-dialogue-f97116495874666a",
+      "mode": "connected-dialogue",
+      "goal": "gesprek-volgen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gesprek-volgen",
+      "labels": [
+        "Luisteren",
+        "Gesprek volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-compare",
+      "key": "sound-compare|klankverschil|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:sound-compare:klink-woord-mat:0",
+      "mode": "sound-compare",
+      "goal": "klankverschil",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klankverschil",
+      "labels": [
+        "Klanken en letters",
+        "Klanken vergelijken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-question",
+      "key": "text-question|tekst-info|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:text-question:klink-text-11469f28cc75975d",
+      "mode": "text-question",
+      "goal": "tekst-info",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-info",
+      "labels": [
+        "Lezen",
+        "Informatie vinden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "dialogue-question",
+      "key": "dialogue-question|gesprek-begrip|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:dialogue-question:klink-dialogue-d0a263adf67c1b3c",
+      "mode": "dialogue-question",
+      "goal": "gesprek-begrip",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gesprek-begrip",
+      "labels": [
+        "In de praktijk",
+        "Gesprek begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "text-evidence",
+      "key": "text-evidence|tekst-bewijs|KLINK-EXTENDED|||mark||",
+      "id": "groep-1:group:text-evidence:klink-text-11469f28cc75975d",
+      "mode": "text-evidence",
+      "goal": "tekst-bewijs",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-bewijs",
+      "labels": [
+        "Lezen",
+        "Antwoord uitleggen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sentence-build",
+      "key": "sentence-build|zin-volgorde|ALF-CMP-005|||||",
+      "id": "groep-1:group:sentence-build:klink-sentence-cf6532e5ec2d5992",
+      "mode": "sentence-build",
+      "goal": "zin-volgorde",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "zin-volgorde",
+      "labels": [
+        "Zinnen maken",
+        "Woordvolgorde"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "verb-choice",
+      "key": "verb-choice|werkwoord|KLINK-EXTENDED|||gap||",
+      "id": "groep-1:group:verb-choice:klink-sentence-46608bcd4e85efc8",
+      "mode": "verb-choice",
+      "goal": "werkwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "werkwoord",
+      "labels": [
+        "Zinnen maken",
+        "Werkwoord kiezen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-message",
+      "key": "functional-message|bericht|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:functional-message:klink-dialogue-d0a263adf67c1b3c",
+      "mode": "functional-message",
+      "goal": "bericht",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "bericht",
+      "labels": [
+        "Schrijven",
+        "Bericht schrijven"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "functional-form",
+      "key": "functional-form|formulier|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:functional-form:klink-dialogue-d0a263adf67c1b3c",
+      "mode": "functional-form",
+      "goal": "formulier",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "formulier",
+      "labels": [
+        "Schrijven",
+        "Formulier invullen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "dialogue-role",
+      "key": "dialogue-role|gespreksrol|KLINK-EXTENDED|||||",
+      "id": "groep-1:group:dialogue-role:klink-dialogue-d0a263adf67c1b3c:0",
+      "mode": "dialogue-role",
+      "goal": "gespreksrol",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gespreksrol",
+      "labels": [
+        "Spreken",
+        "Zelf reageren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "word-sort",
+      "key": "word-sort|sorteer-letter|KLINK-STANDARD|||sort|letter|",
+      "id": "groep-1:group:word-sort:initial-m",
+      "mode": "word-sort",
+      "goal": "sorteer-letter",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "sorteer-letter",
+      "labels": [
+        "Lezen",
+        "Letters herkennen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "context-order",
+      "key": "context-order|stappen|ALF-CMP-013|||||",
+      "id": "groep-1:group:context-order:klink-text-11469f28cc75975d",
+      "mode": "context-order",
+      "goal": "stappen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "stappen",
+      "labels": [
+        "In de praktijk",
+        "Volgorde van stappen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "situation-point",
+      "key": "situation-point|situatie|KLINK-STANDARD|||hotspot||",
+      "id": "groep-1:group:situation-point:situatie-map",
+      "mode": "situation-point",
+      "goal": "situatie",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "situatie",
+      "labels": [
+        "Woordbetekenis",
+        "Woord in een situatie"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "practice-branch",
+      "key": "practice-branch|praktijkkeuze|KLINK-STANDARD|||branch||",
+      "id": "groep-1:group:practice-branch:klink-dialogue-c3ecb2965e20ece2",
+      "mode": "practice-branch",
+      "goal": "praktijkkeuze",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "praktijkkeuze",
+      "labels": [
+        "In de praktijk",
+        "Keuze en gevolg"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-spelling",
+      "key": "content-teacher|spelling-controle|KLINK-CONTENT|teacher|spelling|||",
+      "id": "content:klink-sp-c-01-ramen",
+      "mode": "content-teacher",
+      "goal": "spelling-controle",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "spelling-controle",
+      "labels": [
+        "Spelling",
+        "Controleren"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-grammatica",
+      "key": "content-choice|vraagwoord|KLINK-CONTENT|choice||||",
+      "id": "content:kg-vraag-001",
+      "mode": "content-choice",
+      "goal": "vraagwoord",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "vraagwoord",
+      "labels": [
+        "Zinnen maken",
+        "Vraagwoorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-teksten",
+      "key": "content-teacher|tekst-kern|KLINK-CONTENT|teacher||||",
+      "id": "content:kb-tb-20261018-04",
+      "mode": "content-teacher",
+      "goal": "tekst-kern",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "tekst-kern",
+      "labels": [
+        "Lezen",
+        "Kern begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-gesprekken",
+      "key": "content-choice|gesprek-lezen|KLINK-CONTENT|choice||||",
+      "id": "content:klink-gs-009",
+      "mode": "content-choice",
+      "goal": "gesprek-lezen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "protected": true,
+      "ownResponsePreserved": true,
+      "actualGoal": "gesprek-lezen",
+      "labels": [
+        "Lezen",
+        "Gesprek begrijpen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-schrijven",
+      "key": "content-teacher|letters-woorden|KLINK-CONTENT|teacher|writing|||",
+      "id": "content:klink-offline-schrijf-01",
+      "mode": "content-teacher",
+      "goal": "letters-woorden",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "letters-woorden",
+      "labels": [
+        "Schrijven",
+        "Letters en woorden"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "content-woordpakketten",
+      "key": "content-teacher|betekenis-precies|KLINK-CONTENT|teacher|precise-response|||",
+      "id": "content:klink-wp-b002-01",
+      "mode": "content-teacher",
+      "goal": "betekenis-precies",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "betekenis-precies",
+      "labels": [
+        "Woordbetekenis",
+        "Precieze betekenis"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "sound-path",
+      "key": "learning-example|klank-first|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-first-1:example:0",
+      "mode": "learning-example",
+      "goal": "klank-first",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-first",
+      "labels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "spelling-path",
+      "key": "learning-example|lange-klinker|KLINK-LEARNING|||||",
+      "id": "groep-5:spelling-path:spelling-long-1:example:0",
+      "mode": "learning-example",
+      "goal": "lange-klinker",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "lange-klinker",
+      "labels": [
+        "Spelling",
+        "Lange klinker"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "grammar-path",
+      "key": "learning-example|vraagzin|KLINK-LEARNING|||||",
+      "id": "groep-3:grammar-path:grammar-question-1:example:0",
+      "mode": "learning-example",
+      "goal": "vraagzin",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "vraagzin",
+      "labels": [
+        "Zinnen maken",
+        "Vragen maken"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "practical-path",
+      "key": "connected-dialogue|gesprek-volgen|ALF-CMP-007|||||",
+      "id": "groep-1:practical-path:klink-dialogue-b19f8672e40c2017:example:0",
+      "mode": "connected-dialogue",
+      "goal": "gesprek-volgen",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "gesprek-volgen",
+      "labels": [
+        "Luisteren",
+        "Gesprek volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "reading-path",
+      "key": "connected-text|tekst-meeluisteren|ALF-CMP-007|||||",
+      "id": "groep-1:reading-path:klink-text-accb45a4f258b9c0:example:0",
+      "mode": "connected-text",
+      "goal": "tekst-meeluisteren",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "tekst-meeluisteren",
+      "labels": [
+        "Luisteren",
+        "Tekst volgen"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "learning-review",
+      "key": "learning-choice|klank-first|KLINK-LEARNING|||||",
+      "id": "groep-1:sound-path:sound-first-1:recall:9",
+      "mode": "learning-choice",
+      "goal": "klank-first",
+      "layout": "single",
+      "infoCount": 1,
+      "infoInHeader": true,
+      "actualGoal": "klank-first",
+      "labels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ],
+      "goalFits": true,
+      "keyboardContained": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": [
+    {
+      "engine": "chromium",
+      "activity": "synonyms",
+      "key": "synonyms|synoniemen|KLINK-EXTENDED|||||",
+      "id": "synonyms:recall:d04de24e4453",
+      "mode": "synonyms",
+      "goal": "synoniemen",
+      "error": "locator.waitFor: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-exercise-id]') to be visible\u001b[22m\n"
+    }
+  ]
+}

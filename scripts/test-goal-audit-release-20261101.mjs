@@ -1,0 +1,4 @@
+import test from'node:test';import assert from'node:assert/strict';import{readFileSync}from'node:fs';import{verifyGoalAuditRelease}from'./check-goal-audit-release-20261101.mjs';
+test('approved source, complete mapping, header and mobile evidence pass',()=>assert.equal(verifyGoalAuditRelease().approvedBy,'Nico'));
+for(const file of['data/klink-learning-goals.json','components/product/exercise-listen.tsx','docs/goal-audit-20261101/local/interactions.json'])test('reject altered source or evidence '+file,()=>assert.throws(()=>verifyGoalAuditRelease(f=>f===file?Buffer.concat([readFileSync(f),Buffer.from(' ')]):readFileSync(f))));
+test('reject missing release approval',()=>assert.throws(()=>verifyGoalAuditRelease(f=>{const b=readFileSync(f);return f==='docs/klink-owner-release-goal-audit-20261101.json'?Buffer.from(JSON.stringify({...JSON.parse(b),publicationApproved:false})):b;})));
