@@ -1,0 +1,699 @@
+{
+  "reviewer": "Codex",
+  "reviewType": "editorial AI review",
+  "independentHumanReview": false,
+  "ownerApproval": "standing-owner-approval",
+  "ownerPolicy": "docs/klink-invullen-20261101/automatic-owner-approval.json",
+  "classroomPilot": "open",
+  "sourceTextChanged": false,
+  "newMedia": false,
+  "bookGoal": "Bestaand schrijfdoel SC-01: schrijven of typen met een zichtbaar model.",
+  "lessonUse": {
+    "teacher": "Laat het model lezen of lees samen. Laat de cursist typen en daarna letters, spaties, hoofdletters en tekens vergelijken.",
+    "learner": "Typt hetzelfde zichtbare model en verbetert een afwijkend antwoord.",
+    "material": "Bestaande Klink-schrijfspeler; 20 bronopdrachten, zonder nieuwe media.",
+    "time": "Docent kiest de opdrachten binnen de werkelijk ingeroosterde oefentijd; geen nieuwe urenvariant of getoetste tijdsclaim.",
+    "observation": "Zichtbaar model blijft staan; fout antwoord rondt niet af; docent observeert zelfstandig vergelijken en gericht verbeteren."
+  },
+  "dimensions": [
+    "natuurlijk Nederlands",
+    "spelling",
+    "grammatica",
+    "korte volwassen context",
+    "opbouw losse woorden naar korte zinnen",
+    "brongetrouwe exacte antwoorden",
+    "passende foutfeedback"
+  ],
+  "rows": [
+    {
+      "id": "KSW-AC-TN-001",
+      "model": "hand",
+      "review": "passed",
+      "feedback": "Kijk goed: hand begint met h en eindigt met d.",
+      "lexicon": [
+        {
+          "surface": "hand",
+          "lemma": "hand",
+          "lexiconCandidateId": "A1-K-258",
+          "lexiconSenseId": "TL0607.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Los woord: geen onterechte eis van hoofdletter of punt."
+    },
+    {
+      "id": "KSW-AC-TN-002",
+      "model": "stoel",
+      "review": "passed",
+      "feedback": "In stoel staan de o en e naast elkaar.",
+      "lexicon": [
+        {
+          "surface": "stoel",
+          "lemma": "stoel",
+          "lexiconCandidateId": "A1-K-354",
+          "lexiconSenseId": "TL1468.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Los woord: geen onterechte eis van hoofdletter of punt."
+    },
+    {
+      "id": "KSW-AC-TN-003",
+      "model": "tafel",
+      "review": "passed",
+      "feedback": "Controleer de volgorde: t-a-f-e-l.",
+      "lexicon": [
+        {
+          "surface": "tafel",
+          "lemma": "tafel",
+          "lexiconCandidateId": "A1-K-353",
+          "lexiconSenseId": "TL1497.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Los woord: geen onterechte eis van hoofdletter of punt."
+    },
+    {
+      "id": "KSW-AC-TN-004",
+      "model": "voet",
+      "review": "passed",
+      "feedback": "Ook voet heeft de letters oe.",
+      "lexicon": [
+        {
+          "surface": "voet",
+          "lemma": "voet",
+          "lexiconCandidateId": "A1-K-264",
+          "lexiconSenseId": "TL1778.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Los woord: geen onterechte eis van hoofdletter of punt."
+    },
+    {
+      "id": "KSW-AC-TN-005",
+      "model": "de hand",
+      "review": "passed",
+      "feedback": "Schrijf de en hand los van elkaar.",
+      "lexicon": [
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "hand",
+          "lemma": "hand",
+          "lexiconCandidateId": "A1-K-258",
+          "lexiconSenseId": "TL0607.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-006",
+      "model": "een stoel",
+      "review": "passed",
+      "feedback": "Typ eerst een, dan een spatie en stoel.",
+      "lexicon": [
+        {
+          "surface": "een",
+          "lemma": "een",
+          "lexiconCandidateId": "A1-K-030",
+          "lexiconSenseId": "TL0419.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "stoel",
+          "lemma": "stoel",
+          "lexiconCandidateId": "A1-K-354",
+          "lexiconSenseId": "TL1468.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-007",
+      "model": "de tafel",
+      "review": "passed",
+      "feedback": "Er staat één spatie tussen de en tafel.",
+      "lexicon": [
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "tafel",
+          "lemma": "tafel",
+          "lexiconCandidateId": "A1-K-353",
+          "lexiconSenseId": "TL1497.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-008",
+      "model": "mijn voet",
+      "review": "passed",
+      "feedback": "Mijn schrijf je met ij. Daarna komt een spatie.",
+      "lexicon": [
+        {
+          "surface": "mijn",
+          "lemma": "mijn",
+          "lexiconCandidateId": "A1-K-027",
+          "lexiconSenseId": "TL0964.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "voet",
+          "lemma": "voet",
+          "lexiconCandidateId": "A1-K-264",
+          "lexiconSenseId": "TL1778.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-009",
+      "model": "De tas is rood.",
+      "review": "passed",
+      "feedback": "Begin met hoofdletter D. Rood heeft oo. Eindig met een punt.",
+      "lexicon": [
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "tas",
+          "lemma": "tas",
+          "lexiconCandidateId": "A1-K-444",
+          "lexiconSenseId": "TL1502.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "is",
+          "lemma": "zijn",
+          "lexiconCandidateId": "A1-K-049",
+          "lexiconSenseId": "TL1965.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "rood",
+          "lemma": "rood",
+          "lexiconCandidateId": "A1-K-493",
+          "lexiconSenseId": "TL1336.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-010",
+      "model": "De pen is blauw.",
+      "review": "passed",
+      "feedback": "Blauw schrijf je met au. Vergeet de punt niet.",
+      "lexicon": [
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "pen",
+          "lemma": "pen",
+          "lexiconCandidateId": "A1-K-148",
+          "lexiconSenseId": "TL1216.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "is",
+          "lemma": "zijn",
+          "lexiconCandidateId": "A1-K-049",
+          "lexiconSenseId": "TL1965.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "blauw",
+          "lemma": "blauw",
+          "lexiconCandidateId": "A1-K-494",
+          "lexiconSenseId": "TL0238.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-011",
+      "model": "Ik pak mijn tas.",
+      "review": "passed",
+      "feedback": "Pak eindigt op k. Mijn schrijf je met ij.",
+      "lexicon": [
+        {
+          "surface": "ik",
+          "lemma": "ik",
+          "lexiconCandidateId": "A1-K-021",
+          "lexiconSenseId": "TL0688.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "pak",
+          "lemma": "pakken",
+          "lexiconCandidateId": "A1-K-055",
+          "lexiconSenseId": "TL1194.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "mijn",
+          "lemma": "mijn",
+          "lexiconCandidateId": "A1-K-027",
+          "lexiconSenseId": "TL0964.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "tas",
+          "lemma": "tas",
+          "lexiconCandidateId": "A1-K-444",
+          "lexiconSenseId": "TL1502.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-012",
+      "model": "Het boek ligt hier.",
+      "review": "passed",
+      "feedback": "Ligt eindigt op gt. Hier schrijf je met ie.",
+      "lexicon": [
+        {
+          "surface": "het",
+          "lemma": "het",
+          "lexiconCandidateId": "A1-K-029",
+          "lexiconSenseId": "TL0642.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "boek",
+          "lemma": "boek",
+          "lexiconCandidateId": "A1-K-147",
+          "lexiconSenseId": "TL0250.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "ligt",
+          "lemma": "liggen",
+          "lexiconCandidateId": "A1-K-520",
+          "lexiconSenseId": "TL0876.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "hier",
+          "lemma": "hier",
+          "lexiconCandidateId": "A1-K-105",
+          "lexiconSenseId": "TL0646.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-013",
+      "model": "Mijn moeder belt morgen.",
+      "review": "passed",
+      "feedback": "Belt eindigt op t. Morgen is één woord.",
+      "lexicon": [
+        {
+          "surface": "mijn",
+          "lemma": "mijn",
+          "lexiconCandidateId": "A1-K-027",
+          "lexiconSenseId": "TL0964.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "moeder",
+          "lemma": "moeder",
+          "lexiconCandidateId": "A1-K-210",
+          "lexiconSenseId": "TL0980.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "belt",
+          "lemma": "bellen",
+          "lexiconCandidateId": "A1-K-064",
+          "lexiconSenseId": "TL0165.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "morgen",
+          "lemma": "morgen",
+          "lexiconCandidateId": "A1-K-081",
+          "lexiconSenseId": "TL0991.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-014",
+      "model": "Ik ga naar school.",
+      "review": "passed",
+      "feedback": "School begint met sch. Zet een punt achter de zin.",
+      "lexicon": [
+        {
+          "surface": "ik",
+          "lemma": "ik",
+          "lexiconCandidateId": "A1-K-021",
+          "lexiconSenseId": "TL0688.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "ga",
+          "lemma": "gaan",
+          "lexiconCandidateId": "A1-K-052",
+          "lexiconSenseId": "TL0496.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "naar",
+          "lemma": "naar",
+          "lexiconCandidateId": "A1-K-038",
+          "lexiconSenseId": "TL0996.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "school",
+          "lemma": "school",
+          "lexiconCandidateId": "A1-K-150",
+          "lexiconSenseId": "TL1371.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-015",
+      "model": "De bus komt te laat.",
+      "review": "passed",
+      "feedback": "Te en laat zijn twee losse woorden. Komt eindigt op t.",
+      "lexicon": [
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "bus",
+          "lemma": "bus",
+          "lexiconCandidateId": "A1-K-100",
+          "lexiconSenseId": "TL0288.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "komt",
+          "lemma": "komen",
+          "lexiconCandidateId": "A1-K-053",
+          "lexiconSenseId": "TL0804.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "te",
+          "lemma": "te",
+          "lexiconCandidateId": "A1-K-558",
+          "lexiconSenseId": "TL1504.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "laat",
+          "lemma": "laat",
+          "lexiconCandidateId": "A1-K-084",
+          "lexiconSenseId": "TL0829.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-016",
+      "model": "Ik koop brood en melk.",
+      "review": "passed",
+      "feedback": "Koop en brood hebben twee o's.",
+      "lexicon": [
+        {
+          "surface": "ik",
+          "lemma": "ik",
+          "lexiconCandidateId": "A1-K-021",
+          "lexiconSenseId": "TL0688.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "koop",
+          "lemma": "kopen",
+          "lexiconCandidateId": "A1-K-095",
+          "lexiconSenseId": "TL0807.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "brood",
+          "lemma": "brood",
+          "lexiconCandidateId": "A1-K-094",
+          "lexiconSenseId": "TL0277.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "en",
+          "lemma": "en",
+          "lexiconCandidateId": "A1-K-035",
+          "lexiconSenseId": "TL0447.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "melk",
+          "lemma": "melk",
+          "lexiconCandidateId": "A1-K-309",
+          "lexiconSenseId": "TL0944.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-017",
+      "model": "Mijn jas hangt in de kast.",
+      "review": "passed",
+      "feedback": "Hangt schrijf je met ngt. In en de staan los.",
+      "lexicon": [
+        {
+          "surface": "mijn",
+          "lemma": "mijn",
+          "lexiconCandidateId": "A1-K-027",
+          "lexiconSenseId": "TL0964.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "jas",
+          "lemma": "jas",
+          "lexiconCandidateId": "A1-K-294",
+          "lexiconSenseId": "TL0732.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "hangt",
+          "lemma": "hangen",
+          "lexiconCandidateId": "A1-K-765",
+          "lexiconSenseId": "TL0615.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "in",
+          "lemma": "in",
+          "lexiconCandidateId": "A1-K-039",
+          "lexiconSenseId": "TL0689.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "kast",
+          "lemma": "kast",
+          "lexiconCandidateId": "A1-K-357",
+          "lexiconSenseId": "TL0756.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-018",
+      "model": "Vandaag ga ik met de bus.",
+      "review": "passed",
+      "feedback": "Begin met hoofdletter V. Met de bus zijn drie losse woorden.",
+      "lexicon": [
+        {
+          "surface": "vandaag",
+          "lemma": "vandaag",
+          "lexiconCandidateId": "A1-K-080",
+          "lexiconSenseId": "TL1644.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "ga",
+          "lemma": "gaan",
+          "lexiconCandidateId": "A1-K-052",
+          "lexiconSenseId": "TL0496.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "ik",
+          "lemma": "ik",
+          "lexiconCandidateId": "A1-K-021",
+          "lexiconSenseId": "TL0688.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "met",
+          "lemma": "met",
+          "lexiconCandidateId": "A1-K-037",
+          "lexiconSenseId": "TL0953.S02",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "bus",
+          "lemma": "bus",
+          "lexiconCandidateId": "A1-K-100",
+          "lexiconSenseId": "TL0288.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-019",
+      "model": "Ik schrijf mijn naam op papier.",
+      "review": "passed",
+      "feedback": "Schrijf heeft ij. Papier eindigt op ier.",
+      "lexicon": [
+        {
+          "surface": "ik",
+          "lemma": "ik",
+          "lexiconCandidateId": "A1-K-021",
+          "lexiconSenseId": "TL0688.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "schrijf",
+          "lemma": "schrijven",
+          "lexiconCandidateId": "A1-K-063",
+          "lexiconSenseId": "TL1380.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "mijn",
+          "lemma": "mijn",
+          "lexiconCandidateId": "A1-K-027",
+          "lexiconSenseId": "TL0964.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "naam",
+          "lemma": "naam",
+          "lexiconCandidateId": "A1-K-001",
+          "lexiconSenseId": "TL0995.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "op",
+          "lemma": "op",
+          "lexiconCandidateId": "A1-K-040",
+          "lexiconSenseId": "TL1123.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "papier",
+          "lemma": "papier",
+          "lexiconCandidateId": "A1-K-442",
+          "lexiconSenseId": "TL1197.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    },
+    {
+      "id": "KSW-AC-TN-020",
+      "model": "De les begint om negen uur.",
+      "review": "passed",
+      "feedback": "Begint eindigt op t. Negen en uur zijn twee woorden.",
+      "lexicon": [
+        {
+          "surface": "de",
+          "lemma": "de",
+          "lexiconCandidateId": "A1-K-028",
+          "lexiconSenseId": "TL0337.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "les",
+          "lemma": "les",
+          "lexiconCandidateId": "A1-K-151",
+          "lexiconSenseId": "TL0858.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "begint",
+          "lemma": "beginnen",
+          "lexiconCandidateId": "A1-K-067",
+          "lexiconSenseId": "TL0145.S01",
+          "wordformReview": "PENDING_FORM_ID"
+        },
+        {
+          "surface": "om",
+          "lemma": "om",
+          "lexiconCandidateId": "A1-K-559",
+          "lexiconSenseId": "TL1063.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "negen",
+          "lemma": "negen",
+          "lexiconCandidateId": "A1-K-194",
+          "lexiconSenseId": "TL1018.S01",
+          "wordformReview": "CANDIDATE_MATCH"
+        },
+        {
+          "surface": "uur",
+          "lemma": "uur",
+          "lexiconCandidateId": "A1-K-082",
+          "lexiconSenseId": "TL1631.S02",
+          "wordformReview": "CANDIDATE_MATCH"
+        }
+      ],
+      "notes": "Woordgrenzen blijven exact; bij zinnen blijven hoofdletter en punt exact."
+    }
+  ]
+}

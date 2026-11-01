@@ -1,0 +1,473 @@
+{
+  "sourceBankSha256": "9ab30d7befb0108c6ee60059816c862fa7d393872a667adbe4c8a067512f5fa2",
+  "inputFileSha256": "e1e5726c74054c67b3c11182ec9d4a5a8b1049b3dd67eab29c7fe77cefe2cf97",
+  "level": "a2",
+  "reviewedIds": [
+    "synonyms:recall:0cdb5d76ac66",
+    "synonyms:recall:0a8d1905aabd",
+    "synonyms:recall:1eaf53d9b31b",
+    "synonyms:recall:7a5512aa799f",
+    "synonyms:recall:cce7f2744b19",
+    "synonyms:recall:6477c5a068c7",
+    "synonyms:recall:4d1efde60b59",
+    "synonyms:recall:fbb2d92d95d8",
+    "synonyms:recall:bc8df2ec194f",
+    "synonyms:recall:dc67b80b5a10",
+    "synonyms:recall:bf5e70726713",
+    "synonyms:recall:8a27b07d520f",
+    "synonyms:recall:902e7fd36bef",
+    "synonyms:recall:108b114c0330",
+    "synonyms:recall:0f562ce06853",
+    "synonyms:recall:a44fc95e007c",
+    "synonyms:recall:6bf853df859c",
+    "synonyms:recall:3ae898e9b8b8",
+    "synonyms:recall:de832b516e8d",
+    "synonyms:recall:28497eee6a12",
+    "synonyms:recall:f242024b1e53",
+    "synonyms:recall:bf6999f72d17",
+    "synonyms:recall:caea3389a2e0",
+    "synonyms:recall:ddb840962e51",
+    "synonyms:recall:51b6bf5c5fa1",
+    "synonyms:recall:2268feae4493",
+    "synonyms:recall:c4804f1e5293",
+    "synonyms:recall:8a245792e2b8",
+    "synonyms:recall:0c055833a418",
+    "synonyms:recall:c255238c798a",
+    "synonyms:recall:1c66d4c858f3",
+    "synonyms:recall:4829949a3342",
+    "synonyms:recall:c8aee8035c48",
+    "synonyms:recall:8131c8d14928",
+    "synonyms:recall:bf727a3d0df1",
+    "synonyms:recall:1c91eb92867c",
+    "synonyms:recall:9b01113db7e8",
+    "synonyms:recall:4d569a1df074",
+    "synonyms:recall:63c97abfff2a",
+    "synonyms:recall:19d5f8c4adf6",
+    "synonyms:recall:28b81550c6f7",
+    "synonyms:recall:a229137d3bd3",
+    "synonyms:recall:9820a2b59c34",
+    "synonyms:recall:ba2b0a0a818d",
+    "synonyms:recall:8ea45d39f114"
+  ],
+  "results": [
+    {
+      "id": "synonyms:recall:0cdb5d76ac66",
+      "status": "revise",
+      "issues": [
+        "Slot kan ook een sluiting zijn. Leg in beide richtingen de betekenis einde van een verhaal vast."
+      ],
+      "proposedChanges": {
+        "context": "Dit is het einde van het verhaal.",
+        "reverseContext": "Dit is het slot van het verhaal."
+      }
+    },
+    {
+      "id": "synonyms:recall:0a8d1905aabd",
+      "status": "revise",
+      "issues": [
+        "Klaar kan af of gereed voor iets betekenen. Kader de gedeelde betekenis klaar om te vertrekken."
+      ],
+      "proposedChanges": {
+        "context": "Wij zijn klaar om te vertrekken.",
+        "reverseContext": "Wij zijn gereed om te vertrekken."
+      }
+    },
+    {
+      "id": "synonyms:recall:1eaf53d9b31b",
+      "status": "revise",
+      "issues": [
+        "Weleens betekent in een vraag vaak ooit, terwijl soms een frequentie aangeeft. Een mededelende frequentiezin voorkomt die verwisseling."
+      ],
+      "proposedChanges": {
+        "context": "Ik eet soms in een restaurant.",
+        "reverseContext": "Ik eet weleens in een restaurant."
+      }
+    },
+    {
+      "id": "synonyms:recall:7a5512aa799f",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:cce7f2744b19",
+      "status": "revise",
+      "issues": [
+        "Pakken is breder dan grijpen; iets meenemen of nemen is niet steeds vastgrijpen. Leg een fysieke greep vast."
+      ],
+      "proposedChanges": {
+        "context": "Ik probeer het touw met mijn hand te pakken.",
+        "reverseContext": "Ik probeer het touw met mijn hand te grijpen."
+      }
+    },
+    {
+      "id": "synonyms:recall:6477c5a068c7",
+      "status": "revise",
+      "issues": [
+        "Stoppen heeft ook de betekenis ergens iets in doen; ophouden heeft ook andere toepassingen. Maak stoppen met een activiteit expliciet."
+      ],
+      "proposedChanges": {
+        "context": "Ik wil stoppen met werken.",
+        "reverseContext": "Ik wil ophouden met werken."
+      }
+    },
+    {
+      "id": "synonyms:recall:4d1efde60b59",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:fbb2d92d95d8",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:bc8df2ec194f",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:dc67b80b5a10",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:bf5e70726713",
+      "status": "revise",
+      "issues": [
+        "Wagen kan meer voertuigen aanduiden dan een auto. De omgekeerde vraag heeft daarom een herkenbare personenautocontext nodig."
+      ],
+      "proposedChanges": {
+        "context": "Mijn auto heeft plaats voor vijf personen.",
+        "reverseContext": "Mijn wagen heeft plaats voor vijf personen."
+      }
+    },
+    {
+      "id": "synonyms:recall:8a27b07d520f",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:902e7fd36bef",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:108b114c0330",
+      "status": "revise",
+      "issues": [
+        "Bellen kan ook aanbellen of een bel laten klinken betekenen. Telefoneren dekt de telefoonbetekenis."
+      ],
+      "proposedChanges": {
+        "context": "Ik wil even bellen met mijn moeder.",
+        "reverseContext": "Ik wil even telefoneren met mijn moeder."
+      }
+    },
+    {
+      "id": "synonyms:recall:0f562ce06853",
+      "status": "revise",
+      "issues": [
+        "Controleren en nakijken overlappen bij het beoordelen van antwoorden; nakijken kan ook iemand met de ogen volgen betekenen."
+      ],
+      "proposedChanges": {
+        "context": "De docent gaat mijn antwoorden controleren.",
+        "reverseContext": "De docent gaat mijn antwoorden nakijken."
+      }
+    },
+    {
+      "id": "synonyms:recall:a44fc95e007c",
+      "status": "keep-inactive",
+      "issues": [
+        "Ontdekken en vinden vallen niet in alle gebruikssituaties samen. Het item is al inactief; zo behouden. Geen reden voor automatische heractivering."
+      ]
+    },
+    {
+      "id": "synonyms:recall:6bf853df859c",
+      "status": "revise",
+      "issues": [
+        "Krijgen is veel breder dan ontvangen, bijvoorbeeld bij ziek worden. Een zending begrenst de gedeelde ontvangstbetekenis."
+      ],
+      "proposedChanges": {
+        "context": "We ontvangen vandaag een brief.",
+        "reverseContext": "We krijgen vandaag een brief."
+      }
+    },
+    {
+      "id": "synonyms:recall:3ae898e9b8b8",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:de832b516e8d",
+      "status": "revise",
+      "issues": [
+        "Helder kan ook licht, doorzichtig of nuchter betekenen. Leg de gedeelde betekenis goed te begrijpen vast."
+      ],
+      "proposedChanges": {
+        "context": "Zijn uitleg is duidelijk.",
+        "reverseContext": "Zijn uitleg is helder."
+      }
+    },
+    {
+      "id": "synonyms:recall:28497eee6a12",
+      "status": "revise",
+      "issues": [
+        "Simpel en eenvoudig zijn passend bij een opdracht; bij personen kunnen de woorden anders en beledigend worden opgevat."
+      ],
+      "proposedChanges": {
+        "context": "Deze opdracht is eenvoudig.",
+        "reverseContext": "Deze opdracht is simpel."
+      }
+    },
+    {
+      "id": "synonyms:recall:f242024b1e53",
+      "status": "revise",
+      "issues": [
+        "Gek betekent ook niet goed bij het verstand of dol op; vreemd betekent ook onbekend of van elders. Het gedeelde ongewone moet blijken."
+      ],
+      "proposedChanges": {
+        "context": "Dat is een gek geluid.",
+        "reverseContext": "Dat is een vreemd geluid."
+      }
+    },
+    {
+      "id": "synonyms:recall:bf6999f72d17",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:caea3389a2e0",
+      "status": "revise",
+      "issues": [
+        "Helemaal is hier een bijwoord, terwijl volledig ook een bijvoeglijk naamwoord kan zijn. Een bijwoordelijke zin maakt de bedoelde uitwisselbaarheid duidelijk."
+      ],
+      "proposedChanges": {
+        "context": "De kamer is helemaal leeg.",
+        "reverseContext": "De kamer is volledig leeg."
+      }
+    },
+    {
+      "id": "synonyms:recall:ddb840962e51",
+      "status": "revise",
+      "issues": [
+        "Lastig kan ook hinderlijk betekenen; moeilijk en lastig passen hier als beoordeling van een taak."
+      ],
+      "proposedChanges": {
+        "context": "Deze som is moeilijk.",
+        "reverseContext": "Deze som is lastig."
+      }
+    },
+    {
+      "id": "synonyms:recall:51b6bf5c5fa1",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:2268feae4493",
+      "status": "revise",
+      "issues": [
+        "Vies betekent ook afschuwelijk of onsmakelijk; vuil betekent hier niet schoon. Maak zichtbare vervuiling expliciet."
+      ],
+      "proposedChanges": {
+        "context": "Mijn handen zijn vies door de modder.",
+        "reverseContext": "Mijn handen zijn vuil door de modder."
+      }
+    },
+    {
+      "id": "synonyms:recall:c4804f1e5293",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:8a245792e2b8",
+      "status": "revise",
+      "issues": [
+        "Dadelijk en straks overlappen bij binnenkort maar leggen niet altijd dezelfde nadruk op hoe snel iets gebeurt. Een expliciet tijdsinterval ondersteunt alleen die gedeelde lezing."
+      ],
+      "proposedChanges": {
+        "context": "De les begint dadelijk, over een paar minuten.",
+        "reverseContext": "De les begint straks, over een paar minuten."
+      }
+    },
+    {
+      "id": "synonyms:recall:0c055833a418",
+      "status": "revise",
+      "issues": [
+        "Direct betekent ook rechtstreeks. Alleen de tijdsbetekenis is hier synoniem met meteen."
+      ],
+      "proposedChanges": {
+        "context": "Ik bel je direct terug.",
+        "reverseContext": "Ik bel je meteen terug."
+      }
+    },
+    {
+      "id": "synonyms:recall:c255238c798a",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:1c66d4c858f3",
+      "status": "revise",
+      "issues": [
+        "Geregeld kan ook georganiseerd of afgehandeld betekenen. Hier gaat het om iets dat herhaaldelijk gebeurt."
+      ],
+      "proposedChanges": {
+        "context": "Ik ga regelmatig naar de markt.",
+        "reverseContext": "Ik ga geregeld naar de markt."
+      }
+    },
+    {
+      "id": "synonyms:recall:4829949a3342",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:c8aee8035c48",
+      "status": "revise",
+      "issues": [
+        "Chef kan ook een kok aanduiden, en baas heeft meer toepassingen. Maak de leidinggevende op het werk herkenbaar."
+      ],
+      "proposedChanges": {
+        "context": "Ik vraag mijn baas om een vrije dag.",
+        "reverseContext": "Ik vraag mijn chef om een vrije dag."
+      }
+    },
+    {
+      "id": "synonyms:recall:8131c8d14928",
+      "status": "revise",
+      "issues": [
+        "Vak heeft ook de betekenissen schoolvak en vakje; beroep kan ook een juridisch beroep zijn. Leg betaald werk expliciet vast."
+      ],
+      "proposedChanges": {
+        "context": "Ik werk als kapper. Dat is mijn beroep.",
+        "reverseContext": "Ik werk als kapper. Dat is mijn vak."
+      }
+    },
+    {
+      "id": "synonyms:recall:bf727a3d0df1",
+      "status": "revise",
+      "issues": [
+        "Deel kan ook een hoeveelheid of aandeel betekenen, terwijl onderdeel een samenstellend gedeelte aanduidt. Kies de gedeelde deel-van-een-geheelbetekenis."
+      ],
+      "proposedChanges": {
+        "context": "Dit is een deel van onze les.",
+        "reverseContext": "Dit is een onderdeel van onze les."
+      }
+    },
+    {
+      "id": "synonyms:recall:1c91eb92867c",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:9b01113db7e8",
+      "status": "revise",
+      "issues": [
+        "Steun is ook een voorwerp of houvast; hulp en steun overlappen als ondersteuning door mensen."
+      ],
+      "proposedChanges": {
+        "context": "Met de hulp van mijn familie gaat het beter.",
+        "reverseContext": "Met de steun van mijn familie gaat het beter."
+      }
+    },
+    {
+      "id": "synonyms:recall:4d569a1df074",
+      "status": "revise",
+      "issues": [
+        "Idee kan ook een plan of vermoeden zijn; gedachte is breder. Plaats beide woorden in een situatie waarin iemand een gedachte opschrijft."
+      ],
+      "proposedChanges": {
+        "context": "Ik schrijf mijn idee in een schrift.",
+        "reverseContext": "Ik schrijf mijn gedachte in een schrift."
+      }
+    },
+    {
+      "id": "synonyms:recall:63c97abfff2a",
+      "status": "revise",
+      "issues": [
+        "Kaartje kan onder meer een berichtje of een kleine kaart zijn. Ticket hoort bij toegang of vervoer."
+      ],
+      "proposedChanges": {
+        "context": "Ik koop een kaartje voor de trein.",
+        "reverseContext": "Ik koop een ticket voor de trein."
+      }
+    },
+    {
+      "id": "synonyms:recall:19d5f8c4adf6",
+      "status": "revise",
+      "issues": [
+        "Kans betekent ook waarschijnlijkheid. Alleen de gelegenheid om iets te doen is hier bedoeld met mogelijkheid."
+      ],
+      "proposedChanges": {
+        "context": "Je krijgt de kans om Nederlands te oefenen.",
+        "reverseContext": "Je krijgt de mogelijkheid om Nederlands te oefenen."
+      }
+    },
+    {
+      "id": "synonyms:recall:28b81550c6f7",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:a229137d3bd3",
+      "status": "revise",
+      "issues": [
+        "Troep kan ook een groep mensen of dieren betekenen. Leg de gedeelde betekenis rommel op de vloer vast."
+      ],
+      "proposedChanges": {
+        "context": "Er ligt veel rommel op de vloer.",
+        "reverseContext": "Er ligt veel troep op de vloer."
+      }
+    },
+    {
+      "id": "synonyms:recall:9820a2b59c34",
+      "status": "pass",
+      "issues": []
+    },
+    {
+      "id": "synonyms:recall:ba2b0a0a818d",
+      "status": "keep-inactive",
+      "issues": [
+        "Verlof omvat ook afwezigheid om andere redenen dan vakantie. Het item is al inactief; zo behouden. Geen reden voor automatische heractivering."
+      ]
+    },
+    {
+      "id": "synonyms:recall:8ea45d39f114",
+      "status": "revise",
+      "issues": [
+        "Fout is breder dan vergissing en kan ook opzettelijk verkeerd handelen aanduiden. Een onbedoelde verwisseling ondersteunt beide woorden."
+      ],
+      "proposedChanges": {
+        "context": "Ik noem per ongeluk de verkeerde naam. Dat is een vergissing.",
+        "reverseContext": "Ik noem per ongeluk de verkeerde naam. Dat is een fout."
+      }
+    }
+  ],
+  "summary": {
+    "reviewType": "Independent blind AI language review; not a human review or official CEFR validation.",
+    "entryCount": 45,
+    "activeCount": 43,
+    "inactiveCount": 2,
+    "reviewedWordFields": 45,
+    "reviewedSynonymFields": 45,
+    "reviewedOptionFields": 180,
+    "sourceContextFieldsPresent": 0,
+    "sourceReverseContextFieldsPresent": 0,
+    "reviewedForwardPresentations": 45,
+    "reviewedReversePresentations": 45,
+    "reviewedReverseOptions": 180,
+    "passCount": 16,
+    "reviseCount": 27,
+    "keepInactiveCount": 2,
+    "proposedContextCount": 27,
+    "proposedReverseContextCount": 27,
+    "findings": "Geen spelfouten in de woorden of opties aangetroffen. Geen twee gelijktijdig passende antwoordopties aangetroffen bij de bedoelde betekenis. De voorgestelde reparaties begrenzen betekenis in beide richtingen; woorden, antwoordvolgorde, niveautoewijzing en activatiestatus kunnen behouden blijven.",
+    "levelAssessment": "Woorden en korte voorgestelde contexten zijn bruikbaar voor receptieve A2-woordenschatoefening met de gegeven antwoordkeuzen. Sommige synoniemen zijn formeler of sterker; dat is op zichzelf geen grond voor schrappen of verhogen naar B1. Een pilot blijft nodig voor empirische moeilijkheid.",
+    "acceptedNearSynonyms": [
+      "mooi/prachtig: normale versterking binnen dezelfde positieve waardering; geen concurrerend antwoord",
+      "salaris/loon: bruikbare dagelijkse benaming van betaling voor werk; geen concurrerend antwoord",
+      "voldoende/genoeg: dezelfde kwantitatieve kernbetekenis",
+      "begrijpen/snappen: registerverschil toegestaan"
+    ],
+    "limits": "Alle bronvelden, thema's, niveaus en activatiestatus gelezen; geen eerdere reviewconclusies geraadpleegd. Geen repositorybestanden gewijzigd. Geen menselijke toets of leerlingpilot uitgevoerd."
+  }
+}

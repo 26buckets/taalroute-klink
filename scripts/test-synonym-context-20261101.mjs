@@ -9,12 +9,14 @@ import {parseLearningReview,updateLearningReview} from '../lib/learning-review.t
 import {verifySynonymContextRelease} from './check-synonym-context-release-20261101.mjs';
 const base='9b4e0937dcad82e14e25ebc97e8a4b08b244042f';
 const before=JSON.parse(execFileSync('git',['show',base+':data/klink-synonyms.json']));
+const independentChanges=JSON.parse(readFileSync('docs/synonym-independent-review-20261101/changes.json'));
+const priorEntries=synonymBank.entries.map(e=>{const c=independentChanges.find(c=>c.id===e.id);if(!c)return e;const old={...e};for(const k of c.changedFields){if(k in c.before)old[k]=c.before[k];else delete old[k];}return old;});
 const folder='docs/synonym-context-20261101';
 const rows=JSON.parse(readFileSync(folder+'/word-review.json')).rows;
 const pack=synonymCollections.find(c=>c.id==='synonyms-b1-context-20261101').pack;
 
 test('eight distinct B1 context tasks preserve all 217 earlier records and A1/A2 availability',()=>{
- assert.deepEqual(synonymBank.entries.slice(0,217),before.entries);assert.deepEqual({...synonymBank,entries:before.entries},before);
+ assert.deepEqual(priorEntries.slice(0,217),before.entries);assert.deepEqual({...synonymBank,entries:before.entries},before);
  assert.equal(synonymBank.entries.length,225);assert.equal(rows.length,8);assert.equal(new Set(rows.map(r=>r.word)).size,8);
  for(const[level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
  for(const row of rows){

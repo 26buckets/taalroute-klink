@@ -1,3 +1,15 @@
+## Actuele publicatie — onafhankelijke taalreview Synoniemen — 1 november 2026
+
+Livebron `4612b27eebe2ef45c6d806ed18df09f7e8f1e934`; Worker `4f6a9042-fb44-4ec6-8aa5-4b826125ecb0`. Normaal gepubliceerd via `npm run deploy` vanaf schone canonieke main, als afstammeling van de goedgekeurde en inmiddels live openingsanimatie `6dd42a5df6ed0fb29a2a0c0922cc67b24a2ace36`. De eerdere cursistinfo, het officiële logo, de loader, overige inhoud, audio, routes, opslag en vormgevingsvloer blijven behouden.
+
+Drie afzonderlijke blinde AI-reviewers beoordeelden alle 225 bronparen, 900 antwoordkaarten en beide richtingen: 17 A1, 45 A2 en 163 B1. Alle 86 contextverduidelijkingen zijn op de definitieve bronhash opnieuw goedgekeurd: 9 A1, 27 A2 en 50 B1. Er zijn 94 contextparen met 188 korte zinnen. De Nederlandse spellingcontrole geeft geen meldingen in 1538 velden. Alle woorden, antwoorden, antwoordposities, niveaus, bron-/lijst-/voortgangs-ID's zijn behouden. Dezelfde 200 vragen blijven actief; de 25 eerder uitgesloten paren blijven uit. Geen menselijke NT2-keuring, officiële individuele ERK-certificering of cursistenpilot geclaimd.
+
+Lokaal slagen 21 inhouds-/vrijgaveproeven, 2400 combinaties van vraag/richting/vorm/mix, TypeScript, gerichte lint en de volledige normale publicatiepoort met productieopbouw. Zowel vóór als na integratie van de nieuwe livebasis zijn 800 browserproeven met alle actieve vragen in beide richtingen, 72 responsieve schermen, 26 vorm-/hervatproeven, alle 380 audiodecodes per browser en 8 identieke ongewijzigde schermen gecontroleerd. De gecompileerde speler doorloopt bovendien alle 172 gewijzigde richtingen, 24 draai-/luisterproeven en 12 toetsenbord-/hervatproeven. Mobiel en desktop, licht/donker, Chromium en WebKit; geen fysiek toestel of native schermtoetsenbord getest.
+
+Online slagen alle 172 gewijzigde richtingen en 24 draai-/luisterproeven. Alle 380 daadwerkelijk aangeboden bestanden (369 MP3, 11 WAV) zijn volledig teruggelezen: bytegelijk en met ingebedde Taalroute-gegevens voor artiest, albumartiest en uitgever. Er zijn geen nieuwe opnamen of providerkosten. De schone livebron en alle vijf bestaande inhoudsvingerafdrukken zijn bevestigd. Alle zware controles lokaal; geen GitHub-workflow of budget gewijzigd. Algemene repository-lint is niet als volledig schoon geclaimd; alle zeven gewijzigde scripts zijn gericht gecontroleerd.
+
+Akkoord en volledig bewijs: `docs/klink-owner-release-synonym-independent-review-20261101.json` en `docs/synonym-independent-review-20261101/`. De vernieuwde bronkopie op de bestaande Drive-projectmap is volledig teruggelezen en alle hashes en ZIP-inhoud zijn bevestigd (`backup.json`); de definitieve onlinekopie staat in `final-backup.json`. De eerste bronkopie en de oorspronkelijke onafhankelijke rapporten blijven behouden. Een herstelbundel bevat de bestaande lokale goedgekeurde previewcommit die de historische publicatiecontrole nodig heeft.
+
 # Actuele publicatie — goedgekeurde openingsloader — 1 november 2026
 
 - Livebron: `6dd42a5df6ed0fb29a2a0c0922cc67b24a2ace36`, branch `main`, schone bron.

@@ -3,6 +3,7 @@ import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseAudioProvider, ExerciseAudioSlot, ExerciseListen } from './exercise-listen';
 import { WordPlaceholder } from './word-placeholder';
 import { readingSupportForExercise, wordMeaningContexts } from '@/lib/production-practice';
+import { exactCopyAnswer } from '@/lib/copy-answer';
 
 import { useId } from 'react';
 import { practiceBusy, usePracticeKeyboard } from '@/hooks/use-practice-keyboard';
@@ -606,7 +607,7 @@ export function ExerciseSurface({
 function Prompt({ exercise, onAudio, children }: { exercise: PackageExercise; onAudio?: AudioPlayer; children?: ReactNode }) {
   const source = wordMeaningContexts(exercise).some(c => c.audio) && !exercise.requiresAudio ? undefined : exercise.prompt?.audio?.src ?? (exercise.wordId ? undefined : findAudioSource(exercise));
   const visibleWord = typeof exercise.displayWord === 'string' ? exercise.displayWord : exercise.exampleWord;
-  const textView = useExerciseViewTarget('text', typeof visibleWord === 'string');
+  const textView = useExerciseViewTarget('text', typeof visibleWord === 'string' && exercise.answerPolicy !== 'exact-copy');
   if (!source && typeof visibleWord !== 'string' && !children) return null;
   return (
     <div className={`cp-task-prompt${source && onAudio && typeof visibleWord !== 'string' ? ' cp-corner-prompt' : ''}`}>
@@ -792,7 +793,7 @@ function InputSurface({ exercise, onAudio, onFinish, onReset, canAnswer, onHelp,
   const fields = asArray<TextField>(exercise.fields);
   const [value, setValue] = useState('');
   const accepted = fields.flatMap((field) => field.acceptedAnswers ?? []);
-  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /><form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => normalize(answer) === normalize(value))); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
+  return <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><WordPicture exercise={exercise} onHelp={onHelp} answeredCorrectly={answeredCorrectly} /><MeaningContexts exercise={exercise} onAudio={onAudio} /><form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); if (canAnswer && value.trim()) onFinish(value, accepted.some(answer => exercise.answerPolicy === 'exact-copy' ? exactCopyAnswer(answer, value) : normalize(answer) === normalize(value))); }}><label className="cp-text-entry"><span>Jouw antwoord</span><input disabled={!canAnswer} value={value} onChange={(event) => { setValue(event.target.value); onReset(); }} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} /></label><button data-practice-check type="submit" className="primary-button" disabled={!canAnswer || !value.trim()}>Controleer<Check /></button></form><WordHint exercise={exercise} onHelp={onHelp} /></section>;
 }
 
 function MeaningContexts({ exercise, onAudio }: { exercise: PackageExercise; onAudio: AudioPlayer }) {
