@@ -1,3 +1,14 @@
+## 1 november 2026 — goedgekeurde kleinere loader
+
+- Werkelijk live: `1069f8ac11730d313b4afdf7ccf4b886229c7882`, schone canonieke `main`; Worker `186e4844-c802-41bb-87d3-12fdfe243620`.
+- Nico keurde de bewegende preview goed en vroeg expliciet publicatie met behoud van ‘Klink wordt geopend…’, formaat, beweging en twee seconden.
+- Alleen `public/opening-loader-quick-20261101/klink-loader.svg` is voor de app gewijzigd: 90.670 → 78.160 bytes, 13,8% kleiner. De bestaande PNG-lagen zijn verliesvrij opnieuw gecomprimeerd; alleen dubbele en tussenliggende constante animatieregels zijn verwijderd. Geen WebP-conversie, gewijzigde lettervormen, kleuren, beweging of timing.
+- De loadercomponent, stylesheet, centrering/158px, minimumduur, doorladen en stilstaande reduced-motion-afbeelding zijn bytegelijk aan de voorafgaande livebron `6838c678d794469cd7a438a00f7e8e01a19ebf77`. De B1-publicatie, titels, schrijfbanken, voortgang, audio en overige app blijven behouden.
+- Drie lagen pixelgelijk, 20.576 bewegingsvergelijkingen en 104 pixelgelijke Chromium/WebKit-beelden; zestien lokale en zestien live controles op desktop/320px mobiel, systeemvoorkeur licht/donker en verminderde beweging. Tekst, formaat, centrum, minimumduur, openen, route en opslag gecontroleerd. Acht poorttests, types, lint, gewone vrijgavepoort en build geslaagd. Geen fysieke telefoon getest.
+- Het werkelijk aangeboden livebestand is volledig teruggelezen en bytegelijk aan de goedgekeurde 78.160-byte versie. Statische afbeelding en alle inhoudshashes behouden.
+- Toestemming: `docs/klink-owner-release-opening-loader-lossless-20261101.json`. Dossier: `docs/opening-loader-lossless-20261101/`; gecontroleerde bron- en finale Drive-herstelkopie: `backup.json` en `final-backup.json`.
+- Geen GitHub Actions-workflows aanwezig of toegevoegd; alle controles lokaal.
+
 ## 1 november 2026 — openingsregel zichtbaar onder de kleine basisloader
 
 - Werkelijk live: `0c130f80053537b9976906b859e844a267912295`, canonieke `main`, schone bron; Worker `28f6987d-6f0d-4113-8f93-28d7fb8c163f`.

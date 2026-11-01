@@ -1,0 +1,13 @@
+Klink — goedgekeurde kleinere loader — 1 november 2026
+
+Nico: “Ja, deze is goed. Zet de kleinere versie nu op de website, met ‘Klink wordt geopend…’ eronder. Houd het formaat, de beweging en die twee seconden hetzelfde.”
+
+Dezelfde animatie is verliesvrij verkleind van 90.670 naar 78.160 bytes (13,8%). Alleen public/opening-loader-quick-20261101/klink-loader.svg wijzigt voor de app. De labelcomponent, stylesheet, afbeeldingmaat van 158px, start/doorlaadlogica, minimumduur van twee seconden en stilstaande afbeelding voor verminderde beweging blijven bytegelijk.
+
+Canonieke repository: 26buckets/taalroute-klink, main.
+Voorafgaande werkelijk gepubliceerde bron: 6838c678d794469cd7a438a00f7e8e01a19ebf77.
+Broncommit van de gecontroleerde SVG-vervanging: 1069f8ac11730d313b4afdf7ccf4b886229c7882.
+De Git-bundle is aanvullend op de voorafgaande bron; behoud de bestaande repository en eerdere herstelkopieën. Publiceer nooit een oude checkout als terugval zonder afzonderlijke opdracht.
+
+Lokale controle: drie lagen pixelgelijk; 20.576 bewegingsvergelijkingen; 104 pixelgelijke browserframes; 16 gevallen voor zichtbare openingsregel, formaat, centrering, minimumduur, openen van app, route en opslag; acht vrijgaveproeven. Geen fysieke telefoon getest.
+Alle controles lokaal; geen GitHub Actions-workflows toegevoegd.
