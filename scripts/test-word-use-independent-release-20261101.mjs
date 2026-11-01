@@ -12,3 +12,5 @@ void test('reject missing approvals, incomplete independent coverage, unresolved
  [folder+'backup.json',r=>{r.parts[0].verified=false;}]
  ])assert.throws(()=>verifyIndependentWordUseReview(f=>{if(f!==file)return readFileSync(f);const r=JSON.parse(readFileSync(f));edit(r);return Buffer.from(JSON.stringify(r));}),file);
 });
+
+void test('standing owner instructions remain bound while historical proofs read their original approved version',()=>{assert.throws(()=>verifyIndependentWordUseReview(f=>f==='AGENTS.md'?Buffer.from('Changed owner instructions'):readFileSync(f)));});
