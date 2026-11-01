@@ -1,3 +1,17 @@
+## Actuele publicatie — mobiele luisterknop, antwoordkeuzes en Verder — 1 november 2026
+
+Livebron `6a4c2acd346c436cb0344b77da21de8dadc09c16`, schone canonieke main; Worker `5c07da04-6f7a-4546-8be2-03ddab16b81b`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de werkelijk live bevestigde bron `1069f8ac11730d313b4afdf7ccf4b886229c7882`, inclusief de nagekeken B1-bronnen, audio, voortgangsaliassen en verliesloos verkleinde oorspronkelijke loader. Latere B1-/loaderregisterdocumentatie is behouden.
+
+Nico vroeg de mobiele overlap en verborgen antwoordkeuzes te herstellen. De luisterbalk heeft nu eigen hoogte en schuift niet over de tekst. Antwoordkeuzes nemen de werkelijk beschikbare ruimte in; lange zinnen staan onder elkaar. Lange bron- en feedbackteksten blijven volledig beschikbaar in hun eigen leesvlak. De compacte oefenstand houdt op kleine schermen de terugknop, vorige, teller, informatie en Verder bereikbaar; de gewone navigatie komt na Terug terug. Letters behouden hun grootte; aanraakvlakken minimaal 44px. Alleen mobiele CSS toegevoegd; geen gewijzigde inhoud, vragen, antwoorden, bron-/voortgangs-ID’s, audio, opslag, routes, toets- of afspeelcode. Desktop en de aparte inhouds-/synoniemspelers behouden hun goedgekeurde opzet.
+
+Lokaal: 192 mobiele woord-/foto-/A1-/A2-antwoordgevallen in Chromium/WebKit op vier schermmaten en licht/donker; 80 langste-antwoordgevallen over alle twintig actuele B1-rondes, acht ongewijzigde desktopvergelijkingen, acht terug-/navigatieproeven, acht gemengde muis-/toetsenflows, vier echte audioflows, veertien bestaande toetsen-/invoer-/opname-/voortgangsproeven, types, lint en 36 vrijgaveproeven. De volledige normale publicatiepoort, metadata van 1.979 geregistreerde audiobestanden, behoud van bestaande media en productieopbouw slagen. De 114 actuele B1-opnamen blijven bytegelijk aan hun vastgelegde metadatacontrole.
+
+Online: opnieuw 192 mobiele antwoord-/feedbackgevallen, twaalf gerichte langste B1-antwoordgevallen en vier werkelijke audio-/muis-/Enter-/pijl-/spatieflows; alle 134 actuele B1-bron-/audiobestanden en de oorspronkelijke kleinere loader volledig bytegelijk teruggelezen. Alle inhoudsvingerafdrukken gelijk. De live mobiele schermen zijn tevens in de eigen browser bekeken. Geen fysieke telefoon, Bluetooth-toetsenbord of menselijke luisterreview geclaimd. Geen GitHub Actions aanwezig of gestart; zware controles lokaal.
+
+Exacte opdracht en vormgevingsaanvulling: `docs/klink-owner-release-mobile-choice-visibility-20261101.json` en `docs/appearance-floor-20261031/approved-updates/mobile-choice-visibility-20261101.json`. Controles, bron-/eindherstelkopieën en publicatiebewijs: `docs/mobile-choice-visibility-20261101/`. De app eenmaal vernieuwen om de actuele opmaak te laden. Publiceer alleen opvolgers via de bestaande poort.
+
+---
+
 ## 1 november 2026 — goedgekeurde kleinere loader
 
 - Werkelijk live: `1069f8ac11730d313b4afdf7ccf4b886229c7882`, schone canonieke `main`; Worker `186e4844-c802-41bb-87d3-12fdfe243620`.
