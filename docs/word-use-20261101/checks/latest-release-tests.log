@@ -1,0 +1,36 @@
+✔ approved full-height Alfa C panels keep all content reachable (365.348792ms)
+✔ rejects altered components/product/alfa-c-workspace.css (232.057792ms)
+✔ rejects altered components/product/panel-pages.ts (231.259916ms)
+✔ rejects altered docs/klink-owner-release-alfa-c-no-scroll-20261101.json (209.12625ms)
+✔ rejects altered docs/alfa-c-no-scroll-20261101/backup.json (273.334667ms)
+✔ complete source, audio, progress and backup evidence permits this exact release (1548.800625ms)
+✔ rejects changed approval or evidence docs/klink-owner-release-complete-20261101.json r=>{r.publicationApproved=false;} (301.596292ms)
+✔ rejects changed approval or evidence docs/klink-owner-release-complete-20261101.json r=>{r.appearanceChanged=true;} (274.572291ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/owner-instruction.json r=>{r.newAudioAuthorized=false;} (276.576416ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/transcript-resolution.json r=>{r.unresolved=1;} (453.422125ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/audio-file-audit.json r=>{r.issues.push('missing brand metadata');} (385.787375ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/browser/checks.json r=>{r.errors.push('player error');} (359.300709ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/progress-checks.json r=>{r.checks.pop();} (434.406416ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/recorder-checks.json r=>{r.errors.push('recording failure');} (422.433625ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/verification.json r=>{r.progress=false;} (456.867292ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/backup.json r=>{r.fullReadback=false;} (912.134916ms)
+✔ rejects changed approval or evidence docs/klink-complete-release-20261101/backup.json r=>{r.parts[0].verified=false;} (900.278583ms)
+✔ rejects changed appearance source (48.105292ms)
+✔ approved phase titles preserve all content, controls and saved work (1678.277666ms)
+✔ rejects altered lib/teacher-classroom.ts (1093.808041ms)
+✔ rejects altered docs/klink-owner-release-teacher-phase-labels-20261101.json (1106.495375ms)
+✔ rejects altered docs/teacher-phase-labels-20261101/backup.json (1061.848417ms)
+✔ approved compact source questions preserve text, audio, keyboard and old progress (1647.234667ms)
+✔ rejects altered app/learner-layout.css (1068.567792ms)
+✔ rejects altered docs/klink-owner-release-text-question-spacing-20261101.json (1026.346792ms)
+✔ rejects altered docs/text-question-spacing-20261101/backup.json (1058.724084ms)
+✔ release is tied to the explicit owner request, all reviewed content, active audio and verified backup (320.060958ms)
+✔ publication refuses missing approval, incomplete checks, missing cloud readback and modified content or audio (810.21575ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6827.104708

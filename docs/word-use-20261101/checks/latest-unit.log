@@ -1,0 +1,28 @@
+✔ short panels retain one complete page (0.749ms)
+✔ page breaks keep full text lines and controls, including nested labels (0.226166ms)
+✔ long paragraphs break between complete readable lines (0.089041ms)
+✔ insufficient space fails visibly instead of hiding a line (0.132917ms)
+✔ All source texts, answers, feedback, goals and legacy records reach their real collections (441.307416ms)
+✔ All six changed collections retain the original progress key, including pre-existing audio aliases (9.989625ms)
+✔ A wrong answer key is rejected even when counts still match (122.271ms)
+✔ Missing choice-specific feedback is rejected (38.698125ms)
+✔ A fabricated evidence segment is rejected (102.233167ms)
+✔ A lost second source fragment is rejected (77.84675ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (11022.333416ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (2.271166ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (15.5105ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (66.179584ms)
+✔ 288 authored questions: two activities, three levels and six short rounds at each level (1.041792ms)
+✔ every card has one correct answer, exact feedback and complete registered audio (8.678583ms)
+✔ speaker perspective and the final B1 task division stay unambiguous (0.144ms)
+✔ new collections keep their level, activity, IDs and answers through every route and review (600.560334ms)
+✔ old synonym records, bank media, original curriculum, instructions and appearance remain unchanged (110.605666ms)
+✔ audio resolution refuses altered transcripts, roles, missing approval and unsafe paths (0.676584ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11457.720666
