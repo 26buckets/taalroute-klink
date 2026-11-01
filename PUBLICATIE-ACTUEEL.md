@@ -1,3 +1,15 @@
+## Actuele publicatie — pijlen en spatie na een muisantwoord — 1 november 2026
+
+Livebron `17f9db234295127531719cebb3df45d666d8ccac`, schone canonieke main; Worker `358edad8-fd3d-47b3-8ecd-01066aa287d2`. Gepubliceerd via de gewone `npm run deploy`, als afstammeling van de werkelijk live bevestigde bron `b670d0c1337eea07e96662237de4b9508de9735c` en de complete canonieke opvolger `38b937ebb11005942fc018e603f6658a53882857`. De bestaande openingsduur, officiële logo, leerdoelen, herhaalrondes en vaste vormgevingsvloer blijven behouden.
+
+Na een goed muisantwoord verliest de uitgeschakelde antwoordknop soms focus aan body. De gedeelde toetsenhook ontvangt daar nu ook →, ← en spatie, met dezelfde bescherming als Enter. Spatie vanuit een geselecteerd antwoord herhaalt het beschikbare geluid zonder het antwoord opnieuw te activeren. Andere knoppen, tekstvelden, opname, dialogen en menu's houden hun bestaande native bediening. De docentenhandleiding is verduidelijkt. Geen wijziging aan indeling, inhoud, audio, validatie, routes, score of opslag.
+
+Lokaal en online: twintig muisfocus-/pijl-/spatieflows in Chromium en WebKit op desktop en 320 × 568, twee proeven met daadwerkelijke leesaudio, acht Enter-focusproeven, vier werkbladproeven en veertien bestaande toetsen-/invoer-/opname-/voortgangsproeven. Lokaal aanvullend 482 toetsen-/knopvergelijkingen over zestig varianten, TypeScript, lint, zeventien vrijgaveproeven en de volledige normale publicatiepoort en productieopbouw. Na Goed gaat → direct verder terwijl de audio speelt en stopt die oude audio. De actuele schone livebron, alle inhoudsvingerafdrukken, vijf daadwerkelijk aangeboden naschrijfbanken en twee audiobestanden zijn bevestigd; de zeven bestanden zijn bytegelijk. Geen fysieke telefoon of toetsenbord getest. De app eenmaal vernieuwen om de nieuwe bediening te laden.
+
+Akkoord en exacte afbakening: `docs/klink-owner-release-answer-arrow-space-20261101.json`. Reproductie, controles, beperkingen, bronback-up en definitieve volledig teruggelezen Drive-herstelkopie: `docs/answer-arrow-space-20261101/`. Geen GitHub Actions-workflows aanwezig of toegevoegd; zware controles lokaal uitgevoerd. Publiceer uitsluitend opvolgers via de bestaande poort.
+
+---
+
 ## Kleine basisloader minimaal twee seconden — 1 november 2026
 
 Livebron `b670d0c1337eea07e96662237de4b9508de9735c`, schone canonieke main; Worker `c0eb92ef-ff9f-420a-9256-47d8f4267dc8`. Normaal gepubliceerd via `npm run deploy` als afstammeling van de werkelijk live bevestigde bron `b7c04d8da4835c8b01f8314bd6247710ed75d0bf`. De Enter-correctie en 48 herhaalrondes blijven behouden.
@@ -25,6 +37,16 @@ Online slagen dezelfde acht gerichte focusproeven, vier werkbladproeven, twee ec
 Akkoord en afbakening: `docs/klink-owner-release-enter-focus-20261101.json`. Bronreproducties, methode, controles, onlineresultaten en beperkingen: `docs/enter-focus-20261101/`. De bronkopie is volledig uit de bestaande Drive-projectmap teruggelezen en per bestand gecontroleerd (`backup.json`); de definitieve herstelkopie met bronbundel en onlinebewijzen staat in `final-backup.json`. De bestaande vaste vloer en alle vorige goedgekeurde vormgeving blijven behouden.
 
 ---
+
+## Herhaalrondes — gepubliceerd en gecontroleerd — 1 november 2026
+
+De 48 herhaalrondes zijn via de gewone route gepubliceerd uit bron `92a560870a5c5368c6711394fb52394eec29a742`, oorspronkelijke Worker `d2049660-d8b9-4966-8670-ba899dba19dd`. De onlinecontrole bevestigde behoud in de opvolgende Enter-/loaderversie; latere goedgekeurde publicaties hierboven bouwen daarop voort.
+
+Samen herhalen > Oefen opnieuw > Zelf oefenen bevat 16 Alfa C-, 12 A1-, 8 A2- en 12 B1-rondes van elk twaalf posities. De 576 posities verwijzen naar bestaande oefeningen; nul nieuwe inhoudskopieën, beelden of opnamen. Alleen de benodigde oorspronkelijke bestanden worden bij openen geladen. Eigen ronde- en sessievoortgang staat apart van de oorspronkelijke oefeningen, pogingen en herhaalschema's. Oude afronding voltooit geen nieuwe ronde; opnieuw oefenen wist geen afronding.
+
+Lokaal en online slagen 1.152 oefenstromen, 96 rondes, 36 schermindelingen en zes bronfout-/herstelproeven in Chromium en WebKit. 822 oorspronkelijke opslagsleutels blijven bytegelijk. Alle 121 aangeboden bronbestanden en 417 audio-opnamen zijn bytegelijk teruggelezen; Taalroute-metadata blijven behouden. 834 browserdecodes en zes echte afspeelproeven via de bestaande knoppen slagen. Lokaal slagen 138 bron-/eenheids-/matrixproeven, negen positieve/negatieve vrijgaveproeven, typecheck, lint, productieopbouw en de volledige gewone publicatiepoort. De goedgekeurde vormgeving, Info-knoppen, kleinere openingsanimatie, bestaande inhoud, media, opslag en routes blijven behouden. Alle zware controles lokaal; geen GitHub Actions-workflows toegevoegd.
+
+Bron, code, controles en alle 417 hergebruikte audiobestanden staan in de volledig teruggelezen Drive-back-up `1LKyh9G2w5lxW0NL0eBxwhcH1_uvIIihQ`; het definitieve online herstelpakket met 681 bestanden is volledig teruggelezen op Drive (`1L8Amr8hskQwFtXZILw9aDswABYsC71BF`), geregistreerd in `docs/repeat-rounds-20261101/final-backup.json`. Automatisch eigenaarsakkoord is vastgelegd. Een onafhankelijke menselijke review, praktijkpilot of fysieke telefoontest wordt niet als uitgevoerd geregistreerd. Een back-up is geen livepublicatie.
 
 ## Actuele publicatie — kleinere openingsloader die direct beweegt — 1 november 2026
 
