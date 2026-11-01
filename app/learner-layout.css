@@ -525,6 +525,15 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
 .learner-app .cp-content-task .cp-choice-grid > button { min-height: 48px; padding: 10px 12px; }
 .learner-app .cp-exercise-stage:has(> .cp-content-task) > .cp-exercise-tools { position: static; }
 
+/* Keep the existing sheet switch above writing tasks instead of underneath them. */
+@media (max-width: 820px) {
+  .learner-app.consistent-layout:has(.cp-text-entry, .cp-form-fields) .cp-chapter-playing:has(> .cp-practice-display) { grid-template-rows: auto auto minmax(0, 1fr); }
+  .learner-app.consistent-layout:has(.cp-text-entry, .cp-form-fields) .cp-chapter-playing:has(> .cp-practice-display) > .cp-exercise-browser { grid-row: 3; }
+  .learner-app.consistent-layout .learner-main[data-keyboard-open="true"] .cp-chapter-playing > .cp-practice-display { display: none; }
+  .learner-app.consistent-layout .learner-main[data-keyboard-open="true"] .cp-chapter-playing:has(> .cp-practice-display) { grid-template-rows: auto; }
+  .learner-app.consistent-layout .learner-main[data-keyboard-open="true"] .cp-chapter-playing:has(> .cp-practice-display) > .cp-exercise-browser { grid-row: 1; }
+}
+
 /* Keep scrolled text behind an opaque toolbar, with its approved position intact. */
 .learner-app .cp-exercise-stage:has(.cp-teacher-workflow) > .cp-exercise-tools { background: var(--paper); box-shadow: 0 -24px 0 var(--paper); }
 /* Nico's local example changes only the text layout of one existing grammar task. */

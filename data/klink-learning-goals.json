@@ -201,9 +201,9 @@
       "family": "schrijven",
       "displayLabels": [
         "Schrijven",
-        "Lettervorm"
+        "Letter typen"
       ],
-      "learnerText": "Je oefent om de vorm van een letter te oefenen."
+      "learnerText": "Je oefent om de getoonde letter te herkennen en te typen."
     },
     "woorden-hardop": {
       "family": "lezen",
@@ -227,7 +227,7 @@
         "Woordbetekenis",
         "Woorden ophalen"
       ],
-      "learnerText": "Je oefent om de betekenis van een bekend woord terug te halen."
+      "learnerText": "Je oefent om het woord bij een foto te bedenken en te herkennen."
     },
     "synoniemen": {
       "family": "woorden",
@@ -787,7 +787,7 @@
         "Zinnen maken",
         "Plannen en verwachtingen"
       ],
-      "learnerText": "Je oefent om met de aangeboden vormen over plannen of verwachtingen te praten."
+      "learnerText": "Je oefent om zinnen te maken over plannen of verwachtingen."
     },
     "modaliteit": {
       "family": "grammatica",
@@ -884,6 +884,94 @@
         "Vaste combinaties"
       ],
       "learnerText": "Je oefent om de aangeboden woorden in de bedoelde vaste combinatie te gebruiken."
+    },
+    "tijd-getallen": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Datum, tijd en getallen"
+      ],
+      "learnerText": "Je oefent om dagen, tijden en getallen duidelijk in een zin te gebruiken."
+    },
+    "woorddelen": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Woorden en woorddelen"
+      ],
+      "learnerText": "Je oefent om woorddelen te herkennen en de betekenis van samengestelde woorden te begrijpen."
+    },
+    "voltooide-tijd": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Voltooide tijd"
+      ],
+      "learnerText": "Je oefent om met hebben of zijn te vertellen wat er is gebeurd."
+    },
+    "passieve-zin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Worden en zijn"
+      ],
+      "learnerText": "Je oefent om met worden of zijn te beschrijven wat er met iemand of iets gebeurt."
+    },
+    "dat-vraagwoord": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Dat en vraagwoorden"
+      ],
+      "learnerText": "Je oefent om een mededeling met dat en een vraag met een vraagwoord in een langere zin te zetten."
+    },
+    "indirecte-vragen": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Indirecte vragen"
+      ],
+      "learnerText": "Je oefent om met of of een vraagwoord een vraag in een langere zin te zetten."
+    },
+    "letters-woorden": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Letters en woorden"
+      ],
+      "learnerText": "Je oefent om letters en korte woorden na te schrijven of te typen."
+    },
+    "naam-hoofdletter": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Naam met hoofdletter"
+      ],
+      "learnerText": "Je oefent om een naam met een hoofdletter te schrijven."
+    },
+    "lettervolgorde-lezen": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Letters en betekenis"
+      ],
+      "learnerText": "Je oefent om te herkennen hoe de volgorde van letters de betekenis van een woord verandert."
+    },
+    "eindletters-lezen": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Eindletters vergelijken"
+      ],
+      "learnerText": "Je oefent om de laatste letters van bekende woorden te vergelijken."
+    },
+    "betekenis-herkennen": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Precieze betekenis"
+      ],
+      "learnerText": "Je oefent om de juiste betekenis van een woord in een situatie te herkennen."
     }
   },
   "contentGoals": {
@@ -909,7 +997,7 @@
     "grammatica:grammar:Tegenwoordige tijd": "heden-zin",
     "grammatica:grammar:Ja-neevraag en jij": "vraagzin",
     "grammatica:grammar:Ontkenning": "ontkenning",
-    "grammatica:grammar:Tijd en getallen": "hoeveelheid-zin",
+    "grammatica:grammar:Tijd en getallen": "tijd-getallen",
     "grammatica:grammar:Hoofdzin met tijd vooraan": "zin-volgorde",
     "grammatica:grammar:Kunnen en willen": "modaliteit",
     "grammatica:grammar:Lidwoord en meervoud": "lidwoord",
@@ -949,12 +1037,12 @@
     "grammatica:grammar:Nevenschikking": "zinnen-verbinden",
     "grammatica:grammar:Omdat en eenvoudige bijzin": "zinnen-verbinden",
     "grammatica:grammar:Graag, voorkeur en voorstel als chunks": "passend-formuleren",
-    "grammatica:grammar:Voltooide tijd met hebben en zijn": "zijn-hebben",
+    "grammatica:grammar:Voltooide tijd met hebben en zijn": "voltooide-tijd",
     "grammatica:grammar:Voltooid deelwoord en werkwoordspelling": "werkwoord-combineren",
     "grammatica:grammar:Eenvoudige verleden vormen en volgorde": "verleden-zin",
     "grammatica:grammar:Terugverwijzen naar personen en dingen": "voornaamwoord",
-    "grammatica:grammar:Dat en indirecte vraag met vraagwoord": "vraagwoord",
-    "grammatica:grammar:Lezen van vormen en samenstellingen": "woordbeeld",
+    "grammatica:grammar:Dat en indirecte vraag met vraagwoord": "dat-vraagwoord",
+    "grammatica:grammar:Lezen van vormen en samenstellingen": "woorddelen",
     "grammatica:grammar:Te en om te": "werkwoord-combineren",
     "grammatica:grammar:Aan het en positie met te": "werkwoord-combineren",
     "grammatica:grammar:Het als onderwerp en er als verwijzing naar plaats": "plaatswoord",
@@ -971,15 +1059,15 @@
     "grammatica:grammar:Er, daar, hier en voorzetselbijwoorden": "plaatswoord",
     "grammatica:grammar:Werkwoorden met te, om te en vaste aanvulling": "werkwoord-combineren",
     "grammatica:grammar:Woordvorming en kwaliteiten beschrijven": "beschrijven",
-    "grammatica:grammar:Werkwoordgroepen in hoofd- en bijzin": "zinnen-verbinden",
-    "grammatica:grammar:Passief worden en zijn": "zijn-hebben",
+    "grammatica:grammar:Werkwoordgroepen in hoofd- en bijzin": "werkwoord-combineren",
+    "grammatica:grammar:Passief worden en zijn": "passieve-zin",
     "grammatica:grammar:Doel, middel en procedure verbinden": "zinnen-verbinden",
     "grammatica:grammar:Vergelijken en precies afwegen": "vergelijken",
     "grammatica:grammar:Modaliteit, advies en beleefdheid": "modaliteit",
     "grammatica:grammar:Indirect weergeven en samenvatten": "indirect-weergeven",
     "grammatica:grammar:Hoeveelheden, maten en gradatie": "hoeveelheid-zin",
     "grammatica:grammar:Verwijsketens en ontkenning in samenhang": "voornaamwoord",
-    "grammatica:grammar:Indirecte vragen met of en vraagwoord": "vraagwoord",
+    "grammatica:grammar:Indirecte vragen met of en vraagwoord": "indirecte-vragen",
     "grammatica:grammar:Bron, waarschijnlijkheid en nieuwsregister": "passend-formuleren",
     "grammatica:grammar:Oorzaak, gevolg en tegenstelling": "zinnen-verbinden",
     "grammatica:grammar:Argumenten en samenhangende tekst": "zinnen-verbinden",
@@ -1035,7 +1123,7 @@
     "teksten::nested-place": "tekst-info",
     "teksten::action-sequence": "tekst-volgorde",
     "teksten::initial-final-state": "tekst-volgorde",
-    "teksten::unsupported-consequence": "tekst-volgorde",
+    "teksten::unsupported-consequence": "tekst-precies",
     "teksten::state-change": "tekst-volgorde",
     "teksten::preparation-versus-completion": "tekst-precies",
     "teksten::total-and-subset": "tekst-gegevens",
@@ -1053,7 +1141,7 @@
     "teksten::paragraph-relation": "tekst-verband",
     "teksten::supporting-detail-versus-main": "tekst-kern",
     "teksten::contrast-supports-main": "tekst-kern",
-    "teksten::cause-adjustment-consequence": "tekst-volgorde",
+    "teksten::cause-adjustment-consequence": "tekst-reden",
     "teksten::coincidence-versus-cause": "tekst-reden",
     "teksten::causal-chain": "tekst-reden",
     "teksten::recommendation-reason-boundary": "tekst-reden",
@@ -1087,15 +1175,15 @@
     "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Hoe ver wil iemand het raam openen?": "gesprek-lezen",
     "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Wat wil de persoon drinken?": "gesprek-lezen",
     "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Welke zak is genoeg?": "gesprek-lezen",
-    "schrijven:writing:Vormen e/n/m/s, p-positie, korte labels, zelfcontrole en tweewoordenlijst binnen vijf bronwoorden": "woord-schrijven",
+    "schrijven:writing:Vormen e/n/m/s, p-positie, korte labels, zelfcontrole en tweewoordenlijst binnen vijf bronwoorden": "letters-woorden",
     "schrijven:writing:Het ontbrekende voorwerp schrijven binnen een gegeven verzoek.": "schriftelijk-verzoek",
     "schrijven:writing:Een begrijpelijk schriftelijk leenverzoek formuleren.": "schriftelijk-verzoek",
     "schrijven:writing:Woordgrenzen en zinopbouw bij bekende penzin": "woordgrenzen",
     "schrijven:writing:Een schriftelijk leenverzoek herkenbaar afsluiten met een vraagteken.": "schriftelijk-verzoek",
     "schrijven:writing:Veldlabels begrijpen en de juiste brongegevens in vier afzonderlijke velden plaatsen.": "formulier",
-    "schrijven:writing:Hoofdletter en naamkaart: kopiëren versus zelf schrijven": "zinsafsluiting",
+    "schrijven:writing:Hoofdletter en naamkaart: kopiëren versus zelf schrijven": "naam-hoofdletter",
     "schrijven:writing:Een korte eetwens met een duidelijke beperking opschrijven.": "informatie-noteren",
-    "schrijven:writing:Een gerecht en de manier van serveren als twee aparte inhoudspunten noteren.": "zinsafsluiting",
+    "schrijven:writing:Een gerecht en de manier van serveren als twee aparte inhoudspunten noteren.": "informatie-noteren",
     "schrijven:writing:Een leenafspraak begrijpelijk bevestigen en later dezelfde functie met afzonderlijk voorbereide parallelle inhoud uitvoeren.": "afspraak-noteren",
     "schrijven:writing:Een terugbelafspraak met persoon, dagdeel en tijd noteren.": "afspraak-noteren",
     "schrijven:writing:Een onjuiste tijdnotatie herkennen en brongebonden herstellen.": "afspraak-noteren",
@@ -1104,7 +1192,7 @@
     "schrijven:writing:Cijfervorm en volgorde 24/42 op correctiestrook": "cijfers-schrijven",
     "schrijven:writing:Vertraging en onzekerheid eerlijk melden met een concrete vervolgafspraak.": "afspraak-noteren",
     "schrijven:writing:Een bruikbare lijst schrijven met beide producten en hun eigen hoeveelheid.": "lijst",
-    "schrijven:writing:Ronde vormen o en verbindingen k/b/t bij korte voorwerplabels": "woord-schrijven",
+    "schrijven:writing:Ronde vormen o en verbindingen k/b/t bij korte voorwerplabels": "letters-woorden",
     "schrijven:writing:Tweeletterklinkers als schrijfdoel met betekenis behouden": "woord-schrijven",
     "schrijven:writing:Medeklinkerclusters in korte labels en eigen correctie": "woord-schrijven",
     "schrijven:writing:Meerlettergrepig boodschappenwoord in bestaande hoeveelheidstaak": "woord-schrijven",
@@ -1112,8 +1200,8 @@
     "schrijven:writing:Twee concrete alternatieven schriftelijk afwegen en een gemotiveerd praktisch verzoek formuleren.": "schriftelijk-afwegen",
     "woordpakketten:precise-response:meaning-repair": "betekenis-precies",
     "woordpakketten:precise-response:meaning-boundary": "betekenis-precies",
-    "woordpakketten:precise-response:reading-condition": "woordbeeld",
-    "woordpakketten:precise-response:spelling-recall": "spelling-controle",
+    "woordpakketten:precise-response:reading-condition": "woorden-hardop",
+    "woordpakketten:precise-response:spelling-recall": "woord-schrijven",
     "woordpakketten:precise-response:meaning": "betekenis-precies",
     "woordpakketten:precise-response:functional-use": "betekenis-precies",
     "woordpakketten:precise-response:word-relation": "betekenis-precies",
@@ -1122,8 +1210,8 @@
     "woordpakketten:precise-response:functional-action": "betekenis-precies",
     "woordpakketten:precise-response:precise-meaning-and-word-ending": "betekenis-precies",
     "woordpakketten:precise-response:functional-object-choice": "betekenis-precies",
-    "woordpakketten:precise-response:letter-order-and-meaning": "spelling-controle",
-    "woordpakketten:precise-response:cluster-word-reading": "woordbeeld",
+    "woordpakketten:precise-response:letter-order-and-meaning": "lettervolgorde-lezen",
+    "woordpakketten:precise-response:cluster-word-reading": "woorden-hardop",
     "woordpakketten:model-fade:own-response-after-removal-of-written-model": "woord-zelf-gebruiken",
     "woordpakketten:functional-use:request": "woord-toepassen",
     "woordpakketten:functional-use:information-relay": "woord-toepassen",
@@ -1133,10 +1221,10 @@
     "woordpakketten:functional-use:body-function-explanation": "woord-toepassen",
     "woordpakketten:precise-response:meaning-word-choice": "betekenis-precies",
     "woordpakketten:precise-response:word-object-matching": "betekenis-precies",
-    "woordpakketten:precise-response:final-letter-comparison": "spelling-controle",
+    "woordpakketten:precise-response:final-letter-comparison": "eindletters-lezen",
     "woordpakketten:model-fade:Een eerder voorbereid woord schrijven na afbouw van het zichtbare model; geen dictee of zelfstandig leesbewijs.": "woord-zelf-gebruiken",
     "woordpakketten:functional-use:De voorbereide bronbetekenis in een concrete context gebruiken en na een andere activiteit ondersteund terughalen.": "woord-toepassen",
-    "woordpakketten:precise-response:Het hele voorbereide woord lezen zonder voorafgaande uitspraak of modelhulp; betekenis apart aantonen.": "betekenis-precies",
+    "woordpakketten:precise-response:Het hele voorbereide woord lezen zonder voorafgaande uitspraak of modelhulp; betekenis apart aantonen.": "woorden-hardop",
     "woordpakketten:precise-response:De betekenis of functie van naast in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
     "woordpakketten:precise-response:De betekenis of functie van schenk in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
     "woordpakketten:precise-response:De betekenis of functie van onder in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
@@ -1165,7 +1253,7 @@
     "woordpakketten:precise-response:De betekenis of functie van rekening houden met in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
     "woordpakketten:precise-response:De betekenis of functie van in overleg in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
     "woordpakketten:precise-response:De betekenis of functie van in aanmerking komen in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
-    "woordpakketten::Betekenis in een situatie herkennen; oefenen, geen zelfstandige lees- of spreekbeoordeling.": "betekenis-precies"
+    "woordpakketten::Betekenis in een situatie herkennen; oefenen, geen zelfstandige lees- of spreekbeoordeling.": "betekenis-herkennen"
   },
   "modes": {
     "model": "woord-kennismaken",

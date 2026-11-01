@@ -166,7 +166,7 @@ function SheetExercise({ pack, exercise, number, onAudio, startPlayback, onAttem
     setResult(correct ? 'right' : 'wrong'); if (correct) onDone();
   }
   return <ExerciseAudioProvider><article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-sheet-item ${result}`} data-sheet-exercise={exercise.exerciseId} aria-label={`Opdracht ${number}`}>
-    <ExerciseAudioSlot><LearnerExerciseInfo exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; }} /></ExerciseAudioSlot>
+    <ExerciseAudioSlot info={<LearnerExerciseInfo exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; }} />} />
     <ExerciseSurface pack={pack} exercise={exercise} guided answeredCorrectly={result === 'right'} canAnswer={heard && result !== 'right'} speakingOptionId="" onOpenExercise={() => {}} onReset={() => setResult('idle')} onHelp={() => { metrics.current.helpUsed = true; }} onFinish={finish} onAudio={async source => {
       const controller = startPlayback(); playback.current = controller; setAudioError(false); setPlaying(true);
       if (exercise.readingTask) metrics.current.helpUsed = true;
@@ -216,7 +216,7 @@ function WorksheetRow({ exercise, onAudio, onAttempt, onDone, completed }: { com
   const metrics = useRef({ started: 0, attempts: 0, helpUsed: false });
   useEffect(() => { metrics.current.started = Date.now(); return () => playback.current?.abort(); }, []);
   return <ExerciseAudioProvider><article ref={row} tabIndex={-1} data-practice-item data-practice-ready={result === 'right'} data-practice-busy={playing} className={`cp-worksheet-row ${result}`} data-worksheet-exercise={exercise.exerciseId}>
-    <ExerciseAudioSlot><LearnerExerciseInfo exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; }} /></ExerciseAudioSlot>
+    <ExerciseAudioSlot info={<LearnerExerciseInfo exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; }} />} />
     <BuildSurface exercise={exercise} answeredCorrectly={result === 'right'} onAudio={async source => {
       playback.current?.abort(); const controller = new AbortController(); playback.current = controller; setPlaying(true);
       try { const ok = await onAudio(source, { waitUntilEnd: true, signal: controller.signal }); if (controller.signal.aborted) return false; setAudioError(ok === false); if (ok !== false) setHeard(true); return ok !== false; }
