@@ -9,10 +9,13 @@ import { extendedActivities, extendedExercises, type ExtendedActivity } from './
 
 import { standardActivities, standardExercises, type StandardActivity } from './standard-practice.ts';
 import { isSynonymPack, synonymExercises } from './synonyms.ts';
+import { isWordUsePack, wordUseExercises } from './word-use.ts';
 
 // These are activities on the existing word groups, not a second curriculum.
 export const groupActivities = [
   { id: 'synonyms', label: 'Synoniemen', category: 'Kiezen', icon: 'link' },
+  { id: 'word-combinations', label: 'Woordcombinaties', category: 'Kiezen', icon: 'link' },
+  { id: 'suitable-reply', label: 'Welke reactie past?', category: 'Kiezen', icon: 'chat' },
   { id: 'meet', label: 'Kijk en luister', category: 'Ontdekken', icon: 'eye', mode: 'model' },
   { id: 'same-word', label: 'Zoek hetzelfde woord', category: 'Kiezen', icon: 'search' },
   { id: 'listen', label: 'Hoor en kies', category: 'Kiezen', icon: 'ear' },
@@ -113,6 +116,7 @@ const learningCache = new WeakMap<PackageDefinition, Map<string, PackageExercise
 export function groupExercises(pack: PackageDefinition, activity: GroupActivity, seed = 1): PackageExercise[] {
   // Supplemental packs offer only their authored activities; other generators require the core curriculum.
   if (pack.practiceActivities && !pack.practiceActivities.includes(activity)) return [];
+  if (isWordUsePack(pack)) return wordUseExercises(pack, activity, seed);
   if (isSynonymPack(pack)) return activity === 'learning-review'
     ? [false, true].flatMap(reverse => ['synonyms', 'hear-match'].flatMap(mode => synonymExercises(pack, mode, 1, reverse)))
     : synonymExercises(pack, activity, seed);

@@ -17,6 +17,7 @@ import { useRouteSettings } from './route-settings';
 import { PracticeLine } from './practice-line';
 import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
 import { isSynonymPack, parseSynonymSettings, synonymActivities, synonymExercises } from '@/lib/synonyms';
+import { isWordUsePack } from '@/lib/word-use';
 
 const icons = { eye: Eye, ear: Ear, image: ImageIcon, link: Link2, puzzle: Puzzle, grid: Grid2X2, keyboard: Keyboard, pen: PencilLine, mic: Mic, book: BookOpen, search: Search, chat: MessageCircle };
 const sheetActivities: GroupActivity[] = ['meet', 'same-word', 'listen', 'hear-word', 'read', 'build-model', 'build', 'missing', 'copy', 'dictation'];
@@ -68,6 +69,7 @@ export function PackageGroupPractice({ pack, onAudio, onAttempt, selection = { l
 type GroupRoundProps = { progressId?: string; progressExerciseIds?: string[]; legacySessionId?: string; pack: PackageDefinition; activity: GroupActivity; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; onBack: () => void; onAgain: () => void; exerciseSet?: PackageExercise[]; sessionId?: string; backLabel?: string; exerciseMenu?: ExerciseMenuProps };
 
 export function GroupRound(props: GroupRoundProps) {
+  if (isWordUsePack(props.pack)) return <div className="cp-synonym-round"><GroupRoundPlayer {...props} /></div>;
   return isSynonymPack(props.pack) && synonymActivities.some(id => id === props.activity) ? <SynonymRound {...props} /> : <GroupRoundPlayer {...props} />;
 }
 

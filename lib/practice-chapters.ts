@@ -2,6 +2,7 @@ import { productionIndex, productionPack, readingSelections } from './production
 import { chapterWordRounds, selectChapterWords, wordRoundActivities, type WordRound } from './word-rounds.ts';
 import { teacherChapter, teacherGroups, teacherTasks } from './alfa-c-docent.ts';
 import { synonymCollections, synonymActivities, isSynonymPack } from './synonyms.ts';
+import { wordUseCollections, wordUseActivities } from './word-use.ts';
 import { alfaCChapters } from './alfa-c-navigation.ts';
 import { importedActivities, importedCollections, type ImportedActivity } from './imported-practice.ts';
 import { contentPackages } from './package-content.ts';
@@ -14,16 +15,16 @@ import type { PackageDefinition, PackageExercise } from './package-content';
 
 // Separate skill entrances, not new lessons or a second placement of Lexicon words.
 export const practiceChapters: { id: string; title: string; icon: typeof groupActivities[number]['icon']; activities: GroupActivity[] }[] = [
-  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards', 'synonyms'] },
+  { id: 'words', title: 'Woorden oefenen', icon: 'image', activities: ['word-sort', 'meet', 'same-word', 'listen', 'hear-word', 'read', 'match', 'hear-match', 'cards', 'synonyms', 'word-combinations'] },
   { id: 'sounds', title: 'Klanken', icon: 'ear', activities: ['sound-path', 'sound-compare'] },
   { id: 'sentences', title: 'Zinnen', icon: 'book', activities: ['sentences', 'word-sentence', 'find-sentence', 'sentence-build', 'sentence-dictation', 'sentence-speak'] },
   { id: 'texts', title: 'Teksten', icon: 'book', activities: ['reading-path', 'texts', 'text-question', 'text-evidence', 'context-order'] },
-  { id: 'listening', title: 'Luisteren', icon: 'ear', activities: ['listen', 'understand', 'text-question', 'dialogue-question'] },
+  { id: 'listening', title: 'Luisteren', icon: 'ear', activities: ['listen', 'understand', 'text-question', 'dialogue-question', 'suitable-reply'] },
   { id: 'speaking', title: 'Spreken', icon: 'mic', activities: ['practice-branch', 'speak', 'sentence-speak', 'dialogues', 'dialogue-role'] },
   { id: 'writing', title: 'Schrijven', icon: 'pen', activities: ['write-letter', 'copy', 'write', 'dictation', 'paper-dictation', 'sentence-dictation', 'functional-message', 'functional-form'] },
   { id: 'spelling', title: 'Spelling', icon: 'keyboard', activities: ['word-sort', 'spelling-path', 'build-model', 'build', 'worksheet', 'worksheet-heard', 'missing', 'dictation'] },
   { id: 'grammar', title: 'Grammatica', icon: 'puzzle', activities: ['grammar-path', 'sentence-build', 'verb-choice'] },
-  { id: 'practical', title: 'In de praktijk', icon: 'chat', activities: ['practice-branch', 'situation-point', 'context-order', 'practical-path', 'dialogues', 'dialogue-role', 'dialogue-question', 'functional-message', 'functional-form'] },
+  { id: 'practical', title: 'In de praktijk', icon: 'chat', activities: ['practice-branch', 'situation-point', 'context-order', 'practical-path', 'dialogues', 'dialogue-role', 'dialogue-question', 'functional-message', 'functional-form', 'suitable-reply'] },
   { id: 'repeat', title: 'Samen herhalen', icon: 'grid', activities: ['learning-review', 'word-bingo', 'image-bingo', 'memory', 'read-series', 'worksheet', 'worksheet-heard'] },
   { id: 'support', title: 'Rustig beginnen', icon: 'eye', activities: ['meet', 'build-model', 'copy'] },
 ];
@@ -97,6 +98,7 @@ export function chapterExerciseCount(chapter: string, selection: ChapterLocation
 
 export function chapterCollections(activity: GroupActivity): ChapterCollection[] {
   if (activity === 'synonyms') return synonymCollections;
+  if (wordUseActivities.some(id => id === activity)) return wordUseCollections.filter(collection => collection.pack.practiceActivities?.includes(activity));
   if (activity.startsWith('content-')) {
     const existing = cache.get(activity);
     if (existing) return existing;
@@ -156,6 +158,7 @@ export function chapterCollections(activity: GroupActivity): ChapterCollection[]
     const exercises = groupExercises(collection.pack, activity);
     return exercises.length ? [{ ...collection, title: activity === 'learning-review' ? collection.title : `Synoniemen · ${collection.title}`, exercises }] : [];
   }));
+  if (activity === 'learning-review') result.push(...wordUseCollections);
   cache.set(activity, result);
   return result;
 }

@@ -299,7 +299,7 @@ function PackageExercisePlayer({
 
   const beginAudio = useEffectEvent(() => {
     if (exercise?.mode === 'connected-dialogue') return;
-    if (needsListen || exercise?.mode === 'model' || (isInstructionAudioEnabled(exercise?.instructionAudio?.src) && exercise?.instructionAudio)) {
+    if (needsListen || exercise?.mode === 'model' || (!exercise?.wordUseId && isInstructionAudioEnabled(exercise?.instructionAudio?.src) && exercise?.instructionAudio)) {
       void listen(needsListen || exercise?.mode === 'model' ? stimulus : undefined, true);
     }
   });
@@ -387,7 +387,7 @@ function PackageExercisePlayer({
       objective: asString(exercise.objective), assessment: exercise.assessment ?? 'answer',
       ...(exercise.readingTask ? { independentReading: correct && !metrics.current.helpUsed } : {}),
       ...(exercise.learningPathId ? { independentReading: false, reviewEligible: exercise.reviewEligible === true } : {}),
-      ...(exercise.synonymPairId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
+      ...(exercise.synonymPairId || exercise.wordUseId ? { independentReading: exercise.independentReading === true && correct && !metrics.current.helpUsed, reviewEligible: exercise.reviewEligible === true } : {}),
       ...(exercise.componentId === 'KLINK-CONTENT' ? { independentReading: false, reviewEligible: false, access: exercise.access === 'self-practice' ? 'self-practice' : 'teacher-supported' } : {}),
       ...(sentenceQuestion || exercise.access === 'supported-listening' ? { contextId: asString(exercise.contextId), access: 'supported-listening', independentReading: false } : {}) });
     setResult(correct ? 'right' : 'wrong');

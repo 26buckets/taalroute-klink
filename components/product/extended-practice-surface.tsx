@@ -19,20 +19,25 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
   if (exercise.mode === 'functional-message' || exercise.mode === 'functional-form') return <FunctionalWriting exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} onAudio={onAudio} canAnswer={canAnswer} />;
   const correct = answer.correctOptionIds?.includes(selected);
   const synonyms = exercise.mode === 'synonyms';
-  return <section className={`cp-task-card cp-extended-task${synonyms ? ' cp-synonyms-task' : ''}`}>
+  const wordUse = typeof exercise.wordUseId === 'string';
+  return <section className={`cp-task-card cp-extended-task${synonyms || wordUse ? ' cp-synonyms-task' : ''}`}>
+    {wordUse && <p className="cp-synonym-context">{String(exercise.wordUseContext)}</p>}
     {synonyms && exercise.prompt?.audio?.src && typeof exercise.synonymContext === 'string' && <p className="cp-synonym-context">{exercise.synonymContext}</p>}
     {exercise.mode === 'sound-compare' ? <ExerciseListen label="Luister naar beide woorden" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> :
-      synonyms ? exercise.prompt?.audio?.src ? <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> : typeof exercise.synonymContext === 'string' && exercise.prompt?.text ? <p className="cp-synonym-word cp-synonym-context-card">{exercise.synonymContext.split(exercise.prompt.text)[0]}<strong>{exercise.prompt.text}</strong>{exercise.synonymContext.split(exercise.prompt.text)[1]}</p> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
+      synonyms ? exercise.prompt?.audio?.src ? <ExerciseListen label="Luister naar het woord" onClick={() => onAudio(exercise.prompt?.audio?.src)} /> : typeof exercise.synonymContext === 'string' && exercise.prompt?.text ? <p className="cp-synonym-word cp-synonym-context-card">{exercise.synonymContext.split(exercise.prompt.text)[0]}<strong>{exercise.prompt.text}</strong>{exercise.synonymContext.split(exercise.prompt.text)[1]}</p> : <p className="cp-synonym-word">{exercise.prompt?.text}</p> : wordUse ? <>
+        {exercise.prompt?.audio?.src && <ExerciseListen label={exercise.mode === 'word-combinations' ? 'Luister naar de combinatie en de antwoorden' : 'Luister naar de ander en de antwoorden'} onClick={() => onAudio(exercise.prompt?.audio?.src)} />}
+        <p className="cp-synonym-word cp-synonym-context-card"><strong>{exercise.prompt?.text}</strong></p>
+      </> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
     {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
       setSelected(option.id);
       const isCorrect = answer.correctOptionIds?.includes(option.id) === true;
-      const feedback = synonyms || exercise.readingRoundId ? String(isCorrect ? exercise.correctFeedback : exercise.feedback)
+      const feedback = synonyms || wordUse || exercise.readingRoundId ? String(isCorrect ? exercise.correctFeedback : exercise.feedback)
         : isCorrect ? typeof exercise.evidence === 'string' ? `In de tekst: ${exercise.evidence}` : 'Goed. Kijk ook naar het voorbeeld.'
         : exercise.mode === 'verb-choice' ? 'Kijk naar ik. Welke vorm hoort daarbij?' : 'Kijk of luister nog eens. Je keuzes blijven staan.';
       onFinish(option.id, isCorrect, feedback);
-    }}>{option.label}</button>{option.audio?.src && <button className="secondary-button" aria-label={`Luister: ${option.label}`} onClick={() => onAudio(option.audio?.src)}><Volume2 /></button>}</div>)}</div>
+    }}>{option.label}</button>{option.audio?.src && !wordUse && <button className="secondary-button" aria-label={`Luister: ${option.label}`} onClick={() => onAudio(option.audio?.src)}><Volume2 /></button>}</div>)}</div>
     {exercise.mode === 'verb-choice' && <><button className="secondary-button" onClick={() => { setHelp(!help); onHelp(); }}>Help</button>{help && <div className="cp-source-text"><p>{String(exercise.rule)}</p><p>{String(exercise.sourceModel)}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.modelAudio as ExerciseAudio).src)}><Volume2 />Luister</button>}</div>}</>}
     {typeof exercise.evidence === 'string' && <p className="cp-source-proof" aria-hidden={!correct} style={{ visibility: correct ? 'visible' : 'hidden' }}>{exercise.evidence}</p>}
   </section>;
