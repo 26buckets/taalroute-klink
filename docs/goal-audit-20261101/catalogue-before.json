@@ -1,0 +1,1226 @@
+{
+  "families": {
+    "woorden": {
+      "label": "Woordbetekenis",
+      "kleur": "Blauw",
+      "light": {
+        "background": "#EAF2FB",
+        "foreground": "#244C7A"
+      },
+      "dark": {
+        "background": "#263D55",
+        "foreground": "#D3E6FF"
+      }
+    },
+    "klanken": {
+      "label": "Klanken en letters",
+      "kleur": "Paars",
+      "light": {
+        "background": "#F0EAF8",
+        "foreground": "#60408A"
+      },
+      "dark": {
+        "background": "#3E3152",
+        "foreground": "#E4D6FF"
+      }
+    },
+    "lezen": {
+      "label": "Lezen",
+      "kleur": "Petrol",
+      "light": {
+        "background": "#E6F1F1",
+        "foreground": "#174C53"
+      },
+      "dark": {
+        "background": "#243E41",
+        "foreground": "#D0EEEE"
+      }
+    },
+    "luisteren": {
+      "label": "Luisteren",
+      "kleur": "Blauwgroen",
+      "light": {
+        "background": "#E6F3F6",
+        "foreground": "#1C5260"
+      },
+      "dark": {
+        "background": "#243E48",
+        "foreground": "#D2EDF6"
+      }
+    },
+    "spreken": {
+      "label": "Spreken",
+      "kleur": "Pruim",
+      "light": {
+        "background": "#F4ECF3",
+        "foreground": "#74466F"
+      },
+      "dark": {
+        "background": "#483447",
+        "foreground": "#F4D5F0"
+      }
+    },
+    "schrijven": {
+      "label": "Schrijven",
+      "kleur": "Oker",
+      "light": {
+        "background": "#FAF0DB",
+        "foreground": "#705018"
+      },
+      "dark": {
+        "background": "#463B28",
+        "foreground": "#F6E5B7"
+      }
+    },
+    "spelling": {
+      "label": "Spelling",
+      "kleur": "Oker",
+      "light": {
+        "background": "#FAF0DB",
+        "foreground": "#705018"
+      },
+      "dark": {
+        "background": "#463B28",
+        "foreground": "#F6E5B7"
+      }
+    },
+    "grammatica": {
+      "label": "Zinnen maken",
+      "kleur": "Indigo",
+      "light": {
+        "background": "#ECEEF9",
+        "foreground": "#434C80"
+      },
+      "dark": {
+        "background": "#303954",
+        "foreground": "#DCE2FF"
+      }
+    },
+    "praktijk": {
+      "label": "In de praktijk",
+      "kleur": "Groen",
+      "light": {
+        "background": "#E9F2E9",
+        "foreground": "#385D40"
+      },
+      "dark": {
+        "background": "#2D4032",
+        "foreground": "#DCEEDC"
+      }
+    }
+  },
+  "goals": {
+    "woord-kennismaken": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis"
+      ],
+      "learnerText": "Je oefent om een bekend woord met zijn betekenis te verbinden."
+    },
+    "woordbeeld": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Woorden herkennen"
+      ],
+      "learnerText": "Je oefent om hetzelfde geschreven woord te herkennen."
+    },
+    "hoor-foto": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Woord en foto"
+      ],
+      "learnerText": "Je oefent om een gesproken woord met de juiste foto te verbinden."
+    },
+    "hoor-woord": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Woord herkennen"
+      ],
+      "learnerText": "Je oefent om een gesproken woord tussen geschreven woorden te herkennen."
+    },
+    "lees-foto": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Woord en foto"
+      ],
+      "learnerText": "Je oefent om een geschreven woord met de juiste foto te verbinden."
+    },
+    "bouw-model": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Letters op volgorde"
+      ],
+      "learnerText": "Je oefent om de letters van een woord in de goede volgorde te zetten, met een voorbeeld."
+    },
+    "bouw-gehoord": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Horen en spellen"
+      ],
+      "learnerText": "Je oefent om een gehoord woord met letters te maken."
+    },
+    "ontbrekende-letter": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Woord aanvullen"
+      ],
+      "learnerText": "Je oefent om de ontbrekende letter of lettergroep in een woord te vinden."
+    },
+    "overschrijven": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Precies schrijven"
+      ],
+      "learnerText": "Je oefent om een geschreven woord precies over te nemen."
+    },
+    "woord-dictee": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Horen en schrijven"
+      ],
+      "learnerText": "Je oefent om een gehoord woord zonder geschreven voorbeeld op te schrijven."
+    },
+    "woord-schrijven": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Woord schrijven"
+      ],
+      "learnerText": "Je oefent om de schrijfwijze van een bekend woord te oefenen."
+    },
+    "letter-schrijven": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Lettervorm"
+      ],
+      "learnerText": "Je oefent om de vorm van een letter te oefenen."
+    },
+    "woorden-hardop": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Woorden lezen"
+      ],
+      "learnerText": "Je oefent om bekende woorden hardop te lezen."
+    },
+    "woord-uitspraak": {
+      "family": "spreken",
+      "displayLabels": [
+        "Spreken",
+        "Uitspraak"
+      ],
+      "learnerText": "Je oefent om een bekend woord na te zeggen en je uitspraak terug te horen."
+    },
+    "woord-kaart": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Woorden ophalen"
+      ],
+      "learnerText": "Je oefent om de betekenis van een bekend woord terug te halen."
+    },
+    "synoniemen": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Synoniemen"
+      ],
+      "learnerText": "Je oefent om woorden met bijna dezelfde betekenis in de gegeven context te verbinden."
+    },
+    "woordcombinaties": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Woorden combineren"
+      ],
+      "learnerText": "Je oefent om woorden te herkennen die in deze situatie bij elkaar passen."
+    },
+    "passende-reactie": {
+      "family": "praktijk",
+      "displayLabels": [
+        "In de praktijk",
+        "Passend reageren"
+      ],
+      "learnerText": "Je oefent om een reactie te kiezen die bij de situatie past."
+    },
+    "taalregister": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Passend taalgebruik"
+      ],
+      "learnerText": "Je oefent om te herkennen welk taalgebruik bij een situatie past."
+    },
+    "zin-volgen": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Zin volgen"
+      ],
+      "learnerText": "Je oefent om een gesproken zin met tekststeun te volgen."
+    },
+    "gehoorde-zin": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Zin herkennen"
+      ],
+      "learnerText": "Je oefent om een gehoorde zin tussen geschreven zinnen te herkennen."
+    },
+    "zinsdictee": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Zin schrijven"
+      ],
+      "learnerText": "Je oefent om een gehoorde zin op te schrijven."
+    },
+    "zin-uitspraak": {
+      "family": "spreken",
+      "displayLabels": [
+        "Spreken",
+        "Zinnen uitspreken"
+      ],
+      "learnerText": "Je oefent om een zin na te zeggen met een passende uitspraak en zinsmelodie."
+    },
+    "zin-begrijpen": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Zin begrijpen"
+      ],
+      "learnerText": "Je oefent om de betekenis van een gehoorde zin te begrijpen."
+    },
+    "tekst-meeluisteren": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Tekst volgen"
+      ],
+      "learnerText": "Je oefent om een korte tekst te volgen terwijl je luistert."
+    },
+    "gesprek-volgen": {
+      "family": "luisteren",
+      "displayLabels": [
+        "Luisteren",
+        "Gesprek volgen"
+      ],
+      "learnerText": "Je oefent om te volgen wat mensen in een gesprek zeggen."
+    },
+    "tekst-info": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Informatie vinden"
+      ],
+      "learnerText": "Je oefent om informatie uit een tekst te halen."
+    },
+    "tekst-bewijs": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Antwoord uitleggen"
+      ],
+      "learnerText": "Je oefent om in de tekst aan te wijzen waar je antwoord staat."
+    },
+    "gesprek-begrip": {
+      "family": "praktijk",
+      "displayLabels": [
+        "In de praktijk",
+        "Gesprek begrijpen"
+      ],
+      "learnerText": "Je oefent om te begrijpen wat mensen in een gesprek bedoelen."
+    },
+    "gesprek-lezen": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Gesprek begrijpen"
+      ],
+      "learnerText": "Je oefent om informatie uit een geschreven gesprek te halen."
+    },
+    "zin-volgorde": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Woordvolgorde"
+      ],
+      "learnerText": "Je oefent om de woorden van een zin in de goede volgorde te zetten."
+    },
+    "werkwoord": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Werkwoord kiezen"
+      ],
+      "learnerText": "Je oefent om een werkwoordvorm te kiezen die bij de zin past."
+    },
+    "bericht": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Bericht schrijven"
+      ],
+      "learnerText": "Je oefent om een kort en begrijpelijk bericht te schrijven."
+    },
+    "formulier": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Formulier invullen"
+      ],
+      "learnerText": "Je oefent om gegevens op de goede plaats in een formulier te zetten."
+    },
+    "schriftelijk-verzoek": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Iets vragen"
+      ],
+      "learnerText": "Je oefent om een begrijpelijk verzoek op te schrijven."
+    },
+    "gespreksrol": {
+      "family": "spreken",
+      "displayLabels": [
+        "Spreken",
+        "Zelf reageren"
+      ],
+      "learnerText": "Je oefent om zelf een beurt in een gesprek te zeggen."
+    },
+    "sorteer-betekenis": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Betekenissen ordenen"
+      ],
+      "learnerText": "Je oefent om woorden op betekenis bij elkaar te zetten."
+    },
+    "sorteer-letter": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Letters herkennen"
+      ],
+      "learnerText": "Je oefent om letters op een vaste plaats in een geschreven woord te herkennen."
+    },
+    "sorteer-spelling": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Schrijfpatronen"
+      ],
+      "learnerText": "Je oefent om woorden met hetzelfde schrijfpatroon te herkennen."
+    },
+    "stappen": {
+      "family": "praktijk",
+      "displayLabels": [
+        "In de praktijk",
+        "Volgorde van stappen"
+      ],
+      "learnerText": "Je oefent om stappen van een handeling in een logische volgorde te zetten."
+    },
+    "situatie": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Woord in een situatie"
+      ],
+      "learnerText": "Je oefent om een woord met het juiste onderdeel van een situatie te verbinden."
+    },
+    "praktijkkeuze": {
+      "family": "praktijk",
+      "displayLabels": [
+        "In de praktijk",
+        "Keuze en gevolg"
+      ],
+      "learnerText": "Je oefent om een passende keuze in een dagelijkse situatie te bespreken."
+    },
+    "spelling-controle": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Controleren"
+      ],
+      "learnerText": "Je oefent om de schrijfwijze van een woord of zin te controleren en te verbeteren."
+    },
+    "zinsafsluiting": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Hoofdletter en leesteken"
+      ],
+      "learnerText": "Je oefent om hoofdletters en leestekens in een zin te controleren."
+    },
+    "woordgrenzen": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Spaties"
+      ],
+      "learnerText": "Je oefent om de grenzen tussen woorden in een zin te herkennen."
+    },
+    "eindletter": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Eindletter controleren"
+      ],
+      "learnerText": "Je oefent om de laatste letter van een woord te controleren met een verwante vorm."
+    },
+    "vraagzin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vragen maken"
+      ],
+      "learnerText": "Je oefent om woorden in een vraag in de goede volgorde te zetten."
+    },
+    "vraagwoord": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vraagwoorden"
+      ],
+      "learnerText": "Je oefent om een vraagwoord te kiezen dat bij de gevraagde informatie past."
+    },
+    "plaatswoord": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Plaats aangeven"
+      ],
+      "learnerText": "Je oefent om met de aangeboden woorden aan te geven waar iets is."
+    },
+    "voornaamwoord": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Verwijzen naar iemand"
+      ],
+      "learnerText": "Je oefent om de passende verwijzing naar een persoon of voorwerp in een zin te gebruiken."
+    },
+    "zijn-hebben": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Zijn en hebben"
+      ],
+      "learnerText": "Je oefent om de aangeboden vormen van zijn of hebben in een zin te gebruiken."
+    },
+    "meervoud-zin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Meer dan één"
+      ],
+      "learnerText": "Je oefent om een passende werkwoordvorm bij wij of we te gebruiken."
+    },
+    "ontkenning": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Niet en geen"
+      ],
+      "learnerText": "Je oefent om de bedoelde ontkenning in een zin te gebruiken."
+    },
+    "lidwoord": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "De en het"
+      ],
+      "learnerText": "Je oefent om het aangeboden lidwoord in de bijbehorende woordgroep te gebruiken."
+    },
+    "tekst-kern": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Kern begrijpen"
+      ],
+      "learnerText": "Je oefent om de belangrijkste boodschap van een tekst te herkennen."
+    },
+    "tekst-verwijzing": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Verwijzingen volgen"
+      ],
+      "learnerText": "Je oefent om te volgen over wie of wat de tekst gaat."
+    },
+    "tekst-volgorde": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Volgorde begrijpen"
+      ],
+      "learnerText": "Je oefent om te begrijpen in welke volgorde dingen gebeuren."
+    },
+    "tekst-reden": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Redenen begrijpen"
+      ],
+      "learnerText": "Je oefent om te begrijpen waarom iets in de tekst gebeurt."
+    },
+    "tekst-voorwaarde": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Regels en afspraken"
+      ],
+      "learnerText": "Je oefent om uit een tekst te halen wat je moet of mag doen."
+    },
+    "tekst-gegevens": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Gegevens combineren"
+      ],
+      "learnerText": "Je oefent om gegevens uit verschillende delen van een tekst bij elkaar te brengen."
+    },
+    "tekst-bedoeling": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Bedoeling begrijpen"
+      ],
+      "learnerText": "Je oefent om te herkennen wat de schrijver wil zeggen en waarom."
+    },
+    "tekst-verband": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Verbanden begrijpen"
+      ],
+      "learnerText": "Je oefent om te begrijpen hoe delen van een tekst bij elkaar horen."
+    },
+    "tekst-precies": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Precies lezen"
+      ],
+      "learnerText": "Je oefent om te onderscheiden wat wel en niet in de tekst staat."
+    },
+    "betekenis-precies": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Precieze betekenis"
+      ],
+      "learnerText": "Je oefent om de bedoelde betekenis van een woord in de situatie uit te leggen."
+    },
+    "woord-zelf-gebruiken": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Zelf gebruiken"
+      ],
+      "learnerText": "Je oefent om een bekend woord zonder geschreven voorbeeld te gebruiken."
+    },
+    "woord-toepassen": {
+      "family": "woorden",
+      "displayLabels": [
+        "Woordbetekenis",
+        "Gebruiken in een situatie"
+      ],
+      "learnerText": "Je oefent om een bekend woord passend in een situatie te gebruiken."
+    },
+    "klank-first": {
+      "family": "klanken",
+      "displayLabels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ],
+      "learnerText": "Je oefent om de eerste klank in een bekend woord met de juiste letter of lettergroep te verbinden."
+    },
+    "klank-middle": {
+      "family": "klanken",
+      "displayLabels": [
+        "Klanken en letters",
+        "Middelste klank"
+      ],
+      "learnerText": "Je oefent om de middelste klank in een bekend woord met de juiste letter of lettergroep te verbinden."
+    },
+    "klank-last": {
+      "family": "klanken",
+      "displayLabels": [
+        "Klanken en letters",
+        "Laatste klank"
+      ],
+      "learnerText": "Je oefent om de laatste klank in een bekend woord met de juiste letter of lettergroep te verbinden."
+    },
+    "klankverschil": {
+      "family": "klanken",
+      "displayLabels": [
+        "Klanken en letters",
+        "Klanken vergelijken"
+      ],
+      "learnerText": "Je oefent om te horen of twee bekende woorden hetzelfde of anders klinken."
+    },
+    "lettergroep": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Twee letters, één klank"
+      ],
+      "learnerText": "Je oefent om de aangeboden lettergroepen zoals ie of oe als één klank te schrijven."
+    },
+    "lange-klinker": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Lange klinker"
+      ],
+      "learnerText": "Je oefent om een lange klinker in de aangeboden korte woorden met twee letters te schrijven."
+    },
+    "open-lettergreep": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Eén klinkerletter"
+      ],
+      "learnerText": "Je oefent om een lange klinker in de aangeboden open lettergreep met één letter te schrijven."
+    },
+    "dubbele-medeklinker": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Dubbele medeklinker"
+      ],
+      "learnerText": "Je oefent om in de aangeboden woorden de korte klinker met een dubbele medeklinker te behouden."
+    },
+    "woordspelling": {
+      "family": "spelling",
+      "displayLabels": [
+        "Spelling",
+        "Woordspelling"
+      ],
+      "learnerText": "Je oefent om de schrijfwijze van een bekend woord te herkennen en te onthouden."
+    },
+    "klacht": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Klacht schrijven"
+      ],
+      "learnerText": "Je oefent om een probleem en een gewenste oplossing duidelijk op te schrijven."
+    },
+    "lijst": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Lijst maken"
+      ],
+      "learnerText": "Je oefent om producten en hun hoeveelheden op een bruikbare lijst te zetten."
+    },
+    "afspraak-noteren": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Afspraak noteren"
+      ],
+      "learnerText": "Je oefent om een afspraak met de juiste gegevens op te schrijven."
+    },
+    "informatie-noteren": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Informatie opschrijven"
+      ],
+      "learnerText": "Je oefent om de gevraagde informatie duidelijk op te schrijven."
+    },
+    "cijfers-schrijven": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Cijfers schrijven"
+      ],
+      "learnerText": "Je oefent om cijfers in de bedoelde vorm en volgorde te schrijven."
+    },
+    "schriftelijk-afwegen": {
+      "family": "schrijven",
+      "displayLabels": [
+        "Schrijven",
+        "Keuze toelichten"
+      ],
+      "learnerText": "Je oefent om een keuze met redenen op te schrijven."
+    },
+    "grammatica-herstel": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Zinnen controleren"
+      ],
+      "learnerText": "Je oefent om de aangeboden zinnen zelf te controleren en te verbeteren."
+    },
+    "verleden-zin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vertellen over vroeger"
+      ],
+      "learnerText": "Je oefent om met de aangeboden vormen te vertellen wat eerder gebeurde."
+    },
+    "heden-zin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vertellen over nu"
+      ],
+      "learnerText": "Je oefent om met de aangeboden vormen te vertellen wat nu gebeurt."
+    },
+    "toekomst-zin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Plannen en verwachtingen"
+      ],
+      "learnerText": "Je oefent om met de aangeboden vormen over plannen of verwachtingen te praten."
+    },
+    "modaliteit": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Kunnen, mogen en moeten"
+      ],
+      "learnerText": "Je oefent om met de aangeboden woorden aan te geven wat kan, mag, moet of gewenst is."
+    },
+    "zinnen-verbinden": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Zinnen verbinden"
+      ],
+      "learnerText": "Je oefent om zinnen of zinsdelen met de bedoelde betekenis te verbinden."
+    },
+    "beschrijven": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Beschrijven"
+      ],
+      "learnerText": "Je oefent om personen en dingen met passende woordgroepen te beschrijven."
+    },
+    "vergelijken": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vergelijken"
+      ],
+      "learnerText": "Je oefent om een verschil of overeenkomst precies te beschrijven."
+    },
+    "passend-formuleren": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Passend formuleren"
+      ],
+      "learnerText": "Je oefent om de formulering van een zin bij de situatie te laten passen."
+    },
+    "instructie-verzoek": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vragen en instrueren"
+      ],
+      "learnerText": "Je oefent om met een zin een verzoek of instructie te geven."
+    },
+    "hoeveelheid-zin": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Hoeveelheid en frequentie"
+      ],
+      "learnerText": "Je oefent om een hoeveelheid, maat of frequentie in een zin te verwoorden."
+    },
+    "er-gebruiken": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Er gebruiken"
+      ],
+      "learnerText": "Je oefent om het aangeboden er in de bijbehorende zin te gebruiken."
+    },
+    "werkwoord-combineren": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Werkwoorden in een zin"
+      ],
+      "learnerText": "Je oefent om de aangeboden werkwoorden op de goede manier in een zin te gebruiken."
+    },
+    "indirect-weergeven": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "In eigen woorden"
+      ],
+      "learnerText": "Je oefent om de woorden van iemand anders in een eigen zin weer te geven."
+    },
+    "vraag-begrijpen": {
+      "family": "lezen",
+      "displayLabels": [
+        "Lezen",
+        "Vraag begrijpen"
+      ],
+      "learnerText": "Je oefent om te begrijpen welke informatie in een geschreven vraag wordt gevraagd."
+    },
+    "vaste-woordgroepen": {
+      "family": "grammatica",
+      "displayLabels": [
+        "Zinnen maken",
+        "Vaste combinaties"
+      ],
+      "learnerText": "Je oefent om de aangeboden woorden in de bedoelde vaste combinatie te gebruiken."
+    }
+  },
+  "contentGoals": {
+    "spelling:spelling:Herstel de woordspelling en toon welke voorbereide schrijfregel bij dit woord past.": "spelling-controle",
+    "spelling:spelling:Controleer hoofdletter en punt in een voorbereide mededelende zin.": "zinsafsluiting",
+    "spelling:spelling:Gebruik een voorbereide langere geschreven vorm om de eindletter van het korte woord te controleren.": "eindletter",
+    "spelling:spelling:Controleer woordgrenzen in een voorbereide mededelende zin.": "woordgrenzen",
+    "spelling:spelling:Controleer woordgrenzen, hoofdletter en punt in een voorbereide mededelende zin.": "woordgrenzen",
+    "spelling:spelling:Controleer zinsafsluiting in een voorbereide mededelende zin.": "zinsafsluiting",
+    "spelling:spelling:Schrijf een voorbereide samenstelling zonder spatie en verbind die aan haar betekenis.": "spelling-controle",
+    "spelling:spelling:Kies een passend verkleinwoord en beoordeel de schrijfwijze los van die vormkeuze.": "spelling-controle",
+    "spelling:spelling:Schrijf een eigen kort praktisch bericht en controleer de spelling van gebruikte bekende woorden.": "spelling-controle",
+    "spelling:spelling:Scheid de keuze van een werkwoordsvorm in een eenvoudige zin van het spellen van die gekozen vorm.": "spelling-controle",
+    "spelling:spelling:Herstel gerichte spellingfouten in een samenhangend praktisch bericht met behoud van de inhoud.": "spelling-controle",
+    "spelling:spelling:Redigeer zelfstandig een samenhangend praktisch bericht en verantwoord concrete spellingkeuzes zonder de inhoud te veranderen.": "spelling-controle",
+    "grammatica::Vraagwoord kiezen bij gegeven informatiebehoefte; gedeeltelijke bijdrage aan F03.": "vraagwoord",
+    "grammatica:grammar:Plaatswoord lezen na bewezen i/n/o/p-voorbereiding; mondeling begrip apart.": "plaatswoord",
+    "grammatica:grammar:Eenvoudige zijn/hebben-zinnen met vooraf voorbereide vormen; geen volledige paradigma-eis.": "zijn-hebben",
+    "grammatica:grammar:Vraagwoordzin lezen en betekenis geven na volledige leesvoorbereiding; herstelbatch 001 is mogelijke bron, nog geen dekking.": "vraag-begrijpen",
+    "grammatica:grammar:Persoon en zijn": "zijn-hebben",
+    "grammatica:grammar:Hebben en bezit": "zijn-hebben",
+    "grammatica:grammar:Mededeling en vraag": "vraagzin",
+    "grammatica:grammar:Tegenwoordige tijd": "heden-zin",
+    "grammatica:grammar:Ja-neevraag en jij": "vraagzin",
+    "grammatica:grammar:Ontkenning": "ontkenning",
+    "grammatica:grammar:Tijd en getallen": "hoeveelheid-zin",
+    "grammatica:grammar:Hoofdzin met tijd vooraan": "zin-volgorde",
+    "grammatica:grammar:Kunnen en willen": "modaliteit",
+    "grammatica:grammar:Lidwoord en meervoud": "lidwoord",
+    "grammatica:grammar:Plaats en er": "plaatswoord",
+    "grammatica:grammar:Aanwijzen en beschrijven": "beschrijven",
+    "grammatica:grammar:Hoeveelheid en naamwoordgroep": "hoeveelheid-zin",
+    "grammatica:grammar:Object en bezittelijk voornaamwoord": "voornaamwoord",
+    "grammatica:grammar:Keuzevragen": "vraagzin",
+    "grammatica:grammar:Moeten en mogen": "modaliteit",
+    "grammatica:grammar:Instructie en verzoek": "instructie-verzoek",
+    "grammatica:grammar:Zelf en lichaamsklachten": "voornaamwoord",
+    "grammatica:grammar:Zinnen verbinden": "zinnen-verbinden",
+    "grammatica:grammar:Plannen en voorkeur": "toekomst-zin",
+    "grammatica:grammar:Scheidbaar als bruikbaar patroon": "werkwoord-combineren",
+    "grammatica:grammar:Plaats, tijd en referentie combineren": "plaatswoord",
+    "grammatica:grammar:A1 toepassen en herstellen": "grammatica-herstel",
+    "grammatica:grammar:Persoon en tegenwoordige tijd": "heden-zin",
+    "grammatica:grammar:Hoofdzin en inversie": "zin-volgorde",
+    "grammatica:grammar:Persoonlijke en bezittelijke voornaamwoorden": "voornaamwoord",
+    "grammatica:grammar:Tijd en frequentie": "hoeveelheid-zin",
+    "grammatica:grammar:Ja-neevraag en vraagwoordvraag": "vraagwoord",
+    "grammatica:grammar:Modaal werkwoord en infinitief": "werkwoord-combineren",
+    "grammatica:grammar:Niet en geen": "ontkenning",
+    "grammatica:grammar:Scheidbare en onscheidbare werkwoorden": "werkwoord-combineren",
+    "grammatica:grammar:Plaats, richting en voorzetsels": "plaatswoord",
+    "grammatica:grammar:Gebiedende wijs en verzacht verzoek": "instructie-verzoek",
+    "grammatica:grammar:Presentatief er": "er-gebruiken",
+    "grammatica:grammar:Lidwoord, meervoud en verkleinwoord": "lidwoord",
+    "grammatica:grammar:Bijvoeglijk naamwoord": "beschrijven",
+    "grammatica:grammar:Aanwijzen en bezit in naamwoordgroepen": "beschrijven",
+    "grammatica:grammar:Vergelijken": "vergelijken",
+    "grammatica:grammar:Hoeveelheid en er met een getal": "hoeveelheid-zin",
+    "grammatica:grammar:Onbepaalde woorden en bereik van ontkenning": "ontkenning",
+    "grammatica:grammar:Reflexieve werkwoorden en lichaamsklachten": "werkwoord-combineren",
+    "grammatica:grammar:Duur, begin en frequentie": "hoeveelheid-zin",
+    "grammatica:grammar:Advies, noodzaak en toestemming": "modaliteit",
+    "grammatica:grammar:Nevenschikking": "zinnen-verbinden",
+    "grammatica:grammar:Omdat en eenvoudige bijzin": "zinnen-verbinden",
+    "grammatica:grammar:Graag, voorkeur en voorstel als chunks": "passend-formuleren",
+    "grammatica:grammar:Voltooide tijd met hebben en zijn": "zijn-hebben",
+    "grammatica:grammar:Voltooid deelwoord en werkwoordspelling": "werkwoord-combineren",
+    "grammatica:grammar:Eenvoudige verleden vormen en volgorde": "verleden-zin",
+    "grammatica:grammar:Terugverwijzen naar personen en dingen": "voornaamwoord",
+    "grammatica:grammar:Dat en indirecte vraag met vraagwoord": "vraagwoord",
+    "grammatica:grammar:Lezen van vormen en samenstellingen": "woordbeeld",
+    "grammatica:grammar:Te en om te": "werkwoord-combineren",
+    "grammatica:grammar:Aan het en positie met te": "werkwoord-combineren",
+    "grammatica:grammar:Het als onderwerp en er als verwijzing naar plaats": "plaatswoord",
+    "grammatica:grammar:Woordvolgorde in langere eenvoudige zinnen": "zin-volgorde",
+    "grammatica:grammar:Vaste voorzetsels en vraagpatronen": "vaste-woordgroepen",
+    "grammatica:grammar:Toekomst: gaan en tegenwoordige tijd": "toekomst-zin",
+    "grammatica:grammar:Nog, al, pas, meer en ontkenning": "ontkenning",
+    "grammatica:grammar:Voorkeur, vergelijken en intentie combineren": "vergelijken",
+    "grammatica:grammar:Als, wanneer en bijzin vooraan": "zinnen-verbinden",
+    "grammatica:grammar:A2 integratie en zelfherstel": "grammatica-herstel",
+    "grammatica:grammar:Onvoltooid verleden en voltooide tijd": "verleden-zin",
+    "grammatica:grammar:Toen, als, terwijl en tijdsverband": "zinnen-verbinden",
+    "grammatica:grammar:Betrekkelijke bijzin die/dat": "voornaamwoord",
+    "grammatica:grammar:Er, daar, hier en voorzetselbijwoorden": "plaatswoord",
+    "grammatica:grammar:Werkwoorden met te, om te en vaste aanvulling": "werkwoord-combineren",
+    "grammatica:grammar:Woordvorming en kwaliteiten beschrijven": "beschrijven",
+    "grammatica:grammar:Werkwoordgroepen in hoofd- en bijzin": "zinnen-verbinden",
+    "grammatica:grammar:Passief worden en zijn": "zijn-hebben",
+    "grammatica:grammar:Doel, middel en procedure verbinden": "zinnen-verbinden",
+    "grammatica:grammar:Vergelijken en precies afwegen": "vergelijken",
+    "grammatica:grammar:Modaliteit, advies en beleefdheid": "modaliteit",
+    "grammatica:grammar:Indirect weergeven en samenvatten": "indirect-weergeven",
+    "grammatica:grammar:Hoeveelheden, maten en gradatie": "hoeveelheid-zin",
+    "grammatica:grammar:Verwijsketens en ontkenning in samenhang": "voornaamwoord",
+    "grammatica:grammar:Indirecte vragen met of en vraagwoord": "vraagwoord",
+    "grammatica:grammar:Bron, waarschijnlijkheid en nieuwsregister": "passend-formuleren",
+    "grammatica:grammar:Oorzaak, gevolg en tegenstelling": "zinnen-verbinden",
+    "grammatica:grammar:Argumenten en samenhangende tekst": "zinnen-verbinden",
+    "grammatica:grammar:Tijdsverband en perspectief in een verhaal": "verleden-zin",
+    "grammatica:grammar:Voltooid verleden tijd": "verleden-zin",
+    "grammatica:grammar:Wederkerend, wederkerig en persoonlijke verwijzing": "voornaamwoord",
+    "grammatica:grammar:Pragmatische verzachting en herstel": "passend-formuleren",
+    "grammatica:grammar:Samenhang in formele correspondentie": "zinnen-verbinden",
+    "grammatica:grammar:Formele en compacte constructies": "passend-formuleren",
+    "grammatica:grammar:Reële en denkbeeldige voorwaarde": "zinnen-verbinden",
+    "grammatica:grammar:Toekomst, verwachting en waarschijnlijkheid": "toekomst-zin",
+    "grammatica:grammar:B1 integratie en bewuste revisie": "grammatica-herstel",
+    "teksten::reading.main-idea": "tekst-kern",
+    "teksten::reading.sequence": "tekst-volgorde",
+    "teksten::reading.reference": "tekst-verwijzing",
+    "teksten::possessive-object-location": "tekst-info",
+    "teksten::borrowed-item-final-holder": "tekst-verwijzing",
+    "teksten::rule-scope": "tekst-voorwaarde",
+    "teksten::plan-versus-observed-action": "tekst-precies",
+    "teksten::count-with-location": "tekst-gegevens",
+    "teksten::exact-count-versus-plural": "tekst-gegevens",
+    "teksten::capacity-shortfall": "tekst-gegevens",
+    "teksten::capacity-after-addition": "tekst-gegevens",
+    "teksten::reading.functional-information": "tekst-info",
+    "teksten::main-idea": "tekst-kern",
+    "teksten::character-purpose": "tekst-bedoeling",
+    "teksten::permission-before-selection": "tekst-voorwaarde",
+    "teksten::different-causes": "tekst-reden",
+    "teksten::homograph-context": "tekst-info",
+    "teksten::people-and-possession": "tekst-verwijzing",
+    "teksten::contextual-scope-all": "tekst-precies",
+    "teksten::sequence-adjustment": "tekst-volgorde",
+    "teksten::planned-versus-completed": "tekst-precies",
+    "teksten::same-object-pronouns": "tekst-verwijzing",
+    "teksten::negated-ownership-scope": "tekst-verwijzing",
+    "teksten::deadline-action": "tekst-voorwaarde",
+    "teksten::known-party-pending-meal": "tekst-info",
+    "teksten::Een expliciet genoemde toestand herkennen.": "tekst-info",
+    "teksten::Een expliciete handeling verbinden met het voorwerp.": "tekst-info",
+    "teksten::Begin en latere handeling in het juiste verband zetten.": "tekst-volgorde",
+    "teksten::Het genoemde gebruiksdoel onderscheiden van een plaats of een ander doel.": "tekst-bedoeling",
+    "teksten::Het voorwerp bij een expliciete handeling vinden.": "tekst-info",
+    "teksten::Een met een geïntroduceerd voorwerp herkennen bij de volgende vermelding met de.": "tekst-info",
+    "teksten::Beide expliciet genoemde producten vinden.": "tekst-info",
+    "teksten::De bestemming van voorwerpen vinden.": "tekst-info",
+    "teksten::Pakken onderscheiden van kopen in de tekst.": "tekst-info",
+    "teksten::De zitplek in een concrete plaatsrelatie vinden.": "tekst-info",
+    "teksten::Expliciete informatie in een vooraf ongeziene, voorbereide microtekst vinden en met bronbewijs ondersteunen.": "tekst-info",
+    "teksten::person-possession": "tekst-verwijzing",
+    "teksten::person-place": "tekst-verwijzing",
+    "teksten::action-agent": "tekst-info",
+    "teksten::object-initial-place": "tekst-info",
+    "teksten::nested-place": "tekst-info",
+    "teksten::action-sequence": "tekst-volgorde",
+    "teksten::initial-final-state": "tekst-volgorde",
+    "teksten::unsupported-consequence": "tekst-volgorde",
+    "teksten::state-change": "tekst-volgorde",
+    "teksten::preparation-versus-completion": "tekst-precies",
+    "teksten::total-and-subset": "tekst-gegevens",
+    "teksten::negation-scope-and-unknown-place": "tekst-precies",
+    "teksten::explicit-versus-listed-order": "tekst-volgorde",
+    "teksten::check-action-departure": "tekst-info",
+    "teksten::information-insufficient-for-pronunciation": "tekst-precies",
+    "teksten::bounded-sequence": "tekst-volgorde",
+    "teksten::cause-compromise": "tekst-reden",
+    "teksten::role-information-action": "tekst-info",
+    "teksten::repair-status": "tekst-info",
+    "teksten::subset-and-contrast": "tekst-gegevens",
+    "teksten::main-across-paragraphs": "tekst-kern",
+    "teksten::paragraph-role": "tekst-verband",
+    "teksten::paragraph-relation": "tekst-verband",
+    "teksten::supporting-detail-versus-main": "tekst-kern",
+    "teksten::contrast-supports-main": "tekst-kern",
+    "teksten::cause-adjustment-consequence": "tekst-volgorde",
+    "teksten::coincidence-versus-cause": "tekst-reden",
+    "teksten::causal-chain": "tekst-reden",
+    "teksten::recommendation-reason-boundary": "tekst-reden",
+    "teksten::updated-information-changes-action": "tekst-info",
+    "teksten::precondition-before-move": "tekst-voorwaarde",
+    "teksten::reason-and-readiness": "tekst-reden",
+    "teksten::delay-cause-uncertainty": "tekst-reden",
+    "teksten::numbered-references": "tekst-verwijzing",
+    "teksten::event-reference": "tekst-verwijzing",
+    "teksten::object-reference-across-paragraphs": "tekst-verwijzing",
+    "teksten::report-and-relative-person": "tekst-verwijzing",
+    "teksten::people-and-two-sources": "tekst-verwijzing",
+    "teksten::method-versus-risk-reference": "tekst-verwijzing",
+    "teksten::document-and-people-reference": "tekst-verwijzing",
+    "teksten::subset-reference": "tekst-verwijzing",
+    "teksten::conditional-action-info": "tekst-voorwaarde",
+    "teksten::explicit-author-purpose": "tekst-bedoeling",
+    "teksten::stance-and-reasons": "tekst-reden",
+    "teksten::proposal-versus-authorised-information": "tekst-bedoeling",
+    "teksten::capacity-including-organisers": "tekst-gegevens",
+    "teksten::required-application-information": "tekst-voorwaarde",
+    "teksten::compare-positions": "tekst-info",
+    "teksten::decision-relevant-evidence": "tekst-info",
+    "gesprekken::Lees de bron en wijs bewijs aan voor de twee vragen van Nora.": "gesprek-lezen",
+    "gesprekken::Lees de bron en wijs bewijs aan voor Elena’s voorkeursreden.": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Wanneer moet het boek terug?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Welke doek wordt genoemd?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Welke plek wordt genoemd?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Hoe laat begint het feest?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Waar staat de andere laars?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Hoe ver wil iemand het raam openen?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Wat wil de persoon drinken?": "gesprek-lezen",
+    "gesprekken::Korte bronbeurten lezen, informatie koppelen en tekstbewijs vinden: Welke zak is genoeg?": "gesprek-lezen",
+    "schrijven:writing:Vormen e/n/m/s, p-positie, korte labels, zelfcontrole en tweewoordenlijst binnen vijf bronwoorden": "woord-schrijven",
+    "schrijven:writing:Het ontbrekende voorwerp schrijven binnen een gegeven verzoek.": "schriftelijk-verzoek",
+    "schrijven:writing:Een begrijpelijk schriftelijk leenverzoek formuleren.": "schriftelijk-verzoek",
+    "schrijven:writing:Woordgrenzen en zinopbouw bij bekende penzin": "woordgrenzen",
+    "schrijven:writing:Een schriftelijk leenverzoek herkenbaar afsluiten met een vraagteken.": "schriftelijk-verzoek",
+    "schrijven:writing:Veldlabels begrijpen en de juiste brongegevens in vier afzonderlijke velden plaatsen.": "formulier",
+    "schrijven:writing:Hoofdletter en naamkaart: kopiëren versus zelf schrijven": "zinsafsluiting",
+    "schrijven:writing:Een korte eetwens met een duidelijke beperking opschrijven.": "informatie-noteren",
+    "schrijven:writing:Een gerecht en de manier van serveren als twee aparte inhoudspunten noteren.": "zinsafsluiting",
+    "schrijven:writing:Een leenafspraak begrijpelijk bevestigen en later dezelfde functie met afzonderlijk voorbereide parallelle inhoud uitvoeren.": "afspraak-noteren",
+    "schrijven:writing:Een terugbelafspraak met persoon, dagdeel en tijd noteren.": "afspraak-noteren",
+    "schrijven:writing:Een onjuiste tijdnotatie herkennen en brongebonden herstellen.": "afspraak-noteren",
+    "schrijven:writing:Kledingstuk, gevraagd herstel en aanwezig onderdeel duidelijk noteren.": "informatie-noteren",
+    "schrijven:writing:Een concreet probleem met vindbare plaats en passend verzoek beschrijven.": "schriftelijk-verzoek",
+    "schrijven:writing:Cijfervorm en volgorde 24/42 op correctiestrook": "cijfers-schrijven",
+    "schrijven:writing:Vertraging en onzekerheid eerlijk melden met een concrete vervolgafspraak.": "afspraak-noteren",
+    "schrijven:writing:Een bruikbare lijst schrijven met beide producten en hun eigen hoeveelheid.": "lijst",
+    "schrijven:writing:Ronde vormen o en verbindingen k/b/t bij korte voorwerplabels": "woord-schrijven",
+    "schrijven:writing:Tweeletterklinkers als schrijfdoel met betekenis behouden": "woord-schrijven",
+    "schrijven:writing:Medeklinkerclusters in korte labels en eigen correctie": "woord-schrijven",
+    "schrijven:writing:Meerlettergrepig boodschappenwoord in bestaande hoeveelheidstaak": "woord-schrijven",
+    "schrijven:writing:Een samenhangende, gemotiveerde klacht met relevante feiten, gevolg, eerdere actie en gewenste oplossing schrijven.": "klacht",
+    "schrijven:writing:Twee concrete alternatieven schriftelijk afwegen en een gemotiveerd praktisch verzoek formuleren.": "schriftelijk-afwegen",
+    "woordpakketten:precise-response:meaning-repair": "betekenis-precies",
+    "woordpakketten:precise-response:meaning-boundary": "betekenis-precies",
+    "woordpakketten:precise-response:reading-condition": "woordbeeld",
+    "woordpakketten:precise-response:spelling-recall": "spelling-controle",
+    "woordpakketten:precise-response:meaning": "betekenis-precies",
+    "woordpakketten:precise-response:functional-use": "betekenis-precies",
+    "woordpakketten:precise-response:word-relation": "betekenis-precies",
+    "woordpakketten:precise-response:guided-reference-practice": "betekenis-precies",
+    "woordpakketten:precise-response:spatial-use": "betekenis-precies",
+    "woordpakketten:precise-response:functional-action": "betekenis-precies",
+    "woordpakketten:precise-response:precise-meaning-and-word-ending": "betekenis-precies",
+    "woordpakketten:precise-response:functional-object-choice": "betekenis-precies",
+    "woordpakketten:precise-response:letter-order-and-meaning": "spelling-controle",
+    "woordpakketten:precise-response:cluster-word-reading": "woordbeeld",
+    "woordpakketten:model-fade:own-response-after-removal-of-written-model": "woord-zelf-gebruiken",
+    "woordpakketten:functional-use:request": "woord-toepassen",
+    "woordpakketten:functional-use:information-relay": "woord-toepassen",
+    "woordpakketten:functional-use:request-repair": "woord-toepassen",
+    "woordpakketten:functional-use:functional-sorting": "woord-toepassen",
+    "woordpakketten:functional-use:destination-type-relay": "woord-toepassen",
+    "woordpakketten:functional-use:body-function-explanation": "woord-toepassen",
+    "woordpakketten:precise-response:meaning-word-choice": "betekenis-precies",
+    "woordpakketten:precise-response:word-object-matching": "betekenis-precies",
+    "woordpakketten:precise-response:final-letter-comparison": "spelling-controle",
+    "woordpakketten:model-fade:Een eerder voorbereid woord schrijven na afbouw van het zichtbare model; geen dictee of zelfstandig leesbewijs.": "woord-zelf-gebruiken",
+    "woordpakketten:functional-use:De voorbereide bronbetekenis in een concrete context gebruiken en na een andere activiteit ondersteund terughalen.": "woord-toepassen",
+    "woordpakketten:precise-response:Het hele voorbereide woord lezen zonder voorafgaande uitspraak of modelhulp; betekenis apart aantonen.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van naast in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van schenk in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van onder in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van halte in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van vloer in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van stad in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:model-fade:De doelbetekenis in een eigen zin gebruiken na afbouw van een voorbeeld, zonder het voorbeeld over te schrijven.": "woord-zelf-gebruiken",
+    "woordpakketten:functional-use:De doelbetekenis toepassen in een nieuwe concrete situatie met behoud van de gegeven voorwaarden.": "woord-toepassen",
+    "woordpakketten:precise-response:De betekenis of functie van helft in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van maat in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van week in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van naam in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van lenen in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van ijs in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van schaal in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van nog in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van bewaren in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van ongeveer in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van aanmelden in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van verzet in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van uitleg in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van minder in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van maten in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van pauze in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van voorlopig in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van rekening houden met in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van in overleg in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten:precise-response:De betekenis of functie van in aanmerking komen in de bron vaststellen met een concrete bewijsplaats.": "betekenis-precies",
+    "woordpakketten::Betekenis in een situatie herkennen; oefenen, geen zelfstandige lees- of spreekbeoordeling.": "betekenis-precies"
+  },
+  "modes": {
+    "model": "woord-kennismaken",
+    "same-word": "woordbeeld",
+    "heard-image": "hoor-foto",
+    "heard-word": "hoor-woord",
+    "word-image": "lees-foto",
+    "word-image-match": "lees-foto",
+    "hear-match": "hoor-woord",
+    "missing-grapheme": "ontbrekende-letter",
+    "copy-word": "overschrijven",
+    "meaning-register": "taalregister",
+    "word-dictation": "woord-dictee",
+    "paper-dictation": "woord-dictee",
+    "write-word": "woord-schrijven",
+    "write-letter": "letter-schrijven",
+    "read-series": "woorden-hardop",
+    "repeat-word": "woord-uitspraak",
+    "word-bingo": "hoor-woord",
+    "image-bingo": "hoor-foto",
+    "memory": "woord-kennismaken",
+    "word-card": "woord-kaart",
+    "synonym-card": "synoniemen",
+    "synonyms": "synoniemen",
+    "word-combinations": "woordcombinaties",
+    "suitable-reply": "passende-reactie",
+    "connected-sentence": "zin-volgen",
+    "find-sentence": "gehoorde-zin",
+    "sentence-dictation": "zinsdictee",
+    "sentence-speak": "zin-uitspraak",
+    "sentence-question": "zin-begrijpen",
+    "connected-text": "tekst-meeluisteren",
+    "connected-dialogue": "gesprek-volgen",
+    "sound-compare": "klankverschil",
+    "text-question": "tekst-info",
+    "text-evidence": "tekst-bewijs",
+    "dialogue-question": "gesprek-begrip",
+    "sentence-build": "zin-volgorde",
+    "verb-choice": "werkwoord",
+    "functional-message": "bericht",
+    "functional-form": "formulier",
+    "dialogue-role": "gespreksrol",
+    "context-order": "stappen",
+    "situation-point": "situatie",
+    "practice-branch": "praktijkkeuze"
+  },
+  "rules": {
+    "sound-first": "klank-first",
+    "sound-middle": "klank-middle",
+    "sound-last": "klank-last",
+    "spelling-pairs": "lettergroep",
+    "spelling-long": "lange-klinker",
+    "spelling-open": "open-lettergreep",
+    "spelling-double": "dubbele-medeklinker",
+    "grammar-we": "meervoud-zin",
+    "grammar-question": "vraagzin"
+  }
+}
