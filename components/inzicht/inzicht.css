@@ -1,0 +1,564 @@
+.ki-page {
+  min-height: 100vh;
+  background: var(--canvas);
+}
+/* Match the existing dark school-menu palette; keep all existing pages untouched. */
+[data-theme='dark'] .ki-page {
+  --paper: #172232;
+  --canvas: #202e40;
+  --ink: #e7edf5;
+  --muted: #b1bfd0;
+  --line: #334155;
+  --line-strong: #425269;
+  --primary: #c5dcef;
+  --primary-soft: #29394d;
+  --green-soft: #29394d;
+  --red: #ffb4b4;
+  --red-soft: #3e2530;
+  color-scheme: dark;
+}
+.ki-app {
+  width: min(1120px, 100%);
+  margin: auto;
+  padding: 100px 24px 40px;
+  color: var(--ink);
+  font-weight: 400;
+}
+.ki-app h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 3px 0;
+}
+.ki-app h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.ki-app h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.ki-app h4 {
+  font-weight: 500;
+}
+.ki-app p {
+  line-height: 1.55;
+  margin: 12px 0;
+}
+.ki-app svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.ki-app button,
+.ki-app input,
+.ki-app select,
+.ki-app textarea,
+.ki-app summary {
+  font: inherit;
+}
+.ki-app button,
+.ki-app summary,
+.ki-app .primary-button,
+.ki-app .secondary-button {
+  min-height: 44px;
+  font-weight: 500;
+}
+.ki-app button:disabled {
+  opacity: 0.5;
+}
+.ki-heading,
+.ki-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+.ki-eyebrow {
+  color: var(--primary);
+  margin: 0 !important;
+}
+.ki-test {
+  padding: 10px 14px;
+  background: var(--primary-soft);
+  border-radius: 8px;
+  font-size: 14px;
+}
+.ki-nav,
+.ki-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+  margin-bottom: 22px;
+}
+.ki-nav a,
+.ki-tabs a,
+.ki-nav summary,
+.ki-tabs summary {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.ki-nav a[aria-current],
+.ki-tabs a[aria-current] {
+  background: var(--green-soft);
+  color: var(--ink);
+}
+.ki-nav details,
+.ki-tabs details {
+  position: relative;
+}
+.ki-nav details[open],
+.ki-tabs details[open] {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.ki-card {
+  background: var(--paper);
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 20px 0;
+  min-width: 0;
+}
+.ki-card h3:first-child,
+.ki-card h2:first-child {
+  margin-top: 0;
+}
+.ki-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 16px;
+}
+.ki-cards .ki-card {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.ki-field {
+  display: grid;
+  gap: 7px;
+  margin: 16px 0;
+  max-width: 640px;
+}
+.ki-field input,
+.ki-field select,
+.ki-field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  min-width: 0;
+}
+.ki-field textarea {
+  min-height: 90px;
+}
+.ki-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.ki-error {
+  color: var(--red);
+  padding: 12px;
+  border-left: 3px solid var(--red);
+  background: var(--red-soft);
+}
+.ki-list {
+  padding: 0;
+  list-style: none;
+}
+.ki-list li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+.ki-list li > a:first-child {
+  font-weight: 500;
+}
+.ki-list li span {
+  color: var(--muted);
+}
+.ki-back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+}
+.ki-table {
+  max-width: 100%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.ki-table table {
+  border-collapse: collapse;
+  min-width: 100%;
+  font-size: 15px;
+}
+.ki-table th,
+.ki-table td {
+  padding: 14px;
+  border: 1px solid var(--line);
+  text-align: left;
+  min-width: 150px;
+  font-weight: 400;
+}
+.ki-table th {
+  font-weight: 500;
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+}
+.ki-table th:first-child {
+  left: 0;
+  z-index: 1;
+}
+.ki-table th small {
+  display: block;
+  font-weight: 400;
+  margin-top: 6px;
+}
+.ki-table td a {
+  display: block;
+  min-height: 44px;
+  padding: 4px;
+}
+.ki-table td small {
+  display: block;
+}
+.ki-preview,
+.ki-observation {
+  background: var(--canvas);
+  padding: 18px;
+  border-radius: 8px;
+  margin: 18px 0;
+}
+.ki-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+}
+.ki-check input {
+  width: 20px;
+  height: 20px;
+}
+.ki-app fieldset {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+}
+.ki-app summary {
+  cursor: pointer;
+  padding: 10px 0;
+}
+.ki-app a:focus-visible,
+.ki-app button:focus-visible,
+.ki-app input:focus-visible,
+.ki-app select:focus-visible,
+.ki-app textarea:focus-visible,
+.ki-app summary:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+.ki-advice {
+  margin-top: 20px;
+}
+.ki-app a {
+  overflow-wrap: anywhere;
+}
+.ki-app .primary-button,
+.ki-app .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  text-decoration: none;
+  white-space: normal;
+}
+.ki-app .primary-button {
+  background: var(--primary);
+  color: var(--paper);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+}
+.ki-app .secondary-button {
+  background: var(--paper);
+  color: var(--primary);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+}
+@media (max-width: 700px) {
+  .ki-app {
+    padding: 90px 14px 30px;
+  }
+  .ki-card {
+    padding: 16px;
+  }
+  .ki-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .ki-actions {
+    align-items: flex-start;
+  }
+  .ki-heading h1 {
+    font-size: 25px;
+  }
+  .ki-nav,
+  .ki-tabs {
+    gap: 0;
+  }
+  .ki-nav a,
+  .ki-tabs a {
+    padding: 10px;
+  }
+  .ki-list li {
+    display: grid;
+    gap: 7px;
+  }
+  .ki-table th,
+  .ki-table td {
+    min-width: 135px;
+  }
+  .ki-table th:first-child {
+    min-width: 120px;
+    max-width: 150px;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Source-faithful observation instrument, styled using existing Klink Inzicht variables. */
+.ki-source-modes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+  margin: 18px 0;
+}
+.ki-source-modes button {
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 10px;
+}
+.ki-source-modes button[aria-pressed='true'] {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+.ki-source-context {
+  white-space: pre-line;
+}
+.ki-source-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  font-size: 14px;
+  margin: 18px 0;
+}
+.ki-source-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ki-source-legend strong {
+  font-size: 22px;
+  font-weight: 400;
+  min-width: 22px;
+  text-align: center;
+}
+.ki-source-row {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 8px 0;
+  margin: 0;
+}
+.ki-source-row legend {
+  float: left;
+  min-width: 0;
+  max-width: 100%;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.ki-source-choices {
+  display: flex;
+  gap: 6px;
+}
+.ki-source-choices label {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+}
+.ki-source-choices label.is-selected {
+  background: var(--green-soft);
+  border-color: var(--primary);
+}
+.ki-source-choices input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.ki-source-choices label:has(input:focus-visible) {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.ki-source-status {
+  display: block;
+  margin: 12px 0;
+  color: var(--muted);
+}
+.ki-source-history {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  margin: 6px 0;
+}
+@media (max-width: 460px) {
+  .ki-source-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .ki-source-choices {
+    justify-content: flex-end;
+  }
+}
+
+/* Source marks are categorical: patterns and text remain readable without colour. */
+.ki-report-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.ki-report-bar {
+  display: flex;
+  min-height: 32px;
+  width: 100%;
+  background: var(--background, #fff);
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.ki-report-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  color: #fff;
+  font-size: 14px;
+}
+.ki-report-mark-0 {
+  background: #275f55;
+}
+.ki-report-mark-1 {
+  background: repeating-linear-gradient(
+    45deg,
+    #674b80,
+    #674b80 4px,
+    #48365b 4px,
+    #48365b 8px
+  );
+}
+.ki-report-mark-2 {
+  background: #59636c;
+}
+.ki-report-mark-3 {
+  background: #fff;
+  color: #17201e;
+}
+.ki-report-counts {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.ki-report-timeline {
+  padding-left: 24px;
+}
+.ki-report-timeline > li {
+  margin-block: 24px;
+}
+.ki-reports button {
+  min-height: 44px;
+}
+.ki-reports [aria-pressed='true'] {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+.ki-reports th,
+.ki-reports td {
+  overflow-wrap: anywhere;
+}
+.ki-source-choices {
+  flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  .ki-report-timeline {
+    padding-left: 18px;
+  }
+  .ki-report-timeline button {
+    white-space: normal;
+    text-align: left;
+  }
+}
+
+.ki-app .ki-observation-plot {
+  height: auto;
+  display: block;
+  width: 100%;
+  min-width: 600px;
+  margin-block: 20px;
+}
+.ki-reports figure {
+  overflow-x: auto;
+  max-width: 100%;
+}
+.ki-observation-plot [role='button'] {
+  cursor: pointer;
+}
+.ki-observation-plot [role='button']:focus {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+
+.ki-reports td {
+  color: var(--ink);
+  background: var(--paper);
+}
+.ki-reports td a {
+  color: var(--primary);
+}

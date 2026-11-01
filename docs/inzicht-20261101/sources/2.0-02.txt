@@ -1,0 +1,135 @@
+﻿KLINK 2.0 | 02 Technische en juridische specificatie
+Ontwerp v1.5 | 25 oktober 2026
+STATUS: technische blauwdruk en juridisch werkdocument, geen auditverklaring, geen juridische goedkeuring.
+
+
+1. BEVESTIGDE BRONNEN EN TOEGANGSGRENZEN
+Product: https://klink.taalroute.nl/
+Canonieke repository genoemd in overdracht 19 oktober: 26buckets/taalroute-klink, branch main. Publicatie volgens overdracht via Cloudflare Worker/D1. De gekoppelde GitHub-account kan deze repository momenteel niet ophalen (404, opnieuw bevestigd op 25 oktober 2026). Actuele code, databaseschema, schema-versies, deploymentinstellingen en autorisatielogica zijn daarom NIET geïnspecteerd. Dit document doet daarover geen ongegronde uitspraken.
+Geraadpleegd: KLINK 001 docentenhandleiding 22 oktober 2026, GitHub mee-push-overdracht 19 oktober 2026. Op gedeelde apparaten bestaat in de oude handleiding een 'Verder'-route op apparaatniveau. Toekomstige voortgang moet rekeninggebonden worden. Zes standaardspelers en 44 Alfa B HOLD-items hebben onafhankelijke redactionele/releasecriteria.
+
+
+2. SYSTEEMKEUZE EN ARCHITECTUUR
+Advies: behoud de huidige oefenfrontend, spelers, bron-ID's en releaseprocessen. Voeg een beveiligde account- en organisatie-API toe met beheerde authenticatie en een transactionele database. Vermijd zelfgebouwde wachtwoordauthenticatie. Vergelijk objectief twee opties in technische spike: (A) Cloudflare Workers + D1 + bewezen authprovider, (B) bestaande frontend + beheerde Postgres/Auth-oplossing. Maak de keuze pas na beoordeling repo, huidige D1-migraties, datavolume, regio, kostenschatting, transacties, RLS of server-side tenant-isolatie en operationele verantwoordelijkheid.
+Gebruik bij aanvang een modulair monoliet, geen microservices. Domeinen: identity, organizations, learning, passport, licensing, content, privacy-audit. Elke servicehandeling draagt een op server geverifieerde actor, organisatiecontext en operationeel recht. UI-visibility is nooit een autorisatiegrens.
+
+
+3. CONCEPTUEEL DATAMODEL
+users(id, auth_subject, created_at, status); geen schoolnaam of docentrol als globaal vast accountattribuut.
+personal_workspaces(id, user_id UNIQUE, created_at, status).
+organizations(id, slug, name, status, privacy_contact, contract_ref).
+locations(id, organization_id, name, status); optioneel.
+memberships(id, user_id, organization_id, status, verified_at, started_at, ended_at, UNIQUE(user_id, organization_id)).
+role_assignments(id, membership_id, role_code, scope_type, scope_id, active_from, active_until).
+provisional_enrollments(id, organization_id, external_reference, minimal_person_fields, group_id, status, activation_token_hash, expires_at); nooit zonder verificatie met users samenvoegen.
+groups(id, organization_id, location_id, name, start_at, end_at, status).
+group_memberships(id, group_id, membership_id, role_in_group, start_at, end_at); schoolconsistentie afdwingen.
+content_items(id, stable_item_code, level_code, skill_code, type, release_status); content_versions(id, content_item_id, version_number, payload_reference, media_manifest, immutable_hash). HOLD en geblokkeerde content server-side uitsluiten.
+products(id, code, kind, status), entitlements(id, subject_type, subject_id, product_id, valid_from, valid_until, status), license_seats(id, organization_id, entitlement_id, membership_id, allocation_status).
+assignments(id, organization_id, group_id, created_by_membership_id, content_version_id, instructions, starts_at, due_at, status).
+assignment_recipients(id, assignment_id, school_membership_id, status).
+exercise_attempts(id, account_id, context_type, organization_id NULLABLE, school_membership_id NULLABLE, assignment_id NULLABLE, content_version_id, started_at, submitted_at, response_ref, score, evaluation_status); check constraint: context_type=personal vereist organization_id null en assignment_id null; context_type=school vereist geldige organization_id en lidmaatschap. Elk record hoort aan precies één context.
+assessment_records(id, organization_id, learner_membership_id, assessment_type, criteria_version, assessor_membership_id, outcome, status, immutable_evidence_ref).
+credentials(id, issuer_organization_id, subject_user_id, assessment_record_reference, title, claim_scope, issued_at, expires_at NULLABLE, status, version, signature_or_hash, provenance_ref). Bewaar in privépaspoort alleen vastgelegde minimale claim; niet het hele schooldossier.
+passport_entries(id, workspace_id, credential_id, added_at, status).
+share_grants(id, passport_entry_id, recipient_type, verified_recipient_id, purpose, expires_at, revoked_at, created_at, scopes). Alleen aangewezen ontvangers, geen ruwe openbare zoekindex.
+privacy_requests(id, requester_user_id, category, controller_org_id NULLABLE, request_type, status, received_at, due_at, outcome_ref).
+audit_events(id, actor_user_id, actor_membership_id NULLABLE, organization_id NULLABLE, action, resource_type, resource_ref, occurred_at, outcome, reason_code). Audit bevat minimale noodzakelijke metadata, geen gevoelige antwoorden of tokens.
+outbox_events(id, event_type, resource_id, delivery_status, timestamp) voor betrouwbare verzending zonder dubbele leerbewijzen.
+Alle cross-tenant verwijzingen met samengestelde foreign keys, domeinvalidatie of equivalente betrouwbare verificatie en transactionele controles afdwingen. Indexeren op organization_id, group_id en access scope. Nieuwe identiteitskoppelingen zijn auditwaardige mutaties.
+
+
+4. AUTORISATIEMODEL
+AuthN bevestigt identiteit en sessie. AuthZ berekent het recht op een handeling voor een resource binnen context. Schema: can(actor, action, resource, organization, group_relation, entitlement, data_purpose). Standaard deny, ook bij ontbrekende velden.
+Roltemplates: learner, teacher, assistant_teacher, education_coordinator, school_admin, credential_issuer, content_editor, platform_admin, support_operator. Rollen per membership. Een persoon kan meerdere memberships hebben. De rol in school A is nooit geldig in school B.
+Acties: view_assigned_results, assign_practice, manage_groups, invite_members, allocate_seat, export_school_data, issue_credential, revoke_credential, view_passport_share, platform_manage_org, content_release. Leerbewijzen uitgeven vereist afzonderlijke issuerbevoegdheid en vastgelegde beoordelingsgrondslag.
+Deny-regels: geen persoonlijke gegevens via schoolrol; geen inzien andere organisatie; geen leesrechten op onuitgegeven HOLD-content; schoolbeheerder krijgt niet automatisch inhoudelijke docentnotities; support zonder expliciet gelogde tijdelijke toegang geen dossierinzage.
+Beveiligde contextwisseling: frontend voert gekozen organization_id mee; backend vergelijkt met geverifieerde membership en target resource. Browserstorage en URL zijn niet vertrouwd. Tabbladwissel verandert bestaande opdrachtcontext niet.
+Beslisrechten in backend/server en waar mogelijk databasebeveiliging (bij Postgres Row Level Security). Bij D1 moet de applicatie expliciete, systematisch geteste tenantfilters en dataconsistentie afdwingen. Kies pas na code-inspectie.
+
+
+5. API-CONTRACTEN (VOORSTEL)
+POST /auth/activation/verify -> eenmalige activatie, geen uitlekken of iemand al account heeft.
+GET /me/workspaces -> alleen eigen personal en schoolcontexts.
+GET /orgs/{orgId}/groups -> vereist scope schoolmembership.
+POST /orgs/{orgId}/invites -> schooladmin, geverifieerde uitnodigingsflow.
+POST /orgs/{orgId}/assignments -> teacher/coordinator met groepstoegang, valide content_version release.
+POST /attempts -> sluit actor en content versie aan juiste context en assignment; idempotency key ter voorkoming dubbel posten.
+GET /orgs/{orgId}/results?groupId=... -> alleen toegewezen docent of bevoegde coördinator.
+POST /credentials/issue -> issuerbevoegdheid plus criteria en geldige assessmentref.
+POST /passport/shares -> persoonlijke actor, geverifieerde ontvanger en begrensde scope.
+DELETE /passport/shares/{id} -> revoke, downstream verificatie onmiddellijk.
+POST /privacy-requests -> geharmoniseerde toegang, route naar juiste verantwoordelijke.
+Ieder endpoint moet inputvalidatie, per-resource recht, rate limiting, audit waar nodig, paginatie en expliciete errorcodes krijgen. Geen generieke serveradmin-key in browser.
+
+
+6. SESSIES, HERSTEL EN BEVEILIGING
+Gebruik HttpOnly Secure SameSite cookies of gelijkwaardig bewezen model met CSRF-bescherming waar toepasselijk. Sessies roteren na authenticatie en bevoegdheidsverhoging. Intrekken van membership verbreekt geldige acties onmiddellijk; bij accountcompromis intrekbare sessies.
+Voor beheerders verplichte MFA, docenten standaard sterke MFA; voor cursisten toegankelijke en risicogebaseerde alternatieven. Nooit zichtbaar wachtwoord voor personeel. Activatiecodes alleen gehasht en kort geldig. Geen persoonlijke data in de link. Voorkom accountenumeratie, brute force, replay en sessiediefstal.
+Gedeelde apparaten: expliciete afmelden; server-side uitloggen; service worker en cache mogen geen privé-antwoorden, feedback of tokens achterlaten. Beperkte TTL en afzonderlijke demo-stand. Offline synchronisatie alleen na expliciete dreigingsanalyse en conflictmodel.
+Media en antwoorden: release/HOLD controleren; docentantwoorden niet in leerlingpayload; afgeschermde download/assetregels en contentversion-hashes.
+
+
+7. MIGRATIEPLAN VOOR DE HUIDIGE KLINK-APP
+Stap M0. Repo-toegang herstellen en actuele main-commit bevriezen als inspectiereferentie. Inventariseer routes, package manifest, Workers, D1-migraties, KV/R2/cache, Service Worker, opslag op apparaat, spelers, oefen-ID's, audio, rechten, releaseFlags, tests en deploymentworkflow.
+Stap M1. Integratiecontract bestaande speler: input user/context/assignment/content_version en output event started/answered/submitted/scored. Bestaande spelers blijven ongewijzigd zolang mogelijk.
+Stap M2. Nieuwe identiteits- en organisatieschema's uitsluitend additive. Geen bestaande voortgang stilzwijgend aan accounts koppelen.
+Stap M3. Parallelle demo/staging met synthetische gebruikers en twee schoolorganisaties.
+Stap M4. Migratie en rollbackproef: export, herstel, nieuwe schemadeploy terugzetten, foutcontrole, data-integriteit. Niet-produceerbare content blijft HOLD.
+Stap M5. Gefaseerde pilot, logs en monitoring. Productiedeploy apart autoriseren na acceptatie.
+
+
+8. JURIDISCH VERWERKINGSREGISTER (ONTWERP, NOG TE VALIDEREN)
+Identity & private learning: Taalroute in beginsel verantwoordelijke voor eigen dienst. Doel: account, toegang en leren; bepaal passende art. 6 grondslag per proces.
+School learning: taalschool bepaalt doorgaans doelen van onderwijsadministratie en beoordelingen; Taalroute vaak verwerker voor dat deel. Leg feitelijke zeggenschap vast, geen label als juridisch bewijs.
+Passport: school is verantwoordelijke voor oorspronkelijke beoordeling en verstrekking; Taalroute kan eigen verantwoordelijke zijn voor persoonlijk paspoort en eigen verificatie. Voor elk uitgifte-/kopieproces aparte grondslag en informatieplicht. Deelontvanger kan zelfstandige verantwoordelijke worden voor zijn verwerking.
+Security audit: per logdoel bepalen wie verantwoordelijke is en wie toegang krijgt.
+Marketing: nooit schoolgegevens inzetten voor eigen commerciële profilering op basis van verwerkersrelatie. Particuliere commerciële communicatie apart beoordelen.
+Per stroom leg vast: doelen, categorieën betrokkenen, persoonsgegevens, rechtsgrond, rollen, ontvangers, subverwerkers, EER/doorgifte, bewaartermijn, rechtenverzoekprocedure, beveiliging, incidentmeldingen.
+
+
+9. CONTRACTEN EN BEWAARBELEID
+Benodigd: B2B-dienstverleningsovereenkomst; AVG-verwerkersovereenkomst art. 28 inclusief subverwerkers en incidentprocedure; privacyverklaring consumenten; duidelijke schoolinformatie; voorwaarden voor paspoort en bewijsverificatie; schooloffboarding en export; SLA en dataretour/deletie; support toegang en logging.
+Bewaartermijnen zijn NIET vastgesteld. Beslis per object: voorlopige uitnodiging, persoonlijk account, activiteit, schoolresultaat, docentfeedback, export, betalingsgegevens, auditlog, verificatiestatus, sessie en back-up. Formuleer doel, wettelijke basis, maximale termijn, verwijdertrigger en back-upuitloop. Geen universele automatische termijn voor alle data.
+DPIA-screening vooraf; bij waarschijnlijk hoog risico DPIA voordat verwerking start. Cursisten met beperkte digitale vaardigheden zijn geen vervanging voor een formele risicobeoordeling.
+
+
+10. BEVEILIGINGS- EN REGRESSIETESTMATRIX
+T01 org A-docent GET org B-resultaat => 403 en geen datalek.
+T02 org A-beheerder probeert B-export => 403, audit en geen voorbereidend bestand.
+T03 docenteigen groep A vs niet-toegewezen groep A => 403.
+T04 privépoging zichtbaar in schoolrapport => nooit.
+T05 groepwisseling tijdens ingediende poging => poging behoudt originele school/context.
+T06 twee tabs bij verschillende scholen => geen stille contextwisseling.
+T07 verlopen/ingetrokken uitnodiging => niet te gebruiken.
+T08 duplicaatnaam => geen automatische merge.
+T09 uitgesloten content releaseMode=blocked => niet vindbaar en niet uitvoerbaar.
+T10 oud leerlingantwoord/docentantwoord in cursistpayload => niet beschikbaar.
+T11 afmelden op gedeeld apparaat => geen persoonlijke data uit offline cache, back/forward of nieuwe sessie.
+T12 ingetrokken leerbewijs => check toont ingetrokken status, geen vals 'geldig'.
+T13 ingetrokken share => toekomstige toegang direct gestopt.
+T14 actieve schoollicentie opgezegd => account persoonlijk intact; contractueel afbouwproces.
+T15 data-export en verwijdering -> alleen bevoegde verantwoordelijke en omvang.
+T16 backup/restore -> tenant-isolatie en deletion semantics behouden.
+T17 activatie via slechte verbinding => geen dubbele accountcreatie, herstelbaar.
+T18 MFA/recovery -> docent en admin geen zwakke alternatieve route.
+T19 toegankelijkheid WCAG 2.2 AA op login, opdracht en resultaten met toetsenbord en schermlezer.
+T20 performance load test op 2+ tenants en veel gelijktijdige opgaven zonder contextbloeding.
+Voor alle tests bewijs: ticket, verwachte/werkelijke uitkomst, testomgeving, datum en verantwoordelijke. UITKOMST STAAT NOG OPEN.
+
+
+11. OPEN BESLUITEN EN BLOKKADES
+BLOK A: canonieke GitHub-repository niet toegankelijk in huidige koppeling, actuele code niet beoordeeld.
+BLOK B: keuze authprovider, datahosting, kosten en dataregio nog niet vastgesteld.
+BLOK C: juridisch register, bewaartermijnen, grondslagen, DPIA-screening en contracten vereisen beoordeling door verantwoordelijke/deskundige.
+BLOK D: accounts van minderjarigen niet in eerste pilot, tenzij afzonderlijk juridisch/toegankelijkheidsproces.
+BLOK E: geen productiecode, deploy, live account- of gegevensmutatie op grond van dit ontwerp.
+
+
+12. TOETSBRONNEN
+Autoriteit Persoonsgegevens rollen: https://autoriteitpersoonsgegevens.nl/themas/basis-avg/avg-algemeen/verantwoordelijke-en-verwerker
+AP verwerkersovereenkomst: https://autoriteitpersoonsgegevens.nl/themas/basis-avg/avg-algemeen/verwerkersovereenkomst
+AP DPIA: https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/europese-privacywetgeving/data-protection-impact-assessment-dpia
+OWASP Authorization: https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html
+W3C WCAG 2.2: https://www.w3.org/TR/WCAG22/
+Klink technische overdracht: https://docs.google.com/document/d/1GvfG94741jdf5n9V_vU2NzCVZd6v9PGq3kL7Qz0_2tY/edit

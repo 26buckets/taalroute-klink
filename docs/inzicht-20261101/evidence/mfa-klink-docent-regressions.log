@@ -1,0 +1,36 @@
+✔ mat uses the canonical lesson, word, media and existing practice (0.609125ms)
+✔ three content routes are independent of support and trace prerequisites honestly (0.53375ms)
+✔ sentence and text cards preserve duplicates and reject invalid ordering (0.202ms)
+✔ tile actions preserve unique known letters and allow reordering (0.087208ms)
+✔ session round trip preserves lesson; malformed storage fails closed (0.097209ms)
+✔ runtime sound manifest has isolated slots and rejects unsafe sources and fallbacks (0.980292ms)
+✔ eight source lessons have 24 complete phases, canonical assets and distinct sentences (10.349875ms)
+✔ saved lesson state migrates mat and rejects foreign exercise IDs, unknown letters and excessive input (0.255042ms)
+✔ per-lesson progress is isolated and corrupted or unavailable storage does not open another lesson (0.2045ms)
+✔ successful import returns the original module and resets only the recovery marker (0.600375ms)
+✔ missing old module reloads once, preserves the route and stored lesson/progress, and avoids an error flash (2.592042ms)
+✔ recognises browser load failure: error loading dynamically imported module: /old.js (0.325667ms)
+✔ recognises browser load failure: Importing a module script failed. (0.37525ms)
+✔ recognises browser load failure: Unable to preload CSS for /old.css (0.336417ms)
+✔ recognises browser load failure: Loading chunk teacher-12 failed. (0.247583ms)
+✔ does not reload with {"online":false} (0.479458ms)
+✔ does not reload with {"blocked":true} (0.061958ms)
+✔ real application errors remain errors without reloading (0.080208ms)
+✔ server failure remains an error without browser access (0.083917ms)
+✔ all nine packages retain 30 lesson kernels, 720 phases and 900 matching answers (5556.419916ms)
+✔ repeated letters build, move, clear and restore without admitting excess copies (0.303208ms)
+✔ final d uses the existing t sound, while initial d and written letters remain intact (0.080875ms)
+✔ review repairs preserve meaning, exact text evidence and matching models (0.095ms)
+✔ packages 10–15 append twenty complete lessons and retain the previous 38 (3976.481125ms)
+✔ long vowels and duplicate k tiles build and restore as complete sound cards (0.312708ms)
+✔ source review blockers have matching questions, precise answers and explicit April context (0.170667ms)
+PASS: 24 unchanged double-sided A4 PDFs, 48 previews, 240 unique answers, validated lesson/round links
+✔ scripts/test-teacher-worksheets.mjs (1476.900708ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5822.515709

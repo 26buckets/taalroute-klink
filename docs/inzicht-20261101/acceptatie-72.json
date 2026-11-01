@@ -1,0 +1,445 @@
+{
+  "date": "2026-11-01",
+  "scope": "synthetic local and isolated online staging; not release approval",
+  "priority": "R2 > R1 > v1.0",
+  "counts": {
+    "GETEST": 53,
+    "DEELS": 16,
+    "OPEN": 3
+  },
+  "cases": [
+    {
+      "id": "KI001",
+      "requirement": "docent maakt klas; opnieuw inloggen -> identieke serverklasse.",
+      "status": "GETEST",
+      "evidence_or_gap": "Online wachtwoord + authenticatorlogin, serverklasse en herladen/heropenen; twee browsers. Echte persoonsverificatie blijft vrijgavepoort. Volledige heraanmelding met wachtwoord/MFA en identieke servergegevens: journey-browser.mjs, beide engines."
+    },
+    {
+      "id": "KI002",
+      "requirement": "docent hernoemt/ archiveert -> historie blijft.",
+      "status": "GETEST",
+      "evidence_or_gap": "Hernoemen, versieconflict, archiveren/heropenen met historie: test.mjs."
+    },
+    {
+      "id": "KI003",
+      "requirement": "docent maakt voorlopige cursist; koppeling vereist verificatie.",
+      "status": "GETEST",
+      "evidence_or_gap": "Voorlopig profiel, registrar en accountgebonden uitnodiging: API en student-browser.mjs. Gehele voorlopige docentregistratie → registrar → bedoelde cursist in beide engines, inclusief verloren bevestiging."
+    },
+    {
+      "id": "KI004",
+      "requirement": "twee cursisten met dezelfde naam -> aparte identiteit en dossier.",
+      "status": "GETEST",
+      "evidence_or_gap": "Dubbele naam krijgt aparte IDs; geen automatische merge."
+    },
+    {
+      "id": "KI005",
+      "requirement": "cursist in twee klassen -> correct contextgebonden memberships.",
+      "status": "GETEST",
+      "evidence_or_gap": "Registrar deelt dezelfde schoolcursist in twee klassen in; toegang expliciet per klas."
+    },
+    {
+      "id": "KI006",
+      "requirement": "docent observatie -> zichtbaar in juiste profiel, actor/tijd bekend.",
+      "status": "GETEST",
+      "evidence_or_gap": "API + beide browsers, profiel, auteur/tijd en opslaan na netwerkherstel. Volledige rolproef: verloren serverantwoord herhaald, precies één observatie; evidence/journey/."
+    },
+    {
+      "id": "KI007",
+      "requirement": "observatiecorrectie -> audit en oorspronkelijke versie beschikbaar.",
+      "status": "GETEST",
+      "evidence_or_gap": "Append-only revisies, reden/auteur, oude versie en audit bewaard. Beide revisies en correctiereden zichtbaar na herladen in Chromium en WebKit."
+    },
+    {
+      "id": "KI008",
+      "requirement": "vrije notitie zonder rubric -> geen auto-mastered.",
+      "status": "GETEST",
+      "evidence_or_gap": "Algemene observatie is TRAIN; geen statusverhoging."
+    },
+    {
+      "id": "KI009",
+      "requirement": "individuele geldige oefening -> juist event met itemversie.",
+      "status": "DEELS",
+      "evidence_or_gap": "Schooloefening en contenthash opgeslagen; echte gevalideerde meetinstrumenten ontbreken."
+    },
+    {
+      "id": "KI010",
+      "requirement": "gezamenlijke digibordrespons -> geen individueel bewijs.",
+      "status": "DEELS",
+      "evidence_or_gap": "Geen Inzicht-schrijver in Klink+Docent; regels weigeren niet-individuele/ongeldige identiteit. Geen groepsrespons-importpad gebouwd."
+    },
+    {
+      "id": "KI011",
+      "requirement": "geen bewijs -> UNKNOWN; geen score 0.",
+      "status": "GETEST",
+      "evidence_or_gap": "UNKNOWN expliciet in unit/API/UI, geen score nul."
+    },
+    {
+      "id": "KI012",
+      "requirement": "een succesvolle meetdag -> DEVELOPING.",
+      "status": "DEELS",
+      "evidence_or_gap": "Regeltest met synthetische goedgekeurde rubric; echte rubric nog niet gevalideerd."
+    },
+    {
+      "id": "KI013",
+      "requirement": "twee onafhankelijke dagen + transfer -> MASTERED onder geldige criteria.",
+      "status": "DEELS",
+      "evidence_or_gap": "Onafhankelijke dagen/sessies/itemsets/transfer in regeltest; inhoudelijke norm nog niet goedgekeurd."
+    },
+    {
+      "id": "KI014",
+      "requirement": "twee pogingen op één dag -> niet automatisch MASTERED.",
+      "status": "GETEST",
+      "evidence_or_gap": "Zelfde dag of hergebruikte feedback kan geen geldige transferpaar maken."
+    },
+    {
+      "id": "KI015",
+      "requirement": "herhaald onvoldoendes -> ATTENTION.",
+      "status": "DEELS",
+      "evidence_or_gap": "Twee faaldagen getest; inhoudelijke aandachtcriteria nog te valideren."
+    },
+    {
+      "id": "KI016",
+      "requirement": "enkele fout na mastery -> RECHECK, audit en historie.",
+      "status": "DEELS",
+      "evidence_or_gap": "Regel houdt verworven status + RECHECK; nog geen echt meetpad/rapport met gecertificeerde norm."
+    },
+    {
+      "id": "KI017",
+      "requirement": "ingetrokken event -> herbereken status.",
+      "status": "GETEST",
+      "evidence_or_gap": "Ingetrokken evidence wordt uitgesloten; correctie/outbox herberekening getest."
+    },
+    {
+      "id": "KI018",
+      "requirement": "matrixcel -> exact onderliggend bewijs zichtbaar.",
+      "status": "GETEST",
+      "evidence_or_gap": "Matrixcel opent het individuele bewijsdossier; de opgeslagen observatie en teruglink naar de matrix zijn in beide browsers gecontroleerd. API controleert cursist, klas en school; browser.mjs en performance-online.mjs."
+    },
+    {
+      "id": "KI019",
+      "requirement": "klas restrict Alfa A -> Alfa B/C server-side denied.",
+      "status": "DEELS",
+      "evidence_or_gap": "Serverpolicy weigert niet-toegestane routes bij starten/opslaan; volledige Alfa B/C-catalogus niet aangesloten."
+    },
+    {
+      "id": "KI020",
+      "requirement": "individuele Alfa B override -> alleen betreffende cursist, binnen licentie.",
+      "status": "DEELS",
+      "evidence_or_gap": "Individuele uitzondering geïsoleerd getest; volledige licentieproductintegratie en B-catalogus open."
+    },
+    {
+      "id": "KI021",
+      "requirement": "persoonlijke Klink-oefening -> schoolrestrict geen ongeoorloofde invloed.",
+      "status": "DEELS",
+      "evidence_or_gap": "Bestaande persoonlijke/browserroutes ongewijzigd; geen nieuwe persoonlijke SQL/accountomgeving gebouwd."
+    },
+    {
+      "id": "KI022",
+      "requirement": "opdracht zonder vrijgegeven content -> 422/409, geen aanmaak.",
+      "status": "GETEST",
+      "evidence_or_gap": "HOLD/niet-gepubliceerde content wordt niet uitgegeven, API weigert."
+    },
+    {
+      "id": "KI023",
+      "requirement": "HOLD-content -> nooit in oefenzoeker of aanbeveling.",
+      "status": "GETEST",
+      "evidence_or_gap": "Catalogus en aanbevelingsmatching filteren publicatiestatus; test.mjs."
+    },
+    {
+      "id": "KI024",
+      "requirement": "assignment status 'finished' -> geen onbewezen mastery.",
+      "status": "GETEST",
+      "evidence_or_gap": "Expliciete regeltest KI010/024/044/066/067: completion, TRAIN en hergebruikte feedback zijn geen beheersingsbewijs. Werkelijke schoolpoging blijft TRAIN; test.mjs en student-browser.mjs."
+    },
+    {
+      "id": "KI025",
+      "requirement": "groepadvies met 4/12 attention -> regel R-070 en uitleg.",
+      "status": "DEELS",
+      "evidence_or_gap": "3-en-30% met 60% dekking deterministisch getest; didactische grens nog te kalibreren."
+    },
+    {
+      "id": "KI026",
+      "requirement": "zelfde snapshot/ruleset/catalog -> exact zelfde preview.",
+      "status": "GETEST",
+      "evidence_or_gap": "Identieke gesorteerde snapshot/catalogus geeft identiek regelresultaat."
+    },
+    {
+      "id": "KI027",
+      "requirement": "geen geschikte gepubliceerde les -> expliciet geen match, niet hallucineren.",
+      "status": "GETEST",
+      "evidence_or_gap": "Geen match blijft null/zichtbare tekst; geen gegenereerde les."
+    },
+    {
+      "id": "KI028",
+      "requirement": "preview gewijzigd/oud -> 409 en herberekenen.",
+      "status": "GETEST",
+      "evidence_or_gap": "Veranderde evidence/beleid maakt preview stale; goedkeuring geweigerd."
+    },
+    {
+      "id": "KI029",
+      "requirement": "afwijzen advies -> geen assignment.",
+      "status": "GETEST",
+      "evidence_or_gap": "Reject en approve zonder expliciete opdrachten maken geen assignment. Goedkeuren/afwijzen na verloren antwoord zonder dubbele actie getest; beide browsers plus directe SQL-audit bevestigen één lesplan/audit en geen extra opdracht."
+    },
+    {
+      "id": "KI030",
+      "requirement": "teacher school A -> geen school B-dossier.",
+      "status": "GETEST",
+      "evidence_or_gap": "Cross-tenant read/write/export en samengestelde SQL-FKs getest."
+    },
+    {
+      "id": "KI031",
+      "requirement": "school-admin zonder onderwijsrecht -> alleen administratieve data.",
+      "status": "GETEST",
+      "evidence_or_gap": "School-admin/support zien alleen eigen-school administratieve verwerkingsaantallen en tijdstippen via afgeschermde API/UI; onderwijsdata geweigerd. API/tenanttest en gedeeld-apparaatbrowserproef. Volledig schoolbeheer blijft apart uitbreidingswerk."
+    },
+    {
+      "id": "KI032",
+      "requirement": "gedeelde computer logout -> geen leerlingdata in cache/volgende sessie.",
+      "status": "GETEST",
+      "evidence_or_gap": "Online uitloggen trekt sessie in; Back/Forward/reload toont login; volgende beheerder krijgt geen dossiers. Chromium en WebKit; geen schooldata in browseropslag."
+    },
+    {
+      "id": "KI033",
+      "requirement": "offline of netwerkstoring -> geen vals 'opgeslagen'.",
+      "status": "GETEST",
+      "evidence_or_gap": "Browser netwerkverlies + retry in Chromium/WebKit; invoer blijft, geen vals succes."
+    },
+    {
+      "id": "KI034",
+      "requirement": "uitgetreden docent open tab -> volgende save 403.",
+      "status": "GETEST",
+      "evidence_or_gap": "Actueel uitgetreden membership weigert volgende mutatie."
+    },
+    {
+      "id": "KI035",
+      "requirement": "30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.",
+      "status": "DEELS",
+      "evidence_or_gap": "Schaalproef 30×100/3000 TRAIN: zes browserruns 2159–5714 ms, mediaan 2400,5 ms versus 4830,5 ms baseline. API 432–697 ms. Twee seconden niet gehaald. Laatste volledige online herhaling geblokkeerd door D1-dagquotum; evidence/speed/."
+    },
+    {
+      "id": "KI036",
+      "requirement": "bestaande Klink+Docent testregressie -> geen gewijzigde inhoud, routes of werkbladen.",
+      "status": "GETEST",
+      "evidence_or_gap": "27 bestaande Klink+Docent-regressietests opnieuw lokaal geslaagd; oorspronkelijke productbestanden en vormgevingsvloer zijn ongewijzigd. Zie evidence/mfa-klink-docent-regressions.log."
+    },
+    {
+      "id": "KI037",
+      "requirement": "geen externe AI-aanroepen; code/audit van egress en dependencies.",
+      "status": "GETEST",
+      "evidence_or_gap": "Statische runtime/dependencyreview: geen nieuwe AI/ML SDK of externe fetch in servermodule."
+    },
+    {
+      "id": "KI038",
+      "requirement": "schoolwissel docent -> huidige leerlingselectie gereset.",
+      "status": "GETEST",
+      "evidence_or_gap": "Schoolwissel reset geselecteerde klas/cursist in beide browserengines."
+    },
+    {
+      "id": "KI039",
+      "requirement": "schoolresultaat niet spontaan persoonlijk paspoort beschikbaar.",
+      "status": "DEELS",
+      "evidence_or_gap": "Geen schooldata in bestaande persoonlijke browseropslag; werkelijk persoonlijk passport bestaat nog niet."
+    },
+    {
+      "id": "KI040",
+      "requirement": "rol wisselt midden sessie -> autorisatie telkens opnieuw server-side gecontroleerd.",
+      "status": "GETEST",
+      "evidence_or_gap": "Actuele rol/membership opnieuw gelezen; servertoegang vervalt tijdens sessie."
+    },
+    {
+      "id": "KI041",
+      "requirement": "docent maakt zelf klas maar kan niet een willekeurige schoolleerling koppelen/zien zonder registrar/verified invite.",
+      "status": "GETEST",
+      "evidence_or_gap": "Zelfgemaakte klas kan geen bestaande learner/account harvesten; registrar vereist."
+    },
+    {
+      "id": "KI042",
+      "requirement": "wachtende, verlopen of vervalste invitatie geeft nooit leerlinggegevens vrij.",
+      "status": "GETEST",
+      "evidence_or_gap": "Wachtende, vervalste en verlopen uitnodiging openen geen dossier; exacte accountbinding en eenmaligheid in API-tests. Registratie/koppeling met echte fictieve login in twee online browsers. Dezelfde accountgebonden bevestiging mag na antwoordverlies opnieuw worden gelezen; een nieuw verzoek hergebruikt de uitnodiging niet. Ontkoppelen/herhalen herstelt nooit ingetrokken toegang."
+    },
+    {
+      "id": "KI043",
+      "requirement": "twee schoolklassen met verschillende routepolicies -> assignment exact eigen class; vrij oefenen vraagt geldige expliciete context.",
+      "status": "GETEST",
+      "evidence_or_gap": "Twee klassen, verschillende policies, expliciete context en geïsoleerde override/uitschrijving getest."
+    },
+    {
+      "id": "KI044",
+      "requirement": "instrument met repeated same items+feedback kan niet ten onrechte MASTERED worden door twee werkdagen te spreiden.",
+      "status": "GETEST",
+      "evidence_or_gap": "Herhaalde feedbackitems falen als onafhankelijke meting; regeltest."
+    },
+    {
+      "id": "KI045",
+      "requirement": "teacher note zonder rubric -> aandachtstekst maar geen mastery boost.",
+      "status": "GETEST",
+      "evidence_or_gap": "Notitie zonder rubric zichtbaar; TRAIN, geen mastery boost."
+    },
+    {
+      "id": "KI046",
+      "requirement": "correction invalidates derived evidence, mastery refresh is idempotent en auditeerbaar.",
+      "status": "GETEST",
+      "evidence_or_gap": "Correctie markeert oude revision-derived evidence ongeldig; idempotente verwerking."
+    },
+    {
+      "id": "KI047",
+      "requirement": "outbox retry en dubbele HTTP submit geven 1 event, 1 logisch bewijs en consistente matrix.",
+      "status": "GETEST",
+      "evidence_or_gap": "Dubbele request veroorzaakt één event/outbox; gewijzigde body/context wordt geweigerd. Foutinjectie bewijst duurzame retry met vertraging, doorgaan voor andere klassen en succesvolle herverwerking."
+    },
+    {
+      "id": "KI048",
+      "requirement": "school A via export/achtergrondtaak/cache kan geen school B-resultaat lezen.",
+      "status": "GETEST",
+      "evidence_or_gap": "Tenant- en klascontrole op API, CSV/onderwijsrapport, context/cache en automatische outbox-consumer. Twee-schooltest bevestigt gescheiden snapshot-hashes. Echte Cloudflare-timer verwerkt alleen correct gecontextualiseerde gebeurtenissen."
+    },
+    {
+      "id": "KI049",
+      "requirement": "ontwerp van volgende lesdatum kan weekend/geen rooster aan; geen fictieve ingeplande lesclaim.",
+      "status": "GETEST",
+      "evidence_or_gap": "Geen rooster betekent UNKNOWN en zelf datum kiezen; geen fictieve geplande les."
+    },
+    {
+      "id": "KI050",
+      "requirement": "rechten vervallen tussen lesadvies-preview en goedkeuring => 409/403 en geen assignment.",
+      "status": "GETEST",
+      "evidence_or_gap": "Rolwijziging tussen preview/approve geeft fout en geen opdrachten."
+    },
+    {
+      "id": "KI051",
+      "requirement": "alleen gedeeltelijk gemeten groep rapporteert meetdekking en verbergt pseudo-precisie.",
+      "status": "GETEST",
+      "evidence_or_gap": "Onvolledige groep toont gemeten/actief en geen vals hele-klasadvies."
+    },
+    {
+      "id": "KI052",
+      "requirement": "beperkte leerroute met actieve open opdracht -> impactpreview en expliciete beslissing.",
+      "status": "DEELS",
+      "evidence_or_gap": "Actuele impacthash, expliciete bevestiging, individuele reset en aparte bevestigde opdrachtintrekking werken. Impactoverzicht blijft beperkt; volledige causale intrekkingswizard open. Herhaling van dezelfde bevestiging na antwoordverlies wijzigt de beleidsversie niet opnieuw."
+    },
+    {
+      "id": "KI053",
+      "requirement": "automatische adviezen onthullen geen concept/HOLD-les en geven netjes geen match.",
+      "status": "GETEST",
+      "evidence_or_gap": "HOLD niet zichtbaar in catalogus/advies; ontbrekende match expliciet."
+    },
+    {
+      "id": "KI054",
+      "requirement": "geen netwerk of half voltooide opslag -> expliciete pending/failure, niet vals 'bewaren gelukt'.",
+      "status": "GETEST",
+      "evidence_or_gap": "Atomair opslaan, offlinefout, retry, saved/pending; tests en browserbewijs. Gecontroleerd antwoordverlies NA servercommit: observatie, koppelen/ontkoppelen, beleid, oefenpoging en advies; succesvolle herhaling zonder dubbele records in twee browsers."
+    },
+    {
+      "id": "KI055",
+      "requirement": "audit/back-upverwijderingscontract en RTO/RPO runbook bestaan en getest vóór echte pilotdata.",
+      "status": "OPEN",
+      "evidence_or_gap": "Schema 5: online D1 → SQLite, aparte remote D1 en PostgreSQL plus Time Travel; nieuwe wachtwoorden/MFA na herstel getest. Verwijdercontract, tombstones en ondertekende operationele RPO/RTO blijven open."
+    },
+    {
+      "id": "KI056",
+      "requirement": "WCAG 2.2 AA-acceptatie met keyboard/screenreader/focus en echte matrix-interactie.",
+      "status": "DEELS",
+      "evidence_or_gap": "Axe zonder violations op geteste matrix/cursistschermen, keyboard/reflow; menselijke screenreader/WCAG-acceptatie open."
+    },
+    {
+      "id": "KI057",
+      "requirement": "privacyverantwoordelijke heeft grondslagen, DPIA, retentie en controller/processorrollen afgetekend.",
+      "status": "OPEN",
+      "evidence_or_gap": "Geen juridische/privacyondertekening. Echte pilot geblokkeerd."
+    },
+    {
+      "id": "KI058",
+      "requirement": "geen generatieve AI, ML SDK of verborgen externe AI-egress in productiepad; dependencyreview.",
+      "status": "GETEST",
+      "evidence_or_gap": "Geen AI-runtime/server-egress of nieuwe productdependency; statische inspectie."
+    },
+    {
+      "id": "KI059",
+      "requirement": "Klink+Docent manifest/PR en actuele bekende materialen door Inzicht-write onaangetast.",
+      "status": "GETEST",
+      "evidence_or_gap": "Bestaande Klink+Docent/content/media/routes hash-ongewijzigd ten opzichte van PR-basis; regressies lokaal."
+    },
+    {
+      "id": "KI060",
+      "requirement": "content/itemversie verandert tussen evidence en report -> historie blijft aantoonbaar correct aan oorspronkelijke versie gekoppeld.",
+      "status": "DEELS",
+      "evidence_or_gap": "Versie-ID/hash en herstelhistorie bewaard; volledige contentpublisher/correctie-rapportworkflow nog nodig."
+    },
+    {
+      "id": "KI061",
+      "requirement": "docent creëert voorlopige naam, observeert en heropent observatie zonder Klink-accountkoppeling; geen inzage in bestaande user-data.",
+      "status": "GETEST",
+      "evidence_or_gap": "Voorlopige naam observeren en heropenen zonder account, beide browsers."
+    },
+    {
+      "id": "KI062",
+      "requirement": "twee provisional profielen met zelfde naam niet automatisch gemerged.",
+      "status": "GETEST",
+      "evidence_or_gap": "Gelijke namen aparte identiteiten; API-test."
+    },
+    {
+      "id": "KI063",
+      "requirement": "gecontroleerde link provisional -> schoolmember behoudt observatieprovenance en geen privédata; rollback ontkoppelt zonder evidence leak.",
+      "status": "GETEST",
+      "evidence_or_gap": "Koppelen/ontkoppelen behoudt bronhistorie; geen privéimport; schooltoegang vervalt. Verplaatsing van uitsluitend het fictieve account laat oude onderwijshistorie staan; revoked link wordt niet door replay hersteld."
+    },
+    {
+      "id": "KI064",
+      "requirement": "3/4 van 12 cursisten met onvoldoende bewijs (25% coverage) resulteert NIET in hele-klasherhaling; geeft diagnose + kleine groep.",
+      "status": "GETEST",
+      "evidence_or_gap": "3 aandacht van 4 gemeten/12 actief levert diagnose + kleine groep, geen hele klas."
+    },
+    {
+      "id": "KI065",
+      "requirement": "groepsadvies toont noemer 4 gemeten/12 actief, niet alleen 3 aandacht/12.",
+      "status": "GETEST",
+      "evidence_or_gap": "4 gemeten/12 actief en aandacht/meetgroep zichtbaar in regelresultaat/UI."
+    },
+    {
+      "id": "KI066",
+      "requirement": "TRAIN-only oefenprestatie kan geen MASTERED-status opleveren.",
+      "status": "GETEST",
+      "evidence_or_gap": "TRAIN kan nooit MASTERED opleveren; unit/API/leerlingroute. Volledige docent-cursistproef: oefening Geoefend, matrix en onderliggend individueel TRAIN-bewijs blijven ongemeten."
+    },
+    {
+      "id": "KI067",
+      "requirement": "voltooide oefening met hergebruikte feedbackitems kan niet als onafhankelijke transfermeting tellen.",
+      "status": "GETEST",
+      "evidence_or_gap": "Finished/repeated feedback telt niet als onafhankelijke transfermeting."
+    },
+    {
+      "id": "KI068",
+      "requirement": "volgende dag weekend en geen rooster -> label onbekend en datum kiesbaar zonder fictieve lesplanning.",
+      "status": "GETEST",
+      "evidence_or_gap": "UNKNOWN roosterlabel en kiesbare datum; geen aanname dat morgen een schooldag is."
+    },
+    {
+      "id": "KI069",
+      "requirement": "docentnote bevat script/HTML of CSV-formule -> opgeslagen en geëxporteerd zonder XSS/formula-executie.",
+      "status": "GETEST",
+      "evidence_or_gap": "Werkelijke online Chromium/WebKit-proef met script/HTML in observatie en spreadsheetformule in naam: tekst blijft inert na herladen, CSV neutraliseert formule, JSON bewaart originele tekst als download. evidence/security-browser.json. Geen onafhankelijke pentest geclaimd."
+    },
+    {
+      "id": "KI070",
+      "requirement": "observatie staat in database maar mastery recompute achterloopt -> UI toont saved/pending correct.",
+      "status": "GETEST",
+      "evidence_or_gap": "Observatie staat duurzaam in DB; verwerking queue apart zichtbaar en idempotent."
+    },
+    {
+      "id": "KI071",
+      "requirement": "privacyretentiematrix met controller/grondslag/verwijdering incl. backups is getekend vóór echte pilot.",
+      "status": "OPEN",
+      "evidence_or_gap": "Retentiematrix is concept met expliciet open controller/grondslag/termijnen/back-upverwijdering."
+    },
+    {
+      "id": "KI072",
+      "requirement": "code/docs changelog toont dat alle R1/R2-zwaardere eisen bij implementatie daadwerkelijk zijn meegenomen.",
+      "status": "DEELS",
+      "evidence_or_gap": "Alle 72 eisen met bewijs/gaps en prioriteit vastgelegd; bovenstaande zwaardere eisen nog niet allemaal gerealiseerd."
+    }
+  ],
+  "current_candidate_note": "Latest performance candidate: local checks passed; full online journey blocked by daily D1 write quota. Earlier online proofs are historical."
+}

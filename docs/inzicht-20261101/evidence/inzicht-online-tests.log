@@ -1,0 +1,46 @@
+✔ salted scrypt rejects wrong, oversized and malformed credentials (533.272167ms)
+✔ online login creates only hashed server session and a secure host cookie (155.735792ms)
+✔ incorrect and unknown account use identical errors; attempts are bounded (1544.06075ms)
+✔ host, scheme, origin, disabled account and local token are refused online (144.542833ms)
+✔ logout revokes server session; expiry and user revocation apply immediately (428.706791ms)
+✔ scheduled outbox retries safely and removes only expired limits and sessions (145.528ms)
+✔ deployment guard rejects production names, bindings, routes and unprotected asset handling (1.300208ms)
+✔ KI001/002 class persists, rename conflict, archive preserves observations (21.988167ms)
+✔ KI003/004/061/062 provisional names persist separately and can be observed (3.07525ms)
+✔ KI006/007/008/045/046 observations have revisions, invalidated provenance and no automatic mastery (2.819625ms)
+✔ KI011/012/013/014: unknown, one measure, independent transfer pair, same day (0.166709ms)
+✔ KI015/016/017: attention, recheck retains prior mastery, revoked event removed (0.083041ms)
+✔ KI010/024/044/066/067: group response, completion, repeated feedback and TRAIN cannot prove mastery (0.079209ms)
+✔ KI018: matrix drill-down contains the exact saved observation event (2.083792ms)
+✔ KI022/023/027/053: HOLD never appears, cannot be assigned, absent measure match is explicit (2.954375ms)
+✔ KI025/026/051/064/065: deterministic 60% coverage gate and honest denominators (0.498625ms)
+✔ KI028/050: stale evidence or role change rejects approval without assignment (4.327291ms)
+✔ KI029: reject and explicit approve never silently issue an assignment (4.827208ms)
+✔ KI030/031/034/040/048: tenant, class, admin, support and revoked teacher denied on reads and writes (2.616416ms)
+✔ KI032: logout revokes server session and all data responses are no-store (1.478833ms)
+✔ KI041: self-created class cannot harvest existing school users (2.085333ms)
+✔ KI042/063: invite is account-bound, single use; unlink preserves source and closes access (3.892291ms)
+✔ KI047: HTTP replay is one observation/event/outbox; different body on same key conflicts (2.3935ms)
+✔ KI049/068: tomorrow without timetable never claims a scheduled lesson (3.223334ms)
+✔ KI052: policy requires current impact preview and explicit confirmation (2.329542ms)
+✔ KI054/070: successful storage is distinct from idempotent mastery processing (3.01025ms)
+✔ KI069: SQL values remain data; spreadsheet formula export escaped (2.136958ms)
+✔ Trust boundary: production disabled, unauthenticated denied, CSRF denied, malformed values rejected (3.79525ms)
+✔ Database itself rejects cross-tenant enrollment and teacher references (1.310875ms)
+30x100 SQLite service: 2.9ms, no network, warm runtime; not a production SLO
+✔ KI035: 30 × 100 computed matrix, documented local synthetic timing (4.901125ms)
+✔ KI002/005/021 school attempts survive reads, reject altered assignment context and revoked policy (9.4095ms)
+✔ KI005/019/020/043: multiple classes, explicit context, individual override, registrar enrollment (7.192458ms)
+✔ KI018/019/020: restore inheritance previews the actual class standard and follows later changes (3.250875ms)
+✔ KI021/043: future assignments stay hidden, free practice respects policy, withdrawal preserves evidence (8.314ms)
+✔ KI024/048: education report includes observations and evidence, never other tenants or credentials (2.886792ms)
+✔ KI048: automatic processing keeps two schools and their evidence hashes separate (2.6445ms)
+✔ KI042: waiting, tampered and expired invitation never opens a learner dossier (2.185958ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3339.730916

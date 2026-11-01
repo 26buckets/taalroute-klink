@@ -1,0 +1,389 @@
+﻿KLINK INZICHT | 02 Technische contracten, beslisregels en acceptatietests
+Versie 1.2, gereviewd op 31 oktober 2026. Basis v1.0 plus normatieve REVIEWPATCH R1 en R2 aan het einde. Status: technisch voorstel, bestaande codebase nog niet gevalideerd.
+Lees samen met Inzicht 01, Klink 2.0 v1.5 01/02/03, huidig Klink+Docent START HIER. Dit is géén opdracht om de liveomgeving of Klink+Docent te veranderen.
+
+
+1. Uitvoeringsarchitectuur en grens
+Werk in bestaande repo 26buckets/taalroute-klink indien toegankelijk. Bestaande KLINK 2.0-architectuur noemt Cloudflare Workers/D1 als feitelijke eerdere richting; een latere ontwerpversie verlangt eerst repo-inspectie en een technische spike voordat een definitieve database-/authkeuze wordt gemaakt. Geen blind parallelle stack.
+Bouw een module 'inzicht' in dezelfde Klink-codebase met expliciete schoolcontext. Hergebruik bestaande auth, UI tokens, contentcatalogus en infrastructuur voor zover aantoonbaar aanwezig. Klink+Docent heeft geen nieuwe routes, componenten, opslag of observatielogica nodig.
+Beoogde domeinen (logisch, geen feitelijke bestandsnamen): identity en schoolmembership (gedeeld), insight-classroom, insight-observation, skill-catalog, evidence, mastery, assignment, access-policy, recommendation, audit. Server heeft de uiteindelijke autorisatie- en beslislogica. UI is uitsluitend presentatielaag.
+
+
+2. Verplichte repository-spike vóór implementatie
+WorkChat controleert en documenteert:
+A. Repository exact adres, eigenaar, default branch, actieve PR's, laatst relevante commit, rechten en bouwscripts. Historische PR #5 voor Klink+Docent NIET wijzigen, mergen of deployen.
+B. Frontendframework, router, design system, authprovider, session management, tenantresolutie, huidige docentroutes.
+C. Database-engine, migratiepad, tabellen, constraints, indexes, ORM/querylayer en backupbeleid.
+D. Bestaande oefen-/les-/media-ID's, publicatiestatus, versiebeheer, spelertypen, feedback/scorevelden en betrouwbaarheid van score.
+E. Huidige mogelijkheden voor persoonlijk versus schoolcontext, uitnodigingen, rollen, groepslidmaatschappen, opdrachten en rapportage. Hergebruik wat er al is; vermijd duplicaten.
+F. Deployment staging/production, feature flags, omgevingsvariabelen, logging, tests en releaseproces.
+Rapporteer 'bestaand', 'nieuw nodig', 'te migreren', 'niet geverifieerd'. Geef concrete codepaden alleen na inspectie. Als repo niet toegankelijk is: NO GO voor live-integratie; lever wel zelfstandig uitvoerbaar SQL/API/UI-plan en vraag toegang via projectkanaal. Niet gokken.
+
+
+3. Voorlopige modulelocaties en dependency-regels
+Voorgestelde scheiding, exacte paden na spike:
+app/features/inzicht/pages -> routes Vandaag, Klassen, Cursisten, Observaties, Matrix, Opdrachten, Toegang, Lesadvies, Rapportages.
+app/features/inzicht/components -> schoolselector, klaslijst, cursistkaart, observatieformulier, matrixcel, bewijsdetail, advieskaart, opdrachtwizard.
+server/modules/inzicht -> services en permissiecontrole.
+server/modules/skills -> skillcatalog en criteria.
+server/modules/evidence -> validatie van individuele attempts/observaties, immutable evidence en provenance.
+server/modules/recommendations -> deterministische pure functies, regelsversies en matching met Published-content.
+db/migrations -> additive migraties; db/seeds -> synthetische pilotdata; tests/inzicht -> unit, API, security, E2E.
+Gebruik deze mappen NIET letterlijk als repository er anders uitziet. Bouw op lokale conventies. Geen nieuwe microservices, geen generatieve AI of netwerk-LLM.
+
+
+4. Dataontwerp: bestaande entiteiten hergebruiken
+Bestaande Klink 2.0 conceptentiteiten: users, memberships, role_assignments, organizations, groups, group_memberships, provisional_enrollments, content_items, content_versions, entitlements, assignments, assignment_recipients, exercise_attempts, assessment_records, audit_events, outbox_events.
+Voeg nieuwe opslag uitsluitend toe na schema-audit. Conceptuele extra entiteiten:
+class_access_policies(id, organization_id, class_id, learner_membership_id NULL, version, allowed_route_codes, exercise_mode, created_by, updated_at); unieke actuele policy per klas/leerling; leerlingoverride boven klas binnen schoollicentie.
+skill_definitions(id, code UNIQUE, domain, level_code, label, rubric_type, rubric_version, published_status, created_at).
+skill_prerequisites(skill_id, required_skill_id, requirement_rule).
+content_skill_links(content_version_id, skill_id, relation_type TRAIN|MEASURE, measurement_contract_version, validated_by, release_status).
+teacher_observations(id, organization_id, class_id, learner_membership_id, teacher_membership_id, skill_id, skill_version, situation, observed_outcome, independence, observed_at, recorded_at, valid_for_mastery, current_revision, status).
+observation_revisions(id, observation_id, revision_no, payload, changed_by, reason, created_at) append only.
+evidence_events(id, organization_id, learner_membership_id, skill_id, source_type, source_id, content_version_id NULL, rubric_version, result_payload, independence, occurred_at, event_day, valid, validation_reason, event_hash, created_at).
+mastery_snapshots(id, organization_id, learner_membership_id, skill_id, rule_version, outcome, attention_flag, recheck_flag, evidence_set_hash, calculated_at).
+recommendation_rules(id, version, scenario, criteria_json, priority, enabled, reviewed_by, published_at).
+recommendation_previews(id, organization_id, class_id, generated_by, rule_version, catalog_version, evidence_watermark, output_json, created_at, expires_at).
+approved_lesson_plans(id, organization_id, class_id, approved_by, preview_id, modified_plan_json, approved_at, status).
+Houd schoolcontext per object en valideer dat membership, group/class en school exact overeenkomen. Geen leerlingaccount-ID uit privécontext automatisch als schooldossier-id gebruiken. Gebruik servergecontroleerde actor-context en audit.
+
+
+5. Integriteitsconstraints en mutaties
+Class: organisatie verplicht; unieke id; naam per organisatie niet per se uniek; soft/archive status. class teacher-toewijzing expliciet. Een cursusinschrijving is lidmaatschap met start/end en unieke actieve relatie per klas en leerling. Bij dubbel indienen met dezelfde idempotency key nooit een tweede enrollment.
+Observatie: situation + learner + skill + outcome + independence vereist. Cursist moet actieve of historisch geautoriseerde enrollment hebben voor ingediende klas. Niet meer dan één actieve revisie per observatie. Correcties via append-only revision, niet blind UPDATE op oorspronkelijke payload.
+Attempt: hoort aan exact één context; in schoolcontext vereist organization_id, membership-id, geldige assignment of expliciete vrij-oefencontext. In personal context geen schoolassignment.
+Evidence: immutable event; herroepen/corrigeren via separate validation/revocation-event of soft status + audit. Nooit ruwe antwoordinhoud of privacytekst in auditlog.
+Mastery snapshot is derived state en mag herberekend worden; evidence blijft bron. Wanneer validiteit of regels veranderen, re-evaluate affected learner-skill keys.
+Policy: individuele override mag alleen routes binnen org entitlement kiezen; keuze geen routes is legitieme lege toestand; assignment bij policyconflict geeft 409 met hersteladvies.
+Content release: HOLD, concept en ingetrokken versies worden server-side uitgesloten; aanbeveling verwijst naar specifieke gepubliceerde versies.
+
+
+6. Voorbeeldcontract: POST observaties
+Aanvraag:
+{
+  "class_id": "class_001",
+  "learner_membership_id": "member_123",
+  "skill_code": "ALFA.KLANK.OO.KOPPELEN",
+  "situation": "Zelfstandig herkennen in drie nieuwe woorden",
+  "observed_outcome": "partially_successful",
+  "independence": "with_hint",
+  "observed_at": "2026-10-31T10:15:00Z",
+  "note": "Heeft bij een woord een aanwijzing nodig"
+}
+Actor-id, organisatie-id, validatie, bronstatus, rubricversie en recorded_at volgen van de server. Geen browservertrouwen voor created_by, org ID of status.
+Respons 201: id, revision 1, status SAVED, learner-id, skill-code, observed_at, mastery_refresh_status QUEUED|DONE, evidence_eligibility true|false met reden. 400 veldfout, 401 niet ingelogd, 403 geen klasrecht, 404 onzichtbaar resource, 409 concurrency/conflict, 422 semantisch ongeldige context, 429 rate limit.
+Acceptatie: binnen één succesvolle transactie is observatie duurzaam opgeslagen met audit/revision; daarna event voor masteryherberekening zonder dubbele verwerking. Timeout-herhaling met Idempotency-Key levert hetzelfde logische resultaat.
+
+
+7. Voorbeeldcontract: leesmodellen
+GET /v1/inzicht/classes?status=active -> classes[] {id,name,start_level,enrollments_count,teachers[],updated_at}; server filtert op schoolcontext.
+GET /v1/inzicht/classes/:classId -> class {id,name,start_level,period,status,version}, enrollments[] en bevoegdheden.
+GET /v1/inzicht/classes/:classId/skills-matrix?domain=letters -> columns[] {skill_id,label,code}, rows[] {learner_membership_id,display_name,cells:{skill_id:{status,attention_flag,recheck_flag,evidence_count,calculated_at}}}; cursor/paging voor grotere klassen.
+GET /v1/inzicht/learners/:id/skills/:skillId/evidence -> skill, current mastery, rule_version, events[] {type,source_ref,score,independence,occurred_at,validation} en teacher observations; alle events schoolgefilterd.
+POST /v1/inzicht/classes/:id/recommendations/preview -> snapshot_id, rule_version, content_catalog_version, generated_at, groups[{target_skill, learner_ids, rationale, evidence_ids, rule_id, proposed_content_id/version, type,duration_if_known,followup_check}], warnings[].
+POST /v1/inzicht/lesson-plans/:previewId/approve -> bevestigde expliciete keuze, docentwijzigingen, assignment-batches. Bij oude snapshot, verlopen content of gewijzigde licentie: 409 stale, vraag nieuwe preview.
+Voor naming kan Work bestaande routerconventies gebruiken. Geef contracttabel met exact mapping van nieuwe code naar bovenstaande semantiek.
+
+
+8. Autorisatiematrix (server, default-deny)
+LEARNER: eigen schooloefeningen en geautoriseerde schoolresultaten lezen, nooit andermans dossier.
+TEACHER: binnen toegewezen school/klas class.create indien organisatiebeleid; class.read/update voor geautoriseerde klassen, learner.read voor toegewezen klasleden, observation.create/revise volgens rechten, assignment.create, policy.update binnen entitlement, recommendation.preview/approve.
+ASSISTANT_TEACHER: class.read en eventueel observation.create; class/policy mutaties afhankelijk van toegekend recht, default nee.
+SCHOOL_ADMIN: schoolgroepen/docentrelaties beheren, inzage in inhoudelijke leergegevens alleen als expliciet onderwijsrecht is toegekend (niet vanzelf via administratieve rol).
+CONTENT_EDITOR: skill/contentregels beheren en publiceren, geen dossierinzage.
+PLATFORM_ADMIN: platformconfig en technisch support, geen leerlinginhoud standaard.
+Iedere API valideert: session->actor membership->active organization->class assignment->action permit->resource organization->license/period. Server accepteert geen schoolcontext uitsluitend uit een browsercookie zonder verificatie.
+Test met twee synthetische scholen, identieke namen, twee docenten, gedeelde account met meerdere schoolrollen. Voer IDOR, export, aggregatie, URL wijziging, CSV en background task-isolatie-tests uit.
+
+
+9. Automatische beheersing: datatypes
+Basisstatus = UNKNOWN|DEVELOPING|MASTERED. Extra signalen = ATTENTION|RECHECK|STALE. UI kan vier simpele statussen tonen, maar backend houdt as van signalen gescheiden.
+Geldig bewijs vereist source verified, individually attributable, correct organization and learner, appropriate measure rubric/content_version, valid time, known score/teacher judgment, no revoked state.
+'completed activity' levert activity status, NIET automatisch vaardigheidsbeheersing. Digibordklassikaal antwoord telt nooit als individueel bewijs. Docentobservatie zonder geschikte beoordelingssituatie telt als narratief signaal, niet als geautomatiseerd meetbewijs.
+Meetprotocol voor objectieve pilotchecks (alleen als de vaardigheid hiervoor valideerbaar is): per controle >=5 geschikte items, >=80% correct, zelfstandig, ten minste twee onafhankelijke controles op verschillende kalenderdagen, minstens een set met nieuwe transferitems. Een zelfde sessie herhalen is niet onafhankelijk. Scores met hints tellen niet als zelfstandige voldoende controle.
+Na een voldoende controle is status DEVELOPING totdat tweede onafhankelijke transfercontrole slaagt. Geen geldig bewijs = UNKNOWN. Twee of meer afzonderlijke onvoldoendes kunnen ATTENTION opleveren. Eén fout na MASTERED genereert RECHECK; wis geen eerdere kennisclaim automatisch. Bij inhoudelijk tegenstrijdig bewijs RECHECK en docentcontrole. Tijdgrens STALE configureerbaar per vaardigheid (nog te valideren), geen generieke automatische vervaldatum.
+Voor mondeling lezen/schrijven kan meetrubric criteria bevatten met voldoende beoordeling door docent, met eigen onafhankelijke controlelogica. Niet alle skills onder één 80%-norm dwingen.
+
+
+10. Pure functies voor beheersing
+functie computeMastery(skill, validatedEvents, ruleSet):
+  events = alleen geldige, individuele, niet-herroepen meetevents voor deze skill en deze schoolleerling
+  if events leeg: return UNKNOWN met recheck=false
+  zelfstandigeControles = events.filter(assessmentMode,independence,minimumItems,passedRubric)
+  onafhankelijk = groupBy(uitgevoerdeDag/assessmentSession); neem per dag hoogstens een gekwalificeerde controle mee per regel
+  if count(gekwalificeerde onafhankelijke dagen)>=2 en bestaat transfercontrole: status=MASTERED
+  else status=DEVELOPING
+  attention = herhaaldOnvoldoendeOpVerschillendeDagen of geldige docentflag
+  recheck = conflictTussenBetrouwbareMetingen of nieuweFoutNaBeheersing
+  return {status,attention,recheck,ruleVersion,evidenceIds,calculatedAt}
+Sla regelversie en evidence-set-hash op. Iedere run met dezelfde gevalideerde input moet hetzelfde antwoord geven (geen 'AI-confidence' of willekeur).
+
+
+11. Regelgebaseerde aanbevelingen
+R-001 UNKNOWN bij fundamentele vaardigheid -> stel korte passende diagnostische check voor; geen beheersingsclaim.
+R-010 nog geen letterherkenning -> herkenningsactiviteit; zo nodig docentcontrole.
+R-020 letter herkend maar klankkoppeling niet -> gerichte letter-klankkoppeling.
+R-030 klankkoppeling aangetoond maar decoderen niet -> samenvoegoefening.
+R-040 woordlezen voldoende bewezen en voorwaarden zinslezen geverifieerd -> zinsleesoefening.
+R-050 herhaald onvoldoendes -> herhaling plus docentcheck.
+R-060 tegenstrijdig/oud bewijs -> opnieuw meten; niet zonder bewijs terugzetten.
+R-070 veel cursisten met gelijk aandachtssignaal -> voorstel korte gezamenlijke instructie.
+R-080 leerlingen beheersen vervolgsprong -> kleine verdiepingsgroep.
+Groepsconfig pilot: gezamenlijke aandacht indien >=3 cursisten EN >=30% van actieve ingeschreven leerlingen dezelfde vaardigheid als attention hebben; anders individuele/kleine groep. Missing bewijs kan een aparte diagnostische groep vormen. Prioriteer ernstige fundamentele lacunes boven verdieping, maar blokkeer verdieping voor anderen niet.
+Match content: lesson_version.release_status=PUBLISHED; skill match type TRAIN|MEASURE; niveau toegelaten; active entitlement; metadata compleet incl. media. Geen match -> expliciete 'geen vrijgegeven oefening beschikbaar'. Geen automatisch nieuw lesmateriaal, geen digitale wijziging van Klink+Docent.
+Elke aanbeveling bevat rule_id, ruleset_version, content_version, evidence_ids, affected learners, rationale template, instructional action en optional followup test. Deterministisch sorteren op prioriteit, skillcode en stabiele learner-ID (geen subjectieve AI-ranking). Preview heeft TTL; bij goedkeuring opnieuw rechten en content controleren.
+Rationale voorbeeld: 'Vier van twaalf cursisten hebben bij b/d op twee meetdagen ondersteuning nodig; advies: herhaal klankonderscheiding met gecontroleerde les X.'
+
+
+12. Toegangsmotor
+Voor iedere school request:
+  allow = authenticated AND activeSchoolMembership AND validEntitlement AND publishedContent
+       AND effectiveAllowedRoutes.contains(content.level)
+       AND (exerciseMode==FREE_ALLOWED OR assignmentForLearnerAndContentActive)
+       AND schoolContentContextMatches
+SchoolPolicy = class policy; leerlingoverride vervangt klaspolicy binnen actuele gekozen klas, never bypass license. Wanneer student in meerdere klassen zit, context verplicht selecteren of server-gekoppelde schoolroute naar betreffende opdracht. Geen OR-union over alle klassen zonder beleidsbesluit. Persoonlijke Klink-workspace heeft afzonderlijke entitlement en access-check.
+Verlopen policy, assignment/revocation of licentie: blokkade op server voor toekomstige start. Een reeds afgeronde poging blijft in historie. Retained open progress bij expiratie alleen volgens vastgelegd productbeleid, geen stil verlies.
+Policywijziging met gevolgen voor actieve opdrachten vereist impact-preview en expliciete bevestiging.
+
+
+13. Contentmetadata contract
+Voor iedere releasable les of oefening:
+{stable_content_code,version_id,product_context,level_code,exercise_type,release_status,learning_skill_codes[],measurement_skill_codes[],rubric_contract_version,prerequisites[],teacher_duration_minutes|null,media_status,license_product_code,deep_link}
+Product_context Klink of Klink+Docent. Klink+Docent is uitsluitend leerlink, geen individuele auto-score. Externe deep link verwijst naar daadwerkelijk bestaand pad. Leer- en meetrelaties niet gelijkstellen.
+Content onboarding: huidige JSON bron/manifest inventariseren -> skill codes toewijzen -> didactische review -> schema check -> publicatiestatus controleren -> indexeren. Geen automatische publicatie van HOLD-items.
+Vereis content-version-immutable hash en bij wijziging een nieuwe versie. Ingetrokken versies niet nieuw aanbevelen. Historische evidence bewaart oude content_version_id.
+
+
+14. Teststrategie in vijf lagen
+Unit: regels, statusgrenzen, policy, content matching, versiehash, sorteerdeterminisme.
+Contract: API schemas, fouten, idempotentie, paginering, concurrency, stale preview.
+Integratie: oefenpoging -> event -> evidence -> mastery -> matrix -> lesadvies; observatie -> leerlingprofiel.
+Security: cross-tenant IDOR, privilege escalation, schoolwissel, export/CSV, gedeelde sessies, accountkoppeling, rate limits, CSRF waar relevant, audit.
+E2E & docentpilot: klassen creëren, namen koppelen, observatie, matrixcel openen, opdracht klaarzetten, leerlingervaring, restricties, groepadvies.
+Hanteer feature flag inzicht_beta, aparte staging, synthetische data, rollback van applicatie zonder verlies van events. Geen production rollout zonder afzonderlijke goedkeuring.
+
+
+15. Geautomatiseerde acceptatiecases
+KI-001 docent maakt klas; opnieuw inloggen -> identieke serverklasse.
+KI-002 docent hernoemt/ archiveert -> historie blijft.
+KI-003 docent maakt voorlopige cursist; koppeling vereist verificatie.
+KI-004 twee cursisten met dezelfde naam -> aparte identiteit en dossier.
+KI-005 cursist in twee klassen -> correct contextgebonden memberships.
+KI-006 docent observatie -> zichtbaar in juiste profiel, actor/tijd bekend.
+KI-007 observatiecorrectie -> audit en oorspronkelijke versie beschikbaar.
+KI-008 vrije notitie zonder rubric -> geen auto-mastered.
+KI-009 individuele geldige oefening -> juist event met itemversie.
+KI-010 gezamenlijke digibordrespons -> geen individueel bewijs.
+KI-011 geen bewijs -> UNKNOWN; geen score 0.
+KI-012 een succesvolle meetdag -> DEVELOPING.
+KI-013 twee onafhankelijke dagen + transfer -> MASTERED onder geldige criteria.
+KI-014 twee pogingen op één dag -> niet automatisch MASTERED.
+KI-015 herhaald onvoldoendes -> ATTENTION.
+KI-016 enkele fout na mastery -> RECHECK, audit en historie.
+KI-017 ingetrokken event -> herbereken status.
+KI-018 matrixcel -> exact onderliggend bewijs zichtbaar.
+KI-019 klas restrict Alfa A -> Alfa B/C server-side denied.
+KI-020 individuele Alfa B override -> alleen betreffende cursist, binnen licentie.
+KI-021 persoonlijke Klink-oefening -> schoolrestrict geen ongeoorloofde invloed.
+KI-022 opdracht zonder vrijgegeven content -> 422/409, geen aanmaak.
+KI-023 HOLD-content -> nooit in oefenzoeker of aanbeveling.
+KI-024 assignment status 'finished' -> geen onbewezen mastery.
+KI-025 groepadvies met 4/12 attention -> regel R-070 en uitleg.
+KI-026 zelfde snapshot/ruleset/catalog -> exact zelfde preview.
+KI-027 geen geschikte gepubliceerde les -> expliciet geen match, niet hallucineren.
+KI-028 preview gewijzigd/oud -> 409 en herberekenen.
+KI-029 afwijzen advies -> geen assignment.
+KI-030 teacher school A -> geen school B-dossier.
+KI-031 school-admin zonder onderwijsrecht -> alleen administratieve data.
+KI-032 gedeelde computer logout -> geen leerlingdata in cache/volgende sessie.
+KI-033 offline of netwerkstoring -> geen vals 'opgeslagen'.
+KI-034 uitgetreden docent open tab -> volgende save 403.
+KI-035 30x100 matrix -> onder 2 seconden in afgesproken stagingtestomgeving, gemeten.
+KI-036 bestaande Klink+Docent testregressie -> geen gewijzigde inhoud, routes of werkbladen.
+KI-037 geen externe AI-aanroepen; code/audit van egress en dependencies.
+KI-038 schoolwissel docent -> huidige leerlingselectie gereset.
+KI-039 schoolresultaat niet spontaan persoonlijk paspoort beschikbaar.
+KI-040 rol wisselt midden sessie -> autorisatie telkens opnieuw server-side gecontroleerd.
+
+
+16. Werkpakketten en definition of done
+WP0 Discovery en gap-analyse: repo- en Drivebroninventaris, schema-/UX-mapping, intacte baseline, blockers. DoD: codepaden feitelijk bevestigd, geen bestaande Klink+Docent-mutatie.
+WP1 Klassen: migrations, class APIs, eigen klaslijst/detail/aanmaken/archiveren, enrollment en invite. DoD: KI001-005,030,038.
+WP2 Observatie: skillselectie, rubric, formulier, append-only correctie, profile timeline. DoD: KI006-008,033-034.
+WP3 Evidence/matrix: catalog, content mapping, attempt events, rules, matrix/provenance. DoD: KI009-018,035.
+WP4 Policies/assignment: routes, learner override, published catalog, assignment wizard and student side enforcement. DoD: KI019-024,039.
+WP5 Recommendation engine: pure functions, group matching, explainability, preview, teacher approval. DoD: KI025-029,037.
+WP6 Pilot and quality: QA, DPIA/legal gates, accessibility review, classroom pilot, rollback and launch decision. DoD: all KI, signoffs, no P0/P1.
+Geen fase afsluiten op uitsluitend screenshot, conceptdocument of demo. Link commit, diff, testlogs, PR, bekend defect, reviewbesluit en terugrolstrategie.
+
+
+17. Duidelijke release- en juridische poorten
+G0: codebase/permission/infrastructure known. G1: schema en auth correct. G2: individuele evidence betrouwbaar en tenant-isolatie getest. G3: veilige schoolleerstoftoegang en published-only getest. G4: didactische beoordeling regelmotor door bevoegde docenten. G5: DPIA/privacygrondslag, bewaartermijnen, support en verwerkingsovereenkomsten geaccordeerd. G6: toegankelijkheid en pilot met echte docenten. G7: expliciete merge/deployment toestemming. NO GO voor P0/P1, onduidelijk beheer van persoonsgegevens, cross-tenant lek, ontbrekende rollback of HOLD-leerinhoud.
+Work laat alle onafhankelijke productiekeuzes en open compliancebesluiten als taken met eigenaar/afhankelijkheid zien. Niet zelf juridische toestemming afleiden.
+
+
+18. Risico's en mitigatie
+R1 onbevestigde repo-toegang: eerst toegang herstellen. R2 dubbele modules Klink 2.0/Inzicht: bouw door middel van bestaande domeinen/migraties, niet parallel. R3 onbetrouwbare scores: oefentypen meten niet vanzelf; validatiecontract per skill. R4 privacy: scheiding school/persoonlijk/andere scholen. R5 fouten bij klasoverplaatsing: enrollment-perioden bewaren. R6 content is concept/HOLD: published-only plus manifestcontrole. R7 advies fout: uitlegbaar, docentgoedkeuring, reviewstaleness. R8 onduidelijke licentie: entitlement server. R9 slechte verbinding: idempotentie/offline foutmelding. R10 scope creep: geen AI, geen Klink+Docent wijzigingen.
+
+
+19. Bewijs dat Work na iedere bouwstap moet vastleggen
+Per WP: datum, branch, commit, gewijzigde bestandspaden, migraties met rollbackplan, screenshots/video waar relevant, testcommando's en uitkomsten, eventuele code coverage, security checks, open P0/P1/P2, verschil met deze specificatie, links naar PR en staging. Bewaar overdrachtsverslag in bestaande Drive-map naast Inzicht 00/01/02. Vermeld 'ontwerp', 'gebouwd lokaal', 'getest', 'gereviewd', 'pilot', 'live' als verschillende statuswaarden.
+
+
+20. Bronnen
+Klink 2.0 technisch: https://docs.google.com/document/d/1_C4KJ9k3rLFhgU0WQYi_bmxVPRCQdPJli5E8FKRLOfM/edit
+Klink 2.0 schermen: https://docs.google.com/document/d/1Q1seNkkxcvra_ppz6pf2SjaM9R7O-bLAfGZXrF8H4tg/edit
+Klink 2.0 pilot: https://docs.google.com/document/d/10TrkWpSwiYY9RaOm5n08j_hoxx_TRnB0LYBAixzzP9I/edit
+Klink+Docent actuele index (alleen lezen): https://docs.google.com/document/d/1w7x9i1PuKxQ7MnD6U_I8I7BtWKjzkWJ2rcd92cOyGh8/edit
+Klink Inzicht 01 functioneel: https://docs.google.com/document/d/1TBPhX1b7tak7nAnxjOuoBki7Kv_7JZqGFV51NmguH0I/edit
+
+
+
+
+REVIEWPATCH R1 | Security, architectuur, toetskwaliteit, privacy, operatie | 31 oktober 2026
+STATUS: V1.1-NORMATIEVE AANVULLING. Deze regels zijn strenger of preciezer dan de eerdere voorstellen; bij tegenspraak gaan ze voor. Technisch nog niet geïmplementeerd.
+
+
+R1-SEC-01 | Klas aanmaken is geen recht op willekeurige leerlingen
+Nieuwe klas door docent is toegestaan als actor een actief schoollidmaatschap en class.create-permission heeft. Schoolbeheerder of andere onafhankelijke geautoriseerde registrar bevestigt enrollment van reeds bestaande schoolleerling; alternatieve door school geautoriseerde uitnodigingsflow vereist acceptatie plus bewijs van leerlingidentiteit. Geen 'search all students in tenant' zonder schoolrol. Docent heeft alleen leerling.READ na bevestigde enrollment én actieve class-teacher relation; zelfbedachte class of wachtende uitnodiging mag niet als machtiging gelden. Directe student-ID-invoer zonder enrollment-check is verboden. Bij co-docent rechten opnieuw toetsen per actie. Tussen school A/B en persoonlijke context gelden afzonderlijke permissies.
+
+
+R1-SEC-02 | Class context ambiguïteit
+Leerling kan meerdere klassen binnen school hebben. School-oefening die aan assignment hangt gebruikt uitsluitend assignment.class_id plus geverifieerde enrollment. Vrij oefenen gebruikt de expliciete actieve school+klas context van de sessie, opnieuw server-side gevalideerd. Ontbrekende/ambigue context => keuze verplicht of geweigerd, geen default OR-UNION van klasrechten. Bij twee toegestane routes in één klas geldt de opgeslagen klaspolicy en eventuele persoonlijke override binnen licentie. Individuele uitzondering kan klasbeleid beperken of verruimen binnen tenantentitlement, maar niet een andere klascontext omzeilen. Beëindigde enrollment of ingetrokken schoollidmaatschap blokkeert nieuwe starts, historische dossiergegevens blijven onder bewaarbeleid.
+
+
+R1-SEC-03 | Beveiligde invite en klasrelatie
+Invitestatus created/sent/accepted/expired/revoked, token gehasht en beperkt geldig, eenmalig; redelijke rate limit, anti-enumeration, sessiebindend bij acceptatie en logging zonder token of schooldossierinhoud. Voorlopige leerling krijgt geen accountlink of automatische samenvoeging op naam of e-mail. Foutieve relatiecorrectie moet terug te draaien zijn met effect op autorisatie en rapportage. Privacyrecht en logging voor uitnodigingen.
+
+
+R1-ASMT-01 | Meting versus activiteit
+Definieer skill+itemvaliditeit vóór scoreberekening. Eén oefening mag pas MEASURE=approved wanneer didactisch beoordelaar vastlegt doel/construct, itemdekking, juiste feedback-/hintcondities, onafhankelijke items, norm, testafnamecontext en geteste betrouwbaarheid. Anders uitsluitend TRAIN. Meetkwaliteit per vaardigheid en oefenvorm, niet over de gehele leerroute aannemen. Herhaalde identieke items of oefensessies met antwoordfeedback worden niet twee onafhankelijke controles. 'Dagen' zijn noodzakelijke maar niet voldoende onafhankelijkheidsindicator.
+De 80%-bij-vijf pilotregel is een PROVISORISCHE ONTWERPSTARTWAARDE uitsluitend voor passende, objectief meetbare korte checks; geen algemene meetnorm, geen officiële Alfa- of ERK-vaststelling. Twee onafhankelijke voldoende meetmomenten plus transfer blijven conceptcriterium, met itemversie/sessie- en helpstatus geregistreerd en menselijke didactische validatie voordat automatische MASTERED aan staat. Overige domeinen gebruiken door deskundigen gevalideerde rubrics.
+Meetuitkomsten worden niet gebruikt voor ongevraagde niveauwisseling of automatische besluitvorming met substantiële onderwijsgevolgen.
+
+
+R1-ASMT-02 | Docentobservatie + audit
+Niet iedere check/algemene notitie is automatisch meetbewijs. Observatie heeft rubric_id/rubric_version, evidence_eligible, criteriabeoordeling (items/taak waar vereist), broncontext, zelfstandig-veld en beoordelaar. Een eenvoudige observatie mag als instructiesignaal meetellen zonder beheersingsclaim. Bij correctie nieuwe revision en invalidatie/vervanging van afgeleid evidence, waarna idempotente herberekening. Geen automatische stijging naar MASTERED op alleen docentvinkje zonder passende inhoudscontrole.
+
+
+R1-DATA-01 | Atomaire eventketen
+Verwerk schoolpogingen en docentobservaties transactioneel; sla event en outboxbericht in dezelfde commit op. Consumer retry met event_id idempotency en deduplicatie; alleen geslaagde validatie leidt tot evidence; mastery snapshot version/hash; matrix reads consistent met latest_completed_watermark en toont 'Wordt bijgewerkt' wanneer verwerking achterloopt. Nooit gebruikers een vals opslagsucces melden. Concurrente correctie vereist expected_revision. Iedere event bevat organization_id, learner schoolmembership, assignment/class context, skill_version, content_version, session-id en provenance. Original evidence en ingehouden correcties zijn gescheiden; audit zonder antwoorden en vrije notities.
+
+
+R1-DATA-02 | Multi-tenant SQL-constraints en grenzen
+Verifieer schoolconsistentie met samengestelde sleutels, foreign keys of equivalent runtime+databasetransacties. Los naamcollisies met unieke ID op. Test ook exports, cache keys, achtergrondverwerking, logs, documentexport en fallback endpoints op tenant-isolatie. Geef schoolbeheerders geen onderwijsinzage via standaard schooladmin rol. Pseudonimiseer testdata. Escalate changes van schoolroles/entitlements met aparte audit.
+
+
+R1-PRIV-01 | Privacy- en juridische poort
+Geen livegegevens vóór schriftelijke beoordeling van grondslag, verwerkingsverantwoordelijke/verwerker per gegevensstroom, doelbinding, minimumgegevens, bewaartermijnen, rechten uitoefenen, leveranciers/locaties, export/verwijderstrategie en DPIA. Voor deze systematische vaardigheidsbeoordeling mag de privacyverantwoordelijke niet volstaan met 'geen AI dus geen DPIA'. Er moet vóór pilot minimaal een formele DPIA-beoordeling plaatsvinden; voer een DPIA uit wanneer wettelijk vereist en hanteer bij deze beoordelingsfunctie conservatief een uitgewerkte DPIA als startaanname. Privacyrechtelijke beoordeling is geen producttext-taak van Work alleen.
+Per datatype worden bewaartermijn, privacygrond, schoolverantwoordelijke, geautoriseerde lezers en verwijdermechanisme in een beslismatrix vastgelegd. Verwijdering moet ook derived mastery, caches, exports en back-upverloop omvatten; auditretentie beperken. Zolang dit niet is getekend blijft real-person staging/pilot NO GO.
+Referenties: https://autoriteitpersoonsgegevens.nl/nl/onderwerpen/europese-privacywetgeving/data-protection-impact-assessment-dpia ; https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/obligations_en
+
+
+R1-OPS-01 | Meetbaar betrouwbaar systeem
+Maak operationele meetpunten: event_to_matrix_lag, event_fail_count, duplicate_event_count, unauthorized_access_denied, assignment_policy_conflict, stale_preview_rejected, content_hold_denied, docs_version_mismatch. Voeg alerts toe bij privacy-/integriteitsincidenten, runbook incidentrespons, een echte back-upherstelproef met synthetische data en geplande rollback zonder eventverlies. Leg doelwaarden voor RPO/RTO en monitoringslast vast na infrastructuuraudit. Matrix 2 seconden is alleen voorlopig stagetestdoel met hardware/network/dataset in testverslag.
+Staging featureflag standaard uit in production. Nooit een marketing- of 'gepubliceerd' label voor conceptcode of ongereviewde Klink+Docent-lessen.
+
+
+R1-RECO-01 | Regels verklaren, niet als absolute waarheid
+Regelset source-controlled, versieerbaar, didactisch beoordeeld met fixture-tests en mogelijkheid om uit te schakelen. Gebruik gevalideerde leerbewijzen plus gekwalificeerde observaties; algemene docentnotities sturen hoogstens aandacht. Groepsaanbeveling is contextueel voorstel en toont noemer (actieve leerlingen, gemeten leerlingen), peildatum, basis van signalen en ontbrekende meetdekking. Een noemer van 12 met slechts 4 gemeten leerlingen mag geen '4/12 beheerst' claim zonder de dekking te noemen.
+Voeg bij een groep een fairness-review van systematisch onbekende metingen, ongewenste labels en taakverdeling toe. Vergelijk bij pilot of de regelmotor veel vaker dezelfde cursisten naar herhaling stuurt zonder duidelijke grond.
+Elke preview is gekoppeld aan volledige hash inputsnapshot, rule_version, catalog_version, actieve school en lesdatum. Bij actionele goedkeuring rechten, niet-archivering, entitlement, effective access, content release, enrollments en evidence watermark opnieuw valideren. Oude of inconsistente preview weigert met 409 en stelt opnieuw berekenen voor. Geen stille wijzigingen.
+De knop 'Wat heeft mijn groep morgen nodig?' gebruikt de ingestelde lesdatum en toont niet automatisch dat de klas op zondag/vakantie samenkomt. Van externe AI of taalmodellen is geen afhankelijkheid.
+
+
+R1-RECO-02 | Didactische menselijke beslisregie
+Docent kan adviezen accepteren, combineren, overslaan, aanpassen, overweging noteren en na de les controleren of oefening effect had. Geen automatisch klaarzetten, geen automatisch leerlingniveau veranderen, geen automatisch klasoverplaatsing, geen automatisch individuele beperking verhogen. Klink Inzicht mag alleen linken naar daadwerkelijk gepubliceerde lesversies uit Klink of Klink+Docent, nooit HOLD, onverifieerbare deep links of nieuwe ongecontroleerde inhoud.
+
+
+R1-TEST-01 | Nieuwe blokkerende tests bovenop KI001-KI040
+KI041: docent maakt zelf klas maar kan niet een willekeurige schoolleerling koppelen/zien zonder registrar/verified invite.
+KI042: wachtende, verlopen of vervalste invitatie geeft nooit leerlinggegevens vrij.
+KI043: twee schoolklassen met verschillende routepolicies -> assignment exact eigen class; vrij oefenen vraagt geldige expliciete context.
+KI044: instrument met repeated same items+feedback kan niet ten onrechte MASTERED worden door twee werkdagen te spreiden.
+KI045: teacher note zonder rubric -> aandachtstekst maar geen mastery boost.
+KI046: correction invalidates derived evidence, mastery refresh is idempotent en auditeerbaar.
+KI047: outbox retry en dubbele HTTP submit geven 1 event, 1 logisch bewijs en consistente matrix.
+KI048: school A via export/achtergrondtaak/cache kan geen school B-resultaat lezen.
+KI049: ontwerp van volgende lesdatum kan weekend/geen rooster aan; geen fictieve ingeplande lesclaim.
+KI050: rechten vervallen tussen lesadvies-preview en goedkeuring => 409/403 en geen assignment.
+KI051: alleen gedeeltelijk gemeten groep rapporteert meetdekking en verbergt pseudo-precisie.
+KI052: beperkte leerroute met actieve open opdracht -> impactpreview en expliciete beslissing.
+KI053: automatische adviezen onthullen geen concept/HOLD-les en geven netjes geen match.
+KI054: geen netwerk of half voltooide opslag -> expliciete pending/failure, niet vals 'bewaren gelukt'.
+KI055: audit/back-upverwijderingscontract en RTO/RPO runbook bestaan en getest vóór echte pilotdata.
+KI056: WCAG 2.2 AA-acceptatie met keyboard/screenreader/focus en echte matrix-interactie.
+KI057: privacyverantwoordelijke heeft grondslagen, DPIA, retentie en controller/processorrollen afgetekend.
+KI058: geen generatieve AI, ML SDK of verborgen externe AI-egress in productiepad; dependencyreview.
+KI059: Klink+Docent manifest/PR en actuele bekende materialen door Inzicht-write onaangetast.
+KI060: content/itemversie verandert tussen evidence en report -> historie blijft aantoonbaar correct aan oorspronkelijke versie gekoppeld.
+
+
+R1-REVIEW-REGIE
+Alle KI041-KI060 zijn toegevoegd aan de minimale kwaliteitscriteria voor het relevante werkpakket. Kritische P0: KI041/042/043/046/047/048/050/053/054/057/059. Overige P1 tenzij pilotverantwoordelijke na risicoanalyse strenger stelt.
+Status van de tests: ONTWERP, NIET UITGEVOERD. Geen staging, repository-inhoud, juridische toestemming of menselijke praktijkreview is hier daadwerkelijk gecontroleerd.
+
+
+REVIEWPATCH R2 | Tweede ronde: adversarial security, bewijslogica en uitvoerbaarheid | 31 oktober 2026
+STATUS: V1.2-NORMATIEVE AANVULLING. Bij conflict: R2 vóór R1 vóór oorspronkelijke v1.0-tekst, maar uitsluitend binnen Klink Inzicht. Repositories, staging, deelnemers en formele auditors zijn NIET door deze deskreview getest.
+
+
+R2-SEC-01 | Voorlopige leerling en veilige latere koppeling
+Sta een docent met class.create binnen geautoriseerde schoolcontext toe een schoolgebonden provisional learner record (provisional_id, minimumnaam, class_id, status UNLINKED) te maken en diens EIGEN nieuwe observaties op te slaan. Deze identiteit levert geen toegang tot bestaande school-, privé- of andere schoolresultaten. Een voorlopige observatie is gekoppeld aan provisional_id, niet direct aan globale user_id. Leg distinct status VERIFIED_LINK_REQUIRED vast.
+Om een bestaande account te koppelen: geautoriseerde schooltoewijzing of gecontroleerde uitnodiging/acceptatie + identiteitverificatie, matchreview bij ambiguïteit, audit actor/tijd; daarna transactioneel de overdrachtsrelatie van provisional_id naar geverifieerd schoolmembership maken, met preserve-history van oude observaties en kunnen ontkoppelen. Bij conflict twee profielen of overlap niets automatisch samenvoegen. Indien identiteitskoppeling wordt teruggedraaid, evidence niet automatisch als bewijs voor andere identiteit hergebruiken.
+Bevestig dat self-created class niet de bevoegdheid uitbreidt om schoolbreed bestaande cursisten te zoeken of toe te voegen. Test autorisatie vóór reads, niet alleen bij schrijfactie.
+
+
+R2-ASMT-01 | Scheid 'bewijs toerekenen' en 'cursist beheerst'
+Bewijsgeldigheid vier onafhankelijke lagen: 1) identity/source/context valide; 2) item/rubric geschikt en gepubliceerd; 3) afnameconditie onafhankelijk en hints bekend; 4) beoordelingsbesluit volgens criteria/ruleVersion. Maak validatie per event herhaalbaar en begrijpelijk. Uit TRAIN-only content ontstaan activiteitsscores, geen MASTERED. Verplichte minimale check van representativiteit, itemequivalentie, feedbackhergebruik en transfer. Observatie van provisional learner mag narratieve evidence zijn, maar automatische vaardigheids-MASTERED alleen wanneer identiteit en rubrics betrouwbaar genoeg zijn in de geautoriseerde klascontext; houd bij latere koppeling herberekening en review.
+Automatische beheersing is géén ERK-certificering. A1/A2/B1 krijgen niet de Alfa vijf-itemnorm zonder aparte didactische normering.
+
+
+R2-RECO-01 | Robuuste noemer voor groepsadvies
+De bestaande pilotgroepregel '>=3 AND >=30% van actieve klas' is NIET op zichzelf voldoende voor een KLASSIKALE herhaling. Stel aanvullend de voorlopige eis voor voldoende recente toetsdekking van minimaal 60% van actieve klasleden voor die vaardigheid. Bij dekking lager dan 60% mag de motor wel een klein groepje voor reeds aangetoonde behoefte adviseren, maar voor de groep als geheel hoogstens een diagnostische check voorstellen. Toon op advieskaart 'gemeten X van Y, aandacht Z van X'. 60% is een configureerbare pilotdrempel, geen gevalideerde onderwijskundige norm; valideer bij pilot met didacticus. Voorkom bias dat cursisten zonder meetbewijs als onvoldoende worden geteld.
+Voorbeeld: 12 leerlingen, slechts 4 gemeten waarvan 3 tekort = kleine herhalingsgroep + meting van resterende 8, GEEN automatische hele-klasherhaling.
+
+
+R2-RECO-02 | Lesdatum en planuitvoerbaarheid
+Lesvoorstel krijgt explicit target_date, schedule_source UNKNOWN|TEACHER_SELECTED|VERIFIED_TIMETABLE. Als geen roosterintegratie bestaat default de eerstvolgende kalenderdag met waarschuwing dat dit niet bevestigd de volgende lesdag is, en laat de docent kiezen. Vrije lesdatum beïnvloedt niet wat het systeem over beheersing denkt. Groepsactiviteit met duur wordt alleen aangeboden wanneer tijdsinschatting in content metadata is geverifieerd; anders 'duur onbekend'. Voorstel moet rekening houden met lesrechten/lesstatus en geen in Live bestaande Klink+Docent release veronderstellen.
+
+
+R2-SEC-02 | Threat model expliciet bij WP0
+Voer abuse-case threat model uit inclusief: self-created classroom harvest, guessed class/learner IDs, invite token replay, BOLA/IDOR via matrix/API/exports, cache cross-tenant, stale class role, misbruik docentnotities/XSS, CSV-injectie in export, gelijktijdige policywijziging, replay van oefenpogingen, modified assignment contentVersion, indirecte datalek via dashboards, brede platform-support toegang, herstel na verkeerd gekoppeld account. Neem P0 tests voor alle high-impact flows. Server-side inputvalidatie, output-encoding, CSRF-beveiliging waar sessie/cookie relevant, CSP passend bij stack, rate limits op lijst/download/save, pagination en logging zonder vrije observatietekst.
+
+
+R2-OPS-01 | Verwijder-/bewaarbeleid niet impliciet gokken
+Voor real-data pilot moet een getekende datamatrix bestaan per learner profile, provisional profile, observation and revisions, evidence event, mastery derived state, assignments, invite tokens, audit, exports, caches, backups en persoonlijke passport claims. Per rij: doel, controller, processor, grondslag, benodigde velden, retentie/teller, betrokkene-recht, autorisatierollen, secure deletion, backup expiry, audit owner. Geen verzonnen standaard-termijn zoals 'altijd zeven jaar'; wettelijke/contractuele beoordeling eerst. DPIA/gegevensbescherming is een harde poort vóór verwerken van echte gegevens. Documenteer en test geanonimiseerde/gesynthetiseerde staging.
+
+
+R2-OPS-02 | Nonfunctionals en observatie over codepad
+Vast te stellen na repo-spike: RPO/RTO, 95p read matrix onder normale belasting, save latency, error budgets, monitoringkosten en backups. Het eerdere '2 seconden' blijft een testdoel met geprotocolleerde apparatuur, dataset, netwerk, caching en cold/warm-state; nooit garantie zonder meetrapport. Traceer end-to-end: POST observation -> server stored -> outbox delivery -> evidence validated -> mastery computed -> matrix updated, met status queued/processed/error en retries. UI toont eventueel 'Observatie opgeslagen, verwerking voortgang nog bezig' en mag niet vals 'matrix bijgewerkt' melden.
+
+
+R2-GOV-01 | Uitgifte leerbewijs versus oefenbewijs
+Klink Inzicht toont onderwijsbewijs en beheersingsinschatting. Officiële kwalificatie, schoolcertificaat of export naar persoonlijk leerpaspoort is aparte workflow met assessor/issuerrechten en rechtmatige uitgifte; adviesmotor mag dit nooit zelfstandig doen. Leerpaspoort is geen derde schooldatabasereplica.
+
+
+R2-GOV-02 | Conflicthantering document, code en docentreview
+Bij conflict in de hier geschreven v1.2 normatieve afspraken: productgrens en informatiebeveiliging zijn niet onderhandelbaar zonder nieuw expliciet productbesluit; echte code bepaalt wat nu bestaat, niet wat wenselijk is; didactische normen vereisen menselijke review vóór productie. Maak change-control log met besluit-ID, ouder besluit, nieuw besluit, reden, affected sections, migratierisico, implementatie-eigenaar en goedkeuring. Bij nieuw afwijkend inzicht mag Work onder geen beding meteen productie deployen. Geen autonome 'AI' in runtime; WorkChat als ontwikkelassistent verandert deze runtime-eis niet.
+
+
+R2-TEST-01 | Extra tweede-ronde tests
+KI061: docent creëert voorlopige naam, observeert en heropent observatie zonder Klink-accountkoppeling; geen inzage in bestaande user-data.
+KI062: twee provisional profielen met zelfde naam niet automatisch gemerged.
+KI063: gecontroleerde link provisional -> schoolmember behoudt observatieprovenance en geen privédata; rollback ontkoppelt zonder evidence leak.
+KI064: 3/4 van 12 cursisten met onvoldoende bewijs (25% coverage) resulteert NIET in hele-klasherhaling; geeft diagnose + kleine groep.
+KI065: groepsadvies toont noemer 4 gemeten/12 actief, niet alleen 3 aandacht/12.
+KI066: TRAIN-only oefenprestatie kan geen MASTERED-status opleveren.
+KI067: voltooide oefening met hergebruikte feedbackitems kan niet als onafhankelijke transfermeting tellen.
+KI068: volgende dag weekend en geen rooster -> label onbekend en datum kiesbaar zonder fictieve lesplanning.
+KI069: docentnote bevat script/HTML of CSV-formule -> opgeslagen en geëxporteerd zonder XSS/formula-executie.
+KI070: observatie staat in database maar mastery recompute achterloopt -> UI toont saved/pending correct.
+KI071: privacyretentiematrix met controller/grondslag/verwijdering incl. backups is getekend vóór echte pilot.
+KI072: code/docs changelog toont dat alle R1/R2-zwaardere eisen bij implementatie daadwerkelijk zijn meegenomen.
+
+
+R2-EXPERTPASS OP DOCUMENTNIVEAU
+Productgrenzen: PASS. Docentflow met voorlopige cursisten: PASS op ontwerp na R2. Bevoegdheidsketen: PASS op ontwerp na R1/R2, uitvoeringsbewijs OPEN. Didactische bewijswaardering: CONDITIONEEL, toetsrubrics en psychometrische validatie OPEN. Adviesmotor: PASS op deterministisch ontwerp, calibratie voor 60% coverage en 3/30%-regel OPEN. Data/operatie: CONDITIONEEL, repo en restoreproef OPEN. Privacy: GEBLOKKEERD voor live persoonsgegevens totdat bevoegde beoordeling en DPIA klaar zijn. UX/WCAG: DESIGN REVIEW PASS, maar visuele en assistieve gebruikerstests OPEN.
+NIET CONCLUDEREN: dat onafhankelijke experts daadwerkelijk zijn geïnterviewd, dat een juridische audit is afgerond of dat de app gereed is voor publicatie.

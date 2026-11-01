@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-01T03:21:32.842Z",
+  "results": [
+    {
+      "engine": "chromium",
+      "enrollment_tested": true,
+      "wrong_code_denied": true,
+      "password_only_denied": true,
+      "recovery_login": true,
+      "recovery_reuse_denied": true,
+      "focus_managed": true,
+      "automated_axe_violations": 0,
+      "secret_not_in_browser_storage": true,
+      "secure_session_cookie": true
+    },
+    {
+      "engine": "webkit",
+      "enrollment_tested": true,
+      "wrong_code_denied": true,
+      "password_only_denied": true,
+      "recovery_login": true,
+      "recovery_reuse_denied": true,
+      "focus_managed": true,
+      "automated_axe_violations": 0,
+      "secret_not_in_browser_storage": true,
+      "secure_session_cookie": true
+    }
+  ],
+  "concurrent_confirmation": "one accepted, one rejected"
+}

@@ -1,0 +1,31 @@
+{
+  "normalConfigLocalDev": true,
+  "rows": [
+    {
+      "path": "/inzicht",
+      "status": 200,
+      "inzichtUI": false,
+      "notFound": true,
+      "snippet": "\\\":\\\"NEXT_HTTP_ERROR_FALLBACK;404\\\",\\\"name\\\":\\\"Error\\\",\\\"message\\\":\\\"NEXT_NOT_FOUND\\\",\\\"stack\\\":[[\\\"Page\\\",\\\"/Use"
+    },
+    {
+      "path": "/api/inzicht/me",
+      "status": 404,
+      "inzichtUI": false,
+      "notFound": false
+    },
+    {
+      "path": "/api/attempts",
+      "status": 410,
+      "inzichtUI": false,
+      "notFound": false
+    },
+    {
+      "path": "/api/review-items",
+      "status": 410,
+      "inzichtUI": false,
+      "notFound": false
+    }
+  ],
+  "builtWorkerServe": "not verified: local Wrangler exited before ready"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-01",
+  "schema": 5,
+  "current_worker_version": "a078ad0a-9adc-4b1c-ab5c-fbd870b75e21",
+  "measured_worker_version": "7a3424e1-b55b-4a1c-abd5-420fc53228f1",
+  "final_candidate_deployed": false,
+  "deployment_block": "Schema preflight refused by D1 quota; no bypass",
+  "full_latest_online_journey": "blocked by daily D1 write limit",
+  "local_tests": 55,
+  "teacher_regressions": 27,
+  "appearance": "Chromium/WebKit desktop/mobile light/dark passed; no page overflow",
+  "budget_guard": "Blocked before fixture creation; 218998 shared rows written in rolling 24h",
+  "two_second_target": "not met",
+  "baseline_median_ms": 4830.5,
+  "after_median_ms": 2400.5,
+  "quota_error_handler": "503/Retry-After tested locally only; not yet deployed",
+  "production_published": false,
+  "merged": false
+}

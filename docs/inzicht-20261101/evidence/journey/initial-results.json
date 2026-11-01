@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-01T04:25:02.345Z",
+  "staging": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "synthetic_only": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "run": "2026-11-01T04-24-09-670Z",
+      "steps": [
+        "MFA login, class and two provisional learners through UI",
+        "Lost save response retried exactly once; correction and both historical versions persist"
+      ],
+      "group": "ad999942-af60-4414-9a5f-d52039dcad4f",
+      "learners": [
+        "d22d8fa3-012e-410f-ac2a-f38a21789d38",
+        "70c9e38f-634d-45c5-97ce-69c6a4bb4fb0"
+      ],
+      "status": "failed",
+      "error": "TimeoutError: locator.selectOption: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Voorlopig schoolprofiel', { exact: true })\u001b[22m\n"
+    }
+  ]
+}

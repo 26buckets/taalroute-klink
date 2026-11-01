@@ -1,0 +1,132 @@
+{
+  "at": "2026-11-01T01:34:19.446Z",
+  "source": "Local Cloudflare D1 synthetic staging",
+  "source_checksum": "028e4f6e23d72db7ce95e3d499c4874de4d606d3c18cce1a544c122dae9e4261",
+  "sqlite": "exact rows, checksum and foreign keys verified",
+  "postgres": "actual local PostgreSQL import, every row and field compared",
+  "tables": [
+    {
+      "table": "inzicht_schema",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "users",
+      "rows": 6,
+      "exact": true
+    },
+    {
+      "table": "organizations",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "memberships",
+      "rows": 12,
+      "exact": true
+    },
+    {
+      "table": "groups",
+      "rows": 5,
+      "exact": true
+    },
+    {
+      "table": "group_teachers",
+      "rows": 5,
+      "exact": true
+    },
+    {
+      "table": "school_learners",
+      "rows": 33,
+      "exact": true
+    },
+    {
+      "table": "group_memberships",
+      "rows": 33,
+      "exact": true
+    },
+    {
+      "table": "account_links",
+      "rows": 0,
+      "exact": true
+    },
+    {
+      "table": "skill_definitions",
+      "rows": 3,
+      "exact": true
+    },
+    {
+      "table": "teacher_observations",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "observation_revisions",
+      "rows": 4,
+      "exact": true
+    },
+    {
+      "table": "evidence_events",
+      "rows": 4,
+      "exact": true
+    },
+    {
+      "table": "evidence_revocations",
+      "rows": 0,
+      "exact": true
+    },
+    {
+      "table": "outbox_events",
+      "rows": 4,
+      "exact": true
+    },
+    {
+      "table": "mastery_snapshots",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "class_access_policies",
+      "rows": 5,
+      "exact": true
+    },
+    {
+      "table": "content_versions",
+      "rows": 3,
+      "exact": true
+    },
+    {
+      "table": "assignments",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "assignment_recipients",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "recommendation_previews",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "approved_lesson_plans",
+      "rows": 2,
+      "exact": true
+    },
+    {
+      "table": "audit_events",
+      "rows": 24,
+      "exact": true
+    },
+    {
+      "table": "school_attempts",
+      "rows": 0,
+      "exact": true
+    }
+  ],
+  "sessions": "not restored; reauthentication required",
+  "realData": false,
+  "productionRpoRto": "OPEN"
+}

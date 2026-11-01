@@ -1,0 +1,60 @@
+✔ salted scrypt rejects wrong, oversized and malformed credentials (566.2245ms)
+✔ online login creates only hashed server session and a secure host cookie (157.075583ms)
+✔ incorrect and unknown account use identical errors; attempts are bounded (1535.924458ms)
+✔ host, scheme, origin, disabled account and local token are refused online (144.379959ms)
+✔ logout revokes server session; expiry and user revocation apply immediately (424.157042ms)
+✔ scheduled outbox retries safely and removes only expired limits and sessions (161.930583ms)
+✔ deployment guard rejects production names, bindings, routes and unprotected asset handling (1.242875ms)
+✔ RFC 6238 published SHA-1 vectors and narrow/replay-protected time window (1.033417ms)
+✔ factor encryption authenticates user, key and ciphertext; no plaintext at rest (0.491416ms)
+✔ password alone has no dossier access; enrollment needs a valid code and returns recovery codes once (304.212792ms)
+✔ OTP replay, concurrent confirmation and recovery reuse cannot issue two sessions (429.890167ms)
+✔ five attempts, expiry, cancellation and replacement challenge are enforced (707.567ms)
+✔ MFA rate limit persists across fresh password challenges (283.637167ms)
+✔ password rotation, user disable, wrong origin, missing secret and factor reset fail closed (706.504708ms)
+inzicht.request_failed
+✔ failed session transaction preserves recovery code and does not leave partial authentication (280.933708ms)
+✔ migration revokes all legacy password-only sessions without deleting education data (3.611292ms)
+✔ legacy or fabricated password-only session remains unusable even after MFA enrollment (150.10625ms)
+✔ request bodies are bounded while streaming, including multibyte input and invalid UTF-8 (4.652041ms)
+✔ KI001/002 class persists, rename conflict, archive preserves observations (26.3665ms)
+✔ KI003/004/061/062 provisional names persist separately and can be observed (3.275291ms)
+✔ KI006/007/008/045/046 observations have revisions, invalidated provenance and no automatic mastery (3.056167ms)
+✔ KI011/012/013/014: unknown, one measure, independent transfer pair, same day (0.173083ms)
+✔ KI015/016/017: attention, recheck retains prior mastery, revoked event removed (0.0865ms)
+✔ KI010/024/044/066/067: group response, completion, repeated feedback and TRAIN cannot prove mastery (0.077125ms)
+✔ KI018: matrix drill-down contains the exact saved observation event (2.504666ms)
+✔ KI022/023/027/053: HOLD never appears, cannot be assigned, absent measure match is explicit (2.957ms)
+✔ KI025/026/051/064/065: deterministic 60% coverage gate and honest denominators (0.517334ms)
+✔ KI028/050: stale evidence or role change rejects approval without assignment (6.193583ms)
+✔ KI029: reject and explicit approve never silently issue an assignment (5.273ms)
+✔ KI030/031/034/040/048: tenant, class, admin, support and revoked teacher denied on reads and writes (3.09875ms)
+✔ KI032: logout revokes server session and all data responses are no-store (1.770583ms)
+✔ KI041: self-created class cannot harvest existing school users (2.357333ms)
+✔ KI042/063: invite is account-bound, single use; unlink preserves source and closes access (3.948917ms)
+✔ KI047: HTTP replay is one observation/event/outbox; different body on same key conflicts (2.402333ms)
+✔ KI049/068: tomorrow without timetable never claims a scheduled lesson (3.204833ms)
+✔ KI052: policy requires current impact preview and explicit confirmation (2.593375ms)
+✔ KI054/070: successful storage is distinct from idempotent mastery processing (3.163ms)
+✔ KI069: SQL values remain data; spreadsheet formula export escaped (2.298541ms)
+✔ Trust boundary: production disabled, unauthenticated denied, CSRF denied, malformed values rejected (2.546875ms)
+✔ Database itself rejects cross-tenant enrollment and teacher references (1.402209ms)
+30x100 SQLite service: 3.0ms, no network, warm runtime; not a production SLO
+✔ KI035: 30 × 100 computed matrix, documented local synthetic timing (5.282792ms)
+✔ KI002/005/021 school attempts survive reads, reject altered assignment context and revoked policy (12.652625ms)
+✔ KI005/019/020/043: multiple classes, explicit context, individual override, registrar enrollment (7.800167ms)
+✔ KI018/019/020: restore inheritance previews the actual class standard and follows later changes (3.397ms)
+✔ KI021/043: future assignments stay hidden, free practice respects policy, withdrawal preserves evidence (8.466416ms)
+✔ KI024/048: education report includes observations and evidence, never other tenants or credentials (3.844959ms)
+✔ KI048: automatic processing keeps two schools and their evidence hashes separate (2.987ms)
+✔ KI042: waiting, tampered and expired invitation never opens a learner dossier (2.412833ms)
+inzicht.processing_failed
+✔ processing failure backs off only its class, preserves events and exposes no dossiers to administration (3.787833ms)
+ℹ tests 49
+ℹ suites 0
+ℹ pass 49
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3382.403833
