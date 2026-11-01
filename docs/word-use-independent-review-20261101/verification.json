@@ -17,10 +17,12 @@
   "lintScope": "All six changed scripts; TypeScript check covers the application.",
   "wholeRepositoryLint": {
     "passed": false,
-    "diagnostics": 412,
+    "diagnostics": 417,
     "allDiagnosticFilesOutsideChangedScope": true,
     "note": "Historical lint diagnostics remain in unchanged files; no claim of a clean whole-repository lint."
   },
+  "browserSemanticBankUnchangedAcrossLogoUpdate": true,
+  "postLogoChecks": "compiled flows, audio and responsive/preserved screens repeated after integrating the approved logo update",
   "independentAiReviewers": 3,
   "independentHumanReview": false,
   "classroomPilot": "open",
