@@ -9,6 +9,7 @@ import { contentById } from '../lib/connected-content.ts';
 import { synonymCollections, synonymActivities } from '../lib/synonyms.ts';
 import { wordUseCollections } from '../lib/word-use.ts';
 import complete from '../docs/klink-complete-release-20261101/import-manifest.json' with {type:'json'};
+import reviewedB1 from '../docs/b1-reviewed-release-20261101/b1-release-manifest.json' with {type:'json'};
 import { writingDictationRounds } from '../lib/writing-dictation.ts';
 
 void test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
@@ -38,7 +39,7 @@ void test('Twelve independent chapters cover all registered activities without c
       if (collection.contentUrl) {
         assert.equal(collection.exercises.length, 0, 'Deferred content stays out of the startup bundle');
         assert(collection.exerciseCount > 0);
-        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101)\//.test(collection.contentUrl));
+        assert(/^\/practice-content\/(klink-20261029|word-self-20261031|reading-rounds-20261031|complete-20261101|klink-writing-20261101|b1-review-20261101)\//.test(collection.contentUrl));
         continue;
       }
       assert(collection.exercises.length);
@@ -79,7 +80,10 @@ void test('Source levels are honest, never inferred from matching words or a com
 });
 
 void test('All 158 complete-release rounds are available through the existing level menus and links',()=>{
- for(const row of complete.rows){
+ for(const original of complete.rows){
+  const revision=reviewedB1.rows.find(entry=>entry.before.id===original.id);
+  if(revision){assert.deepEqual(revision.before,original);assert.deepEqual({...revision.after,url:original.url},original);}
+  const row=revision?.after??original;
   const collection=chapterCollections(row.activity).find(c=>c.id===row.id);assert(collection,row.id);
   assert.equal(collection.level,row.level);assert.equal(collection.contentUrl,row.url);assert.equal(collection.exerciseCount,row.count);
   const chapter=practiceChapters.find(c=>c.activities.includes(row.activity));

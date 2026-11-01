@@ -45,7 +45,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    assert.equal(await p.locator('h1').innerText(),'Hoor en typ','The practice heading must not show the word-list answers');
    assert.equal(await task.locator('.cp-word-hint strong').count(),0);
    const input=task.getByRole('textbox',{name:'Jouw antwoord',exact:true});await input.waitFor();
-   await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);
+   await p.waitForFunction(()=>document.querySelector('.cp-text-entry input')?.disabled === false);
    assert.equal(await input.inputValue(),i===5?'Mijn eigen concept':'');
    if(e.meaningCue)assert((await task.innerText()).includes(e.meaningCue));
    await input.fill('zzq');await task.getByRole('button',{name:'Controleer',exact:true}).click();
@@ -61,7 +61,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
    const answer=await p.evaluate(k=>JSON.parse(localStorage.getItem(k)),writingAnswerKey(e.writingSourceId));assert.equal(answer.first,'zzq');assert.equal(answer.last,await input.inputValue());
    await p.locator('[data-practice-next]').click();
    checks.push({engine,sourceId:e.writingSourceId,canonicalId:e.exerciseId,wrongRejected:true,correctAccepted:true,noAnswerModelBeforeHelp:true,noImage:true,noReadingOrReviewClaim:true,helpTracked:i===6});
-   if(i===4){await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();const draft=p.getByRole('textbox',{name:'Jouw antwoord',exact:true});await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);await draft.fill('Mijn eigen concept');await p.reload();await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();}
+   if(i===4){await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();const draft=p.getByRole('textbox',{name:'Jouw antwoord',exact:true});await p.waitForFunction(()=>document.querySelector('.cp-text-entry input')?.disabled === false);await draft.fill('Mijn eigen concept');await p.reload();await p.locator(`[data-exercise-id="${round.exercises[5].exerciseId}"]`).waitFor();}
   }
   await p.getByRole('heading',{name:'Goed geoefend',exact:true}).waitFor();assert.equal(await p.evaluate(k=>JSON.parse(localStorage.getItem(k)).done.length,progressKey),round.exercises.length);
   assert.deepEqual(await p.evaluate(seed=>Object.fromEntries(Object.keys(seed).map(k=>[k,localStorage.getItem(k)])),old),old);

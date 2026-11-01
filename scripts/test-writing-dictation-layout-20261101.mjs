@@ -18,7 +18,7 @@ try{for(const[engine,type]of Object.entries({chromium,webkit})){
   await p.goto('about:blank');await p.goto(route);await p.locator(`[data-exercise-id="${e.exerciseId}"]`).waitFor();
   const automatic=p.locator('[data-practice-automatic]');if(await automatic.getAttribute('aria-pressed')==='false')await automatic.click();
   assert.equal(await p.locator('html').getAttribute('data-theme'),theme);
-  await p.waitForFunction(()=>!document.querySelector('.cp-text-entry input')?.disabled);
+  await p.waitForFunction(()=>document.querySelector('.cp-text-entry input')?.disabled === false);
   for(const state of['question','correct']){
    if(state==='correct'){await p.getByRole('textbox',{name:'Jouw antwoord',exact:true}).fill(e.helpWord);await p.getByRole('button',{name:'Controleer',exact:true}).click();await p.locator('[data-practice-ready="true"]').waitFor();assert((await p.locator('.cp-exercise-feedback').innerText()).includes(e.correctFeedback));}
    const box=await p.evaluate(()=>({viewport:innerWidth,scroll:document.documentElement.scrollWidth,input:document.querySelector('.cp-text-entry input').getBoundingClientRect().toJSON(),buttons:[...document.querySelectorAll('.cp-task-card button')].filter(b=>b.getBoundingClientRect().width>0).map(b=>({label:b.getAttribute('aria-label')||b.textContent,width:b.getBoundingClientRect().width,height:b.getBoundingClientRect().height}))}));

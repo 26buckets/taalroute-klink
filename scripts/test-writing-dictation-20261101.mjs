@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { contentPackages } from '../lib/package-content.ts';
+import { allPackageWords, contentPackages } from '../lib/package-content.ts';
 import { groupExercises } from '../lib/group-practice.ts';
 import { writingDictationRounds } from '../lib/writing-dictation.ts';
 import { displayedChapterCollections, chapterHash, parseChapterHash, selectedChapterCollection, chapterExerciseChoices } from '../lib/practice-chapters.ts';
@@ -28,6 +28,7 @@ test('100 source positions retain the answer contract: 54 references, 46 new can
       assert(e.requiresAudio&&e.audioOnly);assert.equal(e.prompt.audio.src,position.audio);
       assert.equal(e.exampleWord,undefined);assert.equal(e.displayWord,undefined);assert.equal(e.prompt.image,undefined);
       assert.equal(e.helpWord,position.target);assert.equal(e.independentReading,false);assert.equal(e.reviewEligible,false);
+      if(position.wordId)assert.equal(allPackageWords.find(w=>w.id===position.wordId)?.word,position.target);
       assert(isInstructionAudioEnabled(e.instructionAudio.src));
       assert(learningGoalFor(e)?.learnerText);
       const source=originals.get(e.exerciseId);
@@ -50,8 +51,8 @@ test('fifteen short stable rounds open through both writing and spelling without
       assert.equal(selectedChapterCollection(parseChapterHash(chapterHash(location)))?.id,row.id);
       assert.equal(row.help,'practice');assert.equal(row.image,undefined);
       assert.equal(Boolean(row.wordRound),row.exercises.every(e=>e.wordId));
-      for(const choice of chapterExerciseChoices(location)){
-        const selected=selectedChapterCollection({...location,chapter:choice.chapter,activity:choice.id,collection:choice.collection,...(choice.words?{words:choice.words}:{})});
+      for(const level of ['alfa-c','all'])for(const help of ['practice','all',undefined])for(const choice of chapterExerciseChoices({...location,level,help})){
+        const selected=selectedChapterCollection({...location,level,help,chapter:choice.chapter,activity:choice.id,collection:choice.collection,...(choice.words?{words:choice.words}:{})});
         assert(selected);assert.equal(selected.level,'alfa-c');assert.equal(selected.help??'practice','practice');
         if(row.wordRound)assert.deepEqual(new Set(selected.wordRound.wordIds),new Set(row.wordRound.wordIds),'Other exercise keeps the same complete word set');
         else assert.equal(choice.id,'dictation','A missing shared word identity must not offer a different word set');
