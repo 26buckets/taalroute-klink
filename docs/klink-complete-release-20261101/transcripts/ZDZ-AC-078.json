@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-078",
+  "sha256": "4c4bfa07e8a5954e59a0ea7232c43f7d027969b19050a02a7871eca2c236d17e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ja, ik begrijp het nu.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ja, ik begrijp het nu.",
+      "temperature": 0,
+      "avg_logprob": -0.13894283771514893,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.952439933841868e-12,
+      "words": [
+        {
+          "word": " Ja,",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9619140625
+        },
+        {
+          "word": " ik",
+          "start": 0.34,
+          "end": 0.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begrijp",
+          "start": 0.4,
+          "end": 0.74,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 0.74,
+          "end": 0.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nu.",
+          "start": 0.82,
+          "end": 0.92,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

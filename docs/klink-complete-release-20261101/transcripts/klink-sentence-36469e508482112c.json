@@ -1,0 +1,41 @@
+{
+  "id": "klink-sentence-36469e508482112c",
+  "sha256": "627caa4276b77f7e38de099118522ce3815e7ea516b023e9008f820872781487",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit zijn tomaten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.06,
+      "text": " Dit zijn tomaten.",
+      "temperature": 0,
+      "avg_logprob": -0.18994414806365967,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 3.992154263415815e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.93408203125
+        },
+        {
+          "word": " zijn",
+          "start": 0.22,
+          "end": 0.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tomaten.",
+          "start": 0.48,
+          "end": 1.06,
+          "probability": 0.98486328125
+        }
+      ]
+    }
+  ]
+}

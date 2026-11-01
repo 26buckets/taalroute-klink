@@ -1,0 +1,264 @@
+{
+  "id": "A1-T30",
+  "sha256": "ff2bb4609d00b26a00f61ae8fd8027578cc37dbf97cbf8e6d747c8bef2d020f7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op het station kijkt een vrouw op het bord. De trein naar de stad vertrekt om 9 uur van spoor 3. Het is nu 8 uur. De vrouw wacht bij spoor 3. Later stapt zij in de trein.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.84,
+      "text": " Op het station kijkt een vrouw op het bord. De trein naar de stad vertrekt om 9 uur van spoor 3.",
+      "temperature": 0,
+      "avg_logprob": -0.04358117542569599,
+      "compression_ratio": 1.36,
+      "no_speech_prob": 5.958710521530852e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " het",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " station",
+          "start": 0.26,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " kijkt",
+          "start": 0.58,
+          "end": 1.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.0,
+          "end": 1.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 1.1,
+          "end": 1.44,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 1.44,
+          "end": 1.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.58,
+          "end": 1.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bord.",
+          "start": 1.68,
+          "end": 1.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " De",
+          "start": 2.12,
+          "end": 2.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " trein",
+          "start": 2.28,
+          "end": 2.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 2.56,
+          "end": 2.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 2.66,
+          "end": 2.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stad",
+          "start": 2.78,
+          "end": 3.0,
+          "probability": 1.0
+        },
+        {
+          "word": " vertrekt",
+          "start": 3.0,
+          "end": 3.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 3.46,
+          "end": 3.64,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " 9",
+          "start": 3.64,
+          "end": 3.9,
+          "probability": 0.7529296875
+        },
+        {
+          "word": " uur",
+          "start": 3.9,
+          "end": 4.18,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " van",
+          "start": 4.18,
+          "end": 4.32,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " spoor",
+          "start": 4.32,
+          "end": 4.68,
+          "probability": 0.85595703125
+        },
+        {
+          "word": " 3.",
+          "start": 4.68,
+          "end": 4.84,
+          "probability": 0.9921875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.08,
+      "end": 9.0,
+      "text": " Het is nu 8 uur. De vrouw wacht bij spoor 3. Later stapt zij in de trein.",
+      "temperature": 0,
+      "avg_logprob": -0.04358117542569599,
+      "compression_ratio": 1.36,
+      "no_speech_prob": 5.958710521530852e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 5.08,
+          "end": 5.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 5.24,
+          "end": 5.36,
+          "probability": 1.0
+        },
+        {
+          "word": " nu",
+          "start": 5.36,
+          "end": 5.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 8",
+          "start": 5.5,
+          "end": 5.72,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " uur.",
+          "start": 5.72,
+          "end": 6.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " De",
+          "start": 6.2,
+          "end": 6.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 6.34,
+          "end": 6.6,
+          "probability": 1.0
+        },
+        {
+          "word": " wacht",
+          "start": 6.6,
+          "end": 6.82,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 6.82,
+          "end": 6.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " spoor",
+          "start": 6.96,
+          "end": 7.3,
+          "probability": 1.0
+        },
+        {
+          "word": " 3.",
+          "start": 7.3,
+          "end": 7.5,
+          "probability": 1.0
+        },
+        {
+          "word": " Later",
+          "start": 7.72,
+          "end": 8.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stapt",
+          "start": 8.02,
+          "end": 8.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zij",
+          "start": 8.32,
+          "end": 8.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 8.48,
+          "end": 8.62,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.62,
+          "end": 8.7,
+          "probability": 1.0
+        },
+        {
+          "word": " trein.",
+          "start": 8.7,
+          "end": 9.0,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

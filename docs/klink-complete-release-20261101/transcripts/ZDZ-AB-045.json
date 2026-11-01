@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-045",
+  "sha256": "601053fe5c0a354edec3c476f2930ca37c1cbb441d461c9780369f5fe118d2f8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Neem een tas.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Neem een tas.",
+      "temperature": 0,
+      "avg_logprob": -0.4021976590156555,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 4.978244379227892e-12,
+      "words": [
+        {
+          "word": " Neem",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9287109375
+        },
+        {
+          "word": " een",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " tas.",
+          "start": 0.38,
+          "end": 0.66,
+          "probability": 0.96533203125
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-95afd41932580f46",
+  "sha256": "ed3386023fb83fa88572cbef48f70294a3a70fd6428f7835969cac58e73ad6d8",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Victor maakt de borstels schoon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " Victor maakt de borstels schoon.",
+      "temperature": 0,
+      "avg_logprob": -0.15868473052978516,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 0.0008819425129331648,
+      "words": [
+        {
+          "word": " Victor",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.8876953125
+        },
+        {
+          "word": " maakt",
+          "start": 0.3,
+          "end": 0.76,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.76,
+          "end": 0.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " borstels",
+          "start": 0.9,
+          "end": 1.34,
+          "probability": 0.86279296875
+        },
+        {
+          "word": " schoon.",
+          "start": 1.34,
+          "end": 1.68,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

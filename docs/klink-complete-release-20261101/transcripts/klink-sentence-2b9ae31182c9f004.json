@@ -1,0 +1,77 @@
+{
+  "id": "klink-sentence-2b9ae31182c9f004",
+  "sha256": "8952c435dfd5256cb8b34bce34df5fa44931242517bce5a3ab4e78c6b2cdb2dd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe het licht aan als het donker is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": " Ik doe het licht aan als het donker is.",
+      "temperature": 0,
+      "avg_logprob": -0.07761891682942708,
+      "compression_ratio": 0.8863636363636364,
+      "no_speech_prob": 4.577754841861292e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9453125
+        },
+        {
+          "word": " doe",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 0.26,
+          "end": 0.42,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " licht",
+          "start": 0.42,
+          "end": 0.7,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " aan",
+          "start": 0.7,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " als",
+          "start": 0.96,
+          "end": 1.26,
+          "probability": 0.98828125
+        },
+        {
+          "word": " het",
+          "start": 1.26,
+          "end": 1.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " donker",
+          "start": 1.38,
+          "end": 1.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is.",
+          "start": 1.74,
+          "end": 2.0,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

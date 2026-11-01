@@ -1,0 +1,620 @@
+{
+  "id": "A2-T48",
+  "sha256": "355b337d91b99c98f7687df0516d1668c58e071b485e607126d932379004a85d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In het buurthuis oefent een groep elke donderdag samen Nederlands. Deze week is de grote ruimte bezet. De medewerker regelt daarom een kleinere ruimte boven. Daar staan maar acht stoelen. De deelnemers komen daarom in twee groepen. De eerste groep komt om tien uur, de tweede om elf uur. Iedereen krijgt woensdag een bericht met zijn tijd. Beide bijeenkomsten duren drie kwartier. De deelnemers gebruiken dezelfde oefentekst als vorige week. Na afloop brengen zij de stoelen terug naar de medewerker.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.96,
+      "text": " In het buurthuis oefent een groep elke donderdag samen Nederlands.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.978515625
+        },
+        {
+          "word": " het",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.994140625
+        },
+        {
+          "word": " buurthuis",
+          "start": 0.26,
+          "end": 0.74,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " oefent",
+          "start": 0.74,
+          "end": 1.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 1.02,
+          "end": 1.16,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " groep",
+          "start": 1.16,
+          "end": 1.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " elke",
+          "start": 1.36,
+          "end": 1.7,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " donderdag",
+          "start": 1.7,
+          "end": 2.1,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " samen",
+          "start": 2.1,
+          "end": 2.4,
+          "probability": 0.9501953125
+        },
+        {
+          "word": " Nederlands.",
+          "start": 2.4,
+          "end": 2.96,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.36,
+      "end": 5.26,
+      "text": " Deze week is de grote ruimte bezet.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 3.36,
+          "end": 3.96,
+          "probability": 1.0
+        },
+        {
+          "word": " week",
+          "start": 3.96,
+          "end": 4.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is",
+          "start": 4.16,
+          "end": 4.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.28,
+          "end": 4.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " grote",
+          "start": 4.36,
+          "end": 4.6,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " ruimte",
+          "start": 4.6,
+          "end": 4.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bezet.",
+          "start": 4.94,
+          "end": 5.26,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.64,
+      "end": 8.54,
+      "text": " De medewerker regelt daarom een kleinere ruimte boven.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.64,
+          "end": 6.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerker",
+          "start": 6.16,
+          "end": 6.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " regelt",
+          "start": 6.7,
+          "end": 7.0,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " daarom",
+          "start": 7.0,
+          "end": 7.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 7.32,
+          "end": 7.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kleinere",
+          "start": 7.42,
+          "end": 7.88,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " ruimte",
+          "start": 7.88,
+          "end": 8.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " boven.",
+          "start": 8.2,
+          "end": 8.54,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.78,
+      "end": 10.22,
+      "text": " Daar staan maar acht stoelen.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " Daar",
+          "start": 8.78,
+          "end": 9.26,
+          "probability": 0.99609375
+        },
+        {
+          "word": " staan",
+          "start": 9.26,
+          "end": 9.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 9.46,
+          "end": 9.62,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " acht",
+          "start": 9.62,
+          "end": 9.88,
+          "probability": 0.740234375
+        },
+        {
+          "word": " stoelen.",
+          "start": 9.88,
+          "end": 10.22,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 10.58,
+      "end": 12.84,
+      "text": " De deelnemers komen daarom in twee groepen.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 10.58,
+          "end": 11.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deelnemers",
+          "start": 11.06,
+          "end": 11.58,
+          "probability": 1.0
+        },
+        {
+          "word": " komen",
+          "start": 11.58,
+          "end": 11.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " daarom",
+          "start": 11.8,
+          "end": 12.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 12.16,
+          "end": 12.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 12.24,
+          "end": 12.42,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " groepen.",
+          "start": 12.42,
+          "end": 12.84,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 13.2,
+      "end": 16.9,
+      "text": " De eerste groep komt om tien uur, de tweede om elf uur.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 13.2,
+          "end": 13.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerste",
+          "start": 13.64,
+          "end": 13.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " groep",
+          "start": 13.92,
+          "end": 14.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komt",
+          "start": 14.2,
+          "end": 14.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 14.42,
+          "end": 14.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tien",
+          "start": 14.54,
+          "end": 14.72,
+          "probability": 0.30712890625
+        },
+        {
+          "word": " uur,",
+          "start": 14.72,
+          "end": 15.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 15.32,
+          "end": 15.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tweede",
+          "start": 15.56,
+          "end": 15.96,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 15.96,
+          "end": 16.38,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " elf",
+          "start": 16.38,
+          "end": 16.64,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " uur.",
+          "start": 16.64,
+          "end": 16.9,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 17.36,
+      "end": 19.42,
+      "text": " Iedereen krijgt woensdag een bericht met zijn tijd.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " Iedereen",
+          "start": 17.36,
+          "end": 17.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " krijgt",
+          "start": 17.9,
+          "end": 18.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 18.16,
+          "end": 18.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 18.54,
+          "end": 18.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bericht",
+          "start": 18.64,
+          "end": 18.88,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 18.88,
+          "end": 19.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 19.0,
+          "end": 19.14,
+          "probability": 0.98828125
+        },
+        {
+          "word": " tijd.",
+          "start": 19.14,
+          "end": 19.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.18,
+      "end": 21.86,
+      "text": " Beide bijeenkomsten duren drie kwartier.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " Beide",
+          "start": 20.18,
+          "end": 20.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bijeenkomsten",
+          "start": 20.48,
+          "end": 21.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " duren",
+          "start": 21.02,
+          "end": 21.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " drie",
+          "start": 21.24,
+          "end": 21.44,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " kwartier.",
+          "start": 21.44,
+          "end": 21.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 22.2,
+      "end": 25.1,
+      "text": " De deelnemers gebruiken dezelfde oefentekst als vorige week.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 22.2,
+          "end": 22.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deelnemers",
+          "start": 22.7,
+          "end": 23.16,
+          "probability": 1.0
+        },
+        {
+          "word": " gebruiken",
+          "start": 23.16,
+          "end": 23.54,
+          "probability": 1.0
+        },
+        {
+          "word": " dezelfde",
+          "start": 23.54,
+          "end": 23.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oefentekst",
+          "start": 23.94,
+          "end": 24.42,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " als",
+          "start": 24.42,
+          "end": 24.54,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vorige",
+          "start": 24.54,
+          "end": 24.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " week.",
+          "start": 24.88,
+          "end": 25.1,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "seek": 0,
+      "start": 25.56,
+      "end": 28.18,
+      "text": " Na afloop brengen zij de stoelen terug naar de medewerker.",
+      "temperature": 0,
+      "avg_logprob": -0.07596243386981132,
+      "compression_ratio": 1.7605633802816902,
+      "no_speech_prob": 6.752324827746792e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 25.56,
+          "end": 25.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " afloop",
+          "start": 25.96,
+          "end": 26.36,
+          "probability": 1.0
+        },
+        {
+          "word": " brengen",
+          "start": 26.36,
+          "end": 26.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 26.66,
+          "end": 26.78,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " de",
+          "start": 26.78,
+          "end": 26.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stoelen",
+          "start": 26.9,
+          "end": 27.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " terug",
+          "start": 27.16,
+          "end": 27.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 27.38,
+          "end": 27.5,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 27.5,
+          "end": 27.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker.",
+          "start": 27.62,
+          "end": 28.18,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

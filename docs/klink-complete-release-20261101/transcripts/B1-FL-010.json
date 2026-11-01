@@ -1,0 +1,611 @@
+{
+  "id": "B1-FL-010",
+  "sha256": "0416c11a5dc39196ce7a6f81a644b165fcda138581f6326d86999543102d09ff",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Meriem koopt online een jas, maar merkt na het passen dat de mouwen te kort zijn. Volgens de website mag ze artikelen binnen 14 dagen terugsturen, zolang ze ongebruikt zijn. De jas is nog nieuw en de kaartjes zitten eraan. Toch twijfelt ze, omdat ze de originele verpakking al heeft weggegooid. Ze neemt contact op met de klantenservice. Die bevestigt dat een andere stevige doos ook goed is, zolang de jas goed beschermd blijft. Meriem besluit de jas terug te sturen en bewaart de verzendbevestiging.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.08,
+      "text": " Meriem koopt online een jas, maar merkt na het passen dat de mouwen te kort zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " Meriem",
+          "start": 0.0,
+          "end": 0.42,
+          "probability": 0.744140625
+        },
+        {
+          "word": " koopt",
+          "start": 0.42,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " online",
+          "start": 0.78,
+          "end": 1.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 1.16,
+          "end": 1.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " jas,",
+          "start": 1.4,
+          "end": 1.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 1.76,
+          "end": 1.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " merkt",
+          "start": 1.92,
+          "end": 2.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " na",
+          "start": 2.24,
+          "end": 2.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 2.38,
+          "end": 2.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " passen",
+          "start": 2.56,
+          "end": 2.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dat",
+          "start": 2.9,
+          "end": 3.02,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " de",
+          "start": 3.02,
+          "end": 3.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " mouwen",
+          "start": 3.16,
+          "end": 3.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 3.46,
+          "end": 3.6,
+          "probability": 0.63232421875
+        },
+        {
+          "word": " kort",
+          "start": 3.6,
+          "end": 3.76,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn.",
+          "start": 3.76,
+          "end": 4.08,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.24,
+      "end": 9.24,
+      "text": " Volgens de website mag ze artikelen binnen 14 dagen terugsturen, zolang ze ongebruikt zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 4.24,
+          "end": 4.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 4.62,
+          "end": 4.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " website",
+          "start": 4.74,
+          "end": 5.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mag",
+          "start": 5.2,
+          "end": 5.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 5.48,
+          "end": 5.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " artikelen",
+          "start": 5.62,
+          "end": 6.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " binnen",
+          "start": 6.1,
+          "end": 6.32,
+          "probability": 1.0
+        },
+        {
+          "word": " 14",
+          "start": 6.32,
+          "end": 6.72,
+          "probability": 0.69775390625
+        },
+        {
+          "word": " dagen",
+          "start": 6.72,
+          "end": 7.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " terugsturen,",
+          "start": 7.12,
+          "end": 7.84,
+          "probability": 0.88818359375
+        },
+        {
+          "word": " zolang",
+          "start": 7.98,
+          "end": 8.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 8.3,
+          "end": 8.44,
+          "probability": 1.0
+        },
+        {
+          "word": " ongebruikt",
+          "start": 8.44,
+          "end": 9.04,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn.",
+          "start": 9.04,
+          "end": 9.24,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.42,
+      "end": 11.68,
+      "text": " De jas is nog nieuw en de kaartjes zitten eraan.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.42,
+          "end": 9.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas",
+          "start": 9.54,
+          "end": 9.76,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 9.76,
+          "end": 9.88,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 9.88,
+          "end": 10.04,
+          "probability": 1.0
+        },
+        {
+          "word": " nieuw",
+          "start": 10.04,
+          "end": 10.36,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 10.36,
+          "end": 10.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 10.52,
+          "end": 10.62,
+          "probability": 1.0
+        },
+        {
+          "word": " kaartjes",
+          "start": 10.62,
+          "end": 11.04,
+          "probability": 1.0
+        },
+        {
+          "word": " zitten",
+          "start": 11.04,
+          "end": 11.28,
+          "probability": 1.0
+        },
+        {
+          "word": " eraan.",
+          "start": 11.28,
+          "end": 11.68,
+          "probability": 0.99609375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.8,
+      "end": 15.4,
+      "text": " Toch twijfelt ze, omdat ze de originele verpakking al heeft weggegooid.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " Toch",
+          "start": 11.8,
+          "end": 12.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " twijfelt",
+          "start": 12.08,
+          "end": 12.46,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ze,",
+          "start": 12.46,
+          "end": 12.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " omdat",
+          "start": 12.82,
+          "end": 13.0,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 13.0,
+          "end": 13.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 13.18,
+          "end": 13.32,
+          "probability": 1.0
+        },
+        {
+          "word": " originele",
+          "start": 13.32,
+          "end": 13.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verpakking",
+          "start": 13.94,
+          "end": 14.4,
+          "probability": 1.0
+        },
+        {
+          "word": " al",
+          "start": 14.4,
+          "end": 14.58,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 14.58,
+          "end": 14.78,
+          "probability": 1.0
+        },
+        {
+          "word": " weggegooid.",
+          "start": 14.78,
+          "end": 15.4,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.54,
+      "end": 17.6,
+      "text": " Ze neemt contact op met de klantenservice.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 15.54,
+          "end": 15.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " neemt",
+          "start": 15.76,
+          "end": 16.08,
+          "probability": 1.0
+        },
+        {
+          "word": " contact",
+          "start": 16.08,
+          "end": 16.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 16.4,
+          "end": 16.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 16.62,
+          "end": 16.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 16.76,
+          "end": 16.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klantenservice.",
+          "start": 16.88,
+          "end": 17.6,
+          "probability": 0.99560546875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.62,
+      "end": 22.76,
+      "text": " Die bevestigt dat een andere stevige doos ook goed is, zolang de jas goed beschermd blijft.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 17.62,
+          "end": 18.1,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " bevestigt",
+          "start": 18.1,
+          "end": 18.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 18.64,
+          "end": 18.78,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 18.78,
+          "end": 18.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 18.96,
+          "end": 19.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stevige",
+          "start": 19.28,
+          "end": 19.78,
+          "probability": 0.994140625
+        },
+        {
+          "word": " doos",
+          "start": 19.78,
+          "end": 20.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ook",
+          "start": 20.1,
+          "end": 20.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " goed",
+          "start": 20.36,
+          "end": 20.58,
+          "probability": 1.0
+        },
+        {
+          "word": " is,",
+          "start": 20.58,
+          "end": 20.84,
+          "probability": 1.0
+        },
+        {
+          "word": " zolang",
+          "start": 21.0,
+          "end": 21.34,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.34,
+          "end": 21.46,
+          "probability": 1.0
+        },
+        {
+          "word": " jas",
+          "start": 21.46,
+          "end": 21.72,
+          "probability": 1.0
+        },
+        {
+          "word": " goed",
+          "start": 21.72,
+          "end": 21.9,
+          "probability": 1.0
+        },
+        {
+          "word": " beschermd",
+          "start": 21.9,
+          "end": 22.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " blijft.",
+          "start": 22.4,
+          "end": 22.76,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.04,
+      "end": 26.8,
+      "text": " Meriem besluit de jas terug te sturen en bewaart de verzendbevestiging.",
+      "temperature": 0,
+      "avg_logprob": -0.053278266682344325,
+      "compression_ratio": 1.6372549019607843,
+      "no_speech_prob": 6.076480898314918e-12,
+      "words": [
+        {
+          "word": " Meriem",
+          "start": 23.04,
+          "end": 23.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " besluit",
+          "start": 23.52,
+          "end": 23.96,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 23.96,
+          "end": 24.06,
+          "probability": 1.0
+        },
+        {
+          "word": " jas",
+          "start": 24.06,
+          "end": 24.28,
+          "probability": 1.0
+        },
+        {
+          "word": " terug",
+          "start": 24.28,
+          "end": 24.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 24.52,
+          "end": 24.68,
+          "probability": 1.0
+        },
+        {
+          "word": " sturen",
+          "start": 24.68,
+          "end": 25.06,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 25.06,
+          "end": 25.32,
+          "probability": 1.0
+        },
+        {
+          "word": " bewaart",
+          "start": 25.32,
+          "end": 25.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 25.7,
+          "end": 25.8,
+          "probability": 1.0
+        },
+        {
+          "word": " verzendbevestiging.",
+          "start": 25.8,
+          "end": 26.8,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

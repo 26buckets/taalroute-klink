@@ -1,0 +1,235 @@
+{
+  "id": "A1-T07",
+  "sha256": "e2a70d8aedb9d1ff82b95acd5f0a6560ac0e87105fa687d0bc3834513b3078c0",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op zondag is Karim jarig. Zijn zus komt om drie uur. Zij brengt een cadeau en een kaart. Karim zet het cadeau op tafel. Daarna drinken zij samen thee en praten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.04,
+      "text": " Op zondag is Karim jarig. Zijn zus komt om drie uur.",
+      "temperature": 0,
+      "avg_logprob": -0.0699059220611072,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.004322359804064035,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.986328125
+        },
+        {
+          "word": " zondag",
+          "start": 0.12,
+          "end": 0.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is",
+          "start": 0.48,
+          "end": 0.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Karim",
+          "start": 0.58,
+          "end": 0.82,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " jarig.",
+          "start": 0.82,
+          "end": 1.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Zijn",
+          "start": 1.54,
+          "end": 1.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zus",
+          "start": 1.98,
+          "end": 2.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 2.12,
+          "end": 2.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 2.32,
+          "end": 2.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " drie",
+          "start": 2.5,
+          "end": 2.68,
+          "probability": 0.7431640625
+        },
+        {
+          "word": " uur.",
+          "start": 2.68,
+          "end": 3.04,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.22,
+      "end": 6.78,
+      "text": " Zij brengt een cadeau en een kaart. Karim zet het cadeau op tafel.",
+      "temperature": 0,
+      "avg_logprob": -0.0699059220611072,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.004322359804064035,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 3.22,
+          "end": 3.66,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " brengt",
+          "start": 3.66,
+          "end": 3.9,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 3.9,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cadeau",
+          "start": 3.96,
+          "end": 4.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 4.32,
+          "end": 4.4,
+          "probability": 0.77392578125
+        },
+        {
+          "word": " een",
+          "start": 4.4,
+          "end": 4.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kaart.",
+          "start": 4.48,
+          "end": 4.9,
+          "probability": 1.0
+        },
+        {
+          "word": " Karim",
+          "start": 5.36,
+          "end": 5.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zet",
+          "start": 5.8,
+          "end": 5.98,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 5.98,
+          "end": 6.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cadeau",
+          "start": 6.06,
+          "end": 6.32,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 6.32,
+          "end": 6.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tafel.",
+          "start": 6.4,
+          "end": 6.78,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.28,
+      "end": 9.42,
+      "text": " Daarna drinken zij samen thee en praten.",
+      "temperature": 0,
+      "avg_logprob": -0.0699059220611072,
+      "compression_ratio": 1.3333333333333333,
+      "no_speech_prob": 0.004322359804064035,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 7.28,
+          "end": 7.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " drinken",
+          "start": 7.72,
+          "end": 8.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zij",
+          "start": 8.14,
+          "end": 8.2,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " samen",
+          "start": 8.2,
+          "end": 8.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " thee",
+          "start": 8.52,
+          "end": 8.76,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " en",
+          "start": 8.76,
+          "end": 9.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " praten.",
+          "start": 9.0,
+          "end": 9.42,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

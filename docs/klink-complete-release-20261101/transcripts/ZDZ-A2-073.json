@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-073",
+  "sha256": "5f924daac2b1bd1cd356467deb62c2a88517abb4bb958e9cd47e8e2d6df27757",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De klant wil twee dozen bestellen en ze vrijdag ophalen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.54,
+      "text": " De klant wil twee dozen bestellen en ze vrijdag ophalen.",
+      "temperature": 0,
+      "avg_logprob": -0.05966173975091232,
+      "compression_ratio": 0.9333333333333333,
+      "no_speech_prob": 2.9724846715983855e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " klant",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 0.42,
+          "end": 0.58,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " twee",
+          "start": 0.58,
+          "end": 0.82,
+          "probability": 0.8564453125
+        },
+        {
+          "word": " dozen",
+          "start": 0.82,
+          "end": 1.06,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " bestellen",
+          "start": 1.06,
+          "end": 1.56,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 1.56,
+          "end": 1.74,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " ze",
+          "start": 1.74,
+          "end": 1.84,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " vrijdag",
+          "start": 1.84,
+          "end": 2.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ophalen.",
+          "start": 2.16,
+          "end": 2.54,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

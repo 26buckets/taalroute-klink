@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-d8b88b90e9aa7325",
+  "sha256": "3fc5452f0cd20207002309182444c208f3802859da8cbe6e2c87f63c261c498f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Speel je nog een ronde mee?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Speel je nog een ronde mee?",
+      "temperature": 0,
+      "avg_logprob": -0.09281595547993977,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 3.8425794664231905e-12,
+      "words": [
+        {
+          "word": " Speel",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.94189453125
+        },
+        {
+          "word": " je",
+          "start": 0.3,
+          "end": 0.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nog",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.52,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ronde",
+          "start": 0.66,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mee?",
+          "start": 0.88,
+          "end": 1.08,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

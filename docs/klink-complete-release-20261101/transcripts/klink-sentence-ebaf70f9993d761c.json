@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-ebaf70f9993d761c",
+  "sha256": "66d837b49dccdf6379f3d393a25a701851d758e7e22c25732f1e7bf748bf40db",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wie riep er, auw!",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.26,
+      "text": " Wie riep er, auw!",
+      "temperature": 0,
+      "avg_logprob": -0.4009487231572469,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 6.780553549190493e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.90234375
+        },
+        {
+          "word": " riep",
+          "start": 0.24,
+          "end": 0.5,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " er,",
+          "start": 0.5,
+          "end": 0.62,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " auw!",
+          "start": 0.94,
+          "end": 1.26,
+          "probability": 0.69140625
+        }
+      ]
+    }
+  ]
+}

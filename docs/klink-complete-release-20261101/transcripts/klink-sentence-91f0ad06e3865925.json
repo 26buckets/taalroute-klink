@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-91f0ad06e3865925",
+  "sha256": "a2790d5a7a1287473e35bc3dc5d147ec9f1c180b2196565e3aa130979bb8b562",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik leg kaas op mijn brood.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Ik leg kaas op mijn brood.",
+      "temperature": 0,
+      "avg_logprob": -0.05480309327443441,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 3.917316557938699e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96875
+        },
+        {
+          "word": " leg",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kaas",
+          "start": 0.34,
+          "end": 0.78,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " op",
+          "start": 0.78,
+          "end": 0.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.92,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " brood.",
+          "start": 1.06,
+          "end": 1.48,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

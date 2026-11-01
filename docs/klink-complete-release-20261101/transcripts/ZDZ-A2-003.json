@@ -1,0 +1,95 @@
+{
+  "id": "ZDZ-A2-003",
+  "sha256": "9e372dd626f6b293500f675dbb6a3f7137ad8475680824f85b956db812e93201",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan vandaag niet naar mijn afspraak komen, want ik ben ziek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.54,
+      "text": " Ik kan vandaag niet naar mijn afspraak komen, want ik ben ziek.",
+      "temperature": 0,
+      "avg_logprob": -0.0365774290902274,
+      "compression_ratio": 0.9545454545454546,
+      "no_speech_prob": 3.798852291764243e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9541015625
+        },
+        {
+          "word": " kan",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 0.28,
+          "end": 0.54,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 0.54,
+          "end": 0.74,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 0.74,
+          "end": 0.88,
+          "probability": 1.0
+        },
+        {
+          "word": " mijn",
+          "start": 0.88,
+          "end": 1.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 1.08,
+          "end": 1.48,
+          "probability": 1.0
+        },
+        {
+          "word": " komen,",
+          "start": 1.48,
+          "end": 1.78,
+          "probability": 1.0
+        },
+        {
+          "word": " want",
+          "start": 1.88,
+          "end": 2.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 2.04,
+          "end": 2.14,
+          "probability": 1.0
+        },
+        {
+          "word": " ben",
+          "start": 2.14,
+          "end": 2.26,
+          "probability": 1.0
+        },
+        {
+          "word": " ziek.",
+          "start": 2.26,
+          "end": 2.54,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

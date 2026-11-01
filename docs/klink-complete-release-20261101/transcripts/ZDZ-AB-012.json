@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-012",
+  "sha256": "275fdc07753004e4af0d076c7d54dbd798a05b7bcd947b1bbf1175875119e2aa",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Waar is de bus?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Waar is de bus?",
+      "temperature": 0,
+      "avg_logprob": -0.16888898611068726,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 1.6990981538400618e-11,
+      "words": [
+        {
+          "word": " Waar",
+          "start": 0.0,
+          "end": 0.48,
+          "probability": 0.94482421875
+        },
+        {
+          "word": " is",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.6,
+          "end": 0.68,
+          "probability": 0.99609375
+        },
+        {
+          "word": " bus?",
+          "start": 0.68,
+          "end": 0.92,
+          "probability": 0.9892578125
+        }
+      ]
+    }
+  ]
+}

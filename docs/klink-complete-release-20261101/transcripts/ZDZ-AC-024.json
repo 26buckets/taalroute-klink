@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-024",
+  "sha256": "88ffc72f0f9966b443b7b133e386d335a7009b98658d2208f32ae05782e2d0a5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De fiets is kapot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.86,
+      "text": " De fiets is kapot.",
+      "temperature": 0,
+      "avg_logprob": -0.14396018981933595,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 6.103604600904422e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.89013671875
+        },
+        {
+          "word": " fiets",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kapot.",
+          "start": 0.52,
+          "end": 0.86,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

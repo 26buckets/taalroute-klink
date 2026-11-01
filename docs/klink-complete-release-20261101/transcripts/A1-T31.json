@@ -1,0 +1,297 @@
+{
+  "id": "A1-T31",
+  "sha256": "58eb3cf911d6d97e961e0cae22c062acc68cd2d14e07c77c21f229e04334a6bb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Maandag krijgt een medewerker een bericht van zijn baas. Dinsdag werkt hij niet in de winkel, maar in het magazijn. Hij begint om 8 uur. Hij neemt zijn werkschoenen mee. Op dinsdag gaat hij naar het magazijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.28,
+      "text": " Maandag krijgt een medewerker een bericht van zijn baas.",
+      "temperature": 0,
+      "avg_logprob": -0.08127805164882115,
+      "compression_ratio": 1.475177304964539,
+      "no_speech_prob": 5.46890744496098e-12,
+      "words": [
+        {
+          "word": " Maandag",
+          "start": 0.0,
+          "end": 0.38,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " krijgt",
+          "start": 0.38,
+          "end": 0.62,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.62,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 0.72,
+          "end": 1.26,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 1.26,
+          "end": 1.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 1.38,
+          "end": 1.64,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 1.64,
+          "end": 1.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 1.76,
+          "end": 1.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " baas.",
+          "start": 1.9,
+          "end": 2.28,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.0000000000000004,
+      "end": 5.52,
+      "text": " Dinsdag werkt hij niet in de winkel, maar in het magazijn.",
+      "temperature": 0,
+      "avg_logprob": -0.08127805164882115,
+      "compression_ratio": 1.475177304964539,
+      "no_speech_prob": 5.46890744496098e-12,
+      "words": [
+        {
+          "word": " Dinsdag",
+          "start": 3.0000000000000004,
+          "end": 3.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werkt",
+          "start": 3.44,
+          "end": 3.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 3.7,
+          "end": 3.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 3.8,
+          "end": 4.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 4.02,
+          "end": 4.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.16,
+          "end": 4.26,
+          "probability": 1.0
+        },
+        {
+          "word": " winkel,",
+          "start": 4.26,
+          "end": 4.6,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 4.68,
+          "end": 4.8,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 4.8,
+          "end": 4.92,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 4.92,
+          "end": 5.02,
+          "probability": 1.0
+        },
+        {
+          "word": " magazijn.",
+          "start": 5.02,
+          "end": 5.52,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.000000000000001,
+      "end": 7.32,
+      "text": " Hij begint om 8 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.08127805164882115,
+      "compression_ratio": 1.475177304964539,
+      "no_speech_prob": 5.46890744496098e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 6.000000000000001,
+          "end": 6.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 6.44,
+          "end": 6.72,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 6.72,
+          "end": 6.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 8",
+          "start": 6.84,
+          "end": 7.06,
+          "probability": 0.70751953125
+        },
+        {
+          "word": " uur.",
+          "start": 7.06,
+          "end": 7.32,
+          "probability": 0.9951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.6,
+      "end": 8.98,
+      "text": " Hij neemt zijn werkschoenen mee.",
+      "temperature": 0,
+      "avg_logprob": -0.08127805164882115,
+      "compression_ratio": 1.475177304964539,
+      "no_speech_prob": 5.46890744496098e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 7.6,
+          "end": 8.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " neemt",
+          "start": 8.02,
+          "end": 8.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 8.2,
+          "end": 8.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werkschoenen",
+          "start": 8.3,
+          "end": 8.8,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " mee.",
+          "start": 8.8,
+          "end": 8.98,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.36,
+      "end": 11.28,
+      "text": " Op dinsdag gaat hij naar het magazijn.",
+      "temperature": 0,
+      "avg_logprob": -0.08127805164882115,
+      "compression_ratio": 1.475177304964539,
+      "no_speech_prob": 5.46890744496098e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 9.36,
+          "end": 9.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 9.8,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " gaat",
+          "start": 10.18,
+          "end": 10.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 10.34,
+          "end": 10.48,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 10.48,
+          "end": 10.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 10.66,
+          "end": 10.82,
+          "probability": 1.0
+        },
+        {
+          "word": " magazijn.",
+          "start": 10.82,
+          "end": 11.28,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

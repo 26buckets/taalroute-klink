@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-bfcaec96af782c7a",
+  "sha256": "3458b166ae94d308f62d1b327b7490ec90665bad60d5e7ca5da6ac60a45658fb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kook jij morgen of zal ik koken?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.1,
+      "text": " Kook jij morgen of zal ik koken?",
+      "temperature": 0,
+      "avg_logprob": -0.17544039090474448,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.510909441118871e-12,
+      "words": [
+        {
+          "word": " Kook",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.67431640625
+        },
+        {
+          "word": " jij",
+          "start": 0.2,
+          "end": 0.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " morgen",
+          "start": 0.36,
+          "end": 0.74,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " of",
+          "start": 0.74,
+          "end": 1.3,
+          "probability": 0.82470703125
+        },
+        {
+          "word": " zal",
+          "start": 1.3,
+          "end": 1.58,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ik",
+          "start": 1.58,
+          "end": 1.76,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " koken?",
+          "start": 1.76,
+          "end": 2.1,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

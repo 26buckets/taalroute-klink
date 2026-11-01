@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-ee0ac3081f5c7bb9",
+  "sha256": "036bc6b17caec4725ba397743b0d4f917d089b5beebbeb6c7cb2926cd25161c3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wie meldt dit gevaar bij de beheerder?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.82,
+      "text": " Wie meldt dit gevaar bij de beheerder?",
+      "temperature": 0,
+      "avg_logprob": -0.062198246226591224,
+      "compression_ratio": 0.8260869565217391,
+      "no_speech_prob": 4.273961393130854e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " meldt",
+          "start": 0.24,
+          "end": 0.58,
+          "probability": 0.994140625
+        },
+        {
+          "word": " dit",
+          "start": 0.58,
+          "end": 0.72,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " gevaar",
+          "start": 0.72,
+          "end": 1.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 1.1,
+          "end": 1.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.26,
+          "end": 1.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " beheerder?",
+          "start": 1.38,
+          "end": 1.82,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

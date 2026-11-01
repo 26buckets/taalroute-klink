@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-ee1c5ccac6f83ff6",
+  "sha256": "12e1b111276dbc4c86cbc2aa8a9b6894b11266e5f379f3e978efbbf48719e7b8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er verschijnt een lach op zijn gezicht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.74,
+      "text": " Er verschijnt een lach op zijn gezicht.",
+      "temperature": 0,
+      "avg_logprob": -0.058441416422526045,
+      "compression_ratio": 0.8478260869565217,
+      "no_speech_prob": 4.9336997161308904e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.884765625
+        },
+        {
+          "word": " verschijnt",
+          "start": 0.18,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.56,
+          "end": 0.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lach",
+          "start": 0.7,
+          "end": 1.0,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " op",
+          "start": 1.0,
+          "end": 1.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 1.16,
+          "end": 1.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gezicht.",
+          "start": 1.32,
+          "end": 1.74,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

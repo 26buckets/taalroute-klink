@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-e48861a00e057125",
+  "sha256": "c9f72e6d50d0f2249016088faea1f7366733b04daa0bc8f3f5e778f46c3a5ddb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Zijn moeder woont in de stad.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.4,
+      "text": " Zijn moeder woont in de stad.",
+      "temperature": 0,
+      "avg_logprob": -0.07256346482496995,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 5.088904124483928e-12,
+      "words": [
+        {
+          "word": " Zijn",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.97900390625
+        },
+        {
+          "word": " moeder",
+          "start": 0.28,
+          "end": 0.6,
+          "probability": 1.0
+        },
+        {
+          "word": " woont",
+          "start": 0.6,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.08,
+          "end": 1.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " stad.",
+          "start": 1.18,
+          "end": 1.4,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

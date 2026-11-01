@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-088",
+  "sha256": "4a1c298d9a9fa5b3715213e7fd64514b1b5be68ba81b6a2b4173c4bba09913f6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u controleren of mijn telefoonnummer goed is opgeschreven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.0,
+      "text": " Kunt u controleren of mijn telefoonnummer goed is opgeschreven.",
+      "temperature": 0,
+      "avg_logprob": -0.06102141467007724,
+      "compression_ratio": 1.0161290322580645,
+      "no_speech_prob": 4.224042556705276e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.9306640625
+        },
+        {
+          "word": " u",
+          "start": 0.24,
+          "end": 0.32,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " controleren",
+          "start": 0.32,
+          "end": 1.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 1.02,
+          "end": 1.24,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " mijn",
+          "start": 1.24,
+          "end": 1.42,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " telefoonnummer",
+          "start": 1.42,
+          "end": 2.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " goed",
+          "start": 2.02,
+          "end": 2.24,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " is",
+          "start": 2.24,
+          "end": 2.38,
+          "probability": 1.0
+        },
+        {
+          "word": " opgeschreven.",
+          "start": 2.38,
+          "end": 3.0,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

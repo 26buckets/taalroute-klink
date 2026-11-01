@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-088",
+  "sha256": "58ea754173bc7895fda1749b504b8459f8170125fe8ffdbd14e1b935c9c12697",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze brief is voor u.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Deze brief is voor u.",
+      "temperature": 0,
+      "avg_logprob": -0.1339329719543457,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.955712923360167e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " brief",
+          "start": 0.3,
+          "end": 0.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 0.52,
+          "end": 0.62,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 0.62,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " u.",
+          "start": 0.76,
+          "end": 0.92,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

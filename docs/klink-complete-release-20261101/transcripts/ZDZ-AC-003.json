@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-003",
+  "sha256": "8ed0d2a01be85ec37e8e69b153dfff3b4349052e7070009f81690ae1db3c5816",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn hoofd doet pijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Mijn hoofd doet pijn.",
+      "temperature": 0,
+      "avg_logprob": -0.09095044569535689,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 5.116479288858056e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.97265625
+        },
+        {
+          "word": " hoofd",
+          "start": 0.22,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doet",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pijn.",
+          "start": 0.68,
+          "end": 1.02,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

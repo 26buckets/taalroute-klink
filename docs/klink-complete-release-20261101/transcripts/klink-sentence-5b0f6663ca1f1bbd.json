@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-5b0f6663ca1f1bbd",
+  "sha256": "5101af3900ded6d3616276b54e9b9a26f8b1694f99f106b18571deacc46557ad",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De rok hangt in de kast.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " De rok hangt in de kast.",
+      "temperature": 0,
+      "avg_logprob": -0.09440982341766357,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.702033901127223e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.8603515625
+        },
+        {
+          "word": " rok",
+          "start": 0.18,
+          "end": 0.44,
+          "probability": 0.96875
+        },
+        {
+          "word": " hangt",
+          "start": 0.44,
+          "end": 0.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 0.82,
+          "end": 0.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.92,
+          "end": 1.02,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kast.",
+          "start": 1.02,
+          "end": 1.38,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

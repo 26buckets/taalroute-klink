@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-90d2809c70542294",
+  "sha256": "8442f5f77c9647ce4f20d659e3550515c303faf93ae1934edc32c2c92d5f44c2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het maximum is 10 personen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.82,
+      "text": " Het maximum is 10 personen.",
+      "temperature": 0,
+      "avg_logprob": -0.1646573066711426,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 5.234134740211838e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9609375
+        },
+        {
+          "word": " maximum",
+          "start": 0.16,
+          "end": 0.56,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " is",
+          "start": 0.56,
+          "end": 0.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 10",
+          "start": 0.94,
+          "end": 1.22,
+          "probability": 0.8759765625
+        },
+        {
+          "word": " personen.",
+          "start": 1.22,
+          "end": 1.82,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

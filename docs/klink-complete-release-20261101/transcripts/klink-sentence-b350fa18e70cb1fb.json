@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-b350fa18e70cb1fb",
+  "sha256": "9c3bc85f68bdd4751239d40ce9662bdd32831a5cbdccb010e89f9c479d980510",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wacht bij het stoplicht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.28,
+      "text": " Ik wacht bij het stoplicht.",
+      "temperature": 0,
+      "avg_logprob": -0.14594775980169122,
+      "compression_ratio": 0.7941176470588235,
+      "no_speech_prob": 3.6401060117541295e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.947265625
+        },
+        {
+          "word": " wacht",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 0.44,
+          "end": 0.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 0.62,
+          "end": 0.8,
+          "probability": 0.9921875
+        },
+        {
+          "word": " stoplicht.",
+          "start": 0.8,
+          "end": 1.28,
+          "probability": 0.99365234375
+        }
+      ]
+    }
+  ]
+}

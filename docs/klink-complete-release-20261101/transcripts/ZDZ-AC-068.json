@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-068",
+  "sha256": "a0905a0723b6e4823830cecabccf8c780fb263b54ed4b31c76a621fd404fae3b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kies de blauwe fiets.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": " Ik kies de blauwe fiets.",
+      "temperature": 0,
+      "avg_logprob": -0.08940920462975135,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 3.793648121336313e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92138671875
+        },
+        {
+          "word": " kies",
+          "start": 0.16,
+          "end": 0.32,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.32,
+          "end": 0.44,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " blauwe",
+          "start": 0.44,
+          "end": 0.74,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " fiets.",
+          "start": 0.74,
+          "end": 1.0,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-010",
+  "sha256": "130e9974f41bb0d6197a1eb6c66b61ab83b03801b428be36fb2f7c903701bef4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik een kilo appels?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.1,
+      "text": " Mag ik een kilo appels?",
+      "temperature": 0,
+      "avg_logprob": -0.11170406341552734,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 4.039032129588005e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " ik",
+          "start": 0.18,
+          "end": 0.3,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.3,
+          "end": 0.4,
+          "probability": 0.98095703125
+        },
+        {
+          "word": " kilo",
+          "start": 0.4,
+          "end": 0.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " appels?",
+          "start": 0.6,
+          "end": 1.1,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

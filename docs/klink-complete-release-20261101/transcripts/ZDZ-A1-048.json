@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A1-048",
+  "sha256": "acd4921b37e3f2bf24cd887eae68e452a54ed9c767709f0de79ec51af71856ff",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben zaterdag met de bus naar mijn broer gegaan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.06,
+      "text": " Ik ben zaterdag met de bus naar mijn broer gegaan.",
+      "temperature": 0,
+      "avg_logprob": -0.07574011150159334,
+      "compression_ratio": 0.8771929824561403,
+      "no_speech_prob": 3.683687035960226e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag",
+          "start": 0.26,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 0.76,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.9,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 0.98,
+          "end": 1.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 1.16,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 1.28,
+          "end": 1.42,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " broer",
+          "start": 1.42,
+          "end": 1.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gegaan.",
+          "start": 1.68,
+          "end": 2.06,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

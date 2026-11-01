@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-074",
+  "sha256": "852304ed8c432314fe608239275d0545f03a4be537b7f926e6172154e7845e33",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Eerst pak ik mijn tas.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Eerst pak ik mijn tas.",
+      "temperature": 0,
+      "avg_logprob": -0.06436457633972167,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.141797148304871e-12,
+      "words": [
+        {
+          "word": " Eerst",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9765625
+        },
+        {
+          "word": " pak",
+          "start": 0.2,
+          "end": 0.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ik",
+          "start": 0.38,
+          "end": 0.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.48,
+          "end": 0.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " tas.",
+          "start": 0.62,
+          "end": 0.94,
+          "probability": 0.99658203125
+        }
+      ]
+    }
+  ]
+}

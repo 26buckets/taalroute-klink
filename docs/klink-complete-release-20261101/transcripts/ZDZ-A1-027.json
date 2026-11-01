@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-027",
+  "sha256": "0a05569d8626f025a20c5430b05d3484fa0a4232890ff834a441859ed5a93769",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik die pen even lenen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Mag ik die pen even lenen?",
+      "temperature": 0,
+      "avg_logprob": -0.18320456418124112,
+      "compression_ratio": 0.8125,
+      "no_speech_prob": 3.867252438422009e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9296875
+        },
+        {
+          "word": " ik",
+          "start": 0.18,
+          "end": 0.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 0.26,
+          "end": 0.4,
+          "probability": 0.96484375
+        },
+        {
+          "word": " pen",
+          "start": 0.4,
+          "end": 0.54,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " even",
+          "start": 0.54,
+          "end": 0.74,
+          "probability": 0.98828125
+        },
+        {
+          "word": " lenen?",
+          "start": 0.74,
+          "end": 1.08,
+          "probability": 0.98828125
+        }
+      ]
+    }
+  ]
+}

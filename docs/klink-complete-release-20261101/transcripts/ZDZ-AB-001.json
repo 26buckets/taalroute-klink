@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-001",
+  "sha256": "cf3bafa552baad550264e91073165c5371d4da9b5f655703ce9f9379d8f34544",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heet Noor.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.78,
+      "text": " Ik heet Noor.",
+      "temperature": 0,
+      "avg_logprob": -0.1622370613945855,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 6.122838347444315e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9560546875
+        },
+        {
+          "word": " heet",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.99609375
+        },
+        {
+          "word": " Noor.",
+          "start": 0.46,
+          "end": 0.78,
+          "probability": 0.9873046875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,600 @@
+{
+  "id": "B1-FL-097",
+  "sha256": "5c532d25ab1588da86d756f358c50b2c5e00d132f26599b940c9c26c19c03f98",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bij het schoonmaakbedrijf krijgt Mehmet een nieuw contract. In het document staat dat hij vanaf maandag vier dagen werkt. Op het digitale rooster ziet hij echter vijf werkdagen. Mehmet wil geen dienst missen, maar ook niet zomaar een extra dag toezeggen. Hij vraagt zijn leidinggevende welke informatie klopt. Die ontdekt dat het oude rooster nog zichtbaar is en laat het aanpassen. Mehmet bewaart de bevestiging van de wijziging. Zo weten Mehmet en zijn collega's welk rooster voor de komende week geldt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.2,
+      "text": " Bij het schoonmaakbedrijf krijgt Mehmet een nieuw contract.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99609375
+        },
+        {
+          "word": " het",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schoonmaakbedrijf",
+          "start": 0.28,
+          "end": 1.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " krijgt",
+          "start": 1.02,
+          "end": 1.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Mehmet",
+          "start": 1.26,
+          "end": 1.5,
+          "probability": 0.9423828125
+        },
+        {
+          "word": " een",
+          "start": 1.5,
+          "end": 1.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuw",
+          "start": 1.64,
+          "end": 1.94,
+          "probability": 1.0
+        },
+        {
+          "word": " contract.",
+          "start": 1.94,
+          "end": 2.2,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.68,
+      "end": 5.6,
+      "text": " In het document staat dat hij vanaf maandag vier dagen werkt.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 2.68,
+          "end": 3.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 3.16,
+          "end": 3.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " document",
+          "start": 3.28,
+          "end": 3.62,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 3.62,
+          "end": 3.94,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 3.94,
+          "end": 4.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 4.1,
+          "end": 4.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vanaf",
+          "start": 4.22,
+          "end": 4.48,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 4.48,
+          "end": 4.8,
+          "probability": 1.0
+        },
+        {
+          "word": " vier",
+          "start": 4.8,
+          "end": 4.98,
+          "probability": 0.7109375
+        },
+        {
+          "word": " dagen",
+          "start": 4.98,
+          "end": 5.22,
+          "probability": 1.0
+        },
+        {
+          "word": " werkt.",
+          "start": 5.22,
+          "end": 5.6,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.9,
+      "end": 8.98,
+      "text": " Op het digitale rooster ziet hij echter vijf werkdagen.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 5.9,
+          "end": 6.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.48,
+          "end": 6.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " digitale",
+          "start": 6.62,
+          "end": 7.1,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " rooster",
+          "start": 7.1,
+          "end": 7.46,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " ziet",
+          "start": 7.46,
+          "end": 7.68,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " hij",
+          "start": 7.68,
+          "end": 7.8,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " echter",
+          "start": 7.8,
+          "end": 8.04,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " vijf",
+          "start": 8.04,
+          "end": 8.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " werkdagen.",
+          "start": 8.4,
+          "end": 8.98,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.52,
+      "end": 13.36,
+      "text": " Mehmet wil geen dienst missen, maar ook niet zomaar een extra dag toezeggen.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Mehmet",
+          "start": 9.52,
+          "end": 10.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 10.08,
+          "end": 10.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geen",
+          "start": 10.24,
+          "end": 10.38,
+          "probability": 1.0
+        },
+        {
+          "word": " dienst",
+          "start": 10.38,
+          "end": 10.64,
+          "probability": 1.0
+        },
+        {
+          "word": " missen,",
+          "start": 10.64,
+          "end": 10.98,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " maar",
+          "start": 11.12,
+          "end": 11.58,
+          "probability": 1.0
+        },
+        {
+          "word": " ook",
+          "start": 11.58,
+          "end": 11.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 11.78,
+          "end": 11.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zomaar",
+          "start": 11.94,
+          "end": 12.32,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 12.32,
+          "end": 12.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " extra",
+          "start": 12.42,
+          "end": 12.66,
+          "probability": 1.0
+        },
+        {
+          "word": " dag",
+          "start": 12.66,
+          "end": 12.86,
+          "probability": 1.0
+        },
+        {
+          "word": " toezeggen.",
+          "start": 12.86,
+          "end": 13.36,
+          "probability": 0.99462890625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.8,
+      "end": 16.36,
+      "text": " Hij vraagt zijn leidinggevende welke informatie klopt.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 13.8,
+          "end": 14.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 14.24,
+          "end": 14.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 14.52,
+          "end": 14.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leidinggevende",
+          "start": 14.68,
+          "end": 15.3,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " welke",
+          "start": 15.3,
+          "end": 15.56,
+          "probability": 1.0
+        },
+        {
+          "word": " informatie",
+          "start": 15.56,
+          "end": 16.04,
+          "probability": 1.0
+        },
+        {
+          "word": " klopt.",
+          "start": 16.04,
+          "end": 16.36,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.68,
+      "end": 20.12,
+      "text": " Die ontdekt dat het oude rooster nog zichtbaar is en laat het aanpassen.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 16.68,
+          "end": 17.06,
+          "probability": 0.990234375
+        },
+        {
+          "word": " ontdekt",
+          "start": 17.06,
+          "end": 17.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 17.36,
+          "end": 17.5,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 17.5,
+          "end": 17.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 17.62,
+          "end": 17.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rooster",
+          "start": 17.82,
+          "end": 18.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nog",
+          "start": 18.12,
+          "end": 18.28,
+          "probability": 1.0
+        },
+        {
+          "word": " zichtbaar",
+          "start": 18.28,
+          "end": 18.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 18.66,
+          "end": 18.88,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 18.88,
+          "end": 19.42,
+          "probability": 0.919921875
+        },
+        {
+          "word": " laat",
+          "start": 19.42,
+          "end": 19.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 19.6,
+          "end": 19.72,
+          "probability": 1.0
+        },
+        {
+          "word": " aanpassen.",
+          "start": 19.72,
+          "end": 20.12,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.8,
+      "end": 22.8,
+      "text": " Mehmet bewaart de bevestiging van de wijziging.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Mehmet",
+          "start": 20.8,
+          "end": 21.16,
+          "probability": 1.0
+        },
+        {
+          "word": " bewaart",
+          "start": 21.16,
+          "end": 21.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 21.5,
+          "end": 21.6,
+          "probability": 1.0
+        },
+        {
+          "word": " bevestiging",
+          "start": 21.6,
+          "end": 22.12,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 22.12,
+          "end": 22.24,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 22.24,
+          "end": 22.34,
+          "probability": 1.0
+        },
+        {
+          "word": " wijziging.",
+          "start": 22.34,
+          "end": 22.8,
+          "probability": 0.99609375
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 23.18,
+      "end": 26.74,
+      "text": " Zo weten Mehmet en zijn collega's welk rooster voor de komende week geldt.",
+      "temperature": 0,
+      "avg_logprob": -0.06821993296731732,
+      "compression_ratio": 1.6946308724832215,
+      "no_speech_prob": 5.259091773179847e-12,
+      "words": [
+        {
+          "word": " Zo",
+          "start": 23.18,
+          "end": 23.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weten",
+          "start": 23.58,
+          "end": 23.88,
+          "probability": 1.0
+        },
+        {
+          "word": " Mehmet",
+          "start": 23.88,
+          "end": 24.24,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 24.24,
+          "end": 24.34,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 24.34,
+          "end": 24.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega's",
+          "start": 24.52,
+          "end": 24.98,
+          "probability": 1.0
+        },
+        {
+          "word": " welk",
+          "start": 24.98,
+          "end": 25.3,
+          "probability": 0.994140625
+        },
+        {
+          "word": " rooster",
+          "start": 25.3,
+          "end": 25.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 25.6,
+          "end": 25.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 25.74,
+          "end": 25.84,
+          "probability": 1.0
+        },
+        {
+          "word": " komende",
+          "start": 25.84,
+          "end": 26.16,
+          "probability": 1.0
+        },
+        {
+          "word": " week",
+          "start": 26.16,
+          "end": 26.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geldt.",
+          "start": 26.36,
+          "end": 26.74,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

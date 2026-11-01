@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-AC-099",
+  "sha256": "f4e2abd46433d02ea9d165b5e1a708a11ea471dccc966e0f7be60c9a9e83f875",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb vandaag een nieuw woord geleerd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.72,
+      "text": " Ik heb vandaag een nieuw woord geleerd.",
+      "temperature": 0,
+      "avg_logprob": -0.06702634266444615,
+      "compression_ratio": 0.8297872340425532,
+      "no_speech_prob": 4.597599211064729e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vandaag",
+          "start": 0.26,
+          "end": 0.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 0.62,
+          "end": 0.82,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " nieuw",
+          "start": 0.82,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " woord",
+          "start": 1.1,
+          "end": 1.3,
+          "probability": 0.99609375
+        },
+        {
+          "word": " geleerd.",
+          "start": 1.3,
+          "end": 1.72,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

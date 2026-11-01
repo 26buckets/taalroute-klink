@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-056",
+  "sha256": "5b9f0b54e362e4a1b78fa3b34a1971b766f484c10e753aeab695bff51675e2cd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan donderdag niet. Mag ik vrijdag komen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": " Ik kan donderdag niet. Mag ik vrijdag komen?",
+      "temperature": 0,
+      "avg_logprob": -0.07987168431282043,
+      "compression_ratio": 0.9166666666666666,
+      "no_speech_prob": 4.598854283499598e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.970703125
+        },
+        {
+          "word": " kan",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " donderdag",
+          "start": 0.28,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " niet.",
+          "start": 0.68,
+          "end": 0.84,
+          "probability": 1.0
+        },
+        {
+          "word": " Mag",
+          "start": 1.0,
+          "end": 1.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ik",
+          "start": 1.14,
+          "end": 1.24,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijdag",
+          "start": 1.24,
+          "end": 1.56,
+          "probability": 1.0
+        },
+        {
+          "word": " komen?",
+          "start": 1.56,
+          "end": 1.8,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

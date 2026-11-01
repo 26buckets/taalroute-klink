@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-028",
+  "sha256": "5f9451022053b42da8275ca3962cb8df9767454014aaf64f56ae93b5a6569508",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik water?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.64,
+      "text": " Mag ik water?",
+      "temperature": 0,
+      "avg_logprob": -0.2786154065813337,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 3.9438569597594064e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9541015625
+        },
+        {
+          "word": " ik",
+          "start": 0.22,
+          "end": 0.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " water?",
+          "start": 0.32,
+          "end": 0.64,
+          "probability": 0.9951171875
+        }
+      ]
+    }
+  ]
+}

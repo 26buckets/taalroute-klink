@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-005",
+  "sha256": "248417e043da635ba8d3ed0de43d7081298cefca99f5fa500b21fa1b64cc8741",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ga naar school.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.74,
+      "text": " Ik ga naar school.",
+      "temperature": 0,
+      "avg_logprob": -0.07692593336105347,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.5288230630935455e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96630859375
+        },
+        {
+          "word": " ga",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 0.28,
+          "end": 0.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school.",
+          "start": 0.42,
+          "end": 0.74,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-058",
+  "sha256": "3bb965438c22823fe0b9ca34446c1dccfaae0b62fbbbe097a86a8b5836564bac",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben blij dat mijn afspraak toch door kan gaan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.04,
+      "text": " Ik ben blij dat mijn afspraak toch door kan gaan.",
+      "temperature": 0,
+      "avg_logprob": -0.06498202155618106,
+      "compression_ratio": 0.875,
+      "no_speech_prob": 4.060250399784415e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.966796875
+        },
+        {
+          "word": " ben",
+          "start": 0.12,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blij",
+          "start": 0.26,
+          "end": 0.5,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 0.5,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.68,
+          "end": 0.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 0.82,
+          "end": 1.24,
+          "probability": 1.0
+        },
+        {
+          "word": " toch",
+          "start": 1.24,
+          "end": 1.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " door",
+          "start": 1.42,
+          "end": 1.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 1.62,
+          "end": 1.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gaan.",
+          "start": 1.8,
+          "end": 2.04,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

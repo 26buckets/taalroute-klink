@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-dddbb176ee75f055",
+  "sha256": "4b480de5ef015456c6d974ca1ab97d52a8cbf320b05628bf3941748b2525a5ad",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De chirurg legt de behandeling uit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.76,
+      "text": " De chirurg legt de behandeling uit.",
+      "temperature": 0,
+      "avg_logprob": -0.09021913088285007,
+      "compression_ratio": 0.813953488372093,
+      "no_speech_prob": 4.2492350783851496e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9296875
+        },
+        {
+          "word": " chirurg",
+          "start": 0.16,
+          "end": 0.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " legt",
+          "start": 0.66,
+          "end": 1.0,
+          "probability": 0.97412109375
+        },
+        {
+          "word": " de",
+          "start": 1.0,
+          "end": 1.04,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " behandeling",
+          "start": 1.04,
+          "end": 1.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uit.",
+          "start": 1.5,
+          "end": 1.76,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

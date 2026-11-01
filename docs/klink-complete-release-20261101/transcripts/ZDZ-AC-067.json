@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-AC-067",
+  "sha256": "d2da6dde00baa986875b3e420fa89701680be5d4183c19ce9bf495302abe0568",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze jas is mooi, maar die is warmer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " Deze jas is mooi, maar die is warmer.",
+      "temperature": 0,
+      "avg_logprob": -0.13365472157796224,
+      "compression_ratio": 0.8604651162790697,
+      "no_speech_prob": 3.891226750540877e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " jas",
+          "start": 0.32,
+          "end": 0.48,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " is",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mooi,",
+          "start": 0.6,
+          "end": 0.84,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 1.02,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 1.14,
+          "end": 1.26,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " is",
+          "start": 1.26,
+          "end": 1.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " warmer.",
+          "start": 1.44,
+          "end": 1.68,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

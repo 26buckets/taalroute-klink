@@ -1,0 +1,581 @@
+{
+  "id": "A2-T28",
+  "sha256": "1fe4809da87e858986a42a39c02d3910d5e45c830a0de8785bfcd57726b2d030",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een man belt maandag naar de huisarts omdat hij al enkele dagen pijn in zijn rug heeft. De assistent heeft dinsdag geen afspraak meer vrij en biedt woensdag om half tien aan. De man moet woensdag eerst werken en kan pas na twaalf uur. De assistent zoekt verder en vindt donderdag om twee uur een afspraak. Ze vraagt hem eerder te bellen als zijn klachten erger worden. De man schrijft de nieuwe tijd in zijn agenda. Hij bedankt de assistent.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.54,
+      "text": " Een man belt maandag naar de huisarts omdat hij al enkele dagen pijn in zijn rug heeft.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " man",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 1.0
+        },
+        {
+          "word": " belt",
+          "start": 0.32,
+          "end": 0.58,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " maandag",
+          "start": 0.58,
+          "end": 0.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 0.94,
+          "end": 1.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.04,
+          "end": 1.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " huisarts",
+          "start": 1.16,
+          "end": 1.56,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 1.56,
+          "end": 1.72,
+          "probability": 0.94873046875
+        },
+        {
+          "word": " hij",
+          "start": 1.72,
+          "end": 1.9,
+          "probability": 1.0
+        },
+        {
+          "word": " al",
+          "start": 1.9,
+          "end": 2.02,
+          "probability": 1.0
+        },
+        {
+          "word": " enkele",
+          "start": 2.02,
+          "end": 2.34,
+          "probability": 1.0
+        },
+        {
+          "word": " dagen",
+          "start": 2.34,
+          "end": 2.56,
+          "probability": 1.0
+        },
+        {
+          "word": " pijn",
+          "start": 2.56,
+          "end": 2.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 2.88,
+          "end": 2.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 2.98,
+          "end": 3.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " rug",
+          "start": 3.08,
+          "end": 3.26,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft.",
+          "start": 3.26,
+          "end": 3.54,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.98,
+      "end": 8.46,
+      "text": " De assistent heeft dinsdag geen afspraak meer vrij en biedt woensdag om half tien aan.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.98,
+          "end": 4.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " assistent",
+          "start": 4.5,
+          "end": 4.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " heeft",
+          "start": 4.96,
+          "end": 5.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dinsdag",
+          "start": 5.14,
+          "end": 5.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geen",
+          "start": 5.5,
+          "end": 5.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 5.72,
+          "end": 6.16,
+          "probability": 1.0
+        },
+        {
+          "word": " meer",
+          "start": 6.16,
+          "end": 6.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vrij",
+          "start": 6.28,
+          "end": 6.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 6.54,
+          "end": 7.22,
+          "probability": 0.970703125
+        },
+        {
+          "word": " biedt",
+          "start": 7.22,
+          "end": 7.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 7.46,
+          "end": 7.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 7.78,
+          "end": 7.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " half",
+          "start": 7.9,
+          "end": 8.08,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " tien",
+          "start": 8.08,
+          "end": 8.22,
+          "probability": 0.91455078125
+        },
+        {
+          "word": " aan.",
+          "start": 8.22,
+          "end": 8.46,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.96,
+      "end": 12.2,
+      "text": " De man moet woensdag eerst werken en kan pas na twaalf uur.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.96,
+          "end": 9.46,
+          "probability": 1.0
+        },
+        {
+          "word": " man",
+          "start": 9.46,
+          "end": 9.64,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 9.64,
+          "end": 9.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 9.82,
+          "end": 10.16,
+          "probability": 1.0
+        },
+        {
+          "word": " eerst",
+          "start": 10.16,
+          "end": 10.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werken",
+          "start": 10.38,
+          "end": 10.76,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 10.76,
+          "end": 11.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 11.22,
+          "end": 11.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pas",
+          "start": 11.38,
+          "end": 11.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " na",
+          "start": 11.56,
+          "end": 11.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " twaalf",
+          "start": 11.68,
+          "end": 11.98,
+          "probability": 0.94970703125
+        },
+        {
+          "word": " uur.",
+          "start": 11.98,
+          "end": 12.2,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.68,
+      "end": 16.82,
+      "text": " De assistent zoekt verder en vindt donderdag om twee uur een afspraak.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.68,
+          "end": 13.2,
+          "probability": 1.0
+        },
+        {
+          "word": " assistent",
+          "start": 13.2,
+          "end": 13.64,
+          "probability": 1.0
+        },
+        {
+          "word": " zoekt",
+          "start": 13.64,
+          "end": 13.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verder",
+          "start": 13.86,
+          "end": 14.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 14.16,
+          "end": 14.98,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " vindt",
+          "start": 14.98,
+          "end": 15.28,
+          "probability": 1.0
+        },
+        {
+          "word": " donderdag",
+          "start": 15.28,
+          "end": 15.72,
+          "probability": 0.994140625
+        },
+        {
+          "word": " om",
+          "start": 15.72,
+          "end": 15.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 15.88,
+          "end": 16.06,
+          "probability": 0.994140625
+        },
+        {
+          "word": " uur",
+          "start": 16.06,
+          "end": 16.26,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 16.26,
+          "end": 16.34,
+          "probability": 0.97265625
+        },
+        {
+          "word": " afspraak.",
+          "start": 16.34,
+          "end": 16.82,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 17.26,
+      "end": 19.94,
+      "text": " Ze vraagt hem eerder te bellen als zijn klachten erger worden.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 17.26,
+          "end": 17.78,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " vraagt",
+          "start": 17.78,
+          "end": 18.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hem",
+          "start": 18.08,
+          "end": 18.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerder",
+          "start": 18.18,
+          "end": 18.46,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 18.46,
+          "end": 18.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bellen",
+          "start": 18.56,
+          "end": 18.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " als",
+          "start": 18.84,
+          "end": 19.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 19.0,
+          "end": 19.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klachten",
+          "start": 19.14,
+          "end": 19.4,
+          "probability": 1.0
+        },
+        {
+          "word": " erger",
+          "start": 19.4,
+          "end": 19.7,
+          "probability": 1.0
+        },
+        {
+          "word": " worden.",
+          "start": 19.7,
+          "end": 19.94,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 20.44,
+      "end": 22.54,
+      "text": " De man schrijft de nieuwe tijd in zijn agenda.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.44,
+          "end": 20.86,
+          "probability": 1.0
+        },
+        {
+          "word": " man",
+          "start": 20.86,
+          "end": 21.0,
+          "probability": 1.0
+        },
+        {
+          "word": " schrijft",
+          "start": 21.0,
+          "end": 21.34,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.34,
+          "end": 21.46,
+          "probability": 0.9619140625
+        },
+        {
+          "word": " nieuwe",
+          "start": 21.46,
+          "end": 21.64,
+          "probability": 0.9677734375
+        },
+        {
+          "word": " tijd",
+          "start": 21.64,
+          "end": 21.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 21.9,
+          "end": 22.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 22.08,
+          "end": 22.18,
+          "probability": 1.0
+        },
+        {
+          "word": " agenda.",
+          "start": 22.18,
+          "end": 22.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.02,
+      "end": 24.42,
+      "text": " Hij bedankt de assistent.",
+      "temperature": 0,
+      "avg_logprob": -0.069076054626041,
+      "compression_ratio": 1.764,
+      "no_speech_prob": 5.3419950754585166e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 23.02,
+          "end": 23.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bedankt",
+          "start": 23.54,
+          "end": 23.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 23.86,
+          "end": 23.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " assistent.",
+          "start": 23.94,
+          "end": 24.42,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-046",
+  "sha256": "8e74767654ef7a4df2612c6cdd58e40f1aa2f3292bd04dc6e8456b7a0c0d539b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik was thuis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.64,
+      "text": " Ik was thuis.",
+      "temperature": 0,
+      "avg_logprob": -0.16706949472427368,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 4.337454874436819e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9365234375
+        },
+        {
+          "word": " was",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " thuis.",
+          "start": 0.3,
+          "end": 0.64,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "id": "A1-T81",
+  "sha256": "41780343a2db11b3ff9b30527336e9330fef0a029911abd2b23c239eb7f15045",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bij het station staat een vrouw. Zij wil naar het museum. Op een kaart ziet zij de weg. Zij loopt eerst naar links en dan rechtdoor. Het museum ligt naast de bibliotheek. Daar gaat zij naar binnen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.62,
+      "text": " Bij het station staat een vrouw. Zij wil naar het museum.",
+      "temperature": 0,
+      "avg_logprob": -0.05713658179006269,
+      "compression_ratio": 1.4172661870503598,
+      "no_speech_prob": 5.775505941552073e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " het",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " station",
+          "start": 0.3,
+          "end": 0.6,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 0.6,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.86,
+          "end": 1.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw.",
+          "start": 1.0,
+          "end": 1.42,
+          "probability": 1.0
+        },
+        {
+          "word": " Zij",
+          "start": 1.56,
+          "end": 1.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 1.9,
+          "end": 2.04,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " naar",
+          "start": 2.04,
+          "end": 2.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 2.16,
+          "end": 2.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " museum.",
+          "start": 2.3,
+          "end": 2.62,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.1,
+      "end": 6.9,
+      "text": " Op een kaart ziet zij de weg. Zij loopt eerst naar links en dan rechtdoor.",
+      "temperature": 0,
+      "avg_logprob": -0.05713658179006269,
+      "compression_ratio": 1.4172661870503598,
+      "no_speech_prob": 5.775505941552073e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.1,
+          "end": 3.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.5,
+          "end": 3.6,
+          "probability": 1.0
+        },
+        {
+          "word": " kaart",
+          "start": 3.6,
+          "end": 3.94,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 3.94,
+          "end": 4.12,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zij",
+          "start": 4.12,
+          "end": 4.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 4.32,
+          "end": 4.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weg.",
+          "start": 4.46,
+          "end": 4.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zij",
+          "start": 4.98,
+          "end": 5.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " loopt",
+          "start": 5.36,
+          "end": 5.56,
+          "probability": 1.0
+        },
+        {
+          "word": " eerst",
+          "start": 5.56,
+          "end": 5.78,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 5.78,
+          "end": 5.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " links",
+          "start": 5.9,
+          "end": 6.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 6.22,
+          "end": 6.38,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " dan",
+          "start": 6.38,
+          "end": 6.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rechtdoor.",
+          "start": 6.48,
+          "end": 6.9,
+          "probability": 0.9931640625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.38,
+      "end": 10.48,
+      "text": " Het museum ligt naast de bibliotheek. Daar gaat zij naar binnen.",
+      "temperature": 0,
+      "avg_logprob": -0.05713658179006269,
+      "compression_ratio": 1.4172661870503598,
+      "no_speech_prob": 5.775505941552073e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 7.38,
+          "end": 7.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " museum",
+          "start": 7.74,
+          "end": 8.06,
+          "probability": 1.0
+        },
+        {
+          "word": " ligt",
+          "start": 8.06,
+          "end": 8.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naast",
+          "start": 8.3,
+          "end": 8.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.52,
+          "end": 8.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bibliotheek.",
+          "start": 8.62,
+          "end": 9.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Daar",
+          "start": 9.52,
+          "end": 9.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gaat",
+          "start": 9.86,
+          "end": 10.0,
+          "probability": 1.0
+        },
+        {
+          "word": " zij",
+          "start": 10.0,
+          "end": 10.12,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " naar",
+          "start": 10.12,
+          "end": 10.24,
+          "probability": 1.0
+        },
+        {
+          "word": " binnen.",
+          "start": 10.24,
+          "end": 10.48,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

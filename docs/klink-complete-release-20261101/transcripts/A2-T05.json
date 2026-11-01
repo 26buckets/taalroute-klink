@@ -1,0 +1,552 @@
+{
+  "id": "A2-T05",
+  "sha256": "8b56b4b4ede8174d32fa86b715555ea461d2914062abd62349434f34261031e7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Maya wil graag een taalkursus volgen op maandag en woensdag. Op de website ziet zij twee groepen. De ochtendgroep op maandag en donderdag en de avondgroep op dinsdag en woensdag. Maya werkt iedere dinsdagavond. Daarom past geen van de twee groepen goed bij haar. Ze belt de school. De medewerker vertelt dat volgende maand een nieuwe groep begint op maandag en woensdag. Maya vraagt om informatie per e-mail en wacht met inschrijven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.2,
+      "text": " Maya wil graag een taalkursus volgen op maandag en woensdag.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " Maya",
+          "start": 0.0,
+          "end": 0.44,
+          "probability": 0.90087890625
+        },
+        {
+          "word": " wil",
+          "start": 0.44,
+          "end": 0.66,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " graag",
+          "start": 0.66,
+          "end": 0.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.94,
+          "end": 1.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " taalkursus",
+          "start": 1.08,
+          "end": 1.72,
+          "probability": 0.966796875
+        },
+        {
+          "word": " volgen",
+          "start": 1.72,
+          "end": 2.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 2.06,
+          "end": 2.2,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " maandag",
+          "start": 2.2,
+          "end": 2.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " en",
+          "start": 2.66,
+          "end": 2.76,
+          "probability": 0.99609375
+        },
+        {
+          "word": " woensdag.",
+          "start": 2.76,
+          "end": 3.2,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.4,
+      "end": 5.44,
+      "text": " Op de website ziet zij twee groepen.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.4,
+          "end": 3.58,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 3.58,
+          "end": 3.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " website",
+          "start": 3.7,
+          "end": 4.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ziet",
+          "start": 4.1,
+          "end": 4.48,
+          "probability": 0.994140625
+        },
+        {
+          "word": " zij",
+          "start": 4.48,
+          "end": 4.68,
+          "probability": 0.98828125
+        },
+        {
+          "word": " twee",
+          "start": 4.68,
+          "end": 4.96,
+          "probability": 0.94482421875
+        },
+        {
+          "word": " groepen.",
+          "start": 4.96,
+          "end": 5.44,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.56,
+      "end": 9.84,
+      "text": " De ochtendgroep op maandag en donderdag en de avondgroep op dinsdag en woensdag.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.56,
+          "end": 5.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ochtendgroep",
+          "start": 5.76,
+          "end": 6.38,
+          "probability": 0.994140625
+        },
+        {
+          "word": " op",
+          "start": 6.38,
+          "end": 6.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maandag",
+          "start": 6.56,
+          "end": 7.0,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 7.0,
+          "end": 7.14,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " donderdag",
+          "start": 7.14,
+          "end": 7.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " en",
+          "start": 7.68,
+          "end": 7.88,
+          "probability": 0.822265625
+        },
+        {
+          "word": " de",
+          "start": 7.88,
+          "end": 8.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " avondgroep",
+          "start": 8.02,
+          "end": 8.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 8.64,
+          "end": 8.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dinsdag",
+          "start": 8.84,
+          "end": 9.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 9.26,
+          "end": 9.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag.",
+          "start": 9.38,
+          "end": 9.84,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.04,
+      "end": 11.94,
+      "text": " Maya werkt iedere dinsdagavond.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " Maya",
+          "start": 10.04,
+          "end": 10.48,
+          "probability": 1.0
+        },
+        {
+          "word": " werkt",
+          "start": 10.48,
+          "end": 10.8,
+          "probability": 1.0
+        },
+        {
+          "word": " iedere",
+          "start": 10.8,
+          "end": 11.08,
+          "probability": 1.0
+        },
+        {
+          "word": " dinsdagavond.",
+          "start": 11.08,
+          "end": 11.94,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.14,
+      "end": 14.44,
+      "text": " Daarom past geen van de twee groepen goed bij haar.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 12.14,
+          "end": 12.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " past",
+          "start": 12.5,
+          "end": 12.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geen",
+          "start": 12.72,
+          "end": 12.96,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 12.96,
+          "end": 13.14,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 13.14,
+          "end": 13.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 13.28,
+          "end": 13.46,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " groepen",
+          "start": 13.46,
+          "end": 13.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goed",
+          "start": 13.88,
+          "end": 14.02,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 14.02,
+          "end": 14.2,
+          "probability": 1.0
+        },
+        {
+          "word": " haar.",
+          "start": 14.2,
+          "end": 14.44,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.66,
+      "end": 15.52,
+      "text": " Ze belt de school.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 14.66,
+          "end": 14.96,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " belt",
+          "start": 14.96,
+          "end": 15.12,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " de",
+          "start": 15.12,
+          "end": 15.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school.",
+          "start": 15.24,
+          "end": 15.52,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 15.72,
+      "end": 19.92,
+      "text": " De medewerker vertelt dat volgende maand een nieuwe groep begint op maandag en woensdag.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 15.72,
+          "end": 15.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 15.92,
+          "end": 16.48,
+          "probability": 1.0
+        },
+        {
+          "word": " vertelt",
+          "start": 16.48,
+          "end": 16.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 16.86,
+          "end": 17.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 17.02,
+          "end": 17.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maand",
+          "start": 17.42,
+          "end": 17.7,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 17.7,
+          "end": 17.84,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " nieuwe",
+          "start": 17.84,
+          "end": 18.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groep",
+          "start": 18.08,
+          "end": 18.38,
+          "probability": 1.0
+        },
+        {
+          "word": " begint",
+          "start": 18.38,
+          "end": 18.76,
+          "probability": 0.99609375
+        },
+        {
+          "word": " op",
+          "start": 18.76,
+          "end": 18.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " maandag",
+          "start": 18.9,
+          "end": 19.32,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 19.32,
+          "end": 19.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag.",
+          "start": 19.44,
+          "end": 19.92,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.14,
+      "end": 23.48,
+      "text": " Maya vraagt om informatie per e-mail en wacht met inschrijven.",
+      "temperature": 0,
+      "avg_logprob": -0.045480737560673765,
+      "compression_ratio": 1.8347457627118644,
+      "no_speech_prob": 7.441504010219369e-12,
+      "words": [
+        {
+          "word": " Maya",
+          "start": 20.14,
+          "end": 20.52,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 20.52,
+          "end": 20.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 20.9,
+          "end": 21.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " informatie",
+          "start": 21.02,
+          "end": 21.64,
+          "probability": 1.0
+        },
+        {
+          "word": " per",
+          "start": 21.64,
+          "end": 21.84,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 21.84,
+          "end": 22.02,
+          "probability": 0.99609375
+        },
+        {
+          "word": "-mail",
+          "start": 22.02,
+          "end": 22.24,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 22.24,
+          "end": 22.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wacht",
+          "start": 22.44,
+          "end": 22.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " met",
+          "start": 22.72,
+          "end": 22.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " inschrijven.",
+          "start": 22.86,
+          "end": 23.48,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

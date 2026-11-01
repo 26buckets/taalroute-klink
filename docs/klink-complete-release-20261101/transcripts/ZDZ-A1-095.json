@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A1-095",
+  "sha256": "6d50998b5d76bec27c45dc49abf4f6f530982e6973a2fb2a0e430058292f80e8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan u nu niet helpen, want ik heb les.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.62,
+      "text": " Ik kan u nu niet helpen, want ik heb les.",
+      "temperature": 0,
+      "avg_logprob": -0.03744813799858093,
+      "compression_ratio": 0.8913043478260869,
+      "no_speech_prob": 4.665084291088917e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96630859375
+        },
+        {
+          "word": " kan",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " u",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " nu",
+          "start": 0.4,
+          "end": 0.5,
+          "probability": 0.99609375
+        },
+        {
+          "word": " niet",
+          "start": 0.5,
+          "end": 0.64,
+          "probability": 1.0
+        },
+        {
+          "word": " helpen,",
+          "start": 0.64,
+          "end": 1.0,
+          "probability": 1.0
+        },
+        {
+          "word": " want",
+          "start": 1.06,
+          "end": 1.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.18,
+          "end": 1.28,
+          "probability": 1.0
+        },
+        {
+          "word": " heb",
+          "start": 1.28,
+          "end": 1.38,
+          "probability": 1.0
+        },
+        {
+          "word": " les.",
+          "start": 1.38,
+          "end": 1.62,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

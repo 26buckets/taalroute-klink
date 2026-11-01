@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-2f4169c901b46106",
+  "sha256": "ae8577d6ba1ee762bde7c82c2b6e234f40eff310f98e039b496ab000a2b7e616",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De koffer staat bij de deur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.42,
+      "text": " De koffer staat bij de deur.",
+      "temperature": 0,
+      "avg_logprob": -0.08674867336566632,
+      "compression_ratio": 0.8235294117647058,
+      "no_speech_prob": 4.467745617908747e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95556640625
+        },
+        {
+          "word": " koffer",
+          "start": 0.16,
+          "end": 0.58,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " staat",
+          "start": 0.58,
+          "end": 0.8,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bij",
+          "start": 0.8,
+          "end": 0.98,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 0.98,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " deur.",
+          "start": 1.12,
+          "end": 1.42,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

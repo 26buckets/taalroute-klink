@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-fe3cb74cb82c5a7d",
+  "sha256": "c056bab531147e98cb1181d75a9e5bb67a7f72f5548e1d9702d7a6393ddac8c1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik betaal bij de kassa.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.16,
+      "text": " Ik betaal bij de kassa.",
+      "temperature": 0,
+      "avg_logprob": -0.0725600936196067,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 3.493802686396763e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.94287109375
+        },
+        {
+          "word": " betaal",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 0.56,
+          "end": 0.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.7,
+          "end": 0.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kassa.",
+          "start": 0.82,
+          "end": 1.16,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

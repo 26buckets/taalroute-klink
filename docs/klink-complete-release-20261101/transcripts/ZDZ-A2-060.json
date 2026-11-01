@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-060",
+  "sha256": "9a3ea8aad25638cf08e9e54090d2d1b014538005d114b82bd19e88a482b99fbb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vind het jammer dat de les vandaag niet doorgaat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.44,
+      "text": " Ik vind het jammer dat de les vandaag niet doorgaat.",
+      "temperature": 0,
+      "avg_logprob": -0.06357894224279068,
+      "compression_ratio": 0.896551724137931,
+      "no_speech_prob": 3.6414538918949635e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97900390625
+        },
+        {
+          "word": " vind",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 0.3,
+          "end": 0.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jammer",
+          "start": 0.46,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 0.8,
+          "end": 1.08,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 1.08,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 1.22,
+          "end": 1.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vandaag",
+          "start": 1.42,
+          "end": 1.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 1.7,
+          "end": 1.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doorgaat.",
+          "start": 1.9,
+          "end": 2.44,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

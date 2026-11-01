@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-7d49e3333be4c591",
+  "sha256": "3e0b829b20cbcfc6ff75d608d3496ede33fe86bdbda1dceeb0d4a044e445ea6d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De boot ligt aan de steiger.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.56,
+      "text": " De boot ligt aan de steiger.",
+      "temperature": 0,
+      "avg_logprob": -0.1094437042872111,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.062938353810441e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8857421875
+        },
+        {
+          "word": " boot",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " ligt",
+          "start": 0.46,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 0.78,
+          "end": 0.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.94,
+          "end": 1.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " steiger.",
+          "start": 1.1,
+          "end": 1.56,
+          "probability": 0.88818359375
+        }
+      ]
+    }
+  ]
+}

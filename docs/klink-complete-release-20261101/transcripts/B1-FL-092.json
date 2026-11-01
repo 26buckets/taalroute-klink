@@ -1,0 +1,654 @@
+{
+  "id": "B1-FL-092",
+  "sha256": "88afe57d5cb2011da49ce73435ce9628ca6e814490c813639c781431de500240",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op de werkbon van een garage staat dat van een auto alleen de remlichten worden gecontroleerd. Monteur Bram ontdekt dat ook een achterlicht kapot is. De reparatie hiervan staat niet in de oorspronkelijke afspraak. Bram kan het licht meteen vervangen, maar weet niet of de klant extra kosten wil maken. Hij vertelt dit aan de Bali-medewerker. Die belt de klant en legt de keuze uit. De klant geeft toestemming om ook het achterlicht te vervangen. De medewerker voegt de nieuwe afspraak aan de werkbon toe voordat Bram verder gaat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.9,
+      "text": " Op de werkbon van een garage staat dat van een auto alleen de remlichten worden gecontroleerd.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.998046875
+        },
+        {
+          "word": " werkbon",
+          "start": 0.24,
+          "end": 0.68,
+          "probability": 0.951171875
+        },
+        {
+          "word": " van",
+          "start": 0.68,
+          "end": 0.84,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " een",
+          "start": 0.84,
+          "end": 0.98,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " garage",
+          "start": 0.98,
+          "end": 1.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat",
+          "start": 1.44,
+          "end": 1.94,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " dat",
+          "start": 1.94,
+          "end": 2.1,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " van",
+          "start": 2.1,
+          "end": 2.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 2.26,
+          "end": 2.4,
+          "probability": 0.99609375
+        },
+        {
+          "word": " auto",
+          "start": 2.4,
+          "end": 2.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " alleen",
+          "start": 2.82,
+          "end": 3.2,
+          "probability": 0.78564453125
+        },
+        {
+          "word": " de",
+          "start": 3.2,
+          "end": 3.38,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " remlichten",
+          "start": 3.38,
+          "end": 3.92,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " worden",
+          "start": 3.92,
+          "end": 4.08,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " gecontroleerd.",
+          "start": 4.08,
+          "end": 4.9,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.06,
+      "end": 7.92,
+      "text": " Monteur Bram ontdekt dat ook een achterlicht kapot is.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " Monteur",
+          "start": 5.06,
+          "end": 5.5,
+          "probability": 0.857421875
+        },
+        {
+          "word": " Bram",
+          "start": 5.5,
+          "end": 5.8,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " ontdekt",
+          "start": 5.8,
+          "end": 6.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 6.26,
+          "end": 6.42,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " ook",
+          "start": 6.42,
+          "end": 6.62,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 6.62,
+          "end": 6.78,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " achterlicht",
+          "start": 6.78,
+          "end": 7.3,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kapot",
+          "start": 7.3,
+          "end": 7.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is.",
+          "start": 7.68,
+          "end": 7.92,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.16,
+      "end": 11.58,
+      "text": " De reparatie hiervan staat niet in de oorspronkelijke afspraak.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.16,
+          "end": 8.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " reparatie",
+          "start": 8.4,
+          "end": 9.04,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " hiervan",
+          "start": 9.04,
+          "end": 9.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " staat",
+          "start": 9.44,
+          "end": 9.78,
+          "probability": 0.998046875
+        },
+        {
+          "word": " niet",
+          "start": 9.78,
+          "end": 10.08,
+          "probability": 0.98828125
+        },
+        {
+          "word": " in",
+          "start": 10.08,
+          "end": 10.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 10.28,
+          "end": 10.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " oorspronkelijke",
+          "start": 10.38,
+          "end": 11.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak.",
+          "start": 11.04,
+          "end": 11.58,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.82,
+      "end": 16.22,
+      "text": " Bram kan het licht meteen vervangen, maar weet niet of de klant extra kosten wil maken.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " Bram",
+          "start": 11.82,
+          "end": 12.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 12.1,
+          "end": 12.24,
+          "probability": 0.99609375
+        },
+        {
+          "word": " het",
+          "start": 12.24,
+          "end": 12.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " licht",
+          "start": 12.4,
+          "end": 12.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " meteen",
+          "start": 12.58,
+          "end": 12.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vervangen,",
+          "start": 12.92,
+          "end": 13.4,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 13.54,
+          "end": 13.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " weet",
+          "start": 13.76,
+          "end": 14.02,
+          "probability": 0.99609375
+        },
+        {
+          "word": " niet",
+          "start": 14.02,
+          "end": 14.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " of",
+          "start": 14.24,
+          "end": 14.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 14.5,
+          "end": 14.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klant",
+          "start": 14.62,
+          "end": 14.9,
+          "probability": 1.0
+        },
+        {
+          "word": " extra",
+          "start": 14.9,
+          "end": 15.34,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kosten",
+          "start": 15.34,
+          "end": 15.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 15.66,
+          "end": 15.86,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " maken.",
+          "start": 15.86,
+          "end": 16.22,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 16.46,
+      "end": 18.54,
+      "text": " Hij vertelt dit aan de Bali-medewerker.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 16.46,
+          "end": 16.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vertelt",
+          "start": 16.66,
+          "end": 17.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dit",
+          "start": 17.08,
+          "end": 17.26,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " aan",
+          "start": 17.26,
+          "end": 17.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.46,
+          "end": 17.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Bali",
+          "start": 17.58,
+          "end": 17.88,
+          "probability": 0.55517578125
+        },
+        {
+          "word": "-medewerker.",
+          "start": 17.88,
+          "end": 18.54,
+          "probability": 0.94384765625
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.66,
+      "end": 20.96,
+      "text": " Die belt de klant en legt de keuze uit.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 18.66,
+          "end": 19.0,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " belt",
+          "start": 19.0,
+          "end": 19.26,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " de",
+          "start": 19.26,
+          "end": 19.42,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 19.42,
+          "end": 19.76,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 19.76,
+          "end": 20.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " legt",
+          "start": 20.0,
+          "end": 20.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 20.26,
+          "end": 20.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " keuze",
+          "start": 20.34,
+          "end": 20.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uit.",
+          "start": 20.66,
+          "end": 20.96,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.22,
+      "end": 24.28,
+      "text": " De klant geeft toestemming om ook het achterlicht te vervangen.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 21.22,
+          "end": 21.42,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 21.42,
+          "end": 21.7,
+          "probability": 1.0
+        },
+        {
+          "word": " geeft",
+          "start": 21.7,
+          "end": 21.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " toestemming",
+          "start": 21.92,
+          "end": 22.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 22.52,
+          "end": 22.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ook",
+          "start": 22.8,
+          "end": 23.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 23.0,
+          "end": 23.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " achterlicht",
+          "start": 23.18,
+          "end": 23.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 23.72,
+          "end": 23.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vervangen.",
+          "start": 23.86,
+          "end": 24.28,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 24.52,
+      "end": 28.72,
+      "text": " De medewerker voegt de nieuwe afspraak aan de werkbon toe voordat Bram verder gaat.",
+      "temperature": 0,
+      "avg_logprob": -0.06292654747186704,
+      "compression_ratio": 1.843205574912892,
+      "no_speech_prob": 7.157867614598912e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 24.52,
+          "end": 24.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 24.72,
+          "end": 25.36,
+          "probability": 1.0
+        },
+        {
+          "word": " voegt",
+          "start": 25.36,
+          "end": 25.64,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 25.64,
+          "end": 25.76,
+          "probability": 0.91943359375
+        },
+        {
+          "word": " nieuwe",
+          "start": 25.76,
+          "end": 25.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 25.98,
+          "end": 26.52,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 26.52,
+          "end": 26.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 26.64,
+          "end": 26.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werkbon",
+          "start": 26.76,
+          "end": 27.18,
+          "probability": 0.994140625
+        },
+        {
+          "word": " toe",
+          "start": 27.18,
+          "end": 27.42,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " voordat",
+          "start": 27.42,
+          "end": 27.88,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " Bram",
+          "start": 27.88,
+          "end": 28.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verder",
+          "start": 28.16,
+          "end": 28.46,
+          "probability": 1.0
+        },
+        {
+          "word": " gaat.",
+          "start": 28.46,
+          "end": 28.72,
+          "probability": 0.98486328125
+        }
+      ]
+    }
+  ]
+}

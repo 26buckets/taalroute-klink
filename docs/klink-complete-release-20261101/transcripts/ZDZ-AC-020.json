@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-020",
+  "sha256": "c97e81dbad711bf0172eadf1a0bef9969a76f5417c6fb1180c9d66ad6633e130",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik begin om 9 uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Ik begin om 9 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.12722673416137695,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.006797064276535e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.95947265625
+        },
+        {
+          "word": " begin",
+          "start": 0.14,
+          "end": 0.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " om",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.97216796875
+        },
+        {
+          "word": " 9",
+          "start": 0.52,
+          "end": 0.76,
+          "probability": 0.91455078125
+        },
+        {
+          "word": " uur.",
+          "start": 0.76,
+          "end": 1.04,
+          "probability": 0.9560546875
+        }
+      ]
+    }
+  ]
+}

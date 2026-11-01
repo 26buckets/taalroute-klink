@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-4a437f46326059ba",
+  "sha256": "0444bbbb5694970eddf2054aeee731f5f1af8f7326c3ada2ed57acb27a4bceaf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De winkel ligt in het centrum.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " De winkel ligt in het centrum.",
+      "temperature": 0,
+      "avg_logprob": -0.17574816483717698,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.948797885899857e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " winkel",
+          "start": 0.14,
+          "end": 0.52,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " ligt",
+          "start": 0.52,
+          "end": 0.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 0.86,
+          "end": 0.98,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " het",
+          "start": 0.98,
+          "end": 1.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " centrum.",
+          "start": 1.14,
+          "end": 1.58,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

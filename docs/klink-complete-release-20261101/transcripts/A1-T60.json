@@ -1,0 +1,259 @@
+{
+  "id": "A1-T60",
+  "sha256": "28323e11ce597fd8ee9e74cdcc75412f101dd22bc81c48b3dcfb53c0a2c8d93b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Zondag gaat een vrouw zwemmen. Zij neemt een blauwe handdoek mee. Na het zwemmen is de handdoek nat. Thuis hangt zij de handdoek in de badkamer. Daarna trekt zij droge kleding aan en drinkt water.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.16,
+      "text": " Zondag gaat een vrouw zwemmen. Zij neemt een blauwe handdoek mee.",
+      "temperature": 0,
+      "avg_logprob": -0.040832889707464924,
+      "compression_ratio": 1.4961832061068703,
+      "no_speech_prob": 6.172035538903886e-12,
+      "words": [
+        {
+          "word": " Zondag",
+          "start": 0.0,
+          "end": 0.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gaat",
+          "start": 0.48,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.72,
+          "end": 0.88,
+          "probability": 1.0
+        },
+        {
+          "word": " vrouw",
+          "start": 0.88,
+          "end": 1.24,
+          "probability": 1.0
+        },
+        {
+          "word": " zwemmen.",
+          "start": 1.24,
+          "end": 1.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zij",
+          "start": 1.7,
+          "end": 1.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " neemt",
+          "start": 1.92,
+          "end": 2.18,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 2.18,
+          "end": 2.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " blauwe",
+          "start": 2.28,
+          "end": 2.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " handdoek",
+          "start": 2.7,
+          "end": 3.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mee.",
+          "start": 3.02,
+          "end": 3.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.36,
+      "end": 7.12,
+      "text": " Na het zwemmen is de handdoek nat. Thuis hangt zij de handdoek in de badkamer.",
+      "temperature": 0,
+      "avg_logprob": -0.040832889707464924,
+      "compression_ratio": 1.4961832061068703,
+      "no_speech_prob": 6.172035538903886e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 3.36,
+          "end": 3.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 3.5,
+          "end": 3.66,
+          "probability": 1.0
+        },
+        {
+          "word": " zwemmen",
+          "start": 3.66,
+          "end": 4.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 4.0,
+          "end": 4.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.18,
+          "end": 4.32,
+          "probability": 1.0
+        },
+        {
+          "word": " handdoek",
+          "start": 4.32,
+          "end": 4.68,
+          "probability": 1.0
+        },
+        {
+          "word": " nat.",
+          "start": 4.68,
+          "end": 4.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Thuis",
+          "start": 5.08,
+          "end": 5.44,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " hangt",
+          "start": 5.44,
+          "end": 5.76,
+          "probability": 1.0
+        },
+        {
+          "word": " zij",
+          "start": 5.76,
+          "end": 5.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 5.88,
+          "end": 6.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " handdoek",
+          "start": 6.02,
+          "end": 6.36,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 6.36,
+          "end": 6.48,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 6.48,
+          "end": 6.58,
+          "probability": 1.0
+        },
+        {
+          "word": " badkamer.",
+          "start": 6.58,
+          "end": 7.12,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.3,
+      "end": 9.94,
+      "text": " Daarna trekt zij droge kleding aan en drinkt water.",
+      "temperature": 0,
+      "avg_logprob": -0.040832889707464924,
+      "compression_ratio": 1.4961832061068703,
+      "no_speech_prob": 6.172035538903886e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 7.3,
+          "end": 7.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " trekt",
+          "start": 7.6,
+          "end": 7.94,
+          "probability": 1.0
+        },
+        {
+          "word": " zij",
+          "start": 7.94,
+          "end": 8.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " droge",
+          "start": 8.1,
+          "end": 8.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kleding",
+          "start": 8.46,
+          "end": 8.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 8.84,
+          "end": 9.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 9.06,
+          "end": 9.34,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " drinkt",
+          "start": 9.34,
+          "end": 9.72,
+          "probability": 0.99609375
+        },
+        {
+          "word": " water.",
+          "start": 9.72,
+          "end": 9.94,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

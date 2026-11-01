@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-5891973a7d54d946",
+  "sha256": "7631da1c5aa45a2dc632c16449a83d40778e544a2ddac137bea08138e386a8f6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb jeuk aan mijn arm.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Ik heb jeuk aan mijn arm.",
+      "temperature": 0,
+      "avg_logprob": -0.1321162744001909,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.902855899047154e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9560546875
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jeuk",
+          "start": 0.28,
+          "end": 0.68,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " aan",
+          "start": 0.68,
+          "end": 0.78,
+          "probability": 0.7841796875
+        },
+        {
+          "word": " mijn",
+          "start": 0.78,
+          "end": 0.94,
+          "probability": 0.96826171875
+        },
+        {
+          "word": " arm.",
+          "start": 0.94,
+          "end": 1.32,
+          "probability": 0.99365234375
+        }
+      ]
+    }
+  ]
+}

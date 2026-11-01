@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-469b08654acd1ba5",
+  "sha256": "ab224549f49fe2665de026d0463abdae238f84ea2ad83598fdde5d1beca817b4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik slaap na mijn nachtdienst.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.66,
+      "text": " Ik slaap na mijn nachtdienst.",
+      "temperature": 0,
+      "avg_logprob": -0.09479317298302284,
+      "compression_ratio": 0.8285714285714286,
+      "no_speech_prob": 4.432576267837662e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9091796875
+        },
+        {
+          "word": " slaap",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " na",
+          "start": 0.56,
+          "end": 0.8,
+          "probability": 0.97216796875
+        },
+        {
+          "word": " mijn",
+          "start": 0.8,
+          "end": 1.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " nachtdienst.",
+          "start": 1.08,
+          "end": 1.66,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

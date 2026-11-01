@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-4de1014407f63cb1",
+  "sha256": "1509e31a0a1d47125b32499aacfc093936c77405fac202c34d5e1fb2a0a5d145",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik bewaar de bon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Ik bewaar de bon.",
+      "temperature": 0,
+      "avg_logprob": -0.14486932754516602,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 3.273246907894989e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9541015625
+        },
+        {
+          "word": " bewaar",
+          "start": 0.14,
+          "end": 0.6,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 0.6,
+          "end": 0.7,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bon.",
+          "start": 0.7,
+          "end": 0.94,
+          "probability": 0.92919921875
+        }
+      ]
+    }
+  ]
+}

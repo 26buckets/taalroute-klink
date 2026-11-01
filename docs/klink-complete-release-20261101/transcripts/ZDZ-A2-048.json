@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-048",
+  "sha256": "0ab87f60ceb24526f09c2936500a4906ec485b7fc7e95130bd9bcc3538760d43",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Gisteren ben ik te laat gekomen omdat de trein niet reed.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.74,
+      "text": " Gisteren ben ik te laat gekomen omdat de trein niet reed.",
+      "temperature": 0,
+      "avg_logprob": -0.036266756057739255,
+      "compression_ratio": 0.9344262295081968,
+      "no_speech_prob": 3.316683082690841e-12,
+      "words": [
+        {
+          "word": " Gisteren",
+          "start": 0.0,
+          "end": 0.46,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " ben",
+          "start": 0.46,
+          "end": 0.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ik",
+          "start": 0.56,
+          "end": 0.72,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 0.72,
+          "end": 0.84,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " laat",
+          "start": 0.84,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gekomen",
+          "start": 1.06,
+          "end": 1.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " omdat",
+          "start": 1.52,
+          "end": 1.78,
+          "probability": 0.93896484375
+        },
+        {
+          "word": " de",
+          "start": 1.78,
+          "end": 1.98,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " trein",
+          "start": 1.98,
+          "end": 2.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 2.24,
+          "end": 2.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " reed.",
+          "start": 2.42,
+          "end": 2.74,
+          "probability": 0.97314453125
+        }
+      ]
+    }
+  ]
+}

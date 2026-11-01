@@ -1,0 +1,95 @@
+{
+  "id": "ZDZ-A2-005",
+  "sha256": "770edc99ff63ff7e3cc9706912d8a2a499b61221ac3c8c3a59d256154b6c43f3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan morgen niet naar de les komen, want ik moet werken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.42,
+      "text": " Ik kan morgen niet naar de les komen, want ik moet werken.",
+      "temperature": 0,
+      "avg_logprob": -0.05286810133192274,
+      "compression_ratio": 0.9508196721311475,
+      "no_speech_prob": 3.715289360883833e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.73681640625
+        },
+        {
+          "word": " kan",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " morgen",
+          "start": 0.28,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 0.52,
+          "end": 0.74,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " naar",
+          "start": 0.74,
+          "end": 0.88,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " de",
+          "start": 0.88,
+          "end": 1.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 1.0,
+          "end": 1.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komen,",
+          "start": 1.16,
+          "end": 1.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " want",
+          "start": 1.6,
+          "end": 1.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.84,
+          "end": 1.94,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 1.94,
+          "end": 2.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werken.",
+          "start": 2.06,
+          "end": 2.42,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

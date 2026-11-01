@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-038",
+  "sha256": "b57453302ba8da98943d399110a2eb1101f592fd0d29bb9a03ca1e089e04e97d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb geen geld.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.78,
+      "text": " Ik heb geen geld.",
+      "temperature": 0,
+      "avg_logprob": -0.12451648712158203,
+      "compression_ratio": 0.7391304347826086,
+      "no_speech_prob": 4.8128263527291715e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.93603515625
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geen",
+          "start": 0.28,
+          "end": 0.46,
+          "probability": 1.0
+        },
+        {
+          "word": " geld.",
+          "start": 0.46,
+          "end": 0.78,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-064",
+  "sha256": "c594803d8f321e97976ea966dc882476ac7a89906ca8a749f307faa731dcc9d0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nee, ik heet Sam, niet Tom.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Nee, ik heet Sam, niet Tom.",
+      "temperature": 0,
+      "avg_logprob": -0.22623498623187727,
+      "compression_ratio": 0.8181818181818182,
+      "no_speech_prob": 5.832874114264364e-12,
+      "words": [
+        {
+          "word": " Nee,",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.8330078125
+        },
+        {
+          "word": " ik",
+          "start": 0.34,
+          "end": 0.38,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " heet",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " Sam,",
+          "start": 0.52,
+          "end": 0.68,
+          "probability": 0.426025390625
+        },
+        {
+          "word": " niet",
+          "start": 0.9,
+          "end": 0.96,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " Tom.",
+          "start": 0.96,
+          "end": 1.2,
+          "probability": 0.986328125
+        }
+      ]
+    }
+  ]
+}

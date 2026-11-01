@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-025",
+  "sha256": "47e9761f4441cb92e5ae235b3972f4a6c48aebe18c2df0de21263d424fe24a5a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De thee is heet. Wacht even.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.44,
+      "text": " De thee is heet. Wacht even.",
+      "temperature": 0,
+      "avg_logprob": -0.20712621395404524,
+      "compression_ratio": 0.8235294117647058,
+      "no_speech_prob": 4.870245699784004e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9658203125
+        },
+        {
+          "word": " thee",
+          "start": 0.16,
+          "end": 0.32,
+          "probability": 0.6083984375
+        },
+        {
+          "word": " is",
+          "start": 0.32,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heet.",
+          "start": 0.56,
+          "end": 0.82,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Wacht",
+          "start": 0.94,
+          "end": 1.22,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " even.",
+          "start": 1.22,
+          "end": 1.44,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

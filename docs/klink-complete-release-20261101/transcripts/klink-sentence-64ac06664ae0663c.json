@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-64ac06664ae0663c",
+  "sha256": "fdcbba5aaa9cb7cbdf1d75f1458f71e72acaf91db7f744e608f103689986fda7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij lopen tussen de bomen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.34,
+      "text": " Wij lopen tussen de bomen.",
+      "temperature": 0,
+      "avg_logprob": -0.12995962663130325,
+      "compression_ratio": 0.8125,
+      "no_speech_prob": 4.230665297255687e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9306640625
+        },
+        {
+          "word": " lopen",
+          "start": 0.16,
+          "end": 0.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tussen",
+          "start": 0.52,
+          "end": 0.82,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " de",
+          "start": 0.82,
+          "end": 1.0,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bomen.",
+          "start": 1.0,
+          "end": 1.34,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

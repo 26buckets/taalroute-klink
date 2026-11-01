@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-022",
+  "sha256": "611a6cbf4d83353b98ee2409494784b8d11a62d6578afab484a27af06036020e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kun je mij met deze doos helpen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": " Kun je mij met deze doos helpen?",
+      "temperature": 0,
+      "avg_logprob": -0.17343722856961763,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.265673751724375e-12,
+      "words": [
+        {
+          "word": " Kun",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.68798828125
+        },
+        {
+          "word": " je",
+          "start": 0.18,
+          "end": 0.28,
+          "probability": 0.982421875
+        },
+        {
+          "word": " mij",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " met",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.9921875
+        },
+        {
+          "word": " deze",
+          "start": 0.56,
+          "end": 0.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " doos",
+          "start": 0.8,
+          "end": 1.04,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " helpen?",
+          "start": 1.04,
+          "end": 1.36,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

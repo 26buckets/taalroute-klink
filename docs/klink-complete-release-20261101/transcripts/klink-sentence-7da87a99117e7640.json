@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-7da87a99117e7640",
+  "sha256": "9aea130527b93071fc056d3b9d990597b016e8feeaee82b41fa46da3c29ccf5c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik droog mijn wangen af.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Ik droog mijn wangen af.",
+      "temperature": 0,
+      "avg_logprob": -0.10624621131203392,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.439918918630603e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92431640625
+        },
+        {
+          "word": " droog",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " mijn",
+          "start": 0.48,
+          "end": 0.62,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " wangen",
+          "start": 0.62,
+          "end": 0.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " af.",
+          "start": 0.9,
+          "end": 1.2,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

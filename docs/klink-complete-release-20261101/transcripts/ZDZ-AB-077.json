@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-077",
+  "sha256": "6acd0d82c494195a9c453e4991363e803fe7614dac66575655b5c31588b5ce64",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ga met de bus.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.7,
+      "text": " Ik ga met de bus.",
+      "temperature": 0,
+      "avg_logprob": -0.07890325122409397,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.237831873615816e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8955078125
+        },
+        {
+          "word": " ga",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 0.24,
+          "end": 0.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.38,
+          "end": 0.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus.",
+          "start": 0.46,
+          "end": 0.7,
+          "probability": 0.95263671875
+        }
+      ]
+    }
+  ]
+}

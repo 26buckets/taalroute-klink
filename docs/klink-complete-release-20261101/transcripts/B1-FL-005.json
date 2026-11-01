@@ -1,0 +1,617 @@
+{
+  "id": "B1-FL-005",
+  "sha256": "e731f34688f8ae861f4a25e9108948bda5defe6099a057d56239b333073c59e2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op weg naar een sollicitatiegesprek ontdekt Nina op het station dat haar trein niet rijdt. Op het scherm staat dat reizigers een andere verbinding kunnen nemen, maar die route duurt 20 minuten langer. Nina is ruim op tijd vertrokken. Toch weet ze niet zeker of ze het gesprek zal halen. Daarom stuurt ze het bedrijf een kort bericht waarin ze de situatie uitlegt. Ze krijgt direct antwoord. Het gesprek begint gewoon op de afgesproken tijd. Uiteindelijk arriveert Nina vijf minuten voor het begin van het gesprek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.1,
+      "text": " Op weg naar een sollicitatiegesprek ontdekt Nina op het station dat haar trein niet rijdt.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " weg",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " naar",
+          "start": 0.36,
+          "end": 0.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.5,
+          "end": 0.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " sollicitatiegesprek",
+          "start": 0.64,
+          "end": 1.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ontdekt",
+          "start": 1.74,
+          "end": 2.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Nina",
+          "start": 2.06,
+          "end": 2.24,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " op",
+          "start": 2.24,
+          "end": 2.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 2.44,
+          "end": 2.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " station",
+          "start": 2.56,
+          "end": 2.9,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 2.9,
+          "end": 3.12,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " haar",
+          "start": 3.12,
+          "end": 3.26,
+          "probability": 1.0
+        },
+        {
+          "word": " trein",
+          "start": 3.26,
+          "end": 3.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 3.56,
+          "end": 3.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rijdt.",
+          "start": 3.72,
+          "end": 4.1,
+          "probability": 0.99462890625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.56,
+      "end": 9.46,
+      "text": " Op het scherm staat dat reizigers een andere verbinding kunnen nemen, maar die route duurt 20 minuten langer.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 4.56,
+          "end": 5.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 5.04,
+          "end": 5.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " scherm",
+          "start": 5.16,
+          "end": 5.52,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 5.52,
+          "end": 5.72,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 5.72,
+          "end": 5.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " reizigers",
+          "start": 5.88,
+          "end": 6.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 6.34,
+          "end": 6.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " andere",
+          "start": 6.48,
+          "end": 6.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verbinding",
+          "start": 6.7,
+          "end": 7.08,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 7.08,
+          "end": 7.28,
+          "probability": 1.0
+        },
+        {
+          "word": " nemen,",
+          "start": 7.28,
+          "end": 7.62,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 7.78,
+          "end": 7.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 7.92,
+          "end": 8.04,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " route",
+          "start": 8.04,
+          "end": 8.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " duurt",
+          "start": 8.24,
+          "end": 8.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 20",
+          "start": 8.5,
+          "end": 8.78,
+          "probability": 0.7646484375
+        },
+        {
+          "word": " minuten",
+          "start": 8.78,
+          "end": 9.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " langer.",
+          "start": 9.16,
+          "end": 9.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 10.16,
+      "end": 11.68,
+      "text": " Nina is ruim op tijd vertrokken.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Nina",
+          "start": 10.16,
+          "end": 10.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 10.42,
+          "end": 10.6,
+          "probability": 1.0
+        },
+        {
+          "word": " ruim",
+          "start": 10.6,
+          "end": 10.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 10.8,
+          "end": 10.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tijd",
+          "start": 10.96,
+          "end": 11.18,
+          "probability": 1.0
+        },
+        {
+          "word": " vertrokken.",
+          "start": 11.18,
+          "end": 11.68,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.160000000000004,
+      "end": 14.7,
+      "text": " Toch weet ze niet zeker of ze het gesprek zal halen.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Toch",
+          "start": 12.160000000000004,
+          "end": 12.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weet",
+          "start": 12.64,
+          "end": 12.82,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 12.82,
+          "end": 12.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 12.94,
+          "end": 13.08,
+          "probability": 1.0
+        },
+        {
+          "word": " zeker",
+          "start": 13.08,
+          "end": 13.48,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 13.48,
+          "end": 13.66,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 13.66,
+          "end": 13.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 13.76,
+          "end": 13.88,
+          "probability": 1.0
+        },
+        {
+          "word": " gesprek",
+          "start": 13.88,
+          "end": 14.2,
+          "probability": 1.0
+        },
+        {
+          "word": " zal",
+          "start": 14.2,
+          "end": 14.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " halen.",
+          "start": 14.34,
+          "end": 14.7,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.14,
+      "end": 18.48,
+      "text": " Daarom stuurt ze het bedrijf een kort bericht waarin ze de situatie uitlegt.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 15.14,
+          "end": 15.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stuurt",
+          "start": 15.62,
+          "end": 15.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 15.82,
+          "end": 15.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 15.92,
+          "end": 16.06,
+          "probability": 1.0
+        },
+        {
+          "word": " bedrijf",
+          "start": 16.06,
+          "end": 16.38,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 16.38,
+          "end": 16.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kort",
+          "start": 16.5,
+          "end": 16.74,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht",
+          "start": 16.74,
+          "end": 17.1,
+          "probability": 1.0
+        },
+        {
+          "word": " waarin",
+          "start": 17.1,
+          "end": 17.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 17.34,
+          "end": 17.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.42,
+          "end": 17.54,
+          "probability": 1.0
+        },
+        {
+          "word": " situatie",
+          "start": 17.54,
+          "end": 18.04,
+          "probability": 1.0
+        },
+        {
+          "word": " uitlegt.",
+          "start": 18.04,
+          "end": 18.48,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.82,
+      "end": 22.6,
+      "text": " Ze krijgt direct antwoord. Het gesprek begint gewoon op de afgesproken tijd.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 18.82,
+          "end": 19.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " krijgt",
+          "start": 19.16,
+          "end": 19.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " direct",
+          "start": 19.4,
+          "end": 19.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " antwoord.",
+          "start": 19.68,
+          "end": 20.16,
+          "probability": 1.0
+        },
+        {
+          "word": " Het",
+          "start": 20.32,
+          "end": 20.64,
+          "probability": 1.0
+        },
+        {
+          "word": " gesprek",
+          "start": 20.64,
+          "end": 21.0,
+          "probability": 1.0
+        },
+        {
+          "word": " begint",
+          "start": 21.0,
+          "end": 21.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gewoon",
+          "start": 21.26,
+          "end": 21.54,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 21.54,
+          "end": 21.72,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.72,
+          "end": 21.8,
+          "probability": 1.0
+        },
+        {
+          "word": " afgesproken",
+          "start": 21.8,
+          "end": 22.32,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd.",
+          "start": 22.32,
+          "end": 22.6,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.380000000000003,
+      "end": 26.34,
+      "text": " Uiteindelijk arriveert Nina vijf minuten voor het begin van het gesprek.",
+      "temperature": 0,
+      "avg_logprob": -0.08275652820279139,
+      "compression_ratio": 1.7043189368770764,
+      "no_speech_prob": 5.137766947993505e-12,
+      "words": [
+        {
+          "word": " Uiteindelijk",
+          "start": 23.380000000000003,
+          "end": 23.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " arriveert",
+          "start": 23.86,
+          "end": 24.28,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Nina",
+          "start": 24.28,
+          "end": 24.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vijf",
+          "start": 24.5,
+          "end": 24.86,
+          "probability": 0.90673828125
+        },
+        {
+          "word": " minuten",
+          "start": 24.86,
+          "end": 25.14,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 25.14,
+          "end": 25.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " het",
+          "start": 25.32,
+          "end": 25.48,
+          "probability": 1.0
+        },
+        {
+          "word": " begin",
+          "start": 25.48,
+          "end": 25.68,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 25.68,
+          "end": 25.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 25.82,
+          "end": 25.96,
+          "probability": 1.0
+        },
+        {
+          "word": " gesprek.",
+          "start": 25.96,
+          "end": 26.34,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

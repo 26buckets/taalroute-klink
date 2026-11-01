@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-086",
+  "sha256": "b4606c109df18a18fecc679c961e193562e60711513da27c73d60958624574e0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil mijn adres doorgeven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.22,
+      "text": " Ik wil mijn adres doorgeven.",
+      "temperature": 0,
+      "avg_logprob": -0.08441754182179768,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.75204468189283e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.94384765625
+        },
+        {
+          "word": " wil",
+          "start": 0.12,
+          "end": 0.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " adres",
+          "start": 0.38,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doorgeven.",
+          "start": 0.68,
+          "end": 1.22,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

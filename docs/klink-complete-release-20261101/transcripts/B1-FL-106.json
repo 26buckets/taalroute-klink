@@ -1,0 +1,610 @@
+{
+  "id": "B1-FL-106",
+  "sha256": "90f5c5559034da91586eeb242e879dc623acd721eb709dde87e28f31876ee259",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In het tuincentrum zet medewerker Chen planten klaar voor een bestelling. Op de potten staat een etiket met een naam die niet overeenkomt met de naam op de bestellijst. Chen vergelijkt de planten met de foto's in het systeem, maar kan niet zeker vaststellen welke soort het is. Hij zet de potten daarom apart en vraagt de leverancier om een bevestiging. De leverancier ontdekt dat bij het inpakken de verkeerde etiketten zijn gebruikt. Chen laat de potten opnieuw labelen voordat hij de bestelling aan de klant meegeeft.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.72,
+      "text": " In het tuincentrum zet medewerker Chen planten klaar voor een bestelling.",
+      "temperature": 0,
+      "avg_logprob": -0.06762072018214635,
+      "compression_ratio": 1.8374558303886925,
+      "no_speech_prob": 5.8413426005932134e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " het",
+          "start": 0.12,
+          "end": 0.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tuincentrum",
+          "start": 0.28,
+          "end": 0.96,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " zet",
+          "start": 0.96,
+          "end": 1.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " medewerker",
+          "start": 1.22,
+          "end": 1.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Chen",
+          "start": 1.84,
+          "end": 2.14,
+          "probability": 0.88720703125
+        },
+        {
+          "word": " planten",
+          "start": 2.14,
+          "end": 2.78,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " klaar",
+          "start": 2.78,
+          "end": 3.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " voor",
+          "start": 3.02,
+          "end": 3.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 3.16,
+          "end": 3.3,
+          "probability": 0.7724609375
+        },
+        {
+          "word": " bestelling.",
+          "start": 3.3,
+          "end": 3.72,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.94,
+      "end": 9.18,
+      "text": " Op de potten staat een etiket met een naam die niet overeenkomt met de naam op de bestellijst.",
+      "temperature": 0,
+      "avg_logprob": -0.06762072018214635,
+      "compression_ratio": 1.8374558303886925,
+      "no_speech_prob": 5.8413426005932134e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.94,
+          "end": 4.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 4.08,
+          "end": 4.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " potten",
+          "start": 4.22,
+          "end": 4.54,
+          "probability": 0.998046875
+        },
+        {
+          "word": " staat",
+          "start": 4.54,
+          "end": 4.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 4.8,
+          "end": 4.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " etiket",
+          "start": 4.98,
+          "end": 5.5,
+          "probability": 0.9921875
+        },
+        {
+          "word": " met",
+          "start": 5.5,
+          "end": 5.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 5.7,
+          "end": 5.86,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " naam",
+          "start": 5.86,
+          "end": 6.22,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 6.22,
+          "end": 6.46,
+          "probability": 0.875
+        },
+        {
+          "word": " niet",
+          "start": 6.46,
+          "end": 6.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " overeenkomt",
+          "start": 6.7,
+          "end": 7.5,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " met",
+          "start": 7.5,
+          "end": 7.66,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " de",
+          "start": 7.66,
+          "end": 7.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naam",
+          "start": 7.82,
+          "end": 8.12,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 8.12,
+          "end": 8.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.32,
+          "end": 8.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bestellijst.",
+          "start": 8.44,
+          "end": 9.18,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.34,
+      "end": 14.92,
+      "text": " Chen vergelijkt de planten met de foto's in het systeem, maar kan niet zeker vaststellen welke soort het is.",
+      "temperature": 0,
+      "avg_logprob": -0.06762072018214635,
+      "compression_ratio": 1.8374558303886925,
+      "no_speech_prob": 5.8413426005932134e-12,
+      "words": [
+        {
+          "word": " Chen",
+          "start": 9.34,
+          "end": 9.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vergelijkt",
+          "start": 9.64,
+          "end": 10.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.2,
+          "end": 10.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " planten",
+          "start": 10.38,
+          "end": 10.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 10.68,
+          "end": 10.8,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.8,
+          "end": 10.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " foto's",
+          "start": 10.94,
+          "end": 11.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 11.46,
+          "end": 11.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 11.6,
+          "end": 11.72,
+          "probability": 1.0
+        },
+        {
+          "word": " systeem,",
+          "start": 11.72,
+          "end": 12.28,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 12.38,
+          "end": 12.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 12.54,
+          "end": 12.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " niet",
+          "start": 12.72,
+          "end": 12.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zeker",
+          "start": 12.86,
+          "end": 13.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vaststellen",
+          "start": 13.18,
+          "end": 13.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " welke",
+          "start": 13.86,
+          "end": 14.22,
+          "probability": 1.0
+        },
+        {
+          "word": " soort",
+          "start": 14.22,
+          "end": 14.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 14.44,
+          "end": 14.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is.",
+          "start": 14.62,
+          "end": 14.92,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 15.42,
+      "end": 19.54,
+      "text": " Hij zet de potten daarom apart en vraagt de leverancier om een bevestiging.",
+      "temperature": 0,
+      "avg_logprob": -0.06762072018214635,
+      "compression_ratio": 1.8374558303886925,
+      "no_speech_prob": 5.8413426005932134e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 15.42,
+          "end": 15.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zet",
+          "start": 15.92,
+          "end": 16.12,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 16.12,
+          "end": 16.22,
+          "probability": 1.0
+        },
+        {
+          "word": " potten",
+          "start": 16.22,
+          "end": 16.52,
+          "probability": 1.0
+        },
+        {
+          "word": " daarom",
+          "start": 16.52,
+          "end": 16.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " apart",
+          "start": 16.86,
+          "end": 17.18,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 17.18,
+          "end": 17.54,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vraagt",
+          "start": 17.54,
+          "end": 17.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 17.84,
+          "end": 17.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leverancier",
+          "start": 17.92,
+          "end": 18.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 18.52,
+          "end": 18.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 18.72,
+          "end": 18.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bevestiging.",
+          "start": 18.84,
+          "end": 19.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 19.86,
+      "end": 23.94,
+      "text": " De leverancier ontdekt dat bij het inpakken de verkeerde etiketten zijn gebruikt.",
+      "temperature": 0,
+      "avg_logprob": -0.06762072018214635,
+      "compression_ratio": 1.8374558303886925,
+      "no_speech_prob": 5.8413426005932134e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 19.86,
+          "end": 20.12,
+          "probability": 1.0
+        },
+        {
+          "word": " leverancier",
+          "start": 20.12,
+          "end": 20.7,
+          "probability": 1.0
+        },
+        {
+          "word": " ontdekt",
+          "start": 20.7,
+          "end": 21.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 21.14,
+          "end": 21.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 21.36,
+          "end": 21.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 21.52,
+          "end": 21.68,
+          "probability": 1.0
+        },
+        {
+          "word": " inpakken",
+          "start": 21.68,
+          "end": 22.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.18,
+          "end": 22.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkeerde",
+          "start": 22.32,
+          "end": 22.76,
+          "probability": 1.0
+        },
+        {
+          "word": " etiketten",
+          "start": 22.76,
+          "end": 23.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zijn",
+          "start": 23.2,
+          "end": 23.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gebruikt.",
+          "start": 23.4,
+          "end": 23.94,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 24.28,
+      "end": 28.46,
+      "text": " Chen laat de potten opnieuw labelen voordat hij de bestelling aan de klant meegeeft.",
+      "temperature": 0,
+      "avg_logprob": -0.06762072018214635,
+      "compression_ratio": 1.8374558303886925,
+      "no_speech_prob": 5.8413426005932134e-12,
+      "words": [
+        {
+          "word": " Chen",
+          "start": 24.28,
+          "end": 24.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " laat",
+          "start": 24.7,
+          "end": 24.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 24.94,
+          "end": 25.04,
+          "probability": 1.0
+        },
+        {
+          "word": " potten",
+          "start": 25.04,
+          "end": 25.32,
+          "probability": 1.0
+        },
+        {
+          "word": " opnieuw",
+          "start": 25.32,
+          "end": 25.74,
+          "probability": 1.0
+        },
+        {
+          "word": " labelen",
+          "start": 25.74,
+          "end": 26.24,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " voordat",
+          "start": 26.24,
+          "end": 26.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 26.72,
+          "end": 26.86,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 26.86,
+          "end": 26.98,
+          "probability": 1.0
+        },
+        {
+          "word": " bestelling",
+          "start": 26.98,
+          "end": 27.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 27.38,
+          "end": 27.54,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 27.54,
+          "end": 27.64,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 27.64,
+          "end": 27.92,
+          "probability": 1.0
+        },
+        {
+          "word": " meegeeft.",
+          "start": 27.92,
+          "end": 28.46,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

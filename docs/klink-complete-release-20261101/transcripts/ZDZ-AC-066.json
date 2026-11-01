@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-066",
+  "sha256": "67259a8b9f329bb070ef2f537c224cf5434f80ea493acbb35ca2d4bf4e442d0e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze tas is groter dan die.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Deze tas is groter dan die.",
+      "temperature": 0,
+      "avg_logprob": -0.07729983329772949,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.581075102594312e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " tas",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " is",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " groter",
+          "start": 0.62,
+          "end": 0.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dan",
+          "start": 0.92,
+          "end": 1.02,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " die.",
+          "start": 1.02,
+          "end": 1.18,
+          "probability": 0.99560546875
+        }
+      ]
+    }
+  ]
+}

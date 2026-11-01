@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-024",
+  "sha256": "d4dc0d46b9ccd616241c3518a52f3c026cc661908422d013bdb0daa41a471365",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De lamp is kapot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.84,
+      "text": " De lamp is kapot.",
+      "temperature": 0,
+      "avg_logprob": -0.3417297999064128,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 1.1389961022956197e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.70263671875
+        },
+        {
+          "word": " lamp",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " is",
+          "start": 0.4,
+          "end": 0.5,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kapot.",
+          "start": 0.5,
+          "end": 0.84,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

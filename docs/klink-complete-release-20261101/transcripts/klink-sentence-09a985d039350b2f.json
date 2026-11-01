@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-09a985d039350b2f",
+  "sha256": "1f8ec1116e37acf7587469fb50156fc76c19b1f8b757d6e362a678af472c5fa8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het schip ligt in de haven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": " Het schip ligt in de haven.",
+      "temperature": 0,
+      "avg_logprob": -0.11489272117614746,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.368145168492932e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.92333984375
+        },
+        {
+          "word": " schip",
+          "start": 0.14,
+          "end": 0.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ligt",
+          "start": 0.48,
+          "end": 0.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 0.78,
+          "end": 0.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.92,
+          "end": 1.04,
+          "probability": 0.986328125
+        },
+        {
+          "word": " haven.",
+          "start": 1.04,
+          "end": 1.36,
+          "probability": 0.9912109375
+        }
+      ]
+    }
+  ]
+}

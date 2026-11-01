@@ -1,0 +1,521 @@
+{
+  "id": "A2-T16",
+  "sha256": "8b6004ad25c4db95ba4a67f8ad18d089bb10b310f9c89fc2badab1650b15e7ef",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Woensdag komt bij een klein bedrijf een doos aan. Het bedrijf heeft zes koptelefoons besteld. In de doos liggen er maar vijf. De medewerker maakt meteen een foto van de inhoud en stuurt die met het bestelnummer naar de leverancier. De leverancier antwoordt dat de zesde koptelefoon vrijdag wordt bezorgd. De medewerker schrijft dit op voor de collega's. De vijf koptelefoons die wel zijn ontvangen kunnen ondertussen gewoon gebruikt worden.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.36,
+      "text": " Woensdag komt bij een klein bedrijf een doos aan.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " Woensdag",
+          "start": 0.0,
+          "end": 0.72,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " komt",
+          "start": 0.72,
+          "end": 0.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 0.88,
+          "end": 1.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 1.02,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klein",
+          "start": 1.14,
+          "end": 1.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bedrijf",
+          "start": 1.38,
+          "end": 1.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 1.78,
+          "end": 1.92,
+          "probability": 0.998046875
+        },
+        {
+          "word": " doos",
+          "start": 1.92,
+          "end": 2.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aan.",
+          "start": 2.18,
+          "end": 2.36,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.88,
+      "end": 5.32,
+      "text": " Het bedrijf heeft zes koptelefoons besteld.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 2.88,
+          "end": 3.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bedrijf",
+          "start": 3.42,
+          "end": 3.84,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 3.84,
+          "end": 4.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zes",
+          "start": 4.04,
+          "end": 4.3,
+          "probability": 0.9052734375
+        },
+        {
+          "word": " koptelefoons",
+          "start": 4.3,
+          "end": 4.92,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " besteld.",
+          "start": 4.92,
+          "end": 5.32,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.6,
+      "end": 7.3,
+      "text": " In de doos liggen er maar vijf.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 5.6,
+          "end": 6.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.04,
+          "end": 6.16,
+          "probability": 1.0
+        },
+        {
+          "word": " doos",
+          "start": 6.16,
+          "end": 6.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " liggen",
+          "start": 6.46,
+          "end": 6.7,
+          "probability": 1.0
+        },
+        {
+          "word": " er",
+          "start": 6.7,
+          "end": 6.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 6.8,
+          "end": 6.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vijf.",
+          "start": 6.9,
+          "end": 7.3,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.74,
+      "end": 13.16,
+      "text": " De medewerker maakt meteen een foto van de inhoud en stuurt die met het bestelnummer naar de leverancier.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.74,
+          "end": 8.2,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 8.2,
+          "end": 8.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maakt",
+          "start": 8.74,
+          "end": 8.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " meteen",
+          "start": 8.96,
+          "end": 9.2,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 9.2,
+          "end": 9.36,
+          "probability": 1.0
+        },
+        {
+          "word": " foto",
+          "start": 9.36,
+          "end": 9.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 9.68,
+          "end": 9.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.84,
+          "end": 9.96,
+          "probability": 1.0
+        },
+        {
+          "word": " inhoud",
+          "start": 9.96,
+          "end": 10.34,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 10.34,
+          "end": 11.16,
+          "probability": 0.82666015625
+        },
+        {
+          "word": " stuurt",
+          "start": 11.16,
+          "end": 11.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 11.5,
+          "end": 11.58,
+          "probability": 0.98828125
+        },
+        {
+          "word": " met",
+          "start": 11.58,
+          "end": 11.7,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 11.7,
+          "end": 11.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bestelnummer",
+          "start": 11.84,
+          "end": 12.34,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " naar",
+          "start": 12.34,
+          "end": 12.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 12.48,
+          "end": 12.58,
+          "probability": 1.0
+        },
+        {
+          "word": " leverancier.",
+          "start": 12.58,
+          "end": 13.16,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.779999999999996,
+      "end": 17.5,
+      "text": " De leverancier antwoordt dat de zesde koptelefoon vrijdag wordt bezorgd.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 13.779999999999996,
+          "end": 14.339999999999998,
+          "probability": 1.0
+        },
+        {
+          "word": " leverancier",
+          "start": 14.339999999999998,
+          "end": 14.9,
+          "probability": 1.0
+        },
+        {
+          "word": " antwoordt",
+          "start": 14.9,
+          "end": 15.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 15.38,
+          "end": 15.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 15.5,
+          "end": 15.62,
+          "probability": 1.0
+        },
+        {
+          "word": " zesde",
+          "start": 15.62,
+          "end": 15.9,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " koptelefoon",
+          "start": 15.9,
+          "end": 16.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 16.48,
+          "end": 16.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wordt",
+          "start": 16.86,
+          "end": 17.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bezorgd.",
+          "start": 17.02,
+          "end": 17.5,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.92,
+      "end": 20.26,
+      "text": " De medewerker schrijft dit op voor de collega's.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 17.92,
+          "end": 18.34,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 18.34,
+          "end": 18.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schrijft",
+          "start": 18.84,
+          "end": 19.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dit",
+          "start": 19.12,
+          "end": 19.24,
+          "probability": 0.998046875
+        },
+        {
+          "word": " op",
+          "start": 19.24,
+          "end": 19.44,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 19.44,
+          "end": 19.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 19.58,
+          "end": 19.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " collega's.",
+          "start": 19.68,
+          "end": 20.26,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.64,
+      "end": 24.8,
+      "text": " De vijf koptelefoons die wel zijn ontvangen kunnen ondertussen gewoon gebruikt worden.",
+      "temperature": 0,
+      "avg_logprob": -0.11106588326248468,
+      "compression_ratio": 1.752988047808765,
+      "no_speech_prob": 5.467619412780067e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.64,
+          "end": 21.12,
+          "probability": 1.0
+        },
+        {
+          "word": " vijf",
+          "start": 21.12,
+          "end": 21.38,
+          "probability": 1.0
+        },
+        {
+          "word": " koptelefoons",
+          "start": 21.38,
+          "end": 21.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 21.96,
+          "end": 22.08,
+          "probability": 1.0
+        },
+        {
+          "word": " wel",
+          "start": 22.08,
+          "end": 22.26,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zijn",
+          "start": 22.26,
+          "end": 22.42,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ontvangen",
+          "start": 22.42,
+          "end": 22.86,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 22.86,
+          "end": 23.46,
+          "probability": 0.63671875
+        },
+        {
+          "word": " ondertussen",
+          "start": 23.46,
+          "end": 23.92,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " gewoon",
+          "start": 23.92,
+          "end": 24.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gebruikt",
+          "start": 24.18,
+          "end": 24.6,
+          "probability": 1.0
+        },
+        {
+          "word": " worden.",
+          "start": 24.6,
+          "end": 24.8,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

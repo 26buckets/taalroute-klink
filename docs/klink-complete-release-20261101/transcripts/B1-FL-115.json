@@ -1,0 +1,648 @@
+{
+  "id": "B1-FL-115",
+  "sha256": "31f61e4b1dc4f95d7d5f92fd6351121d328b821b9e63981a493151c5a69a8711",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bij de supermarkt ziet medewerker Sanne dat de koelkast met melk warmer is dan normaal. Ze controleert de temperatuur op het scherm en ontdekt dat de deur niet goed sluit. Sanne hangt een briefje op de koelkast. Klanten mogen de melk voorlopig niet meenemen. Daarna meldt ze het probleem aan haar leidinggevende. Die vraagt een monteur en laat de producten apart zetten voor controle. Pas na de controle beslist de leidinggevende wat terug in de verkoop kan. Sanne vertelt haar collega's van de volgende dienst wat er is gebeurd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.82,
+      "text": " Bij de supermarkt ziet medewerker Sanne dat de koelkast met melk warmer is dan normaal.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " supermarkt",
+          "start": 0.28,
+          "end": 0.82,
+          "probability": 0.994140625
+        },
+        {
+          "word": " ziet",
+          "start": 0.82,
+          "end": 1.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 1.02,
+          "end": 1.56,
+          "probability": 0.95556640625
+        },
+        {
+          "word": " Sanne",
+          "start": 1.56,
+          "end": 1.86,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " dat",
+          "start": 1.86,
+          "end": 2.0,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " de",
+          "start": 2.0,
+          "end": 2.14,
+          "probability": 1.0
+        },
+        {
+          "word": " koelkast",
+          "start": 2.14,
+          "end": 2.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 2.56,
+          "end": 2.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " melk",
+          "start": 2.7,
+          "end": 2.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " warmer",
+          "start": 2.96,
+          "end": 3.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " is",
+          "start": 3.2,
+          "end": 3.38,
+          "probability": 1.0
+        },
+        {
+          "word": " dan",
+          "start": 3.38,
+          "end": 3.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " normaal.",
+          "start": 3.5,
+          "end": 3.82,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.2,
+      "end": 8.32,
+      "text": " Ze controleert de temperatuur op het scherm en ontdekt dat de deur niet goed sluit.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 4.2,
+          "end": 4.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " controleert",
+          "start": 4.56,
+          "end": 5.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 5.06,
+          "end": 5.18,
+          "probability": 1.0
+        },
+        {
+          "word": " temperatuur",
+          "start": 5.18,
+          "end": 5.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 5.72,
+          "end": 5.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 5.84,
+          "end": 5.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " scherm",
+          "start": 5.94,
+          "end": 6.3,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 6.3,
+          "end": 6.9,
+          "probability": 0.984375
+        },
+        {
+          "word": " ontdekt",
+          "start": 6.9,
+          "end": 7.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 7.2,
+          "end": 7.32,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.32,
+          "end": 7.44,
+          "probability": 1.0
+        },
+        {
+          "word": " deur",
+          "start": 7.44,
+          "end": 7.62,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 7.62,
+          "end": 7.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goed",
+          "start": 7.78,
+          "end": 7.96,
+          "probability": 1.0
+        },
+        {
+          "word": " sluit.",
+          "start": 7.96,
+          "end": 8.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.8,
+      "end": 10.74,
+      "text": " Sanne hangt een briefje op de koelkast.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Sanne",
+          "start": 8.8,
+          "end": 9.36,
+          "probability": 1.0
+        },
+        {
+          "word": " hangt",
+          "start": 9.36,
+          "end": 9.56,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 9.56,
+          "end": 9.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " briefje",
+          "start": 9.66,
+          "end": 10.02,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 10.02,
+          "end": 10.14,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.14,
+          "end": 10.24,
+          "probability": 1.0
+        },
+        {
+          "word": " koelkast.",
+          "start": 10.24,
+          "end": 10.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.1,
+      "end": 13.42,
+      "text": " Klanten mogen de melk voorlopig niet meenemen.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Klanten",
+          "start": 11.1,
+          "end": 11.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mogen",
+          "start": 11.62,
+          "end": 11.9,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 11.9,
+          "end": 12.02,
+          "probability": 1.0
+        },
+        {
+          "word": " melk",
+          "start": 12.02,
+          "end": 12.28,
+          "probability": 1.0
+        },
+        {
+          "word": " voorlopig",
+          "start": 12.28,
+          "end": 12.74,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 12.74,
+          "end": 12.9,
+          "probability": 1.0
+        },
+        {
+          "word": " meenemen.",
+          "start": 12.9,
+          "end": 13.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.12,
+      "end": 16.22,
+      "text": " Daarna meldt ze het probleem aan haar leidinggevende.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 14.12,
+          "end": 14.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meldt",
+          "start": 14.4,
+          "end": 14.68,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " ze",
+          "start": 14.68,
+          "end": 14.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 14.76,
+          "end": 14.9,
+          "probability": 1.0
+        },
+        {
+          "word": " probleem",
+          "start": 14.9,
+          "end": 15.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 15.28,
+          "end": 15.38,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 15.38,
+          "end": 15.54,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende.",
+          "start": 15.54,
+          "end": 16.22,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.6,
+      "end": 20.14,
+      "text": " Die vraagt een monteur en laat de producten apart zetten voor controle.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 16.6,
+          "end": 17.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vraagt",
+          "start": 17.04,
+          "end": 17.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 17.34,
+          "end": 17.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " monteur",
+          "start": 17.46,
+          "end": 17.98,
+          "probability": 0.990234375
+        },
+        {
+          "word": " en",
+          "start": 17.98,
+          "end": 18.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " laat",
+          "start": 18.36,
+          "end": 18.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 18.52,
+          "end": 18.64,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " producten",
+          "start": 18.64,
+          "end": 19.02,
+          "probability": 1.0
+        },
+        {
+          "word": " apart",
+          "start": 19.02,
+          "end": 19.3,
+          "probability": 1.0
+        },
+        {
+          "word": " zetten",
+          "start": 19.3,
+          "end": 19.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 19.58,
+          "end": 19.72,
+          "probability": 1.0
+        },
+        {
+          "word": " controle.",
+          "start": 19.72,
+          "end": 20.14,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.68,
+      "end": 24.02,
+      "text": " Pas na de controle beslist de leidinggevende wat terug in de verkoop kan.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Pas",
+          "start": 20.68,
+          "end": 21.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " na",
+          "start": 21.14,
+          "end": 21.3,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.3,
+          "end": 21.44,
+          "probability": 1.0
+        },
+        {
+          "word": " controle",
+          "start": 21.44,
+          "end": 21.84,
+          "probability": 1.0
+        },
+        {
+          "word": " beslist",
+          "start": 21.84,
+          "end": 22.24,
+          "probability": 0.986328125
+        },
+        {
+          "word": " de",
+          "start": 22.24,
+          "end": 22.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leidinggevende",
+          "start": 22.36,
+          "end": 22.94,
+          "probability": 1.0
+        },
+        {
+          "word": " wat",
+          "start": 22.94,
+          "end": 23.08,
+          "probability": 1.0
+        },
+        {
+          "word": " terug",
+          "start": 23.08,
+          "end": 23.26,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 23.26,
+          "end": 23.4,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 23.4,
+          "end": 23.46,
+          "probability": 1.0
+        },
+        {
+          "word": " verkoop",
+          "start": 23.46,
+          "end": 23.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan.",
+          "start": 23.86,
+          "end": 24.02,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 24.660000000000004,
+      "end": 27.72,
+      "text": " Sanne vertelt haar collega's van de volgende dienst wat er is gebeurd.",
+      "temperature": 0,
+      "avg_logprob": -0.0651071802040056,
+      "compression_ratio": 1.7516556291390728,
+      "no_speech_prob": 5.301030014254193e-12,
+      "words": [
+        {
+          "word": " Sanne",
+          "start": 24.660000000000004,
+          "end": 25.22,
+          "probability": 1.0
+        },
+        {
+          "word": " vertelt",
+          "start": 25.22,
+          "end": 25.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 25.62,
+          "end": 25.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " collega's",
+          "start": 25.74,
+          "end": 26.22,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 26.22,
+          "end": 26.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 26.3,
+          "end": 26.4,
+          "probability": 1.0
+        },
+        {
+          "word": " volgende",
+          "start": 26.4,
+          "end": 26.76,
+          "probability": 1.0
+        },
+        {
+          "word": " dienst",
+          "start": 26.76,
+          "end": 27.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wat",
+          "start": 27.04,
+          "end": 27.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 27.16,
+          "end": 27.28,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 27.28,
+          "end": 27.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gebeurd.",
+          "start": 27.38,
+          "end": 27.72,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

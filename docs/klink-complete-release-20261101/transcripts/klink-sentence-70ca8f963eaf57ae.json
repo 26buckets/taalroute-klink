@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-70ca8f963eaf57ae",
+  "sha256": "e74cb879cb0b5f39cb3b3fe7250fcbe79d1095e130fce38646e8fa66c8fec288",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik tel negen stoelen in de kring.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " Ik tel negen stoelen in de kring.",
+      "temperature": 0,
+      "avg_logprob": -0.09463174002511161,
+      "compression_ratio": 0.8461538461538461,
+      "no_speech_prob": 4.4046702049604924e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.93310546875
+        },
+        {
+          "word": " tel",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " negen",
+          "start": 0.4,
+          "end": 0.92,
+          "probability": 0.80078125
+        },
+        {
+          "word": " stoelen",
+          "start": 0.92,
+          "end": 1.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 1.26,
+          "end": 1.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.42,
+          "end": 1.5,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " kring.",
+          "start": 1.5,
+          "end": 1.78,
+          "probability": 0.994140625
+        }
+      ]
+    }
+  ]
+}

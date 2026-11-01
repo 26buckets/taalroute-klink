@@ -1,0 +1,594 @@
+{
+  "id": "A2-T24",
+  "sha256": "dfad6d190e79fe481e5c30f0f1eff35ed22cce55e59564720236dc70db71a92b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In een advertentie staat een houten tafel te koop voor 40 euro. De tafel is nog goed, maar past niet in de nieuwe woning van de verkoper. Ophalen kan zaterdag tussen 10 en 12 uur. De koper moet zelf vervoer regelen, want bezorgen kan niet. Een buur stuurt vrijdag een bericht. Hij wil de tafel kopen, maar kan zaterdag pas in de middag komen. De verkoper stelt daarom zondagochtend voor. De buur kan dan komen en vraagt om het adres.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.18,
+      "text": " In een advertentie staat een houten tafel te koop voor 40 euro.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " een",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " advertentie",
+          "start": 0.3,
+          "end": 0.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat",
+          "start": 0.96,
+          "end": 1.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.16,
+          "end": 1.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " houten",
+          "start": 1.32,
+          "end": 1.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tafel",
+          "start": 1.78,
+          "end": 2.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 2.1,
+          "end": 2.2,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " koop",
+          "start": 2.2,
+          "end": 2.42,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " voor",
+          "start": 2.42,
+          "end": 2.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 40",
+          "start": 2.56,
+          "end": 2.88,
+          "probability": 0.81982421875
+        },
+        {
+          "word": " euro.",
+          "start": 2.88,
+          "end": 3.18,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.74,
+      "end": 7.64,
+      "text": " De tafel is nog goed, maar past niet in de nieuwe woning van de verkoper.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.74,
+          "end": 4.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tafel",
+          "start": 4.24,
+          "end": 4.58,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 4.58,
+          "end": 4.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 4.7,
+          "end": 4.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goed,",
+          "start": 4.84,
+          "end": 5.1,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 5.26,
+          "end": 5.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " past",
+          "start": 5.56,
+          "end": 5.86,
+          "probability": 0.97021484375
+        },
+        {
+          "word": " niet",
+          "start": 5.86,
+          "end": 6.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 6.06,
+          "end": 6.24,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 6.24,
+          "end": 6.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 6.32,
+          "end": 6.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woning",
+          "start": 6.52,
+          "end": 6.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 6.86,
+          "end": 6.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 6.98,
+          "end": 7.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkoper.",
+          "start": 7.08,
+          "end": 7.64,
+          "probability": 0.99609375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.38,
+      "end": 10.72,
+      "text": " Ophalen kan zaterdag tussen 10 en 12 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " Ophalen",
+          "start": 8.38,
+          "end": 8.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 8.9,
+          "end": 9.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag",
+          "start": 9.06,
+          "end": 9.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tussen",
+          "start": 9.58,
+          "end": 9.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 10",
+          "start": 9.76,
+          "end": 10.0,
+          "probability": 0.96484375
+        },
+        {
+          "word": " en",
+          "start": 10.0,
+          "end": 10.14,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " 12",
+          "start": 10.14,
+          "end": 10.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uur.",
+          "start": 10.36,
+          "end": 10.72,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.06,
+      "end": 14.24,
+      "text": " De koper moet zelf vervoer regelen, want bezorgen kan niet.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.06,
+          "end": 11.5,
+          "probability": 1.0
+        },
+        {
+          "word": " koper",
+          "start": 11.5,
+          "end": 11.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 11.8,
+          "end": 11.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zelf",
+          "start": 11.98,
+          "end": 12.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vervoer",
+          "start": 12.22,
+          "end": 12.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " regelen,",
+          "start": 12.62,
+          "end": 13.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " want",
+          "start": 13.2,
+          "end": 13.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bezorgen",
+          "start": 13.48,
+          "end": 13.9,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " kan",
+          "start": 13.9,
+          "end": 14.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet.",
+          "start": 14.04,
+          "end": 14.24,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.76,
+      "end": 16.52,
+      "text": " Een buur stuurt vrijdag een bericht.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 14.76,
+          "end": 15.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buur",
+          "start": 15.18,
+          "end": 15.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " stuurt",
+          "start": 15.44,
+          "end": 15.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 15.7,
+          "end": 16.08,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 16.08,
+          "end": 16.18,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht.",
+          "start": 16.18,
+          "end": 16.52,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.84,
+      "end": 20.16,
+      "text": " Hij wil de tafel kopen, maar kan zaterdag pas in de middag komen.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 16.84,
+          "end": 17.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 17.26,
+          "end": 17.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 17.42,
+          "end": 17.54,
+          "probability": 1.0
+        },
+        {
+          "word": " tafel",
+          "start": 17.54,
+          "end": 17.88,
+          "probability": 1.0
+        },
+        {
+          "word": " kopen,",
+          "start": 17.88,
+          "end": 18.26,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 18.44,
+          "end": 18.68,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 18.68,
+          "end": 18.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zaterdag",
+          "start": 18.84,
+          "end": 19.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pas",
+          "start": 19.26,
+          "end": 19.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 19.44,
+          "end": 19.56,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 19.56,
+          "end": 19.64,
+          "probability": 1.0
+        },
+        {
+          "word": " middag",
+          "start": 19.64,
+          "end": 19.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komen.",
+          "start": 19.86,
+          "end": 20.16,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.6,
+      "end": 22.86,
+      "text": " De verkoper stelt daarom zondagochtend voor.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.6,
+          "end": 21.04,
+          "probability": 1.0
+        },
+        {
+          "word": " verkoper",
+          "start": 21.04,
+          "end": 21.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stelt",
+          "start": 21.54,
+          "end": 21.82,
+          "probability": 1.0
+        },
+        {
+          "word": " daarom",
+          "start": 21.82,
+          "end": 22.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zondagochtend",
+          "start": 22.12,
+          "end": 22.66,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " voor.",
+          "start": 22.66,
+          "end": 22.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 23.24,
+      "end": 25.56,
+      "text": " De buur kan dan komen en vraagt om het adres.",
+      "temperature": 0,
+      "avg_logprob": -0.082957428854865,
+      "compression_ratio": 1.6718146718146718,
+      "no_speech_prob": 5.8672225064504424e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 23.24,
+          "end": 23.7,
+          "probability": 1.0
+        },
+        {
+          "word": " buur",
+          "start": 23.7,
+          "end": 23.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 23.94,
+          "end": 24.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dan",
+          "start": 24.06,
+          "end": 24.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komen",
+          "start": 24.2,
+          "end": 24.54,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 24.54,
+          "end": 24.7,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 24.7,
+          "end": 25.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 25.02,
+          "end": 25.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 25.12,
+          "end": 25.24,
+          "probability": 1.0
+        },
+        {
+          "word": " adres.",
+          "start": 25.24,
+          "end": 25.56,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

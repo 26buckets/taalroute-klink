@@ -1,0 +1,101 @@
+{
+  "id": "ZDZ-A2-063",
+  "sha256": "262c858cc47022672fb84985bfb1cca709804aba5c13a07cf59397f551e5bfe6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik hoorde maandag, maar op mijn brief staat dinsdag. Welke dag is juist?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.26,
+      "text": " Ik hoorde maandag, maar op mijn brief staat dinsdag. Welke dag is juist?",
+      "temperature": 0,
+      "avg_logprob": -0.05267519217271071,
+      "compression_ratio": 0.9863013698630136,
+      "no_speech_prob": 4.174322779798567e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.984375
+        },
+        {
+          "word": " hoorde",
+          "start": 0.14,
+          "end": 0.38,
+          "probability": 0.892578125
+        },
+        {
+          "word": " maandag,",
+          "start": 0.38,
+          "end": 0.88,
+          "probability": 0.97509765625
+        },
+        {
+          "word": " maar",
+          "start": 0.94,
+          "end": 1.02,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 1.02,
+          "end": 1.14,
+          "probability": 1.0
+        },
+        {
+          "word": " mijn",
+          "start": 1.14,
+          "end": 1.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " brief",
+          "start": 1.24,
+          "end": 1.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " staat",
+          "start": 1.46,
+          "end": 1.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dinsdag.",
+          "start": 1.66,
+          "end": 2.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Welke",
+          "start": 2.34,
+          "end": 2.66,
+          "probability": 1.0
+        },
+        {
+          "word": " dag",
+          "start": 2.66,
+          "end": 2.74,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 2.74,
+          "end": 2.9,
+          "probability": 1.0
+        },
+        {
+          "word": " juist?",
+          "start": 2.9,
+          "end": 3.26,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

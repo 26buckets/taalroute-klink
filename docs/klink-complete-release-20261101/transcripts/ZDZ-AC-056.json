@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-056",
+  "sha256": "0bce2f37b8ec11fc92c7943c46fb1687784959ee3d2750c0dc97d2156fd0e774",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan woensdag niet komen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Ik kan woensdag niet komen.",
+      "temperature": 0,
+      "avg_logprob": -0.08047320625998756,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.676779363083083e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8232421875
+        },
+        {
+          "word": " kan",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 0.26,
+          "end": 0.6,
+          "probability": 0.998046875
+        },
+        {
+          "word": " niet",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komen.",
+          "start": 0.74,
+          "end": 1.04,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-AC-094",
+  "sha256": "a0f6926982679226909fbf7ca3cf64f7b80982a6aadf0da162575ad58f0ab4c4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze doos is te zwaar voor mij.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.34,
+      "text": " Deze doos is te zwaar voor mij.",
+      "temperature": 0,
+      "avg_logprob": -0.11463934580485026,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.092759117724221e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " doos",
+          "start": 0.32,
+          "end": 0.58,
+          "probability": 0.7744140625
+        },
+        {
+          "word": " is",
+          "start": 0.58,
+          "end": 0.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " te",
+          "start": 0.72,
+          "end": 0.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zwaar",
+          "start": 0.82,
+          "end": 1.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 1.06,
+          "end": 1.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mij.",
+          "start": 1.16,
+          "end": 1.34,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

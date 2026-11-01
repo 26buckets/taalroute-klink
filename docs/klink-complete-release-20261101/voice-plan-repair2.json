@@ -1,0 +1,61 @@
+{
+  "application": "Klink",
+  "date": "2026-11-01",
+  "authorization": "owner-instruction.json",
+  "model": "eleven_multilingual_v2",
+  "outputFormat": "mp3_44100_128",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "settings": {
+    "stability": 0.85,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+  },
+  "roles": "Existing character recordings and voice bindings are unchanged. New voices are external narrators or learner models, not recast characters.",
+  "freeVoiceAlternation": "female/male, continued across new clips; existing good audio reused",
+  "maximumIncludedCredits": 300000,
+  "buyExtraCredits": false,
+  "phase": "repair2",
+  "seed": 19,
+  "textNormalization": "off",
+  "clips": [
+    {
+      "id": "A1-T63-R2",
+      "text": "Zaterdag is er feest op school. Een vrouw wil haar groene jurk dragen. De jurk ligt in de kast, maar is vuil. Zij wast de jurk op vrijdag. Zaterdag trekt zij de schone jurk aan en gaat naar school.",
+      "title": "Kleding voor het feest",
+      "role": "external-narrator",
+      "gender": "male",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko",
+      "src": "/package-audio/complete-20261101/a1-t63.mp3",
+      "textSha256": "c55fd486198b076ded1add5b57d750715c7c2eaeae5723f57c1899e48aa73d19",
+      "sourceId": "A1-T63",
+      "sourceText": "Zaterdag is er feest op school. Een vrouw wil haar groene jurk dragen. De jurk ligt in de kast, maar is vuil. Zij wast de jurk op vrijdag. Zaterdag trekt zij de schone jurk aan en gaat naar school."
+    },
+    {
+      "id": "B1-FL-111-R2",
+      "text": "In de flat delen enkele buren een kist met gereedschap. Fatima wil zaterdag een boormachine lenen om een plank op te hangen. Op de lijst bij de kist ziet ze dat buurman Erik de machine voor hetzelfde weekend heeft gereserveerd. Fatima vraagt hem wanneer hij de machine nodig heeft. Erik wil alleen zaterdagochtend twee gaten boren en kan de machine daarna terugleggen. Ze spreken af dat Fatima de boormachine zaterdagmiddag ophaalt. Fatima schrijft de nieuwe afspraak op de lijst, zodat andere buren weten wanneer de machine beschikbaar is.",
+      "title": "Een boormachine voor het weekend",
+      "role": "external-narrator",
+      "gender": "male",
+      "voiceId": "0qLmDzgqulxcvv0yf3kg",
+      "voiceName": "Remko",
+      "src": "/package-audio/complete-20261101/b1-fl-111.mp3",
+      "textSha256": "060f64c79dc57d9ae3afc250e095b8147c4de53b2e635d807663effc832db4fe",
+      "sourceId": "B1-FL-111",
+      "sourceText": "In de flat delen enkele buren een kist met gereedschap. Fatima wil zaterdag een boormachine lenen om een plank op te hangen. Op de lijst bij de kist ziet ze dat buurman Erik de machine voor hetzelfde weekend heeft gereserveerd. Fatima vraagt hem wanneer hij de machine nodig heeft. Erik wil alleen zaterdagochtend twee gaten boren en kan de machine daarna terugleggen. Ze spreken af dat Fatima de boormachine zaterdagmiddag ophaalt. Fatima schrijft de nieuwe afspraak op de lijst, zodat andere buren weten wanneer de machine beschikbaar is."
+    }
+  ],
+  "characters": 737,
+  "bindings": {
+    "A1-T63": {
+      "src": "/package-audio/complete-20261101/a1-t63.mp3",
+      "recordingId": "A1-T63-R2"
+    },
+    "B1-FL-111": {
+      "src": "/package-audio/complete-20261101/b1-fl-111.mp3",
+      "recordingId": "B1-FL-111-R2"
+    }
+  }
+}

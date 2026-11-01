@@ -1,0 +1,624 @@
+{
+  "id": "B1-FL-041",
+  "sha256": "1839f0b75b327d0b2bac29d5b2189ae964624b41aded984a11bfc5557d0afed6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het buurthuis organiseert elke zondag een wandeling. Meestal loopt de groep ongeveer een uur door het park. De laatste tijd komen er ook mensen die minder ver kunnen lopen. Begeleider Karin stelt daarom voor om na 20 minuten een keuze te bieden. Verder wandelen of via een korte route teruggaan. Sommige vaste deelnemers zijn bang dat de groep uit elkaar valt. Karin regelt voor beide routes een vrijwilliger. Bij de volgende wandeling kunnen mensen zelf kiezen hoe ver ze lopen, zonder alleen terug te hoeven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.42,
+      "text": " Het buurthuis organiseert elke zondag een wandeling.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97900390625
+        },
+        {
+          "word": " buurthuis",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.9306640625
+        },
+        {
+          "word": " organiseert",
+          "start": 0.62,
+          "end": 1.14,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " elke",
+          "start": 1.14,
+          "end": 1.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zondag",
+          "start": 1.44,
+          "end": 1.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.86,
+          "end": 2.02,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " wandeling.",
+          "start": 2.02,
+          "end": 2.42,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.86,
+      "end": 5.2,
+      "text": " Meestal loopt de groep ongeveer een uur door het park.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Meestal",
+          "start": 2.86,
+          "end": 3.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " loopt",
+          "start": 3.38,
+          "end": 3.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.58,
+          "end": 3.68,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " groep",
+          "start": 3.68,
+          "end": 3.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ongeveer",
+          "start": 3.92,
+          "end": 4.28,
+          "probability": 0.994140625
+        },
+        {
+          "word": " een",
+          "start": 4.28,
+          "end": 4.4,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " uur",
+          "start": 4.4,
+          "end": 4.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " door",
+          "start": 4.68,
+          "end": 4.82,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " het",
+          "start": 4.82,
+          "end": 4.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " park.",
+          "start": 4.96,
+          "end": 5.2,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.68,
+      "end": 8.4,
+      "text": " De laatste tijd komen er ook mensen die minder ver kunnen lopen.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.68,
+          "end": 6.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " laatste",
+          "start": 6.0,
+          "end": 6.3,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd",
+          "start": 6.3,
+          "end": 6.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komen",
+          "start": 6.5,
+          "end": 6.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " er",
+          "start": 6.76,
+          "end": 6.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ook",
+          "start": 6.88,
+          "end": 7.02,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " mensen",
+          "start": 7.02,
+          "end": 7.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 7.28,
+          "end": 7.44,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " minder",
+          "start": 7.44,
+          "end": 7.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ver",
+          "start": 7.66,
+          "end": 7.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kunnen",
+          "start": 7.86,
+          "end": 8.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " lopen.",
+          "start": 8.06,
+          "end": 8.4,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.22,
+      "end": 12.74,
+      "text": " Begeleider Karin stelt daarom voor om na 20 minuten een keuze te bieden.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Begeleider",
+          "start": 9.22,
+          "end": 9.74,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " Karin",
+          "start": 9.74,
+          "end": 10.22,
+          "probability": 0.994140625
+        },
+        {
+          "word": " stelt",
+          "start": 10.22,
+          "end": 10.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " daarom",
+          "start": 10.54,
+          "end": 10.82,
+          "probability": 0.9921875
+        },
+        {
+          "word": " voor",
+          "start": 10.82,
+          "end": 11.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " om",
+          "start": 11.02,
+          "end": 11.16,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " na",
+          "start": 11.16,
+          "end": 11.28,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " 20",
+          "start": 11.28,
+          "end": 11.54,
+          "probability": 0.85107421875
+        },
+        {
+          "word": " minuten",
+          "start": 11.54,
+          "end": 11.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 11.92,
+          "end": 12.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " keuze",
+          "start": 12.04,
+          "end": 12.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 12.32,
+          "end": 12.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bieden.",
+          "start": 12.42,
+          "end": 12.74,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.02,
+      "end": 15.48,
+      "text": " Verder wandelen of via een korte route teruggaan.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Verder",
+          "start": 13.02,
+          "end": 13.54,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " wandelen",
+          "start": 13.54,
+          "end": 13.88,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " of",
+          "start": 13.88,
+          "end": 14.12,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " via",
+          "start": 14.12,
+          "end": 14.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 14.32,
+          "end": 14.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " korte",
+          "start": 14.48,
+          "end": 14.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " route",
+          "start": 14.78,
+          "end": 15.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " teruggaan.",
+          "start": 15.0,
+          "end": 15.48,
+          "probability": 0.94384765625
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.14,
+      "end": 18.94,
+      "text": " Sommige vaste deelnemers zijn bang dat de groep uit elkaar valt.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Sommige",
+          "start": 16.14,
+          "end": 16.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vaste",
+          "start": 16.66,
+          "end": 17.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " deelnemers",
+          "start": 17.04,
+          "end": 17.46,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 17.46,
+          "end": 17.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bang",
+          "start": 17.58,
+          "end": 17.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 17.82,
+          "end": 17.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.96,
+          "end": 18.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " groep",
+          "start": 18.06,
+          "end": 18.26,
+          "probability": 1.0
+        },
+        {
+          "word": " uit",
+          "start": 18.26,
+          "end": 18.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " elkaar",
+          "start": 18.4,
+          "end": 18.64,
+          "probability": 1.0
+        },
+        {
+          "word": " valt.",
+          "start": 18.64,
+          "end": 18.94,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.62,
+      "end": 21.82,
+      "text": " Karin regelt voor beide routes een vrijwilliger.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Karin",
+          "start": 19.62,
+          "end": 20.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " regelt",
+          "start": 20.14,
+          "end": 20.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 20.44,
+          "end": 20.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " beide",
+          "start": 20.62,
+          "end": 20.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " routes",
+          "start": 20.9,
+          "end": 21.16,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 21.16,
+          "end": 21.32,
+          "probability": 0.861328125
+        },
+        {
+          "word": " vrijwilliger.",
+          "start": 21.32,
+          "end": 21.82,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 22.28,
+      "end": 26.7,
+      "text": " Bij de volgende wandeling kunnen mensen zelf kiezen hoe ver ze lopen, zonder alleen terug te hoeven.",
+      "temperature": 0,
+      "avg_logprob": -0.07860243761980976,
+      "compression_ratio": 1.683168316831683,
+      "no_speech_prob": 6.124376179805768e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 22.28,
+          "end": 22.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 22.62,
+          "end": 22.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 22.72,
+          "end": 23.06,
+          "probability": 1.0
+        },
+        {
+          "word": " wandeling",
+          "start": 23.06,
+          "end": 23.42,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 23.42,
+          "end": 23.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " mensen",
+          "start": 23.62,
+          "end": 23.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zelf",
+          "start": 23.88,
+          "end": 24.16,
+          "probability": 0.99609375
+        },
+        {
+          "word": " kiezen",
+          "start": 24.16,
+          "end": 24.5,
+          "probability": 1.0
+        },
+        {
+          "word": " hoe",
+          "start": 24.5,
+          "end": 24.64,
+          "probability": 0.67041015625
+        },
+        {
+          "word": " ver",
+          "start": 24.64,
+          "end": 24.8,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " ze",
+          "start": 24.8,
+          "end": 24.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " lopen,",
+          "start": 24.96,
+          "end": 25.26,
+          "probability": 1.0
+        },
+        {
+          "word": " zonder",
+          "start": 25.44,
+          "end": 25.88,
+          "probability": 1.0
+        },
+        {
+          "word": " alleen",
+          "start": 25.88,
+          "end": 26.1,
+          "probability": 1.0
+        },
+        {
+          "word": " terug",
+          "start": 26.1,
+          "end": 26.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 26.32,
+          "end": 26.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoeven.",
+          "start": 26.46,
+          "end": 26.7,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-045",
+  "sha256": "670968faf63bcfd0c2fdd11eef95d5a6ece2e3e32aa1afc2dc3bc08c9dce6684",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Neem je eigen tas naar de winkel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.44,
+      "text": " Neem je eigen tas naar de winkel.",
+      "temperature": 0,
+      "avg_logprob": -0.08257425748384915,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 4.422632832873363e-12,
+      "words": [
+        {
+          "word": " Neem",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.95703125
+        },
+        {
+          "word": " je",
+          "start": 0.22,
+          "end": 0.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " eigen",
+          "start": 0.3,
+          "end": 0.56,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " tas",
+          "start": 0.56,
+          "end": 0.84,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " naar",
+          "start": 0.84,
+          "end": 1.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.0,
+          "end": 1.1,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " winkel.",
+          "start": 1.1,
+          "end": 1.44,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

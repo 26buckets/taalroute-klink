@@ -1,0 +1,582 @@
+{
+  "id": "A2-T66",
+  "sha256": "1e4f58d9e1378da37e6e814c915fee24d12168296c446d66de19434bec7a6e5e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een klant wil twee pakketten terugsturen. In het eerste pakket zit een jas die te klein is. In het tweede zitten schoenen met een kapotte zool. Voor elk pakket vraagt de webwinkel een apart formulier. De klant kan beide pakketten op dezelfde dag bij het postpunt afgeven, maar moet twee verzendbewijzen bewaren. Na ontvangst controleert de winkel elk pakket. Pas daarna krijgt de klant bericht over terugbetaling. Hij vult de formulieren donderdag in en verstuurt beide pakketten vrijdag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.9,
+      "text": " Een klant wil twee pakketten terugsturen.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9921875
+        },
+        {
+          "word": " klant",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 0.5,
+          "end": 0.68,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " twee",
+          "start": 0.68,
+          "end": 0.92,
+          "probability": 0.927734375
+        },
+        {
+          "word": " pakketten",
+          "start": 0.92,
+          "end": 1.34,
+          "probability": 0.99609375
+        },
+        {
+          "word": " terugsturen.",
+          "start": 1.34,
+          "end": 1.9,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.26,
+      "end": 4.84,
+      "text": " In het eerste pakket zit een jas die te klein is.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 2.26,
+          "end": 2.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 2.76,
+          "end": 2.88,
+          "probability": 1.0
+        },
+        {
+          "word": " eerste",
+          "start": 2.88,
+          "end": 3.12,
+          "probability": 1.0
+        },
+        {
+          "word": " pakket",
+          "start": 3.12,
+          "end": 3.5,
+          "probability": 1.0
+        },
+        {
+          "word": " zit",
+          "start": 3.5,
+          "end": 3.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.68,
+          "end": 3.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas",
+          "start": 3.82,
+          "end": 4.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 4.08,
+          "end": 4.22,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " te",
+          "start": 4.22,
+          "end": 4.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klein",
+          "start": 4.34,
+          "end": 4.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 4.58,
+          "end": 4.84,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.08,
+      "end": 7.48,
+      "text": " In het tweede zitten schoenen met een kapotte zool.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 5.08,
+          "end": 5.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 5.56,
+          "end": 5.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tweede",
+          "start": 5.68,
+          "end": 6.06,
+          "probability": 1.0
+        },
+        {
+          "word": " zitten",
+          "start": 6.06,
+          "end": 6.26,
+          "probability": 0.97265625
+        },
+        {
+          "word": " schoenen",
+          "start": 6.26,
+          "end": 6.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 6.6,
+          "end": 6.74,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 6.74,
+          "end": 6.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kapotte",
+          "start": 6.86,
+          "end": 7.2,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " zool.",
+          "start": 7.2,
+          "end": 7.48,
+          "probability": 0.79345703125
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.28,
+      "end": 10.9,
+      "text": " Voor elk pakket vraagt de webwinkel een apart formulier.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 8.28,
+          "end": 8.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " elk",
+          "start": 8.46,
+          "end": 8.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pakket",
+          "start": 8.76,
+          "end": 9.16,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 9.16,
+          "end": 9.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 9.48,
+          "end": 9.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " webwinkel",
+          "start": 9.56,
+          "end": 10.04,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " een",
+          "start": 10.04,
+          "end": 10.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " apart",
+          "start": 10.18,
+          "end": 10.42,
+          "probability": 1.0
+        },
+        {
+          "word": " formulier.",
+          "start": 10.42,
+          "end": 10.9,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.44,
+      "end": 17.42,
+      "text": " De klant kan beide pakketten op dezelfde dag bij het postpunt afgeven, maar moet twee verzendbewijzen bewaren.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.44,
+          "end": 11.92,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 11.92,
+          "end": 12.22,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 12.22,
+          "end": 12.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beide",
+          "start": 12.4,
+          "end": 12.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pakketten",
+          "start": 12.7,
+          "end": 13.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 13.14,
+          "end": 13.26,
+          "probability": 1.0
+        },
+        {
+          "word": " dezelfde",
+          "start": 13.26,
+          "end": 13.68,
+          "probability": 1.0
+        },
+        {
+          "word": " dag",
+          "start": 13.68,
+          "end": 13.82,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 13.82,
+          "end": 13.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 13.98,
+          "end": 14.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " postpunt",
+          "start": 14.1,
+          "end": 14.48,
+          "probability": 0.93603515625
+        },
+        {
+          "word": " afgeven,",
+          "start": 14.48,
+          "end": 15.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 15.22,
+          "end": 15.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 15.72,
+          "end": 15.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 15.94,
+          "end": 16.22,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " verzendbewijzen",
+          "start": 16.22,
+          "end": 16.9,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " bewaren.",
+          "start": 16.9,
+          "end": 17.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.94,
+      "end": 20.02,
+      "text": " Na ontvangst controleert de winkel elk pakket.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 17.94,
+          "end": 18.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangst",
+          "start": 18.12,
+          "end": 18.62,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " controleert",
+          "start": 18.62,
+          "end": 19.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 19.08,
+          "end": 19.18,
+          "probability": 1.0
+        },
+        {
+          "word": " winkel",
+          "start": 19.18,
+          "end": 19.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " elk",
+          "start": 19.46,
+          "end": 19.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " pakket.",
+          "start": 19.68,
+          "end": 20.02,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.54,
+      "end": 22.82,
+      "text": " Pas daarna krijgt de klant bericht over terugbetaling.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " Pas",
+          "start": 20.54,
+          "end": 20.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " daarna",
+          "start": 20.94,
+          "end": 21.26,
+          "probability": 1.0
+        },
+        {
+          "word": " krijgt",
+          "start": 21.26,
+          "end": 21.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 21.52,
+          "end": 21.6,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 21.6,
+          "end": 21.8,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht",
+          "start": 21.8,
+          "end": 22.04,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " over",
+          "start": 22.04,
+          "end": 22.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " terugbetaling.",
+          "start": 22.2,
+          "end": 22.82,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 23.2,
+      "end": 26.62,
+      "text": " Hij vult de formulieren donderdag in en verstuurt beide pakketten vrijdag.",
+      "temperature": 0,
+      "avg_logprob": -0.07878870872934912,
+      "compression_ratio": 1.7428571428571429,
+      "no_speech_prob": 4.920554415310807e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 23.2,
+          "end": 23.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vult",
+          "start": 23.56,
+          "end": 23.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 23.76,
+          "end": 23.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " formulieren",
+          "start": 23.88,
+          "end": 24.36,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " donderdag",
+          "start": 24.36,
+          "end": 24.78,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 24.78,
+          "end": 25.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 25.0,
+          "end": 25.2,
+          "probability": 1.0
+        },
+        {
+          "word": " verstuurt",
+          "start": 25.2,
+          "end": 25.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " beide",
+          "start": 25.54,
+          "end": 25.76,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " pakketten",
+          "start": 25.76,
+          "end": 26.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag.",
+          "start": 26.18,
+          "end": 26.62,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

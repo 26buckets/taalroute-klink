@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-079",
+  "sha256": "98a4ed3845cda60614b2fce52409937a9ce2e2ff6592cfc609e5d195a1189ef1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bedankt voor uw uitleg. Nu weet ik wat ik moet veranderen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.68,
+      "text": " Bedankt voor uw uitleg. Nu weet ik wat ik moet veranderen.",
+      "temperature": 0,
+      "avg_logprob": -0.052069050925118585,
+      "compression_ratio": 0.9508196721311475,
+      "no_speech_prob": 4.4086310123370165e-12,
+      "words": [
+        {
+          "word": " Bedankt",
+          "start": 0.0,
+          "end": 0.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 0.36,
+          "end": 0.44,
+          "probability": 1.0
+        },
+        {
+          "word": " uw",
+          "start": 0.44,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uitleg.",
+          "start": 0.56,
+          "end": 0.96,
+          "probability": 1.0
+        },
+        {
+          "word": " Nu",
+          "start": 1.34,
+          "end": 1.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weet",
+          "start": 1.64,
+          "end": 1.82,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 1.82,
+          "end": 1.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wat",
+          "start": 1.9,
+          "end": 2.0,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 2.0,
+          "end": 2.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 2.1,
+          "end": 2.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " veranderen.",
+          "start": 2.22,
+          "end": 2.68,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

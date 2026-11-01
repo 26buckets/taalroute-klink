@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-28c33c4254551413",
+  "sha256": "50b6a4ecb81007d71dfd524eace2b00941d52274566036d2055daf857a119600",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bel zit naast de deur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " De bel zit naast de deur.",
+      "temperature": 0,
+      "avg_logprob": -0.06696506341298421,
+      "compression_ratio": 0.8064516129032258,
+      "no_speech_prob": 4.72237396756392e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.91748046875
+        },
+        {
+          "word": " bel",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " zit",
+          "start": 0.44,
+          "end": 0.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " naast",
+          "start": 0.74,
+          "end": 1.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.18,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur.",
+          "start": 1.28,
+          "end": 1.6,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

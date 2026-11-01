@@ -1,0 +1,527 @@
+{
+  "id": "A2-T30",
+  "sha256": "3274623647724880538d580583d6fd8bbab829c551e31b02234cb3c0e6fb95d0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op de website van de buurt staat een fiets te koop voor 60 euro. De fiets heeft een nieuw voorlicht, maar de achterband moet worden vervangen. Een koper stuurt een bericht en vraagt of hij de fiets vrijdag kan bekijken. De verkoper kan alleen zaterdagmiddag. Ze spreken af bij de ingang van het buurthuis. De koper wil eerst een korte proefrit maken. Pas daarna beslist hij of hij de fiets koopt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.96,
+      "text": " Op de website van de buurt staat een fiets te koop voor 60 euro.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.994140625
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " website",
+          "start": 0.26,
+          "end": 0.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 0.6,
+          "end": 0.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.76,
+          "end": 0.88,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " buurt",
+          "start": 0.88,
+          "end": 1.16,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " staat",
+          "start": 1.16,
+          "end": 1.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 1.38,
+          "end": 1.54,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " fiets",
+          "start": 1.54,
+          "end": 1.82,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " te",
+          "start": 1.82,
+          "end": 1.94,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " koop",
+          "start": 1.94,
+          "end": 2.18,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " voor",
+          "start": 2.18,
+          "end": 2.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 60",
+          "start": 2.32,
+          "end": 2.66,
+          "probability": 0.8212890625
+        },
+        {
+          "word": " euro.",
+          "start": 2.66,
+          "end": 2.96,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.44,
+      "end": 7.0,
+      "text": " De fiets heeft een nieuw voorlicht, maar de achterband moet worden vervangen.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.44,
+          "end": 3.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fiets",
+          "start": 3.86,
+          "end": 4.1,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 4.1,
+          "end": 4.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 4.26,
+          "end": 4.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuw",
+          "start": 4.4,
+          "end": 4.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voorlicht,",
+          "start": 4.68,
+          "end": 5.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 5.32,
+          "end": 5.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 5.66,
+          "end": 5.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " achterband",
+          "start": 5.8,
+          "end": 6.26,
+          "probability": 0.970703125
+        },
+        {
+          "word": " moet",
+          "start": 6.26,
+          "end": 6.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " worden",
+          "start": 6.42,
+          "end": 6.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vervangen.",
+          "start": 6.62,
+          "end": 7.0,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.62,
+      "end": 11.1,
+      "text": " Een koper stuurt een bericht en vraagt of hij de fiets vrijdag kan bekijken.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 7.62,
+          "end": 8.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " koper",
+          "start": 8.06,
+          "end": 8.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stuurt",
+          "start": 8.42,
+          "end": 8.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 8.7,
+          "end": 8.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 8.8,
+          "end": 9.18,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 9.18,
+          "end": 9.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vraagt",
+          "start": 9.32,
+          "end": 9.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " of",
+          "start": 9.64,
+          "end": 9.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 9.72,
+          "end": 9.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.86,
+          "end": 9.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fiets",
+          "start": 9.96,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijdag",
+          "start": 10.18,
+          "end": 10.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 10.5,
+          "end": 10.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bekijken.",
+          "start": 10.64,
+          "end": 11.1,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.48,
+      "end": 13.62,
+      "text": " De verkoper kan alleen zaterdagmiddag.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.48,
+          "end": 11.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkoper",
+          "start": 11.96,
+          "end": 12.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 12.46,
+          "end": 12.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alleen",
+          "start": 12.62,
+          "end": 12.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zaterdagmiddag.",
+          "start": 12.84,
+          "end": 13.62,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.86,
+      "end": 16.14,
+      "text": " Ze spreken af bij de ingang van het buurthuis.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 13.86,
+          "end": 14.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " spreken",
+          "start": 14.36,
+          "end": 14.7,
+          "probability": 1.0
+        },
+        {
+          "word": " af",
+          "start": 14.7,
+          "end": 14.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 14.88,
+          "end": 15.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 15.02,
+          "end": 15.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ingang",
+          "start": 15.12,
+          "end": 15.42,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 15.42,
+          "end": 15.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 15.52,
+          "end": 15.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " buurthuis.",
+          "start": 15.64,
+          "end": 16.14,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.44,
+      "end": 18.74,
+      "text": " De koper wil eerst een korte proefrit maken.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 16.44,
+          "end": 16.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " koper",
+          "start": 16.86,
+          "end": 17.16,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 17.16,
+          "end": 17.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " eerst",
+          "start": 17.32,
+          "end": 17.58,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 17.58,
+          "end": 17.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " korte",
+          "start": 17.7,
+          "end": 17.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " proefrit",
+          "start": 17.98,
+          "end": 18.4,
+          "probability": 0.96435546875
+        },
+        {
+          "word": " maken.",
+          "start": 18.4,
+          "end": 18.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.2,
+      "end": 21.3,
+      "text": " Pas daarna beslist hij of hij de fiets koopt.",
+      "temperature": 0,
+      "avg_logprob": -0.05818325100523053,
+      "compression_ratio": 1.6569037656903767,
+      "no_speech_prob": 5.279960496595848e-12,
+      "words": [
+        {
+          "word": " Pas",
+          "start": 19.2,
+          "end": 19.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " daarna",
+          "start": 19.58,
+          "end": 19.9,
+          "probability": 1.0
+        },
+        {
+          "word": " beslist",
+          "start": 19.9,
+          "end": 20.28,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " hij",
+          "start": 20.28,
+          "end": 20.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " of",
+          "start": 20.44,
+          "end": 20.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 20.58,
+          "end": 20.68,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.68,
+          "end": 20.8,
+          "probability": 1.0
+        },
+        {
+          "word": " fiets",
+          "start": 20.8,
+          "end": 20.98,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt.",
+          "start": 20.98,
+          "end": 21.3,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

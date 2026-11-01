@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-019",
+  "sha256": "03a9734bc4a45bea431038b70ab2942a3ceb00180a6731f21a0dd68ef2da536a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Maak de tafel schoon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.06,
+      "text": " Maak de tafel schoon.",
+      "temperature": 0,
+      "avg_logprob": -0.15775611183860086,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.153916793869783e-12,
+      "words": [
+        {
+          "word": " Maak",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.974609375
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tafel",
+          "start": 0.38,
+          "end": 0.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " schoon.",
+          "start": 0.7,
+          "end": 1.06,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

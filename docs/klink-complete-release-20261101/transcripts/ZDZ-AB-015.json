@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-015",
+  "sha256": "20c8f65867bf85d3be4d5e8cdb0cd19a4d74762ba786ecfb95b94b76865d72c5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik belde dokter.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.82,
+      "text": " Ik belde dokter.",
+      "temperature": 0,
+      "avg_logprob": -0.15892348289489747,
+      "compression_ratio": 0.6666666666666666,
+      "no_speech_prob": 5.050770131992399e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.970703125
+        },
+        {
+          "word": " belde",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 0.84375
+        },
+        {
+          "word": " dokter.",
+          "start": 0.5,
+          "end": 0.82,
+          "probability": 0.962890625
+        }
+      ]
+    }
+  ]
+}

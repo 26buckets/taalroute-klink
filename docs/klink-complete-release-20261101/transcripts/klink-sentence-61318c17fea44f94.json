@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-61318c17fea44f94",
+  "sha256": "d9697e446e90d48bdd8e0d6137b92abd01bd37bccd009c8dc9a84592cb13d6f0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik de schep even gebruiken?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.4,
+      "text": " Mag ik de schep even gebruiken?",
+      "temperature": 0,
+      "avg_logprob": -0.07121161619822185,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 3.920461177919776e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.94140625
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.3,
+          "end": 0.46,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " schep",
+          "start": 0.46,
+          "end": 0.72,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " even",
+          "start": 0.72,
+          "end": 0.94,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " gebruiken?",
+          "start": 0.94,
+          "end": 1.4,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

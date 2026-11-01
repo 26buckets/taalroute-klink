@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AB-072",
+  "sha256": "756e8c299870d29bf581b1aee7513396d3d3fa102e74a6ce56cb42d3783def5e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bus komt om 8 uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.16,
+      "text": " De bus komt om 8 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.1476945010098544,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 3.8751172409812185e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " bus",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " komt",
+          "start": 0.32,
+          "end": 0.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 0.5,
+          "end": 0.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " 8",
+          "start": 0.68,
+          "end": 0.88,
+          "probability": 0.7861328125
+        },
+        {
+          "word": " uur.",
+          "start": 0.88,
+          "end": 1.16,
+          "probability": 0.96337890625
+        }
+      ]
+    }
+  ]
+}

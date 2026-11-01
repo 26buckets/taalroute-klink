@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-AC-097",
+  "sha256": "710244f95f2ca3e461d2bc14ae4e52f27c2aa025fdc1be262afbedb6c7f4b21a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik zie de fout, nu weet ik het.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Ik zie de fout, nu weet ik het.",
+      "temperature": 0,
+      "avg_logprob": -0.07818944637592022,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.5457019225148e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9765625
+        },
+        {
+          "word": " zie",
+          "start": 0.12,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.24,
+          "end": 0.38,
+          "probability": 0.99609375
+        },
+        {
+          "word": " fout,",
+          "start": 0.38,
+          "end": 0.56,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " nu",
+          "start": 0.84,
+          "end": 1.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " weet",
+          "start": 1.02,
+          "end": 1.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.24,
+          "end": 1.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het.",
+          "start": 1.32,
+          "end": 1.48,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

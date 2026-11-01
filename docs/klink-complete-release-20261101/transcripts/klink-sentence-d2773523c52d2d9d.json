@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-d2773523c52d2d9d",
+  "sha256": "be06a06401a555c07a1c477a5ccbb07c8058ab227b2c79071feb1df150c99ba7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De trein staat langs het perron.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.72,
+      "text": " De trein staat langs het perron.",
+      "temperature": 0,
+      "avg_logprob": -0.23240155440110427,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.553186820632771e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8818359375
+        },
+        {
+          "word": " trein",
+          "start": 0.16,
+          "end": 0.58,
+          "probability": 0.9921875
+        },
+        {
+          "word": " staat",
+          "start": 0.58,
+          "end": 0.8,
+          "probability": 0.998046875
+        },
+        {
+          "word": " langs",
+          "start": 0.8,
+          "end": 1.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 1.24,
+          "end": 1.34,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " perron.",
+          "start": 1.34,
+          "end": 1.72,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

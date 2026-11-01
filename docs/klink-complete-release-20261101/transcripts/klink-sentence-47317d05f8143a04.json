@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-47317d05f8143a04",
+  "sha256": "9279749d846caf4b264664479db0a92462077a1e8e3a3e2d88595004d7fe0a09",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Noor pakt een pleister.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Noor pakt een pleister.",
+      "temperature": 0,
+      "avg_logprob": -0.15089624578302557,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 1.4418684128603143e-11,
+      "words": [
+        {
+          "word": " Noor",
+          "start": 0.0,
+          "end": 0.38,
+          "probability": 0.943359375
+        },
+        {
+          "word": " pakt",
+          "start": 0.38,
+          "end": 0.66,
+          "probability": 0.994140625
+        },
+        {
+          "word": " een",
+          "start": 0.66,
+          "end": 0.78,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " pleister.",
+          "start": 0.78,
+          "end": 1.2,
+          "probability": 0.970703125
+        }
+      ]
+    }
+  ]
+}

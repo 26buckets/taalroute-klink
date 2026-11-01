@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-52184cb7b9f0e435",
+  "sha256": "5f3f258dfb1c651a9b829ba675affed39c420b80c571fc8df7ef87dfa3afad93",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De schaal staat op tafel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.34,
+      "text": " De schaal staat op tafel.",
+      "temperature": 0,
+      "avg_logprob": -0.14107994599775833,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.011930544722819e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92333984375
+        },
+        {
+          "word": " schaal",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 0.994140625
+        },
+        {
+          "word": " staat",
+          "start": 0.48,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 0.72,
+          "end": 0.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tafel.",
+          "start": 0.9,
+          "end": 1.34,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

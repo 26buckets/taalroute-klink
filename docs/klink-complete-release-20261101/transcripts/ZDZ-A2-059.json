@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-059",
+  "sha256": "90a29ca81075b26ffde464eff35614f9ccb2df17c0bee678b557e039c38d503c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik voel me onzeker als ik een onbekende taak moet doen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.3,
+      "text": " Ik voel me onzeker als ik een onbekende taak moet doen.",
+      "temperature": 0,
+      "avg_logprob": -0.040771529788062685,
+      "compression_ratio": 0.9166666666666666,
+      "no_speech_prob": 3.861464099863543e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9501953125
+        },
+        {
+          "word": " voel",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 1.0
+        },
+        {
+          "word": " me",
+          "start": 0.34,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " onzeker",
+          "start": 0.44,
+          "end": 0.96,
+          "probability": 1.0
+        },
+        {
+          "word": " als",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ik",
+          "start": 1.08,
+          "end": 1.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.16,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " onbekende",
+          "start": 1.28,
+          "end": 1.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " taak",
+          "start": 1.74,
+          "end": 2.02,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 2.02,
+          "end": 2.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " doen.",
+          "start": 2.14,
+          "end": 2.3,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

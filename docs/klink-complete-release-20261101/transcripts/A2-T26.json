@@ -1,0 +1,576 @@
+{
+  "id": "A2-T26",
+  "sha256": "cf58baa13bdf04e7f2a5b654d16551ebf3c08c3e49b8359d1c0f1ae3c44c6979",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursist vindt het moeilijk om thuis lange teksten te lezen. Thuis heeft zij weinig tijd. De docent vraagt wanneer oefenen het beste lukt. De cursist heeft elke ochtend 10 minuten vrij. Samen spreken ze af dat zij op maandag, woensdag en vrijdag een korte tekst leest. Op vrijdag vertelt zij welke woorden lastig waren. De docent helpt haar met die woorden. Ze spreken geen extra les af, maar kijken volgende week of dit plan goed werkt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.68,
+      "text": " Een cursist vindt het moeilijk om thuis lange teksten te lezen.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " cursist",
+          "start": 0.16,
+          "end": 0.64,
+          "probability": 0.9921875
+        },
+        {
+          "word": " vindt",
+          "start": 0.64,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.86,
+          "end": 0.94,
+          "probability": 1.0
+        },
+        {
+          "word": " moeilijk",
+          "start": 0.94,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 1.28,
+          "end": 1.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " thuis",
+          "start": 1.42,
+          "end": 1.66,
+          "probability": 1.0
+        },
+        {
+          "word": " lange",
+          "start": 1.66,
+          "end": 1.86,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " teksten",
+          "start": 1.86,
+          "end": 2.22,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 2.22,
+          "end": 2.34,
+          "probability": 1.0
+        },
+        {
+          "word": " lezen.",
+          "start": 2.34,
+          "end": 2.68,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.32,
+      "end": 4.48,
+      "text": " Thuis heeft zij weinig tijd.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " Thuis",
+          "start": 3.32,
+          "end": 3.62,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " heeft",
+          "start": 3.62,
+          "end": 3.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 3.8,
+          "end": 3.92,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " weinig",
+          "start": 3.92,
+          "end": 4.24,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd.",
+          "start": 4.24,
+          "end": 4.48,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.94,
+      "end": 7.36,
+      "text": " De docent vraagt wanneer oefenen het beste lukt.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.94,
+          "end": 5.4,
+          "probability": 1.0
+        },
+        {
+          "word": " docent",
+          "start": 5.4,
+          "end": 5.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 5.72,
+          "end": 6.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wanneer",
+          "start": 6.1,
+          "end": 6.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oefenen",
+          "start": 6.38,
+          "end": 6.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 6.66,
+          "end": 6.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beste",
+          "start": 6.84,
+          "end": 7.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " lukt.",
+          "start": 7.08,
+          "end": 7.36,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.8,
+      "end": 10.28,
+      "text": " De cursist heeft elke ochtend 10 minuten vrij.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.8,
+          "end": 8.26,
+          "probability": 1.0
+        },
+        {
+          "word": " cursist",
+          "start": 8.26,
+          "end": 8.7,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 8.7,
+          "end": 8.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " elke",
+          "start": 8.88,
+          "end": 9.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ochtend",
+          "start": 9.2,
+          "end": 9.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 10",
+          "start": 9.5,
+          "end": 9.68,
+          "probability": 0.7890625
+        },
+        {
+          "word": " minuten",
+          "start": 9.68,
+          "end": 10.04,
+          "probability": 1.0
+        },
+        {
+          "word": " vrij.",
+          "start": 10.04,
+          "end": 10.28,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.02,
+      "end": 15.18,
+      "text": " Samen spreken ze af dat zij op maandag, woensdag en vrijdag een korte tekst leest.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " Samen",
+          "start": 11.02,
+          "end": 11.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " spreken",
+          "start": 11.48,
+          "end": 11.8,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 11.8,
+          "end": 11.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " af",
+          "start": 11.9,
+          "end": 12.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 12.12,
+          "end": 12.26,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zij",
+          "start": 12.26,
+          "end": 12.42,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " op",
+          "start": 12.42,
+          "end": 12.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maandag,",
+          "start": 12.58,
+          "end": 13.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 13.14,
+          "end": 13.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 13.52,
+          "end": 13.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 13.62,
+          "end": 14.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 14.1,
+          "end": 14.3,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " korte",
+          "start": 14.3,
+          "end": 14.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tekst",
+          "start": 14.54,
+          "end": 14.88,
+          "probability": 1.0
+        },
+        {
+          "word": " leest.",
+          "start": 14.88,
+          "end": 15.18,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.72,
+      "end": 18.32,
+      "text": " Op vrijdag vertelt zij welke woorden lastig waren.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 15.72,
+          "end": 16.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 16.2,
+          "end": 16.64,
+          "probability": 1.0
+        },
+        {
+          "word": " vertelt",
+          "start": 16.64,
+          "end": 17.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 17.0,
+          "end": 17.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " welke",
+          "start": 17.14,
+          "end": 17.42,
+          "probability": 1.0
+        },
+        {
+          "word": " woorden",
+          "start": 17.42,
+          "end": 17.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lastig",
+          "start": 17.64,
+          "end": 18.0,
+          "probability": 1.0
+        },
+        {
+          "word": " waren.",
+          "start": 18.0,
+          "end": 18.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.76,
+      "end": 20.4,
+      "text": " De docent helpt haar met die woorden.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.76,
+          "end": 19.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 19.14,
+          "end": 19.48,
+          "probability": 1.0
+        },
+        {
+          "word": " helpt",
+          "start": 19.48,
+          "end": 19.76,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 19.76,
+          "end": 19.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 19.88,
+          "end": 20.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 20.04,
+          "end": 20.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " woorden.",
+          "start": 20.14,
+          "end": 20.4,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.86,
+      "end": 24.96,
+      "text": " Ze spreken geen extra les af, maar kijken volgende week of dit plan goed werkt.",
+      "temperature": 0,
+      "avg_logprob": -0.0633881562421111,
+      "compression_ratio": 1.6541353383458646,
+      "no_speech_prob": 6.052026501474073e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 20.86,
+          "end": 21.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " spreken",
+          "start": 21.18,
+          "end": 21.48,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 21.48,
+          "end": 21.66,
+          "probability": 1.0
+        },
+        {
+          "word": " extra",
+          "start": 21.66,
+          "end": 22.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 22.0,
+          "end": 22.24,
+          "probability": 0.99609375
+        },
+        {
+          "word": " af,",
+          "start": 22.24,
+          "end": 22.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 22.64,
+          "end": 22.96,
+          "probability": 1.0
+        },
+        {
+          "word": " kijken",
+          "start": 22.96,
+          "end": 23.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " volgende",
+          "start": 23.3,
+          "end": 23.68,
+          "probability": 1.0
+        },
+        {
+          "word": " week",
+          "start": 23.68,
+          "end": 23.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 23.92,
+          "end": 24.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dit",
+          "start": 24.08,
+          "end": 24.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " plan",
+          "start": 24.22,
+          "end": 24.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " goed",
+          "start": 24.42,
+          "end": 24.6,
+          "probability": 1.0
+        },
+        {
+          "word": " werkt.",
+          "start": 24.6,
+          "end": 24.96,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

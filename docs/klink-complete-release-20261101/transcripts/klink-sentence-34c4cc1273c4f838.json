@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-34c4cc1273c4f838",
+  "sha256": "ca142b73bb547fa70db48d90c846af9ba7194cdc797b3c183490ff3d8d989609",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De stoep ligt naast de weg.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " De stoep ligt naast de weg.",
+      "temperature": 0,
+      "avg_logprob": -0.11481039340679462,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 3.992182886353168e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.85498046875
+        },
+        {
+          "word": " stoep",
+          "start": 0.18,
+          "end": 0.52,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " ligt",
+          "start": 0.52,
+          "end": 0.84,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " naast",
+          "start": 0.84,
+          "end": 1.22,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 1.22,
+          "end": 1.34,
+          "probability": 0.994140625
+        },
+        {
+          "word": " weg.",
+          "start": 1.34,
+          "end": 1.58,
+          "probability": 0.99609375
+        }
+      ]
+    }
+  ]
+}

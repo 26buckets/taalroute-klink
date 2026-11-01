@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-8c6fc120b8a77e8c",
+  "sha256": "43c7dd7189e24d73b44ff6ce48590afa0621c4fd6cdca9a109ef953090742623",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik meet de plank.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik meet de plank.",
+      "temperature": 0,
+      "avg_logprob": -0.2457326054573059,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 9.706661689701246e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.947265625
+        },
+        {
+          "word": " meet",
+          "start": 0.18,
+          "end": 0.44,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.64,
+          "probability": 0.99609375
+        },
+        {
+          "word": " plank.",
+          "start": 0.64,
+          "end": 0.98,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

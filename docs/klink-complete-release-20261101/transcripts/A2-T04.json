@@ -1,0 +1,562 @@
+{
+  "id": "A2-T04",
+  "sha256": "020a64c16293b05e6fe29f3eeabef05c340b8d0908d08d6db7bb484720ce2927",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op donderdag werkt Nadir thuis. Hij ziet een grote vuilniszak op de stoep voor zijn huis. De vuilniswagen komt pas vrijdag. Mensen in een rolstoel kunnen moeilijk langs de zak. Daarom meldt Nadir het probleem bij de gemeente. De medewerker vraagt om het adres en een foto. Nadir stuurt de foto via een formulier op de website. Later krijgt hij bericht dat de zak dezelfde middag wordt opgehaald. Om vier uur ziet Nadir dat de stoep weer vrij is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.54,
+      "text": " Op donderdag werkt Nadir thuis. Hij ziet een grote vuilniszak op de stoep voor zijn huis.",
+      "temperature": 0,
+      "avg_logprob": -0.07561308023880939,
+      "compression_ratio": 1.679245283018868,
+      "no_speech_prob": 5.686744478095029e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " donderdag",
+          "start": 0.16,
+          "end": 0.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werkt",
+          "start": 0.58,
+          "end": 0.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Nadir",
+          "start": 0.82,
+          "end": 1.14,
+          "probability": 0.8759765625
+        },
+        {
+          "word": " thuis.",
+          "start": 1.14,
+          "end": 1.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Hij",
+          "start": 1.86,
+          "end": 2.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ziet",
+          "start": 2.34,
+          "end": 2.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 2.52,
+          "end": 2.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " grote",
+          "start": 2.64,
+          "end": 2.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vuilniszak",
+          "start": 2.96,
+          "end": 3.58,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " op",
+          "start": 3.58,
+          "end": 3.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 3.72,
+          "end": 3.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stoep",
+          "start": 3.8,
+          "end": 4.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 4.0,
+          "end": 4.14,
+          "probability": 0.99609375
+        },
+        {
+          "word": " zijn",
+          "start": 4.14,
+          "end": 4.26,
+          "probability": 0.99609375
+        },
+        {
+          "word": " huis.",
+          "start": 4.26,
+          "end": 4.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.279999999999999,
+      "end": 10.16,
+      "text": " De vuilniswagen komt pas vrijdag. Mensen in een rolstoel kunnen moeilijk langs de zak.",
+      "temperature": 0,
+      "avg_logprob": -0.07561308023880939,
+      "compression_ratio": 1.679245283018868,
+      "no_speech_prob": 5.686744478095029e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.279999999999999,
+          "end": 5.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vuilniswagen",
+          "start": 5.76,
+          "end": 6.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " komt",
+          "start": 6.24,
+          "end": 6.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " pas",
+          "start": 6.5,
+          "end": 6.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vrijdag.",
+          "start": 6.68,
+          "end": 7.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Mensen",
+          "start": 7.8,
+          "end": 8.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 8.28,
+          "end": 8.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 8.4,
+          "end": 8.52,
+          "probability": 0.94140625
+        },
+        {
+          "word": " rolstoel",
+          "start": 8.52,
+          "end": 9.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kunnen",
+          "start": 9.0,
+          "end": 9.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moeilijk",
+          "start": 9.22,
+          "end": 9.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " langs",
+          "start": 9.6,
+          "end": 9.84,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 9.84,
+          "end": 9.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zak.",
+          "start": 9.92,
+          "end": 10.16,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 10.92,
+      "end": 13.06,
+      "text": " Daarom meldt Nadir het probleem bij de gemeente.",
+      "temperature": 0,
+      "avg_logprob": -0.07561308023880939,
+      "compression_ratio": 1.679245283018868,
+      "no_speech_prob": 5.686744478095029e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 10.92,
+          "end": 11.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meldt",
+          "start": 11.4,
+          "end": 11.62,
+          "probability": 0.994140625
+        },
+        {
+          "word": " Nadir",
+          "start": 11.62,
+          "end": 11.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 11.94,
+          "end": 12.1,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " probleem",
+          "start": 12.1,
+          "end": 12.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 12.56,
+          "end": 12.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gemeente.",
+          "start": 12.64,
+          "end": 13.06,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 13.76,
+      "end": 19.38,
+      "text": " De medewerker vraagt om het adres en een foto. Nadir stuurt de foto via een formulier op de website.",
+      "temperature": 0,
+      "avg_logprob": -0.07561308023880939,
+      "compression_ratio": 1.679245283018868,
+      "no_speech_prob": 5.686744478095029e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 13.76,
+          "end": 14.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 14.24,
+          "end": 14.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 14.72,
+          "end": 15.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " om",
+          "start": 15.04,
+          "end": 15.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 15.16,
+          "end": 15.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " adres",
+          "start": 15.26,
+          "end": 15.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 15.58,
+          "end": 15.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 15.74,
+          "end": 15.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " foto.",
+          "start": 15.84,
+          "end": 16.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Nadir",
+          "start": 17.14,
+          "end": 17.48,
+          "probability": 0.908203125
+        },
+        {
+          "word": " stuurt",
+          "start": 17.48,
+          "end": 17.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.68,
+          "end": 17.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " foto",
+          "start": 17.78,
+          "end": 18.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " via",
+          "start": 18.04,
+          "end": 18.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 18.26,
+          "end": 18.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " formulier",
+          "start": 18.4,
+          "end": 18.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 18.82,
+          "end": 18.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 18.94,
+          "end": 19.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " website.",
+          "start": 19.02,
+          "end": 19.38,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 20.12,
+      "end": 22.82,
+      "text": " Later krijgt hij bericht dat de zak dezelfde middag wordt opgehaald.",
+      "temperature": 0,
+      "avg_logprob": -0.07561308023880939,
+      "compression_ratio": 1.679245283018868,
+      "no_speech_prob": 5.686744478095029e-12,
+      "words": [
+        {
+          "word": " Later",
+          "start": 20.12,
+          "end": 20.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " krijgt",
+          "start": 20.42,
+          "end": 20.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 20.7,
+          "end": 20.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 20.78,
+          "end": 21.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 21.12,
+          "end": 21.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 21.26,
+          "end": 21.36,
+          "probability": 1.0
+        },
+        {
+          "word": " zak",
+          "start": 21.36,
+          "end": 21.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dezelfde",
+          "start": 21.56,
+          "end": 21.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " middag",
+          "start": 21.96,
+          "end": 22.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wordt",
+          "start": 22.18,
+          "end": 22.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opgehaald.",
+          "start": 22.34,
+          "end": 22.82,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 23.42,
+      "end": 25.76,
+      "text": " Om vier uur ziet Nadir dat de stoep weer vrij is.",
+      "temperature": 0,
+      "avg_logprob": -0.07561308023880939,
+      "compression_ratio": 1.679245283018868,
+      "no_speech_prob": 5.686744478095029e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 23.42,
+          "end": 23.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vier",
+          "start": 23.76,
+          "end": 23.96,
+          "probability": 0.537109375
+        },
+        {
+          "word": " uur",
+          "start": 23.96,
+          "end": 24.2,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 24.2,
+          "end": 24.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Nadir",
+          "start": 24.36,
+          "end": 24.7,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " dat",
+          "start": 24.7,
+          "end": 24.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 24.8,
+          "end": 24.94,
+          "probability": 1.0
+        },
+        {
+          "word": " stoep",
+          "start": 24.94,
+          "end": 25.14,
+          "probability": 1.0
+        },
+        {
+          "word": " weer",
+          "start": 25.14,
+          "end": 25.26,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vrij",
+          "start": 25.26,
+          "end": 25.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 25.5,
+          "end": 25.76,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

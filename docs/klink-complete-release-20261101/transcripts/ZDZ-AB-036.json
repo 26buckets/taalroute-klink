@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-036",
+  "sha256": "8beca3e99d2cbd30502ec312ec1fcd988dc0e83c90c4e96e084f34970e530d5f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn sleutel is weg.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Mijn sleutel is weg.",
+      "temperature": 0,
+      "avg_logprob": -0.10332922501997514,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 4.89912364148859e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.958984375
+        },
+        {
+          "word": " sleutel",
+          "start": 0.22,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.58,
+          "end": 0.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weg.",
+          "start": 0.7,
+          "end": 0.92,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

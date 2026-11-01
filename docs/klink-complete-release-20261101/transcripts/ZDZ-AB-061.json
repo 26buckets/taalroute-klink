@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-061",
+  "sha256": "bd9c26b9474d87a057ff96af982299775c8ff7e953de1fc2f8428a033a67f2e3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben boos.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Ik ben boos.",
+      "temperature": 0,
+      "avg_logprob": -0.24063807725906372,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 4.54385227360854e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97265625
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " boos.",
+          "start": 0.3,
+          "end": 0.62,
+          "probability": 0.751953125
+        }
+      ]
+    }
+  ]
+}

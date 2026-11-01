@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A1-098",
+  "sha256": "0c46d6327ce9f706304131f7308bf3ec35b6d8b7f8421537154d83795a65f8c8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben klaar met mijn taak. Wat moet ik nu doen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.16,
+      "text": " Ik ben klaar met mijn taak. Wat moet ik nu doen?",
+      "temperature": 0,
+      "avg_logprob": -0.05038359430101183,
+      "compression_ratio": 0.9056603773584906,
+      "no_speech_prob": 4.013756341181285e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.96484375
+        },
+        {
+          "word": " ben",
+          "start": 0.12,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " klaar",
+          "start": 0.26,
+          "end": 0.54,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 0.54,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.66,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " taak.",
+          "start": 0.8,
+          "end": 1.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Wat",
+          "start": 1.34,
+          "end": 1.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 1.54,
+          "end": 1.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.68,
+          "end": 1.8,
+          "probability": 1.0
+        },
+        {
+          "word": " nu",
+          "start": 1.8,
+          "end": 1.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doen?",
+          "start": 1.94,
+          "end": 2.16,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

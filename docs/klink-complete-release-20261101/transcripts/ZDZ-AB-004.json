@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-004",
+  "sha256": "b88f88f20c20ae431242c79a887de36597abe4973bee57777cec92cb4f9dfd1a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De vloer is nat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.72,
+      "text": " De vloer is nat.",
+      "temperature": 0,
+      "avg_logprob": -0.1115954875946045,
+      "compression_ratio": 0.6666666666666666,
+      "no_speech_prob": 4.535772365338309e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.93798828125
+        },
+        {
+          "word": " vloer",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 0.42,
+          "end": 0.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nat.",
+          "start": 0.54,
+          "end": 0.72,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

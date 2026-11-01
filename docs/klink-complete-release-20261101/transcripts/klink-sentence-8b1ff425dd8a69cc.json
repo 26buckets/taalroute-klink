@@ -1,0 +1,83 @@
+{
+  "id": "klink-sentence-8b1ff425dd8a69cc",
+  "sha256": "bdaf1a9e0410fc0766705eab867fa9d00f4787be8486b449c4bb299c8ad4ec49",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Zit je liever in de zon of onder de boom?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.54,
+      "text": " Zit je liever in de zon of onder de boom?",
+      "temperature": 0,
+      "avg_logprob": -0.10025762109195485,
+      "compression_ratio": 0.8913043478260869,
+      "no_speech_prob": 4.736027542362464e-12,
+      "words": [
+        {
+          "word": " Zit",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.8896484375
+        },
+        {
+          "word": " je",
+          "start": 0.24,
+          "end": 0.3,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " liever",
+          "start": 0.3,
+          "end": 0.64,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " in",
+          "start": 0.64,
+          "end": 0.84,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " de",
+          "start": 0.84,
+          "end": 0.96,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zon",
+          "start": 0.96,
+          "end": 1.3,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 1.3,
+          "end": 1.78,
+          "probability": 0.95361328125
+        },
+        {
+          "word": " onder",
+          "start": 1.78,
+          "end": 2.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 2.16,
+          "end": 2.3,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " boom?",
+          "start": 2.3,
+          "end": 2.54,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

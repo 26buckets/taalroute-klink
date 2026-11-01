@@ -1,0 +1,240 @@
+{
+  "id": "A1-T08",
+  "sha256": "ee7971a4bdda2371891c77fd7f6e66aed5ccf34bda1d75215bcbabfeaeb2ea01",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Noor wil naar haar werk. Zij zoekt haar sleutel. De sleutel ligt niet in haar tas, maar op tafel. Noor pakt de sleutel en doet de deur dicht. Daarna loopt zij naar haar werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.28,
+      "text": " Noor wil naar haar werk. Zij zoekt haar sleutel. De sleutel ligt niet in haar tas, maar op tafel.",
+      "temperature": 0,
+      "avg_logprob": -0.0342297866696217,
+      "compression_ratio": 1.43801652892562,
+      "no_speech_prob": 6.2930312003106614e-12,
+      "words": [
+        {
+          "word": " Noor",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.994140625
+        },
+        {
+          "word": " wil",
+          "start": 0.3,
+          "end": 0.48,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " naar",
+          "start": 0.48,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 0.64,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk.",
+          "start": 0.8,
+          "end": 1.14,
+          "probability": 1.0
+        },
+        {
+          "word": " Zij",
+          "start": 1.38,
+          "end": 1.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zoekt",
+          "start": 1.64,
+          "end": 1.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 1.88,
+          "end": 2.04,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " sleutel.",
+          "start": 2.04,
+          "end": 2.52,
+          "probability": 1.0
+        },
+        {
+          "word": " De",
+          "start": 2.7,
+          "end": 2.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " sleutel",
+          "start": 2.92,
+          "end": 3.34,
+          "probability": 1.0
+        },
+        {
+          "word": " ligt",
+          "start": 3.34,
+          "end": 3.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 3.54,
+          "end": 3.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 3.7,
+          "end": 3.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " haar",
+          "start": 3.88,
+          "end": 4.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tas,",
+          "start": 4.02,
+          "end": 4.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 4.52,
+          "end": 4.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 4.72,
+          "end": 4.9,
+          "probability": 1.0
+        },
+        {
+          "word": " tafel.",
+          "start": 4.9,
+          "end": 5.28,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.6,
+      "end": 9.82,
+      "text": " Noor pakt de sleutel en doet de deur dicht. Daarna loopt zij naar haar werk.",
+      "temperature": 0,
+      "avg_logprob": -0.0342297866696217,
+      "compression_ratio": 1.43801652892562,
+      "no_speech_prob": 6.2930312003106614e-12,
+      "words": [
+        {
+          "word": " Noor",
+          "start": 5.6,
+          "end": 5.96,
+          "probability": 1.0
+        },
+        {
+          "word": " pakt",
+          "start": 5.96,
+          "end": 6.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 6.2,
+          "end": 6.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " sleutel",
+          "start": 6.32,
+          "end": 6.78,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 6.78,
+          "end": 7.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " doet",
+          "start": 7.08,
+          "end": 7.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.24,
+          "end": 7.36,
+          "probability": 1.0
+        },
+        {
+          "word": " deur",
+          "start": 7.36,
+          "end": 7.64,
+          "probability": 1.0
+        },
+        {
+          "word": " dicht.",
+          "start": 7.64,
+          "end": 7.82,
+          "probability": 1.0
+        },
+        {
+          "word": " Daarna",
+          "start": 8.26,
+          "end": 8.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " loopt",
+          "start": 8.58,
+          "end": 9.0,
+          "probability": 1.0
+        },
+        {
+          "word": " zij",
+          "start": 9.0,
+          "end": 9.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 9.18,
+          "end": 9.34,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 9.34,
+          "end": 9.5,
+          "probability": 1.0
+        },
+        {
+          "word": " werk.",
+          "start": 9.5,
+          "end": 9.82,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

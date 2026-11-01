@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-025",
+  "sha256": "0a2de9fbb65135dac4f070b07f2ba9b2694b854cbcaac656909f19751fae9807",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het water is heet.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Het water is heet.",
+      "temperature": 0,
+      "avg_logprob": -0.09931362999810113,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 3.916007275395206e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95849609375
+        },
+        {
+          "word": " water",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " is",
+          "start": 0.42,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heet.",
+          "start": 0.66,
+          "end": 0.98,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

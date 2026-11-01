@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-019",
+  "sha256": "a6b95399225338fd2911b048854bba10b28d86e6b47988f3392bcb7b8007b052",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Als je klaar bent kun je de deur sluiten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " Als je klaar bent kun je de deur sluiten.",
+      "temperature": 0,
+      "avg_logprob": -0.08278930187225342,
+      "compression_ratio": 0.9318181818181818,
+      "no_speech_prob": 4.318843893624802e-12,
+      "words": [
+        {
+          "word": " Als",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.974609375
+        },
+        {
+          "word": " je",
+          "start": 0.18,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klaar",
+          "start": 0.26,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bent",
+          "start": 0.56,
+          "end": 0.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kun",
+          "start": 0.7,
+          "end": 0.86,
+          "probability": 0.865234375
+        },
+        {
+          "word": " je",
+          "start": 0.86,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.94,
+          "end": 1.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur",
+          "start": 1.06,
+          "end": 1.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " sluiten.",
+          "start": 1.24,
+          "end": 1.58,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

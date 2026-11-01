@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-6b578d9e1268c45b",
+  "sha256": "deabf4bcdd5a643c91b90085b5b0f5afd65ab9c43f848a77c7d923d1ac1c9939",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Heb je de buurman gezien?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Heb je de buurman gezien?",
+      "temperature": 0,
+      "avg_logprob": -0.07505333423614502,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 3.742381404769901e-12,
+      "words": [
+        {
+          "word": " Heb",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.89697265625
+        },
+        {
+          "word": " je",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " buurman",
+          "start": 0.38,
+          "end": 0.78,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gezien?",
+          "start": 0.78,
+          "end": 1.14,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

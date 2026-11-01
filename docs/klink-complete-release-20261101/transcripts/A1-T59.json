@@ -1,0 +1,276 @@
+{
+  "id": "A1-T59",
+  "sha256": "9b5f83cd2601758534d07bec39fc93a35e72f6a83d8fedf4b8911c51e5f7cccf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op de koelkast hangt een briefje. De melk is op. Koop vandaag melk en brood. Een man leest het briefje. Hij gaat eerst naar zijn werk. Na zijn werk koopt hij melk en brood. Thuis zet hij de melk koud.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 6.42,
+      "text": " Op de koelkast hangt een briefje. De melk is op. Koop vandaag melk en brood. Een man leest het",
+      "temperature": 0,
+      "avg_logprob": -0.05144052102532185,
+      "compression_ratio": 1.4814814814814814,
+      "no_speech_prob": 6.194710109458379e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97412109375
+        },
+        {
+          "word": " de",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " koelkast",
+          "start": 0.26,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hangt",
+          "start": 0.68,
+          "end": 0.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.88,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " briefje.",
+          "start": 0.96,
+          "end": 1.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " De",
+          "start": 2.0,
+          "end": 2.52,
+          "probability": 0.96240234375
+        },
+        {
+          "word": " melk",
+          "start": 2.52,
+          "end": 2.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 2.76,
+          "end": 2.86,
+          "probability": 1.0
+        },
+        {
+          "word": " op.",
+          "start": 2.86,
+          "end": 3.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Koop",
+          "start": 3.5,
+          "end": 3.92,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vandaag",
+          "start": 3.92,
+          "end": 4.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " melk",
+          "start": 4.2,
+          "end": 4.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 4.54,
+          "end": 4.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " brood.",
+          "start": 4.64,
+          "end": 4.92,
+          "probability": 1.0
+        },
+        {
+          "word": " Een",
+          "start": 5.32,
+          "end": 5.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " man",
+          "start": 5.84,
+          "end": 6.02,
+          "probability": 1.0
+        },
+        {
+          "word": " leest",
+          "start": 6.02,
+          "end": 6.3,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 6.3,
+          "end": 6.42,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 6.42,
+      "end": 12.6,
+      "text": " briefje. Hij gaat eerst naar zijn werk. Na zijn werk koopt hij melk en brood. Thuis zet hij de melk koud.",
+      "temperature": 0,
+      "avg_logprob": -0.05144052102532185,
+      "compression_ratio": 1.4814814814814814,
+      "no_speech_prob": 6.194710109458379e-12,
+      "words": [
+        {
+          "word": " briefje.",
+          "start": 6.42,
+          "end": 6.78,
+          "probability": 1.0
+        },
+        {
+          "word": " Hij",
+          "start": 7.06,
+          "end": 7.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gaat",
+          "start": 7.5,
+          "end": 7.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerst",
+          "start": 7.7,
+          "end": 7.94,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 7.94,
+          "end": 8.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 8.06,
+          "end": 8.2,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " werk.",
+          "start": 8.2,
+          "end": 8.54,
+          "probability": 1.0
+        },
+        {
+          "word": " Na",
+          "start": 9.18,
+          "end": 9.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 9.32,
+          "end": 9.48,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " werk",
+          "start": 9.48,
+          "end": 9.76,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt",
+          "start": 9.76,
+          "end": 10.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hij",
+          "start": 10.04,
+          "end": 10.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " melk",
+          "start": 10.14,
+          "end": 10.4,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 10.4,
+          "end": 10.5,
+          "probability": 1.0
+        },
+        {
+          "word": " brood.",
+          "start": 10.5,
+          "end": 10.8,
+          "probability": 1.0
+        },
+        {
+          "word": " Thuis",
+          "start": 11.2,
+          "end": 11.68,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " zet",
+          "start": 11.68,
+          "end": 11.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 11.86,
+          "end": 11.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 11.94,
+          "end": 12.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " melk",
+          "start": 12.06,
+          "end": 12.3,
+          "probability": 1.0
+        },
+        {
+          "word": " koud.",
+          "start": 12.3,
+          "end": 12.6,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

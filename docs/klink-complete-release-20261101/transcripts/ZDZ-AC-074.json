@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-074",
+  "sha256": "139df2d62f9c4df37747d85a6b7590ce689fbfe4259e2eb3021b90d2f7a0fa9d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Eerst doe ik mijn jas aan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": " Eerst doe ik mijn jas aan.",
+      "temperature": 0,
+      "avg_logprob": -0.15382877985636392,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 3.719604485530326e-12,
+      "words": [
+        {
+          "word": " Eerst",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.974609375
+        },
+        {
+          "word": " doe",
+          "start": 0.24,
+          "end": 0.34,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " ik",
+          "start": 0.34,
+          "end": 0.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " jas",
+          "start": 0.62,
+          "end": 0.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " aan.",
+          "start": 0.82,
+          "end": 1.0,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

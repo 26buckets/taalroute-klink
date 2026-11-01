@@ -1,0 +1,516 @@
+{
+  "id": "A2-T06",
+  "sha256": "d09bbbfda73fbaa2ca9d1e0dddc467889feb0ffa0e6ff038012005a95bf43396",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Daan werkt in een supermarkt en staat zaterdag op het rooster. Zijn dochter heeft die ochtend een sportwedstrijd. Daan vraagt collega Ivo of ze kunnen ruilen. Ivo wil zaterdag werken, maar kan pas om 12 uur beginnen. Hun leidinggevende past het rooster aan. Daan werkt zondagochtend en Ivo zaterdagmiddag. Voor de zaterdagochtend vindt de leidinggevende een andere collega. Daan controleert daarna het nieuwe rooster op zijn telefoon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.66,
+      "text": " Daan werkt in een supermarkt en staat zaterdag op het rooster.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Daan",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " werkt",
+          "start": 0.3,
+          "end": 0.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 0.54,
+          "end": 0.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 0.62,
+          "end": 0.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " supermarkt",
+          "start": 0.76,
+          "end": 1.38,
+          "probability": 0.98828125
+        },
+        {
+          "word": " en",
+          "start": 1.38,
+          "end": 1.52,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " staat",
+          "start": 1.52,
+          "end": 1.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zaterdag",
+          "start": 1.7,
+          "end": 2.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " op",
+          "start": 2.16,
+          "end": 2.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 2.28,
+          "end": 2.38,
+          "probability": 0.99609375
+        },
+        {
+          "word": " rooster.",
+          "start": 2.38,
+          "end": 2.66,
+          "probability": 0.99755859375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.14,
+      "end": 5.6,
+      "text": " Zijn dochter heeft die ochtend een sportwedstrijd.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Zijn",
+          "start": 3.14,
+          "end": 3.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dochter",
+          "start": 3.68,
+          "end": 3.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " heeft",
+          "start": 3.98,
+          "end": 4.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " die",
+          "start": 4.18,
+          "end": 4.28,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " ochtend",
+          "start": 4.28,
+          "end": 4.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 4.6,
+          "end": 4.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " sportwedstrijd.",
+          "start": 4.72,
+          "end": 5.6,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.08,
+      "end": 8.44,
+      "text": " Daan vraagt collega Ivo of ze kunnen ruilen.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Daan",
+          "start": 6.08,
+          "end": 6.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " collega",
+          "start": 6.92,
+          "end": 7.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Ivo",
+          "start": 7.32,
+          "end": 7.62,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " of",
+          "start": 7.62,
+          "end": 7.76,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ze",
+          "start": 7.76,
+          "end": 7.88,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " kunnen",
+          "start": 7.88,
+          "end": 8.06,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " ruilen.",
+          "start": 8.06,
+          "end": 8.44,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.8,
+      "end": 12.22,
+      "text": " Ivo wil zaterdag werken, maar kan pas om 12 uur beginnen.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Ivo",
+          "start": 8.8,
+          "end": 9.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 9.34,
+          "end": 9.52,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " zaterdag",
+          "start": 9.52,
+          "end": 10.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werken,",
+          "start": 10.0,
+          "end": 10.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " maar",
+          "start": 10.6,
+          "end": 10.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 10.92,
+          "end": 11.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " pas",
+          "start": 11.14,
+          "end": 11.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 11.32,
+          "end": 11.44,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " 12",
+          "start": 11.44,
+          "end": 11.66,
+          "probability": 0.88525390625
+        },
+        {
+          "word": " uur",
+          "start": 11.66,
+          "end": 11.94,
+          "probability": 0.95263671875
+        },
+        {
+          "word": " beginnen.",
+          "start": 11.94,
+          "end": 12.22,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.0,
+      "end": 14.7,
+      "text": " Hun leidinggevende past het rooster aan.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Hun",
+          "start": 13.0,
+          "end": 13.14,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " leidinggevende",
+          "start": 13.14,
+          "end": 13.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " past",
+          "start": 13.8,
+          "end": 14.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 14.0,
+          "end": 14.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rooster",
+          "start": 14.12,
+          "end": 14.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan.",
+          "start": 14.42,
+          "end": 14.7,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.26,
+      "end": 17.66,
+      "text": " Daan werkt zondagochtend en Ivo zaterdagmiddag.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Daan",
+          "start": 15.26,
+          "end": 15.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werkt",
+          "start": 15.52,
+          "end": 15.76,
+          "probability": 1.0
+        },
+        {
+          "word": " zondagochtend",
+          "start": 15.76,
+          "end": 16.46,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " en",
+          "start": 16.46,
+          "end": 16.66,
+          "probability": 0.99609375
+        },
+        {
+          "word": " Ivo",
+          "start": 16.66,
+          "end": 16.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zaterdagmiddag.",
+          "start": 16.9,
+          "end": 17.66,
+          "probability": 0.99609375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 17.92,
+      "end": 20.92,
+      "text": " Voor de zaterdagochtend vindt de leidinggevende een andere collega.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 17.92,
+          "end": 18.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 18.4,
+          "end": 18.5,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zaterdagochtend",
+          "start": 18.5,
+          "end": 19.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vindt",
+          "start": 19.22,
+          "end": 19.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 19.46,
+          "end": 19.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " leidinggevende",
+          "start": 19.52,
+          "end": 20.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 20.12,
+          "end": 20.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " andere",
+          "start": 20.26,
+          "end": 20.5,
+          "probability": 0.994140625
+        },
+        {
+          "word": " collega.",
+          "start": 20.5,
+          "end": 20.92,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 21.46,
+      "end": 24.1,
+      "text": " Daan controleert daarna het nieuwe rooster op zijn telefoon.",
+      "temperature": 0,
+      "avg_logprob": -0.08068572362263997,
+      "compression_ratio": 1.75,
+      "no_speech_prob": 5.51017564909273e-12,
+      "words": [
+        {
+          "word": " Daan",
+          "start": 21.46,
+          "end": 22.0,
+          "probability": 1.0
+        },
+        {
+          "word": " controleert",
+          "start": 22.0,
+          "end": 22.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " daarna",
+          "start": 22.48,
+          "end": 22.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 22.7,
+          "end": 22.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 22.84,
+          "end": 23.02,
+          "probability": 1.0
+        },
+        {
+          "word": " rooster",
+          "start": 23.02,
+          "end": 23.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 23.34,
+          "end": 23.5,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 23.5,
+          "end": 23.62,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " telefoon.",
+          "start": 23.62,
+          "end": 24.1,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

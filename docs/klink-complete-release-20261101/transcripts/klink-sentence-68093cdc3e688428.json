@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-68093cdc3e688428",
+  "sha256": "3d6c73f366451fe45794ec21eaaadd805891278b4809b9bba35af5b664ed24d7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De klok hangt aan de muur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.52,
+      "text": " De klok hangt aan de muur.",
+      "temperature": 0,
+      "avg_logprob": -0.10245965077326848,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 1.4535808320892407e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.89794921875
+        },
+        {
+          "word": " klok",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " hangt",
+          "start": 0.5,
+          "end": 0.9,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " aan",
+          "start": 0.9,
+          "end": 1.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.06,
+          "end": 1.18,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " muur.",
+          "start": 1.18,
+          "end": 1.52,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

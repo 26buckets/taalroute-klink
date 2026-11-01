@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-076",
+  "sha256": "4672644eb0ea0b0e88be92ac6eff3a7c76e3c8696181c2e0026e33f9a33d30ee",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Thuis kook ik voor mijn kinderen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Thuis kook ik voor mijn kinderen.",
+      "temperature": 0,
+      "avg_logprob": -0.13383356730143228,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 4.762287786341801e-12,
+      "words": [
+        {
+          "word": " Thuis",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.94091796875
+        },
+        {
+          "word": " kook",
+          "start": 0.32,
+          "end": 0.52,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " ik",
+          "start": 0.52,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 0.62,
+          "end": 0.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.76,
+          "end": 0.88,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kinderen.",
+          "start": 0.88,
+          "end": 1.18,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

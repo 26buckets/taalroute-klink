@@ -1,0 +1,613 @@
+{
+  "id": "A2-T76",
+  "sha256": "87f0b66a13badb9e29e126f6581a7903ea918b240dbd5ebc092b1fa9d8166d89",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een schoonmaakbedrijf stuurt het rooster voor volgende week. De ochtenddienst begint maandag een uur eerder dan normaal, om 7 uur. Medewerkers die niet kunnen komen, moeten voor vrijdag met hun leidinggevende overleggen. Zij mogen niet zelf een collega in hun plaats zetten. Een medewerker heeft maandag een afspraak bij de dokter. Hij belt donderdag zijn leidinggevende. Samen spreken ze af dat hij maandag de middagdienst werkt. Vrijdag ontvangt hij het aangepaste rooster per e-mail. Hij leest het rooster nog eens.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.36,
+      "text": " Een schoonmaakbedrijf stuurt het rooster voor volgende week.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.08,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " schoonmaakbedrijf",
+          "start": 0.08,
+          "end": 0.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stuurt",
+          "start": 0.96,
+          "end": 1.2,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 1.2,
+          "end": 1.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " rooster",
+          "start": 1.34,
+          "end": 1.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 1.64,
+          "end": 1.78,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " volgende",
+          "start": 1.78,
+          "end": 2.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " week.",
+          "start": 2.16,
+          "end": 2.36,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.0,
+      "end": 6.8,
+      "text": " De ochtenddienst begint maandag een uur eerder dan normaal, om 7 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.0,
+          "end": 3.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ochtenddienst",
+          "start": 3.5,
+          "end": 4.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 4.0,
+          "end": 4.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maandag",
+          "start": 4.26,
+          "end": 4.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 4.64,
+          "end": 4.74,
+          "probability": 0.99609375
+        },
+        {
+          "word": " uur",
+          "start": 4.74,
+          "end": 4.96,
+          "probability": 1.0
+        },
+        {
+          "word": " eerder",
+          "start": 4.96,
+          "end": 5.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dan",
+          "start": 5.32,
+          "end": 5.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " normaal,",
+          "start": 5.44,
+          "end": 5.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 5.88,
+          "end": 6.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 7",
+          "start": 6.2,
+          "end": 6.4,
+          "probability": 0.75927734375
+        },
+        {
+          "word": " uur.",
+          "start": 6.4,
+          "end": 6.8,
+          "probability": 0.9951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.84,
+      "end": 11.86,
+      "text": " Medewerkers die niet kunnen komen, moeten voor vrijdag met hun leidinggevende overleggen.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Medewerkers",
+          "start": 7.84,
+          "end": 8.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 8.34,
+          "end": 8.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 8.42,
+          "end": 8.58,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 8.58,
+          "end": 8.72,
+          "probability": 1.0
+        },
+        {
+          "word": " komen,",
+          "start": 8.72,
+          "end": 9.14,
+          "probability": 1.0
+        },
+        {
+          "word": " moeten",
+          "start": 9.24,
+          "end": 9.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 9.76,
+          "end": 9.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vrijdag",
+          "start": 9.92,
+          "end": 10.52,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " met",
+          "start": 10.52,
+          "end": 10.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hun",
+          "start": 10.64,
+          "end": 10.78,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende",
+          "start": 10.78,
+          "end": 11.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " overleggen.",
+          "start": 11.38,
+          "end": 11.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.36,
+      "end": 15.0,
+      "text": " Zij mogen niet zelf een collega in hun plaats zetten.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 12.36,
+          "end": 12.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mogen",
+          "start": 12.86,
+          "end": 13.06,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 13.06,
+          "end": 13.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zelf",
+          "start": 13.26,
+          "end": 13.56,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 13.56,
+          "end": 13.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " collega",
+          "start": 13.8,
+          "end": 14.18,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 14.18,
+          "end": 14.28,
+          "probability": 0.96875
+        },
+        {
+          "word": " hun",
+          "start": 14.28,
+          "end": 14.4,
+          "probability": 1.0
+        },
+        {
+          "word": " plaats",
+          "start": 14.4,
+          "end": 14.74,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " zetten.",
+          "start": 14.74,
+          "end": 15.0,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.620000000000001,
+      "end": 18.22,
+      "text": " Een medewerker heeft maandag een afspraak bij de dokter.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Een",
+          "start": 15.620000000000001,
+          "end": 16.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 16.12,
+          "end": 16.62,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 16.62,
+          "end": 16.76,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 16.76,
+          "end": 17.1,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 17.1,
+          "end": 17.18,
+          "probability": 1.0
+        },
+        {
+          "word": " afspraak",
+          "start": 17.18,
+          "end": 17.68,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 17.68,
+          "end": 17.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 17.78,
+          "end": 17.9,
+          "probability": 1.0
+        },
+        {
+          "word": " dokter.",
+          "start": 17.9,
+          "end": 18.22,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.48,
+      "end": 20.46,
+      "text": " Hij belt donderdag zijn leidinggevende.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 18.48,
+          "end": 18.98,
+          "probability": 1.0
+        },
+        {
+          "word": " belt",
+          "start": 18.98,
+          "end": 19.22,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " donderdag",
+          "start": 19.22,
+          "end": 19.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 19.68,
+          "end": 19.78,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende.",
+          "start": 19.78,
+          "end": 20.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.04,
+      "end": 23.78,
+      "text": " Samen spreken ze af dat hij maandag de middagdienst werkt.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Samen",
+          "start": 21.04,
+          "end": 21.54,
+          "probability": 1.0
+        },
+        {
+          "word": " spreken",
+          "start": 21.54,
+          "end": 21.84,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 21.84,
+          "end": 21.96,
+          "probability": 0.998046875
+        },
+        {
+          "word": " af",
+          "start": 21.96,
+          "end": 22.1,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 22.1,
+          "end": 22.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 22.3,
+          "end": 22.44,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 22.44,
+          "end": 22.84,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 22.84,
+          "end": 22.92,
+          "probability": 1.0
+        },
+        {
+          "word": " middagdienst",
+          "start": 22.92,
+          "end": 23.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werkt.",
+          "start": 23.36,
+          "end": 23.78,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 24.34,
+      "end": 26.9,
+      "text": " Vrijdag ontvangt hij het aangepaste rooster per e-mail.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Vrijdag",
+          "start": 24.34,
+          "end": 24.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangt",
+          "start": 24.84,
+          "end": 25.28,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 25.28,
+          "end": 25.34,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 25.34,
+          "end": 25.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aangepaste",
+          "start": 25.52,
+          "end": 26.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rooster",
+          "start": 26.0,
+          "end": 26.38,
+          "probability": 1.0
+        },
+        {
+          "word": " per",
+          "start": 26.38,
+          "end": 26.52,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " e",
+          "start": 26.52,
+          "end": 26.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": "-mail.",
+          "start": 26.7,
+          "end": 26.9,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 27.32,
+      "end": 28.9,
+      "text": " Hij leest het rooster nog eens.",
+      "temperature": 0,
+      "avg_logprob": -0.06795511089387488,
+      "compression_ratio": 1.7266666666666666,
+      "no_speech_prob": 0.004194309003651142,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 27.32,
+          "end": 27.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leest",
+          "start": 27.82,
+          "end": 28.14,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 28.14,
+          "end": 28.24,
+          "probability": 1.0
+        },
+        {
+          "word": " rooster",
+          "start": 28.24,
+          "end": 28.54,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 28.54,
+          "end": 28.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eens.",
+          "start": 28.68,
+          "end": 28.9,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

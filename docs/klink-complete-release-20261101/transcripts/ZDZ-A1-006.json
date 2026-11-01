@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-006",
+  "sha256": "5c7f3a9e303f26c81712d6bb924949cc10c1157470f021344c6b8b525f0c7868",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ga zaterdag met mijn zus naar het park.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Ik ga zaterdag met mijn zus naar het park.",
+      "temperature": 0,
+      "avg_logprob": -0.06832186381022136,
+      "compression_ratio": 0.8571428571428571,
+      "no_speech_prob": 4.318371615158467e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.970703125
+        },
+        {
+          "word": " ga",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag",
+          "start": 0.24,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " met",
+          "start": 0.68,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.8,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zus",
+          "start": 0.94,
+          "end": 1.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 1.12,
+          "end": 1.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.26,
+          "end": 1.38,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " park.",
+          "start": 1.38,
+          "end": 1.6,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

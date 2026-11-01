@@ -1,0 +1,297 @@
+{
+  "id": "A1-T85",
+  "sha256": "dc50acaa68dd49057f7519c3ce1b6280f0de42886ab5852c0f7bab9273435363",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een jongen zit op een bank bij het station. Hij legt zijn rode muts naast zich. De trein komt. De jongen loopt weg zonder de muts. Een medewerker vindt de muts en legt die bij het loket.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " Een jongen zit op een bank bij het station.",
+      "temperature": 0,
+      "avg_logprob": -0.08216077002926149,
+      "compression_ratio": 1.441860465116279,
+      "no_speech_prob": 5.51093892742216e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " jongen",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zit",
+          "start": 0.44,
+          "end": 0.6,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.74,
+          "end": 0.84,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bank",
+          "start": 0.84,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 1.12,
+          "end": 1.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 1.28,
+          "end": 1.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " station.",
+          "start": 1.42,
+          "end": 1.68,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.16,
+      "end": 4.12,
+      "text": " Hij legt zijn rode muts naast zich.",
+      "temperature": 0,
+      "avg_logprob": -0.08216077002926149,
+      "compression_ratio": 1.441860465116279,
+      "no_speech_prob": 5.51093892742216e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 2.16,
+          "end": 2.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " legt",
+          "start": 2.68,
+          "end": 2.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 2.9,
+          "end": 3.02,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " rode",
+          "start": 3.02,
+          "end": 3.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " muts",
+          "start": 3.26,
+          "end": 3.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naast",
+          "start": 3.54,
+          "end": 3.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zich.",
+          "start": 3.88,
+          "end": 4.12,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.38,
+      "end": 5.24,
+      "text": " De trein komt.",
+      "temperature": 0,
+      "avg_logprob": -0.08216077002926149,
+      "compression_ratio": 1.441860465116279,
+      "no_speech_prob": 5.51093892742216e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.38,
+          "end": 4.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " trein",
+          "start": 4.68,
+          "end": 4.96,
+          "probability": 1.0
+        },
+        {
+          "word": " komt.",
+          "start": 4.96,
+          "end": 5.24,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 5.6,
+      "end": 7.44,
+      "text": " De jongen loopt weg zonder de muts.",
+      "temperature": 0,
+      "avg_logprob": -0.08216077002926149,
+      "compression_ratio": 1.441860465116279,
+      "no_speech_prob": 5.51093892742216e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 5.6,
+          "end": 6.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jongen",
+          "start": 6.12,
+          "end": 6.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " loopt",
+          "start": 6.38,
+          "end": 6.58,
+          "probability": 1.0
+        },
+        {
+          "word": " weg",
+          "start": 6.58,
+          "end": 6.78,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zonder",
+          "start": 6.78,
+          "end": 7.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.08,
+          "end": 7.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " muts.",
+          "start": 7.18,
+          "end": 7.44,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 7.8,
+      "end": 10.22,
+      "text": " Een medewerker vindt de muts en legt die bij het loket.",
+      "temperature": 0,
+      "avg_logprob": -0.08216077002926149,
+      "compression_ratio": 1.441860465116279,
+      "no_speech_prob": 5.51093892742216e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 7.8,
+          "end": 8.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 8.14,
+          "end": 8.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vindt",
+          "start": 8.7,
+          "end": 8.92,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 8.92,
+          "end": 9.0,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " muts",
+          "start": 9.0,
+          "end": 9.26,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 9.26,
+          "end": 9.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " legt",
+          "start": 9.42,
+          "end": 9.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " die",
+          "start": 9.68,
+          "end": 9.68,
+          "probability": 0.9326171875
+        },
+        {
+          "word": " bij",
+          "start": 9.68,
+          "end": 9.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 9.8,
+          "end": 9.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " loket.",
+          "start": 9.94,
+          "end": 10.22,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-020",
+  "sha256": "76feb0ba1463b0c01bf1a9fc368782b450d11276fbcc39ddc898670c01aedff4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik werk maandag van 9 tot 5.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Ik werk maandag van 9 tot 5.",
+      "temperature": 0,
+      "avg_logprob": -0.08111770336444561,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.121225062603262e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8896484375
+        },
+        {
+          "word": " werk",
+          "start": 0.14,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maandag",
+          "start": 0.36,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 0.76,
+          "end": 0.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 9",
+          "start": 0.9,
+          "end": 1.1,
+          "probability": 0.93896484375
+        },
+        {
+          "word": " tot",
+          "start": 1.1,
+          "end": 1.24,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " 5.",
+          "start": 1.24,
+          "end": 1.48,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

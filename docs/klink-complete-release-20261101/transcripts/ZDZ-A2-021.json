@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-021",
+  "sha256": "43b1e8cdf82b7d59dc2c3e43a6800b9b5d81a19084937fa2313cbc538d5de758",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn collega is ziek, dus ik doe vandaag zijn werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.2,
+      "text": " Mijn collega is ziek, dus ik doe vandaag zijn werk.",
+      "temperature": 0,
+      "avg_logprob": -0.08632795015970866,
+      "compression_ratio": 0.8947368421052632,
+      "no_speech_prob": 4.545113851256444e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.97216796875
+        },
+        {
+          "word": " collega",
+          "start": 0.2,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 0.56,
+          "end": 0.72,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ziek,",
+          "start": 0.72,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dus",
+          "start": 1.24,
+          "end": 1.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.3,
+          "end": 1.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " doe",
+          "start": 1.4,
+          "end": 1.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vandaag",
+          "start": 1.5,
+          "end": 1.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 1.74,
+          "end": 1.92,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " werk.",
+          "start": 1.92,
+          "end": 2.2,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

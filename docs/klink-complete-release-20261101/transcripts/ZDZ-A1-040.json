@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-040",
+  "sha256": "bf02f9eb025fa822de0d483e5ce7c7043f372937b945a5822195e178beafabf6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik begrijp de opdracht niet. Kunt u mij helpen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.1,
+      "text": " Ik begrijp de opdracht niet. Kunt u mij helpen?",
+      "temperature": 0,
+      "avg_logprob": -0.05297329425811768,
+      "compression_ratio": 0.8545454545454545,
+      "no_speech_prob": 4.237115866501107e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " begrijp",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.5,
+          "end": 0.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opdracht",
+          "start": 0.6,
+          "end": 0.92,
+          "probability": 1.0
+        },
+        {
+          "word": " niet.",
+          "start": 0.92,
+          "end": 1.1,
+          "probability": 1.0
+        },
+        {
+          "word": " Kunt",
+          "start": 1.3,
+          "end": 1.6,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " u",
+          "start": 1.6,
+          "end": 1.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " mij",
+          "start": 1.68,
+          "end": 1.78,
+          "probability": 0.998046875
+        },
+        {
+          "word": " helpen?",
+          "start": 1.78,
+          "end": 2.1,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

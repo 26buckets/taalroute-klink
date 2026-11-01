@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-7060e7266ba8e9fb",
+  "sha256": "892f21044e9b64710c433ce8853bfe6e485e6c040a91af53048a5973106cba3d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik deel de koek met Anouk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " Ik deel de koek met Anouk.",
+      "temperature": 0,
+      "avg_logprob": -0.11110748563494001,
+      "compression_ratio": 0.8125,
+      "no_speech_prob": 4.957899108620767e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95556640625
+        },
+        {
+          "word": " deel",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.54,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " koek",
+          "start": 0.54,
+          "end": 0.84,
+          "probability": 0.984375
+        },
+        {
+          "word": " met",
+          "start": 0.84,
+          "end": 1.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Anouk.",
+          "start": 1.1,
+          "end": 1.5,
+          "probability": 0.99072265625
+        }
+      ]
+    }
+  ]
+}

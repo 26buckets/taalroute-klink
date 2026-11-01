@@ -1,0 +1,95 @@
+{
+  "id": "ZDZ-A2-071",
+  "sha256": "1c8d6fa8b56935b4d3b95e96d7683b78dcd7f6bbebe458ab603b46406460d586",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Volgens het bericht is de winkel zaterdag gesloten, maar maandag weer open.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.62,
+      "text": " Volgens het bericht is de winkel zaterdag gesloten, maar maandag weer open.",
+      "temperature": 0,
+      "avg_logprob": -0.0502161979675293,
+      "compression_ratio": 1.0273972602739727,
+      "no_speech_prob": 3.1257633200526547e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " het",
+          "start": 0.34,
+          "end": 0.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bericht",
+          "start": 0.44,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 0.76,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.9,
+          "end": 1.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " winkel",
+          "start": 1.0,
+          "end": 1.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zaterdag",
+          "start": 1.26,
+          "end": 1.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gesloten,",
+          "start": 1.74,
+          "end": 2.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 2.4,
+          "end": 2.76,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " maandag",
+          "start": 2.76,
+          "end": 3.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weer",
+          "start": 3.2,
+          "end": 3.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " open.",
+          "start": 3.34,
+          "end": 3.62,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

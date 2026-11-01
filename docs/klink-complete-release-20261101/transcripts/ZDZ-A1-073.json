@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-073",
+  "sha256": "7bf7b7ffbe28efde953a8e3656715f8ce5493f9991e316705454b65b281eab50",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bus naar het station komt 10 minuten later.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.26,
+      "text": " De bus naar het station komt 10 minuten later.",
+      "temperature": 0,
+      "avg_logprob": -0.1259627001626151,
+      "compression_ratio": 0.8518518518518519,
+      "no_speech_prob": 3.4874071946217056e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.990234375
+        },
+        {
+          "word": " bus",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.56,
+          "end": 0.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " station",
+          "start": 0.72,
+          "end": 1.02,
+          "probability": 1.0
+        },
+        {
+          "word": " komt",
+          "start": 1.02,
+          "end": 1.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " 10",
+          "start": 1.36,
+          "end": 1.58,
+          "probability": 0.64013671875
+        },
+        {
+          "word": " minuten",
+          "start": 1.58,
+          "end": 1.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " later.",
+          "start": 1.96,
+          "end": 2.26,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-A1-062",
+  "sha256": "74857253c62182fab22c3b7d20130402aacac81894b0bc1bef8f3f62dc4951f2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u iets langzamer praten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Kunt u iets langzamer praten.",
+      "temperature": 0,
+      "avg_logprob": -0.19010334748488206,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 5.710491975119414e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.8173828125
+        },
+        {
+          "word": " u",
+          "start": 0.2,
+          "end": 0.28,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " iets",
+          "start": 0.28,
+          "end": 0.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " langzamer",
+          "start": 0.42,
+          "end": 0.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " praten.",
+          "start": 0.78,
+          "end": 1.18,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-713c683ff80ec1a5",
+  "sha256": "07320a1e34b19f5fd2e2ddebb9443c8d287d043eafdbdc2e720be151de0e415a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hoe laat is het op die klok?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.34,
+      "text": " Hoe laat is het op die klok?",
+      "temperature": 0,
+      "avg_logprob": -0.0811227560043335,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 5.2416998692905725e-12,
+      "words": [
+        {
+          "word": " Hoe",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9453125
+        },
+        {
+          "word": " laat",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " is",
+          "start": 0.44,
+          "end": 0.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.58,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 0.72,
+          "end": 0.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " die",
+          "start": 0.88,
+          "end": 1.02,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " klok?",
+          "start": 1.02,
+          "end": 1.34,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

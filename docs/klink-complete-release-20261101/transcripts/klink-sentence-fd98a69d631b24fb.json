@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-fd98a69d631b24fb",
+  "sha256": "eb07607b8b022439a0da717825dabc22d4e628956c87bc1f020067ce225c4e63",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hoe laat vertrekt de boot?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Hoe laat vertrekt de boot?",
+      "temperature": 0,
+      "avg_logprob": -0.08716904033314098,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.699616563963449e-12,
+      "words": [
+        {
+          "word": " Hoe",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.93994140625
+        },
+        {
+          "word": " laat",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " vertrekt",
+          "start": 0.42,
+          "end": 0.84,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " de",
+          "start": 0.84,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " boot?",
+          "start": 0.94,
+          "end": 1.14,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

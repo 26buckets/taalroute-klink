@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-008",
+  "sha256": "83d195bc1225829bbed16d57872cab6660532cb199e373d92b9ab47a66cfebfa",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn huis heeft een kleine tuin.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": " Mijn huis heeft een kleine tuin.",
+      "temperature": 0,
+      "avg_logprob": -0.14690673351287842,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.774487662867477e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.97314453125
+        },
+        {
+          "word": " huis",
+          "start": 0.24,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " heeft",
+          "start": 0.4,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.62,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kleine",
+          "start": 0.74,
+          "end": 1.04,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " tuin.",
+          "start": 1.04,
+          "end": 1.36,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

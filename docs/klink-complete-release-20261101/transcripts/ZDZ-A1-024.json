@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-024",
+  "sha256": "590273768718f8701f380a0c4bdb1f00f5bb7eb2cb8868a05d4b765f9fb8f6c6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De lamp in de keuken is kapot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.3,
+      "text": " De lamp in de keuken is kapot.",
+      "temperature": 0,
+      "avg_logprob": -0.07030153274536133,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.875007086040494e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9443359375
+        },
+        {
+          "word": " lamp",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 0.36,
+          "end": 0.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 0.48,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " keuken",
+          "start": 0.56,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 0.86,
+          "end": 0.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kapot.",
+          "start": 0.96,
+          "end": 1.3,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

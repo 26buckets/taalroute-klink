@@ -1,0 +1,617 @@
+{
+  "id": "B1-FL-078",
+  "sha256": "f6fde47bdb51b23f0be73c886ca778ca1d2a78c00e17daeda6d43476599236b6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op een taalschool merkt administratief medewerker Omar dat cursisten verschillende starttijden zien. In de bevestigingsmail staat 9 uur, maar in het online rooster staat half 10. Hij vraagt de docent welke tijd klopt voordat hij iets verandert. De docent bevestigt dat de les om half 10 begint. Omar past de standaardmail aan en stuurt de cursisten een kort bericht. Ook controleert hij of de volgende groepen dezelfde fout kunnen krijgen. Zo weten de cursisten hoe laat de les begint en voorkomt hij verwarring bij nieuwe inschrijvingen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.6,
+      "text": " Op een taalschool merkt administratief medewerker Omar dat cursisten verschillende starttijden zien.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " een",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " taalschool",
+          "start": 0.26,
+          "end": 0.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " merkt",
+          "start": 0.74,
+          "end": 1.06,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " administratief",
+          "start": 1.06,
+          "end": 1.7,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " medewerker",
+          "start": 1.7,
+          "end": 2.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Omar",
+          "start": 2.22,
+          "end": 2.58,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " dat",
+          "start": 2.58,
+          "end": 2.84,
+          "probability": 0.9453125
+        },
+        {
+          "word": " cursisten",
+          "start": 2.84,
+          "end": 3.32,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " verschillende",
+          "start": 3.32,
+          "end": 3.86,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " starttijden",
+          "start": 3.86,
+          "end": 4.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zien.",
+          "start": 4.42,
+          "end": 4.6,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.76,
+      "end": 8.68,
+      "text": " In de bevestigingsmail staat 9 uur, maar in het online rooster staat half 10.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 4.76,
+          "end": 4.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 4.9,
+          "end": 4.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bevestigingsmail",
+          "start": 4.98,
+          "end": 5.76,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " staat",
+          "start": 5.76,
+          "end": 6.06,
+          "probability": 1.0
+        },
+        {
+          "word": " 9",
+          "start": 6.06,
+          "end": 6.3,
+          "probability": 0.7958984375
+        },
+        {
+          "word": " uur,",
+          "start": 6.3,
+          "end": 6.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 6.82,
+          "end": 6.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 6.96,
+          "end": 7.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 7.08,
+          "end": 7.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " online",
+          "start": 7.2,
+          "end": 7.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " rooster",
+          "start": 7.52,
+          "end": 7.94,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " staat",
+          "start": 7.94,
+          "end": 8.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " half",
+          "start": 8.26,
+          "end": 8.48,
+          "probability": 0.951171875
+        },
+        {
+          "word": " 10.",
+          "start": 8.48,
+          "end": 8.68,
+          "probability": 0.84619140625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.84,
+      "end": 11.84,
+      "text": " Hij vraagt de docent welke tijd klopt voordat hij iets verandert.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 8.84,
+          "end": 9.0,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vraagt",
+          "start": 9.0,
+          "end": 9.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 9.32,
+          "end": 9.4,
+          "probability": 1.0
+        },
+        {
+          "word": " docent",
+          "start": 9.4,
+          "end": 9.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " welke",
+          "start": 9.76,
+          "end": 10.18,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd",
+          "start": 10.18,
+          "end": 10.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klopt",
+          "start": 10.36,
+          "end": 10.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " voordat",
+          "start": 10.68,
+          "end": 11.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hij",
+          "start": 11.1,
+          "end": 11.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iets",
+          "start": 11.22,
+          "end": 11.38,
+          "probability": 1.0
+        },
+        {
+          "word": " verandert.",
+          "start": 11.38,
+          "end": 11.84,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.0,
+      "end": 14.74,
+      "text": " De docent bevestigt dat de les om half 10 begint.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.0,
+          "end": 12.14,
+          "probability": 1.0
+        },
+        {
+          "word": " docent",
+          "start": 12.14,
+          "end": 12.54,
+          "probability": 1.0
+        },
+        {
+          "word": " bevestigt",
+          "start": 12.54,
+          "end": 13.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 13.06,
+          "end": 13.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 13.2,
+          "end": 13.32,
+          "probability": 1.0
+        },
+        {
+          "word": " les",
+          "start": 13.32,
+          "end": 13.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " om",
+          "start": 13.58,
+          "end": 13.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " half",
+          "start": 13.82,
+          "end": 14.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 10",
+          "start": 14.12,
+          "end": 14.3,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " begint.",
+          "start": 14.3,
+          "end": 14.74,
+          "probability": 0.994140625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.9,
+      "end": 18.26,
+      "text": " Omar past de standaardmail aan en stuurt de cursisten een kort bericht.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " Omar",
+          "start": 14.9,
+          "end": 15.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " past",
+          "start": 15.26,
+          "end": 15.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 15.52,
+          "end": 15.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " standaardmail",
+          "start": 15.66,
+          "end": 16.2,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " aan",
+          "start": 16.2,
+          "end": 16.48,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 16.48,
+          "end": 16.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stuurt",
+          "start": 16.68,
+          "end": 16.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 16.94,
+          "end": 17.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cursisten",
+          "start": 17.04,
+          "end": 17.5,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " een",
+          "start": 17.5,
+          "end": 17.66,
+          "probability": 1.0
+        },
+        {
+          "word": " kort",
+          "start": 17.66,
+          "end": 17.88,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht.",
+          "start": 17.88,
+          "end": 18.26,
+          "probability": 0.9609375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.42,
+      "end": 21.68,
+      "text": " Ook controleert hij of de volgende groepen dezelfde fout kunnen krijgen.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " Ook",
+          "start": 18.42,
+          "end": 18.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " controleert",
+          "start": 18.62,
+          "end": 19.2,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " hij",
+          "start": 19.2,
+          "end": 19.38,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " of",
+          "start": 19.38,
+          "end": 19.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 19.6,
+          "end": 19.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 19.72,
+          "end": 20.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groepen",
+          "start": 20.08,
+          "end": 20.44,
+          "probability": 1.0
+        },
+        {
+          "word": " dezelfde",
+          "start": 20.44,
+          "end": 20.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fout",
+          "start": 20.92,
+          "end": 21.1,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 21.1,
+          "end": 21.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " krijgen.",
+          "start": 21.36,
+          "end": 21.68,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.88,
+      "end": 26.36,
+      "text": " Zo weten de cursisten hoe laat de les begint en voorkomt hij verwarring bij nieuwe inschrijvingen.",
+      "temperature": 0,
+      "avg_logprob": -0.05090471593345084,
+      "compression_ratio": 1.7243589743589745,
+      "no_speech_prob": 7.4710610961648e-12,
+      "words": [
+        {
+          "word": " Zo",
+          "start": 21.88,
+          "end": 22.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " weten",
+          "start": 22.02,
+          "end": 22.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.26,
+          "end": 22.4,
+          "probability": 1.0
+        },
+        {
+          "word": " cursisten",
+          "start": 22.4,
+          "end": 22.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoe",
+          "start": 22.9,
+          "end": 23.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " laat",
+          "start": 23.1,
+          "end": 23.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 23.32,
+          "end": 23.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 23.44,
+          "end": 23.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begint",
+          "start": 23.62,
+          "end": 24.02,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 24.02,
+          "end": 24.22,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " voorkomt",
+          "start": 24.22,
+          "end": 24.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 24.64,
+          "end": 24.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verwarring",
+          "start": 24.76,
+          "end": 25.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 25.2,
+          "end": 25.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 25.4,
+          "end": 25.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " inschrijvingen.",
+          "start": 25.66,
+          "end": 26.36,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

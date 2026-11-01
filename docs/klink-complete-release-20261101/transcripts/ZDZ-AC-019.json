@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-019",
+  "sha256": "4bd7b1b0824736de56a70b84c3e5e9df09312682d726a393dbac8ecdd546a700",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Maak de deur dicht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Maak de deur dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.2199629306793213,
+      "compression_ratio": 0.76,
+      "no_speech_prob": 3.996226960456539e-12,
+      "words": [
+        {
+          "word": " Maak",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9111328125
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " deur",
+          "start": 0.38,
+          "end": 0.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dicht.",
+          "start": 0.64,
+          "end": 0.92,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

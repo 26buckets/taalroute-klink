@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-060",
+  "sha256": "32259343380416da525fa7bfe81a45337f53f04ace505d3c6c38d0e18f6d6a0c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben moe.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.6,
+      "text": " Ik ben moe.",
+      "temperature": 0,
+      "avg_logprob": -0.1889438033103943,
+      "compression_ratio": 0.5789473684210527,
+      "no_speech_prob": 5.422813240119062e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9443359375
+        },
+        {
+          "word": " ben",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " moe.",
+          "start": 0.3,
+          "end": 0.6,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

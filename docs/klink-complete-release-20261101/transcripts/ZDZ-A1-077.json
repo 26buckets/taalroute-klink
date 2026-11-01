@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-077",
+  "sha256": "1a51712a54a9d5bf3e273810ae8f074ed04601a6a596b956d4f1b58771bf60b4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Daarna maak ik de tafel schoon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Daarna maak ik de tafel schoon.",
+      "temperature": 0,
+      "avg_logprob": -0.13619542121887207,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.060433846792e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " maak",
+          "start": 0.3,
+          "end": 0.52,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ik",
+          "start": 0.52,
+          "end": 0.6,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 0.6,
+          "end": 0.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tafel",
+          "start": 0.72,
+          "end": 1.08,
+          "probability": 0.994140625
+        },
+        {
+          "word": " schoon.",
+          "start": 1.08,
+          "end": 1.38,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-096",
+  "sha256": "693d214a9227ea7c5e2e2e0b0976b59e7a05dd0dad20652c1f3594b360cc3dc6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb de andere doos gepakt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Ik heb de andere doos gepakt.",
+      "temperature": 0,
+      "avg_logprob": -0.06453375021616618,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 3.4890413041360757e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.24,
+          "end": 0.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " andere",
+          "start": 0.36,
+          "end": 0.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doos",
+          "start": 0.54,
+          "end": 0.8,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " gepakt.",
+          "start": 0.8,
+          "end": 1.14,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

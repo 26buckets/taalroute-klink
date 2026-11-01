@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-3df004c052112fd3",
+  "sha256": "bebb6ac719d3a7a6873f8a3ec2dd371501b148c6a57e1349ec5aaf487f5d1fec",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De ringen liggen in een doosje.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.64,
+      "text": " De ringen liggen in een doosje.",
+      "temperature": 0,
+      "avg_logprob": -0.09137896129063197,
+      "compression_ratio": 0.8857142857142857,
+      "no_speech_prob": 3.7770528892033806e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9130859375
+        },
+        {
+          "word": " ringen",
+          "start": 0.2,
+          "end": 0.54,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " liggen",
+          "start": 0.54,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 0.88,
+          "end": 1.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.02,
+          "end": 1.18,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " doosje.",
+          "start": 1.18,
+          "end": 1.64,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

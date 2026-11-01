@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-003",
+  "sha256": "d53de68754f98c29dfe65c98f809993842f6459b363e8bb82feeaa4fda7fd083",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben ziek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Ik ben ziek.",
+      "temperature": 0,
+      "avg_logprob": -0.18396127223968506,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 4.7420643800588635e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.8310546875
+        },
+        {
+          "word": " ben",
+          "start": 0.12,
+          "end": 0.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ziek.",
+          "start": 0.26,
+          "end": 0.62,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

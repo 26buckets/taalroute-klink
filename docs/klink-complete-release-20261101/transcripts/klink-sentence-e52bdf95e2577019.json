@@ -1,0 +1,83 @@
+{
+  "id": "klink-sentence-e52bdf95e2577019",
+  "sha256": "3fa0a1109c6cf1f357b28adea56ae3574632bbac1b1ef7b03fb73d36edd5cf7c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Zullen we in de zon of in de schaduw zitten?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.46,
+      "text": " Zullen we in de zon of in de schaduw zitten?",
+      "temperature": 0,
+      "avg_logprob": -0.07275472746955024,
+      "compression_ratio": 0.9565217391304348,
+      "no_speech_prob": 4.296859743013748e-12,
+      "words": [
+        {
+          "word": " Zullen",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.96337890625
+        },
+        {
+          "word": " we",
+          "start": 0.26,
+          "end": 0.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 0.4,
+          "end": 0.62,
+          "probability": 0.99609375
+        },
+        {
+          "word": " de",
+          "start": 0.62,
+          "end": 0.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zon",
+          "start": 0.74,
+          "end": 1.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " of",
+          "start": 1.08,
+          "end": 1.48,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " in",
+          "start": 1.48,
+          "end": 1.7,
+          "probability": 0.9765625
+        },
+        {
+          "word": " de",
+          "start": 1.7,
+          "end": 1.8,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " schaduw",
+          "start": 1.8,
+          "end": 2.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zitten?",
+          "start": 2.22,
+          "end": 2.46,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

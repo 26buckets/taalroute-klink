@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-63fe0fbcda12f0a5",
+  "sha256": "fc442356dcd0ec2ed2591e087dbb2cc1338ca3c9947146153abb74cfe58b8af4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kop staat op een schotel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " De kop staat op een schotel.",
+      "temperature": 0,
+      "avg_logprob": -0.10347266991933186,
+      "compression_ratio": 0.8235294117647058,
+      "no_speech_prob": 4.370684369980893e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.91796875
+        },
+        {
+          "word": " kop",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.94384765625
+        },
+        {
+          "word": " staat",
+          "start": 0.44,
+          "end": 0.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 0.68,
+          "end": 0.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 0.88,
+          "end": 1.0,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " schotel.",
+          "start": 1.0,
+          "end": 1.5,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

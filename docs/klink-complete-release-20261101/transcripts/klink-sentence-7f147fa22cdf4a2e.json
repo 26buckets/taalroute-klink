@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-7f147fa22cdf4a2e",
+  "sha256": "3dffdde0e7a95e74ddb243c73ce6ac4a7163aad3e8c7c8853772ee037e2487d2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij bezoeken een circus met acrobaten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.1,
+      "text": " Wij bezoeken een circus met acrobaten.",
+      "temperature": 0,
+      "avg_logprob": -0.07385073389325823,
+      "compression_ratio": 0.8636363636363636,
+      "no_speech_prob": 3.931637567594626e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " bezoeken",
+          "start": 0.2,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.56,
+          "end": 0.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " circus",
+          "start": 0.76,
+          "end": 1.08,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " met",
+          "start": 1.08,
+          "end": 1.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " acrobaten.",
+          "start": 1.44,
+          "end": 2.1,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

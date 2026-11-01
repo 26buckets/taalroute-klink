@@ -1,0 +1,283 @@
+{
+  "id": "A1-T93",
+  "sha256": "0587e0eb35e3e0fcd5ce7cfc1c6f17b48e1077a14beebb957b269186064ba0a4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op tafel staan schone borden. Een medewerker telt er 10. Zij zet 6 borden in de kast en 4 op een kar. Daarna maakt zij de tafel schoon. De kok vraagt of de kar bij de deur kan staan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.2,
+      "text": " Op tafel staan schone borden. Een medewerker telt er 10.",
+      "temperature": 0,
+      "avg_logprob": -0.05972536171183867,
+      "compression_ratio": 1.368421052631579,
+      "no_speech_prob": 4.640935639260713e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " tafel",
+          "start": 0.2,
+          "end": 0.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staan",
+          "start": 0.54,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schone",
+          "start": 0.72,
+          "end": 1.06,
+          "probability": 0.994140625
+        },
+        {
+          "word": " borden.",
+          "start": 1.06,
+          "end": 1.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Een",
+          "start": 1.74,
+          "end": 2.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 2.14,
+          "end": 2.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " telt",
+          "start": 2.68,
+          "end": 2.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " er",
+          "start": 2.88,
+          "end": 3.02,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " 10.",
+          "start": 3.02,
+          "end": 3.2,
+          "probability": 0.7451171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.64,
+      "end": 8.2,
+      "text": " Zij zet 6 borden in de kast en 4 op een kar. Daarna maakt zij de tafel schoon.",
+      "temperature": 0,
+      "avg_logprob": -0.05972536171183867,
+      "compression_ratio": 1.368421052631579,
+      "no_speech_prob": 4.640935639260713e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 3.64,
+          "end": 4.04,
+          "probability": 0.99609375
+        },
+        {
+          "word": " zet",
+          "start": 4.04,
+          "end": 4.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 6",
+          "start": 4.2,
+          "end": 4.4,
+          "probability": 0.8076171875
+        },
+        {
+          "word": " borden",
+          "start": 4.4,
+          "end": 4.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 4.7,
+          "end": 4.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.82,
+          "end": 4.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kast",
+          "start": 4.9,
+          "end": 5.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 5.18,
+          "end": 5.3,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " 4",
+          "start": 5.3,
+          "end": 5.46,
+          "probability": 0.939453125
+        },
+        {
+          "word": " op",
+          "start": 5.46,
+          "end": 5.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 5.64,
+          "end": 5.74,
+          "probability": 0.982421875
+        },
+        {
+          "word": " kar.",
+          "start": 5.74,
+          "end": 5.98,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " Daarna",
+          "start": 6.66,
+          "end": 7.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maakt",
+          "start": 7.06,
+          "end": 7.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zij",
+          "start": 7.34,
+          "end": 7.46,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " de",
+          "start": 7.46,
+          "end": 7.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tafel",
+          "start": 7.58,
+          "end": 7.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schoon.",
+          "start": 7.9,
+          "end": 8.2,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.8,
+      "end": 10.94,
+      "text": " De kok vraagt of de kar bij de deur kan staan.",
+      "temperature": 0,
+      "avg_logprob": -0.05972536171183867,
+      "compression_ratio": 1.368421052631579,
+      "no_speech_prob": 4.640935639260713e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.8,
+          "end": 9.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kok",
+          "start": 9.2,
+          "end": 9.4,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vraagt",
+          "start": 9.4,
+          "end": 9.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 9.78,
+          "end": 9.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.88,
+          "end": 9.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kar",
+          "start": 9.98,
+          "end": 10.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 10.14,
+          "end": 10.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 10.26,
+          "end": 10.36,
+          "probability": 1.0
+        },
+        {
+          "word": " deur",
+          "start": 10.36,
+          "end": 10.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 10.54,
+          "end": 10.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " staan.",
+          "start": 10.66,
+          "end": 10.94,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

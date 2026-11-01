@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-6cf7ed7796c97b8c",
+  "sha256": "cce402f32d00ab2f6098b2ec65a3e0062c4ab1d05e73f1258c3c28664b80a584",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het raam staat open.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Het raam staat open.",
+      "temperature": 0,
+      "avg_logprob": -0.14463037914699978,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 3.716426472122336e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.90869140625
+        },
+        {
+          "word": " raam",
+          "start": 0.18,
+          "end": 0.52,
+          "probability": 0.99609375
+        },
+        {
+          "word": " staat",
+          "start": 0.52,
+          "end": 0.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " open.",
+          "start": 0.68,
+          "end": 1.04,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

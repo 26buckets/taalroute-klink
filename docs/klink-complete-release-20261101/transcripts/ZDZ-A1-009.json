@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-009",
+  "sha256": "3ea95b7156dcfb5f382179fcef7bd2b3fb19de5bea072cff60d9532d54764935",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De badkamer is boven, naast mijn kamer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.12,
+      "text": " De badkamer is boven, naast mijn kamer.",
+      "temperature": 0,
+      "avg_logprob": -0.04592581356272978,
+      "compression_ratio": 0.8863636363636364,
+      "no_speech_prob": 4.424881468179098e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97314453125
+        },
+        {
+          "word": " badkamer",
+          "start": 0.14,
+          "end": 0.62,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " is",
+          "start": 0.62,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " boven,",
+          "start": 0.76,
+          "end": 1.16,
+          "probability": 1.0
+        },
+        {
+          "word": " naast",
+          "start": 1.32,
+          "end": 1.58,
+          "probability": 1.0
+        },
+        {
+          "word": " mijn",
+          "start": 1.58,
+          "end": 1.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kamer.",
+          "start": 1.7,
+          "end": 2.12,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

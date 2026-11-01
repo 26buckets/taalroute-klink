@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-b4ce8336af6f6d47",
+  "sha256": "36c06897e1202acdd365636476f655fa21483aa658aadd6cbfe7f2d7feb764a3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De chauffeur zit achter het stuur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.9,
+      "text": " De chauffeur zit achter het stuur.",
+      "temperature": 0,
+      "avg_logprob": -0.12006795406341553,
+      "compression_ratio": 0.8095238095238095,
+      "no_speech_prob": 4.4495483686457504e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8984375
+        },
+        {
+          "word": " chauffeur",
+          "start": 0.14,
+          "end": 0.64,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " zit",
+          "start": 0.64,
+          "end": 0.92,
+          "probability": 0.98828125
+        },
+        {
+          "word": " achter",
+          "start": 0.92,
+          "end": 1.3,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " het",
+          "start": 1.3,
+          "end": 1.52,
+          "probability": 0.9921875
+        },
+        {
+          "word": " stuur.",
+          "start": 1.52,
+          "end": 1.9,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

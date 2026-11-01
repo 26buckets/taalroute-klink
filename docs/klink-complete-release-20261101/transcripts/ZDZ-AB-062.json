@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-062",
+  "sha256": "c24e599b7595a06f0b75e8c86da87913102db6f203036ed057594c7175c341b1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wat zei u?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Wat zei u?",
+      "temperature": 0,
+      "avg_logprob": -0.16681385040283203,
+      "compression_ratio": 0.5555555555555556,
+      "no_speech_prob": 4.909097000432849e-12,
+      "words": [
+        {
+          "word": " Wat",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.98046875
+        },
+        {
+          "word": " zei",
+          "start": 0.26,
+          "end": 0.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " u?",
+          "start": 0.5,
+          "end": 0.62,
+          "probability": 0.982421875
+        }
+      ]
+    }
+  ]
+}

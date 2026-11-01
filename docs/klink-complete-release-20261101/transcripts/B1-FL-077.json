@@ -1,0 +1,641 @@
+{
+  "id": "B1-FL-077",
+  "sha256": "1c928255915543e1cf2d8e4b1b080816244505eaa1de940c61e889c312cde345",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een medewerker van het busstation leest in de planning dat perron 4 vanaf vrijdag wordt afgesloten voor onderhoud. Volgens het overzicht vertrekt een internationale bus nog van dat perron. Hij controleert daarom de lijst met vertrektijden en overlegt met de vervoerder. Samen kiezen ze een vrij perron zonder de vertrektijd te veranderen. De medewerker past het overzicht op de schermen aan en hangt een bericht bij het oude perron. Reizigers kunnen de bus nu op de juiste plek vinden. Voor de dienst begint controleert hij of beide berichten overeen komen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.34,
+      "text": " Een medewerker van het busstation leest in de planning dat perron 4 vanaf vrijdag wordt afgesloten voor onderhoud.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " medewerker",
+          "start": 0.16,
+          "end": 0.68,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 0.68,
+          "end": 0.8,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 0.8,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " busstation",
+          "start": 0.94,
+          "end": 1.44,
+          "probability": 0.95458984375
+        },
+        {
+          "word": " leest",
+          "start": 1.44,
+          "end": 1.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 1.78,
+          "end": 1.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.9,
+          "end": 2.0,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " planning",
+          "start": 2.0,
+          "end": 2.34,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " dat",
+          "start": 2.34,
+          "end": 2.58,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " perron",
+          "start": 2.58,
+          "end": 2.94,
+          "probability": 0.89404296875
+        },
+        {
+          "word": " 4",
+          "start": 2.94,
+          "end": 3.26,
+          "probability": 0.96728515625
+        },
+        {
+          "word": " vanaf",
+          "start": 3.26,
+          "end": 3.64,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " vrijdag",
+          "start": 3.64,
+          "end": 4.02,
+          "probability": 1.0
+        },
+        {
+          "word": " wordt",
+          "start": 4.02,
+          "end": 4.18,
+          "probability": 0.994140625
+        },
+        {
+          "word": " afgesloten",
+          "start": 4.18,
+          "end": 4.72,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 4.72,
+          "end": 4.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " onderhoud.",
+          "start": 4.88,
+          "end": 5.34,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 6.0,
+      "end": 9.24,
+      "text": " Volgens het overzicht vertrekt een internationale bus nog van dat perron.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 6.0,
+          "end": 6.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.52,
+          "end": 6.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " overzicht",
+          "start": 6.64,
+          "end": 7.12,
+          "probability": 1.0
+        },
+        {
+          "word": " vertrekt",
+          "start": 7.12,
+          "end": 7.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 7.48,
+          "end": 7.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " internationale",
+          "start": 7.62,
+          "end": 8.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bus",
+          "start": 8.24,
+          "end": 8.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 8.46,
+          "end": 8.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 8.64,
+          "end": 8.78,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 8.78,
+          "end": 8.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " perron.",
+          "start": 8.94,
+          "end": 9.24,
+          "probability": 0.994140625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.74,
+      "end": 14.14,
+      "text": " Hij controleert daarom de lijst met vertrektijden en overlegt met de vervoerder.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 9.74,
+          "end": 10.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " controleert",
+          "start": 10.26,
+          "end": 10.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " daarom",
+          "start": 10.82,
+          "end": 11.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 11.06,
+          "end": 11.18,
+          "probability": 1.0
+        },
+        {
+          "word": " lijst",
+          "start": 11.18,
+          "end": 11.52,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 11.52,
+          "end": 11.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertrektijden",
+          "start": 11.66,
+          "end": 12.46,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " en",
+          "start": 12.46,
+          "end": 13.0,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " overlegt",
+          "start": 13.0,
+          "end": 13.4,
+          "probability": 0.9677734375
+        },
+        {
+          "word": " met",
+          "start": 13.4,
+          "end": 13.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 13.54,
+          "end": 13.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vervoerder.",
+          "start": 13.68,
+          "end": 14.14,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 14.6,
+      "end": 17.86,
+      "text": " Samen kiezen ze een vrij perron zonder de vertrektijd te veranderen.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " Samen",
+          "start": 14.6,
+          "end": 15.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kiezen",
+          "start": 15.12,
+          "end": 15.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 15.38,
+          "end": 15.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 15.5,
+          "end": 15.62,
+          "probability": 1.0
+        },
+        {
+          "word": " vrij",
+          "start": 15.62,
+          "end": 15.82,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " perron",
+          "start": 15.82,
+          "end": 16.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zonder",
+          "start": 16.22,
+          "end": 16.6,
+          "probability": 0.7939453125
+        },
+        {
+          "word": " de",
+          "start": 16.6,
+          "end": 16.72,
+          "probability": 1.0
+        },
+        {
+          "word": " vertrektijd",
+          "start": 16.72,
+          "end": 17.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " te",
+          "start": 17.22,
+          "end": 17.36,
+          "probability": 1.0
+        },
+        {
+          "word": " veranderen.",
+          "start": 17.36,
+          "end": 17.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 18.28,
+      "end": 22.86,
+      "text": " De medewerker past het overzicht op de schermen aan en hangt een bericht bij het oude perron.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.28,
+          "end": 18.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 18.64,
+          "end": 19.2,
+          "probability": 1.0
+        },
+        {
+          "word": " past",
+          "start": 19.2,
+          "end": 19.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 19.44,
+          "end": 19.58,
+          "probability": 1.0
+        },
+        {
+          "word": " overzicht",
+          "start": 19.58,
+          "end": 19.94,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 19.94,
+          "end": 20.08,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 20.08,
+          "end": 20.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schermen",
+          "start": 20.16,
+          "end": 20.56,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 20.56,
+          "end": 20.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 20.76,
+          "end": 21.38,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " hangt",
+          "start": 21.38,
+          "end": 21.62,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 21.62,
+          "end": 21.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bericht",
+          "start": 21.72,
+          "end": 22.06,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 22.06,
+          "end": 22.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 22.2,
+          "end": 22.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 22.34,
+          "end": 22.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " perron.",
+          "start": 22.54,
+          "end": 22.86,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 23.5,
+      "end": 25.86,
+      "text": " Reizigers kunnen de bus nu op de juiste plek vinden.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " Reizigers",
+          "start": 23.5,
+          "end": 24.02,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kunnen",
+          "start": 24.02,
+          "end": 24.28,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 24.28,
+          "end": 24.42,
+          "probability": 1.0
+        },
+        {
+          "word": " bus",
+          "start": 24.42,
+          "end": 24.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nu",
+          "start": 24.62,
+          "end": 24.74,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 24.74,
+          "end": 24.86,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 24.86,
+          "end": 24.96,
+          "probability": 1.0
+        },
+        {
+          "word": " juiste",
+          "start": 24.96,
+          "end": 25.26,
+          "probability": 1.0
+        },
+        {
+          "word": " plek",
+          "start": 25.26,
+          "end": 25.56,
+          "probability": 1.0
+        },
+        {
+          "word": " vinden.",
+          "start": 25.56,
+          "end": 25.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 26.28,
+      "end": 29.46,
+      "text": " Voor de dienst begint controleert hij of beide berichten overeen komen.",
+      "temperature": 0,
+      "avg_logprob": -0.07317503792898995,
+      "compression_ratio": 1.832236842105263,
+      "no_speech_prob": 5.5538212917483065e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 26.28,
+          "end": 26.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 26.58,
+          "end": 26.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dienst",
+          "start": 26.7,
+          "end": 26.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 26.98,
+          "end": 27.4,
+          "probability": 0.990234375
+        },
+        {
+          "word": " controleert",
+          "start": 27.4,
+          "end": 28.0,
+          "probability": 0.943359375
+        },
+        {
+          "word": " hij",
+          "start": 28.0,
+          "end": 28.12,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " of",
+          "start": 28.12,
+          "end": 28.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beide",
+          "start": 28.26,
+          "end": 28.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " berichten",
+          "start": 28.5,
+          "end": 28.82,
+          "probability": 1.0
+        },
+        {
+          "word": " overeen",
+          "start": 28.82,
+          "end": 29.2,
+          "probability": 0.7783203125
+        },
+        {
+          "word": " komen.",
+          "start": 29.2,
+          "end": 29.46,
+          "probability": 0.98583984375
+        }
+      ]
+    }
+  ]
+}

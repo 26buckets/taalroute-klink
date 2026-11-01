@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-052",
+  "sha256": "f25f5a8ddc9f0fe593dcef7e8e3df978a0e946dba36b0bdfb0c5d8df3fec14d7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is mooi.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Dit is mooi.",
+      "temperature": 0,
+      "avg_logprob": -0.2237225260053362,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 4.802546815091402e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " is",
+          "start": 0.28,
+          "end": 0.38,
+          "probability": 1.0
+        },
+        {
+          "word": " mooi.",
+          "start": 0.38,
+          "end": 0.62,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

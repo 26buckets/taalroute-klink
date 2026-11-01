@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-090",
+  "sha256": "03dd5b0d726d1b74e67215fc00f3cef7031bad11921e9cf0034c16e90f755cc7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is mijn adres.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.82,
+      "text": " Dit is mijn adres.",
+      "temperature": 0,
+      "avg_logprob": -0.13519748051961264,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.065684854753782e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.966796875
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " mijn",
+          "start": 0.28,
+          "end": 0.46,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " adres.",
+          "start": 0.46,
+          "end": 0.82,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "klink-sentence-84e056599380fbb5",
+  "sha256": "0ea95334e332dc55a91c9d93028315eadab9f25fd390a1d6750b02bcf980e272",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er ligt een munt van 1 euro op tafel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.3,
+      "text": " Er ligt een munt van 1 euro op tafel.",
+      "temperature": 0,
+      "avg_logprob": -0.07053279876708984,
+      "compression_ratio": 0.8222222222222222,
+      "no_speech_prob": 4.766334028849517e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.93359375
+        },
+        {
+          "word": " ligt",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.34,
+          "end": 0.48,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " munt",
+          "start": 0.48,
+          "end": 0.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " van",
+          "start": 0.76,
+          "end": 0.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " 1",
+          "start": 0.96,
+          "end": 1.28,
+          "probability": 0.79248046875
+        },
+        {
+          "word": " euro",
+          "start": 1.28,
+          "end": 1.66,
+          "probability": 0.96826171875
+        },
+        {
+          "word": " op",
+          "start": 1.66,
+          "end": 1.92,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tafel.",
+          "start": 1.92,
+          "end": 2.3,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

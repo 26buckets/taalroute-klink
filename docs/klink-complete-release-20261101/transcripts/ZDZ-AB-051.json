@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-051",
+  "sha256": "c747b87bc3ee3b7cb82f0924292c89a9ffa0ce9a0e80bf76649040ce36c10c81",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is makkelijk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Dit is makkelijk.",
+      "temperature": 0,
+      "avg_logprob": -0.20727956295013428,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 3.772023492165655e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97509765625
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.3,
+          "probability": 1.0
+        },
+        {
+          "word": " makkelijk.",
+          "start": 0.3,
+          "end": 0.66,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

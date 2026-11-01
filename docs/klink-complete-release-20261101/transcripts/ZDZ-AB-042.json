@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-042",
+  "sha256": "044989af2b4bb7d70e80c3632aeb406e3a32e4018e0bfadc57d837ae39f466fa",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Neem een appel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.58,
+      "text": " Neem een appel.",
+      "temperature": 0,
+      "avg_logprob": -0.1225663423538208,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 1.5031835151613215e-11,
+      "words": [
+        {
+          "word": " Neem",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.98828125
+        },
+        {
+          "word": " een",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " appel.",
+          "start": 0.36,
+          "end": 0.58,
+          "probability": 0.9951171875
+        }
+      ]
+    }
+  ]
+}

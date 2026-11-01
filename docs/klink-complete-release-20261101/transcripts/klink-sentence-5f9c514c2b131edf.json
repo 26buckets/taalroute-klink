@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-5f9c514c2b131edf",
+  "sha256": "4bf8d5e9d855664035f16ff998974d3a1890af740d3a945ab7ce8253e8e44492",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik pas de rok.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.88,
+      "text": " Ik pas de rok.",
+      "temperature": 0,
+      "avg_logprob": -0.06867259740829468,
+      "compression_ratio": 0.6363636363636364,
+      "no_speech_prob": 5.964341433933873e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.978515625
+        },
+        {
+          "word": " pas",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.990234375
+        },
+        {
+          "word": " de",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " rok.",
+          "start": 0.62,
+          "end": 0.88,
+          "probability": 0.98974609375
+        }
+      ]
+    }
+  ]
+}

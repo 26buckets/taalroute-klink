@@ -1,0 +1,277 @@
+{
+  "id": "A1-T95",
+  "sha256": "16949dba35d94f82d0d0bd54d47c96270ea2b6db07e495a51cc0403662024320",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bericht voor de groep. Morgen is er geen les in het lokaal. De docent is ziek. Vrijdag komt de groep weer naar school. De les begint dan om 9 uur. Neem vrijdag je schrift en een pen mee.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.94,
+      "text": " Bericht voor de groep. Morgen is er geen les in het lokaal.",
+      "temperature": 0,
+      "avg_logprob": -0.05391112841092623,
+      "compression_ratio": 1.3676470588235294,
+      "no_speech_prob": 4.623350313703867e-12,
+      "words": [
+        {
+          "word": " Bericht",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " voor",
+          "start": 0.32,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groep.",
+          "start": 0.56,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Morgen",
+          "start": 1.18,
+          "end": 1.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 1.58,
+          "end": 1.76,
+          "probability": 1.0
+        },
+        {
+          "word": " er",
+          "start": 1.76,
+          "end": 1.86,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 1.86,
+          "end": 2.04,
+          "probability": 1.0
+        },
+        {
+          "word": " les",
+          "start": 2.04,
+          "end": 2.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 2.3,
+          "end": 2.42,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 2.42,
+          "end": 2.52,
+          "probability": 1.0
+        },
+        {
+          "word": " lokaal.",
+          "start": 2.52,
+          "end": 2.94,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.28,
+      "end": 6.5,
+      "text": " De docent is ziek. Vrijdag komt de groep weer naar school.",
+      "temperature": 0,
+      "avg_logprob": -0.05391112841092623,
+      "compression_ratio": 1.3676470588235294,
+      "no_speech_prob": 4.623350313703867e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.28,
+          "end": 3.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 3.68,
+          "end": 3.94,
+          "probability": 0.99609375
+        },
+        {
+          "word": " is",
+          "start": 3.94,
+          "end": 4.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ziek.",
+          "start": 4.14,
+          "end": 4.38,
+          "probability": 1.0
+        },
+        {
+          "word": " Vrijdag",
+          "start": 5.02,
+          "end": 5.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komt",
+          "start": 5.42,
+          "end": 5.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 5.6,
+          "end": 5.72,
+          "probability": 1.0
+        },
+        {
+          "word": " groep",
+          "start": 5.72,
+          "end": 5.94,
+          "probability": 1.0
+        },
+        {
+          "word": " weer",
+          "start": 5.94,
+          "end": 6.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 6.06,
+          "end": 6.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school.",
+          "start": 6.2,
+          "end": 6.5,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.98,
+      "end": 10.8,
+      "text": " De les begint dan om 9 uur. Neem vrijdag je schrift en een pen mee.",
+      "temperature": 0,
+      "avg_logprob": -0.05391112841092623,
+      "compression_ratio": 1.3676470588235294,
+      "no_speech_prob": 4.623350313703867e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.98,
+          "end": 7.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 7.38,
+          "end": 7.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 7.58,
+          "end": 7.88,
+          "probability": 1.0
+        },
+        {
+          "word": " dan",
+          "start": 7.88,
+          "end": 8.0,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " om",
+          "start": 8.0,
+          "end": 8.12,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " 9",
+          "start": 8.12,
+          "end": 8.32,
+          "probability": 0.896484375
+        },
+        {
+          "word": " uur.",
+          "start": 8.32,
+          "end": 8.64,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " Neem",
+          "start": 9.2,
+          "end": 9.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 9.4,
+          "end": 9.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " je",
+          "start": 9.78,
+          "end": 9.92,
+          "probability": 1.0
+        },
+        {
+          "word": " schrift",
+          "start": 9.92,
+          "end": 10.2,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 10.2,
+          "end": 10.32,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 10.32,
+          "end": 10.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pen",
+          "start": 10.42,
+          "end": 10.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mee.",
+          "start": 10.6,
+          "end": 10.8,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

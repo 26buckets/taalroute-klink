@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-27801d17f2242f52",
+  "sha256": "7146d6f78103a2c44684f94fcbac7d3b211c6c7a357b054f240b7d0a7b8e4a33",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De emmer staat bij de kraan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " De emmer staat bij de kraan.",
+      "temperature": 0,
+      "avg_logprob": -0.0917956034342448,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.0692562207057517e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92138671875
+        },
+        {
+          "word": " emmer",
+          "start": 0.16,
+          "end": 0.52,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " staat",
+          "start": 0.52,
+          "end": 0.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bij",
+          "start": 0.84,
+          "end": 1.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.06,
+          "end": 1.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kraan.",
+          "start": 1.18,
+          "end": 1.6,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

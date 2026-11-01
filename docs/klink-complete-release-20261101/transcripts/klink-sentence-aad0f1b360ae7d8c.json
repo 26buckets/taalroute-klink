@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-aad0f1b360ae7d8c",
+  "sha256": "d81d7d200538726e6750d12259995d554b6d5cbc0f28a61e7b70a833befd6e04",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het vliegtuig stijgt op.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Het vliegtuig stijgt op.",
+      "temperature": 0,
+      "avg_logprob": -0.0545933587210519,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.4371316516855774e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8466796875
+        },
+        {
+          "word": " vliegtuig",
+          "start": 0.16,
+          "end": 0.72,
+          "probability": 0.998046875
+        },
+        {
+          "word": " stijgt",
+          "start": 0.72,
+          "end": 1.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op.",
+          "start": 1.12,
+          "end": 1.38,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

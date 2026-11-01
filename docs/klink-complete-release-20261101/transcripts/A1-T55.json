@@ -1,0 +1,303 @@
+{
+  "id": "A1-T55",
+  "sha256": "fdc328be33d8f31650a7525b9e4bc32d55c7aee2693ef73917748008c06b73bb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op vrijdag maakt een vader zijn fiets schoon. Hij zet de fiets in de garage. Zijn zoon wil de fiets gebruiken. De vader zegt, wacht tot zaterdag. Op zaterdag mag de zoon met de fiets naar het park.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.94,
+      "text": " Op vrijdag maakt een vader zijn fiets schoon.",
+      "temperature": 0,
+      "avg_logprob": -0.09114442189534505,
+      "compression_ratio": 1.4592592592592593,
+      "no_speech_prob": 4.807238374732181e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " vrijdag",
+          "start": 0.16,
+          "end": 0.58,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " maakt",
+          "start": 0.58,
+          "end": 0.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 0.82,
+          "end": 0.9,
+          "probability": 0.9384765625
+        },
+        {
+          "word": " vader",
+          "start": 0.9,
+          "end": 1.2,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 1.2,
+          "end": 1.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " fiets",
+          "start": 1.36,
+          "end": 1.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " schoon.",
+          "start": 1.6,
+          "end": 1.94,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.26,
+      "end": 3.74,
+      "text": " Hij zet de fiets in de garage.",
+      "temperature": 0,
+      "avg_logprob": -0.09114442189534505,
+      "compression_ratio": 1.4592592592592593,
+      "no_speech_prob": 4.807238374732181e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 2.26,
+          "end": 2.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zet",
+          "start": 2.66,
+          "end": 2.86,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 2.86,
+          "end": 2.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fiets",
+          "start": 2.94,
+          "end": 3.14,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 3.14,
+          "end": 3.24,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 3.24,
+          "end": 3.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " garage.",
+          "start": 3.32,
+          "end": 3.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.34,
+      "end": 5.88,
+      "text": " Zijn zoon wil de fiets gebruiken.",
+      "temperature": 0,
+      "avg_logprob": -0.09114442189534505,
+      "compression_ratio": 1.4592592592592593,
+      "no_speech_prob": 4.807238374732181e-12,
+      "words": [
+        {
+          "word": " Zijn",
+          "start": 4.34,
+          "end": 4.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zoon",
+          "start": 4.74,
+          "end": 4.94,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 4.94,
+          "end": 5.1,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " de",
+          "start": 5.1,
+          "end": 5.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fiets",
+          "start": 5.18,
+          "end": 5.38,
+          "probability": 1.0
+        },
+        {
+          "word": " gebruiken.",
+          "start": 5.38,
+          "end": 5.88,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 6.32,
+      "end": 8.68,
+      "text": " De vader zegt, wacht tot zaterdag.",
+      "temperature": 0,
+      "avg_logprob": -0.09114442189534505,
+      "compression_ratio": 1.4592592592592593,
+      "no_speech_prob": 4.807238374732181e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.32,
+          "end": 6.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vader",
+          "start": 6.72,
+          "end": 7.04,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt,",
+          "start": 7.04,
+          "end": 7.36,
+          "probability": 1.0
+        },
+        {
+          "word": " wacht",
+          "start": 7.58,
+          "end": 7.98,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " tot",
+          "start": 7.98,
+          "end": 8.12,
+          "probability": 1.0
+        },
+        {
+          "word": " zaterdag.",
+          "start": 8.12,
+          "end": 8.68,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.579999999999998,
+      "end": 11.74,
+      "text": " Op zaterdag mag de zoon met de fiets naar het park.",
+      "temperature": 0,
+      "avg_logprob": -0.09114442189534505,
+      "compression_ratio": 1.4592592592592593,
+      "no_speech_prob": 4.807238374732181e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 9.579999999999998,
+          "end": 9.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zaterdag",
+          "start": 9.98,
+          "end": 10.38,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 10.38,
+          "end": 10.54,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " de",
+          "start": 10.54,
+          "end": 10.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zoon",
+          "start": 10.64,
+          "end": 10.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 10.84,
+          "end": 10.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.94,
+          "end": 11.04,
+          "probability": 1.0
+        },
+        {
+          "word": " fiets",
+          "start": 11.04,
+          "end": 11.24,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 11.24,
+          "end": 11.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 11.36,
+          "end": 11.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " park.",
+          "start": 11.48,
+          "end": 11.74,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-f2862bf274c3d31d",
+  "sha256": "ab8aec6f4c320ee8e87a66832143ae32824993729858f4dbd5923ccf5de25df6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De munt ligt naast de bon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " De munt ligt naast de bon.",
+      "temperature": 0,
+      "avg_logprob": -0.12239368145282452,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 3.2767495314334205e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95166015625
+        },
+        {
+          "word": " munt",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ligt",
+          "start": 0.46,
+          "end": 0.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naast",
+          "start": 0.76,
+          "end": 1.18,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 1.18,
+          "end": 1.28,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bon.",
+          "start": 1.28,
+          "end": 1.5,
+          "probability": 0.94287109375
+        }
+      ]
+    }
+  ]
+}

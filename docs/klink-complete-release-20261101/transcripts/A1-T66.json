@@ -1,0 +1,289 @@
+{
+  "id": "A1-T66",
+  "sha256": "fe7116415b0b09290143e0d394e09f4ca729ed0fb300793b1055bfef937d1a6a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw is op haar werk. Zij wil een brief lezen, maar haar bril ligt thuis. Ze belt haar man. Hij brengt de bril naar haar werk. Om tien uur krijgt de vrouw de bril. Daarna leest zij de brief.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.82,
+      "text": " Een vrouw is op haar werk. Zij wil een brief lezen, maar haar bril ligt thuis.",
+      "temperature": 0,
+      "avg_logprob": -0.03858940366288306,
+      "compression_ratio": 1.4772727272727273,
+      "no_speech_prob": 7.1866813715348865e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.962890625
+        },
+        {
+          "word": " vrouw",
+          "start": 0.12,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 0.68,
+          "end": 0.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 0.82,
+          "end": 0.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk.",
+          "start": 0.94,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zij",
+          "start": 1.46,
+          "end": 1.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 1.72,
+          "end": 1.86,
+          "probability": 0.99609375
+        },
+        {
+          "word": " een",
+          "start": 1.86,
+          "end": 1.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " brief",
+          "start": 1.98,
+          "end": 2.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lezen,",
+          "start": 2.2,
+          "end": 2.58,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 2.74,
+          "end": 2.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 2.86,
+          "end": 3.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bril",
+          "start": 3.02,
+          "end": 3.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ligt",
+          "start": 3.28,
+          "end": 3.5,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " thuis.",
+          "start": 3.5,
+          "end": 3.82,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.02,
+      "end": 6.46,
+      "text": " Ze belt haar man. Hij brengt de bril naar haar werk.",
+      "temperature": 0,
+      "avg_logprob": -0.03858940366288306,
+      "compression_ratio": 1.4772727272727273,
+      "no_speech_prob": 7.1866813715348865e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 4.02,
+          "end": 4.26,
+          "probability": 0.994140625
+        },
+        {
+          "word": " belt",
+          "start": 4.26,
+          "end": 4.46,
+          "probability": 0.9921875
+        },
+        {
+          "word": " haar",
+          "start": 4.46,
+          "end": 4.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man.",
+          "start": 4.62,
+          "end": 4.84,
+          "probability": 1.0
+        },
+        {
+          "word": " Hij",
+          "start": 5.06,
+          "end": 5.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " brengt",
+          "start": 5.24,
+          "end": 5.56,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.56,
+          "end": 5.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bril",
+          "start": 5.62,
+          "end": 5.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 5.86,
+          "end": 5.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 5.98,
+          "end": 6.14,
+          "probability": 1.0
+        },
+        {
+          "word": " werk.",
+          "start": 6.14,
+          "end": 6.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.7,
+      "end": 10.04,
+      "text": " Om tien uur krijgt de vrouw de bril. Daarna leest zij de brief.",
+      "temperature": 0,
+      "avg_logprob": -0.03858940366288306,
+      "compression_ratio": 1.4772727272727273,
+      "no_speech_prob": 7.1866813715348865e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 6.7,
+          "end": 6.86,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " tien",
+          "start": 6.86,
+          "end": 7.04,
+          "probability": 0.68994140625
+        },
+        {
+          "word": " uur",
+          "start": 7.04,
+          "end": 7.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " krijgt",
+          "start": 7.36,
+          "end": 7.7,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 7.7,
+          "end": 7.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 7.78,
+          "end": 8.08,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.08,
+          "end": 8.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bril.",
+          "start": 8.14,
+          "end": 8.42,
+          "probability": 1.0
+        },
+        {
+          "word": " Daarna",
+          "start": 8.62,
+          "end": 9.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " leest",
+          "start": 9.02,
+          "end": 9.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zij",
+          "start": 9.5,
+          "end": 9.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 9.66,
+          "end": 9.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " brief.",
+          "start": 9.78,
+          "end": 10.04,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

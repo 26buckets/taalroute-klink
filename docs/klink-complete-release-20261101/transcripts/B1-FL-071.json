@@ -1,0 +1,629 @@
+{
+  "id": "B1-FL-071",
+  "sha256": "f6c150192f73473ab542883df6ba8fec8e43ea57d71725c1c26580a4b485812e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Volgens de planning gebruikt een taalschool donderdagmiddag zaal 3. Wanneer medewerker Ben de deur opent, staat de ruimte vol stoelen voor een bijeenkomst van een andere organisatie. Op de reserveringslijst blijken beide groepen hetzelfde tijdstip te hebben gekregen. Ben belt de twee contactpersonen en vraagt hoeveel mensen ze verwachten. De andere organisatie heeft een grote zaal nodig, maar de taalschool kan naar een kleinere ruimte. Ben bevestigt de nieuwe afspraak schriftelijk. Hij past ook de centrale planning aan, zodat collega's niet opnieuw twee groepen naar dezelfde zaal sturen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.8600000000000048,
+      "end": 3.88,
+      "text": " Volgens de planning gebruikt een taalschool donderdagmiddag zaal 3.",
+      "temperature": 0,
+      "avg_logprob": -0.08712351882217714,
+      "compression_ratio": 1.6758620689655173,
+      "no_speech_prob": 6.124755650566138e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 0.8600000000000048,
+          "end": 1.42,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " de",
+          "start": 1.42,
+          "end": 1.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " planning",
+          "start": 1.54,
+          "end": 1.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gebruikt",
+          "start": 1.8,
+          "end": 2.22,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 2.22,
+          "end": 2.32,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " taalschool",
+          "start": 2.32,
+          "end": 2.78,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " donderdagmiddag",
+          "start": 2.78,
+          "end": 3.48,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " zaal",
+          "start": 3.48,
+          "end": 3.68,
+          "probability": 0.826171875
+        },
+        {
+          "word": " 3.",
+          "start": 3.68,
+          "end": 3.88,
+          "probability": 0.93603515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.44,
+      "end": 9.7,
+      "text": " Wanneer medewerker Ben de deur opent, staat de ruimte vol stoelen voor een bijeenkomst van een andere organisatie.",
+      "temperature": 0,
+      "avg_logprob": -0.08712351882217714,
+      "compression_ratio": 1.6758620689655173,
+      "no_speech_prob": 6.124755650566138e-12,
+      "words": [
+        {
+          "word": " Wanneer",
+          "start": 4.44,
+          "end": 4.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 4.98,
+          "end": 5.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Ben",
+          "start": 5.48,
+          "end": 5.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 5.7,
+          "end": 5.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur",
+          "start": 5.86,
+          "end": 6.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " opent,",
+          "start": 6.06,
+          "end": 6.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " staat",
+          "start": 6.58,
+          "end": 6.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 6.84,
+          "end": 6.96,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " ruimte",
+          "start": 6.96,
+          "end": 7.28,
+          "probability": 1.0
+        },
+        {
+          "word": " vol",
+          "start": 7.28,
+          "end": 7.48,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " stoelen",
+          "start": 7.48,
+          "end": 7.8,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " voor",
+          "start": 7.8,
+          "end": 7.96,
+          "probability": 0.99609375
+        },
+        {
+          "word": " een",
+          "start": 7.96,
+          "end": 8.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bijeenkomst",
+          "start": 8.08,
+          "end": 8.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " van",
+          "start": 8.56,
+          "end": 8.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 8.68,
+          "end": 8.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 8.8,
+          "end": 9.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " organisatie.",
+          "start": 9.02,
+          "end": 9.7,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 10.2,
+      "end": 14.26,
+      "text": " Op de reserveringslijst blijken beide groepen hetzelfde tijdstip te hebben gekregen.",
+      "temperature": 0,
+      "avg_logprob": -0.08712351882217714,
+      "compression_ratio": 1.6758620689655173,
+      "no_speech_prob": 6.124755650566138e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 10.2,
+          "end": 10.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.74,
+          "end": 10.84,
+          "probability": 1.0
+        },
+        {
+          "word": " reserveringslijst",
+          "start": 10.84,
+          "end": 11.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " blijken",
+          "start": 11.72,
+          "end": 12.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " beide",
+          "start": 12.02,
+          "end": 12.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groepen",
+          "start": 12.28,
+          "end": 12.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hetzelfde",
+          "start": 12.6,
+          "end": 13.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tijdstip",
+          "start": 13.04,
+          "end": 13.48,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 13.48,
+          "end": 13.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hebben",
+          "start": 13.58,
+          "end": 13.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gekregen.",
+          "start": 13.74,
+          "end": 14.26,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 14.68,
+      "end": 18.12,
+      "text": " Ben belt de twee contactpersonen en vraagt hoeveel mensen ze verwachten.",
+      "temperature": 0,
+      "avg_logprob": -0.08712351882217714,
+      "compression_ratio": 1.6758620689655173,
+      "no_speech_prob": 6.124755650566138e-12,
+      "words": [
+        {
+          "word": " Ben",
+          "start": 14.68,
+          "end": 15.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " belt",
+          "start": 15.24,
+          "end": 15.48,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 15.48,
+          "end": 15.62,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 15.62,
+          "end": 15.76,
+          "probability": 0.994140625
+        },
+        {
+          "word": " contactpersonen",
+          "start": 15.76,
+          "end": 16.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 16.68,
+          "end": 16.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 16.8,
+          "end": 17.1,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " hoeveel",
+          "start": 17.1,
+          "end": 17.38,
+          "probability": 1.0
+        },
+        {
+          "word": " mensen",
+          "start": 17.38,
+          "end": 17.6,
+          "probability": 1.0
+        },
+        {
+          "word": " ze",
+          "start": 17.6,
+          "end": 17.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verwachten.",
+          "start": 17.76,
+          "end": 18.12,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 18.78,
+      "end": 23.84,
+      "text": " De andere organisatie heeft een grote zaal nodig, maar de taalschool kan naar een kleinere ruimte.",
+      "temperature": 0,
+      "avg_logprob": -0.08712351882217714,
+      "compression_ratio": 1.6758620689655173,
+      "no_speech_prob": 6.124755650566138e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.78,
+          "end": 19.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 19.18,
+          "end": 19.42,
+          "probability": 1.0
+        },
+        {
+          "word": " organisatie",
+          "start": 19.42,
+          "end": 20.1,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 20.1,
+          "end": 20.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 20.3,
+          "end": 20.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " grote",
+          "start": 20.42,
+          "end": 20.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaal",
+          "start": 20.7,
+          "end": 21.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nodig,",
+          "start": 21.0,
+          "end": 21.3,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 21.66,
+          "end": 22.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.1,
+          "end": 22.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " taalschool",
+          "start": 22.22,
+          "end": 22.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 22.64,
+          "end": 22.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " naar",
+          "start": 22.8,
+          "end": 22.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 22.94,
+          "end": 23.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kleinere",
+          "start": 23.06,
+          "end": 23.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ruimte.",
+          "start": 23.46,
+          "end": 23.84,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 24.2,
+      "end": 26.5,
+      "text": " Ben bevestigt de nieuwe afspraak schriftelijk.",
+      "temperature": 0,
+      "avg_logprob": -0.08712351882217714,
+      "compression_ratio": 1.6758620689655173,
+      "no_speech_prob": 6.124755650566138e-12,
+      "words": [
+        {
+          "word": " Ben",
+          "start": 24.2,
+          "end": 24.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bevestigt",
+          "start": 24.76,
+          "end": 25.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 25.22,
+          "end": 25.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nieuwe",
+          "start": 25.36,
+          "end": 25.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 25.54,
+          "end": 26.02,
+          "probability": 1.0
+        },
+        {
+          "word": " schriftelijk.",
+          "start": 26.02,
+          "end": 26.5,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 2650,
+      "start": 26.5,
+      "end": 32.06,
+      "text": " Hij past ook de centrale planning aan, zodat collega's niet opnieuw twee groepen naar dezelfde zaal sturen.",
+      "temperature": 0,
+      "avg_logprob": -0.062218946569106155,
+      "compression_ratio": 1.1382978723404256,
+      "no_speech_prob": 4.031937544252129e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 26.5,
+          "end": 27.24,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " past",
+          "start": 27.24,
+          "end": 27.46,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ook",
+          "start": 27.46,
+          "end": 27.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 27.6,
+          "end": 27.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " centrale",
+          "start": 27.72,
+          "end": 28.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " planning",
+          "start": 28.14,
+          "end": 28.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan,",
+          "start": 28.38,
+          "end": 28.68,
+          "probability": 1.0
+        },
+        {
+          "word": " zodat",
+          "start": 28.84,
+          "end": 29.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega's",
+          "start": 29.56,
+          "end": 30.04,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 30.04,
+          "end": 30.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opnieuw",
+          "start": 30.16,
+          "end": 30.5,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 30.5,
+          "end": 30.7,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " groepen",
+          "start": 30.7,
+          "end": 31.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 31.08,
+          "end": 31.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dezelfde",
+          "start": 31.18,
+          "end": 31.54,
+          "probability": 1.0
+        },
+        {
+          "word": " zaal",
+          "start": 31.54,
+          "end": 31.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " sturen.",
+          "start": 31.74,
+          "end": 32.06,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

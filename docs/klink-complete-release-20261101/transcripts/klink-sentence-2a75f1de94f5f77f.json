@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-2a75f1de94f5f77f",
+  "sha256": "c723c0bccac5a18e9cef9163bcb1293bba5efb96d9af7394c11eed5d35394272",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er staan wolken in de lucht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.3,
+      "text": " Er staan wolken in de lucht.",
+      "temperature": 0,
+      "avg_logprob": -0.10054218769073486,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 5.1958493930970295e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8291015625
+        },
+        {
+          "word": " staan",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wolken",
+          "start": 0.34,
+          "end": 0.8,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " in",
+          "start": 0.8,
+          "end": 0.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.92,
+          "end": 1.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " lucht.",
+          "start": 1.02,
+          "end": 1.3,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

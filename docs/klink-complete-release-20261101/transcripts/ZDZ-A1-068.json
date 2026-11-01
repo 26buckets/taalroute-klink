@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A1-068",
+  "sha256": "75340ac905ca99785a1bec9fec5e60a90e34867aec80a93042935d5631756cce",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik neem de trein, want de bus is te laat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " Ik neem de trein, want de bus is te laat.",
+      "temperature": 0,
+      "avg_logprob": -0.09516497219310087,
+      "compression_ratio": 0.8913043478260869,
+      "no_speech_prob": 3.4559763904817853e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " neem",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.34,
+          "end": 0.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " trein,",
+          "start": 0.46,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " want",
+          "start": 0.84,
+          "end": 0.88,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 0.88,
+          "end": 1.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bus",
+          "start": 1.0,
+          "end": 1.14,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " is",
+          "start": 1.14,
+          "end": 1.26,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " te",
+          "start": 1.26,
+          "end": 1.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " laat.",
+          "start": 1.36,
+          "end": 1.58,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-068",
+  "sha256": "870541cec6bbbba28f7af6ccc085da97c73cf239a610ad4a07693f3b70fce327",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kies de blauwe tas.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik kies de blauwe tas.",
+      "temperature": 0,
+      "avg_logprob": -0.0673134724299113,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 3.4739034565633986e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " kies",
+          "start": 0.18,
+          "end": 0.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.36,
+          "end": 0.48,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " blauwe",
+          "start": 0.48,
+          "end": 0.76,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tas.",
+          "start": 0.76,
+          "end": 0.98,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

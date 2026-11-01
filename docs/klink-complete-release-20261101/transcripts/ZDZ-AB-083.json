@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-083",
+  "sha256": "a4042f60c3c059c91028069593a3fb3344db344b54232d65a652c38e03aca2ee",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ga een boek lezen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Ik ga een boek lezen.",
+      "temperature": 0,
+      "avg_logprob": -0.10338107022372159,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 3.913717006726047e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " ga",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " boek",
+          "start": 0.38,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " lezen.",
+          "start": 0.56,
+          "end": 0.9,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

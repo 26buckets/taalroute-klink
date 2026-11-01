@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-fdbe772308c4cc04",
+  "sha256": "3511ba9be9b4fdd7950ad7d66ff6ab195ab5f1ecd03e59b87441e17631be7b2f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik hang mijn jas aan de haak.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Ik hang mijn jas aan de haak.",
+      "temperature": 0,
+      "avg_logprob": -0.04978733796339769,
+      "compression_ratio": 0.8055555555555556,
+      "no_speech_prob": 3.667686813979554e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " hang",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.32,
+          "end": 0.52,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " jas",
+          "start": 0.52,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 0.88,
+          "end": 1.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.08,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haak.",
+          "start": 1.22,
+          "end": 1.6,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

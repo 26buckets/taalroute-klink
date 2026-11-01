@@ -1,0 +1,295 @@
+{
+  "id": "A1-T71",
+  "sha256": "3099c5ea5dfa9cf59e42f5dd4acdc867882af3f4cbc05426e5b5925cba226f02",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw koopt een kaartje voor de bus. Zij stopt het kaartje in haar jas. Bij de bus haalt zij het kaartje uit haar jas en laat het aan de chauffeur zien. Daarna gaat zij met de bus naar het station.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.92,
+      "text": " Een vrouw koopt een kaartje voor de bus. Zij stopt het kaartje in haar jas.",
+      "temperature": 0,
+      "avg_logprob": -0.0470045243992525,
+      "compression_ratio": 1.558139534883721,
+      "no_speech_prob": 5.115656596249574e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " vrouw",
+          "start": 0.16,
+          "end": 0.52,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt",
+          "start": 0.52,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.72,
+          "end": 0.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaartje",
+          "start": 0.84,
+          "end": 1.24,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 1.24,
+          "end": 1.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.38,
+          "end": 1.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus.",
+          "start": 1.48,
+          "end": 1.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Zij",
+          "start": 2.26,
+          "end": 2.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " stopt",
+          "start": 2.66,
+          "end": 2.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 2.9,
+          "end": 2.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartje",
+          "start": 2.98,
+          "end": 3.4,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 3.4,
+          "end": 3.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 3.5,
+          "end": 3.62,
+          "probability": 1.0
+        },
+        {
+          "word": " jas.",
+          "start": 3.62,
+          "end": 3.92,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.5,
+      "end": 7.88,
+      "text": " Bij de bus haalt zij het kaartje uit haar jas en laat het aan de chauffeur zien.",
+      "temperature": 0,
+      "avg_logprob": -0.0470045243992525,
+      "compression_ratio": 1.558139534883721,
+      "no_speech_prob": 5.115656596249574e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 4.5,
+          "end": 4.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 4.9,
+          "end": 5.0,
+          "probability": 1.0
+        },
+        {
+          "word": " bus",
+          "start": 5.0,
+          "end": 5.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haalt",
+          "start": 5.24,
+          "end": 5.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 5.48,
+          "end": 5.58,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " het",
+          "start": 5.58,
+          "end": 5.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartje",
+          "start": 5.72,
+          "end": 6.12,
+          "probability": 1.0
+        },
+        {
+          "word": " uit",
+          "start": 6.12,
+          "end": 6.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 6.28,
+          "end": 6.42,
+          "probability": 1.0
+        },
+        {
+          "word": " jas",
+          "start": 6.42,
+          "end": 6.7,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 6.7,
+          "end": 6.84,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " laat",
+          "start": 6.84,
+          "end": 7.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 7.04,
+          "end": 7.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 7.16,
+          "end": 7.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.24,
+          "end": 7.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " chauffeur",
+          "start": 7.34,
+          "end": 7.7,
+          "probability": 1.0
+        },
+        {
+          "word": " zien.",
+          "start": 7.7,
+          "end": 7.88,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.78,
+      "end": 10.42,
+      "text": " Daarna gaat zij met de bus naar het station.",
+      "temperature": 0,
+      "avg_logprob": -0.0470045243992525,
+      "compression_ratio": 1.558139534883721,
+      "no_speech_prob": 5.115656596249574e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 8.78,
+          "end": 9.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaat",
+          "start": 9.06,
+          "end": 9.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 9.3,
+          "end": 9.42,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " met",
+          "start": 9.42,
+          "end": 9.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.56,
+          "end": 9.66,
+          "probability": 1.0
+        },
+        {
+          "word": " bus",
+          "start": 9.66,
+          "end": 9.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naar",
+          "start": 9.88,
+          "end": 10.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 10.0,
+          "end": 10.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " station.",
+          "start": 10.14,
+          "end": 10.42,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

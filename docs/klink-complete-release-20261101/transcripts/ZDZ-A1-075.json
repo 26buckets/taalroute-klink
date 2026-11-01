@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-A1-075",
+  "sha256": "5664090f9f7e943a38e440ee4c47de206febdad065ff7e80883ea42b8c47efda",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Daarna ga ik naar huis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Daarna ga ik naar huis.",
+      "temperature": 0,
+      "avg_logprob": -0.23643665313720702,
+      "compression_ratio": 0.7931034482758621,
+      "no_speech_prob": 4.40098478493578e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 0.0,
+          "end": 0.36,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " ga",
+          "start": 0.36,
+          "end": 0.52,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ik",
+          "start": 0.52,
+          "end": 0.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 0.64,
+          "end": 0.74,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " huis.",
+          "start": 0.74,
+          "end": 1.08,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

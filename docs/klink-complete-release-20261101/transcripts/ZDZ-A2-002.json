@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-002",
+  "sha256": "ee70ffa64e078c39dee01678ae8663ca44fb29905b4be0f6600312d3412ce746",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil graag twee broden, want er komen vanavond vrienden eten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.86,
+      "text": " Ik wil graag twee broden, want er komen vanavond vrienden eten.",
+      "temperature": 0,
+      "avg_logprob": -0.04731261211892833,
+      "compression_ratio": 0.9692307692307692,
+      "no_speech_prob": 3.6254092176252195e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98095703125
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " graag",
+          "start": 0.28,
+          "end": 0.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 0.58,
+          "end": 0.68,
+          "probability": 0.81591796875
+        },
+        {
+          "word": " broden,",
+          "start": 0.68,
+          "end": 1.12,
+          "probability": 0.990234375
+        },
+        {
+          "word": " want",
+          "start": 1.26,
+          "end": 1.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 1.38,
+          "end": 1.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " komen",
+          "start": 1.5,
+          "end": 1.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vanavond",
+          "start": 1.72,
+          "end": 2.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrienden",
+          "start": 2.2,
+          "end": 2.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eten.",
+          "start": 2.56,
+          "end": 2.86,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-3cc628d12e8cc2a8",
+  "sha256": "79bca9d6e52ddf2ea8b3c607a81b46655396ed1b3badeaa7fb54d404eb78e83e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe het raam dicht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik doe het raam dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.15224008560180663,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.189276096161487e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.88623046875
+        },
+        {
+          "word": " doe",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 0.28,
+          "end": 0.44,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " raam",
+          "start": 0.44,
+          "end": 0.74,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " dicht.",
+          "start": 0.74,
+          "end": 0.98,
+          "probability": 0.9912109375
+        }
+      ]
+    }
+  ]
+}

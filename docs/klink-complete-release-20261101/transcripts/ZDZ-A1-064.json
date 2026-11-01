@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-064",
+  "sha256": "dba938130f8a495e3de7a4bf3f3ca63431ad33dd7a103b0d06ae70d162df89a2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nee, mijn afspraak is op woensdag, niet dinsdag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.12,
+      "text": " Nee, mijn afspraak is op woensdag, niet dinsdag.",
+      "temperature": 0,
+      "avg_logprob": -0.03125331515357608,
+      "compression_ratio": 0.9230769230769231,
+      "no_speech_prob": 4.252320717768043e-12,
+      "words": [
+        {
+          "word": " Nee,",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.3,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 0.44,
+          "end": 0.8,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.8,
+          "end": 0.88,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 0.88,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag,",
+          "start": 0.98,
+          "end": 1.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 1.56,
+          "end": 1.7,
+          "probability": 1.0
+        },
+        {
+          "word": " dinsdag.",
+          "start": 1.7,
+          "end": 2.12,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

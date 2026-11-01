@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-bb92d30461bb82f1",
+  "sha256": "0dc5752fcff0ee10dc6dbf0e4d3f35a357206f0ee6efa43d18507e080de2dfa3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er komt een storm.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Er komt een storm.",
+      "temperature": 0,
+      "avg_logprob": -0.21702951192855835,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 5.02589940151732e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8095703125
+        },
+        {
+          "word": " komt",
+          "start": 0.14,
+          "end": 0.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.36,
+          "end": 0.52,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " storm.",
+          "start": 0.52,
+          "end": 0.94,
+          "probability": 0.99560546875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-022",
+  "sha256": "da7f972d1ed701762fcac30f1b2b57f065af68959ef37b7d83ef06f0d94454d9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Help me, alstublieft.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.04,
+      "text": " Help me, alstublieft.",
+      "temperature": 0,
+      "avg_logprob": -0.23981702327728271,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 2.5056892324903934e-11,
+      "words": [
+        {
+          "word": " Help",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.93603515625
+        },
+        {
+          "word": " me,",
+          "start": 0.24,
+          "end": 0.44,
+          "probability": 0.994140625
+        },
+        {
+          "word": " alstublieft.",
+          "start": 0.62,
+          "end": 1.04,
+          "probability": 0.94140625
+        }
+      ]
+    }
+  ]
+}

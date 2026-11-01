@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-081",
+  "sha256": "a19174202e2346df8e98d7625f57b3397259df55358bb4609dad1d3087cb48cb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb de taak opnieuw gedaan. Is het nu goed?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.14,
+      "text": " Ik heb de taak opnieuw gedaan. Is het nu goed?",
+      "temperature": 0,
+      "avg_logprob": -0.055384291542900935,
+      "compression_ratio": 0.8679245283018868,
+      "no_speech_prob": 4.652571296975827e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9150390625
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.24,
+          "end": 0.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " taak",
+          "start": 0.36,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " opnieuw",
+          "start": 0.62,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gedaan.",
+          "start": 0.86,
+          "end": 1.14,
+          "probability": 1.0
+        },
+        {
+          "word": " Is",
+          "start": 1.4,
+          "end": 1.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 1.74,
+          "end": 1.84,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " nu",
+          "start": 1.84,
+          "end": 1.94,
+          "probability": 0.998046875
+        },
+        {
+          "word": " goed?",
+          "start": 1.94,
+          "end": 2.14,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

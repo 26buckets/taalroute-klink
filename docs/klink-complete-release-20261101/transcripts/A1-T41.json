@@ -1,0 +1,271 @@
+{
+  "id": "A1-T41",
+  "sha256": "2149382464553abf8556aef45a77800d95fa4e43b3760fda1f552d43694e33ce",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op het raam van de bakkerij staat Zondag gesloten. Maandag open om 8 uur. Een man leest dit bericht op zondag. Hij wil brood kopen. Daarom gaat hij maandag terug. Om 9 uur koopt hij twee broden.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.76,
+      "text": " Op het raam van de bakkerij staat Zondag gesloten. Maandag open om 8 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.09710099299748738,
+      "compression_ratio": 1.3661971830985915,
+      "no_speech_prob": 4.978140729500202e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " het",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " raam",
+          "start": 0.28,
+          "end": 0.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 0.54,
+          "end": 0.64,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.64,
+          "end": 0.74,
+          "probability": 1.0
+        },
+        {
+          "word": " bakkerij",
+          "start": 0.74,
+          "end": 1.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " staat",
+          "start": 1.18,
+          "end": 1.56,
+          "probability": 1.0
+        },
+        {
+          "word": " Zondag",
+          "start": 1.56,
+          "end": 2.3,
+          "probability": 0.783203125
+        },
+        {
+          "word": " gesloten.",
+          "start": 2.3,
+          "end": 2.82,
+          "probability": 0.99609375
+        },
+        {
+          "word": " Maandag",
+          "start": 3.28,
+          "end": 3.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " open",
+          "start": 3.8,
+          "end": 4.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 4.12,
+          "end": 4.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 8",
+          "start": 4.28,
+          "end": 4.5,
+          "probability": 0.81494140625
+        },
+        {
+          "word": " uur.",
+          "start": 4.5,
+          "end": 4.76,
+          "probability": 0.98974609375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.26,
+      "end": 10.48,
+      "text": " Een man leest dit bericht op zondag. Hij wil brood kopen. Daarom gaat hij maandag terug.",
+      "temperature": 0,
+      "avg_logprob": -0.09710099299748738,
+      "compression_ratio": 1.3661971830985915,
+      "no_speech_prob": 4.978140729500202e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 5.26,
+          "end": 5.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man",
+          "start": 5.78,
+          "end": 5.98,
+          "probability": 1.0
+        },
+        {
+          "word": " leest",
+          "start": 5.98,
+          "end": 6.28,
+          "probability": 1.0
+        },
+        {
+          "word": " dit",
+          "start": 6.28,
+          "end": 6.4,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " bericht",
+          "start": 6.4,
+          "end": 6.68,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 6.68,
+          "end": 6.8,
+          "probability": 1.0
+        },
+        {
+          "word": " zondag.",
+          "start": 6.8,
+          "end": 7.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Hij",
+          "start": 7.46,
+          "end": 7.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 7.84,
+          "end": 8.0,
+          "probability": 0.994140625
+        },
+        {
+          "word": " brood",
+          "start": 8.0,
+          "end": 8.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kopen.",
+          "start": 8.32,
+          "end": 8.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Daarom",
+          "start": 9.04,
+          "end": 9.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaat",
+          "start": 9.56,
+          "end": 9.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 9.7,
+          "end": 9.84,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 9.84,
+          "end": 10.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " terug.",
+          "start": 10.28,
+          "end": 10.48,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 10.96,
+      "end": 12.98,
+      "text": " Om 9 uur koopt hij twee broden.",
+      "temperature": 0,
+      "avg_logprob": -0.09710099299748738,
+      "compression_ratio": 1.3661971830985915,
+      "no_speech_prob": 4.978140729500202e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 10.96,
+          "end": 11.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " 9",
+          "start": 11.36,
+          "end": 11.56,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " uur",
+          "start": 11.56,
+          "end": 11.96,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt",
+          "start": 11.96,
+          "end": 12.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hij",
+          "start": 12.22,
+          "end": 12.32,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 12.32,
+          "end": 12.54,
+          "probability": 0.83740234375
+        },
+        {
+          "word": " broden.",
+          "start": 12.54,
+          "end": 12.98,
+          "probability": 0.97509765625
+        }
+      ]
+    }
+  ]
+}

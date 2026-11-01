@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A1-069",
+  "sha256": "6caa3385863644ad95cf689e6fd3483eec62af2f611ec956ce21508f29621075",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kies deze cursus, want de lessen zijn op maandag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.6,
+      "text": " Ik kies deze cursus, want de lessen zijn op maandag.",
+      "temperature": 0,
+      "avg_logprob": -0.05525486469268799,
+      "compression_ratio": 0.8813559322033898,
+      "no_speech_prob": 3.685222699917334e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " kies",
+          "start": 0.18,
+          "end": 0.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " deze",
+          "start": 0.38,
+          "end": 0.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " cursus,",
+          "start": 0.7,
+          "end": 1.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " want",
+          "start": 1.32,
+          "end": 1.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.42,
+          "end": 1.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " lessen",
+          "start": 1.54,
+          "end": 1.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 1.84,
+          "end": 1.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 1.96,
+          "end": 2.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " maandag.",
+          "start": 2.16,
+          "end": 2.6,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

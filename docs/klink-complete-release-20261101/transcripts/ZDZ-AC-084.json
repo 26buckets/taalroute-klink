@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-AC-084",
+  "sha256": "9d74e51e4bd1ada339ba87a914b88e171c31b0d2782ff15c6d55fbda9185b187",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil elke dag tien minuten lezen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.74,
+      "text": " Ik wil elke dag tien minuten lezen.",
+      "temperature": 0,
+      "avg_logprob": -0.12307006972176689,
+      "compression_ratio": 0.8536585365853658,
+      "no_speech_prob": 4.508790910073834e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " elke",
+          "start": 0.28,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dag",
+          "start": 0.6,
+          "end": 0.76,
+          "probability": 1.0
+        },
+        {
+          "word": " tien",
+          "start": 0.76,
+          "end": 0.96,
+          "probability": 0.5205078125
+        },
+        {
+          "word": " minuten",
+          "start": 0.96,
+          "end": 1.34,
+          "probability": 1.0
+        },
+        {
+          "word": " lezen.",
+          "start": 1.34,
+          "end": 1.74,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-095",
+  "sha256": "9293869c5d2203ef9afea5bf48fb9b92a548d042d919017b28efe9a1e6ca643f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het licht is uit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.8,
+      "text": " Het licht is uit.",
+      "temperature": 0,
+      "avg_logprob": -0.15248876147800022,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.666324184693371e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9287109375
+        },
+        {
+          "word": " licht",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.99609375
+        },
+        {
+          "word": " is",
+          "start": 0.42,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " uit.",
+          "start": 0.56,
+          "end": 0.8,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,271 @@
+{
+  "id": "A1-T16",
+  "sha256": "a5cc7a7efd7b59169447384c6c7fcdc68484b28acc30bc09a9032be9c195f116",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op woensdag wast een man zijn kleding. Buiten regent het. Daarom hangt hij de kleding binnen naast het raam. Hij doet het raam dicht. Op donderdag is de kleding droog. Dan legt hij alles in de kast.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.7,
+      "text": " Op woensdag wast een man zijn kleding. Buiten regent het.",
+      "temperature": 0,
+      "avg_logprob": -0.06588390214102609,
+      "compression_ratio": 1.4887218045112782,
+      "no_speech_prob": 7.531573455177298e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96728515625
+        },
+        {
+          "word": " woensdag",
+          "start": 0.16,
+          "end": 0.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " wast",
+          "start": 0.74,
+          "end": 1.18,
+          "probability": 0.87060546875
+        },
+        {
+          "word": " een",
+          "start": 1.18,
+          "end": 1.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " man",
+          "start": 1.34,
+          "end": 1.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 1.58,
+          "end": 1.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kleding.",
+          "start": 1.8,
+          "end": 2.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Buiten",
+          "start": 2.62,
+          "end": 3.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " regent",
+          "start": 3.06,
+          "end": 3.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het.",
+          "start": 3.5,
+          "end": 3.7,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.84,
+      "end": 7.56,
+      "text": " Daarom hangt hij de kleding binnen naast het raam. Hij doet het raam dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.06588390214102609,
+      "compression_ratio": 1.4887218045112782,
+      "no_speech_prob": 7.531573455177298e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 3.84,
+          "end": 4.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hangt",
+          "start": 4.28,
+          "end": 4.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 4.52,
+          "end": 4.58,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " de",
+          "start": 4.58,
+          "end": 4.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kleding",
+          "start": 4.72,
+          "end": 5.1,
+          "probability": 1.0
+        },
+        {
+          "word": " binnen",
+          "start": 5.1,
+          "end": 5.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naast",
+          "start": 5.32,
+          "end": 5.88,
+          "probability": 0.89697265625
+        },
+        {
+          "word": " het",
+          "start": 5.88,
+          "end": 6.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " raam.",
+          "start": 6.0,
+          "end": 6.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Hij",
+          "start": 6.54,
+          "end": 6.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " doet",
+          "start": 6.74,
+          "end": 6.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.9,
+          "end": 7.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " raam",
+          "start": 7.04,
+          "end": 7.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dicht.",
+          "start": 7.32,
+          "end": 7.56,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.88,
+      "end": 11.34,
+      "text": " Op donderdag is de kleding droog. Dan legt hij alles in de kast.",
+      "temperature": 0,
+      "avg_logprob": -0.06588390214102609,
+      "compression_ratio": 1.4887218045112782,
+      "no_speech_prob": 7.531573455177298e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 7.88,
+          "end": 8.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " donderdag",
+          "start": 8.12,
+          "end": 8.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is",
+          "start": 8.58,
+          "end": 8.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.74,
+          "end": 8.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kleding",
+          "start": 8.84,
+          "end": 9.24,
+          "probability": 1.0
+        },
+        {
+          "word": " droog.",
+          "start": 9.24,
+          "end": 9.64,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Dan",
+          "start": 9.82,
+          "end": 10.04,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " legt",
+          "start": 10.04,
+          "end": 10.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 10.3,
+          "end": 10.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " alles",
+          "start": 10.36,
+          "end": 10.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 10.72,
+          "end": 10.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.88,
+          "end": 11.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kast.",
+          "start": 11.0,
+          "end": 11.34,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

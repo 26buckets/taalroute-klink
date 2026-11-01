@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-059",
+  "sha256": "6547aa57f72cb3be7320cfcc38fe717f6d0df743b505c3bab5d92e8240acf815",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben bang.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.54,
+      "text": " Ik ben bang.",
+      "temperature": 0,
+      "avg_logprob": -0.1814460073198591,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 6.078334450348999e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96240234375
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bang.",
+          "start": 0.3,
+          "end": 0.54,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

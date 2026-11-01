@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-53c71fd76f95d53a",
+  "sha256": "59739474a383f80a2f63637477f46dba059b81bc6fc9a180141fc25cbe4928b0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik de bon, alstublieft?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.44,
+      "text": " Mag ik de bon, alstublieft?",
+      "temperature": 0,
+      "avg_logprob": -0.17413503783089773,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 5.431699361124753e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.94580078125
+        },
+        {
+          "word": " ik",
+          "start": 0.18,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.3,
+          "end": 0.42,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " bon,",
+          "start": 0.42,
+          "end": 0.7,
+          "probability": 0.7216796875
+        },
+        {
+          "word": " alstublieft?",
+          "start": 1.04,
+          "end": 1.44,
+          "probability": 0.93505859375
+        }
+      ]
+    }
+  ]
+}

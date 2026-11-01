@@ -1,0 +1,641 @@
+{
+  "id": "B1-FL-032",
+  "sha256": "c67b3d0187873b067419512cd515f4566d6a3efad39e9b0689c9d9f6c446df31",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bij het buurthuis hangt een oproep om ouderen te helpen met boodschappen doen. Sarah wil graag helpen, maar ze kan niet op vaste dagen komen omdat haar werktijden veranderen. Tijdens het kennismakingsgesprek legt ze dit uit. De coördinator vertelt dat vrijwilligers ook losse diensten kunnen kiezen via een rooster. Sarah meldt zich daarvoor aan. Ze begint met één middag per twee weken, zodat ze kan ontdekken of het bij haar past. Na haar eerste bezoek merkt ze dat rustig luisteren soms net zo belangrijk is als het dragen van tassen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.74,
+      "text": " Bij het buurthuis hangt een oproep om ouderen te helpen met boodschappen doen.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " het",
+          "start": 0.24,
+          "end": 0.4,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " buurthuis",
+          "start": 0.4,
+          "end": 0.88,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " hangt",
+          "start": 0.88,
+          "end": 1.12,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 1.12,
+          "end": 1.22,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " oproep",
+          "start": 1.22,
+          "end": 1.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 1.7,
+          "end": 1.92,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " ouderen",
+          "start": 1.92,
+          "end": 2.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " te",
+          "start": 2.4,
+          "end": 2.5,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " helpen",
+          "start": 2.5,
+          "end": 2.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 2.88,
+          "end": 3.04,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " boodschappen",
+          "start": 3.04,
+          "end": 3.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " doen.",
+          "start": 3.58,
+          "end": 3.74,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.02,
+      "end": 8.68,
+      "text": " Sarah wil graag helpen, maar ze kan niet op vaste dagen komen omdat haar werktijden veranderen.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " Sarah",
+          "start": 4.02,
+          "end": 4.36,
+          "probability": 0.79443359375
+        },
+        {
+          "word": " wil",
+          "start": 4.36,
+          "end": 4.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " graag",
+          "start": 4.56,
+          "end": 4.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " helpen,",
+          "start": 4.84,
+          "end": 5.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 5.32,
+          "end": 5.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ze",
+          "start": 5.48,
+          "end": 5.6,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " kan",
+          "start": 5.6,
+          "end": 5.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 5.76,
+          "end": 5.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 5.94,
+          "end": 6.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vaste",
+          "start": 6.12,
+          "end": 6.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dagen",
+          "start": 6.5,
+          "end": 6.7,
+          "probability": 1.0
+        },
+        {
+          "word": " komen",
+          "start": 6.7,
+          "end": 7.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " omdat",
+          "start": 7.1,
+          "end": 7.42,
+          "probability": 0.80126953125
+        },
+        {
+          "word": " haar",
+          "start": 7.42,
+          "end": 7.62,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " werktijden",
+          "start": 7.62,
+          "end": 8.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " veranderen.",
+          "start": 8.16,
+          "end": 8.68,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.8,
+      "end": 11.36,
+      "text": " Tijdens het kennismakingsgesprek legt ze dit uit.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " Tijdens",
+          "start": 8.8,
+          "end": 9.24,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 9.24,
+          "end": 9.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kennismakingsgesprek",
+          "start": 9.36,
+          "end": 10.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " legt",
+          "start": 10.5,
+          "end": 10.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 10.86,
+          "end": 10.94,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " dit",
+          "start": 10.94,
+          "end": 11.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uit.",
+          "start": 11.1,
+          "end": 11.36,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.56,
+      "end": 16.0,
+      "text": " De coördinator vertelt dat vrijwilligers ook losse diensten kunnen kiezen via een rooster.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.56,
+          "end": 11.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " coördinator",
+          "start": 11.7,
+          "end": 12.36,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vertelt",
+          "start": 12.36,
+          "end": 12.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 12.82,
+          "end": 13.04,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " vrijwilligers",
+          "start": 13.04,
+          "end": 13.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ook",
+          "start": 13.68,
+          "end": 13.88,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " losse",
+          "start": 13.88,
+          "end": 14.28,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " diensten",
+          "start": 14.28,
+          "end": 14.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kunnen",
+          "start": 14.58,
+          "end": 14.8,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kiezen",
+          "start": 14.8,
+          "end": 15.18,
+          "probability": 1.0
+        },
+        {
+          "word": " via",
+          "start": 15.18,
+          "end": 15.44,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " een",
+          "start": 15.44,
+          "end": 15.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rooster.",
+          "start": 15.62,
+          "end": 16.0,
+          "probability": 0.99755859375
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 16.22,
+      "end": 17.62,
+      "text": " Sarah meldt zich daarvoor aan.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " Sarah",
+          "start": 16.22,
+          "end": 16.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meldt",
+          "start": 16.64,
+          "end": 16.9,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " zich",
+          "start": 16.9,
+          "end": 17.06,
+          "probability": 1.0
+        },
+        {
+          "word": " daarvoor",
+          "start": 17.06,
+          "end": 17.34,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " aan.",
+          "start": 17.34,
+          "end": 17.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.8,
+      "end": 22.0,
+      "text": " Ze begint met één middag per twee weken, zodat ze kan ontdekken of het bij haar past.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 17.8,
+          "end": 17.92,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " begint",
+          "start": 17.92,
+          "end": 18.24,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 18.24,
+          "end": 18.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " één",
+          "start": 18.42,
+          "end": 18.66,
+          "probability": 0.8505859375
+        },
+        {
+          "word": " middag",
+          "start": 18.66,
+          "end": 18.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " per",
+          "start": 18.98,
+          "end": 19.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " twee",
+          "start": 19.14,
+          "end": 19.36,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " weken,",
+          "start": 19.36,
+          "end": 19.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zodat",
+          "start": 19.9,
+          "end": 20.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 20.2,
+          "end": 20.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kan",
+          "start": 20.32,
+          "end": 20.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ontdekken",
+          "start": 20.48,
+          "end": 20.96,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 20.96,
+          "end": 21.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 21.24,
+          "end": 21.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bij",
+          "start": 21.36,
+          "end": 21.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 21.5,
+          "end": 21.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " past.",
+          "start": 21.66,
+          "end": 22.0,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 22.2,
+      "end": 27.18,
+      "text": " Na haar eerste bezoek merkt ze dat rustig luisteren soms net zo belangrijk is als het dragen van tassen.",
+      "temperature": 0,
+      "avg_logprob": -0.03548767648894211,
+      "compression_ratio": 1.6167664670658684,
+      "no_speech_prob": 8.83750277819173e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 22.2,
+          "end": 22.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 22.38,
+          "end": 22.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerste",
+          "start": 22.56,
+          "end": 22.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bezoek",
+          "start": 22.86,
+          "end": 23.26,
+          "probability": 1.0
+        },
+        {
+          "word": " merkt",
+          "start": 23.26,
+          "end": 23.64,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " ze",
+          "start": 23.64,
+          "end": 23.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 23.76,
+          "end": 23.9,
+          "probability": 1.0
+        },
+        {
+          "word": " rustig",
+          "start": 23.9,
+          "end": 24.28,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " luisteren",
+          "start": 24.28,
+          "end": 24.78,
+          "probability": 0.99609375
+        },
+        {
+          "word": " soms",
+          "start": 24.78,
+          "end": 25.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " net",
+          "start": 25.08,
+          "end": 25.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zo",
+          "start": 25.24,
+          "end": 25.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " belangrijk",
+          "start": 25.4,
+          "end": 25.78,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 25.78,
+          "end": 26.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " als",
+          "start": 26.06,
+          "end": 26.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " het",
+          "start": 26.2,
+          "end": 26.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dragen",
+          "start": 26.38,
+          "end": 26.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " van",
+          "start": 26.66,
+          "end": 26.84,
+          "probability": 1.0
+        },
+        {
+          "word": " tassen.",
+          "start": 26.84,
+          "end": 27.18,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}
