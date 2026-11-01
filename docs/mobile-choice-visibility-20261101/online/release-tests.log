@@ -1,0 +1,44 @@
+✔ The exact approved mobile-only repair retains all old source and release evidence (133.999125ms)
+✔ Reject missing permission/proof: docs/klink-owner-release-mobile-choice-visibility-20261101.json (2.179958ms)
+✔ Reject missing permission/proof: docs/mobile-choice-visibility-20261101/local/checks.json (52.424ms)
+✔ Reject missing permission/proof: docs/mobile-choice-visibility-20261101/backup.json (83.78125ms)
+✔ Reject changes outside the exact approved CSS (49.563375ms)
+✔ Visible label is the only runtime change and the previous title release remains verified (1060.168375ms)
+✔ Reject missing permission or proof: docs/klink-owner-release-opening-loader-label-20261101.json (349.316042ms)
+✔ Reject missing permission or proof: docs/klink-owner-release-opening-loader-label-20261101.json (350.538417ms)
+✔ Reject missing permission or proof: docs/opening-loader-label-20261101/local/checks.json (386.911417ms)
+✔ Reject missing permission or proof: docs/opening-loader-label-20261101/backup.json (408.717959ms)
+✔ Reject unapproved loader change: components/product/klink-opening-loader.tsx (93.323167ms)
+✔ Reject unapproved loader change: components/product/klink-opening-loader.css (94.853959ms)
+✔ Only approved lossless asset changes and preceding B1 release stays verified (580.770875ms)
+✔ Reject missing approval or proof: docs/klink-owner-release-opening-loader-lossless-20261101.json (87.777875ms)
+✔ Reject missing approval or proof: docs/klink-owner-release-opening-loader-lossless-20261101.json (73.671458ms)
+✔ Reject missing approval or proof: docs/opening-loader-lossless-20261101/local/equivalence.json (81.248916ms)
+✔ Reject missing approval or proof: docs/opening-loader-lossless-20261101/backup.json (126.083292ms)
+✔ Reject unapproved asset, timing or placement: public/opening-loader-quick-20261101/klink-loader.svg (77.104459ms)
+✔ Reject unapproved asset, timing or placement: components/product/klink-opening-loader.tsx (101.006083ms)
+✔ Reject unapproved asset, timing or placement: components/product/klink-opening-loader.css (118.401833ms)
+✔ Only the 68 content titles change and the preceding keyboard release stays approved (1173.286291ms)
+✔ Reject missing permission or proof: docs/klink-owner-release-reading-round-titles-20261101.json (386.71575ms)
+✔ Reject missing permission or proof: docs/klink-owner-release-reading-round-titles-20261101.json (413.653917ms)
+✔ Reject missing permission or proof: docs/reading-round-titles-20261101/title-review.json (452.769958ms)
+✔ Reject missing permission or proof: docs/reading-round-titles-20261101/local/browser.json (407.293375ms)
+✔ Reject missing permission or proof: docs/reading-round-titles-20261101/backup.json (423.2535ms)
+✔ Reject an unapproved change: lib/learner-copy.ts (360.568042ms)
+✔ Reject an unapproved change: hooks/use-practice-keyboard.ts (371.861584ms)
+✔ Reject an unapproved change: app/learner-ui.css (337.920583ms)
+✔ approved minimal focus repair and complete mixed-input evidence pass (690.49625ms)
+✔ reject altered source or proof: hooks/use-practice-keyboard.ts (440.548209ms)
+✔ reject altered source or proof: components/product/package-exercise-browser.tsx (463.96975ms)
+✔ reject altered source or proof: docs/space-mixed-input-20261101/local/mixed.json (490.279792ms)
+✔ reject altered source or proof: docs/space-mixed-input-20261101/local/audio.json (508.669833ms)
+✔ reject missing publicationApproved (420.032875ms)
+✔ reject missing fullReadback (432.107042ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4373.996875

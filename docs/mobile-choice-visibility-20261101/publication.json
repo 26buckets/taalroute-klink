@@ -1,0 +1,27 @@
+{
+  "published": true,
+  "sourceCommit": "6a4c2acd346c436cb0344b77da21de8dadc09c16",
+  "sourceClean": true,
+  "workerVersion": "5c07da04-6f7a-4546-8be2-03ddab16b81b",
+  "normalDeployment": true,
+  "precedingLiveSource": "1069f8ac11730d313b4afdf7ccf4b886229c7882",
+  "checks": {
+    "localMobileLayouts": 192,
+    "localB1LongestAnswers": 80,
+    "unchangedDesktop": 8,
+    "backAndNavigationRestored": 8,
+    "localMixedInput": 8,
+    "localNativeAudio": 4,
+    "keyboardRegressions": 14,
+    "releaseTests": 36,
+    "onlineMobileLayouts": 192,
+    "onlineB1LongestAnswers": 12,
+    "onlineNativeAudio": 4,
+    "publicB1BanksAndAudioByteEqual": 134,
+    "originalLoaderByteEqual": true
+  },
+  "contentAudioProgressPreserved": true,
+  "layoutScope": "Only approved mobile choice layout. Long sources and feedback retain complete text in their own reading area. Back and fixed info remain accessible. Original font sizes and >=44px touch targets retained. Desktop and separate content/synonym players preserved.",
+  "physicalPhoneTested": false,
+  "githubActionsUsed": false
+}
