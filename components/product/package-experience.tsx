@@ -12,7 +12,7 @@ import { contextReadiness, lessonContentLevel, lessonWordIds, readinessLabels, t
 import { playMedia, stopMedia } from '@/components/product/shared';
 import { exercisesForLesson, lessonPreviewWords } from '@/lib/taalroute-packages';
 import { nextLessonPosition } from '@/lib/learner-progress';
-import { learnerListName } from '@/lib/learner-copy';
+import { learnerListName, learnerCollectionLabel } from '@/lib/learner-copy';
 import sectionPhotos from '@/data/klink-section-photos.json';
 import {
   lessonPackages,
@@ -87,7 +87,8 @@ export function PackageGrid({ onOpen }: { onOpen: (id: PackageId) => void }) {
             </span>
             <span className="cp-package-copy">
               <small aria-hidden="true">{index + 1}</small>
-              <strong>{learnerListName(pack)}</strong>
+              <strong>{learnerCollectionLabel(learnerListName(pack)).title}</strong>
+              <small className="cp-card-meta">{pack.lessons.length} {pack.lessons.length === 1 ? 'les' : 'lessen'}</small>
               <span className="cp-section-open">Open <ArrowRight aria-hidden="true" /></span>
             </span>
           </button>;
@@ -351,12 +352,13 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
         {lessons.map((lesson) => {
           const index = pack.lessons.indexOf(lesson);
           const words = lessonPreviewWords(pack, lesson);
-          const label = pack.status === 'local-proposal' ? lesson.title : words.map(wordLabel).join(' · ') || `Les ${index + 1}`;
+          const label = pack.status === 'local-proposal' ? lesson.title : words.map(wordLabel).join(' · ') || 'Leesles';
+          const count = lessonExercises(pack, lesson).length;
           return <article key={lesson.id}>
             <span className="cp-lesson-number" aria-label={`Les ${index + 1}`}>{index + 1}</span>
             <div className="cp-lesson-preview">
               {words[0]?.image && <Image src={words[0].image} alt="" width={80} height={80} />}
-              <h2>{label}</h2>
+              <div><h2>{label}</h2><small className="cp-card-meta">Les {index + 1} · {levelLabel(lessonContentLevel(pack, lesson))} · {count} {count === 1 ? 'oefening' : 'oefeningen'}</small></div>
             </div>
             <button className="primary-button cp-start-lesson" aria-label={`Start les ${index + 1}: ${label}`} onClick={() => { setResumeId(undefined); setSelectedLessonId(lesson.id); setPlaying(true); }}>Start<ArrowRight aria-hidden="true" /></button>
           </article>
@@ -390,7 +392,7 @@ function PackageUse({ pack, onAudio, onAttempt, lesson }: { pack: PackageDefinit
       {readiness === 'later' && <p>Eerst met de docent kiezen en voorbereiden. Deze inhoud is nog geen volgende zelfstandige leesopdracht.</p>}
       <button className="secondary-button" aria-pressed={practicing} onClick={() => { stopMedia(); setPracticing(value => !value); }}>{practicing ? 'Bekijk de bronnen' : 'Oefenen met zinnen en situaties'}<Shapes /></button>
       {practicing ? <PackageGroupPractice key={`${readiness}:${settings.language}`} pack={pack} onAudio={onAudio} onAttempt={onAttempt} scopeId={lesson?.id} usage={{ lesson, settings, readiness }} /> : <>
-        <div className="cp-reading-list">{visible.map(item => <button className="secondary-button" key={item.id} data-content-id={item.id} onClick={() => setSelectedId(item.exercise!.exerciseId)}><span>{item.title}<small className="cp-content-level-label">{levelLabel(item.placement.level)} · Met de docent</small></span><ArrowRight aria-hidden="true" /></button>)}</div>
+        <div className="cp-reading-list">{visible.map(item => <button className="secondary-button" key={item.id} data-content-id={item.id} onClick={() => setSelectedId(item.exercise!.exerciseId)}><span>{learnerCollectionLabel(item.title).title}<small className="cp-content-level-label">{levelLabel(item.placement.level)} · Met de docent</small></span><ArrowRight aria-hidden="true" /></button>)}</div>
         {!visible.length && <output>{readiness === 'independent' ? 'Er is hier nog geen tekst vrijgegeven voor zelfstandig lezen. Kijk samen met je docent bij de andere opdrachten.' : 'Voor deze keuze is hier nog geen inhoud voorbereid. Bekijk met je docent de andere mogelijkheden.'}</output>}
       </>}
     </>}
@@ -399,7 +401,7 @@ function PackageUse({ pack, onAudio, onAttempt, lesson }: { pack: PackageDefinit
 
 function PackageScenes({ pack }: { pack: PackageDefinition }) {
   return <section className="cp-scene-gallery"><header><h2>Bekijk de situaties</h2><p>Bekijk en bespreek de foto met je docent.</p></header>
-    <div>{pack.scenes.filter(scene => scene.image).map(scene => <article key={scene.id}><Image src={scene.image!} alt={scene.description ?? scene.title} width={760} height={760} /><div><strong>{scene.title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div></article>)}</div>
+    <div>{pack.scenes.filter(scene => scene.image).map(scene => <article key={scene.id}><Image src={scene.image!} alt={scene.description ?? scene.title} width={760} height={760} /><div><strong>{learnerCollectionLabel(scene.title).title}</strong>{scene.words && <em>{scene.words.join(' · ')}</em>}</div></article>)}</div>
     {!pack.scenes.some(scene => scene.image) && <p>Bij dit onderdeel is nog geen situatiebeeld beschikbaar.</p>}
   </section>;
 }

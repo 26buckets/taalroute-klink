@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "identical": false,
+      "changedPixels": 784,
+      "imageWidth": 1280,
+      "imageHeight": 844,
+      "bounds": {
+        "minX": 220,
+        "minY": 60,
+        "maxX": 220,
+        "maxY": 843
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "identical": false,
+      "changedPixels": 784,
+      "imageWidth": 1280,
+      "imageHeight": 844,
+      "bounds": {
+        "minX": 220,
+        "minY": 60,
+        "maxX": 220,
+        "maxY": 843
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "identical": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "identical": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "identical": false,
+      "changedPixels": 2868,
+      "imageWidth": 1280,
+      "imageHeight": 844,
+      "bounds": {
+        "minX": 254,
+        "minY": 151,
+        "maxX": 591,
+        "maxY": 179
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "identical": false,
+      "changedPixels": 2868,
+      "imageWidth": 1280,
+      "imageHeight": 844,
+      "bounds": {
+        "minX": 254,
+        "minY": 151,
+        "maxX": 591,
+        "maxY": 179
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "identical": false,
+      "changedPixels": 2940,
+      "imageWidth": 390,
+      "imageHeight": 844,
+      "bounds": {
+        "minX": 21,
+        "minY": 189,
+        "maxX": 368,
+        "maxY": 216
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "identical": true
+    }
+  ],
+  "reference": "Frozen pre-publication local screenshots, each compared to the then-approved live interface",
+  "allIdentical": false
+}

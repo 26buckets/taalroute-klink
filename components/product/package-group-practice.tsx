@@ -98,9 +98,10 @@ function SynonymRound(props: GroupRoundProps) {
 
 function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pack, activity, onAudio, onAttempt, onBack, onAgain, exerciseSet, sessionId, backLabel = 'Alle oefeningen', exerciseMenu }: GroupRoundProps) {
   const exercises = useMemo(() => exerciseSet ?? groupExercises(pack, activity), [pack, activity, exerciseSet]);
-  const storageKey = groupSessionKey(sessionId ?? pack.id, activity);
+  const storageKey = groupSessionKey(sessionId ?? pack.id, activity, progressId);
+  const legacyStorageKey = groupSessionKey(legacySessionId ?? sessionId ?? pack.id, activity);
   const [session, setSession] = useState(() => {
-    try { return restoreGroupSession(localStorage.getItem(storageKey) ?? (legacySessionId ? localStorage.getItem(groupSessionKey(legacySessionId, activity)) : null), exercises); } catch { return { done: false }; }
+    try { return restoreGroupSession(localStorage.getItem(storageKey) ?? (legacySessionId ? localStorage.getItem(legacyStorageKey) : null), exercises, progressId, storageKey === legacyStorageKey ? null : localStorage.getItem(legacyStorageKey)); } catch { return { done: false }; }
   });
   const completionKeys = usePracticeKeyboard();
   const [initialId] = useState(session.exerciseId);
@@ -113,7 +114,7 @@ function GroupRoundPlayer({ progressId, progressExerciseIds, legacySessionId, pa
     if (progressId && attempt.correct) recordRoundSteps(progressId, progressExerciseIds ?? exercises.map(e => e.exerciseId), [attempt.exerciseId]);
     onAttempt?.(attempt);
   }
-  function restart() { try { if (legacySessionId) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
+  function restart() { try { if (legacySessionId || storageKey !== legacyStorageKey) localStorage.setItem(storageKey, JSON.stringify({ version: 1, done: false })); else localStorage.removeItem(storageKey); for (const exercise of exercises) { localStorage.removeItem(`klink.taalroute.content-workflow.v1:${exercise.exerciseId}`); } for (const key of Object.keys(localStorage)) if(key.startsWith(`klink.taalroute.content-initial.v1:${storageKey}:`)) localStorage.removeItem(key); } catch { /* Optional storage. */ } stopMedia(); onAgain(); }
   if (session.done) return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<section {...completionKeys} className="honest-empty"><Check /><h2 tabIndex={-1} ref={node => node?.focus()}>Goed geoefend</h2><button className="primary-button" onClick={restart}><RefreshCw />Nog een keer</button><button data-practice-next aria-keyshortcuts="Enter ArrowRight" className="secondary-button" onClick={onBack}>{backLabel}<ArrowRight /></button></section></>;
   if (activity === 'worksheet' || activity === 'worksheet-heard') return <><RoundProgressNotice />{exerciseMenu && <ExerciseMenu {...exerciseMenu} />}<BuildWorksheet showTitle={!exerciseMenu} exercises={exercises} onAudio={onAudio} onAttempt={recordAttempt} initialId={initialId} onPosition={exerciseId => setSession(current => ({ ...current, exerciseId }))} onDone={() => setSession(current => ({ ...current, done: true }))} /></>;
   const canUseSheet = sheetActivities.includes(activity) && exercises.length > 1;

@@ -1,4 +1,5 @@
 import imageAliases from '../data/klink-progress-image-aliases-20261030.json' with { type: 'json' };
+import writingPredecessors from '../data/klink-writing-progress-predecessors-20261101.json' with { type: 'json' };
 export const roundProgressPrefix = 'klink.round-progress.v1:';
 export const roundProgressEvent = 'klink-round-progress';
 type RoundProgress = { version: 1; total: number; done: string[] };
@@ -26,9 +27,16 @@ export function mergeRoundProgress(raw: string | null, ids: string[], done: stri
 
 function read(id: string) {
   if (typeof window === 'undefined') return null;
+  const stored = (key: string) => { try { return localStorage.getItem(roundProgressPrefix + key); } catch { return null; } };
   try {
-    const saved = localStorage.getItem(roundProgressPrefix + id);
-    return fallback.get(id) ?? saved;
+    const saved = stored(id);
+    const current = fallback.get(id) ?? saved;
+    if (current !== null) return current;
+    const previous = (writingPredecessors as Record<string, { id: string; exerciseIds: string[] }>)[id];
+    if (!previous) return null;
+    const progress = parseRoundProgress(fallback.get(previous.id) ?? stored(previous.id), previous.exerciseIds.length);
+    // A revised task starts fresh; its unchanged neighbours inherit progress without rewriting the old round.
+    return JSON.stringify({ ...progress, done: progress.done.filter(exerciseId => previous.exerciseIds.includes(exerciseId)) });
   } catch { return fallback.get(id) ?? null; }
 }
 

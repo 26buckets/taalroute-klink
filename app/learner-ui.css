@@ -33,8 +33,8 @@
 .learner-app .cp-home-shortcuts { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0 28px; }
 .cp-home-chapters { margin-top: 32px; }
 .cp-home-chapters > h2 { margin-bottom: 16px; font-weight: 500; }
-.cp-chapter-grid, .cp-chapter-collections { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 12px; }
-.cp-chapter-collections { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); }
+.cp-chapter-grid, .cp-chapter-collections { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); grid-auto-rows: 1fr; gap: 12px; }
+.cp-chapter-collections { grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); grid-auto-rows: 1fr; }
 .cp-chapter-grid .cp-activity-button { min-height: 76px; font-size: 20px; font-weight: 500; text-align: left; }
 .cp-chapter-levels { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; border: 0; }
 .cp-chapter-levels [aria-pressed="true"] { color: #fff; background: var(--primary); border-color: var(--primary); }
@@ -135,7 +135,7 @@
 .cp-picture-help { display: grid; justify-items: center; align-items: center; height: 200px; min-height: 200px; max-width: 100%; }
 .cp-picture-help img { width: 100%; height: 200px; max-height: 200px; object-fit: contain; }
 .cp-activity-section > p { font-weight: 400; margin: 0 0 12px; }
-.cp-chapter-collection { display: grid; grid-template-columns: 64px minmax(0, 1fr) 24px; align-items: center; gap: 12px; padding: 12px; background: var(--paper); border: 1px solid var(--line-strong); border-radius: var(--radius); text-align: left; color: var(--ink); min-height: 96px; }
+.cp-chapter-collection { display: grid; grid-template-columns: 64px minmax(0, 1fr) 24px; align-items: center; gap: 12px; padding: 12px; background: var(--paper); border: 1px solid var(--line-strong); border-radius: var(--radius); text-align: left; color: var(--ink); min-height: 144px; }
 .cp-chapter-collection.is-complete { background: #e9f3eb; }
 .cp-chapter-collection .cp-round-status { display: flex; align-items: center; gap: 6px; color: #28583b; font-weight: 500; }
 .cp-round-status svg { width: 18px; height: 18px; flex: none; }
@@ -143,6 +143,10 @@
 .cp-chapter-collection > svg:first-child { width: 32px; height: 32px; justify-self: center; color: var(--primary); }
 .cp-chapter-collection strong { display: block; font-size: 20px; font-weight: 500; overflow-wrap: anywhere; }
 .cp-chapter-collection small { display: block; margin-top: 6px; color: var(--muted); font-size: 14px; }
+.cp-collection-copy { min-width: 0; overflow-wrap: anywhere; }
+.cp-collection-copy strong { min-height: 2lh; }
+.cp-collection-meta { display: flex; flex-wrap: wrap; column-gap: 4px; align-content: start; margin-top: 6px; font-size: 14px; }
+.cp-collection-meta small { display: inline; margin-top: 0; }
 .cp-chapter-more { margin-top: 20px; }
 .learner-app .cp-chapter-collection:focus { outline: 3px solid var(--focus); outline-offset: 3px; }
 .cp-menu-location { margin: 0 0 6px; color: var(--muted); font-size: 16px; font-weight: 400; }
@@ -807,3 +811,12 @@ body:has(.cp-practice-explanation) [data-slot="dialog-overlay"] { z-index: 2000;
 .word-library-page .word-library-more { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; }
 
 .word-library-page .word-filters > label:not(.word-search) { flex: 1 1 260px; max-width: 390px; }
+
+/* Equal rows follow the existing grids; larger text remains fully visible. */
+:is(.cp-package-grid, .cp-lesson-list, .cp-word-grid, .cp-global-word-grid, .cp-activity-grid, .cp-reading-list, .cp-scene-gallery > div, .review-word-list > div) { grid-auto-rows: 1fr; }
+.cp-photo-section .cp-package-copy > strong { min-height: 2lh; }
+.cp-card-meta { display: block; margin-top: 6px; color: var(--muted); font-size: 14px; font-weight: 400; }
+.cp-lesson-preview > div { min-width: 0; overflow-wrap: anywhere; }
+.cp-lesson-preview .cp-card-meta { font-size: 14px; }
+.cp-activity-button > span { min-width: 0; overflow-wrap: anywhere; }
+.ac-docent .cp-activity-button > span > strong { font-weight: inherit; }

@@ -255,7 +255,7 @@ function PackageExercisePlayer({
   });
   useEffect(() => { advancing.current = false; }, [exerciseId, completed]);
   useEffect(() => {
-    if (keyboardMode && result === 'right' && !recording) keyboard.ref.current?.querySelector<HTMLButtonElement>('[data-practice-next]:not(:disabled)')?.focus({ preventScroll: true });
+    if (keyboardMode && result === 'right' && !recording && keyboard.ref.current?.dataset.practiceFocusNext === 'true') keyboard.ref.current.querySelector<HTMLButtonElement>('[data-practice-next]:not(:disabled)')?.focus({ preventScroll: true });
   }, [keyboardMode, result, audioPending, recording, keyboard.ref]);
   async function listen(source?: string, automaticStart = false, singleTurn?: number) {
     if ((exercise?.readingTask || (exercise?.componentId === 'KLINK-EXTENDED' && !(exercise.synonymPairId && source === stimulus)) || (exercise?.learningPathId && source !== stimulus)) && source) metrics.current.helpUsed = true;

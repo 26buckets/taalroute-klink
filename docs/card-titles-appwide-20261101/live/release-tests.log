@@ -1,0 +1,53 @@
+✔ approved keyboard repair with mouse-focus and real-audio evidence passes (1022.697666ms)
+✔ reject changed source or evidence: hooks/use-practice-keyboard.ts (239.685708ms)
+✔ reject changed source or evidence: docs/KLINK-DOCENTHANDLEIDING.md (865.040375ms)
+✔ reject changed source or evidence: docs/answer-arrow-space-20261101/local/focus.json (837.44725ms)
+✔ reject changed source or evidence: docs/answer-arrow-space-20261101/local/audio.json (817.43775ms)
+✔ reject absent approval or unverified backup: publicationApproved (555.96075ms)
+✔ reject absent approval or unverified backup: fullReadback (611.530334ms)
+✔ Approved appwide card change and the preceding Enter evidence both pass (1696.980834ms)
+✔ Reject missing permission or evidence: docs/klink-owner-release-card-titles-20261101.json (5.557875ms)
+✔ Reject missing permission or evidence: docs/klink-owner-release-card-titles-20261101.json (1.495208ms)
+✔ Reject missing permission or evidence: docs/card-titles-appwide-20261101/local/checks.json (166.876916ms)
+✔ Reject missing permission or evidence: docs/card-titles-appwide-20261101/verification.json (179.70875ms)
+✔ Reject missing permission or evidence: docs/card-titles-appwide-20261101/backup.json (282.66175ms)
+✔ Reject an unapproved change: app/learner-ui.css (165.93475ms)
+✔ Reject an unapproved change: components/product/package-experience.tsx (179.807ms)
+✔ Reject an unapproved change: hooks/use-practice-keyboard.ts (229.745417ms)
+✔ Short labels separate authored rounds, levels and support without clipping topics (0.970375ms)
+✔ All visible collection labels separate round and level prefixes (1806.582667ms)
+✔ approved keyboard-only repair and complete actual-focus evidence pass (1520.073667ms)
+✔ reject changed source or evidence hooks/use-practice-keyboard.ts (229.809833ms)
+✔ reject changed source or evidence docs/enter-focus-20261101/local/focus.json (1242.796333ms)
+✔ reject missing publication approval (1023.757417ms)
+✔ two-second opening has owner approval and preservation evidence (1253.626417ms)
+✔ reject changed duration or missing proof components/product/klink-opening-loader.tsx (1002.196917ms)
+✔ reject changed duration or missing proof components/product/classroom-boundary.tsx (877.766542ms)
+✔ reject changed duration or missing proof docs/opening-loader-duration-20261101/local/checks.json (929.823125ms)
+✔ reject changed duration or missing proof docs/opening-loader-duration-20261101/backup.json (767.197625ms)
+✔ reject changed duration or missing proof docs/klink-owner-release-opening-loader-duration-20261101.json (503.5485ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (10300.094459ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.516584ms)
+✔ All 158 complete-release rounds are available through the existing level menus and links (13.012916ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (51.567875ms)
+(node:29368) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ the current source register contains 44 versioned documents and 880 unique source records (1.800958ms)
+✔ all 4 new identities use their actual visible source model (0.521125ms)
+✔ new Alfa A models are unique across visible typing activities and every reused model has a real canonical reference (2126.527041ms)
+✔ a revised source inherits unchanged answers without changing the original progress or accepting the withdrawn alias (0.483916ms)
+✔ temporary storage denial retains inherited in-memory progress (0.160291ms)
+✔ revised writing sessions preserve the old store and resume the corrected task after old completion (0.618834ms)
+✔ release requires actual source, browser, preservation and verified recovery proof (637.78375ms)
+✔ release rejects altered data/klink-production-index.json (403.007625ms)
+✔ release rejects altered lib/round-progress.ts (389.734416ms)
+✔ release rejects altered docs/writing-banks-20261101/source-records.jsonl (362.362291ms)
+✔ release rejects altered docs/writing-banks-20261101/local/browser.json (327.935958ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10697.531584

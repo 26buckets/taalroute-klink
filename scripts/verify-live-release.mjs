@@ -57,7 +57,7 @@ await Promise.all(Array.from({ length: 8 }, async () => {
 const response = await fetch(base + '/', { cache: 'no-store' });
 assert.equal(response.status, 200);
 const html = await response.text();
-const appPaths = [...new Set(html.match(/\/_next\/static\/chunks\/page-[A-Za-z0-9_-]+\.js/g) || [])];
+const appPaths = [...new Set(html.match(/\/_next\/static\/chunks\/(?:page|index)-[A-Za-z0-9_-]+\.js/g) || [])];
 assert.equal(appPaths.length, 1);
 const client = Buffer.from(await (await fetch(base + appPaths[0])).arrayBuffer());
 assert.equal(sha(client), sha(readFileSync('dist/client' + appPaths[0])));

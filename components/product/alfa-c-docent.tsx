@@ -34,6 +34,7 @@ import {
   type TeacherEvent,
   type Observation,
 } from '@/lib/alfa-c-docent';
+import { learnerCollectionLabel } from '@/lib/learner-copy';
 import './alfa-c-docent.css';
 export function TeacherBlockCards({ groups = teacherGroups, level = 'alfa-c' }: { groups?: typeof teacherGroups; level?: string }) {
   return (
@@ -154,6 +155,7 @@ function AlfaCTeacherContent({ group }: { group: string }) {
     }
   }
   const session = store.sessions.find((s) => s.id === sessionId);
+  const taskLabel = task ? learnerCollectionLabel(task.title.replace(/ (\d+)$/, ' · Ronde $1')) : undefined;
   return (
     <div className="learner-page cp-chapters ac-docent">
       <header className="cp-context-header">
@@ -165,9 +167,9 @@ function AlfaCTeacherContent({ group }: { group: string }) {
           <ArrowLeft />
         </a>
         <h1>
-          {task?.title ?? teacherGroups.find((g) => g.id === group)?.title}
+          {taskLabel?.title ?? teacherGroups.find((g) => g.id === group)?.title}
         </h1>
-        <small>Met je docent</small>
+        <small>{taskLabel?.round && `Ronde ${taskLabel.round} · `}Met je docent</small>
       </header>
       {error && <p role="alert">{error}</p>}
       {!loaded ? (
@@ -239,10 +241,13 @@ function AlfaCTeacherContent({ group }: { group: string }) {
             </label>
           </div>
           <div className="cp-chapter-grid">
-            {tasks.map((t) => (
-              <button
+            {tasks.map((t) => {
+              const numbered = t.title.match(/^(.*) (\d+)$/);
+              const title = learnerCollectionLabel(numbered?.[1] ?? t.title).title;
+              return <button
                 className="cp-activity-button"
                 aria-label={t.title}
+                aria-describedby={`ac-task-meta-${t.id}`}
                 aria-pressed={taskId === t.id}
                 key={t.id}
                 onClick={() => {
@@ -256,7 +261,8 @@ function AlfaCTeacherContent({ group }: { group: string }) {
                 }}
               >
                 <span>
-                  {t.title}
+                  <strong>{title}</strong>
+                  <small id={`ac-task-meta-${t.id}`} className="cp-card-meta">{numbered && `Ronde ${numbered[2]} · `}Alfa C · {t.stages.length} {t.stages.length === 1 ? 'stap' : 'stappen'}</small>
                   <small>
                     {store.sessions.some(
                       (s) =>
@@ -269,8 +275,8 @@ function AlfaCTeacherContent({ group }: { group: string }) {
                   </small>
                 </span>
                 <ArrowRight />
-              </button>
-            ))}
+              </button>;
+            })}
           </div>
           {task && (
             <>
