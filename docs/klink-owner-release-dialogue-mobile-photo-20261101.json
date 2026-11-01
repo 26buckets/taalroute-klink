@@ -1,0 +1,27 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "userRequest": "Op mobiel is de foto bij gesprekken nog te groot. Maak die kleiner, zodat ik ook de tekst en afspeelknoppen kan zien. Behoud alle inhoud, audio en voortgang.",
+  "appearanceChangeApproved": true,
+  "publicationApproved": true,
+  "publicationAuthorizationRef": "docs/klink-owner-release-sentence-listen-repair-20261101.json",
+  "publicationContext": "Concrete vervolgcorrectie van dezelfde gepubliceerde gespreksspeler, binnen de lopende opdracht om de werkende versie online te zetten.",
+  "baselineSourceCommit": "9b4e0937dcad82e14e25ebc97e8a4b08b244042f",
+  "liveSourceCommit": "dd3e3528b57ed9edcee4f99361dddbe3ab43da71",
+  "approval": "docs/appearance-floor-20261031/approved-updates/dialogue-mobile-photo-20261101.json",
+  "scope": "Only mobile: full photo, max 96 x 64 pixels, beside the speaker header. Original 24px text remains. Compact gaps and horizontal button padding retain all labels and 48px touch targets so text and playback controls fit common phone screens. On very short screens or long turns scrolling remains available. Desktop unchanged. Original media, routing, player logic, identifiers and storage unchanged.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "scripts/check-dialogue-mobile-photo-release-20261101.mjs",
+    "scripts/check-sentence-listen-repair-release-20261101.mjs",
+    "scripts/test-dialogue-mobile-photo-browser-20261101.mjs",
+    "scripts/test-dialogue-mobile-photo-release-20261101.mjs"
+  ],
+  "files": {
+    "app/learner-layout.css": "840de004c0daab0a6a571e65f8b6daeabbc369754a3ca38e51e50067f0e09663",
+    "scripts/check-dialogue-mobile-photo-release-20261101.mjs": "83773429aa2b5603aad7eb4b8a0aa57077bfa4b824814d9cce8759126975604f",
+    "scripts/check-sentence-listen-repair-release-20261101.mjs": "131b9be95a89eda157f06554d6a05b35614f0abd99f919af952c4fafadd52012",
+    "scripts/test-dialogue-mobile-photo-browser-20261101.mjs": "615248e5f1a65b40dfce20a9091407c207bd4a4e8bcffcc0b91198c8b8b5b4c1",
+    "scripts/test-dialogue-mobile-photo-release-20261101.mjs": "5c647a71ca3879f2b3a8c0ce6d80ed3b12e2db293d118f5faab6197b33d2683d"
+  }
+}
