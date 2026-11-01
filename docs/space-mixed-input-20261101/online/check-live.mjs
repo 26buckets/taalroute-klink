@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {chapterCollections} from '../../../lib/practice-chapters.ts';
+import {chapterWordRounds} from '../../../lib/word-rounds.ts';
+const origin='https://klink.taalroute.nl';
+const release=await(await fetch(origin+'/release.json?mixed-space='+Date.now(),{cache:'no-store'})).json();
+assert.equal(release.sourceCommit,'35182be471e139a7615181206ce1288c45886c86');assert(release.sourceClean);
+const baseline=JSON.parse(readFileSync('docs/space-mixed-input-20261101/live-baseline.json'));
+for(const key of Object.keys(baseline).filter(k=>k.endsWith('Sha256')))assert.equal(release[key],baseline[key],key);
+const writing=JSON.parse(readFileSync('docs/writing-banks-20261101/batch-01.json'));
+const prior=JSON.parse(readFileSync('docs/enter-focus-20261101/online/published.json'));
+const words=chapterWordRounds(chapterCollections('same-word').find(r=>r.id==='groep-4.alfa-a')).find(r=>r.id.endsWith('~words-2'));
+const reading=chapterCollections('text-question').find(r=>r.id==='klink-teksten-zelf-a1-r01-v1');
+const exercise=JSON.parse(readFileSync('public'+reading.contentUrl)).exercises[1];
+const paths=new Set([...writing.rows.map(r=>r.url),...prior.files.map(f=>f.path),words.exercises[1].prompt.audio.src]);
+const audioSources=(value)=>{if(!value||typeof value!=='object')return;for(const[k,v]of Object.entries(value)){if(k==='src'&&typeof v==='string'&&/\.(mp3|wav|ogg)$/.test(v)&&v.startsWith('/'))paths.add(v);else if(typeof v==='object')audioSources(v);}};
+audioSources(exercise);
+const files=[];
+for(const path of paths){const response=await fetch(origin+path);assert.equal(response.status,200,path);const bytes=Buffer.from(await response.arrayBuffer());assert(bytes.equals(readFileSync('public'+path)),path);files.push({path,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')});}
+mkdirSync('outputs/space-mixed-input-20261101/online',{recursive:true});
+writeFileSync('outputs/space-mixed-input-20261101/online/published.json',JSON.stringify({release,fingerprintsPreserved:true,files,allBytesEqual:true,latestWritingBanksPreserved:true},null,2)+'\n');
+console.log('PASS clean exact live source, content fingerprints and '+files.length+' offered current/legacy banks and audio files.');
