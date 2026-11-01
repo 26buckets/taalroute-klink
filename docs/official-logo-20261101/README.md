@@ -21,3 +21,7 @@ Na publicatie staan de werkelijk gepubliceerde broncommit en livecontroles in pu
 De historische beeldcontrole van 31 oktober controleert haar oorspronkelijke uitgave tot de vastgestelde opvolgcommit b368996ce81590ddfa0afee1d5d488e415c9f58c. Latere logo-aanpassingen worden door de nieuwe vrijgavepoort met een exacte bestandslijst en SHA-256-controles bewaakt. De oude beelden en alle overige actuele bestanden blijven beschermd.
 
 De eerste volledige publicatiecontrole doorliep de inhoudscontroles en stopte volgens de gewone beveiliging omdat de wijziging nog niet gecommit was. Na vastlegging wordt dezelfde normale publicatieroute opnieuw uitgevoerd.
+
+Uitgevoerde eindcontroles: 15 gerichte vrijgave-/beveiligingstests en de volledige normale publicatiepoort zijn geslaagd. De brede historische negatieve reeks is niet volledig herhaald; zie check-scope.json. De echte Worker is na publicatie gecontroleerd met bron- en inhoudshashes, alle gewijzigde assets, oorspronkelijke media/audio-steekproeven, navigatie en opgeslagen voortgang.
+
+Bij live-schermvergelijkingen zijn hoogstens tien rasterrandpixels buiten de logo’s toegestaan boven de kleurkanaaltolerantie van 8/255. Werkelijke aantallen/coördinaten staan per proef in live/checks.json; opmaakmaten, tekst en stijlen worden exact vergeleken. Geen claim dat alle schermpixels identiek zijn of dat fysieke toestellen getest zijn.

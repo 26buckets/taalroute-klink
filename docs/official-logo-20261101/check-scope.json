@@ -1,0 +1,17 @@
+{
+  "historicalPublicationProofSuite": "Stopped after 17.5 minutes; it repeats unrelated historical tamper scenarios. Not claimed as passed.",
+  "scopedReleaseTests": {
+    "passed": 15,
+    "failed": 0,
+    "cancelled": 0
+  },
+  "fullCurrentPublicationGate": "Run through canonical npm run deploy; exact current delta and historical release chain retained.",
+  "curriculumTests": {
+    "passed": 48,
+    "failed": 0,
+    "skipped": 1,
+    "skippedName": "Source-fidelity ledger retains original text, speakers, questions and recording pointers",
+    "note": "Existing skipped source-fidelity test, unrelated to logo change; audio register pretest also passed."
+  },
+  "localCompiledWorkerPreview": "Local spawn EBADF prevented separate compiled Worker startup; Vite browser checks and production build passed. Actual published Worker is checked after publication."
+}

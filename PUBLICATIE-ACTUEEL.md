@@ -1,3 +1,15 @@
+## Actuele publicatie — officieel Klink-logo — 1 november 2026
+
+Livebron `8a8acb1968846acb1843b84981614a5bcc16c012`; Worker `ab0012e1-c819-4ebb-ac5b-d20fe78a0acd`. Via de normale `npm run deploy` gepubliceerd vanaf schone canonieke main, als afstammeling van de actuele goedgekeurde livebron `9d231b1d9cced59374d3ab4d56083f6881c0b3e8`.
+
+Op Nico’s concrete opdracht is het nieuwe petrolgroene vectorlogo met groene stip en vloeiende laatste k officieel. Het vervangt D uitsluitend als logokeuze. Licht/donker, bestaande slogan, iconen en Klinks deelafbeelding zijn toegepast met behoud van de oorspronkelijke kaders en posities. Studio gebruikt dezelfde goedgekeurde paden. Alle overige vormgeving, inhoud, audio, routes, functies en opslag blijven behouden; de vijf inhoudsvingerafdrukken zijn online ongewijzigd.
+
+Lokaal zijn TypeScript, gerichte lint-/vrijgavetests (15), inhoudscontroles, productieopbouw en de volledige normale publicatiepoort geslaagd. Er zijn 24 lokale logo-/opmaakvergelijkingen in Chromium/WebKit, desktop/mobiel en licht/donker. Online zijn de schone bron, alle gewijzigde assets, de oorspronkelijke landingsfoto/deelafbeelding/uitgeverslogo en zes bestaande opnamen bytegelijk gecontroleerd. Navigatie, zes niveauknoppen, klankenkaart en opgeslagen voortgang slagen in beide browsers op vier breedtes; de landing slaagt op vijf breedtes. Aanvullende livevergelijkingen en exacte uitslagen staan in `docs/official-logo-20261101/live/checks.json`.
+
+Geen fysieke toestellen getest. De afzonderlijke lokale Worker-start gaf een omgevingsfout; de productieopbouw en echte gepubliceerde Worker zijn wel gecontroleerd. De brede historische negatieve publicatiebewijstest is niet volledig herhaald; de gerichte beveiligingstests en volledige actuele publicatiepoort wel. Alle zware controles lokaal; geen GitHub Actions-run of budgetwijziging.
+
+Akkoord, canonieke SVG-paden, oude herstelassets, controles, publicatie en teruggelezen Drive-back-up: `docs/official-logo-20261101/`. De vectorbron blijft een gecontroleerde reconstructie van Nico’s bevestigde PNG. Alle eerdere vloerreferenties en vrijgaven blijven als historie behouden.
+
 ## Actuele publicatie — volledige taalreview woordgebruik — 1 november 2026
 Livebron `9d231b1d9cced59374d3ab4d56083f6881c0b3e8`; Worker `1f20969e-769b-4da1-8f3b-de0f8b82d5d1`. Gepubliceerd via de normale `npm run deploy` vanaf schone canonieke main, als afstammeling van de goedgekeurde livebron `76a8c365a83fd0181e79ca67077a891c1ae2a286`.
 
