@@ -8,12 +8,13 @@ import {learningGoalFor} from '../lib/learning-goals.ts';
 import {validateProductionCollection} from '../lib/production-practice.ts';
 const json=f=>JSON.parse(readFileSync(f));
 const rows=json('docs/writing-copy-next-20261101/source.json').rows;
-const index=json('data/klink-production-index.json');
+const currentIndex=json('data/klink-production-index.json');
+const index=JSON.parse(execFileSync('git',['show','995ae4407c6b9c0765cf63f801009846ca30ed11:data/klink-production-index.json']));
 const before=JSON.parse(execFileSync('git',['show','86ef96a12e8b90a19dccaa56e1711240a39dc4c5:data/klink-production-index.json']));
 const added=index.slice(before.length);
 
 test('all existing and new collection banks still pass the shared loader validation',()=>{
-  for(const r of index)assert.equal(validateProductionCollection(json('public'+r.url),r.id,r.count).length,r.count,r.id);
+  for(const r of currentIndex)assert.equal(validateProductionCollection(json('public'+r.url),r.id,r.count).length,r.count,r.id);
 });
 
 test('four source-bound rounds add 80 positions and preserve the first publication',()=>{

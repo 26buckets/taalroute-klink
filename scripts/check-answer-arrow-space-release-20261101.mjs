@@ -1,5 +1,5 @@
-import {verifyCardTitlesRelease,readBeforeCardTitles} from './check-card-titles-release-20261101.mjs';
 import assert from 'node:assert/strict';
+import {verifyWritingBanksRelease,readBeforeWritingBanks} from './check-writing-banks-release-20261101.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -13,7 +13,7 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 
 export function verifyAnswerArrowSpaceRelease(read=readFileSync) {
-  const successor=verifyCardTitlesRelease(read),currentRead=read;read=file=>readBeforeCardTitles(file,successor,currentRead);
+  const successor=verifyWritingBanksRelease(read),currentRead=read;read=file=>readBeforeWritingBanks(file,successor,currentRead);
   const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-answer-arrow-space-20261101.json');
   assert.equal(r.approvedBy,'Nico');
   assert(r.publicationApproved&&r.appearanceUnchanged);
@@ -22,7 +22,7 @@ export function verifyAnswerArrowSpaceRelease(read=readFileSync) {
   assert(r.userRequest.includes('pijltjestoetsen en spatie'));
   git('merge-base','--is-ancestor',live,base);
   git('merge-base','--is-ancestor',base,'HEAD');
-  const changed=sort([...new Set([...lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)),])]);
+  const changed=sort([...new Set(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)))]);
   assert.deepEqual(changed,r.changedFiles);
   assert.deepEqual(sort(Object.keys(r.files)),changed);
   assert.deepEqual(changed.filter(f=>!f.startsWith('scripts/')),['docs/KLINK-DOCENTHANDLEIDING.md','hooks/use-practice-keyboard.ts']);
@@ -48,5 +48,5 @@ export function verifyAnswerArrowSpaceRelease(read=readFileSync) {
   return {...r,successor};
 }
 export function readBeforeAnswerArrowSpace(file,r,read=readFileSync) {
-  return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeCardTitles(file,r.successor,read);
+  return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeWritingBanks(file,r.successor,read);
 }

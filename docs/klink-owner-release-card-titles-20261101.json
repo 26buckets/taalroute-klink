@@ -3,7 +3,7 @@
   "publicationApproved": true,
   "appearanceChangeApproved": true,
   "userRequest": "Prima, zet deze versie nu live in Klink. Behoud alle inhoud, audio, voortgang en overige vormgeving en controleer na publicatie ook desktop en mobiel. Doe dit voor alle onderdelen in alle onderdelen door de hele app.",
-  "baselineSourceCommit": "aafdebe15eef6f03c89ac81364469d0fe02a1061",
+  "baselineSourceCommit": "de651b0e95e31d54492af6ae1aa43af9a84ecafc",
   "liveSourceCommit": "17f9db234295127531719cebb3df45d666d8ccac",
   "approval": "docs/appearance-floor-20261031/approved-updates/card-titles-appwide-20261101.json",
   "changedFiles": [
@@ -17,8 +17,8 @@
     "docs/appearance-floor-20261031/approved-updates/collection-labels-20261101.json",
     "docs/appearance-floor-20261031/floor.json",
     "lib/learner-copy.ts",
-    "scripts/check-answer-arrow-space-release-20261101.mjs",
     "scripts/check-card-titles-release-20261101.mjs",
+    "scripts/check-writing-banks-release-20261101.mjs",
     "scripts/test-card-titles-appwide-browser.mjs",
     "scripts/test-card-titles-native-audio.mjs",
     "scripts/test-card-titles-release-20261101.mjs",
@@ -34,12 +34,12 @@
     "components/product/package-experience.tsx": "200807b7627c128aa42c7a69de80205bb90c2a2c2569e205ad00c2424b1a9f74",
     "components/product/practice-chapters.tsx": "8c6d3e66273e23c10412c533c7fd629439b5b65870c2d0018892782750cdc63a",
     "components/product/teacher-classroom.css": "f8a3a14029901ebfe674cd36dbeb1dd0e2a06f2db5925a1f63333f2f811bb324",
-    "docs/appearance-floor-20261031/approved-updates/card-titles-appwide-20261101.json": "fcd3f6b9ffeaf3149e45312b28d9c7fe4e3a52cdd14ce5a67546f6e9693ff4ca",
+    "docs/appearance-floor-20261031/approved-updates/card-titles-appwide-20261101.json": "b76ac511f2c0d91b128641c779934b0fcc37f5be90d3d6868d96f9abe06a45f5",
     "docs/appearance-floor-20261031/approved-updates/collection-labels-20261101.json": "db3012cace139518221d401bdc5692022fdb3323ed3f84c224b090f1877575ef",
     "docs/appearance-floor-20261031/floor.json": "13f4c01f3db7b89dc58195ca869ab14238424c5611404aff3c2dc3509971b2b7",
     "lib/learner-copy.ts": "9bac9e701d559baf0019a4a999dbb3e6e9b8de86c4f445886ab6366cdef51d69",
-    "scripts/check-answer-arrow-space-release-20261101.mjs": "aaad4d0b492a5735ffb1d092096f6299ff23230300e9ec48b30b6244abcab250",
-    "scripts/check-card-titles-release-20261101.mjs": "0ac4ec4925629efae44468d3ec021d1bdb51d4a3d4a93610c0caf93e1a031adb",
+    "scripts/check-card-titles-release-20261101.mjs": "b9c01155c15bd6c38df533d66ab9035c23267ca2e04ca8286c5136db7b9fbde0",
+    "scripts/check-writing-banks-release-20261101.mjs": "c655f20224a13fe922c91134ea03e52a1a75f6cc5552e9a96fa284418a579484",
     "scripts/test-card-titles-appwide-browser.mjs": "9fd9885718f8c0f2c3ecfbbf91220ccdaea272c23a7657c1780fac240bac49ce",
     "scripts/test-card-titles-native-audio.mjs": "ccac18c5261ada6b63d727aad3764069f7ff31c5e8b71aadf44c19ae4fd6f229",
     "scripts/test-card-titles-release-20261101.mjs": "99687546fbda30ea0a24f2bf4d707186796541809e0e20e68f19870b24f92293",
@@ -49,7 +49,7 @@
     "scripts/verify-live-release.mjs": "5a6b7630fc272bd123122d4736cd29384f3549a948d07179dd26b6a3cb52ccd0"
   },
   "evidenceFiles": {
-    "docs/card-titles-appwide-20261101/local/checks.json": "5f2e88046083279fe60f345f13c1a648285b606211c0ec64e0b810c1d24d5b08",
+    "docs/card-titles-appwide-20261101/local/checks.json": "bb95844f53096b2bf04822a34e1e186bc4b705ffb9e22d5aadca13f19f2ae63c",
     "docs/card-titles-appwide-20261101/local/targeted.json": "cdca8626302f43214533fd29b4d436e01ad8427053d2011c7d2c3498b7a58399",
     "docs/card-titles-appwide-20261101/local/loader.json": "eb9cde5a595844305670780bff4e52f3e7b61d034b6c311d91bc5c23a423f8a2",
     "docs/card-titles-appwide-20261101/local/native-audio.json": "05a4b8020352ef917486f25e4f386f88f1f08ca87176cfdf5e68fbefa1f47a51",
@@ -60,10 +60,11 @@
     "docs/card-titles-appwide-20261101/local/types.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "docs/card-titles-appwide-20261101/local/lint.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "docs/card-titles-appwide-20261101/local/unit.log": "d34d20bf19acd9371df98c5338f319caf7527b6cc5e59b1716127426adbcb5a0",
-    "docs/card-titles-appwide-20261101/local/build.log": "d0fe52c2dcd22d3f86e3ac485acb4745af795443414a28fba6d83ebd6fa2a279",
+    "docs/card-titles-appwide-20261101/local/build.log": "e114b00dfba263b3f458f9f84e2dec5c6728eebf5c91fa011250b772763373ba",
     "docs/card-titles-appwide-20261101/local/worksheet-unit.log": "603930eba88d7fcbbf9f159aa12790e108ad49db55911eb9e81e5b82091834ef",
-    "docs/card-titles-appwide-20261101/local/source-preservation.json": "c44c5536eb5c25af032670ce5433a3b10113598c263c832a76d2ad6e29728fd4",
-    "docs/card-titles-appwide-20261101/verification.json": "d34129984fd6c42cc3e16eaabf1f9216ddb5b26b369b6543cebb0094900e2149",
-    "docs/card-titles-appwide-20261101/local/arrow-native.json": "036f0dc96e4e184e54fa0c8850f5ea264ec370d8a3ab1b019cc017d15cb725ca"
+    "docs/card-titles-appwide-20261101/local/source-preservation.json": "9770d01d9770cf1c2172a3deb97879cc201a616e69b1a8e1c8e1540e37b170fd",
+    "docs/card-titles-appwide-20261101/verification.json": "01ae970ad10607b6b7026ade8e7284d8122aade4e6d8d3edaeda12349a7dc865",
+    "docs/card-titles-appwide-20261101/local/arrow-native.json": "036f0dc96e4e184e54fa0c8850f5ea264ec370d8a3ab1b019cc017d15cb725ca",
+    "docs/card-titles-appwide-20261101/local/writing-preserved.json": "44eef8b4bf918017974ef432ca7653144c62098ca91b7ed3c38f34e5b6e51c70"
   }
 }

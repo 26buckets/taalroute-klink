@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-const base = 'aafdebe15eef6f03c89ac81364469d0fe02a1061', live = '17f9db234295127531719cebb3df45d666d8ccac', folder = 'docs/card-titles-appwide-20261101/';
+const base = 'de651b0e95e31d54492af6ae1aa43af9a84ecafc', live = '17f9db234295127531719cebb3df45d666d8ccac', folder = 'docs/card-titles-appwide-20261101/';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const sort = values => values.sort((a, b) => a.localeCompare(b));
