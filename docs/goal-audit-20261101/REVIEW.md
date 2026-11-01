@@ -15,3 +15,7 @@ Lokaal: 202 doel-/label-/header-/dialoogcontroles; honderd antwoord-/vervolgflow
 De eerste brede testrun miste een testsimulator voor zinnendictee; die is aangevuld. De afzenderproef wacht nu op de bestaande kleurtransitie. De oorspronkelijke foutmeldingen zijn geen onbevestigde resterende appfouten; de definitieve resultaten bevatten de herproeven. Bij de nieuwe werkbladtest bleek de werkelijke weergave-overlap en die is hersteld; er zijn geen geforceerde klikken gebruikt.
 
 Geen fysieke telefoon of native telefoontoetsenbord getest. Lange teksten blijven leesbaar en mogen in het eigen oefenvlak scrollen. Geen browser- of didactische praktijkgarantie op niet-geteste hardware. Alle zware controles worden lokaal uitgevoerd; geen GitHub Actions toegevoegd.
+
+## Definitieve publicatie
+
+Bron f7fb187b7901b824234d83478313dcafff7d69a4, Worker 976151dd-e176-4c27-b0bd-94f6f8384964, via de normale publicatieroute. Alle hierboven beschreven lokale controles en dezelfde mobiele online reeksen slagen. De volledige matrixcontrole telt nu 99.732 instanties, na behoud van de extra naschrijfposities. De zeven aangeboden bron-/audiobestanden zijn bytegelijk. Definitieve online resultaten en de ene afzonderlijk geslaagde laadherproef staan in online/. De feitelijke afbakening bij spreken, docentwerkvormen en mobiel toetsenbord blijft gelden. De app is brongebonden gecontroleerd; er is geen onafhankelijke praktijkpilot geclaimd.
