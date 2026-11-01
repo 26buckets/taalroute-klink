@@ -1,3 +1,4 @@
+import {verifyDialogueMobilePhotoRelease,readBeforeDialogueMobilePhoto} from './check-dialogue-mobile-photo-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,11 +9,12 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc','VORMGEVING-VASTGEZET.md'];
 export const contextFiles=['VORMGEVING-VASTGEZET.md','app/learner-ui.css','components/product/extended-practice-surface.tsx','components/product/package-exercise-browser.tsx','components/product/package-group-practice.tsx','data/klink-synonyms.json','data/klink-synonym-audio.json','lib/synonyms.ts','scripts/test-synonyms.mjs','scripts/test-synonyms-browser.mjs','scripts/test-synonym-recovery-20261101.mjs','scripts/check-sentence-listen-repair-release-20261101.mjs','scripts/check-synonym-context-release-20261101.mjs','scripts/test-synonym-context-20261101.mjs','scripts/test-synonym-context-browser-20261101.mjs',...[1,2,3].map(i=>`public/package-audio/synoniemen-context-20261101/SC00${i}.mp3`)];
 export function verifySynonymContextRelease(read=readFileSync){
+ const successor=verifyDialogueMobilePhotoRelease(read),readCurrent=read;read=file=>readBeforeDialogueMobilePhoto(file,successor,readCurrent);
  const r=JSON.parse(read('docs/klink-owner-release-synonym-context-20261101.json'));
  assert.equal(r.approvedBy,'Nico');assert.equal(r.publicationApproved,true);assert.equal(r.appearanceChangeApproved,true);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);assert.equal(r.provider,'ElevenLabs');
  assert(r.userRequest.includes('acht overgebleven opnamen')&&r.userRequest.includes('bovenaan')&&r.userRequest.includes('scrollen'));
  git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,sort([...contextFiles]));assert.deepEqual(r.changedFiles,changed);assert.deepEqual(sort(Object.keys(r.files)),changed);for(const f of changed)assert.equal(sha(read(f)),r.files[f],f);
  const before=JSON.parse(git('show',base+':data/klink-synonyms.json')),bank=JSON.parse(read('data/klink-synonyms.json'));
  assert.deepEqual({...bank,entries:before.entries},before);assert.deepEqual(bank.entries.slice(0,217),before.entries);assert.equal(bank.entries.length,225);assert.equal(bank.entries.filter(e=>e.active).length,200);
@@ -37,6 +39,6 @@ export function verifySynonymContextRelease(read=readFileSync){
  const approval=JSON.parse(read(r.approval));assert.equal(approval.userRequest,r.userRequest);assert.deepEqual(approval.files,r.files);assert.equal(approval.requestedLayoutSha256,sha(read(folder+'/requested-layout.png')));
  const checks=JSON.parse(read(folder+'/verification.json'));for(const k of ['types','lint','build','unit','allEightContexts','threeModes','reverseDirections','nativePlayback','controlsAtTop','noScrollDesktop','noScrollMobile','previousContentPreserved','localOnly'])assert.equal(checks[k],true,k);
  const backup=JSON.parse(read(folder+'/backup.json'));assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId&&backup.sha256);assert.deepEqual(backup.files,r.files);
- return r;
+ return {...r,successor};
 }
-export function readBeforeSynonymContext(file,r,read=readFileSync){return r.changedFiles.includes(file)||file==='docs/appearance-floor-20261031/floor.json'?git('show',base+':'+file):read(file);}
+export function readBeforeSynonymContext(file,r,read=readFileSync){return r.changedFiles.includes(file)||file==='docs/appearance-floor-20261031/floor.json'?git('show',base+':'+file):readBeforeDialogueMobilePhoto(file,r.successor,read);}

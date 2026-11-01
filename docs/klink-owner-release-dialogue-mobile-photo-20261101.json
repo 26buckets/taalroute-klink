@@ -6,22 +6,24 @@
   "publicationApproved": true,
   "publicationAuthorizationRef": "docs/klink-owner-release-sentence-listen-repair-20261101.json",
   "publicationContext": "Concrete vervolgcorrectie van dezelfde gepubliceerde gespreksspeler, binnen de lopende opdracht om de werkende versie online te zetten.",
-  "baselineSourceCommit": "9b4e0937dcad82e14e25ebc97e8a4b08b244042f",
-  "liveSourceCommit": "dd3e3528b57ed9edcee4f99361dddbe3ab43da71",
+  "baselineSourceCommit": "51f4cbcfe704a2358d80e95988f363da50bd634c",
+  "liveSourceCommit": "51f4cbcfe704a2358d80e95988f363da50bd634c",
   "approval": "docs/appearance-floor-20261031/approved-updates/dialogue-mobile-photo-20261101.json",
   "scope": "Only mobile: full photo, max 96 x 64 pixels, beside the speaker header. Original 24px text remains. Compact gaps and horizontal button padding retain all labels and 48px touch targets so text and playback controls fit common phone screens. On very short screens or long turns scrolling remains available. Desktop unchanged. Original media, routing, player logic, identifiers and storage unchanged.",
   "changedFiles": [
     "app/learner-layout.css",
     "scripts/check-dialogue-mobile-photo-release-20261101.mjs",
-    "scripts/check-sentence-listen-repair-release-20261101.mjs",
+    "scripts/check-synonym-context-release-20261101.mjs",
     "scripts/test-dialogue-mobile-photo-browser-20261101.mjs",
-    "scripts/test-dialogue-mobile-photo-release-20261101.mjs"
+    "scripts/test-dialogue-mobile-photo-release-20261101.mjs",
+    "VORMGEVING-VASTGEZET.md"
   ],
   "files": {
     "app/learner-layout.css": "840de004c0daab0a6a571e65f8b6daeabbc369754a3ca38e51e50067f0e09663",
-    "scripts/check-dialogue-mobile-photo-release-20261101.mjs": "83773429aa2b5603aad7eb4b8a0aa57077bfa4b824814d9cce8759126975604f",
-    "scripts/check-sentence-listen-repair-release-20261101.mjs": "131b9be95a89eda157f06554d6a05b35614f0abd99f919af952c4fafadd52012",
+    "scripts/check-dialogue-mobile-photo-release-20261101.mjs": "f06004c4b647b8b978316f01a53fa09278e5917a2a020d48026ae3f37c772be6",
+    "scripts/check-synonym-context-release-20261101.mjs": "6bef5c627f8105efe3a67282049e087e5e72fff4c67fc3f1f8507a52058f41c5",
     "scripts/test-dialogue-mobile-photo-browser-20261101.mjs": "615248e5f1a65b40dfce20a9091407c207bd4a4e8bcffcc0b91198c8b8b5b4c1",
-    "scripts/test-dialogue-mobile-photo-release-20261101.mjs": "5c647a71ca3879f2b3a8c0ce6d80ed3b12e2db293d118f5faab6197b33d2683d"
+    "scripts/test-dialogue-mobile-photo-release-20261101.mjs": "5c647a71ca3879f2b3a8c0ce6d80ed3b12e2db293d118f5faab6197b33d2683d",
+    "VORMGEVING-VASTGEZET.md": "0c2fc37ac8355c66be70b059b74a196e6b9b11268256e6a75d6396f2fc901018"
   }
 }
