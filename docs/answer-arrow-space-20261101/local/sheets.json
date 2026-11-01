@@ -1,0 +1,34 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "activity": "worksheet",
+      "enterFromAnswerToNextItem": true,
+      "enterFromLastAnswerToNextPage": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "activity": "worksheet-heard",
+      "enterFromAnswerToNextItem": true,
+      "enterFromLastAnswerToNextPage": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "worksheet",
+      "enterFromAnswerToNextItem": true,
+      "enterFromLastAnswerToNextPage": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "activity": "worksheet-heard",
+      "enterFromAnswerToNextItem": true,
+      "enterFromLastAnswerToNextPage": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": []
+}

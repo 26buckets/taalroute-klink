@@ -1,4 +1,6 @@
 import test from 'node:test';
+import {chapterCollections} from '../lib/practice-chapters.ts';
+import {groupActivities} from '../lib/group-practice.ts';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {roundProgressCount,recordRoundSteps,roundProgressPrefix} from '../lib/round-progress.ts';
@@ -11,10 +13,20 @@ test('the current source register contains 44 versioned documents and 880 unique
  const register=json(folder+'source-register.json'),records=readFileSync(folder+'source-records.jsonl','utf8').trim().split('\n').map(JSON.parse);
  assert.equal(register.documents.length,44);assert.equal(records.length,880);assert.equal(new Set(records.map(r=>r.id)).size,880);assert(records.every(r=>r.revisionId&&r.recordSha256&&r.url));
 });
-test('all 12 new identities use their actual visible source model',()=>{
+test('all 4 new identities use their actual visible source model',()=>{
  const batch=json(folder+'batch-01.json');let seen=0;
  for(const row of batch.rows){const bank=json('public'+row.url);validateProductionCollection(bank,row.id,row.count);for(const e of bank.exercises.filter(e=>batch.newUniqueSourceIds.includes(e.exerciseId))){assert(exactCopyAnswer(e.exampleWord,e.fields[0].acceptedAnswers[0]));assert(!exactCopyAnswer(e.exampleWord,e.exampleWord+'x'));seen++;}}
- assert.equal(seen,12);
+ assert.equal(seen,4);
+});
+test('new Alfa A models are unique across visible typing activities and every reused model has a real canonical reference',()=>{
+ const batch=json(folder+'batch-01.json'),newIds=new Set(batch.newUniqueSourceIds),existing=new Map();
+ for(const activity of groupActivities)for(const row of chapterCollections(activity.id))for(const e of row.contentUrl?json('public'+row.contentUrl).exercises:row.exercises){
+  const model=e.componentId==='ALF-CMP-006'?e.exampleWord:e.componentId==='ALF-CMP-012'&&!e.hideWritingModel?e.target:null;
+  if(typeof model==='string'&&!newIds.has(e.exerciseId))existing.set(e.exerciseId,model.trim().toLowerCase());
+ }
+ const models=new Set(existing.values()),bank=json('public'+batch.rows[1].url);
+ for(const e of bank.exercises)assert(!models.has(e.exampleWord.trim().toLowerCase()),e.exerciseId);
+ for(const reused of batch.reusedExisting)assert.equal(existing.get(reused.existingId),reused.model.toLowerCase(),reused.sourceId);
 });
 test('a revised source inherits unchanged answers without changing the original progress or accepting the withdrawn alias',()=>{
  const [id,previous]=Object.entries(json('data/klink-writing-progress-predecessors-20261101.json'))[0],memory=new Map(),oldWindow=globalThis.window,oldStorage=globalThis.localStorage;

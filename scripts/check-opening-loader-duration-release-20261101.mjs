@@ -1,4 +1,4 @@
-import {verifyWritingBanksRelease,readBeforeWritingBanks} from './check-writing-banks-release-20261101.mjs';
+import {verifyAnswerArrowSpaceRelease,readBeforeAnswerArrowSpace} from './check-answer-arrow-space-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -7,7 +7,7 @@ const base='b7c04d8da4835c8b01f8314bd6247710ed75d0bf',folder='docs/opening-loade
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyOpeningLoaderDuration(read=readFileSync){
- const successor=verifyWritingBanksRelease(read),currentRead=read;read=file=>readBeforeWritingBanks(file,successor,currentRead);
+ const successor=verifyAnswerArrowSpaceRelease(read),currentRead=read;read=file=>readBeforeAnswerArrowSpace(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-opening-loader-duration-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,base);assert.equal(r.userAnswer,'Ja, op de website');assert(r.userQuestion.includes('twee seconden'));git('merge-base','--is-ancestor',base,'HEAD');
  const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,sort([...r.changedFiles,floor,r.approval]));assert.deepEqual(sort(Object.keys(r.files)),r.changedFiles);
@@ -20,4 +20,4 @@ export function verifyOpeningLoaderDuration(read=readFileSync){
  const verification=json(folder+'verification.json');for(const k of ['types','lint','teacherRecovery','teacherPrivacy','reactReview','originalArtworkPreserved','contentMediaAndStorageUnchanged','localOnly'])assert.equal(verification[k],true,k);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,successor};
 }
-export function readBeforeOpeningLoaderDuration(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):readBeforeWritingBanks(file,r.successor,read);}
+export function readBeforeOpeningLoaderDuration(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):readBeforeAnswerArrowSpace(file,r.successor,read);}

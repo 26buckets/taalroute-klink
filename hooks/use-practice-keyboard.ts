@@ -28,8 +28,8 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
     const selectedAnswer = target.closest('.cp-choice-grid button[aria-pressed="true"], .cp-evidence-options button[aria-pressed="true"], .cp-large-options button[aria-pressed="true"]');
     const confirmAnswer = event.key === 'Enter' && (selectedAnswer || (item ?? root).dataset.practiceReady === 'true' && (input || target.closest('[data-practice-check]')));
     const button = target.closest('button, a, summary, [role="button"]');
-    // Native activation happens on keyup for Space; never also click it here.
-    if (!confirmAnswer && button && (event.key === 'Enter' || event.key === ' ')) return;
+    // Keep native button activation, except replaying audio from a selected answer.
+    if (!confirmAnswer && button && (event.key === 'Enter' || event.key === ' ' && !selectedAnswer)) return;
     if (!confirmAnswer && input?.form) return;
     event.preventDefault();
     const forwardDuringAudio = allowAudioNext && !item && root.dataset.practiceReady === 'true' && (event.key === 'Enter' || event.key === 'ArrowRight');
@@ -68,14 +68,14 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
   }, [enabled, busy, allowAudioNext, onUse, onListen]);
   useEffect(() => {
     // A correct answer can disable the focused button and leave focus on the page.
-    const enterFromPage = (event: globalThis.KeyboardEvent) => {
+    const keyFromPage = (event: globalThis.KeyboardEvent) => {
       const root = ref.current;
-      if (event.key !== 'Enter' || !root?.getClientRects().length || (event.target !== document.body && event.target !== document.documentElement)) return;
+      if (!['Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(event.key) || !root?.getClientRects().length || (event.target !== document.body && event.target !== document.documentElement)) return;
       if (Array.from(document.querySelectorAll<HTMLElement>('[role="dialog"], [role="menu"], [role="listbox"]')).some(panel => panel.getClientRects().length)) return;
       onKeyDownCapture(event, root);
     };
-    document.addEventListener('keydown', enterFromPage);
-    return () => document.removeEventListener('keydown', enterFromPage);
+    document.addEventListener('keydown', keyFromPage);
+    return () => document.removeEventListener('keydown', keyFromPage);
   }, [onKeyDownCapture]);
   return { ref, onKeyDownCapture };
 }

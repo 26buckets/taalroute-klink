@@ -1,17 +1,9 @@
 {
-  "baselineSourceCommit": "2ee6c95a7550e1d123f96fc550b5f2e1d1e5b709",
+  "baselineSourceCommit": "17f9db234295127531719cebb3df45d666d8ccac",
   "newUniqueSourceIds": [
-    "KSW-AA-TN-001",
-    "KSW-AA-TN-002",
-    "KSW-AA-TN-003",
-    "KSW-AA-TN-004",
-    "KSW-AA-TN-005",
     "KSW-AA-TN-006",
     "KSW-AA-TN-007",
     "KSW-AA-TN-008",
-    "KSW-AA-TN-009",
-    "KSW-AA-TN-010",
-    "KSW-AA-TN-015",
     "KSW-AC-TN-097"
   ],
   "rows": [
@@ -32,8 +24,8 @@
       "image": null,
       "id": "production:copy:alfa-a:KSW-AA-TN-001-020",
       "title": "Letters en woorden · 1",
-      "url": "/practice-content/klink-writing-20261101/ksw-aa-tn-unique-14ba6d5c3bd7e879.json",
-      "count": 11
+      "url": "/practice-content/klink-writing-20261101/ksw-aa-tn-unique-c89d5fd205683ac5.json",
+      "count": 3
     }
   ],
   "preservedLegacyUrl": "/practice-content/klink-writing-20261101/ksw-ac-tn-081-100-015a59a08f2d0f35.json",
@@ -71,6 +63,55 @@
   },
   "reusedExisting": [
     {
+      "sourceId": "KSW-AA-TN-001",
+      "existingId": "groep-1:group:write-letter:letter-m",
+      "model": "m",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-002",
+      "existingId": "groep-1:group:write-letter:letter-a",
+      "model": "a",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-003",
+      "existingId": "groep-1:group:write-letter:letter-s",
+      "model": "s",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-004",
+      "existingId": "groep-4:group:write-letter:letter-o",
+      "model": "o",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-005",
+      "existingId": "groep-1:group:write-letter:letter-n",
+      "model": "n",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-009",
+      "existingId": "TYP-A1-0553",
+      "model": "om",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-010",
+      "existingId": "TYP-A1-0666",
+      "model": "na",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
+    },
+    {
       "sourceId": "KSW-AA-TN-011",
       "existingId": "TYP-A-0003",
       "model": "man",
@@ -97,6 +138,13 @@
       "model": "naam",
       "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
       "criterionOpen": "Existing answer normalization differs from the new exact-copy source; do not claim that criterion verified or silently change its old grading."
+    },
+    {
+      "sourceId": "KSW-AA-TN-015",
+      "existingId": "TYP-B1-3499",
+      "model": "som",
+      "decision": "REUSE_EXISTING_CONTENT_DO_NOT_DUPLICATE",
+      "criterionOpen": "Existing visible-model typing already offers this model. Existing normalization or level context differs; compare that criterion without duplicating the model or silently changing old grading."
     },
     {
       "sourceId": "KSW-AA-TN-016",
@@ -134,7 +182,8 @@
       "criterionOpen": "Existing answer normalization differs from the new exact-copy source; do not claim that criterion verified or silently change its old grading."
     }
   ],
-  "liveSourceCommit": "b670d0c1337eea07e96662237de4b9508de9735c",
+  "liveSourceCommit": "17f9db234295127531719cebb3df45d666d8ccac",
   "enterRepairPreserved": true,
-  "twoSecondLoaderPreserved": true
+  "twoSecondLoaderPreserved": true,
+  "arrowAndSpaceRepairPreserved": true
 }

@@ -38,6 +38,6 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
   console.log(engine,width,theme,checks.length,'PASS');await local.screenshot({path:`${out}/${engine}-${width}-${theme}.png`});await context.close();
  }}finally{await browser.close();}
 }
-assert.equal(checks.length,smoke?24:96);assert.equal(preservation.length,smoke?2:8);assert.deepEqual(errors,[]);
+assert.equal(checks.length,manifest.newUniqueSourceIds.length*(smoke?2:8));assert.equal(preservation.length,smoke?2:8);assert.deepEqual(errors,[]);
 }catch(e){errors.push(e.stack);throw e;}finally{writeFileSync(out+'/browser.json',JSON.stringify({base,checks,preservation,sessionRecovery,errors,physicalPhoneTested:false,sourceCommit:manifest.baselineSourceCommit},null,2)+'\n');}
 console.log(`PASS: ${checks.length} source-bound answer flows; ${preservation.length} unchanged interface comparisons; old round progress retained.`);

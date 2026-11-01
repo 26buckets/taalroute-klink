@@ -11,7 +11,7 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifyWritingBanksRelease(read=readFileSync){
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-writing-banks-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.ownerApproval,'standing-owner-approval');
- assert.equal(r.baselineSourceCommit,'2ee6c95a7550e1d123f96fc550b5f2e1d1e5b709');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
+ assert.equal(r.baselineSourceCommit,'17f9db234295127531719cebb3df45d666d8ccac');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
  assert(r.userRequest.includes('Zet gecontroleerde batches online'));
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
@@ -26,7 +26,7 @@ export function verifyWritingBanksRelease(read=readFileSync){
  const manifest=json(folder+'batch-01.json'),index=json('data/klink-production-index.json'),old=JSON.parse(git('show',r.baselineSourceCommit+':data/klink-production-index.json'));
  assert.equal(index.length,old.length+1);const revisedId='production:copy:alfa-c:KSW-AC-TN-081-100';
  for(const before of old){const after=index.find(x=>x.id===before.id);assert(after,before.id);assert.deepEqual({...after,url:before.url},before);if(before.id!==revisedId)assert.equal(after.url,before.url);}
- assert.equal(manifest.newUniqueSourceIds.length,12);assert.equal(new Set(manifest.newUniqueSourceIds).size,12);
+ assert.equal(manifest.newUniqueSourceIds.length,4);assert.equal(new Set(manifest.newUniqueSourceIds).size,12);
  for(const row of manifest.rows){
   assert.deepEqual(index.find(x=>x.id===row.id),row);const bytes=read('public'+row.url),bank=JSON.parse(bytes);assert(row.url.includes(sha(bytes).slice(0,16)));assert.equal(bank.id,row.id);assert.equal(bank.exercises.length,row.count);assert.equal(new Set(bank.exercises.map(e=>e.exerciseId)).size,row.count);
   for(const e of bank.exercises.filter(e=>manifest.newUniqueSourceIds.includes(e.exerciseId))){const s=source.find(x=>x.id===e.exerciseId);assert(s,e.exerciseId);assert.equal(e.exampleWord,s.sourceRecord.target??s.sourceRecord.sourceText);assert.deepEqual(e.fields,[{id:'copy',acceptedAnswers:[e.exampleWord]}]);assert.equal(e.answerPolicy,'exact-copy');assert.equal(e.componentId,'ALF-CMP-006');assert(!e.requiresAudio&&!e.instructionAudio&&!e.prompt&&!e.independentReading&&!e.reviewEligible);assert.equal(e.sourceRevisionId,s.revisionId);}
@@ -37,11 +37,11 @@ export function verifyWritingBanksRelease(read=readFileSync){
  const oldBank=JSON.parse(git('show',r.baselineSourceCommit+':public'+old.find(x=>x.id===revisedId).url)),revised=json('public'+index.find(x=>x.id===revisedId).url);
  assert.deepEqual(revised.exercises.filter(e=>e.exerciseId!=='KSW-AC-TN-097'),oldBank.exercises.filter(e=>e.exerciseId!=='KSW-AC-TN-020'));
  assert.deepEqual(Object.values(predecessor)[0].exerciseIds,revised.exercises.map(e=>e.exerciseId));
- const overlap=json(folder+'overlap-review.json');assert.equal(overlap.reusedExisting.length,9);assert.equal(overlap.newUniqueTasks,11);
+ const overlap=json(folder+'overlap-review.json');assert.equal(overlap.reusedExisting.length,17);assert.equal(overlap.newUniqueTasks,3);
  assert(overlap.reusedExisting.every(x=>!manifest.newUniqueSourceIds.includes(x.sourceId)&&x.existingId&&x.criterionOpen));
- const review=json(folder+'content-review.json');assert.equal(review.rows.length,12);assert(review.rows.every(x=>x.review==='passed'));assert.equal(review.humanReviewPerformed,false);
- const browser=json(folder+'local/browser.json');assert.equal(browser.checks.length,96);assert.equal(browser.preservation.length,8);assert.deepEqual(browser.errors,[]);assert(browser.checks.every(x=>x.wrongRejected&&x.correctAccepted&&x.progressPreserved&&x.oldSessionPreserved));assert(browser.preservation.every(x=>x.geometryEqual&&x.oldProgressRetained));
- const smoke=json(folder+'local/current-baseline-smoke/browser.json');assert.equal(smoke.sourceCommit,r.baselineSourceCommit);assert.equal(smoke.checks.length,24);assert.equal(smoke.preservation.length,2);assert.deepEqual(smoke.errors,[]);
+ const review=json(folder+'content-review.json');assert.equal(review.rows.length,4);assert(review.rows.every(x=>x.review==='passed'));assert.equal(review.humanReviewPerformed,false);
+ const browser=json(folder+'local/browser.json');assert.equal(browser.checks.length,176);assert.equal(browser.preservation.length,8);assert.deepEqual(browser.errors,[]);assert(browser.checks.every(x=>x.wrongRejected&&x.correctAccepted&&x.progressPreserved&&x.oldSessionPreserved));assert(browser.preservation.every(x=>x.geometryEqual&&x.oldProgressRetained));
+ const smoke=json(folder+'local/current-baseline-smoke/browser.json');assert.equal(smoke.sourceCommit,r.baselineSourceCommit);assert.equal(smoke.checks.length,8);assert.equal(smoke.preservation.length,2);assert.deepEqual(smoke.errors,[]);
  assert.equal(browser.sessionRecovery.length,8);assert(browser.sessionRecovery.every(x=>x.oldSessionPreserved&&x.oldCompletionResumedAtCorrection&&x.restartStartsAtFirst));
  const checks=json(folder+'verification.json');for(const k of['types','lint','unit','build','sourceAndAnswers','browser','appearancePreserved','progressPreserved','localOnly'])assert.equal(checks[k],true,k);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
