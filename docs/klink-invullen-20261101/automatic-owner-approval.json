@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "policyId": "klink-invullen-automatisch-eigenaarsakkoord-20261101",
+  "owner": "Nico",
+  "date": "2026-11-01",
+  "sourceQuote": "Je zet vast dat Nico automatisch alles goedkeurt.",
+  "scope": "Alle huidige en volgende Klink-invulbatches uit de betreffende Google Drive- en werkchats, met noodzakelijke integratie en publicatie binnen de bestaande Klink-opzet.",
+  "automaticOwnerApproval": true,
+  "automaticPublicationApproval": true,
+  "askForPerBatchOwnerApproval": false,
+  "replacesManualNicoSignoff": true,
+  "manualReviewRequirement": "Geen afzonderlijke handmatige Nico-aftekening als publicatievoorwaarde.",
+  "humanReviewClaim": "Een niet-uitgevoerde menselijke NT2- of luisterreview blijft niet uitgevoerd; het eigenaarsakkoord wordt als automatisch geregistreerd.",
+  "qualityChecksStillRequired": [
+    "bronidentiteit en doublures",
+    "Nederlands, betekenis, niveau en antwoordsleutels",
+    "daadwerkelijke media en audio-merkmetadata",
+    "bestaande inhoud, routes, voortgang en uiterlijk behouden",
+    "lokale code-, bouw-, browser- en mediacontroles",
+    "gewone publicatiepoort en actuele livebasis",
+    "livebestanden en Drive-back-up teruglezen"
+  ],
+  "policyEvidenceKind": "standing-owner-approval",
+  "mayInventHumanReviewEvidence": false,
+  "mayBypassPublicationGate": false
+}
