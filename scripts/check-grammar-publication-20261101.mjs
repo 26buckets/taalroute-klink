@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
+import {verifyTwentyWordAudioRelease,readBeforeTwentyWordAudio,twentyWordApprovalFile} from './check-twenty-word-audio-release-20261101.mjs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 
@@ -14,6 +15,8 @@ const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
 const sorted = values => values.toSorted((a,b) => a < b ? -1 : a > b ? 1 : 0);
 export function verifyGrammarPublication(read = readFileSync) {
+  const twentyWordAudio=existsSync(twentyWordApprovalFile)?verifyTwentyWordAudioRelease(read):null;
+  const currentRead=read;if(twentyWordAudio)read=file=>readBeforeTwentyWordAudio(file,twentyWordAudio,currentRead);
   const bytes = read(grammarPublicationFile);
   assert.equal(sha(bytes), approvalHash, 'Only the source-bound owner publication is allowed');
   const r = JSON.parse(bytes);
@@ -25,13 +28,13 @@ export function verifyGrammarPublication(read = readFileSync) {
   assert.equal(r.localCandidate, candidate);
   assert.equal(r.userRequest, 'Goed, rond nu ook de historische archieftest af en los eventuele afwijkingen veilig op. Behoud de opmaak en aanklikbare woordaudio. Dan gaan we alles online zetten. Daarna is alles is gelukt. Doe dat direct.');
   for (const revision of [base, live, r.localCandidate]) git('merge-base', '--is-ancestor', revision, 'HEAD');
-  const changed = sorted([...new Set([...lines(git('diff','--name-only',base)), ...lines(git('ls-files','--others','--exclude-standard'))])].filter(file => !file.startsWith(folder) && file !== 'scripts/check-grammar-publication-20261101.mjs' && file !== 'PUBLICATIE-ACTUEEL.md'));
+  const changed = sorted([...new Set(twentyWordAudio?lines(git('diff','--name-only',base,twentyWordAudio.baselineSourceCommit)):[...lines(git('diff','--name-only',base)), ...lines(git('ls-files','--others','--exclude-standard'))])].filter(file => !file.startsWith(folder) && file !== 'scripts/check-grammar-publication-20261101.mjs' && file !== 'PUBLICATIE-ACTUEEL.md'));
   assert.deepEqual(changed, sorted(Object.keys(r.files)), 'Every publication change must be reviewed');
   for (const [file, record] of Object.entries(r.files)) {
     assert.equal(sha(read(file)), record.after, file);
     if (record.before) assert.equal(sha(git('show', base + ':' + file)), record.before, file);
   }
-  const candidateChanges = sorted([...new Set([...lines(git('diff','--name-only',candidate)), ...lines(git('ls-files','--others','--exclude-standard'))])].filter(file => !file.startsWith(folder) && file !== 'scripts/check-grammar-publication-20261101.mjs' && file !== 'PUBLICATIE-ACTUEEL.md'));
+  const candidateChanges = sorted([...new Set(twentyWordAudio?lines(git('diff','--name-only',candidate,twentyWordAudio.baselineSourceCommit)):[...lines(git('diff','--name-only',candidate)), ...lines(git('ls-files','--others','--exclude-standard'))])].filter(file => !file.startsWith(folder) && file !== 'scripts/check-grammar-publication-20261101.mjs' && file !== 'PUBLICATIE-ACTUEEL.md'));
   assert.deepEqual(candidateChanges, sorted(Object.keys(r.candidateFiles)));
   for (const [file, record] of Object.entries(r.candidateFiles)) {
     assert.equal(sha(read(file)), record.after, file);
@@ -60,11 +63,13 @@ export function verifyGrammarPublication(read = readFileSync) {
     assert.deepEqual(row.errors, []);assert.equal(sha(read(row.file)), row.sha256, row.file);
     for (const key of ['artist','album_artist','publisher']) assert.equal(row.tags[key], 'Taalroute');
   }
-  return r;
+  return {...r,twentyWordAudio};
 }
 export function readBeforeGrammarPublication(file, proof, read = readFileSync) {
+  const currentRead=read;if(proof.twentyWordAudio)read=path=>readBeforeTwentyWordAudio(path,proof.twentyWordAudio,currentRead);
   return proof.files[file]?.before ? git('show', base + ':' + file) : read(file);
 }
 export function readBeforeGrammarCandidate(file, proof, read = readFileSync) {
+  const currentRead=read;if(proof.twentyWordAudio)read=path=>readBeforeTwentyWordAudio(path,proof.twentyWordAudio,currentRead);
   return proof.candidateFiles[file]?.before ? git('show', candidate + ':' + file) : read(file);
 }
