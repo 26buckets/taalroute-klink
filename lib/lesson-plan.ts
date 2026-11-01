@@ -84,7 +84,7 @@ export function exerciseHelp(exercise: PackageExercise, guided = false): string 
   if (exercise.mode === 'missing-grapheme') return 'Luister. Kies wat ontbreekt.';
   if (exercise.componentId === 'ALF-CMP-004') return exercise.audioOnlySources === true ? 'Tik op Luister. Kies daarna het woord.' : 'Kies een woord. Kies daarna de foto.';
   if (exercise.componentId === 'ALF-CMP-005') return 'Tik op de letters. Met Eén terug verander je een letter.';
-  if (exercise.componentId === 'ALF-CMP-006') return 'Typ het woord. Tik daarna op Controleer.';
+  if (exercise.componentId === 'ALF-CMP-006') return exercise.answerPolicy === 'exact-copy' ? 'Typ precies na. Tik daarna op Controleer.' : 'Typ het woord. Tik daarna op Controleer.';
   if (exercise.componentId === 'ALF-CMP-002') return 'Tik op jouw antwoord.';
   return 'Neem rustig de tijd.';
 }
