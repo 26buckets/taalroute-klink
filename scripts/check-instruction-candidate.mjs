@@ -4,7 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 
 export const instructionCandidateFile='docs/instruction-integration-20261101/prepared.json';
-const base='92a560870a5c5368c6711394fb52394eec29a742';
+const base='b670d0c1337eea07e96662237de4b9508de9735c';
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6});
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');

@@ -1,0 +1,904 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "mode": "synonyms",
+      "activity": "synonyms",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-combinations",
+      "activity": "word-combinations",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "suitable-reply",
+      "activity": "suitable-reply",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "model",
+      "activity": "meet",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "same-word",
+      "activity": "same-word",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "heard-image",
+      "activity": "listen",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "heard-word",
+      "activity": "listen",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-image",
+      "activity": "read",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-image-match",
+      "activity": "match",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "hear-match",
+      "activity": "hear-match",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-build",
+      "activity": "build-model",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "recall-word",
+      "activity": "build",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "missing-grapheme",
+      "activity": "missing",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "copy-word",
+      "activity": "copy",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "meaning-register",
+      "activity": "copy",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-dictation",
+      "activity": "dictation",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "write-word",
+      "activity": "write",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "write-letter",
+      "activity": "write-letter",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "paper-dictation",
+      "activity": "paper-dictation",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "read-series",
+      "activity": "read-series",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "repeat-word",
+      "activity": "speak",
+      "response": "oral-participation",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-bingo",
+      "activity": "word-bingo",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "image-bingo",
+      "activity": "image-bingo",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "memory",
+      "activity": "memory",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-card",
+      "activity": "cards",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "synonym-card",
+      "activity": "cards",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "connected-sentence",
+      "activity": "sentences",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "text-question",
+      "activity": "sentences",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "find-sentence",
+      "activity": "find-sentence",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "sentence-dictation",
+      "activity": "sentence-dictation",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "sentence-speak",
+      "activity": "sentence-speak",
+      "response": "oral-participation",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "sentence-question",
+      "activity": "understand",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "connected-text",
+      "activity": "texts",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "connected-dialogue",
+      "activity": "dialogues",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "sound-compare",
+      "activity": "sound-compare",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "dialogue-question",
+      "activity": "dialogue-question",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "text-evidence",
+      "activity": "text-evidence",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "sentence-build",
+      "activity": "sentence-build",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "verb-choice",
+      "activity": "verb-choice",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "functional-message",
+      "activity": "functional-message",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "functional-form",
+      "activity": "functional-form",
+      "response": "answer",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "dialogue-role",
+      "activity": "dialogue-role",
+      "response": "oral-participation",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "word-sort",
+      "activity": "word-sort",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "context-order",
+      "activity": "context-order",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "situation-point",
+      "activity": "situation-point",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "practice-branch",
+      "activity": "practice-branch",
+      "response": "answer",
+      "focusBeforeEnter": "H4",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "content-teacher",
+      "activity": "content-spelling",
+      "response": "guided-response",
+      "nextWithinWorkflow": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "content-choice",
+      "activity": "content-woordpakketten",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "learning-example",
+      "activity": "sound-path",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BUTTON",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "mode": "learning-choice",
+      "activity": "sound-path",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "synonyms",
+      "activity": "synonyms",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-combinations",
+      "activity": "word-combinations",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "suitable-reply",
+      "activity": "suitable-reply",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "model",
+      "activity": "meet",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "same-word",
+      "activity": "same-word",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "heard-image",
+      "activity": "listen",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "heard-word",
+      "activity": "listen",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-image",
+      "activity": "read",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-image-match",
+      "activity": "match",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "hear-match",
+      "activity": "hear-match",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-build",
+      "activity": "build-model",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "recall-word",
+      "activity": "build",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "missing-grapheme",
+      "activity": "missing",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "copy-word",
+      "activity": "copy",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "meaning-register",
+      "activity": "copy",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-dictation",
+      "activity": "dictation",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "write-word",
+      "activity": "write",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "write-letter",
+      "activity": "write-letter",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "paper-dictation",
+      "activity": "paper-dictation",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "read-series",
+      "activity": "read-series",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "repeat-word",
+      "activity": "speak",
+      "response": "oral-participation",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-bingo",
+      "activity": "word-bingo",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "image-bingo",
+      "activity": "image-bingo",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "memory",
+      "activity": "memory",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-card",
+      "activity": "cards",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "synonym-card",
+      "activity": "cards",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "connected-sentence",
+      "activity": "sentences",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "text-question",
+      "activity": "sentences",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "find-sentence",
+      "activity": "find-sentence",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "sentence-dictation",
+      "activity": "sentence-dictation",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "sentence-speak",
+      "activity": "sentence-speak",
+      "response": "oral-participation",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "sentence-question",
+      "activity": "understand",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "connected-text",
+      "activity": "texts",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "connected-dialogue",
+      "activity": "dialogues",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "sound-compare",
+      "activity": "sound-compare",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "dialogue-question",
+      "activity": "dialogue-question",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "text-evidence",
+      "activity": "text-evidence",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "sentence-build",
+      "activity": "sentence-build",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "verb-choice",
+      "activity": "verb-choice",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "functional-message",
+      "activity": "functional-message",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "functional-form",
+      "activity": "functional-form",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "dialogue-role",
+      "activity": "dialogue-role",
+      "response": "oral-participation",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "word-sort",
+      "activity": "word-sort",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "context-order",
+      "activity": "context-order",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "situation-point",
+      "activity": "situation-point",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "practice-branch",
+      "activity": "practice-branch",
+      "response": "answer",
+      "focusBeforeEnter": "H4",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "content-teacher",
+      "activity": "content-spelling",
+      "response": "guided-response",
+      "nextWithinWorkflow": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "content-choice",
+      "activity": "content-woordpakketten",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "learning-example",
+      "activity": "sound-path",
+      "response": "listening-or-reading",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "mode": "learning-choice",
+      "activity": "sound-path",
+      "response": "answer",
+      "focusBeforeEnter": "BODY",
+      "next": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": []
+}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, type KeyboardEvent } from 'react';
+import { useCallback, useEffect, useRef, type KeyboardEvent } from 'react';
 
 export function practiceBusy(root: HTMLElement | null, ignoreAudio = false) {
   return Boolean(root?.querySelector('[data-practice-busy="true"], [data-practice-recording="true"]')) ||
@@ -15,9 +15,9 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
   onListen?: () => void;
 } = {}) {
   const ref = useRef<HTMLElement>(null);
-  function onKeyDownCapture(event: KeyboardEvent<HTMLElement>) {
-    if (!enabled || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.nativeEvent.isComposing) return;
-    const root = event.currentTarget, target = event.target as HTMLElement;
+  const onKeyDownCapture = useCallback((event: KeyboardEvent<HTMLElement> | globalThis.KeyboardEvent, fallbackRoot?: HTMLElement) => {
+    if (!enabled || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || ('nativeEvent' in event ? event.nativeEvent.isComposing : event.isComposing)) return;
+    const root = fallbackRoot ?? event.currentTarget as HTMLElement, target = fallbackRoot ?? event.target as HTMLElement;
     if (!['Enter', ' ', 'ArrowLeft', 'ArrowRight'].includes(event.key) || target.closest('textarea, select, [contenteditable]:not([contenteditable="false"]), [role="menu"], [role="listbox"], [role="slider"], [role="tablist"], audio, video, [role="dialog"], [aria-haspopup="dialog"]')) return;
     const input = target.closest('input');
     if (input && event.key !== 'Enter') return;
@@ -25,16 +25,18 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
     root.dataset.practiceKeyboard = 'true';
     if (!target.closest('[data-practice-automatic]')) onUse?.();
     const item = target.closest<HTMLElement>('[data-practice-item]');
-    const confirmedInput = event.key === 'Enter' && item?.dataset.practiceReady === 'true' && (input || target.closest('[data-practice-check]'));
+    const selectedAnswer = target.closest('.cp-choice-grid button[aria-pressed="true"], .cp-evidence-options button[aria-pressed="true"], .cp-large-options button[aria-pressed="true"]');
+    const confirmAnswer = event.key === 'Enter' && (selectedAnswer || (item ?? root).dataset.practiceReady === 'true' && (input || target.closest('[data-practice-check]')));
     const button = target.closest('button, a, summary, [role="button"]');
     // Native activation happens on keyup for Space; never also click it here.
-    if (!confirmedInput && button && (event.key === 'Enter' || event.key === ' ')) return;
-    if (!confirmedInput && input?.form) return;
+    if (!confirmAnswer && button && (event.key === 'Enter' || event.key === ' ')) return;
+    if (!confirmAnswer && input?.form) return;
     event.preventDefault();
     const forwardDuringAudio = allowAudioNext && !item && root.dataset.practiceReady === 'true' && (event.key === 'Enter' || event.key === 'ArrowRight');
     if ((busy && !forwardDuringAudio) || practiceBusy(root, forwardDuringAudio)) return;
-    if (!item && root.querySelector('[data-practice-item]')) {
-      (root.querySelector<HTMLElement>('[data-practice-item][data-practice-ready="false"]') ?? root.querySelector<HTMLElement>('[data-practice-item]'))?.focus();
+    const unfinishedItem = root.querySelector<HTMLElement>('[data-practice-item][data-practice-ready="false"]');
+    if (!item && root.querySelector('[data-practice-item]') && (unfinishedItem || event.key !== 'Enter')) {
+      (unfinishedItem ?? root.querySelector<HTMLElement>('[data-practice-item]'))?.focus();
       return;
     }
     const scope = item ?? root;
@@ -63,6 +65,17 @@ export function usePracticeKeyboard({ enabled = true, busy = false, allowAudioNe
     } else if (event.key === 'ArrowLeft') move(-1);
     else if (event.key === 'ArrowRight' || scope.getAttribute('data-practice-ready') === 'true') move(1);
     else if (!click('[data-practice-check]', scope) && !item) click('[data-practice-next]');
-  }
+  }, [enabled, busy, allowAudioNext, onUse, onListen]);
+  useEffect(() => {
+    // A correct answer can disable the focused button and leave focus on the page.
+    const enterFromPage = (event: globalThis.KeyboardEvent) => {
+      const root = ref.current;
+      if (event.key !== 'Enter' || !root?.getClientRects().length || (event.target !== document.body && event.target !== document.documentElement)) return;
+      if (Array.from(document.querySelectorAll<HTMLElement>('[role="dialog"], [role="menu"], [role="listbox"]')).some(panel => panel.getClientRects().length)) return;
+      onKeyDownCapture(event, root);
+    };
+    document.addEventListener('keydown', enterFromPage);
+    return () => document.removeEventListener('keydown', enterFromPage);
+  }, [onKeyDownCapture]);
   return { ref, onKeyDownCapture };
 }
