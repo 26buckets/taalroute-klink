@@ -10,7 +10,7 @@ import { synonymCollections, synonymActivities } from '../lib/synonyms.ts';
 import { wordUseCollections } from '../lib/word-use.ts';
 import complete from '../docs/klink-complete-release-20261101/import-manifest.json' with {type:'json'};
 
-test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
+void test('Twelve independent chapters cover all registered activities without changing Lexicon', () => {
   const before = JSON.stringify(packs);
   assert.equal(practiceChapters.length, 12);
   assert.equal(new Set(practiceChapters.map(item => item.id)).size, 12);
@@ -53,7 +53,7 @@ test('Twelve independent chapters cover all registered activities without changi
   assert.equal(JSON.stringify(packs), before);
 });
 
-test('Source levels are honest, never inferred from matching words or a completed activity', () => {
+void test('Source levels are honest, never inferred from matching words or a completed activity', () => {
   for (const activity of ['texts', 'text-question', 'dialogue-role', 'functional-message']) {
     for (const collection of chapterCollections(activity)) for (const exercise of collection.exercises) {
       assert.equal(exercise.independentReading, false);
@@ -70,7 +70,7 @@ test('Source levels are honest, never inferred from matching words or a complete
   assert.equal(chapterCollections('dialogues').length, 128);
 });
 
-test('All 158 complete-release rounds are available through the existing level menus and links',()=>{
+void test('All 158 complete-release rounds are available through the existing level menus and links',()=>{
  for(const row of complete.rows){
   const collection=chapterCollections(row.activity).find(c=>c.id===row.id);assert(collection,row.id);
   assert.equal(collection.level,row.level);assert.equal(collection.contentUrl,row.url);assert.equal(collection.exerciseCount,row.count);
@@ -79,7 +79,7 @@ test('All 158 complete-release rounds are available through the existing level m
  }
 });
 
-test('Deep links validate chapter, activity, collection and level; stale links fail safely', () => {
+void test('Deep links validate chapter, activity, collection and level; stale links fail safely', () => {
   for (const chapter of practiceChapters) for (const activity of chapter.activities) {
     const collection = chapterCollections(activity)[0];
     const location = { chapter: chapter.id, activity, collection: collection.id, level: collection.level };

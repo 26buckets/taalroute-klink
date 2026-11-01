@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {verifyInstructionCandidate,readBeforeInstructionCandidate,instructionCandidateFile,instructionBaseline} from './check-instruction-candidate.mjs';
-test('Local preparation preserves the complete live source behind exact reviewed changes and cannot authorize publication',()=>{
+void test('Local preparation preserves the complete live source behind exact reviewed changes and cannot authorize publication',()=>{
  const proof=verifyInstructionCandidate();assert.equal(proof.publicationApproved,false);
  for(const file of Object.keys(proof.files).filter(f=>/^(app|components|data|lib|public)\//.test(f)&&f!=='components/product/grammar-instruction-example.tsx'))assert.deepEqual(readBeforeInstructionCandidate(file,proof),instructionBaseline(file));
  const original=readFileSync('data/klink-media.json');assert.deepEqual(readBeforeInstructionCandidate('data/klink-media.json',proof),original);
@@ -11,7 +11,7 @@ test('Local preparation preserves the complete live source behind exact reviewed
   const bad=structuredClone(proof);mutate(bad);assert.throws(()=>verifyInstructionCandidate(f=>f===instructionCandidateFile?Buffer.from(JSON.stringify(bad)):readFileSync(f)));
  }
 });
-test('Changing a hash in the preparation cannot bless unrelated source, audio timing, layout or route changes',()=>{
+void test('Changing a hash in the preparation cannot bless unrelated source, audio timing, layout or route changes',()=>{
  const proof=verifyInstructionCandidate();
  for(const[file,mutate]of[
   ['data/klink-imported-practice.json',b=>{const d=JSON.parse(b);d.items[0].id+='-wrong';return Buffer.from(JSON.stringify(d));}],

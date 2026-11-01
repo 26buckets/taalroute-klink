@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import { chapterCollections, chapterExerciseChoices, chapterHash, parseChapterHash, matchesChapterSelection } from '../lib/practice-chapters.ts';
 const collection = chapterCollections('meet').find(item => item.title === 'pen · kip');
 const location = { chapter: 'words', activity: 'meet', collection: collection.id, level: collection.level };
-test('Exercise choices retain exact collection, filters and real routes across skills', () => {
+void test('Exercise choices retain exact collection, filters and real routes across skills', () => {
   const choices = chapterExerciseChoices(location);
   for (const id of ['read','sound-compare']) assert(!choices.some(item=>item.id===id),'Do not switch to a form with different target words');
   for (const id of ['meet', 'listen', 'build-model', 'speak']) assert(choices.some(item => item.id === id), id);
@@ -17,7 +17,7 @@ test('Exercise choices retain exact collection, filters and real routes across s
     assert(matchesChapterSelection(candidate, location));
   }
 });
-test('Unavailable collections and due-only review cannot acquire unrelated shortcuts', () => {
+void test('Unavailable collections and due-only review cannot acquire unrelated shortcuts', () => {
   assert.deepEqual(chapterExerciseChoices({ ...location, collection: 'does-not-exist' }), []);
   assert.deepEqual(chapterExerciseChoices({ ...location, activity: 'learning-review' }), []);
   assert.deepEqual(chapterExerciseChoices({ ...location, level: 'b1' }), []);

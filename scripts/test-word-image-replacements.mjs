@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import { verifyWordImageReplacements } from './check-word-image-replacements.mjs';
 import { allPackageWords } from '../lib/package-content.ts';
 
-test('All fifteen replacements reach their existing word cards', () => {
+void test('All fifteen replacements reach their existing word cards', () => {
   const images = JSON.parse(readFileSync('docs/klink-word-images-20261026/images.json'));
   assert.equal(images.length, 15);
   for (const image of images) for (const id of image.ids) {
@@ -15,7 +15,7 @@ test('All fifteen replacements reach their existing word cards', () => {
   }
 });
 
-test('Replacement release rejects wrong scope, quantity defaults, changed audio and image tampering', () => {
+void test('Replacement release rejects wrong scope, quantity defaults, changed audio and image tampering', () => {
   const release = JSON.parse(readFileSync('docs/klink-owner-release-word-images-20261026.json'));
   verifyWordImageReplacements(release);
   for (const mutate of [r => r.publicationApproved = false, r => r.images = 14, r => r.quantityVariantsPublished = true, r => r.baselineSourceCommit = '0'.repeat(40), r => r.previousAuthorization = 'other.json', r => delete r.files['data/klink-media.json']]) {

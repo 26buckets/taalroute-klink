@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { chapterLevels, chapterCollections, availableChapterCollections, availableChapterActivities, matchesChapterSelection, practiceChapters, chapterHash, parseChapterHash } from '../lib/practice-chapters.ts';
 
-test('Every available entrance has matching tasks; unavailable combinations remain empty without lowering level', () => {
+void test('Every available entrance has matching tasks; unavailable combinations remain empty without lowering level', () => {
   let checked = 0;
   for (const chapter of practiceChapters) for (const {id:level} of chapterLevels) for (const help of ['practice','guided']) {
     const selection={level,help};
@@ -28,7 +28,7 @@ test('Every available entrance has matching tasks; unavailable combinations rema
   console.log('Availability combinations:',checked);
 });
 
-test('Review entrance requires due saved work and never changes it',()=>{
+void test('Review entrance requires due saved work and never changes it',()=>{
   const collection=chapterCollections('learning-review')[0];
   const id=collection.exercises[0].exerciseId;
   const review={[id]:{due:100,last:50,streak:1}};

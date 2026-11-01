@@ -8,7 +8,7 @@ import texts from '../data/klink-alfa-c-texts.json' with {type:'json'};
 import {pilotBlocks,alfaCGuideAudio} from '../lib/alfa-c-practice.ts';
 import {isWithdrawnAudio,instructionAudioEnabled} from '../lib/audio-policy.ts';
 const sha=b=>createHash('sha256').update(b).digest('hex');
-test('All revised Alfa C guidance has a separate voice and exact branded recordings; existing targets are unchanged',()=>{
+void test('All revised Alfa C guidance has a separate voice and exact branded recordings; existing targets are unchanged',()=>{
  assert.equal(audio.voiceId,'h6uBOiAjLKklte8hdYio');assert.notEqual(audio.voiceId,audio.targetVoiceId);assert.equal(instructionAudioEnabled,false);
  assert.equal(sha(execFileSync('git',['show','195a5673:data/klink-alfa-c-texts.json'])),audio.textSourceSha256);
  assert.deepEqual(texts,JSON.parse(execFileSync('git',['show','f7fb187b:data/klink-alfa-c-texts.json'])));

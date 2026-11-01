@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {getSlowAudio,setSlowAudio,subscribeSlowAudio,applyDefaultAudioRate,playMedia,stopMedia,SLOW_AUDIO_RATE} from '../lib/media-player.ts';
 
-test('Session tempo changes active and later audio without restarting; restores each original rate and survives denied storage',async()=>{
+void test('Session tempo changes active and later audio without restarting; restores each original rate and survives denied storage',async()=>{
  const original={Audio:globalThis.Audio,window:globalThis.window,document:globalThis.document,storage:globalThis.sessionStorage};
  const stored=new Map();let audio,starts=0,notifications=0;
  const recording={};globalThis.window=new EventTarget();
