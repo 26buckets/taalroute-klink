@@ -21,6 +21,7 @@ export function TeacherPreparation({task,locked,onBegin}:{task:ContentTask;locke
    <p>Voor de docent. Deze uitleg kan voorbeelden en antwoorden bevatten.</p>
    {!privateView?<button className="secondary-button" onClick={()=>setPrivateView(true)}>De cursist kijkt niet mee</button>:<>
     <h4>De opdracht</h4><p>{phase?.instruction??task.prompt}</p>
+    <h4>Begeleiding bij deze opdracht</h4><p>{task.teacherGuidance}</p>
     <h4>Vooraf controleren</h4><ul>{task.prerequisites.map((text,index)=><li key={index}>{text}</li>)}</ul>
     {Boolean(flow?.materials.length)&&<><h4>Benodigd</h4><ul>{flow!.materials.map((text,index)=><li key={index}>{text}</li>)}</ul></>}
     <details><summary>Bron en context</summary><p className="cp-content-stimulus">{task.stimulus}</p></details>

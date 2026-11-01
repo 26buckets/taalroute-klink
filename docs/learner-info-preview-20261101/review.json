@@ -1,0 +1,31 @@
+{
+  "status": "working-preview-not-published",
+  "baselineMain": "9dd110f16558079d6f89f68da9a9f7771326786d",
+  "currentLiveSource": "9d231b1d9cced59374d3ab4d56083f6881c0b3e8",
+  "previewBranch": "preview/learner-info-20261101",
+  "previewUrl": "http://127.0.0.1:18998/#learner/chapters/words/content-woordpakketten/content%3Awoordpakketten%3Aword-self%3Ab1%3Ab1%3Achoice?level=b1&help=practice",
+  "appearanceApprovalPending": true,
+  "published": false,
+  "sourceFiles": [
+    "app/learner-layout.css",
+    "components/product/imported-practice-surface.tsx",
+    "components/product/imported-teacher-workflow.tsx",
+    "scripts/test-learner-info-preview.cua.js"
+  ],
+  "scope": "Replace only imported-task Hulp met je docent with an info icon beside the question and concise learner instructions. Keep teacher guidance behind the existing private teacher-preparation gate. Preserve exercise prompts, answers, media, grading, storage and other composition.",
+  "nativePhoneKeyboardTested": false,
+  "mobileDemoMethod": "Actual live app and focused sentence field, native layout/visual viewport resized to the available 390x320 area; keyboard itself not rendered.",
+  "liveAudioDemo": "Actual UI confirms previous disabled during pending playback while Verder is enabled after correct answer; next within 800ms, original audio clip 10.16 seconds.",
+  "typeCheckPassed": true,
+  "lintPassed": true,
+  "reactReview": "House Dialog reused; hooks before returns; existing grading/storage untouched; theme inherited on open; dialog keyboard containment, Escape, focus restoration and 44px controls checked.",
+  "noProductionChanges": true,
+  "noPush": true,
+  "noCloudChecks": true,
+  "sha256": {
+    "app/learner-layout.css": "5e408ba168f601d488d420c92f9b366cf3465c074d5965cfde9a85c0615adc10",
+    "components/product/imported-practice-surface.tsx": "7455216f55c31d0a2d027751b93119447372fed37bf117ea64c555d813b692ab",
+    "components/product/imported-teacher-workflow.tsx": "4353533111e463aabaf40a47e12cccc43ed6fb03e2cbe39ca0461ac9b81263e3",
+    "scripts/test-learner-info-preview.cua.js": "c49afe24dd9fbddd75b33f42eb6709f9cc60495dd99d336559bf59dd6a77b82c"
+  }
+}
