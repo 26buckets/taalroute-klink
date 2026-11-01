@@ -50,7 +50,7 @@ for(const [name,engine]of Object.entries({chromium,webkit})){
  for(const level of ['alfa-a','alfa-b']){
   const c=collections.find(c=>c.level===level),p=await browser.newPage();p.setDefaultTimeout(20000);
   await p.addInitScript(()=>{window.__native=[];window.addEventListener('klink-audio-source',e=>{e.detail.muted=true;e.detail.addEventListener('ended',()=>window.__native.push({src:e.detail.src,duration:e.detail.duration}));});});
-  await p.goto(base+'/'+hash(c));await ready(p);await p.waitForFunction(()=>window.__native?.some(a=>Number.isFinite(a.duration)&&a.duration>0));await answer(p,c.exercises[0]);results.push({engine:name,level,nativeAudio:await p.evaluate(()=>window.__native)});await p.close();
+  await p.goto(base+'/'+hash(c));await ready(p);await p.locator('[data-practice-listen]').first().click();await p.waitForFunction(()=>window.__native?.some(a=>Number.isFinite(a.duration)&&a.duration>0));await answer(p,c.exercises[0]);results.push({engine:name,level,nativeAudio:await p.evaluate(()=>window.__native)});await p.close();
  }
  }finally{await browser.close();writeFileSync(out+'/browser.json',JSON.stringify({results,errors},null,2));}
 }
