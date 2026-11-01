@@ -169,6 +169,7 @@ function PackageExercisePlayer({
   const [returnedToUnfinished, setReturnedToUnfinished] = useState(false);
   const [result, setResult] = useState<ResultState>('idle');
   const [exerciseMenuOpen, setExerciseMenuOpen] = useState(false);
+  const [infoTarget,setInfoTarget] = useState<HTMLSpanElement|null>(null);
   const [message, setMessage] = useState('Neem je tijd.');
   const [heard, setHeard] = useState(false);
   const [activeTurn, setActiveTurn] = useState(0);
@@ -478,13 +479,14 @@ function PackageExercisePlayer({
   } : undefined);
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
-              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}{(exercise.componentId !== 'KLINK-CONTENT' || Boolean((exercise.contentTask as {teacherWorkflow?:unknown}|undefined)?.teacherWorkflow)) && <LearnerExerciseInfo key={exercise.exerciseId} exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }} />}</h3>
+              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button data-practice-previous aria-keyshortcuts="ArrowLeft" title="Vorige oefening (←)" onClick={() => { if (!audioPending && !recording && !practiceBusy(keyboard.ref.current)) { if (guided) openGuidedAt(guidedIndex - 1); else openAt(recordIndex - 1); } }} disabled={audioPending || recording || (guided ? guidedIndex <= 0 : recordIndex === 0)} aria-label="Vorige oefening"><ArrowLeft /></button>
               {guided && !firstLetterGuide && !manualAdvance && !exercise.learningPathId && exercise.componentId !== 'KLINK-EXTENDED' && <button data-practice-automatic aria-label={autoPaused || keyboardMode ? 'Automatisch verder aanzetten' : 'Automatisch verder pauzeren'} aria-pressed={autoPaused || keyboardMode} onClick={() => { const paused = autoPaused || keyboardMode; keyboardUsed.current = false; setKeyboardMode(false); setAutoPaused(!paused); }}>{autoPaused || keyboardMode ? <Play /> : <Pause />}</button>}
               <b aria-label={`${guided ? 'Stap' : 'Oefening'} ${guided ? guidedIndex + 1 : recordIndex + 1} van ${guided ? exercises.length : records.length}`}>{guided ? guidedIndex + 1 : recordIndex + 1} / {guided ? exercises.length : records.length}</b>
               {!guided && <button onClick={() => openAt(recordIndex + 1)} disabled={recordIndex >= records.length - 1} aria-label="Volgende oefening"><ArrowRight /></button>}
+              <span ref={setInfoTarget} className="cp-exercise-info-slot">{(exercise.componentId !== 'KLINK-CONTENT' || Boolean((exercise.contentTask as {teacherWorkflow?:unknown}|undefined)?.teacherWorkflow)) && <LearnerExerciseInfo key={exercise.exerciseId} exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }} />}</span>
             </nav>);
   return (
     <section {...keyboard} data-practice-ready={result === 'right'} className={`cp-exercise-browser ${guided && !practiceRound ? 'is-guided' : ''} ${practiceRound ? 'is-mixed-round' : ''}`} data-exercise-id={exercise.exerciseId} data-answer-hidden={['word-dictation', 'recall-word', 'missing-grapheme', 'sentence-question'].includes(exercise.mode) ? 'true' : undefined}>
@@ -516,6 +518,7 @@ function PackageExercisePlayer({
               key={exercise.exerciseId}
               exercise={exercise}
               pack={pack}
+              infoTarget={infoTarget}
               onRecordingChange={setRecording}
               onAudio={source => listen(source)}
               onFinish={finish}
@@ -561,6 +564,7 @@ export function ExerciseSurface({
   dialogueControls,
   answeredCorrectly = false,
   onRecordingChange,
+  infoTarget,
 }: {
   exercise: PackageExercise;
   pack: PackageDefinition;
@@ -575,10 +579,11 @@ export function ExerciseSurface({
   dialogueControls?: DialogueControls;
   answeredCorrectly?: boolean;
   onRecordingChange?: (busy: boolean) => void;
+  infoTarget?: HTMLElement | null;
 }) {
   const demo = beginnerExerciseDemo(pack, exercise, guided);
   switch (exercise.componentId) {
-    case 'KLINK-CONTENT': return <ImportedPracticeSurface exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
+    case 'KLINK-CONTENT': return <ImportedPracticeSurface infoTarget={infoTarget} exercise={exercise} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
     case 'KLINK-STANDARD': return <StandardPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;
     case 'KLINK-LEARNING': return <LearningPathSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onHelp={onHelp} canAnswer={canAnswer} />;
     case 'KLINK-EXTENDED': return exercise.mode === 'dialogue-role' ? <section className="cp-task-card"><Prompt exercise={exercise} onAudio={onAudio} /><p>Geef zelf antwoord.</p><WordHint exercise={{ ...exercise, helpWord: asString(asRecord(exercise.roleModel).text) }} onHelp={onHelp} />{canAnswer && <Recorder onFinish={onFinish} onRecordingChange={onRecordingChange} />}</section> : <ExtendedPracticeSurface exercise={exercise} onAudio={onAudio} onFinish={onFinish} onReset={onReset} onHelp={onHelp} canAnswer={canAnswer} answeredCorrectly={answeredCorrectly} />;

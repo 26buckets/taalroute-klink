@@ -1,4 +1,4 @@
-import {verifyWritingCopyNextRelease,readBeforeWritingCopyNext} from './check-writing-copy-next-release-20261101.mjs';
+import{verifyInfoHeaderRelease,readBeforeInfoHeader}from'./check-info-header-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -7,7 +7,7 @@ const base='780d798ba604114c5be5828aa89c2932ef45faac',live='780d798ba604114c5be5
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifyLearningGoalsRelease(read=readFileSync){
- const successor=verifyWritingCopyNextRelease(read),currentRead=read;read=file=>readBeforeWritingCopyNext(file,successor,currentRead);
+ const successor=verifyInfoHeaderRelease(read),currentRead=read;read=file=>readBeforeInfoHeader(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-learning-goals-20261101.json');assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceChangeApproved);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);assert(r.userRequest.includes('Zet Wat oefen je? met de gekleurde labels boven Zo oefen je'));git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
  const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));assert.deepEqual(changed,sort([...r.changedFiles,floor,r.approval]));assert.deepEqual(sort(Object.keys(r.files)),r.changedFiles);for(const[f,h]of Object.entries(r.files))assert.equal(sha(read(f)),h,f);for(const[f,h]of Object.entries(r.evidenceFiles))assert.equal(sha(read(f)),h,f);
  const runtime=changed.filter(f=>/^(app|components|hooks|data|lib|public|db|drizzle)\//.test(f));assert.deepEqual(runtime,sort(['app/learner-layout.css','components/product/imported-practice-surface.tsx','components/product/package-exercise-browser.tsx','components/product/package-group-practice.tsx','components/product/learner-exercise-info.tsx','data/klink-learning-goals.json','lib/learning-goals.ts']));
@@ -23,4 +23,4 @@ export function verifyLearningGoalsRelease(read=readFileSync){
  const proof=json(folder+'verification.json');for(const k of['types','lint','allGoalMappings','approvedLabelsAndColors','keyboard','mobileTouch','teacherPrivacy','nativeAudioAndNext','answersAndProgress','contentMediaAndStorageUnchanged','localOnly'])assert.equal(proof[k],true,k);assert.equal(proof.catalogueVariants,99652);assert.equal(proof.uniqueExerciseIds,67956);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,successor};
 }
-export function readBeforeLearningGoals(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):readBeforeWritingCopyNext(file,r.successor,read);}
+export function readBeforeLearningGoals(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):readBeforeInfoHeader(file,r.successor,read);}

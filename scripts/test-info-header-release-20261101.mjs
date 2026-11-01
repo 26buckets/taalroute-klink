@@ -1,0 +1,4 @@
+import test from'node:test';import assert from'node:assert/strict';import{readFileSync}from'node:fs';import{verifyInfoHeaderRelease}from'./check-info-header-release-20261101.mjs';
+test('approved header info and actual answer interaction pass',()=>assert.equal(verifyInfoHeaderRelease().approvedBy,'Nico'));
+for(const file of['components/product/imported-practice-surface.tsx','docs/info-header-20261101/local/checks.json'])test('reject changed source or proof '+file,()=>assert.throws(()=>verifyInfoHeaderRelease(f=>f===file?Buffer.concat([readFileSync(f),Buffer.from(' ')]):readFileSync(f))));
+test('reject missing publication approval',()=>assert.throws(()=>verifyInfoHeaderRelease(f=>{const b=readFileSync(f);if(f!=='docs/klink-owner-release-info-header-20261101.json')return b;return Buffer.from(JSON.stringify({...JSON.parse(b),publicationApproved:false}));})));

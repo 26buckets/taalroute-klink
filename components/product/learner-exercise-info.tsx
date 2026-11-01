@@ -1,13 +1,14 @@
 'use client';
 /* oxlint-disable jsx-a11y/no-noninteractive-tabindex -- The scrollable explanation needs keyboard access while the close buttons stay visible. */
-import {useRef,useState,type CSSProperties,type ReactNode} from 'react';
+import {useRef,useState,type CSSProperties} from 'react';
+import {createPortal} from 'react-dom';
 import {Info,X} from 'lucide-react';
 import {Dialog,DialogClose,DialogContent,DialogTitle,DialogTrigger} from '@/components/ui/dialog';
 import {learningGoalFor} from '@/lib/learning-goals';
 import type {PackageExercise} from '@/lib/package-content';
 import type {ContentTask} from '@/lib/imported-practice-contract';
 
-export function LearnerExerciseInfo({exercise,onHelp,showTrigger=true,children}:{exercise:PackageExercise;onHelp:()=>void;showTrigger?:boolean;children?:ReactNode}) {
+export function LearnerExerciseInfo({exercise,onHelp,showTrigger=true,target}:{exercise:PackageExercise;onHelp:()=>void;showTrigger?:boolean;target?:HTMLElement|null}) {
   const [open,setOpen]=useState(false),[style,setStyle]=useState<CSSProperties>({});
   const trigger=useRef<HTMLButtonElement>(null),close=useRef<HTMLButtonElement>(null);
   const goal=learningGoalFor(exercise),task=exercise.contentTask as ContentTask|undefined;
@@ -23,7 +24,7 @@ export function LearnerExerciseInfo({exercise,onHelp,showTrigger=true,children}:
     }
     setOpen(next);
   }}>
-    {children?<div className="cp-content-question">{children}{button}</div>:button}
+    {target === undefined ? button : target && createPortal(button,target)}
     {open&&<DialogContent className="cp-learner-info" style={style} showCloseButton={false} initialFocus={close} aria-describedby={undefined}>
       <header><DialogTitle>Over deze oefening</DialogTitle><DialogClose ref={close} className="secondary-button" aria-label="Uitleg sluiten"><X aria-hidden="true"/></DialogClose></header>
       <section className="cp-learner-info-body" aria-label="Uitleg bij deze oefening" tabIndex={0}>
