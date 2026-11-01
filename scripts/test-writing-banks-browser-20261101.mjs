@@ -6,14 +6,14 @@ import {groupSessionKey} from '../lib/group-practice.ts';
 import {collectionProgressId,roundProgressPrefix} from '../lib/round-progress.ts';
 const base=process.env.KLINK_TEST_BASE||'http://127.0.0.1:19041',out=process.env.KLINK_TEST_OUTPUT||'docs/writing-banks-20261101/local';mkdirSync(out,{recursive:true});
 const json=f=>JSON.parse(readFileSync(f)),manifest=json('docs/writing-banks-20261101/batch-01.json'),index=json('data/klink-production-index.json');
-const checks=[],preservation=[],errors=[];
+const checks=[],preservation=[],errors=[],smoke=!!process.env.KLINK_WRITING_SMOKE;
 const route=r=>'/'+chapterHash({chapter:'writing',activity:'copy',collection:r.id,level:r.level,help:r.help});
 const oldKey=roundProgressPrefix+collectionProgressId('copy',manifest.rows[0].id,manifest.preservedLegacyUrl);
 async function geometry(p){await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(250);await p.evaluate(()=>window.scrollTo(0,0));return p.evaluate(()=>Object.fromEntries(['.cp-task-card','.cp-task-prompt','.cp-text-entry input','[data-practice-check]','[data-practice-next]'].map(s=>{const e=document.querySelector(s),r=e.getBoundingClientRect(),c=getComputedStyle(e);return[s,{x:r.x,y:r.y,width:r.width,height:r.height,font:c.fontFamily,size:c.fontSize,weight:c.fontWeight,color:c.color,background:c.backgroundColor}];})));}
 try{
 for(const[engine,type]of Object.entries({chromium,webkit})){
  const browser=await type.launch({headless:true,...(engine==='chromium'?{channel:'chrome'}:{})});
- try{for(const width of[1280,390])for(const theme of['light','dark']){
+ try{for(const width of(smoke?[390]:[1280,390]))for(const theme of(smoke?['light']:['light','dark'])){
   const context=await browser.newContext({viewport:{width,height:844},colorScheme:theme,hasTouch:width<800});const p=await context.newPage();p.on('pageerror',e=>errors.push({engine,width,theme,url:p.url(),message:e.message,stack:e.stack}));
   await context.addInitScript(({oldKey})=>{if(!localStorage.getItem('writing-test-seeded')){localStorage.setItem(oldKey,JSON.stringify({version:1,total:20,done:['KSW-AC-TN-081','KSW-AC-TN-020']}));localStorage.setItem('klink.round-progress.v1:unrelated','{"version":1,"total":2,"done":["keep"]}');localStorage.setItem('writing-test-seeded','yes');}localStorage.setItem('klink.exercise-view.v1','{"photo":false,"text":false}');},{oldKey});
   await p.goto(base,{waitUntil:'networkidle'});
@@ -33,6 +33,6 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
   console.log(engine,width,theme,checks.length,'PASS');await local.screenshot({path:`${out}/${engine}-${width}-${theme}.png`});await context.close();
  }}finally{await browser.close();}
 }
-assert.equal(checks.length,96);assert.equal(preservation.length,8);assert.deepEqual(errors,[]);
-}catch(e){errors.push(e.stack);throw e;}finally{writeFileSync(out+'/browser.json',JSON.stringify({base,checks,preservation,errors,physicalPhoneTested:false,sourceCommit:'92a560870a5c5368c6711394fb52394eec29a742'},null,2)+'\n');}
-console.log('PASS: 96 source-bound answer flows; 8 unchanged interface comparisons; old round progress retained.');
+assert.equal(checks.length,smoke?24:96);assert.equal(preservation.length,smoke?2:8);assert.deepEqual(errors,[]);
+}catch(e){errors.push(e.stack);throw e;}finally{writeFileSync(out+'/browser.json',JSON.stringify({base,checks,preservation,errors,physicalPhoneTested:false,sourceCommit:manifest.baselineSourceCommit},null,2)+'\n');}
+console.log(`PASS: ${checks.length} source-bound answer flows; ${preservation.length} unchanged interface comparisons; old round progress retained.`);

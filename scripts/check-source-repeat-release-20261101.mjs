@@ -1,4 +1,4 @@
-import {verifyWritingBanksRelease,readBeforeWritingBanks} from './check-writing-banks-release-20261101.mjs';
+import {verifyEnterFocusRelease,readBeforeEnterFocus} from './check-enter-focus-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -7,7 +7,7 @@ const base='5aff33c933f6e6446264f4ae668ea2a923c20e61',live='039eb22ede86403144dc
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 export function verifySourceRepeatRelease(read=readFileSync){
- const successor=verifyWritingBanksRelease(read),currentRead=read;read=file=>readBeforeWritingBanks(file,successor,currentRead);
+ const successor=verifyEnterFocusRelease(read),currentRead=read;read=file=>readBeforeEnterFocus(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-source-repeat-20261101.json');
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);assert.equal(r.approvedBy,'Nico');assert.equal(r.ownerApproval,'standing-owner-approval');assert(r.publicationApproved&&r.appearanceUnchanged);
  assert(r.userRequest.includes('overige Klink-invulbatches zelfstandig af'));
@@ -38,4 +38,4 @@ export function verifySourceRepeatRelease(read=readFileSync){
  const proof=json(folder+'verification.json');for(const k of['types','lint','unit','build','sourceReferences','allAnswers','browser','progressIsolated','appearancePreserved','media','learningGoalsPreserved','localOnly'])assert.equal(proof[k],true,k);assert.equal(proof.independentHumanReview,false);assert.equal(proof.classroomPilot,'open');
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,successor};
 }
-export function readBeforeSourceRepeat(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeWritingBanks(file,r.successor,read);}
+export function readBeforeSourceRepeat(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeEnterFocus(file,r.successor,read);}

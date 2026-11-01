@@ -11,7 +11,7 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 export function verifyWritingBanksRelease(read=readFileSync){
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-writing-banks-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceUnchanged);assert.equal(r.ownerApproval,'standing-owner-approval');
- assert.equal(r.baselineSourceCommit,'92a560870a5c5368c6711394fb52394eec29a742');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
+ assert.equal(r.baselineSourceCommit,'b7c04d8da4835c8b01f8314bd6247710ed75d0bf');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
  assert(r.userRequest.includes('Zet gecontroleerde batches online'));
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
  const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])].sort((a,b)=>a.localeCompare(b));
@@ -39,6 +39,7 @@ export function verifyWritingBanksRelease(read=readFileSync){
  assert(overlap.reusedExisting.every(x=>!manifest.newUniqueSourceIds.includes(x.sourceId)&&x.existingId&&x.criterionOpen));
  const review=json(folder+'content-review.json');assert.equal(review.rows.length,12);assert(review.rows.every(x=>x.review==='passed'));assert.equal(review.humanReviewPerformed,false);
  const browser=json(folder+'local/browser.json');assert.equal(browser.checks.length,96);assert.equal(browser.preservation.length,8);assert.deepEqual(browser.errors,[]);assert(browser.checks.every(x=>x.wrongRejected&&x.correctAccepted&&x.progressPreserved));assert(browser.preservation.every(x=>x.geometryEqual&&x.oldProgressRetained));
+ const smoke=json(folder+'local/current-baseline-smoke/browser.json');assert.equal(smoke.sourceCommit,r.baselineSourceCommit);assert.equal(smoke.checks.length,24);assert.equal(smoke.preservation.length,2);assert.deepEqual(smoke.errors,[]);
  const checks=json(folder+'verification.json');for(const k of['types','lint','unit','build','sourceAndAnswers','browser','appearancePreserved','progressPreserved','localOnly'])assert.equal(checks[k],true,k);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
  return r;
