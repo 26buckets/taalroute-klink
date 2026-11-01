@@ -4,6 +4,7 @@ import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
+import {readBeforeLaterContentRevisions} from './check-later-content-revisions.mjs';
 const manifest=JSON.parse(readFileSync('docs/long-content-review-20261030/source-amendments.json'));
 const baseline=new Map();
 function original(file){
@@ -12,8 +13,9 @@ function original(file){
 }
 export function readBeforeLongReview(file,read=readFileSync){
  const changes=manifest.changes.filter(c=>c.path[0]===file);
- if(!changes.length)return read(file);
- const current=JSON.parse(read(file));
+ const bytes=readBeforeLaterContentRevisions(file,read);
+ if(!changes.length)return bytes;
+ const current=JSON.parse(bytes);
  for(const c of changes){
   let o=current;for(const k of c.path.slice(1,-1))o=o[k];const k=c.path.at(-1);
   if(c.removed)assert(!Object.hasOwn(o,k));else assert.deepEqual(o[k],c.after,c.path.join('/'));

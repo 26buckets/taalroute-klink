@@ -504,3 +504,13 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
 .cp-learner-info-tip { padding: 16px; background: var(--canvas); border-left: 3px solid var(--primary); }
 .cp-learner-info-return { min-height: 44px; justify-self: start; padding: 8px 12px; font-size: 16px; font-weight: 400; }
 @media (max-width: 480px) { .cp-learner-info[data-slot="dialog-content"] { padding: 16px; gap: 16px; } }
+
+/* Keep scrolled text behind an opaque toolbar, with its approved position intact. */
+.learner-app .cp-exercise-stage:has(.cp-teacher-workflow) > .cp-exercise-tools { background: var(--paper); box-shadow: 0 -24px 0 var(--paper); }
+/* Nico's local example changes only the text layout of one existing grammar task. */
+.learner-app .cp-instruction-example { display: grid; gap: 24px; font-size: 22px; line-height: 1.6; overflow-wrap: anywhere; }
+.learner-app .cp-instruction-example section { display: grid; gap: 12px; }
+.learner-app .cp-instruction-example :is(h4,p,ul) { margin: 0; }
+.learner-app .cp-instruction-example h4 { font-size: inherit; line-height: inherit; font-weight: 500; }
+.learner-app .cp-instruction-example ul { padding-left: 1.25em; list-style: disc; }
+.learner-app .cp-instruction-example li + li { margin-top: 8px; }

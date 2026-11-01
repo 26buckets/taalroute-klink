@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
@@ -54,7 +55,7 @@ void test('new collections keep their level, activity, IDs and answers through e
  }
 });
 void test('old synonym records, bank media, original curriculum, instructions and appearance remain unchanged',()=>{
- for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readFileSync(f),execFileSync('git',['show',(f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?read('docs/word-use-independent-review-20261101/baseline.json').sourceCommit:base)+':'+f],{maxBuffer:128e6}),f);
+ for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readPreservedAppearance(f),execFileSync('git',['show',(f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?'e6fc6294fb4670b0624c5e8c909018fe52ad5804':base)+':'+f],{maxBuffer:128e6}),f);
  for(const[level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
  const original=JSON.parse(execFileSync('git',['show',base+':data/klink-word-library-index.json'],{maxBuffer:16e6})),current=read('data/klink-word-library-index.json'),added=new Set(['word-combinations','suitable-reply']);
  assert.deepEqual({...current,chapters:current.chapters.map(c=>({...c,activities:c.activities.filter(a=>!added.has(a))})),activities:current.activities.filter(a=>!added.has(a.id))},original);
@@ -63,3 +64,13 @@ void test('audio resolution refuses altered transcripts, roles, missing approval
  const [id,entry]=Object.entries(bindings)[0];assert(entry);
  for(const changes of [{transcript:'anders'},{role:'wrong'},{review:'candidate'},{metadataApproved:false},{src:'/package-audio/../secret.mp3'}])assert.equal(resolveRegisteredAudio(id,entry.transcript,entry.role,undefined,{[id]:{...entry,...changes}}),undefined);
 });
+
+// Compare with the actual integrated live floor; only this exact local addition is removed.
+function readPreservedAppearance(file) {
+ const current=readFileSync(file);
+ if(file!=='app/learner-layout.css')return current;
+ const addition=readFileSync('docs/instruction-local-20261101/layout-addition.css');
+ assert.equal(createHash('sha256').update(addition).digest('hex'),'f28371faa8fc19a8ac899c2daf42059b080189b91d0489185498a93c0337df07');
+ assert(current.subarray(-addition.length).equals(addition));
+ return current.subarray(0,current.length-addition.length);
+}

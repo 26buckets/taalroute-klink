@@ -45,7 +45,7 @@ const demos: DemoDefinition[] = [
   { id: 'document', category: 'Praktijk', title: 'Lees de afspraak', short: 'Vind informatie op een echte tekstvorm.', level: 'A1', icon: <ScanText /> },
   { id: 'dialogue', category: 'Praktijk', title: 'Wat zeg je?', short: 'Kies een passende reactie in een gesprek.', level: 'A1', icon: <MessageCircle /> },
   { id: 'timetable', category: 'Praktijk', title: 'Zoek je bus', short: 'Lees een eenvoudig vertrekbord.', level: 'A1', icon: <Bus /> },
-  { id: 'category', category: 'Woord', title: 'Wat hoort waar?', short: 'Orden woorden op betekenis.', level: 'Alfa B', icon: <Shapes /> },
+  { id: 'category', category: 'Woord', title: 'Wat hoort waar?', short: 'Leg bij elkaar wat bij elkaar hoort.', level: 'Alfa B', icon: <Shapes /> },
 ];
 
 const categories = ['Alles', 'Klank', 'Woord', 'Lezen', 'Praktijk'] as const;
