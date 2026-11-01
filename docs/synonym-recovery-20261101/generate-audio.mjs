@@ -1,0 +1,23 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const folder='docs/synonym-recovery-20261101',plan=JSON.parse(readFileSync(folder+'/voice-plan.json'));
+const clip=plan.newRecordings[0],record=folder+'/audio.json';
+const sha=b=>createHash('sha256').update(b).digest('hex');
+const original='/Users/nicoknoester/.cache/klink-synonyms-recovery-20261101/originals/SR001.mp3';
+const packetHash=f=>execFileSync('ffmpeg',['-v','error','-i',f,'-map','0:a:0','-c:a','copy','-f','hash','-hash','sha256','-'],{encoding:'utf8'}).trim();
+assert.equal(plan.provider,'ElevenLabs');assert.equal(plan.newRecordings.length,1);assert.equal(clip.text,'bestedingen');assert.notEqual(clip.voiceId,plan.instructionVoiceId);
+if(existsSync(record)) {const r=JSON.parse(readFileSync(record));assert.equal(r.sha256,sha(readFileSync('public'+r.src)));console.log('Existing recording retained.');process.exit(0);}
+const key=readFileSync('/Users/nicoknoester/Documents/Taalroute-muziek-audio/.env','utf8').match(/^ELEVENLABS_API_KEY\s*=\s*(.+)$/m)?.[1].trim().replace(/^['"]|['"]$/g,'');assert(key);
+const headers={'xi-api-key':key,'Content-Type':'application/json'};
+const sub=await fetch('https://api.elevenlabs.io/v1/user/subscription',{headers});assert(sub.ok,'ElevenLabs account unavailable: '+sub.status);const before=await sub.json();const text=clip.text+'.';assert(before.character_limit-before.character_count>text.length*2,'Insufficient existing ElevenLabs credits');
+mkdirSync(original.slice(0,original.lastIndexOf('/')),{recursive:true});mkdirSync('public/package-audio/synoniemen-aanvulling-20261101',{recursive:true});
+const res=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${clip.voiceId}?output_format=mp3_44100_128`,{method:'POST',headers,body:JSON.stringify({text,model_id:plan.model,language_code:'nl',apply_text_normalization:'off',voice_settings:plan.settings,seed:1}),signal:AbortSignal.timeout(60000)});
+assert(res.ok,'ElevenLabs conversion failed: '+res.status+' '+(res.ok?'':await res.text()));const bytes=Buffer.from(await res.arrayBuffer());assert(bytes.length>1000);writeFileSync(original,bytes);
+const metadata={artist:'Taalroute',album_artist:'Taalroute',publisher:'Taalroute',album:'Klink - Synoniemen',title:clip.text,copyright:'Taalroute'};
+execFileSync('ffmpeg',['-v','error','-n','-i',original,'-map_metadata','-1','-c:a','copy',...Object.entries(metadata).flatMap(([k,v])=>['-metadata',k+'='+v]),'-metadata','encoder=','public'+clip.src]);
+assert.equal(packetHash(original),packetHash('public'+clip.src));const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_format','-of','json','public'+clip.src]));for(const[k,v]of Object.entries(metadata))assert.equal(probe.format.tags[k],v);
+const afterRes=await fetch('https://api.elevenlabs.io/v1/user/subscription',{headers});assert(afterRes.ok);const after=await afterRes.json();
+const output={...clip,provider:plan.provider,model:plan.model,settings:plan.settings,originalSha256:sha(bytes),sha256:sha(readFileSync('public'+clip.src)),audioPacketHash:packetHash('public'+clip.src),audioPacketsUnchanged:true,metadataVerified:true,metadata:probe.format.tags,duration:Number(probe.format.duration),humanListeningReview:'open',requestId:res.headers.get('request-id'),historyItemId:res.headers.get('history-item-id'),sourceText:text,existingCreditsUsed:after.character_count-before.character_count,newCreditPurchase:false,originalBackupPath:original};
+writeFileSync(record,JSON.stringify(output,null,2)+'\n');console.log(JSON.stringify({word:clip.text,provider:plan.provider,duration:output.duration,metadataVerified:true,existingCreditsUsed:output.existingCreditsUsed}));

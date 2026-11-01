@@ -40,7 +40,7 @@ try {
   assert.equal(await page.getByRole('link', { name: 'Synoniemen', exact: true }).count(), 0);
   assert.equal(await page.getByRole('button', { name: 'Synoniemen', exact: true }).count(), 0);
   checks.push('Word library has no duplicate synonym entrance; saved word state retained.');
-  for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 185]]) {
+  for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 192]]) {
     await page.goto(base + '/' + chapterHash({ chapter: 'words', activity: 'synonyms', level, help: 'practice' }));
     await page.locator('.cp-chapter-collection').first().waitFor();
     assert.equal(await page.getByRole('button', { name: level.toUpperCase(), exact: true }).getAttribute('aria-pressed'), 'true');
@@ -49,16 +49,16 @@ try {
     assert.deepEqual((await page.locator('[data-collection]').evaluateAll(nodes => nodes.map(node => node.dataset.collection))).sort(), ids.sort());
     assert.equal(synonymBank.entries.filter(entry => entry.active && entry.levels.includes(level)).length, expected);
   }
-  checks.push('A1/A2/B1 show the correct cumulative collections and counts: 16/59/185.');
+  checks.push('A1/A2/B1 show the correct cumulative collections and counts: 16/59/192.');
   for (const collection of synonymCollections) {
     await page.goto(base + '/' + location(collection));
     for (const [at, exercise] of collection.exercises.entries()) await answer(page, exercise, at === 0);
   }
-  checks.push('All 185 real questions: target word, four text choices, wrong/right feedback, manual next step, no media.');
+  checks.push('All 192 real questions: target word, four text choices, wrong/right feedback, manual next step, no media.');
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.taalroute.savedWords.v1')));
   assert.deepEqual(saved, ['klink-woord-map']);
   const review = await page.evaluate(() => JSON.parse(localStorage.getItem('klink.learning-review.v1')));
-  assert.equal(Object.keys(review).filter(id => id.startsWith('synonyms:recall:')).length, 185);
+  assert.equal(Object.keys(review).filter(id => id.startsWith('synonyms:recall:')).length, 192);
   const first = synonymCollections[0], firstExercise = first.exercises[0];
   await page.goto(base + '/' + chapterHash({ chapter: 'repeat', activity: 'learning-review', collection: first.id, level: 'a1', help: 'practice' }));
   await page.locator('.cp-synonym-word').waitFor();
@@ -115,4 +115,4 @@ try {
   assert.deepEqual(errors, []);
 } finally { await second.close(); }
 await fs.writeFile(new URL('synonyms-browser-checks.json', out), JSON.stringify({ checks, errors }, null, 2));
-console.log(JSON.stringify({ passed: checks.length, questions: 185, engines: ['Chromium', 'WebKit'], checks }));
+console.log(JSON.stringify({ passed: checks.length, questions: 192, engines: ['Chromium', 'WebKit'], checks }));

@@ -19,10 +19,12 @@ async function verify(page, exercise, activity, wrongFirst = false) {
     assert.equal(await card.innerText(), exercise.cards[0].front.text);
     assert(await next.isDisabled(), 'Reveal the card before marking it practised');
     await card.click();
-    assert.equal(await page.locator('.cp-flash-card').innerText(), exercise.cards[0].back.text);
+    await page.waitForFunction(expected => document.querySelector('.cp-card-back[aria-hidden="false"] strong')?.innerText === expected, exercise.cards[0].back.text);
+    assert.equal(await page.locator('.cp-card-back[aria-hidden="false"] strong').innerText(), exercise.cards[0].back.text);
     assert((await page.locator('.cp-exercise-feedback').innerText()).includes('Geoefend'));
     await page.getByRole('button', { name: 'Toon het eerste woord', exact: true }).click();
-    assert.equal(await page.locator('.cp-flash-card').innerText(), exercise.cards[0].front.text);
+    await page.waitForFunction(expected => document.querySelector('.cp-card-front[aria-hidden="false"] strong')?.innerText === expected, exercise.cards[0].front.text);
+    assert.equal(await page.locator('.cp-card-front[aria-hidden="false"] strong').innerText(), exercise.cards[0].front.text);
   } else {
     if (activity === 'hear-match') {
       assert.equal(await page.locator('.cp-synonym-word').count(), 0, 'The spoken source word is hidden');

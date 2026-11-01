@@ -1,0 +1,23 @@
+✔ Matching help describes the actual source and target controls (22.044041ms)
+✔ Whole word groups feed the exercise library, without changing the curriculum (2978.695666ms)
+✔ Every first-group word is a target in all basic word activities (1.131167ms)
+✔ Bingo has per-word turns, stable boards, no answer model, and audio gating (35.720666ms)
+✔ Sentence recognition reuses real near-contrast sentences and retains reading conditions (76.886541ms)
+✔ Connected instructions do not change participation into proven skill or unpark the short t (0.637667ms)
+✔ Group progress rejects unknown IDs and never uses lesson-progress keys (0.19075ms)
+✔ Twelve independent chapters cover all registered activities without changing Lexicon (9825.828333ms)
+✔ Source levels are honest, never inferred from matching words or a completed activity (0.456542ms)
+✔ Deep links validate chapter, activity, collection and level; stale links fail safely (61.221709ms)
+PASS shared category/sequence/list routes, valid block membership, legacy links, level/help validation.
+PASS exactly twelve shared categories, all 15 sequence blocks and five guided groups placed once; no level expansion.
+✔ scripts/test-unified-practice-navigation.mjs (1835.032583ms)
+PASS continuity: 1692 collections, 7461 small rounds, 49226 unchanged tasks, 1982 exact-word switches; whole boards, old/new links, invalid selections and shared progress
+✔ scripts/test-word-round-continuity.mjs (7173.604666ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10164.131292
