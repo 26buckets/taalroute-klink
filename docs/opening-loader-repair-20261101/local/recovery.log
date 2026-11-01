@@ -1,0 +1,18 @@
+✔ successful import returns the original module and resets only the recovery marker (0.956083ms)
+✔ missing old module reloads once, preserves the route and stored lesson/progress, and avoids an error flash (4.694625ms)
+✔ recognises browser load failure: error loading dynamically imported module: /old.js (0.496ms)
+✔ recognises browser load failure: Importing a module script failed. (0.769375ms)
+✔ recognises browser load failure: Unable to preload CSS for /old.css (0.864375ms)
+✔ recognises browser load failure: Loading chunk teacher-12 failed. (0.632417ms)
+✔ does not reload with {"online":false} (1.446417ms)
+✔ does not reload with {"blocked":true} (0.123834ms)
+✔ real application errors remain errors without reloading (0.122791ms)
+✔ server failure remains an error without browser access (0.123625ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 168.620333
