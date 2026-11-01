@@ -1,3 +1,15 @@
+## Actuele publicatie — cursistinfo naast de vraag — 1 november 2026
+
+Livebron `e6fc6294fb4670b0624c5e8c909018fe52ad5804`; Worker `10514be3-2b96-4dd5-8026-cde0b1bc10b5`. Via de normale `npm run deploy` vanaf schone canonieke main gepubliceerd, als afstammeling van de actuele goedgekeurde livebron `0391320925fc10e4ec86f9c4e8b837fe660df46e`. Het officiële logo en de aanvullende taalreview blijven behouden.
+
+Op Nico's expliciete akkoord staat ⓘ naast de vraag. Het opent korte cursistuitleg in het bestaande dialoogvenster. De oorspronkelijke docentnotities staan bij Opdracht en voorbereiding achter De cursist kijkt niet mee. De drie zichtbare runtimebestanden zijn exact gelijk aan het getoonde en goedgekeurde voorstel. Alleen de gedeelde toetsafhandeling krijgt een functionele aanvulling: dialoogtriggers behouden hun eigen Enter/spatie, zodat een goed antwoord de infoknop niet onbedoeld Verder laat activeren. De eerdere vloer blijft behouden buiten dit specifieke akkoord.
+
+Lokaal en online slagen 12 info-/toetsen-/aanraak-/themaproeven in Chromium en WebKit, op 1280×720, 390×844 en 320×568 in licht/donker; 9 integratieproeven met voorbereiding/privacy, eigen eerste antwoord, invoer, keuze en afronding; 16 schrijf-toetsenbordproeven, 12 audio-Verder-veiligheidsproeven en 2 native audio-/herlaadproeven. Lokaal slagen bovendien 14 bestaande toetsenbordproeven, TypeScript, gerichte lint, 6 positieve/negatieve vrijgaveproeven en de volledige normale publicatiepoort met productieopbouw. De historische losse imported/cumulative-unitingangen melden een bestaande interpunctieafwijking in hun herstelbasis; deze taak verandert die broninhoud niet. Geen algemene unitvrijgave geclaimd.
+
+Online zijn de schone bron en alle inhoudsvingerafdrukken bevestigd; twee daadwerkelijk aangeboden audiobestanden zijn bytegelijk. Inhoud, audio, beelden, IDs, routes, opslagformaat en overige appopmaak zijn ongewijzigd. Geen fysieke telefoon of native schermtoetsenbord getest; de mobiele maten en toetsenbordruimte zijn in browsers gecontroleerd. Alle uitgebreide controles lokaal; geen GitHub-workflow of budgetwijziging.
+
+Akkoord en bewijs: `docs/klink-owner-release-learner-info-20261101.json`, de specifieke aanvulling in de bestaande vormgevingsvloer, en `docs/learner-info-release-20261101/`. De bronkopie is op Drive volledig teruggelezen en alle bronhashes/ZIP-integriteit zijn bevestigd (`backup.json`); het definitieve herstelpakket wordt vastgelegd in `final-backup.json`.
+
 ## Actuele publicatie — onafhankelijke tweede AI-taalreview — 1 november 2026
 Livebron `0391320925fc10e4ec86f9c4e8b837fe660df46e`; Worker `865e57f8-c5a0-429a-8257-5267fe5af38d`. Gepubliceerd via `npm run deploy` vanaf schone canonieke main, met behoud van de inmiddels gepubliceerde officiële logoversie `8a8acb1968846acb1843b84981614a5bcc16c012` en diens bevestiging op main.
 
