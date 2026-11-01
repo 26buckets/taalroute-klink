@@ -1,0 +1,11 @@
+{
+  "approvedBy": "Nico",
+  "userQuestion": "Bedoel je dat de Klink-website de kleine basisloader ongeveer twee seconden moet tonen vóór de app opent, zodat je de hele beweging ziet?",
+  "userAnswer": "Ja, op de website",
+  "baselineSourceCommit": "b7c04d8da4835c8b01f8314bd6247710ed75d0bf",
+  "scope": "Minimum two seconds from decoded original opening image and wait for requested workspace; same artwork, size, colors and reduced-motion alternative. No rotation or preview alternatives published.",
+  "files": {
+    "components/product/classroom-boundary.tsx": "aa94870f9b4b90b80df755ad08ad1b886a14e47c46f6831fff009543b419fc64",
+    "components/product/klink-opening-loader.tsx": "07b2a1cf4ee6d58e92dcbd1d103e70728488d66f6d1e8b47cc19c64c56c0cd78"
+  }
+}
