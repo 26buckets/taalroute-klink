@@ -1,0 +1,12 @@
+/* Text keeps its existing metrics; only focus/hover/playing reveals the control. */
+button.cp-inline-word.cp-inline-word.cp-inline-word {
+  display: inline; min-width: 0; min-height: 0; width: auto; height: auto;
+  margin: 0; padding: 0; border: 0; border-radius: 0;
+  background: transparent; color: inherit; font: inherit; letter-spacing: inherit;
+  line-height: inherit; text-align: inherit; vertical-align: baseline; box-shadow: none;
+}
+button.cp-inline-word.cp-inline-word.cp-inline-word:is(:hover, :focus-visible, [data-word-state="playing"]) {
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.cp-word-audio-error { display: block; font-size: 1rem; font-weight: 400; }
+@media print { button.cp-inline-word.cp-inline-word.cp-inline-word { text-decoration: none; } }

@@ -1,4 +1,5 @@
 'use client';
+import { WordAudioText } from './word-audio-text';
 import './word-use.css';
 import { useExerciseViewTarget } from './exercise-view';
 import { ExerciseListen } from './exercise-listen';
@@ -29,7 +30,7 @@ export function ExtendedPracticeSurface({ exercise, onAudio, onFinish, onReset, 
         {exercise.prompt?.audio?.src && <ExerciseListen label={exercise.mode === 'word-combinations' ? 'Luister naar de combinatie en de antwoorden' : 'Luister naar de ander en de antwoorden'} onClick={() => onAudio(exercise.prompt?.audio?.src)} />}
         <p className="cp-synonym-word cp-synonym-context-card"><strong>{exercise.prompt?.text}</strong></p>
       </> : <SourceText exercise={exercise} onAudio={onAudio} onHelp={onHelp} />}
-    {typeof exercise.question === 'string' && <h4>{exercise.question}</h4>}
+    {typeof exercise.question === 'string' && <h4><WordAudioText text={exercise.question} /></h4>}
     {(exercise.questionAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => onAudio((exercise.questionAudio as ExerciseAudio).src)}><Volume2 />De vraag</button>}
     <div className={exercise.mode === 'text-evidence' ? 'cp-evidence-options' : 'cp-choice-grid'}>{options.map(option => <div className="cp-extended-option" key={option.id}><button disabled={!canAnswer || correct} aria-pressed={selected === option.id} className={selected === option.id ? 'selected' : ''} onClick={() => {
       setSelected(option.id);

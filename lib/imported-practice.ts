@@ -15,6 +15,7 @@ export const importedRoutes = [
   { domain: 'woordpakketten', id: 'content-woordpakketten', label: 'Woorden gebruiken', chapter: 'words', category: 'Woorden', icon: 'book' },
 ] as const;
 const selfPracticeIds = new Set(wordUseSelf.map(item => item.id));
+const independentGrammar = (item: ImportedItem) => item.domain === 'grammatica' && item.mode === 'choice' && !item.teacherWorkflow && !item.teacherReference;
 export const importedItems = ([...bank.items, ...wordUseSelf] as ImportedItem[]).filter(item => !importedItemIssues(item).length);
 export const importedActivities = importedRoutes.filter(route => importedItems.some(item => item.domain === route.domain));
 export type ImportedActivity = typeof importedRoutes[number]['id'];
@@ -23,7 +24,7 @@ export function importedExercise(item: ImportedItem): PackageExercise {
   const initialQuestions = item.teacherReference ? importedItems.filter(other => other.teacherReference && other.domain === item.domain && other.stimulus === item.stimulus).map(other => ({ id: other.id, prompt: other.prompt })) : undefined;
   return { exerciseId: `content:${item.id}`, componentId: 'KLINK-CONTENT', contractVersion: '1.0', mode: `content-${item.mode}`, groupActivity: importedRoutes.find(route => route.domain === item.domain)!.id,
     title: item.title, objective: item.objective, sourceContentIds: item.sourceIds, sourceStatus: 'reviewed-concept', phase: 'use', requiresAudio: false, manualAdvance: true, requiresExplicitCompletion: true,
-    assessment: item.mode === 'teacher' ? 'participation' : 'answer', reviewEligible: false, independentReading: false, access: selfPracticeIds.has(item.id) ? 'self-practice' : 'teacher-supported',
+    assessment: item.mode === 'teacher' ? 'participation' : 'answer', reviewEligible: false, independentReading: false, access: selfPracticeIds.has(item.id) || independentGrammar(item) ? 'self-practice' : 'teacher-supported',
     contentLevel: importedLevels[item.level], contentAxis: item.axis, contentTask: {...item,...(initialQuestions?.length ? {initialQuestions} : {})}, feedback: item.feedback.retry,
     targetWordIds: item.teacherWorkflow?.targetWordIds.length ? item.teacherWorkflow.targetWordIds : item.sourceIds.filter(id => id.startsWith('klink-woord-')),
     sourceLessonIds: item.teacherWorkflow?.sourceLessonIds ?? [],

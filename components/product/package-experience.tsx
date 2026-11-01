@@ -368,9 +368,9 @@ function PackageLessons({ pack, onAudio, initialPosition, onPosition, onLessonDo
 function PackageUse({ pack, onAudio, onAttempt, lesson }: { pack: PackageDefinition; onAudio: AudioPlayer; onAttempt?: (attempt: PracticeAttempt) => void; lesson?: PackageLesson }) {
   const { settings } = useRouteSettings();
   const [kind, setKind] = useState<'sentence' | 'text' | 'dialogue' | 'scene'>('sentence');
-  const [readiness, setReadiness] = useState<ContentReadiness>('guided');
+  const [readiness, setReadiness] = useState<ContentReadiness>('independent');
   const [selectedId, setSelectedId] = useState('');
-  const [practicing, setPracticing] = useState(false);
+  const [practicing, setPracticing] = useState(true);
   const sources = [...pack.texts.map(item => ({ ...item, kind: item.kind ?? 'text' })), ...pack.dialogues.map(item => ({ ...item, kind: 'dialogue' }))];
   const items = sources.filter(item => item.kind === kind && (!lesson || item.lessonIds?.includes(lesson.id))).map(item => ({ ...item, placement: contextReadiness(item.id, pack, lesson, settings), exercise: pack.exercises.find(exercise => exercise.contextId === item.id && (!lesson || exercise.lessonId === lesson.id)) })).filter(item => item.exercise);
   const visible = items.filter(item => item.placement.status === readiness);
@@ -385,7 +385,7 @@ function PackageUse({ pack, onAudio, onAttempt, lesson }: { pack: PackageDefinit
     <header className="cp-panel-heading"><h1 className="sr-only">Gebruiken</h1></header>
     <div className="cp-chapter-levels" aria-label="Wat wil je gebruiken?">{([['sentence', 'Zinnen', FileText], ['text', 'Teksten en verhalen', BookOpen], ['dialogue', 'Gesprekken', MessageCircle], ['scene', 'Situaties', Images]] as const).map(([id, label, Icon]) => <button className="secondary-button" key={id} aria-pressed={kind === id} onClick={() => changeKind(id)}><Icon aria-hidden="true" />{label}</button>)}</div>
     {kind === 'scene' ? <PackageScenes pack={pack} /> : <>
-      <fieldset className="cp-chapter-levels"><legend className="sr-only">Wanneer oefenen?</legend>{(Object.keys(readinessLabels) as ContentReadiness[]).map(id => <button key={id} className="secondary-button" aria-pressed={readiness === id} onClick={() => { stopMedia(); setReadiness(id); }}>{readinessLabels[id]} <span aria-label="bronnen">({items.filter(item => item.placement.status === id).length})</span></button>)}</fieldset>
+      <fieldset className="cp-chapter-levels"><legend className="sr-only">Wanneer oefenen?</legend>{(Object.keys(readinessLabels) as ContentReadiness[]).map(id => <button key={id} className="secondary-button" aria-pressed={readiness === id} onClick={() => { stopMedia(); setReadiness(id); }}>{readinessLabels[id]} {!practicing && <span aria-label="bronnen">({items.filter(item => item.placement.status === id).length})</span>}</button>)}</fieldset>
       {readiness === 'later' && <p>Eerst met de docent kiezen en voorbereiden. Deze inhoud is nog geen volgende zelfstandige leesopdracht.</p>}
       <button className="secondary-button" aria-pressed={practicing} onClick={() => { stopMedia(); setPracticing(value => !value); }}>{practicing ? 'Bekijk de bronnen' : 'Oefenen met zinnen en situaties'}<Shapes /></button>
       {practicing ? <PackageGroupPractice key={`${readiness}:${settings.language}`} pack={pack} onAudio={onAudio} onAttempt={onAttempt} scopeId={lesson?.id} usage={{ lesson, settings, readiness }} /> : <>

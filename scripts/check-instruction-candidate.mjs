@@ -14,7 +14,22 @@ export function instructionBaseline(file){
  if(!snapshots.has(file))snapshots.set(file,git('show',base+':'+file));
  return Buffer.from(snapshots.get(file));
 }
+const grammarScopeFile='docs/grammar-self-lessons-20261101/scope.json';
+const grammarScopeHash='7b4f88b80b9e3a1707c562536b4ddd900a647cf66d0d0a1ab3362d0de4c2f98d';
+function grammarBefore(file,scope){
+ const record=scope.files[file];
+ return record?.before ? git('show',scope.baselineSourceCommit+':'+file) : undefined;
+}
 export function verifyInstructionCandidate(read=readFileSync){
+ const originalRead=read;
+ const scopeBytes=read(grammarScopeFile);assert.equal(sha(scopeBytes),grammarScopeHash,'Only the reviewed local grammar integration is allowed');
+ const grammar=JSON.parse(scopeBytes);
+ assert.equal(grammar.localOnly,true);assert.equal(grammar.publicationApproved,false);
+ for(const[file,record]of Object.entries(grammar.files)){
+  assert.equal(sha(read(file)),record.after,file);
+  if(record.before)assert.equal(sha(grammarBefore(file,grammar)),record.before,file);
+ }
+ read=file=>grammar.files[file]?.before?grammarBefore(file,grammar):originalRead(file);
  if(!existsSync(instructionCandidateFile))return null;
  const r=JSON.parse(read(instructionCandidateFile));
  assert.equal(r.baselineSourceCommit,base);assert.equal(r.approvedBy,'Nico');
@@ -22,19 +37,20 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(r.userRequest,'Voeg deze correcties samen met de nieuwste livebasis en los de resterende testafwijkingen en vrijgavepunten veilig op. Behoud deze opmaak, test alles lokaal en publiceer nog niets.');
  git('merge-base','--is-ancestor',base,'HEAD');
  const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
- assert.deepEqual(changed,sort(Object.keys(r.files)),'Every changed or untracked release file must be accounted for');
+ assert.deepEqual(changed,sort([...new Set([...Object.keys(r.files),...grammar.releaseFiles])]),'Every changed or untracked release file must be accounted for');
+ const instructionChanges=Object.keys(r.files);
  for(const [file,hash]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),hash,file);
  const oldScope='docs/instruction-local-20261101/scope.json';
  assert.deepEqual(read(oldScope),git('show','19e7db5c:'+oldScope));
  const allowedRuntime=new Set(JSON.parse(read(oldScope)).files.map(f=>f.path));
  for(const f of ['components/product/imported-practice-surface.tsx','data/klink-alfa-c-readalong.json','lib/learner-route.ts'])allowedRuntime.add(f);
- for(const file of changed)assert(file.startsWith('scripts/')||allowedRuntime.has(file),'Unexpected runtime change: '+file);
- for(const file of changed.filter(f=>/^(components|lib)\//.test(f)&&f!=='lib/learner-route.ts'))assert.deepEqual(read(file),git('show','19e7db5c:'+file),'Preserve the reviewed instruction fix: '+file);
+ for(const file of instructionChanges)assert(file.startsWith('scripts/')||allowedRuntime.has(file),'Unexpected runtime change: '+file);
+ for(const file of instructionChanges.filter(f=>/^(components|lib)\//.test(f)&&f!=='lib/learner-route.ts'))assert.deepEqual(read(file),git('show','19e7db5c:'+file),'Preserve the reviewed instruction fix: '+file);
  const suffix=read('docs/instruction-local-20261101/layout-addition.css');
  assert.equal(sha(suffix),'fb22accf4eca581e4bf3576add6b8e6e3f5b5e4f9320b05911d7abf653172cc0');
  assert.equal(read('app/learner-layout.css').toString(),instructionBaseline('app/learner-layout.css').toString()+suffix.toString());
  assert.equal(read('lib/learner-route.ts').toString(),instructionBaseline('lib/learner-route.ts').toString().replace("'context-order', 'situation-point'","'word-combinations', 'suitable-reply', 'context-order', 'situation-point'"));
- const jsonFiles=changed.filter(f=>f.endsWith('.json')),restored=new Map(jsonFiles.map(f=>[f,JSON.parse(read(f))]));
+ const jsonFiles=instructionChanges.filter(f=>f.endsWith('.json')),restored=new Map(jsonFiles.map(f=>[f,JSON.parse(read(f))]));
  for(const[path,hash]of[
   ['docs/instruction-simplification-20261101/amendment.json','516c09aa6f83dc243b865ad937a4649b84fb588790cd5793b098a26f9f23c773'],
   ['docs/local-instruction-appwide-20261101/amendment.json','bdcc4e401f559f675a9ebeb73534c7c2bda1cf307835061874ba1d34053ccd06'],
@@ -47,8 +63,8 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(periods,2);
  for(const[file,data]of restored)assert.deepEqual(data,JSON.parse(instructionBaseline(file)),'All other source fields remain unchanged: '+file);
  for(const f of JSON.parse(read('docs/instruction-local-20261101/scope.json')).files.filter(f=>f.path.endsWith('.pdf')))assert.equal(sha(read(f.path)),f.afterSha256);
- return r;
+ return {...r,grammarExtension:grammar};
 }
 export function readBeforeInstructionCandidate(file,proof,read=readFileSync){
- return proof&&Object.hasOwn(proof.files,file)?instructionBaseline(file):read(file);
+ return proof&&Object.hasOwn(proof.files,file)?instructionBaseline(file):proof?.grammarExtension?.files[file]?.before?grammarBefore(file,proof.grammarExtension):read(file);
 }

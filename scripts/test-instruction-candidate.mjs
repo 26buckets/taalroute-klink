@@ -25,3 +25,10 @@ void test('Changing a hash in the preparation cannot bless unrelated source, aud
  }
  const bytes=instructionBaseline('app/learner-layout.css');bytes.fill(0);assert.notDeepEqual(instructionBaseline('app/learner-layout.css'),bytes);
 });
+void test('The grammar lesson extension is local-only and rejects altered source or substituted recordings',()=>{
+ const proof=verifyInstructionCandidate(),scope='docs/grammar-self-lessons-20261101/scope.json';
+ assert.equal(proof.grammarExtension.publicationApproved,false);
+ for(const file of [scope,'lib/word-audio.ts',Object.keys(proof.grammarExtension.files).find(f=>f.startsWith('public/package-audio/woordvormen-20261101/'))]) {
+  assert.throws(()=>verifyInstructionCandidate(f=>f===file?Buffer.concat([readFileSync(f),Buffer.from('changed')]):readFileSync(f)));
+ }
+});

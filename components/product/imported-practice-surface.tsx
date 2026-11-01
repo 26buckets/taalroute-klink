@@ -1,4 +1,5 @@
 'use client';
+import { WordAudioText } from './word-audio-text';
 import { useExerciseViewTarget } from './exercise-view';
 import { useEffect, useState } from 'react';
 import { Check } from 'lucide-react';
@@ -36,7 +37,7 @@ export function ImportedPracticeSurface({ exercise, onFinish, onReset, onHelp, c
   }
   if(!prepared)return <TeacherPreparation task={task} locked={Boolean(locked)} onBegin={()=>setPrepared(true)}/>;
   return <section className="cp-task-card cp-content-task" data-content-player={task.mode}>
-    <p {...textView} className="cp-content-stimulus">{task.stimulus}</p>
+    <p {...textView} className="cp-content-stimulus"><WordAudioText text={task.stimulus} /></p>
     <LearnerExerciseInfo exercise={exercise} onHelp={onHelp} showTrigger={Boolean(!staged || firstResponse)} target={infoTarget} /><h4>{staged&&pendingQuestion?pendingQuestion.prompt:task.prompt}</h4>
     {task.mode === 'choice' && <><p>{task.correctOptionIds.length > 1 ? 'Kies alle passende antwoorden.' : 'Kies één antwoord.'}</p><div className="cp-choice-grid">{task.options.map(option => <button key={option.id} className={`secondary-button${selected.includes(option.id) ? ' selected' : ''}`} aria-pressed={selected.includes(option.id)} disabled={locked} onClick={() => { setSelected(previous => task.correctOptionIds.length > 1 ? previous.includes(option.id) ? previous.filter(id => id !== option.id) : [...previous,option.id] : [option.id]); onReset(); }}>{option.text}</button>)}</div></>}
     {staged && !firstResponse && <p>Geef eerst zelf antwoord en wijs aan waar je dat in de tekst ziet. Je mag je antwoord zeggen. {questions.length>1?`Vraag ${questions.findIndex(question=>question.id===pendingQuestion?.id)+1} van ${questions.length}. Eerst alle eigen antwoorden; daarna bespreken we de mogelijkheden.`:''}</p>}

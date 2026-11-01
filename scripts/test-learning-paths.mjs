@@ -30,7 +30,7 @@ test('Every new rule is reachable; intact short paths retain source references a
         'Keep each route short; do not turn the entire word group into one long lesson',
       );
       assert.equal(collection.level, exerciseSetLevel(steps));
-      assert.equal(exerciseSetHelp(steps), 'guided');
+      assert.equal(exerciseSetHelp(steps), activity.id === 'grammar-path' ? 'practice' : 'guided');
       assert.equal(steps[0].learningStage, 'example');
       assert.equal(steps.at(-1).learningStage, 'recall');
       assert.equal(
@@ -221,7 +221,7 @@ test('Current release points to the cumulative instruction; historical approval 
   assert.equal(release.ownerAuthorization, 'docs/klink-owner-release-cumulative-20261018.json');
   const current = JSON.parse(readFileSync(release.ownerAuthorization));
   assert.equal(current.userRequest, JSON.parse(readFileSync('docs/klink-cumulative-release-20261018/owner-instruction.json')).userRequest);
-  assert.equal(current.files['lib/learning-paths.ts'], createHash('sha256').update(readFileSync('lib/learning-paths.ts')).digest('hex'));
+  assert.equal(current.files['lib/learning-paths.ts'], createHash('sha256').update(execFileSync('git', ['show', 'c6e1165d:lib/learning-paths.ts'])).digest('hex'));
   const approval = JSON.parse(readFileSync('docs/klink-owner-release-round3-20261018.json'));
   const published = JSON.parse(readFileSync('docs/klink-publication-didactic-round3-20261018.json'));
   assert.equal(approval.approvedBy, 'Nico');

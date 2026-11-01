@@ -1,4 +1,5 @@
 'use client';
+import { WordAudioText } from './word-audio-text';
 
 import { ExerciseListen } from './exercise-listen';
 import { compactImageSrc } from '@/lib/compact-images';
@@ -80,12 +81,12 @@ function GapSurface({ task, exercise, onAudio, onFinish, onReset, onHelp, canAns
   function submit(answer: string) { if (canAnswer && answer.trim() && !answeredCorrectly) onFinish(answer, correct(answer), correct(answer) ? 'Dit woord past in de zin.' : task.help); }
   return <>
     <fieldset className="cp-practice-display" aria-label="Hoe wil je oefenen?">{(['type', 'choice'] as const).map(kind => <button key={kind} className="secondary-button" aria-pressed={mode === kind} disabled={answeredCorrectly} onClick={() => { setMode(kind); setValue(''); onReset(); if (kind === 'choice') onHelp(); }}>{kind === 'type' ? 'Zelf typen' : 'Kies een woord'}</button>)}</fieldset>
-    {task.cue && <p className="cp-gap-cue">{task.cue}</p>}
-    <h4 className="cp-gap-sentence">{task.before}<span aria-label="Hier mist een woord">…</span>{task.after}</h4>
+    {task.cue && <p className="cp-gap-cue"><WordAudioText text={task.cue} /></p>}
+    <h4 className="cp-gap-sentence"><WordAudioText text={task.before} /><span aria-label="Hier mist een woord">…</span><WordAudioText text={task.after} /></h4>
     {mode === 'type' ? <form className="cp-dictation-form" onSubmit={event => { event.preventDefault(); submit(value); }}><label className="cp-text-entry"><span>Welk woord mist?</span><input value={value} disabled={!canAnswer || answeredCorrectly} autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck={false} maxLength={120} onChange={event => { setValue(event.target.value); onReset(); }} /></label><button data-practice-check className="primary-button" type="submit" disabled={!canAnswer || !value.trim() || answeredCorrectly}>Controleer<Check /></button></form>
       : <div className="cp-choice-grid">{task.options.map(option => <div key={option.id} className="cp-extended-option"><button disabled={!canAnswer || answeredCorrectly} aria-pressed={value === option.label} onClick={() => { setValue(option.label); submit(option.label); }}>{option.label}</button></div>)}</div>}
     <Help text={task.help} onHelp={onHelp} />
-    <button className="secondary-button" aria-expanded={model} onClick={() => { setModel(!model); onHelp(); }}>Voorbeeld</button>{model && <div className="cp-source-text"><p>{task.model}</p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => { onHelp(); void onAudio((exercise.modelAudio as ExerciseAudio).src); }}><Volume2 />Luister</button>}</div>}
+    <button className="secondary-button" aria-expanded={model} onClick={() => { setModel(!model); onHelp(); }}>Voorbeeld</button>{model && <div className="cp-source-text"><p><WordAudioText text={task.model} /></p>{(exercise.modelAudio as ExerciseAudio)?.src && <button className="secondary-button" onClick={() => { onHelp(); void onAudio((exercise.modelAudio as ExerciseAudio).src); }}><Volume2 />Luister</button>}</div>}
   </>;
 }
 function HotspotSurface({ task, onFinish, onReset, onHelp, canAnswer, answeredCorrectly }: TaskProps<HotspotTask>) {
