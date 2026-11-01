@@ -8,7 +8,7 @@ test('Every available entrance has matching tasks; unavailable combinations rema
     const selection={level,help};
     const available=availableChapterActivities(chapter.id,selection);
     for (const activity of chapter.activities) {
-      const expected=activity==='learning-review'?[]:chapterCollections(activity).filter(item=>matchesChapterSelection(item,selection)&&item.exercises.length);
+      const expected=activity==='learning-review'?[]:chapterCollections(activity).filter(item=>matchesChapterSelection(item,selection)&&(item.exerciseCount||item.exercises.length));
       const actual=availableChapterCollections(activity,selection);
       assert.deepEqual(actual,expected);
       assert.equal(available.includes(activity),actual.length>0);
@@ -20,8 +20,8 @@ test('Every available entrance has matching tasks; unavailable combinations rema
     }
     assert.deepEqual(selection,{level,help});
   }
-  assert.equal(availableChapterCollections('meet',{level:'alfa-c',help:'practice'}).length,0);
-  assert.equal(availableChapterActivities('words',{level:'alfa-c',help:'practice'}).length,0);
+  assert(availableChapterCollections('meet',{level:'alfa-c',help:'practice'}).every(c=>c.level==='alfa-c'&&c.help==='practice'&&c.exerciseCount>0));
+  assert(availableChapterActivities('words',{level:'alfa-c',help:'practice'}).includes('same-word'));
   assert(availableChapterActivities('words',{level:'alfa-c',help:'guided'}).length);
   console.log('Availability combinations:',checked);
 });

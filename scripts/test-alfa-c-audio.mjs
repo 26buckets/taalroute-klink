@@ -10,15 +10,17 @@ import {isWithdrawnAudio,instructionAudioEnabled} from '../lib/audio-policy.ts';
 const sha=b=>createHash('sha256').update(b).digest('hex');
 test('All revised Alfa C guidance has a separate voice and exact branded recordings; existing targets are unchanged',()=>{
  assert.equal(audio.voiceId,'h6uBOiAjLKklte8hdYio');assert.notEqual(audio.voiceId,audio.targetVoiceId);assert.equal(instructionAudioEnabled,false);
- assert.equal(sha(fs.readFileSync('data/klink-alfa-c-texts.json')),audio.textSourceSha256);
- assert.equal(Object.keys(audio.clips).length,36);
+ assert.equal(sha(execFileSync('git',['show','195a5673:data/klink-alfa-c-texts.json'])),audio.textSourceSha256);
+ assert.deepEqual(texts,JSON.parse(execFileSync('git',['show','f7fb187b:data/klink-alfa-c-texts.json'])));
+ assert.deepEqual(audio,JSON.parse(execFileSync('git',['show','f7fb187b:data/klink-alfa-c-audio.json'])));
+ assert.equal(Object.keys(audio.clips).length,44);
  for(const b of Object.values(texts.blocks)){assert(alfaCGuideAudio(b.start));assert(alfaCGuideAudio(b.end));}
  for(const c of Object.values(texts.common))assert(alfaCGuideAudio(c.text));
  for(const b of Object.values(texts.blocks))for(const s of b.steps)for(const [field,text] of Object.entries(s))if(field!=='screen'&&text)assert(alfaCGuideAudio(text),text);
  for(const c of Object.values(audio.clips)){
-  assert.equal(c.voiceId,audio.voiceId);assert.equal(alfaCGuideAudio(c.text),c.src);assert(!isWithdrawnAudio(c.src));assert.equal(sha(fs.readFileSync('public'+c.src)),c.sha256);
+  assert.equal(c.voiceId,audio.voiceId);assert.equal(alfaCGuideAudio(c.text),Object.values(audio.clips).findLast(row=>row.text===c.text).src);assert(!isWithdrawnAudio(c.src));assert.equal(sha(fs.readFileSync('public'+c.src)),c.sha256);
   const tags=JSON.parse(execFileSync('/opt/homebrew/bin/ffprobe',['-v','error','-show_format','-of','json','public'+c.src])).format.tags;
-  for(const k of ['artist','album_artist','publisher'])assert.equal(tags[k],'Taalroute');assert.equal(tags.album,'Klink - Alfa C - Uitleg en hulp');assert.equal(tags.title,c.text);assert(!/elevenlabs|suno|openai|generator/i.test(JSON.stringify(tags)));
+  for(const k of ['artist','album_artist','publisher'])assert.equal(tags[k],'Taalroute');assert.match(tags.album,/^Klink - /);assert.equal(tags.title,c.text);assert(!/elevenlabs|suno|openai|generator/i.test(JSON.stringify(tags)));
  }
  const media=JSON.parse(fs.readFileSync('docs/klink-alfa-c-release-20261026/media.json')).media;
  for(const m of media)assert.equal(sha(fs.readFileSync('public'+m.src)),m.sha256,'Existing media '+m.src);

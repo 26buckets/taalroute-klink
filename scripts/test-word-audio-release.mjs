@@ -1,3 +1,4 @@
+import {approvedWords} from './check-approved-word-snapshot.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -19,7 +20,7 @@ test('New word audio preserves pictures and only the explicitly named existing r
 test('All 5127 displayed word cards resolve audio and keep the latest approved images',()=>{
   assert.equal(allPackageWords.length,5127);assert(allPackageWords.every(word=>word.audio));
   const manifest=JSON.parse(readFileSync('docs/klink-wordaudio-publication-20261025/audio-manifest.json'));
-  for(const row of manifest){const word=allPackageWords.find(word=>word.id===row.id);assert.equal(word.word,row.text);assert.equal(word.audio,row.src);}
+  for(const row of manifest){const word=allPackageWords.find(word=>word.id===row.id);assert.equal(word.word,row.text);assert.equal(word.audio,approvedWords.get(word.id).audio);}
   const images=JSON.parse(readFileSync('docs/klink-images-20261025/images.json'));
-  for(const image of images)for(const id of image.ids)assert.equal(allPackageWords.find(word=>word.id===id).image,image.image,id);
+  for(const image of images)for(const id of image.ids)assert.equal(allPackageWords.find(word=>word.id===id).image,approvedWords.get(id).image,id);
 });

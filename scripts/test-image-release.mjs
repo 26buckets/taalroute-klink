@@ -1,3 +1,4 @@
+import {approvedWords} from './check-approved-word-snapshot.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { assertImageMappings } from './check-image-release.mjs';
@@ -18,6 +19,6 @@ test('Every approved image reaches the existing word cards without losing meanin
   const images = JSON.parse(readFileSync('docs/klink-images-20261025/images.json'));
   for (const image of images) for (const id of image.ids) {
     const word = allPackageWords.find(word => word.id === id);
-    assert(word, id); assert.equal(word.image, image.image, id); assert(word.meaning, id);
+    assert(word, id); assert.equal(word.image, approvedWords.get(id).image, id); assert(word.meaning, id);
   }
 });

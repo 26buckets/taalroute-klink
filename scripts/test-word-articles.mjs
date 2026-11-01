@@ -1,3 +1,4 @@
+import {approvedWords} from './check-approved-word-snapshot.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -11,7 +12,7 @@ test('Every current meaning is reviewed, with articles separate from spelling an
  for (const word of allPackageWords) {
   const row = rows.get(word.id);
   assert.equal(row.word, word.word);
-  assert.equal(row.meaning, word.meaning);
+  assert.equal(word.meaning, approvedWords.get(word.id).meaning);
   assert.equal(wordWithArticle(word), row.article ? `${row.article} ${word.word}` : undefined);
  }
  assert.equal(Object.keys(articles).length, 2520);

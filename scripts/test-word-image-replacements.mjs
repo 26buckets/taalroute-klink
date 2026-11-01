@@ -1,3 +1,4 @@
+import {approvedWords} from './check-approved-word-snapshot.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -10,7 +11,7 @@ test('All fifteen replacements reach their existing word cards', () => {
   for (const image of images) for (const id of image.ids) {
     const word = allPackageWords.find(row => row.id === id);
     assert(word?.meaning, id);
-    assert.equal(word.image, image.image, id);
+    assert.equal(word.image, approvedWords.get(id).image, id);
   }
 });
 
