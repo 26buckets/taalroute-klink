@@ -1,0 +1,79 @@
+{
+  "base": "http://127.0.0.1:18996",
+  "checks": [
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "activity": "text-question",
+      "nativeAudio": true,
+      "mouseAfterEnterReplay": true,
+      "mouseAfterArrowsReplay": true,
+      "repeatedReplay": true,
+      "heldSpaceSafe": true,
+      "answerRetained": true,
+      "enterAndArrowsRetained": true,
+      "explicitTabSpaceNative": true,
+      "keyboardAnswerFocusPreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "chromium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "activity": "same-word",
+      "nativeAudio": true,
+      "mouseAfterEnterReplay": true,
+      "mouseAfterArrowsReplay": true,
+      "repeatedReplay": true,
+      "heldSpaceSafe": true,
+      "answerRetained": true,
+      "enterAndArrowsRetained": true,
+      "explicitTabSpaceNative": true,
+      "keyboardAnswerFocusPreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "activity": "text-question",
+      "nativeAudio": true,
+      "mouseAfterEnterReplay": true,
+      "mouseAfterArrowsReplay": true,
+      "repeatedReplay": true,
+      "heldSpaceSafe": true,
+      "answerRetained": true,
+      "enterAndArrowsRetained": true,
+      "explicitTabSpaceNative": true,
+      "keyboardAnswerFocusPreserved": true,
+      "storagePreserved": true
+    },
+    {
+      "engine": "webkit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "activity": "same-word",
+      "nativeAudio": true,
+      "mouseAfterEnterReplay": true,
+      "mouseAfterArrowsReplay": true,
+      "repeatedReplay": true,
+      "heldSpaceSafe": true,
+      "answerRetained": true,
+      "enterAndArrowsRetained": true,
+      "explicitTabSpaceNative": true,
+      "keyboardAnswerFocusPreserved": true,
+      "storagePreserved": true
+    }
+  ],
+  "errors": [],
+  "physicalPhoneTested": false
+}

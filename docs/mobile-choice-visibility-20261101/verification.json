@@ -1,0 +1,19 @@
+{
+  "types": true,
+  "lint": true,
+  "touchAnswers": true,
+  "keyboard": true,
+  "nativeAudio": true,
+  "desktopUnchanged": true,
+  "contentAudioProgressUnchanged": true,
+  "backRestoresNavigation": true,
+  "localOnly": true,
+  "physicalPhoneTested": false,
+  "runtimeScope": "Only appended mobile CSS. Existing source, answer/audio/progress IDs, handlers, routes, storage, all assets and desktop rules unchanged.",
+  "geometry": "192 cases in Chromium/WebKit, 390x844,375x667,320x568,768x1024, light/dark. Every answer hit-tested against overlays before and after correct feedback. Complete reading source unchanged; long text scrolls separately.",
+  "limits": "No physical phone, Bluetooth keyboard or independent human listening test. Compact short-screen mode keeps the back button; app navigation returns after back. Separate synonym and imported-content layouts excluded to preserve their approved composition.",
+  "latestB1SourcesAndAudioPreserved": true,
+  "latestLosslessLoaderPreserved": true,
+  "b1LongestAnswerChecks": 80,
+  "backRestoreChecks": 8
+}
