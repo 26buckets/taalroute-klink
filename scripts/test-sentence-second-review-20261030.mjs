@@ -74,7 +74,7 @@ void test('Every previous exercise key survives; only the recorded linked fields
  assert.equal(priorRows.length,proof.afterPlacements);assert.equal(map.size,proof.afterDistinct);assert.deepEqual(proof.removed,[]);assert.equal(proof.added.length,2);
  for(const a of proof.added){assert(a.key.includes('sentence-build:klink-sentence-ad0f734e2f5137d1'));assert.equal(digest(map.get(a.key)),a.sha256);map.delete(a.key);}
  for(const change of proof.changes){const e=map.get(change.key).exercise;for(const f of change.fields){if(!f.removed)assert.deepEqual(e[f.field],f.after,change.key+'/'+f.field);if(f.added)delete e[f.field];else e[f.field]=f.before;}}
- assert.equal(map.size,proof.beforeDistinct);assert.equal(digest([...map.keys()].sort().map(k=>map.get(k))),proof.beforeDistinctSha256);
+ assert.equal(map.size,proof.beforeDistinct);assert.equal(digest([...map.keys()].sort((a,b)=>a<b?-1:a>b?1:0).map(k=>map.get(k))),proof.beforeDistinctSha256);
 });
 void test('Historical comparison accepts only the exact scoped amendments and rejects unrelated or altered repairs',()=>{
  for(const file of ['data/klink-connected-content.json','data/klink-content-routing.json','public/content-register/active.json'])readBeforeSentenceRevision(file);

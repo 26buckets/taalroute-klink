@@ -1,6 +1,7 @@
 import test from 'node:test';
+import {execFileSync} from 'node:child_process';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { connectedContent, contentForStep, contentReadingConditions } from '../lib/connected-content.ts';
 import { taalroutePackages as packs, exercisesForLesson } from '../lib/taalroute-packages.ts';
 import originalBank from '../data/klink-connected-content.json' with { type: 'json' };
@@ -58,14 +59,10 @@ void test('Suit, jug and molar are not attached to verb-only occurrences; no pub
   assert.equal(new Set(originalBank.items.flatMap(item => item.blocks.map(block => block.audio.src))).size, 1979);
   assert.equal(new Set(connectedContent.filter(item => item.kind === 'dialogue').flatMap(item => item.blocks.map(block => block.audio.src))).size, 512);
 });
-void test('Source-fidelity ledger retains original text, speakers, questions and recording pointers', { skip: !existsSync('outputs/content-connection-20261017/source-ledger.json') }, () => {
-  const ledger = JSON.parse(readFileSync('outputs/content-connection-20261017/source-ledger.json'));
-  assert.equal(ledger.sources.length, 1618);
-  for (const source of ledger.sources) {
-    const item = originalBank.items.find(item => item.id === source.contentId);
-    assert.equal(item.text, source.originalText);
-    assert.deepEqual(item.blocks.map(({ text, speaker }) => [text, speaker]), source.blocks.map(({ text, speaker }) => [text, speaker]));
-    if (source.question) assert.equal(item.discussion.question, source.question);
-    assert(ledger.media.filter(media => item.blocks.some(block => block.audio.src === media.src)).every(media => media.soundUnchanged));
-  }
+void test('The published source reference preserves every text, speaker, question and recording pointer', () => {
+  // The optional 17 October ledger predates approved source corrections; compare the actual integrated release.
+  const published=JSON.parse(execFileSync('git',['show','f7fb187b7901b824234d83478313dcafff7d69a4:data/klink-connected-content.json'],{maxBuffer:128e6}));
+  assert.equal(published.items.length,1612);
+  assert.deepEqual(originalBank,published);
+  for(const item of published.items)for(const block of item.blocks)assert(existsSync('public'+block.audio.src),block.id);
 });
