@@ -1,4 +1,18 @@
+## Kleine basisloader minimaal twee seconden — 1 november 2026
+
+Livebron `b670d0c1337eea07e96662237de4b9508de9735c`, schone canonieke main; Worker `c0eb92ef-ff9f-420a-9256-47d8f4267dc8`. Normaal gepubliceerd via `npm run deploy` als afstammeling van de werkelijk live bevestigde bron `b7c04d8da4835c8b01f8314bd6247710ed75d0bf`. De Enter-correctie en 48 herhaalrondes blijven behouden.
+
+Nico bevestigde uitdrukkelijk dat de kleine basisloader op de website ongeveer twee seconden moet tonen voordat de app opent. De gedeelde opening wacht nu minimaal 2000 ms vanaf de gedecodeerde afbeelding en totdat de aangevraagde omgeving geladen is. Die omgeving wordt tijdens de opening geladen. Een ontbrekende afbeelding blokkeert de app niet; timers en late callbacks worden opgeruimd. Normale navigatie krijgt geen nieuwe minimumwachttijd. Exact dezelfde oorspronkelijke animatie, 158px afbeeldingsbreedte, centrering, kleuren en stilstaande variant bij minder beweging blijven staan. Alle andere loaders blijven uitsluitend previews.
+
+Lokaal: 32 duur-/laad-/opslag-/routecontroles in Chromium en WebKit op desktop en mobiel, inclusief langzame appcode, langzame/ontbrekende afbeelding en minder beweging; 24 ongewijzigde schermvergelijkingen (licht/donker); 8 docentprivacy-situaties; TypeScript, gerichte lint, React-review, 10 hersteltests, 25 vrijgave-/hersteltests en normale publicatiepoort. Online: opnieuw 32 laadcontroles, 4 daadwerkelijke beweging-/stilstand-/eenmalig-afspelenproeven, exacte livebron, behoud van alle inhoudshashes en bytegelijke animatiebestanden. De online meting gebruikt één paginaklok en telt serverwachttijd vóór het zichtbare scherm niet als animatieduur. Geen fysieke telefoon getest. Geen GitHub Actions aanwezig of toegevoegd.
+
+Akkoord: `docs/klink-owner-release-opening-loader-duration-20261101.json`; beperkte aanvulling op de vaste vloer: `docs/appearance-floor-20261031/approved-updates/opening-loader-duration-20261101.json`. Bewijs, gecontroleerde bronback-up en definitieve herstelkopie staan in `docs/opening-loader-duration-20261101/` (`backup.json`, `final-backup.json`). Publiceer uitsluitend een afstammeling van deze livebron via de bestaande publicatiepoort.
+
+---
+
 ## Actuele publicatie — Enter vanaf antwoord en verloren focus — 1 november 2026
+
+Actuele opvolging: de afzonderlijk goedgekeurde openingsduur staat inmiddels live op `b670d0c1337eea07e96662237de4b9508de9735c`. De Enter-hook is daarvan teruggelezen en bytegelijk aan de hieronder volledig geteste herstelbron; de Enter-reparatie blijft dus behouden.
 
 Livebron `b7c04d8da4835c8b01f8314bd6247710ed75d0bf`, schone canonieke main; Worker `b06720a4-9c05-4382-8be8-73ae49ae6c7c`. Via de normale `npm run deploy` gepubliceerd als afstammeling van de laatst werkelijk bevestigde livebron `92a560870a5c5368c6711394fb52394eec29a742`. De oorspronkelijke reparatiebasis is eerst bijgewerkt met de goedgekeurde 48 herhaalrondes en het aangescherpte historische vrijgavebewijs. Een eerdere publicatiestart is vóór upload afgebroken; de geblokkeerde controles zijn opgelost door de canonieke bron en bestaande vrijgaveketen samen te behouden, zonder poort of blokkade te omzeilen.
 

@@ -1,0 +1,5 @@
+{
+  "timing": "Production timing uses the page performance clock for both module request and loader removal. It checks module loading during the visible opening period; response/network time before the page appears is not part of the two-second display interval.",
+  "motion": "Four existing motion cases: Chromium/WebKit, mobile, normal/reduced motion. The font wait is disabled only in the screenshot harness while the app module is deliberately held.",
+  "runtimeChangedAfterPublication": false
+}
