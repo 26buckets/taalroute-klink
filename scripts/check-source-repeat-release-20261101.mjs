@@ -6,7 +6,6 @@ import {createHash} from 'node:crypto';
 const base='5aff33c933f6e6446264f4ae668ea2a923c20e61',live='039eb22ede86403144dc150e7f0f995df10c4f81',folder='docs/repeat-rounds-20261101/';
 const git=(...a)=>execFileSync('git',a,{maxBuffer:128e6}),sha=b=>createHash('sha256').update(b).digest('hex'),lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
-const candidates=new WeakMap();
 export function verifySourceRepeatRelease(read=readFileSync){
  const candidate=verifyInstructionCandidate(read),currentRead=read;read=file=>readBeforeInstructionCandidate(file,candidate,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-source-repeat-20261101.json');
@@ -37,6 +36,6 @@ export function verifySourceRepeatRelease(read=readFileSync){
  const audio=json(folder+'audio-audit.json');assert(audio.passed);assert.equal(audio.files.length,417);
  const media=json(folder+'local/media-checks.json');assert.equal(media.hashes.length,417);assert(media.hashes.every(c=>c.sourceAndHostedIdentical&&c.taalrouteMetadataRetained));assert.equal(media.decoded.length,2);assert(media.decoded.every(c=>c.files.length===417));assert.equal(media.played.length,6);assert(media.played.every(c=>c.ended&&c.nativeElement&&c.playedThroughExistingControl));assert.deepEqual(media.errors,[]);assert.equal(media.humanListeningPerformed,false);
  const proof=json(folder+'verification.json');for(const k of['types','lint','unit','build','sourceReferences','allAnswers','browser','progressIsolated','appearancePreserved','media','learningGoalsPreserved','localOnly'])assert.equal(proof[k],true,k);assert.equal(proof.independentHumanReview,false);assert.equal(proof.classroomPilot,'open');
- const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);if(candidate)candidates.set(r,candidate);return r;
+ const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,instructionCandidate:candidate};
 }
-export function readBeforeSourceRepeat(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeInstructionCandidate(file,candidates.get(r),read);}
+export function readBeforeSourceRepeat(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeInstructionCandidate(file,r.instructionCandidate,read);}
