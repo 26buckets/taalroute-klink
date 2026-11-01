@@ -38,18 +38,21 @@
     {
       "id": "schrijven",
       "title": "Schrijven Alfa C en Alfa A/B",
-      "scope": "880 actuele bronrecords uit 44 opnieuw gelezen native Google Docs; 780 nog niet aangesloten en één herziene bronpositie.",
-      "status": "BRONREGISTER_ACTUEEL_EERSTE_BATCH_IN_CONTROLE",
+      "scope": "880 actuele bronrecords uit 44 native Google Docs: 103 rechtstreeks brongebonden online, 17 bestaande modellen met open criterium en 760 nog niet aangesloten.",
+      "status": "EERSTE_AANVULLENDE_BATCH_ONLINE_GECONTROLEERD",
       "source": "https://drive.google.com/drive/folders/1883bUG_a_G3y2xTPvBfR7WfdFzOAidPG",
-      "done": "De eerdere naschrijfserie telt 100 online bronposities met 99 oorspronkelijke opdracht-ID’s. Alle 44 actuele bronnen opnieuw vastgelegd; geen dubbele bron-ID’s.",
-      "open": "Overige 780 schrijfbronrecords: 700 Alfa C en 80 Alfa A/B. Per module bron-/betekeniscontrole, beoordeling, noodzakelijke media en runtimeacceptatie afronden. Menselijke review en cursistenpilot zijn niet uitgevoerd.",
-      "next": "Eerste batch na bron-, antwoord-, browser-, behoud-, bouw- en Drive-controle via de gewone publicatiepoort publiceren.",
+      "done": "Drie nieuwe Alfa A-kopieertaken en herziene Alfa C TN-097 gepubliceerd. Alle 17 al bestaande modellen uitgesloten van de nieuwe bank. Oude antwoorden en afgeronde sessies bewaard; herziene opdracht niet ten onrechte voltooid. Desktop/mobiel en licht/donker in Chromium/WebKit lokaal en online gecontroleerd.",
+      "open": "760 nog niet aangesloten bronopdrachten plus 17 verschillen in beoordelingscriterium of niveaucontext. Onafhankelijke menselijke NT2-review, cursistenpilot en fysieke toestellen niet getest.",
+      "next": "Hoor en typ KSW-AC-HT-001–100 wordt afzonderlijk voorbereid in de afgestemde implementatiechat. Daarna per module de ontbrekende media, antwoordcriteria en hervatcontrole afronden volgens remaining-readiness.json.",
       "runtimeImported": true,
       "automaticOwnerApproval": true,
       "ownerApprovalPolicyId": "klink-invullen-automatisch-eigenaarsakkoord-20261101",
       "manualNicoSignoffRequired": false,
       "sourceReviewStatusNote": "De opgegeven open punten bevatten bronstatus uit eerdere overdrachten. Een handmatige Nico-aftekening is door de nieuwe opdracht vervangen; daadwerkelijke kwaliteits-/media-/techniekcontroles blijven open waar nog niet uitgevoerd.",
       "publishedSourceIds": [
+        "KSW-AA-TN-006",
+        "KSW-AA-TN-007",
+        "KSW-AA-TN-008",
         "KSW-AC-TN-001",
         "KSW-AC-TN-002",
         "KSW-AC-TN-003",
@@ -151,14 +154,22 @@
         "KSW-AC-TN-099",
         "KSW-AC-TN-100"
       ],
-      "publishedSourceRecords": 100,
-      "remainingSourceRecords": 780,
-      "publicationProof": "docs/writing-copy-next-20261101/publication.json",
-      "driveBackup": "https://drive.google.com/file/d/1VcGq6mABBThR3MRVX9nAH951oZI1NjYD/view",
-      "publishedCanonicalTasks": 99,
-      "sourceAliases": {
+      "publishedSourceRecords": 103,
+      "remainingSourceRecords": 760,
+      "publicationProof": "docs/writing-banks-20261101/publication.json",
+      "driveBackup": "https://drive.google.com/file/d/1-2lQxonCm3vg-fDEHRN4nsP-nfQPg4P2/view",
+      "publishedCanonicalTasks": 103,
+      "sourceAliases": {},
+      "reusedModelsWithOpenCriteria": 17,
+      "publishedSourceCommit": "de651b0e95e31d54492af6ae1aa43af9a84ecafc",
+      "retiredSourceAliases": {
         "KSW-AC-TN-097": "KSW-AC-TN-020"
-      }
+      },
+      "sourceRegister": "docs/writing-banks-20261101/source-register.json",
+      "sourceStatusRegister": "docs/klink-invullen-20261101/writing-source-register.json",
+      "sourceRegisterDriveId": "1gsCkBg-HVMBJGJFo8vg5NBKEMgx-MQLS",
+      "sourceStatusReportDriveId": "1S3PAOAOJETnxFXnjNv746CnI5YIgb4sn",
+      "driveFinalBackup": "https://drive.google.com/file/d/1qF6o2iXqr84fVNKUCsZJ5_g4N0J5DzgP/view"
     },
     {
       "id": "spreken",
@@ -350,5 +361,5 @@
     "repositoryPath": "26buckets/taalroute-klink/AGENTS.md"
   },
   "sourceBaselineAtInitialIntake": "08a44807052370ce16277edb2ac00adfcbdd0d2e",
-  "updatedAt": "2026-11-01T18:26:55.217Z"
+  "updatedAt": "2026-11-01T19:22:42.497374+00:00"
 }

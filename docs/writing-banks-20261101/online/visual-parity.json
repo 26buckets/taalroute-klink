@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "light",
+      "changed": 784,
+      "nativeFocusPixels": 0,
+      "desktopDividerRasterPixels": 784,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "theme": "dark",
+      "changed": 784,
+      "nativeFocusPixels": 0,
+      "desktopDividerRasterPixels": 784,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "light",
+      "changed": 0,
+      "nativeFocusPixels": 0,
+      "desktopDividerRasterPixels": 0,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "theme": "dark",
+      "changed": 0,
+      "nativeFocusPixels": 0,
+      "desktopDividerRasterPixels": 0,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "light",
+      "changed": 2868,
+      "nativeFocusPixels": 2868,
+      "desktopDividerRasterPixels": 0,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 1280,
+      "theme": "dark",
+      "changed": 2868,
+      "nativeFocusPixels": 2868,
+      "desktopDividerRasterPixels": 0,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "light",
+      "changed": 2940,
+      "nativeFocusPixels": 2940,
+      "desktopDividerRasterPixels": 0,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "theme": "dark",
+      "changed": 0,
+      "nativeFocusPixels": 0,
+      "desktopDividerRasterPixels": 0,
+      "unexpected": 0,
+      "staticPixelsPreserved": true
+    }
+  ],
+  "allIdentical": false,
+  "staticAppearancePreserved": true,
+  "sourceAppearanceGuardPassed": true,
+  "assistantVisualReview": "Desktop before/after and WebKit mobile before/after inspected. Native blue focus outline varies with focus state. Chromium differs only in the single desktop divider raster column x220; source CSS, layout and rendered elements are verified unchanged by the release guard. No app code changed to obtain this comparison.",
+  "reference": "Frozen local reference. Browser-native blue focus outline and the one-pixel desktop divider raster band are recorded separately. Every other pixel must match."
+}

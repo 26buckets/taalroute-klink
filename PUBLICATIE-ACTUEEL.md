@@ -2467,3 +2467,20 @@ Lees ook `PUBLICATIE.md` voor de bestaande publicatieroute en voorwaarden; histo
 ## Deelvenster gepubliceerd — 24 oktober 2026
 
 Broncommit `deb7a0cce5e12a5c1fbe067a07e8808c80ca7f61`, liveversie `50d504df-84fa-4e2d-b4f9-a3dc60710276`. Zie `DELEN-PUBLICATIE-20261024.json`. Bestaande inhoud, media, opslag en lesdeelopties behouden; mobiel, desktop, licht en donker gecontroleerd.
+
+
+## Schrijfbronregister en aanvullende kopieertaken — 1 november 2026
+
+Gecontroleerde livebron `de651b0e95e31d54492af6ae1aa43af9a84ecafc` op canonieke main, afstammeling van livebron 17f9db234295127531719cebb3df45d666d8ccac inclusief de goedgekeurde pijltjes-/Spatie-reparatie, Enter-bediening, herhaalronden en twee seconden zichtbare openingsloader. Worker `7a22afb6-3e25-4fae-a839-f27724e49e1c`.
+
+880 unieke bronrecords uit 44 native Drive-documenten vastgelegd. Nieuw online: Alfa A TN-006, TN-007 en TN-008; Alfa C TN-097 gebruikt nu de actuele bronzin. Zeventien bestaande modellen uit lettertyp- en woordkopieeropdrachten worden niet dubbel toegevoegd. De afwijkende oude normalisatie of niveaucontext blijft expliciet open. Deze bronreconciliatie telt 103 rechtstreeks aangesloten bronrecords, 17 hergebruikte modellen met open criterium en 760 nog niet aangesloten bronnen.
+
+De negentien ongewijzigde taken in de herziene bank blijven bytegelijk. De oude bank blijft op zijn adres beschikbaar. Het herstel neemt uitsluitend nog geldige oude antwoorden over; de voormalige alias 020 geeft geen voltooid-vinkje voor de nieuwe 097. Oude voortgang en oude afgeronde groepssessies blijven bewaard; de herziene sessie opent de correctie en opnieuw beginnen start de eerste taak. Alle gerenderde onderdelen, opzet, typografie, knoppen, kleuren en overige opslag blijven behouden. Geen nieuwe media of workflows.
+
+Lokaal: types, gerichte lint, 142 bestaande inhouds-/voortgangstests, 11 bron-/herstel-/vrijgavecontroles inclusief vier negatieve manipulaties, productieopbouw en gewone historische publicatiepoort geslaagd. Lokaal en online: elk 32 fout-/goedantwoordstromen, acht vormgevingsvergelijkingen en acht hervat-/herstartgevallen in Chromium/WebKit, desktop/mobiel en licht/donker. De aangeboden bronbanken en bestaande inhoud-/audiobestanden zijn bytegelijk teruggelezen. Inhoudskenmerken in release.json behouden. Geen onafhankelijke menselijke NT2-review, cursistenpilot of fysieke telefoons geclaimd.
+
+Bewijs: `docs/writing-banks-20261101/publication.json`, `online/`, `source-register.json`, `overlap-review.json` en `remaining-readiness.json`. De 44 volledige bronkopieën en 880 volledige bronrecords blijven in de privé Drive-herstelkopie; de openbare repository bewaart noodzakelijke metadata en de vier gecontroleerde bronposities. Alle zware controles lokaal uitgevoerd; geen GitHub Actions-workflows.
+
+Aanvullend zijn acht expliciet geactiveerde lichte/donkere schermstanden gecontroleerd in Chromium/WebKit op desktop/mobiel, inclusief fout/goed en opslag. De pixelvergelijking bewaart drie exact gelijke schermen en documenteert bij vijf schermen uitsluitend browserfocusranden of één pixelkolom van de desktop-scheidingslijn. Alle overige pixels zijn gelijk; de broncontrole bevestigt ongewijzigde stijlen en gerenderde schermopbouw. Geen wijziging aan de app gedaan voor de beeldvergelijking.
+
+Definitieve herstelkopie volledig teruggelezen: https://drive.google.com/file/d/1qF6o2iXqr84fVNKUCsZJ5_g4N0J5DzgP/view. Alle 137 opgenomen bestanden, 44 native bronkopieën, 880 private bronrecords en ZIP-integriteit gecontroleerd.
