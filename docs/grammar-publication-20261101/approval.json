@@ -2,8 +2,8 @@
   "approvedBy": "Nico",
   "publicationApproved": true,
   "productionBatch": false,
-  "baselineSourceCommit": "08fda5b385ed384d7bf6bebae7a8a2d388c4ac39",
-  "liveSourceCommit": "6a4c2acd346c436cb0344b77da21de8dadc09c16",
+  "baselineSourceCommit": "fb29c5a2698b17871c7c12a8cd46b3a90ccfa889",
+  "liveSourceCommit": "cfeb578a8e2fb29898d5ce994b74793e7630f219",
   "localCandidate": "6c3f777585557b81be4762b662e249463ce95065",
   "userRequest": "Goed, rond nu ook de historische archieftest af en los eventuele afwijkingen veilig op. Behoud de opmaak en aanklikbare woordaudio. Dan gaan we alles online zetten. Daarna is alles is gelukt. Doe dat direct.",
   "files": {
@@ -124,8 +124,8 @@
       "after": "64a261c4040cd33768452cff48a8b95859160e7f463a8975b7bbcd7f5670b3d3"
     },
     "docs/appearance-floor-20261031/floor.json": {
-      "before": "7f972a8d0029f0261f344c76e530f3f0d04978192135929fef22ba4dbe626a20",
-      "after": "4749e9bc5ac4cc521b0934393c8da312de68bc35e9976b217fdb0cab90be84a3"
+      "before": "bcfa78b2417d42cd9442ed0c7c0178445d4b8c5fda17c974be0137358a6c1867",
+      "after": "0cfccba035e6492ecaffba1e73e7009a18c76aefb57a31d823667302986b07c4"
     },
     "docs/content-repair-20261030/audio-review.mjs": {
       "before": "e6f8e8f59a28ca5eb50f0f9ed28e373cec437546443a6c8aabcb2b2037365151",
@@ -6003,6 +6003,10 @@
       "before": "98e409e2c6b6cb212bfe32315a625c4a36c833ec385b58eaa955a3f275911717",
       "after": "bd6492a996ef8262ecbc2094b1f21439f9f0e34f8bc5f7e0e40093a0bb3f9cf1"
     },
+    "scripts/check-insights-menu-link-release-20261101.mjs": {
+      "before": "19cc617207ab3e714cc4758e54395f39c3dc70f01d3472e770e785085cf71a1e",
+      "after": "0ec008f92ed1da08c0106134c4bb81f55456fc8bc18af4fe81b0a189ebb8235e"
+    },
     "scripts/check-instruction-candidate.mjs": {
       "before": null,
       "after": "4877623b07396e811cd9f94475530b239294e532ede278d474f406a0314a7ea4"
@@ -6018,10 +6022,6 @@
     "scripts/check-long-review.mjs": {
       "before": "ac44893b5922c4c7986a52150b2d09c92c017e27bb33e8d5257e41b20cfce465",
       "after": "6a6b1353fadaa23832f44ed4838f2431f1efcd3c1b7db2ccdbabcea911c1439d"
-    },
-    "scripts/check-mobile-choice-visibility-release-20261101.mjs": {
-      "before": "ddea2eb071c7a294109f6a1a499deea02a0464434c91b85d8b05403b298817fc",
-      "after": "c34df6724cea994f29f8ae217143e197878642d9b9affe053e96081c6726c5a6"
     },
     "scripts/check-practice-availability-release.mjs": {
       "before": "56474a1f8f80a44c5873dc2075f29dd98d4a6b078d6600e822185fa2bdb45d54",
@@ -6705,7 +6705,7 @@
     }
   },
   "evidenceFiles": {
-    "docs/grammar-publication-20261101/preservation.json": "374827e291eb6d61d617684d1c3c574505ac4fd5fd49dbd51050b60d9cf0a4ff",
+    "docs/grammar-publication-20261101/preservation.json": "55e9e794b8a68c7c90e3c6963d2a51176e1328c5d60787a3d088a1891accfbfb",
     "docs/grammar-publication-20261101/archive-results.json": "3dbde10c412531c77432013897a6febb72c94594f6e0c2dfdbaca09d42f041a4",
     "docs/grammar-publication-20261101/audio-metadata.json": "4ea842997ec26de2e40c996d4ef413772d440cd1c141fddb428b7be367f36bbc",
     "docs/grammar-publication-20261101/released-word-audio-metadata.json": "b651688c922911782e48a90f609e386ea4d034d9d2f740c5df85fff6ab3dad13"
@@ -6718,6 +6718,10 @@
     "app/learner-layout.css": {
       "before": "a4459ec216571f09440d7d423fff5f69ccdcaa9afeb759b81a786f4b4d594696",
       "after": "f7da37b589d540997874d68f550e75b3ea0ba1961332765aca932635c142ba10"
+    },
+    "components/product/taalroute-header.tsx": {
+      "before": "bb369100cb2403d3d42cf705ab824be53a98fa5ef03fb930bfc18b5dcca75cc2",
+      "after": "9361d2156623b8870991526f6efa22d52484ffd65fe380c0af32786d5908e42e"
     },
     "data/klink-production-index.json": {
       "before": "e33b4a34c5bb5739602c1066e6370d2ce5305e5a1a6b425846b3365ad43f2d13",
@@ -6735,13 +6739,17 @@
       "before": null,
       "after": "64a261c4040cd33768452cff48a8b95859160e7f463a8975b7bbcd7f5670b3d3"
     },
+    "docs/appearance-floor-20261031/approved-updates/insights-menu-link-20261101.json": {
+      "before": null,
+      "after": "8b0bfda29512326e923573c6ce7c287784be3c71b45648cca5b2139c7fe969a2"
+    },
     "docs/appearance-floor-20261031/approved-updates/mobile-choice-visibility-20261101.json": {
       "before": null,
       "after": "769a15993b4352592a31f6bc293123068301507b0d8d5aee8feb2e547b6f4849"
     },
     "docs/appearance-floor-20261031/floor.json": {
       "before": "06833af518581ab8c62c7f0cf31ac6a33e3c31945314361e8340b0e60bc65896",
-      "after": "4749e9bc5ac4cc521b0934393c8da312de68bc35e9976b217fdb0cab90be84a3"
+      "after": "0cfccba035e6492ecaffba1e73e7009a18c76aefb57a31d823667302986b07c4"
     },
     "docs/b1-reviewed-release-20261101/REVIEW.txt": {
       "before": null,
@@ -7443,6 +7451,94 @@
       "before": null,
       "after": "379675a17aedacef22ada4ca0eafb6f1c2e08e82e58cd8952624831ffcd0c0eb"
     },
+    "docs/insights-menu-link-20261101/DIAGNOSE.txt": {
+      "before": null,
+      "after": "df45640a1794c0871809f27333dfe5bd57969383c7d5a3d2e88940001ecc126f"
+    },
+    "docs/insights-menu-link-20261101/backup.json": {
+      "before": null,
+      "after": "236ec1a46e82e5d9a86590f387146450464276b1ab7cdaf52aa05f6a44d6dc6e"
+    },
+    "docs/insights-menu-link-20261101/baseline-live.json": {
+      "before": null,
+      "after": "4d7ce78cc3cc0a28138ee554e095a4f40686ae6d61dc92884b3be457a2ee8bfa"
+    },
+    "docs/insights-menu-link-20261101/final-backup.json": {
+      "before": null,
+      "after": "8acfa0eea1bb2dd35217e07e333a7e93009caadcd2bfc7504f32f005a4bcf79f"
+    },
+    "docs/insights-menu-link-20261101/local/checks.json": {
+      "before": null,
+      "after": "ce6ba37f7a753d7ece8f7e37584b274fc9110d900d2028e9ce0a44f9e1fb8678"
+    },
+    "docs/insights-menu-link-20261101/local/lint.log": {
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/insights-menu-link-20261101/local/menu-1280.png": {
+      "before": null,
+      "after": "ae027baa672dc8e9b2d980a57783a72dc6b1399f26cfc2e7595f01fd1d55501d"
+    },
+    "docs/insights-menu-link-20261101/local/menu-320.png": {
+      "before": null,
+      "after": "77f92eb3afa862518d6067c571a5f3c481ecbca6c98ef5967c4b0781847a6c3a"
+    },
+    "docs/insights-menu-link-20261101/local/menu-390.png": {
+      "before": null,
+      "after": "23abaa21232d29c9b029c768bcb98c5396a958cf71383680c21ae445e8f8ead9"
+    },
+    "docs/insights-menu-link-20261101/local/menu-768.png": {
+      "before": null,
+      "after": "0543f76287f2b22ea7b6e0d6bf3cd5c516ba0c0468a533c0b10cf3ab9c69f8c6"
+    },
+    "docs/insights-menu-link-20261101/local/types.log": {
+      "before": null,
+      "after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/insights-menu-link-20261101/online/checks.json": {
+      "before": null,
+      "after": "d210c65b0177db09dffa2ab5f8dbd0637a2996049ccaf20fee9a383da7f693e4"
+    },
+    "docs/insights-menu-link-20261101/online/deploy.log": {
+      "before": null,
+      "after": "f2dadedfbf2c2ee6b2c19b891bdd58d5472cecca03e85a28ec40002c54286eea"
+    },
+    "docs/insights-menu-link-20261101/online/menu-1280.png": {
+      "before": null,
+      "after": "ae027baa672dc8e9b2d980a57783a72dc6b1399f26cfc2e7595f01fd1d55501d"
+    },
+    "docs/insights-menu-link-20261101/online/menu-320.png": {
+      "before": null,
+      "after": "77f92eb3afa862518d6067c571a5f3c481ecbca6c98ef5967c4b0781847a6c3a"
+    },
+    "docs/insights-menu-link-20261101/online/menu-390.png": {
+      "before": null,
+      "after": "23abaa21232d29c9b029c768bcb98c5396a958cf71383680c21ae445e8f8ead9"
+    },
+    "docs/insights-menu-link-20261101/online/menu-768.png": {
+      "before": null,
+      "after": "0543f76287f2b22ea7b6e0d6bf3cd5c516ba0c0468a533c0b10cf3ab9c69f8c6"
+    },
+    "docs/insights-menu-link-20261101/online/menu-desktop-live.jpg": {
+      "before": null,
+      "after": "61b888e1656025db41adf29e0d682da68cfafdaee5b853ee897b3fd96aea8a5d"
+    },
+    "docs/insights-menu-link-20261101/online/release-tests.log": {
+      "before": null,
+      "after": "2ff347f323df0c270359adf25fb5a8379e3b6d4bc7b4e43ed03799c83c5581d5"
+    },
+    "docs/insights-menu-link-20261101/online/release.json": {
+      "before": null,
+      "after": "5027fcfa774f7ef88e539bb1c2c49806a32900a4941c670e79dc87cabab3af3a"
+    },
+    "docs/insights-menu-link-20261101/publication.json": {
+      "before": null,
+      "after": "d532dc31f5f4ee0fa11c627e859ecd2690f101d6ea1d1b1a9d224bc80d0199f9"
+    },
+    "docs/insights-menu-link-20261101/verification.json": {
+      "before": null,
+      "after": "99b0fd769f293bdd277a1c9b74718bdddb40bc41725f4b8f1412fb841e7afd70"
+    },
     "docs/klink-invullen-20261101/implementation-progress.json": {
       "before": "107365fadb7e94c27f8187a33c9c2f3bde910622a69e2236cd95c3b1165c33f9",
       "after": "1af5ef8ea4be5af1fd4e8ec17c4405a1555a96d84b76af16edf14e19c7ea2dc3"
@@ -7454,6 +7550,10 @@
     "docs/klink-owner-release-b1-reviewed-20261101.json": {
       "before": null,
       "after": "f73b495fed068a3ab2b890a661b6aa0e46147f200e08afeee0bd05c1d1b25f53"
+    },
+    "docs/klink-owner-release-insights-menu-link-20261101.json": {
+      "before": null,
+      "after": "b653509bc526c8e9cf5851bc21d16f6be2e4dc3ffc9496d011300001dacf3e96"
     },
     "docs/klink-owner-release-mobile-choice-visibility-20261101.json": {
       "before": null,
@@ -8643,13 +8743,17 @@
       "before": "22fd4739e63f832227cdf5a777c95992cbd1aad02f846143d35f4ebcec4f7bc6",
       "after": "bd6492a996ef8262ecbc2094b1f21439f9f0e34f8bc5f7e0e40093a0bb3f9cf1"
     },
+    "scripts/check-insights-menu-link-release-20261101.mjs": {
+      "before": null,
+      "after": "0ec008f92ed1da08c0106134c4bb81f55456fc8bc18af4fe81b0a189ebb8235e"
+    },
     "scripts/check-local-code-cleanup.mjs": {
       "before": "b0e3bb856de2381fedf644a89d7bf58d8082aae94056d33d67f477529e51c5eb",
       "after": "e99999c2a15f38b5a8933711de10514f49a34c2b1b55f74861f169e8237222a2"
     },
     "scripts/check-mobile-choice-visibility-release-20261101.mjs": {
       "before": null,
-      "after": "c34df6724cea994f29f8ae217143e197878642d9b9affe053e96081c6726c5a6"
+      "after": "1b33381de78f10dcf6ca2ff4d28fb42b716dde689fc051944f5e2587b24cf790"
     },
     "scripts/check-opening-loader-label-release-20261101.mjs": {
       "before": "533117b4ccba4b861ec65ba5cf6cc9baa08974873cb1a6fb6f24bf5d9a628874",
@@ -8670,6 +8774,14 @@
     "scripts/test-grammar-publication-20261101.mjs": {
       "before": null,
       "after": "61c9391341eb95a7dd63ef195d5e5eb017c3a957ad8b1a5db2a6872ea699c13b"
+    },
+    "scripts/test-insights-menu-link-browser-20261101.mjs": {
+      "before": null,
+      "after": "e65992948daf9e757d9bc5875575d3013abc16b3ae5a701c9bf553facce7682a"
+    },
+    "scripts/test-insights-menu-link-release-20261101.mjs": {
+      "before": null,
+      "after": "abd9825bacb9da3f0c012536146c20f048449d5672cafef41f5b2dc46d48e1b2"
     },
     "scripts/test-lexicon-basis-selection.mjs": {
       "before": "6ef471341cbaf170fe0810fef4197a4430ed6286ce1004e84f7d4ad81ba1e956",

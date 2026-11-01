@@ -8,7 +8,7 @@ const live = 'cfeb578a8e2fb29898d5ce994b74793e7630f219';
 const candidate = '6c3f777585557b81be4762b662e249463ce95065';
 const folder = 'docs/grammar-publication-20261101/';
 export const grammarPublicationFile = folder + 'approval.json';
-const approvalHash = '29cb47719c9e52f5b5ad3ad62662a3f98670102f199d7a3b27d7897deb6317d2';
+const approvalHash = '4994aa9951c834fd29dcfa121aa683855c1022dae8eb157a2d565862cae5ad34';
 const git = (...args) => execFileSync('git', args, { maxBuffer: 128e6 });
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const lines = bytes => bytes.toString().trim().split('\n').filter(Boolean);
