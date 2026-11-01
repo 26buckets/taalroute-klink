@@ -26,7 +26,7 @@ export function verifyWritingBanksRelease(read=readFileSync){
  const manifest=json(folder+'batch-01.json'),index=json('data/klink-production-index.json'),old=JSON.parse(git('show',r.baselineSourceCommit+':data/klink-production-index.json'));
  assert.equal(index.length,old.length+1);const revisedId='production:copy:alfa-c:KSW-AC-TN-081-100';
  for(const before of old){const after=index.find(x=>x.id===before.id);assert(after,before.id);assert.deepEqual({...after,url:before.url},before);if(before.id!==revisedId)assert.equal(after.url,before.url);}
- assert.equal(manifest.newUniqueSourceIds.length,4);assert.equal(new Set(manifest.newUniqueSourceIds).size,12);
+ assert.equal(manifest.newUniqueSourceIds.length,4);assert.equal(new Set(manifest.newUniqueSourceIds).size,manifest.newUniqueSourceIds.length);
  for(const row of manifest.rows){
   assert.deepEqual(index.find(x=>x.id===row.id),row);const bytes=read('public'+row.url),bank=JSON.parse(bytes);assert(row.url.includes(sha(bytes).slice(0,16)));assert.equal(bank.id,row.id);assert.equal(bank.exercises.length,row.count);assert.equal(new Set(bank.exercises.map(e=>e.exerciseId)).size,row.count);
   for(const e of bank.exercises.filter(e=>manifest.newUniqueSourceIds.includes(e.exerciseId))){const s=source.find(x=>x.id===e.exerciseId);assert(s,e.exerciseId);assert.equal(e.exampleWord,s.sourceRecord.target??s.sourceRecord.sourceText);assert.deepEqual(e.fields,[{id:'copy',acceptedAnswers:[e.exampleWord]}]);assert.equal(e.answerPolicy,'exact-copy');assert.equal(e.componentId,'ALF-CMP-006');assert(!e.requiresAudio&&!e.instructionAudio&&!e.prompt&&!e.independentReading&&!e.reviewEligible);assert.equal(e.sourceRevisionId,s.revisionId);}
