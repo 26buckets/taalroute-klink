@@ -1,0 +1,11 @@
+.klink-opening-loader {
+  display: grid;
+  place-items: center;
+  min-height: var(--klink-app-height, 100dvh);
+  padding: 24px;
+}
+.klink-opening-loader img {
+  display: block;
+  width: min(300px, 80vw);
+  height: auto;
+}

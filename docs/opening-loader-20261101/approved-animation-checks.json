@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "checks": [
+    "Chromium 960px: no controls, no overflow, accessible status, static reduced-motion source",
+    "Chromium 320px: no controls, no overflow, accessible status, static reduced-motion source",
+    "Chromium: SVG/Lottie reduced motion and one-shot completed logo",
+    "WebKit 960px: no controls, no overflow, accessible status, static reduced-motion source",
+    "WebKit 320px: no controls, no overflow, accessible status, static reduced-motion source",
+    "WebKit: SVG/Lottie reduced motion and one-shot completed logo",
+    "SVG/Lottie parity frame 0: mean channel delta 0.2736/255",
+    "SVG/Lottie parity frame 49: mean channel delta 0.2795/255",
+    "SVG/Lottie parity frame 59: mean channel delta 0.2794/255",
+    "SVG/Lottie parity frame 85: mean channel delta 0.2795/255",
+    "SVG/Lottie parity frame 112: mean channel delta 0.2860/255",
+    "SVG/Lottie parity frame 161: mean channel delta 0.3058/255",
+    "SVG/Lottie parity frame 275: mean channel delta 0.3058/255"
+  ],
+  "limitations": [
+    "Standalone prototype; no app integration or physical device test",
+    "Raster-backed SVG and Lottie; original image layers retained"
+  ]
+}

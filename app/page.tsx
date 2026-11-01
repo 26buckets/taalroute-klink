@@ -1,5 +1,7 @@
 'use client';
 
+import { KlinkOpeningLoader } from '@/components/product/klink-opening-loader';
+
 import { EntryScreen } from '@/components/product/entry-design';
 import { CheckCircle2 } from 'lucide-react';
 import { lazy, Suspense, useEffect, useState } from 'react';
@@ -59,7 +61,7 @@ export default function KlinkProductSlice() {
   return (
     <div className="product-root" data-theme="taalroute">
       {portal === 'entry' && <EntryScreen onPortal={openPortal} />}
-      {portal !== 'entry' && <Suspense fallback={<output>Klink wordt geopend…</output>}><PracticeWorkspace portal={portal} onExit={() => openPortal('entry')} onToast={setToast} /></Suspense>}
+      {portal !== 'entry' && <Suspense fallback={<KlinkOpeningLoader />}><PracticeWorkspace portal={portal} onExit={() => openPortal('entry')} onToast={setToast} /></Suspense>}
       {toast && <output className="toast-message"><CheckCircle2 />{toast}</output>}
     </div>
   );

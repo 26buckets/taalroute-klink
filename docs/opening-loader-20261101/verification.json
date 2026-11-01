@@ -1,0 +1,19 @@
+{
+  "types": true,
+  "lint": true,
+  "teacherRecovery": true,
+  "teacherPrivacy": true,
+  "approvedAssetsUnchanged": true,
+  "runtimeScopeExact": true,
+  "appearanceCompared": true,
+  "contentMediaAndStorageUnchanged": true,
+  "localOnly": true,
+  "physicalDevicesTested": false,
+  "visualComparison": {
+    "views": 24,
+    "exactMatches": 17,
+    "maximumChangedChannelFraction": 0.000265321829302872,
+    "limit": 0.001,
+    "note": "Small rasterization/edge differences; no layout change. Both engines, two sizes, both color schemes."
+  }
+}

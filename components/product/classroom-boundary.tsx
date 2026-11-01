@@ -1,5 +1,7 @@
 'use client';
 
+import { KlinkOpeningLoader } from './klink-opening-loader';
+
 import { lazy, Suspense, useLayoutEffect, useState, type ReactNode } from 'react';
 import {
   classroomHash,
@@ -42,11 +44,11 @@ export function ClassroomBoundary({ children }: { children: ReactNode }) {
       window.removeEventListener('pageshow', restore);
     };
   }, []);
-  if (classroom === null) return <output>Klink wordt geopend…</output>;
+  if (classroom === null) return <KlinkOpeningLoader />;
   return (
     <>
       <TaalrouteHeader classroom={projecting && !materials} />
-      <Suspense fallback={<output>Klink wordt geopend…</output>}>
+      <Suspense fallback={<KlinkOpeningLoader />}>
         {classroom && <div hidden={materials}><TeacherClassroom onActiveChange={setProjecting} /></div>}
         {materials && <TeacherMaterials />}
         {!classroom && !materials && children}
