@@ -23,4 +23,4 @@ export function verifyOpeningLoaderRepair(read=readFileSync){
  const verification=json(folder+'verification.json');for(const k of ['types','lint','teacherRecovery','teacherPrivacy','originalArtworkPreserved','contentMediaAndStorageUnchanged','noExtraWait','localOnly'])assert.equal(verification[k],true,k);for(const[f,h]of Object.entries(r.evidenceFiles))assert.equal(sha(read(f)),h,f);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);return {...r,successor};
 }
-export function readBeforeOpeningLoaderRepair(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):read(file)}
+export function readBeforeOpeningLoaderRepair(file,r,read=readFileSync){return r.changedFiles.includes(file)||file===floor?git('show',base+':'+file):readBeforeSourceRepeat(file,r.successor,read)}
