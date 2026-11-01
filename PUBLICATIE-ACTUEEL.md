@@ -1,3 +1,18 @@
+# Actuele publicatie — goedgekeurde openingsloader — 1 november 2026
+
+- Livebron: `6dd42a5df6ed0fb29a2a0c0922cc67b24a2ace36`, branch `main`, schone bron.
+- Cloudflare Worker-versie: `0736c6fc-55dc-4239-ba9e-de15b51fa855`.
+- Werkelijk vorige livebron: `e6fc6294fb4670b0624c5e8c909018fe52ad5804`; werkbasis `a160cd5816dd92e70feb6729e18dc74fe44d66a8` voegde daarna alleen de eerdere controle-/back-updocumentatie toe.
+- Expliciete opdracht: “Ja, deze is goed. Zet deze loader nu in Klink op de plek van ‘Klink wordt geopend…’. Houd de rest van de vormgeving en alle bestaande functies hetzelfde.”
+- Alleen de drie bestaande openingsmeldingen gebruiken nu de exact goedgekeurde v4-animatie. Geen zichtbare laadtekst, extra knoppen, gefingeerde voortgang of extra wachttijd. `prefers-reduced-motion` kiest het complete stilstaande logo. De oorspronkelijke Suspense-, routing-, privacy- en herstelcode is behouden. De rest van het uiterlijk en alle bestaande inhoud, media, opslag en functies blijven staan.
+- De vaste vloer is uitsluitend uitgebreid met `docs/appearance-floor-20261031/approved-updates/opening-loader-20261101.json`; eerdere afspraken zijn ongewijzigd.
+- Lokaal: 32 laadscenario’s, 24 schermvergelijkingen, 12 uitleg/toets/touch/antwoord/voortgang-controles, 8 docent-randgevallen en 10 hersteltests; types, gerichte lint, productiebuild en volledige publicatiecontrole geslaagd. Publicatie via `npm run deploy`.
+- Live: 32 laadscenario’s en 24 bestaande schermen in Chromium/WebKit, desktop/mobiel, licht/donker; geen browserfouten. De twee loaderbestanden zijn bytegelijk aan de goedgekeurde bronnen; alle bestaande inhoudscontrolesommen blijven gelijk. Geen fysieke telefoon of menselijke schermlezertest gedaan.
+- Herstelpakket `1NZ821XqspaA-ynb10LU8Ck_bPN9T-D_O` volledig teruggelezen, met gelijke SHA-256 en geldige ZIP. Controlebewijzen en eindrapport staan in [de bestaande Klink-projectmap](https://drive.google.com/drive/folders/1pm_O13Js_vfr_ViTR7fA8RZVPpyd89c5). Details: `docs/opening-loader-20261101/`.
+- Historisch goedkeuringsbewijs `6492b44a` was alleen lokaal aanwezig en is reproduceerbaar bewaard onder tag `approved-learner-info-preview-20261101`; de bestaande controle is niet verzwakt. Geen GitHub Actions-workflows aanwezig of toegevoegd.
+
+---
+
 ## Actuele publicatie — cursistinfo naast de vraag — 1 november 2026
 
 Livebron `e6fc6294fb4670b0624c5e8c909018fe52ad5804`; Worker `10514be3-2b96-4dd5-8026-cde0b1bc10b5`. Via de normale `npm run deploy` vanaf schone canonieke main gepubliceerd, als afstammeling van de actuele goedgekeurde livebron `0391320925fc10e4ec86f9c4e8b837fe660df46e`. Het officiële logo en de aanvullende taalreview blijven behouden.
