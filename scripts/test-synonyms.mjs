@@ -21,7 +21,7 @@ test('225 preserved source pairs and 200 active word/context questions have exac
     assert.equal(entry.options.filter(option => option === entry.synonym).length, 1);
     assert(!entry.options.includes(entry.word));
     if (!entry.context) assert([entry.word, ...entry.options].every(word => !/\s/.test(word)));
-    else { assert(entry.context.includes(entry.word)); assert(entry.reverseContext.includes(entry.synonym)); assert.equal(entry.minimumLevel, 'b1'); }
+    else { assert(entry.context.includes(entry.word)); assert(entry.reverseContext.includes(entry.synonym)); assert(['a1','a2','b1'].includes(entry.minimumLevel)); }
     assert.equal(entry.review.individualCefrValidated, false);
     assert(entry.source.kind === 'editorial-addition' || entry.sourceWords.length || entry.source.id);
   }

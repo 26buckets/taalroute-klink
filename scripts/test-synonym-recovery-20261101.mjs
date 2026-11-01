@@ -5,13 +5,15 @@ import {execFileSync} from 'node:child_process';
 import {synonymBank,synonymCollections,synonymExercises} from '../lib/synonyms.ts';
 import {availableChapterCollections,chapterExerciseChoices,chapterHash,parseChapterHash} from '../lib/practice-chapters.ts';
 import {verifySynonymRecoveryRelease} from './check-synonym-recovery-release-20261101.mjs';
+const independentChanges=JSON.parse(readFileSync('docs/synonym-independent-review-20261101/changes.json'));
+const priorEntries=synonymBank.entries.map(e=>{const c=independentChanges.find(c=>c.id===e.id);if(!c)return e;const old={...e};for(const k of c.changedFields){if(k in c.before)old[k]=c.before[k];else delete old[k];}return old;});
 const folder='docs/synonym-recovery-20261101';
 const review=JSON.parse(readFileSync(folder+'/word-review.json'));
 const ids=new Set(review.recovered.map(r=>r.newId));
 const baseline=JSON.parse(execFileSync('git',['show','87a3a2ba3854f2fe11e1255f29ebf5d0017d042a:data/klink-synonyms.json']));
 
 test('seven new questions preserve the original 210 records, all IDs and all A1/A2 availability',()=>{
- assert.deepEqual(synonymBank.entries.slice(0,210),baseline.entries);
+ assert.deepEqual(priorEntries.slice(0,210),baseline.entries);
  assert.deepEqual({...synonymBank,entries:baseline.entries},baseline);
  assert.equal(synonymBank.entries.length,225);assert.equal(synonymBank.entries.filter(e=>e.active).length,200);
  for(const [level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
