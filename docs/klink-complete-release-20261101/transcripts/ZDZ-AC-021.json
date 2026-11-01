@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AC-021",
+  "sha256": "ef42b4552532d8b2a32b8150281728dc9410a27c3cfede7f3fe65c76a4f659f1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben vrijdagvrij.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ik ben vrijdagvrij.",
+      "temperature": 0,
+      "avg_logprob": -0.18582558631896973,
+      "compression_ratio": 0.7916666666666666,
+      "no_speech_prob": 3.99572215592503e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " ben",
+          "start": 0.12,
+          "end": 0.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vrijdagvrij.",
+          "start": 0.28,
+          "end": 0.92,
+          "probability": 0.85595703125
+        }
+      ]
+    }
+  ]
+}

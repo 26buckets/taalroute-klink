@@ -1,0 +1,549 @@
+{
+  "id": "A2-T64",
+  "sha256": "2d3519de5394dc76dad0b8085a4640f0eda2198992a51ee48e68ec460d9358a9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bericht voor medewerkers. De koelkast in de kantine werkt sinds vanochtend niet meer. Koud eten mag daarom niet in deze koelkast worden gelegd. Gebruik vandaag de koelkast in de keuken op de eerste verdieping. Meld het aan de leidinggevende als daar geen plaats meer is. Een monteur kan morgen komen kijken, maar een reparatie is nog niet afgesproken. De medewerkers zetten hun lunch in de andere koelkast. Om vier uur controleert de leidinggevende of er genoeg ruimte over is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.36,
+      "text": " Bericht voor medewerkers. De koelkast in de kantine werkt sinds vanochtend niet meer. Koud",
+      "temperature": 0,
+      "avg_logprob": -0.04232294437212822,
+      "compression_ratio": 1.7408759124087592,
+      "no_speech_prob": 6.077198206472234e-12,
+      "words": [
+        {
+          "word": " Bericht",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.990234375
+        },
+        {
+          "word": " voor",
+          "start": 0.32,
+          "end": 0.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerkers.",
+          "start": 0.48,
+          "end": 1.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " De",
+          "start": 1.54,
+          "end": 2.02,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " koelkast",
+          "start": 2.02,
+          "end": 2.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 2.48,
+          "end": 2.58,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 2.58,
+          "end": 2.66,
+          "probability": 1.0
+        },
+        {
+          "word": " kantine",
+          "start": 2.66,
+          "end": 3.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " werkt",
+          "start": 3.02,
+          "end": 3.36,
+          "probability": 1.0
+        },
+        {
+          "word": " sinds",
+          "start": 3.36,
+          "end": 3.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vanochtend",
+          "start": 3.56,
+          "end": 3.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 3.98,
+          "end": 4.12,
+          "probability": 1.0
+        },
+        {
+          "word": " meer.",
+          "start": 4.12,
+          "end": 4.38,
+          "probability": 1.0
+        },
+        {
+          "word": " Koud",
+          "start": 4.88,
+          "end": 5.36,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.36,
+      "end": 10.12,
+      "text": " eten mag daarom niet in deze koelkast worden gelegd. Gebruik vandaag de koelkast in de keuken",
+      "temperature": 0,
+      "avg_logprob": -0.04232294437212822,
+      "compression_ratio": 1.7408759124087592,
+      "no_speech_prob": 6.077198206472234e-12,
+      "words": [
+        {
+          "word": " eten",
+          "start": 5.36,
+          "end": 5.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mag",
+          "start": 5.68,
+          "end": 5.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " daarom",
+          "start": 5.82,
+          "end": 6.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " niet",
+          "start": 6.12,
+          "end": 6.26,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 6.26,
+          "end": 6.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deze",
+          "start": 6.4,
+          "end": 6.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " koelkast",
+          "start": 6.6,
+          "end": 6.98,
+          "probability": 1.0
+        },
+        {
+          "word": " worden",
+          "start": 6.98,
+          "end": 7.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gelegd.",
+          "start": 7.16,
+          "end": 7.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Gebruik",
+          "start": 8.24,
+          "end": 8.64,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 8.64,
+          "end": 8.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.94,
+          "end": 9.14,
+          "probability": 1.0
+        },
+        {
+          "word": " koelkast",
+          "start": 9.14,
+          "end": 9.56,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 9.56,
+          "end": 9.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.66,
+          "end": 9.76,
+          "probability": 1.0
+        },
+        {
+          "word": " keuken",
+          "start": 9.76,
+          "end": 10.12,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 10.12,
+      "end": 14.84,
+      "text": " op de eerste verdieping. Meld het aan de leidinggevende als daar geen plaats meer is. Een",
+      "temperature": 0,
+      "avg_logprob": -0.04232294437212822,
+      "compression_ratio": 1.7408759124087592,
+      "no_speech_prob": 6.077198206472234e-12,
+      "words": [
+        {
+          "word": " op",
+          "start": 10.12,
+          "end": 10.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 10.26,
+          "end": 10.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerste",
+          "start": 10.34,
+          "end": 10.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " verdieping.",
+          "start": 10.56,
+          "end": 11.02,
+          "probability": 1.0
+        },
+        {
+          "word": " Meld",
+          "start": 11.54,
+          "end": 11.9,
+          "probability": 0.974609375
+        },
+        {
+          "word": " het",
+          "start": 11.9,
+          "end": 12.04,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " aan",
+          "start": 12.04,
+          "end": 12.16,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 12.16,
+          "end": 12.26,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende",
+          "start": 12.26,
+          "end": 12.9,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " als",
+          "start": 12.9,
+          "end": 13.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " daar",
+          "start": 13.04,
+          "end": 13.18,
+          "probability": 0.994140625
+        },
+        {
+          "word": " geen",
+          "start": 13.18,
+          "end": 13.34,
+          "probability": 1.0
+        },
+        {
+          "word": " plaats",
+          "start": 13.34,
+          "end": 13.68,
+          "probability": 1.0
+        },
+        {
+          "word": " meer",
+          "start": 13.68,
+          "end": 13.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 13.82,
+          "end": 14.04,
+          "probability": 1.0
+        },
+        {
+          "word": " Een",
+          "start": 14.46,
+          "end": 14.84,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 14.84,
+      "end": 20.26,
+      "text": " monteur kan morgen komen kijken, maar een reparatie is nog niet afgesproken. De medewerkers zetten hun",
+      "temperature": 0,
+      "avg_logprob": -0.04232294437212822,
+      "compression_ratio": 1.7408759124087592,
+      "no_speech_prob": 6.077198206472234e-12,
+      "words": [
+        {
+          "word": " monteur",
+          "start": 14.84,
+          "end": 15.2,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " kan",
+          "start": 15.2,
+          "end": 15.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " morgen",
+          "start": 15.38,
+          "end": 15.62,
+          "probability": 1.0
+        },
+        {
+          "word": " komen",
+          "start": 15.62,
+          "end": 15.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kijken,",
+          "start": 15.88,
+          "end": 16.24,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 16.48,
+          "end": 16.8,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 16.8,
+          "end": 16.92,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " reparatie",
+          "start": 16.92,
+          "end": 17.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 17.48,
+          "end": 17.6,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 17.6,
+          "end": 17.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 17.72,
+          "end": 17.86,
+          "probability": 1.0
+        },
+        {
+          "word": " afgesproken.",
+          "start": 17.86,
+          "end": 18.52,
+          "probability": 1.0
+        },
+        {
+          "word": " De",
+          "start": 18.96,
+          "end": 19.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerkers",
+          "start": 19.36,
+          "end": 19.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zetten",
+          "start": 19.9,
+          "end": 20.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hun",
+          "start": 20.12,
+          "end": 20.26,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 20.26,
+      "end": 25.22,
+      "text": " lunch in de andere koelkast. Om vier uur controleert de leidinggevende of er genoeg ruimte over is.",
+      "temperature": 0,
+      "avg_logprob": -0.04232294437212822,
+      "compression_ratio": 1.7408759124087592,
+      "no_speech_prob": 6.077198206472234e-12,
+      "words": [
+        {
+          "word": " lunch",
+          "start": 20.26,
+          "end": 20.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 20.5,
+          "end": 20.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 20.64,
+          "end": 20.7,
+          "probability": 1.0
+        },
+        {
+          "word": " andere",
+          "start": 20.7,
+          "end": 20.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " koelkast.",
+          "start": 20.9,
+          "end": 21.44,
+          "probability": 1.0
+        },
+        {
+          "word": " Om",
+          "start": 21.78,
+          "end": 22.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vier",
+          "start": 22.18,
+          "end": 22.4,
+          "probability": 0.51708984375
+        },
+        {
+          "word": " uur",
+          "start": 22.4,
+          "end": 22.7,
+          "probability": 1.0
+        },
+        {
+          "word": " controleert",
+          "start": 22.7,
+          "end": 23.18,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " de",
+          "start": 23.18,
+          "end": 23.3,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende",
+          "start": 23.3,
+          "end": 23.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " of",
+          "start": 23.98,
+          "end": 24.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " er",
+          "start": 24.2,
+          "end": 24.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " genoeg",
+          "start": 24.3,
+          "end": 24.52,
+          "probability": 1.0
+        },
+        {
+          "word": " ruimte",
+          "start": 24.52,
+          "end": 24.82,
+          "probability": 1.0
+        },
+        {
+          "word": " over",
+          "start": 24.82,
+          "end": 25.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is.",
+          "start": 25.02,
+          "end": 25.22,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

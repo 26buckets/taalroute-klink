@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-532639fbae935159",
+  "sha256": "0c860cff6340c6bbeeeffcaaa4ec5f5caacbe47d6dd9bd3592effdbe51a86b96",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ga naar de les.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ik ga naar de les.",
+      "temperature": 0,
+      "avg_logprob": -0.13298537996080187,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.2170802440344435e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8837890625
+        },
+        {
+          "word": " ga",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 0.3,
+          "end": 0.48,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " les.",
+          "start": 0.6,
+          "end": 0.92,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

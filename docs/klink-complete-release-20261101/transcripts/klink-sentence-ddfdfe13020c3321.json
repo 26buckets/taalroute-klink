@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-ddfdfe13020c3321",
+  "sha256": "148aec3e13d3272c464613c60c1dea9738a18f7690b684d29787c802c65838e7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij gaan het gebouw in.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.06,
+      "text": " Wij gaan het gebouw in.",
+      "temperature": 0,
+      "avg_logprob": -0.10252948240800337,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 3.858702853770657e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.93798828125
+        },
+        {
+          "word": " gaan",
+          "start": 0.2,
+          "end": 0.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " gebouw",
+          "start": 0.52,
+          "end": 0.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in.",
+          "start": 0.88,
+          "end": 1.06,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

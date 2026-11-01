@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-034",
+  "sha256": "1806450c74f95d964e7f7fd5188d30a12437df676026313c2448e09c198fc346",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hoe laat moet ik terug zijn?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Hoe laat moet ik terug zijn?",
+      "temperature": 0,
+      "avg_logprob": -0.15208191871643068,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.5232862594390966e-12,
+      "words": [
+        {
+          "word": " Hoe",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8134765625
+        },
+        {
+          "word": " laat",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " moet",
+          "start": 0.36,
+          "end": 0.48,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ik",
+          "start": 0.48,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " terug",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn?",
+          "start": 0.74,
+          "end": 0.98,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-AC-031",
+  "sha256": "a75eaac88b7d2c2a64775147cbab1cef39efa2c798e59a3d880ecea708d5ca97",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u dat nog een keer zeggen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.12,
+      "text": " Kunt u dat nog een keer zeggen?",
+      "temperature": 0,
+      "avg_logprob": -0.0928950309753418,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.278476010977084e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.9560546875
+        },
+        {
+          "word": " u",
+          "start": 0.2,
+          "end": 0.28,
+          "probability": 0.986328125
+        },
+        {
+          "word": " dat",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nog",
+          "start": 0.4,
+          "end": 0.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.54,
+          "end": 0.68,
+          "probability": 0.994140625
+        },
+        {
+          "word": " keer",
+          "start": 0.68,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zeggen?",
+          "start": 0.8,
+          "end": 1.12,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

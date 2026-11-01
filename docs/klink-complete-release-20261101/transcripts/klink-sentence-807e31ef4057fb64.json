@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-807e31ef4057fb64",
+  "sha256": "fdc8f05154b25b5ce5c60aef2e0e2a80a8b00a6f5d1d8ac8b0337b4453c719b2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nadia controleert haar paspoort.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " Nadia controleert haar paspoort.",
+      "temperature": 0,
+      "avg_logprob": -0.08403456211090088,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 3.990119866459363e-12,
+      "words": [
+        {
+          "word": " Nadia",
+          "start": 0.0,
+          "end": 0.48,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " controleert",
+          "start": 0.48,
+          "end": 1.06,
+          "probability": 0.994140625
+        },
+        {
+          "word": " haar",
+          "start": 1.06,
+          "end": 1.18,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " paspoort.",
+          "start": 1.18,
+          "end": 1.78,
+          "probability": 0.99658203125
+        }
+      ]
+    }
+  ]
+}

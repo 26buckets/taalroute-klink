@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A2-004",
+  "sha256": "d61ef9d8e76ee6bbf49623b9b937a249d9812de3fcf7d393445c58975f827d0c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De vloer is nat, dus loop voorzichtig.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.86,
+      "text": " De vloer is nat, dus loop voorzichtig.",
+      "temperature": 0,
+      "avg_logprob": -0.09091943502426147,
+      "compression_ratio": 0.8260869565217391,
+      "no_speech_prob": 3.342531113004199e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vloer",
+          "start": 0.14,
+          "end": 0.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 0.46,
+          "end": 0.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nat,",
+          "start": 0.58,
+          "end": 0.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dus",
+          "start": 1.02,
+          "end": 1.14,
+          "probability": 1.0
+        },
+        {
+          "word": " loop",
+          "start": 1.14,
+          "end": 1.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voorzichtig.",
+          "start": 1.34,
+          "end": 1.86,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

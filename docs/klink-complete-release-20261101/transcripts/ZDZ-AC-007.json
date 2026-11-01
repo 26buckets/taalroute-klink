@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-007",
+  "sha256": "72177e9e983a0acffbba14c7d919d2345cb8529b4e74178c97a55b8ac22f36a9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " ik praat met mijn vriend",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.86,
+      "text": " ik praat met mijn vriend",
+      "temperature": 0,
+      "avg_logprob": -0.30620241165161133,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.661336421019069e-12,
+      "words": [
+        {
+          "word": " ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.4140625
+        },
+        {
+          "word": " praat",
+          "start": 0.14,
+          "end": 0.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 0.38,
+          "end": 0.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " mijn",
+          "start": 0.5,
+          "end": 0.62,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " vriend",
+          "start": 0.62,
+          "end": 0.86,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

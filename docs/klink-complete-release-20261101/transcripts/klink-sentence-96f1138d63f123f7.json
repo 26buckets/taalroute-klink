@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-96f1138d63f123f7",
+  "sha256": "584cebe0a94e73306df798c05f3e0682ae9b4269a09183eb1d5e1d9560c88c1f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik maak het pakje open.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.16,
+      "text": " Ik maak het pakje open.",
+      "temperature": 0,
+      "avg_logprob": -0.10331075841730292,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 3.0664765431759333e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.93115234375
+        },
+        {
+          "word": " maak",
+          "start": 0.14,
+          "end": 0.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 0.4,
+          "end": 0.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " pakje",
+          "start": 0.5,
+          "end": 0.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " open.",
+          "start": 0.86,
+          "end": 1.16,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

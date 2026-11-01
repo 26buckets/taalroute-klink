@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-081",
+  "sha256": "9fbf5230c399baf337ceb76509819151638033b15b7c14b5c101fbe292104b41",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dank u voor de hulp.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Dank u voor de hulp.",
+      "temperature": 0,
+      "avg_logprob": -0.16906561851501464,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 4.282248600856464e-12,
+      "words": [
+        {
+          "word": " Dank",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " u",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.982421875
+        },
+        {
+          "word": " voor",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hulp.",
+          "start": 0.68,
+          "end": 0.98,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

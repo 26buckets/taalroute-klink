@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-a9be0f8eb7dc07e0",
+  "sha256": "6ac4fef397b235e9cb5ad61f81edfd671fa9f54904242bef2bb86d2e450addd8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De borstels hangen in de kast.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.62,
+      "text": " De borstels hangen in de kast.",
+      "temperature": 0,
+      "avg_logprob": -0.10070122991289411,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 1.6944170025401384e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.923828125
+        },
+        {
+          "word": " borstels",
+          "start": 0.16,
+          "end": 0.66,
+          "probability": 0.994140625
+        },
+        {
+          "word": " hangen",
+          "start": 0.66,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 1.06,
+          "end": 1.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.16,
+          "end": 1.26,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " kast.",
+          "start": 1.26,
+          "end": 1.62,
+          "probability": 0.990234375
+        }
+      ]
+    }
+  ]
+}

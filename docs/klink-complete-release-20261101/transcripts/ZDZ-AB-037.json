@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-037",
+  "sha256": "b76e29819f14d8d61e868ccf8f961a3896f76eb13b8d65eec4f1d91989afe164",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn telefoon is kapot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": " Mijn telefoon is kapot.",
+      "temperature": 0,
+      "avg_logprob": -0.20694195140491833,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 6.362534197418279e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.890625
+        },
+        {
+          "word": " telefoon",
+          "start": 0.24,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.58,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kapot.",
+          "start": 0.68,
+          "end": 1.0,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

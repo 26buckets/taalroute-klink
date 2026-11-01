@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-001",
+  "sha256": "68d058b5ecf515f42a0d0545b40870478a5e91fc2e4e25d131ee4c193191928d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik woon sinds kort in Rotterdam en ik zoek werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.02,
+      "text": " Ik woon sinds kort in Rotterdam en ik zoek werk.",
+      "temperature": 0,
+      "avg_logprob": -0.06004955894068668,
+      "compression_ratio": 0.8727272727272727,
+      "no_speech_prob": 3.918830537852358e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " woon",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.98828125
+        },
+        {
+          "word": " sinds",
+          "start": 0.36,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kort",
+          "start": 0.6,
+          "end": 0.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 0.78,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Rotterdam",
+          "start": 0.9,
+          "end": 1.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 1.36,
+          "end": 1.48,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " ik",
+          "start": 1.48,
+          "end": 1.56,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " zoek",
+          "start": 1.56,
+          "end": 1.74,
+          "probability": 1.0
+        },
+        {
+          "word": " werk.",
+          "start": 1.74,
+          "end": 2.02,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-042",
+  "sha256": "339d72a3c6d7db539e88f55a618632bdb4a6b7d65227c0a425cb73f94bcf9a3f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Neem een appel, die is lekker.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.28,
+      "text": " Neem een appel, die is lekker.",
+      "temperature": 0,
+      "avg_logprob": -0.23425467809041342,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 5.329624762351326e-12,
+      "words": [
+        {
+          "word": " Neem",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.978515625
+        },
+        {
+          "word": " een",
+          "start": 0.24,
+          "end": 0.32,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " appel,",
+          "start": 0.32,
+          "end": 0.54,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " die",
+          "start": 0.86,
+          "end": 0.94,
+          "probability": 0.98828125
+        },
+        {
+          "word": " is",
+          "start": 0.94,
+          "end": 1.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " lekker.",
+          "start": 1.06,
+          "end": 1.28,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

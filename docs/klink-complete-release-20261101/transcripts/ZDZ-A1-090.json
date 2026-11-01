@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-090",
+  "sha256": "624e1d0fdd27af5f25cdf4104ef4a5cf420c87cc7b7c5967cc6068ad591bb247",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Moet ik mijn naam hier schrijven?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Moet ik mijn naam hier schrijven?",
+      "temperature": 0,
+      "avg_logprob": -0.08253591401236397,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 4.631313995501207e-12,
+      "words": [
+        {
+          "word": " Moet",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " ik",
+          "start": 0.18,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.26,
+          "end": 0.4,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " naam",
+          "start": 0.4,
+          "end": 0.66,
+          "probability": 1.0
+        },
+        {
+          "word": " hier",
+          "start": 0.66,
+          "end": 0.84,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " schrijven?",
+          "start": 0.84,
+          "end": 1.32,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

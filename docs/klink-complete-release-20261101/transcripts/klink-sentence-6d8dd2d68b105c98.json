@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-6d8dd2d68b105c98",
+  "sha256": "9e8c2e8588db8616f19f6fc417bc480fb8976370a09340bda13208e14f47950d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik steek de sleutel in het slot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " Ik steek de sleutel in het slot.",
+      "temperature": 0,
+      "avg_logprob": -0.11134999138968331,
+      "compression_ratio": 0.8421052631578947,
+      "no_speech_prob": 3.932738249640133e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9453125
+        },
+        {
+          "word": " steek",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.56,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " sleutel",
+          "start": 0.56,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 1.04,
+          "end": 1.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 1.22,
+          "end": 1.32,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " slot.",
+          "start": 1.32,
+          "end": 1.58,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

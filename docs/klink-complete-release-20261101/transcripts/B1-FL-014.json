@@ -1,0 +1,611 @@
+{
+  "id": "B1-FL-014",
+  "sha256": "a6b2a65fcfa0a800de0be1b9a0262ee5fa29a711e26094a2f200a8bb00a42e18",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Yolanda heeft kaartjes gekocht voor een rondleiding in het Stadsmuseum. De bevestiging zegt dat bezoekers tien minuten voor het begin bij de ingang moeten zijn. Wanneer Yolanda aankomt, ziet ze dat haar vriend nog onderweg is. Ze vraagt of de groep even kan wachten, maar de medewerker zegt dat de rondleiding op tijd moet beginnen. Yolanda besluit alvast mee te gaan. Haar vriend kan later zelfstandig het museum bezoeken, want zijn kaartje is de hele middag geldig. Na afloop spreken ze af in het café.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.44,
+      "text": " Yolanda heeft kaartjes gekocht voor een rondleiding in het Stadsmuseum.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " Yolanda",
+          "start": 0.0,
+          "end": 0.5,
+          "probability": 0.8818359375
+        },
+        {
+          "word": " heeft",
+          "start": 0.5,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartjes",
+          "start": 0.76,
+          "end": 1.18,
+          "probability": 1.0
+        },
+        {
+          "word": " gekocht",
+          "start": 1.18,
+          "end": 1.64,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 1.64,
+          "end": 1.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 1.8,
+          "end": 1.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rondleiding",
+          "start": 1.96,
+          "end": 2.52,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 2.52,
+          "end": 2.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 2.64,
+          "end": 2.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Stadsmuseum.",
+          "start": 2.82,
+          "end": 3.44,
+          "probability": 0.9697265625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.7,
+      "end": 8.1,
+      "text": " De bevestiging zegt dat bezoekers tien minuten voor het begin bij de ingang moeten zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.7,
+          "end": 3.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bevestiging",
+          "start": 3.9,
+          "end": 4.54,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt",
+          "start": 4.54,
+          "end": 4.88,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 4.88,
+          "end": 5.14,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " bezoekers",
+          "start": 5.14,
+          "end": 5.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tien",
+          "start": 5.68,
+          "end": 5.9,
+          "probability": 0.65771484375
+        },
+        {
+          "word": " minuten",
+          "start": 5.9,
+          "end": 6.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 6.34,
+          "end": 6.48,
+          "probability": 0.994140625
+        },
+        {
+          "word": " het",
+          "start": 6.48,
+          "end": 6.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begin",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 6.92,
+          "end": 7.1,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " de",
+          "start": 7.1,
+          "end": 7.22,
+          "probability": 1.0
+        },
+        {
+          "word": " ingang",
+          "start": 7.22,
+          "end": 7.6,
+          "probability": 1.0
+        },
+        {
+          "word": " moeten",
+          "start": 7.6,
+          "end": 7.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn.",
+          "start": 7.8,
+          "end": 8.1,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.4,
+      "end": 11.6,
+      "text": " Wanneer Yolanda aankomt, ziet ze dat haar vriend nog onderweg is.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " Wanneer",
+          "start": 8.4,
+          "end": 8.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Yolanda",
+          "start": 8.7,
+          "end": 9.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aankomt,",
+          "start": 9.08,
+          "end": 9.7,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 9.72,
+          "end": 9.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 9.94,
+          "end": 10.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dat",
+          "start": 10.06,
+          "end": 10.22,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 10.22,
+          "end": 10.36,
+          "probability": 1.0
+        },
+        {
+          "word": " vriend",
+          "start": 10.36,
+          "end": 10.68,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 10.68,
+          "end": 10.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " onderweg",
+          "start": 10.92,
+          "end": 11.36,
+          "probability": 1.0
+        },
+        {
+          "word": " is.",
+          "start": 11.36,
+          "end": 11.6,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.8,
+      "end": 16.52,
+      "text": " Ze vraagt of de groep even kan wachten, maar de medewerker zegt dat de rondleiding op tijd moet beginnen.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 11.8,
+          "end": 11.98,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vraagt",
+          "start": 11.98,
+          "end": 12.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " of",
+          "start": 12.34,
+          "end": 12.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.46,
+          "end": 12.58,
+          "probability": 1.0
+        },
+        {
+          "word": " groep",
+          "start": 12.58,
+          "end": 12.82,
+          "probability": 1.0
+        },
+        {
+          "word": " even",
+          "start": 12.82,
+          "end": 13.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kan",
+          "start": 13.06,
+          "end": 13.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wachten,",
+          "start": 13.2,
+          "end": 13.58,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 13.74,
+          "end": 13.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 13.94,
+          "end": 14.08,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 14.08,
+          "end": 14.64,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt",
+          "start": 14.64,
+          "end": 14.9,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 14.9,
+          "end": 15.04,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 15.04,
+          "end": 15.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rondleiding",
+          "start": 15.16,
+          "end": 15.64,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 15.64,
+          "end": 15.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tijd",
+          "start": 15.76,
+          "end": 15.96,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 15.96,
+          "end": 16.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " beginnen.",
+          "start": 16.16,
+          "end": 16.52,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 16.9,
+      "end": 18.6,
+      "text": " Yolanda besluit alvast mee te gaan.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " Yolanda",
+          "start": 16.9,
+          "end": 17.32,
+          "probability": 1.0
+        },
+        {
+          "word": " besluit",
+          "start": 17.32,
+          "end": 17.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " alvast",
+          "start": 17.74,
+          "end": 18.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " mee",
+          "start": 18.08,
+          "end": 18.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 18.24,
+          "end": 18.38,
+          "probability": 1.0
+        },
+        {
+          "word": " gaan.",
+          "start": 18.38,
+          "end": 18.6,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.86,
+      "end": 23.62,
+      "text": " Haar vriend kan later zelfstandig het museum bezoeken, want zijn kaartje is de hele middag geldig.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " Haar",
+          "start": 18.86,
+          "end": 19.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vriend",
+          "start": 19.2,
+          "end": 19.44,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 19.44,
+          "end": 19.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " later",
+          "start": 19.6,
+          "end": 19.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zelfstandig",
+          "start": 19.92,
+          "end": 20.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 20.52,
+          "end": 20.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " museum",
+          "start": 20.64,
+          "end": 20.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bezoeken,",
+          "start": 20.94,
+          "end": 21.42,
+          "probability": 1.0
+        },
+        {
+          "word": " want",
+          "start": 21.56,
+          "end": 21.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 21.74,
+          "end": 21.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartje",
+          "start": 21.9,
+          "end": 22.34,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 22.34,
+          "end": 22.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.46,
+          "end": 22.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hele",
+          "start": 22.6,
+          "end": 22.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " middag",
+          "start": 22.84,
+          "end": 23.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " geldig.",
+          "start": 23.16,
+          "end": 23.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 23.9,
+      "end": 25.52,
+      "text": " Na afloop spreken ze af in het café.",
+      "temperature": 0,
+      "avg_logprob": -0.0486088955041134,
+      "compression_ratio": 1.6721854304635762,
+      "no_speech_prob": 8.336197183933525e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 23.9,
+          "end": 24.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " afloop",
+          "start": 24.02,
+          "end": 24.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " spreken",
+          "start": 24.4,
+          "end": 24.74,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ze",
+          "start": 24.74,
+          "end": 24.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " af",
+          "start": 24.86,
+          "end": 25.04,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 25.04,
+          "end": 25.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 25.18,
+          "end": 25.28,
+          "probability": 1.0
+        },
+        {
+          "word": " café.",
+          "start": 25.28,
+          "end": 25.52,
+          "probability": 0.990234375
+        }
+      ]
+    }
+  ]
+}

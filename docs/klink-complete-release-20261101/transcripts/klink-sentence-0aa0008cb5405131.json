@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-0aa0008cb5405131",
+  "sha256": "c8271fd3bf9c063b510891690d7efe44d7c92ee6da1263cb505e2bafd79ddd78",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Boris zit op het balkon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Boris zit op het balkon.",
+      "temperature": 0,
+      "avg_logprob": -0.08264116807417436,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.766516608495364e-12,
+      "words": [
+        {
+          "word": " Boris",
+          "start": 0.0,
+          "end": 0.5,
+          "probability": 0.91845703125
+        },
+        {
+          "word": " zit",
+          "start": 0.5,
+          "end": 0.78,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " op",
+          "start": 0.78,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 0.94,
+          "end": 1.04,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " balkon.",
+          "start": 1.04,
+          "end": 1.48,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

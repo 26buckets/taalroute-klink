@@ -1,0 +1,648 @@
+{
+  "id": "B1-FL-072",
+  "sha256": "e63809d9cd3f8a06484725b9c6965b1e58a6de33348bd1f87bb2b9985b2285e1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de werkplaats krijgt Fatou een nieuwe instructie voor het controleren van metalen onderdelen. Op de oude kaart staat dat zij alleen naar krassen moet kijken. Volgens de nieuwe kaart moet zij ook de maat meten. Fatou ziet dat niet alle collega's deze verandering hebben gelezen. Ze stelt voor om de eerste tien onderdelen samen te controleren. De teamleider vindt dat goed, maar wil dat het gewone werk daarna doorgaat. Na de gezamenlijke controle weet iedereen welke twee punten belangrijk zijn. De nieuwe kaart hangt daarna bij de werktafel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.56,
+      "text": " In de werkplaats krijgt Fatou een nieuwe instructie voor het controleren van metalen onderdelen.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 0.12,
+          "end": 0.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " werkplaats",
+          "start": 0.2,
+          "end": 0.78,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " krijgt",
+          "start": 0.78,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Fatou",
+          "start": 1.12,
+          "end": 1.42,
+          "probability": 0.9375
+        },
+        {
+          "word": " een",
+          "start": 1.42,
+          "end": 1.6,
+          "probability": 0.98291015625
+        },
+        {
+          "word": " nieuwe",
+          "start": 1.6,
+          "end": 1.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " instructie",
+          "start": 1.84,
+          "end": 2.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 2.44,
+          "end": 2.62,
+          "probability": 0.93359375
+        },
+        {
+          "word": " het",
+          "start": 2.62,
+          "end": 2.76,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " controleren",
+          "start": 2.76,
+          "end": 3.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " van",
+          "start": 3.38,
+          "end": 3.52,
+          "probability": 0.990234375
+        },
+        {
+          "word": " metalen",
+          "start": 3.52,
+          "end": 4.02,
+          "probability": 0.99609375
+        },
+        {
+          "word": " onderdelen.",
+          "start": 4.02,
+          "end": 4.56,
+          "probability": 0.99755859375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.68,
+      "end": 7.58,
+      "text": " Op de oude kaart staat dat zij alleen naar krassen moet kijken.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 4.68,
+          "end": 4.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 4.84,
+          "end": 4.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 4.94,
+          "end": 5.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kaart",
+          "start": 5.2,
+          "end": 5.5,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 5.5,
+          "end": 5.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 5.76,
+          "end": 6.06,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zij",
+          "start": 6.06,
+          "end": 6.26,
+          "probability": 0.994140625
+        },
+        {
+          "word": " alleen",
+          "start": 6.26,
+          "end": 6.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " naar",
+          "start": 6.58,
+          "end": 6.76,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " krassen",
+          "start": 6.76,
+          "end": 7.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " moet",
+          "start": 7.1,
+          "end": 7.26,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " kijken.",
+          "start": 7.26,
+          "end": 7.58,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.8,
+      "end": 10.24,
+      "text": " Volgens de nieuwe kaart moet zij ook de maat meten.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 7.8,
+          "end": 8.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.16,
+          "end": 8.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 8.28,
+          "end": 8.46,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " kaart",
+          "start": 8.46,
+          "end": 8.86,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 8.86,
+          "end": 9.14,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " zij",
+          "start": 9.14,
+          "end": 9.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ook",
+          "start": 9.3,
+          "end": 9.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 9.48,
+          "end": 9.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maat",
+          "start": 9.62,
+          "end": 9.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meten.",
+          "start": 9.86,
+          "end": 10.24,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.44,
+      "end": 13.86,
+      "text": " Fatou ziet dat niet alle collega's deze verandering hebben gelezen.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " Fatou",
+          "start": 10.44,
+          "end": 10.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ziet",
+          "start": 10.74,
+          "end": 11.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 11.02,
+          "end": 11.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 11.24,
+          "end": 11.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " alle",
+          "start": 11.4,
+          "end": 11.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " collega's",
+          "start": 11.66,
+          "end": 12.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deze",
+          "start": 12.34,
+          "end": 12.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " verandering",
+          "start": 12.72,
+          "end": 13.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hebben",
+          "start": 13.18,
+          "end": 13.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gelezen.",
+          "start": 13.36,
+          "end": 13.86,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.08,
+      "end": 17.72,
+      "text": " Ze stelt voor om de eerste tien onderdelen samen te controleren.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 14.08,
+          "end": 14.28,
+          "probability": 0.98828125
+        },
+        {
+          "word": " stelt",
+          "start": 14.28,
+          "end": 14.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 14.58,
+          "end": 14.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 14.86,
+          "end": 15.22,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 15.22,
+          "end": 15.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " eerste",
+          "start": 15.34,
+          "end": 15.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tien",
+          "start": 15.66,
+          "end": 15.92,
+          "probability": 0.8125
+        },
+        {
+          "word": " onderdelen",
+          "start": 15.92,
+          "end": 16.56,
+          "probability": 1.0
+        },
+        {
+          "word": " samen",
+          "start": 16.56,
+          "end": 16.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 16.88,
+          "end": 17.04,
+          "probability": 1.0
+        },
+        {
+          "word": " controleren.",
+          "start": 17.04,
+          "end": 17.72,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.9,
+      "end": 21.76,
+      "text": " De teamleider vindt dat goed, maar wil dat het gewone werk daarna doorgaat.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 17.9,
+          "end": 18.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " teamleider",
+          "start": 18.06,
+          "end": 18.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vindt",
+          "start": 18.58,
+          "end": 18.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 18.94,
+          "end": 19.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " goed,",
+          "start": 19.06,
+          "end": 19.36,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 19.48,
+          "end": 19.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 19.7,
+          "end": 19.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dat",
+          "start": 19.9,
+          "end": 20.04,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 20.04,
+          "end": 20.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gewone",
+          "start": 20.2,
+          "end": 20.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werk",
+          "start": 20.54,
+          "end": 20.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " daarna",
+          "start": 20.8,
+          "end": 21.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " doorgaat.",
+          "start": 21.14,
+          "end": 21.76,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.92,
+      "end": 25.9,
+      "text": " Na de gezamenlijke controle weet iedereen welke twee punten belangrijk zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 21.92,
+          "end": 22.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 22.12,
+          "end": 22.3,
+          "probability": 1.0
+        },
+        {
+          "word": " gezamenlijke",
+          "start": 22.3,
+          "end": 22.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " controle",
+          "start": 22.86,
+          "end": 23.3,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " weet",
+          "start": 23.3,
+          "end": 23.76,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " iedereen",
+          "start": 23.76,
+          "end": 24.16,
+          "probability": 1.0
+        },
+        {
+          "word": " welke",
+          "start": 24.16,
+          "end": 24.64,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 24.64,
+          "end": 24.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " punten",
+          "start": 24.82,
+          "end": 25.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " belangrijk",
+          "start": 25.2,
+          "end": 25.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn.",
+          "start": 25.56,
+          "end": 25.9,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 26.16,
+      "end": 28.24,
+      "text": " De nieuwe kaart hangt daarna bij de werktafel.",
+      "temperature": 0,
+      "avg_logprob": -0.060297262668609616,
+      "compression_ratio": 1.7694805194805194,
+      "no_speech_prob": 7.300266294252289e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 26.16,
+          "end": 26.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 26.24,
+          "end": 26.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaart",
+          "start": 26.42,
+          "end": 26.76,
+          "probability": 1.0
+        },
+        {
+          "word": " hangt",
+          "start": 26.76,
+          "end": 27.04,
+          "probability": 1.0
+        },
+        {
+          "word": " daarna",
+          "start": 27.04,
+          "end": 27.3,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 27.3,
+          "end": 27.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 27.5,
+          "end": 27.66,
+          "probability": 1.0
+        },
+        {
+          "word": " werktafel.",
+          "start": 27.66,
+          "end": 28.24,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

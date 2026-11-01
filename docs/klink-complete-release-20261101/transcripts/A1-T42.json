@@ -1,0 +1,277 @@
+{
+  "id": "A1-T42",
+  "sha256": "9325684097a928bfeed1f699ad7cfa5f4485ec080f63157320c2f252506c0839",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursist komt met de fiets naar school. Bij de deur hangt een bord. Zet fietsen achter het gebouw. De cursist leest het bord. Hij loopt met zijn fiets naar de achterkant. Daarna gaat hij naar de les.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.18,
+      "text": " Een cursist komt met de fiets naar school. Bij de deur hangt een bord.",
+      "temperature": 0,
+      "avg_logprob": -0.0443071820842686,
+      "compression_ratio": 1.4852941176470589,
+      "no_speech_prob": 1.0291907083515017e-11,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.91162109375
+        },
+        {
+          "word": " cursist",
+          "start": 0.26,
+          "end": 0.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " komt",
+          "start": 0.72,
+          "end": 0.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 0.94,
+          "end": 1.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.08,
+          "end": 1.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " fiets",
+          "start": 1.2,
+          "end": 1.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 1.42,
+          "end": 1.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " school.",
+          "start": 1.56,
+          "end": 1.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Bij",
+          "start": 2.1,
+          "end": 2.22,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 2.22,
+          "end": 2.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur",
+          "start": 2.36,
+          "end": 2.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hangt",
+          "start": 2.6,
+          "end": 2.84,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 2.84,
+          "end": 2.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bord.",
+          "start": 2.94,
+          "end": 3.18,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.38,
+      "end": 6.34,
+      "text": " Zet fietsen achter het gebouw. De cursist leest het bord.",
+      "temperature": 0,
+      "avg_logprob": -0.0443071820842686,
+      "compression_ratio": 1.4852941176470589,
+      "no_speech_prob": 1.0291907083515017e-11,
+      "words": [
+        {
+          "word": " Zet",
+          "start": 3.38,
+          "end": 3.78,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " fietsen",
+          "start": 3.78,
+          "end": 4.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " achter",
+          "start": 4.1,
+          "end": 4.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 4.38,
+          "end": 4.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gebouw.",
+          "start": 4.56,
+          "end": 5.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 5.1,
+          "end": 5.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " cursist",
+          "start": 5.26,
+          "end": 5.72,
+          "probability": 1.0
+        },
+        {
+          "word": " leest",
+          "start": 5.72,
+          "end": 6.0,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 6.0,
+          "end": 6.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bord.",
+          "start": 6.12,
+          "end": 6.34,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.54,
+      "end": 9.8,
+      "text": " Hij loopt met zijn fiets naar de achterkant. Daarna gaat hij naar de les.",
+      "temperature": 0,
+      "avg_logprob": -0.0443071820842686,
+      "compression_ratio": 1.4852941176470589,
+      "no_speech_prob": 1.0291907083515017e-11,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 6.54,
+          "end": 6.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " loopt",
+          "start": 6.7,
+          "end": 6.96,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 6.96,
+          "end": 7.1,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 7.1,
+          "end": 7.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " fiets",
+          "start": 7.26,
+          "end": 7.5,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 7.5,
+          "end": 7.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.64,
+          "end": 7.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " achterkant.",
+          "start": 7.76,
+          "end": 8.34,
+          "probability": 1.0
+        },
+        {
+          "word": " Daarna",
+          "start": 8.54,
+          "end": 8.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaat",
+          "start": 8.86,
+          "end": 9.14,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 9.14,
+          "end": 9.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 9.26,
+          "end": 9.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.38,
+          "end": 9.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les.",
+          "start": 9.52,
+          "end": 9.8,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

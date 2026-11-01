@@ -1,0 +1,252 @@
+{
+  "id": "A1-T56",
+  "sha256": "a56a280f52b712b44a4402c24b05906d400101abd765c7788236471ee9168f1a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In het café kunnen klanten soep eten. Een klant wil soep, maar de soep is op. Hij kiest een broodje kaas en een glas water. Hij betaalt bij de kassa. Daarna gaat hij aan tafel zitten.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.66,
+      "text": " In het café kunnen klanten soep eten. Een klant wil soep, maar de soep is op.",
+      "temperature": 0,
+      "avg_logprob": -0.049438645762781945,
+      "compression_ratio": 1.362962962962963,
+      "no_speech_prob": 5.7054361235486795e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.986328125
+        },
+        {
+          "word": " het",
+          "start": 0.12,
+          "end": 0.24,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " café",
+          "start": 0.24,
+          "end": 0.5,
+          "probability": 0.986328125
+        },
+        {
+          "word": " kunnen",
+          "start": 0.5,
+          "end": 0.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klanten",
+          "start": 0.78,
+          "end": 1.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " soep",
+          "start": 1.08,
+          "end": 1.42,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " eten.",
+          "start": 1.42,
+          "end": 1.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Een",
+          "start": 1.88,
+          "end": 2.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " klant",
+          "start": 2.04,
+          "end": 2.32,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 2.32,
+          "end": 2.48,
+          "probability": 0.99609375
+        },
+        {
+          "word": " soep,",
+          "start": 2.48,
+          "end": 2.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 2.9,
+          "end": 3.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.02,
+          "end": 3.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " soep",
+          "start": 3.14,
+          "end": 3.34,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 3.34,
+          "end": 3.44,
+          "probability": 1.0
+        },
+        {
+          "word": " op.",
+          "start": 3.44,
+          "end": 3.66,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.84,
+      "end": 8.8,
+      "text": " Hij kiest een broodje kaas en een glas water. Hij betaalt bij de kassa. Daarna gaat hij aan tafel zitten.",
+      "temperature": 0,
+      "avg_logprob": -0.049438645762781945,
+      "compression_ratio": 1.362962962962963,
+      "no_speech_prob": 5.7054361235486795e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 3.84,
+          "end": 4.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kiest",
+          "start": 4.02,
+          "end": 4.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 4.28,
+          "end": 4.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " broodje",
+          "start": 4.4,
+          "end": 4.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaas",
+          "start": 4.74,
+          "end": 5.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 5.08,
+          "end": 5.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 5.2,
+          "end": 5.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " glas",
+          "start": 5.32,
+          "end": 5.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water.",
+          "start": 5.6,
+          "end": 5.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Hij",
+          "start": 6.08,
+          "end": 6.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " betaalt",
+          "start": 6.22,
+          "end": 6.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bij",
+          "start": 6.58,
+          "end": 6.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.7,
+          "end": 6.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kassa.",
+          "start": 6.8,
+          "end": 7.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Daarna",
+          "start": 7.42,
+          "end": 7.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gaat",
+          "start": 7.72,
+          "end": 7.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 7.96,
+          "end": 8.08,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " aan",
+          "start": 8.08,
+          "end": 8.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tafel",
+          "start": 8.2,
+          "end": 8.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zitten.",
+          "start": 8.54,
+          "end": 8.8,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

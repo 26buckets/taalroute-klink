@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-4f581127e2d29cff",
+  "sha256": "1e622fdc6cb19da5719b5281ec8c420481931d2b7c83af86b19df2d3f0e296a7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De plank ligt op de werktafel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.9,
+      "text": " De plank ligt op de werktafel.",
+      "temperature": 0,
+      "avg_logprob": -0.07983013299795297,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.585259259614171e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " plank",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ligt",
+          "start": 0.5,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 0.86,
+          "end": 1.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.1,
+          "end": 1.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " werktafel.",
+          "start": 1.26,
+          "end": 1.9,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

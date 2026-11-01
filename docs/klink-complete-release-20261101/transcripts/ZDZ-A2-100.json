@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-100",
+  "sha256": "98f69d5e578037662d9e3eae9f131637675881afea8a90a2a475758ccb0eb7a3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bedankt voor uw hulp. Morgen probeer ik het zelf.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.26,
+      "text": " Bedankt voor uw hulp. Morgen probeer ik het zelf.",
+      "temperature": 0,
+      "avg_logprob": -0.08477383189731175,
+      "compression_ratio": 0.8596491228070176,
+      "no_speech_prob": 4.3401107360785396e-12,
+      "words": [
+        {
+          "word": " Bedankt",
+          "start": 0.0,
+          "end": 0.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " voor",
+          "start": 0.36,
+          "end": 0.44,
+          "probability": 1.0
+        },
+        {
+          "word": " uw",
+          "start": 0.44,
+          "end": 0.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hulp.",
+          "start": 0.56,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Morgen",
+          "start": 1.1,
+          "end": 1.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " probeer",
+          "start": 1.42,
+          "end": 1.8,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 1.8,
+          "end": 1.9,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 1.9,
+          "end": 2.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zelf.",
+          "start": 2.0,
+          "end": 2.26,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

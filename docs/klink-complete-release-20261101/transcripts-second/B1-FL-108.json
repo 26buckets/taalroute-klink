@@ -1,0 +1,628 @@
+{
+  "id": "B1-FL-108",
+  "sha256": "841b787ebfa518cac0531be0b727eed177ec6350bf2cd55ae14564ea6a2a1528",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de straat organiseert een groep buren een kennismakingsavond. Hun nieuwe buur, Matteo, spreekt nog niet zo goed Nederlands en reageert niet op de uitnodiging in de groepsapp. Buurvrouw Leila denkt dat hij misschien niet weet wat de bedoeling is. Ze belt bij hem aan en legt rustig uit dat iedereen iets mag vertellen over zichzelf, maar dat niemand iets hoeft voor te bereiden. Matteo is opgelucht. Hij komt die avond en luistert eerst vooral mee. Later vertelt hij waar hij vroeger woonde en raakt met twee buren in gesprek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.24,
+      "text": " In de straat organiseert een groep buren een kennismakingsavond.",
+      "temperature": 0,
+      "avg_logprob": -0.05552017397996856,
+      "compression_ratio": 1.6761904761904762,
+      "no_speech_prob": 0.003823166713118553,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.08,
+          "probability": 0.9921875
+        },
+        {
+          "word": " de",
+          "start": 0.08,
+          "end": 0.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " straat",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " organiseert",
+          "start": 0.56,
+          "end": 1.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 1.16,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groep",
+          "start": 1.22,
+          "end": 1.54,
+          "probability": 1.0
+        },
+        {
+          "word": " buren",
+          "start": 1.54,
+          "end": 1.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.86,
+          "end": 2.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kennismakingsavond.",
+          "start": 2.08,
+          "end": 3.24,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.32,
+      "end": 9.24,
+      "text": " Hun nieuwe buur, Matteo, spreekt nog niet zo goed Nederlands en reageert niet op de uitnodiging in de groepsapp.",
+      "temperature": 0,
+      "avg_logprob": -0.05552017397996856,
+      "compression_ratio": 1.6761904761904762,
+      "no_speech_prob": 0.003823166713118553,
+      "words": [
+        {
+          "word": " Hun",
+          "start": 3.32,
+          "end": 3.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 3.62,
+          "end": 3.92,
+          "probability": 1.0
+        },
+        {
+          "word": " buur,",
+          "start": 3.92,
+          "end": 4.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Matteo,",
+          "start": 4.36,
+          "end": 4.84,
+          "probability": 0.8759765625
+        },
+        {
+          "word": " spreekt",
+          "start": 5.04,
+          "end": 5.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 5.5,
+          "end": 5.62,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 5.62,
+          "end": 5.82,
+          "probability": 1.0
+        },
+        {
+          "word": " zo",
+          "start": 5.82,
+          "end": 5.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goed",
+          "start": 5.98,
+          "end": 6.18,
+          "probability": 1.0
+        },
+        {
+          "word": " Nederlands",
+          "start": 6.18,
+          "end": 6.74,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 6.74,
+          "end": 6.92,
+          "probability": 0.7607421875
+        },
+        {
+          "word": " reageert",
+          "start": 6.92,
+          "end": 7.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 7.48,
+          "end": 7.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 7.66,
+          "end": 7.84,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.84,
+          "end": 7.92,
+          "probability": 1.0
+        },
+        {
+          "word": " uitnodiging",
+          "start": 7.92,
+          "end": 8.62,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 8.62,
+          "end": 8.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.72,
+          "end": 8.84,
+          "probability": 1.0
+        },
+        {
+          "word": " groepsapp.",
+          "start": 8.84,
+          "end": 9.24,
+          "probability": 0.93017578125
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.5,
+      "end": 12.86,
+      "text": " Buurvrouw Leila denkt dat hij misschien niet weet wat de bedoeling is.",
+      "temperature": 0,
+      "avg_logprob": -0.05552017397996856,
+      "compression_ratio": 1.6761904761904762,
+      "no_speech_prob": 0.003823166713118553,
+      "words": [
+        {
+          "word": " Buurvrouw",
+          "start": 9.5,
+          "end": 10.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Leila",
+          "start": 10.0,
+          "end": 10.3,
+          "probability": 0.95703125
+        },
+        {
+          "word": " denkt",
+          "start": 10.3,
+          "end": 10.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 10.76,
+          "end": 10.92,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 10.92,
+          "end": 11.04,
+          "probability": 1.0
+        },
+        {
+          "word": " misschien",
+          "start": 11.04,
+          "end": 11.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 11.36,
+          "end": 11.66,
+          "probability": 1.0
+        },
+        {
+          "word": " weet",
+          "start": 11.66,
+          "end": 11.94,
+          "probability": 1.0
+        },
+        {
+          "word": " wat",
+          "start": 11.94,
+          "end": 12.18,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 12.18,
+          "end": 12.32,
+          "probability": 1.0
+        },
+        {
+          "word": " bedoeling",
+          "start": 12.32,
+          "end": 12.66,
+          "probability": 1.0
+        },
+        {
+          "word": " is.",
+          "start": 12.66,
+          "end": 12.86,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 13.02,
+      "end": 19.88,
+      "text": " Ze belt bij hem aan en legt rustig uit dat iedereen iets mag vertellen over zichzelf, maar dat niemand iets hoeft voor te bereiden.",
+      "temperature": 0,
+      "avg_logprob": -0.05552017397996856,
+      "compression_ratio": 1.6761904761904762,
+      "no_speech_prob": 0.003823166713118553,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 13.02,
+          "end": 13.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " belt",
+          "start": 13.22,
+          "end": 13.46,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " bij",
+          "start": 13.46,
+          "end": 13.6,
+          "probability": 1.0
+        },
+        {
+          "word": " hem",
+          "start": 13.6,
+          "end": 13.78,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 13.78,
+          "end": 14.06,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 14.06,
+          "end": 14.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " legt",
+          "start": 14.32,
+          "end": 14.58,
+          "probability": 1.0
+        },
+        {
+          "word": " rustig",
+          "start": 14.58,
+          "end": 15.0,
+          "probability": 1.0
+        },
+        {
+          "word": " uit",
+          "start": 15.0,
+          "end": 15.18,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 15.18,
+          "end": 15.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iedereen",
+          "start": 15.38,
+          "end": 15.68,
+          "probability": 1.0
+        },
+        {
+          "word": " iets",
+          "start": 15.68,
+          "end": 15.98,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 15.98,
+          "end": 16.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertellen",
+          "start": 16.18,
+          "end": 16.62,
+          "probability": 1.0
+        },
+        {
+          "word": " over",
+          "start": 16.62,
+          "end": 16.88,
+          "probability": 1.0
+        },
+        {
+          "word": " zichzelf,",
+          "start": 16.88,
+          "end": 17.44,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 17.58,
+          "end": 17.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 17.88,
+          "end": 18.04,
+          "probability": 1.0
+        },
+        {
+          "word": " niemand",
+          "start": 18.04,
+          "end": 18.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " iets",
+          "start": 18.36,
+          "end": 18.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hoeft",
+          "start": 18.66,
+          "end": 19.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 19.04,
+          "end": 19.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 19.22,
+          "end": 19.42,
+          "probability": 1.0
+        },
+        {
+          "word": " bereiden.",
+          "start": 19.42,
+          "end": 19.88,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 20.04,
+      "end": 24.04,
+      "text": " Matteo is opgelucht. Hij komt die avond en luistert eerst vooral mee.",
+      "temperature": 0,
+      "avg_logprob": -0.05552017397996856,
+      "compression_ratio": 1.6761904761904762,
+      "no_speech_prob": 0.003823166713118553,
+      "words": [
+        {
+          "word": " Matteo",
+          "start": 20.04,
+          "end": 20.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 20.54,
+          "end": 20.68,
+          "probability": 1.0
+        },
+        {
+          "word": " opgelucht.",
+          "start": 20.68,
+          "end": 21.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Hij",
+          "start": 21.48,
+          "end": 21.76,
+          "probability": 1.0
+        },
+        {
+          "word": " komt",
+          "start": 21.76,
+          "end": 22.0,
+          "probability": 1.0
+        },
+        {
+          "word": " die",
+          "start": 22.0,
+          "end": 22.18,
+          "probability": 1.0
+        },
+        {
+          "word": " avond",
+          "start": 22.18,
+          "end": 22.62,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 22.62,
+          "end": 22.76,
+          "probability": 1.0
+        },
+        {
+          "word": " luistert",
+          "start": 22.76,
+          "end": 23.2,
+          "probability": 1.0
+        },
+        {
+          "word": " eerst",
+          "start": 23.2,
+          "end": 23.56,
+          "probability": 1.0
+        },
+        {
+          "word": " vooral",
+          "start": 23.56,
+          "end": 23.86,
+          "probability": 1.0
+        },
+        {
+          "word": " mee.",
+          "start": 23.86,
+          "end": 24.04,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 24.3,
+      "end": 28.68,
+      "text": " Later vertelt hij waar hij vroeger woonde en raakt met twee buren in gesprek.",
+      "temperature": 0,
+      "avg_logprob": -0.05552017397996856,
+      "compression_ratio": 1.6761904761904762,
+      "no_speech_prob": 0.003823166713118553,
+      "words": [
+        {
+          "word": " Later",
+          "start": 24.3,
+          "end": 24.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vertelt",
+          "start": 24.8,
+          "end": 25.22,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 25.22,
+          "end": 25.36,
+          "probability": 1.0
+        },
+        {
+          "word": " waar",
+          "start": 25.36,
+          "end": 25.54,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 25.54,
+          "end": 25.68,
+          "probability": 1.0
+        },
+        {
+          "word": " vroeger",
+          "start": 25.68,
+          "end": 26.06,
+          "probability": 1.0
+        },
+        {
+          "word": " woonde",
+          "start": 26.06,
+          "end": 26.44,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 26.44,
+          "end": 26.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " raakt",
+          "start": 26.8,
+          "end": 27.18,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 27.18,
+          "end": 27.32,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 27.32,
+          "end": 27.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " buren",
+          "start": 27.56,
+          "end": 28.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 28.04,
+          "end": 28.16,
+          "probability": 1.0
+        },
+        {
+          "word": " gesprek.",
+          "start": 28.16,
+          "end": 28.68,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

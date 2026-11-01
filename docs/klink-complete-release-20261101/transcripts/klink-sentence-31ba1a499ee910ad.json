@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-31ba1a499ee910ad",
+  "sha256": "323681912fca1d99509a35fcbcd4a8eb186f54c6106a16489ed2c39d0a38f083",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kan mijn haar.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.06,
+      "text": " Ik kan mijn haar.",
+      "temperature": 0,
+      "avg_logprob": -0.17638158798217773,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 1.1400407527728529e-11,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.923828125
+        },
+        {
+          "word": " kan",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.7724609375
+        },
+        {
+          "word": " mijn",
+          "start": 0.44,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " haar.",
+          "start": 0.68,
+          "end": 1.06,
+          "probability": 0.99462890625
+        }
+      ]
+    }
+  ]
+}

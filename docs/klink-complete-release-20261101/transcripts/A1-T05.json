@@ -1,0 +1,246 @@
+{
+  "id": "A1-T05",
+  "sha256": "168ab262aacdf0bfcbbdd24b32c69b68fe0b3403293ed7b5901595baad15f478",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Amir heeft een pakket voor zijn buurman. De buurman is op zijn werk. Amir schrijft een briefje. Ik heb je pakket. Hij legt het briefje bij de deur. Om zes uur komt de buurman thuis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.58,
+      "text": " Amir heeft een pakket voor zijn buurman. De buurman is op zijn werk. Amir schrijft een briefje.",
+      "temperature": 0,
+      "avg_logprob": -0.05979218849769005,
+      "compression_ratio": 1.4140625,
+      "no_speech_prob": 5.299702083433333e-12,
+      "words": [
+        {
+          "word": " Amir",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " heeft",
+          "start": 0.34,
+          "end": 0.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.52,
+          "end": 0.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pakket",
+          "start": 0.64,
+          "end": 0.98,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " voor",
+          "start": 0.98,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 1.14,
+          "end": 1.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " buurman.",
+          "start": 1.28,
+          "end": 1.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 2.02,
+          "end": 2.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " buurman",
+          "start": 2.52,
+          "end": 2.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 2.88,
+          "end": 3.0,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 3.0,
+          "end": 3.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 3.12,
+          "end": 3.22,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " werk.",
+          "start": 3.22,
+          "end": 3.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Amir",
+          "start": 4.22,
+          "end": 4.74,
+          "probability": 1.0
+        },
+        {
+          "word": " schrijft",
+          "start": 4.74,
+          "end": 5.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 5.06,
+          "end": 5.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " briefje.",
+          "start": 5.16,
+          "end": 5.58,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.82,
+      "end": 11.06,
+      "text": " Ik heb je pakket. Hij legt het briefje bij de deur. Om zes uur komt de buurman thuis.",
+      "temperature": 0,
+      "avg_logprob": -0.05979218849769005,
+      "compression_ratio": 1.4140625,
+      "no_speech_prob": 5.299702083433333e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 5.82,
+          "end": 6.22,
+          "probability": 0.9677734375
+        },
+        {
+          "word": " heb",
+          "start": 6.22,
+          "end": 6.36,
+          "probability": 1.0
+        },
+        {
+          "word": " je",
+          "start": 6.36,
+          "end": 6.46,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " pakket.",
+          "start": 6.46,
+          "end": 6.82,
+          "probability": 1.0
+        },
+        {
+          "word": " Hij",
+          "start": 7.14,
+          "end": 7.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " legt",
+          "start": 7.64,
+          "end": 7.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 7.86,
+          "end": 7.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " briefje",
+          "start": 7.94,
+          "end": 8.24,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 8.24,
+          "end": 8.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.34,
+          "end": 8.44,
+          "probability": 1.0
+        },
+        {
+          "word": " deur.",
+          "start": 8.44,
+          "end": 8.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Om",
+          "start": 9.24,
+          "end": 9.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zes",
+          "start": 9.58,
+          "end": 9.84,
+          "probability": 0.7958984375
+        },
+        {
+          "word": " uur",
+          "start": 9.84,
+          "end": 10.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 10.06,
+          "end": 10.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 10.24,
+          "end": 10.36,
+          "probability": 1.0
+        },
+        {
+          "word": " buurman",
+          "start": 10.36,
+          "end": 10.7,
+          "probability": 1.0
+        },
+        {
+          "word": " thuis.",
+          "start": 10.7,
+          "end": 11.06,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

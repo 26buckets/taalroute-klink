@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-31ba1a499ee910ad",
+  "sha256": "323681912fca1d99509a35fcbcd4a8eb186f54c6106a16489ed2c39d0a38f083",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kam mijn haar.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Ik kam mijn haar.",
+      "temperature": 0,
+      "avg_logprob": -0.37505632638931274,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 0.1032373383641243,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.87451171875
+        },
+        {
+          "word": " kam",
+          "start": 0.14,
+          "end": 0.36,
+          "probability": 0.5322265625
+        },
+        {
+          "word": " mijn",
+          "start": 0.36,
+          "end": 0.6,
+          "probability": 0.984375
+        },
+        {
+          "word": " haar.",
+          "start": 0.6,
+          "end": 0.9,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

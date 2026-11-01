@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-900d2e919f3e6a76",
+  "sha256": "b7165653e36ec2eb1db808e7723ac802ec712f484c445a22519a05b163f73730",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik speel vandaag met Anouk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Ik speel vandaag met Anouk.",
+      "temperature": 0,
+      "avg_logprob": -0.0823894739151001,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.3108689361248675e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96484375
+        },
+        {
+          "word": " speel",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 0.42,
+          "end": 0.72,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 0.72,
+          "end": 1.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Anouk.",
+          "start": 1.06,
+          "end": 1.48,
+          "probability": 0.9921875
+        }
+      ]
+    }
+  ]
+}

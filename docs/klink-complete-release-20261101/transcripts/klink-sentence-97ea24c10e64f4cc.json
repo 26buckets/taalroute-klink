@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-97ea24c10e64f4cc",
+  "sha256": "8d05abc618134429afb05102f13bb63ae5dc52cff5a5369e7e4f3b0233eefdfb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nadia veegt de stoep.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Nadia veegt de stoep.",
+      "temperature": 0,
+      "avg_logprob": -0.1561497774991122,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 5.290003678160016e-12,
+      "words": [
+        {
+          "word": " Nadia",
+          "start": 0.0,
+          "end": 0.5,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " veegt",
+          "start": 0.5,
+          "end": 0.88,
+          "probability": 0.958984375
+        },
+        {
+          "word": " de",
+          "start": 0.88,
+          "end": 1.04,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " stoep.",
+          "start": 1.04,
+          "end": 1.32,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

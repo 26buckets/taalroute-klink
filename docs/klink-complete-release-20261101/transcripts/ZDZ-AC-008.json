@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-008",
+  "sha256": "d7311b647c0de9566f4477876234da3a4cff588dedd4d1457940debbe2f9cf29",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn huis heeft twee kamers.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.36,
+      "text": " Mijn huis heeft twee kamers.",
+      "temperature": 0,
+      "avg_logprob": -0.16095118089155716,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.98325989847781e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9501953125
+        },
+        {
+          "word": " huis",
+          "start": 0.22,
+          "end": 0.42,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " heeft",
+          "start": 0.42,
+          "end": 0.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " twee",
+          "start": 0.68,
+          "end": 0.88,
+          "probability": 0.92431640625
+        },
+        {
+          "word": " kamers.",
+          "start": 0.88,
+          "end": 1.36,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

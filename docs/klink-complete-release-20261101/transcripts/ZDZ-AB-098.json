@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-098",
+  "sha256": "45a57e835b77e435e11bab06779b1ae1444791978be283070887cf266db05d7c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben klaar.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.64,
+      "text": " Ik ben klaar.",
+      "temperature": 0,
+      "avg_logprob": -0.2404279112815857,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 3.4185313000506534e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96044921875
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klaar.",
+          "start": 0.28,
+          "end": 0.64,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

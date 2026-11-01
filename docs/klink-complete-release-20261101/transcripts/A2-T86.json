@@ -1,0 +1,582 @@
+{
+  "id": "A2-T86",
+  "sha256": "b02af0b4e528ba52be4b23544239cc53385e17817709822be5a7d913aede7748",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het buurthuis krijgt maandag een rekening voor water. De beheerder ziet dat er een oud adres op staat. Volgens haar klopt het bedrag. Ze belt het waterbedrijf om het adres te laten veranderen. De medewerker vraagt om het nummer dat op de rekening staat en om het juiste adres. Dinsdag ontvangt het buurthuis een nieuwe rekening per e-mail. De beheerder controleert daarop eerst het adres en daarna het bedrag. Ze bewaart beide rekeningen om ze te vergelijken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.28,
+      "text": " Het buurthuis krijgt maandag een rekening voor water.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " buurthuis",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.990234375
+        },
+        {
+          "word": " krijgt",
+          "start": 0.62,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maandag",
+          "start": 0.88,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.28,
+          "end": 1.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rekening",
+          "start": 1.4,
+          "end": 1.78,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 1.78,
+          "end": 1.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " water.",
+          "start": 1.92,
+          "end": 2.28,
+          "probability": 0.9833984375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.880000000000002,
+      "end": 5.26,
+      "text": " De beheerder ziet dat er een oud adres op staat.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 2.880000000000002,
+          "end": 3.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " beheerder",
+          "start": 3.4,
+          "end": 3.84,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ziet",
+          "start": 3.84,
+          "end": 4.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 4.02,
+          "end": 4.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " er",
+          "start": 4.16,
+          "end": 4.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 4.28,
+          "end": 4.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " oud",
+          "start": 4.38,
+          "end": 4.6,
+          "probability": 0.99609375
+        },
+        {
+          "word": " adres",
+          "start": 4.6,
+          "end": 4.9,
+          "probability": 0.978515625
+        },
+        {
+          "word": " op",
+          "start": 4.9,
+          "end": 5.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " staat.",
+          "start": 5.02,
+          "end": 5.26,
+          "probability": 0.98291015625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.900000000000002,
+      "end": 7.42,
+      "text": " Volgens haar klopt het bedrag.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " Volgens",
+          "start": 5.900000000000002,
+          "end": 6.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 6.42,
+          "end": 6.62,
+          "probability": 1.0
+        },
+        {
+          "word": " klopt",
+          "start": 6.62,
+          "end": 6.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.92,
+          "end": 7.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bedrag.",
+          "start": 7.04,
+          "end": 7.42,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.84,
+      "end": 10.62,
+      "text": " Ze belt het waterbedrijf om het adres te laten veranderen.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 7.84,
+          "end": 8.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " belt",
+          "start": 8.3,
+          "end": 8.5,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " het",
+          "start": 8.5,
+          "end": 8.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " waterbedrijf",
+          "start": 8.66,
+          "end": 9.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 9.3,
+          "end": 9.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 9.42,
+          "end": 9.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " adres",
+          "start": 9.52,
+          "end": 9.78,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 9.78,
+          "end": 9.9,
+          "probability": 1.0
+        },
+        {
+          "word": " laten",
+          "start": 9.9,
+          "end": 10.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " veranderen.",
+          "start": 10.06,
+          "end": 10.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.1,
+      "end": 14.96,
+      "text": " De medewerker vraagt om het nummer dat op de rekening staat en om het juiste adres.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.1,
+          "end": 11.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 11.62,
+          "end": 12.12,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 12.12,
+          "end": 12.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 12.56,
+          "end": 12.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nummer",
+          "start": 12.7,
+          "end": 12.94,
+          "probability": 0.99609375
+        },
+        {
+          "word": " dat",
+          "start": 12.94,
+          "end": 13.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 13.06,
+          "end": 13.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 13.2,
+          "end": 13.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rekening",
+          "start": 13.26,
+          "end": 13.66,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 13.66,
+          "end": 13.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 13.9,
+          "end": 14.08,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " om",
+          "start": 14.08,
+          "end": 14.16,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " het",
+          "start": 14.16,
+          "end": 14.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " juiste",
+          "start": 14.28,
+          "end": 14.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " adres.",
+          "start": 14.56,
+          "end": 14.96,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.72,
+      "end": 18.4,
+      "text": " Dinsdag ontvangt het buurthuis een nieuwe rekening per e-mail.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " Dinsdag",
+          "start": 15.72,
+          "end": 16.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ontvangt",
+          "start": 16.24,
+          "end": 16.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 16.6,
+          "end": 16.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buurthuis",
+          "start": 16.7,
+          "end": 17.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 17.16,
+          "end": 17.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuwe",
+          "start": 17.3,
+          "end": 17.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rekening",
+          "start": 17.48,
+          "end": 17.88,
+          "probability": 1.0
+        },
+        {
+          "word": " per",
+          "start": 17.88,
+          "end": 18.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " e",
+          "start": 18.02,
+          "end": 18.2,
+          "probability": 0.9912109375
+        },
+        {
+          "word": "-mail.",
+          "start": 18.2,
+          "end": 18.4,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.76,
+      "end": 22.08,
+      "text": " De beheerder controleert daarop eerst het adres en daarna het bedrag.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 18.76,
+          "end": 19.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beheerder",
+          "start": 19.22,
+          "end": 19.62,
+          "probability": 1.0
+        },
+        {
+          "word": " controleert",
+          "start": 19.62,
+          "end": 20.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " daarop",
+          "start": 20.12,
+          "end": 20.36,
+          "probability": 0.994140625
+        },
+        {
+          "word": " eerst",
+          "start": 20.36,
+          "end": 20.66,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 20.66,
+          "end": 20.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " adres",
+          "start": 20.8,
+          "end": 21.12,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 21.12,
+          "end": 21.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " daarna",
+          "start": 21.28,
+          "end": 21.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 21.54,
+          "end": 21.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bedrag.",
+          "start": 21.7,
+          "end": 22.08,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 22.5,
+      "end": 24.94,
+      "text": " Ze bewaart beide rekeningen om ze te vergelijken.",
+      "temperature": 0,
+      "avg_logprob": -0.06638610437049629,
+      "compression_ratio": 1.8433734939759037,
+      "no_speech_prob": 5.489170316202996e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 22.5,
+          "end": 23.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bewaart",
+          "start": 23.0,
+          "end": 23.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " beide",
+          "start": 23.34,
+          "end": 23.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rekeningen",
+          "start": 23.6,
+          "end": 24.12,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 24.12,
+          "end": 24.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 24.24,
+          "end": 24.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 24.34,
+          "end": 24.44,
+          "probability": 1.0
+        },
+        {
+          "word": " vergelijken.",
+          "start": 24.44,
+          "end": 24.94,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

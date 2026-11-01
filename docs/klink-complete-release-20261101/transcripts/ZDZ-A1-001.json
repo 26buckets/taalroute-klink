@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-001",
+  "sha256": "7e4d31c3e3ae77ab63f686cad5cfbe456553083919bd8c412e48a81e79ecbee2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heet Noor en ik woon in Rotterdam.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": " Ik heet Noor en ik woon in Rotterdam.",
+      "temperature": 0,
+      "avg_logprob": -0.04508902044857249,
+      "compression_ratio": 0.8604651162790697,
+      "no_speech_prob": 4.167923818576558e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " heet",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Noor",
+          "start": 0.34,
+          "end": 0.66,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " en",
+          "start": 0.66,
+          "end": 0.96,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " ik",
+          "start": 0.96,
+          "end": 1.08,
+          "probability": 0.990234375
+        },
+        {
+          "word": " woon",
+          "start": 1.08,
+          "end": 1.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " in",
+          "start": 1.28,
+          "end": 1.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Rotterdam.",
+          "start": 1.38,
+          "end": 1.8,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

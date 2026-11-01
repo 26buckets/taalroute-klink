@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-45638d611d7598ca",
+  "sha256": "e8054406b36ae48b613746cae71282fe14524d0881e2990e93515afd75cc245f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het krijt ligt bij het bord.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " Het krijt ligt bij het bord.",
+      "temperature": 0,
+      "avg_logprob": -0.131154735883077,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.284284298855523e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9423828125
+        },
+        {
+          "word": " krijt",
+          "start": 0.18,
+          "end": 0.62,
+          "probability": 0.95556640625
+        },
+        {
+          "word": " ligt",
+          "start": 0.62,
+          "end": 0.92,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bij",
+          "start": 0.92,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 1.1,
+          "end": 1.28,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " bord.",
+          "start": 1.28,
+          "end": 1.5,
+          "probability": 0.98046875
+        }
+      ]
+    }
+  ]
+}

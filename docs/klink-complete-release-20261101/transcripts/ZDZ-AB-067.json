@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-067",
+  "sha256": "0b6aabcaa9450bbffa87b2f34831b2a70938262a7a5c502d4d0d488649a046a4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Die tas is klein.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.76,
+      "text": " Die tas is klein.",
+      "temperature": 0,
+      "avg_logprob": -0.4884219169616699,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.05102557402004e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.919921875
+        },
+        {
+          "word": " tas",
+          "start": 0.18,
+          "end": 0.32,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " is",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " klein.",
+          "start": 0.46,
+          "end": 0.76,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

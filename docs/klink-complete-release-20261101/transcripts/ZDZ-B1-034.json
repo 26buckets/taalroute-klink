@@ -1,0 +1,126 @@
+{
+  "id": "ZDZ-B1-034",
+  "sha256": "8013003f6bccf4bc597ef5535bfd8fc47c24b02aace888de2972e31218a8f903",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik hoorde twee verschillende tijden. Kunt u bevestigen hoe laat ik morgen terug moet zijn?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.56,
+      "text": " Ik hoorde twee verschillende tijden.",
+      "temperature": 0,
+      "avg_logprob": -0.088557497660319,
+      "compression_ratio": 1.0714285714285714,
+      "no_speech_prob": 4.513097361102947e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97216796875
+        },
+        {
+          "word": " hoorde",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " twee",
+          "start": 0.34,
+          "end": 0.58,
+          "probability": 0.97021484375
+        },
+        {
+          "word": " verschillende",
+          "start": 0.58,
+          "end": 1.14,
+          "probability": 1.0
+        },
+        {
+          "word": " tijden.",
+          "start": 1.14,
+          "end": 1.56,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 1.66,
+      "end": 4.04,
+      "text": " Kunt u bevestigen hoe laat ik morgen terug moet zijn?",
+      "temperature": 0,
+      "avg_logprob": -0.088557497660319,
+      "compression_ratio": 1.0714285714285714,
+      "no_speech_prob": 4.513097361102947e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 1.66,
+          "end": 1.94,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " u",
+          "start": 1.94,
+          "end": 2.02,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " bevestigen",
+          "start": 2.02,
+          "end": 2.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hoe",
+          "start": 2.58,
+          "end": 2.82,
+          "probability": 0.95361328125
+        },
+        {
+          "word": " laat",
+          "start": 2.82,
+          "end": 3.02,
+          "probability": 0.88427734375
+        },
+        {
+          "word": " ik",
+          "start": 3.02,
+          "end": 3.12,
+          "probability": 0.998046875
+        },
+        {
+          "word": " morgen",
+          "start": 3.12,
+          "end": 3.36,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " terug",
+          "start": 3.36,
+          "end": 3.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 3.6,
+          "end": 3.8,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " zijn?",
+          "start": 3.8,
+          "end": 4.04,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

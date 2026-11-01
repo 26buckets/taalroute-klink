@@ -1,0 +1,284 @@
+{
+  "id": "A1-T34",
+  "sha256": "f912383152e5da22761faaec1fd09f5cafdf59a2c46353fc99b0458398f8b472",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Om acht uur wil een man naar zijn werk vertrekken. Hij kijkt naar de klok in de keuken. De klok staat stil. Op zijn telefoon ziet hij zeven uur. Hij pakt zijn tas en neemt bus vier.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.14,
+      "text": " Om acht uur wil een man naar zijn werk vertrekken.",
+      "temperature": 0,
+      "avg_logprob": -0.055159319692583225,
+      "compression_ratio": 1.4140625,
+      "no_speech_prob": 6.342152497618159e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9765625
+        },
+        {
+          "word": " acht",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 0.611328125
+        },
+        {
+          "word": " uur",
+          "start": 0.38,
+          "end": 0.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " wil",
+          "start": 0.62,
+          "end": 0.78,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 0.78,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man",
+          "start": 0.9,
+          "end": 1.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 1.08,
+          "end": 1.24,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zijn",
+          "start": 1.24,
+          "end": 1.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werk",
+          "start": 1.42,
+          "end": 1.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vertrekken.",
+          "start": 1.68,
+          "end": 2.14,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.26,
+      "end": 4.8,
+      "text": " Hij kijkt naar de klok in de keuken. De klok staat stil.",
+      "temperature": 0,
+      "avg_logprob": -0.055159319692583225,
+      "compression_ratio": 1.4140625,
+      "no_speech_prob": 6.342152497618159e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 2.26,
+          "end": 2.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kijkt",
+          "start": 2.42,
+          "end": 2.72,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 2.72,
+          "end": 2.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.82,
+          "end": 2.94,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " klok",
+          "start": 2.94,
+          "end": 3.16,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 3.16,
+          "end": 3.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 3.26,
+          "end": 3.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " keuken.",
+          "start": 3.36,
+          "end": 3.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 3.88,
+          "end": 3.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klok",
+          "start": 3.98,
+          "end": 4.22,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 4.22,
+          "end": 4.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stil.",
+          "start": 4.44,
+          "end": 4.8,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.94,
+      "end": 6.82,
+      "text": " Op zijn telefoon ziet hij zeven uur.",
+      "temperature": 0,
+      "avg_logprob": -0.055159319692583225,
+      "compression_ratio": 1.4140625,
+      "no_speech_prob": 6.342152497618159e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 4.94,
+          "end": 5.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 5.14,
+          "end": 5.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " telefoon",
+          "start": 5.3,
+          "end": 5.8,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 5.8,
+          "end": 5.98,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " hij",
+          "start": 5.98,
+          "end": 6.12,
+          "probability": 1.0
+        },
+        {
+          "word": " zeven",
+          "start": 6.12,
+          "end": 6.54,
+          "probability": 0.990234375
+        },
+        {
+          "word": " uur.",
+          "start": 6.54,
+          "end": 6.82,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 6.96,
+      "end": 8.94,
+      "text": " Hij pakt zijn tas en neemt bus vier.",
+      "temperature": 0,
+      "avg_logprob": -0.055159319692583225,
+      "compression_ratio": 1.4140625,
+      "no_speech_prob": 6.342152497618159e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 6.96,
+          "end": 7.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pakt",
+          "start": 7.14,
+          "end": 7.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 7.38,
+          "end": 7.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tas",
+          "start": 7.54,
+          "end": 7.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 7.84,
+          "end": 8.18,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " neemt",
+          "start": 8.18,
+          "end": 8.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 8.46,
+          "end": 8.7,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " vier.",
+          "start": 8.7,
+          "end": 8.94,
+          "probability": 0.8564453125
+        }
+      ]
+    }
+  ]
+}

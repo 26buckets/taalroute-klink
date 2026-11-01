@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-4c24d91116023401",
+  "sha256": "e9bb4fda0d145b41e28e46a8b0b1ba18274d18debc924fa6d571885b10171598",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Is de oven al afgekoeld?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.44,
+      "text": " Is de oven al afgekoeld?",
+      "temperature": 0,
+      "avg_logprob": -0.07137878735860188,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.777097554337084e-12,
+      "words": [
+        {
+          "word": " Is",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.89208984375
+        },
+        {
+          "word": " de",
+          "start": 0.16,
+          "end": 0.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " oven",
+          "start": 0.32,
+          "end": 0.66,
+          "probability": 0.990234375
+        },
+        {
+          "word": " al",
+          "start": 0.66,
+          "end": 0.86,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " afgekoeld?",
+          "start": 0.86,
+          "end": 1.44,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

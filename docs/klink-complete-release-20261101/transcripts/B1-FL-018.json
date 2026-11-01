@@ -1,0 +1,635 @@
+{
+  "id": "B1-FL-018",
+  "sha256": "b10ccd10e103c5e0f21377b62c8d48cb51cbd51f58c7fabfd6173506ab47882d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Voor een cursus moeten Mai en Hassan samen een korte presentatie geven. Hassan wil de dia's maken en het meeste vertellen, omdat hij graag voor een groep spreekt. Mai vindt presenteren lastig, maar wil wel oefenen. Ze spreken af dat Hassan de inleiding doet en Mai twee voorbeelden uitlegt. Tijdens het oefenen blijkt dat haar uitleg duidelijk is, zolang ze rustig praat. Op de dag van de presentatie is Mai nog zenuwachtig. Toch is ze tevreden, omdat ze niet alleen heeft meegewerkt, maar ook zelf het woord heeft genomen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.8,
+      "text": " Voor een cursus moeten Mai en Hassan samen een korte presentatie geven.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " een",
+          "start": 0.18,
+          "end": 0.32,
+          "probability": 0.994140625
+        },
+        {
+          "word": " cursus",
+          "start": 0.32,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moeten",
+          "start": 0.78,
+          "end": 1.02,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " Mai",
+          "start": 1.02,
+          "end": 1.26,
+          "probability": 0.6748046875
+        },
+        {
+          "word": " en",
+          "start": 1.26,
+          "end": 1.44,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Hassan",
+          "start": 1.44,
+          "end": 1.86,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " samen",
+          "start": 1.86,
+          "end": 2.24,
+          "probability": 0.98291015625
+        },
+        {
+          "word": " een",
+          "start": 2.24,
+          "end": 2.4,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " korte",
+          "start": 2.4,
+          "end": 2.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " presentatie",
+          "start": 2.72,
+          "end": 3.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geven.",
+          "start": 3.44,
+          "end": 3.8,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.0,
+      "end": 8.32,
+      "text": " Hassan wil de dia's maken en het meeste vertellen, omdat hij graag voor een groep spreekt.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Hassan",
+          "start": 4.0,
+          "end": 4.38,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 4.38,
+          "end": 4.54,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " de",
+          "start": 4.54,
+          "end": 4.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " dia's",
+          "start": 4.72,
+          "end": 5.06,
+          "probability": 0.96044921875
+        },
+        {
+          "word": " maken",
+          "start": 5.06,
+          "end": 5.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 5.36,
+          "end": 5.58,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " het",
+          "start": 5.58,
+          "end": 5.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " meeste",
+          "start": 5.72,
+          "end": 6.04,
+          "probability": 0.9921875
+        },
+        {
+          "word": " vertellen,",
+          "start": 6.04,
+          "end": 6.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " omdat",
+          "start": 6.62,
+          "end": 6.84,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " hij",
+          "start": 6.84,
+          "end": 7.04,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " graag",
+          "start": 7.04,
+          "end": 7.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 7.34,
+          "end": 7.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 7.48,
+          "end": 7.64,
+          "probability": 0.994140625
+        },
+        {
+          "word": " groep",
+          "start": 7.64,
+          "end": 7.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " spreekt.",
+          "start": 7.88,
+          "end": 8.32,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.6,
+      "end": 11.04,
+      "text": " Mai vindt presenteren lastig, maar wil wel oefenen.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Mai",
+          "start": 8.6,
+          "end": 8.7,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vindt",
+          "start": 8.7,
+          "end": 9.08,
+          "probability": 0.998046875
+        },
+        {
+          "word": " presenteren",
+          "start": 9.08,
+          "end": 9.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " lastig,",
+          "start": 9.58,
+          "end": 10.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 10.14,
+          "end": 10.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 10.24,
+          "end": 10.44,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " wel",
+          "start": 10.44,
+          "end": 10.62,
+          "probability": 0.9921875
+        },
+        {
+          "word": " oefenen.",
+          "start": 10.62,
+          "end": 11.04,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.18,
+      "end": 15.2,
+      "text": " Ze spreken af dat Hassan de inleiding doet en Mai twee voorbeelden uitlegt.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Ze",
+          "start": 11.18,
+          "end": 11.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " spreken",
+          "start": 11.34,
+          "end": 11.68,
+          "probability": 1.0
+        },
+        {
+          "word": " af",
+          "start": 11.68,
+          "end": 11.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 11.96,
+          "end": 12.1,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " Hassan",
+          "start": 12.1,
+          "end": 12.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.54,
+          "end": 12.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " inleiding",
+          "start": 12.66,
+          "end": 13.16,
+          "probability": 1.0
+        },
+        {
+          "word": " doet",
+          "start": 13.16,
+          "end": 13.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 13.38,
+          "end": 13.6,
+          "probability": 0.93798828125
+        },
+        {
+          "word": " Mai",
+          "start": 13.6,
+          "end": 13.84,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " twee",
+          "start": 13.84,
+          "end": 14.14,
+          "probability": 0.9677734375
+        },
+        {
+          "word": " voorbeelden",
+          "start": 14.14,
+          "end": 14.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uitlegt.",
+          "start": 14.74,
+          "end": 15.2,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.48,
+      "end": 19.58,
+      "text": " Tijdens het oefenen blijkt dat haar uitleg duidelijk is, zolang ze rustig praat.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Tijdens",
+          "start": 15.48,
+          "end": 15.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 15.9,
+          "end": 16.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " oefenen",
+          "start": 16.02,
+          "end": 16.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blijkt",
+          "start": 16.42,
+          "end": 16.84,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " dat",
+          "start": 16.84,
+          "end": 16.94,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " haar",
+          "start": 16.94,
+          "end": 17.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uitleg",
+          "start": 17.12,
+          "end": 17.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " duidelijk",
+          "start": 17.56,
+          "end": 18.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is,",
+          "start": 18.1,
+          "end": 18.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zolang",
+          "start": 18.42,
+          "end": 18.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " ze",
+          "start": 18.72,
+          "end": 18.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rustig",
+          "start": 18.86,
+          "end": 19.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " praat.",
+          "start": 19.22,
+          "end": 19.58,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 19.76,
+      "end": 22.82,
+      "text": " Op de dag van de presentatie is Mai nog zenuwachtig.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 19.76,
+          "end": 20.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 20.06,
+          "end": 20.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dag",
+          "start": 20.16,
+          "end": 20.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 20.34,
+          "end": 20.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 20.5,
+          "end": 20.6,
+          "probability": 0.998046875
+        },
+        {
+          "word": " presentatie",
+          "start": 20.6,
+          "end": 21.38,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 21.38,
+          "end": 21.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Mai",
+          "start": 21.6,
+          "end": 21.82,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " nog",
+          "start": 21.82,
+          "end": 22.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zenuwachtig.",
+          "start": 22.04,
+          "end": 22.82,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 22.98,
+      "end": 27.78,
+      "text": " Toch is ze tevreden, omdat ze niet alleen heeft meegewerkt, maar ook zelf het woord heeft genomen.",
+      "temperature": 0,
+      "avg_logprob": -0.05060727337756789,
+      "compression_ratio": 1.75503355704698,
+      "no_speech_prob": 7.650325685448767e-12,
+      "words": [
+        {
+          "word": " Toch",
+          "start": 22.98,
+          "end": 23.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 23.28,
+          "end": 23.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ze",
+          "start": 23.42,
+          "end": 23.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tevreden,",
+          "start": 23.54,
+          "end": 24.1,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 24.18,
+          "end": 24.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ze",
+          "start": 24.42,
+          "end": 24.62,
+          "probability": 0.998046875
+        },
+        {
+          "word": " niet",
+          "start": 24.62,
+          "end": 24.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alleen",
+          "start": 24.76,
+          "end": 25.04,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 25.04,
+          "end": 25.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meegewerkt,",
+          "start": 25.3,
+          "end": 25.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " maar",
+          "start": 26.06,
+          "end": 26.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ook",
+          "start": 26.22,
+          "end": 26.4,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zelf",
+          "start": 26.4,
+          "end": 26.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 26.7,
+          "end": 26.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " woord",
+          "start": 26.9,
+          "end": 27.16,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " heeft",
+          "start": 27.16,
+          "end": 27.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " genomen.",
+          "start": 27.34,
+          "end": 27.78,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

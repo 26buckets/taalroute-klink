@@ -1,0 +1,41 @@
+{
+  "id": "klink-sentence-7bda12f2f17bca7d",
+  "sha256": "274bfe8daf60966fbdf4f9f9c433389cf9062753624862e9ec001699c7a4dc2a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit zijn koekjes.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Dit zijn koekjes.",
+      "temperature": 0,
+      "avg_logprob": -0.18594752417670357,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 4.241476961319712e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.970703125
+        },
+        {
+          "word": " zijn",
+          "start": 0.22,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " koekjes.",
+          "start": 0.44,
+          "end": 1.02,
+          "probability": 0.97265625
+        }
+      ]
+    }
+  ]
+}

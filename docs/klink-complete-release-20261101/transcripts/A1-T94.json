@@ -1,0 +1,327 @@
+{
+  "id": "A1-T94",
+  "sha256": "087d9931e874ebcf951e99f5d5dea1dcb92f1556c626f1f9ed87fdbdfc05716c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op straat vindt een vrouw een portemonnee. In de portemonnee ziet zij een kaart met een naam. De vrouw brengt de portemonnee naar het politiebureau. Daar geeft zij de portemonnee aan een medewerker. De medewerker schrijft het telefoonnummer van de vrouw op.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.0,
+      "text": " Op straat vindt een vrouw een portemonnee.",
+      "temperature": 0,
+      "avg_logprob": -0.06842390040761416,
+      "compression_ratio": 1.7133333333333334,
+      "no_speech_prob": 8.143167563867681e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9814453125
+        },
+        {
+          "word": " straat",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " vindt",
+          "start": 0.56,
+          "end": 0.78,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " een",
+          "start": 0.78,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 0.86,
+          "end": 1.2,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 1.2,
+          "end": 1.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " portemonnee.",
+          "start": 1.32,
+          "end": 2.0,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.1,
+      "end": 4.56,
+      "text": " In de portemonnee ziet zij een kaart met een naam.",
+      "temperature": 0,
+      "avg_logprob": -0.06842390040761416,
+      "compression_ratio": 1.7133333333333334,
+      "no_speech_prob": 8.143167563867681e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 2.1,
+          "end": 2.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.28,
+          "end": 2.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " portemonnee",
+          "start": 2.38,
+          "end": 2.94,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 2.94,
+          "end": 3.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zij",
+          "start": 3.16,
+          "end": 3.34,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " een",
+          "start": 3.34,
+          "end": 3.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaart",
+          "start": 3.52,
+          "end": 3.88,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 3.88,
+          "end": 4.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 4.06,
+          "end": 4.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " naam.",
+          "start": 4.2,
+          "end": 4.56,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.72,
+      "end": 6.98,
+      "text": " De vrouw brengt de portemonnee naar het politiebureau.",
+      "temperature": 0,
+      "avg_logprob": -0.06842390040761416,
+      "compression_ratio": 1.7133333333333334,
+      "no_speech_prob": 8.143167563867681e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.72,
+          "end": 4.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrouw",
+          "start": 4.84,
+          "end": 5.14,
+          "probability": 1.0
+        },
+        {
+          "word": " brengt",
+          "start": 5.14,
+          "end": 5.4,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.4,
+          "end": 5.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " portemonnee",
+          "start": 5.48,
+          "end": 6.04,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 6.04,
+          "end": 6.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 6.16,
+          "end": 6.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " politiebureau.",
+          "start": 6.32,
+          "end": 6.98,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.2,
+      "end": 9.42,
+      "text": " Daar geeft zij de portemonnee aan een medewerker.",
+      "temperature": 0,
+      "avg_logprob": -0.06842390040761416,
+      "compression_ratio": 1.7133333333333334,
+      "no_speech_prob": 8.143167563867681e-12,
+      "words": [
+        {
+          "word": " Daar",
+          "start": 7.2,
+          "end": 7.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geeft",
+          "start": 7.3,
+          "end": 7.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zij",
+          "start": 7.6,
+          "end": 7.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 7.78,
+          "end": 7.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " portemonnee",
+          "start": 7.92,
+          "end": 8.5,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 8.5,
+          "end": 8.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 8.68,
+          "end": 8.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker.",
+          "start": 8.82,
+          "end": 9.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.58,
+      "end": 12.32,
+      "text": " De medewerker schrijft het telefoonnummer van de vrouw op.",
+      "temperature": 0,
+      "avg_logprob": -0.06842390040761416,
+      "compression_ratio": 1.7133333333333334,
+      "no_speech_prob": 8.143167563867681e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.58,
+          "end": 9.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 9.72,
+          "end": 10.28,
+          "probability": 1.0
+        },
+        {
+          "word": " schrijft",
+          "start": 10.28,
+          "end": 10.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 10.68,
+          "end": 10.82,
+          "probability": 0.99609375
+        },
+        {
+          "word": " telefoonnummer",
+          "start": 10.82,
+          "end": 11.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " van",
+          "start": 11.48,
+          "end": 11.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 11.66,
+          "end": 11.78,
+          "probability": 1.0
+        },
+        {
+          "word": " vrouw",
+          "start": 11.78,
+          "end": 12.1,
+          "probability": 1.0
+        },
+        {
+          "word": " op.",
+          "start": 12.1,
+          "end": 12.32,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

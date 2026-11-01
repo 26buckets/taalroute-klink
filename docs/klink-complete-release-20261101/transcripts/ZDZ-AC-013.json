@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-013",
+  "sha256": "d77abcd89ce80fc934cc25c80d999250022dbc375cbb6cdf0fec6b9025128101",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik stap hier uit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.74,
+      "text": " Ik stap hier uit.",
+      "temperature": 0,
+      "avg_logprob": -0.15941768884658813,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 3.703789011599845e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.947265625
+        },
+        {
+          "word": " stap",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.994140625
+        },
+        {
+          "word": " hier",
+          "start": 0.34,
+          "end": 0.5,
+          "probability": 0.99609375
+        },
+        {
+          "word": " uit.",
+          "start": 0.5,
+          "end": 0.74,
+          "probability": 0.8525390625
+        }
+      ]
+    }
+  ]
+}

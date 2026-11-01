@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-035",
+  "sha256": "4e194071765f259326972f2c9440dfa3a0db8bd550780d55e2c6c2e6f5419c26",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u dit een keer doen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Kunt u dit een keer doen?",
+      "temperature": 0,
+      "avg_logprob": -0.12959978797219016,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.01995450816095e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.8583984375
+        },
+        {
+          "word": " u",
+          "start": 0.2,
+          "end": 0.28,
+          "probability": 0.986328125
+        },
+        {
+          "word": " dit",
+          "start": 0.28,
+          "end": 0.44,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 0.44,
+          "end": 0.6,
+          "probability": 0.984375
+        },
+        {
+          "word": " keer",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " doen?",
+          "start": 0.74,
+          "end": 0.94,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

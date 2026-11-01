@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-079",
+  "sha256": "f93d778736b5d1b16b4374ea0e55403e76f457c6e23873b0b668e236853548bc",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nee, dat klopt niet.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.12,
+      "text": " Nee, dat klopt niet.",
+      "temperature": 0,
+      "avg_logprob": -0.10646381378173828,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 5.051854767845754e-12,
+      "words": [
+        {
+          "word": " Nee,",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.97412109375
+        },
+        {
+          "word": " dat",
+          "start": 0.6,
+          "end": 0.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " klopt",
+          "start": 0.7,
+          "end": 0.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet.",
+          "start": 0.96,
+          "end": 1.12,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A2-077",
+  "sha256": "115becf963bb969d29723fc27074cd78572f4a1d57afe4a4f76f3e1a0e877df5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Daarna heeft de klant de bestelling opgehaald.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " Daarna heeft de klant de bestelling opgehaald.",
+      "temperature": 0,
+      "avg_logprob": -0.05125940547269933,
+      "compression_ratio": 0.92,
+      "no_speech_prob": 3.5118219096630376e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.994140625
+        },
+        {
+          "word": " heeft",
+          "start": 0.32,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.52,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klant",
+          "start": 0.64,
+          "end": 0.86,
+          "probability": 0.9921875
+        },
+        {
+          "word": " de",
+          "start": 0.86,
+          "end": 0.92,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " bestelling",
+          "start": 0.92,
+          "end": 1.22,
+          "probability": 1.0
+        },
+        {
+          "word": " opgehaald.",
+          "start": 1.22,
+          "end": 1.78,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

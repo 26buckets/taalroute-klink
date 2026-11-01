@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-83e2b66e8ae7f977",
+  "sha256": "c05c57361cbd4e9485a592b6ae2ef76c407211caaf20ad5ad70f4d9c39696b37",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De les duurt een uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.26,
+      "text": " De les duurt een uur.",
+      "temperature": 0,
+      "avg_logprob": -0.12786535783247513,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.323103940800932e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92333984375
+        },
+        {
+          "word": " les",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " duurt",
+          "start": 0.44,
+          "end": 0.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.74,
+          "end": 0.9,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " uur.",
+          "start": 0.9,
+          "end": 1.26,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

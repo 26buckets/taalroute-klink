@@ -1,0 +1,283 @@
+{
+  "id": "A1-T63",
+  "sha256": "ad4c3b1215140bec2467e479477e6ce471729d82caec2fb6c1b07f395dc516cf",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Zaterdag is er feest op school. Een vrouw wil haar groene jurk dragen. De jurk ligt in de kast, maar is vuil. Zij was de jurk op vrijdag. Zaterdag trekt zij de schone jurk aan en gaat naar school.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.66,
+      "text": " Zaterdag is er feest op school. Een vrouw wil haar groene jurk dragen.",
+      "temperature": 0,
+      "avg_logprob": -0.07828616433673435,
+      "compression_ratio": 1.4411764705882353,
+      "no_speech_prob": 0.0023943728301674128,
+      "words": [
+        {
+          "word": " Zaterdag",
+          "start": 0.0,
+          "end": 0.44,
+          "probability": 0.984375
+        },
+        {
+          "word": " is",
+          "start": 0.44,
+          "end": 0.54,
+          "probability": 0.998046875
+        },
+        {
+          "word": " er",
+          "start": 0.54,
+          "end": 0.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " feest",
+          "start": 0.62,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school.",
+          "start": 1.1,
+          "end": 1.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Een",
+          "start": 1.7,
+          "end": 2.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vrouw",
+          "start": 2.04,
+          "end": 2.42,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 2.42,
+          "end": 2.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " haar",
+          "start": 2.52,
+          "end": 2.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groene",
+          "start": 2.66,
+          "end": 3.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jurk",
+          "start": 3.0,
+          "end": 3.28,
+          "probability": 1.0
+        },
+        {
+          "word": " dragen.",
+          "start": 3.28,
+          "end": 3.66,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.0,
+      "end": 7.7,
+      "text": " De jurk ligt in de kast, maar is vuil. Zij was de jurk op vrijdag.",
+      "temperature": 0,
+      "avg_logprob": -0.07828616433673435,
+      "compression_ratio": 1.4411764705882353,
+      "no_speech_prob": 0.0023943728301674128,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.0,
+          "end": 4.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " jurk",
+          "start": 4.34,
+          "end": 4.66,
+          "probability": 1.0
+        },
+        {
+          "word": " ligt",
+          "start": 4.66,
+          "end": 4.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 4.8,
+          "end": 4.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.92,
+          "end": 5.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kast,",
+          "start": 5.0,
+          "end": 5.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 5.3,
+          "end": 5.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 5.42,
+          "end": 5.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vuil.",
+          "start": 5.54,
+          "end": 5.9,
+          "probability": 0.99609375
+        },
+        {
+          "word": " Zij",
+          "start": 6.4,
+          "end": 6.74,
+          "probability": 0.994140625
+        },
+        {
+          "word": " was",
+          "start": 6.74,
+          "end": 6.8,
+          "probability": 0.447509765625
+        },
+        {
+          "word": " de",
+          "start": 6.8,
+          "end": 6.96,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " jurk",
+          "start": 6.96,
+          "end": 7.22,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 7.22,
+          "end": 7.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vrijdag.",
+          "start": 7.28,
+          "end": 7.7,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.56,
+      "end": 10.74,
+      "text": " Zaterdag trekt zij de schone jurk aan en gaat naar school.",
+      "temperature": 0,
+      "avg_logprob": -0.07828616433673435,
+      "compression_ratio": 1.4411764705882353,
+      "no_speech_prob": 0.0023943728301674128,
+      "words": [
+        {
+          "word": " Zaterdag",
+          "start": 8.56,
+          "end": 8.9,
+          "probability": 1.0
+        },
+        {
+          "word": " trekt",
+          "start": 8.9,
+          "end": 9.18,
+          "probability": 1.0
+        },
+        {
+          "word": " zij",
+          "start": 9.18,
+          "end": 9.26,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " de",
+          "start": 9.26,
+          "end": 9.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schone",
+          "start": 9.4,
+          "end": 9.7,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " jurk",
+          "start": 9.7,
+          "end": 10.02,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 10.02,
+          "end": 10.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 10.14,
+          "end": 10.28,
+          "probability": 0.99609375
+        },
+        {
+          "word": " gaat",
+          "start": 10.28,
+          "end": 10.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 10.42,
+          "end": 10.56,
+          "probability": 1.0
+        },
+        {
+          "word": " school.",
+          "start": 10.56,
+          "end": 10.74,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

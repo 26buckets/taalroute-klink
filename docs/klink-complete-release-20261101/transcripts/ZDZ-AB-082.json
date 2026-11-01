@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-082",
+  "sha256": "5ab41429464e25d280c1a73bb19200271ee046f0ff633ab6fab29a0f511d711c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Morgen ga ik werken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Morgen ga ik werken.",
+      "temperature": 0,
+      "avg_logprob": -0.1637065675523546,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 4.159578063933633e-12,
+      "words": [
+        {
+          "word": " Morgen",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.876953125
+        },
+        {
+          "word": " ga",
+          "start": 0.3,
+          "end": 0.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 0.48,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " werken.",
+          "start": 0.58,
+          "end": 0.92,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "application": "Klink",
+  "date": "2026-11-01",
+  "authorization": "owner-instruction.json",
+  "model": "eleven_v3",
+  "outputFormat": "mp3_44100_128",
+  "instructionVoiceId": "h6uBOiAjLKklte8hdYio",
+  "settings": {
+    "stability": 1.0,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": false,
+    "speed": 1
+  },
+  "roles": "Existing character recordings and voice bindings are unchanged. New voices are external narrators or learner models, not recast characters.",
+  "freeVoiceAlternation": "female/male, continued across new clips; existing good audio reused",
+  "maximumIncludedCredits": 300000,
+  "buyExtraCredits": false,
+  "phase": "repair4",
+  "seed": 29,
+  "textNormalization": "off",
+  "clips": [
+    {
+      "id": "ZDZ-A2-085-R4",
+      "text": "Ik wil vaker met collega's spreken, zodat ik beter Nederlands leer.",
+      "title": "Ik wil vaker met collega's spreken, zodat ik beter Nederlands leer.",
+      "role": "learner-model-utterance",
+      "gender": "female",
+      "voiceId": "7qdUFMklKPaaAVMsBTBt",
+      "voiceName": "Roos",
+      "src": "/package-audio/complete-20261101/zdz-a2-085.mp3",
+      "textSha256": "a5f7053da4f45d672e9bfc7330773d45072bf34e4c2efcba7a14784edd986343",
+      "sourceId": "ZDZ-A2-085",
+      "sourceText": "Ik wil vaker met collega's spreken, zodat ik beter Nederlands leer.",
+      "modelChangeReason": "Exact canonical sentence; the previous model left an unwanted syllable before spreken. Same current free model voice, no character reassignment."
+    }
+  ],
+  "characters": 67,
+  "bindings": {
+    "ZDZ-A2-085": {
+      "src": "/package-audio/complete-20261101/zdz-a2-085.mp3",
+      "recordingId": "ZDZ-A2-085-R4"
+    }
+  }
+}

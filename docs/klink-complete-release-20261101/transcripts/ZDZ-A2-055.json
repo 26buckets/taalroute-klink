@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-055",
+  "sha256": "ed5e978e618b46d313e4341a3757c0baff2914491244430d3ecb971f2baf8b66",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " kan ik mijn afspraak van dinsdag naar donderdag verplaatsen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.36,
+      "text": " kan ik mijn afspraak van dinsdag naar donderdag verplaatsen.",
+      "temperature": 0,
+      "avg_logprob": -0.07462370913961659,
+      "compression_ratio": 1.0,
+      "no_speech_prob": 4.0449700880462736e-12,
+      "words": [
+        {
+          "word": " kan",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.62451171875
+        },
+        {
+          "word": " ik",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " afspraak",
+          "start": 0.4,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 0.86,
+          "end": 0.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dinsdag",
+          "start": 0.98,
+          "end": 1.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 1.32,
+          "end": 1.44,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " donderdag",
+          "start": 1.44,
+          "end": 1.8,
+          "probability": 0.99609375
+        },
+        {
+          "word": " verplaatsen.",
+          "start": 1.8,
+          "end": 2.36,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

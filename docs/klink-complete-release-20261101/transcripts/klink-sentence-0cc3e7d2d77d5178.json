@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-0cc3e7d2d77d5178",
+  "sha256": "4b1f8713166ea211229cebda800731613cff747c71a3cfb03b0348fbcaf5c40d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De schil ligt naast het mes.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " De schil ligt naast het mes.",
+      "temperature": 0,
+      "avg_logprob": -0.07806847645686223,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.5024986343455975e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94873046875
+        },
+        {
+          "word": " schil",
+          "start": 0.16,
+          "end": 0.52,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " ligt",
+          "start": 0.52,
+          "end": 0.84,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naast",
+          "start": 0.84,
+          "end": 1.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 1.26,
+          "end": 1.4,
+          "probability": 0.99609375
+        },
+        {
+          "word": " mes.",
+          "start": 1.4,
+          "end": 1.68,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

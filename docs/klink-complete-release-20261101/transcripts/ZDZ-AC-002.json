@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-002",
+  "sha256": "8c5b1a82ed6feb8a8799c5c9aaddb13e5584e3774b5332441cb24f69a0dc09d2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil graag een brood, alstublieft.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " Ik wil graag een brood, alstublieft.",
+      "temperature": 0,
+      "avg_logprob": -0.06227597068337833,
+      "compression_ratio": 0.8181818181818182,
+      "no_speech_prob": 4.195727099087776e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.93017578125
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " graag",
+          "start": 0.3,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.58,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " brood,",
+          "start": 0.66,
+          "end": 1.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alstublieft.",
+          "start": 1.08,
+          "end": 1.68,
+          "probability": 0.95849609375
+        }
+      ]
+    }
+  ]
+}

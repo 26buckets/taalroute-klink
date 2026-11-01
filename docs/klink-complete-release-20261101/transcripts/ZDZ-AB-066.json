@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-066",
+  "sha256": "63f4cdece3f3144567bb9cfee1c3d8b81ed775c17025104a0d6c3665ef4b4432",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Deze tas is groot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Deze tas is groot.",
+      "temperature": 0,
+      "avg_logprob": -0.20257091522216797,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.2344335503263775e-12,
+      "words": [
+        {
+          "word": " Deze",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.974609375
+        },
+        {
+          "word": " tas",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.99609375
+        },
+        {
+          "word": " is",
+          "start": 0.46,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " groot.",
+          "start": 0.64,
+          "end": 0.92,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

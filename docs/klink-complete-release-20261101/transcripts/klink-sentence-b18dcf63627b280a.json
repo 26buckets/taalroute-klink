@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-b18dcf63627b280a",
+  "sha256": "85cac935b459fe7c6747cb879a1e87af80b662eb03337b108c7621f939ab81f7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Aisha deelt de koekjes uit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Aisha deelt de koekjes uit.",
+      "temperature": 0,
+      "avg_logprob": -0.13521821682269758,
+      "compression_ratio": 0.8181818181818182,
+      "no_speech_prob": 4.736691507772894e-12,
+      "words": [
+        {
+          "word": " Aisha",
+          "start": 0.0,
+          "end": 0.4,
+          "probability": 0.72998046875
+        },
+        {
+          "word": " deelt",
+          "start": 0.4,
+          "end": 0.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.78,
+          "end": 0.96,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " koekjes",
+          "start": 0.96,
+          "end": 1.34,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " uit.",
+          "start": 1.34,
+          "end": 1.6,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-023",
+  "sha256": "d55332ddb6cfe8608966d45990770d80ba379fa4388d48008719becdaefe3f4c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Laten we het werk verdelen, dan zijn we sneller klaar.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.36,
+      "text": " Laten we het werk verdelen, dan zijn we sneller klaar.",
+      "temperature": 0,
+      "avg_logprob": -0.0704193115234375,
+      "compression_ratio": 0.9473684210526315,
+      "no_speech_prob": 3.926383090185892e-12,
+      "words": [
+        {
+          "word": " Laten",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.99609375
+        },
+        {
+          "word": " we",
+          "start": 0.24,
+          "end": 0.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 0.34,
+          "end": 0.44,
+          "probability": 0.986328125
+        },
+        {
+          "word": " werk",
+          "start": 0.44,
+          "end": 0.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verdelen,",
+          "start": 0.68,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dan",
+          "start": 1.26,
+          "end": 1.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zijn",
+          "start": 1.5,
+          "end": 1.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " we",
+          "start": 1.64,
+          "end": 1.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " sneller",
+          "start": 1.78,
+          "end": 2.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klaar.",
+          "start": 2.0,
+          "end": 2.36,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

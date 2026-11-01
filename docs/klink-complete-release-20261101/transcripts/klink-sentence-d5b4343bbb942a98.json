@@ -1,0 +1,41 @@
+{
+  "id": "klink-sentence-d5b4343bbb942a98",
+  "sha256": "ce790f8951fea18b957bb46cbca461ca9bc090b397a93205d13c228732930558",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er ligt sneeuw.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Er ligt sneeuw.",
+      "temperature": 0,
+      "avg_logprob": -0.26401538848876954,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 4.170545853110497e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8447265625
+        },
+        {
+          "word": " ligt",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " sneeuw.",
+          "start": 0.38,
+          "end": 0.98,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

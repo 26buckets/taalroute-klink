@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-096",
+  "sha256": "faf1996fd65eb42e05668f8363dff6d6af779d1656760963be6023fd0f0bbff3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb de verkeerde bus genomen, dus ik kom later.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.22,
+      "text": " Ik heb de verkeerde bus genomen, dus ik kom later.",
+      "temperature": 0,
+      "avg_logprob": -0.05444142692967465,
+      "compression_ratio": 0.9090909090909091,
+      "no_speech_prob": 3.5433390162958878e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9765625
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkeerde",
+          "start": 0.36,
+          "end": 0.74,
+          "probability": 1.0
+        },
+        {
+          "word": " bus",
+          "start": 0.74,
+          "end": 0.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " genomen,",
+          "start": 0.92,
+          "end": 1.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dus",
+          "start": 1.58,
+          "end": 1.66,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 1.66,
+          "end": 1.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kom",
+          "start": 1.78,
+          "end": 1.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " later.",
+          "start": 1.92,
+          "end": 2.22,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

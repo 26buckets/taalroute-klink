@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-f773a31f59783a57",
+  "sha256": "c92fd86d131ada99e92a1e4c0e9c36aeaf8baa67a96f5d9a1ab865a13cee1a1d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik drink iets tijdens de pauze.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.58,
+      "text": " Ik drink iets tijdens de pauze.",
+      "temperature": 0,
+      "avg_logprob": -0.09440799554189046,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.9037753024894215e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.91796875
+        },
+        {
+          "word": " drink",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.998046875
+        },
+        {
+          "word": " iets",
+          "start": 0.4,
+          "end": 0.64,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " tijdens",
+          "start": 0.64,
+          "end": 1.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.08,
+          "end": 1.18,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " pauze.",
+          "start": 1.18,
+          "end": 1.58,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

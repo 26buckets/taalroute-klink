@@ -1,0 +1,138 @@
+{
+  "id": "ZDZ-B1-055",
+  "sha256": "9221de29b4db5e4eb26fd01a6fde7e7516452849c08ca993e86bc6094fd72afb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Onze afspraak van morgen valt samen met een vergadering. Heeft u later op de dag nog tijd?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.46,
+      "text": " Onze afspraak van morgen valt samen met een vergadering.",
+      "temperature": 0,
+      "avg_logprob": -0.06400735916629914,
+      "compression_ratio": 1.0975609756097562,
+      "no_speech_prob": 4.341796887297189e-12,
+      "words": [
+        {
+          "word": " Onze",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " afspraak",
+          "start": 0.22,
+          "end": 0.66,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 0.66,
+          "end": 0.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " morgen",
+          "start": 0.78,
+          "end": 1.1,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " valt",
+          "start": 1.1,
+          "end": 1.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " samen",
+          "start": 1.32,
+          "end": 1.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 1.62,
+          "end": 1.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.78,
+          "end": 1.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vergadering.",
+          "start": 1.88,
+          "end": 2.46,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.62,
+      "end": 3.98,
+      "text": " Heeft u later op de dag nog tijd?",
+      "temperature": 0,
+      "avg_logprob": -0.06400735916629914,
+      "compression_ratio": 1.0975609756097562,
+      "no_speech_prob": 4.341796887297189e-12,
+      "words": [
+        {
+          "word": " Heeft",
+          "start": 2.62,
+          "end": 2.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " u",
+          "start": 2.82,
+          "end": 2.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " later",
+          "start": 2.92,
+          "end": 3.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 3.24,
+          "end": 3.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 3.4,
+          "end": 3.5,
+          "probability": 1.0
+        },
+        {
+          "word": " dag",
+          "start": 3.5,
+          "end": 3.66,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 3.66,
+          "end": 3.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tijd?",
+          "start": 3.8,
+          "end": 3.98,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

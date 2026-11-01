@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-050",
+  "sha256": "f6024017142e9e25216c879a9ece6729ccc254ca27eb2142a7bba21e6af8df13",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vind thee lekker.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.82,
+      "text": " Ik vind thee lekker.",
+      "temperature": 0,
+      "avg_logprob": -0.19707220792770386,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 4.336478225119844e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9697265625
+        },
+        {
+          "word": " vind",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " thee",
+          "start": 0.34,
+          "end": 0.52,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " lekker.",
+          "start": 0.52,
+          "end": 0.82,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

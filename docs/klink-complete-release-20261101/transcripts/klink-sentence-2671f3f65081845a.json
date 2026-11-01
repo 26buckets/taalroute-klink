@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-2671f3f65081845a",
+  "sha256": "477f11e811972990212a4dc7ab216b94606e4be22a0107d739dc4b2fdf2dbf8f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vul de emmer met water.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Ik vul de emmer met water.",
+      "temperature": 0,
+      "avg_logprob": -0.18363896283236417,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 3.6345568481949142e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " vul",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " de",
+          "start": 0.36,
+          "end": 0.52,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " emmer",
+          "start": 0.52,
+          "end": 0.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 0.86,
+          "end": 1.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " water.",
+          "start": 1.06,
+          "end": 1.38,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

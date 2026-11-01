@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-e20979039b89f704",
+  "sha256": "ee974178d8a3f57036ff7358199421fc63fc6876579f2ff508967d72e176ef27",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn naam staat op de kaart.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.42,
+      "text": " Mijn naam staat op de kaart.",
+      "temperature": 0,
+      "avg_logprob": -0.09602521016047551,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.7906869443670175e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.89501953125
+        },
+        {
+          "word": " naam",
+          "start": 0.26,
+          "end": 0.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " staat",
+          "start": 0.56,
+          "end": 0.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 0.74,
+          "end": 0.92,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 0.92,
+          "end": 1.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " kaart.",
+          "start": 1.02,
+          "end": 1.42,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

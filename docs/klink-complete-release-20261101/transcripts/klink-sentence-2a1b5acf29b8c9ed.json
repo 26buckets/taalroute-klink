@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-2a1b5acf29b8c9ed",
+  "sha256": "4ac77e319a31b8832c3ee81a3ac11c14f0f45da1d6c162a305819385cafa1cbe",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik trek de broek aan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.1,
+      "text": " Ik trek de broek aan.",
+      "temperature": 0,
+      "avg_logprob": -0.14380788803100586,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.911962767610966e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.80224609375
+        },
+        {
+          "word": " trek",
+          "start": 0.2,
+          "end": 0.4,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 0.4,
+          "end": 0.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " broek",
+          "start": 0.6,
+          "end": 0.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aan.",
+          "start": 0.88,
+          "end": 1.1,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

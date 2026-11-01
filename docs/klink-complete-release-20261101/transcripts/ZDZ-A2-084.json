@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-084",
+  "sha256": "1a7b021fe2c777a3d29391c90582136fe23749189b704e0bf217a1f74b175523",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Als ik genoeg oefen, wil ik volgend jaar examen doen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.64,
+      "text": " Als ik genoeg oefen, wil ik volgend jaar examen doen.",
+      "temperature": 0,
+      "avg_logprob": -0.053855396452404204,
+      "compression_ratio": 0.9298245614035088,
+      "no_speech_prob": 3.743225781421833e-12,
+      "words": [
+        {
+          "word": " Als",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " ik",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " genoeg",
+          "start": 0.26,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " oefen,",
+          "start": 0.56,
+          "end": 0.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wil",
+          "start": 1.06,
+          "end": 1.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.32,
+          "end": 1.42,
+          "probability": 1.0
+        },
+        {
+          "word": " volgend",
+          "start": 1.42,
+          "end": 1.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " jaar",
+          "start": 1.8,
+          "end": 1.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " examen",
+          "start": 1.98,
+          "end": 2.52,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " doen.",
+          "start": 2.52,
+          "end": 2.64,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

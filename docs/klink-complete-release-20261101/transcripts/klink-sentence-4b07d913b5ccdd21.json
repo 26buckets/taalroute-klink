@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-4b07d913b5ccdd21",
+  "sha256": "beb10bda450d90108256e02de40d6a00a2a791305ca83ccab34f77f4dbc73c05",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit kost 1 euro.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.24,
+      "text": " Dit kost 1 euro.",
+      "temperature": 0,
+      "avg_logprob": -0.27487826347351074,
+      "compression_ratio": 0.6666666666666666,
+      "no_speech_prob": 4.23724813916615e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " kost",
+          "start": 0.24,
+          "end": 0.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 1",
+          "start": 0.5,
+          "end": 0.9,
+          "probability": 0.87060546875
+        },
+        {
+          "word": " euro.",
+          "start": 0.9,
+          "end": 1.24,
+          "probability": 0.98291015625
+        }
+      ]
+    }
+  ]
+}

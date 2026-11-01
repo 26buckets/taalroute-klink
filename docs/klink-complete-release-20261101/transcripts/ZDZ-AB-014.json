@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-014",
+  "sha256": "d0d098bf77935106fd538b2f1ce8c2951e5e2eda5b35514e4da132038461669b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb pijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.54,
+      "text": " Ik heb pijn.",
+      "temperature": 0,
+      "avg_logprob": -0.15952181816101074,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 7.01356941273934e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.7626953125
+        },
+        {
+          "word": " heb",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pijn.",
+          "start": 0.28,
+          "end": 0.54,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

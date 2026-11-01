@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-096",
+  "sha256": "816107b70c7dc8b4b19c139c460e6c46aa0167f1d08ba0e8fadb1a63e79da0ec",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb een fout gemaakt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Ik heb een fout gemaakt.",
+      "temperature": 0,
+      "avg_logprob": -0.133271853129069,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 3.86126287194033e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.88916015625
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.24,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fout",
+          "start": 0.36,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gemaakt.",
+          "start": 0.64,
+          "end": 0.9,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-cad328376c678ddc",
+  "sha256": "200e64f038ca2c55322c74d4486bc27023b11f2f7606c9113119c9f6902d0c8b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe het doosje dicht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Ik doe het doosje dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.14552372152155096,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.458043309507609e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.89599609375
+        },
+        {
+          "word": " doe",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " het",
+          "start": 0.26,
+          "end": 0.44,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " doosje",
+          "start": 0.44,
+          "end": 0.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dicht.",
+          "start": 0.82,
+          "end": 1.02,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "id": "A1-T19",
+  "sha256": "d3488bd54a9c21b903f1f3a3d4879406a31e00c75518cbe967030f33cef48b05",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw gaat naar de apotheek. Zij heeft een recept van de dokter. De medewerker geeft haar een medicijn. De vrouw vraagt hoe zij het medicijn moet gebruiken. De medewerker legt het uit. Daarna gaat de vrouw naar huis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.38,
+      "text": " Een vrouw gaat naar de apotheek. Zij heeft een recept van de dokter.",
+      "temperature": 0,
+      "avg_logprob": -0.05690407435099284,
+      "compression_ratio": 1.5602836879432624,
+      "no_speech_prob": 5.685819003120596e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.98291015625
+        },
+        {
+          "word": " vrouw",
+          "start": 0.18,
+          "end": 0.5,
+          "probability": 1.0
+        },
+        {
+          "word": " gaat",
+          "start": 0.5,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 0.66,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.76,
+          "end": 0.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " apotheek.",
+          "start": 0.88,
+          "end": 1.44,
+          "probability": 1.0
+        },
+        {
+          "word": " Zij",
+          "start": 1.64,
+          "end": 2.16,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " heeft",
+          "start": 2.16,
+          "end": 2.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 2.32,
+          "end": 2.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " recept",
+          "start": 2.44,
+          "end": 2.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 2.74,
+          "end": 2.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 2.88,
+          "end": 3.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dokter.",
+          "start": 3.0,
+          "end": 3.38,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.74,
+      "end": 8.52,
+      "text": " De medewerker geeft haar een medicijn. De vrouw vraagt hoe zij het medicijn moet gebruiken.",
+      "temperature": 0,
+      "avg_logprob": -0.05690407435099284,
+      "compression_ratio": 1.5602836879432624,
+      "no_speech_prob": 5.685819003120596e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.74,
+          "end": 4.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 4.26,
+          "end": 4.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geeft",
+          "start": 4.78,
+          "end": 5.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 5.04,
+          "end": 5.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 5.2,
+          "end": 5.32,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " medicijn.",
+          "start": 5.32,
+          "end": 5.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 6.06,
+          "end": 6.52,
+          "probability": 1.0
+        },
+        {
+          "word": " vrouw",
+          "start": 6.52,
+          "end": 6.82,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 6.82,
+          "end": 7.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hoe",
+          "start": 7.1,
+          "end": 7.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zij",
+          "start": 7.2,
+          "end": 7.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 7.34,
+          "end": 7.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medicijn",
+          "start": 7.48,
+          "end": 7.86,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 7.86,
+          "end": 8.02,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gebruiken.",
+          "start": 8.02,
+          "end": 8.52,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.92,
+      "end": 12.14,
+      "text": " De medewerker legt het uit. Daarna gaat de vrouw naar huis.",
+      "temperature": 0,
+      "avg_logprob": -0.05690407435099284,
+      "compression_ratio": 1.5602836879432624,
+      "no_speech_prob": 5.685819003120596e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.92,
+          "end": 9.38,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 9.38,
+          "end": 9.88,
+          "probability": 1.0
+        },
+        {
+          "word": " legt",
+          "start": 9.88,
+          "end": 10.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 10.08,
+          "end": 10.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uit.",
+          "start": 10.18,
+          "end": 10.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Daarna",
+          "start": 10.8,
+          "end": 11.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " gaat",
+          "start": 11.22,
+          "end": 11.42,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 11.42,
+          "end": 11.52,
+          "probability": 1.0
+        },
+        {
+          "word": " vrouw",
+          "start": 11.52,
+          "end": 11.74,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 11.74,
+          "end": 11.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " huis.",
+          "start": 11.84,
+          "end": 12.14,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

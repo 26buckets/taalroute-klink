@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-babfe1fb37d256d8",
+  "sha256": "76a9eec84099110655c314a92c930d22f97de2f593e3ee30fe647b9a17d484b7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik leg de was in de mand.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.3,
+      "text": " Ik leg de was in de mand.",
+      "temperature": 0,
+      "avg_logprob": -0.12694909355857156,
+      "compression_ratio": 0.8333333333333334,
+      "no_speech_prob": 3.548752004062239e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96875
+        },
+        {
+          "word": " leg",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.34,
+          "end": 0.46,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " was",
+          "start": 0.46,
+          "end": 0.74,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " in",
+          "start": 0.74,
+          "end": 0.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mand.",
+          "start": 1.1,
+          "end": 1.3,
+          "probability": 0.99072265625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,613 @@
+{
+  "id": "A2-T59",
+  "sha256": "c34ed86b9add6bbf1a3d88ec918ab5f8d821d4f113a35fa77de544f815ef5864",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het museum opent zaterdag een kleine tentoonstelling over wonen in de stad. Bezoekers mogen vanaf 10 uur binnen. Om 11 uur geeft een medewerker uitleg bij enkele foto's. Voor die uitleg moet je je uiterlijk vrijdag aanmelden, maar de tentoonstelling zelf is zonder aanmelding te bezoeken. De toegang is deze zaterdag gratis. Een bezoeker wil alleen de foto's bekijken en komt rond 12 uur. Hij hoeft zich daarvoor niet vooraf aan te melden. Het museum sluit die dag om 5 uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.8,
+      "text": " Het museum opent zaterdag een kleine tentoonstelling over wonen in de stad.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " museum",
+          "start": 0.26,
+          "end": 0.64,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " opent",
+          "start": 0.64,
+          "end": 1.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zaterdag",
+          "start": 1.1,
+          "end": 1.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.58,
+          "end": 1.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " kleine",
+          "start": 1.72,
+          "end": 2.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tentoonstelling",
+          "start": 2.02,
+          "end": 2.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " over",
+          "start": 2.76,
+          "end": 3.04,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " wonen",
+          "start": 3.04,
+          "end": 3.4,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " in",
+          "start": 3.4,
+          "end": 3.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 3.48,
+          "end": 3.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " stad.",
+          "start": 3.58,
+          "end": 3.8,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.06,
+      "end": 5.66,
+      "text": " Bezoekers mogen vanaf 10 uur binnen.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Bezoekers",
+          "start": 4.06,
+          "end": 4.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mogen",
+          "start": 4.52,
+          "end": 4.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vanaf",
+          "start": 4.8,
+          "end": 5.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 10",
+          "start": 5.1,
+          "end": 5.24,
+          "probability": 0.8759765625
+        },
+        {
+          "word": " uur",
+          "start": 5.24,
+          "end": 5.44,
+          "probability": 0.94921875
+        },
+        {
+          "word": " binnen.",
+          "start": 5.44,
+          "end": 5.66,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.86,
+      "end": 9.0,
+      "text": " Om 11 uur geeft een medewerker uitleg bij enkele foto's.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 5.86,
+          "end": 6.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " 11",
+          "start": 6.04,
+          "end": 6.3,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " uur",
+          "start": 6.3,
+          "end": 6.52,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " geeft",
+          "start": 6.52,
+          "end": 6.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 6.8,
+          "end": 6.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerker",
+          "start": 6.94,
+          "end": 7.5,
+          "probability": 1.0
+        },
+        {
+          "word": " uitleg",
+          "start": 7.5,
+          "end": 7.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 7.9,
+          "end": 8.06,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " enkele",
+          "start": 8.06,
+          "end": 8.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " foto's.",
+          "start": 8.46,
+          "end": 9.0,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.12,
+      "end": 11.56,
+      "text": " Voor die uitleg moet je je uiterlijk vrijdag aanmelden,",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 9.12,
+          "end": 9.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 9.34,
+          "end": 9.46,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " uitleg",
+          "start": 9.46,
+          "end": 9.82,
+          "probability": 1.0
+        },
+        {
+          "word": " moet",
+          "start": 9.82,
+          "end": 10.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " je",
+          "start": 10.02,
+          "end": 10.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " je",
+          "start": 10.12,
+          "end": 10.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uiterlijk",
+          "start": 10.26,
+          "end": 10.68,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vrijdag",
+          "start": 10.68,
+          "end": 11.06,
+          "probability": 0.99609375
+        },
+        {
+          "word": " aanmelden,",
+          "start": 11.06,
+          "end": 11.56,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.68,
+      "end": 14.62,
+      "text": " maar de tentoonstelling zelf is zonder aanmelding te bezoeken.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " maar",
+          "start": 11.68,
+          "end": 11.82,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " de",
+          "start": 11.82,
+          "end": 11.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tentoonstelling",
+          "start": 11.96,
+          "end": 12.66,
+          "probability": 1.0
+        },
+        {
+          "word": " zelf",
+          "start": 12.66,
+          "end": 12.94,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " is",
+          "start": 12.94,
+          "end": 13.24,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " zonder",
+          "start": 13.24,
+          "end": 13.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aanmelding",
+          "start": 13.58,
+          "end": 14.1,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 14.1,
+          "end": 14.24,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bezoeken.",
+          "start": 14.24,
+          "end": 14.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.82,
+      "end": 16.94,
+      "text": " De toegang is deze zaterdag gratis.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 14.82,
+          "end": 15.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " toegang",
+          "start": 15.02,
+          "end": 15.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 15.38,
+          "end": 15.54,
+          "probability": 1.0
+        },
+        {
+          "word": " deze",
+          "start": 15.54,
+          "end": 15.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag",
+          "start": 15.8,
+          "end": 16.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gratis.",
+          "start": 16.34,
+          "end": 16.94,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 17.08,
+      "end": 20.58,
+      "text": " Een bezoeker wil alleen de foto's bekijken en komt rond 12 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 17.08,
+          "end": 17.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bezoeker",
+          "start": 17.22,
+          "end": 17.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 17.6,
+          "end": 17.8,
+          "probability": 0.998046875
+        },
+        {
+          "word": " alleen",
+          "start": 17.8,
+          "end": 18.1,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 18.1,
+          "end": 18.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " foto's",
+          "start": 18.26,
+          "end": 18.7,
+          "probability": 1.0
+        },
+        {
+          "word": " bekijken",
+          "start": 18.7,
+          "end": 19.18,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 19.18,
+          "end": 19.4,
+          "probability": 0.99609375
+        },
+        {
+          "word": " komt",
+          "start": 19.4,
+          "end": 19.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rond",
+          "start": 19.68,
+          "end": 19.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 12",
+          "start": 19.86,
+          "end": 20.1,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " uur.",
+          "start": 20.1,
+          "end": 20.58,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.72,
+      "end": 22.76,
+      "text": " Hij hoeft zich daarvoor niet vooraf aan te melden.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 20.72,
+          "end": 20.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hoeft",
+          "start": 20.86,
+          "end": 21.1,
+          "probability": 1.0
+        },
+        {
+          "word": " zich",
+          "start": 21.1,
+          "end": 21.26,
+          "probability": 1.0
+        },
+        {
+          "word": " daarvoor",
+          "start": 21.26,
+          "end": 21.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 21.56,
+          "end": 21.72,
+          "probability": 1.0
+        },
+        {
+          "word": " vooraf",
+          "start": 21.72,
+          "end": 22.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 22.1,
+          "end": 22.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 22.3,
+          "end": 22.42,
+          "probability": 1.0
+        },
+        {
+          "word": " melden.",
+          "start": 22.42,
+          "end": 22.76,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 22.94,
+      "end": 25.16,
+      "text": " Het museum sluit die dag om 5 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.04630079737470194,
+      "compression_ratio": 1.6690140845070423,
+      "no_speech_prob": 7.650672630143962e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 22.94,
+          "end": 23.12,
+          "probability": 1.0
+        },
+        {
+          "word": " museum",
+          "start": 23.12,
+          "end": 23.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " sluit",
+          "start": 23.48,
+          "end": 23.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 23.88,
+          "end": 24.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dag",
+          "start": 24.0,
+          "end": 24.24,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 24.24,
+          "end": 24.48,
+          "probability": 1.0
+        },
+        {
+          "word": " 5",
+          "start": 24.48,
+          "end": 24.74,
+          "probability": 0.9033203125
+        },
+        {
+          "word": " uur.",
+          "start": 24.74,
+          "end": 25.16,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-011",
+  "sha256": "32d8384afc75a60864b534e7727c969eed26fa67ae780e2fb11ddc65e1fea384",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik betaal met mijn kaart.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik betaal met mijn kaart.",
+      "temperature": 0,
+      "avg_logprob": -0.048738046125932175,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.214328538920675e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.93408203125
+        },
+        {
+          "word": " betaal",
+          "start": 0.14,
+          "end": 0.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 0.4,
+          "end": 0.52,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.52,
+          "end": 0.62,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kaart.",
+          "start": 0.62,
+          "end": 0.98,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

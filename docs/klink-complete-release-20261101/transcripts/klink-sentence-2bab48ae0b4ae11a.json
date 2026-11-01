@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-2bab48ae0b4ae11a",
+  "sha256": "c1e5de3041096a09975dd71742af81a3eddca51ba77652ee6ed406e769725fde",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kan de kok dit zonder vlees maken?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.82,
+      "text": " Kan de kok dit zonder vlees maken?",
+      "temperature": 0,
+      "avg_logprob": -0.11291190556117467,
+      "compression_ratio": 0.8095238095238095,
+      "no_speech_prob": 4.167687028822087e-12,
+      "words": [
+        {
+          "word": " Kan",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.94384765625
+        },
+        {
+          "word": " de",
+          "start": 0.18,
+          "end": 0.34,
+          "probability": 0.99609375
+        },
+        {
+          "word": " kok",
+          "start": 0.34,
+          "end": 0.54,
+          "probability": 0.994140625
+        },
+        {
+          "word": " dit",
+          "start": 0.54,
+          "end": 0.74,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " zonder",
+          "start": 0.74,
+          "end": 1.18,
+          "probability": 0.994140625
+        },
+        {
+          "word": " vlees",
+          "start": 1.18,
+          "end": 1.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maken?",
+          "start": 1.56,
+          "end": 1.82,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

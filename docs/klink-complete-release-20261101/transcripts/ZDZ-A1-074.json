@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-074",
+  "sha256": "0c519b2791c2139b52739163962828f052af0fc0112bcc07783247306ee21961",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Eerst koop ik brood in de winkel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.24,
+      "text": " Eerst koop ik brood in de winkel.",
+      "temperature": 0,
+      "avg_logprob": -0.09607318242390951,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 4.090585942889691e-12,
+      "words": [
+        {
+          "word": " Eerst",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.9677734375
+        },
+        {
+          "word": " koop",
+          "start": 0.24,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ik",
+          "start": 0.44,
+          "end": 0.5,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " brood",
+          "start": 0.5,
+          "end": 0.78,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 0.78,
+          "end": 0.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.88,
+          "end": 0.94,
+          "probability": 0.998046875
+        },
+        {
+          "word": " winkel.",
+          "start": 0.94,
+          "end": 1.24,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

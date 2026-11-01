@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-4c3d0ca15ab8381c",
+  "sha256": "b39da84c517d998496ed0195b19a52ff544e395ad580cc13feaf0d2e4c51021c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In het doosje ligt een sleutel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.7,
+      "text": " In het doosje ligt een sleutel.",
+      "temperature": 0,
+      "avg_logprob": -0.06650702158610027,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 3.474621632082453e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " het",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " doosje",
+          "start": 0.3,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ligt",
+          "start": 0.72,
+          "end": 1.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.0,
+          "end": 1.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " sleutel.",
+          "start": 1.16,
+          "end": 1.7,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

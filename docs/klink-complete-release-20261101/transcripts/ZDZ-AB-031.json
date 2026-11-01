@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-031",
+  "sha256": "edb6d627036cd8dad9cf19fababc7461ee12e3d74172184007db151ca2172881",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nog een keer alsjeblieft.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.14,
+      "text": " Nog een keer alsjeblieft.",
+      "temperature": 0,
+      "avg_logprob": -0.14582454241239107,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 4.958085591394434e-12,
+      "words": [
+        {
+          "word": " Nog",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " een",
+          "start": 0.22,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " keer",
+          "start": 0.3,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alsjeblieft.",
+          "start": 0.52,
+          "end": 1.14,
+          "probability": 0.88330078125
+        }
+      ]
+    }
+  ]
+}

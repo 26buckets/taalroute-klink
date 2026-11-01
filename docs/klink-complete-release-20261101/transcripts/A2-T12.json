@@ -1,0 +1,594 @@
+{
+  "id": "A2-T12",
+  "sha256": "7922bdbf68f3317fb60389b72b41b4d75adafd964e742e70041b0085d5e14492",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hallo allemaal! Zondag maken we met de sportclub een wandeling in het bos. We vertrekken om 10 uur bij het station. Er wordt regen verwacht, dus neem een jas en schoenen mee. Als het heel hard regent, wandelen we niet buiten. Dan geven we om 10 uur een sportles in het buurthuis. Zaterdagavond sturen we een bericht met onze keuze. Wie zich al heeft aangemeld, hoeft dat niet opnieuw te doen. Laat het weten als je zondag niet kunt komen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.5800000000000023,
+      "end": 4.48,
+      "text": " Hallo allemaal! Zondag maken we met de sportclub een wandeling in het bos.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Hallo",
+          "start": 0.5800000000000023,
+          "end": 1.02,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " allemaal!",
+          "start": 1.02,
+          "end": 1.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Zondag",
+          "start": 2.04,
+          "end": 2.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maken",
+          "start": 2.48,
+          "end": 2.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " we",
+          "start": 2.74,
+          "end": 2.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 2.88,
+          "end": 3.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.0,
+          "end": 3.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " sportclub",
+          "start": 3.1,
+          "end": 3.56,
+          "probability": 0.97265625
+        },
+        {
+          "word": " een",
+          "start": 3.56,
+          "end": 3.72,
+          "probability": 0.994140625
+        },
+        {
+          "word": " wandeling",
+          "start": 3.72,
+          "end": 4.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 4.06,
+          "end": 4.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 4.18,
+          "end": 4.26,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " bos.",
+          "start": 4.26,
+          "end": 4.48,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.940000000000002,
+      "end": 6.68,
+      "text": " We vertrekken om 10 uur bij het station.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " We",
+          "start": 4.940000000000002,
+          "end": 5.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vertrekken",
+          "start": 5.38,
+          "end": 5.78,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 5.78,
+          "end": 5.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " 10",
+          "start": 5.88,
+          "end": 6.02,
+          "probability": 0.642578125
+        },
+        {
+          "word": " uur",
+          "start": 6.02,
+          "end": 6.2,
+          "probability": 0.984375
+        },
+        {
+          "word": " bij",
+          "start": 6.2,
+          "end": 6.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 6.32,
+          "end": 6.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " station.",
+          "start": 6.46,
+          "end": 6.68,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.280000000000002,
+      "end": 10.46,
+      "text": " Er wordt regen verwacht, dus neem een jas en schoenen mee.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Er",
+          "start": 7.280000000000002,
+          "end": 7.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wordt",
+          "start": 7.72,
+          "end": 7.88,
+          "probability": 1.0
+        },
+        {
+          "word": " regen",
+          "start": 7.88,
+          "end": 8.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verwacht,",
+          "start": 8.14,
+          "end": 8.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dus",
+          "start": 8.8,
+          "end": 9.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " neem",
+          "start": 9.24,
+          "end": 9.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 9.44,
+          "end": 9.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas",
+          "start": 9.6,
+          "end": 9.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " en",
+          "start": 9.84,
+          "end": 10.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schoenen",
+          "start": 10.0,
+          "end": 10.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mee.",
+          "start": 10.28,
+          "end": 10.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.020000000000003,
+      "end": 13.44,
+      "text": " Als het heel hard regent, wandelen we niet buiten.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Als",
+          "start": 11.020000000000003,
+          "end": 11.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 11.46,
+          "end": 11.56,
+          "probability": 1.0
+        },
+        {
+          "word": " heel",
+          "start": 11.56,
+          "end": 11.7,
+          "probability": 1.0
+        },
+        {
+          "word": " hard",
+          "start": 11.7,
+          "end": 11.94,
+          "probability": 1.0
+        },
+        {
+          "word": " regent,",
+          "start": 11.94,
+          "end": 12.4,
+          "probability": 1.0
+        },
+        {
+          "word": " wandelen",
+          "start": 12.5,
+          "end": 12.86,
+          "probability": 1.0
+        },
+        {
+          "word": " we",
+          "start": 12.86,
+          "end": 12.96,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 12.96,
+          "end": 13.1,
+          "probability": 1.0
+        },
+        {
+          "word": " buiten.",
+          "start": 13.1,
+          "end": 13.44,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.92,
+      "end": 16.58,
+      "text": " Dan geven we om 10 uur een sportles in het buurthuis.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Dan",
+          "start": 13.92,
+          "end": 14.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geven",
+          "start": 14.3,
+          "end": 14.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " we",
+          "start": 14.56,
+          "end": 14.74,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 14.74,
+          "end": 14.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 10",
+          "start": 14.92,
+          "end": 15.08,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " uur",
+          "start": 15.08,
+          "end": 15.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 15.36,
+          "end": 15.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " sportles",
+          "start": 15.48,
+          "end": 15.88,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 15.88,
+          "end": 16.02,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 16.02,
+          "end": 16.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buurthuis.",
+          "start": 16.1,
+          "end": 16.58,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.78,
+      "end": 19.66,
+      "text": " Zaterdagavond sturen we een bericht met onze keuze.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Zaterdagavond",
+          "start": 17.78,
+          "end": 18.22,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " sturen",
+          "start": 18.22,
+          "end": 18.5,
+          "probability": 1.0
+        },
+        {
+          "word": " we",
+          "start": 18.5,
+          "end": 18.62,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 18.62,
+          "end": 18.72,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht",
+          "start": 18.72,
+          "end": 19.0,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 19.0,
+          "end": 19.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " onze",
+          "start": 19.1,
+          "end": 19.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " keuze.",
+          "start": 19.32,
+          "end": 19.66,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.28,
+      "end": 22.54,
+      "text": " Wie zich al heeft aangemeld, hoeft dat niet opnieuw te doen.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 20.28,
+          "end": 20.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zich",
+          "start": 20.5,
+          "end": 20.68,
+          "probability": 1.0
+        },
+        {
+          "word": " al",
+          "start": 20.68,
+          "end": 20.8,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 20.8,
+          "end": 21.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aangemeld,",
+          "start": 21.0,
+          "end": 21.5,
+          "probability": 1.0
+        },
+        {
+          "word": " hoeft",
+          "start": 21.58,
+          "end": 21.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 21.7,
+          "end": 21.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 21.82,
+          "end": 21.96,
+          "probability": 1.0
+        },
+        {
+          "word": " opnieuw",
+          "start": 21.96,
+          "end": 22.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 22.26,
+          "end": 22.36,
+          "probability": 1.0
+        },
+        {
+          "word": " doen.",
+          "start": 22.36,
+          "end": 22.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 23.1,
+      "end": 24.92,
+      "text": " Laat het weten als je zondag niet kunt komen.",
+      "temperature": 0,
+      "avg_logprob": -0.0921584278547845,
+      "compression_ratio": 1.6222222222222222,
+      "no_speech_prob": 1.2514478169023402e-11,
+      "words": [
+        {
+          "word": " Laat",
+          "start": 23.1,
+          "end": 23.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 23.38,
+          "end": 23.48,
+          "probability": 1.0
+        },
+        {
+          "word": " weten",
+          "start": 23.48,
+          "end": 23.72,
+          "probability": 1.0
+        },
+        {
+          "word": " als",
+          "start": 23.72,
+          "end": 23.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " je",
+          "start": 23.88,
+          "end": 23.98,
+          "probability": 1.0
+        },
+        {
+          "word": " zondag",
+          "start": 23.98,
+          "end": 24.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 24.28,
+          "end": 24.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kunt",
+          "start": 24.4,
+          "end": 24.6,
+          "probability": 1.0
+        },
+        {
+          "word": " komen.",
+          "start": 24.6,
+          "end": 24.92,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

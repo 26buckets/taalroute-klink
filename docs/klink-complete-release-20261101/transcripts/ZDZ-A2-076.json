@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-076",
+  "sha256": "3fd67042a308b1e2aa81bd78cb8ad5c640c767acaebe4e18b586313f669d21ba",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De klant kwam later omdat de bus te laat was.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.14,
+      "text": " De klant kwam later omdat de bus te laat was.",
+      "temperature": 0,
+      "avg_logprob": -0.0625423789024353,
+      "compression_ratio": 0.9,
+      "no_speech_prob": 3.8276131396342006e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97509765625
+        },
+        {
+          "word": " klant",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kwam",
+          "start": 0.42,
+          "end": 0.68,
+          "probability": 1.0
+        },
+        {
+          "word": " later",
+          "start": 0.68,
+          "end": 0.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " omdat",
+          "start": 0.96,
+          "end": 1.18,
+          "probability": 0.96337890625
+        },
+        {
+          "word": " de",
+          "start": 1.18,
+          "end": 1.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bus",
+          "start": 1.36,
+          "end": 1.58,
+          "probability": 0.998046875
+        },
+        {
+          "word": " te",
+          "start": 1.58,
+          "end": 1.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " laat",
+          "start": 1.68,
+          "end": 1.86,
+          "probability": 0.994140625
+        },
+        {
+          "word": " was.",
+          "start": 1.86,
+          "end": 2.14,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

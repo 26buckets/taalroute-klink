@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-099",
+  "sha256": "8b8f8aba1346a0c9b834e0ad772d23814c578f4c477a10c4b44a626e54eadc9f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb vandaag drie nieuwe woorden geleerd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.72,
+      "text": " Ik heb vandaag drie nieuwe woorden geleerd.",
+      "temperature": 0,
+      "avg_logprob": -0.036955026479867786,
+      "compression_ratio": 0.8431372549019608,
+      "no_speech_prob": 3.946258250731027e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.974609375
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 0.26,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " drie",
+          "start": 0.58,
+          "end": 0.8,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " nieuwe",
+          "start": 0.8,
+          "end": 1.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woorden",
+          "start": 1.04,
+          "end": 1.32,
+          "probability": 1.0
+        },
+        {
+          "word": " geleerd.",
+          "start": 1.32,
+          "end": 1.72,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

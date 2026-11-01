@@ -1,0 +1,625 @@
+{
+  "id": "A2-T81",
+  "sha256": "a8795ef62f932ae4c2e5a2b966aa0ec33aa5fb17a7cd630adf4cc571f04bab16",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een buurthuis biedt volgende week woensdagavond een computerles aan. Deelnemers melden zich via een formulier op de website aan. Daarna verschijnt een bericht op het scherm. Dat bericht betekent alleen dat het formulier is ontvangen. Een plaats in de groep is nog niet zeker. De medewerker bekijkt de aanvragen op donderdag. Vrijdag laat de medewerker per e-mail weten wie kan meedoen. Wie geen e-mail heeft, kan vrijdagmiddag bellen. Een bewoner heeft het formulier dinsdag verstuurd en wacht nog op de beslissing.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.4,
+      "text": " Een buurthuis biedt volgende week woensdagavond een computerles aan.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " buurthuis",
+          "start": 0.26,
+          "end": 0.76,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " biedt",
+          "start": 0.76,
+          "end": 1.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 1.02,
+          "end": 1.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " week",
+          "start": 1.38,
+          "end": 1.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " woensdagavond",
+          "start": 1.6,
+          "end": 2.4,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " een",
+          "start": 2.4,
+          "end": 2.58,
+          "probability": 0.994140625
+        },
+        {
+          "word": " computerles",
+          "start": 2.58,
+          "end": 3.2,
+          "probability": 0.998046875
+        },
+        {
+          "word": " aan.",
+          "start": 3.2,
+          "end": 3.4,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.78,
+      "end": 6.58,
+      "text": " Deelnemers melden zich via een formulier op de website aan.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Deelnemers",
+          "start": 3.78,
+          "end": 4.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " melden",
+          "start": 4.26,
+          "end": 4.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zich",
+          "start": 4.56,
+          "end": 4.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " via",
+          "start": 4.74,
+          "end": 4.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 4.96,
+          "end": 5.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " formulier",
+          "start": 5.14,
+          "end": 5.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 5.64,
+          "end": 5.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 5.8,
+          "end": 5.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " website",
+          "start": 5.9,
+          "end": 6.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aan.",
+          "start": 6.28,
+          "end": 6.58,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.86,
+      "end": 8.7,
+      "text": " Daarna verschijnt een bericht op het scherm.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 6.86,
+          "end": 7.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " verschijnt",
+          "start": 7.16,
+          "end": 7.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 7.68,
+          "end": 7.8,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bericht",
+          "start": 7.8,
+          "end": 8.12,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 8.12,
+          "end": 8.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 8.26,
+          "end": 8.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " scherm.",
+          "start": 8.36,
+          "end": 8.7,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.88,
+      "end": 11.6,
+      "text": " Dat bericht betekent alleen dat het formulier is ontvangen.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Dat",
+          "start": 8.88,
+          "end": 9.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bericht",
+          "start": 9.12,
+          "end": 9.44,
+          "probability": 1.0
+        },
+        {
+          "word": " betekent",
+          "start": 9.44,
+          "end": 9.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alleen",
+          "start": 9.88,
+          "end": 10.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 10.14,
+          "end": 10.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " het",
+          "start": 10.36,
+          "end": 10.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " formulier",
+          "start": 10.52,
+          "end": 11.0,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 11.0,
+          "end": 11.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ontvangen.",
+          "start": 11.14,
+          "end": 11.6,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 11.76,
+      "end": 13.82,
+      "text": " Een plaats in de groep is nog niet zeker.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Een",
+          "start": 11.76,
+          "end": 12.02,
+          "probability": 0.994140625
+        },
+        {
+          "word": " plaats",
+          "start": 12.02,
+          "end": 12.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 12.38,
+          "end": 12.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.52,
+          "end": 12.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " groep",
+          "start": 12.62,
+          "end": 12.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 12.88,
+          "end": 13.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nog",
+          "start": 13.08,
+          "end": 13.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 13.24,
+          "end": 13.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zeker.",
+          "start": 13.42,
+          "end": 13.82,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.0,
+      "end": 16.46,
+      "text": " De medewerker bekijkt de aanvragen op donderdag.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " De",
+          "start": 14.0,
+          "end": 14.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 14.16,
+          "end": 14.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bekijkt",
+          "start": 14.74,
+          "end": 15.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 15.14,
+          "end": 15.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aanvragen",
+          "start": 15.24,
+          "end": 15.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 15.72,
+          "end": 15.92,
+          "probability": 1.0
+        },
+        {
+          "word": " donderdag.",
+          "start": 15.92,
+          "end": 16.46,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 16.68,
+      "end": 19.94,
+      "text": " Vrijdag laat de medewerker per e-mail weten wie kan meedoen.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Vrijdag",
+          "start": 16.68,
+          "end": 17.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " laat",
+          "start": 17.16,
+          "end": 17.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.44,
+          "end": 17.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerker",
+          "start": 17.56,
+          "end": 18.14,
+          "probability": 1.0
+        },
+        {
+          "word": " per",
+          "start": 18.14,
+          "end": 18.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " e",
+          "start": 18.36,
+          "end": 18.54,
+          "probability": 0.9912109375
+        },
+        {
+          "word": "-mail",
+          "start": 18.54,
+          "end": 18.74,
+          "probability": 1.0
+        },
+        {
+          "word": " weten",
+          "start": 18.74,
+          "end": 19.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wie",
+          "start": 19.06,
+          "end": 19.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 19.32,
+          "end": 19.52,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " meedoen.",
+          "start": 19.52,
+          "end": 19.94,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 20.08,
+      "end": 22.44,
+      "text": " Wie geen e-mail heeft, kan vrijdagmiddag bellen.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 20.08,
+          "end": 20.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geen",
+          "start": 20.24,
+          "end": 20.5,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 20.5,
+          "end": 20.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": "-mail",
+          "start": 20.68,
+          "end": 20.84,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft,",
+          "start": 20.84,
+          "end": 21.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 21.24,
+          "end": 21.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdagmiddag",
+          "start": 21.46,
+          "end": 22.16,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " bellen.",
+          "start": 22.16,
+          "end": 22.44,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "seek": 0,
+      "start": 22.58,
+      "end": 26.46,
+      "text": " Een bewoner heeft het formulier dinsdag verstuurd en wacht nog op de beslissing.",
+      "temperature": 0,
+      "avg_logprob": -0.04802507641671718,
+      "compression_ratio": 1.757679180887372,
+      "no_speech_prob": 1.0215675527724954e-11,
+      "words": [
+        {
+          "word": " Een",
+          "start": 22.58,
+          "end": 22.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bewoner",
+          "start": 22.74,
+          "end": 23.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 23.22,
+          "end": 23.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 23.44,
+          "end": 23.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " formulier",
+          "start": 23.58,
+          "end": 24.02,
+          "probability": 1.0
+        },
+        {
+          "word": " dinsdag",
+          "start": 24.02,
+          "end": 24.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verstuurd",
+          "start": 24.48,
+          "end": 25.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 25.0,
+          "end": 25.24,
+          "probability": 0.96630859375
+        },
+        {
+          "word": " wacht",
+          "start": 25.24,
+          "end": 25.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nog",
+          "start": 25.52,
+          "end": 25.66,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 25.66,
+          "end": 25.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 25.84,
+          "end": 25.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " beslissing.",
+          "start": 25.94,
+          "end": 26.46,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

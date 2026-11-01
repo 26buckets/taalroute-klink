@@ -1,0 +1,71 @@
+{
+  "id": "klink-sentence-d89cfac7b2831142",
+  "sha256": "acf2064042407fd772aab8449f4eeab9bfef3eccd31ffb951de6f5dc0027cbe0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Jamal zegt auw als hij zijn knie stoot.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.58,
+      "text": " Jamal zegt auw als hij zijn knie stoot.",
+      "temperature": 0,
+      "avg_logprob": -0.06757422054515165,
+      "compression_ratio": 0.8297872340425532,
+      "no_speech_prob": 4.536551689859891e-12,
+      "words": [
+        {
+          "word": " Jamal",
+          "start": 0.0,
+          "end": 0.4,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " zegt",
+          "start": 0.4,
+          "end": 0.68,
+          "probability": 1.0
+        },
+        {
+          "word": " auw",
+          "start": 0.68,
+          "end": 1.34,
+          "probability": 0.787109375
+        },
+        {
+          "word": " als",
+          "start": 1.34,
+          "end": 1.64,
+          "probability": 0.95849609375
+        },
+        {
+          "word": " hij",
+          "start": 1.64,
+          "end": 1.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 1.78,
+          "end": 1.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " knie",
+          "start": 1.94,
+          "end": 2.24,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " stoot.",
+          "start": 2.24,
+          "end": 2.58,
+          "probability": 0.9951171875
+        }
+      ]
+    }
+  ]
+}

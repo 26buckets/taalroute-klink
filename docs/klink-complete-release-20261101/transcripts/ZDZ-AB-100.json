@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-100",
+  "sha256": "294aeb89ae209a79610168b114a428ba2d4054db4b6f18cbd02dd32548015a62",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bedankt, tot morgen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Bedankt, tot morgen.",
+      "temperature": 0,
+      "avg_logprob": -0.10676555633544922,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 3.87785029781762e-12,
+      "words": [
+        {
+          "word": " Bedankt,",
+          "start": 0.0,
+          "end": 0.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tot",
+          "start": 0.64,
+          "end": 0.76,
+          "probability": 1.0
+        },
+        {
+          "word": " morgen.",
+          "start": 0.76,
+          "end": 1.02,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

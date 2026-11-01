@@ -1,0 +1,642 @@
+{
+  "id": "B1-FL-058",
+  "sha256": "5a45348a93f317e05b451d3db263134dec368c015786572b302cc88c49d4c15b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bij de lunch op kantoor ziet Bas dat er voor de vergadering broodjes zijn besteld. Op de lijst staat dat hij een vegetarisch broodje heeft gevraagd. Maar op de verpakkingen staan geen namen. Bas wil niet zomaar iets pakken, omdat de bestellingen op elkaar lijken. Hij vraagt de organisator om de lijst erbij te halen. Samen controleren ze welke broodjes bij welke bestelling horen. Daarna zet de organisator kleine kaartjes naast het eten. De volgende keer kunnen collega's sneller het juiste broodje kiezen zonder steeds vragen te stellen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.62,
+      "text": " Bij de lunch op kantoor ziet Bas dat er voor de vergadering broodjes zijn besteld.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " de",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99609375
+        },
+        {
+          "word": " lunch",
+          "start": 0.28,
+          "end": 0.48,
+          "probability": 0.990234375
+        },
+        {
+          "word": " op",
+          "start": 0.48,
+          "end": 0.62,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kantoor",
+          "start": 0.62,
+          "end": 1.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ziet",
+          "start": 1.02,
+          "end": 1.2,
+          "probability": 0.9921875
+        },
+        {
+          "word": " Bas",
+          "start": 1.2,
+          "end": 1.42,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " dat",
+          "start": 1.42,
+          "end": 1.56,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " er",
+          "start": 1.56,
+          "end": 1.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " voor",
+          "start": 1.7,
+          "end": 1.82,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 1.82,
+          "end": 1.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vergadering",
+          "start": 1.92,
+          "end": 2.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " broodjes",
+          "start": 2.52,
+          "end": 3.02,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zijn",
+          "start": 3.02,
+          "end": 3.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " besteld.",
+          "start": 3.18,
+          "end": 3.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.88,
+      "end": 7.24,
+      "text": " Op de lijst staat dat hij een vegetarisch broodje heeft gevraagd.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.88,
+          "end": 4.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 4.2,
+          "end": 4.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lijst",
+          "start": 4.3,
+          "end": 4.64,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 4.64,
+          "end": 4.88,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 4.88,
+          "end": 5.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 5.04,
+          "end": 5.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 5.2,
+          "end": 5.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vegetarisch",
+          "start": 5.34,
+          "end": 6.0,
+          "probability": 0.927734375
+        },
+        {
+          "word": " broodje",
+          "start": 6.0,
+          "end": 6.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 6.46,
+          "end": 6.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gevraagd.",
+          "start": 6.64,
+          "end": 7.24,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.32,
+      "end": 9.3,
+      "text": " Maar op de verpakkingen staan geen namen.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Maar",
+          "start": 7.32,
+          "end": 7.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " op",
+          "start": 7.6,
+          "end": 7.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.74,
+          "end": 7.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verpakkingen",
+          "start": 7.84,
+          "end": 8.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staan",
+          "start": 8.42,
+          "end": 8.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geen",
+          "start": 8.62,
+          "end": 8.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " namen.",
+          "start": 8.86,
+          "end": 9.3,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.58,
+      "end": 13.26,
+      "text": " Bas wil niet zomaar iets pakken, omdat de bestellingen op elkaar lijken.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Bas",
+          "start": 9.58,
+          "end": 9.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wil",
+          "start": 9.98,
+          "end": 10.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 10.16,
+          "end": 10.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zomaar",
+          "start": 10.34,
+          "end": 10.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iets",
+          "start": 10.7,
+          "end": 10.86,
+          "probability": 1.0
+        },
+        {
+          "word": " pakken,",
+          "start": 10.86,
+          "end": 11.22,
+          "probability": 1.0
+        },
+        {
+          "word": " omdat",
+          "start": 11.34,
+          "end": 11.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 11.72,
+          "end": 11.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bestellingen",
+          "start": 11.88,
+          "end": 12.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 12.42,
+          "end": 12.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " elkaar",
+          "start": 12.56,
+          "end": 12.86,
+          "probability": 1.0
+        },
+        {
+          "word": " lijken.",
+          "start": 12.86,
+          "end": 13.26,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.4,
+      "end": 16.04,
+      "text": " Hij vraagt de organisator om de lijst erbij te halen.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 13.4,
+          "end": 13.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 13.6,
+          "end": 13.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 13.94,
+          "end": 14.02,
+          "probability": 1.0
+        },
+        {
+          "word": " organisator",
+          "start": 14.02,
+          "end": 14.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 14.74,
+          "end": 14.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 14.9,
+          "end": 15.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lijst",
+          "start": 15.0,
+          "end": 15.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " erbij",
+          "start": 15.32,
+          "end": 15.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 15.54,
+          "end": 15.7,
+          "probability": 1.0
+        },
+        {
+          "word": " halen.",
+          "start": 15.7,
+          "end": 16.04,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.28,
+      "end": 19.34,
+      "text": " Samen controleren ze welke broodjes bij welke bestelling horen.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Samen",
+          "start": 16.28,
+          "end": 16.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " controleren",
+          "start": 16.7,
+          "end": 17.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ze",
+          "start": 17.24,
+          "end": 17.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " welke",
+          "start": 17.36,
+          "end": 17.68,
+          "probability": 1.0
+        },
+        {
+          "word": " broodjes",
+          "start": 17.68,
+          "end": 18.1,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 18.1,
+          "end": 18.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " welke",
+          "start": 18.26,
+          "end": 18.58,
+          "probability": 1.0
+        },
+        {
+          "word": " bestelling",
+          "start": 18.58,
+          "end": 18.98,
+          "probability": 1.0
+        },
+        {
+          "word": " horen.",
+          "start": 18.98,
+          "end": 19.34,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.58,
+      "end": 22.42,
+      "text": " Daarna zet de organisator kleine kaartjes naast het eten.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 19.58,
+          "end": 19.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zet",
+          "start": 19.82,
+          "end": 20.14,
+          "probability": 0.994140625
+        },
+        {
+          "word": " de",
+          "start": 20.14,
+          "end": 20.22,
+          "probability": 1.0
+        },
+        {
+          "word": " organisator",
+          "start": 20.22,
+          "end": 20.88,
+          "probability": 1.0
+        },
+        {
+          "word": " kleine",
+          "start": 20.88,
+          "end": 21.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaartjes",
+          "start": 21.22,
+          "end": 21.7,
+          "probability": 1.0
+        },
+        {
+          "word": " naast",
+          "start": 21.7,
+          "end": 21.96,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 21.96,
+          "end": 22.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eten.",
+          "start": 22.1,
+          "end": 22.42,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 22.62,
+      "end": 27.32,
+      "text": " De volgende keer kunnen collega's sneller het juiste broodje kiezen zonder steeds vragen te stellen.",
+      "temperature": 0,
+      "avg_logprob": -0.05821770115902549,
+      "compression_ratio": 1.8,
+      "no_speech_prob": 6.939015768231416e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 22.62,
+          "end": 22.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 22.72,
+          "end": 23.12,
+          "probability": 1.0
+        },
+        {
+          "word": " keer",
+          "start": 23.12,
+          "end": 23.3,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 23.3,
+          "end": 23.56,
+          "probability": 1.0
+        },
+        {
+          "word": " collega's",
+          "start": 23.56,
+          "end": 24.16,
+          "probability": 1.0
+        },
+        {
+          "word": " sneller",
+          "start": 24.16,
+          "end": 24.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 24.62,
+          "end": 24.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " juiste",
+          "start": 24.82,
+          "end": 25.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " broodje",
+          "start": 25.12,
+          "end": 25.52,
+          "probability": 1.0
+        },
+        {
+          "word": " kiezen",
+          "start": 25.52,
+          "end": 25.82,
+          "probability": 1.0
+        },
+        {
+          "word": " zonder",
+          "start": 25.82,
+          "end": 26.32,
+          "probability": 0.8076171875
+        },
+        {
+          "word": " steeds",
+          "start": 26.32,
+          "end": 26.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vragen",
+          "start": 26.58,
+          "end": 26.96,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 26.96,
+          "end": 27.08,
+          "probability": 1.0
+        },
+        {
+          "word": " stellen.",
+          "start": 27.08,
+          "end": 27.32,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

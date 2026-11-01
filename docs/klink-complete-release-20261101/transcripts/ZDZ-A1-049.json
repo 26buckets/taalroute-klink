@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A1-049",
+  "sha256": "bac346f4d335e5b371cfda287dcbe562b445ce321def39f069390affaf408e39",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb vandaag een e-mail aan mijn docent gestuurd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.24,
+      "text": " Ik heb vandaag een e-mail aan mijn docent gestuurd.",
+      "temperature": 0,
+      "avg_logprob": -0.046144432491726346,
+      "compression_ratio": 0.8793103448275862,
+      "no_speech_prob": 4.3593371100436595e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 0.26,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 0.6,
+          "end": 0.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " e",
+          "start": 0.76,
+          "end": 0.92,
+          "probability": 0.9853515625
+        },
+        {
+          "word": "-mail",
+          "start": 0.92,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 1.1,
+          "end": 1.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 1.28,
+          "end": 1.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 1.4,
+          "end": 1.76,
+          "probability": 1.0
+        },
+        {
+          "word": " gestuurd.",
+          "start": 1.76,
+          "end": 2.24,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

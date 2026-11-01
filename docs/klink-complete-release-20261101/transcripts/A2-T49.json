@@ -1,0 +1,600 @@
+{
+  "id": "A2-T49",
+  "sha256": "ad738bff67c8223db7c0e7a40079112f0257c8f9f5f2fe017c8f2cec6d162b3f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een reiziger merkt op maandag dat zijn reiskaart weg is. Hij belt de vervoerder om dat te melden. De medewerker vraagt naar zijn naam en het nummer van de kaart. Het nummer staat in een oude e-mail. De reiziger zoekt de e-mail op en geeft het nummer door. De medewerker zegt dat de oude kaart niet meer gebruikt kan worden. Een nieuwe kaart komt vrijdag met de post. Tot die tijd koopt de reiziger een loskaartje voor iedere rit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.92,
+      "text": " Een reiziger merkt op maandag dat zijn reiskaart weg is.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.986328125
+        },
+        {
+          "word": " reiziger",
+          "start": 0.16,
+          "end": 0.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " merkt",
+          "start": 0.72,
+          "end": 1.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 1.08,
+          "end": 1.2,
+          "probability": 0.994140625
+        },
+        {
+          "word": " maandag",
+          "start": 1.2,
+          "end": 1.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 1.64,
+          "end": 1.8,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zijn",
+          "start": 1.8,
+          "end": 1.98,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " reiskaart",
+          "start": 1.98,
+          "end": 2.48,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " weg",
+          "start": 2.48,
+          "end": 2.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 2.7,
+          "end": 2.92,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.08,
+      "end": 4.82,
+      "text": " Hij belt de vervoerder om dat te melden.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 3.08,
+          "end": 3.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " belt",
+          "start": 3.18,
+          "end": 3.42,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " de",
+          "start": 3.42,
+          "end": 3.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vervoerder",
+          "start": 3.54,
+          "end": 4.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 4.02,
+          "end": 4.2,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " dat",
+          "start": 4.2,
+          "end": 4.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " te",
+          "start": 4.34,
+          "end": 4.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " melden.",
+          "start": 4.48,
+          "end": 4.82,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.96,
+      "end": 7.76,
+      "text": " De medewerker vraagt naar zijn naam en het nummer van de kaart.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.96,
+          "end": 5.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " medewerker",
+          "start": 5.08,
+          "end": 5.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraagt",
+          "start": 5.66,
+          "end": 6.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naar",
+          "start": 6.02,
+          "end": 6.12,
+          "probability": 0.99609375
+        },
+        {
+          "word": " zijn",
+          "start": 6.12,
+          "end": 6.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naam",
+          "start": 6.34,
+          "end": 6.62,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 6.62,
+          "end": 6.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 6.78,
+          "end": 6.92,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nummer",
+          "start": 6.92,
+          "end": 7.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " van",
+          "start": 7.16,
+          "end": 7.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 7.3,
+          "end": 7.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaart.",
+          "start": 7.42,
+          "end": 7.76,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.9,
+      "end": 9.64,
+      "text": " Het nummer staat in een oude e-mail.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 7.9,
+          "end": 8.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nummer",
+          "start": 8.12,
+          "end": 8.4,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 8.4,
+          "end": 8.64,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 8.64,
+          "end": 8.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 8.88,
+          "end": 8.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " oude",
+          "start": 8.98,
+          "end": 9.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " e",
+          "start": 9.28,
+          "end": 9.46,
+          "probability": 0.9912109375
+        },
+        {
+          "word": "-mail.",
+          "start": 9.46,
+          "end": 9.64,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.82,
+      "end": 12.28,
+      "text": " De reiziger zoekt de e-mail op en geeft het nummer door.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.82,
+          "end": 9.92,
+          "probability": 1.0
+        },
+        {
+          "word": " reiziger",
+          "start": 9.92,
+          "end": 10.38,
+          "probability": 1.0
+        },
+        {
+          "word": " zoekt",
+          "start": 10.38,
+          "end": 10.64,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 10.64,
+          "end": 10.74,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " e",
+          "start": 10.74,
+          "end": 10.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": "-mail",
+          "start": 10.88,
+          "end": 11.04,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 11.04,
+          "end": 11.26,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 11.26,
+          "end": 11.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " geeft",
+          "start": 11.44,
+          "end": 11.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 11.7,
+          "end": 11.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nummer",
+          "start": 11.82,
+          "end": 12.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " door.",
+          "start": 12.08,
+          "end": 12.28,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 12.48,
+      "end": 15.54,
+      "text": " De medewerker zegt dat de oude kaart niet meer gebruikt kan worden.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.48,
+          "end": 12.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 12.62,
+          "end": 13.16,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt",
+          "start": 13.16,
+          "end": 13.48,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 13.48,
+          "end": 13.72,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 13.72,
+          "end": 13.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 13.84,
+          "end": 14.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaart",
+          "start": 14.1,
+          "end": 14.4,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 14.4,
+          "end": 14.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meer",
+          "start": 14.54,
+          "end": 14.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gebruikt",
+          "start": 14.72,
+          "end": 15.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 15.16,
+          "end": 15.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " worden.",
+          "start": 15.28,
+          "end": 15.54,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 15.72,
+      "end": 17.76,
+      "text": " Een nieuwe kaart komt vrijdag met de post.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 15.72,
+          "end": 15.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nieuwe",
+          "start": 15.86,
+          "end": 16.08,
+          "probability": 1.0
+        },
+        {
+          "word": " kaart",
+          "start": 16.08,
+          "end": 16.44,
+          "probability": 1.0
+        },
+        {
+          "word": " komt",
+          "start": 16.44,
+          "end": 16.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 16.68,
+          "end": 17.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " met",
+          "start": 17.18,
+          "end": 17.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.34,
+          "end": 17.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " post.",
+          "start": 17.46,
+          "end": 17.76,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 17.98,
+      "end": 21.1,
+      "text": " Tot die tijd koopt de reiziger een loskaartje voor iedere rit.",
+      "temperature": 0,
+      "avg_logprob": -0.046111190079042574,
+      "compression_ratio": 1.794979079497908,
+      "no_speech_prob": 9.190526811808652e-12,
+      "words": [
+        {
+          "word": " Tot",
+          "start": 17.98,
+          "end": 18.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " die",
+          "start": 18.14,
+          "end": 18.32,
+          "probability": 1.0
+        },
+        {
+          "word": " tijd",
+          "start": 18.32,
+          "end": 18.58,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt",
+          "start": 18.58,
+          "end": 18.9,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " de",
+          "start": 18.9,
+          "end": 19.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " reiziger",
+          "start": 19.0,
+          "end": 19.48,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 19.48,
+          "end": 19.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " loskaartje",
+          "start": 19.66,
+          "end": 20.3,
+          "probability": 0.92431640625
+        },
+        {
+          "word": " voor",
+          "start": 20.3,
+          "end": 20.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iedere",
+          "start": 20.48,
+          "end": 20.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rit.",
+          "start": 20.84,
+          "end": 21.1,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

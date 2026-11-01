@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-053",
+  "sha256": "4e69c6f945e71ec5692e5322c9d9dcaa0ec4f1fbe2e33f48f322a2192455b90b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik eet graag thuis, want het is rustig.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.02,
+      "text": " Ik eet graag thuis, want het is rustig.",
+      "temperature": 0,
+      "avg_logprob": -0.040172520805807674,
+      "compression_ratio": 0.8478260869565217,
+      "no_speech_prob": 4.029034918195951e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " eet",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 1.0
+        },
+        {
+          "word": " graag",
+          "start": 0.34,
+          "end": 0.62,
+          "probability": 1.0
+        },
+        {
+          "word": " thuis,",
+          "start": 0.62,
+          "end": 0.98,
+          "probability": 1.0
+        },
+        {
+          "word": " want",
+          "start": 1.18,
+          "end": 1.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.3,
+          "end": 1.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 1.44,
+          "end": 1.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rustig.",
+          "start": 1.56,
+          "end": 2.02,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

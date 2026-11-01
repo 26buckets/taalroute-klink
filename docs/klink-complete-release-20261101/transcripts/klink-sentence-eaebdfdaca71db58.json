@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-eaebdfdaca71db58",
+  "sha256": "4556e648a27cda309ff1e3723f83e7867fea9bc10712019024f7deebbff9f7f0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De tafel staat in de huiskamer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.9,
+      "text": " De tafel staat in de huiskamer.",
+      "temperature": 0,
+      "avg_logprob": -0.07912423060490535,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 3.392191909312725e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95263671875
+        },
+        {
+          "word": " tafel",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat",
+          "start": 0.62,
+          "end": 0.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 0.92,
+          "end": 1.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.16,
+          "end": 1.28,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " huiskamer.",
+          "start": 1.28,
+          "end": 1.9,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

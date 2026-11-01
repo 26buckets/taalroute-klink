@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-dcad844f6ce1b4c8",
+  "sha256": "58ca828a449c182a35ff4b8b665742647c86a221db18461638b010e85ba5ab75",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn haar is lang.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Mijn haar is lang.",
+      "temperature": 0,
+      "avg_logprob": -0.17157475153605142,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 5.416889159448601e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.87939453125
+        },
+        {
+          "word": " haar",
+          "start": 0.26,
+          "end": 0.58,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " is",
+          "start": 0.58,
+          "end": 0.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " lang.",
+          "start": 0.88,
+          "end": 1.18,
+          "probability": 0.994140625
+        }
+      ]
+    }
+  ]
+}

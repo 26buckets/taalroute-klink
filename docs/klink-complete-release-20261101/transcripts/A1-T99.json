@@ -1,0 +1,315 @@
+{
+  "id": "A1-T99",
+  "sha256": "bab8051344091f496155c6c8a74980e43b92a758cd1a90a416a8c4de611fd8d3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw gaat in de regen naar haar werk. Zij pakt een lange jas en een paraplu. Bij de halte ziet zij dat de bus later komt. Zij stuurt een bericht naar haar baas. Daarna wacht zij onder een dak.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.72,
+      "text": " Een vrouw gaat in de regen naar haar werk.",
+      "temperature": 0,
+      "avg_logprob": -0.07347462210856692,
+      "compression_ratio": 1.437956204379562,
+      "no_speech_prob": 4.921190191464753e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " vrouw",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 1.0
+        },
+        {
+          "word": " gaat",
+          "start": 0.5,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 0.66,
+          "end": 0.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.76,
+          "end": 0.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " regen",
+          "start": 0.86,
+          "end": 1.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 1.12,
+          "end": 1.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 1.26,
+          "end": 1.38,
+          "probability": 1.0
+        },
+        {
+          "word": " werk.",
+          "start": 1.38,
+          "end": 1.72,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.2600000000000007,
+      "end": 4.2,
+      "text": " Zij pakt een lange jas en een paraplu.",
+      "temperature": 0,
+      "avg_logprob": -0.07347462210856692,
+      "compression_ratio": 1.437956204379562,
+      "no_speech_prob": 4.921190191464753e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 2.2600000000000007,
+          "end": 2.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " pakt",
+          "start": 2.66,
+          "end": 2.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 2.86,
+          "end": 3.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lange",
+          "start": 3.0,
+          "end": 3.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " jas",
+          "start": 3.24,
+          "end": 3.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 3.54,
+          "end": 3.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.68,
+          "end": 3.84,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " paraplu.",
+          "start": 3.84,
+          "end": 4.2,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.880000000000001,
+      "end": 7.02,
+      "text": " Bij de halte ziet zij dat de bus later komt.",
+      "temperature": 0,
+      "avg_logprob": -0.07347462210856692,
+      "compression_ratio": 1.437956204379562,
+      "no_speech_prob": 4.921190191464753e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 4.880000000000001,
+          "end": 5.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 5.28,
+          "end": 5.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " halte",
+          "start": 5.4,
+          "end": 5.7,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " ziet",
+          "start": 5.7,
+          "end": 5.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zij",
+          "start": 5.86,
+          "end": 6.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 6.04,
+          "end": 6.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.16,
+          "end": 6.28,
+          "probability": 1.0
+        },
+        {
+          "word": " bus",
+          "start": 6.28,
+          "end": 6.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " later",
+          "start": 6.46,
+          "end": 6.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt.",
+          "start": 6.7,
+          "end": 7.02,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.540000000000001,
+      "end": 9.28,
+      "text": " Zij stuurt een bericht naar haar baas.",
+      "temperature": 0,
+      "avg_logprob": -0.07347462210856692,
+      "compression_ratio": 1.437956204379562,
+      "no_speech_prob": 4.921190191464753e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 7.540000000000001,
+          "end": 7.94,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " stuurt",
+          "start": 7.94,
+          "end": 8.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 8.16,
+          "end": 8.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 8.28,
+          "end": 8.56,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 8.56,
+          "end": 8.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar",
+          "start": 8.68,
+          "end": 8.84,
+          "probability": 1.0
+        },
+        {
+          "word": " baas.",
+          "start": 8.84,
+          "end": 9.28,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 9.88,
+      "end": 11.06,
+      "text": " Daarna wacht zij onder een dak.",
+      "temperature": 0,
+      "avg_logprob": -0.07347462210856692,
+      "compression_ratio": 1.437956204379562,
+      "no_speech_prob": 4.921190191464753e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 9.88,
+          "end": 10.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wacht",
+          "start": 10.16,
+          "end": 10.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zij",
+          "start": 10.46,
+          "end": 10.58,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " onder",
+          "start": 10.58,
+          "end": 10.74,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 10.74,
+          "end": 10.9,
+          "probability": 0.99609375
+        },
+        {
+          "word": " dak.",
+          "start": 10.9,
+          "end": 11.06,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

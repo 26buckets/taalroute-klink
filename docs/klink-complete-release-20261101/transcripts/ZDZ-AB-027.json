@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-027",
+  "sha256": "c41b3db38a768afd15f476e1ad4800d2f4c89d8c93bfb113f92b2619a6d09829",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik die pen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Mag ik die pen?",
+      "temperature": 0,
+      "avg_logprob": -0.45210137963294983,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 5.0645143460925635e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.90380859375
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " die",
+          "start": 0.3,
+          "end": 0.44,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " pen?",
+          "start": 0.44,
+          "end": 0.62,
+          "probability": 0.97705078125
+        }
+      ]
+    }
+  ]
+}

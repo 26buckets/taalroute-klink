@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-AC-037",
+  "sha256": "08ae27a28848cdb643b9e91fba4eb9c6c81fafbe80775f8dc75628dcaef98153",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn telefoon is kapot. Ik kan niet bellen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.88,
+      "text": " Mijn telefoon is kapot. Ik kan niet bellen.",
+      "temperature": 0,
+      "avg_logprob": -0.07517152674057904,
+      "compression_ratio": 0.8775510204081632,
+      "no_speech_prob": 4.549482318649822e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " telefoon",
+          "start": 0.22,
+          "end": 0.6,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.6,
+          "end": 0.72,
+          "probability": 1.0
+        },
+        {
+          "word": " kapot.",
+          "start": 0.72,
+          "end": 1.04,
+          "probability": 1.0
+        },
+        {
+          "word": " Ik",
+          "start": 1.18,
+          "end": 1.32,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 1.32,
+          "end": 1.44,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 1.44,
+          "end": 1.58,
+          "probability": 1.0
+        },
+        {
+          "word": " bellen.",
+          "start": 1.58,
+          "end": 1.88,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

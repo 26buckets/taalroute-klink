@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-2215884ee8241259",
+  "sha256": "a389291faa4c0dc75aec0e3edf55e49d33ec6d712280dc2b9363e33c63955dad",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het feest is in het buurthuis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " Het feest is in het buurthuis.",
+      "temperature": 0,
+      "avg_logprob": -0.11857169015066964,
+      "compression_ratio": 0.8333333333333334,
+      "no_speech_prob": 5.073922185183655e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96923828125
+        },
+        {
+          "word": " feest",
+          "start": 0.16,
+          "end": 0.56,
+          "probability": 0.994140625
+        },
+        {
+          "word": " is",
+          "start": 0.56,
+          "end": 0.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 0.72,
+          "end": 0.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 0.86,
+          "end": 0.98,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " buurthuis.",
+          "start": 0.98,
+          "end": 1.54,
+          "probability": 0.99072265625
+        }
+      ]
+    }
+  ]
+}

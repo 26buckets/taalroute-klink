@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-938ffdc72015ee27",
+  "sha256": "5a0cb4068f4e5ed1b32cf508ec89330e76f68491f03ff2d04e86e32cc2ab3ab4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn afspraak is volgende maand.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.82,
+      "text": " Mijn afspraak is volgende maand.",
+      "temperature": 0,
+      "avg_logprob": -0.030319658915201823,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 3.91302615310174e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9921875
+        },
+        {
+          "word": " afspraak",
+          "start": 0.22,
+          "end": 0.8,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 0.8,
+          "end": 1.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " volgende",
+          "start": 1.04,
+          "end": 1.48,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " maand.",
+          "start": 1.48,
+          "end": 1.82,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

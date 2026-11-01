@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-7e4d38c679a56ecd",
+  "sha256": "9ac88c95d759521b623a3dea78d16a62c99b5b596331d1b77788692490599ed3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De suiker staat naast de thee.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.74,
+      "text": " De suiker staat naast de thee.",
+      "temperature": 0,
+      "avg_logprob": -0.10014176368713379,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.646896153119972e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.97412109375
+        },
+        {
+          "word": " suiker",
+          "start": 0.18,
+          "end": 0.62,
+          "probability": 0.994140625
+        },
+        {
+          "word": " staat",
+          "start": 0.62,
+          "end": 0.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " naast",
+          "start": 0.96,
+          "end": 1.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.4,
+          "end": 1.54,
+          "probability": 0.998046875
+        },
+        {
+          "word": " thee.",
+          "start": 1.54,
+          "end": 1.74,
+          "probability": 0.787109375
+        }
+      ]
+    }
+  ]
+}

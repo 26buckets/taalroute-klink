@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-b6506e6695eb6f47",
+  "sha256": "fe9c8cfa8f606c608691f0c672f10d0c9b78ea602f209648c97c83d5c2158a1b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De sleutel ligt op de plank.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " De sleutel ligt op de plank.",
+      "temperature": 0,
+      "avg_logprob": -0.09119679377629207,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.584581416415933e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.955078125
+        },
+        {
+          "word": " sleutel",
+          "start": 0.18,
+          "end": 0.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ligt",
+          "start": 0.68,
+          "end": 0.96,
+          "probability": 0.998046875
+        },
+        {
+          "word": " op",
+          "start": 0.96,
+          "end": 1.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.1,
+          "end": 1.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " plank.",
+          "start": 1.2,
+          "end": 1.48,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

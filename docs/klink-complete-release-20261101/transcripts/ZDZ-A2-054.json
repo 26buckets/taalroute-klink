@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A2-054",
+  "sha256": "697fb5ce63fa79a7b6d4bfa97cea8b03184ea6a8ba83c287de4e035f254038ba",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " kunt u een afspraak voor volgende week maken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.92,
+      "text": " kunt u een afspraak voor volgende week maken.",
+      "temperature": 0,
+      "avg_logprob": -0.14565229415893555,
+      "compression_ratio": 0.8823529411764706,
+      "no_speech_prob": 4.015001438956167e-12,
+      "words": [
+        {
+          "word": " kunt",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.5634765625
+        },
+        {
+          "word": " u",
+          "start": 0.18,
+          "end": 0.32,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " afspraak",
+          "start": 0.46,
+          "end": 0.92,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 0.92,
+          "end": 1.06,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " volgende",
+          "start": 1.06,
+          "end": 1.4,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " week",
+          "start": 1.4,
+          "end": 1.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maken.",
+          "start": 1.62,
+          "end": 1.92,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "id": "A1-T33",
+  "sha256": "54fcebb2d3ad1df07dec49e3958a51904b1414135dca663a7efb72d9be5ec9d0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursist wil inloggen op de computer. Zijn wachtwoord klopt niet. De docent helpt hem. Zij schrijft een nieuw wachtwoord op papier. De cursist leest het en kan nu inloggen. Daarna maakt hij zijn opdracht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.2,
+      "text": " Een cursist wil inloggen op de computer. Zijn wachtwoord klopt niet. De docent helpt hem.",
+      "temperature": 0,
+      "avg_logprob": -0.04062346889548106,
+      "compression_ratio": 1.4577464788732395,
+      "no_speech_prob": 5.640311568494427e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97607421875
+        },
+        {
+          "word": " cursist",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.99609375
+        },
+        {
+          "word": " wil",
+          "start": 0.62,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " inloggen",
+          "start": 0.78,
+          "end": 1.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 1.22,
+          "end": 1.36,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.36,
+          "end": 1.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " computer.",
+          "start": 1.46,
+          "end": 1.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zijn",
+          "start": 2.24,
+          "end": 2.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wachtwoord",
+          "start": 2.74,
+          "end": 3.14,
+          "probability": 1.0
+        },
+        {
+          "word": " klopt",
+          "start": 3.14,
+          "end": 3.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet.",
+          "start": 3.42,
+          "end": 3.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 3.92,
+          "end": 4.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 4.36,
+          "end": 4.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " helpt",
+          "start": 4.72,
+          "end": 5.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hem.",
+          "start": 5.04,
+          "end": 5.2,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.8,
+      "end": 10.12,
+      "text": " Zij schrijft een nieuw wachtwoord op papier. De cursist leest het en kan nu inloggen.",
+      "temperature": 0,
+      "avg_logprob": -0.04062346889548106,
+      "compression_ratio": 1.4577464788732395,
+      "no_speech_prob": 5.640311568494427e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 5.8,
+          "end": 6.02,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " schrijft",
+          "start": 6.02,
+          "end": 6.3,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 6.3,
+          "end": 6.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuw",
+          "start": 6.4,
+          "end": 6.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wachtwoord",
+          "start": 6.6,
+          "end": 7.0,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 7.0,
+          "end": 7.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " papier.",
+          "start": 7.12,
+          "end": 7.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 7.94,
+          "end": 8.44,
+          "probability": 1.0
+        },
+        {
+          "word": " cursist",
+          "start": 8.44,
+          "end": 8.84,
+          "probability": 1.0
+        },
+        {
+          "word": " leest",
+          "start": 8.84,
+          "end": 9.12,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 9.12,
+          "end": 9.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " en",
+          "start": 9.26,
+          "end": 9.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 9.38,
+          "end": 9.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nu",
+          "start": 9.5,
+          "end": 9.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " inloggen.",
+          "start": 9.64,
+          "end": 10.12,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 10.7,
+      "end": 12.02,
+      "text": " Daarna maakt hij zijn opdracht.",
+      "temperature": 0,
+      "avg_logprob": -0.04062346889548106,
+      "compression_ratio": 1.4577464788732395,
+      "no_speech_prob": 5.640311568494427e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 10.7,
+          "end": 11.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maakt",
+          "start": 11.02,
+          "end": 11.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 11.32,
+          "end": 11.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zijn",
+          "start": 11.42,
+          "end": 11.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opdracht.",
+          "start": 11.58,
+          "end": 12.02,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

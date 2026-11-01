@@ -1,0 +1,101 @@
+{
+  "id": "ZDZ-A2-067",
+  "sha256": "664a2ab3bd3ef8c7d9a41b7b3c18e0ecaec99751789a143926f14c445bd4a944",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bus is goedkoper, maar ik neem de trein omdat die sneller is.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.98,
+      "text": " De bus is goedkoper, maar ik neem de trein omdat die sneller is.",
+      "temperature": 0,
+      "avg_logprob": -0.062391737233037536,
+      "compression_ratio": 0.9846153846153847,
+      "no_speech_prob": 3.303349781214049e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " bus",
+          "start": 0.16,
+          "end": 0.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is",
+          "start": 0.32,
+          "end": 0.44,
+          "probability": 1.0
+        },
+        {
+          "word": " goedkoper,",
+          "start": 0.44,
+          "end": 0.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 1.16,
+          "end": 1.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 1.54,
+          "end": 1.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " neem",
+          "start": 1.66,
+          "end": 1.82,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.82,
+          "end": 1.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " trein",
+          "start": 1.92,
+          "end": 2.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " omdat",
+          "start": 2.18,
+          "end": 2.3,
+          "probability": 0.994140625
+        },
+        {
+          "word": " die",
+          "start": 2.3,
+          "end": 2.46,
+          "probability": 0.487548828125
+        },
+        {
+          "word": " sneller",
+          "start": 2.46,
+          "end": 2.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is.",
+          "start": 2.78,
+          "end": 2.98,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

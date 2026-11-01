@@ -1,0 +1,41 @@
+{
+  "id": "klink-sentence-6e96d1505a0d811b",
+  "sha256": "5e9ef00879aee0c1e8657eeb213a1eb1f6f2b65fb5fb10f44619f55cc48bb3c9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De les begint.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " De les begint.",
+      "temperature": 0,
+      "avg_logprob": -0.4874840974807739,
+      "compression_ratio": 0.6363636363636364,
+      "no_speech_prob": 3.486371781546982e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9423828125
+        },
+        {
+          "word": " les",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.93603515625
+        },
+        {
+          "word": " begint.",
+          "start": 0.4,
+          "end": 0.92,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

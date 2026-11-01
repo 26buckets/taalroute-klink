@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-93e972aafaa2f5e6",
+  "sha256": "4c3e3dad99ddbffbf2d8e15a04b721acd508bdc843c55d26ee2509cc9944b285",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De aardappel ligt op de plank.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " De aardappel ligt op de plank.",
+      "temperature": 0,
+      "avg_logprob": -0.12474383626665388,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.8730876145143256e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9384765625
+        },
+        {
+          "word": " aardappel",
+          "start": 0.18,
+          "end": 0.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ligt",
+          "start": 0.74,
+          "end": 1.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " op",
+          "start": 1.1,
+          "end": 1.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 1.36,
+          "end": 1.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " plank.",
+          "start": 1.5,
+          "end": 1.78,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

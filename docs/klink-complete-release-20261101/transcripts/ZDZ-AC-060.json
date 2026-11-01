@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-060",
+  "sha256": "175dfb72adf359ddb78a47af5f5ef741551eac5e6179b442c300f4838cbb00f3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben moe naar mijn werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Ik ben moe naar mijn werk.",
+      "temperature": 0,
+      "avg_logprob": -0.12094510685313832,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.507712779433515e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moe",
+          "start": 0.28,
+          "end": 0.48,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naar",
+          "start": 0.48,
+          "end": 0.56,
+          "probability": 0.9033203125
+        },
+        {
+          "word": " mijn",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.966796875
+        },
+        {
+          "word": " werk.",
+          "start": 0.68,
+          "end": 0.96,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

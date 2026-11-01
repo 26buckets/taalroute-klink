@@ -1,0 +1,95 @@
+{
+  "id": "ZDZ-A2-015",
+  "sha256": "d5deee36ef7f887debf1604b8da98b04f249c17357ef5d50adf68c6b437af362",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn knie doet sinds gisteren pijn, vooral als ik de trap oploop.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.9,
+      "text": " Mijn knie doet sinds gisteren pijn, vooral als ik de trap oploop.",
+      "temperature": 0,
+      "avg_logprob": -0.07623965923602764,
+      "compression_ratio": 0.9848484848484849,
+      "no_speech_prob": 4.03122977707393e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " knie",
+          "start": 0.24,
+          "end": 0.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " doet",
+          "start": 0.5,
+          "end": 0.66,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " sinds",
+          "start": 0.66,
+          "end": 0.92,
+          "probability": 0.99609375
+        },
+        {
+          "word": " gisteren",
+          "start": 0.92,
+          "end": 1.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " pijn,",
+          "start": 1.32,
+          "end": 1.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vooral",
+          "start": 1.76,
+          "end": 2.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " als",
+          "start": 2.0,
+          "end": 2.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ik",
+          "start": 2.1,
+          "end": 2.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.18,
+          "end": 2.28,
+          "probability": 0.99609375
+        },
+        {
+          "word": " trap",
+          "start": 2.28,
+          "end": 2.5,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " oploop.",
+          "start": 2.5,
+          "end": 2.9,
+          "probability": 0.7587890625
+        }
+      ]
+    }
+  ]
+}

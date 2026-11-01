@@ -1,0 +1,252 @@
+{
+  "id": "A1-T04",
+  "sha256": "f55121c32f00bccb078ebfe77fe07e29b8391bdc79078a086f2e2f473ef52b03",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mila wil op dinsdag naar de markt. Haar fiets staat bij de deur, maar de fiets is kapot. Daarom loopt Mila naar de markt. Zij koopt tomaten en kaas. Om 11 uur is zij weer thuis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.18,
+      "text": " Mila wil op dinsdag naar de markt. Haar fiets staat bij de deur, maar de fiets is kapot.",
+      "temperature": 0,
+      "avg_logprob": -0.035783305312647964,
+      "compression_ratio": 1.3615384615384616,
+      "no_speech_prob": 6.1459739207625486e-12,
+      "words": [
+        {
+          "word": " Mila",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.98046875
+        },
+        {
+          "word": " wil",
+          "start": 0.3,
+          "end": 0.46,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " op",
+          "start": 0.46,
+          "end": 0.58,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " dinsdag",
+          "start": 0.58,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.1,
+          "end": 1.22,
+          "probability": 0.994140625
+        },
+        {
+          "word": " markt.",
+          "start": 1.22,
+          "end": 1.6,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " Haar",
+          "start": 1.74,
+          "end": 1.94,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " fiets",
+          "start": 1.94,
+          "end": 2.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " staat",
+          "start": 2.16,
+          "end": 2.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 2.4,
+          "end": 2.56,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 2.56,
+          "end": 2.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur,",
+          "start": 2.68,
+          "end": 3.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maar",
+          "start": 3.14,
+          "end": 3.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 3.3,
+          "end": 3.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " fiets",
+          "start": 3.42,
+          "end": 3.64,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 3.64,
+          "end": 3.78,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " kapot.",
+          "start": 3.78,
+          "end": 4.18,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.44,
+      "end": 9.12,
+      "text": " Daarom loopt Mila naar de markt. Zij koopt tomaten en kaas. Om 11 uur is zij weer thuis.",
+      "temperature": 0,
+      "avg_logprob": -0.035783305312647964,
+      "compression_ratio": 1.3615384615384616,
+      "no_speech_prob": 6.1459739207625486e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 4.44,
+          "end": 4.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " loopt",
+          "start": 4.82,
+          "end": 5.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Mila",
+          "start": 5.02,
+          "end": 5.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 5.32,
+          "end": 5.42,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.42,
+          "end": 5.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " markt.",
+          "start": 5.54,
+          "end": 5.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zij",
+          "start": 6.06,
+          "end": 6.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " koopt",
+          "start": 6.3,
+          "end": 6.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tomaten",
+          "start": 6.52,
+          "end": 6.94,
+          "probability": 0.998046875
+        },
+        {
+          "word": " en",
+          "start": 6.94,
+          "end": 7.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaas.",
+          "start": 7.1,
+          "end": 7.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Om",
+          "start": 7.64,
+          "end": 7.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 11",
+          "start": 7.82,
+          "end": 8.08,
+          "probability": 0.81494140625
+        },
+        {
+          "word": " uur",
+          "start": 8.08,
+          "end": 8.34,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " is",
+          "start": 8.34,
+          "end": 8.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 8.46,
+          "end": 8.6,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " weer",
+          "start": 8.6,
+          "end": 8.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " thuis.",
+          "start": 8.76,
+          "end": 9.12,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

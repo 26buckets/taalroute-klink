@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-018",
+  "sha256": "79a46aff5773d5a0341fec4a717db9998ad2430cc04fd45710dbe40e198c0b0e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Pak de doos.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.58,
+      "text": " Pak de doos.",
+      "temperature": 0,
+      "avg_logprob": -0.1648673415184021,
+      "compression_ratio": 0.6,
+      "no_speech_prob": 6.774807711357189e-12,
+      "words": [
+        {
+          "word": " Pak",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.921875
+        },
+        {
+          "word": " de",
+          "start": 0.2,
+          "end": 0.32,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " doos.",
+          "start": 0.32,
+          "end": 0.58,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-8c35273c3e6cb17f",
+  "sha256": "ca31ecd5811f245b327fe4b4f08dacd930d825b55730d91c243d2b996a36a91d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Welke ingang van de school gebruiken we?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.1,
+      "text": " Welke ingang van de school gebruiken we?",
+      "temperature": 0,
+      "avg_logprob": -0.09979517119271415,
+      "compression_ratio": 0.8333333333333334,
+      "no_speech_prob": 4.093043612374281e-12,
+      "words": [
+        {
+          "word": " Welke",
+          "start": 0.0,
+          "end": 0.38,
+          "probability": 0.966796875
+        },
+        {
+          "word": " ingang",
+          "start": 0.38,
+          "end": 0.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 0.88,
+          "end": 1.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.02,
+          "end": 1.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " school",
+          "start": 1.16,
+          "end": 1.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gebruiken",
+          "start": 1.44,
+          "end": 1.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " we?",
+          "start": 1.94,
+          "end": 2.1,
+          "probability": 0.98974609375
+        }
+      ]
+    }
+  ]
+}

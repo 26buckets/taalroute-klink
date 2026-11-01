@@ -1,0 +1,71 @@
+{
+  "id": "klink-sentence-b899be4a16f7fe4a",
+  "sha256": "390d52602b94eae48e129f5f32f1b5cd99fbbbd96f20150cb8b5de1ae94e70bb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Staat er in de tekst wie rijk is?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.04,
+      "text": " Staat er in de tekst wie rijk is?",
+      "temperature": 0,
+      "avg_logprob": -0.07435406957353864,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 5.7797035386830675e-12,
+      "words": [
+        {
+          "word": " Staat",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " er",
+          "start": 0.26,
+          "end": 0.46,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " in",
+          "start": 0.46,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.6,
+          "end": 0.7,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " tekst",
+          "start": 0.7,
+          "end": 1.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " wie",
+          "start": 1.14,
+          "end": 1.34,
+          "probability": 0.86962890625
+        },
+        {
+          "word": " rijk",
+          "start": 1.34,
+          "end": 1.76,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " is?",
+          "start": 1.76,
+          "end": 2.04,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

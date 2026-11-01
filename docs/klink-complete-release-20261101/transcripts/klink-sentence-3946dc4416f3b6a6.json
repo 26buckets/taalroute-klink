@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-3946dc4416f3b6a6",
+  "sha256": "91c813f3a251177315404635287f9774766259847e1128a7d3b1e8d01cdd3f2a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij nemen pauze voor de lunch.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.56,
+      "text": " Wij nemen pauze voor de lunch.",
+      "temperature": 0,
+      "avg_logprob": -0.06157565116882324,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 4.610222793799412e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " nemen",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 1.0
+        },
+        {
+          "word": " pauze",
+          "start": 0.38,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " voor",
+          "start": 0.88,
+          "end": 1.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.12,
+          "end": 1.26,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " lunch.",
+          "start": 1.26,
+          "end": 1.56,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

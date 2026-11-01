@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-0ec0571d6ef0d727",
+  "sha256": "ea2586ec66f8c47669791438f57be67fe9ecd00b6af7e4f5b00a9a8a7733b60d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De tafel is schoon.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " De tafel is schoon.",
+      "temperature": 0,
+      "avg_logprob": -0.1920152187347412,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 4.079118987032615e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.85205078125
+        },
+        {
+          "word": " tafel",
+          "start": 0.14,
+          "end": 0.56,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 0.56,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schoon.",
+          "start": 0.78,
+          "end": 1.2,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

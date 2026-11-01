@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-007",
+  "sha256": "cf4887a4d886a90f98cfeece0bd72e80ca131a626c88f7757db906284a2d2cca",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn zus komt vanavond op bezoek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " Mijn zus komt vanavond op bezoek.",
+      "temperature": 0,
+      "avg_logprob": -0.05674002965291341,
+      "compression_ratio": 0.8048780487804879,
+      "no_speech_prob": 4.044646128437135e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.994140625
+        },
+        {
+          "word": " zus",
+          "start": 0.22,
+          "end": 0.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komt",
+          "start": 0.36,
+          "end": 0.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vanavond",
+          "start": 0.62,
+          "end": 1.04,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 1.04,
+          "end": 1.14,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " bezoek.",
+          "start": 1.14,
+          "end": 1.5,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

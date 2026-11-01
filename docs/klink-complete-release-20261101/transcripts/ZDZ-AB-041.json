@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-041",
+  "sha256": "84296e0b3191b4edcec9a8540af4e3fb0c4e40dd264dd988f00f80a53d15fa77",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Lees dit boek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Lees dit boek.",
+      "temperature": 0,
+      "avg_logprob": -0.18204032050238717,
+      "compression_ratio": 0.6363636363636364,
+      "no_speech_prob": 6.329624758355523e-12,
+      "words": [
+        {
+          "word": " Lees",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9658203125
+        },
+        {
+          "word": " dit",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " boek.",
+          "start": 0.36,
+          "end": 0.62,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

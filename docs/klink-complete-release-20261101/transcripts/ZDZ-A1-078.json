@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-078",
+  "sha256": "1250f28415ee83ae2564e90bf635c7e381551464818341a98fe01b3539e6a04b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dank u, nu begrijp ik het.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Dank u, nu begrijp ik het.",
+      "temperature": 0,
+      "avg_logprob": -0.0744164907015287,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 6.6909412038684835e-12,
+      "words": [
+        {
+          "word": " Dank",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.98291015625
+        },
+        {
+          "word": " u,",
+          "start": 0.22,
+          "end": 0.36,
+          "probability": 0.990234375
+        },
+        {
+          "word": " nu",
+          "start": 0.6,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " begrijp",
+          "start": 0.68,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik",
+          "start": 0.98,
+          "end": 1.04,
+          "probability": 1.0
+        },
+        {
+          "word": " het.",
+          "start": 1.04,
+          "end": 1.18,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

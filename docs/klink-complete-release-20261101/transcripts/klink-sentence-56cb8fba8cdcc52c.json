@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-56cb8fba8cdcc52c",
+  "sha256": "5f3e5f6ee7e1b691a9dd6fc7ebb87352504df3590256ab2dcc1fbf4321ef662d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij helpen de buren.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.2,
+      "text": " Wij helpen de buren.",
+      "temperature": 0,
+      "avg_logprob": -0.11220860481262207,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 4.1376498581546794e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.95556640625
+        },
+        {
+          "word": " helpen",
+          "start": 0.24,
+          "end": 0.7,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.7,
+          "end": 0.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " buren.",
+          "start": 0.84,
+          "end": 1.2,
+          "probability": 0.994140625
+        }
+      ]
+    }
+  ]
+}

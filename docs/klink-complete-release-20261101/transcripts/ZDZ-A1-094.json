@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-094",
+  "sha256": "b62a39585738da06a168632cfec7fd460b4b2c85e841d7f2a690ad46b69378ab",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb morgen al een afspraak.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Ik heb morgen al een afspraak.",
+      "temperature": 0,
+      "avg_logprob": -0.05646584584162785,
+      "compression_ratio": 0.8571428571428571,
+      "no_speech_prob": 4.786438172893481e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.88037109375
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " morgen",
+          "start": 0.24,
+          "end": 0.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " al",
+          "start": 0.52,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.72,
+          "end": 0.82,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " afspraak.",
+          "start": 0.82,
+          "end": 1.38,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

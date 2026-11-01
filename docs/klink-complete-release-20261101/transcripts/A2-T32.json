@@ -1,0 +1,600 @@
+{
+  "id": "A2-T32",
+  "sha256": "8c324f35d6021de1712ef1e5b59f182976fb43e3fa9a838c313905944e10268f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een medewerker wil volgende maand twee dagen vrijnemen. Hij vraagt verlof aan via een formulier op de website van het bedrijf. Op maandag vult hij alleen de eerste datum in. De leidinggevende stuurt het formulier terug omdat de tweede datum ontbreekt. Dinsdag vult de medewerker ook die datum in en stuurt het formulier opnieuw. Woensdag ontvangt hij een bericht dat beide dagen zijn goedgekeurd. Daarna schrijft hij de dagen in zijn agenda. Voor die bevestiging had hij nog geen reis geboekt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.58,
+      "text": " Een medewerker wil volgende maand twee dagen vrijnemen.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.994140625
+        },
+        {
+          "word": " medewerker",
+          "start": 0.16,
+          "end": 0.7,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 0.7,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " volgende",
+          "start": 0.86,
+          "end": 1.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maand",
+          "start": 1.2,
+          "end": 1.44,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " twee",
+          "start": 1.44,
+          "end": 1.66,
+          "probability": 0.962890625
+        },
+        {
+          "word": " dagen",
+          "start": 1.66,
+          "end": 1.94,
+          "probability": 1.0
+        },
+        {
+          "word": " vrijnemen.",
+          "start": 1.94,
+          "end": 2.58,
+          "probability": 0.873046875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.8,
+      "end": 6.18,
+      "text": " Hij vraagt verlof aan via een formulier op de website van het bedrijf.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 2.8,
+          "end": 3.32,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vraagt",
+          "start": 3.32,
+          "end": 3.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verlof",
+          "start": 3.58,
+          "end": 3.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 3.94,
+          "end": 4.16,
+          "probability": 1.0
+        },
+        {
+          "word": " via",
+          "start": 4.16,
+          "end": 4.38,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 4.38,
+          "end": 4.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " formulier",
+          "start": 4.52,
+          "end": 4.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 4.98,
+          "end": 5.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 5.1,
+          "end": 5.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " website",
+          "start": 5.16,
+          "end": 5.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 5.44,
+          "end": 5.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 5.62,
+          "end": 5.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bedrijf.",
+          "start": 5.74,
+          "end": 6.18,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.56,
+      "end": 9.02,
+      "text": " Op maandag vult hij alleen de eerste datum in.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 6.56,
+          "end": 7.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maandag",
+          "start": 7.02,
+          "end": 7.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vult",
+          "start": 7.5,
+          "end": 7.7,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hij",
+          "start": 7.7,
+          "end": 7.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alleen",
+          "start": 7.82,
+          "end": 8.04,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.04,
+          "end": 8.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " eerste",
+          "start": 8.2,
+          "end": 8.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " datum",
+          "start": 8.44,
+          "end": 8.88,
+          "probability": 1.0
+        },
+        {
+          "word": " in.",
+          "start": 8.88,
+          "end": 9.02,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.36,
+      "end": 12.96,
+      "text": " De leidinggevende stuurt het formulier terug omdat de tweede datum ontbreekt.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 9.36,
+          "end": 9.74,
+          "probability": 1.0
+        },
+        {
+          "word": " leidinggevende",
+          "start": 9.74,
+          "end": 10.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " stuurt",
+          "start": 10.4,
+          "end": 10.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 10.62,
+          "end": 10.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " formulier",
+          "start": 10.74,
+          "end": 11.14,
+          "probability": 1.0
+        },
+        {
+          "word": " terug",
+          "start": 11.14,
+          "end": 11.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " omdat",
+          "start": 11.48,
+          "end": 11.7,
+          "probability": 0.94091796875
+        },
+        {
+          "word": " de",
+          "start": 11.7,
+          "end": 11.9,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tweede",
+          "start": 11.9,
+          "end": 12.18,
+          "probability": 1.0
+        },
+        {
+          "word": " datum",
+          "start": 12.18,
+          "end": 12.52,
+          "probability": 1.0
+        },
+        {
+          "word": " ontbreekt.",
+          "start": 12.52,
+          "end": 12.96,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.660000000000004,
+      "end": 17.14,
+      "text": " Dinsdag vult de medewerker ook die datum in en stuurt het formulier opnieuw.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Dinsdag",
+          "start": 13.660000000000004,
+          "end": 14.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vult",
+          "start": 14.18,
+          "end": 14.44,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 14.44,
+          "end": 14.56,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " medewerker",
+          "start": 14.56,
+          "end": 15.12,
+          "probability": 1.0
+        },
+        {
+          "word": " ook",
+          "start": 15.12,
+          "end": 15.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 15.3,
+          "end": 15.42,
+          "probability": 0.99609375
+        },
+        {
+          "word": " datum",
+          "start": 15.42,
+          "end": 15.82,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 15.82,
+          "end": 15.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 15.96,
+          "end": 16.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " stuurt",
+          "start": 16.1,
+          "end": 16.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 16.34,
+          "end": 16.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " formulier",
+          "start": 16.44,
+          "end": 16.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " opnieuw.",
+          "start": 16.84,
+          "end": 17.14,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.760000000000005,
+      "end": 20.58,
+      "text": " Woensdag ontvangt hij een bericht dat beide dagen zijn goedgekeurd.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Woensdag",
+          "start": 17.760000000000005,
+          "end": 18.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " ontvangt",
+          "start": 18.28,
+          "end": 18.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 18.72,
+          "end": 18.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 18.78,
+          "end": 18.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 18.9,
+          "end": 19.18,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 19.18,
+          "end": 19.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " beide",
+          "start": 19.3,
+          "end": 19.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dagen",
+          "start": 19.56,
+          "end": 19.86,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 19.86,
+          "end": 20.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " goedgekeurd.",
+          "start": 20.02,
+          "end": 20.58,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.100000000000005,
+      "end": 23.1,
+      "text": " Daarna schrijft hij de dagen in zijn agenda.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 21.100000000000005,
+          "end": 21.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schrijft",
+          "start": 21.62,
+          "end": 22.06,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " hij",
+          "start": 22.06,
+          "end": 22.14,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 22.14,
+          "end": 22.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dagen",
+          "start": 22.26,
+          "end": 22.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 22.5,
+          "end": 22.66,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 22.66,
+          "end": 22.78,
+          "probability": 1.0
+        },
+        {
+          "word": " agenda.",
+          "start": 22.78,
+          "end": 23.1,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 23.7,
+      "end": 25.92,
+      "text": " Voor die bevestiging had hij nog geen reis geboekt.",
+      "temperature": 0,
+      "avg_logprob": -0.07255370978153113,
+      "compression_ratio": 1.8058608058608059,
+      "no_speech_prob": 6.197118773004773e-12,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 23.7,
+          "end": 24.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " die",
+          "start": 24.02,
+          "end": 24.16,
+          "probability": 1.0
+        },
+        {
+          "word": " bevestiging",
+          "start": 24.16,
+          "end": 24.68,
+          "probability": 1.0
+        },
+        {
+          "word": " had",
+          "start": 24.68,
+          "end": 24.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 24.8,
+          "end": 24.94,
+          "probability": 1.0
+        },
+        {
+          "word": " nog",
+          "start": 24.94,
+          "end": 25.08,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 25.08,
+          "end": 25.28,
+          "probability": 1.0
+        },
+        {
+          "word": " reis",
+          "start": 25.28,
+          "end": 25.58,
+          "probability": 1.0
+        },
+        {
+          "word": " geboekt.",
+          "start": 25.58,
+          "end": 25.92,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

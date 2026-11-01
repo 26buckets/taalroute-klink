@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-046",
+  "sha256": "e8008821861d454319089f243b80efb55f92a1c6ba45cd34ff1847f19e68238b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Gisteren heb ik met mijn zoon gekookt.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.43999999999999995,
+      "end": 1.74,
+      "text": " Gisteren heb ik met mijn zoon gekookt.",
+      "temperature": 0,
+      "avg_logprob": -0.23906689882278442,
+      "compression_ratio": 0.8260869565217391,
+      "no_speech_prob": 5.463213648831955e-12,
+      "words": [
+        {
+          "word": " Gisteren",
+          "start": 0.43999999999999995,
+          "end": 0.68,
+          "probability": 0.96923828125
+        },
+        {
+          "word": " heb",
+          "start": 0.68,
+          "end": 0.76,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ik",
+          "start": 0.76,
+          "end": 0.86,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 0.86,
+          "end": 0.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " mijn",
+          "start": 0.98,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zoon",
+          "start": 1.1,
+          "end": 1.32,
+          "probability": 1.0
+        },
+        {
+          "word": " gekookt.",
+          "start": 1.32,
+          "end": 1.74,
+          "probability": 0.9951171875
+        }
+      ]
+    }
+  ]
+}

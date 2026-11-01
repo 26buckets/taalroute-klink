@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-055",
+  "sha256": "1e2df697a252c6c14883f525fccfc923702e0bbc9523b256fefc73ff8444ecee",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " kunnen we dinsdag om 3 uur afspreken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.76,
+      "text": " kunnen we dinsdag om 3 uur afspreken.",
+      "temperature": 0,
+      "avg_logprob": -0.1042791534872616,
+      "compression_ratio": 0.8222222222222222,
+      "no_speech_prob": 4.306814019999772e-12,
+      "words": [
+        {
+          "word": " kunnen",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.85107421875
+        },
+        {
+          "word": " we",
+          "start": 0.18,
+          "end": 0.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dinsdag",
+          "start": 0.34,
+          "end": 0.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " om",
+          "start": 0.7,
+          "end": 0.82,
+          "probability": 0.99609375
+        },
+        {
+          "word": " 3",
+          "start": 0.82,
+          "end": 1.0,
+          "probability": 0.666015625
+        },
+        {
+          "word": " uur",
+          "start": 1.0,
+          "end": 1.22,
+          "probability": 0.9130859375
+        },
+        {
+          "word": " afspreken.",
+          "start": 1.22,
+          "end": 1.76,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

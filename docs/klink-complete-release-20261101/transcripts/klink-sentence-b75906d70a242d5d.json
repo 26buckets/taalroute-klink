@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-b75906d70a242d5d",
+  "sha256": "f28a560a8cd34ed5ac7e90d5e319cce8b11af5fa148aa645310df5a61a82cb3a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De fles staat in de koelkast.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " De fles staat in de koelkast.",
+      "temperature": 0,
+      "avg_logprob": -0.14294815063476562,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 4.274510433111001e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94970703125
+        },
+        {
+          "word": " fles",
+          "start": 0.16,
+          "end": 0.5,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " staat",
+          "start": 0.5,
+          "end": 0.84,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " in",
+          "start": 0.84,
+          "end": 1.04,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 1.04,
+          "end": 1.14,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " koelkast.",
+          "start": 1.14,
+          "end": 1.68,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

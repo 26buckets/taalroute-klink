@@ -1,0 +1,65 @@
+{
+  "id": "ZDZ-A1-030",
+  "sha256": "2cd9bdad8cf41b29e6a7a3219ec98949ca8ed3eada7f6942b7fedf2702f77cb7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik om drie uur pauze nemen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Mag ik om drie uur pauze nemen?",
+      "temperature": 0,
+      "avg_logprob": -0.19594376427786692,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.486286342419987e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.50634765625
+        },
+        {
+          "word": " ik",
+          "start": 0.18,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " drie",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.5419921875
+        },
+        {
+          "word": " uur",
+          "start": 0.56,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " pauze",
+          "start": 0.78,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nemen?",
+          "start": 1.04,
+          "end": 1.32,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

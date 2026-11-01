@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-030",
+  "sha256": "4cec82d21635b20d846e8b68165c5b8de37bdedcfe748d62267d0a42eb4f59fd",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik nu pauze nemen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": " Mag ik nu pauze nemen?",
+      "temperature": 0,
+      "avg_logprob": -0.13469323244961826,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 3.850040945774236e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.93359375
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.28,
+          "probability": 1.0
+        },
+        {
+          "word": " nu",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " pauze",
+          "start": 0.4,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nemen?",
+          "start": 0.74,
+          "end": 1.0,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

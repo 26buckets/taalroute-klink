@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-086",
+  "sha256": "2bab01ff1d62005718bf62f3ba30db3e4e8ca761edc14dab7ec660916697605f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb een vraag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Ik heb een vraag.",
+      "temperature": 0,
+      "avg_logprob": -0.1699036955833435,
+      "compression_ratio": 0.68,
+      "no_speech_prob": 3.8585050952943956e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.94189453125
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vraag.",
+          "start": 0.36,
+          "end": 0.66,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

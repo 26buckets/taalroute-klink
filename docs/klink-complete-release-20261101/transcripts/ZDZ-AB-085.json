@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-085",
+  "sha256": "14c6c432616cd363d3ca45c0e4ad56bc63cd46f2866a8c6626199b05832b2537",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wil meer lezen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Ik wil meer lezen.",
+      "temperature": 0,
+      "avg_logprob": -0.12038522296481663,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.473270712179733e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.921875
+        },
+        {
+          "word": " wil",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " meer",
+          "start": 0.32,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " lezen.",
+          "start": 0.6,
+          "end": 0.96,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

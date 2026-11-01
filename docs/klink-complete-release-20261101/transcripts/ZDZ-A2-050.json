@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-050",
+  "sha256": "47bd73045e7f3b420a1d59bee9e87a8e12a4de4acfbfef323f702ea3855d2063",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vind online lessen fijn omdat ik thuis kan leren.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.58,
+      "text": " Ik vind online lessen fijn omdat ik thuis kan leren.",
+      "temperature": 0,
+      "avg_logprob": -0.059701893064710826,
+      "compression_ratio": 0.8813559322033898,
+      "no_speech_prob": 3.3949149914891397e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.994140625
+        },
+        {
+          "word": " vind",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 1.0
+        },
+        {
+          "word": " online",
+          "start": 0.32,
+          "end": 0.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " lessen",
+          "start": 0.64,
+          "end": 1.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " fijn",
+          "start": 1.0,
+          "end": 1.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " omdat",
+          "start": 1.28,
+          "end": 1.66,
+          "probability": 0.77294921875
+        },
+        {
+          "word": " ik",
+          "start": 1.66,
+          "end": 1.86,
+          "probability": 1.0
+        },
+        {
+          "word": " thuis",
+          "start": 1.86,
+          "end": 2.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 2.14,
+          "end": 2.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leren.",
+          "start": 2.28,
+          "end": 2.58,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

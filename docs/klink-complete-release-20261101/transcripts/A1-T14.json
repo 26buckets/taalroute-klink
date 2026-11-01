@@ -1,0 +1,283 @@
+{
+  "id": "A1-T14",
+  "sha256": "b73370ec621fe5ca69fb67ef928461c7067f8af15a27cea9cb6e3590f955fe70",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op maandag wil een man met bus 6 naar het centrum. Bij de halte staat een bord met de tekst, bus 6 komt vandaag niet. De man neemt daarom tram 2. Om 10 uur is hij in het centrum.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.42,
+      "text": " Op maandag wil een man met bus 6 naar het centrum.",
+      "temperature": 0,
+      "avg_logprob": -0.07592420890683034,
+      "compression_ratio": 1.3692307692307693,
+      "no_speech_prob": 8.368801311664509e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98779296875
+        },
+        {
+          "word": " maandag",
+          "start": 0.16,
+          "end": 0.52,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 0.52,
+          "end": 0.66,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.66,
+          "end": 0.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " man",
+          "start": 0.8,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 0.98,
+          "end": 1.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bus",
+          "start": 1.12,
+          "end": 1.38,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " 6",
+          "start": 1.38,
+          "end": 1.6,
+          "probability": 0.953125
+        },
+        {
+          "word": " naar",
+          "start": 1.6,
+          "end": 1.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 1.82,
+          "end": 2.04,
+          "probability": 0.994140625
+        },
+        {
+          "word": " centrum.",
+          "start": 2.04,
+          "end": 2.42,
+          "probability": 0.98876953125
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.56,
+      "end": 6.14,
+      "text": " Bij de halte staat een bord met de tekst, bus 6 komt vandaag niet.",
+      "temperature": 0,
+      "avg_logprob": -0.07592420890683034,
+      "compression_ratio": 1.3692307692307693,
+      "no_speech_prob": 8.368801311664509e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 2.56,
+          "end": 2.66,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 2.66,
+          "end": 2.78,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " halte",
+          "start": 2.78,
+          "end": 3.1,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " staat",
+          "start": 3.1,
+          "end": 3.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.34,
+          "end": 3.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bord",
+          "start": 3.5,
+          "end": 3.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " met",
+          "start": 3.78,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.96,
+          "end": 4.1,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " tekst,",
+          "start": 4.1,
+          "end": 4.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 4.56,
+          "end": 4.86,
+          "probability": 0.96044921875
+        },
+        {
+          "word": " 6",
+          "start": 4.86,
+          "end": 5.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 5.08,
+          "end": 5.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vandaag",
+          "start": 5.42,
+          "end": 5.8,
+          "probability": 1.0
+        },
+        {
+          "word": " niet.",
+          "start": 5.8,
+          "end": 6.14,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.3,
+      "end": 9.68,
+      "text": " De man neemt daarom tram 2. Om 10 uur is hij in het centrum.",
+      "temperature": 0,
+      "avg_logprob": -0.07592420890683034,
+      "compression_ratio": 1.3692307692307693,
+      "no_speech_prob": 8.368801311664509e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.3,
+          "end": 6.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man",
+          "start": 6.44,
+          "end": 6.64,
+          "probability": 1.0
+        },
+        {
+          "word": " neemt",
+          "start": 6.64,
+          "end": 6.98,
+          "probability": 1.0
+        },
+        {
+          "word": " daarom",
+          "start": 6.98,
+          "end": 7.34,
+          "probability": 1.0
+        },
+        {
+          "word": " tram",
+          "start": 7.34,
+          "end": 7.54,
+          "probability": 0.9609375
+        },
+        {
+          "word": " 2.",
+          "start": 7.54,
+          "end": 7.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Om",
+          "start": 8.06,
+          "end": 8.22,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " 10",
+          "start": 8.22,
+          "end": 8.4,
+          "probability": 0.83154296875
+        },
+        {
+          "word": " uur",
+          "start": 8.4,
+          "end": 8.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 8.68,
+          "end": 8.86,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 8.86,
+          "end": 8.98,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 8.98,
+          "end": 9.12,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 9.12,
+          "end": 9.26,
+          "probability": 1.0
+        },
+        {
+          "word": " centrum.",
+          "start": 9.26,
+          "end": 9.68,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

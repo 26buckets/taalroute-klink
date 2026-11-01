@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-dc5b1ced0abca69a",
+  "sha256": "a481113b8c24de15e0ca556cb9075d7ca1c8272b3e4018f2310bd7f8316a0887",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het kind staat naast Fatima.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " Het kind staat naast Fatima.",
+      "temperature": 0,
+      "avg_logprob": -0.09191313656893643,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.217333947342805e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " kind",
+          "start": 0.18,
+          "end": 0.42,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " staat",
+          "start": 0.42,
+          "end": 0.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naast",
+          "start": 0.74,
+          "end": 1.2,
+          "probability": 1.0
+        },
+        {
+          "word": " Fatima.",
+          "start": 1.2,
+          "end": 1.68,
+          "probability": 0.99462890625
+        }
+      ]
+    }
+  ]
+}

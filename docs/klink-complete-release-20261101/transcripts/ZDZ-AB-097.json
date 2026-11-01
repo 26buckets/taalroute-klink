@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-097",
+  "sha256": "514ef903699ba42c4ce76f058b0b848c1472d80d2720dd1e6dceaae0f6cac4ac",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Nu is het goed.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.66,
+      "text": " Nu is het goed.",
+      "temperature": 0,
+      "avg_logprob": -0.17254960536956787,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 5.02796458981547e-12,
+      "words": [
+        {
+          "word": " Nu",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.91015625
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 0.34,
+          "end": 0.44,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " goed.",
+          "start": 0.44,
+          "end": 0.66,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

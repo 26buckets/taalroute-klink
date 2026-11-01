@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-bdcaacc357a3433c",
+  "sha256": "e3f44ee9c3fe8f8957922bd82560bed70472066dcec7047bbe3795ce6fc3be6b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het schip vaart langzaam weg.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Het schip vaart langzaam weg.",
+      "temperature": 0,
+      "avg_logprob": -0.06978178024291992,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 3.9801243897907845e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9560546875
+        },
+        {
+          "word": " schip",
+          "start": 0.16,
+          "end": 0.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vaart",
+          "start": 0.48,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " langzaam",
+          "start": 0.78,
+          "end": 1.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weg.",
+          "start": 1.36,
+          "end": 1.6,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

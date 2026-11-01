@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-88e15610c2658beb",
+  "sha256": "e6b9fdad062800ac107eed4953067788549ecd8e126a1db92af6c52e945b7af6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe het licht uit.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Ik doe het licht uit.",
+      "temperature": 0,
+      "avg_logprob": -0.15307068824768066,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.1398221656274714e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.818359375
+        },
+        {
+          "word": " doe",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 0.26,
+          "end": 0.4,
+          "probability": 0.99609375
+        },
+        {
+          "word": " licht",
+          "start": 0.4,
+          "end": 0.68,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " uit.",
+          "start": 0.68,
+          "end": 0.94,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

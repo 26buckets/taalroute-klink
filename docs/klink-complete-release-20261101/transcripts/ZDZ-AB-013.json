@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-013",
+  "sha256": "b889d58e3d02f000c0c8ebd8c4329cdf22212af02ab955af5458a0ddd4946db7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ga met de trein.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.84,
+      "text": " Ik ga met de trein.",
+      "temperature": 0,
+      "avg_logprob": -0.09176421165466309,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 4.250412955625338e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9443359375
+        },
+        {
+          "word": " ga",
+          "start": 0.12,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 0.26,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trein.",
+          "start": 0.56,
+          "end": 0.84,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

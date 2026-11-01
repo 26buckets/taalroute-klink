@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-081",
+  "sha256": "a3024f1d615cd974649623af99c99c4c92b8f6006b83ac50c26641bfdb56d2b4",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dank u, ik doe het zelf.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.18,
+      "text": " Dank u, ik doe het zelf.",
+      "temperature": 0,
+      "avg_logprob": -0.13693206960504706,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 4.972321165919169e-12,
+      "words": [
+        {
+          "word": " Dank",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " u,",
+          "start": 0.22,
+          "end": 0.38,
+          "probability": 0.947265625
+        },
+        {
+          "word": " ik",
+          "start": 0.66,
+          "end": 0.74,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " doe",
+          "start": 0.74,
+          "end": 0.84,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " het",
+          "start": 0.84,
+          "end": 0.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zelf.",
+          "start": 0.96,
+          "end": 1.18,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

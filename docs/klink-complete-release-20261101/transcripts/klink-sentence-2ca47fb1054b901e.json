@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-2ca47fb1054b901e",
+  "sha256": "4f569132073ea6ef93780f69afeabdfd7e552c86667863b3e280dded9ef7dfa7",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bon ligt naast mijn tas.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " De bon ligt naast mijn tas.",
+      "temperature": 0,
+      "avg_logprob": -0.12636752923329672,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.907796825187605e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.76708984375
+        },
+        {
+          "word": " bon",
+          "start": 0.16,
+          "end": 0.42,
+          "probability": 0.7529296875
+        },
+        {
+          "word": " ligt",
+          "start": 0.42,
+          "end": 0.76,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " naast",
+          "start": 0.76,
+          "end": 1.14,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " mijn",
+          "start": 1.14,
+          "end": 1.28,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tas.",
+          "start": 1.28,
+          "end": 1.6,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

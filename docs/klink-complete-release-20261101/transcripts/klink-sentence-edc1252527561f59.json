@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-edc1252527561f59",
+  "sha256": "d07997a57d7a10e87dc12bcc9097191608a973686fd507f111ed609dc7eb8e70",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Wij ruimen het speelgoed op.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Wij ruimen het speelgoed op.",
+      "temperature": 0,
+      "avg_logprob": -0.049826401930588946,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 3.982331825413965e-12,
+      "words": [
+        {
+          "word": " Wij",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.9716796875
+        },
+        {
+          "word": " ruimen",
+          "start": 0.26,
+          "end": 0.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " het",
+          "start": 0.6,
+          "end": 0.78,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " speelgoed",
+          "start": 0.78,
+          "end": 1.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op.",
+          "start": 1.26,
+          "end": 1.48,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-bc230c20216b5cfa",
+  "sha256": "237241c1028c8bed8583ee1b85ea7df7fd51ddba3d8b4b96e72d5a2f64bb63ff",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik hoor iemand au roepen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " Ik hoor iemand au roepen.",
+      "temperature": 0,
+      "avg_logprob": -0.30084640329534357,
+      "compression_ratio": 0.7575757575757576,
+      "no_speech_prob": 5.10681037388383e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.91796875
+        },
+        {
+          "word": " hoor",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " iemand",
+          "start": 0.34,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " au",
+          "start": 0.64,
+          "end": 0.96,
+          "probability": 0.29833984375
+        },
+        {
+          "word": " roepen.",
+          "start": 0.96,
+          "end": 1.5,
+          "probability": 0.84326171875
+        }
+      ]
+    }
+  ]
+}

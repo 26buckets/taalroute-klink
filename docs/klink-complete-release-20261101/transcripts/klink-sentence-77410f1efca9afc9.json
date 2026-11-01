@@ -1,0 +1,71 @@
+{
+  "id": "klink-sentence-77410f1efca9afc9",
+  "sha256": "f5520c6cb6e4d82730e6cbc182e2dcdd72dee26f4044cb28ff4b478f8826e4e1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De vakman bekijkt het dak vanaf de grond.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.22,
+      "text": " De vakman bekijkt het dak vanaf de grond.",
+      "temperature": 0,
+      "avg_logprob": -0.04925224516126844,
+      "compression_ratio": 0.8541666666666666,
+      "no_speech_prob": 3.742979017007375e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9541015625
+        },
+        {
+          "word": " vakman",
+          "start": 0.16,
+          "end": 0.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bekijkt",
+          "start": 0.6,
+          "end": 1.06,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " het",
+          "start": 1.06,
+          "end": 1.2,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " dak",
+          "start": 1.2,
+          "end": 1.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " vanaf",
+          "start": 1.42,
+          "end": 1.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.76,
+          "end": 1.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " grond.",
+          "start": 1.84,
+          "end": 2.22,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

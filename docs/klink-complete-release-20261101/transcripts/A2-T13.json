@@ -1,0 +1,557 @@
+{
+  "id": "A2-T13",
+  "sha256": "7244ea67e9560c922366eb5dbe9997b291e48c13bc6a3e79f6d3156f4c9d43ae",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een klant koopt vrijdag een zwarte broek in een kledingwinkel. Thuis ziet hij een kleine scheur in de broek. Zaterdag gaat hij met de broek en de bon terug naar de winkel. De medewerker wil een nieuwe broek in dezelfde maat geven, maar die maat is uitverkocht. De klant wil niet op een bestelling wachten. Daarom kiest hij voor terugbetaling. De medewerker zegt dat het geld binnen drie werkdagen op de bankrekening van de klant staat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.96,
+      "text": " Een klant koopt vrijdag een zwarte broek in een kledingwinkel.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " klant",
+          "start": 0.14,
+          "end": 0.48,
+          "probability": 1.0
+        },
+        {
+          "word": " koopt",
+          "start": 0.48,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vrijdag",
+          "start": 0.78,
+          "end": 1.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 1.2,
+          "end": 1.34,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zwarte",
+          "start": 1.34,
+          "end": 1.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " broek",
+          "start": 1.68,
+          "end": 1.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 1.98,
+          "end": 2.14,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " een",
+          "start": 2.14,
+          "end": 2.24,
+          "probability": 0.99609375
+        },
+        {
+          "word": " kledingwinkel.",
+          "start": 2.24,
+          "end": 2.96,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.1,
+      "end": 5.04,
+      "text": " Thuis ziet hij een kleine scheur in de broek.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " Thuis",
+          "start": 3.1,
+          "end": 3.46,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ziet",
+          "start": 3.46,
+          "end": 3.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hij",
+          "start": 3.7,
+          "end": 3.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.82,
+          "end": 3.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kleine",
+          "start": 3.96,
+          "end": 4.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " scheur",
+          "start": 4.24,
+          "end": 4.56,
+          "probability": 0.92578125
+        },
+        {
+          "word": " in",
+          "start": 4.56,
+          "end": 4.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.68,
+          "end": 4.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " broek.",
+          "start": 4.76,
+          "end": 5.04,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.4,
+      "end": 7.96,
+      "text": " Zaterdag gaat hij met de broek en de bon terug naar de winkel.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " Zaterdag",
+          "start": 5.4,
+          "end": 5.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gaat",
+          "start": 5.8,
+          "end": 6.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 6.0,
+          "end": 6.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 6.12,
+          "end": 6.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.28,
+          "end": 6.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " broek",
+          "start": 6.38,
+          "end": 6.64,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 6.64,
+          "end": 6.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.78,
+          "end": 6.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bon",
+          "start": 6.88,
+          "end": 7.1,
+          "probability": 0.9658203125
+        },
+        {
+          "word": " terug",
+          "start": 7.1,
+          "end": 7.36,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naar",
+          "start": 7.36,
+          "end": 7.5,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.5,
+          "end": 7.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " winkel.",
+          "start": 7.62,
+          "end": 7.96,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 8.12,
+      "end": 12.44,
+      "text": " De medewerker wil een nieuwe broek in dezelfde maat geven, maar die maat is uitverkocht.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 8.12,
+          "end": 8.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 8.32,
+          "end": 8.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wil",
+          "start": 8.86,
+          "end": 9.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 9.04,
+          "end": 9.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " nieuwe",
+          "start": 9.18,
+          "end": 9.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " broek",
+          "start": 9.42,
+          "end": 9.74,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 9.74,
+          "end": 9.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dezelfde",
+          "start": 9.88,
+          "end": 10.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maat",
+          "start": 10.36,
+          "end": 10.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geven,",
+          "start": 10.6,
+          "end": 10.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 11.1,
+          "end": 11.24,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " die",
+          "start": 11.24,
+          "end": 11.38,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " maat",
+          "start": 11.38,
+          "end": 11.64,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 11.64,
+          "end": 11.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " uitverkocht.",
+          "start": 11.78,
+          "end": 12.44,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.58,
+      "end": 14.34,
+      "text": " De klant wil niet op een bestelling wachten.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 12.58,
+          "end": 12.72,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 12.72,
+          "end": 12.98,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 12.98,
+          "end": 13.14,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 13.14,
+          "end": 13.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 13.32,
+          "end": 13.48,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 13.48,
+          "end": 13.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bestelling",
+          "start": 13.58,
+          "end": 13.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wachten.",
+          "start": 13.96,
+          "end": 14.34,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 14.52,
+      "end": 16.08,
+      "text": " Daarom kiest hij voor terugbetaling.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " Daarom",
+          "start": 14.52,
+          "end": 14.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kiest",
+          "start": 14.86,
+          "end": 15.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 15.08,
+          "end": 15.18,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 15.18,
+          "end": 15.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " terugbetaling.",
+          "start": 15.34,
+          "end": 16.08,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 16.26,
+      "end": 20.58,
+      "text": " De medewerker zegt dat het geld binnen drie werkdagen op de bankrekening van de klant staat.",
+      "temperature": 0,
+      "avg_logprob": -0.06448945132168857,
+      "compression_ratio": 1.7827868852459017,
+      "no_speech_prob": 7.680927074926736e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 16.26,
+          "end": 16.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 16.4,
+          "end": 16.96,
+          "probability": 1.0
+        },
+        {
+          "word": " zegt",
+          "start": 16.96,
+          "end": 17.24,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 17.24,
+          "end": 17.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 17.4,
+          "end": 17.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geld",
+          "start": 17.54,
+          "end": 17.78,
+          "probability": 1.0
+        },
+        {
+          "word": " binnen",
+          "start": 17.78,
+          "end": 18.02,
+          "probability": 1.0
+        },
+        {
+          "word": " drie",
+          "start": 18.02,
+          "end": 18.28,
+          "probability": 0.92333984375
+        },
+        {
+          "word": " werkdagen",
+          "start": 18.28,
+          "end": 18.9,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " op",
+          "start": 18.9,
+          "end": 19.06,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " de",
+          "start": 19.06,
+          "end": 19.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bankrekening",
+          "start": 19.18,
+          "end": 19.8,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 19.8,
+          "end": 19.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 19.94,
+          "end": 20.06,
+          "probability": 1.0
+        },
+        {
+          "word": " klant",
+          "start": 20.06,
+          "end": 20.32,
+          "probability": 1.0
+        },
+        {
+          "word": " staat.",
+          "start": 20.32,
+          "end": 20.58,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

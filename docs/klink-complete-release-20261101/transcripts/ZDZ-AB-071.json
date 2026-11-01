@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-071",
+  "sha256": "fa76ff6fac04c1df7745ae8dc59b989054e5e52eadbc801d7e36c48c5b3d7009",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De winkel is dicht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.76,
+      "text": " De winkel is dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.1746744049919976,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 4.221441772533918e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.96728515625
+        },
+        {
+          "word": " winkel",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 0.4,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dicht.",
+          "start": 0.56,
+          "end": 0.76,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

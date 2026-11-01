@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A2-078",
+  "sha256": "0c88bf13a29b856a3abb9f069cf4e552242ec5b43e7804d4412231d04677118e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " U heeft gelijk, ik heb de verkeerde datum opgeschreven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.8,
+      "text": " U heeft gelijk, ik heb de verkeerde datum opgeschreven.",
+      "temperature": 0,
+      "avg_logprob": -0.03513557260686701,
+      "compression_ratio": 0.9166666666666666,
+      "no_speech_prob": 4.0137103710091715e-12,
+      "words": [
+        {
+          "word": " U",
+          "start": 0.0,
+          "end": 0.1,
+          "probability": 0.96484375
+        },
+        {
+          "word": " heeft",
+          "start": 0.1,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gelijk,",
+          "start": 0.3,
+          "end": 0.74,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 0.86,
+          "end": 1.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " heb",
+          "start": 1.04,
+          "end": 1.18,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 1.18,
+          "end": 1.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkeerde",
+          "start": 1.3,
+          "end": 1.76,
+          "probability": 1.0
+        },
+        {
+          "word": " datum",
+          "start": 1.76,
+          "end": 2.14,
+          "probability": 1.0
+        },
+        {
+          "word": " opgeschreven.",
+          "start": 2.14,
+          "end": 2.8,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

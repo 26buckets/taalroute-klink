@@ -1,0 +1,270 @@
+{
+  "id": "A1-T58",
+  "sha256": "eda1cbd6cf69624ca8cc04972934d20c088e7cb19debcc9c72ef27899a955c86",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op de trap ziet een medewerker water. Zij zet een bord bij de trap. Pas op, de trap is nat. Daarna maakt zij de trap droog. Om 11 uur haalt zij het bord weg. De trap is weer droog.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.98,
+      "text": " Op de trap ziet een medewerker water. Zij zet een bord bij de trap. Pas op, de trap is nat.",
+      "temperature": 0,
+      "avg_logprob": -0.04470613694960071,
+      "compression_ratio": 1.4634146341463414,
+      "no_speech_prob": 5.424295995010153e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trap",
+          "start": 0.26,
+          "end": 0.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " ziet",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " een",
+          "start": 0.62,
+          "end": 0.8,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerker",
+          "start": 0.8,
+          "end": 1.36,
+          "probability": 1.0
+        },
+        {
+          "word": " water.",
+          "start": 1.36,
+          "end": 1.76,
+          "probability": 0.99609375
+        },
+        {
+          "word": " Zij",
+          "start": 2.02,
+          "end": 2.2,
+          "probability": 0.99609375
+        },
+        {
+          "word": " zet",
+          "start": 2.2,
+          "end": 2.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 2.38,
+          "end": 2.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bord",
+          "start": 2.5,
+          "end": 2.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bij",
+          "start": 2.76,
+          "end": 2.94,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.94,
+          "end": 3.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trap.",
+          "start": 3.08,
+          "end": 3.32,
+          "probability": 1.0
+        },
+        {
+          "word": " Pas",
+          "start": 3.52,
+          "end": 3.8,
+          "probability": 0.98046875
+        },
+        {
+          "word": " op,",
+          "start": 3.8,
+          "end": 4.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 4.24,
+          "end": 4.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trap",
+          "start": 4.36,
+          "end": 4.56,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 4.56,
+          "end": 4.74,
+          "probability": 1.0
+        },
+        {
+          "word": " nat.",
+          "start": 4.74,
+          "end": 4.98,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.24,
+      "end": 9.9,
+      "text": " Daarna maakt zij de trap droog. Om 11 uur haalt zij het bord weg. De trap is weer droog.",
+      "temperature": 0,
+      "avg_logprob": -0.04470613694960071,
+      "compression_ratio": 1.4634146341463414,
+      "no_speech_prob": 5.424295995010153e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 5.24,
+          "end": 5.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maakt",
+          "start": 5.56,
+          "end": 5.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 5.88,
+          "end": 6.0,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " de",
+          "start": 6.0,
+          "end": 6.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trap",
+          "start": 6.14,
+          "end": 6.34,
+          "probability": 1.0
+        },
+        {
+          "word": " droog.",
+          "start": 6.34,
+          "end": 6.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Om",
+          "start": 6.92,
+          "end": 7.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 11",
+          "start": 7.1,
+          "end": 7.4,
+          "probability": 0.8076171875
+        },
+        {
+          "word": " uur",
+          "start": 7.4,
+          "end": 7.6,
+          "probability": 0.998046875
+        },
+        {
+          "word": " haalt",
+          "start": 7.6,
+          "end": 7.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 7.82,
+          "end": 7.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 7.96,
+          "end": 8.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bord",
+          "start": 8.12,
+          "end": 8.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " weg.",
+          "start": 8.32,
+          "end": 8.62,
+          "probability": 1.0
+        },
+        {
+          "word": " De",
+          "start": 8.8,
+          "end": 9.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " trap",
+          "start": 9.0,
+          "end": 9.22,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 9.22,
+          "end": 9.38,
+          "probability": 1.0
+        },
+        {
+          "word": " weer",
+          "start": 9.38,
+          "end": 9.5,
+          "probability": 1.0
+        },
+        {
+          "word": " droog.",
+          "start": 9.5,
+          "end": 9.9,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

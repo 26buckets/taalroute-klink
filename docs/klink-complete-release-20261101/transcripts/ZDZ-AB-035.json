@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-035",
+  "sha256": "d6f61ac09ec41acba118e72d5d2b61fd479821fc44ae8f905d3f92bd3c958696",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hoe doe ik dit?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.88,
+      "text": " Hoe doe ik dit?",
+      "temperature": 0,
+      "avg_logprob": -0.22781133651733398,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 1.3320078547096603e-11,
+      "words": [
+        {
+          "word": " Hoe",
+          "start": 0.0,
+          "end": 0.46,
+          "probability": 0.96240234375
+        },
+        {
+          "word": " doe",
+          "start": 0.46,
+          "end": 0.6,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ik",
+          "start": 0.6,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dit?",
+          "start": 0.72,
+          "end": 0.88,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-08db4dd9ba3bd5a7",
+  "sha256": "b1646d5bae34d9a94f02c52cc968b186da8dc4acab8799b88c2d3c8b7005f16b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kok maakt een maaltijd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.48,
+      "text": " De kok maakt een maaltijd.",
+      "temperature": 0,
+      "avg_logprob": -0.17137789726257324,
+      "compression_ratio": 0.8387096774193549,
+      "no_speech_prob": 4.312539908513102e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.8642578125
+        },
+        {
+          "word": " kok",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.96484375
+        },
+        {
+          "word": " maakt",
+          "start": 0.44,
+          "end": 0.82,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " een",
+          "start": 0.82,
+          "end": 0.94,
+          "probability": 0.990234375
+        },
+        {
+          "word": " maaltijd.",
+          "start": 0.94,
+          "end": 1.48,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-016",
+  "sha256": "342f9f699a8f753c07ccea68f280f0467d613e0520305030d654baf79d5d97a0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik zoek werk.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.62,
+      "text": " Ik zoek werk.",
+      "temperature": 0,
+      "avg_logprob": -0.1654670238494873,
+      "compression_ratio": 0.6190476190476191,
+      "no_speech_prob": 4.601423842648389e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.8837890625
+        },
+        {
+          "word": " zoek",
+          "start": 0.14,
+          "end": 0.34,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " werk.",
+          "start": 0.34,
+          "end": 0.62,
+          "probability": 0.98046875
+        }
+      ]
+    }
+  ]
+}

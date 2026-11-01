@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-023",
+  "sha256": "e690a9e8d5fbffce81502666ec2c7e7c2fd8e4143206c9fea0e7134ede6dd1a5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " We doen het samen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " We doen het samen.",
+      "temperature": 0,
+      "avg_logprob": -0.18879824876785278,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.273338193722109e-12,
+      "words": [
+        {
+          "word": " We",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.95947265625
+        },
+        {
+          "word": " doen",
+          "start": 0.24,
+          "end": 0.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 0.36,
+          "end": 0.5,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " samen.",
+          "start": 0.5,
+          "end": 0.9,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

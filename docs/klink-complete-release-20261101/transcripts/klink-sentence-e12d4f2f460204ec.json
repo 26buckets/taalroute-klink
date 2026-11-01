@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-e12d4f2f460204ec",
+  "sha256": "6969212dab05131c225f6392f11d4d121d51598168002a2d6d49d9306b7c2097",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Noor kiest kaas als beleg.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.8,
+      "text": " Noor kiest kaas als beleg.",
+      "temperature": 0,
+      "avg_logprob": -0.1523576149573693,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 6.00059195041136e-12,
+      "words": [
+        {
+          "word": " Noor",
+          "start": 0.0,
+          "end": 0.38,
+          "probability": 0.9658203125
+        },
+        {
+          "word": " kiest",
+          "start": 0.38,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kaas",
+          "start": 0.68,
+          "end": 1.18,
+          "probability": 0.8310546875
+        },
+        {
+          "word": " als",
+          "start": 1.18,
+          "end": 1.42,
+          "probability": 0.99609375
+        },
+        {
+          "word": " beleg.",
+          "start": 1.42,
+          "end": 1.8,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

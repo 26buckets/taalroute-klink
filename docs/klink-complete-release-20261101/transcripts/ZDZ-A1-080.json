@@ -1,0 +1,77 @@
+{
+  "id": "ZDZ-A1-080",
+  "sha256": "3d83240b556d1706f370732abde255982752d89bc1f92a2c140a13d68c891868",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik heb een fout gemaakt, ik doe het opnieuw.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.06,
+      "text": " Ik heb een fout gemaakt, ik doe het opnieuw.",
+      "temperature": 0,
+      "avg_logprob": -0.07682624459266663,
+      "compression_ratio": 0.8627450980392157,
+      "no_speech_prob": 4.0944825654976036e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.88427734375
+        },
+        {
+          "word": " heb",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 0.26,
+          "end": 0.38,
+          "probability": 1.0
+        },
+        {
+          "word": " fout",
+          "start": 0.38,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gemaakt,",
+          "start": 0.66,
+          "end": 1.0,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 1.4,
+          "end": 1.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " doe",
+          "start": 1.5,
+          "end": 1.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.62,
+          "end": 1.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " opnieuw.",
+          "start": 1.76,
+          "end": 2.06,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

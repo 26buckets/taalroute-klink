@@ -1,0 +1,265 @@
+{
+  "id": "A1-T44",
+  "sha256": "7deb7fc84977ca650c08b20d8d9a10d8df730c05b5a0273a8a9ab93a0e51ccba",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vrouw wil haar zoon bellen. De batterij van haar telefoon is leeg. Op haar werk leent zij een telefoon van haar collega. Zij belt haar zoon. Na het werk laat zij haar eigen telefoon op.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.26,
+      "text": " Een vrouw wil haar zoon bellen. De batterij van haar telefoon is leeg.",
+      "temperature": 0,
+      "avg_logprob": -0.06974387559734407,
+      "compression_ratio": 1.56198347107438,
+      "no_speech_prob": 0.008184890262782574,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.1,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " vrouw",
+          "start": 0.1,
+          "end": 0.5,
+          "probability": 1.0
+        },
+        {
+          "word": " wil",
+          "start": 0.5,
+          "end": 0.64,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " haar",
+          "start": 0.64,
+          "end": 0.82,
+          "probability": 1.0
+        },
+        {
+          "word": " zoon",
+          "start": 0.82,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bellen.",
+          "start": 1.12,
+          "end": 1.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 1.44,
+          "end": 1.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " batterij",
+          "start": 1.6,
+          "end": 2.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " van",
+          "start": 2.0,
+          "end": 2.1,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " haar",
+          "start": 2.1,
+          "end": 2.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " telefoon",
+          "start": 2.26,
+          "end": 2.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 2.76,
+          "end": 2.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leeg.",
+          "start": 2.88,
+          "end": 3.26,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.26,
+      "end": 5.62,
+      "text": " Op haar werk leent zij een telefoon van haar collega.",
+      "temperature": 0,
+      "avg_logprob": -0.06974387559734407,
+      "compression_ratio": 1.56198347107438,
+      "no_speech_prob": 0.008184890262782574,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.26,
+          "end": 3.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 3.38,
+          "end": 3.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk",
+          "start": 3.5,
+          "end": 3.86,
+          "probability": 1.0
+        },
+        {
+          "word": " leent",
+          "start": 3.86,
+          "end": 4.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zij",
+          "start": 4.14,
+          "end": 4.26,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " een",
+          "start": 4.26,
+          "end": 4.44,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " telefoon",
+          "start": 4.44,
+          "end": 4.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " van",
+          "start": 4.9,
+          "end": 5.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " haar",
+          "start": 5.0,
+          "end": 5.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " collega.",
+          "start": 5.16,
+          "end": 5.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 5.72,
+      "end": 8.88,
+      "text": " Zij belt haar zoon. Na het werk laat zij haar eigen telefoon op.",
+      "temperature": 0,
+      "avg_logprob": -0.06974387559734407,
+      "compression_ratio": 1.56198347107438,
+      "no_speech_prob": 0.008184890262782574,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 5.72,
+          "end": 5.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " belt",
+          "start": 5.98,
+          "end": 6.18,
+          "probability": 0.9921875
+        },
+        {
+          "word": " haar",
+          "start": 6.18,
+          "end": 6.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zoon.",
+          "start": 6.32,
+          "end": 6.7,
+          "probability": 1.0
+        },
+        {
+          "word": " Na",
+          "start": 6.74,
+          "end": 6.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 6.92,
+          "end": 7.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk",
+          "start": 7.1,
+          "end": 7.36,
+          "probability": 1.0
+        },
+        {
+          "word": " laat",
+          "start": 7.36,
+          "end": 7.56,
+          "probability": 0.83056640625
+        },
+        {
+          "word": " zij",
+          "start": 7.56,
+          "end": 7.72,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " haar",
+          "start": 7.72,
+          "end": 7.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " eigen",
+          "start": 7.9,
+          "end": 8.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " telefoon",
+          "start": 8.18,
+          "end": 8.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op.",
+          "start": 8.7,
+          "end": 8.88,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

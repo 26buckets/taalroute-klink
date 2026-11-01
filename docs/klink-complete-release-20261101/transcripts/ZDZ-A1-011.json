@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-011",
+  "sha256": "be706f4a0169bb478f7f299f4df9bd9278ba84e9e470e20467da3a3c4ce88abb",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik met mijn kaart betalen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.28,
+      "text": " Mag ik met mijn kaart betalen?",
+      "temperature": 0,
+      "avg_logprob": -0.10881070295969646,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 4.6835838159176024e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.8955078125
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " met",
+          "start": 0.3,
+          "end": 0.44,
+          "probability": 0.99609375
+        },
+        {
+          "word": " mijn",
+          "start": 0.44,
+          "end": 0.58,
+          "probability": 0.99609375
+        },
+        {
+          "word": " kaart",
+          "start": 0.58,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " betalen?",
+          "start": 0.86,
+          "end": 1.28,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

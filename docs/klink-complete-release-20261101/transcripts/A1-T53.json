@@ -1,0 +1,253 @@
+{
+  "id": "A1-T53",
+  "sha256": "8c42bab3744fda0db1e9cb041fb814db6d1914d7728d27c0651a341d3c78f2c8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de tuin staan bloemen. Een man geeft de bloemen water. Daarna zet hij de lege emmer in de kast. Hij wast zijn handen. Om vijf uur gaat hij naar binnen en drinkt thee.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.96,
+      "text": " In de tuin staan bloemen. Een man geeft de bloemen water.",
+      "temperature": 0,
+      "avg_logprob": -0.0636887788772583,
+      "compression_ratio": 1.330708661417323,
+      "no_speech_prob": 5.9109002414903244e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.984375
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.26,
+          "probability": 1.0
+        },
+        {
+          "word": " tuin",
+          "start": 0.26,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " staan",
+          "start": 0.56,
+          "end": 0.72,
+          "probability": 1.0
+        },
+        {
+          "word": " bloemen.",
+          "start": 0.72,
+          "end": 1.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Een",
+          "start": 1.32,
+          "end": 1.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " man",
+          "start": 1.72,
+          "end": 1.92,
+          "probability": 1.0
+        },
+        {
+          "word": " geeft",
+          "start": 1.92,
+          "end": 2.2,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 2.2,
+          "end": 2.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bloemen",
+          "start": 2.3,
+          "end": 2.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " water.",
+          "start": 2.56,
+          "end": 2.96,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.48,
+      "end": 6.46,
+      "text": " Daarna zet hij de lege emmer in de kast. Hij wast zijn handen.",
+      "temperature": 0,
+      "avg_logprob": -0.0636887788772583,
+      "compression_ratio": 1.330708661417323,
+      "no_speech_prob": 5.9109002414903244e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 3.48,
+          "end": 3.96,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zet",
+          "start": 3.96,
+          "end": 4.2,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 4.2,
+          "end": 4.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 4.28,
+          "end": 4.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lege",
+          "start": 4.38,
+          "end": 4.64,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " emmer",
+          "start": 4.64,
+          "end": 4.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 4.88,
+          "end": 4.98,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 4.98,
+          "end": 5.04,
+          "probability": 1.0
+        },
+        {
+          "word": " kast.",
+          "start": 5.04,
+          "end": 5.38,
+          "probability": 1.0
+        },
+        {
+          "word": " Hij",
+          "start": 5.52,
+          "end": 5.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " wast",
+          "start": 5.76,
+          "end": 5.94,
+          "probability": 0.916015625
+        },
+        {
+          "word": " zijn",
+          "start": 5.94,
+          "end": 6.1,
+          "probability": 1.0
+        },
+        {
+          "word": " handen.",
+          "start": 6.1,
+          "end": 6.46,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.7,
+      "end": 9.0,
+      "text": " Om vijf uur gaat hij naar binnen en drinkt thee.",
+      "temperature": 0,
+      "avg_logprob": -0.0636887788772583,
+      "compression_ratio": 1.330708661417323,
+      "no_speech_prob": 5.9109002414903244e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 6.7,
+          "end": 7.14,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " vijf",
+          "start": 7.14,
+          "end": 7.5,
+          "probability": 0.986328125
+        },
+        {
+          "word": " uur",
+          "start": 7.5,
+          "end": 7.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gaat",
+          "start": 7.64,
+          "end": 7.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 7.78,
+          "end": 7.92,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 7.92,
+          "end": 8.04,
+          "probability": 1.0
+        },
+        {
+          "word": " binnen",
+          "start": 8.04,
+          "end": 8.32,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 8.32,
+          "end": 8.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " drinkt",
+          "start": 8.54,
+          "end": 8.86,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " thee.",
+          "start": 8.86,
+          "end": 9.0,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-292581c46a96f710",
+  "sha256": "2b72129d911d209c45a5eedbdc105fecab0f6a0353011e71f4355335d672bc8c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik wijs de deuk aan.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.1,
+      "text": " Ik wijs de deuk aan.",
+      "temperature": 0,
+      "avg_logprob": -0.06228577006946911,
+      "compression_ratio": 0.7692307692307693,
+      "no_speech_prob": 3.392753742878507e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.974609375
+        },
+        {
+          "word": " wijs",
+          "start": 0.16,
+          "end": 0.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 0.46,
+          "end": 0.58,
+          "probability": 0.99609375
+        },
+        {
+          "word": " deuk",
+          "start": 0.58,
+          "end": 0.88,
+          "probability": 0.990234375
+        },
+        {
+          "word": " aan.",
+          "start": 0.88,
+          "end": 1.1,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

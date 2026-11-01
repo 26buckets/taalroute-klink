@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-85b611ddfa723680",
+  "sha256": "39e5d3cedf2bbadea1e4bd3f47b07d67844897ca7001d4c0c4b3fe2e264850ce",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er ligt een tak op het dak.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.5,
+      "text": " Er ligt een tak op het dak.",
+      "temperature": 0,
+      "avg_logprob": -0.07149688402811687,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 4.638443708987472e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.88671875
+        },
+        {
+          "word": " ligt",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.38,
+          "end": 0.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " tak",
+          "start": 0.54,
+          "end": 0.86,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " op",
+          "start": 0.86,
+          "end": 1.14,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 1.14,
+          "end": 1.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dak.",
+          "start": 1.32,
+          "end": 1.5,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

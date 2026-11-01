@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-f707e6fc6bb4572c",
+  "sha256": "7422b997f14fac45d9a78519b56cd0468453ca54aec19b3e7f751bf1bdf3ee2b",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De ouders wachten bij de school.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " De ouders wachten bij de school.",
+      "temperature": 0,
+      "avg_logprob": -0.06749699665949895,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.307744265463764e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " ouders",
+          "start": 0.16,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " wachten",
+          "start": 0.6,
+          "end": 0.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 0.96,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 1.14,
+          "end": 1.28,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " school.",
+          "start": 1.28,
+          "end": 1.54,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

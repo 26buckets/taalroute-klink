@@ -1,0 +1,4463 @@
+{
+  "supplementProvenance": {
+    "driveUrl": "https://drive.google.com/file/d/1A4ZKDnGcKOwOh2K3S8p82U2gsR9v9DcY/view",
+    "zipSha256": "13b9048930362efe8376ce73e6a448f4c5fc72d293b91a3c8b138e9b526fa4de",
+    "canonicalSourceObservedCommit": "52d2048bacd0c3de4b9bf765d80f2929114cb8f8",
+    "commitIsNotLiveVerification": true,
+    "fileCountReviewedBySource": 55,
+    "sourceFiles": [
+      {
+        "path": "data/klink-production-index.json",
+        "sha256": "4054b25ad9676ffa922516a6e3d5f15f83f221740b5bad83af580789f3e40c64"
+      },
+      {
+        "path": "data/klink-dialogue-repair.json",
+        "sha256": "38bdf175122d3aabe4c5563eb0dcf7120c4a71365429100f9ac7a6afe55941fe"
+      },
+      {
+        "path": "data/klink-connected-content.json",
+        "sha256": "613845d715f15e510ff48a1c74c6867358c848b31997e28b07591a6f0ab6828a"
+      },
+      {
+        "path": "docs/leesrondes-a1-a2-20261031/source.json",
+        "sha256": "1859642e0aa72c9d22bab30dbc77ef832d8691c92031c745165a31ceacead8cc"
+      },
+      {
+        "path": "lib/extended-practice.ts",
+        "sha256": "b8525e94aa096c8a25a12554a70917fff9a69f53c7a55edb29c8bc51c12a7bb9"
+      },
+      {
+        "path": "lib/practice-chapters.ts",
+        "sha256": "9d8727ebdbe56d676356ef0a1bcc9642e5e5b05c2871171b6ac28c1400f36469"
+      }
+    ],
+    "status": "additive metadata; older original text, answer IDs, and live app untouched",
+    "batch17Addition": "Tien nieuwe redactionele tekst-/vraag-ID-doelverbindingen. Batch16 166 links en 11 naamkeuzes onveranderd.",
+    "batch19Addition": {
+      "addedTextGoalRows": 14,
+      "sourceOfNewRows": "Text goal + 4 real question IDs from original batch19 source",
+      "status": "redactioneel HOLD; geen live app ID toezegging"
+    }
+  },
+  "nameDecisions": [
+    {
+      "name": "Mila",
+      "personId": "klink-persoon-mila",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A1-T04"
+      ],
+      "existingSourceHits": []
+    },
+    {
+      "name": "Amir",
+      "personId": "klink-persoon-amir",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A1-T05"
+      ],
+      "existingSourceHits": []
+    },
+    {
+      "name": "Lotte",
+      "personId": "klink-persoon-lotte",
+      "decision": "reuse-same-canonical-person",
+      "textIds": [
+        "A1-T06"
+      ],
+      "existingSourceHits": [
+        {
+          "path": "data/klink-connected-content.json",
+          "occurrences": 23
+        },
+        {
+          "path": "data/klink-dialogue-repair.json",
+          "occurrences": 31
+        },
+        {
+          "path": "data/klink-functional-writing.json",
+          "occurrences": 6
+        },
+        {
+          "path": "data/klink-long-content-levels.json",
+          "occurrences": 9
+        },
+        {
+          "path": "data/klink-sentence-levels.json",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "name": "Karim",
+      "personId": "klink-persoon-karim",
+      "decision": "reuse-same-canonical-person",
+      "textIds": [
+        "A1-T07"
+      ],
+      "existingSourceHits": [
+        {
+          "path": "data/klink-alfa-c-dagelijks-audio.json",
+          "occurrences": 29
+        },
+        {
+          "path": "data/klink-alfa-c-dagelijks.json",
+          "occurrences": 36
+        },
+        {
+          "path": "data/klink-alfa-c-readalong.json",
+          "occurrences": 6
+        },
+        {
+          "path": "data/klink-connected-content.json",
+          "occurrences": 37
+        },
+        {
+          "path": "data/klink-dialogue-repair.json",
+          "occurrences": 31
+        },
+        {
+          "path": "data/klink-functional-writing.json",
+          "occurrences": 5
+        },
+        {
+          "path": "data/klink-imported-practice.json",
+          "occurrences": 9
+        },
+        {
+          "path": "data/klink-long-content-levels.json",
+          "occurrences": 17
+        },
+        {
+          "path": "data/klink-sentence-levels.json",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "name": "Noor",
+      "personId": "klink-persoon-noor",
+      "decision": "reuse-same-canonical-person",
+      "textIds": [
+        "A1-T08"
+      ],
+      "existingSourceHits": [
+        {
+          "path": "data/klink-alfa-c-dagelijks-audio.json",
+          "occurrences": 6
+        },
+        {
+          "path": "data/klink-alfa-c-dagelijks.json",
+          "occurrences": 1
+        },
+        {
+          "path": "data/klink-alfa-c-readalong.json",
+          "occurrences": 2
+        },
+        {
+          "path": "data/klink-connected-content.json",
+          "occurrences": 46
+        },
+        {
+          "path": "data/klink-dialogue-repair.json",
+          "occurrences": 31
+        },
+        {
+          "path": "data/klink-functional-writing.json",
+          "occurrences": 5
+        },
+        {
+          "path": "data/klink-long-content-levels.json",
+          "occurrences": 21
+        },
+        {
+          "path": "data/klink-sentence-levels.json",
+          "occurrences": 3
+        }
+      ]
+    },
+    {
+      "name": "Nadir",
+      "personId": "klink-persoon-nadir",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A2-T04"
+      ],
+      "existingSourceHits": []
+    },
+    {
+      "name": "Maya",
+      "personId": "klink-persoon-maya",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A2-T05"
+      ],
+      "existingSourceHits": []
+    },
+    {
+      "name": "Daan",
+      "personId": "klink-persoon-daan",
+      "decision": "reuse-same-canonical-person",
+      "textIds": [
+        "A2-T06"
+      ],
+      "existingSourceHits": [
+        {
+          "path": "data/klink-connected-content.json",
+          "occurrences": 31
+        },
+        {
+          "path": "data/klink-dialogue-repair.json",
+          "occurrences": 25
+        },
+        {
+          "path": "data/klink-functional-writing.json",
+          "occurrences": 5
+        },
+        {
+          "path": "data/klink-imported-practice.json",
+          "occurrences": 22
+        },
+        {
+          "path": "data/klink-long-content-levels.json",
+          "occurrences": 13
+        },
+        {
+          "path": "data/klink-sentence-levels.json",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "name": "Ivo",
+      "personId": "klink-persoon-ivo",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A2-T06"
+      ],
+      "existingSourceHits": []
+    },
+    {
+      "name": "Hana",
+      "personId": "klink-persoon-hana",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A2-T07"
+      ],
+      "existingSourceHits": []
+    },
+    {
+      "name": "Julia",
+      "personId": "klink-persoon-julia",
+      "decision": "new-person-reserved-in-production",
+      "textIds": [
+        "A2-T08"
+      ],
+      "existingSourceHits": []
+    }
+  ],
+  "existingReadingAnchors": {
+    "A1": {
+      "round": {
+        "activity": "text-question",
+        "level": "a1",
+        "help": "practice",
+        "image": null,
+        "id": "klink-teksten-zelf-a1-r01-v1",
+        "title": "Leesronde 1 · School, winkel en werk",
+        "url": "/practice-content/reading-rounds-20261031/a1-r01-e9b59c847cc51360.json",
+        "count": 12
+      },
+      "sourceFile": "public/practice-content/reading-rounds-20261031/a1-r01-e9b59c847cc51360.json",
+      "sha256": "e9b59c847cc5136076d7cc0c007d1fd1eb11fe431a61bf3904a73253db969582",
+      "existingObjectives": [
+        {
+          "id": "klink-teksten-zelf-a1-r01-q01",
+          "question": "Op welke dag gaat Sara naar school?",
+          "textIds": [
+            "A1-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q02",
+          "question": "Hoe laat begint de les?",
+          "textIds": [
+            "A1-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q03",
+          "question": "Hoe gaat Sara naar school?",
+          "textIds": [
+            "A1-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q04",
+          "question": "Wat zit in haar tas?",
+          "textIds": [
+            "A1-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q05",
+          "question": "Wanneer gaat Omar naar de winkel?",
+          "textIds": [
+            "A1-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q06",
+          "question": "Hoeveel appels koopt Omar?",
+          "textIds": [
+            "A1-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q07",
+          "question": "Hoeveel kost de melk?",
+          "textIds": [
+            "A1-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q08",
+          "question": "Waar betaalt Omar?",
+          "textIds": [
+            "A1-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q09",
+          "question": "Waarom gaat Fatima niet naar haar werk?",
+          "textIds": [
+            "A1-T03"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q10",
+          "question": "Hoe laat belt Fatima haar baas?",
+          "textIds": [
+            "A1-T03"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q11",
+          "question": "Met wie praat Fatima aan de telefoon?",
+          "textIds": [
+            "A1-T03"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a1-r01-q12",
+          "question": "Wanneer gaat Fatima naar de dokter?",
+          "textIds": [
+            "A1-T03"
+          ]
+        }
+      ]
+    },
+    "A2": {
+      "round": {
+        "activity": "text-question",
+        "level": "a2",
+        "help": "practice",
+        "image": null,
+        "id": "klink-teksten-zelf-a2-r01-v1",
+        "title": "Leesronde 1 · Afspraken, reizen en boeken",
+        "url": "/practice-content/reading-rounds-20261031/a2-r01-220269c6452b808d.json",
+        "count": 12
+      },
+      "sourceFile": "public/practice-content/reading-rounds-20261031/a2-r01-220269c6452b808d.json",
+      "sha256": "220269c6452b808d673e0ca2428e0f72769253c76d210139e8890e1e19f35694",
+      "existingObjectives": [
+        {
+          "id": "klink-teksten-zelf-a2-r01-q01",
+          "question": "Wanneer was de afspraak bij de tandarts eerst?",
+          "textIds": [
+            "A2-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q02",
+          "question": "Waarom belt Farid de tandarts?",
+          "textIds": [
+            "A2-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q03",
+          "question": "Wanneer is de nieuwe afspraak?",
+          "textIds": [
+            "A2-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q04",
+          "question": "Wat krijgt Farid na het veranderen van de afspraak?",
+          "textIds": [
+            "A2-T01"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q05",
+          "question": "Waarom staat de fiets van Elif bij de fietsenmaker?",
+          "textIds": [
+            "A2-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q06",
+          "question": "Welke bus neemt Elif?",
+          "textIds": [
+            "A2-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q07",
+          "question": "Hoe laat komt de bus aan?",
+          "textIds": [
+            "A2-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q08",
+          "question": "Wat doet Elif na de busrit?",
+          "textIds": [
+            "A2-T02"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q09",
+          "question": "Waarom gaat Yara naar de bibliotheek?",
+          "textIds": [
+            "A2-T03"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q10",
+          "question": "Hoe laat sluit de bibliotheek op zaterdag?",
+          "textIds": [
+            "A2-T03"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q11",
+          "question": "Waarom kan Yara het boek vandaag niet meenemen?",
+          "textIds": [
+            "A2-T03"
+          ]
+        },
+        {
+          "id": "klink-teksten-zelf-a2-r01-q12",
+          "question": "Wanneer wil Yara terugkomen?",
+          "textIds": [
+            "A2-T03"
+          ]
+        }
+      ]
+    }
+  },
+  "textGoalLinks": [
+    {
+      "textId": "A1-T01",
+      "level": "A1",
+      "title": "Naar school",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De vier bronvragen beantwoorden en het antwoord in de tekst terugvinden.",
+      "questionIds": [
+        "A1-Q01",
+        "A1-Q02",
+        "A1-Q03",
+        "A1-Q04"
+      ],
+      "lexiconThemeReferencesAsSupplied": [],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T02",
+      "level": "A1",
+      "title": "In de winkel",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De vier bronvragen beantwoorden en het antwoord in de tekst terugvinden.",
+      "questionIds": [
+        "A1-Q05",
+        "A1-Q06",
+        "A1-Q07",
+        "A1-Q08"
+      ],
+      "lexiconThemeReferencesAsSupplied": [],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T03",
+      "level": "A1",
+      "title": "Fatima is ziek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De vier bronvragen beantwoorden en het antwoord in de tekst terugvinden.",
+      "questionIds": [
+        "A1-Q09",
+        "A1-Q10",
+        "A1-Q11",
+        "A1-Q12"
+      ],
+      "lexiconThemeReferencesAsSupplied": [],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T01",
+      "level": "A2",
+      "title": "Een andere afspraak",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De vier bronvragen beantwoorden en het antwoord in de tekst terugvinden.",
+      "questionIds": [
+        "A2-Q01",
+        "A2-Q02",
+        "A2-Q03",
+        "A2-Q04"
+      ],
+      "lexiconThemeReferencesAsSupplied": [],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T02",
+      "level": "A2",
+      "title": "Met de bus naar het werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De vier bronvragen beantwoorden en het antwoord in de tekst terugvinden.",
+      "questionIds": [
+        "A2-Q05",
+        "A2-Q06",
+        "A2-Q07",
+        "A2-Q08"
+      ],
+      "lexiconThemeReferencesAsSupplied": [],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T03",
+      "level": "A2",
+      "title": "Een boek lenen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De vier bronvragen beantwoorden en het antwoord in de tekst terugvinden.",
+      "questionIds": [
+        "A2-Q09",
+        "A2-Q10",
+        "A2-Q11",
+        "A2-Q12"
+      ],
+      "lexiconThemeReferencesAsSupplied": [],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T04",
+      "level": "A1",
+      "title": "Naar de markt",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Begrijpen waarom iemand loopt en wat zij koopt",
+      "questionIds": [
+        "A1-Q13",
+        "A1-Q14",
+        "A1-Q15",
+        "A1-Q16"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T05",
+      "level": "A1",
+      "title": "Een briefje bij de deur",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Begrijpen aan wie iets behoort en waarom een briefje wordt geschreven",
+      "questionIds": [
+        "A1-Q17",
+        "A1-Q18",
+        "A1-Q19",
+        "A1-Q20"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T06",
+      "level": "A1",
+      "title": "Pauze op het werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijden, pauze en werkhandelingen onderscheiden",
+      "questionIds": [
+        "A1-Q21",
+        "A1-Q22",
+        "A1-Q23",
+        "A1-Q24"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T07",
+      "level": "A1",
+      "title": "Een verjaardag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Begrijpen wie op bezoek komt en wat samen gebeurt",
+      "questionIds": [
+        "A1-Q25",
+        "A1-Q26",
+        "A1-Q27",
+        "A1-Q28"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T08",
+      "level": "A1",
+      "title": "De sleutel op tafel",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Plaats van een voorwerp en volgorde herkennen",
+      "questionIds": [
+        "A1-Q29",
+        "A1-Q30",
+        "A1-Q31",
+        "A1-Q32"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T04",
+      "level": "A2",
+      "title": "Een melding aan de gemeente",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Oorzaak, informatieverzoek, actie en gevolg verbinden",
+      "questionIds": [
+        "A2-Q13",
+        "A2-Q14",
+        "A2-Q15",
+        "A2-Q16"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "wonen en buurt",
+        "problemen melden"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T05",
+      "level": "A2",
+      "title": "Een taalcursus kiezen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Rooster vergelijken, reden en vervolgstap bepalen",
+      "questionIds": [
+        "A2-Q17",
+        "A2-Q18",
+        "A2-Q19",
+        "A2-Q20"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "leren en opleiding",
+        "afspraken"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T06",
+      "level": "A2",
+      "title": "Een dienst ruilen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Werkafspraken begrijpen en tijdsblokken onderscheiden",
+      "questionIds": [
+        "A2-Q21",
+        "A2-Q22",
+        "A2-Q23",
+        "A2-Q24"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "werk en collega’s",
+        "rooster en afspraken"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T07",
+      "level": "A2",
+      "title": "Samen koken op vrijdag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Rekening houden met wensen en volgorde begrijpen",
+      "questionIds": [
+        "A2-Q25",
+        "A2-Q26",
+        "A2-Q27",
+        "A2-Q28"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "sociaal contact",
+        "eten en boodschappen"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T08",
+      "level": "A2",
+      "title": "De lamp in de gang",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Probleem, planning, toegang en oplossing begrijpen",
+      "questionIds": [
+        "A2-Q29",
+        "A2-Q30",
+        "A2-Q31",
+        "A2-Q32"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "wonen en buurt",
+        "problemen melden"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T09",
+      "level": "A1",
+      "title": "Bericht voor de klas",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een gewijzigd lesrooster en benodigde spullen herkennen",
+      "questionIds": [
+        "A1-Q33",
+        "A1-Q34",
+        "A1-Q35",
+        "A1-Q36"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T10",
+      "level": "A1",
+      "title": "Een jas passen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een maatprobleem, keuze en betaalwijze herkennen",
+      "questionIds": [
+        "A1-Q37",
+        "A1-Q38",
+        "A1-Q39",
+        "A1-Q40"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T11",
+      "level": "A1",
+      "title": "Wandelen in het park",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Activiteiten en een verandering door het weer begrijpen",
+      "questionIds": [
+        "A1-Q41",
+        "A1-Q42",
+        "A1-Q43",
+        "A1-Q44"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T12",
+      "level": "A1",
+      "title": "Drie taken",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Volgorde en tijd van taken uit een korte lijst halen",
+      "questionIds": [
+        "A1-Q45",
+        "A1-Q46",
+        "A1-Q47",
+        "A1-Q48"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T13",
+      "level": "A1",
+      "title": "Een foto voor de les",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Zender, inhoud en volgorde van een digitaal bericht herkennen",
+      "questionIds": [
+        "A1-Q49",
+        "A1-Q50",
+        "A1-Q51",
+        "A1-Q52"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T09",
+      "level": "A2",
+      "title": "Een andere ingang",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Reden, alternatieve route en duur van tijdelijke toegang begrijpen",
+      "questionIds": [
+        "A2-Q33",
+        "A2-Q34",
+        "A2-Q35",
+        "A2-Q36"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "wonen en buurt",
+        "praktische berichten"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T10",
+      "level": "A2",
+      "title": "Het werkblad voor de les",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De opeenvolgende stappen, samenwerking en inlevertijd begrijpen",
+      "questionIds": [
+        "A2-Q37",
+        "A2-Q38",
+        "A2-Q39",
+        "A2-Q40"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "leren en opleiding",
+        "prijs en boodschappen"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T11",
+      "level": "A2",
+      "title": "Een gevonden tas",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Plaats, afhaaltijd, identificatie en bewaartijd uit een bericht halen",
+      "questionIds": [
+        "A2-Q41",
+        "A2-Q42",
+        "A2-Q43",
+        "A2-Q44"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "dagelijks leven en dienstverlening",
+        "sport en vrije tijd"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T12",
+      "level": "A2",
+      "title": "Bericht van de sportclub",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een voorwaardelijke wijziging en informatie over tijd en aanmelden begrijpen",
+      "questionIds": [
+        "A2-Q45",
+        "A2-Q46",
+        "A2-Q47",
+        "A2-Q48"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "sociaal contact",
+        "tijd en afspraken"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T13",
+      "level": "A2",
+      "title": "Een broek terugbrengen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Oorzaak, keuze tussen oplossingen en terugbetalingswijze herkennen",
+      "questionIds": [
+        "A2-Q49",
+        "A2-Q50",
+        "A2-Q51",
+        "A2-Q52"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "winkel en dienstverlening",
+        "geld en betalen"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T14",
+      "level": "A1",
+      "title": "Met de tram naar het centrum",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een gewijzigde reis en de gekozen oplossing begrijpen",
+      "questionIds": [
+        "A1-Q53",
+        "A1-Q54",
+        "A1-Q55",
+        "A1-Q56"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T15",
+      "level": "A1",
+      "title": "Brood bestellen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een bestelling, ophaaldag en tijd herkennen",
+      "questionIds": [
+        "A1-Q57",
+        "A1-Q58",
+        "A1-Q59",
+        "A1-Q60"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T16",
+      "level": "A1",
+      "title": "Kleding bij het raam",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Reden en volgorde van huishoudelijke handelingen herkennen",
+      "questionIds": [
+        "A1-Q61",
+        "A1-Q62",
+        "A1-Q63",
+        "A1-Q64"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T17",
+      "level": "A1",
+      "title": "De nieuwe collega",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Handelingen en volgorde tijdens een werkdag begrijpen",
+      "questionIds": [
+        "A1-Q65",
+        "A1-Q66",
+        "A1-Q67",
+        "A1-Q68"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T18",
+      "level": "A1",
+      "title": "Een brief van de gemeente",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een dag, tijd en benodigd document uit een brief halen",
+      "questionIds": [
+        "A1-Q69",
+        "A1-Q70",
+        "A1-Q71",
+        "A1-Q72"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C01",
+        "LWD-A1-C03",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T14",
+      "level": "A2",
+      "title": "Een fout op de huurrekening",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een fout, tijdelijke betaalinstructie en latere correctie begrijpen",
+      "questionIds": [
+        "A2-Q53",
+        "A2-Q54",
+        "A2-Q55",
+        "A2-Q56"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T15",
+      "level": "A2",
+      "title": "Samen eten in de flat",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een praktische afspraak, reden en alternatief voor deelname begrijpen",
+      "questionIds": [
+        "A2-Q57",
+        "A2-Q58",
+        "A2-Q59",
+        "A2-Q60"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C06",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T16",
+      "level": "A2",
+      "title": "Een doos voor het kantoor",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een afwijking in de levering en de afspraken over herstel begrijpen",
+      "questionIds": [
+        "A2-Q61",
+        "A2-Q62",
+        "A2-Q63",
+        "A2-Q64"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T17",
+      "level": "A2",
+      "title": "De link naar de online les",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een technisch probleem, hulp en de vervolghandeling begrijpen",
+      "questionIds": [
+        "A2-Q65",
+        "A2-Q66",
+        "A2-Q67",
+        "A2-Q68"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T18",
+      "level": "A2",
+      "title": "Water in de buurtuin",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Oorzaak, prioriteit en vervolg bij een praktisch probleem begrijpen",
+      "questionIds": [
+        "A2-Q69",
+        "A2-Q70",
+        "A2-Q71",
+        "A2-Q72"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T19",
+      "level": "A1",
+      "title": "Bij de apotheek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Begrijpen welke hulp iemand vraagt bij de apotheek",
+      "questionIds": [
+        "A1-Q73",
+        "A1-Q74",
+        "A1-Q75",
+        "A1-Q76"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C07",
+        "LWD-A1-C02"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T20",
+      "level": "A1",
+      "title": "Schoenen voor het werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Oorzaak, materiaal en begintijd in een werkverhaal onderscheiden",
+      "questionIds": [
+        "A1-Q77",
+        "A1-Q78",
+        "A1-Q79",
+        "A1-Q80"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T21",
+      "level": "A1",
+      "title": "Een kaart voor oma",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Doel, inhoud en tijdsvolgorde van een kaart begrijpen",
+      "questionIds": [
+        "A1-Q81",
+        "A1-Q82",
+        "A1-Q83",
+        "A1-Q84"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T22",
+      "level": "A1",
+      "title": "In het zwembad",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Herkennen wie wat doet en wanneer het bezoek eindigt",
+      "questionIds": [
+        "A1-Q85",
+        "A1-Q86",
+        "A1-Q87",
+        "A1-Q88"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T23",
+      "level": "A1",
+      "title": "De hond van de buur",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Hulp vragen en de volgorde van handelingen begrijpen",
+      "questionIds": [
+        "A1-Q89",
+        "A1-Q90",
+        "A1-Q91",
+        "A1-Q92"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C02"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T19",
+      "level": "A2",
+      "title": "Een afspraak over de kraan",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een probleem, gewijzigde afspraak en controle na reparatie begrijpen",
+      "questionIds": [
+        "A2-Q73",
+        "A2-Q74",
+        "A2-Q75",
+        "A2-Q76"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T20",
+      "level": "A2",
+      "title": "Een bezoek aan het museum",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Aanmeldtermijn, kosten en verschillende informatiekanalen herkennen",
+      "questionIds": [
+        "A2-Q77",
+        "A2-Q78",
+        "A2-Q79",
+        "A2-Q80"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T21",
+      "level": "A2",
+      "title": "Een gesprek over werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Voorbereiding, documenten en tijdsvolgorde van een sollicitatie begrijpen",
+      "questionIds": [
+        "A2-Q81",
+        "A2-Q82",
+        "A2-Q83",
+        "A2-Q84"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T22",
+      "level": "A2",
+      "title": "Een andere sluitingstijd",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Uitzondering op openingstijden en vervolgacties begrijpen",
+      "questionIds": [
+        "A2-Q85",
+        "A2-Q86",
+        "A2-Q87",
+        "A2-Q88"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T23",
+      "level": "A2",
+      "title": "Veilig werken in het magazijn",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een veiligheidsinstructie toepassen op een concreet probleem",
+      "questionIds": [
+        "A2-Q89",
+        "A2-Q90",
+        "A2-Q91",
+        "A2-Q92"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T24",
+      "level": "A1",
+      "title": "Bij de kapper",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Afspraak, betaling en gevolg van regen herkennen",
+      "questionIds": [
+        "A1-Q93",
+        "A1-Q94",
+        "A1-Q95",
+        "A1-Q96"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T25",
+      "level": "A1",
+      "title": "Een nieuwe buur",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een bezoek en een volgende gezamenlijke activiteit begrijpen",
+      "questionIds": [
+        "A1-Q97",
+        "A1-Q98",
+        "A1-Q99",
+        "A1-Q100"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C01",
+        "LWD-A1-C08",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T26",
+      "level": "A1",
+      "title": "De lijst voor de winkel",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Lijst, beschikbaarheid en vervolgactie uit elkaar houden",
+      "questionIds": [
+        "A1-Q101",
+        "A1-Q102",
+        "A1-Q103",
+        "A1-Q104"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T27",
+      "level": "A1",
+      "title": "Een natte vloer",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Waarschuwing, hulpmiddel en veilig verdergaan begrijpen",
+      "questionIds": [
+        "A1-Q105",
+        "A1-Q106",
+        "A1-Q107",
+        "A1-Q108"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C12",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T28",
+      "level": "A1",
+      "title": "Het formulier voor werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Doel, gegevens en contactmoment uit een werkformulier begrijpen",
+      "questionIds": [
+        "A1-Q109",
+        "A1-Q110",
+        "A1-Q111",
+        "A1-Q112"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C01",
+        "LWD-A1-C11",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T24",
+      "level": "A2",
+      "title": "Een tafel ophalen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Vraag en aanbod, afhaalmoment en vervoer begrijpen",
+      "questionIds": [
+        "A2-Q93",
+        "A2-Q94",
+        "A2-Q95",
+        "A2-Q96"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C03",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T25",
+      "level": "A2",
+      "title": "De eerste dag als vrijwilliger",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Leren op de werkplek en passende hulp bij een vraag herkennen",
+      "questionIds": [
+        "A2-Q97",
+        "A2-Q98",
+        "A2-Q99",
+        "A2-Q100"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C02",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T26",
+      "level": "A2",
+      "title": "Een afspraak over lezen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een haalbaar oefenplan, feedback en evaluatie herkennen",
+      "questionIds": [
+        "A2-Q101",
+        "A2-Q102",
+        "A2-Q103",
+        "A2-Q104"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C03",
+        "LWD-A1-C02"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T27",
+      "level": "A2",
+      "title": "Het buurtfeest op zaterdag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijdsplanning, voorwaarde en praktische deelname begrijpen",
+      "questionIds": [
+        "A2-Q105",
+        "A2-Q106",
+        "A2-Q107",
+        "A2-Q108"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03",
+        "LWD-A1-C10",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T28",
+      "level": "A2",
+      "title": "Een afspraak bij de huisarts",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Afspraakwijziging en een voorwaardelijke contactafspraak begrijpen",
+      "questionIds": [
+        "A2-Q109",
+        "A2-Q110",
+        "A2-Q111",
+        "A2-Q112"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C07",
+        "LWD-A1-C03",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T29",
+      "level": "A1",
+      "title": "Een nieuwe bril",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Reden, bezoekdag, pasvorm en koopkeuze herkennen",
+      "questionIds": [
+        "A1-Q113",
+        "A1-Q114",
+        "A1-Q115",
+        "A1-Q116"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T30",
+      "level": "A1",
+      "title": "De trein naar de stad",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Spoor, vertrektijd, wachten en reisdoel vinden",
+      "questionIds": [
+        "A1-Q117",
+        "A1-Q118",
+        "A1-Q119",
+        "A1-Q120"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T31",
+      "level": "A1",
+      "title": "Het bericht van de baas",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Nieuwe werkplek, dag, begintijd en benodigd materiaal herkennen",
+      "questionIds": [
+        "A1-Q121",
+        "A1-Q122",
+        "A1-Q123",
+        "A1-Q124"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T32",
+      "level": "A1",
+      "title": "Op bezoek bij opa",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Familiebezoek, woonplek, meegenomen voorwerp en volgorde herkennen",
+      "questionIds": [
+        "A1-Q125",
+        "A1-Q126",
+        "A1-Q127",
+        "A1-Q128"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T33",
+      "level": "A1",
+      "title": "Een nieuw wachtwoord",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Digitale hindernis, hulp, bron van het wachtwoord en vervolg begrijpen",
+      "questionIds": [
+        "A1-Q129",
+        "A1-Q130",
+        "A1-Q131",
+        "A1-Q132"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T29",
+      "level": "A2",
+      "title": "Andere bakken in de kantine",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een afvalregel, onderscheid tussen afvalsoorten en tijd van legen begrijpen",
+      "questionIds": [
+        "A2-Q113",
+        "A2-Q114",
+        "A2-Q115",
+        "A2-Q116"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T30",
+      "level": "A2",
+      "title": "Een fiets uit een advertentie",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Prijs, gebrek, afspraak en voorwaarde voor aankoop onderscheiden",
+      "questionIds": [
+        "A2-Q117",
+        "A2-Q118",
+        "A2-Q119",
+        "A2-Q120"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T31",
+      "level": "A2",
+      "title": "Een andere tijd in het theater",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Wijziging in begintijd, opening deuren, stoel en kaartje begrijpen",
+      "questionIds": [
+        "A2-Q121",
+        "A2-Q122",
+        "A2-Q123",
+        "A2-Q124"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T32",
+      "level": "A2",
+      "title": "Twee dagen vrij vragen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Ontbrekende gegevens, correctie, bevestiging en timing van planning begrijpen",
+      "questionIds": [
+        "A2-Q125",
+        "A2-Q126",
+        "A2-Q127",
+        "A2-Q128"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A2-T33",
+      "level": "A2",
+      "title": "Een pakket versturen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Inhoud, adres, formulier en verzendbewijs uit een handeling begrijpen",
+      "questionIds": [
+        "A2-Q129",
+        "A2-Q130",
+        "A2-Q131",
+        "A2-Q132"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C01",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten; geen ingeroosterde docentbijeenkomst voor deze productie opgegeven."
+    },
+    {
+      "textId": "A1-T34",
+      "level": "A1",
+      "title": "De klok in de keuken",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijd zien op twee apparaten en een reis kiezen",
+      "questionIds": [
+        "A1-Q133",
+        "A1-Q134",
+        "A1-Q135",
+        "A1-Q136"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T35",
+      "level": "A1",
+      "title": "Harde muziek buiten",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Het verloop van een geluidshinder en een handeling herkennen",
+      "questionIds": [
+        "A1-Q137",
+        "A1-Q138",
+        "A1-Q139",
+        "A1-Q140"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T36",
+      "level": "A1",
+      "title": "De plant bij het raam",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een plant verzorgen en verplaatsen bij regen",
+      "questionIds": [
+        "A1-Q141",
+        "A1-Q142",
+        "A1-Q143",
+        "A1-Q144"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T37",
+      "level": "A1",
+      "title": "Een andere stoel",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een probleem melden en de oplossing uitvoeren",
+      "questionIds": [
+        "A1-Q145",
+        "A1-Q146",
+        "A1-Q147",
+        "A1-Q148"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T38",
+      "level": "A1",
+      "title": "Een boterham van een collega",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een vergeten lunch en hulp van een collega herkennen",
+      "questionIds": [
+        "A1-Q149",
+        "A1-Q150",
+        "A1-Q151",
+        "A1-Q152"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T34",
+      "level": "A2",
+      "title": "De markt op een andere plek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijdelijke plaats, reden en vervolg van een marktbezoek begrijpen",
+      "questionIds": [
+        "A2-Q133",
+        "A2-Q134",
+        "A2-Q135",
+        "A2-Q136"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T35",
+      "level": "A2",
+      "title": "De printer op kantoor",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Werkplanning aanpassen door een kapotte printer",
+      "questionIds": [
+        "A2-Q137",
+        "A2-Q138",
+        "A2-Q139",
+        "A2-Q140"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T36",
+      "level": "A2",
+      "title": "Een proefles bij de sportclub",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een passende sportgroep en praktische voorwaarden herkennen",
+      "questionIds": [
+        "A2-Q141",
+        "A2-Q142",
+        "A2-Q143",
+        "A2-Q144"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T37",
+      "level": "A2",
+      "title": "De stand van de watermeter",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Meterstand controleren, fout ontdekken en laten herstellen",
+      "questionIds": [
+        "A2-Q145",
+        "A2-Q146",
+        "A2-Q147",
+        "A2-Q148"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T38",
+      "level": "A2",
+      "title": "Samen het plein opruimen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Taken, materialen en afronding van gezamenlijke schoonmaak begrijpen",
+      "questionIds": [
+        "A2-Q149",
+        "A2-Q150",
+        "A2-Q151",
+        "A2-Q152"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T39",
+      "level": "A1",
+      "title": "De lift in de flat",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een mededeling lezen en de veilige route naar huis herkennen",
+      "questionIds": [
+        "A1-Q153",
+        "A1-Q154",
+        "A1-Q155",
+        "A1-Q156"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T40",
+      "level": "A1",
+      "title": "Lunch voor school",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Meenemen naar school en boodschappen voor de lunch begrijpen",
+      "questionIds": [
+        "A1-Q157",
+        "A1-Q158",
+        "A1-Q159",
+        "A1-Q160"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T41",
+      "level": "A1",
+      "title": "De openingstijd bij de bakker",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een sluitingsbericht lezen en een nieuwe bezoekdag herkennen",
+      "questionIds": [
+        "A1-Q161",
+        "A1-Q162",
+        "A1-Q163",
+        "A1-Q164"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T42",
+      "level": "A1",
+      "title": "Waar mag de fiets staan?",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige aanwijzing voor fietsen op school volgen",
+      "questionIds": [
+        "A1-Q165",
+        "A1-Q166",
+        "A1-Q167",
+        "A1-Q168"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T43",
+      "level": "A1",
+      "title": "Samen een kast verplaatsen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Samen hulp bieden en de volgorde van handelingen begrijpen",
+      "questionIds": [
+        "A1-Q169",
+        "A1-Q170",
+        "A1-Q171",
+        "A1-Q172"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T39",
+      "level": "A2",
+      "title": "De datum op het formulier",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tegenstrijdige data controleren en een correctie toepassen",
+      "questionIds": [
+        "A2-Q153",
+        "A2-Q154",
+        "A2-Q155",
+        "A2-Q156"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T40",
+      "level": "A2",
+      "title": "De dozen in de koelkast",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Samen een koelkast gebruiken en spullen van de juiste groep herkennen",
+      "questionIds": [
+        "A2-Q157",
+        "A2-Q158",
+        "A2-Q159",
+        "A2-Q160"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T41",
+      "level": "A2",
+      "title": "De reis naar de bijeenkomst",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een aankomsttijd afwegen tegen een begintijd en vervoerskeuze uitleggen",
+      "questionIds": [
+        "A2-Q161",
+        "A2-Q162",
+        "A2-Q163",
+        "A2-Q164"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T42",
+      "level": "A2",
+      "title": "Muziek in de gang",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een geluidssituatie melden en een huisregel uit bericht herkennen",
+      "questionIds": [
+        "A2-Q165",
+        "A2-Q166",
+        "A2-Q167",
+        "A2-Q168"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A2-T43",
+      "level": "A2",
+      "title": "Een andere tijd voor het schoolgesprek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Afspraakwijziging doorgeven en hulp met taal tijdig aanvragen",
+      "questionIds": [
+        "A2-Q169",
+        "A2-Q170",
+        "A2-Q171",
+        "A2-Q172"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Supplement bij bestaande Klink-leesopdrachten, geen nieuwe fictieve lesplanning of live rondetoewijzing."
+    },
+    {
+      "textId": "A1-T44",
+      "level": "A1",
+      "title": "Een lege batterij",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een probleem met de telefoon en de oplossing begrijpen",
+      "questionIds": [
+        "A1-Q173",
+        "A1-Q174",
+        "A1-Q175",
+        "A1-Q176"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C10",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T45",
+      "level": "A1",
+      "title": "Een bericht van het zwembad",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Uit een bericht de dag van sluiting en een alternatief begrijpen",
+      "questionIds": [
+        "A1-Q177",
+        "A1-Q178",
+        "A1-Q179",
+        "A1-Q180"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T46",
+      "level": "A1",
+      "title": "Koppen voor de bezoekers",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De volgorde van taken en de tijd van bezoek herkennen",
+      "questionIds": [
+        "A1-Q181",
+        "A1-Q182",
+        "A1-Q183",
+        "A1-Q184"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T47",
+      "level": "A1",
+      "title": "Een natte jas",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Volgorde en reden van dagelijkse handelingen volgen",
+      "questionIds": [
+        "A1-Q185",
+        "A1-Q186",
+        "A1-Q187",
+        "A1-Q188"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T48",
+      "level": "A1",
+      "title": "Een kaartje voor de film",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijd, koopkanaal en reiswijze uit een verhaal halen",
+      "questionIds": [
+        "A1-Q189",
+        "A1-Q190",
+        "A1-Q191",
+        "A1-Q192"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T44",
+      "level": "A2",
+      "title": "Een ander lokaal voor de les",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De oorzaak, oplossing en begintijd van een leswijziging begrijpen",
+      "questionIds": [
+        "A2-Q173",
+        "A2-Q174",
+        "A2-Q175",
+        "A2-Q176"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T45",
+      "level": "A2",
+      "title": "Een verkeerde doos bij de levering",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Verschil tussen bestelling en levering en oplossing herkennen",
+      "questionIds": [
+        "A2-Q177",
+        "A2-Q178",
+        "A2-Q179",
+        "A2-Q180"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T46",
+      "level": "A2",
+      "title": "De wandeling langs een andere weg",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijd, routewijziging en informatiekanalen onderscheiden",
+      "questionIds": [
+        "A2-Q181",
+        "A2-Q182",
+        "A2-Q183",
+        "A2-Q184"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T47",
+      "level": "A2",
+      "title": "Een toets op woensdag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Afwijkende toetsdag, alternatieve tijd en materialen begrijpen",
+      "questionIds": [
+        "A2-Q185",
+        "A2-Q186",
+        "A2-Q187",
+        "A2-Q188"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T48",
+      "level": "A2",
+      "title": "Twee groepen in het buurthuis",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Ruimtebeperking, groepsverdeling en duur uit een bericht halen",
+      "questionIds": [
+        "A2-Q189",
+        "A2-Q190",
+        "A2-Q191",
+        "A2-Q192"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Thematic supplement bij bestaande Klink-leesopdrachten; geen livepublicatie, cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T49",
+      "level": "A1",
+      "title": "Een briefje bij het lokaal",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een ander lokaal uit een bericht halen",
+      "questionIds": [
+        "A1-Q193",
+        "A1-Q194",
+        "A1-Q195",
+        "A1-Q196"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T50",
+      "level": "A1",
+      "title": "De soep voor het eten",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudig recept en de volgorde herkennen",
+      "questionIds": [
+        "A1-Q197",
+        "A1-Q198",
+        "A1-Q199",
+        "A1-Q200"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T51",
+      "level": "A1",
+      "title": "De tas voor het sporten",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Voorbereiding en spullen voor het sporten begrijpen",
+      "questionIds": [
+        "A1-Q201",
+        "A1-Q202",
+        "A1-Q203",
+        "A1-Q204"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T52",
+      "level": "A1",
+      "title": "Een boek voor de vakantie",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Boekkeuze en lenen herkennen",
+      "questionIds": [
+        "A1-Q205",
+        "A1-Q206",
+        "A1-Q207",
+        "A1-Q208"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T53",
+      "level": "A1",
+      "title": "Water voor de bloemen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige taakvolgorde in de tuin begrijpen",
+      "questionIds": [
+        "A1-Q209",
+        "A1-Q210",
+        "A1-Q211",
+        "A1-Q212"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T49",
+      "level": "A2",
+      "title": "Een verloren reiskaart",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Verliesmelding, benodigde informatie en voorwaarden herkennen",
+      "questionIds": [
+        "A2-Q193",
+        "A2-Q194",
+        "A2-Q195",
+        "A2-Q196"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C02"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T50",
+      "level": "A2",
+      "title": "Een vacature bij de bakker",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Werktijden, eisen en solliciteren uit een vacature halen",
+      "questionIds": [
+        "A2-Q197",
+        "A2-Q198",
+        "A2-Q199",
+        "A2-Q200"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T51",
+      "level": "A2",
+      "title": "Een keuze voor het plein",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Voorstellen vergelijken, stemmen en datum herkennen",
+      "questionIds": [
+        "A2-Q201",
+        "A2-Q202",
+        "A2-Q203",
+        "A2-Q204"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C01"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T52",
+      "level": "A2",
+      "title": "Een apparaat in de werkruimte",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een veilige werkinstructie en volgorde toepassen",
+      "questionIds": [
+        "A2-Q205",
+        "A2-Q206",
+        "A2-Q207",
+        "A2-Q208"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A2-T53",
+      "level": "A2",
+      "title": "Aanmelden voor een uitstapje",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Vereiste gegevens, toestemming en deadline herkennen",
+      "questionIds": [
+        "A2-Q209",
+        "A2-Q210",
+        "A2-Q211",
+        "A2-Q212"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Thematisch supplement; geen livepublicatie, extra cursusplanning of nieuwe app-ronde."
+    },
+    {
+      "textId": "A1-T54",
+      "level": "A1",
+      "title": "De fles in de koelkast",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Plaats, volgorde en handelingen bij het klaarmaken van drinken herkennen",
+      "questionIds": [
+        "A1-Q213",
+        "A1-Q214",
+        "A1-Q215",
+        "A1-Q216"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A1-T55",
+      "level": "A1",
+      "title": "De fiets in de garage",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een afspraak over tijd en gebruik van een fiets begrijpen",
+      "questionIds": [
+        "A1-Q217",
+        "A1-Q218",
+        "A1-Q219",
+        "A1-Q220"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A1-T56",
+      "level": "A1",
+      "title": "Een andere lunch",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een wijziging in een bestelling herkennen",
+      "questionIds": [
+        "A1-Q221",
+        "A1-Q222",
+        "A1-Q223",
+        "A1-Q224"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A1-T57",
+      "level": "A1",
+      "title": "Het kaartje in de jas",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een zoekhandeling en vertrektijd bij de bus begrijpen",
+      "questionIds": [
+        "A1-Q225",
+        "A1-Q226",
+        "A1-Q227",
+        "A1-Q228"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A1-T58",
+      "level": "A1",
+      "title": "De natte trap",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een waarschuwing en de volgorde van schoonmaken begrijpen",
+      "questionIds": [
+        "A1-Q229",
+        "A1-Q230",
+        "A1-Q231",
+        "A1-Q232"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C12",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A2-T54",
+      "level": "A2",
+      "title": "De kleine zaal in het buurthuis",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Ruimtewisseling, instructie en volgorde van praktische taken begrijpen",
+      "questionIds": [
+        "A2-Q213",
+        "A2-Q214",
+        "A2-Q215",
+        "A2-Q216"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A2-T55",
+      "level": "A2",
+      "title": "De bestelling komt later",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een gewijzigde bezorgdag, keuzemogelijkheden en reactie begrijpen",
+      "questionIds": [
+        "A2-Q217",
+        "A2-Q218",
+        "A2-Q219",
+        "A2-Q220"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A2-T56",
+      "level": "A2",
+      "title": "Een proefles in het zwembad",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Aanmelding, proefles en vervolgkeuze onderscheiden",
+      "questionIds": [
+        "A2-Q221",
+        "A2-Q222",
+        "A2-Q223",
+        "A2-Q224"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A2-T57",
+      "level": "A2",
+      "title": "De map op het werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een zoekactie en zorgvuldige omgang met papieren begrijpen",
+      "questionIds": [
+        "A2-Q225",
+        "A2-Q226",
+        "A2-Q227",
+        "A2-Q228"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A2-T58",
+      "level": "A2",
+      "title": "Een andere route langs de weg",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Tijdelijke route en verschillende verkeersregels uit een bericht halen",
+      "questionIds": [
+        "A2-Q229",
+        "A2-Q230",
+        "A2-Q231",
+        "A2-Q232"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Redactionele bestaande thema/doelkoppeling, geen live app-publicatie of nieuwe cursus."
+    },
+    {
+      "textId": "A1-T59",
+      "level": "A1",
+      "title": "Briefje op de koelkast",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een korte boodschappenopdracht en volgorde begrijpen",
+      "questionIds": [
+        "A1-Q233",
+        "A1-Q234",
+        "A1-Q235",
+        "A1-Q236"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T60",
+      "level": "A1",
+      "title": "De handdoek na het zwemmen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Spullen en volgorde na het zwemmen herkennen",
+      "questionIds": [
+        "A1-Q237",
+        "A1-Q238",
+        "A1-Q239",
+        "A1-Q240"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T61",
+      "level": "A1",
+      "title": "Een doos voor de boeken",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige inpaktaak en plaats herkennen",
+      "questionIds": [
+        "A1-Q241",
+        "A1-Q242",
+        "A1-Q243",
+        "A1-Q244"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T62",
+      "level": "A1",
+      "title": "Een afspraak bij het loket",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Afspraak, document en tijdstip herkennen",
+      "questionIds": [
+        "A1-Q245",
+        "A1-Q246",
+        "A1-Q247",
+        "A1-Q248"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C01",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T63",
+      "level": "A1",
+      "title": "Kleding voor het feest",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Kleur, kleding en voorbereiding van een feest herkennen",
+      "questionIds": [
+        "A1-Q249",
+        "A1-Q250",
+        "A1-Q251",
+        "A1-Q252"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T59",
+      "level": "A2",
+      "title": "De opening van de tentoonstelling",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een programma, uitzonderingen en aanmelden begrijpen",
+      "questionIds": [
+        "A2-Q233",
+        "A2-Q234",
+        "A2-Q235",
+        "A2-Q236"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T60",
+      "level": "A2",
+      "title": "Een lek bij het raam",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Probleem, tijdelijke maatregel en bezoek van monteur onderscheiden",
+      "questionIds": [
+        "A2-Q237",
+        "A2-Q238",
+        "A2-Q239",
+        "A2-Q240"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T61",
+      "level": "A2",
+      "title": "Een stukje voor de buurtkrant",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Informatie verzamelen, redigeren en een inleverdatum begrijpen",
+      "questionIds": [
+        "A2-Q241",
+        "A2-Q242",
+        "A2-Q243",
+        "A2-Q244"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T62",
+      "level": "A2",
+      "title": "Een plaats voor de computerles",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Wachtlijst, keuze en uiterste reactietijd begrijpen",
+      "questionIds": [
+        "A2-Q245",
+        "A2-Q246",
+        "A2-Q247",
+        "A2-Q248"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T63",
+      "level": "A2",
+      "title": "Een bus vertrekt eerder",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Tijdelijke vertrektijd en een alternatief reisschema begrijpen",
+      "questionIds": [
+        "A2-Q249",
+        "A2-Q250",
+        "A2-Q251",
+        "A2-Q252"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T64",
+      "level": "A1",
+      "title": "Brood uit de oven",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Herkennen hoe iemand brood klaarmaakt en wanneer het wordt gegeten",
+      "questionIds": [
+        "A1-Q253",
+        "A1-Q254",
+        "A1-Q255",
+        "A1-Q256"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C05"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T65",
+      "level": "A1",
+      "title": "Bericht bij het schoolplein",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Begrijpen welke ingang open is en op welke dag",
+      "questionIds": [
+        "A1-Q257",
+        "A1-Q258",
+        "A1-Q259",
+        "A1-Q260"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C04"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T66",
+      "level": "A1",
+      "title": "De bril op het werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Herkennen van een vergeten voorwerp en de oplossing",
+      "questionIds": [
+        "A1-Q261",
+        "A1-Q262",
+        "A1-Q263",
+        "A1-Q264"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C02"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T67",
+      "level": "A1",
+      "title": "Een zware doos bij de trap",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Hulp vragen bij een zware doos en de veilige oplossing begrijpen",
+      "questionIds": [
+        "A1-Q265",
+        "A1-Q266",
+        "A1-Q267",
+        "A1-Q268"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T68",
+      "level": "A1",
+      "title": "Kaartjes voor het concert",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Plaats, dag en gebruik van toegangsbewijzen herkennen",
+      "questionIds": [
+        "A1-Q269",
+        "A1-Q270",
+        "A1-Q271",
+        "A1-Q272"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T64",
+      "level": "A2",
+      "title": "De koelkast in de kantine",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een storing melden en een tijdelijke afspraak over eten begrijpen",
+      "questionIds": [
+        "A2-Q253",
+        "A2-Q254",
+        "A2-Q255",
+        "A2-Q256"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T65",
+      "level": "A2",
+      "title": "Vrijwilligers helpen in de bibliotheek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een introductie, taakverdeling en aanmeldtermijn begrijpen",
+      "questionIds": [
+        "A2-Q257",
+        "A2-Q258",
+        "A2-Q259",
+        "A2-Q260"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C09",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T66",
+      "level": "A2",
+      "title": "Twee pakketten terugsturen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Twee retourregels en de controle van verzendbewijzen begrijpen",
+      "questionIds": [
+        "A2-Q261",
+        "A2-Q262",
+        "A2-Q263",
+        "A2-Q264"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T67",
+      "level": "A2",
+      "title": "Een zaal reserveren voor een bijeenkomst",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een reserveringsverzoek, beschikbaarheid en bevestiging onderscheiden",
+      "questionIds": [
+        "A2-Q265",
+        "A2-Q266",
+        "A2-Q267",
+        "A2-Q268"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A2-T68",
+      "level": "A2",
+      "title": "Bericht over de wijkvergadering",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en letterlijk tekstbewijs",
+      "concreteTextGoal": "Een agenda en het indienen van vragen vóór de vergadering begrijpen",
+      "questionIds": [
+        "A2-Q269",
+        "A2-Q270",
+        "A2-Q271",
+        "A2-Q272"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C08",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Redactionele thematische koppeling, geen nieuwe cursus of live plaatsing."
+    },
+    {
+      "textId": "A1-T69",
+      "level": "A1",
+      "title": "De krant voor de buur",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een afspraak over ophalen en geven begrijpen",
+      "questionIds": [
+        "A1-Q273",
+        "A1-Q274",
+        "A1-Q275",
+        "A1-Q276"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T70",
+      "level": "A1",
+      "title": "Het licht in de keuken",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Probleem, veilige tijdelijke handeling en hulp onderscheiden",
+      "questionIds": [
+        "A1-Q277",
+        "A1-Q278",
+        "A1-Q279",
+        "A1-Q280"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T71",
+      "level": "A1",
+      "title": "Een kaartje in de bus",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Kaartje kopen, laten zien en aankomst onderscheiden",
+      "questionIds": [
+        "A1-Q281",
+        "A1-Q282",
+        "A1-Q283",
+        "A1-Q284"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C04",
+        "LWD-A1-C06"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T72",
+      "level": "A1",
+      "title": "Bloemen voor de docent",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Informatie over geven en tijdsvolgorde herkennen",
+      "questionIds": [
+        "A1-Q285",
+        "A1-Q286",
+        "A1-Q287",
+        "A1-Q288"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C09",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T73",
+      "level": "A1",
+      "title": "De sleutel voor een collega",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een sleutel en een briefje op het werk terugvinden",
+      "questionIds": [
+        "A1-Q289",
+        "A1-Q290",
+        "A1-Q291",
+        "A1-Q292"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C10"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T69",
+      "level": "A2",
+      "title": "Een middag vrij voor een afspraak",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Verzoek, roosterwissel en definitieve toestemming onderscheiden",
+      "questionIds": [
+        "A2-Q273",
+        "A2-Q274",
+        "A2-Q275",
+        "A2-Q276"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C03",
+        "LWD-A1-C11"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T70",
+      "level": "A2",
+      "title": "Een workshop in de bibliotheek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Aanmeldregel voor activiteit en gewone toegang onderscheiden",
+      "questionIds": [
+        "A2-Q277",
+        "A2-Q278",
+        "A2-Q279",
+        "A2-Q280"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C09",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T71",
+      "level": "A2",
+      "title": "Een onvolledige bestelling voor de lunch",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Ontbrekende artikelen, melding en opvolging onderscheiden",
+      "questionIds": [
+        "A2-Q281",
+        "A2-Q282",
+        "A2-Q283",
+        "A2-Q284"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C06",
+        "LWD-A1-C11"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T72",
+      "level": "A2",
+      "title": "Een andere plaats voor de afspraak",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Wijziging van plaats en ontvangstbevestiging begrijpen",
+      "questionIds": [
+        "A2-Q285",
+        "A2-Q286",
+        "A2-Q287",
+        "A2-Q288"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C03",
+        "LWD-A1-C10"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T73",
+      "level": "A2",
+      "title": "Een werkblad voor een veiligheidsgesprek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Instructie, volgorde en feedback na veiligheidsopdracht begrijpen",
+      "questionIds": [
+        "A2-Q289",
+        "A2-Q290",
+        "A2-Q291",
+        "A2-Q292"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T74",
+      "level": "A1",
+      "title": "Het raam tijdens de les",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een verzoek, toestemming en volgende handeling herkennen",
+      "questionIds": [
+        "A1-Q293",
+        "A1-Q294",
+        "A1-Q295",
+        "A1-Q296"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C09",
+        "LWD-A1-C02"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T75",
+      "level": "A1",
+      "title": "Geld bij de kassa",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Prijs, geldgebrek en keuze bij het betalen begrijpen",
+      "questionIds": [
+        "A1-Q297",
+        "A1-Q298",
+        "A1-Q299",
+        "A1-Q300"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C06"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T76",
+      "level": "A1",
+      "title": "De rode en de blauwe map",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een voorwerp, ontvanger en volgorde onderscheiden",
+      "questionIds": [
+        "A1-Q301",
+        "A1-Q302",
+        "A1-Q303",
+        "A1-Q304"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T77",
+      "level": "A1",
+      "title": "Twee stoelen in de tuin",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De volgorde van tuintaken en tijden begrijpen",
+      "questionIds": [
+        "A1-Q305",
+        "A1-Q306",
+        "A1-Q307",
+        "A1-Q308"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T78",
+      "level": "A1",
+      "title": "De verkeerde jas",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een vergissing en de gekozen oplossing begrijpen",
+      "questionIds": [
+        "A1-Q309",
+        "A1-Q310",
+        "A1-Q311",
+        "A1-Q312"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C11"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T74",
+      "level": "A2",
+      "title": "Een fietscontrole op zaterdag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Voorwaarden, controle en reparatieafspraak onderscheiden",
+      "questionIds": [
+        "A2-Q293",
+        "A2-Q294",
+        "A2-Q295",
+        "A2-Q296"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C04",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T75",
+      "level": "A2",
+      "title": "Vragen voor de energieavond",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Deadline, thema en ontvangstbevestiging herkennen",
+      "questionIds": [
+        "A2-Q297",
+        "A2-Q298",
+        "A2-Q299",
+        "A2-Q300"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C03",
+        "LWD-A1-C10"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T76",
+      "level": "A2",
+      "title": "Het rooster van het schoonmaakbedrijf",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een gewijzigde dienst en toestemming voor ruilen begrijpen",
+      "questionIds": [
+        "A2-Q301",
+        "A2-Q302",
+        "A2-Q303",
+        "A2-Q304"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C03",
+        "LWD-A1-C11"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T77",
+      "level": "A2",
+      "title": "Sportles na de regen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Locatie, materiaal en afmeldtijd begrijpen",
+      "questionIds": [
+        "A2-Q305",
+        "A2-Q306",
+        "A2-Q307",
+        "A2-Q308"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T78",
+      "level": "A2",
+      "title": "De sleutel van de buurtkamer",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een sleutelregeling, deelnemersaantal en sluitingstijd begrijpen",
+      "questionIds": [
+        "A2-Q309",
+        "A2-Q310",
+        "A2-Q311",
+        "A2-Q312"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C03",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T79",
+      "level": "A1",
+      "title": "De wekker op zes uur",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een werkdag voorbereiden en volgorde herkennen",
+      "questionIds": [
+        "A1-Q313",
+        "A1-Q314",
+        "A1-Q315",
+        "A1-Q316"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C03",
+        "LWD-A1-C11"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T80",
+      "level": "A1",
+      "title": "Een brief aan de school",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Ziekmelding en volgorde in een kort bericht begrijpen",
+      "questionIds": [
+        "A1-Q317",
+        "A1-Q318",
+        "A1-Q319",
+        "A1-Q320"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C07",
+        "LWD-A1-C09"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T81",
+      "level": "A1",
+      "title": "De weg naar het museum",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige route en bestemming uit een kaart halen",
+      "questionIds": [
+        "A1-Q321",
+        "A1-Q322",
+        "A1-Q323",
+        "A1-Q324"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C04",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T82",
+      "level": "A1",
+      "title": "Training op zaterdag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Sportbericht met tijd en voorwaarde begrijpen",
+      "questionIds": [
+        "A1-Q325",
+        "A1-Q326",
+        "A1-Q327",
+        "A1-Q328"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T83",
+      "level": "A1",
+      "title": "Drie dozen in de winkel",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Toestand van materialen en gekozen handeling herkennen",
+      "questionIds": [
+        "A1-Q329",
+        "A1-Q330",
+        "A1-Q331",
+        "A1-Q332"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T79",
+      "level": "A2",
+      "title": "Een gewijzigd rooster in de bakkerij",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een roosterwijziging en terugkoppeling begrijpen",
+      "questionIds": [
+        "A2-Q313",
+        "A2-Q314",
+        "A2-Q315",
+        "A2-Q316"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T80",
+      "level": "A2",
+      "title": "Een boek met een kapotte bladzijde",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een beschadiging melden en afspraken volgen",
+      "questionIds": [
+        "A2-Q317",
+        "A2-Q318",
+        "A2-Q319",
+        "A2-Q320"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C09",
+        "LWD-A1-C02"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T81",
+      "level": "A2",
+      "title": "Een formulier voor de computerles",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Aanmelden, bevestiging en vervolgvraag begrijpen",
+      "questionIds": [
+        "A2-Q321",
+        "A2-Q322",
+        "A2-Q323",
+        "A2-Q324"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C09",
+        "LWD-A1-C10"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing",
+      "authorizedSourceCorrection": "Eerste zin zegt volgende week woensdagavond; les vindt na beoordeling en bericht plaats."
+    },
+    {
+      "textId": "A2-T82",
+      "level": "A2",
+      "title": "Samen schilderen op zaterdag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Uitnodiging met materialen, tijd en voorwaarde begrijpen",
+      "questionIds": [
+        "A2-Q325",
+        "A2-Q326",
+        "A2-Q327",
+        "A2-Q328"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T83",
+      "level": "A2",
+      "title": "Afval scheiden in het gebouw",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Instructie, plaats en tijd voor afvalscheiding begrijpen",
+      "questionIds": [
+        "A2-Q329",
+        "A2-Q330",
+        "A2-Q331",
+        "A2-Q332"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T84",
+      "level": "A1",
+      "title": "Een kaart met een nieuw adres",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Adressen doorgeven op school",
+      "questionIds": [
+        "A1-Q333",
+        "A1-Q334",
+        "A1-Q335",
+        "A1-Q336"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C01",
+        "LWD-A1-C09"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T85",
+      "level": "A1",
+      "title": "De muts bij het station",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een vergeten voorwerp terugvinden",
+      "questionIds": [
+        "A1-Q337",
+        "A1-Q338",
+        "A1-Q339",
+        "A1-Q340"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C04",
+        "LWD-A1-C05"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T86",
+      "level": "A1",
+      "title": "Het raam op het werk",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Samen afspraken maken op het werk",
+      "questionIds": [
+        "A1-Q341",
+        "A1-Q342",
+        "A1-Q343",
+        "A1-Q344"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T87",
+      "level": "A1",
+      "title": "Bericht over de sportles",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een sportinstructie lezen",
+      "questionIds": [
+        "A1-Q345",
+        "A1-Q346",
+        "A1-Q347",
+        "A1-Q348"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C08",
+        "LWD-A1-C03"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T88",
+      "level": "A1",
+      "title": "Een plant bij de deur",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Spullen beschermen bij slecht weer",
+      "questionIds": [
+        "A1-Q349",
+        "A1-Q350",
+        "A1-Q351",
+        "A1-Q352"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T84",
+      "level": "A2",
+      "title": "Twee prijzen op de markt",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een verschil tussen twee prijzen herkennen",
+      "questionIds": [
+        "A2-Q333",
+        "A2-Q334",
+        "A2-Q335",
+        "A2-Q336"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C06",
+        "LWD-A1-C02"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T85",
+      "level": "A2",
+      "title": "De eerste uitleg in de werkplaats",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Veiligheidsregels en volgorde op het werk",
+      "questionIds": [
+        "A2-Q337",
+        "A2-Q338",
+        "A2-Q339",
+        "A2-Q340"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T86",
+      "level": "A2",
+      "title": "Het adres op de waterrekening",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Foute persoonsgegevens laten verbeteren",
+      "questionIds": [
+        "A2-Q341",
+        "A2-Q342",
+        "A2-Q343",
+        "A2-Q344"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C01",
+        "LWD-A1-C06"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T87",
+      "level": "A2",
+      "title": "Uitnodiging voor het taalcafé",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Instructies en verschillende aanmeldregels begrijpen",
+      "questionIds": [
+        "A2-Q345",
+        "A2-Q346",
+        "A2-Q347",
+        "A2-Q348"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C08",
+        "LWD-A1-C09"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T88",
+      "level": "A2",
+      "title": "De trap tijdens het schilderen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Toegangsregels bij tijdelijk werk begrijpen",
+      "questionIds": [
+        "A2-Q349",
+        "A2-Q350",
+        "A2-Q351",
+        "A2-Q352"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C12"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T89",
+      "level": "A1",
+      "title": "Een bord bij de speeltuin",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige openbare mededeling begrijpen",
+      "questionIds": [
+        "A1-Q353",
+        "A1-Q354",
+        "A1-Q355",
+        "A1-Q356"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T90",
+      "level": "A1",
+      "title": "Een bericht voor de buren",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijd en een verzoek in een bericht begrijpen",
+      "questionIds": [
+        "A1-Q357",
+        "A1-Q358",
+        "A1-Q359",
+        "A1-Q360"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C01",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T91",
+      "level": "A1",
+      "title": "Een jas bij de kapper",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een voorwerp terugvinden in een winkel",
+      "questionIds": [
+        "A1-Q361",
+        "A1-Q362",
+        "A1-Q363",
+        "A1-Q364"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C04",
+        "LWD-A1-C05"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T92",
+      "level": "A1",
+      "title": "Een uitnodiging voor thee",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een uitnodiging en meeneemverzoek begrijpen",
+      "questionIds": [
+        "A1-Q365",
+        "A1-Q366",
+        "A1-Q367",
+        "A1-Q368"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C01",
+        "LWD-A1-C09"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T93",
+      "level": "A1",
+      "title": "De schone borden",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige volgorde op het werk begrijpen",
+      "questionIds": [
+        "A1-Q369",
+        "A1-Q370",
+        "A1-Q371",
+        "A1-Q372"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C11",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T89",
+      "level": "A2",
+      "title": "Een tas gevonden in de bus",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een gevonden voorwerp en ophaalvoorwaarden begrijpen",
+      "questionIds": [
+        "A2-Q353",
+        "A2-Q354",
+        "A2-Q355",
+        "A2-Q356"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T90",
+      "level": "A2",
+      "title": "Een stoel lenen van de vereniging",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Voorwaarden voor het lenen van een voorwerp begrijpen",
+      "questionIds": [
+        "A2-Q357",
+        "A2-Q358",
+        "A2-Q359",
+        "A2-Q360"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C02",
+        "LWD-A1-C07"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T91",
+      "level": "A2",
+      "title": "De glasbak krijgt een andere plek",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijdelijke regels voor een afvalplek begrijpen",
+      "questionIds": [
+        "A2-Q361",
+        "A2-Q362",
+        "A2-Q363",
+        "A2-Q364"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T92",
+      "level": "A2",
+      "title": "Uitnodiging voor een kookmiddag",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een uitnodiging met verschillende voorwaarden begrijpen",
+      "questionIds": [
+        "A2-Q365",
+        "A2-Q366",
+        "A2-Q367",
+        "A2-Q368"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C01",
+        "LWD-A1-C09"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A2-T93",
+      "level": "A2",
+      "title": "Een vraag over de servicekosten",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een rekening en een open vraag onderscheiden",
+      "questionIds": [
+        "A2-Q369",
+        "A2-Q370",
+        "A2-Q371",
+        "A2-Q372"
+      ],
+      "existingGoalFamilies": [
+        "LWD-A1-C02",
+        "LWD-A1-C09"
+      ],
+      "status": "redactionele doelkoppeling; geen live plaatsing"
+    },
+    {
+      "textId": "A1-T94",
+      "level": "A1",
+      "title": "Een gevonden portemonnee",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Begrijpen wat iemand met een gevonden voorwerp doet",
+      "questionIds": [
+        "A1-Q373",
+        "A1-Q374",
+        "A1-Q375",
+        "A1-Q376"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C02",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A1-T95",
+      "level": "A1",
+      "title": "Morgen geen les",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De informatie in een kort schoolbericht terugvinden",
+      "questionIds": [
+        "A1-Q377",
+        "A1-Q378",
+        "A1-Q379",
+        "A1-Q380"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A1-T96",
+      "level": "A1",
+      "title": "Terugbellen bij de halte",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "De volgorde van handelingen in een kort verhaal volgen",
+      "questionIds": [
+        "A1-Q381",
+        "A1-Q382",
+        "A1-Q383",
+        "A1-Q384"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C02",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A1-T97",
+      "level": "A1",
+      "title": "Een schoen bij de sportzaal",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Belangrijke voorwerpen, personen en tijd herkennen",
+      "questionIds": [
+        "A1-Q385",
+        "A1-Q386",
+        "A1-Q387",
+        "A1-Q388"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C08"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A1-T98",
+      "level": "A1",
+      "title": "De schooldeur gaat later open",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Openingstijd en volgorde in een mededeling begrijpen",
+      "questionIds": [
+        "A1-Q389",
+        "A1-Q390",
+        "A1-Q391",
+        "A1-Q392"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A1-T99",
+      "level": "A1",
+      "title": "Een jas voor de regen",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Voorwerpen en handelingen bij slecht weer begrijpen",
+      "questionIds": [
+        "A1-Q393",
+        "A1-Q394",
+        "A1-Q395",
+        "A1-Q396"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C01",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A1-T100",
+      "level": "A1",
+      "title": "Uitnodiging voor het ontbijt",
+      "sourceRoundAnchor": "klink-teksten-zelf-a1-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Een eenvoudige uitnodiging en uiterste aanmelddag begrijpen",
+      "questionIds": [
+        "A1-Q397",
+        "A1-Q398",
+        "A1-Q399",
+        "A1-Q400"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C02",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T94",
+      "level": "A2",
+      "title": "Een andere prijs op de kassabon",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Prijsinformatie en voorwaardelijke vervolgstappen uit een klacht begrijpen",
+      "questionIds": [
+        "A2-Q373",
+        "A2-Q374",
+        "A2-Q375",
+        "A2-Q376"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T95",
+      "level": "A2",
+      "title": "De lift bij de huisarts",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Mogelijkheden en verwachtingen in een bezoekersbericht onderscheiden",
+      "questionIds": [
+        "A2-Q377",
+        "A2-Q378",
+        "A2-Q379",
+        "A2-Q380"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C06",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T96",
+      "level": "A2",
+      "title": "Een informatieavond over huren",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Aanbod, starttijd en grenzen van toezeggingen in een uitnodiging begrijpen",
+      "questionIds": [
+        "A2-Q381",
+        "A2-Q382",
+        "A2-Q383",
+        "A2-Q384"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C04",
+        "LWD-A1-C10"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T97",
+      "level": "A2",
+      "title": "De pauze tijdens de avonddienst",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Rooster, voorkeur en nog niet goedgekeurd verzoek onderscheiden",
+      "questionIds": [
+        "A2-Q385",
+        "A2-Q386",
+        "A2-Q387",
+        "A2-Q388"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C11"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T98",
+      "level": "A2",
+      "title": "Een tijdelijke fietsroute in het park",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Tijdelijke route, uitzonderingen en verwachting onderscheiden",
+      "questionIds": [
+        "A2-Q389",
+        "A2-Q390",
+        "A2-Q391",
+        "A2-Q392"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C05",
+        "LWD-A1-C06"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T99",
+      "level": "A2",
+      "title": "Een melding over straatverlichting",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Melding, ontvangst, beoordeling en onzeker reparatiemoment onderscheiden",
+      "questionIds": [
+        "A2-Q393",
+        "A2-Q394",
+        "A2-Q395",
+        "A2-Q396"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C02",
+        "LWD-A1-C09"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    },
+    {
+      "textId": "A2-T100",
+      "level": "A2",
+      "title": "Twee tijden voor de leesgroep",
+      "sourceRoundAnchor": "klink-teksten-zelf-a2-r01-v1",
+      "activity": "text-question",
+      "existingGoalFamily": "TE-02: tekstbegrip en terugzoeken van tekstbewijs",
+      "concreteTextGoal": "Aanmeldtermijn, roosterkeuze en voorlopige status onderscheiden",
+      "questionIds": [
+        "A2-Q397",
+        "A2-Q398",
+        "A2-Q399",
+        "A2-Q400"
+      ],
+      "lexiconThemeReferencesAsSupplied": [
+        "LWD-A1-C03",
+        "LWD-A1-C12"
+      ],
+      "lessonPlacement": "Aanvullende redactionele Klink-tekstoefening binnen bestaande leesactiviteit; niet live ingepland."
+    }
+  ],
+  "applicableObservationInterpretation": {
+    "task": "Cursist leest de tekst, kiest bij vier vragen één antwoord en kijkt waar dat staat.",
+    "visibleLearnerAction": "Antwoordkeuze en bij herlezing de gebruikte bewijszin kunnen aanwijzen. Dit is een beoogde handeling, niet een geobserveerd pilotresultaat.",
+    "feedbackSupport": "Voor elk van de drie opties een brongebonden uitleg; de tekst blijft beschikbaar voor herlezing.",
+    "teacherActionWhenUsedInClass": "Docent selecteert een passende tekst bij het bestaande leesdoel en vraagt waar het antwoord staat. Dit is een gebruiksaanwijzing, geen nieuwe lesplanning.",
+    "material": "Bestaande tekst-opdracht-vorm met vier vragen, drie opties, bewijsplaatsen en feedback.",
+    "timeAndMeeting": "Niet opgegeven voor dit zelfstandige materiaalonderdeel; geen fictieve lestijd of ingeroosterde bijeenkomst toegevoegd."
+  }
+}

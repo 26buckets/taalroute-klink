@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-29c38ec80442e86e",
+  "sha256": "ae122837e558eecfe3acf8ea60745b72cfdc17aef40be06eae48305e89e05f68",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het schaap staat in het gras.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.64,
+      "text": " Het schaap staat in het gras.",
+      "temperature": 0,
+      "avg_logprob": -0.041381279627482094,
+      "compression_ratio": 0.8055555555555556,
+      "no_speech_prob": 4.143272530621189e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.916015625
+        },
+        {
+          "word": " schaap",
+          "start": 0.18,
+          "end": 0.62,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " staat",
+          "start": 0.62,
+          "end": 0.86,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 0.86,
+          "end": 1.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.14,
+          "end": 1.26,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " gras.",
+          "start": 1.26,
+          "end": 1.64,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

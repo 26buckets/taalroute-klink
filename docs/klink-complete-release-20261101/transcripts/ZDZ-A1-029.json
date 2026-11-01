@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-029",
+  "sha256": "210758de6ed5d6d317bc921e98250ff615ad262bb7c7411f627845eb90cb6ff5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik het raam open doen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Mag ik het raam open doen?",
+      "temperature": 0,
+      "avg_logprob": -0.1060576005415483,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 3.801806525843832e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " ik",
+          "start": 0.18,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 0.28,
+          "end": 0.42,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " raam",
+          "start": 0.42,
+          "end": 0.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " open",
+          "start": 0.7,
+          "end": 0.92,
+          "probability": 0.7607421875
+        },
+        {
+          "word": " doen?",
+          "start": 0.92,
+          "end": 1.08,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

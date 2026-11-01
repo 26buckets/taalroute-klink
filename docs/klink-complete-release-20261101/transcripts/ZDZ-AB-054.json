@@ -1,0 +1,41 @@
+{
+  "id": "ZDZ-AB-054",
+  "sha256": "d301d1549dbe94ce1fce128328e275ce76c033bf22e164f20425f5af3e5f7233",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kom maandag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Ik kom maandag.",
+      "temperature": 0,
+      "avg_logprob": -0.14481830596923828,
+      "compression_ratio": 0.6521739130434783,
+      "no_speech_prob": 5.781518059438939e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " kom",
+          "start": 0.16,
+          "end": 0.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maandag.",
+          "start": 0.36,
+          "end": 0.96,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

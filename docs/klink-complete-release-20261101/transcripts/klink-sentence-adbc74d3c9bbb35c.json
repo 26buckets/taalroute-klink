@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-adbc74d3c9bbb35c",
+  "sha256": "f96e7ac7443077344be218e663ab7dcbfa1b0892f9790d6e9b44f9316beed12c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De pil zit in een strip.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " De pil zit in een strip.",
+      "temperature": 0,
+      "avg_logprob": -0.17028560638427734,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 5.310121266310919e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.83642578125
+        },
+        {
+          "word": " pil",
+          "start": 0.16,
+          "end": 0.44,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " zit",
+          "start": 0.44,
+          "end": 0.7,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " in",
+          "start": 0.7,
+          "end": 0.84,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " een",
+          "start": 0.84,
+          "end": 0.96,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " strip.",
+          "start": 0.96,
+          "end": 1.32,
+          "probability": 0.84716796875
+        }
+      ]
+    }
+  ]
+}

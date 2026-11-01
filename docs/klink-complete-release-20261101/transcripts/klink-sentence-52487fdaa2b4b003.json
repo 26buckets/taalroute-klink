@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-52487fdaa2b4b003",
+  "sha256": "2e5a81797afe3d9cdd0500790345f89f0ed88bd5c20c5fd53187baae3fc0d3ae",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De bus staat bij de halte.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.6,
+      "text": " De bus staat bij de halte.",
+      "temperature": 0,
+      "avg_logprob": -0.11766026236794212,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.34418516784274e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.90966796875
+        },
+        {
+          "word": " bus",
+          "start": 0.14,
+          "end": 0.46,
+          "probability": 0.97705078125
+        },
+        {
+          "word": " staat",
+          "start": 0.46,
+          "end": 0.84,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bij",
+          "start": 0.84,
+          "end": 1.06,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.06,
+          "end": 1.22,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " halte.",
+          "start": 1.22,
+          "end": 1.6,
+          "probability": 0.9892578125
+        }
+      ]
+    }
+  ]
+}

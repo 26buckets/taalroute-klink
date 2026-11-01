@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-aac0c23ad94b08a0",
+  "sha256": "f06b208bde87973f05141131dff4a380fa7b71eccb1d1639b3d74a4e6c70c34c",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik leer een nieuw spel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.06,
+      "text": " Ik leer een nieuw spel.",
+      "temperature": 0,
+      "avg_logprob": -0.17715010643005372,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 6.8161453044279785e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.728515625
+        },
+        {
+          "word": " leer",
+          "start": 0.16,
+          "end": 0.38,
+          "probability": 0.99609375
+        },
+        {
+          "word": " een",
+          "start": 0.38,
+          "end": 0.54,
+          "probability": 0.998046875
+        },
+        {
+          "word": " nieuw",
+          "start": 0.54,
+          "end": 0.84,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " spel.",
+          "start": 0.84,
+          "end": 1.06,
+          "probability": 0.98046875
+        }
+      ]
+    }
+  ]
+}

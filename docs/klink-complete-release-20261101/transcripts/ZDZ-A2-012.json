@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A2-012",
+  "sha256": "d0981cf002adab6589090601973b5057a93da84c42dcb97cfe9321873fb7894e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik kom 10 minuten later, want de bus is te laat.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.24,
+      "text": " Ik kom 10 minuten later, want de bus is te laat.",
+      "temperature": 0,
+      "avg_logprob": -0.09408257989322438,
+      "compression_ratio": 0.8727272727272727,
+      "no_speech_prob": 3.3950179906955258e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.994140625
+        },
+        {
+          "word": " kom",
+          "start": 0.12,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 10",
+          "start": 0.32,
+          "end": 0.44,
+          "probability": 0.5361328125
+        },
+        {
+          "word": " minuten",
+          "start": 0.44,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " later,",
+          "start": 0.78,
+          "end": 1.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " want",
+          "start": 1.28,
+          "end": 1.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 1.46,
+          "end": 1.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bus",
+          "start": 1.58,
+          "end": 1.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " is",
+          "start": 1.76,
+          "end": 1.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 1.88,
+          "end": 2.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " laat.",
+          "start": 2.0,
+          "end": 2.24,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

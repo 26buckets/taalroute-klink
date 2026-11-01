@@ -1,0 +1,276 @@
+{
+  "id": "A1-T37",
+  "sha256": "2f66c23c6d6b46f8e0863486a26673bc48d4be471581ffdf33bbca8f1cbbce8e",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " In de klas staat een kapotte stoel. Een cursist zegt het tegen de docent. De docent geeft hem een andere stoel. Daarna kan de cursist weer aan het werk. Na de les zet hij de kapotte stoel bij de deur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.18,
+      "text": " In de klas staat een kapotte stoel. Een cursist zegt het tegen de docent. De docent geeft hem",
+      "temperature": 0,
+      "avg_logprob": -0.050764890817495495,
+      "compression_ratio": 1.5384615384615385,
+      "no_speech_prob": 4.604951402836788e-12,
+      "words": [
+        {
+          "word": " In",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.97412109375
+        },
+        {
+          "word": " de",
+          "start": 0.14,
+          "end": 0.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klas",
+          "start": 0.24,
+          "end": 0.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat",
+          "start": 0.48,
+          "end": 0.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.64,
+          "end": 0.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " kapotte",
+          "start": 0.78,
+          "end": 1.12,
+          "probability": 0.96826171875
+        },
+        {
+          "word": " stoel.",
+          "start": 1.12,
+          "end": 1.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " Een",
+          "start": 1.78,
+          "end": 2.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " cursist",
+          "start": 2.18,
+          "end": 2.6,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " zegt",
+          "start": 2.6,
+          "end": 2.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 2.82,
+          "end": 2.92,
+          "probability": 0.9873046875
+        },
+        {
+          "word": " tegen",
+          "start": 2.92,
+          "end": 3.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.12,
+          "end": 3.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " docent.",
+          "start": 3.26,
+          "end": 3.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 4.04,
+          "end": 4.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 4.48,
+          "end": 4.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geeft",
+          "start": 4.8,
+          "end": 5.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hem",
+          "start": 5.08,
+          "end": 5.18,
+          "probability": 0.9951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.18,
+      "end": 10.54,
+      "text": " een andere stoel. Daarna kan de cursist weer aan het werk. Na de les zet hij de kapotte stoel bij de deur.",
+      "temperature": 0,
+      "avg_logprob": -0.050764890817495495,
+      "compression_ratio": 1.5384615384615385,
+      "no_speech_prob": 4.604951402836788e-12,
+      "words": [
+        {
+          "word": " een",
+          "start": 5.18,
+          "end": 5.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " andere",
+          "start": 5.32,
+          "end": 5.56,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " stoel.",
+          "start": 5.56,
+          "end": 5.88,
+          "probability": 1.0
+        },
+        {
+          "word": " Daarna",
+          "start": 6.28,
+          "end": 6.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kan",
+          "start": 6.76,
+          "end": 7.0,
+          "probability": 0.994140625
+        },
+        {
+          "word": " de",
+          "start": 7.0,
+          "end": 7.1,
+          "probability": 1.0
+        },
+        {
+          "word": " cursist",
+          "start": 7.1,
+          "end": 7.44,
+          "probability": 1.0
+        },
+        {
+          "word": " weer",
+          "start": 7.44,
+          "end": 7.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 7.56,
+          "end": 7.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 7.68,
+          "end": 7.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werk.",
+          "start": 7.78,
+          "end": 8.04,
+          "probability": 1.0
+        },
+        {
+          "word": " Na",
+          "start": 8.52,
+          "end": 8.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 8.84,
+          "end": 8.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " les",
+          "start": 8.98,
+          "end": 9.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " zet",
+          "start": 9.16,
+          "end": 9.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 9.36,
+          "end": 9.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 9.44,
+          "end": 9.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kapotte",
+          "start": 9.54,
+          "end": 9.86,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " stoel",
+          "start": 9.86,
+          "end": 10.1,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 10.1,
+          "end": 10.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 10.2,
+          "end": 10.3,
+          "probability": 1.0
+        },
+        {
+          "word": " deur.",
+          "start": 10.3,
+          "end": 10.54,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-9e3b574b67aec8d8",
+  "sha256": "334018b01adf34d7b33d1a205ebe57aa7619443ddecee824d3295585e9b5456d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het speelgoed ligt in een mand.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " Het speelgoed ligt in een mand.",
+      "temperature": 0,
+      "avg_logprob": -0.09631361280168806,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 4.5935256466622665e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.88525390625
+        },
+        {
+          "word": " speelgoed",
+          "start": 0.16,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ligt",
+          "start": 0.72,
+          "end": 1.02,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 1.02,
+          "end": 1.14,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 1.14,
+          "end": 1.28,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " mand.",
+          "start": 1.28,
+          "end": 1.54,
+          "probability": 0.99267578125
+        }
+      ]
+    }
+  ]
+}

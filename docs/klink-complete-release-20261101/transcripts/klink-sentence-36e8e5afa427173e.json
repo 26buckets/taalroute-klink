@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-36e8e5afa427173e",
+  "sha256": "51121c4072f5204c7158960f98023f5ce244412313a6f1ac203c2ac4be3c9b2d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Eline wast de druiven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " Eline wast de druiven.",
+      "temperature": 0,
+      "avg_logprob": -0.13507871627807616,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 4.66161614517957e-12,
+      "words": [
+        {
+          "word": " Eline",
+          "start": 0.0,
+          "end": 0.4,
+          "probability": 0.9423828125
+        },
+        {
+          "word": " wast",
+          "start": 0.4,
+          "end": 0.84,
+          "probability": 0.94873046875
+        },
+        {
+          "word": " de",
+          "start": 0.84,
+          "end": 1.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " druiven.",
+          "start": 1.1,
+          "end": 1.54,
+          "probability": 0.884765625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-022",
+  "sha256": "e4ac991aff5cba229e231aeae3452e091a9e7dc07d205393ee3665331407c793",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kun je me even helpen?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.9,
+      "text": " Kun je me even helpen?",
+      "temperature": 0,
+      "avg_logprob": -0.20526933670043945,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 3.863030121481481e-12,
+      "words": [
+        {
+          "word": " Kun",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.869140625
+        },
+        {
+          "word": " je",
+          "start": 0.18,
+          "end": 0.26,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " me",
+          "start": 0.26,
+          "end": 0.36,
+          "probability": 0.89501953125
+        },
+        {
+          "word": " even",
+          "start": 0.36,
+          "end": 0.54,
+          "probability": 0.99609375
+        },
+        {
+          "word": " helpen?",
+          "start": 0.54,
+          "end": 0.9,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

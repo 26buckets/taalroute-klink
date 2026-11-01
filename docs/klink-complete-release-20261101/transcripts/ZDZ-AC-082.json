@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-082",
+  "sha256": "d44afd3c45553f49f6e14eb360b7a565a6c65d8d664e99b7cffd40dee59adfd1",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Morgen ga ik mijn moeder bellen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.38,
+      "text": " Morgen ga ik mijn moeder bellen.",
+      "temperature": 0,
+      "avg_logprob": -0.1075504223505656,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 4.282866162413912e-12,
+      "words": [
+        {
+          "word": " Morgen",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.9326171875
+        },
+        {
+          "word": " ga",
+          "start": 0.34,
+          "end": 0.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " ik",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 1.0
+        },
+        {
+          "word": " mijn",
+          "start": 0.68,
+          "end": 0.82,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " moeder",
+          "start": 0.82,
+          "end": 1.06,
+          "probability": 1.0
+        },
+        {
+          "word": " bellen.",
+          "start": 1.06,
+          "end": 1.38,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

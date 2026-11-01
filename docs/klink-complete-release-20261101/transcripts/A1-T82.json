@@ -1,0 +1,258 @@
+{
+  "id": "A1-T82",
+  "sha256": "7271cdc2644909dd4e547913ba3ed87f1638458491f1a3de31ad051dc08d878f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bericht van de sportclub. De training begint zaterdag om 10 uur. Neem water en sportschoenen mee. Bij regen trainen we binnen in de zaal. Wie niet kan komen, belt vrijdag de trainer. De training duurt een uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.08,
+      "text": " Bericht van de sportclub. De training begint zaterdag om 10 uur. Neem water en sportschoenen mee.",
+      "temperature": 0,
+      "avg_logprob": -0.041268424382285465,
+      "compression_ratio": 1.4217687074829932,
+      "no_speech_prob": 6.699099608376002e-12,
+      "words": [
+        {
+          "word": " Bericht",
+          "start": 0.0,
+          "end": 0.42,
+          "probability": 0.9921875
+        },
+        {
+          "word": " van",
+          "start": 0.42,
+          "end": 0.54,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 0.54,
+          "end": 0.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " sportclub.",
+          "start": 0.66,
+          "end": 1.18,
+          "probability": 0.82763671875
+        },
+        {
+          "word": " De",
+          "start": 1.36,
+          "end": 1.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " training",
+          "start": 1.68,
+          "end": 1.98,
+          "probability": 1.0
+        },
+        {
+          "word": " begint",
+          "start": 1.98,
+          "end": 2.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zaterdag",
+          "start": 2.34,
+          "end": 2.84,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 2.84,
+          "end": 2.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 10",
+          "start": 2.98,
+          "end": 3.14,
+          "probability": 0.74462890625
+        },
+        {
+          "word": " uur.",
+          "start": 3.14,
+          "end": 3.44,
+          "probability": 0.998046875
+        },
+        {
+          "word": " Neem",
+          "start": 3.7,
+          "end": 3.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water",
+          "start": 3.92,
+          "end": 4.22,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 4.22,
+          "end": 4.38,
+          "probability": 1.0
+        },
+        {
+          "word": " sportschoenen",
+          "start": 4.38,
+          "end": 4.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mee.",
+          "start": 4.88,
+          "end": 5.08,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.32,
+      "end": 11.2,
+      "text": " Bij regen trainen we binnen in de zaal. Wie niet kan komen, belt vrijdag de trainer. De training duurt een uur.",
+      "temperature": 0,
+      "avg_logprob": -0.041268424382285465,
+      "compression_ratio": 1.4217687074829932,
+      "no_speech_prob": 6.699099608376002e-12,
+      "words": [
+        {
+          "word": " Bij",
+          "start": 5.32,
+          "end": 5.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " regen",
+          "start": 5.64,
+          "end": 5.98,
+          "probability": 1.0
+        },
+        {
+          "word": " trainen",
+          "start": 5.98,
+          "end": 6.34,
+          "probability": 0.9921875
+        },
+        {
+          "word": " we",
+          "start": 6.34,
+          "end": 6.44,
+          "probability": 1.0
+        },
+        {
+          "word": " binnen",
+          "start": 6.44,
+          "end": 6.68,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 6.68,
+          "end": 6.86,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 6.86,
+          "end": 6.98,
+          "probability": 1.0
+        },
+        {
+          "word": " zaal.",
+          "start": 6.98,
+          "end": 7.28,
+          "probability": 1.0
+        },
+        {
+          "word": " Wie",
+          "start": 7.52,
+          "end": 7.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " niet",
+          "start": 7.72,
+          "end": 7.88,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 7.88,
+          "end": 8.04,
+          "probability": 1.0
+        },
+        {
+          "word": " komen,",
+          "start": 8.04,
+          "end": 8.46,
+          "probability": 1.0
+        },
+        {
+          "word": " belt",
+          "start": 8.7,
+          "end": 8.82,
+          "probability": 0.99609375
+        },
+        {
+          "word": " vrijdag",
+          "start": 8.82,
+          "end": 9.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 9.22,
+          "end": 9.34,
+          "probability": 1.0
+        },
+        {
+          "word": " trainer.",
+          "start": 9.34,
+          "end": 9.66,
+          "probability": 1.0
+        },
+        {
+          "word": " De",
+          "start": 9.96,
+          "end": 10.14,
+          "probability": 1.0
+        },
+        {
+          "word": " training",
+          "start": 10.14,
+          "end": 10.46,
+          "probability": 1.0
+        },
+        {
+          "word": " duurt",
+          "start": 10.46,
+          "end": 10.74,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 10.74,
+          "end": 10.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " uur.",
+          "start": 10.9,
+          "end": 11.2,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

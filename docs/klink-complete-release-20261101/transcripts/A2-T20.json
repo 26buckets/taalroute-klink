@@ -1,0 +1,557 @@
+{
+  "id": "A2-T20",
+  "sha256": "1f0a92383b7f486ba89bbfd17be2be23659f3176b83a99c6ed9b21f1b9bdda28",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het buurthuis organiseert zondag een bezoek aan het museum. Deelnemers kunnen zich tot en met donderdag aanmelden. Een kaartje kost 5 euro, maar kinderen onder 12 jaar mogen gratis mee. De busreis wordt door het buurthuis betaald. Vrijdag krijgt iedere deelnemer een bericht met de vertrektijd en de bushalte. Wie geen e-mail gebruikt kan de informatie ook bij het buurthuis ophalen. Een bewoner meldt zich woensdag aan en betaalt het kaartje meteen bij de balie.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.4,
+      "text": " Het buurthuis organiseert zondag een bezoek aan het museum.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.984375
+        },
+        {
+          "word": " buurthuis",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.9443359375
+        },
+        {
+          "word": " organiseert",
+          "start": 0.62,
+          "end": 1.14,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " zondag",
+          "start": 1.14,
+          "end": 1.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.46,
+          "end": 1.56,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " bezoek",
+          "start": 1.56,
+          "end": 1.84,
+          "probability": 1.0
+        },
+        {
+          "word": " aan",
+          "start": 1.84,
+          "end": 1.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 1.96,
+          "end": 2.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " museum.",
+          "start": 2.08,
+          "end": 2.4,
+          "probability": 0.99462890625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.36,
+      "end": 5.66,
+      "text": " Deelnemers kunnen zich tot en met donderdag aanmelden.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " Deelnemers",
+          "start": 3.36,
+          "end": 3.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kunnen",
+          "start": 3.92,
+          "end": 4.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zich",
+          "start": 4.1,
+          "end": 4.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tot",
+          "start": 4.28,
+          "end": 4.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 4.48,
+          "end": 4.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " met",
+          "start": 4.6,
+          "end": 4.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " donderdag",
+          "start": 4.74,
+          "end": 5.2,
+          "probability": 0.998046875
+        },
+        {
+          "word": " aanmelden.",
+          "start": 5.2,
+          "end": 5.66,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.08,
+      "end": 10.54,
+      "text": " Een kaartje kost 5 euro, maar kinderen onder 12 jaar mogen gratis mee.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 6.08,
+          "end": 6.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kaartje",
+          "start": 6.6,
+          "end": 7.0,
+          "probability": 1.0
+        },
+        {
+          "word": " kost",
+          "start": 7.0,
+          "end": 7.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 5",
+          "start": 7.2,
+          "end": 7.44,
+          "probability": 0.81982421875
+        },
+        {
+          "word": " euro,",
+          "start": 7.44,
+          "end": 7.78,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " maar",
+          "start": 8.08,
+          "end": 8.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kinderen",
+          "start": 8.56,
+          "end": 8.96,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " onder",
+          "start": 8.96,
+          "end": 9.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 12",
+          "start": 9.18,
+          "end": 9.48,
+          "probability": 0.95751953125
+        },
+        {
+          "word": " jaar",
+          "start": 9.48,
+          "end": 9.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mogen",
+          "start": 9.74,
+          "end": 10.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gratis",
+          "start": 10.0,
+          "end": 10.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mee.",
+          "start": 10.38,
+          "end": 10.54,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.12,
+      "end": 13.22,
+      "text": " De busreis wordt door het buurthuis betaald.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 11.12,
+          "end": 11.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " busreis",
+          "start": 11.58,
+          "end": 11.98,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " wordt",
+          "start": 11.98,
+          "end": 12.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " door",
+          "start": 12.14,
+          "end": 12.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 12.28,
+          "end": 12.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buurthuis",
+          "start": 12.4,
+          "end": 12.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " betaald.",
+          "start": 12.8,
+          "end": 13.22,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.06,
+      "end": 17.6,
+      "text": " Vrijdag krijgt iedere deelnemer een bericht met de vertrektijd en de bushalte.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " Vrijdag",
+          "start": 14.06,
+          "end": 14.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " krijgt",
+          "start": 14.54,
+          "end": 14.86,
+          "probability": 1.0
+        },
+        {
+          "word": " iedere",
+          "start": 14.86,
+          "end": 15.16,
+          "probability": 0.998046875
+        },
+        {
+          "word": " deelnemer",
+          "start": 15.16,
+          "end": 15.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 15.68,
+          "end": 15.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bericht",
+          "start": 15.8,
+          "end": 16.12,
+          "probability": 1.0
+        },
+        {
+          "word": " met",
+          "start": 16.12,
+          "end": 16.26,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 16.26,
+          "end": 16.38,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vertrektijd",
+          "start": 16.38,
+          "end": 16.9,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " en",
+          "start": 16.9,
+          "end": 17.04,
+          "probability": 0.93701171875
+        },
+        {
+          "word": " de",
+          "start": 17.04,
+          "end": 17.16,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bushalte.",
+          "start": 17.16,
+          "end": 17.6,
+          "probability": 0.958984375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.16,
+      "end": 21.5,
+      "text": " Wie geen e-mail gebruikt kan de informatie ook bij het buurthuis ophalen.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 18.16,
+          "end": 18.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " geen",
+          "start": 18.54,
+          "end": 18.76,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 18.76,
+          "end": 18.92,
+          "probability": 0.98876953125
+        },
+        {
+          "word": "-mail",
+          "start": 18.92,
+          "end": 19.06,
+          "probability": 1.0
+        },
+        {
+          "word": " gebruikt",
+          "start": 19.06,
+          "end": 19.5,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 19.5,
+          "end": 19.64,
+          "probability": 0.62890625
+        },
+        {
+          "word": " de",
+          "start": 19.64,
+          "end": 19.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " informatie",
+          "start": 19.74,
+          "end": 20.26,
+          "probability": 1.0
+        },
+        {
+          "word": " ook",
+          "start": 20.26,
+          "end": 20.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 20.44,
+          "end": 20.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 20.58,
+          "end": 20.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buurthuis",
+          "start": 20.7,
+          "end": 21.08,
+          "probability": 1.0
+        },
+        {
+          "word": " ophalen.",
+          "start": 21.08,
+          "end": 21.5,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 22.1,
+      "end": 25.66,
+      "text": " Een bewoner meldt zich woensdag aan en betaalt het kaartje meteen bij de balie.",
+      "temperature": 0,
+      "avg_logprob": -0.06507527983033812,
+      "compression_ratio": 1.7022058823529411,
+      "no_speech_prob": 5.177996052763145e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 22.1,
+          "end": 22.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bewoner",
+          "start": 22.5,
+          "end": 22.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " meldt",
+          "start": 22.92,
+          "end": 23.14,
+          "probability": 0.99609375
+        },
+        {
+          "word": " zich",
+          "start": 23.14,
+          "end": 23.28,
+          "probability": 1.0
+        },
+        {
+          "word": " woensdag",
+          "start": 23.28,
+          "end": 23.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aan",
+          "start": 23.68,
+          "end": 23.94,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 23.94,
+          "end": 24.1,
+          "probability": 1.0
+        },
+        {
+          "word": " betaalt",
+          "start": 24.1,
+          "end": 24.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " het",
+          "start": 24.38,
+          "end": 24.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kaartje",
+          "start": 24.5,
+          "end": 24.86,
+          "probability": 1.0
+        },
+        {
+          "word": " meteen",
+          "start": 24.86,
+          "end": 25.12,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 25.12,
+          "end": 25.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 25.24,
+          "end": 25.32,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " balie.",
+          "start": 25.32,
+          "end": 25.66,
+          "probability": 0.7666015625
+        }
+      ]
+    }
+  ]
+}

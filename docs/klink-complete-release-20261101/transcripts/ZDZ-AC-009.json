@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-009",
+  "sha256": "ef22f968dd72361fad61d93ac8b5a766ea0c11313c103e893f4af4bf1631edb5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De badkamer is naast de keuken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.42,
+      "text": " De badkamer is naast de keuken.",
+      "temperature": 0,
+      "avg_logprob": -0.09358669916788737,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 3.7570883903992325e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.93994140625
+        },
+        {
+          "word": " badkamer",
+          "start": 0.16,
+          "end": 0.62,
+          "probability": 0.99609375
+        },
+        {
+          "word": " is",
+          "start": 0.62,
+          "end": 0.74,
+          "probability": 1.0
+        },
+        {
+          "word": " naast",
+          "start": 0.74,
+          "end": 0.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.98,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " keuken.",
+          "start": 1.06,
+          "end": 1.42,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

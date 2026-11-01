@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-7bad03d2ead1870a",
+  "sha256": "c2979ce055deb1393dcedf524081ef87bd10fd7ed33c54777282008035a1981b",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe mail in een com.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.16,
+      "text": " Ik doe mail in een com.",
+      "temperature": 0,
+      "avg_logprob": -0.27546532154083253,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 0.046099692583084106,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.96875
+        },
+        {
+          "word": " doe",
+          "start": 0.12,
+          "end": 0.22,
+          "probability": 0.998046875
+        },
+        {
+          "word": " mail",
+          "start": 0.22,
+          "end": 0.54,
+          "probability": 0.84228515625
+        },
+        {
+          "word": " in",
+          "start": 0.54,
+          "end": 0.86,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 0.86,
+          "end": 0.96,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " com.",
+          "start": 0.96,
+          "end": 1.16,
+          "probability": 0.794921875
+        }
+      ]
+    }
+  ]
+}

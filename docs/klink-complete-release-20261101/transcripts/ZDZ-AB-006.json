@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-006",
+  "sha256": "88f43267abf29eb312a9875f7d5757de09509d13849b008918d595486e46a2fc",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is mijn vriend.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.7,
+      "text": " Dit is mijn vriend.",
+      "temperature": 0,
+      "avg_logprob": -0.34389511744181317,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 4.36917212479071e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.94921875
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.28,
+          "end": 0.4,
+          "probability": 0.7509765625
+        },
+        {
+          "word": " vriend.",
+          "start": 0.4,
+          "end": 0.7,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

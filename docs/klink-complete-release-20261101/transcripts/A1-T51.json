@@ -1,0 +1,228 @@
+{
+  "id": "A1-T51",
+  "sha256": "9a6aac64a2f56d99a9896140208e3e084702586bded2fc35a5b3d793031fbdc6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Vrijdag gaat een vrouw zwemmen. Zij legt haar badpak en een handdoek in haar tas. De tas staat bij de deur. Om twee uur vertrekt zij met de fiets naar het zwembad.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.0,
+      "text": " Vrijdag gaat een vrouw zwemmen. Zij legt haar badpak en een handdoek in haar tas.",
+      "temperature": 0,
+      "avg_logprob": -0.06087415501222772,
+      "compression_ratio": 1.2936507936507937,
+      "no_speech_prob": 4.3929916128393476e-12,
+      "words": [
+        {
+          "word": " Vrijdag",
+          "start": 0.0,
+          "end": 0.38,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " gaat",
+          "start": 0.38,
+          "end": 0.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.52,
+          "end": 0.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vrouw",
+          "start": 0.66,
+          "end": 0.96,
+          "probability": 1.0
+        },
+        {
+          "word": " zwemmen.",
+          "start": 0.96,
+          "end": 1.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Zij",
+          "start": 1.72,
+          "end": 2.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " legt",
+          "start": 2.12,
+          "end": 2.32,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 2.32,
+          "end": 2.42,
+          "probability": 1.0
+        },
+        {
+          "word": " badpak",
+          "start": 2.42,
+          "end": 2.86,
+          "probability": 0.837890625
+        },
+        {
+          "word": " en",
+          "start": 2.86,
+          "end": 3.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 3.02,
+          "end": 3.18,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " handdoek",
+          "start": 3.18,
+          "end": 3.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " in",
+          "start": 3.44,
+          "end": 3.54,
+          "probability": 1.0
+        },
+        {
+          "word": " haar",
+          "start": 3.54,
+          "end": 3.66,
+          "probability": 1.0
+        },
+        {
+          "word": " tas.",
+          "start": 3.66,
+          "end": 4.0,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.500000000000002,
+      "end": 8.56,
+      "text": " De tas staat bij de deur. Om twee uur vertrekt zij met de fiets naar het zwembad.",
+      "temperature": 0,
+      "avg_logprob": -0.06087415501222772,
+      "compression_ratio": 1.2936507936507937,
+      "no_speech_prob": 4.3929916128393476e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.500000000000002,
+          "end": 4.9,
+          "probability": 1.0
+        },
+        {
+          "word": " tas",
+          "start": 4.9,
+          "end": 5.1,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 5.1,
+          "end": 5.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 5.28,
+          "end": 5.4,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.4,
+          "end": 5.52,
+          "probability": 1.0
+        },
+        {
+          "word": " deur.",
+          "start": 5.52,
+          "end": 5.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Om",
+          "start": 6.36,
+          "end": 6.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " twee",
+          "start": 6.5,
+          "end": 6.7,
+          "probability": 0.8193359375
+        },
+        {
+          "word": " uur",
+          "start": 6.7,
+          "end": 6.94,
+          "probability": 1.0
+        },
+        {
+          "word": " vertrekt",
+          "start": 6.94,
+          "end": 7.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zij",
+          "start": 7.3,
+          "end": 7.44,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " met",
+          "start": 7.44,
+          "end": 7.58,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.58,
+          "end": 7.68,
+          "probability": 1.0
+        },
+        {
+          "word": " fiets",
+          "start": 7.68,
+          "end": 7.88,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 7.88,
+          "end": 8.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 8.0,
+          "end": 8.14,
+          "probability": 1.0
+        },
+        {
+          "word": " zwembad.",
+          "start": 8.14,
+          "end": 8.56,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-591e927e91f0ffd6",
+  "sha256": "7608f2f57a0f99c536d52365f6bd8c2014f6a5d1088cc8cd8a00a203651a032d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het pakje ligt in de gang.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.34,
+      "text": " Het pakje ligt in de gang.",
+      "temperature": 0,
+      "avg_logprob": -0.05893977483113607,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.026791487060644e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.89208984375
+        },
+        {
+          "word": " pakje",
+          "start": 0.18,
+          "end": 0.58,
+          "probability": 0.99609375
+        },
+        {
+          "word": " ligt",
+          "start": 0.58,
+          "end": 0.88,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 0.88,
+          "end": 1.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.0,
+          "end": 1.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " gang.",
+          "start": 1.12,
+          "end": 1.34,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

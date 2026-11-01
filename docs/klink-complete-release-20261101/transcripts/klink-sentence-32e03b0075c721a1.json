@@ -1,0 +1,77 @@
+{
+  "id": "klink-sentence-32e03b0075c721a1",
+  "sha256": "4a081660808e4080ebd1740bc494337669a2ff40a807530634b06263752ccdde",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Is het kind al klaar om mee te gaan?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.66,
+      "text": " Is het kind al klaar om mee te gaan?",
+      "temperature": 0,
+      "avg_logprob": -0.1520378589630127,
+      "compression_ratio": 0.8181818181818182,
+      "no_speech_prob": 5.478441485184948e-12,
+      "words": [
+        {
+          "word": " Is",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.91162109375
+        },
+        {
+          "word": " het",
+          "start": 0.2,
+          "end": 0.36,
+          "probability": 0.994140625
+        },
+        {
+          "word": " kind",
+          "start": 0.36,
+          "end": 0.48,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " al",
+          "start": 0.48,
+          "end": 0.68,
+          "probability": 0.99609375
+        },
+        {
+          "word": " klaar",
+          "start": 0.68,
+          "end": 1.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 1.06,
+          "end": 1.2,
+          "probability": 0.998046875
+        },
+        {
+          "word": " mee",
+          "start": 1.2,
+          "end": 1.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 1.38,
+          "end": 1.48,
+          "probability": 1.0
+        },
+        {
+          "word": " gaan?",
+          "start": 1.48,
+          "end": 1.66,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

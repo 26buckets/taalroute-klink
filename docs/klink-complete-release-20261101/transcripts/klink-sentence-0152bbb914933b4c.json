@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-0152bbb914933b4c",
+  "sha256": "e10fec1bc4f8f062374e81cd6d35ba6d8c33712b8b5043b1c1b6fdc5d2641625",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Het gebouw staat naast het station.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.74,
+      "text": " Het gebouw staat naast het station.",
+      "temperature": 0,
+      "avg_logprob": -0.12202171178964469,
+      "compression_ratio": 0.875,
+      "no_speech_prob": 4.540698546329214e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " gebouw",
+          "start": 0.18,
+          "end": 0.68,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " staat",
+          "start": 0.68,
+          "end": 0.88,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " naast",
+          "start": 0.88,
+          "end": 1.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 1.32,
+          "end": 1.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " station.",
+          "start": 1.44,
+          "end": 1.74,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

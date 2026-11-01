@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-035",
+  "sha256": "582a74ecd47391d7c78525cef86bc71f568d77fdbd8b8342c2b7c80e2bd266b6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Kunt u dit eerst doen? Dan kijk ik.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.76,
+      "text": " Kunt u dit eerst doen? Dan kijk ik.",
+      "temperature": 0,
+      "avg_logprob": -0.06816259026527405,
+      "compression_ratio": 0.813953488372093,
+      "no_speech_prob": 4.288370873684055e-12,
+      "words": [
+        {
+          "word": " Kunt",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.962890625
+        },
+        {
+          "word": " u",
+          "start": 0.24,
+          "end": 0.32,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " dit",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " eerst",
+          "start": 0.46,
+          "end": 0.74,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " doen?",
+          "start": 0.74,
+          "end": 0.94,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " Dan",
+          "start": 1.1,
+          "end": 1.34,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " kijk",
+          "start": 1.34,
+          "end": 1.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ik.",
+          "start": 1.6,
+          "end": 1.76,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-80121c8ca8e2d364",
+  "sha256": "1a7d5c61a6d350bbfacf276447601f3086d65bb91dc97df6c24885f401c458f3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De vader zit naast zijn dochter.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.92,
+      "text": " De vader zit naast zijn dochter.",
+      "temperature": 0,
+      "avg_logprob": -0.06034374237060547,
+      "compression_ratio": 0.8421052631578947,
+      "no_speech_prob": 4.9668333682029164e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9521484375
+        },
+        {
+          "word": " vader",
+          "start": 0.16,
+          "end": 0.58,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zit",
+          "start": 0.58,
+          "end": 0.9,
+          "probability": 0.998046875
+        },
+        {
+          "word": " naast",
+          "start": 0.9,
+          "end": 1.32,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 1.32,
+          "end": 1.5,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dochter.",
+          "start": 1.5,
+          "end": 1.92,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

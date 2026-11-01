@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-ff6a064313af6e50",
+  "sha256": "698da4130f44771a8d9b1bbc7fcc95757e401f9d0c2c5322eb7d99354df98442",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De pleister ligt in de doos.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " De pleister ligt in de doos.",
+      "temperature": 0,
+      "avg_logprob": -0.09739178877610427,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.966423973462586e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.95654296875
+        },
+        {
+          "word": " pleister",
+          "start": 0.16,
+          "end": 0.58,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " ligt",
+          "start": 0.58,
+          "end": 0.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 0.98,
+          "end": 1.16,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " de",
+          "start": 1.16,
+          "end": 1.28,
+          "probability": 0.99609375
+        },
+        {
+          "word": " doos.",
+          "start": 1.28,
+          "end": 1.68,
+          "probability": 0.9912109375
+        }
+      ]
+    }
+  ]
+}

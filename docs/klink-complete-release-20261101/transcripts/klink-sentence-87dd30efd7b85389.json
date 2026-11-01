@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-87dd30efd7b85389",
+  "sha256": "dcb4ebc47f7aa361a9ec89d5c2ff1de549994101e39b428fedd09ff08b91dcf3",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik schud het zand uit mijn schoen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.62,
+      "text": " Ik schud het zand uit mijn schoen.",
+      "temperature": 0,
+      "avg_logprob": -0.09185082117716471,
+      "compression_ratio": 0.85,
+      "no_speech_prob": 5.221296919127871e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.93212890625
+        },
+        {
+          "word": " schud",
+          "start": 0.14,
+          "end": 0.42,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " het",
+          "start": 0.42,
+          "end": 0.58,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " zand",
+          "start": 0.58,
+          "end": 0.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " uit",
+          "start": 0.9,
+          "end": 1.1,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 1.1,
+          "end": 1.24,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schoen.",
+          "start": 1.24,
+          "end": 1.62,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

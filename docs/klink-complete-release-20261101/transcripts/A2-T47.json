@@ -1,0 +1,564 @@
+{
+  "id": "A2-T47",
+  "sha256": "ea7e689d271e06465e1f716c045a279fcdd82439c55c8b4d8850d17a30d55f17",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een cursist volgt op maandag een avondcursus. Volgende week is er een korte toets. De docent vraagt iedereen eerst hoofdstuk 3 te lezen. De toets is niet op maandag, maar op woensdag om 7 uur, in hetzelfde lokaal. Wie dan moet werken, mag vrijdag om 4 uur komen. De cursist kan woensdag en schrijft de datum in zijn agenda. Op dinsdag krijgt hij een bericht dat hij een pen moet meenemen. Zijn boek mag thuisblijven.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.46,
+      "text": " Een cursist volgt op maandag een avondcursus.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " cursist",
+          "start": 0.12,
+          "end": 0.58,
+          "probability": 0.98828125
+        },
+        {
+          "word": " volgt",
+          "start": 0.58,
+          "end": 0.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 0.9,
+          "end": 1.02,
+          "probability": 0.990234375
+        },
+        {
+          "word": " maandag",
+          "start": 1.02,
+          "end": 1.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 1.42,
+          "end": 1.58,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " avondcursus.",
+          "start": 1.58,
+          "end": 2.46,
+          "probability": 0.99853515625
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.7,
+      "end": 4.44,
+      "text": " Volgende week is er een korte toets.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " Volgende",
+          "start": 2.7,
+          "end": 3.12,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " week",
+          "start": 3.12,
+          "end": 3.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 3.38,
+          "end": 3.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 3.54,
+          "end": 3.64,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " een",
+          "start": 3.64,
+          "end": 3.74,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " korte",
+          "start": 3.74,
+          "end": 4.08,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " toets.",
+          "start": 4.08,
+          "end": 4.44,
+          "probability": 0.998046875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.68,
+      "end": 7.5,
+      "text": " De docent vraagt iedereen eerst hoofdstuk 3 te lezen.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 4.68,
+          "end": 4.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " docent",
+          "start": 4.92,
+          "end": 5.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 5.32,
+          "end": 5.66,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " iedereen",
+          "start": 5.66,
+          "end": 6.0,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " eerst",
+          "start": 6.0,
+          "end": 6.38,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hoofdstuk",
+          "start": 6.38,
+          "end": 6.82,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " 3",
+          "start": 6.82,
+          "end": 6.98,
+          "probability": 0.95458984375
+        },
+        {
+          "word": " te",
+          "start": 6.98,
+          "end": 7.14,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " lezen.",
+          "start": 7.14,
+          "end": 7.5,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 7.7,
+      "end": 12.18,
+      "text": " De toets is niet op maandag, maar op woensdag om 7 uur, in hetzelfde lokaal.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 7.7,
+          "end": 8.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " toets",
+          "start": 8.0,
+          "end": 8.3,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 8.3,
+          "end": 8.5,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 8.5,
+          "end": 8.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " op",
+          "start": 8.64,
+          "end": 8.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " maandag,",
+          "start": 8.82,
+          "end": 9.24,
+          "probability": 1.0
+        },
+        {
+          "word": " maar",
+          "start": 9.3,
+          "end": 9.38,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " op",
+          "start": 9.38,
+          "end": 9.54,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " woensdag",
+          "start": 9.54,
+          "end": 10.0,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 10.0,
+          "end": 10.18,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " 7",
+          "start": 10.18,
+          "end": 10.46,
+          "probability": 0.86767578125
+        },
+        {
+          "word": " uur,",
+          "start": 10.46,
+          "end": 10.86,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " in",
+          "start": 11.0,
+          "end": 11.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hetzelfde",
+          "start": 11.22,
+          "end": 11.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lokaal.",
+          "start": 11.72,
+          "end": 12.18,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.38,
+      "end": 14.92,
+      "text": " Wie dan moet werken, mag vrijdag om 4 uur komen.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 12.38,
+          "end": 12.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " dan",
+          "start": 12.58,
+          "end": 12.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " moet",
+          "start": 12.72,
+          "end": 12.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " werken,",
+          "start": 12.88,
+          "end": 13.28,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 13.4,
+          "end": 13.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 13.66,
+          "end": 14.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 14.06,
+          "end": 14.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 4",
+          "start": 14.2,
+          "end": 14.4,
+          "probability": 0.9775390625
+        },
+        {
+          "word": " uur",
+          "start": 14.4,
+          "end": 14.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " komen.",
+          "start": 14.62,
+          "end": 14.92,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.12,
+      "end": 17.98,
+      "text": " De cursist kan woensdag en schrijft de datum in zijn agenda.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 15.12,
+          "end": 15.28,
+          "probability": 1.0
+        },
+        {
+          "word": " cursist",
+          "start": 15.28,
+          "end": 15.7,
+          "probability": 1.0
+        },
+        {
+          "word": " kan",
+          "start": 15.7,
+          "end": 15.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woensdag",
+          "start": 15.84,
+          "end": 16.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 16.34,
+          "end": 16.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " schrijft",
+          "start": 16.54,
+          "end": 16.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 16.9,
+          "end": 17.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " datum",
+          "start": 17.0,
+          "end": 17.34,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 17.34,
+          "end": 17.44,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 17.44,
+          "end": 17.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " agenda.",
+          "start": 17.6,
+          "end": 17.98,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 18.24,
+      "end": 21.1,
+      "text": " Op dinsdag krijgt hij een bericht dat hij een pen moet meenemen.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 18.24,
+          "end": 18.4,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dinsdag",
+          "start": 18.4,
+          "end": 18.86,
+          "probability": 1.0
+        },
+        {
+          "word": " krijgt",
+          "start": 18.86,
+          "end": 19.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 19.18,
+          "end": 19.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 19.26,
+          "end": 19.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bericht",
+          "start": 19.4,
+          "end": 19.76,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 19.76,
+          "end": 19.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hij",
+          "start": 19.98,
+          "end": 20.1,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 20.1,
+          "end": 20.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pen",
+          "start": 20.24,
+          "end": 20.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moet",
+          "start": 20.42,
+          "end": 20.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " meenemen.",
+          "start": 20.6,
+          "end": 21.1,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 21.26,
+      "end": 22.56,
+      "text": " Zijn boek mag thuisblijven.",
+      "temperature": 0,
+      "avg_logprob": -0.0722603484203941,
+      "compression_ratio": 1.657370517928287,
+      "no_speech_prob": 8.501155508711111e-12,
+      "words": [
+        {
+          "word": " Zijn",
+          "start": 21.26,
+          "end": 21.52,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " boek",
+          "start": 21.52,
+          "end": 21.72,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 21.72,
+          "end": 21.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " thuisblijven.",
+          "start": 21.9,
+          "end": 22.56,
+          "probability": 0.9345703125
+        }
+      ]
+    }
+  ]
+}

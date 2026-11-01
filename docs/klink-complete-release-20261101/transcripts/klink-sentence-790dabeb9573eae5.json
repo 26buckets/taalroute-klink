@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-790dabeb9573eae5",
+  "sha256": "98d10502ae9dc9f0546ea26c0b03d4dbf2a98cfbe134f529509564b07a891fb6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn keel doet pijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.12,
+      "text": " Mijn keel doet pijn.",
+      "temperature": 0,
+      "avg_logprob": -0.13201904296875,
+      "compression_ratio": 0.7692307692307693,
+      "no_speech_prob": 6.375692508664432e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.9306640625
+        },
+        {
+          "word": " keel",
+          "start": 0.24,
+          "end": 0.6,
+          "probability": 0.998046875
+        },
+        {
+          "word": " doet",
+          "start": 0.6,
+          "end": 0.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " pijn.",
+          "start": 0.74,
+          "end": 1.12,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AB-080",
+  "sha256": "1a80a38bfa67bd6b85d1f7feb61f022f9a638d42aa5a746ef6ce1b1af7f71af0",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik doe het nog een keer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.88,
+      "text": " Ik doe het nog een keer.",
+      "temperature": 0,
+      "avg_logprob": -0.10254244804382324,
+      "compression_ratio": 0.75,
+      "no_speech_prob": 3.966853755199562e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.888671875
+        },
+        {
+          "word": " doe",
+          "start": 0.14,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 0.28,
+          "end": 0.42,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nog",
+          "start": 0.42,
+          "end": 0.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 0.56,
+          "end": 0.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " keer.",
+          "start": 0.72,
+          "end": 0.88,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

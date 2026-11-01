@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-c67b91f586849324",
+  "sha256": "6f8ef39baa9200e9f0d66f3c246d9695e8bd6530e51abb6b3d01adafb8656b8f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De kassa staat bij de uitgang.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.68,
+      "text": " De kassa staat bij de uitgang.",
+      "temperature": 0,
+      "avg_logprob": -0.10849217573801677,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 3.426295271807822e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.939453125
+        },
+        {
+          "word": " kassa",
+          "start": 0.16,
+          "end": 0.54,
+          "probability": 0.939453125
+        },
+        {
+          "word": " staat",
+          "start": 0.54,
+          "end": 0.92,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 0.92,
+          "end": 1.12,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 1.12,
+          "end": 1.26,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " uitgang.",
+          "start": 1.26,
+          "end": 1.68,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

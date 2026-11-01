@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-cea858969bb2184e",
+  "sha256": "534bcaa469280f3043d411e3c616191b20c18cbf8ddaaa522899561807f1e404",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik druk op de bel.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.92,
+      "text": " Ik druk op de bel.",
+      "temperature": 0,
+      "avg_logprob": -0.0950055652194553,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 4.014113694217336e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.96826171875
+        },
+        {
+          "word": " druk",
+          "start": 0.14,
+          "end": 0.36,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 0.36,
+          "end": 0.58,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.58,
+          "end": 0.7,
+          "probability": 0.99609375
+        },
+        {
+          "word": " bel.",
+          "start": 0.7,
+          "end": 0.92,
+          "probability": 0.94384765625
+        }
+      ]
+    }
+  ]
+}

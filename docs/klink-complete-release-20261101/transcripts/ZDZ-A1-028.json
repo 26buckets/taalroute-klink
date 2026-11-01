@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-A1-028",
+  "sha256": "0d6b23e218978c827148a6b9873afb5ed4f5b5c92fe0837c8a7d2c02d9094f94",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik hier water drinken?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.1,
+      "text": " Mag ik hier water drinken?",
+      "temperature": 0,
+      "avg_logprob": -0.1328111171722412,
+      "compression_ratio": 0.8125,
+      "no_speech_prob": 4.351804507030099e-12,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.96533203125
+        },
+        {
+          "word": " ik",
+          "start": 0.2,
+          "end": 0.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hier",
+          "start": 0.3,
+          "end": 0.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water",
+          "start": 0.44,
+          "end": 0.74,
+          "probability": 0.99609375
+        },
+        {
+          "word": " drinken?",
+          "start": 0.74,
+          "end": 1.1,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

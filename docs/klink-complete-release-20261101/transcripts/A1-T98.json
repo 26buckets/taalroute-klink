@@ -1,0 +1,265 @@
+{
+  "id": "A1-T98",
+  "sha256": "9e60e9ffdbb282f723d8aecf613e6f21bb91f6103e8a0052ce6e2a80ca5b6ac6",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een vader komt om 8 uur bij school. De deur is nog dicht. Op een briefje staat, de school gaat vandaag om half 9 open. De vader wacht buiten. Om half 9 gaat hij naar binnen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.94,
+      "text": " Een vader komt om 8 uur bij school. De deur is nog dicht.",
+      "temperature": 0,
+      "avg_logprob": -0.08049936805452619,
+      "compression_ratio": 1.3622047244094488,
+      "no_speech_prob": 5.909658179481525e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.97998046875
+        },
+        {
+          "word": " vader",
+          "start": 0.28,
+          "end": 0.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " komt",
+          "start": 0.66,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 0.9,
+          "end": 1.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 8",
+          "start": 1.08,
+          "end": 1.24,
+          "probability": 0.69287109375
+        },
+        {
+          "word": " uur",
+          "start": 1.24,
+          "end": 1.42,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " bij",
+          "start": 1.42,
+          "end": 1.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " school.",
+          "start": 1.54,
+          "end": 1.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " De",
+          "start": 2.06,
+          "end": 2.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deur",
+          "start": 2.14,
+          "end": 2.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 2.4,
+          "end": 2.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 2.54,
+          "end": 2.68,
+          "probability": 1.0
+        },
+        {
+          "word": " dicht.",
+          "start": 2.68,
+          "end": 2.94,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.1,
+      "end": 6.24,
+      "text": " Op een briefje staat, de school gaat vandaag om half 9 open.",
+      "temperature": 0,
+      "avg_logprob": -0.08049936805452619,
+      "compression_ratio": 1.3622047244094488,
+      "no_speech_prob": 5.909658179481525e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.1,
+          "end": 3.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 3.26,
+          "end": 3.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " briefje",
+          "start": 3.36,
+          "end": 3.72,
+          "probability": 1.0
+        },
+        {
+          "word": " staat,",
+          "start": 3.72,
+          "end": 4.04,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 4.16,
+          "end": 4.32,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " school",
+          "start": 4.32,
+          "end": 4.6,
+          "probability": 1.0
+        },
+        {
+          "word": " gaat",
+          "start": 4.6,
+          "end": 4.84,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 4.84,
+          "end": 5.18,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 5.18,
+          "end": 5.34,
+          "probability": 1.0
+        },
+        {
+          "word": " half",
+          "start": 5.34,
+          "end": 5.6,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " 9",
+          "start": 5.6,
+          "end": 5.8,
+          "probability": 0.80859375
+        },
+        {
+          "word": " open.",
+          "start": 5.8,
+          "end": 6.24,
+          "probability": 0.99658203125
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.44,
+      "end": 9.14,
+      "text": " De vader wacht buiten. Om half 9 gaat hij naar binnen.",
+      "temperature": 0,
+      "avg_logprob": -0.08049936805452619,
+      "compression_ratio": 1.3622047244094488,
+      "no_speech_prob": 5.909658179481525e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.44,
+          "end": 6.62,
+          "probability": 1.0
+        },
+        {
+          "word": " vader",
+          "start": 6.62,
+          "end": 6.96,
+          "probability": 1.0
+        },
+        {
+          "word": " wacht",
+          "start": 6.96,
+          "end": 7.18,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " buiten.",
+          "start": 7.18,
+          "end": 7.52,
+          "probability": 1.0
+        },
+        {
+          "word": " Om",
+          "start": 7.68,
+          "end": 7.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " half",
+          "start": 7.82,
+          "end": 8.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 9",
+          "start": 8.1,
+          "end": 8.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gaat",
+          "start": 8.3,
+          "end": 8.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 8.64,
+          "end": 8.78,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 8.78,
+          "end": 8.92,
+          "probability": 1.0
+        },
+        {
+          "word": " binnen.",
+          "start": 8.92,
+          "end": 9.14,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

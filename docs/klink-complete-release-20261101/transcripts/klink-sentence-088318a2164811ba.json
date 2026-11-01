@@ -1,0 +1,41 @@
+{
+  "id": "klink-sentence-088318a2164811ba",
+  "sha256": "53dccfdbc439691595d22845a69558828c945dca5ef17f5a21d02218ba352231",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Noor is beneden.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Noor is beneden.",
+      "temperature": 0,
+      "avg_logprob": -0.2811681429545085,
+      "compression_ratio": 0.6666666666666666,
+      "no_speech_prob": 3.343304105785094e-11,
+      "words": [
+        {
+          "word": " Noor",
+          "start": 0.0,
+          "end": 0.42,
+          "probability": 0.7236328125
+        },
+        {
+          "word": " is",
+          "start": 0.42,
+          "end": 0.62,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " beneden.",
+          "start": 0.62,
+          "end": 1.02,
+          "probability": 0.9931640625
+        }
+      ]
+    }
+  ]
+}

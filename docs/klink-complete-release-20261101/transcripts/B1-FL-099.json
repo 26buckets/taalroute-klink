@@ -1,0 +1,557 @@
+{
+  "id": "B1-FL-099",
+  "sha256": "1cdde73560117a974d5ca33937a29c35f59215e1e5a1ae6eb51611084187fe81",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een ziekenhuis laat nieuwe informatieborden maken voor bezoekers. Communicatiemedewerker Farid bekijkt de proef voordat de borden worden gedrukt. Op het bord staat dat bezoekers zich op de tweede verdieping moeten melden, maar de receptie is onlangs naar de begaane grond verhuisd. Farid vraagt bij de receptie of de nieuwe locatie klopt. Daarna corrigeert hij de tekst en stuurt een nieuwe proef naar de drukker. Pas na de controle geeft hij toestemming om alle borden te maken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.92,
+      "text": " Een ziekenhuis laat nieuwe informatieborden maken voor bezoekers.",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " ziekenhuis",
+          "start": 0.16,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " laat",
+          "start": 0.72,
+          "end": 0.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 0.92,
+          "end": 1.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " informatieborden",
+          "start": 1.22,
+          "end": 1.96,
+          "probability": 0.99609375
+        },
+        {
+          "word": " maken",
+          "start": 1.96,
+          "end": 2.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 2.24,
+          "end": 2.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bezoekers.",
+          "start": 2.42,
+          "end": 2.92,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.34,
+      "end": 7.26,
+      "text": " Communicatiemedewerker Farid bekijkt de proef voordat de borden worden gedrukt.",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " Communicatiemedewerker",
+          "start": 4.34,
+          "end": 4.86,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " Farid",
+          "start": 4.86,
+          "end": 5.24,
+          "probability": 0.9189453125
+        },
+        {
+          "word": " bekijkt",
+          "start": 5.24,
+          "end": 5.6,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 5.6,
+          "end": 5.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " proef",
+          "start": 5.7,
+          "end": 6.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " voordat",
+          "start": 6.0,
+          "end": 6.4,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 6.4,
+          "end": 6.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " borden",
+          "start": 6.5,
+          "end": 6.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " worden",
+          "start": 6.68,
+          "end": 6.9,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " gedrukt.",
+          "start": 6.9,
+          "end": 7.26,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.64,
+      "end": 10.92,
+      "text": " Op het bord staat dat bezoekers zich op de tweede verdieping moeten melden,",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 7.64,
+          "end": 8.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 8.16,
+          "end": 8.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bord",
+          "start": 8.28,
+          "end": 8.48,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " staat",
+          "start": 8.48,
+          "end": 8.7,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 8.7,
+          "end": 8.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bezoekers",
+          "start": 8.88,
+          "end": 9.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zich",
+          "start": 9.32,
+          "end": 9.46,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 9.46,
+          "end": 9.6,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 9.6,
+          "end": 9.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tweede",
+          "start": 9.7,
+          "end": 9.98,
+          "probability": 0.994140625
+        },
+        {
+          "word": " verdieping",
+          "start": 9.98,
+          "end": 10.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " moeten",
+          "start": 10.36,
+          "end": 10.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " melden,",
+          "start": 10.54,
+          "end": 10.92,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.2,
+      "end": 14.1,
+      "text": " maar de receptie is onlangs naar de begaane grond verhuisd.",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " maar",
+          "start": 11.2,
+          "end": 11.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 11.7,
+          "end": 11.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " receptie",
+          "start": 11.82,
+          "end": 12.26,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 12.26,
+          "end": 12.4,
+          "probability": 1.0
+        },
+        {
+          "word": " onlangs",
+          "start": 12.4,
+          "end": 12.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 12.78,
+          "end": 12.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 12.88,
+          "end": 12.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " begaane",
+          "start": 12.98,
+          "end": 13.36,
+          "probability": 0.58447265625
+        },
+        {
+          "word": " grond",
+          "start": 13.36,
+          "end": 13.6,
+          "probability": 0.998046875
+        },
+        {
+          "word": " verhuisd.",
+          "start": 13.6,
+          "end": 14.1,
+          "probability": 0.97119140625
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.56,
+      "end": 17.12,
+      "text": " Farid vraagt bij de receptie of de nieuwe locatie klopt.",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " Farid",
+          "start": 14.56,
+          "end": 15.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 15.08,
+          "end": 15.38,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bij",
+          "start": 15.38,
+          "end": 15.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 15.5,
+          "end": 15.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " receptie",
+          "start": 15.6,
+          "end": 16.02,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 16.02,
+          "end": 16.12,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 16.12,
+          "end": 16.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nieuwe",
+          "start": 16.2,
+          "end": 16.36,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " locatie",
+          "start": 16.36,
+          "end": 16.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klopt.",
+          "start": 16.82,
+          "end": 17.12,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.86,
+      "end": 20.8,
+      "text": " Daarna corrigeert hij de tekst en stuurt een nieuwe proef naar de drukker.",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 17.86,
+          "end": 18.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " corrigeert",
+          "start": 18.12,
+          "end": 18.64,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hij",
+          "start": 18.64,
+          "end": 18.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 18.74,
+          "end": 18.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tekst",
+          "start": 18.88,
+          "end": 19.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 19.22,
+          "end": 19.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " stuurt",
+          "start": 19.34,
+          "end": 19.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 19.56,
+          "end": 19.7,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " nieuwe",
+          "start": 19.7,
+          "end": 19.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " proef",
+          "start": 19.94,
+          "end": 20.22,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 20.22,
+          "end": 20.34,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 20.34,
+          "end": 20.46,
+          "probability": 1.0
+        },
+        {
+          "word": " drukker.",
+          "start": 20.46,
+          "end": 20.8,
+          "probability": 0.99609375
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 21.4,
+      "end": 24.4,
+      "text": " Pas na de controle geeft hij toestemming om alle borden te maken.",
+      "temperature": 0,
+      "avg_logprob": -0.07637191280241935,
+      "compression_ratio": 1.7481751824817517,
+      "no_speech_prob": 5.598832595460346e-12,
+      "words": [
+        {
+          "word": " Pas",
+          "start": 21.4,
+          "end": 21.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " na",
+          "start": 21.88,
+          "end": 22.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 22.02,
+          "end": 22.16,
+          "probability": 1.0
+        },
+        {
+          "word": " controle",
+          "start": 22.16,
+          "end": 22.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " geeft",
+          "start": 22.54,
+          "end": 22.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hij",
+          "start": 22.82,
+          "end": 22.94,
+          "probability": 1.0
+        },
+        {
+          "word": " toestemming",
+          "start": 22.94,
+          "end": 23.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 23.46,
+          "end": 23.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " alle",
+          "start": 23.58,
+          "end": 23.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " borden",
+          "start": 23.74,
+          "end": 23.96,
+          "probability": 1.0
+        },
+        {
+          "word": " te",
+          "start": 23.96,
+          "end": 24.12,
+          "probability": 1.0
+        },
+        {
+          "word": " maken.",
+          "start": 24.12,
+          "end": 24.4,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

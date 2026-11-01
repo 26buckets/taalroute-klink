@@ -1,0 +1,515 @@
+{
+  "id": "A2-T71",
+  "sha256": "6b895d5e7707f9c0cbc681c58d3c5959dae0156bf9544d5b0a6c06369da406bf",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Een kantoor bestelt voor vrijdag 10 broodjes en 6 flessen water. De bezorger brengt vrijdag om 11 uur de bestelling, maar er zitten maar 8 broodjes in de tas. Het water is wel compleet. De medewerker belt direct de leverancier. Die biedt aan de twee ontbrekende broodjes voor half 12 te brengen. De medewerker vraagt om een bevestiging per e-mail. Om kwart over 11 ontvangt hij dat bericht.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.54,
+      "text": " Een kantoor bestelt voor vrijdag 10 broodjes en 6 flessen water.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.990234375
+        },
+        {
+          "word": " kantoor",
+          "start": 0.12,
+          "end": 0.58,
+          "probability": 1.0
+        },
+        {
+          "word": " bestelt",
+          "start": 0.58,
+          "end": 0.96,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " voor",
+          "start": 0.96,
+          "end": 1.14,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 1.14,
+          "end": 1.62,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 10",
+          "start": 1.62,
+          "end": 1.82,
+          "probability": 0.650390625
+        },
+        {
+          "word": " broodjes",
+          "start": 1.82,
+          "end": 2.4,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 2.4,
+          "end": 2.62,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " 6",
+          "start": 2.62,
+          "end": 2.82,
+          "probability": 0.97119140625
+        },
+        {
+          "word": " flessen",
+          "start": 2.82,
+          "end": 3.2,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " water.",
+          "start": 3.2,
+          "end": 3.54,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.8,
+      "end": 8.56,
+      "text": " De bezorger brengt vrijdag om 11 uur de bestelling, maar er zitten maar 8 broodjes in de tas.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 3.8,
+          "end": 3.98,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bezorger",
+          "start": 3.98,
+          "end": 4.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " brengt",
+          "start": 4.48,
+          "end": 4.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag",
+          "start": 4.8,
+          "end": 5.24,
+          "probability": 1.0
+        },
+        {
+          "word": " om",
+          "start": 5.24,
+          "end": 5.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " 11",
+          "start": 5.44,
+          "end": 5.72,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " uur",
+          "start": 5.72,
+          "end": 5.94,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " de",
+          "start": 5.94,
+          "end": 6.04,
+          "probability": 0.998046875
+        },
+        {
+          "word": " bestelling,",
+          "start": 6.04,
+          "end": 6.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 6.6,
+          "end": 6.76,
+          "probability": 0.998046875
+        },
+        {
+          "word": " er",
+          "start": 6.76,
+          "end": 6.9,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " zitten",
+          "start": 6.9,
+          "end": 7.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " maar",
+          "start": 7.1,
+          "end": 7.28,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 8",
+          "start": 7.28,
+          "end": 7.56,
+          "probability": 0.9775390625
+        },
+        {
+          "word": " broodjes",
+          "start": 7.56,
+          "end": 8.06,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 8.06,
+          "end": 8.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.2,
+          "end": 8.3,
+          "probability": 1.0
+        },
+        {
+          "word": " tas.",
+          "start": 8.3,
+          "end": 8.56,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.76,
+      "end": 10.2,
+      "text": " Het water is wel compleet.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " Het",
+          "start": 8.76,
+          "end": 8.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " water",
+          "start": 8.98,
+          "end": 9.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 9.28,
+          "end": 9.48,
+          "probability": 1.0
+        },
+        {
+          "word": " wel",
+          "start": 9.48,
+          "end": 9.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " compleet.",
+          "start": 9.64,
+          "end": 10.2,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.36,
+      "end": 12.58,
+      "text": " De medewerker belt direct de leverancier.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 10.36,
+          "end": 10.5,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 10.5,
+          "end": 11.1,
+          "probability": 1.0
+        },
+        {
+          "word": " belt",
+          "start": 11.1,
+          "end": 11.34,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " direct",
+          "start": 11.34,
+          "end": 11.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 11.7,
+          "end": 11.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leverancier.",
+          "start": 11.86,
+          "end": 12.58,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 12.76,
+      "end": 16.22,
+      "text": " Die biedt aan de twee ontbrekende broodjes voor half 12 te brengen.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " Die",
+          "start": 12.76,
+          "end": 12.96,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " biedt",
+          "start": 12.96,
+          "end": 13.24,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 13.24,
+          "end": 13.34,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 13.34,
+          "end": 13.48,
+          "probability": 1.0
+        },
+        {
+          "word": " twee",
+          "start": 13.48,
+          "end": 13.68,
+          "probability": 0.599609375
+        },
+        {
+          "word": " ontbrekende",
+          "start": 13.68,
+          "end": 14.34,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " broodjes",
+          "start": 14.34,
+          "end": 14.84,
+          "probability": 1.0
+        },
+        {
+          "word": " voor",
+          "start": 14.84,
+          "end": 15.08,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " half",
+          "start": 15.08,
+          "end": 15.36,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " 12",
+          "start": 15.36,
+          "end": 15.62,
+          "probability": 0.93603515625
+        },
+        {
+          "word": " te",
+          "start": 15.62,
+          "end": 15.9,
+          "probability": 0.94580078125
+        },
+        {
+          "word": " brengen.",
+          "start": 15.9,
+          "end": 16.22,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 16.32,
+      "end": 18.9,
+      "text": " De medewerker vraagt om een bevestiging per e-mail.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 16.32,
+          "end": 16.5,
+          "probability": 1.0
+        },
+        {
+          "word": " medewerker",
+          "start": 16.5,
+          "end": 17.06,
+          "probability": 1.0
+        },
+        {
+          "word": " vraagt",
+          "start": 17.06,
+          "end": 17.44,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " om",
+          "start": 17.44,
+          "end": 17.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 17.56,
+          "end": 17.68,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " bevestiging",
+          "start": 17.68,
+          "end": 18.28,
+          "probability": 1.0
+        },
+        {
+          "word": " per",
+          "start": 18.28,
+          "end": 18.46,
+          "probability": 1.0
+        },
+        {
+          "word": " e",
+          "start": 18.46,
+          "end": 18.66,
+          "probability": 0.99267578125
+        },
+        {
+          "word": "-mail.",
+          "start": 18.66,
+          "end": 18.9,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.12,
+      "end": 21.34,
+      "text": " Om kwart over 11 ontvangt hij dat bericht.",
+      "temperature": 0,
+      "avg_logprob": -0.0671682778526755,
+      "compression_ratio": 1.625,
+      "no_speech_prob": 6.773975911450458e-12,
+      "words": [
+        {
+          "word": " Om",
+          "start": 19.12,
+          "end": 19.28,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " kwart",
+          "start": 19.28,
+          "end": 19.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " over",
+          "start": 19.58,
+          "end": 19.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 11",
+          "start": 19.82,
+          "end": 20.08,
+          "probability": 0.9912109375
+        },
+        {
+          "word": " ontvangt",
+          "start": 20.08,
+          "end": 20.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " hij",
+          "start": 20.66,
+          "end": 20.76,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 20.76,
+          "end": 20.94,
+          "probability": 1.0
+        },
+        {
+          "word": " bericht.",
+          "start": 20.94,
+          "end": 21.34,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

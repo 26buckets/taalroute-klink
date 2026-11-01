@@ -1,0 +1,83 @@
+{
+  "id": "ZDZ-A2-069",
+  "sha256": "a03149588d701f31a9289927e6a6ef85a47e2063513a9c09eb7da096dc7bd482",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Laten we morgen beginnen, want dan heeft iedereen meer tijd.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.18,
+      "text": " Laten we morgen beginnen, want dan heeft iedereen meer tijd.",
+      "temperature": 0,
+      "avg_logprob": -0.07684847712516785,
+      "compression_ratio": 0.9375,
+      "no_speech_prob": 4.633349259819397e-12,
+      "words": [
+        {
+          "word": " Laten",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.99609375
+        },
+        {
+          "word": " we",
+          "start": 0.24,
+          "end": 0.34,
+          "probability": 1.0
+        },
+        {
+          "word": " morgen",
+          "start": 0.34,
+          "end": 0.56,
+          "probability": 1.0
+        },
+        {
+          "word": " beginnen,",
+          "start": 0.56,
+          "end": 0.92,
+          "probability": 1.0
+        },
+        {
+          "word": " want",
+          "start": 1.12,
+          "end": 1.18,
+          "probability": 0.998046875
+        },
+        {
+          "word": " dan",
+          "start": 1.18,
+          "end": 1.28,
+          "probability": 1.0
+        },
+        {
+          "word": " heeft",
+          "start": 1.28,
+          "end": 1.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iedereen",
+          "start": 1.44,
+          "end": 1.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " meer",
+          "start": 1.74,
+          "end": 1.92,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " tijd.",
+          "start": 1.92,
+          "end": 2.18,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

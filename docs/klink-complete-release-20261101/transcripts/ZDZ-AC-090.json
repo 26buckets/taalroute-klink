@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AC-090",
+  "sha256": "e68bc53413417b0749e77ca6fd2422cdb75c2484d1f978a88b94944bce15529d",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit is mijn telefoonnummer.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Dit is mijn telefoonnummer.",
+      "temperature": 0,
+      "avg_logprob": -0.1385524489662864,
+      "compression_ratio": 0.7714285714285715,
+      "no_speech_prob": 5.807417047254404e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.92724609375
+        },
+        {
+          "word": " is",
+          "start": 0.16,
+          "end": 0.28,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " mijn",
+          "start": 0.28,
+          "end": 0.44,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " telefoonnummer.",
+          "start": 0.44,
+          "end": 1.02,
+          "probability": 0.998046875
+        }
+      ]
+    }
+  ]
+}

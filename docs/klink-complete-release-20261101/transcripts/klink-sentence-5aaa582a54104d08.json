@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-5aaa582a54104d08",
+  "sha256": "accbb44d95602777fb8cd2f7fab9429bfee2ddea1df5fb0e368ffe865b46d562",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De zon staat boven de huizen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.78,
+      "text": " De zon staat boven de huizen.",
+      "temperature": 0,
+      "avg_logprob": -0.06924790602463943,
+      "compression_ratio": 0.7837837837837838,
+      "no_speech_prob": 4.672771284491839e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.91259765625
+        },
+        {
+          "word": " zon",
+          "start": 0.18,
+          "end": 0.48,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " staat",
+          "start": 0.48,
+          "end": 0.78,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " boven",
+          "start": 0.78,
+          "end": 1.3,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 1.3,
+          "end": 1.42,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " huizen.",
+          "start": 1.42,
+          "end": 1.78,
+          "probability": 0.99755859375
+        }
+      ]
+    }
+  ]
+}

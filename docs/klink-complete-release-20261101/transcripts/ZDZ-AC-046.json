@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AC-046",
+  "sha256": "e0effbacfcd085dd591cefe0bbc2ac89aa474f41fbc138d0746757f82dfe0db5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Gisteren was ik bij mijn moeder.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.43999999999999995,
+      "end": 1.36,
+      "text": " Gisteren was ik bij mijn moeder.",
+      "temperature": 0,
+      "avg_logprob": -0.25890753819392276,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 5.93313809540974e-12,
+      "words": [
+        {
+          "word": " Gisteren",
+          "start": 0.43999999999999995,
+          "end": 0.68,
+          "probability": 0.96484375
+        },
+        {
+          "word": " was",
+          "start": 0.68,
+          "end": 0.8,
+          "probability": 1.0
+        },
+        {
+          "word": " ik",
+          "start": 0.8,
+          "end": 0.9,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 0.9,
+          "end": 1.0,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 1.0,
+          "end": 1.12,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " moeder.",
+          "start": 1.12,
+          "end": 1.36,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

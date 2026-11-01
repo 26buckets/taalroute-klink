@@ -1,0 +1,594 @@
+{
+  "id": "A2-T83",
+  "sha256": "eed7aaebd70c22be6244128255f34fab82bed138ffac43c0f0a230c3464ab1d3",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mededeling aan bewoners. Vanaf maandag staan er drie bakken bij de achterdeur. Papier hoort in de blauwe bak en glas in de groene bak. Voor gewoon afval staat er een grijze bak. Zet geen losse spullen naast de bakken, want de doorgang moet vrij blijven. De bakken worden op woensdag geleegd. Op dinsdagavond controleert de beheerder of de doorgang vrij is. Wie een volle bak ziet, mag dit melden bij de beheerder. De bewoners kunnen de bakken vanaf maandag gebruiken.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 4.2,
+      "text": " Mededeling aan bewoners. Vanaf maandag staan er drie bakken bij de achterdeur.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " Mededeling",
+          "start": 0.0,
+          "end": 0.74,
+          "probability": 0.986328125
+        },
+        {
+          "word": " aan",
+          "start": 0.74,
+          "end": 0.92,
+          "probability": 1.0
+        },
+        {
+          "word": " bewoners.",
+          "start": 0.92,
+          "end": 1.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " Vanaf",
+          "start": 1.58,
+          "end": 2.04,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 2.04,
+          "end": 2.5,
+          "probability": 1.0
+        },
+        {
+          "word": " staan",
+          "start": 2.5,
+          "end": 2.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " er",
+          "start": 2.68,
+          "end": 2.88,
+          "probability": 1.0
+        },
+        {
+          "word": " drie",
+          "start": 2.88,
+          "end": 3.06,
+          "probability": 0.92041015625
+        },
+        {
+          "word": " bakken",
+          "start": 3.06,
+          "end": 3.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bij",
+          "start": 3.42,
+          "end": 3.54,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 3.54,
+          "end": 3.66,
+          "probability": 1.0
+        },
+        {
+          "word": " achterdeur.",
+          "start": 3.66,
+          "end": 4.2,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.3,
+      "end": 7.16,
+      "text": " Papier hoort in de blauwe bak en glas in de groene bak.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " Papier",
+          "start": 4.3,
+          "end": 4.76,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " hoort",
+          "start": 4.76,
+          "end": 5.06,
+          "probability": 1.0
+        },
+        {
+          "word": " in",
+          "start": 5.06,
+          "end": 5.2,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.2,
+          "end": 5.28,
+          "probability": 1.0
+        },
+        {
+          "word": " blauwe",
+          "start": 5.28,
+          "end": 5.64,
+          "probability": 1.0
+        },
+        {
+          "word": " bak",
+          "start": 5.64,
+          "end": 5.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " en",
+          "start": 5.8,
+          "end": 6.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " glas",
+          "start": 6.06,
+          "end": 6.48,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " in",
+          "start": 6.48,
+          "end": 6.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 6.58,
+          "end": 6.7,
+          "probability": 1.0
+        },
+        {
+          "word": " groene",
+          "start": 6.7,
+          "end": 7.0,
+          "probability": 1.0
+        },
+        {
+          "word": " bak.",
+          "start": 7.0,
+          "end": 7.16,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.36,
+      "end": 9.56,
+      "text": " Voor gewoon afval staat er een grijze bak.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " Voor",
+          "start": 7.36,
+          "end": 7.6,
+          "probability": 1.0
+        },
+        {
+          "word": " gewoon",
+          "start": 7.6,
+          "end": 7.96,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " afval",
+          "start": 7.96,
+          "end": 8.4,
+          "probability": 1.0
+        },
+        {
+          "word": " staat",
+          "start": 8.4,
+          "end": 8.64,
+          "probability": 1.0
+        },
+        {
+          "word": " er",
+          "start": 8.64,
+          "end": 8.82,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 8.82,
+          "end": 8.96,
+          "probability": 1.0
+        },
+        {
+          "word": " grijze",
+          "start": 8.96,
+          "end": 9.42,
+          "probability": 1.0
+        },
+        {
+          "word": " bak.",
+          "start": 9.42,
+          "end": 9.56,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 9.8,
+      "end": 13.46,
+      "text": " Zet geen losse spullen naast de bakken, want de doorgang moet vrij blijven.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " Zet",
+          "start": 9.8,
+          "end": 10.16,
+          "probability": 1.0
+        },
+        {
+          "word": " geen",
+          "start": 10.16,
+          "end": 10.3,
+          "probability": 1.0
+        },
+        {
+          "word": " losse",
+          "start": 10.3,
+          "end": 10.72,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " spullen",
+          "start": 10.72,
+          "end": 11.02,
+          "probability": 1.0
+        },
+        {
+          "word": " naast",
+          "start": 11.02,
+          "end": 11.42,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 11.42,
+          "end": 11.48,
+          "probability": 1.0
+        },
+        {
+          "word": " bakken,",
+          "start": 11.48,
+          "end": 11.82,
+          "probability": 1.0
+        },
+        {
+          "word": " want",
+          "start": 11.84,
+          "end": 12.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.08,
+          "end": 12.2,
+          "probability": 1.0
+        },
+        {
+          "word": " doorgang",
+          "start": 12.2,
+          "end": 12.56,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " moet",
+          "start": 12.56,
+          "end": 12.72,
+          "probability": 1.0
+        },
+        {
+          "word": " vrij",
+          "start": 12.72,
+          "end": 12.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " blijven.",
+          "start": 12.96,
+          "end": 13.46,
+          "probability": 0.966796875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.54,
+      "end": 15.38,
+      "text": " De bakken worden op woensdag geleegd.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " De",
+          "start": 13.54,
+          "end": 13.7,
+          "probability": 1.0
+        },
+        {
+          "word": " bakken",
+          "start": 13.7,
+          "end": 14.02,
+          "probability": 1.0
+        },
+        {
+          "word": " worden",
+          "start": 14.02,
+          "end": 14.14,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 14.14,
+          "end": 14.36,
+          "probability": 1.0
+        },
+        {
+          "word": " woensdag",
+          "start": 14.36,
+          "end": 14.84,
+          "probability": 1.0
+        },
+        {
+          "word": " geleegd.",
+          "start": 14.84,
+          "end": 15.38,
+          "probability": 0.97216796875
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 15.4,
+      "end": 18.9,
+      "text": " Op dinsdagavond controleert de beheerder of de doorgang vrij is.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " Op",
+          "start": 15.4,
+          "end": 15.62,
+          "probability": 1.0
+        },
+        {
+          "word": " dinsdagavond",
+          "start": 15.62,
+          "end": 16.46,
+          "probability": 1.0
+        },
+        {
+          "word": " controleert",
+          "start": 16.46,
+          "end": 17.02,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " de",
+          "start": 17.02,
+          "end": 17.12,
+          "probability": 1.0
+        },
+        {
+          "word": " beheerder",
+          "start": 17.12,
+          "end": 17.5,
+          "probability": 1.0
+        },
+        {
+          "word": " of",
+          "start": 17.5,
+          "end": 17.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 17.8,
+          "end": 17.98,
+          "probability": 1.0
+        },
+        {
+          "word": " doorgang",
+          "start": 17.98,
+          "end": 18.32,
+          "probability": 1.0
+        },
+        {
+          "word": " vrij",
+          "start": 18.32,
+          "end": 18.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is.",
+          "start": 18.56,
+          "end": 18.9,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.1,
+      "end": 21.62,
+      "text": " Wie een volle bak ziet, mag dit melden bij de beheerder.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " Wie",
+          "start": 19.1,
+          "end": 19.3,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 19.3,
+          "end": 19.42,
+          "probability": 1.0
+        },
+        {
+          "word": " volle",
+          "start": 19.42,
+          "end": 19.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bak",
+          "start": 19.72,
+          "end": 19.86,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet,",
+          "start": 19.86,
+          "end": 20.08,
+          "probability": 1.0
+        },
+        {
+          "word": " mag",
+          "start": 20.24,
+          "end": 20.44,
+          "probability": 1.0
+        },
+        {
+          "word": " dit",
+          "start": 20.44,
+          "end": 20.62,
+          "probability": 1.0
+        },
+        {
+          "word": " melden",
+          "start": 20.62,
+          "end": 20.98,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 20.98,
+          "end": 21.08,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.08,
+          "end": 21.2,
+          "probability": 1.0
+        },
+        {
+          "word": " beheerder.",
+          "start": 21.2,
+          "end": 21.62,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "seek": 0,
+      "start": 21.72,
+      "end": 24.32,
+      "text": " De bewoners kunnen de bakken vanaf maandag gebruiken.",
+      "temperature": 0,
+      "avg_logprob": -0.047213483739782264,
+      "compression_ratio": 1.755639097744361,
+      "no_speech_prob": 0.00280056893825531,
+      "words": [
+        {
+          "word": " De",
+          "start": 21.72,
+          "end": 21.88,
+          "probability": 1.0
+        },
+        {
+          "word": " bewoners",
+          "start": 21.88,
+          "end": 22.44,
+          "probability": 1.0
+        },
+        {
+          "word": " kunnen",
+          "start": 22.44,
+          "end": 22.62,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 22.62,
+          "end": 22.78,
+          "probability": 1.0
+        },
+        {
+          "word": " bakken",
+          "start": 22.78,
+          "end": 23.1,
+          "probability": 1.0
+        },
+        {
+          "word": " vanaf",
+          "start": 23.1,
+          "end": 23.44,
+          "probability": 1.0
+        },
+        {
+          "word": " maandag",
+          "start": 23.44,
+          "end": 23.82,
+          "probability": 1.0
+        },
+        {
+          "word": " gebruiken.",
+          "start": 23.82,
+          "end": 24.32,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

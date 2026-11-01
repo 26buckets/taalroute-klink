@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AC-092",
+  "sha256": "423a3747c2c16ea8eca2e03ab5ae77ea056ac3affd79dd55f652dd98a01a15cc",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Stop alsjeblieft, ik heb pijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.28,
+      "text": " Stop alsjeblieft, ik heb pijn.",
+      "temperature": 0,
+      "avg_logprob": -0.1294253349304199,
+      "compression_ratio": 0.7894736842105263,
+      "no_speech_prob": 4.8705679246696665e-12,
+      "words": [
+        {
+          "word": " Stop",
+          "start": 0.0,
+          "end": 0.26,
+          "probability": 0.8857421875
+        },
+        {
+          "word": " alsjeblieft,",
+          "start": 0.26,
+          "end": 0.78,
+          "probability": 0.91943359375
+        },
+        {
+          "word": " ik",
+          "start": 0.88,
+          "end": 0.9,
+          "probability": 0.994140625
+        },
+        {
+          "word": " heb",
+          "start": 0.9,
+          "end": 1.04,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " pijn.",
+          "start": 1.04,
+          "end": 1.28,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

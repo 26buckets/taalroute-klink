@@ -1,0 +1,297 @@
+{
+  "id": "A1-T97",
+  "sha256": "11d2c8e126f949dcc20867e68275f9ff24494c61e9ba4d2fe7ca605549e76a0f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Na de sportles ziet een vrouw één schoen onder een bank. De schoen is niet van haar. Zij geeft hem aan de docent. De docent legt de schoen bij de deur. Morgen kan de eigenaar hem ophalen.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.4,
+      "text": " Na de sportles ziet een vrouw één schoen onder een bank.",
+      "temperature": 0,
+      "avg_logprob": -0.06867118676503499,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 4.4630770433540246e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " de",
+          "start": 0.16,
+          "end": 0.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " sportles",
+          "start": 0.26,
+          "end": 0.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " ziet",
+          "start": 0.7,
+          "end": 0.86,
+          "probability": 0.998046875
+        },
+        {
+          "word": " een",
+          "start": 0.86,
+          "end": 0.98,
+          "probability": 1.0
+        },
+        {
+          "word": " vrouw",
+          "start": 0.98,
+          "end": 1.36,
+          "probability": 1.0
+        },
+        {
+          "word": " één",
+          "start": 1.36,
+          "end": 1.52,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " schoen",
+          "start": 1.52,
+          "end": 1.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " onder",
+          "start": 1.82,
+          "end": 2.02,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 2.02,
+          "end": 2.14,
+          "probability": 0.994140625
+        },
+        {
+          "word": " bank.",
+          "start": 2.14,
+          "end": 2.4,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 2.7,
+      "end": 4.0,
+      "text": " De schoen is niet van haar.",
+      "temperature": 0,
+      "avg_logprob": -0.06867118676503499,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 4.4630770433540246e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 2.7,
+          "end": 3.12,
+          "probability": 1.0
+        },
+        {
+          "word": " schoen",
+          "start": 3.12,
+          "end": 3.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 3.36,
+          "end": 3.48,
+          "probability": 1.0
+        },
+        {
+          "word": " niet",
+          "start": 3.48,
+          "end": 3.6,
+          "probability": 1.0
+        },
+        {
+          "word": " van",
+          "start": 3.6,
+          "end": 3.76,
+          "probability": 1.0
+        },
+        {
+          "word": " haar.",
+          "start": 3.76,
+          "end": 4.0,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 4.42,
+      "end": 5.7,
+      "text": " Zij geeft hem aan de docent.",
+      "temperature": 0,
+      "avg_logprob": -0.06867118676503499,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 4.4630770433540246e-12,
+      "words": [
+        {
+          "word": " Zij",
+          "start": 4.42,
+          "end": 4.78,
+          "probability": 0.99609375
+        },
+        {
+          "word": " geeft",
+          "start": 4.78,
+          "end": 5.0,
+          "probability": 1.0
+        },
+        {
+          "word": " hem",
+          "start": 5.0,
+          "end": 5.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aan",
+          "start": 5.1,
+          "end": 5.22,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 5.22,
+          "end": 5.32,
+          "probability": 1.0
+        },
+        {
+          "word": " docent.",
+          "start": 5.32,
+          "end": 5.7,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 6.14,
+      "end": 7.76,
+      "text": " De docent legt de schoen bij de deur.",
+      "temperature": 0,
+      "avg_logprob": -0.06867118676503499,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 4.4630770433540246e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 6.14,
+          "end": 6.48,
+          "probability": 1.0
+        },
+        {
+          "word": " docent",
+          "start": 6.48,
+          "end": 6.8,
+          "probability": 1.0
+        },
+        {
+          "word": " legt",
+          "start": 6.8,
+          "end": 7.04,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 7.04,
+          "end": 7.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " schoen",
+          "start": 7.1,
+          "end": 7.3,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 7.3,
+          "end": 7.42,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 7.42,
+          "end": 7.52,
+          "probability": 1.0
+        },
+        {
+          "word": " deur.",
+          "start": 7.52,
+          "end": 7.76,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 8.3,
+      "end": 9.78,
+      "text": " Morgen kan de eigenaar hem ophalen.",
+      "temperature": 0,
+      "avg_logprob": -0.06867118676503499,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 4.4630770433540246e-12,
+      "words": [
+        {
+          "word": " Morgen",
+          "start": 8.3,
+          "end": 8.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kan",
+          "start": 8.6,
+          "end": 8.78,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.78,
+          "end": 8.9,
+          "probability": 1.0
+        },
+        {
+          "word": " eigenaar",
+          "start": 8.9,
+          "end": 9.24,
+          "probability": 1.0
+        },
+        {
+          "word": " hem",
+          "start": 9.24,
+          "end": 9.38,
+          "probability": 1.0
+        },
+        {
+          "word": " ophalen.",
+          "start": 9.38,
+          "end": 9.78,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

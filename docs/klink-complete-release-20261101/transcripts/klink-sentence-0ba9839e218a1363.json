@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-0ba9839e218a1363",
+  "sha256": "70cc282bf79fcb98aaddc2774761973a2295a1a40bbcba2833f2c6c0c699ea1f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik pak mijn koffer in.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik pak mijn koffer in.",
+      "temperature": 0,
+      "avg_logprob": -0.1391363577409224,
+      "compression_ratio": 0.7333333333333333,
+      "no_speech_prob": 3.977162349455554e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.904296875
+        },
+        {
+          "word": " pak",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " mijn",
+          "start": 0.3,
+          "end": 0.44,
+          "probability": 0.97265625
+        },
+        {
+          "word": " koffer",
+          "start": 0.44,
+          "end": 0.8,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " in.",
+          "start": 0.8,
+          "end": 0.98,
+          "probability": 0.98486328125
+        }
+      ]
+    }
+  ]
+}

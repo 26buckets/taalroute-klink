@@ -1,0 +1,593 @@
+{
+  "id": "B1-FL-036",
+  "sha256": "aac7bf3868ea6467e6568b16800d35ac8f7d9c04c5965e8c333dccc10c0b3b01",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Na een etentje merkt Koen dat er op de rekening een drankje staat dat niemand aan tafel heeft besteld. Zijn vrienden willen snel vertrekken en stellen voor het bedrag gewoon te betalen. Koen vindt dat niet nodig. Hij vraagt de medewerker vriendelijk om de bestelling te controleren. De medewerker ontdekt dat het drankje bij een andere tafel hoort en past de rekening aan. Koen bedankt haar. Buiten zegt hij tegen zijn vrienden dat een fout bespreken niet hetzelfde is als onbeleefd zijn.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 5.24,
+      "text": " Na een etentje merkt Koen dat er op de rekening een drankje staat dat niemand aan tafel heeft besteld.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " Na",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.978515625
+        },
+        {
+          "word": " een",
+          "start": 0.16,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " etentje",
+          "start": 0.32,
+          "end": 0.9,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " merkt",
+          "start": 0.9,
+          "end": 1.24,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " Koen",
+          "start": 1.24,
+          "end": 1.56,
+          "probability": 0.9462890625
+        },
+        {
+          "word": " dat",
+          "start": 1.56,
+          "end": 1.84,
+          "probability": 0.98193359375
+        },
+        {
+          "word": " er",
+          "start": 1.84,
+          "end": 1.98,
+          "probability": 0.998046875
+        },
+        {
+          "word": " op",
+          "start": 1.98,
+          "end": 2.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.08,
+          "end": 2.18,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rekening",
+          "start": 2.18,
+          "end": 2.62,
+          "probability": 1.0
+        },
+        {
+          "word": " een",
+          "start": 2.62,
+          "end": 2.76,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " drankje",
+          "start": 2.76,
+          "end": 3.16,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " staat",
+          "start": 3.16,
+          "end": 3.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 3.46,
+          "end": 3.68,
+          "probability": 0.9638671875
+        },
+        {
+          "word": " niemand",
+          "start": 3.68,
+          "end": 3.98,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " aan",
+          "start": 3.98,
+          "end": 4.2,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " tafel",
+          "start": 4.2,
+          "end": 4.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " heeft",
+          "start": 4.58,
+          "end": 4.8,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " besteld.",
+          "start": 4.8,
+          "end": 5.24,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 5.46,
+      "end": 9.12,
+      "text": " Zijn vrienden willen snel vertrekken en stellen voor het bedrag gewoon te betalen.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " Zijn",
+          "start": 5.46,
+          "end": 5.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vrienden",
+          "start": 5.74,
+          "end": 6.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " willen",
+          "start": 6.08,
+          "end": 6.26,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " snel",
+          "start": 6.26,
+          "end": 6.58,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vertrekken",
+          "start": 6.58,
+          "end": 7.12,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 7.12,
+          "end": 7.32,
+          "probability": 0.994140625
+        },
+        {
+          "word": " stellen",
+          "start": 7.32,
+          "end": 7.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 7.56,
+          "end": 7.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 7.74,
+          "end": 7.88,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bedrag",
+          "start": 7.88,
+          "end": 8.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " gewoon",
+          "start": 8.22,
+          "end": 8.48,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " te",
+          "start": 8.48,
+          "end": 8.66,
+          "probability": 1.0
+        },
+        {
+          "word": " betalen.",
+          "start": 8.66,
+          "end": 9.12,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 9.3,
+      "end": 10.9,
+      "text": " Koen vindt dat niet nodig.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " Koen",
+          "start": 9.3,
+          "end": 9.7,
+          "probability": 1.0
+        },
+        {
+          "word": " vindt",
+          "start": 9.7,
+          "end": 10.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 10.14,
+          "end": 10.26,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " niet",
+          "start": 10.26,
+          "end": 10.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nodig.",
+          "start": 10.44,
+          "end": 10.9,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 11.16,
+      "end": 14.3,
+      "text": " Hij vraagt de medewerker vriendelijk om de bestelling te controleren.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 11.16,
+          "end": 11.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " vraagt",
+          "start": 11.3,
+          "end": 11.62,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 11.62,
+          "end": 11.72,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " medewerker",
+          "start": 11.72,
+          "end": 12.28,
+          "probability": 1.0
+        },
+        {
+          "word": " vriendelijk",
+          "start": 12.28,
+          "end": 12.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 12.78,
+          "end": 12.96,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 12.96,
+          "end": 13.06,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bestelling",
+          "start": 13.06,
+          "end": 13.46,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " te",
+          "start": 13.46,
+          "end": 13.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " controleren.",
+          "start": 13.62,
+          "end": 14.3,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 14.46,
+      "end": 18.74,
+      "text": " De medewerker ontdekt dat het drankje bij een andere tafel hoort en past de rekening aan.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 14.46,
+          "end": 14.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " medewerker",
+          "start": 14.58,
+          "end": 15.18,
+          "probability": 1.0
+        },
+        {
+          "word": " ontdekt",
+          "start": 15.18,
+          "end": 15.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 15.58,
+          "end": 15.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 15.78,
+          "end": 15.94,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " drankje",
+          "start": 15.94,
+          "end": 16.3,
+          "probability": 1.0
+        },
+        {
+          "word": " bij",
+          "start": 16.3,
+          "end": 16.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " een",
+          "start": 16.42,
+          "end": 16.56,
+          "probability": 1.0
+        },
+        {
+          "word": " andere",
+          "start": 16.56,
+          "end": 16.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tafel",
+          "start": 16.86,
+          "end": 17.3,
+          "probability": 1.0
+        },
+        {
+          "word": " hoort",
+          "start": 17.3,
+          "end": 17.6,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 17.6,
+          "end": 17.78,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " past",
+          "start": 17.78,
+          "end": 18.02,
+          "probability": 0.998046875
+        },
+        {
+          "word": " de",
+          "start": 18.02,
+          "end": 18.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " rekening",
+          "start": 18.14,
+          "end": 18.54,
+          "probability": 1.0
+        },
+        {
+          "word": " aan.",
+          "start": 18.54,
+          "end": 18.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.94,
+      "end": 19.74,
+      "text": " Koen bedankt haar.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " Koen",
+          "start": 18.94,
+          "end": 19.16,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bedankt",
+          "start": 19.16,
+          "end": 19.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " haar.",
+          "start": 19.58,
+          "end": 19.74,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 19.9,
+      "end": 24.62,
+      "text": " Buiten zegt hij tegen zijn vrienden dat een fout bespreken niet hetzelfde is als onbeleefd zijn.",
+      "temperature": 0,
+      "avg_logprob": -0.041706577228133083,
+      "compression_ratio": 1.7875457875457876,
+      "no_speech_prob": 7.354931767789008e-12,
+      "words": [
+        {
+          "word": " Buiten",
+          "start": 19.9,
+          "end": 20.24,
+          "probability": 0.998046875
+        },
+        {
+          "word": " zegt",
+          "start": 20.24,
+          "end": 20.52,
+          "probability": 1.0
+        },
+        {
+          "word": " hij",
+          "start": 20.52,
+          "end": 20.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " tegen",
+          "start": 20.64,
+          "end": 20.9,
+          "probability": 1.0
+        },
+        {
+          "word": " zijn",
+          "start": 20.9,
+          "end": 21.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrienden",
+          "start": 21.1,
+          "end": 21.52,
+          "probability": 1.0
+        },
+        {
+          "word": " dat",
+          "start": 21.52,
+          "end": 21.68,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " een",
+          "start": 21.68,
+          "end": 21.84,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " fout",
+          "start": 21.84,
+          "end": 22.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bespreken",
+          "start": 22.08,
+          "end": 22.62,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " niet",
+          "start": 22.62,
+          "end": 22.82,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " hetzelfde",
+          "start": 22.82,
+          "end": 23.34,
+          "probability": 1.0
+        },
+        {
+          "word": " is",
+          "start": 23.34,
+          "end": 23.54,
+          "probability": 1.0
+        },
+        {
+          "word": " als",
+          "start": 23.54,
+          "end": 23.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " onbeleefd",
+          "start": 23.82,
+          "end": 24.44,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " zijn.",
+          "start": 24.44,
+          "end": 24.62,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

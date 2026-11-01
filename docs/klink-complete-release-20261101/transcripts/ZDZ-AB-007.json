@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-007",
+  "sha256": "036eb38b546af2f4e0471bf2065417d2e63bff9d7740e352d569c8fb06767d4f",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Hallo, hoe gaat het?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Hallo, hoe gaat het?",
+      "temperature": 0,
+      "avg_logprob": -0.05491262012057834,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 6.141288432653935e-12,
+      "words": [
+        {
+          "word": " Hallo,",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.99072265625
+        },
+        {
+          "word": " hoe",
+          "start": 0.56,
+          "end": 0.64,
+          "probability": 0.9921875
+        },
+        {
+          "word": " gaat",
+          "start": 0.64,
+          "end": 0.84,
+          "probability": 1.0
+        },
+        {
+          "word": " het?",
+          "start": 0.84,
+          "end": 1.02,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

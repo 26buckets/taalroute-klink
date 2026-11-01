@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-d4fa36041697d506",
+  "sha256": "f3a0996aca9981ba6dd0d17b89d988d89d35664e5c78c85109a1da2449b88915",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Dit pak weegt 1 kilo.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.56,
+      "text": " Dit pak weegt 1 kilo.",
+      "temperature": 0,
+      "avg_logprob": -0.2710577964782715,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.220407009980498e-12,
+      "words": [
+        {
+          "word": " Dit",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " pak",
+          "start": 0.24,
+          "end": 0.54,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " weegt",
+          "start": 0.54,
+          "end": 0.94,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " 1",
+          "start": 0.94,
+          "end": 1.32,
+          "probability": 0.75537109375
+        },
+        {
+          "word": " kilo.",
+          "start": 1.32,
+          "end": 1.56,
+          "probability": 0.91796875
+        }
+      ]
+    }
+  ]
+}

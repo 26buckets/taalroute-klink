@@ -1,0 +1,71 @@
+{
+  "id": "ZDZ-A1-025",
+  "sha256": "e7d428c04d3a7c5a9343fd17411b3308a965342331096d95415bb22ada49e136",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Er ligt glas op de vloer. Loop voorzichtig.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.06,
+      "text": " Er ligt glas op de vloer. Loop voorzichtig.",
+      "temperature": 0,
+      "avg_logprob": -0.08241357301410876,
+      "compression_ratio": 0.8775510204081632,
+      "no_speech_prob": 3.699901496290181e-12,
+      "words": [
+        {
+          "word": " Er",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.98046875
+        },
+        {
+          "word": " ligt",
+          "start": 0.12,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " glas",
+          "start": 0.3,
+          "end": 0.6,
+          "probability": 0.99609375
+        },
+        {
+          "word": " op",
+          "start": 0.6,
+          "end": 0.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.72,
+          "end": 0.8,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vloer.",
+          "start": 0.8,
+          "end": 1.14,
+          "probability": 1.0
+        },
+        {
+          "word": " Loop",
+          "start": 1.32,
+          "end": 1.5,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " voorzichtig.",
+          "start": 1.5,
+          "end": 2.06,
+          "probability": 0.9990234375
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-A1-002",
+  "sha256": "344cbe16346e4123701c518eb3443db25c2cb5231ea7f698cec674037eb6f987",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mag ik twee broden alstublieft?",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.32,
+      "text": " Mag ik twee broden alstublieft?",
+      "temperature": 0,
+      "avg_logprob": -0.15280486856188094,
+      "compression_ratio": 0.7948717948717948,
+      "no_speech_prob": 0.02163422852754593,
+      "words": [
+        {
+          "word": " Mag",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.96435546875
+        },
+        {
+          "word": " ik",
+          "start": 0.12,
+          "end": 0.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " twee",
+          "start": 0.22,
+          "end": 0.36,
+          "probability": 0.83203125
+        },
+        {
+          "word": " broden",
+          "start": 0.36,
+          "end": 0.8,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " alstublieft?",
+          "start": 0.8,
+          "end": 1.32,
+          "probability": 0.90087890625
+        }
+      ]
+    }
+  ]
+}

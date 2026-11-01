@@ -1,0 +1,53 @@
+{
+  "id": "ZDZ-AB-073",
+  "sha256": "f7338c20fcca1c9902ee913b80641a340e227dc4aed81f164df54bb3d32fecd9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De afspraak is op vrijdag.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.12,
+      "text": " De afspraak is op vrijdag.",
+      "temperature": 0,
+      "avg_logprob": -0.08064827552208534,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 4.189156833922514e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.98681640625
+        },
+        {
+          "word": " afspraak",
+          "start": 0.18,
+          "end": 0.58,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " is",
+          "start": 0.58,
+          "end": 0.66,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 0.66,
+          "end": 0.78,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " vrijdag.",
+          "start": 0.78,
+          "end": 1.12,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

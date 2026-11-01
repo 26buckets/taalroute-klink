@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-1e1dbf7b88e8fc86",
+  "sha256": "e7b56c7010f38c79cc0a84990523b2c4a28d07220548a0980f25d9b60ad1c5b2",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik fiets naar school.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.94,
+      "text": " Ik fiets naar school.",
+      "temperature": 0,
+      "avg_logprob": -0.14146688249376085,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 5.591106570779214e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.84326171875
+        },
+        {
+          "word": " fiets",
+          "start": 0.14,
+          "end": 0.46,
+          "probability": 0.986328125
+        },
+        {
+          "word": " naar",
+          "start": 0.46,
+          "end": 0.62,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " school.",
+          "start": 0.62,
+          "end": 0.94,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-A1-021",
+  "sha256": "42d771667377ea1be513a2d040f5ff528d28f3acb36cc38c966f50b2b4179bc8",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Mijn pauze begint om 12 uur.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.66,
+      "text": " Mijn pauze begint om 12 uur.",
+      "temperature": 0,
+      "avg_logprob": -0.09612011909484863,
+      "compression_ratio": 0.7777777777777778,
+      "no_speech_prob": 4.25662977088237e-12,
+      "words": [
+        {
+          "word": " Mijn",
+          "start": 0.0,
+          "end": 0.2,
+          "probability": 0.98828125
+        },
+        {
+          "word": " pauze",
+          "start": 0.2,
+          "end": 0.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " begint",
+          "start": 0.52,
+          "end": 0.86,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " om",
+          "start": 0.86,
+          "end": 1.02,
+          "probability": 0.99609375
+        },
+        {
+          "word": " 12",
+          "start": 1.02,
+          "end": 1.28,
+          "probability": 0.890625
+        },
+        {
+          "word": " uur.",
+          "start": 1.28,
+          "end": 1.66,
+          "probability": 0.970703125
+        }
+      ]
+    }
+  ]
+}

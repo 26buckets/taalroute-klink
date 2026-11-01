@@ -1,0 +1,259 @@
+{
+  "id": "A1-T39",
+  "sha256": "f0a6e6bb97995645d2ab2a4cde06bd9c38bfa23aeea9bdf39d39b36ff918c317",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Bericht in de flat. De lift is vandaag kapot, neem de trap. Donderdag komt iemand de lift maken. Een bewoner woont op de tweede verdieping. Hij leest het bericht en neemt de trap naar huis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.16,
+      "text": " Bericht in de flat. De lift is vandaag kapot, neem de trap.",
+      "temperature": 0,
+      "avg_logprob": -0.06934993714094162,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 5.19678050592276e-12,
+      "words": [
+        {
+          "word": " Bericht",
+          "start": 0.0,
+          "end": 0.34,
+          "probability": 0.990234375
+        },
+        {
+          "word": " in",
+          "start": 0.34,
+          "end": 0.44,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 0.44,
+          "end": 0.5,
+          "probability": 0.998046875
+        },
+        {
+          "word": " flat.",
+          "start": 0.5,
+          "end": 0.74,
+          "probability": 0.998046875
+        },
+        {
+          "word": " De",
+          "start": 0.98,
+          "end": 1.28,
+          "probability": 0.998046875
+        },
+        {
+          "word": " lift",
+          "start": 1.28,
+          "end": 1.5,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " is",
+          "start": 1.5,
+          "end": 1.66,
+          "probability": 1.0
+        },
+        {
+          "word": " vandaag",
+          "start": 1.66,
+          "end": 1.96,
+          "probability": 1.0
+        },
+        {
+          "word": " kapot,",
+          "start": 1.96,
+          "end": 2.34,
+          "probability": 1.0
+        },
+        {
+          "word": " neem",
+          "start": 2.54,
+          "end": 2.82,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 2.82,
+          "end": 2.92,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " trap.",
+          "start": 2.92,
+          "end": 3.16,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.72,
+      "end": 7.32,
+      "text": " Donderdag komt iemand de lift maken. Een bewoner woont op de tweede verdieping.",
+      "temperature": 0,
+      "avg_logprob": -0.06934993714094162,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 5.19678050592276e-12,
+      "words": [
+        {
+          "word": " Donderdag",
+          "start": 3.72,
+          "end": 4.16,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " komt",
+          "start": 4.16,
+          "end": 4.32,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " iemand",
+          "start": 4.32,
+          "end": 4.54,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 4.54,
+          "end": 4.66,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " lift",
+          "start": 4.66,
+          "end": 4.86,
+          "probability": 1.0
+        },
+        {
+          "word": " maken.",
+          "start": 4.86,
+          "end": 5.2,
+          "probability": 1.0
+        },
+        {
+          "word": " Een",
+          "start": 5.44,
+          "end": 5.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bewoner",
+          "start": 5.88,
+          "end": 6.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " woont",
+          "start": 6.3,
+          "end": 6.48,
+          "probability": 1.0
+        },
+        {
+          "word": " op",
+          "start": 6.48,
+          "end": 6.6,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 6.6,
+          "end": 6.68,
+          "probability": 1.0
+        },
+        {
+          "word": " tweede",
+          "start": 6.68,
+          "end": 6.94,
+          "probability": 0.99365234375
+        },
+        {
+          "word": " verdieping.",
+          "start": 6.94,
+          "end": 7.32,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.54,
+      "end": 9.62,
+      "text": " Hij leest het bericht en neemt de trap naar huis.",
+      "temperature": 0,
+      "avg_logprob": -0.06934993714094162,
+      "compression_ratio": 1.4,
+      "no_speech_prob": 5.19678050592276e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 7.54,
+          "end": 7.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " leest",
+          "start": 7.92,
+          "end": 8.18,
+          "probability": 1.0
+        },
+        {
+          "word": " het",
+          "start": 8.18,
+          "end": 8.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bericht",
+          "start": 8.3,
+          "end": 8.6,
+          "probability": 1.0
+        },
+        {
+          "word": " en",
+          "start": 8.6,
+          "end": 8.72,
+          "probability": 1.0
+        },
+        {
+          "word": " neemt",
+          "start": 8.72,
+          "end": 8.94,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 8.94,
+          "end": 8.98,
+          "probability": 1.0
+        },
+        {
+          "word": " trap",
+          "start": 8.98,
+          "end": 9.18,
+          "probability": 1.0
+        },
+        {
+          "word": " naar",
+          "start": 9.18,
+          "end": 9.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " huis.",
+          "start": 9.3,
+          "end": 9.62,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

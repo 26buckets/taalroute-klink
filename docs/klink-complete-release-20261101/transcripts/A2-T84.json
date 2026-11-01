@@ -1,0 +1,545 @@
+{
+  "id": "A2-T84",
+  "sha256": "53b6789012dbc007c5c26cde5712be6bfee87c01181fb308a40f02ef6078cb4a",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Op zaterdag verkoopt een kraamhouder aardappels op de markt. Op het bord staat dat een kilo 2 euro kost. Een klant kiest 2 kilo, maar de kassa laat 4,50 euro zien. De kraamhouder ziet dat het bord nog de oude prijs laat zien. Hij rekent voor deze klant 4 euro, zoals het bord aangeeft. Daarna verandert hij het bord voor de volgende klanten. De klant betaalt en neemt de aardappels mee naar huis.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.66,
+      "text": " Op zaterdag verkoopt een kraamhouder aardappels op de markt.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.9794921875
+        },
+        {
+          "word": " zaterdag",
+          "start": 0.16,
+          "end": 0.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " verkoopt",
+          "start": 0.64,
+          "end": 0.98,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " een",
+          "start": 0.98,
+          "end": 1.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kraamhouder",
+          "start": 1.08,
+          "end": 1.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " aardappels",
+          "start": 1.68,
+          "end": 2.08,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " op",
+          "start": 2.08,
+          "end": 2.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.22,
+          "end": 2.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " markt.",
+          "start": 2.3,
+          "end": 2.66,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 3.04,
+      "end": 5.56,
+      "text": " Op het bord staat dat een kilo 2 euro kost.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " Op",
+          "start": 3.04,
+          "end": 3.52,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " het",
+          "start": 3.52,
+          "end": 3.66,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " bord",
+          "start": 3.66,
+          "end": 3.86,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " staat",
+          "start": 3.86,
+          "end": 4.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " dat",
+          "start": 4.1,
+          "end": 4.26,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " een",
+          "start": 4.26,
+          "end": 4.38,
+          "probability": 0.85595703125
+        },
+        {
+          "word": " kilo",
+          "start": 4.38,
+          "end": 4.68,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " 2",
+          "start": 4.68,
+          "end": 4.94,
+          "probability": 0.86962890625
+        },
+        {
+          "word": " euro",
+          "start": 4.94,
+          "end": 5.24,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " kost.",
+          "start": 5.24,
+          "end": 5.56,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 6.06,
+      "end": 9.82,
+      "text": " Een klant kiest 2 kilo, maar de kassa laat 4,50 euro zien.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " Een",
+          "start": 6.06,
+          "end": 6.54,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " klant",
+          "start": 6.54,
+          "end": 6.84,
+          "probability": 1.0
+        },
+        {
+          "word": " kiest",
+          "start": 6.84,
+          "end": 7.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " 2",
+          "start": 7.08,
+          "end": 7.26,
+          "probability": 0.95654296875
+        },
+        {
+          "word": " kilo,",
+          "start": 7.26,
+          "end": 7.62,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " maar",
+          "start": 7.86,
+          "end": 8.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " de",
+          "start": 8.08,
+          "end": 8.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kassa",
+          "start": 8.2,
+          "end": 8.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " laat",
+          "start": 8.54,
+          "end": 8.74,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " 4",
+          "start": 8.74,
+          "end": 8.98,
+          "probability": 0.91259765625
+        },
+        {
+          "word": ",50",
+          "start": 8.98,
+          "end": 9.52,
+          "probability": 0.92236328125
+        },
+        {
+          "word": " euro",
+          "start": 9.52,
+          "end": 9.56,
+          "probability": 0.994140625
+        },
+        {
+          "word": " zien.",
+          "start": 9.56,
+          "end": 9.82,
+          "probability": 0.99365234375
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 10.34,
+      "end": 13.08,
+      "text": " De kraamhouder ziet dat het bord nog de oude prijs laat zien.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 10.34,
+          "end": 10.74,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " kraamhouder",
+          "start": 10.74,
+          "end": 11.3,
+          "probability": 1.0
+        },
+        {
+          "word": " ziet",
+          "start": 11.3,
+          "end": 11.46,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dat",
+          "start": 11.46,
+          "end": 11.62,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 11.62,
+          "end": 11.74,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " bord",
+          "start": 11.74,
+          "end": 11.92,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " nog",
+          "start": 11.92,
+          "end": 12.08,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 12.08,
+          "end": 12.2,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " oude",
+          "start": 12.2,
+          "end": 12.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " prijs",
+          "start": 12.42,
+          "end": 12.72,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " laat",
+          "start": 12.72,
+          "end": 12.86,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " zien.",
+          "start": 12.86,
+          "end": 13.08,
+          "probability": 1.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 13.56,
+      "end": 16.96,
+      "text": " Hij rekent voor deze klant 4 euro, zoals het bord aangeeft.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " Hij",
+          "start": 13.56,
+          "end": 14.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " rekent",
+          "start": 14.04,
+          "end": 14.36,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 14.36,
+          "end": 14.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " deze",
+          "start": 14.48,
+          "end": 14.7,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " klant",
+          "start": 14.7,
+          "end": 14.98,
+          "probability": 1.0
+        },
+        {
+          "word": " 4",
+          "start": 14.98,
+          "end": 15.2,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " euro,",
+          "start": 15.2,
+          "end": 15.6,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " zoals",
+          "start": 15.82,
+          "end": 16.14,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 16.14,
+          "end": 16.3,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bord",
+          "start": 16.3,
+          "end": 16.48,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aangeeft.",
+          "start": 16.48,
+          "end": 16.96,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 17.78,
+      "end": 19.74,
+      "text": " Daarna verandert hij het bord voor de volgende klanten.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " Daarna",
+          "start": 17.78,
+          "end": 18.06,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " verandert",
+          "start": 18.06,
+          "end": 18.46,
+          "probability": 0.998046875
+        },
+        {
+          "word": " hij",
+          "start": 18.46,
+          "end": 18.56,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " het",
+          "start": 18.56,
+          "end": 18.68,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " bord",
+          "start": 18.68,
+          "end": 18.88,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " voor",
+          "start": 18.88,
+          "end": 19.04,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 19.04,
+          "end": 19.12,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " volgende",
+          "start": 19.12,
+          "end": 19.42,
+          "probability": 1.0
+        },
+        {
+          "word": " klanten.",
+          "start": 19.42,
+          "end": 19.74,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "seek": 0,
+      "start": 20.2,
+      "end": 22.62,
+      "text": " De klant betaalt en neemt de aardappels mee naar huis.",
+      "temperature": 0,
+      "avg_logprob": -0.07822375511055563,
+      "compression_ratio": 1.736842105263158,
+      "no_speech_prob": 5.4259951566548725e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 20.2,
+          "end": 20.64,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " klant",
+          "start": 20.64,
+          "end": 20.9,
+          "probability": 1.0
+        },
+        {
+          "word": " betaalt",
+          "start": 20.9,
+          "end": 21.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " en",
+          "start": 21.3,
+          "end": 21.42,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " neemt",
+          "start": 21.42,
+          "end": 21.66,
+          "probability": 1.0
+        },
+        {
+          "word": " de",
+          "start": 21.66,
+          "end": 21.72,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " aardappels",
+          "start": 21.72,
+          "end": 22.08,
+          "probability": 1.0
+        },
+        {
+          "word": " mee",
+          "start": 22.08,
+          "end": 22.22,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " naar",
+          "start": 22.22,
+          "end": 22.32,
+          "probability": 1.0
+        },
+        {
+          "word": " huis.",
+          "start": 22.32,
+          "end": 22.62,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

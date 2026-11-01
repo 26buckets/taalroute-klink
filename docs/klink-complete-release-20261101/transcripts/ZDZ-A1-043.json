@@ -1,0 +1,89 @@
+{
+  "id": "ZDZ-A1-043",
+  "sha256": "9a56c00e2264df61e67bba6dc48914ad8da941982fac77834ef54da9a31e0862",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Doe het oude papier in die doos, niet op de grond.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 2.66,
+      "text": " Doe het oude papier in die doos, niet op de grond.",
+      "temperature": 0,
+      "avg_logprob": -0.0842470407485962,
+      "compression_ratio": 0.9259259259259259,
+      "no_speech_prob": 4.4969631317337555e-12,
+      "words": [
+        {
+          "word": " Doe",
+          "start": 0.0,
+          "end": 0.24,
+          "probability": 0.9755859375
+        },
+        {
+          "word": " het",
+          "start": 0.24,
+          "end": 0.36,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " oude",
+          "start": 0.36,
+          "end": 0.66,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " papier",
+          "start": 0.66,
+          "end": 1.0,
+          "probability": 0.998046875
+        },
+        {
+          "word": " in",
+          "start": 1.0,
+          "end": 1.2,
+          "probability": 0.998046875
+        },
+        {
+          "word": " die",
+          "start": 1.2,
+          "end": 1.3,
+          "probability": 0.9833984375
+        },
+        {
+          "word": " doos,",
+          "start": 1.3,
+          "end": 1.66,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " niet",
+          "start": 1.88,
+          "end": 2.06,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 2.06,
+          "end": 2.22,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " de",
+          "start": 2.22,
+          "end": 2.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " grond.",
+          "start": 2.32,
+          "end": 2.66,
+          "probability": 1.0
+        }
+      ]
+    }
+  ]
+}

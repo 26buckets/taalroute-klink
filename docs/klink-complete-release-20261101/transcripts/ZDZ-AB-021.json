@@ -1,0 +1,47 @@
+{
+  "id": "ZDZ-AB-021",
+  "sha256": "16d73f906077d3601d95b79b4675d8f85a2b1e491c64dc43269b9200a0362151",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik ben morgen vrij.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 0.98,
+      "text": " Ik ben morgen vrij.",
+      "temperature": 0,
+      "avg_logprob": -0.2016429305076599,
+      "compression_ratio": 0.76,
+      "no_speech_prob": 4.1202163209019815e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.9580078125
+        },
+        {
+          "word": " ben",
+          "start": 0.14,
+          "end": 0.3,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " morgen",
+          "start": 0.3,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " vrij.",
+          "start": 0.6,
+          "end": 0.98,
+          "probability": 0.98291015625
+        }
+      ]
+    }
+  ]
+}

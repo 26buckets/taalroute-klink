@@ -1,0 +1,53 @@
+{
+  "id": "klink-sentence-4a71e0fc8b2f0bfb",
+  "sha256": "d8eb4338f8e471f2c7231a599510348e3139e93582aa15040d6daf07314821d9",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik zit op de bank.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.0,
+      "text": " Ik zit op de bank.",
+      "temperature": 0,
+      "avg_logprob": -0.12338871426052517,
+      "compression_ratio": 0.6923076923076923,
+      "no_speech_prob": 5.072113735959949e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.16,
+          "probability": 0.73583984375
+        },
+        {
+          "word": " zit",
+          "start": 0.16,
+          "end": 0.4,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " op",
+          "start": 0.4,
+          "end": 0.6,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " de",
+          "start": 0.6,
+          "end": 0.7,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " bank.",
+          "start": 0.7,
+          "end": 1.0,
+          "probability": 0.99609375
+        }
+      ]
+    }
+  ]
+}

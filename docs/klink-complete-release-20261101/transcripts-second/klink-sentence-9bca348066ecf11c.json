@@ -1,0 +1,65 @@
+{
+  "id": "klink-sentence-9bca348066ecf11c",
+  "sha256": "bb5ab72af626f52bcdaa6bbb4463d489edfa938102f693a26bade1acfdde1b01",
+  "model": "whisper-large-v3",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Lin veegt de sneeuw van het pad.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.54,
+      "text": " Lin veegt de sneeuw van het pad.",
+      "temperature": 0,
+      "avg_logprob": -0.27436390944889616,
+      "compression_ratio": 0.8,
+      "no_speech_prob": 0.005045272409915924,
+      "words": [
+        {
+          "word": " Lin",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.544921875
+        },
+        {
+          "word": " veegt",
+          "start": 0.18,
+          "end": 0.62,
+          "probability": 0.94921875
+        },
+        {
+          "word": " de",
+          "start": 0.62,
+          "end": 0.72,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " sneeuw",
+          "start": 0.72,
+          "end": 1.1,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " van",
+          "start": 1.1,
+          "end": 1.2,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " het",
+          "start": 1.2,
+          "end": 1.34,
+          "probability": 0.9921875
+        },
+        {
+          "word": " pad.",
+          "start": 1.34,
+          "end": 1.54,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

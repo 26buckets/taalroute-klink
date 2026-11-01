@@ -1,0 +1,47 @@
+{
+  "id": "klink-sentence-0ba4733bd7f3bf84",
+  "sha256": "cb3804753fdbcf2dbdf5d9d6ba71964fac508b623001fee536364c6caddd10f5",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik pak mijn leesboek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.06,
+      "text": " Ik pak mijn leesboek.",
+      "temperature": 0,
+      "avg_logprob": -0.09246917204423384,
+      "compression_ratio": 0.7241379310344828,
+      "no_speech_prob": 4.087778726624691e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.962890625
+        },
+        {
+          "word": " pak",
+          "start": 0.14,
+          "end": 0.32,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " mijn",
+          "start": 0.32,
+          "end": 0.5,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " leesboek.",
+          "start": 0.5,
+          "end": 1.06,
+          "probability": 0.9970703125
+        }
+      ]
+    }
+  ]
+}

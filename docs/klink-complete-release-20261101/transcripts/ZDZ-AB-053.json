@@ -1,0 +1,59 @@
+{
+  "id": "ZDZ-AB-053",
+  "sha256": "6a224ab62e9f6e179d5da84ba601ea1e693e3b2842ab65e745a7a302ac82ca43",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " Ik vind dit een goed boek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.08,
+      "text": " Ik vind dit een goed boek.",
+      "temperature": 0,
+      "avg_logprob": -0.1836690902709961,
+      "compression_ratio": 0.7647058823529411,
+      "no_speech_prob": 5.091182250088755e-12,
+      "words": [
+        {
+          "word": " Ik",
+          "start": 0.0,
+          "end": 0.28,
+          "probability": 0.81640625
+        },
+        {
+          "word": " vind",
+          "start": 0.28,
+          "end": 0.42,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " dit",
+          "start": 0.42,
+          "end": 0.56,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " een",
+          "start": 0.56,
+          "end": 0.68,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " goed",
+          "start": 0.68,
+          "end": 0.82,
+          "probability": 0.998046875
+        },
+        {
+          "word": " boek.",
+          "start": 0.82,
+          "end": 1.08,
+          "probability": 0.99951171875
+        }
+      ]
+    }
+  ]
+}

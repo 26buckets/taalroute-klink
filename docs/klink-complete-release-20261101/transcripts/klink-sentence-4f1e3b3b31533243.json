@@ -1,0 +1,59 @@
+{
+  "id": "klink-sentence-4f1e3b3b31533243",
+  "sha256": "d0f77d9a08209a7d15dedfc2baf5a9c22cdd2d6922e19a72f92247425260aa91",
+  "model": "whisper-large-v3-turbo",
+  "expectedTextProvided": false,
+  "humanListeningReview": false,
+  "text": " De schep staat tegen het hek.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 1.74,
+      "text": " De schep staat tegen het hek.",
+      "temperature": 0,
+      "avg_logprob": -0.09121171633402507,
+      "compression_ratio": 0.8285714285714286,
+      "no_speech_prob": 4.7991333129715485e-12,
+      "words": [
+        {
+          "word": " De",
+          "start": 0.0,
+          "end": 0.18,
+          "probability": 0.85986328125
+        },
+        {
+          "word": " schep",
+          "start": 0.18,
+          "end": 0.52,
+          "probability": 0.966796875
+        },
+        {
+          "word": " staat",
+          "start": 0.52,
+          "end": 0.8,
+          "probability": 0.998046875
+        },
+        {
+          "word": " tegen",
+          "start": 0.8,
+          "end": 1.2,
+          "probability": 0.99609375
+        },
+        {
+          "word": " het",
+          "start": 1.2,
+          "end": 1.44,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " hek.",
+          "start": 1.44,
+          "end": 1.74,
+          "probability": 0.99072265625
+        }
+      ]
+    }
+  ]
+}
