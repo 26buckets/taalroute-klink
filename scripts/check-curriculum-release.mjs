@@ -1030,9 +1030,9 @@ if (missing.length) issues.push(`${missing.length} betekenissen hebben nog geen 
 const missingImages = release.words.filter(word => !media[word.id]?.image);
 if (missingImages.length) issues.push(`${missingImages.length} betekenissen hebben nog geen gekoppeld betekenisbeeld.`);
 if (existsSync('docs/instruction-integration-20261101/prepared.json')) {
-  const {verifyInstructionCandidate}=await import('./check-instruction-candidate.mjs');
-  try { verifyInstructionCandidate(); issues.push('Deze instructiecorrecties zijn uitsluitend lokaal voorbereid; publicatie is niet toegestaan.'); }
-  catch(error) { issues.push('De lokale instructievoorbereiding is ongeldig: '+error.message); }
+  const {verifyGrammarPublication}=await import('./check-grammar-publication-20261101.mjs');
+  try { verifyGrammarPublication(); }
+  catch(error) { issues.push('De brongebonden grammaticavrijgave is ongeldig: '+error.message); }
 }
 if (issues.length) { console.error(issues.join('\n')); process.exitCode = 1; }
 else {

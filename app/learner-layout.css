@@ -609,6 +609,8 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
       .cp-exercise-feedback > button { min-height: 44px; height: 44px; padding-block: 2px; }
     }
   }
+}
+
 /* Keep scrolled text behind an opaque toolbar, with its approved position intact. */
 .learner-app .cp-exercise-stage:has(.cp-teacher-workflow) > .cp-exercise-tools { background: var(--paper); box-shadow: 0 -24px 0 var(--paper); }
 /* Nico's local example changes only the text layout of one existing grammar task. */
