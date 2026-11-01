@@ -349,6 +349,44 @@ test('KI029: reject and explicit approve never silently issue an assignment', as
   assert.equal(s.count('assignments'), 0);
   assert.equal(s.count('approved_lesson_plans'), 1);
 });
+test('KI029/054: lost plan decision response retries without duplicate actions or bypassing authorization', async () => {
+  for (const action of ['approve', 'reject']) {
+    const s = setup();
+    const preview = await s.request('classes/school-a:klas/recommendations', {
+      target_date: '2026-11-02',
+      schedule_source: 'TEACHER_SELECTED',
+    });
+    const path = `plans/${preview.data.id}`;
+    const body = {
+      action,
+      confirmed: true,
+      assignments: [],
+      note: 'Eerst observeren',
+    };
+    const key = crypto.randomUUID();
+    const first = await s.request(path, body, { key });
+    assertStatus(first, 200);
+    const retry = await s.request(path, body, { key });
+    assertStatus(retry, 200);
+    assert.deepEqual(retry.data, first.data);
+    assert.equal(
+      s.count('approved_lesson_plans'),
+      action === 'approve' ? 1 : 0,
+    );
+    assert.equal(s.count('assignments'), 0);
+    assertStatus(
+      await s.request(path, { ...body, note: 'Changed' }, { key }),
+      409,
+    );
+    assertStatus(await s.request(path, body), 409);
+    s.db.connection
+      .prepare(
+        "UPDATE memberships SET status='ended' WHERE id='school-a:docent'",
+      )
+      .run();
+    assertStatus(await s.request(path, body, { key }), 403);
+  }
+});
 test('KI030/031/034/040/048: tenant, class, admin, support and revoked teacher denied on reads and writes', async () => {
   const s = setup();
   for (const path of [
@@ -455,6 +493,73 @@ test('KI042/063: invite is account-bound, single use; unlink preserves source an
     ),
     403,
   );
+});
+test('KI042/054: lost link and unlink responses can be retried without restoring revoked access', async () => {
+  const s = setup();
+  const invitation = await s.request(
+    'invites',
+    {
+      learner_id: 'school-a:leerling-1',
+      membership_id: 'school-a:cursist',
+      identity_checked: true,
+    },
+    { user: 'registrar' },
+  );
+  const body = { token: invitation.data.token };
+  const key = crypto.randomUUID();
+  const link = await s.request('accept-invite', body, { user: 'cursist', key });
+  assertStatus(link, 200);
+  const retry = await s.request('accept-invite', body, {
+    user: 'cursist',
+    key,
+  });
+  assertStatus(retry, 200);
+  assert.deepEqual(retry.data, link.data);
+  assert.equal(s.count('account_links'), 1);
+  assertStatus(
+    await s.request('accept-invite', body, { user: 'cursist' }),
+    409,
+  );
+  const unlinkKey = crypto.randomUUID();
+  const unlink = { link_id: link.data.id };
+  assertStatus(
+    await s.request('unlink', unlink, { user: 'registrar', key: unlinkKey }),
+    200,
+  );
+  assertStatus(
+    await s.request('unlink', unlink, { user: 'registrar', key: unlinkKey }),
+    200,
+  );
+  assertStatus(
+    await s.request('accept-invite', body, { user: 'cursist', key }),
+    200,
+  );
+  assertStatus(
+    await s.request(
+      'school-practice?class=school-a:klas&content=word-mat',
+      undefined,
+      { user: 'cursist' },
+    ),
+    403,
+  );
+  assert.equal(s.count('account_links'), 1);
+});
+test('KI052/054: policy confirmation can replay after lost response without changing version twice', async () => {
+  const s = setup();
+  const path = 'classes/school-a:klas/policy';
+  const policy = { allowed_routes: ['Alfa A'], exercise_mode: 'assigned' };
+  const preview = await s.request(path, { ...policy, preview: true });
+  const body = {
+    ...policy,
+    impact_hash: preview.data.impact_hash,
+    confirmed: true,
+  };
+  const key = crypto.randomUUID();
+  assertStatus(await s.request(path, body, { key }), 200);
+  const before = await s.request(path);
+  assertStatus(await s.request(path, body, { key }), 200);
+  assert.deepEqual((await s.request(path)).data, before.data);
+  assertStatus(await s.request(path, body), 409);
 });
 test('KI047: HTTP replay is one observation/event/outbox; different body on same key conflicts', async () => {
   const s = setup();

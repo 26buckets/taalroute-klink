@@ -1,0 +1,29 @@
+✖ KI029/054: lost plan decision response retries without duplicate actions or bypassing authorization (18.192292ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 281.760459
+
+✖ failing tests:
+
+test at scripts/inzicht/test.mjs:352:1
+✖ KI029/054: lost plan decision response retries without duplicate actions or bypassing authorization (18.192292ms)
+  AssertionError [ERR_ASSERTION]: {"error":"Dit voorstel is al afgehandeld."}
+  
+  409 !== 200
+  
+      at assertStatus (file:///Users/nicoknoester/Documents/Codex/2026-11-01/referenced-chatgpt-conversation-this-is-an-3/work/taalroute-klink/scripts/inzicht/test.mjs:82:10)
+      at TestContext.<anonymous> (file:///Users/nicoknoester/Documents/Codex/2026-11-01/referenced-chatgpt-conversation-this-is-an-3/work/taalroute-klink/scripts/inzicht/test.mjs:365:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 409,
+    expected: 200,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

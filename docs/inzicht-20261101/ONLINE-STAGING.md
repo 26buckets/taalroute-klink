@@ -63,3 +63,7 @@ Privacy/grondslag/DPIA/retentie en verwijdering uit back-ups; Echte identity lif
 ## Aanvulling MFA en beheer, 1 november 2026
 
 Wachtwoord plus verplichte authenticatorcode, eenmalige herstelcodes, beheerreset, revocatie en duurzame foutisolatie zijn op de afzonderlijke fictieve staging uitgevoerd. Zie `MFA-EN-BEHEER.md` voor actuele codepaden, schema 5, bewijzen en operationele grenzen. De huidige test- en acceptatiestand staat in `PROJECTVERSLAG.md` en `ACCEPTATIE-72.md`; oudere logbestanden zijn historische bewijzen.
+
+## Volledige docent-cursistproef, 1 november 2026
+
+Beide browserengines doorlopen dezelfde volledige klas-/account-/observatie-/oefen-/adviesketen, met heraanmelding en gecontroleerd verloren opslagantwoorden. De Inzicht-service herhaalt bevestigingen nu correct zonder dubbele wijzigingen. Actuele stagingversie `06739054-6fc4-40c0-8e82-c6c8fd3fc4dd`; schema 5 ongewijzigd. Zie `PROJECTVERSLAG.md` en `evidence/journey/`. Uitvoeren: `KLINK_TEST_URL=https://klink-inzicht-pr8-staging.nico-554.workers.dev node scripts/inzicht/journey-browser.mjs`. Alleen de bedoelde fictieve cursistkoppeling wordt tussen de browserproeven verplaatst; oude onderwijsgegevens blijven behouden. Geen parallelle schrijvende browserreeksen met dezelfde accounts uitvoeren. De laatste volledige WebKit-klas blijft via het fictieve cursistaccount bereikbaar. Geen merge/productiepublicatie.

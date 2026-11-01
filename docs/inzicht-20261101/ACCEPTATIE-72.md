@@ -6,13 +6,13 @@
 
 | Case | Eis | Status | Bewijs / open punt |
 |---|---|---|---|
-| KI001 | docent maakt klas; opnieuw inloggen -> identieke serverklasse. | GETEST | Online wachtwoord + authenticatorlogin, serverklasse en herladen/heropenen; twee browsers. Echte persoonsverificatie blijft vrijgavepoort. |
+| KI001 | docent maakt klas; opnieuw inloggen -> identieke serverklasse. | GETEST | Online wachtwoord + authenticatorlogin, serverklasse en herladen/heropenen; twee browsers. Echte persoonsverificatie blijft vrijgavepoort. Volledige heraanmelding met wachtwoord/MFA en identieke servergegevens: journey-browser.mjs, beide engines. |
 | KI002 | docent hernoemt/ archiveert -> historie blijft. | GETEST | Hernoemen, versieconflict, archiveren/heropenen met historie: test.mjs. |
-| KI003 | docent maakt voorlopige cursist; koppeling vereist verificatie. | GETEST | Voorlopig profiel, registrar en accountgebonden uitnodiging: API en student-browser.mjs. |
+| KI003 | docent maakt voorlopige cursist; koppeling vereist verificatie. | GETEST | Voorlopig profiel, registrar en accountgebonden uitnodiging: API en student-browser.mjs. Gehele voorlopige docentregistratie → registrar → bedoelde cursist in beide engines, inclusief verloren bevestiging. |
 | KI004 | twee cursisten met dezelfde naam -> aparte identiteit en dossier. | GETEST | Dubbele naam krijgt aparte IDs; geen automatische merge. |
 | KI005 | cursist in twee klassen -> correct contextgebonden memberships. | GETEST | Registrar deelt dezelfde schoolcursist in twee klassen in; toegang expliciet per klas. |
-| KI006 | docent observatie -> zichtbaar in juiste profiel, actor/tijd bekend. | GETEST | API + beide browsers, profiel, auteur/tijd en opslaan na netwerkherstel. |
-| KI007 | observatiecorrectie -> audit en oorspronkelijke versie beschikbaar. | GETEST | Append-only revisies, reden/auteur, oude versie en audit bewaard. |
+| KI006 | docent observatie -> zichtbaar in juiste profiel, actor/tijd bekend. | GETEST | API + beide browsers, profiel, auteur/tijd en opslaan na netwerkherstel. Volledige rolproef: verloren serverantwoord herhaald, precies één observatie; evidence/journey/. |
+| KI007 | observatiecorrectie -> audit en oorspronkelijke versie beschikbaar. | GETEST | Append-only revisies, reden/auteur, oude versie en audit bewaard. Beide revisies en correctiereden zichtbaar na herladen in Chromium en WebKit. |
 | KI008 | vrije notitie zonder rubric -> geen auto-mastered. | GETEST | Algemene observatie is TRAIN; geen statusverhoging. |
 | KI009 | individuele geldige oefening -> juist event met itemversie. | DEELS | Schooloefening en contenthash opgeslagen; echte gevalideerde meetinstrumenten ontbreken. |
 | KI010 | gezamenlijke digibordrespons -> geen individueel bewijs. | DEELS | Geen Inzicht-schrijver in Klink+Docent; regels weigeren niet-individuele/ongeldige identiteit. Geen groepsrespons-importpad gebouwd. |
@@ -34,7 +34,7 @@
 | KI026 | zelfde snapshot/ruleset/catalog -> exact zelfde preview. | GETEST | Identieke gesorteerde snapshot/catalogus geeft identiek regelresultaat. |
 | KI027 | geen geschikte gepubliceerde les -> expliciet geen match, niet hallucineren. | GETEST | Geen match blijft null/zichtbare tekst; geen gegenereerde les. |
 | KI028 | preview gewijzigd/oud -> 409 en herberekenen. | GETEST | Veranderde evidence/beleid maakt preview stale; goedkeuring geweigerd. |
-| KI029 | afwijzen advies -> geen assignment. | GETEST | Reject en approve zonder expliciete opdrachten maken geen assignment. |
+| KI029 | afwijzen advies -> geen assignment. | GETEST | Reject en approve zonder expliciete opdrachten maken geen assignment. Goedkeuren/afwijzen na verloren antwoord zonder dubbele actie getest; beide browsers plus directe SQL-audit bevestigen één lesplan/audit en geen extra opdracht. |
 | KI030 | teacher school A -> geen school B-dossier. | GETEST | Cross-tenant read/write/export en samengestelde SQL-FKs getest. |
 | KI031 | school-admin zonder onderwijsrecht -> alleen administratieve data. | GETEST | School-admin/support zien alleen eigen-school administratieve verwerkingsaantallen en tijdstippen via afgeschermde API/UI; onderwijsdata geweigerd. API/tenanttest en gedeeld-apparaatbrowserproef. Volledig schoolbeheer blijft apart uitbreidingswerk. |
 | KI032 | gedeelde computer logout -> geen leerlingdata in cache/volgende sessie. | GETEST | Online uitloggen trekt sessie in; Back/Forward/reload toont login; volgende beheerder krijgt geen dossiers. Chromium en WebKit; geen schooldata in browseropslag. |
@@ -47,7 +47,7 @@
 | KI039 | schoolresultaat niet spontaan persoonlijk paspoort beschikbaar. | DEELS | Geen schooldata in bestaande persoonlijke browseropslag; werkelijk persoonlijk passport bestaat nog niet. |
 | KI040 | rol wisselt midden sessie -> autorisatie telkens opnieuw server-side gecontroleerd. | GETEST | Actuele rol/membership opnieuw gelezen; servertoegang vervalt tijdens sessie. |
 | KI041 | docent maakt zelf klas maar kan niet een willekeurige schoolleerling koppelen/zien zonder registrar/verified invite. | GETEST | Zelfgemaakte klas kan geen bestaande learner/account harvesten; registrar vereist. |
-| KI042 | wachtende, verlopen of vervalste invitatie geeft nooit leerlinggegevens vrij. | GETEST | Wachtende, vervalste en verlopen uitnodiging openen geen dossier; exacte accountbinding en eenmaligheid in API-tests. Registratie/koppeling met echte fictieve login in twee online browsers. |
+| KI042 | wachtende, verlopen of vervalste invitatie geeft nooit leerlinggegevens vrij. | GETEST | Wachtende, vervalste en verlopen uitnodiging openen geen dossier; exacte accountbinding en eenmaligheid in API-tests. Registratie/koppeling met echte fictieve login in twee online browsers. Dezelfde accountgebonden bevestiging mag na antwoordverlies opnieuw worden gelezen; een nieuw verzoek hergebruikt de uitnodiging niet. Ontkoppelen/herhalen herstelt nooit ingetrokken toegang. |
 | KI043 | twee schoolklassen met verschillende routepolicies -> assignment exact eigen class; vrij oefenen vraagt geldige expliciete context. | GETEST | Twee klassen, verschillende policies, expliciete context en geïsoleerde override/uitschrijving getest. |
 | KI044 | instrument met repeated same items+feedback kan niet ten onrechte MASTERED worden door twee werkdagen te spreiden. | GETEST | Herhaalde feedbackitems falen als onafhankelijke meting; regeltest. |
 | KI045 | teacher note zonder rubric -> aandachtstekst maar geen mastery boost. | GETEST | Notitie zonder rubric zichtbaar; TRAIN, geen mastery boost. |
@@ -57,9 +57,9 @@
 | KI049 | ontwerp van volgende lesdatum kan weekend/geen rooster aan; geen fictieve ingeplande lesclaim. | GETEST | Geen rooster betekent UNKNOWN en zelf datum kiezen; geen fictieve geplande les. |
 | KI050 | rechten vervallen tussen lesadvies-preview en goedkeuring => 409/403 en geen assignment. | GETEST | Rolwijziging tussen preview/approve geeft fout en geen opdrachten. |
 | KI051 | alleen gedeeltelijk gemeten groep rapporteert meetdekking en verbergt pseudo-precisie. | GETEST | Onvolledige groep toont gemeten/actief en geen vals hele-klasadvies. |
-| KI052 | beperkte leerroute met actieve open opdracht -> impactpreview en expliciete beslissing. | DEELS | Actuele impacthash, expliciete bevestiging, individuele reset en aparte bevestigde opdrachtintrekking werken. Impactoverzicht blijft beperkt; volledige causale intrekkingswizard open. |
+| KI052 | beperkte leerroute met actieve open opdracht -> impactpreview en expliciete beslissing. | DEELS | Actuele impacthash, expliciete bevestiging, individuele reset en aparte bevestigde opdrachtintrekking werken. Impactoverzicht blijft beperkt; volledige causale intrekkingswizard open. Herhaling van dezelfde bevestiging na antwoordverlies wijzigt de beleidsversie niet opnieuw. |
 | KI053 | automatische adviezen onthullen geen concept/HOLD-les en geven netjes geen match. | GETEST | HOLD niet zichtbaar in catalogus/advies; ontbrekende match expliciet. |
-| KI054 | geen netwerk of half voltooide opslag -> expliciete pending/failure, niet vals 'bewaren gelukt'. | GETEST | Atomair opslaan, offlinefout, retry, saved/pending; tests en browserbewijs. |
+| KI054 | geen netwerk of half voltooide opslag -> expliciete pending/failure, niet vals 'bewaren gelukt'. | GETEST | Atomair opslaan, offlinefout, retry, saved/pending; tests en browserbewijs. Gecontroleerd antwoordverlies NA servercommit: observatie, koppelen/ontkoppelen, beleid, oefenpoging en advies; succesvolle herhaling zonder dubbele records in twee browsers. |
 | KI055 | audit/back-upverwijderingscontract en RTO/RPO runbook bestaan en getest vóór echte pilotdata. | OPEN | Schema 5: online D1 → SQLite, aparte remote D1 en PostgreSQL plus Time Travel; nieuwe wachtwoorden/MFA na herstel getest. Verwijdercontract, tombstones en ondertekende operationele RPO/RTO blijven open. |
 | KI056 | WCAG 2.2 AA-acceptatie met keyboard/screenreader/focus en echte matrix-interactie. | DEELS | Axe zonder violations op geteste matrix/cursistschermen, keyboard/reflow; menselijke screenreader/WCAG-acceptatie open. |
 | KI057 | privacyverantwoordelijke heeft grondslagen, DPIA, retentie en controller/processorrollen afgetekend. | OPEN | Geen juridische/privacyondertekening. Echte pilot geblokkeerd. |
@@ -68,10 +68,10 @@
 | KI060 | content/itemversie verandert tussen evidence en report -> historie blijft aantoonbaar correct aan oorspronkelijke versie gekoppeld. | DEELS | Versie-ID/hash en herstelhistorie bewaard; volledige contentpublisher/correctie-rapportworkflow nog nodig. |
 | KI061 | docent creëert voorlopige naam, observeert en heropent observatie zonder Klink-accountkoppeling; geen inzage in bestaande user-data. | GETEST | Voorlopige naam observeren en heropenen zonder account, beide browsers. |
 | KI062 | twee provisional profielen met zelfde naam niet automatisch gemerged. | GETEST | Gelijke namen aparte identiteiten; API-test. |
-| KI063 | gecontroleerde link provisional -> schoolmember behoudt observatieprovenance en geen privédata; rollback ontkoppelt zonder evidence leak. | GETEST | Koppelen/ontkoppelen behoudt bronhistorie; geen privéimport; schooltoegang vervalt. |
+| KI063 | gecontroleerde link provisional -> schoolmember behoudt observatieprovenance en geen privédata; rollback ontkoppelt zonder evidence leak. | GETEST | Koppelen/ontkoppelen behoudt bronhistorie; geen privéimport; schooltoegang vervalt. Verplaatsing van uitsluitend het fictieve account laat oude onderwijshistorie staan; revoked link wordt niet door replay hersteld. |
 | KI064 | 3/4 van 12 cursisten met onvoldoende bewijs (25% coverage) resulteert NIET in hele-klasherhaling; geeft diagnose + kleine groep. | GETEST | 3 aandacht van 4 gemeten/12 actief levert diagnose + kleine groep, geen hele klas. |
 | KI065 | groepsadvies toont noemer 4 gemeten/12 actief, niet alleen 3 aandacht/12. | GETEST | 4 gemeten/12 actief en aandacht/meetgroep zichtbaar in regelresultaat/UI. |
-| KI066 | TRAIN-only oefenprestatie kan geen MASTERED-status opleveren. | GETEST | TRAIN kan nooit MASTERED opleveren; unit/API/leerlingroute. |
+| KI066 | TRAIN-only oefenprestatie kan geen MASTERED-status opleveren. | GETEST | TRAIN kan nooit MASTERED opleveren; unit/API/leerlingroute. Volledige docent-cursistproef: oefening Geoefend, matrix en onderliggend individueel TRAIN-bewijs blijven ongemeten. |
 | KI067 | voltooide oefening met hergebruikte feedbackitems kan niet als onafhankelijke transfermeting tellen. | GETEST | Finished/repeated feedback telt niet als onafhankelijke transfermeting. |
 | KI068 | volgende dag weekend en geen rooster -> label onbekend en datum kiesbaar zonder fictieve lesplanning. | GETEST | UNKNOWN roosterlabel en kiesbare datum; geen aanname dat morgen een schooldag is. |
 | KI069 | docentnote bevat script/HTML of CSV-formule -> opgeslagen en geëxporteerd zonder XSS/formula-executie. | GETEST | Werkelijke online Chromium/WebKit-proef met script/HTML in observatie en spreadsheetformule in naam: tekst blijft inert na herladen, CSV neutraliseert formule, JSON bewaart originele tekst als download. evidence/security-browser.json. Geen onafhankelijke pentest geclaimd. |

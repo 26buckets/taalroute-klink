@@ -1188,37 +1188,39 @@ export async function handleInzicht(
             affected,
             policy: { allowed_routes: routes, exercise_mode: mode },
           });
-        if (body.impact_hash !== impactHash || body.confirmed !== true)
-          return fail(409, 'Bekijk eerst de actuele gevolgen en bevestig.');
         return response(
-          await mutate(c, request, body, async () => ({
-            data: { ok: true },
-            statements: [
-              inherit
-                ? stmt(
-                    db,
-                    'DELETE FROM class_access_policies WHERE organization_id=? AND group_id=? AND subject_id=?',
-                    c.org,
-                    group,
-                    target,
-                  )
-                : stmt(
-                    db,
-                    'INSERT INTO class_access_policies VALUES (?,?,?,?,?,?) ON CONFLICT(organization_id,group_id,subject_id) DO UPDATE SET version=class_access_policies.version+1,allowed_routes=excluded.allowed_routes,exercise_mode=excluded.exercise_mode',
-                    c.org,
-                    group,
-                    target,
-                    current.version + 1,
-                    canonical(routes),
-                    mode,
-                  ),
-              audit(
-                c,
-                inherit ? 'policy.inherit' : 'policy.update',
-                `${group}:${target}`,
-              ),
-            ],
-          })),
+          await mutate(c, request, body, async () => {
+            if (body.impact_hash !== impactHash || body.confirmed !== true)
+              return fail(409, 'Bekijk eerst de actuele gevolgen en bevestig.');
+            return {
+              data: { ok: true },
+              statements: [
+                inherit
+                  ? stmt(
+                      db,
+                      'DELETE FROM class_access_policies WHERE organization_id=? AND group_id=? AND subject_id=?',
+                      c.org,
+                      group,
+                      target,
+                    )
+                  : stmt(
+                      db,
+                      'INSERT INTO class_access_policies VALUES (?,?,?,?,?,?) ON CONFLICT(organization_id,group_id,subject_id) DO UPDATE SET version=class_access_policies.version+1,allowed_routes=excluded.allowed_routes,exercise_mode=excluded.exercise_mode',
+                      c.org,
+                      group,
+                      target,
+                      current.version + 1,
+                      canonical(routes),
+                      mode,
+                    ),
+                audit(
+                  c,
+                  inherit ? 'policy.inherit' : 'policy.update',
+                  `${group}:${target}`,
+                ),
+              ],
+            };
+          }),
         );
       }
       if (path[2] === 'assignments') {
@@ -1635,35 +1637,34 @@ export async function handleInzicht(
       );
       if (!p) return fail(404, 'Niet beschikbaar.');
       await teacher(c, String(p.group_id), true);
-      if (p.status !== 'pending')
-        return fail(409, 'Dit voorstel is al afgehandeld.');
-      const action = choice(body.action, ['approve', 'reject']);
-      if (action === 'reject')
-        return response(
-          await mutate(c, request, body, async () => ({
-            data: { ok: true },
-            statements: [
-              stmt(
-                db,
-                "UPDATE recommendation_previews SET status='rejected' WHERE organization_id=? AND id=?",
-                c.org,
-                path[1],
-              ),
-              audit(c, 'recommendation.reject', path[1]),
-            ],
-          })),
-        );
-      if (
-        body.confirmed !== true ||
-        String(p.expires_at) < now() ||
-        (await hash(await inputs(c, String(p.group_id)))) !== p.input_hash
-      )
-        return fail(
-          409,
-          'Voorstel verouderd. Bereken opnieuw en controleer het resultaat.',
-        );
       return response(
         await mutate(c, request, body, async () => {
+          // A committed decision must remain replayable when its response was lost.
+          if (p.status !== 'pending')
+            return fail(409, 'Dit voorstel is al afgehandeld.');
+          const action = choice(body.action, ['approve', 'reject']);
+          if (action === 'reject')
+            return {
+              data: { ok: true },
+              statements: [
+                stmt(
+                  db,
+                  "UPDATE recommendation_previews SET status='rejected' WHERE organization_id=? AND id=?",
+                  c.org,
+                  path[1],
+                ),
+                audit(c, 'recommendation.reject', path[1]),
+              ],
+            };
+          if (
+            body.confirmed !== true ||
+            String(p.expires_at) < now() ||
+            (await hash(await inputs(c, String(p.group_id)))) !== p.input_hash
+          )
+            return fail(
+              409,
+              'Voorstel verouderd. Bereken opnieuw en controleer het resultaat.',
+            );
           const selections = Array.isArray(body.assignments)
             ? (body.assignments as Record<string, unknown>[])
             : [];
@@ -1763,17 +1764,17 @@ export async function handleInzicht(
     if (path[0] === 'accept-invite' && writing) {
       if (c.role !== 'learner')
         return fail(403, 'De bedoelde cursist moet zelf bevestigen.');
-      const invite = await one(
-        db,
-        "SELECT * FROM school_invites WHERE organization_id=? AND membership_id=? AND token_hash=? AND status='created' AND expires_at>?",
-        c.org,
-        c.member,
-        await hash(string(body.token, 64)),
-        now(),
-      );
-      if (!invite) return fail(409, 'Uitnodiging niet beschikbaar.');
       return response(
         await mutate(c, request, body, async () => {
+          const invite = await one(
+            db,
+            "SELECT * FROM school_invites WHERE organization_id=? AND membership_id=? AND token_hash=? AND status='created' AND expires_at>?",
+            c.org,
+            c.member,
+            await hash(string(body.token, 64)),
+            now(),
+          );
+          if (!invite) return fail(409, 'Uitnodiging niet beschikbaar.');
           const id = uid();
           return {
             data: { id },
@@ -1805,29 +1806,31 @@ export async function handleInzicht(
       if (c.role !== 'registrar')
         return fail(403, 'Alleen de bevoegde schoolregistrar kan ontkoppelen.');
       const id = string(body.link_id);
-      if (
-        !(await one(
-          db,
-          'SELECT id FROM account_links WHERE organization_id=? AND id=? AND revoked_at IS NULL',
-          c.org,
-          id,
-        ))
-      )
-        return fail(404, 'Niet beschikbaar.');
       return response(
-        await mutate(c, request, body, async () => ({
-          data: { ok: true },
-          statements: [
-            stmt(
+        await mutate(c, request, body, async () => {
+          if (
+            !(await one(
               db,
-              'UPDATE account_links SET revoked_at=? WHERE organization_id=? AND id=?',
-              now(),
+              'SELECT id FROM account_links WHERE organization_id=? AND id=? AND revoked_at IS NULL',
               c.org,
               id,
-            ),
-            audit(c, 'link.revoke', id),
-          ],
-        })),
+            ))
+          )
+            return fail(404, 'Niet beschikbaar.');
+          return {
+            data: { ok: true },
+            statements: [
+              stmt(
+                db,
+                'UPDATE account_links SET revoked_at=? WHERE organization_id=? AND id=?',
+                now(),
+                c.org,
+                id,
+              ),
+              audit(c, 'link.revoke', id),
+            ],
+          };
+        }),
       );
     }
     if (path[0] === 'school-practice') {

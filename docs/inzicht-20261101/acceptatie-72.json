@@ -12,7 +12,7 @@
       "id": "KI001",
       "requirement": "docent maakt klas; opnieuw inloggen -> identieke serverklasse.",
       "status": "GETEST",
-      "evidence_or_gap": "Online wachtwoord + authenticatorlogin, serverklasse en herladen/heropenen; twee browsers. Echte persoonsverificatie blijft vrijgavepoort."
+      "evidence_or_gap": "Online wachtwoord + authenticatorlogin, serverklasse en herladen/heropenen; twee browsers. Echte persoonsverificatie blijft vrijgavepoort. Volledige heraanmelding met wachtwoord/MFA en identieke servergegevens: journey-browser.mjs, beide engines."
     },
     {
       "id": "KI002",
@@ -24,7 +24,7 @@
       "id": "KI003",
       "requirement": "docent maakt voorlopige cursist; koppeling vereist verificatie.",
       "status": "GETEST",
-      "evidence_or_gap": "Voorlopig profiel, registrar en accountgebonden uitnodiging: API en student-browser.mjs."
+      "evidence_or_gap": "Voorlopig profiel, registrar en accountgebonden uitnodiging: API en student-browser.mjs. Gehele voorlopige docentregistratie → registrar → bedoelde cursist in beide engines, inclusief verloren bevestiging."
     },
     {
       "id": "KI004",
@@ -42,13 +42,13 @@
       "id": "KI006",
       "requirement": "docent observatie -> zichtbaar in juiste profiel, actor/tijd bekend.",
       "status": "GETEST",
-      "evidence_or_gap": "API + beide browsers, profiel, auteur/tijd en opslaan na netwerkherstel."
+      "evidence_or_gap": "API + beide browsers, profiel, auteur/tijd en opslaan na netwerkherstel. Volledige rolproef: verloren serverantwoord herhaald, precies één observatie; evidence/journey/."
     },
     {
       "id": "KI007",
       "requirement": "observatiecorrectie -> audit en oorspronkelijke versie beschikbaar.",
       "status": "GETEST",
-      "evidence_or_gap": "Append-only revisies, reden/auteur, oude versie en audit bewaard."
+      "evidence_or_gap": "Append-only revisies, reden/auteur, oude versie en audit bewaard. Beide revisies en correctiereden zichtbaar na herladen in Chromium en WebKit."
     },
     {
       "id": "KI008",
@@ -180,7 +180,7 @@
       "id": "KI029",
       "requirement": "afwijzen advies -> geen assignment.",
       "status": "GETEST",
-      "evidence_or_gap": "Reject en approve zonder expliciete opdrachten maken geen assignment."
+      "evidence_or_gap": "Reject en approve zonder expliciete opdrachten maken geen assignment. Goedkeuren/afwijzen na verloren antwoord zonder dubbele actie getest; beide browsers plus directe SQL-audit bevestigen één lesplan/audit en geen extra opdracht."
     },
     {
       "id": "KI030",
@@ -258,7 +258,7 @@
       "id": "KI042",
       "requirement": "wachtende, verlopen of vervalste invitatie geeft nooit leerlinggegevens vrij.",
       "status": "GETEST",
-      "evidence_or_gap": "Wachtende, vervalste en verlopen uitnodiging openen geen dossier; exacte accountbinding en eenmaligheid in API-tests. Registratie/koppeling met echte fictieve login in twee online browsers."
+      "evidence_or_gap": "Wachtende, vervalste en verlopen uitnodiging openen geen dossier; exacte accountbinding en eenmaligheid in API-tests. Registratie/koppeling met echte fictieve login in twee online browsers. Dezelfde accountgebonden bevestiging mag na antwoordverlies opnieuw worden gelezen; een nieuw verzoek hergebruikt de uitnodiging niet. Ontkoppelen/herhalen herstelt nooit ingetrokken toegang."
     },
     {
       "id": "KI043",
@@ -318,7 +318,7 @@
       "id": "KI052",
       "requirement": "beperkte leerroute met actieve open opdracht -> impactpreview en expliciete beslissing.",
       "status": "DEELS",
-      "evidence_or_gap": "Actuele impacthash, expliciete bevestiging, individuele reset en aparte bevestigde opdrachtintrekking werken. Impactoverzicht blijft beperkt; volledige causale intrekkingswizard open."
+      "evidence_or_gap": "Actuele impacthash, expliciete bevestiging, individuele reset en aparte bevestigde opdrachtintrekking werken. Impactoverzicht blijft beperkt; volledige causale intrekkingswizard open. Herhaling van dezelfde bevestiging na antwoordverlies wijzigt de beleidsversie niet opnieuw."
     },
     {
       "id": "KI053",
@@ -330,7 +330,7 @@
       "id": "KI054",
       "requirement": "geen netwerk of half voltooide opslag -> expliciete pending/failure, niet vals 'bewaren gelukt'.",
       "status": "GETEST",
-      "evidence_or_gap": "Atomair opslaan, offlinefout, retry, saved/pending; tests en browserbewijs."
+      "evidence_or_gap": "Atomair opslaan, offlinefout, retry, saved/pending; tests en browserbewijs. Gecontroleerd antwoordverlies NA servercommit: observatie, koppelen/ontkoppelen, beleid, oefenpoging en advies; succesvolle herhaling zonder dubbele records in twee browsers."
     },
     {
       "id": "KI055",
@@ -384,7 +384,7 @@
       "id": "KI063",
       "requirement": "gecontroleerde link provisional -> schoolmember behoudt observatieprovenance en geen privédata; rollback ontkoppelt zonder evidence leak.",
       "status": "GETEST",
-      "evidence_or_gap": "Koppelen/ontkoppelen behoudt bronhistorie; geen privéimport; schooltoegang vervalt."
+      "evidence_or_gap": "Koppelen/ontkoppelen behoudt bronhistorie; geen privéimport; schooltoegang vervalt. Verplaatsing van uitsluitend het fictieve account laat oude onderwijshistorie staan; revoked link wordt niet door replay hersteld."
     },
     {
       "id": "KI064",
@@ -402,7 +402,7 @@
       "id": "KI066",
       "requirement": "TRAIN-only oefenprestatie kan geen MASTERED-status opleveren.",
       "status": "GETEST",
-      "evidence_or_gap": "TRAIN kan nooit MASTERED opleveren; unit/API/leerlingroute."
+      "evidence_or_gap": "TRAIN kan nooit MASTERED opleveren; unit/API/leerlingroute. Volledige docent-cursistproef: oefening Geoefend, matrix en onderliggend individueel TRAIN-bewijs blijven ongemeten."
     },
     {
       "id": "KI067",

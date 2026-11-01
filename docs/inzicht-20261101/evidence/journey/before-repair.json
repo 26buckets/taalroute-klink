@@ -1,0 +1,26 @@
+{
+  "at": "2026-11-01T04:29:16.879Z",
+  "staging": "https://klink-inzicht-pr8-staging.nico-554.workers.dev",
+  "synthetic_only": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "run": "2026-11-01T04-28-53-230Z",
+      "steps": [
+        "MFA login, class and two provisional learners through UI",
+        "Lost save response retried exactly once; correction and both historical versions persist"
+      ],
+      "group": "86902367-2ee4-49be-be33-38947c1d71ce",
+      "learners": [
+        "3922f1e1-79c5-4226-93f0-9d52f36906c1",
+        "04288ffe-b8f4-4a67-995f-db874c5a8af1"
+      ],
+      "status": "failed",
+      "error": "AssertionError [ERR_ASSERTION]: accept-invite: 409",
+      "alerts": [
+        ""
+      ],
+      "page_errors": []
+    }
+  ]
+}
