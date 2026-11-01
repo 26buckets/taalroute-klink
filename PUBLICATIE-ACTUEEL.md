@@ -1,3 +1,15 @@
+## Actuele publicatie — Inzichten in het hamburgermenu — 1 november 2026
+
+Livebron `cfeb578a8e2fb29898d5ce994b74793e7630f219`, schone canonieke main; Worker `1e3d4580-29ea-435f-b65b-eb0f85ea3d53`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van livebron `6a4c2acd346c436cb0344b77da21de8dadc09c16` en de vastlegging `08fda5b385ed384d7bf6bebae7a8a2d388c4ac39`. De eerdere mobiele bediening en alle bestaande publicaties blijven behouden.
+
+Nico wees op de herhaaldelijk gevraagde ontbrekende Inzichten-link en verduidelijkte de bestaande aparte beheeromgeving `https://inzicht.taalroute.nl/`. Het echte menu en de gepubliceerde bron bevatten geen link en geen voorwaarde die hem verbergt. De aparte beheeromgeving toont haar bestaande inlogpagina. Alleen de native link **Inzichten** met bestaand Lucide-grafiekicoon is toegevoegd aan het headerhamburgermenu, onder Klink+docent, boven Delen. Opent in een nieuw tabblad met `noopener noreferrer`, zodat de oefening open blijft. Geen integratie van de concept-Inzicht-uitbreiding, geen loginwijzigingen of databasewerk. Geen gewijzigde inhoud, media, audio-, antwoord- of voortgangscode, opslag of routes.
+
+Lokaal en online ieder zestien menu-/bestemmingscontroles: Chromium/WebKit, 320/390/768/1280px, licht/donker, één zichtbare link zonder scrollen, bestaande menuopties, muis/aanraken, werkelijke inlogpagina en behoud van de oorspronkelijke pagina en opslag. Tab+Enter in Chromium, Enter na locatorfocus in WebKit; WebKit Tab vanuit native summary kon in de lokale omgeving niet worden geverifieerd. Escape en focusterugkeer getest. Tien vrijgaveproeven, typecontrole, lint van alle vijf gewijzigde code-/testbestanden en volledige normale publicatiepoort slagen. Brede repositorylint meldt bestaande niet-gerelateerde fouten; geen ongevraagde opschoning gedaan. Alle live inhoudsvingerafdrukken behouden. Geen fysieke telefoon of ingelogde beheerfuncties getest. Geen GitHub Actions-workflows aanwezig of gestart.
+
+Brongebonden verzoek, bestemming en beperkte vormgevingsaanvulling: `docs/klink-owner-release-insights-menu-link-20261101.json` en `docs/appearance-floor-20261031/approved-updates/insights-menu-link-20261101.json`. Dossier: `docs/insights-menu-link-20261101/`, inclusief gecontroleerde bronherstelkopie, online bewijs en finale Drive-herstelkopie. Een al geopend oud app-tabblad eenmaal vernieuwen om de nieuwe menulink te laden.
+
+---
+
 ## Actuele publicatie — mobiele luisterknop, antwoordkeuzes en Verder — 1 november 2026
 
 Livebron `6a4c2acd346c436cb0344b77da21de8dadc09c16`, schone canonieke main; Worker `5c07da04-6f7a-4546-8be2-03ddab16b81b`. Via de gewone `npm run deploy` gepubliceerd als afstammeling van de werkelijk live bevestigde bron `1069f8ac11730d313b4afdf7ccf4b886229c7882`, inclusief de nagekeken B1-bronnen, audio, voortgangsaliassen en verliesloos verkleinde oorspronkelijke loader. Latere B1-/loaderregisterdocumentatie is behouden.

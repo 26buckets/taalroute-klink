@@ -1,4 +1,4 @@
-import {verifyGrammarPublication,readBeforeGrammarPublication} from './check-grammar-publication-20261101.mjs';
+import {verifyInsightsMenuRelease,readBeforeInsightsMenu} from './check-insights-menu-link-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -8,12 +8,12 @@ const git=(...args)=>execFileSync('git',args,{maxBuffer:128e6}),sha=b=>createHas
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 const lines=b=>b.toString().trim().split('\n').filter(Boolean),sort=a=>a.sort((a,b)=>a.localeCompare(b));
 export function verifyMobileChoiceVisibilityRelease(read=readFileSync){
- const grammar=verifyGrammarPublication(read),currentRead=read;read=file=>readBeforeGrammarPublication(file,grammar,currentRead);
+ const successor=verifyInsightsMenuRelease(read),currentRead=read;read=file=>readBeforeInsightsMenu(file,successor,currentRead);
  const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-mobile-choice-visibility-20261101.json');
  assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceChangeApproved);assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);
  assert(r.userRequest.includes('Herstel ook die overlap')&&r.userRequest.includes('alle antwoorden en Verder')&&r.userRequest.includes('zet het online'));
  git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
- const changed=sort(lines(git('diff','--name-only',base,grammar.baselineSourceCommit,'--',...roots)));
+ const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
  for(const[f,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(f)),h,f);
  assert.deepEqual(changed.filter(f=>/^(app|components|hooks|data|lib|public|db|drizzle)\//.test(f)),['app/learner-layout.css']);
@@ -28,6 +28,6 @@ export function verifyMobileChoiceVisibilityRelease(read=readFileSync){
  const retention=json(folder+'local/public-retention.json');assert.equal(retention.files.length,134);assert(retention.files.every(f=>f.byteEqual));
  const v=json(folder+'verification.json');for(const key of ['types','lint','touchAnswers','keyboard','nativeAudio','desktopUnchanged','contentAudioProgressUnchanged','localOnly'])assert.equal(v[key],true,key);
  const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.driveId);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
- return {...r,grammar};
+ return {...r,successor};
 }
-export function readBeforeMobileChoiceVisibility(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeGrammarPublication(file,r.grammar,read);}
+export function readBeforeMobileChoiceVisibility(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeInsightsMenu(file,r.successor,read);}

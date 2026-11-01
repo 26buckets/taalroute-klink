@@ -3,8 +3,8 @@ import { readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 
-const base = '08fda5b385ed384d7bf6bebae7a8a2d388c4ac39';
-const live = '6a4c2acd346c436cb0344b77da21de8dadc09c16';
+const base = 'fb29c5a2698b17871c7c12a8cd46b3a90ccfa889';
+const live = 'cfeb578a8e2fb29898d5ce994b74793e7630f219';
 const candidate = '6c3f777585557b81be4762b662e249463ce95065';
 const folder = 'docs/grammar-publication-20261101/';
 export const grammarPublicationFile = folder + 'approval.json';
