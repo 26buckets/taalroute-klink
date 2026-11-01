@@ -13,7 +13,7 @@ const read = (path) =>
 const rows = read('public/content-register/active.json');
 const planned = read('public/content-register/planned.json');
 
-test('Stable script IDs preserve exact language and separate instruction from target', () => {
+void test('Stable script IDs preserve exact language and separate instruction from target', () => {
   assert.equal(
     plannedAudioId('target', ' café '),
     plannedAudioId('target', 'cafe\u0301'),
@@ -27,7 +27,7 @@ test('Stable script IDs preserve exact language and separate instruction from ta
     plannedAudioId('target', 'Een tas.'),
   );
 });
-test('Later binding is exact, reviewed, branded and never silently replaces current audio', () => {
+void test('Later binding is exact, reviewed, branded and never silently replaces current audio', () => {
   const good = {
     src: '/package-audio/word/new.wav',
     transcript: 'tas',
@@ -59,7 +59,7 @@ test('Later binding is exact, reviewed, branded and never silently replaces curr
   );
   assert.equal(resolveRegisteredAudio('unknown', 'tas', 'target'), undefined);
 });
-test('All active word, context, instruction and comprehension audio IDs have a register slot', () => {
+void test('All active word, context, instruction and comprehension audio IDs have a register slot', () => {
   const byId = new Map(rows.map((row) => [row.id, row]));
   assert.equal(byId.size, rows.length);
   for (const word of read('data/klink-curriculum.json').words)
@@ -90,7 +90,7 @@ test('All active word, context, instruction and comprehension audio IDs have a r
   assert(byId.has('zin-man'));
   assert(rows.some((row) => row.kind === 'sound' && row.status === 'missing'));
 });
-test('Prepared scripts remain unplaced, deduplicated by role, with honest archive status', () => {
+void test('Prepared scripts remain unplaced, deduplicated by role, with honest archive status', () => {
   assert.equal(new Set(planned.map((row) => row.id)).size, planned.length);
   for (const row of planned) {
     assert.equal(row.id, plannedAudioId(row.role, row.text));
@@ -112,7 +112,7 @@ test('Prepared scripts remain unplaced, deduplicated by role, with honest archiv
     !/drive\.google|docs\.google|diglin/i.test(JSON.stringify([rows, planned])),
   );
 });
-test('Inventory generation is deterministic, and does not mutate the learner curriculum', () => {
+void test('Inventory generation is deterministic, and does not mutate the learner curriculum', () => {
   const before = JSON.stringify(packs);
   const fixture = {
     reviewedAudio: [
@@ -156,7 +156,7 @@ test('Inventory generation is deterministic, and does not mutate the learner cur
     302,
   );
 });
-test('Broader domains do not claim a full method from renderers or exercise counts', () => {
+void test('Broader domains do not claim a full method from renderers or exercise counts', () => {
   assert.equal(contentCoverage.length, 12);
   assert(contentCoverage.every((row) => row.status !== 'Werkt'));
   assert.equal(

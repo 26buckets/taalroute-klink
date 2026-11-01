@@ -33,7 +33,7 @@ const paths = [...new Set([
   ...instructions.items.map(item => item.src), ...comprehension.items.map(item => item.src),
 ].filter(path => path && !isWithdrawnAudio(path)))].sort((a,b)=>a.localeCompare(b));
 const results = [], errors = []; let next = 0;
-const withdrawn = readdirSync('public', { recursive: true }).map(path => `/${path}`).filter(path => isWithdrawnAudio(path) && statSync(`public${path}`).isFile());
+const withdrawn = readdirSync('public', { recursive: true, encoding: 'utf8' }).map(path => `/${path}`).filter(path => isWithdrawnAudio(path) && statSync(`public${path}`).isFile());
 assert(withdrawn.length > 16);
 for (const path of new Set(withdrawn)) {
   const response = await fetch(base + path, { cache: 'no-store' });

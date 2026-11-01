@@ -6,7 +6,7 @@ import {importedItems,importedExercise} from '../../lib/imported-practice.ts';
 import {importedItemIssues} from '../../lib/imported-practice-contract.ts';
 import {pilotBlocks} from '../../lib/alfa-c-practice.ts';
 import {functionalBlocks,functionalAudio} from '../../lib/alfa-c-functioneel.ts';
-import {dailyBlocks,dailyAudio,dailyAnswer} from '../../lib/alfa-c-dagelijks.ts';
+import {dailyBlocks,dailyAnswer} from '../../lib/alfa-c-dagelijks.ts';
 import {teacherTasks} from '../../lib/alfa-c-docent.ts';
 const dir='docs/imported-alfa-c-release-20261031',read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const ledger=read(dir+'/source-amendments.json');
@@ -21,7 +21,7 @@ for(const t of texts){assert.deepEqual(importedItemIssues(t),[]);const e=importe
 const media=new Set(),audioBindings=[];
 function walk(v){if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==='object')Object.values(v).forEach(walk);else if(typeof v==='string'&&v.startsWith('/')&&/\.(mp3|wav|ogg)$/i.test(v)){assert(fs.existsSync('public'+v),v);media.add(v);}}
 for(const b of pilotBlocks){assert.equal(b.steps.length,12);for(const s of b.steps){walk(s);if(s.exercise.tiles)assert.equal(s.exercise.answer.targetTileIds.map(id=>s.exercise.tiles.find(t=>t.id===id).token).join(s.exercise.buildKind==='sentence'?' ':''),s.model);}}
-const fclips=read('data/klink-alfa-c-functioneel-audio.json').clips;
+const _fclips=read('data/klink-alfa-c-functioneel-audio.json').clips;
 for(const b of functionalBlocks){assert.equal(b.steps.length,12);for(const s of b.steps){if(s.kind==='choice')assert.equal(s.options.filter(o=>o.id===s.correctOptionId).length,1);for(const [role,text]of[['guide',s.instruction],['guide',s.helpVisible],['guide',s.retryVisible],...s.dictationTexts.map(t=>['target',t]),...s.exampleTargetTexts.map(t=>['target',t])])if(text){const src=functionalAudio(role,text);assert(src,`${s.id} ${role} ${text}`);walk(src);audioBindings.push({task:s.id,role,text,src});}}}
 const dclips=read('data/klink-alfa-c-dagelijks-audio.json').clips;
 for(const b of dailyBlocks){assert.equal(b.steps.length,12);for(const s of b.steps){for(const[k,text]of Object.entries(s.speech)){const clip=dclips.find(c=>c.id===s.audio[k]);assert(clip,`${s.id}:${k}`);assert.equal(clip.text,text);walk(clip.src);audioBindings.push({task:s.id,role:k,text,src:clip.src});}if(s.interaction==='keuze'){assert.equal(s.options.filter(o=>o.correct).length,1);for(const o of s.options)assert.equal(dailyAnswer(s,[o.code]),o.correct);}else{assert.deepEqual([...s.cards].sort(),[...s.answerOrder].sort());assert(dailyAnswer(s,s.answerOrder));}}}

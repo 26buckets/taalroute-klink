@@ -19,7 +19,7 @@ import {
   isCorrectSequence,
 } from '../lib/teacher-classroom.ts';
 
-test('mat uses the canonical lesson, word, media and existing practice', () => {
+void test('mat uses the canonical lesson, word, media and existing practice', () => {
   assert.equal(matWord.id, 'klink-woord-mat');
   assert.equal(matWord.image, '/start-tas/mat.webp');
   assert.equal(matWord.audio, '/package-audio/taalroute/klink-woord-mat.wav');
@@ -33,7 +33,7 @@ test('mat uses the canonical lesson, word, media and existing practice', () => {
     phases.every((p) => p.action && p.observe && p.framework && p.minutes > 0),
   );
 });
-test('three content routes are independent of support and trace prerequisites honestly', () => {
+void test('three content routes are independent of support and trace prerequisites honestly', () => {
   assert.deepEqual(routeIds, ['a', 'b', 'c']);
   assert.equal(new Set(routeIds.map((r) => classroomRoutes[r].goal)).size, 3);
   for (const route of routeIds)
@@ -65,7 +65,7 @@ test('three content routes are independent of support and trace prerequisites ho
     'a',
   );
 });
-test('sentence and text cards preserve duplicates and reject invalid ordering', () => {
+void test('sentence and text cards preserve duplicates and reject invalid ordering', () => {
   assert.equal(sequenceForRoute('b').length, 6);
   assert(isCorrectSequence('b', [0, 1, 2, 3, 4, 5]));
   assert(!isCorrectSequence('b', [5, 4, 3, 2, 1, 0]));
@@ -113,14 +113,14 @@ test('sentence and text cards preserve duplicates and reject invalid ordering', 
   );
   assert(!('response' in state));
 });
-test('tile actions preserve unique known letters and allow reordering', () => {
+void test('tile actions preserve unique known letters and allow reordering', () => {
   assert.deepEqual(placeTile(['m'], 'a'), ['m', 'a', '']);
   assert.deepEqual(placeTile(['a', 'm'], 'm', 0), ['m', 'a', '']);
   assert.deepEqual(placeTile(['m', 'a', 't'], 't', 0), ['t', 'a', 'm']);
   assert.deepEqual(placeTile(['m'], 's'), ['m']);
   assert.deepEqual(placeTile(['m'], 'a', -1), ['m']);
 });
-test('session round trip preserves lesson; malformed storage fails closed', () => {
+void test('session round trip preserves lesson; malformed storage fails closed', () => {
   const state = {
     ...freshClassroom('extend'),
     active: true,
@@ -150,7 +150,7 @@ test('session round trip preserves lesson; malformed storage fails closed', () =
   assert.deepEqual(bad.tiles, ['m', '', '']);
   assert.equal(bad.exerciseId, undefined);
 });
-test('runtime sound manifest has isolated slots and rejects unsafe sources and fallbacks', () => {
+void test('runtime sound manifest has isolated slots and rejects unsafe sources and fallbacks', () => {
   const registry = JSON.parse(
     readFileSync('public/content/klink-docent-audio.json'),
   );

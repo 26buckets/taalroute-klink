@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { applyDefaultAudioRate, DEFAULT_AUDIO_RATE, playMedia, stopMedia } from '../lib/media-player.ts';
 import { isWithdrawnAudio } from '../lib/audio-policy.ts';
 
-test('Withdrawn explanation is blocked; task questions and words remain available', async () => {
+void test('Withdrawn explanation is blocked; task questions and words remain available', async () => {
   for (const source of ['/package-audio/instructions/extra-begrip.wav', '/audio/pb/instructie1.m4a', '/package-audio/comprehension/hulp-biet.wav']) {
     assert(isWithdrawnAudio(source));
     assert(isWithdrawnAudio(`https://klink.taalroute.nl${source}?v=2`));
@@ -13,7 +13,7 @@ test('Withdrawn explanation is blocked; task questions and words remain availabl
   assert.equal(isWithdrawnAudio('/audio/pb/biet.m4a'), false);
 });
 
-test('Default playback uses 0.85; isolated models retain their natural rate without changing other audio', async () => {
+void test('Default playback uses 0.85; isolated models retain their natural rate without changing other audio', async () => {
   assert.equal(DEFAULT_AUDIO_RATE, 0.85);
   assert.doesNotThrow(() => applyDefaultAudioRate(null));
   const ownRecording = { playbackRate: 1, defaultPlaybackRate: 1, preservesPitch: false };

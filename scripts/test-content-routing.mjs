@@ -5,7 +5,7 @@ import { contentRouting, connectedContent, contentForStep, contentPlacementForSt
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import curriculum from '../data/klink-curriculum.json' with { type: 'json' };
 
-test('Every Klink route takes its exact content placement from the same Lexicon edition', () => {
+void test('Every Klink route takes its exact content placement from the same Lexicon edition', () => {
   assert.equal(contentRouting.release.authority, 'Lexicon');
   assert.equal(contentRouting.release.curriculumEdition, curriculum.release.id);
   assert.equal(contentRouting.release.curriculumInputHash, curriculum.release.inputHash);
@@ -14,7 +14,7 @@ test('Every Klink route takes its exact content placement from the same Lexicon 
   for (const step of contentRouting.steps) assert.deepEqual(contentForStep(step).map(item => item.id), step.contents.map(item => item.contentId));
   assert.deepEqual(contentForStep({id:'unknown',newWords:['klink-woord-tas']}), [], 'No implicit word-overlap fallback');
 });
-test('Recorded texts remain exact and every repeat remains an optional supported-listening proposal', () => {
+void test('Recorded texts remain exact and every repeat remains an optional supported-listening proposal', () => {
   for (const item of connectedContent) {
     assert.equal(contentRouting.items.find(row => row.id === item.id).textHash, createHash('sha256').update(item.text).digest('hex'));
     assert.deepEqual(item.wordIds, contentRouting.items.find(row => row.id === item.id).wordIds);

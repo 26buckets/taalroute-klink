@@ -14,7 +14,7 @@ for (const [engine, browserType] of Object.entries({ chromium, webkit })) {
     page.on('pageerror', e => errors.push(e.message));
     await page.addInitScript(() => { window.Audio = class extends EventTarget { play() { this.t = setTimeout(() => this.dispatchEvent(new Event('ended')), 10); return Promise.resolve(); } pause() { clearTimeout(this.t); } }; });
     await page.goto(base + '/#learner/alfa-c');
-    for (const [kind, blocks, key] of [['daily', dailyBlocks, dailyStorageKey], ['functional', functionalBlocks, functionalStorageKey]]) {
+    for (const [kind, blocks, key] of /** @type {const} */ ([['daily', dailyBlocks, dailyStorageKey], ['functional', functionalBlocks, functionalStorageKey]])) {
       for (const block of blocks) for (const [index, step] of block.steps.entries()) {
         await page.evaluate(({ key, block, index }) => localStorage.setItem(key, JSON.stringify({ version: 1, positions: { [block]: index }, records: {} })), { key, block: block.id, index });
         await page.goto(base + `/#learner/alfa-c/${block.id}`); await page.reload();

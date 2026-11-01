@@ -12,7 +12,7 @@ const review=JSON.parse(readFileSync(folder+'/word-review.json'));
 const ids=new Set(review.recovered.map(r=>r.newId));
 const baseline=JSON.parse(execFileSync('git',['show','87a3a2ba3854f2fe11e1255f29ebf5d0017d042a:data/klink-synonyms.json']));
 
-test('seven new questions preserve the original 210 records, all IDs and all A1/A2 availability',()=>{
+void test('seven new questions preserve the original 210 records, all IDs and all A1/A2 availability',()=>{
  assert.deepEqual(priorEntries.slice(0,210),baseline.entries);
  assert.deepEqual({...synonymBank,entries:baseline.entries},baseline);
  assert.equal(synonymBank.entries.length,225);assert.equal(synonymBank.entries.filter(e=>e.active).length,200);
@@ -21,7 +21,7 @@ test('seven new questions preserve the original 210 records, all IDs and all A1/
  assert.equal(new Set([...review.recovered.map(r=>r.recordingWord),...review.retained.map(r=>r.word)]).size,15);
 });
 
-test('all seven questions reverse, mix, turn and play their exact word in both directions',()=>{
+void test('all seven questions reverse, mix, turn and play their exact word in both directions',()=>{
  let seen=0;
  for(const collection of synonymCollections.filter(c=>c.exercises.some(e=>ids.has(e.exerciseId)))){
   const location={chapter:'words',activity:'synonyms',collection:collection.id,level:'b1',help:'practice'};
@@ -43,7 +43,7 @@ test('all seven questions reverse, mix, turn and play their exact word in both d
  for(const r of review.retained)assert(!active.has(r.word),r.word);
 });
 
-test('all existing bindings remain and one female ElevenLabs counterpart has actual Taalroute metadata',()=>{
+void test('all existing bindings remain and one female ElevenLabs counterpart has actual Taalroute metadata',()=>{
  const old=JSON.parse(execFileSync('git',['show','87a3a2ba3854f2fe11e1255f29ebf5d0017d042a:data/klink-synonym-audio.json']));
  const current=JSON.parse(readFileSync('data/klink-synonym-audio.json'));
  const released=JSON.parse(execFileSync('git',['show','12715486542e6aa766862a8068cd4ce65294ed28:data/klink-synonym-audio.json']));
@@ -55,7 +55,7 @@ test('all existing bindings remain and one female ElevenLabs counterpart has act
  for(const k of ['artist','album_artist','publisher'])assert.equal(probe.format.tags[k],'Taalroute');assert.equal(probe.format.tags.title,'bestedingen');assert.equal(probe.format.tags.album,'Klink - Synoniemen');
 });
 
-test('publication permits only the approved recovery and rejects missing authorization or backup',()=>{
+void test('publication permits only the approved recovery and rejects missing authorization or backup',()=>{
  assert(verifySynonymRecoveryRelease());
  for(const[file,key,value]of[
   ['docs/klink-owner-release-synonym-recovery-20261101.json','publicationApproved',false],

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { playMedia, stopMedia } from '../lib/media-player.ts';
-test('Read-along follows media time and releases its animation callback on cancellation and completion', async () => {
+void test('Read-along follows media time and releases its animation callback on cancellation and completion', async () => {
   const originals = { Audio: globalThis.Audio, requestAnimationFrame: globalThis.requestAnimationFrame, cancelAnimationFrame: globalThis.cancelAnimationFrame };
   const frames = new Map(); let serial = 0, audio;
   globalThis.requestAnimationFrame = callback => { frames.set(++serial, callback); return serial; };

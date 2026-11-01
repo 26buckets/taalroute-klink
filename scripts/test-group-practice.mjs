@@ -9,7 +9,7 @@ import { contentById } from '../lib/connected-content.ts';
 import { importedItems, importedExercise, importedMatchesPack } from '../lib/imported-practice.ts';
 import groupRelease from '../data/klink-group-practice-release.json' with { type: 'json' };
 import { exerciseHelp } from '../lib/lesson-plan.ts';
-test('Matching help describes the actual source and target controls', () => {
+void test('Matching help describes the actual source and target controls', () => {
   for (const mode of ['match', 'hear-match']) {
     const exercises = packs.flatMap(pack => groupExercises(pack, mode));
     assert(exercises.length > 0);
@@ -21,7 +21,7 @@ test('Matching help describes the actual source and target controls', () => {
   }
 });
 
-test('Whole word groups feed the exercise library, without changing the curriculum', () => {
+void test('Whole word groups feed the exercise library, without changing the curriculum', () => {
   for (const pack of packs) {
     const before = JSON.stringify(pack);
     const all = new Set(pack.words.map(word => word.id));
@@ -52,7 +52,7 @@ test('Whole word groups feed the exercise library, without changing the curricul
   }
 });
 
-test('Every first-group word is a target in all basic word activities', () => {
+void test('Every first-group word is a target in all basic word activities', () => {
   const pack = packs[0], expected = pack.words.map(w => w.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0);
   for (const mode of ['meet','listen','hear-word','read','match','hear-match','build-model','build','worksheet','worksheet-heard','missing','copy','dictation','write','paper-dictation','read-series','speak','word-bingo','image-bingo','memory']) {
     assert.deepEqual([...new Set(groupExercises(pack, mode).flatMap(e => e.targetWordIds))].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), expected, mode);
@@ -60,7 +60,7 @@ test('Every first-group word is a target in all basic word activities', () => {
   assert.deepEqual(pack.words.map(w => w.word).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), ['mat','tas','map','man','pan','jas'].sort((a, b) => a < b ? -1 : a > b ? 1 : 0));
 });
 
-test('Bingo has per-word turns, stable boards, no answer model, and audio gating', () => {
+void test('Bingo has per-word turns, stable boards, no answer model, and audio gating', () => {
   for (const pack of packs) for (const mode of ['word-bingo', 'hear-match']) {
     assert.deepEqual([...new Set(groupExercises(pack, mode).flatMap(item => item.targetWordIds))].sort((a, b) => a < b ? -1 : a > b ? 1 : 0), pack.words.filter(word => word.audio).map(word => word.id).sort((a, b) => a < b ? -1 : a > b ? 1 : 0), `${pack.id}/${mode}: words without an exercise photo must not disappear`);
   }
@@ -80,7 +80,7 @@ test('Bingo has per-word turns, stable boards, no answer model, and audio gating
   }
 });
 
-test('Sentence recognition reuses real near-contrast sentences and retains reading conditions', () => {
+void test('Sentence recognition reuses real near-contrast sentences and retains reading conditions', () => {
   let count = 0;
   for (const pack of packs) for (const exercise of groupExercises(pack, 'find-sentence')) {
     count++;
@@ -98,7 +98,7 @@ test('Sentence recognition reuses real near-contrast sentences and retains readi
   assert(count > 0);
 });
 
-test('Connected instructions do not change participation into proven skill or unpark the short t', () => {
+void test('Connected instructions do not change participation into proven skill or unpark the short t', () => {
   for (const mode of ['speak','sentence-speak','write','write-letter','paper-dictation','read-series','texts','dialogues']) {
     assert(groupExercises(packs[0], mode).every(e => e.assessment === 'participation'));
   }
@@ -117,7 +117,7 @@ test('Connected instructions do not change participation into proven skill or un
   assert.equal(groupRelease.existingMediaChanged, false);
 });
 
-test('Group progress rejects unknown IDs and never uses lesson-progress keys', () => {
+void test('Group progress rejects unknown IDs and never uses lesson-progress keys', () => {
   const records = groupExercises(packs[0], 'build');
   const raw = JSON.stringify({ version: 1, exerciseId: records[1].exerciseId, done: false });
   assert.equal(restoreGroupSession(raw, records).exerciseId, records[1].exerciseId);

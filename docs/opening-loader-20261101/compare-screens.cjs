@@ -1,13 +1,14 @@
-const { chromium,webkit }=require('./klink-current/node_modules/playwright');
-const { mkdirSync,writeFileSync,readFileSync }=require('node:fs');
-const assert=require('node:assert/strict');
-const sharp=require('./klink-current/node_modules/sharp');
+(async()=>{
+const { chromium,webkit }=await import('playwright');
+const { mkdirSync,writeFileSync,readFileSync }=await import('node:fs');
+const {default:assert}=await import('node:assert/strict');
+const {default:sharp}=await import('sharp');
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:4173',phase=process.argv[2]||'before';
 const dir=`work/loader-screen-checks/${phase}`;mkdirSync(dir,{recursive:true});
-(async()=>{const checks=[],errors=[];
+const checks=[],errors=[];
 for(const[engine,type]of Object.entries({chromium,webkit})){const browser=await type.launch();try{for(const[width,height]of [[1280,800],[390,844]])for(const colorScheme of['light','dark']){
  const context=await browser.newContext({viewport:{width,height},colorScheme,reducedMotion:'reduce'});const page=await context.newPage();page.setDefaultTimeout(30000);page.on('pageerror',e=>errors.push(e.message));
- for(const[name,hash,selector]of[['entry','','.entry-screen'],['learner','#learner','button'],['teacher','#teacher/plus','button']]){
+ for(const[name,hash,_selector]of[['entry','','.entry-screen'],['learner','#learner','button'],['teacher','#teacher/plus','button']]){
   await page.goto(base+'/'+hash,{waitUntil:'domcontentloaded'});await page.waitForTimeout(1400);await page.locator('button').first().waitFor();await page.getByText('Klink wordt geopend…',{exact:true}).waitFor({state:'hidden'});await page.evaluate(()=>Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,2000))]));await page.waitForTimeout(250);
   const file=`${engine}-${width}-${colorScheme}-${name}.png`;await page.screenshot({path:dir+'/'+file});
   const item={engine,width,height,colorScheme,name,hash,scrollWidth:await page.evaluate(()=>document.documentElement.scrollWidth)};

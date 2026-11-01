@@ -4,7 +4,7 @@ import { learnerCollectionLabel as label } from '../lib/learner-copy.ts';
 import { displayedChapterCollections } from '../lib/practice-chapters.ts';
 import { groupActivities } from '../lib/group-practice.ts';
 
-test('Short labels separate authored rounds, levels and support without clipping topics', () => {
+void test('Short labels separate authored rounds, levels and support without clipping topics', () => {
   assert.deepEqual(label('Zeg de zin · Ronde 2'), { title: 'Zinnen oefenen', round: '2', support: undefined });
   assert.equal(label('Zeg de zin ronde 2').round, '2');
   assert.equal(label('Zinnenronde 1 · Werk en dagelijks leven').title, 'Werk en dagelijks leven');
@@ -19,7 +19,7 @@ test('Short labels separate authored rounds, levels and support without clipping
   assert.equal(label('Uitbreiding met je docent · alsook · beogen').support, 'Uitbreiding met je docent');
 });
 
-test('All visible collection labels separate round and level prefixes', () => {
+void test('All visible collection labels separate round and level prefixes', () => {
   let checked = 0;
   for (const activity of groupActivities) for (const collection of displayedChapterCollections(activity.id, { level: 'all' })) {
     const result = label(collection.title);

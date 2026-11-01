@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import sharp from 'sharp';
-import {chromium,webkit} from 'playwright';
+import {webkit} from 'playwright';
 const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:4173';
 const out=process.env.KLINK_LOADER_OUTPUT||'docs/opening-loader-repair-20261101/local';
 mkdirSync(out,{recursive:true});

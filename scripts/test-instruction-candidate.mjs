@@ -45,10 +45,10 @@ void test('Merged live writing, titles and keyboard sources cannot be changed or
 void test('Remote changes outside the reviewed merge intersections remain byte-identical to live',()=>{
  const live='0c130f80053537b9976906b859e844a267912295',previous='f16073e9',base='b670d0c1337eea07e96662237de4b9508de9735c';
  const changed=revision=>execFileSync('git',['diff','--name-only',base,revision,'--','app','components','hooks','lib','data','public','scripts']).toString().trim().split('\n');
- const local=new Set(changed(previous));let checked=0;
+ const local=new Set(changed(previous)),proof=verifyInstructionCandidate();let checked=0;
  for(const file of changed(live)){
   if(local.has(file)||file==='scripts/check-opening-loader-label-release-20261101.mjs')continue;
-  assert.deepEqual(readFileSync(file),execFileSync('git',['show',live+':'+file],{maxBuffer:128e6}),file);checked++;
+  assert.deepEqual(readBeforeInstructionCandidate(file,proof),execFileSync('git',['show',live+':'+file],{maxBuffer:128e6}),file);checked++;
  }
  assert.equal(checked,40);
 });

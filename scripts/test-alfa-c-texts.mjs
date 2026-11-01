@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { pilotBlocks, alfaCCommonTexts } from '../lib/alfa-c-practice.ts';
 const reviewed = JSON.parse(readFileSync('docs/klink-alfa-c-texts-20261027/reviewed-text-package.json'));
-test('All 36 learner texts match the reviewed package without changing answers or source media', () => {
+void test('All 36 learner texts match the reviewed package without changing answers or source media', () => {
   assert.equal(pilotBlocks.length, 3);
   for (const [b, block] of pilotBlocks.entries()) {
     const source = reviewed.blocks[b];

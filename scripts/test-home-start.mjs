@@ -4,7 +4,7 @@ import { homeLessonPosition, nextLessonPosition, parseProgress } from '../lib/le
 import { taalroutePackages as packs } from '../lib/taalroute-packages.ts';
 import { lessonContentLevel } from '../lib/learner-route.ts';
 
-test('A new learner starts at the first guided mat example without a level choice', () => {
+void test('A new learner starts at the first guided mat example without a level choice', () => {
   const start = homeLessonPosition(packs, { completed: [] }, 'all');
   assert.equal(start.packageId, packs[0].id);
   assert.equal(start.lessonId, packs[0].lessons[0].id);
@@ -12,7 +12,7 @@ test('A new learner starts at the first guided mat example without a level choic
   assert.equal(packs[0].exercises.find(exercise => exercise.exerciseId === start.exerciseId).mode, 'model');
 });
 
-test('Resume keeps the exact exercise; completion selects the next unfinished lesson', () => {
+void test('Resume keeps the exact exercise; completion selects the next unfinished lesson', () => {
   const lesson = packs[0].lessons[0];
   const position = { packageId: packs[0].id, lessonId: lesson.id, exerciseId: lesson.guidedExerciseIds[1] };
   const progress = parseProgress(JSON.stringify({ position, completed: [] }), packs);
@@ -23,7 +23,7 @@ test('Resume keeps the exact exercise; completion selects the next unfinished le
   assert.equal(homeLessonPosition(packs, { completed: packs.flatMap(pack => pack.lessons.map(item => item.id)) }, 'all').lessonId, lesson.id);
 });
 
-test('An explicit literacy choice is respected, including when a saved lesson belongs elsewhere', () => {
+void test('An explicit literacy choice is respected, including when a saved lesson belongs elsewhere', () => {
   const position = homeLessonPosition(packs, { completed: [] }, 'all');
   for (const literacy of ['alfa-a', 'alfa-b', 'alfa-c']) {
     const expected = packs.flatMap(pack => pack.lessons.filter(lesson => lesson.guidedExerciseIds?.length && lessonContentLevel(pack, lesson) === literacy).map(lesson => ({ pack, lesson })))[0];
@@ -37,7 +37,7 @@ test('An explicit literacy choice is respected, including when a saved lesson be
 });
 
 
-test('The final beginner lesson continues with pen/pet, including after saving and reloading', () => {
+void test('The final beginner lesson continues with pen/pet, including after saving and reloading', () => {
   const first = packs[0];
   const next = nextLessonPosition(packs, first.id, 'klink-leesstap-05');
   const nextPack = packs.find(pack => pack.id === next.packageId);
@@ -54,7 +54,7 @@ test('The final beginner lesson continues with pen/pet, including after saving a
   assert.equal(nextLessonPosition(packs, packs.at(-1).id, packs.at(-1).lessons.at(-1).id), undefined);
 });
 
- test('Nek continues with kop/sok and preserves progress without completing the next lesson', () => {
+ void test('Nek continues with kop/sok and preserves progress without completing the next lesson', () => {
   const next = nextLessonPosition(packs, 'groep-3', 'woord-klink-woord-nek');
   const pack = packs.find(item => item.id === next.packageId);
   const lesson = pack.lessons.find(item => item.id === next.lessonId);

@@ -3,7 +3,7 @@ import test from 'node:test';
 import { defaultRouteSettings, parseRouteSettings } from '../lib/learner-route.ts';
 import { defaultPracticePreferences, parsePracticePreferences, practiceLocation } from '../lib/practice-navigation.ts';
 
-test('navigation preferences validate input and retain both old route axes', () => {
+void test('navigation preferences validate input and retain both old route axes', () => {
   for (const raw of [null, 'bad', 'null', '[]', '{"level":"b2","help":"other"}']) assert.deepEqual(parsePracticePreferences(raw), defaultPracticePreferences);
   const raw = '{"literacy":"alfa-b","language":"a2","pictures":"request"}';
   const settings = parseRouteSettings(raw);
@@ -13,7 +13,7 @@ test('navigation preferences validate input and retain both old route axes', () 
   assert.deepEqual(settings, JSON.parse(raw));
 });
 
-test('Start restores the last selection while inner bookmarks keep their original scope', () => {
+void test('Start restores the last selection while inner bookmarks keep their original scope', () => {
   const preferences = { level: 'a2', help: 'guided' };
   assert.deepEqual(practiceLocation('#learner/home', preferences), preferences);
   assert.deepEqual(practiceLocation('#learner/chapters', preferences), preferences);

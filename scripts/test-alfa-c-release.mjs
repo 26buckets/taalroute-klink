@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { verifyAlfaCRelease } from './check-alfa-c-release.mjs';
-test('Alfa C release requires exact approval, scope, evidence and preserved live media', () => {
+void test('Alfa C release requires exact approval, scope, evidence and preserved live media', () => {
   const release = JSON.parse(
     readFileSync('docs/klink-owner-release-alfa-c-20261026.json'),
   );

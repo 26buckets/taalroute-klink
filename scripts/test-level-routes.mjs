@@ -10,7 +10,7 @@ import { groupActivities, groupExercises } from '../lib/group-practice.ts';
 import { chapterCollections, chapterHash, parseChapterHash } from '../lib/practice-chapters.ts';
 import { defaultRouteSettings, parseRouteSettings, practiceStages, contextReadiness, lessonWordIds, scopeWordExercises, selectUsageExercises } from '../lib/learner-route.ts';
 
-test('Six levels and support are distinct; malformed preferences cannot change curriculum or grant a level', () => {
+void test('Six levels and support are distinct; malformed preferences cannot change curriculum or grant a level', () => {
   assert.deepEqual(contentLevels.filter(item => !['all', 'support'].includes(item.id)).map(item => item.label), ['Alfa A', 'Alfa B', 'Alfa C', 'A1', 'A2', 'B1']);
   assert.deepEqual(['alfa-a', 'alfa-b', 'alfa-c', 'a1', 'a2', 'b1'].filter(level => availableContentLevels.has(level)), ['alfa-a', 'alfa-b', 'alfa-c', 'a1', 'a2', 'b1']);
   assert.deepEqual(parseRouteSettings('bad'), defaultRouteSettings);
@@ -19,11 +19,11 @@ test('Six levels and support are distinct; malformed preferences cannot change c
   assert.deepEqual(parseRouteSettings('{"literacy":"alfa-a","language":"a2","pictures":"request"}'), { literacy: 'alfa-a', language: 'a2', pictures: 'request' });
 });
 
-test('All existing activities have exactly one place in the growth sequence', () => {
+void test('All existing activities have exactly one place in the growth sequence', () => {
   for (const item of groupActivities) assert.equal(practiceStages.filter(stage => stage.activities.includes(item.id)).length, 1, item.id);
 });
 
-test('A difficult context never inherits Alfa A from a matching target word', () => {
+void test('A difficult context never inherits Alfa A from a matching target word', () => {
   const source = [...contentById.values()].find(item => item.sourceLevel === 'A2');
   assert.equal(exerciseContentLevel({ contextId: source.id, wordId: 'klink-woord-mat', learningPathId: 'path' }), 'a2');
   assert.equal(exerciseContentLevel({ contextId: 'not-a-source', wordId: 'klink-woord-mat' }), 'support');
@@ -31,7 +31,7 @@ test('A difficult context never inherits Alfa A from a matching target word', ()
   assert.equal(exerciseSetHelp([{ wordId: 'klink-woord-mat', learningPathId: 'path' }]), 'guided');
 });
 
-test('Filtering preserves whole boards and learning sequences, order, IDs and source bytes', () => {
+void test('Filtering preserves whole boards and learning sequences, order, IDs and source bytes', () => {
   for (const pack of packs) for (const activity of groupActivities) {
     const source = groupExercises(pack, activity.id), before = JSON.stringify(source);
     assert.deepEqual(selectExerciseSet(source, { level: 'all' }), source);
@@ -47,7 +47,7 @@ test('Filtering preserves whole boards and learning sequences, order, IDs and so
   }
 });
 
-test('The first mat step cannot invent a choice set or split a mixed board', () => {
+void test('The first mat step cannot invent a choice set or split a mixed board', () => {
   const pack = packs[0], ids = lessonWordIds(pack, pack.lessons[0]);
   assert.deepEqual(ids, ['klink-woord-mat']);
   assert.equal(scopeWordExercises(groupExercises(pack, 'meet'), ids).length, 1);
@@ -62,7 +62,7 @@ test('The first mat step cannot invent a choice set or split a mixed board', () 
   assert.deepEqual(scopeWordExercises([{ exerciseId: 'board', wordId: ids[0], cells: [{ cellId: 'unprepared-word' }] }], ids), []);
 });
 
-test('Readiness retains higher and unprepared sources for later; no invented independent reading', () => {
+void test('Readiness retains higher and unprepared sources for later; no invented independent reading', () => {
   for (const pack of packs) for (const item of [...pack.texts, ...pack.dialogues]) {
     const placement = contextReadiness(item.id, pack, pack.lessons[0], defaultRouteSettings);
     assert.notEqual(placement.status, 'independent');
@@ -77,7 +77,7 @@ test('Readiness retains higher and unprepared sources for later; no invented ind
   }
 });
 
-test('All contextual exercises remain reachable across readiness buckets without splitting chains', () => {
+void test('All contextual exercises remain reachable across readiness buckets without splitting chains', () => {
   for (const pack of packs) for (const activity of practiceStages.find(stage => stage.id === 'use').activities) {
     const original = groupExercises(pack, activity), before = JSON.stringify(original);
     const buckets = ['independent', 'guided', 'later'].map(status => selectUsageExercises(original, pack, undefined, defaultRouteSettings, status));
@@ -88,7 +88,7 @@ test('All contextual exercises remain reachable across readiness buckets without
   }
 });
 
-test('Chapter navigation retains level, help and old supported path links', () => {
+void test('Chapter navigation retains level, help and old supported path links', () => {
   const location = { level: 'alfa-c', help: 'guided' };
   assert.deepEqual(parseChapterHash(chapterHash(location)), location);
   const collection = chapterCollections('sound-path')[0];

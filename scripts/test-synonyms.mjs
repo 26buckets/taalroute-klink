@@ -8,7 +8,7 @@ import { availableChapterCollections, chapterCollections, chapterExerciseChoices
 import { groupExercises } from '../lib/group-practice.ts';
 import { parseLearningReview, updateLearningReview } from '../lib/learning-review.ts';
 
-test('225 preserved source pairs and 200 active word/context questions have exactly one correct answer and traceable editorial sources', () => {
+void test('225 preserved source pairs and 200 active word/context questions have exactly one correct answer and traceable editorial sources', () => {
   assert.equal(synonymBank.entries.length, 225);
   assert.equal(new Set(synonymBank.entries.map(entry => entry.id)).size, 225);
   assert.equal(synonymBank.sourceReview.length, 43);
@@ -41,7 +41,7 @@ test('225 preserved source pairs and 200 active word/context questions have exac
   }
 });
 
-test('A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes', () => {
+void test('A1/A2/B1 selection is cumulative and preserves the existing category/activity/list routes', () => {
   assert(practiceChapters.find(chapter => chapter.id === 'words').activities.includes('synonyms'));
   for (const [level, expected] of [['a1', 16], ['a2', 59], ['b1', 200]]) {
     const selected = availableChapterCollections('synonyms', { level, help: 'practice' });
@@ -58,7 +58,7 @@ test('A1/A2/B1 selection is cumulative and preserves the existing category/activ
   assert(!app.includes("activity: 'synonyms'"), 'Word library has no duplicate synonym entrance');
 });
 
-test('wrong answers become due for repetition, survive reload and retain the exact question', () => {
+void test('wrong answers become due for repetition, survive reload and retain the exact question', () => {
   const exercise = synonymCollections[0].exercises[0], now = 1_800_000_000_000;
   const attempt = { exerciseId: exercise.exerciseId, mode: 'synonyms', answer: 'wrong', correct: false, attempts: 1, helpUsed: false, support: 'none', elapsedMs: 1000, objective: exercise.objective, assessment: 'answer', reviewEligible: true };
   const state = parseLearningReview(JSON.stringify(updateLearningReview({}, attempt, now)));
@@ -71,7 +71,7 @@ test('wrong answers become due for repetition, survive reload and retain the exa
   assert(later[exercise.exerciseId].due > now + 86_400_000);
 });
 
-test('all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery', () => {
+void test('all pairs reverse, mix and turn without changing sources or counting a revealed card as mastery', () => {
   const before = JSON.stringify(synonymBank), ids = new Set();
   const alternatives = new Map();
   for (const entry of synonymBank.entries) for (const [a, b] of [[entry.word, entry.synonym], [entry.synonym, entry.word]]) alternatives.set(a, new Set([...(alternatives.get(a) ?? []), b]));
@@ -120,7 +120,7 @@ test('all pairs reverse, mix and turn without changing sources or counting a rev
   assert.equal(synonymCollections.flatMap(collection => synonymExercises(collection.pack, 'hear-match', 1, true)).length, 200);
 });
 
-test('reverse and heard answers retain their exact repetition task; cards never enter the queue', () => {
+void test('reverse and heard answers retain their exact repetition task; cards never enter the queue', () => {
   const collection = synonymCollections[0], now = 1_800_000_000_000;
   for (const activity of ['synonyms', 'hear-match', 'cards']) {
     const exercise = synonymExercises(collection.pack, activity, 1, true)[0];
@@ -132,12 +132,12 @@ test('reverse and heard answers retain their exact repetition task; cards never 
   }
 });
 
-test('corrupt saved mixing preferences fall back safely', () => {
+void test('corrupt saved mixing preferences fall back safely', () => {
   for (const raw of [null, '{', 'null', '[]', '{"seed":0,"reverse":false}', '{"seed":1.5,"reverse":true}', '{"seed":1,"reverse":"yes"}', '{"seed":4294967296,"reverse":false}']) assert.deepEqual(parseSynonymSettings(raw), { seed: 1, reverse: false });
   assert.deepEqual(parseSynonymSettings('{"seed":92,"reverse":true}'), { seed: 92, reverse: true });
 });
 
-test('meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels', () => {
+void test('meaning audit excludes unsafe pairs, keeps every original record and corrects whole-task levels', () => {
   const review = JSON.parse(readFileSync(new URL('../docs/synonyms-review-20261031/word-review.json', import.meta.url)));
   assert.equal(review.rows.length, 210);
   assert.equal(review.rows.filter(row => row.active).length, 185);
@@ -161,7 +161,7 @@ test('meaning audit excludes unsafe pairs, keeps every original record and corre
   }
 });
 
-test('publication rejects reactivated unsafe pairs, missing reviews and false listening claims', () => {
+void test('publication rejects reactivated unsafe pairs, missing reviews and false listening claims', () => {
   assert(verifySynonymReviewRelease());
   const releaseFile = 'docs/klink-owner-release-synonym-review-20261031.json';
   const cases = [

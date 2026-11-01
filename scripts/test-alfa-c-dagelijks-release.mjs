@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { verifyDailyRelease } from './check-alfa-c-dagelijks-release.mjs';
-test('daily successor binds authorization, reviewed source, media and preservation evidence', () => {
+void test('daily successor binds authorization, reviewed source, media and preservation evidence', () => {
   const release = verifyDailyRelease();
   for (const path of Object.keys(release.files)) {
     if (!path.endsWith('.json') && !path.endsWith('.tsx')) continue;

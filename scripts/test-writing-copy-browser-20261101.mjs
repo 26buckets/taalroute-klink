@@ -70,7 +70,7 @@ for(const[engine,type]of Object.entries({chromium,webkit})){
   for(const width of[1280,390])for(const theme of['light','dark']){
     const context=await browser.newContext({viewport:{width,height:844},colorScheme:theme});
     const pages=await Promise.all([context.newPage(),context.newPage()]);
-    for(const[p,url]of[[pages[0],base],[pages[1],'https://klink.taalroute.nl']]){await p.goto(url+route(old));await ready(p,e.exerciseId);}
+    for(const[p,url]of /** @type {const} */ ([[pages[0],base],[pages[1],'https://klink.taalroute.nl']])){await p.goto(url+route(old));await ready(p,e.exerciseId);}
     const[g1,g2]=await Promise.all(pages.map(geometry));
     assert.deepEqual(g1,g2,`${engine} ${width} ${theme}: existing player appearance`);
     const input=pages[0].locator('.cp-text-entry input');await input.fill(e.exampleWord.toUpperCase().replace(/[.!?]+$/,''));await input.press('Enter');await pages[0].locator('[data-practice-ready="true"]').waitFor();

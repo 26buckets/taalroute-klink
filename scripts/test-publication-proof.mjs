@@ -132,14 +132,14 @@ function check(candidate, changeApproval, changeImported, changeHeaderCss, chang
     return result.stderr;
   } finally { rmSync(dir, { recursive: true, force: true }); }
 }
-test('Valid publication proof resolves provenance, not outstanding media approval', () => {
+void test('Valid publication proof resolves provenance, not outstanding media approval', () => {
   const errors = check(proof);
   assert(!errors.includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
   assert(!/herkomstbewijs|broncommit/.test(errors));
   assert(errors.includes('uitspraakcontrole')); assert(errors.includes('1 betekenissen hebben nog geen gekoppeld betekenisbeeld'));
   assert(!errors.includes('instructie-audio is nog niet inhoudelijk vrijgegeven')); assert(errors.includes('zinnen en situaties'));
 });
-test('New route approval rejects changed hashes and cannot drop the previous approval scope', () => {
+void test('New route approval rejects changed hashes and cannot drop the previous approval scope', () => {
   for (const change of [
     approval => { approval.files['app/learner-ui.css'] = '0'.repeat(64); },
     approval => { delete approval.files['lib/teacher-practice-plan.ts']; },
@@ -148,12 +148,12 @@ test('New route approval rejects changed hashes and cannot drop the previous app
     approval => { approval.previousAuthorization = 'unrelated.json'; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
-test('Cumulative approval requires every new source, review and verified backup binding', () => {
+void test('Cumulative approval requires every new source, review and verified backup binding', () => {
   for (const file of ['data/klink-imported-practice.json', 'components/product/imported-teacher-workflow.tsx', 'lib/standard-player-contract.ts', 'docs/klink-cumulative-release-20261018/admissions.json', 'docs/klink-cumulative-release-20261018/teksten-item-review.json', 'docs/klink-cumulative-release-20261018/source-drive-verification.json', 'docs/klink-cumulative-release-20261018/source-backup-manifest.json', 'docs/klink-cumulative-release-20261018/live-baseline-check.json']) {
     assert(check(proof, approval => { delete approval.files[file]; }).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'), file);
   }
 });
-test('Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity', () => {
+void test('Cumulative scope cannot change the owner instruction, counts, audio pause, review limits or backup identity', () => {
   for (const change of [
     approval => { approval.userRequest = 'Unrelated instruction'; },
     approval => { approval.cumulativeRelease.included++; },
@@ -167,7 +167,7 @@ test('Cumulative scope cannot change the owner instruction, counts, audio pause,
     approval => { approval.contentSourceCommit = baseline.sourceCommit; },
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
-test('Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected', () => {
+void test('Only the exact admitted catalog can pass; omissions, duplicates, changed tasks and excluded records are rejected', () => {
   for (const change of [
     catalog => { catalog.items.pop(); },
     catalog => { catalog.items[1] = catalog.items[0]; },
@@ -176,27 +176,27 @@ test('Only the exact admitted catalog can pass; omissions, duplicates, changed t
     catalog => { catalog.items[0].level = 'unclassified'; },
   ]) assert(check(proof, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
-test('Proof for a different live version cannot satisfy the publication gate', () => {
+void test('Proof for a different live version cannot satisfy the publication gate', () => {
   assert(check({ ...proof, liveWorkerVersion: 'another-version' }).includes('herkomstbewijs past niet'));
 });
-test('A boolean without its underlying publication record is rejected', () => {
+void test('A boolean without its underlying publication record is rejected', () => {
   assert(check(null).includes('herkomstbewijs ontbreekt'));
 });
-test('Missing fresh public client evidence is rejected', () => {
+void test('Missing fresh public client evidence is rejected', () => {
   assert(check({ ...proof, freshClientSha256: null }).includes('herkomstbewijs past niet'));
 });
-test('A mismatching or dirty live release marker is rejected', () => {
+void test('A mismatching or dirty live release marker is rejected', () => {
   for (const liveRelease of [null, { ...proof.liveRelease, sourceCommit: 'another-commit' }, { ...proof.liveRelease, sourceClean: false }]) {
     assert(check({ ...proof, liveRelease }).includes('herkomstbewijs past niet'));
   }
 });
-test('Incomplete media evidence or a missing source archive is rejected', () => {
+void test('Incomplete media evidence or a missing source archive is rejected', () => {
   for (const changes of [{ mediaChecked: 0 }, { mediaChecked: proof.expectedMedia - 1 }, { errors: ['missing media'] }, { sourceArchiveSha256: null }]) {
     assert(check({ ...proof, ...changes }).includes('herkomstbewijs past niet'));
   }
 });
 
-test('Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval', () => {
+void test('Short-screen repair retains current live provenance, reviewed CSS and the historical cumulative approval', () => {
  for (const change of [
   approval => { delete approval.files['docs/klink-owner-release-cumulative-20261018.json']; },
   approval => { delete approval.files['docs/klink-short-screen-release-20261018/live-baseline-check.json']; },
@@ -209,7 +209,7 @@ test('Short-screen repair retains current live provenance, reviewed CSS and the 
  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Smaller header successor retains historical approval and permits only the exact approved dimensions', () => {
+void test('Smaller header successor retains historical approval and permits only the exact approved dimensions', () => {
   for (const change of [
     approval => { delete approval.logoSizing; },
     approval => { approval.logoSizing.userRequest = 'unrelated'; },
@@ -224,7 +224,7 @@ test('Smaller header successor retains historical approval and permits only the 
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Header sizing rejects extra CSS changes even when approval hashes match the source files', () => {
+void test('Header sizing rejects extra CSS changes even when approval hashes match the source files', () => {
   for (const change of [
     css => css.replace('width: 66px', 'width: 60px'),
     css => css.replace('--taalroute-header-height: 60px', '--taalroute-header-height: 70px'),
@@ -232,7 +232,7 @@ test('Header sizing rejects extra CSS changes even when approval hashes match th
   ]) assert(check(proof, undefined, undefined, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Wordbuild publication requires exact consent, reviewed selection and verified source backup', () => {
+void test('Wordbuild publication requires exact consent, reviewed selection and verified source backup', () => {
   for (const change of [
     approval => { delete approval.wordbuildRelease; },
     approval => { approval.wordbuildRelease.userRequest = 'unrelated'; },
@@ -248,7 +248,7 @@ test('Wordbuild publication requires exact consent, reviewed selection and verif
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval', () => {
+void test('Wordbuild source changes, hidden omissions and new audio cannot reuse the prior approval', () => {
   for (const change of [
     catalog => { catalog.packs[0].exercises.pop(); },
     catalog => { catalog.packs[0].exercises[0].exampleWord += 'x'; },
@@ -258,7 +258,7 @@ test('Wordbuild source changes, hidden omissions and new audio cannot reuse the 
 });
 
 // A maintenance release cannot loosen historical content approvals or its exact scope.
-test('Maintenance approval rejects an expanded scope, missing consent and altered source hashes', () => {
+void test('Maintenance approval rejects an expanded scope, missing consent and altered source hashes', () => {
   for (const change of [
     approval => { approval.maintenanceRelease.publicationApproved = false; },
     approval => { approval.maintenanceRelease.changedFiles.push('data/klink-curriculum.json'); },
@@ -269,7 +269,7 @@ test('Maintenance approval rejects an expanded scope, missing consent and altere
 });
 
 // Footer consent cannot admit unrelated changes or replace historical approval.
-test('Landing footer approval remains limited to the explicit request', () => {
+void test('Landing footer approval remains limited to the explicit request', () => {
   for (const change of [
     approval => { approval.landingRelease.publicationApproved = false; },
     approval => { approval.landingRelease.changedFiles.push('data/klink-curriculum.json'); },
@@ -279,7 +279,7 @@ test('Landing footer approval remains limited to the explicit request', () => {
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Sharing release cannot extend runtime scope or erase the previous maintenance approval', () => {
+void test('Sharing release cannot extend runtime scope or erase the previous maintenance approval', () => {
  for (const change of [
    a => { a.sharingRelease.changedFiles.push('data/klink-curriculum.json'); },
    a => { a.sharingRelease.baselineSourceCommit = '0'.repeat(40); },
@@ -288,12 +288,12 @@ test('Sharing release cannot extend runtime scope or erase the previous maintena
  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Header repair retains the published sharing and content approval', () => {
+void test('Header repair retains the published sharing and content approval', () => {
  for (const change of [a=>{a.headerRepair.changedFiles.push('data/klink-curriculum.json');},a=>{a.headerRepair.baselineSourceCommit='0'.repeat(40);},a=>{delete a.files['docs/klink-owner-release-sharing-20261024.json'];},a=>{a.headerRepair.userRequest='unrelated';}]) assert(check(proof,change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
 // The new visual approval must not admit content changes or discard its predecessor.
-test('Compact exercise release requires exact consent, scope, source and verified backup', () => {
+void test('Compact exercise release requires exact consent, scope, source and verified backup', () => {
   for (const change of [
     a => { a.compactExercises.publicationApproved = false; },
     a => { a.compactExercises.userRequest = 'unrelated'; },
@@ -304,11 +304,11 @@ test('Compact exercise release requires exact consent, scope, source and verifie
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('KLINK menu addition cannot widen content scope or discard the approved header repair',()=>{
+void test('KLINK menu addition cannot widen content scope or discard the approved header repair',()=>{
  for(const change of [a=>{a.appMenu.changedFiles.push('data/klink-curriculum.json');},a=>{a.appMenu.userRequest='unrelated';},a=>{a.headerRepair.userRequest='unrelated';}])assert(check(proof,change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Collapsible exercise menu binds consent, unchanged content scope and verified backup', () => {
+void test('Collapsible exercise menu binds consent, unchanged content scope and verified backup', () => {
   for (const change of [
     a => { a.exerciseMenu.publicationApproved = false; },
     a => { a.exerciseMenu.userRequest = 'unrelated'; },
@@ -319,7 +319,7 @@ test('Collapsible exercise menu binds consent, unchanged content scope and verif
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Beginner release binds current live ancestry, exact scope and owner publication request', () => {
+void test('Beginner release binds current live ancestry, exact scope and owner publication request', () => {
   for (const change of [
     approval => { delete approval.beginnerRelease; },
     approval => { approval.beginnerRelease.baselineSourceCommit = '0'.repeat(40); },
@@ -332,7 +332,7 @@ test('Beginner release binds current live ancestry, exact scope and owner public
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('In release preserves beginner scope and binds its publication and backup', () => {
+void test('In release preserves beginner scope and binds its publication and backup', () => {
   for (const change of [
     a => { delete a.inRelease; },
     a => { a.inRelease.publicationApproved = false; },
@@ -343,7 +343,7 @@ test('In release preserves beginner scope and binds its publication and backup',
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Consistent layout keeps the current beginners release, owner consent and exact source scope', () => {
+void test('Consistent layout keeps the current beginners release, owner consent and exact source scope', () => {
   for (const change of [
     approval => { delete approval.consistentLayout; },
     approval => { approval.consistentLayout.publicationApproved = false; },
@@ -354,7 +354,7 @@ test('Consistent layout keeps the current beginners release, owner consent and e
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('En release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+void test('En release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
   for (const change of [
     a => { delete a.enRelease; },
     a => { a.enRelease.publicationApproved = false; },
@@ -366,7 +366,7 @@ test('En release binds its scope, live ancestry and verified backup without weak
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence', () => {
+void test('White workspace approval preserves the latest lessons and binds menu, geometry and backup evidence', () => {
   for (const change of [
     approval => { approval.whiteWorkspace.baselineSourceCommit = '0'.repeat(40); },
     approval => { approval.whiteWorkspace.publicationApproved = false; },
@@ -376,7 +376,7 @@ test('White workspace approval preserves the latest lessons and binds menu, geom
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Is release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+void test('Is release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
   for (const change of [
     a => { delete a.isRelease; },
     a => { a.isRelease.publicationApproved = false; },
@@ -388,7 +388,7 @@ test('Is release binds its scope, live ancestry and verified backup without weak
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Kan release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+void test('Kan release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
   for (const change of [
     a => { delete a.kanRelease; },
     a => { a.kanRelease.publicationApproved = false; },
@@ -400,7 +400,7 @@ test('Kan release binds its scope, live ancestry and verified backup without wea
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Kast release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+void test('Kast release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
   for (const change of [
     a => { delete a.kastRelease; },
     a => { a.kastRelease.publicationApproved = false; },
@@ -412,7 +412,7 @@ test('Kast release binds its scope, live ancestry and verified backup without we
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Mens release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+void test('Mens release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
   for (const change of [
     a => { delete a.mensRelease; },
     a => { a.mensRelease.publicationApproved = false; },
@@ -424,7 +424,7 @@ test('Mens release binds its scope, live ancestry and verified backup without we
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Nek release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
+void test('Nek release binds its scope, live ancestry and verified backup without weakening earlier approvals', () => {
   for (const change of [
     a => { delete a.nekRelease; },
     a => { a.nekRelease.publicationApproved = false; },
@@ -437,7 +437,7 @@ test('Nek release binds its scope, live ancestry and verified backup without wea
 });
 
 
-test('Overview workspace release binds the three exceptions to the latest lessons and verified backup', () => {
+void test('Overview workspace release binds the three exceptions to the latest lessons and verified backup', () => {
   for (const change of [
     a => { delete a.overviewWorkspace; },
     a => { a.overviewWorkspace.publicationApproved = false; },
@@ -449,7 +449,7 @@ test('Overview workspace release binds the three exceptions to the latest lesson
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Nek continuation requires scoped owner authorization, current ancestry and verified backup', () => {
+void test('Nek continuation requires scoped owner authorization, current ancestry and verified backup', () => {
   for (const change of [
     a => { delete a.nekContinuation; },
     a => { a.nekContinuation.publicationApproved = false; },
@@ -461,7 +461,7 @@ test('Nek continuation requires scoped owner authorization, current ancestry and
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Kop/sok binds exact scope and preserves the full checked baseline with targeted regression', () => {
+void test('Kop/sok binds exact scope and preserves the full checked baseline with targeted regression', () => {
   for (const change of [
     a => { delete a.kopSokRelease; },
     a => { a.kopSokRelease.publicationApproved = false; },
@@ -473,7 +473,7 @@ test('Kop/sok binds exact scope and preserves the full checked baseline with tar
 });
 
 
-test('Landing audiences release requires exact scope, owner request and verified backup', () => {
+void test('Landing audiences release requires exact scope, owner request and verified backup', () => {
   for (const change of [
     a => { delete a.landingAudiences; },
     a => { a.landingAudiences.publicationApproved = false; },
@@ -486,7 +486,7 @@ test('Landing audiences release requires exact scope, owner request and verified
 });
 
 
-test('Session stability requires current source, scoped authorization, stress proof and verified backup', () => {
+void test('Session stability requires current source, scoped authorization, stress proof and verified backup', () => {
   for (const change of [
     a => { delete a.sessionStability; },
     a => { a.sessionStability.publicationApproved = false; },
@@ -497,7 +497,7 @@ test('Session stability requires current source, scoped authorization, stress pr
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Grouped lesson guidance requires scoped counts, review and verified source backup', () => {
+void test('Grouped lesson guidance requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group4Guidance; },
     a => { a.group4Guidance.publicationApproved = false; },
@@ -510,7 +510,7 @@ test('Grouped lesson guidance requires scoped counts, review and verified source
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Group five letter combinations requires scoped counts, review and verified source backup', () => {
+void test('Group five letter combinations requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group5Guidance; },
     a => { a.group5Guidance.publicationApproved = false; },
@@ -523,7 +523,7 @@ test('Group five letter combinations requires scoped counts, review and verified
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Matching card layout requires scoped approval and verified review/backup', () => {
+void test('Matching card layout requires scoped approval and verified review/backup', () => {
   for (const change of [
     a => { delete a.matchingCards; },
     a => { a.matchingCards.publicationApproved = false; },
@@ -534,7 +534,7 @@ test('Matching card layout requires scoped approval and verified review/backup',
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Group six letter combinations requires scoped counts, review and verified source backup', () => {
+void test('Group six letter combinations requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group6Guidance; },
     a => { a.group6Guidance.publicationApproved = false; },
@@ -548,7 +548,7 @@ test('Group six letter combinations requires scoped counts, review and verified 
 });
 
 
-test('Landing review preserves exact approved baseline, scope and review evidence', () => {
+void test('Landing review preserves exact approved baseline, scope and review evidence', () => {
   for (const change of [
     a => { delete a.landingReview; },
     a => { a.landingReview.publicationApproved = false; },
@@ -561,7 +561,7 @@ test('Landing review preserves exact approved baseline, scope and review evidenc
 });
 
 
-test('Group seven letter combinations requires scoped counts, review and verified source backup', () => {
+void test('Group seven letter combinations requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group7Guidance; },
     a => { a.group7Guidance.publicationApproved = false; },
@@ -574,7 +574,7 @@ test('Group seven letter combinations requires scoped counts, review and verifie
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
-test('Exercise frame changes require exact scope, review, predecessor and verified backup', () => {
+void test('Exercise frame changes require exact scope, review, predecessor and verified backup', () => {
   for (const change of [
     a => { delete a.exerciseFrames; },
     a => { a.exerciseFrames.publicationApproved = false; },
@@ -586,7 +586,7 @@ test('Exercise frame changes require exact scope, review, predecessor and verifi
 });
 
 
-test('Klankenkaart publication requires exact live ancestry, owner instruction, scope and verified backup', () => {
+void test('Klankenkaart publication requires exact live ancestry, owner instruction, scope and verified backup', () => {
   for (const change of [
     a => { delete a.soundReference; },
     a => { a.soundReference.publicationApproved = false; },
@@ -601,7 +601,7 @@ test('Klankenkaart publication requires exact live ancestry, owner instruction, 
 });
 
 
-test('Group eight letter combinations requires scoped counts, review and verified source backup', () => {
+void test('Group eight letter combinations requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group8Guidance; },
     a => { a.group8Guidance.publicationApproved = false; },
@@ -614,7 +614,7 @@ test('Group eight letter combinations requires scoped counts, review and verifie
   ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
 });
 
- test('Article release requires meaning review, preserved previous scope and verified source backup', () => {
+ void test('Article release requires meaning review, preserved previous scope and verified source backup', () => {
  for (const change of [
  a => { delete a.wordArticles; },
  a => { a.wordArticles.publicationApproved = false; },
@@ -627,7 +627,7 @@ test('Group eight letter combinations requires scoped counts, review and verifie
  ]) assert(check(proof, change).includes('Het inhoudsgebonden publicatieakkoord van de eigenaar ontbreekt of past niet meer.'));
  });
 
-test('Group nine letter combinations requires scoped counts, review and verified source backup', () => {
+void test('Group nine letter combinations requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group9Guidance; },
     a => { a.group9Guidance.publicationApproved = false; },
@@ -641,7 +641,7 @@ test('Group nine letter combinations requires scoped counts, review and verified
 });
 
 
-test('Group ten letter combinations requires scoped counts, review and verified source backup', () => {
+void test('Group ten letter combinations requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.group10Guidance; },
     a => { a.group10Guidance.publicationApproved = false; },
@@ -655,7 +655,7 @@ test('Group ten letter combinations requires scoped counts, review and verified 
 });
 
 
-test('Five follow-up groups requires scoped counts, review and verified source backup', () => {
+void test('Five follow-up groups requires scoped counts, review and verified source backup', () => {
   for (const change of [
     a => { delete a.followupGuidance; },
     a => { a.followupGuidance.publicationApproved = false; },

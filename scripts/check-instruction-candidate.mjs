@@ -1,3 +1,4 @@
+import {verifyCodeCleanup,readBeforeCodeCleanup} from './check-local-code-cleanup.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -25,21 +26,22 @@ const alfaScopeFile='docs/grammar-alfa-b1-20261101/scope.json';
 const alfaScopeHash='bfb03db9da8d5c5cb0cd47f32f1fe5083e56fea1fe572e5f3f549f2a2d785bd0';
 const integrationFile='docs/grammar-live-integration-20261101/scope.json';
 const integrationHash='5c7e3cc20270c673100d21de4f03298980914496481f13b12e356a1fb87b097e';
-function verifyIntegration(read){
+function verifyIntegration(read,cleanup){
  const bytes=read(integrationFile);assert.equal(sha(bytes),integrationHash,'Only the reviewed local merge is allowed');
  const r=JSON.parse(bytes);
  assert.equal(r.liveSourceCommit,'0c130f80053537b9976906b859e844a267912295');
  assert.equal(r.previousCandidate,'f16073e9');
  assert.equal(r.localOnly,true);assert.equal(r.publicationApproved,false);assert.equal(r.productionBatch,false);
  for(const revision of [r.liveSourceCommit,r.previousCandidate])git('merge-base','--is-ancestor',revision,'HEAD');
- const changed=sort([...new Set([...lines(git('diff','--name-only',r.liveSourceCommit,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+ const changed=sort(lines(git('diff','--name-only',r.liveSourceCommit,cleanup.baselineSourceCommit,'--',...roots)));
  assert.deepEqual(changed,sort([...Object.keys(r.files),'scripts/check-instruction-candidate.mjs']),'Every local merge change must be accounted for');
  for(const[file,hash]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(file)),hash,file);
  for(const[file,hash]of Object.entries(r.liveFingerprints))assert.equal(sha(git('show',r.liveSourceCommit+':'+file)),hash,file);
  return r;
 }
 export function verifyInstructionCandidate(read=readFileSync){
- const integration=verifyIntegration(read);
+ const cleanup=verifyCodeCleanup(read),cleanupRead=read;read=file=>readBeforeCodeCleanup(file,cleanup,cleanupRead);
+ const integration=verifyIntegration(read,cleanup);
  // Validate the previously frozen local scopes at their original source after checking every merged byte.
  read=file=>git('show',integration.previousCandidate+':'+file);
  const currentRead=read,alfaBytes=read(alfaScopeFile);
@@ -94,9 +96,10 @@ export function verifyInstructionCandidate(read=readFileSync){
  assert.equal(periods,2);
  for(const[file,data]of restored)assert.deepEqual(data,JSON.parse(instructionBaseline(file)),'All other source fields remain unchanged: '+file);
  for(const f of JSON.parse(read('docs/instruction-local-20261101/scope.json')).files.filter(f=>f.path.endsWith('.pdf')))assert.equal(sha(read(f.path)),f.afterSha256);
- return {...r,grammarExtension:grammar,alfaExtension:alfa,integration};
+ return {...r,grammarExtension:grammar,alfaExtension:alfa,integration,cleanup};
 }
 export function readBeforeInstructionCandidate(file,proof,read=readFileSync){
+ const currentRead=read;read=path=>readBeforeCodeCleanup(path,proof?.cleanup,currentRead);
  if(proof?.integration)return Object.hasOwn(proof.integration.liveFiles,file)?git('show',proof.integration.liveSourceCommit+':'+file):read(file);
  return proof&&Object.hasOwn(proof.files,file)?instructionBaseline(file):proof?.grammarExtension?.files[file]?.before?grammarBefore(file,proof.grammarExtension):proof?.alfaExtension?.files[file]?.before?grammarBefore(file,proof.alfaExtension):read(file);
 }

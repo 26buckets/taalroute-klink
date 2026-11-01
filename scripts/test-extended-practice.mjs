@@ -7,7 +7,7 @@ import { resolveRegisteredAudio } from '../lib/audio-register.ts';
 import { contentById } from '../lib/connected-content.ts';
 import writing from '../data/klink-functional-writing.json' with { type: 'json' };
 const all = activity => packs.flatMap(pack => extendedExercises(pack, activity));
-test('Every new activity has stable scoped source references, preparation and honest release status', () => {
+void test('Every new activity has stable scoped source references, preparation and honest release status', () => {
   for (const pack of packs) for (const activity of extendedActivities) {
     const items = extendedExercises(pack, activity.id);
     assert.deepEqual(items, extendedExercises(pack, activity.id));
@@ -21,7 +21,7 @@ test('Every new activity has stable scoped source references, preparation and ho
     }
   }
 });
-test('All source questions retained with exact answer and source evidence, no random distractors', () => {
+void test('All source questions retained with exact answer and source evidence, no random distractors', () => {
   assert.equal(new Set(all('text-question').map(item => item.contextId)).size, 180);
   assert.equal(new Set(all('dialogue-question').map(item => item.contextId)).size, 120);
   for (const item of [...all('text-question'), ...all('dialogue-question')]) {
@@ -41,7 +41,7 @@ test('All source questions retained with exact answer and source evidence, no ra
     assert(item.options.every(option => contentById.get(item.contextId).text.includes(option.label)));
   }
 });
-test('Klankvergelijking uses actual wholeword recordings, balanced equal/different trials and no answer leaks', () => {
+void test('Klankvergelijking uses actual wholeword recordings, balanced equal/different trials and no answer leaks', () => {
   const items = all('sound-compare'); assert(items.length > 8);
   assert.equal(items.filter(item => item.answer.correctOptionIds[0] === 'same').length, items.length / 2);
   for (const item of items) {
@@ -52,7 +52,7 @@ test('Klankvergelijking uses actual wholeword recordings, balanced equal/differe
     assert.equal(item.textBlocks[0].audio.src === item.textBlocks[1].audio.src, item.answer.correctOptionIds[0] === 'same');
   }
 });
-test('Sentence construction preserves exact word boundaries; grammar targets only the stated ik-form', () => {
+void test('Sentence construction preserves exact word boundaries; grammar targets only the stated ik-form', () => {
   for (const item of all('sentence-build')) {
     const sentence = item.answer.targetTileIds.map(id => item.tiles.find(tile => tile.id === id).token).join(' ');
     assert.equal(sentence, contentById.get(item.contextId).text); assert.equal(item.requiresAudio, true);
@@ -66,7 +66,7 @@ test('Sentence construction preserves exact word boundaries; grammar targets onl
     assert.equal(item.options.filter(option => item.answer.correctOptionIds.includes(option.id)).length, 1);
   }
 });
-test('Writing and role work use source tasks and participation, never fabricated mastery', () => {
+void test('Writing and role work use source tasks and participation, never fabricated mastery', () => {
   assert.equal(writing.items.length, 120);
   for (const mode of ['functional-message', 'functional-form', 'dialogue-role']) for (const item of all(mode)) {
     assert.equal(item.assessment, 'participation'); assert.equal(item.requiresExplicitCompletion, true);
@@ -80,7 +80,7 @@ test('Writing and role work use source tasks and participation, never fabricated
     }
   }
 });
-test('Sixteen branded instructions are connected by owner authorization, without inventing a listening review', () => {
+void test('Sixteen branded instructions are connected by owner authorization, without inventing a listening review', () => {
   const candidates = JSON.parse(readFileSync('data/klink-audio-candidates.json')).items;
   assert.equal(candidates.length, 16);
   assert.equal(new Set(candidates.map(item => item.id)).size, 16);

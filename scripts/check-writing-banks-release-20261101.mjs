@@ -16,7 +16,7 @@ export function verifyWritingBanksRelease(read=readFileSync){
  assert.equal(r.baselineSourceCommit,'17f9db234295127531719cebb3df45d666d8ccac');assert(r.liveSourceCommit);git('merge-base','--is-ancestor',r.liveSourceCommit,r.baselineSourceCommit);
  assert(r.userRequest.includes('Zet gecontroleerde batches online'));
  git('merge-base','--is-ancestor',r.baselineSourceCommit,'HEAD');
- const changed=[...new Set([...lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)),])].sort((a,b)=>a.localeCompare(b));
+ const changed=[...new Set(lines(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--',...roots)))].sort((a,b)=>a.localeCompare(b));
  assert.deepEqual(changed,r.changedFiles);assert.deepEqual(Object.keys(r.files).sort((a,b)=>a.localeCompare(b)),changed);
  for(const[f,h]of Object.entries({...r.files,...r.evidenceFiles}))assert.equal(sha(read(f)),h,f);
  assert.equal(git('diff','--name-only',r.baselineSourceCommit,successor.baselineSourceCommit,'--','app','hooks','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','package.json','package-lock.json','vite.config.ts').length,0,'Preserve every existing interface, player, dependency and workflow');

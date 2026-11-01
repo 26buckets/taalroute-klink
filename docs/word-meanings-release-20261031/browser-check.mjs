@@ -1,5 +1,5 @@
 import assert from'node:assert/strict';import{readFileSync as read,writeFileSync as write}from'node:fs';import{chromium,webkit}from'playwright';import{productionIndex,exerciseWord}from'../../lib/production-practice.ts';import{chapterHash,practiceChapters}from'../../lib/practice-chapters.ts';import{groupSessionKey}from'../../lib/group-practice.ts';
-const dir='docs/word-meanings-release-20261031',base=process.env.KLINK_TEST_URL??'http://127.0.0.1:18933';const checks=[];let errors=[];
+const dir='docs/word-meanings-release-20261031',base=process.env.KLINK_TEST_URL??'http://127.0.0.1:18933';const checks=[];const errors=[];
 const cases=[['pak','a2','copy'],['want','a2','copy'],['regent','b1','copy'],['zinnen','b1','read-series'],['voorkomen','a2','read-series'],['godverdomme','b1','copy'],['adequaat','b1','read-series']];
 for(const [engine,type]of Object.entries({chromium,webkit})){
  const b=await type.launch({headless:true});try{for(const width of[1366,390]){const page=await b.newPage({viewport:{width,height:width===390?844:900}});page.on('pageerror',e=>errors.push(e.message));

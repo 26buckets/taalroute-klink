@@ -23,7 +23,7 @@ const live = normalizedPage('work/live-page.js', { o: '_ip', a: '_asset', s: '_m
 const baseline = normalizedPage('work/live-baseline/dist/client/_next/static/chunks/page-DgaDhDRv.js', { a: '_ip', o: '_asset', s: '_match' });
 assert.equal(hash(live), hash(baseline), 'Live application page differs from the candidate baseline');
 const base = 'work/live-baseline/dist/server';
-const hashes = new Map(readdirSync(base, { recursive: true }).filter(path => path.endsWith('.js')).map(path => [hash(readFileSync(`${base}/${path}`)), path]));
+const hashes = new Map(readdirSync(base, { recursive: true, encoding: 'utf8' }).filter(path => path.endsWith('.js')).map(path => [hash(readFileSync(`${base}/${path}`)), path]));
 const matches = [], unmatched = [];
 for (const file of readdirSync('work/live-worker')) {
   const sha256 = hash(readFileSync(`work/live-worker/${file}`));

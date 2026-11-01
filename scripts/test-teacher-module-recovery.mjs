@@ -15,12 +15,12 @@ async function pending(promise) {
  let settled=false;promise.then(()=>{settled=true;},()=>{settled=true;});
  await new Promise(resolve=>setImmediate(resolve));assert.equal(settled,false);
 }
-test('successful import returns the original module and resets only the recovery marker',async()=>{
+void test('successful import returns the original module and resets only the recovery marker',async()=>{
  const b=browser();b.saved.set(key,'1');const loaded={TeacherClassroom:'original'};
  assert.equal(await loadTeacherWithRecovery(async()=>loaded),loaded);
  assert.equal(b.reloads(),0);assert.equal(b.saved.has(key),false);assert.equal(b.saved.size,2);
 });
-test('missing old module reloads once, preserves the route and stored lesson/progress, and avoids an error flash',async()=>{
+void test('missing old module reloads once, preserves the route and stored lesson/progress, and avoids an error flash',async()=>{
  const b=browser();const original=[...b.saved];
  await pending(loadTeacherWithRecovery(async()=>{throw missing();}));
  assert.equal(b.reloads(),1);assert.equal(window.location.hash,'#teacher/plus');
@@ -30,16 +30,16 @@ test('missing old module reloads once, preserves the route and stored lesson/pro
  await loadTeacherWithRecovery(async()=>({}));
  await pending(loadTeacherWithRecovery(async()=>{throw missing();}));assert.equal(b.reloads(),2);
 });
-for(const message of ['error loading dynamically imported module: /old.js','Importing a module script failed.','Unable to preload CSS for /old.css','Loading chunk teacher-12 failed.'])test('recognises browser load failure: '+message,async()=>{
+for(const message of ['error loading dynamically imported module: /old.js','Importing a module script failed.','Unable to preload CSS for /old.css','Loading chunk teacher-12 failed.'])void test('recognises browser load failure: '+message,async()=>{
  const b=browser();await pending(loadTeacherWithRecovery(async()=>{throw new TypeError(message);}));assert.equal(b.reloads(),1);
 });
-for(const options of [{online:false},{blocked:true}])test('does not reload with '+JSON.stringify(options),async()=>{
+for(const options of [{online:false},{blocked:true}])void test('does not reload with '+JSON.stringify(options),async()=>{
  const b=browser(options);const error=missing();await assert.rejects(loadTeacherWithRecovery(async()=>{throw error;}),e=>e===error);assert.equal(b.reloads(),0);assert.equal(b.saved.size,2);
  assert.deepEqual(await loadTeacherWithRecovery(async()=>({ok:true})),{ok:true});
 });
-test('real application errors remain errors without reloading',async()=>{
+void test('real application errors remain errors without reloading',async()=>{
  const b=browser();const error=new Error('Unexpected lesson state');await assert.rejects(loadTeacherWithRecovery(async()=>{throw error;}),e=>e===error);assert.equal(b.reloads(),0);assert.equal(b.saved.size,2);
 });
-test('server failure remains an error without browser access',async()=>{
+void test('server failure remains an error without browser access',async()=>{
  delete globalThis.window;const error=missing();await assert.rejects(loadTeacherWithRecovery(async()=>{throw error;}),e=>e===error);
 });

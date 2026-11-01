@@ -61,7 +61,7 @@ export function EntryScreen({ onPortal }: { onPortal: (portal: Portal) => void }
               </form>
             )}
           </div>
-          <figure className="entry-visual"><Image src="/klink-entry-hero.webp" alt="Een volwassen cursist oefent woorden samen met een docent" fill priority sizes="(max-width: 700px) 100vw, 45vw" /><figcaption><Headphones aria-hidden="true" /><span>Alle ruimte om te oefenen.</span></figcaption></figure>
+          <figure className="entry-visual"><Image src="/klink-entry-hero.webp" alt="Een volwassen cursist oefent woorden samen met een docent" fill preload loading="eager" fetchPriority="high" sizes="(max-width: 700px) 100vw, 45vw" /><figcaption><Headphones aria-hidden="true" /><span>Alle ruimte om te oefenen.</span></figcaption></figure>
         </div>
         {mode === 'choose' && <>
           <div className="landing-wordrow" aria-label="Luisteren, oefenen, groeien"><span>Luisteren.</span><span>Oefenen.</span><span>Groeien.</span></div>

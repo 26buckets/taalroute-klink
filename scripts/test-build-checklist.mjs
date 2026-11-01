@@ -7,7 +7,7 @@ const find = id => {
   const pack = packs.find(item => item.lessons.some(lesson => lesson.id === id));
   return [pack, pack.lessons.find(item => item.id === id)];
 };
-test('Every existing step has the same goal checklist, exact bindings and no source mutations', () => {
+void test('Every existing step has the same goal checklist, exact bindings and no source mutations', () => {
   const before = JSON.stringify(packs);
   const statuses = new Set();
   let count = 0;
@@ -36,7 +36,7 @@ test('Every existing step has the same goal checklist, exact bindings and no sou
   assert.equal(statuses.size, 4);
   assert.equal(JSON.stringify(packs), before);
 });
-test('Works requires target coverage, guided connection, word media and instruction audio', () => {
+void test('Works requires target coverage, guided connection, word media and instruction audio', () => {
   const [pack, lesson] = find('klink-leesstap-01');
   const row = (candidate, step = lesson) => buildChecklist(candidate, step).find(item => item.id === 'word-model');
   assert.equal(row(pack).status, 'works');
@@ -49,7 +49,7 @@ test('Works requires target coverage, guided connection, word media and instruct
   assert.equal(row({ ...pack, exercises }).status, 'partial');
   assert.equal(row({ ...pack, exercises: [] }).status, 'missing');
 });
-test('One word is consciously not made into a fake comparison; copying is not recognition', () => {
+void test('One word is consciously not made into a fake comparison; copying is not recognition', () => {
   const [pack, lesson] = find('klink-leesstap-01');
   const rows = buildChecklist(pack, lesson);
   assert.equal(rows.find(row => row.id === 'word-recognition').status, 'different');
@@ -58,7 +58,7 @@ test('One word is consciously not made into a fake comparison; copying is not re
   const copyOnly = { ...pairPack, exercises: pairPack.exercises.filter(item => item.mode === 'same-word') };
   assert.equal(buildChecklist(copyOnly, pairLesson).find(row => row.id === 'word-recognition').status, 'missing');
 });
-test('Sentence bridge uses only contexts actually attached to the selected meaning and step', () => {
+void test('Sentence bridge uses only contexts actually attached to the selected meaning and step', () => {
   let linked = 0;
   for (const pack of packs) for (const lesson of pack.lessons) {
     const bridge = sentenceBridge(pack, lesson);

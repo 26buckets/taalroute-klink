@@ -10,7 +10,7 @@ import { chapterCollections } from '../lib/practice-chapters.ts';
 import { updateLearningReview } from '../lib/learning-review.ts';
 const starter = packs.find(p => p.id === 'groep-1');
 
-test('Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast', () => {
+void test('Three starter sorting boards use precisely the six existing short-a words and no invented phonemic contrast', () => {
   const items = groupExercises(starter, 'word-sort'); assert.equal(items.length, 3);
   for (const item of items) {
     assert(validStandardTask(item.standardTask));
@@ -22,14 +22,14 @@ test('Three starter sorting boards use precisely the six existing short-a words 
   }
   assert.deepEqual(items, groupExercises(starter, 'word-sort'));
 });
-test('Sound sorting rejects unapproved or missing recordings', () => {
+void test('Sound sorting rejects unapproved or missing recordings', () => {
   const task = structuredClone(groupExercises(starter, 'word-sort')[0].standardTask); task.basis = 'sound';
   assert.equal(validStandardTask(task), false);
   task.items.forEach(i => { i.audio = { audioId: i.id, src: '/existing.wav' }; });
   assert.equal(validStandardTask(task), false);
   task.items.forEach(i => { i.audioApproved = true; }); assert(validStandardTask(task));
 });
-test('Precise text selection preserves source token offsets and only accepts a complete exact answer span', () => {
+void test('Precise text selection preserves source token offsets and only accepts a complete exact answer span', () => {
   const task = markTask('Zij zit bij het raam. De tas ligt bij het raam.', 'Zij zit bij het raam.', 'Bij het raam.');
   assert(validStandardTask(task)); assert.equal(task.acceptedSelections.length, 1);
   const ids = task.acceptedSelections[0]; assert.equal(ids.length, 3);
@@ -37,12 +37,12 @@ test('Precise text selection preserves source token offsets and only accepts a c
   assert(!sameSelection([...ids, ids[0]], ids)); assert(!sameSelection([...ids, task.tokens.at(-1).id], ids));
   assert.equal(markTask('De jas is nat.', 'De jas is nat.', 'Hij hangt aan een haak.'), undefined);
 });
-test('Every attached precise mark task refers literally to its existing source and question', () => {
+void test('Every attached precise mark task refers literally to its existing source and question', () => {
   const items = packs.flatMap(p => groupExercises(p, 'text-evidence')).filter(i => i.standardTask);
   assert(items.length >= 8);
   for (const item of items) { assert(validStandardTask(item.standardTask)); const source = contentById.get(item.contextId); assert.equal(item.standardTask.text, source.text); assert.equal(item.question, source.discussion.question); }
 });
-test('Gap players preserve the existing full sentence while withholding the complete model', () => {
+void test('Gap players preserve the existing full sentence while withholding the complete model', () => {
   const items = packs.flatMap(p => groupExercises(p, 'verb-choice')); assert(items.length >= 8);
   for (const item of items) {
     const task = item.standardTask; assert(validStandardTask(task)); assert.equal(task.kind, 'gap'); assert(task.cue.startsWith('Werkwoord: ')); assert(!task.cue.includes('undefined')); assert(item.additionalReadingCondition);
@@ -52,7 +52,7 @@ test('Gap players preserve the existing full sentence while withholding the comp
   }
   assert.equal(normalizeAnswer('  DRINK. '), 'drink'); assert.notEqual(normalizeAnswer('drinkt'), 'drink');
 });
-test('Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders', () => {
+void test('Order player accepts explicitly authorized alternatives but never incomplete or duplicate orders', () => {
   assert(orderAccepted(['b','a','c'], ['a','b','c'], [['b','a','c']]));
   assert(!orderAccepted(['a','a','c'], ['a','b','c'])); assert(!orderAccepted(['a','b'], ['a','b','c']));
   assert(!orderAccepted(['b','a','c'], ['a','b','c']));
@@ -61,7 +61,7 @@ test('Order player accepts explicitly authorized alternatives but never incomple
     const source = contentById.get(item.contextId); assert(source); assert(item.items.every(i => source.text.includes(i.text.replace(/^[^:]+: /, ''))));
   }
 });
-test('Scene task stays unoffered without approved media and valid normalized regions', () => {
+void test('Scene task stays unoffered without approved media and valid normalized regions', () => {
   const attached = groupExercises(starter, 'situation-point')[0];
   assert.equal(attached.contextId, 'situatie-map'); assert(validStandardTask(attached.standardTask));
   assert.equal(attached.standardTask.image.src, '/package-media/cp001/aa-cp001-scene-table-on.webp');
@@ -72,14 +72,14 @@ test('Scene task stays unoffered without approved media and valid normalized reg
   task.regions[0].width=2; assert(!validStandardTask(task));
   assert(standardMediaNeeds.some(n=>n.activity==='situation-point'&&n.status==='paused'));
 });
-test('All branching paths contain two or three meaningful choices and finish as participation', () => {
+void test('All branching paths contain two or three meaningful choices and finish as participation', () => {
   const item = groupExercises(starter,'practice-branch')[0]; assert(item); const task = item.standardTask; assert(validStandardTask(task));
   assert.equal(item.assessment,'participation'); assert.equal(item.requiresExplicitCompletion,true); assert.equal(item.reviewEligible,false);
   function walk(id,path=[]) { const node=task.nodes.find(n=>n.id===id); for(const choice of node.choices) { assert(choice.consequence); assert(!path.includes(choice.next)); if(choice.next) walk(choice.next,[...path,id]); else assert([2,3].includes(path.length+1)); } }
   walk(task.start);
   const broken=structuredClone(task); broken.nodes[0].choices[0].next='missing'; assert(!validStandardTask(broken));
 });
-test('Standard activities are reachable in existing stages and preserve source/lesson references', () => {
+void test('Standard activities are reachable in existing stages and preserve source/lesson references', () => {
   for (const activity of standardActivities) {
     assert(practiceStages.some(s=>s.activities.includes(activity.id)));
     for(const p of packs) for(const item of standardExercises(p,activity.id)) {
@@ -91,7 +91,7 @@ test('Standard activities are reachable in existing stages and preserve source/l
   }
 });
 
-test('Completion and model-supported answers do not add standard players to mastery/review', () => {
+void test('Completion and model-supported answers do not add standard players to mastery/review', () => {
   const state = { preserved: { last: 1, due: 2, streak: 1 } };
   for(const mode of ['word-sort','verb-choice','text-evidence','practice-branch']) {
     const item=groupExercises(starter,mode)[0] ?? packs.flatMap(p=>groupExercises(p,mode))[0];
@@ -100,7 +100,7 @@ test('Completion and model-supported answers do not add standard players to mast
   }
 });
 
-test('Expanded list coverage retains every word, all six players and distinct scene targets', () => {
+void test('Expanded list coverage retains every word, all six players and distinct scene targets', () => {
   for (const pack of packs) {
     const sorts = groupExercises(pack, 'word-sort');
     assert(sorts.length, pack.id);
@@ -120,7 +120,7 @@ test('Expanded list coverage retains every word, all six players and distinct sc
   assert(unique('practice-branch').size >= 16);
 });
 
-test('Every new branch keeps source identities and terminates after two or three decisions', () => {
+void test('Every new branch keeps source identities and terminates after two or three decisions', () => {
   for (const collection of chapterCollections('practice-branch')) for (const item of collection.exercises) {
     const task=item.standardTask, source=contentById.get(item.contextId);
     assert(validStandardTask(task)); assert.equal(item.assessment,'participation'); assert.equal(item.reviewEligible,false);

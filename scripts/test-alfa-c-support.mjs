@@ -7,7 +7,7 @@ import { functionalBlocks, functionalAudio } from '../lib/alfa-c-functioneel.ts'
 import { pilotBlocks, alfaCGuideAudio } from '../lib/alfa-c-practice.ts';
 const read = path => JSON.parse(fs.readFileSync(path));
 const alignment = read('data/klink-alfa-c-readalong.json');
-test('Every daily source button reads every complete visible document, including the final line', () => {
+void test('Every daily source button reads every complete visible document, including the final line', () => {
   const clips = new Map(read('data/klink-alfa-c-dagelijks-audio.json').clips.map(c => [c.id, c]));
   for (const block of dailyBlocks) for (const step of block.steps) {
     assert.equal(step.speech.O, step.documents.map(d => d.text).join('\n\n'), step.id);
@@ -18,7 +18,7 @@ test('Every daily source button reads every complete visible document, including
     }
   }
 });
-test('Explanation timings match exact text and unchanged audio, across all three players', () => {
+void test('Explanation timings match exact text and unchanged audio, across all three players', () => {
   const bySource = new Map(alignment.clips.map(c => [c.src,c]));
   for (const c of alignment.clips) {
     assert.equal(createHash('sha256').update(fs.readFileSync('public'+c.src)).digest('hex'), c.sha256);
@@ -31,7 +31,7 @@ test('Explanation timings match exact text and unchanged audio, across all three
   for(const b of pilotBlocks)for(const s of b.steps)expected.push([alfaCGuideAudio(s.spokenInstruction),s.spokenInstruction]);
   for(const [src,text] of expected)assert.equal(bySource.get(src)?.text,text,src);
 });
-test('Correct-answer feedback varies and every phrase has the proper guide recording', () => {
+void test('Correct-answer feedback varies and every phrase has the proper guide recording', () => {
   const phrases=new Set();
   for(const b of dailyBlocks)for(const s of b.steps)phrases.add(s.speech.G.split('.')[0]);
   assert(phrases.size>=8);

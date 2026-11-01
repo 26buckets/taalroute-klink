@@ -5,7 +5,7 @@ import { taalroutePackages as packs, primaryWordCards, exercisesForLesson, exerc
 import release from '../data/klink-curriculum.json' with { type: 'json' };
 import media from '../data/klink-media.json' with { type: 'json' };
 const lessons = packs.flatMap(pack => pack.lessons);
-test('Context pictures remain learning support and never become scored image answers', () => {
+void test('Context pictures remain learning support and never become scored image answers', () => {
   const original = media['klink-woord-de'];
   media['klink-woord-de'] = { ...original, image: '/package-media/test-context.webp', imageUse: 'context' };
   try {
@@ -18,7 +18,7 @@ test('Context pictures remain learning support and never become scored image ans
     }
   } finally { media['klink-woord-de'] = original; }
 });
-test('Compact lesson previews preserve the full lesson and choose target meanings, including recall', () => {
+void test('Compact lesson previews preserve the full lesson and choose target meanings, including recall', () => {
   const before = JSON.stringify(packs);
   for (const pack of packs) for (const lesson of pack.lessons) {
     const expected = (lesson.newWords.length ? lesson.newWords : lesson.returning).slice(0, 2);
@@ -29,7 +29,7 @@ test('Compact lesson previews preserve the full lesson and choose target meaning
   const legacy = { ...pack.lessons[0], newWords: undefined, returning: undefined };
   assert.deepEqual(lessonPreviewWords(pack, legacy).map(word => word.word), legacy.words.slice(0, 2));
 });
-test('Every Lexicon meaning has exactly one first home; all core and extension steps remain exact', () => {
+void test('Every Lexicon meaning has exactly one first home; all core and extension steps remain exact', () => {
   assert.equal(primaryWordCards.length, 338);
   assert.equal(new Set(primaryWordCards.map(word => word.id)).size, 338);
   assert.equal(new Set(primaryWordCards.map(word => word.word)).size, 337);
@@ -44,12 +44,12 @@ test('Every Lexicon meaning has exactly one first home; all core and extension s
     for (const key of ['known', 'newWords', 'returning']) assert.deepEqual(lesson[key], step[key], `${step.id} ${key}`);
   }
 });
-test('Long words retain all five reading routes; support is not mistaken for a core step', () => {
+void test('Long words retain all five reading routes; support is not mistaken for a core step', () => {
   assert.equal(primaryWordCards.filter(word => word.packageId.startsWith('route-')).length, 78);
   assert.equal(packs.filter(pack => pack.kind === 'route').length, 5);
   assert.equal(primaryWordCards.filter(word => word.packageId === 'voorbereiding').length, 7);
 });
-test('Guided lessons use explicit IDs, introduce choices first and never borrow from another lesson', () => {
+void test('Guided lessons use explicit IDs, introduce choices first and never borrow from another lesson', () => {
   for (const pack of packs) for (const lesson of pack.lessons) {
     const exercises = exercisesForLesson(pack, lesson);
     assert(exercises.length > 0, lesson.id);
@@ -66,7 +66,7 @@ test('Guided lessons use explicit IDs, introduce choices first and never borrow 
     for (const id of [...lesson.newWords, ...lesson.returning]) assert(seen.has(id), `${lesson.id} drops ${id}`);
   }
 });
-test('Existing renderer contracts have valid answers, tiles, models, and nonambiguous pairs', () => {
+void test('Existing renderer contracts have valid answers, tiles, models, and nonambiguous pairs', () => {
   const ids = new Set();
   for (const pack of packs) for (const exercise of pack.exercises) {
     assert(!ids.has(exercise.exerciseId), exercise.exerciseId); ids.add(exercise.exerciseId);
@@ -86,7 +86,7 @@ test('Existing renderer contracts have valid answers, tiles, models, and nonambi
     if (exercise.mode.startsWith('heard') || exercise.mode === 'repeat-word') assert(exercise.prompt.audio?.src);
   }
 });
-test('Both pak meanings remain distinct, missing media is not invented and public files contain no Drive links', () => {
+void test('Both pak meanings remain distinct, missing media is not invented and public files contain no Drive links', () => {
   const pak = primaryWordCards.filter(word => word.word === 'pak');
   assert.equal(pak.length, 2);
   const packaging = pak.find(word => word.id.endsWith('verpakking'));
@@ -96,7 +96,7 @@ test('Both pak meanings remain distinct, missing media is not invented and publi
   for (const word of primaryWordCards) for (const path of [word.audio, word.image].filter(Boolean)) assert(existsSync(new URL(`../public${path}`, import.meta.url)), path);
   assert(!/drive\.google|docs\.google|diglin/i.test(JSON.stringify(packs)));
 });
-test('Only the established learner, teacher and exercise players are mounted; existing CSS remains the shell', () => {
+void test('Only the established learner, teacher and exercise players are mounted; existing CSS remains the shell', () => {
   const page = readFileSync(new URL('../app/page.tsx', import.meta.url), 'utf8');
   const workspace = readFileSync(new URL('../components/product/practice-workspace.tsx', import.meta.url), 'utf8');
   assert(page.includes('<PracticeWorkspace')); assert(workspace.includes('<LearnerApp')); assert(workspace.includes('<TeacherApp')); assert(!`${page}${workspace}`.includes('CurriculumApp'));

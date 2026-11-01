@@ -6,7 +6,7 @@ import {chapterCollections,matchesChapterSelection,chapterHash,parseChapterHash}
 import {selectExerciseSet,exerciseSetHelp} from '../lib/content-levels.ts';
 import data from '../data/klink-lexicon-wordbuild-rest.json' with {type:'json'};
 
-test('Exact Basis selection is reachable at six levels, counted once and remains guided',()=>{
+void test('Exact Basis selection is reachable at six levels, counted once and remains guided',()=>{
  const supplements=contentPackages.filter(pack=>pack.practiceActivities?.includes('build-model'));
  const ids=new Set(supplements.map(pack=>pack.id));
  const rows=chapterCollections('build-model').filter(row=>ids.has(row.pack.id));
@@ -26,7 +26,7 @@ test('Exact Basis selection is reachable at six levels, counted once and remains
  assert.deepEqual(rows.filter(row=>matchesChapterSelection(row,{level:'all',help:'practice'})),[]);
 });
 
-test('Excluded IDs never enter model tasks or word banks; original lesson route is preserved',()=>{
+void test('Excluded IDs never enter model tasks or word banks; original lesson route is preserved',()=>{
  const exclusions=new Set(data.selectionPolicy.excludedLexemeIds);
  assert(contentPackages.every(pack=>pack.words.every(word=>!exclusions.has(word.id))));
  assert.deepEqual(lessonPackages,taalroutePackages);

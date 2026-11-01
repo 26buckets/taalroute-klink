@@ -6,7 +6,7 @@ import { soundCards, soundById, soundsForWord, wordsForSound, lessonForSoundWord
 import { allPackageWords, lessonPackages } from '../lib/package-content.ts';
 import { isWithdrawnAudio } from '../lib/audio-policy.ts';
 
-test('All 46 canonical poster cards have one group, their own spelling and valid source links', () => {
+void test('All 46 canonical poster cards have one group, their own spelling and valid source links', () => {
   assert.equal(soundCards.length, 46);
   const grouped = reference.groups.flatMap(group => group.items);
   assert.equal(new Set(grouped).size, soundCards.length);
@@ -24,7 +24,7 @@ test('All 46 canonical poster cards have one group, their own spelling and valid
   }
 });
 
-test('Sound references use source reading units in word order; no substring guesses or spelling-value substitutions', () => {
+void test('Sound references use source reading units in word order; no substring guesses or spelling-value substitutions', () => {
   assert.deepEqual(soundsForWord('klink-woord-mat').map(sound => sound.id), ['m', 'a', 't']);
   assert.deepEqual(soundsForWord('klink-woord-tas').map(sound => sound.id), ['t', 'a', 's']);
   assert.deepEqual(soundsForWord('klink-woord-maan').map(sound => sound.id), ['m', 'aa', 'n']);
@@ -33,7 +33,7 @@ test('Sound references use source reading units in word order; no substring gues
   assert.deepEqual(soundsForWord('unknown'), []);
 });
 
-test('Word links open the existing lesson with intact registered audio and no new media bindings', () => {
+void test('Word links open the existing lesson with intact registered audio and no new media bindings', () => {
   const original = JSON.stringify(allPackageWords);
   assert(wordsForSound(soundById.get('a')).some(word => word.word === 'mat'));
   assert(!wordsForSound(soundById.get('a')).some(word => word.word === 'maan'));

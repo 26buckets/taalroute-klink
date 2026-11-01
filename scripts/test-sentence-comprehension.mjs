@@ -11,7 +11,7 @@ import audioPlan from '../data/klink-comprehension-audio.json' with { type: 'jso
 import release from '../data/klink-release-readiness.json' with { type: 'json' };
 
 const questions = packs.flatMap(pack => pack.exercises.filter(item => item.mode === 'sentence-question'));
-test('Eight authored questions cover the existing sentences with real evidence, feedback and stable bindings', () => {
+void test('Eight authored questions cover the existing sentences with real evidence, feedback and stable bindings', () => {
   assert.equal(sentenceQuestions.length, 8);
   assert.equal(questions.length, 8);
   assert.deepEqual(new Set(questions.map(item => item.contextId)), new Set(klinkContexts.filter(item => item.kind === 'sentence').map(item => item.id)));
@@ -36,7 +36,7 @@ test('Eight authored questions cover the existing sentences with real evidence, 
   }
   assert.equal(positions.size, 2);
 });
-test('Guided questions use prepared options; oral contrasts stay explicit and optional', () => {
+void test('Guided questions use prepared options; oral contrasts stay explicit and optional', () => {
   let guided = 0;
   for (const pack of packs) for (const lesson of pack.lessons) {
     const route = exercisesForLesson(pack, lesson);
@@ -61,7 +61,7 @@ test('Guided questions use prepared options; oral contrasts stay explicit and op
     assert(!packs.some(pack => pack.lessons.some(lesson => lesson.guidedExerciseIds.includes(item.exerciseId))));
   }
 });
-test('Condition and conjunction items cannot be solved by spotting only the subject word', () => {
+void test('Condition and conjunction items cannot be solved by spotting only the subject word', () => {
   const biet = questions.find(item => item.questionId === 'begrip-biet');
   assert.equal(biet.comprehensionFocus, 'property');
   assert.deepEqual(biet.options.map(option => option.label), ['Schoon', 'Vies']);
@@ -70,7 +70,7 @@ test('Condition and conjunction items cannot be solved by spotting only the subj
   assert(kool.options.every(option => option.label.toLowerCase().includes('kool')));
   assert.equal(kool.answer.correctOptionIds[0], 'beide');
 });
-test('Teacher checklist reports connected, optional and absent comprehension without claiming independent reading', () => {
+void test('Teacher checklist reports connected, optional and absent comprehension without claiming independent reading', () => {
   const pack = packs.find(item => item.id === 'groep-1');
   const lesson = pack.lessons.find(item => item.id === 'klink-leesstap-04');
   const list = buildChecklist(pack, lesson);
@@ -83,7 +83,7 @@ test('Teacher checklist reports connected, optional and absent comprehension wit
   assert(sentenceBridge(bietPack, bietLesson).models.flatMap(model => model.questions).some(item => item.preparation.length && !item.guided));
   assert.equal(buildChecklist(packs[0], packs[0].lessons[0]).find(item => item.id === 'sentence-listening').status, 'missing');
 });
-test('Released audio retains separate roles, embedded Taalroute branding and explicit user approval', () => {
+void test('Released audio retains separate roles, embedded Taalroute branding and explicit user approval', () => {
   assert.notEqual(audioPlan.instructionVoiceId, audioPlan.targetVoiceId);
   assert.equal(audioPlan.items.length, 8);
   for (const item of audioPlan.items) {

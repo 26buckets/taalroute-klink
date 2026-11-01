@@ -6,7 +6,7 @@ import { learningActivities, learningRules } from '../lib/learning-paths.ts';
 import { chapterCollections } from '../lib/practice-chapters.ts';
 import { learningAreas } from '../lib/learning-areas.ts';
 
-test('Editorial coverage separates published sequences from remaining curriculum work', () => {
+void test('Editorial coverage separates published sequences from remaining curriculum work', () => {
   for (const id of ['reading', 'sounds', 'daily-life', 'spelling', 'grammar']) {
     const area = learningAreas.find(area => area.id === id);
     assert(!/wachten op vrijgave|vrijgave.*blijven open/i.test(area.remaining));
@@ -15,7 +15,7 @@ test('Editorial coverage separates published sequences from remaining curriculum
   }
 });
 
-test('All 302 teaching plans retain canonical words and small lesson identity', () => {
+void test('All 302 teaching plans retain canonical words and small lesson identity', () => {
   let count = 0;
   for (const pack of packs) for (const lesson of pack.lessons) {
     const plan = teacherPracticePlan(pack, lesson);
@@ -34,7 +34,7 @@ test('All 302 teaching plans retain canonical words and small lesson identity', 
   assert.equal(first.wordIds.length, 1);
 });
 
-test('Recall varies answer positions without changing choices, answers or retry stability', () => {
+void test('Recall varies answer positions without changing choices, answers or retry stability', () => {
   let checked = 0, changed = 0;
   for (const activity of learningActivities) for (const collection of chapterCollections(activity.id)) {
     for (const item of collection.exercises.filter(item => item.learningStage === 'recall' && item.options)) {
@@ -53,7 +53,7 @@ test('Recall varies answer positions without changing choices, answers or retry 
   assert(changed > checked / 4, `${changed} varied out of ${checked}`);
 });
 
-test('Sound models underline the target unit only in models; grammar feedback matches available help', () => {
+void test('Sound models underline the target unit only in models; grammar feedback matches available help', () => {
   let models = 0, grammar = 0;
   for (const collection of chapterCollections('sound-path')) for (const item of collection.exercises) {
     if (item.mode === 'learning-example') {

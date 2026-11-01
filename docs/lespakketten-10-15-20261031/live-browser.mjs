@@ -6,7 +6,7 @@ import {getClassroomLesson} from '../../lib/teacher-classroom.ts';
 const base=process.env.KLINK_URL??'https://klink.taalroute.nl',smoke=process.env.KLINK_SMOKE==='1',checks=[],errors=[];
 for(const[name,engine]of Object.entries(smoke?{chromium}:{chromium,webkit})){
  const b=await engine.launch();try{for(const width of smoke?[390]:[1366,390]){
-  const p=await b.newPage({viewport:{width,height:900}});p.setDefaultTimeout(20000);p.on('pageerror',e=>errors.push(e.message));await p.addInitScript(()=>{window.audioPlayed=[];const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){this.addEventListener('ended',()=>window.audioPlayed.push(this.currentSrc),{once:true});return play.call(this);};});await p.emulateMedia({reducedMotion:'reduce'});
+  const p=await b.newPage({viewport:{width,height:900}});p.setDefaultTimeout(20000);p.on('pageerror',e=>errors.push(e.message));await p.addInitScript(()=>{window.audioPlayed=[];const play=Reflect.get(HTMLMediaElement.prototype,'play');HTMLMediaElement.prototype.play=function(){this.addEventListener('ended',()=>window.audioPlayed.push(this.currentSrc),{once:true});return play.call(this);};});await p.emulateMedia({reducedMotion:'reduce'});
   await p.goto(base+'/#teacher/plus');await p.getByRole('button',{name:'Les openen: mat',exact:true}).waitFor();assert.equal(await p.locator('.kpd-lesson-choice').count(),58);
   for(const source of smoke?extra.filter(l=>l.id==='maand'):extra){
    const l=getClassroomLesson(source.id);await p.getByRole('button',{name:'Les openen: '+l.id,exact:true}).click();

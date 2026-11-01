@@ -13,7 +13,7 @@ const index=json('data/klink-production-index.json');
 const row=index.find(r=>r.id==='production:copy:alfa-c:KSW-AC-TN-001-020');
 const bytes=readFileSync('public'+row.url),collection=JSON.parse(bytes);
 
-test('20 source-bound tasks use the existing copy player and preserve the old catalogue',()=>{
+void test('20 source-bound tasks use the existing copy player and preserve the old catalogue',()=>{
   const before=JSON.parse(execFileSync('git',['show','4612b27eebe2ef45c6d806ed18df09f7e8f1e934:data/klink-production-index.json']));
   assert.deepEqual(index.slice(0,before.length),before);
   assert(index.length>=before.length+1);
@@ -37,7 +37,7 @@ test('20 source-bound tasks use the existing copy player and preserve the old ca
   }
 });
 
-for(const {id,sourceRecord:s} of source)test(id+' requires the visible characters, case, inner spaces and punctuation',()=>{
+for(const {id,sourceRecord:s} of source)void test(id+' requires the visible characters, case, inner spaces and punctuation',()=>{
   const target=s.visibleModel;
   assert(exactCopyAnswer(target,target));
   assert(exactCopyAnswer(target,`  ${target}  `));
@@ -47,7 +47,7 @@ for(const {id,sourceRecord:s} of source)test(id+' requires the visible character
   if(target.includes(' '))assert(!exactCopyAnswer(target,target.replace(' ','  ')));
 });
 
-test('canonical Unicode is accepted without treating a different letter as equal',()=>{
+void test('canonical Unicode is accepted without treating a different letter as equal',()=>{
   assert(exactCopyAnswer('café','cafe\u0301'));
   assert(!exactCopyAnswer('café','cafe'));
 });

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { functionalAudio, functionalBlocks, functionalOptions, functionalStorageKey, readFunctionalProgress } from '../lib/alfa-c-functioneel.ts';
 const amendments = JSON.parse(readFileSync('docs/imported-alfa-c-release-20261031/source-amendments.json')).changes;
 const source = JSON.parse(readFileSync('docs/klink-alfa-c-functioneel-20261028/reviewed-package.json'));
-test('all instructions, examples, source texts, tips, retries and isolated dictation items have exact audio bindings',()=>{
+void test('all instructions, examples, source texts, tips, retries and isolated dictation items have exact audio bindings',()=>{
  for(const block of functionalBlocks){
   for(const text of [block.start,block.end])assert(functionalAudio('guide',text));
   for(const s of block.steps){
@@ -14,7 +14,7 @@ test('all instructions, examples, source texts, tips, retries and isolated dicta
   }
  }
 });
-test('all 72 revised tasks available with 27 actual digital response places', () => {
+void test('all 72 revised tasks available with 27 actual digital response places', () => {
   const tasks = functionalBlocks.flatMap(b => b.steps);
   assert.equal(tasks.length,72); assert.equal(new Set(tasks.map(s=>s.id)).size,72);
   assert.equal(tasks.filter(s=>s.closed).length,0);
@@ -38,7 +38,7 @@ test('all 72 revised tasks available with 27 actual digital response places', ()
   for(const error of ['woensdag 09.00 zaal 2','Voornaam: Elmi','Achternaam: Safa','De map ligt in de bak.','Ik zet de fles op tafel.'])assert(sheets.includes(error));
   assert(!/concept|voice.?id|generator|AI|broncommit/i.test(sheets));
 });
-test('progress rejects corrupt or invented success and never changes the older storage contract', () => {
+void test('progress rejects corrupt or invented success and never changes the older storage contract', () => {
   assert.notEqual(functionalStorageKey,'klink.preview.alfa-c.v1');
   for(const v of [null,'','{','null','{}','{"version":2}'])assert.deepEqual(readFunctionalProgress(v),{version:1,positions:{},records:{}});
   const choice=functionalBlocks[0].steps[1],open=functionalBlocks[0].steps[0];
@@ -51,7 +51,7 @@ test('progress rejects corrupt or invented success and never changes the older s
   assert.deepEqual(readFunctionalProgress(JSON.stringify(raw)).records[open.id],raw.records[open.id]);
 });
 
-test('reviewed examples narrate the first source line as well as the answer',()=>{
+void test('reviewed examples narrate the first source line as well as the answer',()=>{
  const steps=functionalBlocks.flatMap(b=>b.steps);
  for(const id of ['lijst-02','lijst-06']){const s=steps.find(s=>s.id==='klink-alfa-c-aanvulling-'+id);assert(s.exampleTargetTexts[0].includes('1 brood'));assert(s.exampleVisible.includes(s.exampleTargetTexts[0]));}
  const s=steps.find(s=>s.id==='klink-alfa-c-aanvulling-werk-03');assert.deepEqual(s.exampleTargetTexts.slice(0,2),['1 Pak een doek.','2 Maak de tafel schoon.']);

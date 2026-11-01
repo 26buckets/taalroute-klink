@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import { learnerCollectionLabel } from '../lib/learner-copy.ts';
 import { chapterCollections } from '../lib/practice-chapters.ts';
 const review = JSON.parse(readFileSync('docs/reading-round-titles-20261101/title-review.json'));
-test('Every reading round has its own short source-bound topic title and separate round number', () => {
+void test('Every reading round has its own short source-bound topic title and separate round number', () => {
   const rounds = chapterCollections('text-question').filter(c => c.title.startsWith('Leesronde'));
   assert.equal(rounds.length, 68);
   assert.deepEqual(review.map(r => r.id), rounds.map(r => r.id));
