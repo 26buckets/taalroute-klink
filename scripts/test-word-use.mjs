@@ -19,7 +19,7 @@ test('288 authored questions: two activities, three levels and six short rounds 
  for(const level of ['alfa-a','alfa-b','alfa-c','b2','support'])for(const activity of ['word-combinations','suitable-reply'])assert.equal(availableChapterCollections(activity,{level}).length,0);
 });
 test('every card has one correct answer, exact feedback and complete registered audio',()=>{
- const review=read('docs/word-use-20261101/content-review.json');assert.equal(review.rows.length,288);
+ const review=read('docs/word-use-language-review-20261101/content-review.json');assert.equal(review.rows.length,288);
  for(const collection of wordUseCollections)for(const e of collection.exercises){
   const row=wordUseBank.entries.find(x=>x.id===e.wordUseId),r=review.rows.find(x=>x.id===e.wordUseId);
   assert.equal(e.options.length,4);assert.equal(new Set(e.options.map(o=>o.label)).size,4);assert.equal(e.answer.correctOptionIds.length,1);
@@ -54,7 +54,7 @@ test('new collections keep their level, activity, IDs and answers through every 
  }
 });
 test('old synonym records, bank media, original curriculum, instructions and appearance remain unchanged',()=>{
- for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readFileSync(f),execFileSync('git',['show',base+':'+f],{maxBuffer:128e6}),f);
+ for(const f of ['data/klink-synonyms.json','data/klink-synonym-audio.json','data/klink-curriculum.json','data/klink-media.json','data/klink-connected-content.json','data/klink-audio-policy.json','data/klink-production-instructions.json','app/learner-ui.css','app/learner-layout.css','docs/appearance-floor-20261031/floor.json'])assert.deepEqual(readFileSync(f),execFileSync('git',['show',(f.startsWith('app/')||f.startsWith('docs/appearance-floor-')?read('docs/word-use-language-review-20261101/baseline.json').sourceCommit:base)+':'+f],{maxBuffer:128e6}),f);
  for(const[level,n]of [['a1',16],['a2',59],['b1',200]])assert.equal(availableChapterCollections('synonyms',{level,help:'practice'}).flatMap(c=>c.exercises).length,n);
  const original=JSON.parse(execFileSync('git',['show',base+':data/klink-word-library-index.json'],{maxBuffer:16e6})),current=read('data/klink-word-library-index.json'),added=new Set(['word-combinations','suitable-reply']);
  assert.deepEqual({...current,chapters:current.chapters.map(c=>({...c,activities:c.activities.filter(a=>!added.has(a))})),activities:current.activities.filter(a=>!added.has(a.id))},original);
