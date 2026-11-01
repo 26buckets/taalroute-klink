@@ -1,3 +1,4 @@
+import writingPredecessors from '../data/klink-writing-progress-predecessors-20261101.json' with { type: 'json' };
 import { importedActivities, importedExercisesForPack, type ImportedActivity } from './imported-practice.ts';
 import type { PackageDefinition, PackageExercise, PackageWord } from './package-content';
 import { learningActivities, learningExercises, type LearningActivity } from './learning-paths.ts';
@@ -272,10 +273,16 @@ export function groupExercises(pack: PackageDefinition, activity: GroupActivity,
   });
 }
 
-export const groupSessionKey = (packId: string, activity: GroupActivity) => `klink.group.v1:${packId}:${activity}`;
-export function restoreGroupSession(raw: string | null, exercises: PackageExercise[]): { exerciseId?: string; done: boolean } {
+const writingRevisions = writingPredecessors as Record<string, { sessionExerciseAliases: Record<string, string> }>;
+export const groupSessionKey = (packId: string, activity: GroupActivity, progressId?: string) => `klink.group.v1:${packId}:${activity}${progressId && writingRevisions[progressId] ? ':source:' + progressId : ''}`;
+export function restoreGroupSession(raw: string | null, exercises: PackageExercise[], progressId?: string, previousRaw?: string | null): { exerciseId?: string; done: boolean } {
   try {
-    const value = JSON.parse(raw ?? 'null');
+    let value = JSON.parse(raw ?? 'null');
+    const aliases = writingRevisions[progressId ?? '']?.sessionExerciseAliases;
+    if (raw === null && aliases && previousRaw) {
+      value = JSON.parse(previousRaw);
+      if (value?.version === 1) value = { ...value, done: false, exerciseId: aliases[value.exerciseId] ?? (value.done === true ? Object.values(aliases)[0] : value.exerciseId) };
+    }
     if (value?.version === 1 && exercises.some(item => item.exerciseId === value.exerciseId)) return { exerciseId: value.exerciseId, done: value.done === true };
   } catch { /* Corrupt storage must not prevent practice. */ }
   return { done: false };
