@@ -1,3 +1,15 @@
+## Actuele publicatie — Wat oefen je? — 1 november 2026
+
+Livebron `1fb7c126cc642aa9230652a11c60fe3b2ab3c065`, schone canonieke main; Worker `2db6dd55-99bd-4127-8f0c-22d0caecbc59`. Normaal gepubliceerd via `npm run deploy` als afstammeling van werkelijke vorige livebron `780d798ba604114c5be5828aa89c2932ef45faac`, inclusief de Synoniemen-review, openingsanimatie en twintig exacte Alfa C-naschrijfopdrachten. Alle bestaande inhoud, media, routes, antwoorden en lokale gegevens blijven behouden.
+
+Concreet goedgekeurde aanvulling: in de cursistinfo staat Wat oefen je? met één of twee gekleurde labels en een doelzin boven Zo oefen je. De 97 doelen uit de goedgekeurde matrix zijn gekoppeld aan alle 59 oefenvormen en 99.652 catalogusvarianten (67.956 verschillende oefen-IDs). Ook per opdracht op werkbladen. De oorspronkelijke 99.632 matrixkoppelingen blijven exact behouden; de twintig nieuw gepubliceerde naschrijftaken gebruiken hetzelfde doel Precies schrijven met een bij woorden, woordgroepen en zinnen passende doelzin. Geen nieuwe indeling van de overige app. De beschermde eerste reactie en docentvoorbereiding blijven behouden.
+
+Lokaal en online slagen in Chromium en WebKit 108 doel-/kleur-/volgorde-/toets-/touch-/themacontroles, 16 werkbladcontroles, 12 antwoord-/voortgang-/hervatcontroles, 16 schrijf-/toetsenbordindelingen, 12 proeven Verder tijdens audio, twee echte audio-/voortgangsproeven en 12 controles van de nieuwe exacte naschrijftaken. Lokaal aanvullend 14 bestaande toetsencontroles, negen bron-/docentprivacyproeven, 26 eenheidscontroles, zes vrijgave-/herstelproeven, TypeScript, gerichte lint, productieopbouw en de volledige publicatiepoort. Geen fysieke telefoon of native telefoontoetsenbord getest. De aangeboden livebron, alle bestaande inhoudsvingerafdrukken en twee werkelijk aangeboden audiobestanden zijn bevestigd; audio is bytegelijk. Alle zware controles lokaal; geen GitHub Actions-workflows aanwezig of toegevoegd.
+
+Akkoord: `docs/klink-owner-release-learning-goals-20261101.json`; uitsluitend deze concrete vormgevingsaanvulling in `docs/appearance-floor-20261031/approved-updates/learning-goals-20261101.json`. Bewijs en mobiele schermen: `docs/learning-goals-20261101/`. De geïntegreerde bronkopie is volledig vanaf Drive teruggelezen met controle van ZIP en iedere bestandshash (`backup.json`); de definitieve herstelkopie met bronbundel en onlinebewijzen staat in `final-backup.json`. De eerdere kopieën en hun bronbewijzen blijven behouden.
+
+---
+
 ## Actuele publicatie — eerste twintig schrijfoefeningen — 1 november 2026
 
 Livebron `780d798ba604114c5be5828aa89c2932ef45faac`; Worker `516d853f-5e16-481f-935c-278d74f8986f`. Via de gewone `npm run deploy` gepubliceerd vanaf schone canonieke main, als afstammeling van de goedgekeurde livebron `4612b27eebe2ef45c6d806ed18df09f7e8f1e934`. De nieuwste synoniemenreview, laadanimatie en overige gepubliceerde functies blijven behouden.

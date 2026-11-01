@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {mkdirSync,readFileSync,writeFileSync} from 'node:fs';
+import {chromium,webkit} from 'playwright';
+import {chapterCollections,chapterHash,practiceChapters} from '../lib/practice-chapters.ts';
+import {learningGoalFor} from '../lib/learning-goals.ts';
+import {exerciseSetHelp} from '../lib/content-levels.ts';
+const base=process.env.KLINK_TEST_URL||'http://127.0.0.1:18996',out=process.env.KLINK_GOALS_OUTPUT||'outputs/learning-goals-20261101/browser';mkdirSync(out,{recursive:true});
+const cases=[];
+for(const [activity,family]of[['content-woordpakketten','woorden'],['sound-path','klanken'],['text-question','lezen'],['listen','luisteren'],['sentence-speak','spreken'],['functional-form','schrijven'],['paper-dictation','spelling'],['grammar-path','grammatica'],['suitable-reply','praktijk']]){
+ for(const row of chapterCollections(activity)){
+  const es=row.contentUrl?JSON.parse(readFileSync('public'+row.contentUrl)).exercises:row.exercises,e=es[0],goal=e&&learningGoalFor(e);if(!goal||goal.family!==family)continue;
+  const chapter=practiceChapters.find(c=>c.activities.includes(activity)).id,help=exerciseSetHelp(es);cases.push({activity,row,e,goal,route:'/'+chapterHash({chapter,activity,collection:row.id,level:row.level,help})});break;
+ }
+}
+assert.equal(cases.length,9);const checks=[],errors=[];
+for(const[engine,type]of Object.entries({chromium,webkit})){
+ const browser=await type.launch();try{for(const[width,height]of[[1280,720],[390,844],[320,568]])for(const theme of['light','dark']){
+  const context=await browser.newContext({viewport:{width,height},hasTouch:true,colorScheme:theme});await context.addInitScript(()=>{if(!localStorage.getItem('klink.goals.retention'))localStorage.setItem('klink.goals.retention','kept');});
+  for(const c of cases){const p=await context.newPage();p.setDefaultTimeout(15000);p.on('pageerror',e=>errors.push(e.message));await p.goto(base+c.route);const root=p.locator('[data-exercise-id]');await root.waitFor();await p.evaluate(theme=>document.documentElement.setAttribute('data-theme',theme),theme);const id=await root.getAttribute('data-exercise-id');const trigger=p.getByRole('button',{name:'Over deze oefening',exact:true});await trigger.press('Enter');const dialog=p.getByRole('dialog');await dialog.waitFor();await p.waitForFunction(()=>document.activeElement?.getAttribute('aria-label')==='Uitleg sluiten');await p.waitForTimeout(120);
+   const goal=dialog.locator('[data-learning-goal]');assert.equal(await goal.getAttribute('data-learning-goal'),c.goal.id);assert.equal(await goal.getAttribute('data-goal-family'),c.goal.family);assert.deepEqual(await goal.locator('.cp-learning-goal-labels span').allTextContents(),c.goal.displayLabels);assert.equal(await goal.locator('p').innerText(),c.goal.learnerText);
+   const layout=await dialog.evaluate(e=>{const r=e.getBoundingClientRect(),body=e.querySelector('.cp-learner-info-body'),h=[...e.querySelectorAll('h3')].map(n=>n.textContent),buttons=[...e.querySelectorAll('button')];return{fits:r.left>=0&&r.right<=innerWidth&&r.top>=0&&r.bottom<=innerHeight,goalBeforeHow:h.indexOf('Wat oefen je?')<h.indexOf('Zo oefen je'),controlsReachable:buttons.every(b=>{const q=b.getBoundingClientRect();return q.width>=44&&q.height>=44&&q.top>=0&&q.bottom<=innerHeight;}),bodyScrollable:body.scrollHeight>body.clientHeight+1,labels:[...e.querySelectorAll('.cp-learning-goal-labels span')].map(s=>({bg:getComputedStyle(s).backgroundColor,ink:getComputedStyle(s).color,fit:s.scrollWidth<=s.clientWidth+1})),font:parseFloat(getComputedStyle(e).fontSize)};});assert(layout.fits&&layout.goalBeforeHow&&layout.controlsReachable&&layout.font>=16&&layout.labels.every(l=>l.fit),JSON.stringify({engine,activity:c.activity,width,theme,layout}));
+   const rgb=s=>s.match(/[\d.]+/g).slice(0,3).map(Number),lum=arr=>arr.map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((s,x,i)=>s+x*[.2126,.7152,.0722][i],0);for(const l of layout.labels){const hexToRgb=h=>'rgb('+h.slice(1).match(/../g).map(x=>parseInt(x,16)).join(', ')+')';assert.equal(l.bg,hexToRgb(c.goal.colors[theme].background));assert.equal(l.ink,hexToRgb(c.goal.colors[theme].foreground));const[a,b]=[lum(rgb(l.bg)),lum(rgb(l.ink))].sort((a,b)=>a-b);assert((b+.05)/(a+.05)>=4.5);}
+   for(const key of['Tab','ArrowLeft','ArrowRight']){await p.keyboard.press(key);assert(await dialog.evaluate(e=>e.contains(document.activeElement)));assert.equal(await root.getAttribute('data-exercise-id'),id);}
+   if(width===320||width===390&&theme==='light')await p.screenshot({path:`${out}/${engine}-${c.activity}-${width}-${theme}.png`});await p.keyboard.press('Escape');await dialog.waitFor({state:'hidden'});assert(await trigger.evaluate(e=>e===document.activeElement));await trigger.press(' ');await dialog.waitFor();await p.getByRole('button',{name:'Terug naar de oefening',exact:true}).tap();await dialog.waitFor({state:'hidden'});assert.equal(await root.getAttribute('data-exercise-id'),id);assert.equal(await p.evaluate(()=>localStorage.getItem('klink.goals.retention')),'kept');
+   checks.push({engine,activity:c.activity,goal:c.goal.id,family:c.goal.family,width,height,theme,...layout,keyboardContained:true,escapeFocusRestored:true,touchReturn:true,exercisePreserved:true,storagePreserved:true});await p.close();
+  }await context.close();
+ }}finally{await browser.close();writeFileSync(out+'/checks.json',JSON.stringify({base,checks,errors,physicalPhoneTested:false},null,2)+'\n');}}
+assert.equal(checks.length,108);assert.deepEqual(errors,[]);console.log('PASS 108 goal-order, label-color, dialog-layout, keyboard/touch and preservation checks');

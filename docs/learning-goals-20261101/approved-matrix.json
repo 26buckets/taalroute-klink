@@ -1,0 +1,2259 @@
+{
+  "source": {
+    "repository": "26buckets/taalroute-klink",
+    "branch": "main",
+    "catalogueCommit": "a160cd5816dd92e70feb6729e18dc74fe44d66a8",
+    "publishedSource": "e6fc6294fb4670b0624c5e8c909018fe52ad5804",
+    "created": "2026-11-01",
+    "files": {
+      "lib/practice-chapters.ts": "551ed42a5a0ac3cff186c83092a2f25cc15be0a8386716f30fa694e2547447df",
+      "lib/production-practice.ts": "8b11fe3538ed880d07fe11952961579e22a430454ee7455142dbc057cbce59b7",
+      "data/klink-production-index.json": "01a9dfa053de3ad17ee0df197279515895bc83e442a53d2a23726ec8a2585631",
+      "lib/group-practice.ts": "e1d3efccf51e789db5e5f2c4fe1f9c3b3535451a812dc1881645e687892de16b",
+      "lib/extended-practice.ts": "b8525e94aa096c8a25a12554a70917fff9a69f53c7a55edb29c8bc51c12a7bb9",
+      "lib/standard-practice.ts": "702099048abb3b548bd7c1c29efa84ffd266db62e9b29aa0e185471ef11e7779",
+      "lib/learning-paths.ts": "960e6bf0e24922df33da151f8c9c9e32722850e8fcdae79d73468f5b62265ce4",
+      "lib/synonyms.ts": "99c41d806b68636c0ad33496d3f64ee3c76e53d2e0641ab9e7422f19262c1ee5",
+      "lib/word-use.ts": "d61a5e7ebeef0a8e864ac1a648b1706528379adc3906b4a9c619cd5e7c92f5dd",
+      "lib/imported-practice-contract.ts": "5f09fca1a46b5533ca54e9334ffba1cd01b07d2bdce8809e0039497792154813",
+      "lib/imported-practice.ts": "fbe187e578cbabe4c579f96d64dd9a99009fee32f453fe3ae9e7f91c9695b1e7",
+      "data/klink-learning-rules.json": "f2be3f342123bfc5ffe77deacc2307c86ce4825ead0f621e14ee472bf48078b0",
+      "data/klink-imported-practice.json": "d29de11b4306695b9877cb3765c03d3dbcfbce19a3a1f920adbba299cc8ccdd2",
+      "data/klink-word-use.json": "687e18e28e69ed9cddfdc6c2c63e87ec6d86b6cdb3335e324e0ab5e280b979d7",
+      "docs/word-use-20261101/teaching-plan.json": "3b1ee28325a017c9efc6ba1b5c07f5511111b2a4719f51f639194a95f4cd3947",
+      "docs/appearance-floor-20261031/floor.json": "a76680c9b17479e53fe015b69963dc69197ab762bf0a783ed8b43cb7f1e11321"
+    },
+    "designBasisDriveId": "1iXr55yHAoIVVtu_J6yZrcqkjKca3USrz",
+    "method": "Manual proposed goal catalogue; deterministic per-instance source mapping. Not individual editorial approval of all items."
+  },
+  "families": {
+    "woorden": {
+      "label": "Woordbetekenis",
+      "kleur": "Blauw",
+      "light": {
+        "background": "#EAF2FB",
+        "foreground": "#244C7A"
+      },
+      "dark": {
+        "background": "#263D55",
+        "foreground": "#D3E6FF"
+      }
+    },
+    "klanken": {
+      "label": "Klanken en letters",
+      "kleur": "Paars",
+      "light": {
+        "background": "#F0EAF8",
+        "foreground": "#60408A"
+      },
+      "dark": {
+        "background": "#3E3152",
+        "foreground": "#E4D6FF"
+      }
+    },
+    "lezen": {
+      "label": "Lezen",
+      "kleur": "Petrol",
+      "light": {
+        "background": "#E6F1F1",
+        "foreground": "#174C53"
+      },
+      "dark": {
+        "background": "#243E41",
+        "foreground": "#D0EEEE"
+      }
+    },
+    "luisteren": {
+      "label": "Luisteren",
+      "kleur": "Blauwgroen",
+      "light": {
+        "background": "#E6F3F6",
+        "foreground": "#1C5260"
+      },
+      "dark": {
+        "background": "#243E48",
+        "foreground": "#D2EDF6"
+      }
+    },
+    "spreken": {
+      "label": "Spreken",
+      "kleur": "Pruim",
+      "light": {
+        "background": "#F4ECF3",
+        "foreground": "#74466F"
+      },
+      "dark": {
+        "background": "#483447",
+        "foreground": "#F4D5F0"
+      }
+    },
+    "schrijven": {
+      "label": "Schrijven",
+      "kleur": "Oker",
+      "light": {
+        "background": "#FAF0DB",
+        "foreground": "#705018"
+      },
+      "dark": {
+        "background": "#463B28",
+        "foreground": "#F6E5B7"
+      }
+    },
+    "spelling": {
+      "label": "Spelling",
+      "kleur": "Oker",
+      "light": {
+        "background": "#FAF0DB",
+        "foreground": "#705018"
+      },
+      "dark": {
+        "background": "#463B28",
+        "foreground": "#F6E5B7"
+      }
+    },
+    "grammatica": {
+      "label": "Zinnen maken",
+      "kleur": "Indigo",
+      "light": {
+        "background": "#ECEEF9",
+        "foreground": "#434C80"
+      },
+      "dark": {
+        "background": "#303954",
+        "foreground": "#DCE2FF"
+      }
+    },
+    "praktijk": {
+      "label": "In de praktijk",
+      "kleur": "Groen",
+      "light": {
+        "background": "#E9F2E9",
+        "foreground": "#385D40"
+      },
+      "dark": {
+        "background": "#2D4032",
+        "foreground": "#DCEEDC"
+      }
+    }
+  },
+  "goals": [
+    {
+      "id": "woord-kennismaken",
+      "family": "woorden",
+      "label": "Betekenis",
+      "learnerText": "Je oefent om een bekend woord met zijn betekenis te verbinden.",
+      "successCriterion": "Het woord en het bedoelde voorwerp of de bedoelde situatie verbinden.",
+      "instances": 1602,
+      "displayLabels": [
+        "Woordbetekenis"
+      ]
+    },
+    {
+      "id": "woordbeeld",
+      "family": "lezen",
+      "label": "Woorden herkennen",
+      "learnerText": "Je oefent om hetzelfde geschreven woord te herkennen.",
+      "successCriterion": "Hetzelfde woord kiezen, ook tussen woorden die erop lijken.",
+      "instances": 988,
+      "displayLabels": [
+        "Lezen",
+        "Woorden herkennen"
+      ]
+    },
+    {
+      "id": "hoor-foto",
+      "family": "luisteren",
+      "label": "Woord en foto",
+      "learnerText": "Je oefent om een gesproken woord met de juiste foto te verbinden.",
+      "successCriterion": "Bij het gehoorde woord de passende foto aanwijzen.",
+      "instances": 1349,
+      "displayLabels": [
+        "Luisteren",
+        "Woord en foto"
+      ]
+    },
+    {
+      "id": "hoor-woord",
+      "family": "luisteren",
+      "label": "Woord herkennen",
+      "learnerText": "Je oefent om een gesproken woord tussen geschreven woorden te herkennen.",
+      "successCriterion": "Het geschreven woord kiezen dat bij het gehoorde woord hoort; leesvoorbereiding blijft nodig.",
+      "instances": 6447,
+      "displayLabels": [
+        "Luisteren",
+        "Woord herkennen"
+      ]
+    },
+    {
+      "id": "lees-foto",
+      "family": "lezen",
+      "label": "Woord en foto",
+      "learnerText": "Je oefent om een geschreven woord met de juiste foto te verbinden.",
+      "successCriterion": "Bij het bekende geschreven woord de passende foto kiezen.",
+      "instances": 1281,
+      "displayLabels": [
+        "Lezen",
+        "Woord en foto"
+      ]
+    },
+    {
+      "id": "bouw-model",
+      "family": "spelling",
+      "label": "Letters op volgorde",
+      "learnerText": "Je oefent om de letters van een woord in de goede volgorde te zetten, met een voorbeeld.",
+      "successCriterion": "Het bekende woord met het zichtbare model correct opbouwen.",
+      "instances": 12140,
+      "displayLabels": [
+        "Spelling",
+        "Letters op volgorde"
+      ]
+    },
+    {
+      "id": "bouw-gehoord",
+      "family": "spelling",
+      "label": "Horen en spellen",
+      "learnerText": "Je oefent om een gehoord woord met letters te maken.",
+      "successCriterion": "De juiste letters voor het gehoorde bekende woord in volgorde leggen.",
+      "instances": 1952,
+      "displayLabels": [
+        "Spelling",
+        "Horen en spellen"
+      ]
+    },
+    {
+      "id": "ontbrekende-letter",
+      "family": "spelling",
+      "label": "Woord aanvullen",
+      "learnerText": "Je oefent om de ontbrekende letter of lettergroep in een woord te vinden.",
+      "successCriterion": "Het bekende woord met de passende letter of lettergroep aanvullen.",
+      "instances": 383,
+      "displayLabels": [
+        "Spelling",
+        "Woord aanvullen"
+      ]
+    },
+    {
+      "id": "overschrijven",
+      "family": "schrijven",
+      "label": "Precies schrijven",
+      "learnerText": "Je oefent om een geschreven woord precies over te nemen.",
+      "successCriterion": "De weergegeven letters in de juiste volgorde invoeren.",
+      "instances": 24492,
+      "displayLabels": [
+        "Schrijven",
+        "Precies schrijven"
+      ]
+    },
+    {
+      "id": "woord-dictee",
+      "family": "spelling",
+      "label": "Horen en schrijven",
+      "learnerText": "Je oefent om een gehoord woord zonder geschreven voorbeeld op te schrijven.",
+      "successCriterion": "De schrijfwijze vergelijken of controleren met het aangeboden woord; beoordeling volgt de bestaande oefening.",
+      "instances": 886,
+      "displayLabels": [
+        "Spelling",
+        "Horen en schrijven"
+      ]
+    },
+    {
+      "id": "woord-schrijven",
+      "family": "schrijven",
+      "label": "Woord schrijven",
+      "learnerText": "Je oefent om de schrijfwijze van een bekend woord te oefenen.",
+      "successCriterion": "Het woord schrijven en met het bestaande model of de bestaande criteria vergelijken.",
+      "instances": 485,
+      "displayLabels": [
+        "Schrijven",
+        "Woord schrijven"
+      ]
+    },
+    {
+      "id": "letter-schrijven",
+      "family": "schrijven",
+      "label": "Lettervorm",
+      "learnerText": "Je oefent om de vorm van een letter te oefenen.",
+      "successCriterion": "De bedoelde lettervorm maken en vergelijken met het model.",
+      "instances": 236,
+      "displayLabels": [
+        "Schrijven",
+        "Lettervorm"
+      ]
+    },
+    {
+      "id": "woorden-hardop",
+      "family": "lezen",
+      "label": "Woorden lezen",
+      "learnerText": "Je oefent om bekende woorden hardop te lezen.",
+      "successCriterion": "De aangeboden woorden hardop lezen en zo nodig met het model vergelijken; afronden is geen automatische uitspraakbeoordeling.",
+      "instances": 23795,
+      "displayLabels": [
+        "Lezen",
+        "Woorden lezen"
+      ]
+    },
+    {
+      "id": "woord-uitspraak",
+      "family": "spreken",
+      "label": "Uitspraak",
+      "learnerText": "Je oefent om een bekend woord na te zeggen en je uitspraak terug te horen.",
+      "successCriterion": "Het woord nazeggen; bij opname model en eigen uitspraak vergelijken.",
+      "instances": 443,
+      "displayLabels": [
+        "Spreken",
+        "Uitspraak"
+      ]
+    },
+    {
+      "id": "woord-kaart",
+      "family": "woorden",
+      "label": "Woorden ophalen",
+      "learnerText": "Je oefent om de betekenis van een bekend woord terug te halen.",
+      "successCriterion": "Eerst het woord of de betekenis proberen op te halen en daarna de kaart gebruiken voor controle.",
+      "instances": 1019,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Woorden ophalen"
+      ]
+    },
+    {
+      "id": "synoniemen",
+      "family": "woorden",
+      "label": "Synoniemen",
+      "learnerText": "Je oefent om woorden met bijna dezelfde betekenis in de gegeven context te verbinden.",
+      "successCriterion": "Het bedoelde synoniem in de aangeboden context kiezen of terughalen; geen claim van uitwisselbaarheid in elke zin.",
+      "instances": 1400,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Synoniemen"
+      ]
+    },
+    {
+      "id": "woordcombinaties",
+      "family": "woorden",
+      "label": "Woorden combineren",
+      "learnerText": "Je oefent om woorden te herkennen die in deze situatie bij elkaar passen.",
+      "successCriterion": "De bedoelde woordcombinatie kiezen in de gegeven zin of situatie.",
+      "instances": 288,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Woorden combineren"
+      ]
+    },
+    {
+      "id": "passende-reactie",
+      "family": "praktijk",
+      "label": "Passend reageren",
+      "learnerText": "Je oefent om een reactie te kiezen die bij de situatie past.",
+      "successCriterion": "De ene contextueel passende reactie kiezen; dit is geen bewijs van zelfstandig spreken.",
+      "instances": 288,
+      "displayLabels": [
+        "In de praktijk",
+        "Passend reageren"
+      ]
+    },
+    {
+      "id": "taalregister",
+      "family": "woorden",
+      "label": "Passend taalgebruik",
+      "learnerText": "Je oefent om te herkennen welk taalgebruik bij een situatie past.",
+      "successCriterion": "De passende gebruikssituatie van het aangeboden woord of de uitdrukking onderscheiden.",
+      "instances": 1,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Passend taalgebruik"
+      ]
+    },
+    {
+      "id": "zin-volgen",
+      "family": "luisteren",
+      "label": "Zin volgen",
+      "learnerText": "Je oefent om een gesproken zin met tekststeun te volgen.",
+      "successCriterion": "De aangeboden gesproken zin volgen; deelname alleen bewijst geen zelfstandig lezen of begrijpen.",
+      "instances": 2923,
+      "displayLabels": [
+        "Luisteren",
+        "Zin volgen"
+      ]
+    },
+    {
+      "id": "gehoorde-zin",
+      "family": "luisteren",
+      "label": "Zin herkennen",
+      "learnerText": "Je oefent om een gehoorde zin tussen geschreven zinnen te herkennen.",
+      "successCriterion": "De geschreven zin kiezen die met de gehoorde zin overeenkomt.",
+      "instances": 227,
+      "displayLabels": [
+        "Luisteren",
+        "Zin herkennen"
+      ]
+    },
+    {
+      "id": "zinsdictee",
+      "family": "spelling",
+      "label": "Zin schrijven",
+      "learnerText": "Je oefent om een gehoorde zin op te schrijven.",
+      "successCriterion": "De woorden en hun volgorde uit de gehoorde zin opschrijven; hoofdletters, spaties en leestekens volgens de bestaande taakcriteria.",
+      "instances": 1292,
+      "displayLabels": [
+        "Spelling",
+        "Zin schrijven"
+      ]
+    },
+    {
+      "id": "zin-uitspraak",
+      "family": "spreken",
+      "label": "Zinnen uitspreken",
+      "learnerText": "Je oefent om een zin na te zeggen met een passende uitspraak en zinsmelodie.",
+      "successCriterion": "De zin nazeggen en waar beschikbaar de eigen opname met het model vergelijken.",
+      "instances": 1792,
+      "displayLabels": [
+        "Spreken",
+        "Zinnen uitspreken"
+      ]
+    },
+    {
+      "id": "zin-begrijpen",
+      "family": "luisteren",
+      "label": "Zin begrijpen",
+      "learnerText": "Je oefent om de betekenis van een gehoorde zin te begrijpen.",
+      "successCriterion": "Een antwoord kiezen dat bij de betekenis van de aangeboden zin past.",
+      "instances": 8,
+      "displayLabels": [
+        "Luisteren",
+        "Zin begrijpen"
+      ]
+    },
+    {
+      "id": "tekst-meeluisteren",
+      "family": "luisteren",
+      "label": "Tekst volgen",
+      "learnerText": "Je oefent om een korte tekst te volgen terwijl je luistert.",
+      "successCriterion": "Met de bestaande luister- en tekststeun de inhoud volgen; deelname bewijst geen zelfstandig leesbegrip.",
+      "instances": 348,
+      "displayLabels": [
+        "Luisteren",
+        "Tekst volgen"
+      ]
+    },
+    {
+      "id": "gesprek-volgen",
+      "family": "luisteren",
+      "label": "Gesprek volgen",
+      "learnerText": "Je oefent om te volgen wat mensen in een gesprek zeggen.",
+      "successCriterion": "De beurten in het modelgesprek volgen; afronden bewijst geen zelfstandig spreken.",
+      "instances": 248,
+      "displayLabels": [
+        "Luisteren",
+        "Gesprek volgen"
+      ]
+    },
+    {
+      "id": "tekst-info",
+      "family": "lezen",
+      "label": "Informatie vinden",
+      "learnerText": "Je oefent om informatie uit een tekst te halen.",
+      "successCriterion": "Het passende antwoord verbinden met de relevante informatie in de tekst; audio kan steun zijn.",
+      "instances": 2424,
+      "displayLabels": [
+        "Lezen",
+        "Informatie vinden"
+      ]
+    },
+    {
+      "id": "tekst-bewijs",
+      "family": "lezen",
+      "label": "Antwoord uitleggen",
+      "learnerText": "Je oefent om in de tekst aan te wijzen waar je antwoord staat.",
+      "successCriterion": "De relevante bronwoorden of bronzinnen bij het antwoord aanwijzen.",
+      "instances": 312,
+      "displayLabels": [
+        "Lezen",
+        "Antwoord uitleggen"
+      ]
+    },
+    {
+      "id": "gesprek-begrip",
+      "family": "praktijk",
+      "label": "Gesprek begrijpen",
+      "learnerText": "Je oefent om te begrijpen wat mensen in een gesprek bedoelen.",
+      "successCriterion": "Informatie uit de gespreksbeurten met een passend antwoord verbinden; transcript of audio volgt de bestaande vorm.",
+      "instances": 790,
+      "displayLabels": [
+        "In de praktijk",
+        "Gesprek begrijpen"
+      ]
+    },
+    {
+      "id": "gesprek-lezen",
+      "family": "lezen",
+      "label": "Gesprek begrijpen",
+      "learnerText": "Je oefent om informatie uit een geschreven gesprek te halen.",
+      "successCriterion": "Het antwoord met de geschreven bronbeurten onderbouwen; geen luisterdoel zonder een luisteropdracht.",
+      "instances": 10,
+      "displayLabels": [
+        "Lezen",
+        "Gesprek begrijpen"
+      ]
+    },
+    {
+      "id": "zin-volgorde",
+      "family": "grammatica",
+      "label": "Woordvolgorde",
+      "learnerText": "Je oefent om de woorden van een zin in de goede volgorde te zetten.",
+      "successCriterion": "De aangeboden woorden tot de bedoelde zin ordenen.",
+      "instances": 1642,
+      "displayLabels": [
+        "Zinnen maken",
+        "Woordvolgorde"
+      ]
+    },
+    {
+      "id": "werkwoord",
+      "family": "grammatica",
+      "label": "Werkwoord kiezen",
+      "learnerText": "Je oefent om een werkwoordvorm te kiezen die bij de zin past.",
+      "successCriterion": "De in deze taak bedoelde vorm bij persoon, tijd of betekenis gebruiken; geen volledig paradigma claimen.",
+      "instances": 215,
+      "displayLabels": [
+        "Zinnen maken",
+        "Werkwoord kiezen"
+      ]
+    },
+    {
+      "id": "bericht",
+      "family": "schrijven",
+      "label": "Bericht schrijven",
+      "learnerText": "Je oefent om een kort en begrijpelijk bericht te schrijven.",
+      "successCriterion": "De gevraagde boodschap voor de bedoelde ontvanger formuleren volgens de bestaande inhoudscriteria.",
+      "instances": 240,
+      "displayLabels": [
+        "Schrijven",
+        "Bericht schrijven"
+      ]
+    },
+    {
+      "id": "formulier",
+      "family": "schrijven",
+      "label": "Formulier invullen",
+      "learnerText": "Je oefent om gegevens op de goede plaats in een formulier te zetten.",
+      "successCriterion": "De juiste brongegevens bij de passende veldlabels plaatsen.",
+      "instances": 121,
+      "displayLabels": [
+        "Schrijven",
+        "Formulier invullen"
+      ]
+    },
+    {
+      "id": "schriftelijk-verzoek",
+      "family": "schrijven",
+      "label": "Iets vragen",
+      "learnerText": "Je oefent om een begrijpelijk verzoek op te schrijven.",
+      "successCriterion": "De gevraagde informatie en verzoekvorm herkenbaar opschrijven.",
+      "instances": 4,
+      "displayLabels": [
+        "Schrijven",
+        "Iets vragen"
+      ]
+    },
+    {
+      "id": "gespreksrol",
+      "family": "spreken",
+      "label": "Zelf reageren",
+      "learnerText": "Je oefent om zelf een beurt in een gesprek te zeggen.",
+      "successCriterion": "Een inhoudelijk passende beurt inspreken of uitspreken; opname en docentbeoordeling blijven volgens het bestaande contract.",
+      "instances": 368,
+      "displayLabels": [
+        "Spreken",
+        "Zelf reageren"
+      ]
+    },
+    {
+      "id": "sorteer-betekenis",
+      "family": "woorden",
+      "label": "Betekenissen ordenen",
+      "learnerText": "Je oefent om woorden op betekenis bij elkaar te zetten.",
+      "successCriterion": "Woorden bij de bedoelde betekeniscategorie indelen.",
+      "instances": 2,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Betekenissen ordenen"
+      ]
+    },
+    {
+      "id": "sorteer-letter",
+      "family": "lezen",
+      "label": "Letters herkennen",
+      "learnerText": "Je oefent om letters op een vaste plaats in een geschreven woord te herkennen.",
+      "successCriterion": "Woorden op de gevraagde begin- of eindletter indelen; dit is geen klankonderscheid zonder luisteren.",
+      "instances": 436,
+      "displayLabels": [
+        "Lezen",
+        "Letters herkennen"
+      ]
+    },
+    {
+      "id": "sorteer-spelling",
+      "family": "spelling",
+      "label": "Schrijfpatronen",
+      "learnerText": "Je oefent om woorden met hetzelfde schrijfpatroon te herkennen.",
+      "successCriterion": "Woorden op de aangeboden spellingeigenschap indelen.",
+      "instances": 772,
+      "displayLabels": [
+        "Spelling",
+        "Schrijfpatronen"
+      ]
+    },
+    {
+      "id": "stappen",
+      "family": "praktijk",
+      "label": "Volgorde van stappen",
+      "learnerText": "Je oefent om stappen van een handeling in een logische volgorde te zetten.",
+      "successCriterion": "De stappen volgens de gegeven situatie of bron ordenen.",
+      "instances": 319,
+      "displayLabels": [
+        "In de praktijk",
+        "Volgorde van stappen"
+      ]
+    },
+    {
+      "id": "situatie",
+      "family": "woorden",
+      "label": "Woord in een situatie",
+      "learnerText": "Je oefent om een woord met het juiste onderdeel van een situatie te verbinden.",
+      "successCriterion": "Het bedoelde object of onderdeel in de bestaande scène aanwijzen.",
+      "instances": 8,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Woord in een situatie"
+      ]
+    },
+    {
+      "id": "praktijkkeuze",
+      "family": "praktijk",
+      "label": "Keuze en gevolg",
+      "learnerText": "Je oefent om een passende keuze in een dagelijkse situatie te bespreken.",
+      "successCriterion": "De keuze en het gevolg met de bestaande ondersteuning bespreken; deelname is geen zelfstandige beheersingsmeting.",
+      "instances": 16,
+      "displayLabels": [
+        "In de praktijk",
+        "Keuze en gevolg"
+      ]
+    },
+    {
+      "id": "spelling-controle",
+      "family": "spelling",
+      "label": "Spelling controleren",
+      "learnerText": "Je oefent om de schrijfwijze van een woord of zin te controleren en te verbeteren.",
+      "successCriterion": "De gevraagde correctie met de voorbereide schrijfregel verbinden.",
+      "instances": 27,
+      "displayLabels": [
+        "Spelling",
+        "Controleren"
+      ]
+    },
+    {
+      "id": "zinsafsluiting",
+      "family": "spelling",
+      "label": "Hoofdletter en leesteken",
+      "learnerText": "Je oefent om hoofdletters en leestekens in een zin te controleren.",
+      "successCriterion": "De gevraagde hoofdletter of zinsafsluiting volgens de concrete opdracht verbeteren.",
+      "instances": 10,
+      "displayLabels": [
+        "Spelling",
+        "Hoofdletter en leesteken"
+      ]
+    },
+    {
+      "id": "woordgrenzen",
+      "family": "spelling",
+      "label": "Spaties",
+      "learnerText": "Je oefent om de grenzen tussen woorden in een zin te herkennen.",
+      "successCriterion": "De bedoelde woorden met de juiste spaties opschrijven.",
+      "instances": 5,
+      "displayLabels": [
+        "Spelling",
+        "Spaties"
+      ]
+    },
+    {
+      "id": "eindletter",
+      "family": "spelling",
+      "label": "Eindletter controleren",
+      "learnerText": "Je oefent om de laatste letter van een woord te controleren met een verwante vorm.",
+      "successCriterion": "De aangeboden langere vorm gebruiken om de bedoelde eindletter te kiezen.",
+      "instances": 4,
+      "displayLabels": [
+        "Spelling",
+        "Eindletter controleren"
+      ]
+    },
+    {
+      "id": "vraagzin",
+      "family": "grammatica",
+      "label": "Vragen maken",
+      "learnerText": "Je oefent om woorden in een vraag in de goede volgorde te zetten.",
+      "successCriterion": "De bedoelde vraag volgens het gegeven model vormen.",
+      "instances": 29,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vragen maken"
+      ]
+    },
+    {
+      "id": "vraagwoord",
+      "family": "grammatica",
+      "label": "Vraagwoorden",
+      "learnerText": "Je oefent om een vraagwoord te kiezen dat bij de gevraagde informatie past.",
+      "successCriterion": "Het bedoelde wie/wat/waar/wanneer/hoe/waarom onderscheiden volgens de bronvraag.",
+      "instances": 19,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vraagwoorden"
+      ]
+    },
+    {
+      "id": "plaatswoord",
+      "family": "grammatica",
+      "label": "Plaats aangeven",
+      "learnerText": "Je oefent om met de aangeboden woorden aan te geven waar iets is.",
+      "successCriterion": "De bedoelde plaatsrelatie in de voorbereide zin herkennen of formuleren.",
+      "instances": 6,
+      "displayLabels": [
+        "Zinnen maken",
+        "Plaats aangeven"
+      ]
+    },
+    {
+      "id": "voornaamwoord",
+      "family": "grammatica",
+      "label": "Verwijzen naar iemand",
+      "learnerText": "Je oefent om de passende verwijzing naar een persoon of voorwerp in een zin te gebruiken.",
+      "successCriterion": "De bedoelde verwijzing met de juiste persoon of zaak verbinden.",
+      "instances": 7,
+      "displayLabels": [
+        "Zinnen maken",
+        "Verwijzen naar iemand"
+      ]
+    },
+    {
+      "id": "zijn-hebben",
+      "family": "grammatica",
+      "label": "Zijn en hebben",
+      "learnerText": "Je oefent om de aangeboden vormen van zijn of hebben in een zin te gebruiken.",
+      "successCriterion": "De voorbereide vorm bij de bedoelde persoon of betekenis gebruiken.",
+      "instances": 5,
+      "displayLabels": [
+        "Zinnen maken",
+        "Zijn en hebben"
+      ]
+    },
+    {
+      "id": "meervoud-zin",
+      "family": "grammatica",
+      "label": "Meer dan één",
+      "learnerText": "Je oefent om een passende werkwoordvorm bij wij of we te gebruiken.",
+      "successCriterion": "Een van de aangeboden meervoudsvormen in de modelzin gebruiken.",
+      "instances": 127,
+      "displayLabels": [
+        "Zinnen maken",
+        "Meer dan één"
+      ]
+    },
+    {
+      "id": "ontkenning",
+      "family": "grammatica",
+      "label": "Niet en geen",
+      "learnerText": "Je oefent om de bedoelde ontkenning in een zin te gebruiken.",
+      "successCriterion": "De concrete ontkenningsvorm bij de bedoelde betekenis gebruiken.",
+      "instances": 4,
+      "displayLabels": [
+        "Zinnen maken",
+        "Niet en geen"
+      ]
+    },
+    {
+      "id": "lidwoord",
+      "family": "grammatica",
+      "label": "De en het",
+      "learnerText": "Je oefent om het aangeboden lidwoord in de bijbehorende woordgroep te gebruiken.",
+      "successCriterion": "De voorbereide woordgroep met het bedoelde lidwoord vormen.",
+      "instances": 2,
+      "displayLabels": [
+        "Zinnen maken",
+        "De en het"
+      ]
+    },
+    {
+      "id": "tekst-kern",
+      "family": "lezen",
+      "label": "Kern begrijpen",
+      "learnerText": "Je oefent om de belangrijkste boodschap van een tekst te herkennen.",
+      "successCriterion": "De hoofdgedachte onderscheiden van een los detail.",
+      "instances": 11,
+      "displayLabels": [
+        "Lezen",
+        "Kern begrijpen"
+      ]
+    },
+    {
+      "id": "tekst-verwijzing",
+      "family": "lezen",
+      "label": "Verwijzingen volgen",
+      "learnerText": "Je oefent om te volgen over wie of wat de tekst gaat.",
+      "successCriterion": "De bedoelde persoon, zaak of eigenaar bij een verwijzing aanwijzen.",
+      "instances": 19,
+      "displayLabels": [
+        "Lezen",
+        "Verwijzingen volgen"
+      ]
+    },
+    {
+      "id": "tekst-volgorde",
+      "family": "lezen",
+      "label": "Volgorde begrijpen",
+      "learnerText": "Je oefent om te begrijpen in welke volgorde dingen gebeuren.",
+      "successCriterion": "De bronhandelingen en de tijdsvolgorde correct verbinden.",
+      "instances": 13,
+      "displayLabels": [
+        "Lezen",
+        "Volgorde begrijpen"
+      ]
+    },
+    {
+      "id": "tekst-reden",
+      "family": "lezen",
+      "label": "Redenen begrijpen",
+      "learnerText": "Je oefent om te begrijpen waarom iets in de tekst gebeurt.",
+      "successCriterion": "Oorzaak, reden en gevolg onderscheiden volgens de bron.",
+      "instances": 8,
+      "displayLabels": [
+        "Lezen",
+        "Redenen begrijpen"
+      ]
+    },
+    {
+      "id": "tekst-voorwaarde",
+      "family": "lezen",
+      "label": "Regels en afspraken",
+      "learnerText": "Je oefent om uit een tekst te halen wat je moet of mag doen.",
+      "successCriterion": "De bedoelde afspraak, voorwaarde of instructie uit de bron gebruiken.",
+      "instances": 6,
+      "displayLabels": [
+        "Lezen",
+        "Regels en afspraken"
+      ]
+    },
+    {
+      "id": "tekst-gegevens",
+      "family": "lezen",
+      "label": "Gegevens combineren",
+      "learnerText": "Je oefent om gegevens uit verschillende delen van een tekst bij elkaar te brengen.",
+      "successCriterion": "De relevante aantallen, personen of voorwaarden combineren zonder niet-gegeven informatie in te vullen.",
+      "instances": 7,
+      "displayLabels": [
+        "Lezen",
+        "Gegevens combineren"
+      ]
+    },
+    {
+      "id": "tekst-bedoeling",
+      "family": "lezen",
+      "label": "Bedoeling begrijpen",
+      "learnerText": "Je oefent om te herkennen wat de schrijver wil zeggen en waarom.",
+      "successCriterion": "Het bedoelde doel, standpunt of de bedoelde onderbouwing uit de bron halen.",
+      "instances": 4,
+      "displayLabels": [
+        "Lezen",
+        "Bedoeling begrijpen"
+      ]
+    },
+    {
+      "id": "tekst-verband",
+      "family": "lezen",
+      "label": "Verbanden begrijpen",
+      "learnerText": "Je oefent om te begrijpen hoe delen van een tekst bij elkaar horen.",
+      "successCriterion": "De concrete relatie tussen alinea’s, details of tegenstellingen uitleggen.",
+      "instances": 2,
+      "displayLabels": [
+        "Lezen",
+        "Verbanden begrijpen"
+      ]
+    },
+    {
+      "id": "tekst-precies",
+      "family": "lezen",
+      "label": "Precies lezen",
+      "learnerText": "Je oefent om te onderscheiden wat wel en niet in de tekst staat.",
+      "successCriterion": "Expliciete informatie onderscheiden van een plan, aanname, onzekerheid of niet-onderbouwde gevolgtrekking.",
+      "instances": 6,
+      "displayLabels": [
+        "Lezen",
+        "Precies lezen"
+      ]
+    },
+    {
+      "id": "betekenis-precies",
+      "family": "woorden",
+      "label": "Precieze betekenis",
+      "learnerText": "Je oefent om de bedoelde betekenis van een woord in de situatie uit te leggen.",
+      "successCriterion": "De bedoelde betekenis uit de bron aanwijzen of in eigen woorden toelichten.",
+      "instances": 395,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Precieze betekenis"
+      ]
+    },
+    {
+      "id": "woord-zelf-gebruiken",
+      "family": "woorden",
+      "label": "Zelf gebruiken",
+      "learnerText": "Je oefent om een bekend woord zonder geschreven voorbeeld te gebruiken.",
+      "successCriterion": "Een eigen reactie geven nadat het aangeboden geschreven voorbeeld weg is; geen spontane transfer claimen.",
+      "instances": 353,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Zelf gebruiken"
+      ]
+    },
+    {
+      "id": "woord-toepassen",
+      "family": "woorden",
+      "label": "Gebruiken in een situatie",
+      "learnerText": "Je oefent om een bekend woord passend in een situatie te gebruiken.",
+      "successCriterion": "De bedoelde woordbetekenis of taalfunctie in de concrete situatie toepassen.",
+      "instances": 349,
+      "displayLabels": [
+        "Woordbetekenis",
+        "Gebruiken in een situatie"
+      ]
+    },
+    {
+      "id": "klank-first",
+      "family": "klanken",
+      "label": "Eerste klank",
+      "learnerText": "Je oefent om de eerste klank in een bekend woord met de juiste letter of lettergroep te verbinden.",
+      "successCriterion": "De bedoelde klankpositie in het hele woord herkennen en de passende schrijfvorm kiezen.",
+      "instances": 552,
+      "displayLabels": [
+        "Klanken en letters",
+        "Eerste klank"
+      ]
+    },
+    {
+      "id": "klank-middle",
+      "family": "klanken",
+      "label": "Middelste klank",
+      "learnerText": "Je oefent om de middelste klank in een bekend woord met de juiste letter of lettergroep te verbinden.",
+      "successCriterion": "De bedoelde klankpositie in het hele woord herkennen en de passende schrijfvorm kiezen.",
+      "instances": 533,
+      "displayLabels": [
+        "Klanken en letters",
+        "Middelste klank"
+      ]
+    },
+    {
+      "id": "klank-last",
+      "family": "klanken",
+      "label": "Laatste klank",
+      "learnerText": "Je oefent om de laatste klank in een bekend woord met de juiste letter of lettergroep te verbinden.",
+      "successCriterion": "De bedoelde klankpositie in het hele woord herkennen en de passende schrijfvorm kiezen.",
+      "instances": 552,
+      "displayLabels": [
+        "Klanken en letters",
+        "Laatste klank"
+      ]
+    },
+    {
+      "id": "klankverschil",
+      "family": "klanken",
+      "label": "Klanken vergelijken",
+      "learnerText": "Je oefent om te horen of twee bekende woorden hetzelfde of anders klinken.",
+      "successCriterion": "Het aangeboden identieke paar of het voorbereide verschil in één klank onderscheiden.",
+      "instances": 122,
+      "displayLabels": [
+        "Klanken en letters",
+        "Klanken vergelijken"
+      ]
+    },
+    {
+      "id": "lettergroep",
+      "family": "spelling",
+      "label": "Twee letters, één klank",
+      "learnerText": "Je oefent om de aangeboden lettergroepen zoals ie of oe als één klank te schrijven.",
+      "successCriterion": "De in de bron voorbereide lettergroep als geheel kiezen; niet alle tweeklanken op één hoop zetten.",
+      "instances": 90,
+      "displayLabels": [
+        "Spelling",
+        "Twee letters, één klank"
+      ]
+    },
+    {
+      "id": "lange-klinker",
+      "family": "spelling",
+      "label": "Lange klinker",
+      "learnerText": "Je oefent om een lange klinker in de aangeboden korte woorden met twee letters te schrijven.",
+      "successCriterion": "Binnen de bedoelde gesloten korte woorden aa, ee, oo of uu toepassen; geen algemene regel voor alle woorden.",
+      "instances": 184,
+      "displayLabels": [
+        "Spelling",
+        "Lange klinker"
+      ]
+    },
+    {
+      "id": "open-lettergreep",
+      "family": "spelling",
+      "label": "Eén klinkerletter",
+      "learnerText": "Je oefent om een lange klinker in de aangeboden open lettergreep met één letter te schrijven.",
+      "successCriterion": "De voorbereide voorbeeldrelatie zoals boom–bomen toepassen.",
+      "instances": 16,
+      "displayLabels": [
+        "Spelling",
+        "Eén klinkerletter"
+      ]
+    },
+    {
+      "id": "dubbele-medeklinker",
+      "family": "spelling",
+      "label": "Dubbele medeklinker",
+      "learnerText": "Je oefent om in de aangeboden woorden de korte klinker met een dubbele medeklinker te behouden.",
+      "successCriterion": "De voorbereide voorbeeldrelatie zoals bus–bussen toepassen.",
+      "instances": 7,
+      "displayLabels": [
+        "Spelling",
+        "Dubbele medeklinker"
+      ]
+    },
+    {
+      "id": "woordspelling",
+      "family": "spelling",
+      "label": "Woordspelling",
+      "learnerText": "Je oefent om de schrijfwijze van een bekend woord te herkennen en te onthouden.",
+      "successCriterion": "De letters of lettergroep in het aangeboden woord herkennen, aanvullen en met het model vergelijken; geen onbekende spellingregel afleiden.",
+      "instances": 2094,
+      "displayLabels": [
+        "Spelling",
+        "Woordspelling"
+      ]
+    },
+    {
+      "id": "klacht",
+      "family": "schrijven",
+      "label": "Klacht schrijven",
+      "learnerText": "Je oefent om een probleem en een gewenste oplossing duidelijk op te schrijven.",
+      "successCriterion": "De relevante feiten, het gevolg en de gewenste oplossing volgens de concrete bronopdracht formuleren.",
+      "instances": 1,
+      "displayLabels": [
+        "Schrijven",
+        "Klacht schrijven"
+      ]
+    },
+    {
+      "id": "lijst",
+      "family": "schrijven",
+      "label": "Lijst maken",
+      "learnerText": "Je oefent om producten en hun hoeveelheden op een bruikbare lijst te zetten.",
+      "successCriterion": "Beide gevraagde producten en hun eigen hoeveelheid herkenbaar noteren.",
+      "instances": 1,
+      "displayLabels": [
+        "Schrijven",
+        "Lijst maken"
+      ]
+    },
+    {
+      "id": "afspraak-noteren",
+      "family": "schrijven",
+      "label": "Afspraak noteren",
+      "learnerText": "Je oefent om een afspraak met de juiste gegevens op te schrijven.",
+      "successCriterion": "De bedoelde persoon, tijd, plaats of bevestiging volgens de bron noteren.",
+      "instances": 4,
+      "displayLabels": [
+        "Schrijven",
+        "Afspraak noteren"
+      ]
+    },
+    {
+      "id": "informatie-noteren",
+      "family": "schrijven",
+      "label": "Informatie opschrijven",
+      "learnerText": "Je oefent om de gevraagde informatie duidelijk op te schrijven.",
+      "successCriterion": "Alle gevraagde inhoudspunten uit de bron afzonderlijk en begrijpelijk noteren.",
+      "instances": 2,
+      "displayLabels": [
+        "Schrijven",
+        "Informatie opschrijven"
+      ]
+    },
+    {
+      "id": "cijfers-schrijven",
+      "family": "schrijven",
+      "label": "Cijfers schrijven",
+      "learnerText": "Je oefent om cijfers in de bedoelde vorm en volgorde te schrijven.",
+      "successCriterion": "De bedoelde cijferreeks maken en met de gegeven correctiestrook vergelijken.",
+      "instances": 5,
+      "displayLabels": [
+        "Schrijven",
+        "Cijfers schrijven"
+      ]
+    },
+    {
+      "id": "schriftelijk-afwegen",
+      "family": "schrijven",
+      "label": "Keuze toelichten",
+      "learnerText": "Je oefent om een keuze met redenen op te schrijven.",
+      "successCriterion": "De twee gevraagde alternatieven afwegen en de praktische keuze met redenen formuleren.",
+      "instances": 1,
+      "displayLabels": [
+        "Schrijven",
+        "Keuze toelichten"
+      ]
+    },
+    {
+      "id": "grammatica-herstel",
+      "family": "grammatica",
+      "label": "Zinnen controleren",
+      "learnerText": "Je oefent om de aangeboden zinnen zelf te controleren en te verbeteren.",
+      "successCriterion": "De bedoelde vormen en betekenis volgens de concrete broncriteria herstellen.",
+      "instances": 3,
+      "displayLabels": [
+        "Zinnen maken",
+        "Zinnen controleren"
+      ]
+    },
+    {
+      "id": "verleden-zin",
+      "family": "grammatica",
+      "label": "Vertellen over vroeger",
+      "learnerText": "Je oefent om met de aangeboden vormen te vertellen wat eerder gebeurde.",
+      "successCriterion": "De bedoelde verleden vorm en de tijdsrelatie in de bronzin gebruiken.",
+      "instances": 4,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vertellen over vroeger"
+      ]
+    },
+    {
+      "id": "heden-zin",
+      "family": "grammatica",
+      "label": "Vertellen over nu",
+      "learnerText": "Je oefent om met de aangeboden vormen te vertellen wat nu gebeurt.",
+      "successCriterion": "De bedoelde tegenwoordige vorm in de concrete bronzin gebruiken.",
+      "instances": 2,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vertellen over nu"
+      ]
+    },
+    {
+      "id": "toekomst-zin",
+      "family": "grammatica",
+      "label": "Plannen en verwachtingen",
+      "learnerText": "Je oefent om met de aangeboden vormen over plannen of verwachtingen te praten.",
+      "successCriterion": "De bedoelde toekomstige of verwachte situatie met de voorbereide formulering weergeven.",
+      "instances": 3,
+      "displayLabels": [
+        "Zinnen maken",
+        "Plannen en verwachtingen"
+      ]
+    },
+    {
+      "id": "modaliteit",
+      "family": "grammatica",
+      "label": "Kunnen, mogen en moeten",
+      "learnerText": "Je oefent om met de aangeboden woorden aan te geven wat kan, mag, moet of gewenst is.",
+      "successCriterion": "De concrete mogelijkheid, noodzaak, toestemming of wens met de bedoelde vorm verbinden.",
+      "instances": 4,
+      "displayLabels": [
+        "Zinnen maken",
+        "Kunnen, mogen en moeten"
+      ]
+    },
+    {
+      "id": "zinnen-verbinden",
+      "family": "grammatica",
+      "label": "Zinnen verbinden",
+      "learnerText": "Je oefent om zinnen of zinsdelen met de bedoelde betekenis te verbinden.",
+      "successCriterion": "Het concrete verband, zoals reden, gevolg, voorwaarde of tijd, met de voorbereide zinsvorm uitdrukken.",
+      "instances": 11,
+      "displayLabels": [
+        "Zinnen maken",
+        "Zinnen verbinden"
+      ]
+    },
+    {
+      "id": "beschrijven",
+      "family": "grammatica",
+      "label": "Beschrijven",
+      "learnerText": "Je oefent om personen en dingen met passende woordgroepen te beschrijven.",
+      "successCriterion": "De naamwoordgroep of beschrijvende vorm bij de bedoelde persoon of zaak gebruiken.",
+      "instances": 4,
+      "displayLabels": [
+        "Zinnen maken",
+        "Beschrijven"
+      ]
+    },
+    {
+      "id": "vergelijken",
+      "family": "grammatica",
+      "label": "Vergelijken",
+      "learnerText": "Je oefent om een verschil of overeenkomst precies te beschrijven.",
+      "successCriterion": "De aangeboden vergelijkingsvorm bij de concrete betekenis gebruiken.",
+      "instances": 3,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vergelijken"
+      ]
+    },
+    {
+      "id": "passend-formuleren",
+      "family": "grammatica",
+      "label": "Passend formuleren",
+      "learnerText": "Je oefent om de formulering van een zin bij de situatie te laten passen.",
+      "successCriterion": "De bedoelde formele, voorzichtige, beleefde of voorkeurformulering volgens de bron gebruiken.",
+      "instances": 4,
+      "displayLabels": [
+        "Zinnen maken",
+        "Passend formuleren"
+      ]
+    },
+    {
+      "id": "instructie-verzoek",
+      "family": "grammatica",
+      "label": "Vragen en instrueren",
+      "learnerText": "Je oefent om met een zin een verzoek of instructie te geven.",
+      "successCriterion": "De voorbereide verzoek- of instructievorm bij de bedoelde situatie gebruiken.",
+      "instances": 2,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vragen en instrueren"
+      ]
+    },
+    {
+      "id": "hoeveelheid-zin",
+      "family": "grammatica",
+      "label": "Hoeveelheid en frequentie",
+      "learnerText": "Je oefent om een hoeveelheid, maat of frequentie in een zin te verwoorden.",
+      "successCriterion": "De bedoelde hoeveelheid of frequentie volgens de bronzin uitdrukken.",
+      "instances": 6,
+      "displayLabels": [
+        "Zinnen maken",
+        "Hoeveelheid en frequentie"
+      ]
+    },
+    {
+      "id": "er-gebruiken",
+      "family": "grammatica",
+      "label": "Er gebruiken",
+      "learnerText": "Je oefent om het aangeboden er in de bijbehorende zin te gebruiken.",
+      "successCriterion": "De functie van er in de voorbereide bronzin herkennen of toepassen.",
+      "instances": 1,
+      "displayLabels": [
+        "Zinnen maken",
+        "Er gebruiken"
+      ]
+    },
+    {
+      "id": "werkwoord-combineren",
+      "family": "grammatica",
+      "label": "Werkwoorden in een zin",
+      "learnerText": "Je oefent om de aangeboden werkwoorden op de goede manier in een zin te gebruiken.",
+      "successCriterion": "De bedoelde scheidbare vorm, verbinding met te of andere voorbereide werkwoordconstructie gebruiken.",
+      "instances": 8,
+      "displayLabels": [
+        "Zinnen maken",
+        "Werkwoorden in een zin"
+      ]
+    },
+    {
+      "id": "indirect-weergeven",
+      "family": "grammatica",
+      "label": "In eigen woorden",
+      "learnerText": "Je oefent om de woorden van iemand anders in een eigen zin weer te geven.",
+      "successCriterion": "De boodschap volgens de concrete bron in de bedoelde indirecte zin of samenvatting weergeven.",
+      "instances": 1,
+      "displayLabels": [
+        "Zinnen maken",
+        "In eigen woorden"
+      ]
+    },
+    {
+      "id": "vraag-begrijpen",
+      "family": "lezen",
+      "label": "Vraag begrijpen",
+      "learnerText": "Je oefent om te begrijpen welke informatie in een geschreven vraag wordt gevraagd.",
+      "successCriterion": "De bedoelde informatiebehoefte uit de voorbereide bronvraag herkennen.",
+      "instances": 1,
+      "displayLabels": [
+        "Lezen",
+        "Vraag begrijpen"
+      ]
+    },
+    {
+      "id": "vaste-woordgroepen",
+      "family": "grammatica",
+      "label": "Vaste combinaties",
+      "learnerText": "Je oefent om de aangeboden woorden in de bedoelde vaste combinatie te gebruiken.",
+      "successCriterion": "De voorbereide combinatie, zoals een vaste verbinding met een voorzetsel, bij de bedoelde betekenis gebruiken.",
+      "instances": 1,
+      "displayLabels": [
+        "Zinnen maken",
+        "Vaste combinaties"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "synonyms",
+      "title": "Synoniemen",
+      "levels": [
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "synoniemen"
+      ],
+      "variants": 200,
+      "reviewNote": ""
+    },
+    {
+      "id": "word-combinations",
+      "title": "Woordcombinaties",
+      "levels": [
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "woordcombinaties"
+      ],
+      "variants": 144,
+      "reviewNote": ""
+    },
+    {
+      "id": "suitable-reply",
+      "title": "Welke reactie past?",
+      "levels": [
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "passende-reactie"
+      ],
+      "variants": 144,
+      "reviewNote": ""
+    },
+    {
+      "id": "meet",
+      "title": "Kijk en luister",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "woord-kennismaken"
+      ],
+      "variants": 1084,
+      "reviewNote": ""
+    },
+    {
+      "id": "same-word",
+      "title": "Zoek hetzelfde woord",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "woordbeeld"
+      ],
+      "variants": 985,
+      "reviewNote": ""
+    },
+    {
+      "id": "listen",
+      "title": "Hoor en kies",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "hoor-foto",
+        "hoor-woord"
+      ],
+      "variants": 1595,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "hear-word",
+      "title": "Zoek het woord",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "hoor-woord"
+      ],
+      "variants": 985,
+      "reviewNote": ""
+    },
+    {
+      "id": "read",
+      "title": "Kies de foto",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "lees-foto"
+      ],
+      "variants": 958,
+      "reviewNote": ""
+    },
+    {
+      "id": "match",
+      "title": "Woord en foto",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "lees-foto"
+      ],
+      "variants": 323,
+      "reviewNote": ""
+    },
+    {
+      "id": "hear-match",
+      "title": "Geluid en woord",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "hoor-woord",
+        "synoniemen"
+      ],
+      "variants": 545,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "build-model",
+      "title": "Leg het woord na",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "bouw-model"
+      ],
+      "variants": 6092,
+      "reviewNote": ""
+    },
+    {
+      "id": "build",
+      "title": "Hoor en leg",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "bouw-gehoord"
+      ],
+      "variants": 443,
+      "reviewNote": ""
+    },
+    {
+      "id": "worksheet",
+      "title": "Meer woorden maken",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "bouw-model"
+      ],
+      "variants": 6048,
+      "reviewNote": ""
+    },
+    {
+      "id": "worksheet-heard",
+      "title": "Hoor en maak meer woorden",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "bouw-gehoord"
+      ],
+      "variants": 1283,
+      "reviewNote": ""
+    },
+    {
+      "id": "missing",
+      "title": "Vul aan",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "ontbrekende-letter"
+      ],
+      "variants": 383,
+      "reviewNote": ""
+    },
+    {
+      "id": "copy",
+      "title": "Typ na",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "overschrijven",
+        "taalregister"
+      ],
+      "variants": 23795,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "dictation",
+      "title": "Hoor en typ",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "woord-dictee"
+      ],
+      "variants": 443,
+      "reviewNote": ""
+    },
+    {
+      "id": "write",
+      "title": "Schrijf het woord",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "woord-schrijven"
+      ],
+      "variants": 443,
+      "reviewNote": ""
+    },
+    {
+      "id": "write-letter",
+      "title": "Schrijf de letter",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "letter-schrijven"
+      ],
+      "variants": 236,
+      "reviewNote": ""
+    },
+    {
+      "id": "paper-dictation",
+      "title": "Hoor en schrijf",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "woord-dictee"
+      ],
+      "variants": 443,
+      "reviewNote": ""
+    },
+    {
+      "id": "read-series",
+      "title": "Lees de woorden",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "woorden-hardop"
+      ],
+      "variants": 23795,
+      "reviewNote": ""
+    },
+    {
+      "id": "speak",
+      "title": "Zeg het woord",
+      "levels": [
+        "alfa-a",
+        "alfa-b"
+      ],
+      "goalIds": [
+        "woord-uitspraak"
+      ],
+      "variants": 443,
+      "reviewNote": ""
+    },
+    {
+      "id": "word-bingo",
+      "title": "Woordbingo",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "hoor-woord"
+      ],
+      "variants": 4480,
+      "reviewNote": ""
+    },
+    {
+      "id": "image-bingo",
+      "title": "Fotobingo",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "a1",
+        "b1"
+      ],
+      "goalIds": [
+        "hoor-foto"
+      ],
+      "variants": 391,
+      "reviewNote": ""
+    },
+    {
+      "id": "memory",
+      "title": "Zoek de paren",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "a1"
+      ],
+      "goalIds": [
+        "woord-kennismaken"
+      ],
+      "variants": 136,
+      "reviewNote": ""
+    },
+    {
+      "id": "cards",
+      "title": "Draai de kaart",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "woord-kaart",
+        "synoniemen"
+      ],
+      "variants": 1219,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "sentences",
+      "title": "Luister en lees mee",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "zin-volgen",
+        "tekst-info"
+      ],
+      "variants": 1492,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "word-sentence",
+      "title": "Van woord naar zin",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "woord-kennismaken",
+        "zin-volgen"
+      ],
+      "variants": 2013,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "find-sentence",
+      "title": "Zoek de zin",
+      "levels": [
+        "a1"
+      ],
+      "goalIds": [
+        "gehoorde-zin"
+      ],
+      "variants": 227,
+      "reviewNote": ""
+    },
+    {
+      "id": "sentence-dictation",
+      "title": "Typ de zin",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "zinsdictee"
+      ],
+      "variants": 1292,
+      "reviewNote": ""
+    },
+    {
+      "id": "sentence-speak",
+      "title": "Zeg de zin",
+      "levels": [
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "zin-uitspraak"
+      ],
+      "variants": 1792,
+      "reviewNote": ""
+    },
+    {
+      "id": "understand",
+      "title": "Luister en kies",
+      "levels": [
+        "support"
+      ],
+      "goalIds": [
+        "zin-begrijpen"
+      ],
+      "variants": 8,
+      "reviewNote": ""
+    },
+    {
+      "id": "texts",
+      "title": "Luister naar een verhaal",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "tekst-meeluisteren"
+      ],
+      "variants": 192,
+      "reviewNote": ""
+    },
+    {
+      "id": "dialogues",
+      "title": "Luister naar een gesprek",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "gesprek-volgen"
+      ],
+      "variants": 128,
+      "reviewNote": ""
+    },
+    {
+      "id": "sound-compare",
+      "title": "Hetzelfde of anders",
+      "levels": [
+        "alfa-a"
+      ],
+      "goalIds": [
+        "klankverschil"
+      ],
+      "variants": 122,
+      "reviewNote": ""
+    },
+    {
+      "id": "text-question",
+      "title": "Begrijp het verhaal",
+      "levels": [
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "tekst-info"
+      ],
+      "variants": 1220,
+      "reviewNote": ""
+    },
+    {
+      "id": "dialogue-question",
+      "title": "Begrijp het gesprek",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "gesprek-begrip"
+      ],
+      "variants": 120,
+      "reviewNote": ""
+    },
+    {
+      "id": "text-evidence",
+      "title": "Zoek het antwoord",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "tekst-bewijs"
+      ],
+      "variants": 156,
+      "reviewNote": ""
+    },
+    {
+      "id": "sentence-build",
+      "title": "Maak de zin",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "zin-volgorde"
+      ],
+      "variants": 1284,
+      "reviewNote": ""
+    },
+    {
+      "id": "verb-choice",
+      "title": "Kies het werkwoord",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "werkwoord"
+      ],
+      "variants": 215,
+      "reviewNote": ""
+    },
+    {
+      "id": "functional-message",
+      "title": "Schrijf een bericht",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "bericht"
+      ],
+      "variants": 120,
+      "reviewNote": ""
+    },
+    {
+      "id": "functional-form",
+      "title": "Vul een berichtkaart in",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "formulier"
+      ],
+      "variants": 120,
+      "reviewNote": ""
+    },
+    {
+      "id": "dialogue-role",
+      "title": "Jij bent aan de beurt",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "gespreksrol"
+      ],
+      "variants": 128,
+      "reviewNote": ""
+    },
+    {
+      "id": "word-sort",
+      "title": "Sorteer de woorden",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "sorteer-letter",
+        "sorteer-spelling",
+        "sorteer-betekenis"
+      ],
+      "variants": 1210,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "context-order",
+      "title": "Zet de stappen op volgorde",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "stappen"
+      ],
+      "variants": 319,
+      "reviewNote": ""
+    },
+    {
+      "id": "situation-point",
+      "title": "Wijs aan in de situatie",
+      "levels": [
+        "support"
+      ],
+      "goalIds": [
+        "situatie"
+      ],
+      "variants": 8,
+      "reviewNote": ""
+    },
+    {
+      "id": "practice-branch",
+      "title": "Wat doe je nu?",
+      "levels": [
+        "a1"
+      ],
+      "goalIds": [
+        "praktijkkeuze"
+      ],
+      "variants": 16,
+      "reviewNote": ""
+    },
+    {
+      "id": "content-spelling",
+      "title": "Spelling oefenen",
+      "levels": [
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "spelling-controle",
+        "zinsafsluiting",
+        "eindletter",
+        "woordgrenzen"
+      ],
+      "variants": 32,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "content-grammatica",
+      "title": "Zinnen oefenen",
+      "levels": [
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "vraagwoord",
+        "plaatswoord",
+        "zijn-hebben",
+        "vraag-begrijpen",
+        "vraagzin",
+        "heden-zin",
+        "ontkenning",
+        "hoeveelheid-zin",
+        "zin-volgorde",
+        "modaliteit",
+        "lidwoord",
+        "beschrijven",
+        "voornaamwoord",
+        "instructie-verzoek",
+        "zinnen-verbinden",
+        "toekomst-zin",
+        "werkwoord-combineren",
+        "grammatica-herstel",
+        "er-gebruiken",
+        "vergelijken",
+        "passend-formuleren",
+        "verleden-zin",
+        "woordbeeld",
+        "vaste-woordgroepen",
+        "indirect-weergeven"
+      ],
+      "variants": 108,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "content-teksten",
+      "title": "Teksten begrijpen",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "tekst-kern",
+        "tekst-volgorde",
+        "tekst-verwijzing",
+        "tekst-info",
+        "tekst-voorwaarde",
+        "tekst-precies",
+        "tekst-gegevens",
+        "tekst-bedoeling",
+        "tekst-reden",
+        "tekst-verband"
+      ],
+      "variants": 111,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "content-gesprekken",
+      "title": "Gesprekken oefenen",
+      "levels": [
+        "alfa-c",
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "gesprek-lezen"
+      ],
+      "variants": 10,
+      "reviewNote": ""
+    },
+    {
+      "id": "content-schrijven",
+      "title": "Schrijven oefenen",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "woord-schrijven",
+        "schriftelijk-verzoek",
+        "woordgrenzen",
+        "formulier",
+        "zinsafsluiting",
+        "informatie-noteren",
+        "afspraak-noteren",
+        "cijfers-schrijven",
+        "lijst",
+        "klacht",
+        "schriftelijk-afwegen"
+      ],
+      "variants": 72,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "content-woordpakketten",
+      "title": "Woorden gebruiken",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "betekenis-precies",
+        "woordbeeld",
+        "spelling-controle",
+        "woord-zelf-gebruiken",
+        "woord-toepassen"
+      ],
+      "variants": 1102,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "sound-path",
+      "title": "Klanken in woorden",
+      "levels": [
+        "alfa-a"
+      ],
+      "goalIds": [
+        "klank-first",
+        "bouw-gehoord",
+        "klank-last",
+        "klank-middle"
+      ],
+      "variants": 1311,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "spelling-path",
+      "title": "Zo schrijf je het",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "alfa-c",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "lange-klinker",
+        "bouw-gehoord",
+        "lettergroep",
+        "dubbele-medeklinker",
+        "open-lettergreep",
+        "woordspelling",
+        "overschrijven"
+      ],
+      "variants": 3036,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "grammar-path",
+      "title": "Zo maak je een zin",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "vraagzin",
+        "zin-volgorde",
+        "meervoud-zin"
+      ],
+      "variants": 357,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "practical-path",
+      "title": "Van gesprek naar zelf doen",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "gesprek-volgen",
+        "gesprek-begrip",
+        "gespreksrol",
+        "bericht"
+      ],
+      "variants": 720,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "reading-path",
+      "title": "Lezen en begrijpen",
+      "levels": [
+        "a1",
+        "a2"
+      ],
+      "goalIds": [
+        "tekst-meeluisteren",
+        "tekst-info",
+        "tekst-bewijs"
+      ],
+      "variants": 624,
+      "reviewNote": "Meerdere doelen: per concrete opdracht het passende doel kiezen."
+    },
+    {
+      "id": "learning-review",
+      "title": "Oefen opnieuw",
+      "levels": [
+        "alfa-a",
+        "alfa-b",
+        "a1",
+        "a2",
+        "b1"
+      ],
+      "goalIds": [
+        "klank-first",
+        "klank-last",
+        "gesprek-begrip",
+        "tekst-info",
+        "klank-middle",
+        "zin-volgorde",
+        "meervoud-zin",
+        "lange-klinker",
+        "lettergroep",
+        "dubbele-medeklinker",
+        "open-lettergreep",
+        "synoniemen",
+        "woordcombinaties",
+        "passende-reactie"
+      ],
+      "variants": 2931,
+      "reviewNote": "Doel volgt de terugkerende bronopdracht; Herhalen is een oefenfase."
+    }
+  ],
+  "scope": {
+    "activities": 59,
+    "rendererModes": 50,
+    "catalogueVariants": 99632,
+    "uniqueExerciseIds": 67936,
+    "activityGoalVariants": 146,
+    "proposedGoals": 97,
+    "missingMappings": 0,
+    "sourceLessonLinkMissing": 65367
+  }
+}

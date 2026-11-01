@@ -11,6 +11,7 @@ import { wordWithArticle } from '@/lib/word-articles';
 
 import { DialogueSurface, type DialogueControls } from './dialogue-surface';
 import { WordSounds } from './sound-reference';
+import { LearnerExerciseInfo } from './learner-exercise-info';
 import { ImportedPracticeSurface } from './imported-practice-surface';
 import { ExerciseMenu, type ExerciseMenuProps } from './exercise-menu';
 
@@ -477,7 +478,7 @@ function PackageExercisePlayer({
   } : undefined);
   const exerciseHeading = (<div>
               {!guided && <small>Vrij oefenen</small>}
-              <h3 ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}</h3>
+              <h3 className="cp-exercise-info-heading" ref={taskHeading} tabIndex={-1}>{isInstructionAudioEnabled(exercise.instructionAudio?.src) && exercise.instructionAudio?.src ? <button className="cp-instruction-listen" aria-label="Luister naar de opdracht" onClick={() => { explainedModes.current.delete(exercise.instructionAudio!.src!); void listen(sentenceQuestion || (needsListen && !heard) ? stimulus : undefined); }}><Volume2 />{exercise.title || family?.label}</button> : exercise.title || family?.label || 'Oefenen'}{(exercise.componentId !== 'KLINK-CONTENT' || Boolean((exercise.contentTask as {teacherWorkflow?:unknown}|undefined)?.teacherWorkflow)) && <LearnerExerciseInfo key={exercise.exerciseId} exercise={exercise} onHelp={() => { metrics.current.helpUsed = true; if (result === 'right') setHoldFeedback(true); }} />}</h3>
             </div>);
   const exerciseControls = (<nav aria-label="Bladeren door oefeningen">
               <button data-practice-previous aria-keyshortcuts="ArrowLeft" title="Vorige oefening (←)" onClick={() => { if (!audioPending && !recording && !practiceBusy(keyboard.ref.current)) { if (guided) openGuidedAt(guidedIndex - 1); else openAt(recordIndex - 1); } }} disabled={audioPending || recording || (guided ? guidedIndex <= 0 : recordIndex === 0)} aria-label="Vorige oefening"><ArrowLeft /></button>
