@@ -515,3 +515,12 @@ body:has(.cp-learner-info) [data-slot="dialog-overlay"] { z-index: 2000; }
 
 .cp-exercise-info-heading > .cp-content-info-button { display: none; }
 .learner-app .cp-exercise-info-heading > .cp-content-info-button { display: inline-flex; }
+
+/* Keep the task info with the counter, and show a selectable answer clearly. */
+.cp-exercise-info-slot { display: none; }
+.learner-app .cp-exercise-info-slot { display: inline-flex; align-items: center; }
+.learner-app .cp-exercise-info-slot:empty { display: none; }
+.product-root .learner-app .cp-exercise-stage .cp-content-task { height: auto; max-height: none; margin-block: 0; gap: 12px; align-content: start; }
+.learner-app .cp-content-task > :is(h4,p) { margin-block: 0; }
+.learner-app .cp-content-task .cp-choice-grid > button { min-height: 48px; padding: 10px 12px; }
+.learner-app .cp-exercise-stage:has(> .cp-content-task) > .cp-exercise-tools { position: static; }

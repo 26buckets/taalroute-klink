@@ -1,0 +1,51 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "userRequest": "Laat me de leerdoelen ook zien bij klanken, zinnen, teksten en gesprekken, ook op mobiel. Ik wil controleren of de labels duidelijk zijn en passen bij wat de cursist oefent. Even kijken. Blijkbaar kan ik op deze pagina niks selecteren, dus ik kan geen antwoord geven. En het informatiestukje waar ik over deze oefening kan doen, moet op een andere plek. Dus ik denk dat dat in die header van de opdracht moet, bovenaan, waar ook woorden gebruiken staat, B1 en terug en 1 van 4. Daar moet dat i'tje komen te staan. Ja, dat wordt de vaste plek. Niet zo pompaal in de opdracht zelf.",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "debea185f077db2283d8113e28b370f4b107d7fb",
+  "liveSourceCommit": "1fb7c126cc642aa9230652a11c60fe3b2ab3c065",
+  "approval": "docs/appearance-floor-20261031/approved-updates/info-header-20261101.json",
+  "publicationApprovalBasis": "Concrete requested change in the real app, continuing the explicitly authorized implementation/publication workflow in this chat.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/imported-practice-surface.tsx",
+    "components/product/learner-exercise-info.tsx",
+    "components/product/package-exercise-browser.tsx",
+    "scripts/check-info-header-release-20261101.mjs",
+    "scripts/check-learning-goals-release-20261101.mjs",
+    "scripts/test-info-header-browser-20261101.mjs",
+    "scripts/test-info-header-release-20261101.mjs"
+  ],
+  "files": {
+    "app/learner-layout.css": "3791ce09cc80bf8ea7853462e77d4485c914698dde50bd99d35b226f3430d541",
+    "components/product/imported-practice-surface.tsx": "ce5935c7e82f8697cb15d5a1a6d5fb840a7145ba68d084856abbcc9ad0614f3f",
+    "components/product/learner-exercise-info.tsx": "9e702862f8d6f7c026a5f150a3c09f0f41c4f11df24f246382619b32b1f9ba76",
+    "components/product/package-exercise-browser.tsx": "490f63e1de4bd66bb25effd1d99454e9a904c8068fda96ed3b3113735016d6d6",
+    "scripts/check-info-header-release-20261101.mjs": "466daf7337f3780ca785c4d4281f85ef38a778e804851ed4e442535d89b92e53",
+    "scripts/check-learning-goals-release-20261101.mjs": "13aeb47b3e58b392bb7e578167fe560f2359ca996853cbe9d2448aca45f5c913",
+    "scripts/test-info-header-browser-20261101.mjs": "d21d1ba2bf204d38956f62c8ec0424c6e2426745a31818495988d86ee7327262",
+    "scripts/test-info-header-release-20261101.mjs": "dcc8b709ba26cac3dcc2ea0b1a41e6619135018774027ddc2dc89f3eb264548c"
+  },
+  "evidenceFiles": {
+    "docs/info-header-20261101/README.md": "1c487fdd5226254bccb20420d5f3ec0c0c61c4edd2063ddc7b6dca658c205e42",
+    "docs/info-header-20261101/before/voor-herstel.json": "b333386df69e6c39dc1f2b78449db600a34e7e5d69a8616f9f1356ea46498656",
+    "docs/info-header-20261101/browser.log": "d436ac75cd3744f840cf0f534ebd78d6b1624b7eaa158d954b69e5e24312aeff",
+    "docs/info-header-20261101/imported.log": "87ccdc71505b587aeba3c973d0911758813225c77189b4dd770cb697601898a6",
+    "docs/info-header-20261101/lint.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "docs/info-header-20261101/live-before.json": "086c1e2b0f2c8efca2c45f14df88e6980b0182e8d72bd32e28ccfe5eae8a945a",
+    "docs/info-header-20261101/local/checks.json": "a765278f49e4336dcd1058b3d6b1d7dbd8fe79c5f56305d8b4e0dd54d921338a",
+    "docs/info-header-20261101/local/examples.json": "55dfdbef62a4f79e17abc396b41925754b65df318031c1ea4540ae231209ee2b",
+    "docs/info-header-20261101/local/imported/browser-checks.json": "22f80d8a8e5af06e113f6fa004adae49356bf4db2aacf6dcb1bf488691bc9fa2",
+    "docs/info-header-20261101/local/retention/checks.json": "9a05e6223ae02698253e8236d8e8135c804ca53c363fa9341723d9457e895571",
+    "docs/info-header-20261101/local/sheets/checks.json": "69d59e2052d9f5f90fbd751713e24f481567920ea5a066482ffba35df1a5f2ae",
+    "docs/info-header-20261101/local/writing/checks.json": "714f4e164cde6dd0e96d355783983ed713d2941f1ad1479e03e18b347581e2d7",
+    "docs/info-header-20261101/retention.log": "3437e7a938f1959097d90e431cf0a3ecc8de3086de11a81658d4213f5df275b5",
+    "docs/info-header-20261101/sheets.log": "e866546329a12c6d2731805f5a4b4d211259afc6911a8d96591a595a3259d906",
+    "docs/info-header-20261101/types.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "docs/info-header-20261101/unit.log": "99652b5b83e98c23ed03d9223eb53d49a9740632272d64d345ee3973651685ba",
+    "docs/info-header-20261101/verification.json": "38cc4fc29490d596dd8dc95bc88baf729504ac748cc02cc9eff83e1f6a5f975e",
+    "docs/info-header-20261101/writing.log": "a3236b2fdea3d2781a89c5bdcf18bcd06b7ec0d05dea49aa85b5a2c18ffa8b7d"
+  }
+}

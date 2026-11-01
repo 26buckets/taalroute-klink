@@ -1,0 +1,28 @@
+{
+  "approvedBy": "Nico",
+  "approvedOn": "2026-11-01",
+  "userRequest": "Laat me de leerdoelen ook zien bij klanken, zinnen, teksten en gesprekken, ook op mobiel. Ik wil controleren of de labels duidelijk zijn en passen bij wat de cursist oefent. Even kijken. Blijkbaar kan ik op deze pagina niks selecteren, dus ik kan geen antwoord geven. En het informatiestukje waar ik over deze oefening kan doen, moet op een andere plek. Dus ik denk dat dat in die header van de opdracht moet, bovenaan, waar ook woorden gebruiken staat, B1 en terug en 1 van 4. Daar moet dat i'tje komen te staan. Ja, dat wordt de vaste plek. Niet zo pompaal in de opdracht zelf.",
+  "publicationApproved": true,
+  "appearanceChangeApproved": true,
+  "baselineSourceCommit": "debea185f077db2283d8113e28b370f4b107d7fb",
+  "liveSourceCommit": "1fb7c126cc642aa9230652a11c60fe3b2ab3c065",
+  "approval": "docs/appearance-floor-20261031/approved-updates/info-header-20261101.json",
+  "publicationApprovalBasis": "Concrete requested change in the real app, continuing the explicitly authorized implementation/publication workflow in this chat.",
+  "changedFiles": [
+    "app/learner-layout.css",
+    "components/product/imported-practice-surface.tsx",
+    "components/product/learner-exercise-info.tsx",
+    "components/product/package-exercise-browser.tsx",
+    "scripts/check-info-header-release-20261101.mjs",
+    "scripts/check-learning-goals-release-20261101.mjs",
+    "scripts/test-info-header-browser-20261101.mjs",
+    "scripts/test-info-header-release-20261101.mjs"
+  ],
+  "files": {
+    "app/learner-layout.css": "3791ce09cc80bf8ea7853462e77d4485c914698dde50bd99d35b226f3430d541",
+    "components/product/imported-practice-surface.tsx": "ce5935c7e82f8697cb15d5a1a6d5fb840a7145ba68d084856abbcc9ad0614f3f",
+    "components/product/learner-exercise-info.tsx": "9e702862f8d6f7c026a5f150a3c09f0f41c4f11df24f246382619b32b1f9ba76",
+    "components/product/package-exercise-browser.tsx": "490f63e1de4bd66bb25effd1d99454e9a904c8068fda96ed3b3113735016d6d6"
+  },
+  "scope": "Only the requested header info position and the existing content-answer selection/visibility repair. Goals and content unchanged."
+}
