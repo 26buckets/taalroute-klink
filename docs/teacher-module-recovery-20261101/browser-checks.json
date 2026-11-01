@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "scenario": "menu missing old module",
+      "lessons": 58,
+      "manualRefresh": false,
+      "automaticReloads": 1,
+      "failedRequests": 1,
+      "teacherRequests": 2,
+      "progressPreserved": true,
+      "sessionPreserved": true,
+      "menuVisible": true,
+      "errorPage": false
+    },
+    {
+      "scenario": "active lesson survives automatic recovery",
+      "lessonAndProgressIdentical": true,
+      "phase": "Luisteren / 2 van 8",
+      "manualRefreshForRecovery": false
+    },
+    {
+      "scenario": "worksheet with active lesson shares one recovery promise",
+      "lessonAndProgressIdentical": true,
+      "url": "http://127.0.0.1:19007/#teacher/materials?lesson=mat&round=a&from=lesson",
+      "manualRefreshForRecovery": false
+    },
+    {
+      "scenario": "persistent missing current file",
+      "automaticReloads": 1,
+      "lessonAndProgressIdentical": true,
+      "fallsBackToExistingError": true
+    }
+  ],
+  "errors": []
+}

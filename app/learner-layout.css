@@ -339,3 +339,16 @@ body:has(.learner-app.consistent-layout) { position: fixed; inset: 0; overflow: 
 }
 .product-root .consistent-layout .cp-exercise-stage .cp-dialogue { align-content: start; gap: 8px; padding-block: 0; margin-block: 0; }
 .learner-app .cp-exercise-stage:has(.cp-dialogue) > .cp-exercise-tools { top: 0; margin-bottom: 4px; }
+@media (max-width: 760px) {
+  .product-root .consistent-layout .cp-exercise-stage .cp-dialogue { gap: 4px; }
+  .learner-app .cp-dialogue-scene.has-image { position: relative; display: block; }
+  .learner-app .cp-dialogue-scene.has-image > img { position: absolute; top: 8px; right: 14px; width: auto; height: auto; max-width: 96px; max-height: 64px; object-fit: contain; }
+  .learner-app .cp-dialogue-scene.has-image .cp-dialogue-current { padding-block: 8px; }
+  .learner-app .cp-dialogue-scene.has-image .cp-dialogue-position { display: block; padding-right: 108px; }
+  .learner-app .cp-dialogue-scene.has-image .cp-dialogue-current h3 { padding-right: 108px; overflow-wrap: anywhere; }
+  .learner-app .cp-dialogue-controls { gap: 4px; }
+  .learner-app .cp-dialogue-controls button { min-width: 48px; padding-inline: 6px; }
+}
+@media (max-width: 360px) {
+  .learner-app .cp-dialogue-support button { padding-inline: 6px; }
+}

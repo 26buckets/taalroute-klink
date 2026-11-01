@@ -1,0 +1,29 @@
+
+> taalroute-klink@0.1.0 predeploy
+> npm run images:prepare
+
+
+> taalroute-klink@0.1.0 images:prepare
+> node scripts/prepare-images.mjs
+
+{"checked":1707,"prepared":0,"sourceBytes":294827750,"appBytes":35800138,"maxBytes":98304}
+
+> taalroute-klink@0.1.0 deploy
+> npm run check:publication && npm run build && wrangler deploy --config dist/server/wrangler.json
+
+
+> taalroute-klink@0.1.0 check:publication
+> node scripts/check-curriculum-release.mjs
+
+✔ 15 authoritative entrances preserve all 302 exact lessons and exercise payloads (88.775375ms)
+✔ Former group 2 resumes at its actual exercise; first a steps remain small and consecutive (0.537875ms)
+✔ Approved navigation photos remain separate from every preserved word cover (3.652042ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 315.763541
+Leg de gecontroleerde bronwijzigingen eerst vast in een commit.
