@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-01",
+  "sourceCommit": "b81e0ee3189f688e575d22ea0af9269052b19b5f",
+  "previousLocalCommit": "c6e1165d60f54d3ae21e3b4c963ddf4c38a869b4",
+  "lastVerifiedLiveBasis": "b670d0c1337eea07e96662237de4b9508de9735c",
+  "liveRecheckBeforeAnyPublicationRequired": true,
+  "localOnly": true,
+  "publicationApproved": false,
+  "runtimeManifestSha256": "cee00e034ad935352d030763d55766d7227d6f134b82d3db8e9b08f6fb44e005",
+  "checks": {
+    "unitTests": 69,
+    "unitFailures": 0,
+    "finalScopeAndAudioTests": 12,
+    "browserScenarios": 36,
+    "instructionLayoutScenarios": 12,
+    "unchangedStartScreens": 4,
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "nativeAudioPlayback": 2,
+    "realLessonEntry": 2,
+    "oldGuidedLinks": 2,
+    "typecheck": "passed",
+    "lint": "passed",
+    "productionBuild": "passed",
+    "publicationGate": {
+      "result": "blocked-as-requested",
+      "remainingBlocks": [
+        "Publiceer uitsluitend vanuit de canonieke branch.",
+        "Deze instructiecorrecties zijn uitsluitend lokaal voorbereid; publicatie is niet toegestaan."
+      ]
+    }
+  },
+  "media": {
+    "wordForms": 1059,
+    "linked": 1040,
+    "missingBindings": 19,
+    "missingReferencedFiles": 0,
+    "reusedLocalClips": 1377,
+    "reusedClipsByteIdentical": true,
+    "newAudioGenerated": 0
+  },
+  "notPerformed": [
+    "publication",
+    "push",
+    "GitHub Actions",
+    "production batches",
+    "content import",
+    "new audio production",
+    "physical phone/native mobile keyboard",
+    "screenreader audit",
+    "new human pronunciation/NT2 review"
+  ],
+  "embeddedBrowserControl": "unavailable; separate local browser tests performed",
+  "limitations": [
+    "No standalone grammar offer at Alfa A/B/C or B1 in this entrance yet",
+    "92 open grammar tasks retain optional teacher workflow; no false automatic grading",
+    "Local audio playback approval is not publication or human pronunciation approval"
+  ]
+}
