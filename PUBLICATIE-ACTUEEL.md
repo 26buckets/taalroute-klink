@@ -1,3 +1,15 @@
+## Actuele publicatie — twintig beluisterde woordopnamen — 2 november 2026
+
+Livebron `7d1adc5192d265e50362833d5bbbfe2e3c10dacc`, schone canonieke main; Worker `f34e006f-258d-4a46-a089-f688573774bf`. Gepubliceerd via de gewone `npm run deploy`, als afstammeling van livebron `6b25e83b0bb3b051291df76adac96e48adf0ab8b` en vastlegging `6233c816205a92f41f7f3a429a0ed3677632da6a`.
+
+Nico heeft de twintig nieuwe ElevenLabs-opnamen beluisterd en expliciet goedgekeurd en daarna gevraagd ze te koppelen en te publiceren. De negentien eerder bekende A1/A2-woordvormen en ‘oefencursus’ zijn exact toegevoegd; geen bestaande audio vervangen. De bestaande ‘we’, alle overige opnamen, vormgeving, lesinhoud, routes, knoppen, voortgang en opslag blijven behouden. Geen nieuwe audiogeneratie of contentimport in deze stap. De eerdere aanvullende publicatievrijgave blijft exact intact; de nieuwe twintig hebben hun eigen brongebonden register en luisterakkoord.
+
+Lokaal: lint, types, achttien gerichte proeven, 96 grammatica-browsergevallen, 54 native audio-/integratiegevallen en de gewone volledige publicatiepoort/build geslaagd. Acht weergavevergelijkingen: zes pixelgelijk; bij twee WebKit-desktopbeelden uitsluitend 77 rasterpixels aan de letterrand van het nu aanklikbare woord, met gelijke tekstgeometrie en typografie. Geen CSS/componentwijziging. Online: opnieuw 54 native afspeel-/integratiegevallen, twintig nieuwe en 1.377 bestaande aanvullende opnamen volledig bytegelijk teruggelezen; ingebedde Taalroute-metadata van de twintig nieuwe bestanden opnieuw gecontroleerd. Broncommit vóór/na gelijk.
+
+Dossier `docs/twenty-word-audio-20261101/`: brongebonden luisterakkoord, koppelingen, herstelkopieën, controles en publicatie. De twintig specifieke audiogaten zijn opgelost; geen claim dat de hele methode inhoudelijk of auditmatig compleet is. Geen fysieke telefoon-/schermlezertest of extra onafhankelijke NT2-review. Geen GitHub Actions aanwezig, toegevoegd of uitgevoerd; zware controles lokaal.
+
+---
+
 ## Actuele publicatie — zelfstandige grammatica, instructies en woordaudio — 1 november 2026
 
 Livebron `6b25e83b0bb3b051291df76adac96e48adf0ab8b`, schone canonieke main; Worker `e3f5002b-8b45-477e-84de-985fa5560538`, build `2026-11-01T22:18:43.885Z`. Via de gewone `npm run deploy` gepubliceerd, als afstammeling van livebron `cfeb578a8e2fb29898d5ce994b74793e7630f219` en vastlegging `fb29c5a2698b17871c7c12a8cd46b3a90ccfa889`. De nieuwste Inzichten-menulink, B1-bronnen, mobiele bediening, officiële logo, opslag en voortgang blijven behouden.
