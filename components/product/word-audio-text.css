@@ -1,5 +1,6 @@
-/* Text keeps its existing metrics; only focus/hover/playing reveals the control. */
-button.cp-inline-word.cp-inline-word.cp-inline-word {
+/* Inline words also override the compact mobile padding for action buttons. */
+button.cp-inline-word.cp-inline-word.cp-inline-word,
+.learner-app .cp-exercise-browser button.cp-inline-word.cp-inline-word.cp-inline-word {
   display: inline; min-width: 0; min-height: 0; width: auto; height: auto;
   margin: 0; padding: 0; border: 0; border-radius: 0;
   background: transparent; color: inherit; font: inherit; letter-spacing: inherit;

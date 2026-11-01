@@ -15,7 +15,7 @@ export function instructionBaseline(file){
  return Buffer.from(snapshots.get(file));
 }
 const grammarScopeFile='docs/grammar-self-lessons-20261101/scope.json';
-const grammarScopeHash='7b4f88b80b9e3a1707c562536b4ddd900a647cf66d0d0a1ab3362d0de4c2f98d';
+const grammarScopeHash='cee00e034ad935352d030763d55766d7227d6f134b82d3db8e9b08f6fb44e005';
 function grammarBefore(file,scope){
  const record=scope.files[file];
  return record?.before ? git('show',scope.baselineSourceCommit+':'+file) : undefined;
