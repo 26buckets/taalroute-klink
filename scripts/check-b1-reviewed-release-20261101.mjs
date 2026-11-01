@@ -1,3 +1,4 @@
+import {verifyOpeningLoaderLosslessRelease,readBeforeOpeningLoaderLossless} from './check-opening-loader-lossless-release-20261101.mjs';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
@@ -13,13 +14,14 @@ const lines=b=>b.toString().trim().split('\n').filter(Boolean);
 const roots=['app','components','hooks','data','lib','public','scripts','db','drizzle','.github','AGENTS.md','PUBLICATIE.md','VORMGEVING-VASTGEZET.md','docs/appearance-floor-20261031','docs/KLINK-DOCENTHANDLEIDING.md','vite.config.ts','next.config.ts','package.json','package-lock.json','wrangler.jsonc'];
 
 export function verifyB1ReviewedRelease(read=readFileSync) {
+  const successor=verifyOpeningLoaderLosslessRelease(read),currentRead=read;read=file=>readBeforeOpeningLoaderLossless(file,successor,currentRead);
   const json=f=>JSON.parse(read(f)),r=json('docs/klink-owner-release-b1-reviewed-20261101.json');
   assert.equal(r.approvedBy,'Nico');assert(r.publicationApproved&&r.appearanceUnchanged&&r.progressPreserved);
   assert.equal(r.baselineSourceCommit,base);assert.equal(r.liveSourceCommit,live);
   assert(r.userRequest.includes('Zorg dat de nagekeken B1-bronnen online komen'));
   assert.equal(r.humanListeningReview,false);assert.equal(r.independentNt2Review,false);
   git('merge-base','--is-ancestor',live,base);git('merge-base','--is-ancestor',base,'HEAD');
-  const changed=sort([...new Set([...lines(git('diff','--name-only',base,'--',...roots)),...lines(git('ls-files','--others','--exclude-standard','--',...roots))])]);
+  const changed=sort(lines(git('diff','--name-only',base,successor.baselineSourceCommit,'--',...roots)));
   assert.deepEqual(changed,r.changedFiles);assert.deepEqual(sort(Object.keys(r.files)),changed);
   const scripts=['scripts/check-opening-loader-label-release-20261101.mjs','scripts/check-b1-reviewed-release-20261101.mjs','scripts/test-b1-reviewed-browser-20261101.mjs','scripts/test-b1-reviewed-progress-browser-20261101.mjs'];
   assert(changed.every(f=>scripts.includes(f)||['data/klink-production-index.json','data/klink-progress-image-aliases-20261030.json'].includes(f)||/^public\/(practice-content|package-audio)\/b1-review-20261101\//.test(f)));
@@ -60,6 +62,6 @@ export function verifyB1ReviewedRelease(read=readFileSync) {
   const progress=json(folder+'progress-checks.json');assert.equal(progress.checks.length,80);assert.deepEqual(progress.errors,[]);assert(progress.checks.every(c=>c.oldCompletionPreserved&&c.restoredPosition&&c.canonicalProgressKey&&c.unrelatedStoragePreserved));
   const verification=json(folder+'verification.json');for(const k of ['types','lint','editorialReviewAll240','nativeSourcesExact','audioFilesDecodedAndBranded','appearanceUnchanged','progressPreserved','keyboardRegression','localOnly'])assert.equal(verification[k],true,k);
   const backup=json(folder+'backup.json');assert(backup.verified&&backup.fullReadback&&backup.zipIntegrity&&backup.parts.length>=2);assert.deepEqual(backup.files,r.files);assert.deepEqual(backup.evidenceFiles,r.evidenceFiles);
-  return r;
+  return {...r,successor};
 }
-export function readBeforeB1Reviewed(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):read(file);}
+export function readBeforeB1Reviewed(file,r,read=readFileSync){return r.changedFiles.includes(file)?git('show',base+':'+file):readBeforeOpeningLoaderLossless(file,r.successor,read);}
