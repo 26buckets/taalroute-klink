@@ -1,0 +1,520 @@
+{
+  "date": "2026-11-01",
+  "status": "implemented-and-locally-verified; not published",
+  "baseCommit": "92a560870a5c5368c6711394fb52394eec29a742",
+  "changes": [
+    "Short authored topics; generic short labels only for mixed or unnamed rounds",
+    "Round, level and actual count outside the title",
+    "All cards in each existing grid have equal heights; two title lines reserved and natural growth for large text",
+    "Source IDs, exercise sets, deferred loading, images, audio, storage and progress retained"
+  ],
+  "checks": {
+    "typescript": "passed",
+    "productionBuild": "passed",
+    "collectionLabelsAndCatalog": "6 tests passed",
+    "wordRoundsAndContinuity": "passed",
+    "unifiedNavigation": "passed",
+    "sourceRepeatPreservation": "passed after rebasing on current main",
+    "browser": {
+      "results": [
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "light",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "light",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "light",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "light",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "light",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "light",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "light",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "light",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "dark",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "dark",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "dark",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "theme": "dark",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "light",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "light",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "light",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 159.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "light",
+          "activity": "meet",
+          "cards": 12,
+          "height": 210.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "dark",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "dark",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "dark",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 159.59375
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "theme": "dark",
+          "activity": "meet",
+          "cards": 12,
+          "height": 210.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "light",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "light",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "light",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "light",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 1366,
+          "theme": "dark",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "light",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "light",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "light",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "light",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "dark",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "dark",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "dark",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 140
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "theme": "dark",
+          "activity": "meet",
+          "cards": 12,
+          "height": 161
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "light",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "light",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "light",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 159.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "light",
+          "activity": "meet",
+          "cards": 12,
+          "height": 210.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "dark",
+          "activity": "sentence-speak",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "dark",
+          "activity": "sentences",
+          "cards": 10,
+          "height": 159.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "dark",
+          "activity": "text-question",
+          "cards": 12,
+          "height": 159.59375
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "theme": "dark",
+          "activity": "meet",
+          "cards": 12,
+          "height": 210.59375
+        }
+      ],
+      "errors": [],
+      "preserved": [
+        "source IDs",
+        "exercise",
+        "reload",
+        "back focus",
+        "saved progress"
+      ],
+      "textZoom": "200%"
+    }
+  },
+  "knownBaselineIssue": {
+    "check": "scripts/test-alfa-c-menu-browser.mjs",
+    "result": "Fails on pre-existing 12px header/workspace offset between Start and activities at 390px; original and changed CSS produce identical positions. No header change made.",
+    "evidence": {
+      "original": [
+        [
+          {
+            "x": 12,
+            "y": 60,
+            "width": 366
+          },
+          {
+            "x": 12,
+            "y": 172,
+            "width": 366
+          },
+          {
+            "x": 16,
+            "y": 120,
+            "width": 358
+          },
+          {
+            "x": 16,
+            "y": 172,
+            "width": 358
+          }
+        ],
+        [
+          {
+            "x": 12,
+            "y": 60,
+            "width": 366
+          },
+          {
+            "x": 12,
+            "y": 184,
+            "width": 366
+          },
+          {
+            "x": 16,
+            "y": 126,
+            "width": 358
+          },
+          {
+            "x": 16,
+            "y": 184,
+            "width": 358
+          }
+        ]
+      ],
+      "changed": [
+        [
+          {
+            "x": 12,
+            "y": 60,
+            "width": 366
+          },
+          {
+            "x": 12,
+            "y": 172,
+            "width": 366
+          },
+          {
+            "x": 16,
+            "y": 120,
+            "width": 358
+          },
+          {
+            "x": 16,
+            "y": 172,
+            "width": 358
+          }
+        ],
+        [
+          {
+            "x": 12,
+            "y": 60,
+            "width": 366
+          },
+          {
+            "x": 12,
+            "y": 184,
+            "width": 366
+          },
+          {
+            "x": 16,
+            "y": 126,
+            "width": 358
+          },
+          {
+            "x": 16,
+            "y": 184,
+            "width": 358
+          }
+        ]
+      ]
+    }
+  },
+  "githubActions": "No workflows in current main; all checks run locally. No deployment performed.",
+  "screenshots": [
+    "klink-kaartjes-desktop.png",
+    "klink-kaartjes-mobiel.png",
+    "klink-kaartjes-teksten.png"
+  ]
+}
