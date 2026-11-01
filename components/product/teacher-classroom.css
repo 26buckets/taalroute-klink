@@ -1188,7 +1188,7 @@
 @media screen {
   .kpd-brand { font-size: 20px; }
   .kpd-brand img { height: 20px; }
-  .kpd-lesson-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .kpd-lesson-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); grid-auto-rows: 1fr; gap: 12px; }
   .kpd-lesson-choice { display: flex; align-items: center; gap: 16px; padding: 16px; min-height: 112px; text-align: left; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); font-size: 24px; font-weight: 500; }
   .kpd-lesson-choice img { width: 80px; height: 80px; object-fit: contain; border-radius: 4px; }
   .kpd-lesson-choice span { flex: 1; }
@@ -1220,7 +1220,7 @@
 
 .kpd-worksheets { padding: 0 24px 24px; }
 .kpd-worksheets > p { margin: 0 0 12px; font-size: 18px; }
-.kpd-worksheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.kpd-worksheet-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 12px; }
 .kpd-worksheet-lesson { border: 1px solid var(--line); border-radius: var(--radius); padding: 8px; min-width: 0; }
 .kpd-worksheet-lesson h3 { font-size: 22px; line-height: 28px; font-weight: 500; margin: 0 0 8px; }
 .kpd-worksheet-options { display: grid; gap: 8px; }
